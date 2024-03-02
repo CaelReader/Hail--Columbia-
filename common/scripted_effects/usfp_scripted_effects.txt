@@ -1,0 +1,204 @@
+﻿usfp_acw_agitators_traits = {
+	add_random_trait = personality
+	add_experience = 2
+	add_random_trait = skill
+	random_list = {
+		95 = {}
+		5 = { add_random_trait = condition }
+	}
+}
+
+usfp_native_startup = {
+	effect_starting_technology_tier_4_tech = yes
+	effect_native_conscription_10 = yes
+	
+	ig:ig_devout = {
+		set_interest_group_name = ig_evangelical_church
+	}
+	activate_law = law_type:law_chiefdom
+	activate_law = law_type:law_elder_council
+	activate_law = law_type:law_traditionalism
+	activate_law = law_type:law_cultural_exclusion
+	activate_law = law_type:law_elected_bureaucrats
+	activate_law = law_type:law_freedom_of_conscience
+	activate_law = law_type:law_national_militia
+	activate_law = law_type:law_legacy_slavery
+	activate_law = law_type:law_women_own_property
+}
+
+usfp_remove_starting_buildings_effect = {
+	if = {
+		limit = { has_building = building_wheat_farm }
+		remove_building = building_wheat_farm
+	}
+	if = {
+		limit = { has_building = building_barracks }
+		remove_building = building_barracks
+	}
+	if = {
+		limit = { has_building = building_sulfur_mine }
+		remove_building = building_sulfur_mine
+	}
+	if = {
+		limit = { has_building = building_livestock_ranch  }
+		remove_building = building_livestock_ranch
+	}
+	if = {
+		limit = { has_building = building_tobacco_plantation  }
+		remove_building = building_tobacco_plantation
+	}
+	if = {
+		limit = { has_building = building_vineyard_plantation  }
+		remove_building = building_vineyard_plantation
+	}
+	if = {
+		limit = { has_building = building_logging_camp  }
+		remove_building = building_logging_camp
+	}
+	if = {
+		limit = { has_building = building_cotton_plantation  }
+		remove_building = building_cotton_plantation
+	}
+	if = {
+		limit = { has_building = building_maize_farm  }
+		remove_building = building_maize_farm
+	}
+	
+}
+
+#Manifest Destiny tracking
+usfp_manifest_more_destiny_effect = {
+	custom_tooltip = {
+		text = usfp_manifest_more_destiny
+		change_variable = {
+			name = manifest_destiny_var
+			add = 1
+		}
+	}
+	hidden_effect = {
+		remove_modifier = usfp_manifest_destiny_modifier
+		add_modifier = {
+			name = usfp_manifest_destiny_modifier
+			multiplier = root.var:manifest_destiny_var
+		}
+	}
+}
+
+usfp_manifest_less_destiny_effect = {
+	custom_tooltip = {
+		text = usfp_manifest_less_destiny
+		change_variable = {
+			name = manifest_destiny_var
+			subtract = 1
+			min = 0
+		}
+	}
+	hidden_effect = {
+		remove_modifier = usfp_manifest_destiny_modifier
+		add_modifier = {
+			name = usfp_manifest_destiny_modifier
+			multiplier = root.var:manifest_destiny_var
+		}
+	}
+}
+
+usfp_mexican_north_purchase_effect = {
+	s:STATE_CALIFORNIA = {
+		add_claim = c:USA
+		remove_claim = c:MEX
+		if = {
+			limit = { 
+				any_scope_state = {
+					owner = c:MEX
+				}
+			}
+			region_state:MEX = {
+				set_state_owner = c:USA
+			}
+		}
+	}
+	s:STATE_NEVADA = {
+		add_claim = c:USA
+		remove_claim = c:MEX
+		if = {
+			limit = { 
+				any_scope_state = {
+					owner = c:MEX
+				}
+			}
+			region_state:MEX = {
+				set_state_owner = c:USA
+			}
+		}
+	}
+	s:STATE_UTAH = {
+		add_claim = c:USA
+		remove_claim = c:MEX
+		if = {
+			limit = { 
+				any_scope_state = {
+					owner = c:MEX
+				}
+			}
+			region_state:MEX = {
+				set_state_owner = c:USA
+			}
+		}
+	}
+	s:STATE_ARIZONA = {
+		add_claim = c:USA
+		remove_claim = c:MEX
+		if = {
+			limit = { 
+				any_scope_state = {
+					owner = c:MEX
+				}
+			}
+			region_state:MEX = {
+				set_state_owner = c:USA
+			}
+		}
+	}
+	s:STATE_NEW_MEXICO = {
+		add_claim = c:USA
+		remove_claim = c:MEX
+		if = {
+			limit = { 
+				any_scope_state = {
+					owner = c:MEX
+				}
+			}
+			region_state:MEX = {
+				set_state_owner = c:USA
+			}
+		}
+	}
+	s:STATE_TEXAS = {
+		add_claim = c:USA
+		remove_claim = c:MEX
+		if = {
+			limit = { 
+				any_scope_state = {
+					owner = c:MEX
+				}
+			}
+			region_state:MEX = {
+				set_state_owner = c:USA
+			}
+		}
+	}
+	s:STATE_COLORADO = {
+		add_claim = c:USA
+		remove_claim = c:MEX
+		if = {
+			limit = { 
+				any_scope_state = {
+					owner = c:MEX
+				}
+			}
+			region_state:MEX = {
+				set_state_owner = c:USA
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+﻿l_english:
+ideology_usfp_progressive: "Progressive"
+ideology_usfp_progressive_desc: "#lore This leader advocates sweeping reforms to combat monopolies, corruption, and societal decay.#!"
+ideology_usfp_social_gospel_leader: "Social Gospelist"
+ideology_usfp_social_gospel_leader_desc: "#lore This leader seeks to apply Protestant ethics to combat social inequalities.#!"
+ideology_usfp_strongman_populist: "Strongman Populist"
+ideology_usfp_strongman_populist_desc: "#lore This character positions themselves as a decisive leader who will enact economic reforms to the benefit of the masses. #!"
+ideology_american_school_leader:0 "American Systemist"
+ ideology_american_school_leader_desc:0 "#lore This character advocates for a mix of protectionism and interventionism.#!"
+ideology_usfp_abolitionist_radical:0 "Radical Abolitionist"
+ideology_usfp_abolitionist_radical_desc: "#lore This leader seeks an end to slavery as well as equal rights for freedmen. #!"

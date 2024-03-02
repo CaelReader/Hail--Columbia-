@@ -1,0 +1,143 @@
+﻿on_monthly_pulse_country = {
+	on_actions = {
+		usfp_monthly_pulse
+	}
+}
+
+usfp_monthly_pulse = {
+	events = {
+		usfp_usa.1 #Seneca Falls Conference
+		usfp_usa.4 #Opening of Ellis Island
+		usfp_usa.6 #Great Chicago Fire
+	}
+	random_events = {
+		150 = 0
+
+		##Disasters
+		1 = usfp_usa.2 #Atlantic Hurricane
+		3 = usfp_usa.3 #Major Tornado
+		2 = usfp_usa.5 #Wildfire 
+	}
+}
+
+
+on_election_campaign_start = {
+	on_actions = {
+		usfp_acw_election_agitators
+	}
+}
+
+#Spawn a new Slaver, Abolitonist, or RadAbolitionist agitator every election
+usfp_acw_election_agitators = {
+	effect = {
+		if = {
+			limit = {
+				c:USA ?= this
+				NOT = { has_global_variable = american_civil_war }
+			}
+			random_list = {
+				50 = {
+					create_character = {
+						culture = cu:dixie
+						interest_group = ig_landowners
+						female = no
+						is_agitator = yes
+						ideology = ideology_slaver
+						trait_generation = {
+							usfp_acw_agitators_traits = yes
+						}
+						on_created = { set_variable = { name = temp_event_target_in_use years = 8 } }
+					}
+				}
+				40 = {
+					create_character = {
+						culture = cu:yankee
+						interest_group = ig_intelligentsia
+						female = no
+						is_agitator = yes
+						ideology = ideology_abolitionist
+						trait_generation = {
+							usfp_acw_agitators_traits = yes
+						}
+						on_created = { set_variable = { name = temp_event_target_in_use years = 8 } }
+					}
+				}
+				10 = {
+					create_character = {
+						culture = cu:yankee
+						interest_group = ig_intelligentsia
+						female = no
+						is_agitator = yes
+						ideology = ideology_usfp_abolitionist_radical
+						trait_generation = {
+							usfp_acw_agitators_traits = yes
+						}
+						on_created = { set_variable = { name = temp_event_target_in_use years = 8 } }
+					}
+				}
+			}
+
+			random_political_movement = {
+				limit = { desired_law = law_type:law_slave_trade }
+				add_modifier = modifier_uncommitted_government
+				add_modifier = modifier_movement_state_paramilitarism
+			}
+		}
+	}
+}
+
+#Gag Rule enforcement, to allow for Political Movements to still exist
+on_law_enactment_started = {
+	on_actions = {
+		usfp_gag_rule_on_action
+	}
+}
+
+usfp_gag_rule_on_action = {
+	effect = {
+		if = {
+			limit = { 
+				has_journal_entry = je_usfp_a_house_divided_gag_rule
+				OR = {
+					is_enacting_law = law_type:law_slave_trade
+					is_enacting_law = law_type:law_slavery_banned
+					is_enacting_law = law_type:law_debt_slavery
+					is_enacting_law = law_type:law_legacy_slavery
+				}
+			}
+			trigger_event = {
+				id = usfp_a_house_divided.2
+				days = 1
+			}
+		}
+	}
+}
+
+on_new_ruler = {
+	on_actions = {
+		usfp_elected_abolitionist
+	}
+}
+
+usfp_elected_abolitionist = {
+	effect = {
+		if = {
+			limit = {
+				owner = {
+					c:USA ?= this
+				}
+					OR = {
+						has_ideology = ideology:ideology_abolitionist
+						has_ideology = ideology:ideology_usfp_abolitionist_radical
+						has_ideology = ideology:ideology_usfp_social_gospel_leader
+					}
+			}
+			owner = {
+				trigger_event = { 
+					id = usfp_a_house_divided.3
+					popup = yes
+				}
+			}
+		}
+	}
+}

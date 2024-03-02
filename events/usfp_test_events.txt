@@ -1,0 +1,48 @@
+namespace = usfp_test
+
+#force spawn a character
+usfp_test.1 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:character_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+
+	placement = root
+
+	title = usfp_test.1.t
+	desc = usfp_test.1.d
+	flavor = usfp_test.1.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+		create_character = {
+			template = agitator_frederick_douglass
+			on_created = {
+				set_variable = test_var
+				add_character_role = agitator
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_variable = test_var
+			}
+			save_scope_as = character_scope
+		}
+	}
+
+	#Cool
+	option = {
+		name = EXCELLENT
+	}
+
+}

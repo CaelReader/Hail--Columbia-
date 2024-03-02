@@ -1,0 +1,48 @@
+﻿GLOBAL = {
+	c:SEQ = {
+			activate_law = law_type:law_chiefdom
+			activate_law = law_type:law_elder_council
+			create_character = {
+				template = usfp_chief_mushulatubbee_template
+			}
+			capital = {
+				create_pop = {
+					culture = muskogean
+					size = 11000
+				}
+			}
+			add_primary_culture = cu:caddoan
+			add_primary_culture = cu:muskogean	
+	}
+	cu:yankee = {
+		add_cultural_obsession = liquor
+		add_cultural_obsession = coffee
+	}
+	cu:dixie = {
+		add_cultural_obsession = liquor
+		add_cultural_obsession = tobacco
+	}
+	cu:afro_american = {
+		add_cultural_obsession = liquor
+		add_cultural_obsession = tobacco
+	}
+	c:USA = {
+		trigger_event = { id = USCWF.1 days = 1 }
+		add_declared_interest = region_great_plains
+		py:conservative_party = {
+			add_momentum = momentum_medium
+		}
+	}
+	c:ONT = {
+		activate_law = law_type:law_frontier_colonization
+	}
+	c:TEX = {
+		create_diplomatic_pact = {
+			country = c:USA
+			type = increase_relations
+		}
+	}
+	c:MEX = {
+		add_declared_interest = region_great_plains
+	}
+}

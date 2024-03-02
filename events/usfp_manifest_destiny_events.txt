@@ -1,0 +1,491 @@
+﻿namespace = usfp_manifest_destiny
+
+#startup event, introducing Manifest Destiny
+usfp_manifest_destiny.1 = {
+	type = country_event
+	placement = ROOT
+
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_usa.dds"
+	
+	title = usfp_manifest_destiny.1.t
+	desc = usfp_manifest_destiny.1.d
+	flavor = usfp_manifest_destiny.1.f
+	dlc = dlc_usfp
+	duration = 3
+
+	#yes good
+	option = {
+		name = usfp_manifest_destiny.1.a
+		default_option = yes
+		usfp_manifest_more_destiny_effect = yes
+	}
+
+	#no bad
+	option = {
+		name = usfp_manifest_destiny.1.b
+	}
+}
+
+## Texas calls for aid!
+usfp_manifest_destiny.2 = {
+	type = country_event
+	placement = s:STATE_TEXAS.region_state:MEX
+
+	event_image = {
+		video = "rp1_social_banditry"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_manifest_destiny.2.t
+	desc = usfp_manifest_destiny.2.d
+	flavor = usfp_manifest_destiny.2.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+		s:STATE_TEXAS = {
+			save_scope_as = texas_scope
+		}
+		cu:dixie = {
+			save_scope_as = dixie_culture
+		}
+		c:MEX = {
+			save_scope_as = mexico_scope
+		}
+	}
+
+	trigger = {
+		NOT = {
+			exists = c:TEX
+			has_war_with = c:MEX
+		}
+		s:STATE_TEXAS = {
+			any_scope_state = {
+				owner = c:MEX
+				any_scope_pop = {
+					culture = cu:dixie
+				}
+			}
+		}
+	}
+
+	#we shall support Texas
+	option = {
+		name = usfp_manifest_destiny.2.a
+		default_option = yes
+		usfp_manifest_more_destiny_effect = yes
+		s:STATE_TEXAS = {
+			add_claim = c:USA
+		}
+		create_incident = {
+			country = c:USA
+			value = 5
+		}
+	}
+
+	#we do not want to antagonize Mexico
+	option = {
+		name = usfp_manifest_destiny.2.b
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_manifest_destiny_refused_texas
+				years = 2
+			}
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_manifest_destiny_refused_texas
+				years = 2
+			}
+		}
+	}
+}
+
+
+
+## MEX: Mexican Purchase offer
+usfp_manifest_destiny.3 = {
+	type = country_event
+	placement = ROOT
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_manifest_destiny.3.t
+	desc = usfp_manifest_destiny.3.d
+	flavor = usfp_manifest_destiny.3.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+	}
+
+
+	#accept
+	option = {
+		name = usfp_manifest_destiny.3.a
+		ai_chance = {
+			base = 5
+			modifier = {
+				trigger = {
+					taking_loans = yes
+				}
+				add = 10
+			}
+			modifier = {
+				trigger = {
+					OR = {
+						in_default = yes
+						has_modifier = declared_bankruptcy
+					}
+				}
+				add = 100
+			}
+		}
+		c:USA = {
+			change_relations = {
+				country = ROOT
+				value = 25
+			}
+			trigger_event = {
+				id = usfp_manifest_destiny.5
+				days = 7
+				popup = yes
+			}
+		}
+		show_as_tooltip = {
+			add_modifier = {
+				name = usa_paying_for_mexico
+				years = 4
+			}
+			c:MEX = {
+				add_modifier = {
+					name = mexico_getting_paid_by_usa
+					years = 4
+				}
+			}
+			usfp_mexican_north_purchase_effect = yes
+		}
+	}
+
+	#refuse
+	option = {
+		name = usfp_manifest_destiny.3.b
+		default_option = yes
+		ai_chance = {
+			base = 95
+		}
+		c:USA = {
+			change_relations = {
+				country = ROOT
+				value = -10
+			}
+			trigger_event = {
+				id = usfp_manifest_destiny.4
+				days = 7
+			}
+		}
+	}
+}
+
+## Mexican Purchase refused
+usfp_manifest_destiny.4 = {
+	type = country_event
+	placement = ROOT
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_mexico.dds"
+	
+	title = usfp_manifest_destiny.4.t
+	desc = usfp_manifest_destiny.4.d
+	flavor = usfp_manifest_destiny.4.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+		c:MEX = {
+			save_scope_as = mexico_scope
+		}
+	}
+
+	#we will try again later
+	option = {
+		name = usfp_manifest_destiny.4.a
+		default_option = yes
+	}
+
+	#MANIFEST DESTINY
+	option = {
+		name = usfp_manifest_destiny.4.b
+		trigger = {
+			root.var:manifest_destiny_var > 2
+		}
+		highlighted_option = yes
+		s:STATE_CALIFORNIA = {
+			add_claim = c:USA
+		}
+		s:STATE_NEVADA = {
+			add_claim = c:USA
+		}
+		s:STATE_UTAH = {
+			add_claim = c:USA
+		}
+		s:STATE_ARIZONA = {
+			add_claim = c:USA
+		}
+		s:STATE_NEW_MEXICO = {
+			add_claim = c:USA
+		}
+		s:STATE_TEXAS = {
+			add_claim = c:USA
+		}
+	}
+}
+
+
+## Mexican Purchase accepted
+usfp_manifest_destiny.5 = {
+	type = country_event
+	placement = ROOT
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_mexico.dds"
+	
+	title = usfp_manifest_destiny.5.t
+	desc = usfp_manifest_destiny.5.d
+	flavor = usfp_manifest_destiny.5.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+		c:MEX = {
+			save_scope_as = mexico_scope
+		}
+	}
+
+	#excellent
+	option = {
+		name = usfp_manifest_destiny.5.a
+		default_option = yes
+		usfp_manifest_less_destiny_effect = yes
+		add_modifier = {
+			name = usa_paying_for_mexico
+			years = 4
+		}
+		c:MEX = {
+			add_modifier = {
+				name = mexico_getting_paid_by_usa
+				years = 4
+			}
+		}
+		usfp_mexican_north_purchase_effect = yes
+	}
+
+}
+
+#Treaty of Guadalupe Hidalgo
+usfp_manifest_destiny.6 = {
+	type = country_event
+	placement = scope:mexico_capital_scope
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_mexico.dds"
+	
+	title = usfp_manifest_destiny.6.t
+	desc = usfp_manifest_destiny.6.d
+	flavor = usfp_manifest_destiny.6.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		has_war_with = c:MEX
+		c:MEX = {
+			capital = {
+				controller = c:USA
+			}
+		}
+		NOT = {
+			has_variable = g_h_treaty_var
+		}
+	}
+	
+
+	immediate = {
+		c:MEX = {
+			save_scope_as = mexico_scope
+			capital = {
+				save_scope_as = mexico_capital_scope
+			}
+		}
+		set_variable = g_h_treaty_var
+	}
+
+	cancellation_trigger = {
+		NOT = {
+			exists = c:MEX
+		}
+	}
+
+	#Standard Mexican Cession, with payment
+	option = {
+		name = usfp_manifest_destiny.6.a
+		default_option = yes
+		usfp_manifest_less_destiny_effect = yes
+		add_modifier = {
+			name = usa_paying_for_mexico
+			years = 4
+			multiplier = 0.5
+		}
+		c:MEX = {
+			add_modifier = {
+				name = mexico_getting_paid_by_usa
+				years = 4
+				multiplier = 0.5
+			}
+		}
+		every_diplomatic_play = {
+			limit = {
+				initiator_is = c:USA
+				target_is = c:MEX
+			}
+			resolve_play_for = initiator
+		}
+		usfp_mexican_north_purchase_effect = yes
+
+	}
+	
+	#We will not take additional territory
+	option = {
+		name = usfp_manifest_destiny.6.b
+		trigger = {
+			root.var:manifest_destiny_var <= 2
+		}
+		every_diplomatic_play = {
+			limit = {
+				initiator_is = c:USA
+				target_is = c:MEX
+			}
+			resolve_play_for = initiator
+		}
+	}
+
+	#Take the northern part of Mexico too
+	option = {
+		name = usfp_manifest_destiny.6.c
+		trigger = {
+			root.var:manifest_destiny_var >= 4
+		}
+		every_diplomatic_play = {
+			limit = {
+				initiator_is = c:USA
+				target_is = c:MEX
+			}
+			resolve_play_for = initiator
+		}
+		usfp_mexican_north_purchase_effect = yes
+		s:STATE_BAJA_CALIFORNIA.region_state:MEX = {
+			set_state_owner = root
+		}
+		s:STATE_SONORA.region_state:MEX = {
+			set_state_owner = root
+		}
+		s:STATE_CHIHUAHUA.region_state:MEX = {
+			set_state_owner = root
+		}
+		s:STATE_RIO_GRANDE.region_state:MEX = {
+			set_state_owner = root
+		}
+		create_incident = {
+			country = c:MEX
+			value = 30
+		}
+		highlighted_option = yes
+	}
+
+	#Take the northern part of Mexico, and turn Mexico into a dominion
+	option = {
+		name = usfp_manifest_destiny.6.e
+		trigger = {
+			root.var:manifest_destiny_var >= 5
+		}
+		usfp_manifest_more_destiny_effect = yes
+		every_diplomatic_play = {
+			limit = {
+				initiator_is = c:USA
+				target_is = c:MEX
+			}
+			resolve_play_for = initiator
+		}
+		usfp_mexican_north_purchase_effect = yes
+		s:STATE_BAJA_CALIFORNIA.region_state:MEX = {
+			set_state_owner = root
+		}
+		s:STATE_SONORA.region_state:MEX = {
+			set_state_owner = root
+		}
+		s:STATE_CHIHUAHUA.region_state:MEX = {
+			set_state_owner = root
+		}
+		s:STATE_RIO_GRANDE.region_state:MEX = {
+			set_state_owner = root
+		}
+		create_diplomatic_pact = {
+			country = c:MEX
+			type = dominion
+		}
+		create_incident = {
+			country = c:MEX
+			value = 40
+		}
+		highlighted_option = yes
+	}
+
+	#ALL OF MEXICO
+	option = {
+		name = usfp_manifest_destiny.6.g
+		trigger = {
+			root.var:manifest_destiny_var >= 6
+		}
+		usfp_manifest_more_destiny_effect = yes
+		usfp_mexican_north_purchase_effect = yes
+		annex = c:MEX
+		create_incident = {
+			country = c:MEX
+			value = 60
+		}
+		highlighted_option = yes
+	}
+
+}

@@ -1,0 +1,193 @@
+﻿l_english:
+#ACW
+acw_events.1.a.t: "An [SCOPE.sIdeology('abolitionist_scope').GetName] [concept_agitator] will appear in [SCOPE.sCountry('usa_scope').GetName]."
+acw_events.1.b.t: "A [SCOPE.sIdeology('slaver_scope').GetName] [concept_agitator] will appear in [SCOPE.sCountry('usa_scope').GetName]."
+
+usfp_a_house_divided.1.t: "The Pickney Resolutions"
+usfp_a_house_divided.1.d: "The House of Representatives has been buried in a flood of abolitionist petitions. In response, the [SCOPE.sParty('democratic_party').GetName] has passed resolutions forbidding the consideration or discussion of matters pertaining to slavery."
+usfp_a_house_divided.1.f: ""Resolved — that all petitions, memorials, resolutions, propositions, or papers, relating in any way, or to any extent whatever, to the subject of slavery, or the abolition of slavery, shall, without being either printed or referred, be laid upon the table, and that no further action whatever shall be had thereon.""
+usfp_a_house_divided.1.a: "This is flagrantly unconstitutional."
+
+usfp_a_house_divided.3.t: "Secessionist Conventions"
+usfp_a_house_divided.3.d: "In response to the openly anti-slavery platform of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName], several states of the Deep South have immediately called conventions to consider secession from the [ROOT.GetCountry.GetName]."
+usfp_a_house_divided.3.f: ""Our new government is founded upon exactly the opposite idea; its foundations are laid, its corner-stone rests, upon the great truth that the negro is not equal to the white man; that slavery, subordination to the superior race, is his natural and normal condition.""
+usfp_a_house_divided.3.a: "You can have no conflict without being yourselves the aggressors."
+
+missouri_compromise_break: "This will #red break#! the Missouri Compromise!"
+
+usfp_a_house_divided.4.t: "Twelve Years A Slave"
+usfp_a_house_divided.4.d: "[SCOPE.sCharacter('northup_scope').GetFullName], a free black man from the North, was kidnapped and sold into slavery in the South. After over a decade in bondage, he has returned to freedom and published Twelve Years a Slave, which has immediately become a best-seller. [SCOPE.sCharacter('northup_scope').GetLastName]\'s detailed account of the abhorrent conditions of slavery corroborate the North's worst fears, even as they are denied by slave-holders."
+usfp_a_house_divided.4.f: ""Let them know the heart of the poor slave — learn his secret thoughts — thoughts he dare not utter in the hearing of the white man; let them sit by him in the silent watches of the night — converse with him in trustful confidence, of "life, liberty, and the pursuit of happiness," and they will find that ninety-nine out of every hundred are intelligent enough to understand their situation, and to cherish in their bosoms the love of freedom, as passionately as themselves."" #Solomon Northup
+usfp_a_house_divided.4.a: "A harrowing tale of the evils of the South."
+usfp_a_house_divided.4.b: "His story is naught but lies and slander."
+
+usfp_a_house_divided.5.t: "Uncle Tom\'s Cabin"
+usfp_a_house_divided.5.d: "Harriet Stowe\'s anti-slavery novel Uncle Tom\'s Cabin has taken the country by storm, selling hundreds of thousands of copies in only a few months. The novel's melodramatic account of the horrors of life under slavery have swayed thousands of readers to the [SCOPE.sIdeology('abolitionist_scope').GetName] cause, and drawn just as many outraged protests from the South."
+usfp_a_house_divided.5.f: ""I don't want anything of your country, except to be let alone,--to go peaceably out of it; and when I get to Canada, where the laws will own me and protect me, that shall be my country, and its laws I will obey. But if any man tries to stop me, let him take care, for I am desperate. I'll fight for my liberty to the last breath I breathe. You say your fathers did it; if it was right for them, it is right for me!""
+usfp_a_house_divided.5.a: "Everyone should know of the injustices of slavery."
+usfp_a_house_divided.5.b: "This book is an outrageous fiction."
+
+#### Manifest Destiny
+usfp_manifest_destiny.1.t: "From Sea to Shining Sea?"
+usfp_manifest_destiny.1.d: "Since the days of the Thirteen Colonies, the settlers of the [ROOT.GetCountry.GetName] have desired the lands to the west, with complete disregard for their existing inhabitants. Now a justification for expansion is beginning to emerge in our national consciousness — that of Manifest Destiny. Proponents of the idea claim that it is not only our right but our sacred duty to take control of and populate the entirety of the continent."
+usfp_manifest_destiny.1.f: ""Our claim by the right of our manifest destiny is to overspread and to possess the whole of the continent which Providence has given us. It is for the development of the great experiment of liberty and federated self-government entrusted to us.""
+usfp_manifest_destiny.1.a: "The birthday of a new world is at hand!"
+usfp_manifest_destiny.1.b: "What a preposterous notion."
+
+usfp_manifest_destiny.2.t: "[SCOPE.sStateRegion('texas_scope').GetName] Calls for Aid!"
+usfp_manifest_destiny.2.d: "A delegation from the former Republic of Texas has arrived in Washington. In the wake of their failed rebellion, they claim that [SCOPE.sCulture('dixie_culture').GetName] settlers have been subjected to harsh punishments by the [SCOPE.sCountry('mexico_scope').GetAdjectiveNoFormatting] authorities. The delegation is beseeching our intervention to free the Texians from the tyranny of [SCOPE.sCountry('mexico_scope').GetName]"
+usfp_manifest_destiny.2.a: "Texas calls for aid, and the [ROOT.GetCountry.GetName] shall answer!"
+usfp_manifest_destiny.2.b: "We have no interest in antagonizing [SCOPE.sCountry('mexico_scope').GetName]."
+
+usfp_manifest_destiny.3.t: "An Offer for the North"
+usfp_manifest_destiny.3.d: "The government of the [SCOPE.sCountry('usa_scope').GetName] have offered to purchase our northern territories for an appropiate sum. The Americans seem insistent on acquiring more land, and accepting may be a way to avoid hostilities."
+usfp_manifest_destiny.3.f: ""Alta California #italic and#! New Mexico? Surely they must be joking, they expect us to sell half our country for pennies?"\n\n"Well señor, our treasury could use the help, and the Americans second offer might not be as diplomatic."\n\n"Preposterous! If they want to steal our land, let them bring their guns, and we'll bring ours.""
+usfp_manifest_destiny.3.a: "We will accept the deal."
+usfp_manifest_destiny.3.b: "A ridiculous offer. We refuse to even meet with the diplomats."
+
+usfp_manifest_destiny.4.t: "Mexico Refuses"
+usfp_manifest_destiny.4.d: "[SCOPE.sCountry('mexico_scope').GetName] has rejected our offer to purchase their territory."
+usfp_manifest_destiny.4.f: ""They refused to even see me, Sir."\n\n"I see. I will meet with the generals today.""
+usfp_manifest_destiny.4.a: "Another time perhaps."
+usfp_manifest_destiny.4.b: "We will have that land one way or another."
+
+usfp_manifest_destiny.5.t: "Mexico Accepts"
+usfp_manifest_destiny.5.d: "[SCOPE.sCountry('mexico_scope').GetName] has accepted our offer to purchase their territory."
+usfp_manifest_destiny.5.f: ""They're calling it the Mexican Purchase, another Louisiana. Our country doubles in size once more!"\n\n"Bah, the president is a fool. What value does some desert on the other side of the continent have to me? How many weeks of travel does it even take to get to there from here? A waste of my tax dollars if you ask me.""
+usfp_manifest_destiny.5.a: "Splendid."
+
+texan_war_of_independence.2.d: "We do not wish to antagonize [SCOPE.sCountry('mexico_scope').GetName]."
+texan_war_of_independence.2.d.t: "If [SCOPE.sCountry('texas_scope').GetName] remains independent, they will likely continue to ask for statehood."
+
+usfp_manifest_destiny.6.t: "Treaty of Guadalupe Hidalgo"
+usfp_manifest_destiny.6.d: "With the enemy army in tatters and [SCOPE.sState('mexico_capital_scope').GetCityHubName] under our control, [SCOPE.sCountry('mexico_scope').GetName] is at our mercy. We can enforce any treaty that we so choose."
+usfp_manifest_destiny.6.f: "The United States of America and the United Mexican States animated by a sincere desire to put an end to the calamities of the war which unhappily exists between the two Republics and to establish Upon a solid basis relations of peace and friendship..."
+usfp_manifest_destiny.6.a: "We shall secure the Mexican Cession, and provide some recompense for their losses."
+usfp_manifest_destiny.6.b: "An end to hostilies is our priority."
+usfp_manifest_destiny.6.c: "Not only Alta California and New Mexico, but also the rest of northern Mexico will become our territory."
+usfp_manifest_destiny.6.e: "They will cede their northern lands and become an American dominion."
+usfp_manifest_destiny.6.g: "After all, why not? Why shouldn't we take all of Mexico?"
+
+
+
+### Native Removal
+usfp_native_removal.1.t: "The Seminole Removal"
+usfp_native_removal.1.d: "With the Second Seminole War finally winding down, the Army can begin the slow process of removing the remainder of the [SCOPE.sCulture('muskogean_scope').GetName] population across the Mississippi."
+usfp_native_removal.1.f: ""Am I a negro, a slave? I am an Indian. The white man shall not make me black. I will make the white man red with blood, and then blacken him in the sun and rain, where the wolf shall smell his bones and the vulture live upon his flesh!"" #Osceola
+usfp_native_removal.1.a: "Those who refuse to move will be removed by force."
+usfp_native_removal.1.a.t: "We will begin the process of removing the Seminole from [SCOPE.sStateRegion('florida_scope').GetName]. This will likely take a while."
+usfp_native_removal.2.t: "The Treaty of New Echota"
+usfp_native_removal.2.d: "A small group of [SCOPE.sCountry('cherokee_scope').GetAdjective] negotiators have signed a treaty agreeing to vacate their ancestral lands. [SCOPE.sCountry('cherokee_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('cherokee_scope').GetRuler.GetFullName] has protested, as the treaty has not been agreed to by a majority of the Cherokee. Regardless, it gives us legal basis to begin removal."
+usfp_native_removal.2.f: ""Whereas, several persons of the Cherokee Nation of Indians, east of the Mississippi river, have visited the City of Washington, as delegates from that part of their Nation, in favor of emigration, with a hope and desire of making some arrangements which might be acceptable to the Government of the United States, and to their Nation generally, and thereby terminating the difficulties which they have experienced during a residence within the settled portion of the United States...""
+usfp_native_removal.2.a: "They can have peace beyond the Mississippi."
+usfp_native_removal.2.a.t: "We can now begin the Cherokee removal"
+usfp_native_removal.4.t: "The Lands of the Cherokee"
+usfp_native_removal.4.d: "The bulk of the [SCOPE.sCulture('cherokee_culture').GetName] nation have been removed to the [SCOPE.sCountry('indian_territory_scope').GetName], and we have annexed all of their ancestral lands. Some small groups of stragglers still can be found in the wilderness, but they are of no great concern to us."
+usfp_native_removal.4.f: ""From the homes their fathers made\nFrom the graves the tall trees shade\nFor the sake of greed and gold,\nThe Cherokees were forced to go\nTo a land they did not know;\nAnd Father Time or wisdom old\nCannot erase, through endless years\nThe memory of the trail of tears."" # Ruth Margaret Muskrat
+usfp_native_removal.4.a: "We will put their lands to better use."
+
+usfp_native_removal.5.t: "Treaty of Pontotoc Creek"
+usfp_native_removal.5.d: "Our treaty with the [SCOPE.sCountry('chickasaw_scope').GetName] calls for us to pay for their removal and reimburse the nation for the lands vacated."
+usfp_native_removal.5.f: ""The Chickasaw Nation find themselves oppressed in their present situation, by being made subject to the laws of the States in which they reside. Rather than submit to this great evil, they prefer to seek a home in the west, where they may live and be governed by their own laws. And believing that they can procure for themselves a home, in a country suited to their wants and condition, provided they had the means to contract and pay for the same, they have determined to sell their country and hunt a new home.""
+usfp_native_removal.5.a: "We will abide by the treaty."
+usfp_native_removal.5.b: "They can't force us to pay."
+
+usfp_native_removal.6.t: "Chickasaw Trail of Tears"
+usfp_native_removal.6.d: "The last bands of Chickasaw have made their way west across the Mississippi through harsh conditions."
+usfp_native_removal.6.f: ""…our village presents a different appearance. The Indians are all gone; it was melancholy to see the poor creatures leaving the land of their birth and the graves of their fathers. A deep sadness was imprinted on their countenances.""
+usfp_native_removal.6.a: "We did what we could."
+usfp_native_removal.6.b: "Their blood is on our hands."
+
+usfp_native_removal.7.t: "Pacification of Florida"
+usfp_native_removal.7.d: "After much violence and resistance, most of the surviving Seminole have now been removed to the [SCOPE.sCountry('indian_territory_scope').GetName]. Several bands of holdouts, too costly to dislodge, still defy our authority deep within the Everglades."
+usfp_native_removal.7.f: ""The Seminole Indians relinquish to the United States all claim to the land they at present occupy in the Territory of Florida, and agree to emigrate to the country assigned to the Creeks, west of the Mississippi river; it being understood that an additional extent of territory proportioned to their number will be added to the Creek country, and that the Seminoles will be received as a constituent part of the Creek nation, and be re-admitted to all the privileges as members of the same...""
+usfp_native_removal.7.a: "This affair has dragged on too long."
+
+usfp_native_removal.8.t: "Indians Massacred in [SCOPE.sState('massacre_state_scope').GetName]"
+usfp_native_removal.8.d: "In a bid to steal more land for themselves, [SCOPE.sCulture('massacrer_culture').GetName] settlers have coordinated a massacre of Indians in [SCOPE.sState('massacre_state_scope').GetName]. Shocking accounts of wanton rape and looting are already making their way into news reports across the country."
+usfp_native_removal.8.f: ""Damn any man who sympathizes with Indians! I have come to kill Indians, and believe it is right and honorable to use any means under God's heavens to kill Indians.""
+usfp_native_removal.8.a: "Removal will save the Indians."
+usfp_native_removal.8.b: "Prosecute those responsible for this atrocity!"
+
+usfp_native_removal.9.t: "[SCOPE.sCulture('settler_culture_scope').GetName] Settlers Clamor for Removal"
+usfp_native_removal.9.d: "[SCOPE.sCulture('settler_culture_scope').GetName] settlers in [SCOPE.sState('settler_state_scope').GetName] have begun to agitate in favor of immediate Indian Removal. They have submitted a petition to our government complaining about our slow progress on this issue."
+usfp_native_removal.9.f: ""It is in the greatest interest of [SCOPE.sState('settler_state_scope').GetNameNoFormatting] that she is freed of the encumbrance of her Indian population. For the sake of the Indians and our own people, the federal government is implored to enforce the Act that it iself enacted.""
+usfp_native_removal.9.a: "We just need more time to do this properly."
+usfp_native_removal.9.b: "Damn these land thieves!"
+
+usfp_native_removal.10.t: "Creek Removal"
+usfp_native_removal.10.d: "Our military expedition in [SCOPE.sState('alabama_scope').GetName] has begun to round up the last of the remaining Creeks who have refused our removal treaty."
+usfp_native_removal.10.f: ""The men were handcuffed two together, and a long chain passing between the double file connected them all together. The stoical disposition of these forest philosophers was strongly displayed, for neither their physical nor mental sufferings could elicit from them the least indication of distress. The women followed drowned in tears, and giving utterance to most distressing cries; the children joined in from sympathy, for they were yet to young to participate in the unenviable feelings of their parents.""
+usfp_native_removal.10.a: "They should have taken the treaty we offered."
+usfp_native_removal.10.b: "What a miserable situation."
+
+usfp_native_removal.11.t: "Seminole Raid"
+usfp_native_removal.11.d: "Striking out from hidden camps in the Everglades, holdout Seminoles have raided a local militia fort in [SCOPE.sState('florida_scope').GetName]. While casualties were low, the garrison was forced to retreat from the fort, and several White settlements in the surrounding area were looted and burned before the Seminoles melted back into the wilderness."
+usfp_native_removal.11.f: ""You have guns, and so have we — you have powder and lead, and so have we — you have men, and so have we — your men will fight, and so will ours, till the last drop of Seminole's blood has moistened the dust of his hunting ground."" #Osceola
+usfp_native_removal.11.a: "The militia should step up its patrols."
+usfp_native_removal.11.b: "Flush those bandits out!"
+
+usfp_native_removal.12.t: "Indian Stragglers"
+usfp_native_removal.12.d: "Settlers moving into the rural lands of [SCOPE.sState('indian_stragglers_state').GetName] have come into conflict with small groups of Indians who have evaded removal. Sporadic raids and confrontations continue to leave ruined homesteads in their wake, with the settlers pushing the remaining Indians ever deeper into the wilderness."
+usfp_native_removal.12.f: ""We still see them every so often, the Indians. Some are especially stubborn, hovering about the former homes of their fathers, even as we put up new fences around them.""
+usfp_native_removal.12.a: "They should have accepted Removal and avoided this trouble."
+usfp_native_removal.12.b: "They are free to go or stay."
+
+usfp_native_removal.13.t: "Letter to [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName]"
+usfp_native_removal.13.d: "Poet [SCOPE.sCharacter('emerson_scope').GetFullName] has published an open letter criticizing our policy of Indian Removal. The letter lays out a moral case for the ending of the policy, and claims that many average Americans are shocked and dismayed by the position we have forced the Indians into."
+usfp_native_removal.13.f: ""Such a dereliction of all faith and virtue, such a denial of justice, and such deafness to screams for mercy were never heard of in times of peace and in the dealing of a nation with its own allies and wards, since the earth was made. Sir, does this government think that the people of the United States are become savage and mad? From their mind are the sentiments of love and a good nature wiped clean out? The soul of man, the justice, the mercy that is the heart’s heart in all men, from Maine to Georgia, does abhor this business.""
+usfp_native_removal.13.a: "His words ring true."
+usfp_native_removal.13.b: "His words ring hollow."
+
+usfp_native_removal.14.t: "Assassin Strikes at [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting]!"
+usfp_native_removal.14.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] has been shot in the streets of [ROOT.GetCountry.GetCapital.GetCityHubName]! In the ensuing scuffle, the assassin was themselves shot dead. While the exact motives are unclear, the assassin has been identified as a [SCOPE.sCulture('assassin_culture_scope').GetName] man, causing many to immediately assume a connection to Indian Removal. The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] was rushed to the hospital in critical condition."
+usfp_native_removal.14.f: ""Make way! Make way! The President has been shot! The President has been shot, my God!""
+usfp_native_removal.14.a: "This is an outrage!"
+
+usfp_native_removal.15.t: "Assassin Strikes at [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting]!"
+usfp_native_removal.15.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] has been shot in the streets of [ROOT.GetCountry.GetCapital.GetCityHubName]! A White man was witnessed shouting at the President, calling him an 'Indian lover' before opening fire. In the ensuing scuffle, the assassin was themselves shot dead, while the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] was rushed to the hospital in critical condition."
+usfp_native_removal.15.f: ""Make way! Make way! The President has been shot! The President has been shot, my God!""
+usfp_native_removal.15.a: "This is an outrage!"
+
+##USA Flavor Events
+usfp_usa.1.t: "The Declaration of Sentiments"
+usfp_usa.1.d: "The first ever American conference for women's rights has convened in Seneca Falls, [SCOPE.sState('new_york_scope').GetName]. Drawing inspiration from the original Declaration of Independence, the attendees have released a Declaration of Sentiments that outlines womens' grievances against male oppression."
+usfp_usa.1.f: ""Such has been the patient sufferance of the women under this government, and such is now the necessity which constrains them to demand the equal station to which they are entitled. The history of mankind is a history of repeated injuries and usurpation on the part of man toward woman, having in direct object the establishment of an absolute tyranny over her.""
+usfp_usa.1.a: "This is the first step on the path to equality."
+usfp_usa.1.b: "These women don't know their place."
+
+usfp_usa.2.t:0 "Hurricane Strikes [SCOPE.sState('hurricane_state').GetName]"
+usfp_usa.2.d:0 "A powerful hurricane has hit the state of [SCOPE.sState('hurricane_state').GetName], leaving a trail of devastation in its wake. As the flood waters recede, many are left picking up the pieces of their lives."
+usfp_usa.2.f:0 ""Report from [SCOPE.sState('hurricane_state').GetCityHubName]: Trees uprooted. Railcars overturned. Streets blocked by flood debris. Most buildings damaged, many without roofs.""
+usfp_usa.2.a:0 "[SCOPE.sState('hurricane_state').GetNameNoFormatting] will have to pull itself together."
+usfp_usa.2.b:0 "We will send emergency aid to the stricken areas."
+
+usfp_usa.3.t:0 "Tornado Tears Through [SCOPE.sState('tornado_state').GetName]"
+usfp_usa.3.d:0 "An unusually powerful tornado has carved a swathe of destruction through the countryside of [SCOPE.sState('tornado_state').GetName]. Multiple small communities have been wiped off the map, and roads remain choked with debris across the effected region."
+usfp_usa.3.f:0 ""Me and mine were huddled in the cellar for over an hour. The wind was howling outside like a pack of wolves outta hell. When it finally quieted down, we poked our heads out to discover that our house was... gone. The whole dang thing had been lifted up and blown away!""
+usfp_usa.3.a:0 "[SCOPE.sState('tornado_state').GetNameNoFormatting] will rebuild, it always does."
+usfp_usa.3.b:0 "Some emergency funding will help return the area to normal."
+
+usfp_usa.4.t: "Opening of Ellis Island"
+usfp_usa.4.d: "Ellis Island in [SCOPE.sState('new_york_scope').GetName] harbor has been opened as a dedicated immigration inspection station, to help handle the flow of migrants coming into the [ROOT.GetCountry.GetName]. Within days of opening, the island has already processed over a thousand immigrants, with many more sure to follow in the coming years. For these migrants, Ellis Island will be their first experience of America."
+usfp_usa.4.f: "The hopeful migrants stood in lines, each carrying their lives with them in their bags and suitcases. The inspectors walked down the rows, checking each in turn for maladies. Those suspected of being sick were marked with chalk letters, and separated out. The rest trudged onward for further processing."
+usfp_usa.4.a: "New Americans will arrive under the golden lamp of liberty!"
+usfp_usa.4.b: "[SCOPE.sState('new_york_scope').GetNameNoFormatting] is crowded enough as it is!"
+
+usfp_usa.5.t: "Wildfire Rages Across [SCOPE.sState('wildfire_state').GetName]"
+usfp_usa.5.d: "A massive brush fire has swept through the landscape of [SCOPE.sState('wildfire_state').GetName], burning hundreds of thousands of hectares of land. Hundreds of people are dead or missing, and thousands more residents have been displaced - fleeing from homes swallowed up by the inferno."
+usfp_usa.5.f: ""The fire teased us like a living, malevolent thing, intent on causing pain and terror. I thought we would die. I believed there was no way for us to survive that sea of fire, hot wind, smoke, and ash. I saw people - strangers - fall and lie on the road. In the roar of the fire, I could not hear if they screamed. There was nothing to do except keep going or burn."" #Octavia E. Butler
+usfp_usa.5.a: "Fires always burn themselves out."
+usfp_usa.5.b: "We will help fund the recovery efforts."
+
+usfp_usa.6.t: "The Great [SCOPE.sState('illinois_scope').GetCityHubName] Fire"
+usfp_usa.6.d: "A massive fire has raged for two days throughout the central section of [SCOPE.sState('illinois_scope').GetCityHubName], [SCOPE.sState('illinois_scope').GetName]. Over fifteen thousand structures have burned, leaving almost a hundred thousand of the city's residents homeless. Donations and supplies have flooded in from all parts to the stricken city. Fueled by the same winds, large wildfires have also blazed across the shorelines of [SCOPE.sStateRegion('michigan_scope').GetName] and [SCOPE.sStateRegion('wisconsin_scope').GetName]"
+usfp_usa.6.f: ""Listening for a few moments, and thinking it must be near morning, I composed myself to sleep again, but was restless, and my mind became gradually filled with a dread for which I could not account. At length, to assure myself, I rose and went to the window, threw open the blinds, and gazed upon a sheet of flame towering one hundred feet above the top of the hotel, and upon a shower of sparks as copious as drops in a thunder-storm.""
+usfp_usa.6.a: "What a terrible catastrophe."
+usfp_usa.6.b: "Federal funding will bolster the donations."
+
+usfp_usa.7.t: "Harper\'s Weekly"
+usfp_usa.7.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has risen to prominence through his scathing political cartoons. Published nationwide in the ever-popular #italic Harper\'s Weekly#!, his illustrations have come to shape the national discourse, as well as relentlessly mock his political opponents."
+usfp_usa.7.f: ""You cannot help seeing Mr. Nast's pictures, and when you have seen them you cannot fail to understand them. When he caricatures a politician, the name of that politician ever afterwards recalls the countenance of which Mr. Nast has made him a present. An artist of this stamp — and such artists are very rare indeed — does more to affect public opinion than a score of writers.""
+usfp_usa.7.a: "Let's hope he mocks our opponents!"
+usfp_usa.7.b: "Cartoons are for the small-minded."

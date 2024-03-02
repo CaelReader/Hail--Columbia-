@@ -1,0 +1,569 @@
+namespace = usfp_usa
+
+#Seneca Falls Convention
+usfp_usa.1 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/invention_icons/feminism.dds"
+	event_image = {
+		video = "europenorthamerica_sufferage"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	placement = scope:new_york_scope
+
+	title = usfp_usa.1.t
+	desc = usfp_usa.1.d
+	flavor = usfp_usa.1.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+		s:STATE_NEW_YORK.region_state:USA = {
+			save_scope_as = new_york_scope
+		}
+		set_variable = seneca_falls
+	}
+
+	trigger = {
+		exists = c:USA
+		c:USA = root
+		NOT = {
+			has_variable = seneca_falls
+		}
+		game_date > 1848.6.1
+	}
+
+	#Good Idea
+	option = {
+		name = usfp_usa.1.a
+		default_option = yes
+		if = {
+			limit = {
+				has_technology_researched = human_rights
+			}
+			 add_technology_progress = {
+				technology = feminism
+				progress = 3500
+			}
+		} else = {
+			add_technology_progress = {
+				technology = human_rights
+				progress = 3500
+			}
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#No bad
+	option = {
+		name = usfp_usa.1.b
+		every_interest_group = {
+			limit = {
+				has_ideology = ideology:ideology_patriarchal
+			}
+			add_modifier = {
+				name = usfp_rejected_feminism_positive
+				years = 2
+			}
+		}
+	}
+}
+
+#Atlantic Coast Hurricane
+usfp_usa.2 = {
+	type = country_event
+	placement = scope:hurricane_state
+
+	title = usfp_usa.2.t
+	desc = usfp_usa.2.d
+	flavor = usfp_usa.2.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			usfp_atlantic_hurricane_trigger = yes
+			is_coastal = yes
+		}
+		#Hurricane Season between June and November
+		month >= 5
+		month <= 10
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				usfp_atlantic_hurricane_trigger = yes
+				is_coastal = yes
+			}
+			save_scope_as = hurricane_state
+		}
+	}
+
+	option = { #No extra help
+		name = usfp_usa.2.a
+		default_option = yes
+		scope:hurricane_state.state_region = {
+			add_devastation = 20
+		}
+		custom_tooltip = natural_disaster_variable_tt
+		hidden_effect = {
+			random_list = {
+				20 = {
+					random_scope_state = {
+						limit = {
+							is_incorporated = yes
+						}
+						set_variable = {
+							name = natural_disaster_variable
+							months = short_modifier_time
+						}
+					}
+				}
+				80 = {
+				}
+			}
+		}
+	}
+
+	option = { #Extra help
+		name = usfp_usa.2.b
+		add_modifier = {
+			name = usfp_modifier_hurricane_relief
+			multiplier = money_amount_multiplier_small
+			years = 1
+		}
+		scope:hurricane_state.state_region = {
+			add_devastation = 10
+		}
+	}
+}
+
+#Powerful Tornado
+usfp_usa.3 = {
+	type = country_event
+	placement = scope:tornado_state
+
+	title = usfp_usa.3.t
+	desc = usfp_usa.3.d
+	flavor = usfp_usa.3.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_tornado
+		}
+		#Tornado Season between March and June
+		month >= 2
+		month <= 5
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_state_trait = state_trait_tornado
+			}
+			save_scope_as = tornado_state
+		}
+	}
+
+	option = { #No extra help
+		name = usfp_usa.3.a
+		default_option = yes
+		scope:tornado_state.state_region = {
+			add_devastation = 10
+		}
+	}
+
+	option = { #Extra help
+		name = usfp_usa.3.b
+		add_modifier = {
+			name = usfp_modifier_tornado_relief
+			multiplier = money_amount_multiplier_very_small
+			years = 1
+		}
+		scope:tornado_state.state_region = {
+			add_devastation = 5
+		}
+	}
+}
+
+#Opening of Ellis Island
+usfp_usa.4 = {
+	type = country_event
+	placement = scope:new_york_scope
+
+	title = usfp_usa.4.t
+	desc = usfp_usa.4.d
+	flavor = usfp_usa.4.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_steam_ship"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/invention_icons/identification_documents.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_building = building_statue_of_liberty
+			NOT = {
+				has_modifier = usfp_ellis_island_modifier
+			}
+		}
+		game_date > 1892.1.1 
+		NOR = {
+			has_law = law_type:law_closed_borders
+			has_law = law_type:law_national_supremacy
+			has_law = law_type:law_ethnostate
+			has_variable = ellis_island_var
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_building = building_statue_of_liberty
+			}
+			save_scope_as = new_york_scope
+		}
+		set_variable = ellis_island_var
+	}
+
+	#Cool
+	option = {
+		name = usfp_usa.4.a
+		scope:new_york_scope = {
+			add_modifier = {
+				name = usfp_ellis_island_modifier
+			}
+		}
+	}
+
+	#Lets limit migration
+	option = {
+		name = usfp_usa.4.b
+		scope:new_york_scope = {
+			add_modifier = {
+				name = usfp_ellis_island_modifier
+				multiplier = 0.5
+			}
+		}
+	}
+
+}
+
+#Wildfire
+usfp_usa.5 = {
+	type = country_event
+	placement = scope:wildfire_state
+
+	title = usfp_usa.5.t
+	desc = usfp_usa.5.d
+	flavor = usfp_usa.5.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_fire"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			usfp_north_american_wildfire_zone = yes
+			NOT = {
+				has_modifier = usfp_wildfire_recovery_modifier
+			}
+		}
+		#fire season in the summer
+		month >= 5
+		month <= 10
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				usfp_north_american_wildfire_zone = yes
+				NOT = {
+					has_modifier = usfp_wildfire_recovery_modifier
+				}
+			}
+			save_scope_as = wildfire_state
+		}
+	}
+
+	option = { #No extra help
+		name = usfp_usa.5.a
+		default_option = yes
+		scope:wildfire_state = {
+			add_modifier = {
+				name = usfp_wildfire_recovery_modifier
+				years = 2
+				is_decaying = yes
+			}
+			state_region = {
+				add_devastation = 15
+			}
+		}
+	}
+
+	option = { #Extra help
+		name = usfp_usa.5.b
+		add_modifier = {
+			name = usfp_modifier_wildfire_relief
+			multiplier = money_amount_multiplier_small
+			years = 1
+		}
+		scope:wildfire_state = {
+			add_modifier = {
+				name = usfp_wildfire_recovery_modifier
+				years = 1
+				is_decaying = yes
+			}
+			state_region = {
+				add_devastation = 15
+			}
+		}
+	}
+}
+
+#Great Chicago Fire
+usfp_usa.6 = {
+	type = country_event
+	placement = scope:illinois_scope
+
+	title = usfp_usa.6.t
+	desc = usfp_usa.6.d
+	flavor = usfp_usa.6.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_fire"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = {
+		exists = c:USA
+		c:USA = root
+		any_scope_state = {
+			state_region = s:STATE_ILLINOIS
+		}
+		game_date > 1871.10.8
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_ILLINOIS
+			}
+			save_scope_as = illinois_scope
+		}
+		s:STATE_WISCONSIN = {
+			save_scope_as = wisconsin_scope
+		}
+		s:STATE_MICHIGAN = {
+			save_scope_as = michigan_scope
+		}
+	}
+
+	option = { #No extra help
+		name = usfp_usa.6.a
+		default_option = yes
+		scope:illinois_scope = {
+			state_region = {
+				add_devastation = 15
+			}
+			add_modifier = {
+				name = usfp_wildfire_recovery_modifier
+				years = 2
+				is_decaying = yes
+			}
+			add_modifier = {
+				name = usfp_great_urban_fire_modifier
+				years = 2
+				is_decaying = yes
+			}
+		}
+		s:STATE_MICHIGAN = {
+			add_devastation = 15
+			every_scope_state = {
+				add_modifier = {
+					name = usfp_wildfire_recovery_modifier
+					years = 2
+					is_decaying = yes
+				}
+			}
+		}
+		s:STATE_WISCONSIN = {
+			add_devastation = 15
+			every_scope_state = {
+				add_modifier = {
+					name = usfp_wildfire_recovery_modifier
+					years = 2
+					is_decaying = yes
+				}
+			}
+		}
+	}
+
+	option = { #Extra help
+		name = usfp_usa.6.b
+		add_modifier = {
+			name = usfp_modifier_wildfire_relief
+			multiplier = money_amount_multiplier_medium
+			years = 1
+		}
+		scope:illinois_scope = {
+			state_region = {
+				add_devastation = 15
+			}
+			add_modifier = {
+				name = usfp_wildfire_recovery_modifier
+				years = 1
+				is_decaying = yes
+			}
+			add_modifier = {
+				name = usfp_great_urban_fire_modifier
+				years = 1
+				is_decaying = yes
+			}
+		}
+		s:STATE_MICHIGAN = {
+			add_devastation = 15
+			every_scope_state = {
+				add_modifier = {
+					name = usfp_wildfire_recovery_modifier
+					years = 1
+					is_decaying = yes
+				}
+			}
+		}
+		s:STATE_WISCONSIN = {
+			add_devastation = 15
+			every_scope_state = {
+				add_modifier = {
+					name = usfp_wildfire_recovery_modifier
+					years = 1
+					is_decaying = yes
+				}
+			}
+		}
+	}
+}
+
+#Thomas Nast spawn event
+usfp_usa.7 = {
+	type = country_event
+	placement = root
+
+	title = usfp_usa.7.t
+	desc = usfp_usa.7.d
+	flavor = usfp_usa.7.f
+	dlc = dlc_usfp
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:nast_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		exists = c:USA
+		c:USA = root
+		game_date > 1862.1.1
+		NOT = {
+			has_global_variable = thomas_nast_spawned
+		}
+	}
+
+	immediate = {
+		set_global_variable = thomas_nast_spawned
+		create_character = {
+			template = usfp_thomas_nast_character_template
+			on_created = {
+				set_variable = nast_var
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_variable = nast_var
+			}
+			save_scope_as = nast_scope
+		}
+	}
+
+	option = {
+		name = usfp_usa.7.a
+		default_option = yes
+		ig:ig_intelligentsia = {
+			set_ig_trait = ig_trait:usfp_ig_trait_caricature
+			add_modifier = {
+				name = usfp_harpers_weekly
+				years = 30
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = usfp_usa.7.b
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = usfp_harpers_weekly
+				years = 30
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+#Nast weighs in on election
+
+#Nast supports ACW
+
+#Constitutional challenge to law
+

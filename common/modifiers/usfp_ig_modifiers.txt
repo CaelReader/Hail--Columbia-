@@ -1,0 +1,61 @@
+﻿usfp_slavers_reject_abolition = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
+	interest_group_approval_add = -40
+}
+
+usfp_manifest_destiny_refused_texas = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_map_negative.dds
+	interest_group_approval_add = -2
+}
+
+usfp_promoted_native_removal_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
+	interest_group_approval_add = -2
+}
+
+usfp_promoted_native_removal_positive = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_positive.dds
+	interest_group_approval_add = 2
+}
+
+usfp_resisted_native_removal_positive = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_positive.dds
+	interest_group_approval_add = 2
+}
+
+usfp_resisted_native_removal_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
+	interest_group_approval_add = -2
+}
+
+indian_removal_oppose = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_negative.dds
+	interest_group_approval_add = -2
+}
+
+usfp_removal_martyr = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_pop_attraction_mult = 0.1
+	interest_group_pol_str_mult = 0.1
+}
+
+usfp_rejected_feminism_positive = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_positive.dds
+	interest_group_approval_add = 2
+}
+
+usfp_harpers_weekly = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_newspaper_positive.dds
+	interest_group_pol_str_mult = 0.30
+}
+
+usfp_abolitionist_literature_ig = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_book2_positive.dds
+	interest_group_pop_attraction_mult = 0.1
+	interest_group_pol_str_mult = 0.1
+}
+
+usfp_abolitionist_literature_ig_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_book2_negative.dds
+	interest_group_approval_add = -2
+}

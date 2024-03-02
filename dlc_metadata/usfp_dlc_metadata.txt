@@ -1,0 +1,8 @@
+﻿dlc_usfp = {
+	name = "Hail, Columbia!"
+	steam_id = ""
+	type = minor
+	priority = 0
+}
+
+

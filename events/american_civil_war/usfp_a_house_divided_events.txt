@@ -1,0 +1,297 @@
+namespace = usfp_a_house_divided
+
+#Gag Rule put into place
+usfp_a_house_divided.1 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	title = usfp_a_house_divided.1.t
+	desc = usfp_a_house_divided.1.d
+	flavor = usfp_a_house_divided.1.f
+	dlc = dlc_usfp
+	placement = root
+
+	
+
+	duration = 1
+	
+	trigger = {
+		exists = c:USA
+		c:USA = ROOT
+		ig:ig_landowners = {
+			is_in_government = yes
+		}
+		game_date > 1836.5.1
+		has_journal_entry = je_acw_countdown
+		NOT = {
+			has_variable = usfp_had_gag_rule
+		}
+	}
+
+	cancellation_trigger = {
+		OR = {
+			ig:ig_landowners = {
+				is_in_government = no
+			}
+			NOT = {
+				has_journal_entry = je_usfp_a_house_divided_missouri_compromise
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = usfp_had_gag_rule
+		ig:ig_landowners = {
+			party = {
+				save_scope_as = democratic_party
+			}
+		}
+	}
+
+	option = {
+		name = usfp_a_house_divided.1.a
+		default_option = yes
+		add_journal_entry = {
+			type = je_usfp_a_house_divided_gag_rule
+		}
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+		if = {
+			limit = {
+				OR = {
+					is_enacting_law = law_type:law_slave_trade
+					is_enacting_law = law_type:law_slavery_banned
+					is_enacting_law = law_type:law_debt_slavery
+				}
+			}
+			cancel_enactment = yes
+		}
+	}
+	
+
+
+}
+
+#Gag Rule enforcement
+usfp_a_house_divided.2 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		post_notification = usfp_gag_rule_upheld
+		cancel_enactment = yes
+	}
+}
+
+#Slavers will not tolerate an Abolitionist in power
+usfp_a_house_divided.3 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_csa.dds"
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	title = usfp_a_house_divided.3.t
+	desc = usfp_a_house_divided.3.d
+	flavor = usfp_a_house_divided.3.f
+	dlc = dlc_usfp
+	placement = s:STATE_GEORGIA.region_state:USA
+
+	duration = 1
+
+	immediate = {
+	}
+	
+	trigger = {
+		exists = c:USA
+		c:USA = ROOT
+		has_journal_entry = je_acw_countdown
+		# NOT = {
+		# 	has_journal_entry = je_usfp_a_house_divided_missouri_compromise
+		# }
+	}
+
+	option = {
+		name = usfp_a_house_divided.3.a
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_slavers_reject_abolition
+				years = 5
+			}
+		}
+	}
+}
+
+#Solomon Northup spawn event
+usfp_a_house_divided.4 = {
+	type = country_event
+	placement = root
+
+	title = usfp_a_house_divided.4.t
+	desc = usfp_a_house_divided.4.d
+	flavor = usfp_a_house_divided.4.f
+	dlc = dlc_usfp
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:northup_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/pops_icons/slaves.dds"
+
+	duration = 3
+
+	trigger = {
+		game_date > 1853.2.1
+		NOT = {
+			has_global_variable = solomon_northup_spawned
+		}
+	}
+
+	immediate = {
+		set_global_variable = solomon_northup_spawned
+		create_character = {
+			template = usfp_solomon_northup_character_template
+			on_created = {
+				set_variable = northup_var
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_variable = northup_var
+			}
+			save_scope_as = northup_scope
+		}
+	}
+
+	option = {
+		name = usfp_a_house_divided.4.a
+		default_option = yes
+		ai_chance = {
+			base = 100
+		}
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = usfp_abolitionist_literature_ig
+				years = 4
+			}
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_abolitionist_literature_ig_negative
+				years = 4
+			}
+		}
+		add_modifier = {
+			name = usfp_abolitionist_literature_country
+			years = 4
+		}
+	}
+
+	option = {
+		name = usfp_a_house_divided.4.b
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = usfp_abolitionist_literature_ig
+				years = 4
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+}
+
+#Uncle Tom's Cabin
+usfp_a_house_divided.5 = {
+	type = country_event
+	placement = root
+
+	title = usfp_a_house_divided.5.t
+	desc = usfp_a_house_divided.5.d
+	flavor = usfp_a_house_divided.5.f
+	dlc = dlc_usfp
+
+
+	event_image = {
+		video = "southamerica_slaves_night"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/pops_icons/slaves.dds"
+
+	duration = 3
+
+	trigger = {
+		game_date > 1852.1.1
+		NOT = {
+			has_global_variable = uncle_toms_cabin
+		}
+	}
+
+	immediate = {
+		set_global_variable = uncle_toms_cabin
+		ideology:ideology_abolitionist = {
+			save_scope_as = abolitionist_scope
+		}
+	}
+
+	option = {
+		name = usfp_a_house_divided.5.a
+		default_option = yes
+		ai_chance = {
+			base = 100
+		}
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = usfp_abolitionist_literature_ig
+				years = 4
+				multiplier = 2
+			}
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_abolitionist_literature_ig_negative
+				years = 4
+			}
+		}
+		add_modifier = {
+			name = usfp_abolitionist_literature_country
+			years = 4
+			multiplier = 2
+		}
+	}
+
+	option = {
+		name = usfp_a_house_divided.5.b
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = usfp_abolitionist_literature_ig
+				years = 4
+			}
+		}
+		add_radicals = {
+			value = medium_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+}

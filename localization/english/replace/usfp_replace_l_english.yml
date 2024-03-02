@@ -1,0 +1,43 @@
+﻿l_english:
+COM:0 "Comancheria"
+
+je_acw_countdown:0 "A House Divided"
+je_acw_countdown_reason:0 "Slaveholders and abolitionists are engaged in increasingly rancorous debate across the nation. Sooner or later, the arguments will stop being made with words and start being made with bullets."
+
+ acw_events.3.t:0 "The [SCOPE.sCharacter('wilmot_proviso_ig_leader').GetLastName] Proviso"
+ acw_events.3.d:0 "[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetFullName], leader of the [SCOPE.gsInterestGroup('wilmot_proviso_ig').GetName], has proposed outright prohibiting slavery in all our new western territories. Some opponents demand simple moderation, but others are demanding legalization of slavery in all new territories."
+ acw_events.3.f:0 ""This intolerable institution cannot spread its influence any further! A free nation needs free soil if it is to thrive!""
+ acw_events.3.a:0 "Reject the proviso, this remains a state-by-state issue."
+ acw_events.3.b:0 "Accept the proviso, and abolish slavery in the West."
+ acw_events.3.c:0 "Reject the proviso, and expand slavery in the West."
+
+ je_indian_removal:1 "Indian Removal"
+ je_indian_removal_reason:2 "The Five Civilized Tribes have long lived in the American south, and have been the target of 'civilizing' missions since the days of independence. In recent decades, [SCOPE.sCulture('yankee_culture').GetName] and [SCOPE.sCulture('dixie_culture').GetName] settlers have increasingly encroached on the lands of the Five Tribes, sparking violent conflicts.\n\nThe Jackson administration chose to support the incoming settlers, and resolved to see all natives removed to the [SCOPE.sCountry('indian_territory_scope').GetName], regardless of the cost."
+
+ native_resettlement.2.t:1 "John Ross' Protest Petition"
+ native_resettlement.2.d:1 "[SCOPE.sCountry('cherokee_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('cherokee_scope').GetRuler.GetFullName] has presented a petition to Congress asking them to void the treaty which will compel the [SCOPE.sCulture('cherokee_culture').GetName] nation to relocate to the [SCOPE.sCountry('indian_territory_scope').GetName]. His petition has almost as many signatures as the entire eastern Cherokee population."
+ native_resettlement.2.f:0 ""By the stipulations of this treaty, we are stripped of every attribute of freedom. Our property may be plundered before our eyes; violence may be committed on our persons, even our lives may be taken away, and there is none to regard our complaints. We are denationalized; we are disfranchised. We are deprived of membership in the human family!""
+ native_resettlement.2.a:0 "A treaty is a treaty. We cannot rescind what we have signed."
+ native_resettlement.2.b:0 "Our conscience compels us to void the removal treaty."
+
+native_resettlement.3.t: "Cherokee Removal"
+ native_resettlement.3.d:1 "In accordance with the removal treaty, it is time for the [SCOPE.sCulture('cherokee_culture').GetName] of [SCOPE.sState('indian_removal_state').GetStateRegion.GetName] to relocate to the [SCOPE.sCountry('indian_territory_scope').GetName]. Some holdouts refuse to leave their homes, and many are poorly equipped for the journey."
+
+ native_resettlement.4.t:0 "The Trail of Tears"
+ native_resettlement.4.d:1 "Our efforts to remove the [SCOPE.sCulture('cherokee_culture').GetName] from eastern lands has led to the deaths of many during their overland march westward."
+ native_resettlement.4.f:0 ""In the dark the tall pines moan\nAs they guard the dismal trail.\nThe Cherokees say it is the groan,\nEvery shriek and echoed groan\nOf their forefathers that fell\nWith broken hopes and bitter fears\nOn that weary trail of tears."" # Ruth Margaret Muskrat
+ native_resettlement.4.a:2 "We did what we could."
+ native_resettlement.4.b:2 "Their blood is on our hands."
+
+ native_resettlement.5.t:0 "The Clearing of the East"
+ native_resettlement.5.d:1 "The removal of the Five Civilized Tribes to the [SCOPE.sCountry('indian_territory_scope').GetName] is complete. For good or ill, the matter is settled."
+ native_resettlement.5.f:0 "A pair of Europeans watched the Americans go. In the whole scene there was an air of ruin and destruction, something which betrayed a final and irrevocable adieu. One of the observers asked a passing man:\n\n"Why are you leaving your country?"\n\nThe American, sombre and taciturn, replied simply:\n\n"To be free."\n\nBefore the White men could inquire more, the American walked on, continuing his journey east. The Frenchman turned to his compatriot:\n\n"We watch the expulsion, the dissolution, of one of the most celebrated and ancient American peoples.""
+ native_resettlement.5.a:0 "Let us pray that this shall never happen again."
+
+
+ native_resettlement.6.t:0 "The Civilized Tribes"
+ native_resettlement.6.d:1 "With the passing of the [SCOPE.sLawType('pronativelaw').GetName] Law, the Indian Removal Act is annulled and the remainder of the Five Civilized Tribes are free to live on their ancestral lands."
+ native_resettlement.6.f:0 "Some bard shall lift a voice in praise of thee,\nIn moving numbers tell the world how men\nScoffed thee, hissed thee, charged with lunacy!\nAnd who could not give 'nough honor when\nAt length, in spite of jeer, of want and need,\nThy genius shaped a dream into a deed." # Alexander Posey
+ native_resettlement.6.a:0 "Great suffering has been averted."
+
+indian_removal_end: "The Five Civilized Tribes will be removed from their ancestral lands at great loss of life."

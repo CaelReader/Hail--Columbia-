@@ -1,0 +1,21 @@
+{
+	"id":
+	{
+		"steam": "",
+		"paradox": "dlc_usfp"
+	},
+	"displayName":
+	{
+		"en": "Hail, Columbia!"
+	},
+	"category":
+	{
+		"en": "DLC"
+	},
+	"description":
+	{
+		"en": "Hail, Columbia!: United States Flavor Pack"
+	},
+	"thumbnailPath": "thumbnail.png",
+	"thirdPartyContent": true
+}

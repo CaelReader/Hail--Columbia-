@@ -1,0 +1,17 @@
+﻿SMN = {
+	pattern = "pattern_horizontal_split_01.tga"
+	color1 = "white"
+	color2 = "red"
+	
+	colored_emblem = {
+		texture = "ce_stripes_04.dds"
+		color1 = "black"
+        instance = { position = { 0.50 0.50 } }
+	}
+	
+	colored_emblem = {
+		texture = "ce_stripes_04.dds"
+		color1 = "yellow"
+        instance = { position = { 0.50 1.00 } }
+	}
+}

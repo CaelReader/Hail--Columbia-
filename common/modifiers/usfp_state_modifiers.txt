@@ -1,0 +1,42 @@
+﻿usfp_burnt_over_district = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_theocracy_positive.dds
+	interest_group_ig_devout_pol_str_mult = 0.25
+}
+usfp_red_river_revival = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_theocracy_positive.dds
+	interest_group_ig_devout_pol_str_mult = 0.25
+}
+
+#from NFM
+usfp_seminole_war_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_negative.dds
+	state_colony_growth_speed_mult = -0.50
+	state_mortality_mult =  0.25
+	unit_supply_consumption_mult = 0.5
+}
+
+usfp_trail_of_tears_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
+	state_cherokee_standard_of_living_add = -3
+	state_caddoan_standard_of_living_add = -3
+	state_muskogean_standard_of_living_add = -3
+	state_afro_american_standard_of_living_add = -3
+}
+
+usfp_ellis_island_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_clipper_positive.dds
+	state_migration_pull_mult = 0.20
+	state_assimilation_mult = 0.20
+}
+
+usfp_wildfire_recovery_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	building_group_bg_agriculture_throughput_add = -0.20
+	building_group_bg_logging_throughput_add = -0.20
+}
+
+usfp_great_urban_fire_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	building_urban_center_throughput_add = -0.20
+	state_construction_mult = -0.20
+}

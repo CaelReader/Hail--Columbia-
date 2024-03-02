@@ -1,0 +1,179 @@
+﻿SMN = {
+	color = { 136 48 47 }
+	
+	country_type = unrecognized
+	
+	tier = principality
+	
+	capital = STATE_FLORIDA
+	cultures = { muskogean }
+}
+
+CSW = {
+	color = { 113 50 139 }
+	
+	country_type = unrecognized
+	
+	tier = principality
+	
+	capital = STATE_MISSISSIPPI
+	cultures = { caddoan }
+}
+
+CHE = {
+	color = { 184 84 64 }
+	
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { cherokee }
+	capital = STATE_GEORGIA
+}
+
+YOK = {
+	color = { 213 97 124 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	capital = STATE_CALIFORNIA
+	cultures = { hokan }
+}
+
+HOK = {
+	color = { 55 54 113 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	capital = STATE_CALIFORNIA
+	cultures = { hokan }
+}
+
+PIU = {
+	color = { 156 102 0 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	capital = STATE_NEVADA
+	cultures = { paiute }
+}
+
+SHO = {
+	color = { 143 178 196 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	capital = STATE_NEVADA
+	cultures = { caddoan }
+}
+
+YUR = {
+	color = { 196 50 80 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	capital = STATE_CALIFORNIA
+	cultures = { hokan }
+}
+
+SRN = {
+	color = { 133 94 56 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	capital = STATE_CALIFORNIA
+	cultures = { hokan }
+}
+
+GVT = {
+	color = { 75 193 45 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	cultures = { siouan }
+	capital = STATE_MONTANA
+}
+
+AIA = {
+	color = { 24 189 132 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	cultures = { caddoan }
+	capital = STATE_NORTH_DAKOTA
+
+}
+
+FLT = {
+	color = { 189 64 61 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	capital = STATE_MONTANA
+	cultures = { algonquian }
+}
+
+KTN = {
+	color = { 153 197 29 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	capital = STATE_BRITISH_COLUMBIA
+	cultures = { salish }
+}
+
+#Sahaptin
+SHP = {
+	color = { 133 182 231 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	capital = STATE_OREGON
+	cultures = { salish }
+}
+
+#Salish
+SAL = {
+	color = { 170 204 203 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	capital = STATE_WASHINGTON
+	cultures = { salish }
+}
+
+#Klamath
+KLA = {
+	color = { 175 203 228 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	capital = STATE_OREGON
+	cultures = { salish }
+}

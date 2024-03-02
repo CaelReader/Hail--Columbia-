@@ -1,0 +1,8 @@
+﻿usfp_gag_rule_upheld = {
+	type = country
+	group = "enactment_failed_group"
+	
+	texture = "gfx/interface/icons/notification_icons/laws.dds"
+
+	notification_type = toast
+}

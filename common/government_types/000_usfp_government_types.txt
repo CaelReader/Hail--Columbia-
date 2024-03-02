@@ -1,0 +1,90 @@
+﻿gov_usfp_federal_republic_presidential = {
+	transfer_of_power = presidential_elective
+	new_leader_on_reform_government = no
+
+	male_ruler = "RULER_TITLE_PRESIDENT"
+	female_ruler = "RULER_TITLE_PRESIDENT"
+	
+	possible = {
+		OR = {
+			country_has_primary_culture = cu:yankee
+			country_has_primary_culture = cu:dixie
+		}
+		NOR = {
+			c:TEX ?= this
+			c:ORG ?= this
+		}
+		country_has_voting_franchise = yes
+		has_law = law_type:law_presidential_republic
+	}
+
+	on_government_type_change = {
+		change_to_presidential_elective = yes
+	}
+}
+
+
+gov_usfp_principal_chiefdom = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_PRINCIPAL_CHIEF"
+	female_ruler = "RULER_TITLE_PRINCIPAL_CHIEF"
+	
+	possible = {
+		AND = { exists = c:CHE c:CHE = ROOT }
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+gov_usfp_indian_territory = {
+	transfer_of_power = presidential_elective
+	new_leader_on_reform_government = no
+
+	male_ruler = "RULER_TITLE_PRINCIPAL_CHIEF"
+	female_ruler = "RULER_TITLE_PRINCIPAL_CHIEF"
+	
+	possible = {
+		AND = { exists = c:SEQ c:SEQ = ROOT }
+		is_subject_of = c:USA
+	}
+
+	on_government_type_change = {
+		change_to_presidential_elective = yes
+	}
+}
+
+
+
+
+# gov_usfp_tribal_confederation = {
+# 	transfer_of_power = hereditary
+
+# 	male_ruler = "RULER_CHIEFTAIN"
+# 	female_ruler = "RULER_CHIEFTESS"
+	
+# 	possible = {
+# 		has_law = law_type:law_chiefdom
+# 		has_law = law_type:law_elder_council
+# 		OR = {
+# 			AND = { exists = c:CTF c:CTF = ROOT }
+# 			AND = { exists = c:LKT c:LKT = ROOT }
+# 			AND = { exists = c:COM c:COM = ROOT }
+# 			AND = { exists = c:IRC c:IRC = ROOT }
+# 		}
+# 	}
+
+# 	on_government_type_change = {
+# 		change_to_hereditary = yes
+# 	}
+# 	on_post_government_type_change = {
+# 		post_change_to_hereditary = yes
+# 	}
+# }
+
+

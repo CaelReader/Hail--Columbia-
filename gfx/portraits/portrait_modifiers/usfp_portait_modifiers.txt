@@ -1,0 +1,65 @@
+﻿usfp_portait_modifiers = {
+	solomon_northup_hair = {
+        dna_modifiers = {
+            accessory = {
+                mode = replace
+                gene = hairstyles
+                template = african_diaspora_hairstyles
+                accessory = male_hair_african_04
+            }
+			accessory = {
+                mode = add
+                gene = mustaches
+                template = no_mustache
+				range = { 0 1 } # For the randomness to work correctly
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+            }
+			accessory = {
+				mode = add
+				gene = civilian_coats
+				template = all_civilian_coats
+				range = { 0 0.1 }
+			 }
+ 
+			accessory = {
+				mode = add
+				gene = waistcoats
+				template = european_waistcoats
+				range = { 0.45 0.55 }
+			 }
+ 
+			accessory = {
+				mode = add
+				gene = shirt
+				template = no_shirts
+				range = { 0 1 }
+			 }
+			 accessory = {
+				 mode = add
+				 gene = legwear
+				 template = european_legwear_colors
+				 accessory = male_legwear_european_01_black
+			 }
+			 accessory = {
+                mode = replace
+                gene = outfits
+                template = european_working_class_outfits
+                range = { 0 0 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100000
+                scope:character ?= {
+                    has_template = usfp_solomon_northup_character_template
+                }
+            }
+        }
+    }
+}
