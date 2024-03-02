@@ -519,6 +519,10 @@ usfp_usa.7 = {
 			template = usfp_thomas_nast_character_template
 			on_created = {
 				set_variable = nast_var
+				set_variable = { name = temp_event_target_in_use years = 8 }
+				add_modifier = {
+					name = usfp_harpers_weekly_character
+				}
 			}
 		}
 		random_scope_character = {
@@ -562,7 +566,181 @@ usfp_usa.7 = {
 	}
 }
 #Nast weighs in on election
+usfp_usa.8 = {
+	type = country_event
+	placement = root
 
+	title = usfp_usa.8.t
+	desc = usfp_usa.8.d
+	flavor = usfp_usa.8.f
+	dlc = dlc_usfp
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:nast_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_character = {
+			has_variable = nast_var
+			has_role = agitator
+			NOT = {
+				has_variable = agitator_election_participation
+			}
+		}
+		OR = {
+			exists = py:liberal_party
+			exists = py:free_trade_party
+		}
+		NOT = { has_law = law_type:law_single_party_state }
+		in_election_campaign = yes
+	}
+
+	cancellation_trigger = {
+		in_election_campaign = no
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_variable = nast_var
+			}
+			save_scope_as = nast_scope
+			set_variable = { name = agitator_election_participation days = 180 }
+		}
+		if = {
+			limit = { 
+				exists = py:liberal_party
+			}
+			py:liberal_party = {
+				save_scope_as = republican_party_scope
+			}
+		} else = {
+			py:free_trade_party = {
+				save_scope_as = republican_party_scope
+			}
+		}
+		ordered_interest_group = {
+			limit = {
+				party = scope:republican_party_scope
+			}
+			order_by = ig_clout
+			save_scope_as = republican_party_leading_ig
+		}
+		scope:republican_party_leading_ig = {
+			leader = {
+				save_scope_as = nast_support_scope
+			}
+		}
+		random_interest_group = {
+			limit = {
+				NOT = {
+					party = scope:republican_party_scope
+				}
+				is_marginal = no
+			}
+			leader = {
+				save_scope_as = nast_target_scope
+			}
+		}
+	}
+
+	#Great
+	option = {
+		name = usfp_usa.8.a
+		default_option = yes
+		ai_chance = {
+			base = 100
+		}
+		scope:republican_party_scope = {
+			add_momentum = momentum_medium
+		}
+		scope:nast_support_scope = {
+			add_modifier = {
+				name = usfp_flattering_political_cartoon
+				months = 3
+			}
+		}
+		scope:nast_target_scope = {
+			add_modifier = {
+				name = usfp_mocking_political_cartoon
+				months = 6
+			}
+		}
+	}
+
+	#Dammit Nast
+	option = {
+		name = usfp_usa.8.b
+		ai_chance = {
+			base = 0
+		}
+		trigger = {
+			any_interest_group = {
+				is_in_government = no
+				party = scope:republican_party_scope
+			}
+		}
+		scope:republican_party_scope = {
+			add_momentum = momentum_small
+		}
+		scope:nast_support_scope = {
+			add_modifier = {
+				name = usfp_flattering_political_cartoon
+				months = 3
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			interest_group = scope:republican_party_leading_ig
+		}
+		every_interest_group = {
+			limit = {
+				is_in_government = yes
+			}
+			add_modifier = {
+				name = usfp_media_disfavor
+				years = 1
+			}
+		}
+	}
+
+	#Censor that shit!
+	option = {
+		name = usfp_usa.8.c
+		trigger = {
+			any_interest_group = {
+				is_in_government = no
+				party = scope:republican_party_scope
+			}
+			OR = {
+				has_law = law_type:law_censorship
+				has_law = law_type:law_outlawed_dissent
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+		add_radicals = {
+			value = medium_radicals
+			interest_group = scope:republican_party_leading_ig
+		}
+		every_interest_group = {
+			limit = {
+				is_in_government = yes
+			}
+			add_modifier = {
+				name = usfp_media_disfavor
+				years = 2
+			}
+		}
+	}
+}
 #Nast supports ACW
 
 #Constitutional challenge to law

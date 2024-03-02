@@ -15,6 +15,7 @@ usfp_manifest_destiny_anti_expansion_trigger = {
 		has_ideology = ideology:ideology_anarchist
 		has_ideology = ideology:ideology_humanitarian
 		has_variable = is_daniel_webster
+		has_variable = is_jennings_bryan
 	}
 
 }

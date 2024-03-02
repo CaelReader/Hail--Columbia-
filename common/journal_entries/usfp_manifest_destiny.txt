@@ -179,10 +179,10 @@ usfp_manifest_destiny_main = {
 			100 = 0
 			25 = usfp_manifest_destiny.2 #Texas Calls for Aid
 			#Call for Cuban Annexation
+			25 = usfp_manifest_destiny.7 #PB gains Empire of Liberty
 		}
 		events = {
 			usfp_manifest_destiny.6 #Treaty of GH
-			#PB gains Empire of Liberty
 		}
 	}
 

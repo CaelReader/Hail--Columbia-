@@ -62,6 +62,12 @@ ideology_reactionary_segregationist  = { #IPB Compatibility
 		law_cultural_exclusion = neutral
 		law_multicultural = disapprove	
 	}
+
+	lawgroup_migration = {
+		law_migration_controls = approve		
+		law_closed_borders = neutral
+		law_no_migration_controls = neutral
+	}
 }
 
 ideology_republican_moralist = { # USTD

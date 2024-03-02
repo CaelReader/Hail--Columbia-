@@ -1,0 +1,14 @@
+﻿usfp_flattering_political_cartoon = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds	
+	character_popularity_add = 20
+}
+
+usfp_mocking_political_cartoon = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds	
+	character_popularity_add = -20
+}
+
+usfp_harpers_weekly_character = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_newspaper_positive.dds
+	character_popularity_add = 75
+}

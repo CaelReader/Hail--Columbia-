@@ -162,3 +162,15 @@ usfp_abolitionist_literature_country = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_book2_positive.dds
 	state_pop_support_law_slavery_banned_add = 0.05
 }
+
+usfp_congressional_uproar = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_negative.dds
+	country_law_enactment_time_mult = 3
+	interest_group_in_government_attraction_mult = -0.10
+}
+
+usfp_imminent_secession = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_revolution_clock_time_add = 0.5
+	country_revolution_progress_mult = 1
+}

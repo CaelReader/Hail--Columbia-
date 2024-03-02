@@ -27,6 +27,12 @@ usfp_a_house_divided.5.f: ""I don't want anything of your country, except to be 
 usfp_a_house_divided.5.a: "Everyone should know of the injustices of slavery."
 usfp_a_house_divided.5.b: "This book is an outrageous fiction."
 
+usfp_a_house_divided.6.t: "The Impending Crisis of the South"
+usfp_a_house_divided.6.d: "A radical economic treatise has been published in [SCOPE.sState('maryland_scope').GetName], laying out a case that slavery has stunted the growth of the Southern economy and will lead to its long-term ruin. The book has been so controversial that several southern states have declared its possession a capital offense, and the House of Representatives is embroiled in constant argument on the subject."
+usfp_a_house_divided.6.f: ""Freesoilers and abolitionists are the only true friends of the South; slaveholders and slave-breeders are downright enemies of their own section. Anti-slavery men are working for the Union and for the good of the whole world; proslavery men are working for the disunion of the States, and for the good of nothing except themselves.""
+usfp_a_house_divided.6.a: "Slavery is bad for the South!"
+usfp_a_house_divided.6.b: "This whole notion is completely ridiculous."
+
 #### Manifest Destiny
 usfp_manifest_destiny.1.t: "From Sea to Shining Sea?"
 usfp_manifest_destiny.1.d: "Since the days of the Thirteen Colonies, the settlers of the [ROOT.GetCountry.GetName] have desired the lands to the west, with complete disregard for their existing inhabitants. Now a justification for expansion is beginning to emerge in our national consciousness — that of Manifest Destiny. Proponents of the idea claim that it is not only our right but our sacred duty to take control of and populate the entirety of the continent."
@@ -68,7 +74,17 @@ usfp_manifest_destiny.6.c: "Not only Alta California and New Mexico, but also th
 usfp_manifest_destiny.6.e: "They will cede their northern lands and become an American dominion."
 usfp_manifest_destiny.6.g: "After all, why not? Why shouldn't we take all of Mexico?"
 
+usfp_manifest_destiny.7.t: "[SCOPE.gsInterestGroup('pb_ig').GetName] Embrace Continentalism"
+usfp_manifest_destiny.7.d: "The [SCOPE.gsInterestGroup('pb_ig').GetName] have so far largely favored developing the urban centers of the [ROOT.GetCountry.GetName], in lieu of territorial expansion. With the growing influence of Manifest Destiny, many have come around to support a moderate amount of expansion, largely focused on securing ports on the Pacific."
+usfp_manifest_destiny.7.f: ""America's intermediate geographical position between Asia and Europe invests her with the powers and duties of arbiter between the two great continents. With the Atlantic and Pacific joined in union, the United States can act to fuse and harmonize the continents of the world.""
+usfp_manifest_destiny.7.a: "Expansion will be a boon to the economy."
+usfp_manifest_destiny.7.b: "We cannot let these imperialist dreams take root."
 
+usfp_manifest_destiny.8.t: "Gunboat Diplomacy"
+usfp_manifest_destiny.8.d: "The [SCOPE.gsInterestGroup('armed_forces_scope').GetName] have taken a leading role in advancing the status of the [ROOT.GetCountry.GetName] on the world stage. A focus on the conspicuous might of our shining navy will serve to enhance our diplomatic efforts."
+usfp_manifest_destiny.8.f: ""The steamships loomed on the horizon with their glittering white hulls. The American diplomats came ashore under minimal guard, bearing gifts and offers of negotiation. The implications of refusal were not lost on us.""
+usfp_manifest_destiny.8.a: "With the navy at our back, we shall go far!"
+usfp_manifest_destiny.8.b: "The military should keep its focus at home."
 
 ### Native Removal
 usfp_native_removal.1.t: "The Seminole Removal"
@@ -191,3 +207,10 @@ usfp_usa.7.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has risen to promine
 usfp_usa.7.f: ""You cannot help seeing Mr. Nast's pictures, and when you have seen them you cannot fail to understand them. When he caricatures a politician, the name of that politician ever afterwards recalls the countenance of which Mr. Nast has made him a present. An artist of this stamp — and such artists are very rare indeed — does more to affect public opinion than a score of writers.""
 usfp_usa.7.a: "Let's hope he mocks our opponents!"
 usfp_usa.7.b: "Cartoons are for the small-minded."
+
+usfp_usa.8.t: "The [SCOPE.sCharacter('nast_scope').GetLastName] Effect"
+usfp_usa.8.d: "The latest issue of Harper\'s Weekly includes an intricate piece by [SCOPE.sCharacter('nast_scope').GetFullName] in support of [SCOPE.sCharacter('nast_support_scope').GetFullName]\'s candidacy. The cartoon also includes a mocking depiction of [SCOPE.sCharacter('nast_target_scope').GetFullName] and [SCOPE.sCharacter('nast_support_scope').GetHerHis] policies."
+usfp_usa.8.f: ""Let's stop them damn pictures! I don't care so much what the papers write about — my constituents can't read — but damn it, they can see pictures!""
+usfp_usa.8.a: "Good one, Nast!"
+usfp_usa.8.b: "We need to discredit Harper\'s Weekly."
+usfp_usa.8.c: "Stop those presses."

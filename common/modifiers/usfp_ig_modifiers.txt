@@ -59,3 +59,15 @@ usfp_abolitionist_literature_ig_negative = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_book2_negative.dds
 	interest_group_approval_add = -2
 }
+
+usfp_crisis_of_the_south_ig = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_book2_negative.dds
+	interest_group_pop_attraction_mult = -0.10
+	interest_group_pol_str_mult = -0.10
+}
+
+usfp_media_disfavor = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_newspaper_negative.dds
+	interest_group_pop_attraction_mult = -0.10
+	interest_group_pol_str_mult = -0.10
+}

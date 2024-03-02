@@ -117,6 +117,7 @@ je_usfp_a_house_divided_gag_rule = {
 		ig:ig_landowners = {
 			is_in_government = no
 		}
+		government_legitimacy >= 20
 	}
 }
 

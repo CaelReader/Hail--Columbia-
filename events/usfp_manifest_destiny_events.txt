@@ -489,3 +489,132 @@ usfp_manifest_destiny.6 = {
 	}
 
 }
+
+#PB embrace Empire of Liberty
+usfp_manifest_destiny.7 = {
+	type = country_event
+	placement = ROOT
+
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_manifest_destiny.7.t
+	desc = usfp_manifest_destiny.7.d
+	flavor = usfp_manifest_destiny.7.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		ig:ig_petty_bourgeoisie = {
+			NOT = {
+				has_ideology = ideology:ideology_empire_of_liberty
+			}
+		}
+		root.var:manifest_destiny_var >= 4
+	}
+
+	immediate = {
+		ig:ig_petty_bourgeoisie = {
+			save_scope_as = pb_ig
+		}
+	}
+
+	option = {
+		name = usfp_manifest_destiny.7.a
+		default_option = yes
+		ai_chance = {
+			base = 100
+		}
+		ig:ig_petty_bourgeoisie = {
+			add_ideology = ideology_empire_of_liberty
+		}
+	}
+
+	option = {
+		name = usfp_manifest_destiny.7.b
+		trigger = {
+			ig:ig_landowners = {
+				is_in_government = no
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+		ig:ig_petty_bourgeoisie = {
+			add_ideology = ideology_empire_of_liberty
+		}
+		usfp_manifest_less_destiny_effect = yes
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_petty_bourgeoisie
+		}
+	}
+}
+
+#Gunboat Diplomacy
+usfp_manifest_destiny.8 = {
+	type = country_event
+	placement = ROOT
+
+	event_image = {
+		video = "votp_gunboat_diplomacy"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_manifest_destiny.8.t
+	desc = usfp_manifest_destiny.8.d
+	flavor = usfp_manifest_destiny.8.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		NOT = {
+			has_variable = had_gunboat_diplomacy
+		}
+		root.var:manifest_destiny_var >= 4
+		OR = {
+			any_diplomatic_play = {
+				initiator = root
+				OR = {
+					has_play_goal = open_market
+					has_play_goal = make_protectorate
+					has_play_goal = ban_slavery
+				}
+			}
+			ruler = {
+				has_variable = is_theodore_roosevelt
+			}
+		}
+		naval_power_projection >= 80
+	}
+
+	immediate = {
+		set_variable = had_gunboat_diplomacy
+		ig:ig_armed_forces = {
+			save_scope_as = armed_forces_scope
+		}
+	}
+
+	option = {
+		name = usfp_manifest_destiny.8.a
+		ig:ig_armed_forces = {
+			set_ig_trait = ig_trait:usfp_ig_trait_gunboat_diplomacy
+		}
+	}
+
+	option = {
+		name = usfp_manifest_destiny.8.b
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_armed_forces
+		}
+	}
+}

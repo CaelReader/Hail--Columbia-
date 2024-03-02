@@ -110,9 +110,9 @@ je_acw_countdown = {
 			# American Civil War buildup
 			200 = 0
 			10 = acw_events.1 # The Abolitionist's Martyrdom
-			10 = acw_events.3 # The Wilmot Proviso
-			100 = usfp_a_house_divided.5 #Uncle Tom's Cabin
 			100 = usfp_a_house_divided.4 #Twelve Years a Slave
+			100 = usfp_a_house_divided.5 # Uncle Tom's Cabin
+			50 = usfp_a_house_divided.6 # The Impending Crisis of the South
 		}
 		events = {
 			usfp_a_house_divided.1 #Gag Rule implemented
@@ -122,6 +122,7 @@ je_acw_countdown = {
 		random_events = {
 			40 = 0
 			# 20 = acw_events.2 # The Fugitive Slave
+			10 = acw_events.3 # The Wilmot Proviso
 			# 20 = acw_events.5 # Bleeding Kansas
 			20 = acw_events.6 # The Caning of Charles Sumner
 		}

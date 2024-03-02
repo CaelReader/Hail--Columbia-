@@ -128,6 +128,13 @@ usfp_a_house_divided.3 = {
 				years = 5
 			}
 		}
+
+		if = {
+			limit = { 
+				has_modifier = usfp_missouri_compromise_decaying
+			}
+			remove_modifier = usfp_missouri_compromise_decaying
+		}
 	}
 }
 
@@ -164,6 +171,7 @@ usfp_a_house_divided.4 = {
 			template = usfp_solomon_northup_character_template
 			on_created = {
 				set_variable = northup_var
+				set_variable = { name = temp_event_target_in_use years = 4 }
 			}
 		}
 		random_scope_character = {
@@ -291,6 +299,62 @@ usfp_a_house_divided.5 = {
 		}
 		ai_chance = {
 			base = 0
+		}
+	}
+
+}
+
+#The Impending Crisis of the South
+usfp_a_house_divided.6 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	title = usfp_a_house_divided.6.t
+	desc = usfp_a_house_divided.6.d
+	flavor = usfp_a_house_divided.6.f
+	dlc = dlc_usfp
+	placement = scope:maryland_scope
+	duration = 3
+
+	trigger = {
+		game_date > 1857.1.1
+		NOT = {
+			has_global_variable = crisis_of_the_south_published
+		} 
+	}
+
+	immediate = {
+		s:STATE_MARYLAND.region_state:USA = {
+			save_scope_as = maryland_scope
+		}
+		set_global_variable = crisis_of_the_south_published
+	}
+
+	option = {
+		name = usfp_a_house_divided.6.a
+		default_option = yes
+		add_modifier = {
+			name = usfp_congressional_uproar
+			months = 2
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_crisis_of_the_south_ig
+				years = 1
+			}
+		}
+	}
+
+	option = {
+		name = usfp_a_house_divided.6.b
+		add_modifier = {
+			name = usfp_congressional_uproar
+			months = 4
 		}
 	}
 

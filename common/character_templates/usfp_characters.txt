@@ -41,7 +41,7 @@
     }
     on_created = { 
         set_variable = memento_mori_immunity 
-        set_veriable = is_theodore_roosevelt
+        set_variable = is_theodore_roosevelt
     }
 }
 
@@ -360,6 +360,9 @@ usfp_william_jennings_bryan_character_template = {
     birth_date = 1860.3.19
     traits = { experienced_political_operator pious firebrand charismatic }
     # Spawned by Event
+    on_created = {
+        set_variable = is_jennings_bryan
+    }
 }
 
 #USFP: Thomas Nast, Cartoonist
