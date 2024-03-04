@@ -82,8 +82,8 @@ usfp_acw_election_agitators = {
 
 			random_political_movement = {
 				limit = { desired_law = law_type:law_slave_trade }
-				add_modifier = modifier_uncommitted_government
-				add_modifier = modifier_movement_state_paramilitarism
+				# add_modifier = modifier_uncommitted_government
+				# add_modifier = modifier_movement_state_paramilitarism
 			}
 		}
 	}
@@ -145,7 +145,7 @@ usfp_elected_abolitionist = {
 	}
 }
 
-#Constitutional Challenge events
+#Constitutional Challenge event
 on_law_checkpoint_success = {
 	events = {
 		usfp_usa.9
