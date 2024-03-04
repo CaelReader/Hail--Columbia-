@@ -33,6 +33,11 @@ usfp_a_house_divided.6.f: ""Freesoilers and abolitionists are the only true frie
 usfp_a_house_divided.6.a: "Slavery is bad for the South!"
 usfp_a_house_divided.6.b: "This whole notion is completely ridiculous."
 
+usfp_acw.1.t: "A Traitor's Peace"
+usfp_acw.1.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has published a scathing criticism of [SCOPE.sCountry('csa_scope').GetAdjective] peace demands, depicting them as dishonoring the Union and self-destructive to the North. The [SCOPE.sParty('republican_party_scope').GetName] has ran with it to bolster public support for continuing the war, denouncing what they call a Traitor\'s Peace."
+usfp_acw.1.f: ""People of the United States! Will you give your assent to such a base surrender of our cause? If not, then rally only with those who keep step to the music of the Union, who stand by our brave soldiers in the field! Rally for liberty and union, now and forever, one and separable!""
+usfp_acw.1.a: "The Union forever!"
+
 #### Manifest Destiny
 usfp_manifest_destiny.1.t: "From Sea to Shining Sea?"
 usfp_manifest_destiny.1.d: "Since the days of the Thirteen Colonies, the settlers of the [ROOT.GetCountry.GetName] have desired the lands to the west, with complete disregard for their existing inhabitants. Now a justification for expansion is beginning to emerge in our national consciousness — that of Manifest Destiny. Proponents of the idea claim that it is not only our right but our sacred duty to take control of and populate the entirety of the continent."
@@ -214,3 +219,18 @@ usfp_usa.8.f: ""Let's stop them damn pictures! I don't care so much what the pap
 usfp_usa.8.a: "Good one, Nast!"
 usfp_usa.8.b: "We need to discredit Harper\'s Weekly."
 usfp_usa.8.c: "Stop those presses."
+
+usfp_usa.9.t: "Constitutional Challenge"
+usfp_usa.9.d: "Opponents of [SCOPE.sLaw('current_law_scope').GetName] have launched a challenge against it in the courts, attempting to have the law struck down on grounds of violating the [ROOT.GetCountry.GetAdjective] Constitution. Under a strict interpretation of the Constitution, they are correct."
+usfp_usa.9.f: ""The powers of the legislature are defined and limited; and that those limits may not be mistaken or forgotten. Certainly all those who have framed written constitutions contemplate them as forming the fundamental and paramount law of the nation, and consequently the theory of every such government must be, that an act of the legislature, repugnant to the constitution, is void.""
+usfp_usa.9.a: "The law cannot go forward."
+usfp_usa.9.b: "Under a certain interpretation, the law is perfectly constitutional!"
+usfp_usa.9.c: "Loyal judges will read the constitution as we see fit."
+usfp_usa.9.d: "Damn the Constitution, this reform is for the people!"
+
+usfp_usa.10.t: "Scientific Management"
+usfp_usa.10.d: "A new theory of industrial management has risen to prominence among the [SCOPE.gsInterestGroup('industrialists_scope').GetName] and [SCOPE.gsInterestGroup('intelligentsia_scope').GetName]. This new Scientific Management seeks to determine an objectively optimal method for any given task, which is then implemented via close cooperation between managers and workers."
+usfp_usa.10.f: ""The idea of training a workman under a competent teacher into new working habits until he continually and habitually works in accordance with scientific laws, is directly antagonistic to the old idea that each workman can best regulate his own way of doing the work. The philosophy of the old management puts the entire responsibility upon the workmen, while the philosophy of the new places a great part of it upon the management.""
+usfp_usa.10.a: "The [SCOPE.gsInterestGroup('industrialists_scope').GetName] will ensure maximum efficiency!"
+usfp_usa.10.b: "Our esteemed [SCOPE.gsInterestGroup('intelligentsia_scope').GetName] will lead the cutting edge!"
+usfp_usa.10.c: "The bosses already micromanage too much."

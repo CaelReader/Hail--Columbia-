@@ -71,3 +71,33 @@ usfp_media_disfavor = {
 	interest_group_pop_attraction_mult = -0.10
 	interest_group_pol_str_mult = -0.10
 }
+
+usfp_ig_constitutional_challenge = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	interest_group_approval_add = -4
+}
+
+usfp_ig_constitutional_protector = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	interest_group_approval_add = -10
+}
+
+usfp_ig_breaking_constitution = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	interest_group_pop_attraction_mult = -0.40
+}
+
+usfp_ig_rejected_scientific_management_positive = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	interest_group_approval_add = 3
+}
+
+usfp_ig_embraced_scientific_management_positive = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	interest_group_approval_add = 2
+}
+
+usfp_ig_embraced_scientific_management_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	interest_group_approval_add = -3
+}

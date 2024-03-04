@@ -596,6 +596,9 @@ usfp_native_removal.8 = {
 	flavor = usfp_native_removal.8.f
 	dlc = dlc_usfp
 	duration = 3
+	cooldown = {
+		years = 2
+	}
 	
 	trigger = {
 		#triggered by JE
@@ -613,9 +616,6 @@ usfp_native_removal.8 = {
 				state_region = s:STATE_TENNESSEE
 				state_region = s:STATE_MISSISSIPPI
 			}
-		}
-		NOT = {
-			has_variable = had_indian_massacre
 		}
 	}
 
@@ -648,10 +648,6 @@ usfp_native_removal.8 = {
 					save_scope_as = massacrer_culture
 				}
 			}
-		}
-		set_variable = {
-			name = had_indian_massacre
-			years = 1
 		}
 	}
 
@@ -807,6 +803,9 @@ usfp_native_removal.9 = {
 	flavor = usfp_native_removal.9.f
 	dlc = dlc_usfp
 	duration = 3
+	cooldown = {
+		years = 2
+	}
 	
 	trigger = {
 		#triggered by JE
@@ -820,9 +819,6 @@ usfp_native_removal.9 = {
 		}
 		NOT = {
 			has_variable = indian_removal_slow
-		}
-		NOT = {
-			has_variable = indian_removal_slow_complaint
 		}
 	}
 
@@ -852,10 +848,6 @@ usfp_native_removal.9 = {
 					save_scope_as = settler_culture_scope
 				}
 			}
-		}
-		set_variable = {
-			name = indian_removal_slow_complaint
-			years = 2
 		}
 	}
 
@@ -1037,12 +1029,12 @@ usfp_native_removal.12 = {
 	flavor = usfp_native_removal.12.f
 	dlc = dlc_usfp
 	duration = 3
+	cooldown = {
+		years = 3
+	}
 
 	trigger = {
 		#triggered by JE
-		NOT = {
-			has_variable = recent_indian_stragglers
-		}
 		any_scope_state = {
 			OR = {
 				state_region = s:STATE_ALABAMA
@@ -1057,10 +1049,6 @@ usfp_native_removal.12 = {
 	}
 
 	immediate = {
-		set_variable = {
-			name = recent_indian_stragglers
-			years = 3
-		}
 		random_scope_state = {
 			limit = {
 				OR = {

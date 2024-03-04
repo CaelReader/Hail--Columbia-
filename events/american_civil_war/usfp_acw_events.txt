@@ -1,0 +1,103 @@
+﻿namespace = usfp_acw
+
+#Nast supports ACW
+usfp_acw.1 = {
+	type = country_event
+	placement = root
+
+	title = usfp_acw.1.t
+	desc = usfp_acw.1.d
+	flavor = usfp_acw.1.f
+	dlc = dlc_usfp
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:nast_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	duration = 3
+
+	trigger = {
+		#trigger by ACW JE
+		any_scope_character = {
+			has_variable = nast_var
+			has_role = agitator
+		}
+		NOT = {
+			has_variable = nast_acw
+		}
+		has_global_variable = american_civil_war
+		is_at_war = yes
+		exists = c:CSA
+		any_diplomatic_play = {
+			any_scope_play_involved = {
+				c:USA = this
+				c:CSA = this
+			}
+		}
+		in_election_campaign = yes
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_variable = nast_var
+			}
+			save_scope_as = nast_scope
+		}
+		set_variable = nast_acw
+		random_diplomatic_play = {
+			limit = {
+				any_scope_play_involved = {
+					c:USA = this
+					c:CSA = this
+				}
+			}
+			save_scope_as = acw_scope
+		}
+		c:CSA = {
+			save_scope_as = csa_scope
+		}
+		if = {
+			limit = { 
+				exists = py:liberal_party
+			}
+			py:liberal_party = {
+				save_scope_as = republican_party_scope
+			}
+		} else = {
+			py:free_trade_party = {
+				save_scope_as = republican_party_scope
+			}
+		}
+		ordered_interest_group = {
+			limit = {
+				party = scope:republican_party_scope
+			}
+			order_by = ig_clout
+			save_scope_as = republican_party_leading_ig
+		}
+		scope:republican_party_leading_ig = {
+			leader = {
+				save_scope_as = nast_support_scope
+			}
+		}
+	}
+
+	option = {
+		name = usfp_acw.1.a
+		default_option = yes
+		scope:republican_party_scope = {
+			add_momentum = momentum_medium
+		}
+		scope:acw_scope = {
+			add_war_war_support = {
+				target = ROOT
+				value = 25
+			}
+		}
+	}
+}

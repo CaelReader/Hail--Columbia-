@@ -49,6 +49,37 @@ usfp_north_american_wildfire_zone = {
 	}
 }
 
+usfp_enacting_unconstitutional_law = {
+	OR = {
+		is_enacting_law = law_type:law_censorship
+		is_enacting_law = law_type:law_freedom_of_conscience
+		is_enacting_law = law_type:law_parliamentary_republic
+		is_enacting_law = law_type:law_peasant_levies
+		is_enacting_law = law_type:law_militarized_police
+		is_enacting_law = law_type:law_appointed_bureaucrats
+		is_enacting_law = law_type:law_industry_banned
+		is_enacting_law = law_type:law_command_economy
+		is_enacting_law = law_type:law_cooperative_ownership
+		is_enacting_law = law_type:law_religious_schools
+		is_enacting_law = law_type:law_single_party_state
+	}
+}
+
+usfp_enacting_super_unconstitutional_law = {
+	OR = {
+		is_enacting_law = law_type:law_outlawed_dissent
+		is_enacting_law = law_type:law_state_religion
+		is_enacting_law = law_type:law_state_atheism
+		is_enacting_law = law_type:law_monarchy
+		is_enacting_law = law_type:law_theocracy
+		is_enacting_law = law_type:law_council_republic
+		is_enacting_law = law_type:law_hereditary_bureaucrats
+		is_enacting_law = law_type:law_autocracy
+		is_enacting_law = law_type:law_oligarchy
+		is_enacting_law = law_type:law_anarchy
+		is_enacting_law = law_type:law_technocracy
+	}
+}
 
 
 # from VTM

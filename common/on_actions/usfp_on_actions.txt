@@ -12,6 +12,8 @@ usfp_monthly_pulse = {
 	}
 	random_events = {
 		150 = 0
+		100 = usfp_usa.7 #Thomas Nast spawn event
+		100 = usfp_usa.8 #Thomas Nast weighs in on Election
 
 		##Disasters
 		1 = usfp_usa.2 #Atlantic Hurricane
@@ -139,5 +141,12 @@ usfp_elected_abolitionist = {
 				}
 			}
 		}
+	}
+}
+
+#Constitutional Challenge events
+on_law_checkpoint_success = {
+	events = {
+		usfp_usa.9
 	}
 }

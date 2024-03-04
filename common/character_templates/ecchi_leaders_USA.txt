@@ -1266,7 +1266,7 @@ ecchi_usa_seward_character_template = {
                 is_interest_group_type = ig_intelligentsia
             }
         }
-        earliest_usage_date = 1939.1.1
+        earliest_usage_date = 1839.1.1
         latest_usage_date = 1872.10.10
         chance = 90
     }

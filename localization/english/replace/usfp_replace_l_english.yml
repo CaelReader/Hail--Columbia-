@@ -2,7 +2,7 @@
 COM:0 "Comancheria"
 
 je_acw_countdown:0 "A House Divided"
-je_acw_countdown_reason:0 "Slaveholders and abolitionists are engaged in increasingly rancorous debate across the nation. Sooner or later, the arguments will stop being made with words and start being made with bullets."
+je_acw_countdown_reason:0 "The issue of slavery has divided the North and South of the [ROOT.GetCountry.GetName] since before the drafting of the Declaration of Independence. Then as now, a series of compromises in the federal government have forestalled open conflict. "
 
  acw_events.3.t:0 "The [SCOPE.sCharacter('wilmot_proviso_ig_leader').GetLastName] Proviso"
  acw_events.3.d:0 "[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetFullName], leader of the [SCOPE.gsInterestGroup('wilmot_proviso_ig').GetName], has proposed outright prohibiting slavery in all our new western territories. Some opponents demand simple moderation, but others are demanding legalization of slavery in all new territories."

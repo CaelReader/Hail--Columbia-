@@ -586,6 +586,8 @@ usfp_usa.8 = {
 	duration = 3
 
 	trigger = {
+		exists = c:USA
+		c:USA = root
 		any_scope_character = {
 			has_variable = nast_var
 			has_role = agitator
@@ -713,6 +715,7 @@ usfp_usa.8 = {
 	#Censor that shit!
 	option = {
 		name = usfp_usa.8.c
+		highlighted_option = yes
 		trigger = {
 			any_interest_group = {
 				is_in_government = no
@@ -741,7 +744,262 @@ usfp_usa.8 = {
 		}
 	}
 }
-#Nast supports ACW
 
 #Constitutional challenge to law
+usfp_usa.9 = {
+	type = country_event
+	placement = root
 
+	title = usfp_usa.9.t
+	desc = usfp_usa.9.d
+	flavor = usfp_usa.9.f
+	dlc = dlc_usfp
+
+	category = enactment
+
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	cooldown = { years = 5 }
+
+	duration = 3
+
+	trigger = {
+		exists = c:USA
+		c:USA = this
+		OR = {
+			usfp_enacting_super_unconstitutional_law = yes
+			usfp_enacting_unconstitutional_law = yes
+		}
+		has_law = law_type:law_presidential_republic
+		NOR = {
+			has_law = law_type:law_autocracy
+			has_law = law_type:law_oligarchy
+			has_law = law_type:law_technocracy
+			has_law = law_type:law_single_party_state
+		}
+	}
+
+	cancellation_trigger = {
+		OR = {
+			NOT = { 
+				exists = scope:current_law_scope
+			}
+			NOT = {
+				is_enacting_law = scope:current_law_scope.type
+			}
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+    		save_scope_as = current_law_scope
+    	}
+	}
+
+	#Acqueise
+	option = {
+		name = usfp_usa.9.a
+		default_option = yes
+		cancel_enactment = yes
+		ai_chance = {
+			base = 75
+		}
+	}
+
+	#Constitutional Interpretation
+	option = {
+		name = usfp_usa.9.b
+		trigger = {
+			usfp_enacting_unconstitutional_law = yes
+		}
+		add_enactment_modifier = {
+			name = usfp_creative_constitutionalism
+		}
+		every_interest_group = {
+			limit = {
+				is_in_government = no
+			}
+			add_modifier = {
+				name = usfp_ig_constitutional_challenge
+				years = 4
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+
+	#Constitutional Stretch
+	option = {
+		name = usfp_usa.9.c
+		trigger = {
+			usfp_enacting_super_unconstitutional_law = yes
+		}
+		add_enactment_modifier = {
+			name = usfp_breaking_constitution
+		}
+		every_interest_group = {
+			limit = {
+				is_in_government = no
+			}
+			add_modifier = {
+				name = usfp_ig_constitutional_protector
+				years = 4
+			}
+		}
+		every_interest_group = {
+			limit = {
+				is_in_government = yes
+			}
+			add_modifier = {
+				name = usfp_ig_breaking_constitution
+				years = 4
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+
+	#Revolutionary Reformism
+	option = {
+		name = usfp_usa.9.d
+		trigger = {
+			OR = {
+				is_enacting_law = law_type:law_council_republic
+				is_enacting_law = law_type:law_cooperative_ownership
+			}
+		}
+		highlighted_option = yes
+		ai_chance = {
+			base = 300
+		}
+		add_enactment_modifier = {
+			name = usfp_breaking_constitution
+		}
+		every_interest_group = {
+			limit = {
+				is_in_government = no
+				NOT = {
+					has_ideology = ideology:ideology_socialist
+				}
+				leader = {
+					NOR = {
+						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_vanguardist
+					}
+				}
+			}
+			add_modifier = {
+				name = usfp_ig_constitutional_protector
+				years = 4
+			}
+		}
+	}
+
+}
+
+#Rise of Scientific Management
+usfp_usa.10 = {
+	type = country_event
+	placement = scope:illinois_scope
+
+	title = usfp_usa.10.t
+	desc = usfp_usa.10.d
+	flavor = usfp_usa.10.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_gears_pistons"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/invention_icons/corporate_management.dds"
+
+	duration = 3
+
+	trigger = {
+		exists = c:USA
+		c:USA = root
+		has_technology_researched = central_planning
+		NOT = {
+			has_variable = scientific_management_spawned
+		}
+	}
+
+	immediate = {
+		set_variable = scientific_management_spawned
+		ig:ig_industrialists = {
+			save_scope_as = industrialists_scope
+		}
+		ig:ig_intelligentsia = {
+			save_scope_as = intelligentsia_scope
+		}
+	}
+
+	#Industrialists get Scientific Management
+	option = {
+		name = usfp_usa.10.a
+		ig:ig_industrialists = {
+			set_ig_trait = ig_trait:usfp_ig_trait_scientific_management
+		}
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = usfp_ig_embraced_scientific_management_positive
+				years = 2
+			}
+		}
+		ig:ig_trade_unions = {
+			add_modifier = {
+				name = usfp_ig_embraced_scientific_management_negative
+				years = 2
+			}
+		}
+	}
+
+	#Intelligentsia get Scientific Management
+	option = {
+		name = usfp_usa.10.b
+		ig:ig_intelligentsia = {
+			set_ig_trait = ig_trait:usfp_ig_trait_scientific_management
+		}
+		ig:ig_industrialists = {
+			add_modifier = {
+				name = usfp_ig_embraced_scientific_management_positive
+				years = 2
+			}
+		}
+		ig:ig_trade_unions = {
+			add_modifier = {
+				name = usfp_ig_embraced_scientific_management_negative
+				years = 2
+			}
+		}
+	}
+
+	#Reject Scientific Management
+	option = {
+		name = usfp_usa.10.c
+		ig:ig_trade_unions = {
+			add_modifier = {
+				name = usfp_ig_rejected_scientific_management_positive
+				years = 2
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_industrialists
+		}
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+	}
+}

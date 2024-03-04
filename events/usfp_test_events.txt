@@ -26,7 +26,7 @@ usfp_test.1 = {
 
 	immediate = {
 		create_character = {
-			template = agitator_frederick_douglass
+			template = usfp_agitator_elizabeth_gurley_flynn
 			on_created = {
 				set_variable = test_var
 				add_character_role = agitator
