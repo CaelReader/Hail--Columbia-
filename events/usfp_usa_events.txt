@@ -932,6 +932,12 @@ usfp_usa.10 = {
 		NOT = {
 			has_variable = scientific_management_spawned
 		}
+		ig:ig_industrialists = {
+			is_marginal = no
+		}
+		ig:ig_intelligentsia = {
+			is_marginal = no
+		}
 	}
 
 	immediate = {

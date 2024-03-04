@@ -594,6 +594,9 @@ usfp_manifest_destiny.8 = {
 			}
 		}
 		naval_power_projection >= 80
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
 	}
 
 	immediate = {
