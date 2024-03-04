@@ -11,6 +11,15 @@ je_acw_countdown = {
 			name = acw_progress_var
 			value = 0
 		}
+		ideology:ideology_abolitionist = {
+			save_scope_as = abolitionist_scope
+		}
+		ideology:ideology_slaver = {
+			save_scope_as = slaver_scope
+		}
+		ig:ig_landowners = {
+			save_scope_as = landowners_scope
+		}
 	}
 
 	current_value = {
