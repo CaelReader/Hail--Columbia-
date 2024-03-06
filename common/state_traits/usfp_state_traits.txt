@@ -134,7 +134,8 @@ state_trait_black_belt_soil = {
 	icon = "gfx/interface/icons/state_trait_icons/cotton.dds"
 	
 	modifier = {
-		building_cotton_plantation_throughput_add = 0.2
+		building_cotton_plantation_throughput_add = 0.1
+		building_group_bg_plantations_throughput_add = 0.1
 	}
 }
 

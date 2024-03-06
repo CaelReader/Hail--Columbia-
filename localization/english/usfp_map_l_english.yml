@@ -30,3 +30,7 @@
  SAL_ADJ:0 "Salishan"
  KLA:0 "Klamath"
  KLA_ADJ:0 "Klamathan"
+ dyn_c_russian_alaska:0 "Russian-American Company"
+ dyn_c_russian_alaska_ADJ:0 "Russian American"
+ ASK:0 "Alaska"
+ ASK_ADJ:0 "Alaskan"

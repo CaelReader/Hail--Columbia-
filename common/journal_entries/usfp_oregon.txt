@@ -122,12 +122,15 @@ je_oregon = {
 		else = {
 			s:STATE_IDAHO = {
 				add_homeland = cu:yankee
+				add_claim = ROOT
 			}
 			s:STATE_WASHINGTON = {
 				add_homeland = cu:yankee
+				add_claim = ROOT
 			}
 			s:STATE_OREGON = {
 				add_homeland = cu:yankee
+				add_claim = ROOT
 			}
 			add_modifier = {
 				name = oregon_resolved

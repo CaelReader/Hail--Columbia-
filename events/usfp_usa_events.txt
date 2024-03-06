@@ -382,6 +382,9 @@ usfp_usa.6 = {
 			state_region = s:STATE_ILLINOIS
 		}
 		game_date > 1871.10.8
+		NOT = {
+			has_global_variable = great_chicago_fire
+		}
 	}
 
 	immediate = {
@@ -397,6 +400,7 @@ usfp_usa.6 = {
 		s:STATE_MICHIGAN = {
 			save_scope_as = michigan_scope
 		}
+		set_global_variable = great_chicago_fire
 	}
 
 	option = { #No extra help
@@ -823,7 +827,10 @@ usfp_usa.9 = {
 		}
 		every_interest_group = {
 			limit = {
-				is_in_government = no
+				law_stance = {
+					law = scope:current_law_scope
+					value < approve
+				}
 			}
 			add_modifier = {
 				name = usfp_ig_constitutional_challenge
@@ -835,7 +842,7 @@ usfp_usa.9 = {
 		}
 	}
 
-	#Constitutional Stretch
+	#Bribe the Courts
 	option = {
 		name = usfp_usa.9.c
 		trigger = {
@@ -844,9 +851,17 @@ usfp_usa.9 = {
 		add_enactment_modifier = {
 			name = usfp_breaking_constitution
 		}
+		add_modifier = {
+			name = usfp_modifier_supreme_court_bribery
+			multiplier = money_amount_multiplier_medium
+			years = 4
+		}
 		every_interest_group = {
 			limit = {
-				is_in_government = no
+				law_stance = {
+					law = scope:current_law_scope
+					value < strongly_approve
+				}
 			}
 			add_modifier = {
 				name = usfp_ig_constitutional_protector
@@ -885,7 +900,6 @@ usfp_usa.9 = {
 		}
 		every_interest_group = {
 			limit = {
-				is_in_government = no
 				NOT = {
 					has_ideology = ideology:ideology_socialist
 				}
@@ -1006,6 +1020,110 @@ usfp_usa.10 = {
 		add_radicals = {
 			value = small_radicals
 			interest_group = ig:ig_intelligentsia
+		}
+	}
+}
+
+#Cross of Gold Speech
+usfp_usa.11 = {
+	type = country_event
+	placement = scope:illinois_scope
+
+	title = usfp_usa.11.t
+	desc = usfp_usa.11.d
+	flavor = usfp_usa.11.f
+	dlc = dlc_usfp
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:bryan_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	duration = 3
+
+	trigger = {
+		exists = c:USA
+		c:USA = root
+		NOT = { has_law = law_type:law_single_party_state }
+		in_election_campaign = yes
+		NOT = {
+			has_global_variable = cross_of_gold
+		}
+		game_date > 1896.1.1
+	}
+
+	immediate = {
+		set_global_variable = cross_of_gold
+		create_character = {
+			template = usfp_william_jennings_bryan_character_template
+			on_created = {
+				set_variable = is_jennings_bryan	
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_variable = is_jennings_bryan
+			}
+			save_scope_as = bryan_scope
+			interest_group = {
+				party = {
+					save_scope_as = bryan_party
+				}
+			}
+		}
+		s:STATE_ILLINOIS.region_state:USA = {
+			save_scope_as = illinois_scope
+		}
+		random_scope_pop = {
+			limit = {
+				is_pop_type = capitalists
+			}
+			save_scope_as = capitalists_scope
+		}
+	}
+
+	#Free Silver!!!
+	option = {
+		name = usfp_usa.11.a
+		scope:bryan_scope = {
+			set_as_interest_group_leader = yes
+			interest_group = {
+				party = {
+					add_momentum = momentum_medium
+				}
+				add_modifier = {
+					name = usfp_cross_of_gold_ig
+					months = 6
+				}
+			}
+		}
+		ig:ig_rural_folk = {
+			set_ig_trait = ig_trait:usfp_ig_trait_free_silver
+		}
+	}
+
+	#Sound Money is better
+	option = {
+		name = usfp_usa.11.b
+		scope:bryan_scope = {
+			add_character_role = agitator
+			interest_group = {
+				add_modifier = {
+					name = usfp_cross_of_gold_ig
+					months = 6
+					multiplier = 0.5
+				}
+			}
+		}
+		ig:ig_rural_folk = {
+			set_ig_trait = ig_trait:usfp_ig_trait_free_silver
+			add_modifier = {
+				name = usfp_free_silver_ig
+				years = 4
+			}
 		}
 	}
 }

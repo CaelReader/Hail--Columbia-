@@ -1,0 +1,20 @@
+﻿ASK = {
+	dynamic_country_name = {
+		name = dyn_c_russian_alaska
+		adjective = dyn_c_russian_alaska_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor = {
+				AND = {
+					exists = c:RUS
+					scope:actor = {
+						is_subject_of = c:RUS
+					}
+				}
+			}
+		}
+	}
+}

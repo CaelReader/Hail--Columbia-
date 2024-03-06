@@ -5,7 +5,7 @@ usfp_ig_trait_king_cotton = {
 	
 	modifier = {
 		building_group_bg_plantations_tax_mult = -0.2
-		building_cotton_plantation_throughput_add = -0.2
+		building_cotton_plantation_throughput_add = -0.25
 	}
 }
 
@@ -60,6 +60,15 @@ usfp_ig_trait_republican_virtue = {
 		state_peasants_education_access_add = 0.15
 	}
 }
+usfp_ig_trait_free_silver = {
+	icon = "gfx/interface/icons/ig_trait_icons/free_silver.dds"
+	max_approval = unhappy
+	
+	modifier = {
+		state_radicals_from_sol_change_mult = 0.10
+		state_farmers_investment_pool_efficiency_mult = -0.10
+	}
+}
 
 
 #Intelligentsia
@@ -111,7 +120,7 @@ usfp_ig_trait_rail_tycoons = {
 	
 	modifier = {
 		building_railway_throughput_add = 0.10
-		state_construction_mult = 0.05
+		state_colony_growth_creation_mult = 0.05
 	}
 }
 

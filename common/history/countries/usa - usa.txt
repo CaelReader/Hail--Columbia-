@@ -107,6 +107,7 @@
 		}
 		ig:ig_industrialists = {
 			add_ideology = ideology_pro_tariff
+			set_ig_trait = ig_trait:ig_trait_patrician_philanthropy
 		}
 		ig:ig_intelligentsia = {
 			add_ideology = ideology_american_school

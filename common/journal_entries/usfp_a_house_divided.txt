@@ -65,6 +65,12 @@ je_usfp_a_house_divided_slave_power = {
 	goal_add_value = {
 		value = 60
 	}
+
+	invalid = {
+		NOT = {
+			has_journal_entry = je_acw_countdown
+		}
+	}
 }
 
 #Missouri Compromise
@@ -82,13 +88,33 @@ je_usfp_a_house_divided_missouri_compromise = {
 	}
 
 	fail = {
-		NOT = {
-			root = {
-				owns_entire_state_region = STATE_MISSOURI
+		OR = {
+			NOT = {
+				root = {
+					owns_entire_state_region = STATE_MISSOURI
+				}
+			}
+			has_law = law_type:law_slavery_banned
+			has_law = law_type:law_slave_trade
+			hidden_trigger = {
+				has_variable = missouri_compromise_broken_var
 			}
 		}
-		hidden_trigger = {
-			has_variable = missouri_compromise_broken_var
+
+	}
+
+	invalid = {
+		NOT = {
+			has_journal_entry = je_acw_countdown
+		}
+	}
+
+	on_invalid = {
+		if = {
+			limit = { 
+				has_modifier = usfp_missouri_compromise_decaying
+			}
+			remove_modifier = usfp_missouri_compromise_decaying
 		}
 	}
 }
@@ -118,6 +144,12 @@ je_usfp_a_house_divided_gag_rule = {
 			is_in_government = no
 		}
 		government_legitimacy >= 20
+	}
+
+	invalid = {
+		NOT = {
+			has_journal_entry = je_acw_countdown
+		}
 	}
 }
 

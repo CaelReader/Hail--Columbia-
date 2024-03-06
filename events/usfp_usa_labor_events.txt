@@ -1,0 +1,87 @@
+﻿namespace = usfp_usa_labor
+
+#Founding of the IWW
+usfp_usa_labor.1 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/invention_icons/anarchy.dds"
+	event_image = {
+		video = "votp_agitator_speaking"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	placement = scope:illinois_scope
+
+	title = usfp_usa_labor.1.t
+	desc = usfp_usa_labor.1.d
+	flavor = usfp_usa_labor.1.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		NOT = {
+			has_global_variable = iww_founded
+		}
+		game_date > 1905.6.1
+		has_technology_researched = anarchism
+		has_technology_researched = labor_movement
+		has_technology_researched = socialism
+		ig:ig_trade_unions = {
+			is_marginal = no
+		}
+	}
+
+	immediate = {
+		set_global_variable = iww_founded
+		s:STATE_ILLINOIS.region_state:USA = {
+			save_scope_as = illinois_scope
+		}
+		create_character = {
+			template = usfp_bill_haywood_character_template
+			on_created = {
+				set_variable = is_bill_haywood	
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_variable = is_bill_haywood	
+			}
+			save_scope_as = haywood_scope
+		}
+		ig:ig_trade_unions = {
+			save_scope_as = trade_unions_scope
+		}
+	}
+
+	#Solidarity
+	option = {
+		name = usfp_usa_labor.1.a
+		ig:ig_trade_unions = {
+			set_ig_trait = ig_trait:usfp_ig_trait_direct_action
+			add_modifier = {
+				name = usfp_iww_ig
+				years = 15
+			}
+		}
+		scope:haywood_scope = {
+			set_as_interest_group_leader = yes
+		}
+	}
+
+	#Damn Radicals
+	option = {
+		name = usfp_usa_labor.1.b
+		ig:ig_trade_unions = {
+			add_modifier = {
+				name = usfp_iww_ig
+				years = 15
+				multiplier = 0.5
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			strata = poor
+		}
+	}
+}

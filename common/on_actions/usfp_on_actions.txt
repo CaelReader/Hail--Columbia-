@@ -9,6 +9,7 @@ usfp_monthly_pulse = {
 		usfp_usa.1 #Seneca Falls Conference
 		usfp_usa.4 #Opening of Ellis Island
 		usfp_usa.6 #Great Chicago Fire
+		usfp_usa.11 #Cross of Gold
 	}
 	random_events = {
 		150 = 0

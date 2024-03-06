@@ -621,3 +621,140 @@ usfp_manifest_destiny.8 = {
 		}
 	}
 }
+
+#Railroad Tycoons
+usfp_manifest_destiny.9 = {
+	type = country_event
+	placement = scope:rail_state_scope
+
+	title = usfp_manifest_destiny.9.t
+	desc = usfp_manifest_destiny.9.d
+	flavor = usfp_manifest_destiny.9.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_trains"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/invention_icons/railways.dds"
+
+	duration = 3
+
+	trigger = {
+		NOT = {
+			has_variable = had_railroad_tycoons
+		}
+		root.var:manifest_destiny_var >= 1
+		has_technology_researched = steel_railway_cars
+		#railroads to the west!
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_CALIFORNIA
+				state_region = s:STATE_WASHINGTON
+				state_region = s:STATE_OREGON
+			}
+		}
+		#need some connection opportunities
+		OR = {
+			#Southern Route
+			AND = {
+				any_scope_state = {
+					state_region = s:STATE_ARIZONA
+				}
+				any_scope_state = {
+					state_region = s:STATE_NEW_MEXICO
+				}
+				any_scope_state = {
+					state_region = s:STATE_TEXAS
+				}
+				any_scope_state = {
+					state_region = s:STATE_LOUISIANA
+				}
+			}
+			#Central Route
+			AND = {
+				any_scope_state = {
+					state_region = s:STATE_NEVADA
+				}
+				any_scope_state = {
+					state_region = s:STATE_UTAH
+				}
+				any_scope_state = {
+					state_region = s:STATE_WYOMING
+				}
+				any_scope_state = {
+					state_region = s:STATE_NEBRASKA
+				}
+				any_scope_state = {
+					state_region = s:STATE_IOWA
+				}
+			}
+			#Northern Route
+			AND = {
+				any_scope_state = {
+					state_region = s:STATE_IDAHO
+				}
+				any_scope_state = {
+					state_region = s:STATE_MONTANA
+				}
+				any_scope_state = {
+					state_region = s:STATE_NORTH_DAKOTA
+				}
+				any_scope_state = {
+					state_region = s:STATE_MINNESOTA
+				}
+			}
+		}
+		#need trains to build trains
+		any_scope_building = {
+			is_building_type = building_railway
+			count > 30
+		}
+		ig:ig_industrialists = {
+			is_marginal = no
+		}
+	}
+
+	immediate = {
+		set_variable = had_railroad_tycoons
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_MINNESOTA
+					state_region = s:STATE_IOWA
+					state_region = s:STATE_LOUISIANA
+					state_region = s:STATE_NEBRASKA
+					state_region = s:STATE_WYOMING
+				}
+			}
+			save_scope_as = rail_state_scope
+		}
+		ig:ig_industrialists = {
+			save_scope_as = industrialists_scope
+		}
+		random_scope_building = {
+			limit = {
+				is_building_type = building_railway
+			}
+			save_scope_as = railway_scope
+		}
+	}
+
+	#I like trains
+	option = {
+		name = usfp_manifest_destiny.9.a
+		ig:ig_industrialists = {
+			set_ig_trait = ig_trait:usfp_ig_trait_rail_tycoons
+		}
+	}
+
+	#I hate trains
+	option = {
+		name = usfp_manifest_destiny.9.b
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_industrialists
+		}
+	}
+}

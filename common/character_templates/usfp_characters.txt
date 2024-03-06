@@ -254,7 +254,7 @@ ecchi_usa_f_roosevelt_character_template = {
 
 #USFP: Bill Haywood, founding member of the IWW
 usfp_bill_haywood_character_template = {
-    first_name = Bill
+    first_name = William
     last_name = Haywood
     historical = yes
     culture = cu:yankee
@@ -264,6 +264,7 @@ usfp_bill_haywood_character_template = {
     ideology = ideology_communist
     interest_group = ig_trade_unions
     birth_date = 1869.2.4
+    dna = usfp_usa_bill_haywood
     traits = { imposing ambitious direct demagogue scarred }
     #Event-spawned
 }
@@ -326,7 +327,6 @@ usfp_robert_la_follette_character_template = {
     female = no
     ideology = ideology_usfp_progressive
     interest_group = ig_intelligentsia
-	dna = ecchi_dna_franklin_roosevelt
     birth_date = 1855.6.14
     traits = { experienced_political_operator persistent inspirational_orator }
     interest_group_leader_usage = {
@@ -359,6 +359,7 @@ usfp_william_jennings_bryan_character_template = {
     ideology = ideology_usfp_progressive
     interest_group = ig_rural_folk
     birth_date = 1860.3.19
+    dna = usfp_usa_william_jennings_bryan
     traits = { experienced_political_operator pious firebrand charismatic }
     # Spawned by Event
     on_created = {
@@ -443,4 +444,35 @@ usfp_agitator_washington_gladden = {
 		latest_usage_date = 1913.1.1
 		chance = 50
 	} 
+}
+
+#USFP: Thaddeus Stevens, radical abolitionist
+usfp_thaddeus_stevens_character_template = {
+    first_name = Thaddeus
+    last_name = Stevens
+    historical = yes
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    ideology = ideology_usfp_abolitionist_radical #aka Chaddeus Stevens
+    interest_group = ig_intelligentsia
+    birth_date = 1792.4.4
+    dna = usfp_usa_thaddeus_stevens 
+    traits = { persistent wrathful inspirational_orator basic_political_operator }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:USA
+            this = c:USA
+        }
+        interest_group_trigger = {
+            is_marginal = no
+			OR = {
+				is_interest_group_type = ig_intelligentsia
+                is_interest_group_type = ig_petty_bourgeoisie
+			}
+        }
+        earliest_usage_date = 1848.1.1
+        latest_usage_date = 1868.1.1
+        chance = 90
+    }
 }

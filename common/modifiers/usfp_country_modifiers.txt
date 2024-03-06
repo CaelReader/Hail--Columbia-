@@ -174,3 +174,8 @@ usfp_imminent_secession = {
 	country_revolution_clock_time_add = 0.5
 	country_revolution_progress_mult = 1
 }
+
+usfp_modifier_supreme_court_bribery = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_currency_negative.dds
+	country_expenses_add = 1
+}

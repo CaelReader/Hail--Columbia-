@@ -959,7 +959,7 @@ ecchi_usa_emerson_character_template = {
     interest_group = ig_intelligentsia
     birth_date = 1803.5.25
     is_agitator = yes
-	dna = ecchi_dna_ralph_emerson
+	dna = usfp_usa_emerson #USFP new dna
     traits = { literary charismatic romantic tactful }
     #USFP: spawned by Event instead
     # interest_group_leader_usage = {

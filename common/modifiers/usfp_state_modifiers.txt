@@ -26,6 +26,7 @@ usfp_trail_of_tears_modifier = {
 usfp_ellis_island_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_clipper_positive.dds
 	state_migration_pull_mult = 0.20
+	state_migration_pull_add = 10
 	state_assimilation_mult = 0.20
 }
 

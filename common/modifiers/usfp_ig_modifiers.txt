@@ -101,3 +101,20 @@ usfp_ig_embraced_scientific_management_negative = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	interest_group_approval_add = -3
 }
+
+usfp_cross_of_gold_ig = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	interest_group_pop_attraction_mult = 0.10
+	interest_group_pol_str_mult = 0.40
+}
+
+usfp_free_silver_ig = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	interest_group_approval_add = -3
+}
+
+usfp_iww_ig = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_socialism_positive.dds
+	interest_group_pop_attraction_mult = 0.10
+	interest_group_pol_str_mult = 0.20
+}

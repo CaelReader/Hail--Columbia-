@@ -91,6 +91,12 @@ usfp_manifest_destiny.8.f: ""The steamships loomed on the horizon with their gli
 usfp_manifest_destiny.8.a: "With the navy at our back, we shall go far!"
 usfp_manifest_destiny.8.b: "The military should keep its focus at home."
 
+usfp_manifest_destiny.9.t: "Railroad Tycoons"
+usfp_manifest_destiny.9.d: "As the economy and territory of the [ROOT.GetCountry.GetName] have grown, the [SCOPE.sBuilding('railway_scope').GetName] has steadily grown in importance alongside. Seeing an opportunity for unprecedented profits, [SCOPE.gsInterestGroup('industrialists_scope').GetName] have begun to invest heavily in railroad expansion, and seek favorable land grants from the government."
+usfp_manifest_destiny.9.f: ""All over it is felt that the old era of stage coaches and ox and mule transportation is rapidly passing away, and that the locomotive, soon to penetrate the State in all directions, will in future carry the wheat to the wharf, the ore to the mill, the timber to the mine; supply the deficiency of navigable streams, open up millions of acres of the best fruit and grain lands in the world, and make accessible and workable thousands of rich mines."" #Henry George
+usfp_manifest_destiny.9.a: "The railroads will transform the country!"
+usfp_manifest_destiny.9.b: "The railroads are too financially risky."
+
 ### Native Removal
 usfp_native_removal.1.t: "The Seminole Removal"
 usfp_native_removal.1.d: "With the Second Seminole War finally winding down, the Army can begin the slow process of removing the remainder of the [SCOPE.sCulture('muskogean_scope').GetName] population across the Mississippi."
@@ -210,7 +216,7 @@ usfp_usa.6.b: "Federal funding will bolster the donations."
 usfp_usa.7.t: "Harper\'s Weekly"
 usfp_usa.7.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has risen to prominence through his scathing political cartoons. Published nationwide in the ever-popular #italic Harper\'s Weekly#!, his illustrations have come to shape the national discourse, as well as relentlessly mock his political opponents."
 usfp_usa.7.f: ""You cannot help seeing Mr. Nast's pictures, and when you have seen them you cannot fail to understand them. When he caricatures a politician, the name of that politician ever afterwards recalls the countenance of which Mr. Nast has made him a present. An artist of this stamp — and such artists are very rare indeed — does more to affect public opinion than a score of writers.""
-usfp_usa.7.a: "Let's hope he mocks our opponents!"
+usfp_usa.7.a: "Let us hope he's not a thorn in our side."
 usfp_usa.7.b: "Cartoons are for the small-minded."
 
 usfp_usa.8.t: "The [SCOPE.sCharacter('nast_scope').GetLastName] Effect"
@@ -221,12 +227,12 @@ usfp_usa.8.b: "We need to discredit Harper\'s Weekly."
 usfp_usa.8.c: "Stop those presses."
 
 usfp_usa.9.t: "Constitutional Challenge"
-usfp_usa.9.d: "Opponents of [SCOPE.sLaw('current_law_scope').GetName] have launched a challenge against it in the courts, attempting to have the law struck down on grounds of violating the [ROOT.GetCountry.GetAdjective] Constitution. Under a strict interpretation of the Constitution, they are correct."
+usfp_usa.9.d: "Opponents of [SCOPE.sLaw('current_law_scope').GetName] have challenged the proposal on grounds of violating the [ROOT.GetCountry.GetAdjective] Constitution. Under a strict interpretation of the Constitution, they are correct."
 usfp_usa.9.f: ""The powers of the legislature are defined and limited; and that those limits may not be mistaken or forgotten. Certainly all those who have framed written constitutions contemplate them as forming the fundamental and paramount law of the nation, and consequently the theory of every such government must be, that an act of the legislature, repugnant to the constitution, is void.""
 usfp_usa.9.a: "The law cannot go forward."
 usfp_usa.9.b: "Under a certain interpretation, the law is perfectly constitutional!"
-usfp_usa.9.c: "Loyal judges will read the constitution as we see fit."
-usfp_usa.9.d: "Damn the Constitution, this reform is for the people!"
+usfp_usa.9.c: "Loyal judges will read the Constitution as suits our needs."
+usfp_usa.9.d: "The Constitution must bend to the will of the workers."
 
 usfp_usa.10.t: "Scientific Management"
 usfp_usa.10.d: "A new theory of industrial management has risen to prominence among the [SCOPE.gsInterestGroup('industrialists_scope').GetName] and [SCOPE.gsInterestGroup('intelligentsia_scope').GetName]. This new Scientific Management seeks to determine an objectively optimal method for any given task, which is then implemented via close cooperation between managers and workers."
@@ -234,3 +240,17 @@ usfp_usa.10.f: ""The idea of training a workman under a competent teacher into n
 usfp_usa.10.a: "The [SCOPE.gsInterestGroup('industrialists_scope').GetName] will ensure maximum efficiency!"
 usfp_usa.10.b: "Our esteemed [SCOPE.gsInterestGroup('intelligentsia_scope').GetName] will lead the cutting edge!"
 usfp_usa.10.c: "The bosses already micromanage too much."
+
+usfp_usa.11.t: "The Cross of Gold"
+usfp_usa.11.d: "[SCOPE.sCharacter('bryan_scope').GetFullName] has catapulted himself to the heights of the [SCOPE.sParty('bryan_party').GetName], delivering an electrifying speech to the party's covention. In his \'Cross of Gold\' address, [SCOPE.sCharacter('bryan_scope').GetLastName] extoled silver coinage as a bulwark against big city moneyed interests, and presented a populist platform that would ensure prosperity for the common masses."
+usfp_usa.11.f: ""Having behind us the producing masses of this nation and the world, supported by the commercial interests, the laboring interests, and the toilers everywhere, we will answer their demand for a gold standard by saying to them: \'You shall not press down upon the brow of labor this crown of thorns; you shall not crucify mankind upon a cross of gold!\'""
+usfp_usa.11.a: "The [SCOPE.sCharacter('bryan_scope').GetLastName] ticket will sweep the nation!"
+usfp_usa.11.b: "Free Silver is ridiculous, we need sound money!"
+
+
+### Labor Events
+usfp_usa_labor.1.t: "The Industrial Workers of the World"
+usfp_usa_labor.1.d: "A convention of radical trade unionists has met in [SCOPE.sState('illinois_scope').GetCityHubName] to found the Industrial Workers of the World. Taking a much more militant stance than traditional labor organizations, the IWW seeks to unite workers of all trades into one big union. Their stated objective is the abolition of the wage system via direct action, general strikes, and sabotage."
+usfp_usa_labor.1.f: ""It is the historic mission of the working class to do away with capitalism. The army of production must be organized, not only for everyday struggle with capitalists, but also to carry on production when capitalism shall have been overthrown. By organizing industrially we are forming the structure of the new society within the shell of the old.""
+usfp_usa_labor.1.a: "An injury to one is an injury to all!"
+usfp_usa_labor.1.b: "These radicals are a threat to social order."
