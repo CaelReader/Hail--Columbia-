@@ -185,6 +185,7 @@ usfp_manifest_destiny_main = {
 		}
 		events = {
 			usfp_manifest_destiny.6 #Treaty of GH
+			usfp_manifest_destiny.10 #California Gold Rush
 		}
 	}
 

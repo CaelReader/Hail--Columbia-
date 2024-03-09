@@ -17,10 +17,12 @@
 	cu:yankee = {
 		add_cultural_obsession = liquor
 		add_cultural_obsession = coffee
+		add_cultural_obsession = small_arms
 	}
 	cu:dixie = {
 		add_cultural_obsession = liquor
 		add_cultural_obsession = tobacco
+		add_cultural_obsession = small_arms
 	}
 	cu:afro_american = {
 		add_cultural_obsession = liquor

@@ -1127,3 +1127,85 @@ usfp_usa.11 = {
 		}
 	}
 }
+
+#American Hippo Bill
+usfp_usa.12 = {
+	type = country_event
+	placement = scope:louisiana_scope
+
+	title = usfp_usa.12.t
+	desc = usfp_usa.12.d
+	flavor = usfp_usa.12.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "votp_realist_household"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/goods_icons/meat.dds"
+
+	duration = 3
+
+	trigger = {
+		NOT = {
+			has_variable = usfp_hippo_bill
+		}
+		market_capital.market = {
+			mg:meat = { 
+				market_goods_pricier > 0.25 
+			}
+		}
+		any_scope_state = {
+			state_region = s:STATE_LOUISIANA
+			is_incorporated = yes
+			is_treaty_port = no
+		}
+		game_date >= 1910.1.1
+	}
+
+	immediate = {
+		set_variable = usfp_hippo_bill
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_LOUISIANA
+			}
+			save_scope_as = louisiana_scope
+		}
+	}
+
+	#This is absurd
+	option = {
+		name = usfp_usa.12.a
+		default_option = yes
+		ai_chance = {
+			base = 100
+		}
+	}
+	#Bring on the lake cow bacon!
+	option = {
+		name = usfp_usa.12.b
+		scope:louisiana_scope = {
+			create_building = {
+				building = usfp_hippo_ranch
+				level = 3
+			}
+			state_region = {
+				add_devastation = 5
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				trigger = {
+					market_capital.market = {
+						mg:meat = { 
+							market_goods_pricier > 0.60 
+						}
+					}
+				}
+				add = 25
+			}
+		}
+	}
+}

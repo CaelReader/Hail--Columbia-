@@ -16,6 +16,10 @@ usfp_monthly_pulse = {
 		100 = usfp_usa.7 #Thomas Nast spawn event
 		100 = usfp_usa.8 #Thomas Nast weighs in on Election
 		50 = usfp_usa.10 #Scientific Management
+		50 = usfp_usa.12 #American Hippo Bill
+
+		##Labor events
+		100 = usfp_usa_labor.1 #founding of the IWW
 
 		##Disasters
 		1 = usfp_usa.2 #Atlantic Hurricane

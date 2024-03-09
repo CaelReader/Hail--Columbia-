@@ -1,0 +1,15 @@
+﻿usfp_pm_hippo_hunting = {
+	texture = "gfx/interface/icons/production_method_icons/hippo_hunting.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_small_arms_add = 10
+			goods_output_meat_add = 30
+			state_pollution_generation_add = 10
+		}
+		unscaled = {
+			building_laborers_mortality_mult = 0.3
+		}
+	}
+	
+}

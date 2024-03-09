@@ -18,6 +18,7 @@ usfp_missouri_compromise_decaying = {
 	state_pop_support_law_slavery_banned_add = -2.0
 	state_pop_support_law_slave_trade_add = -0.5
 	interest_group_ig_landowners_approval_add = 20 #40
+	political_movement_radicalism_add = -10
 }
 
 usfp_gag_rule_modifier = {
@@ -32,7 +33,6 @@ usfp_gag_rule_modifier = {
 usfp_slave_power_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
 	country_aristocrats_voting_power_add = 30
-	country_farmers_voting_power_add = 15
 	interest_group_ig_landowners_pol_str_mult = 0.25
 }
 
@@ -58,7 +58,8 @@ usfp_second_party_system_modifier = {
 
 albany_regency_uscwf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_agrarians_positive.dds
-	interest_group_ig_rural_folk_pol_str_mult = 1.0
+	interest_group_ig_rural_folk_pol_str_mult = 0.5
+	country_farmers_voting_power_add = 15
 }
 
 a_house_divided_uscwf = {
@@ -125,6 +126,8 @@ usfp_manifest_destiny_modifier = {
 	country_diplomatic_play_maneuvers_add = 4
 	country_infamy_decay_mult = -0.03
 	unit_morale_recovery_mult = 0.01
+	interest_group_ig_armed_forces_pop_attraction_mult = 0.03
+	interest_group_ig_armed_forces_pol_str_mult = 0.02
 }
 
 usfp_vanishing_indian_modifier = {

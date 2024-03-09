@@ -41,3 +41,13 @@ usfp_great_urban_fire_modifier = {
 	building_urban_center_throughput_add = -0.20
 	state_construction_mult = -0.20
 }
+
+usfp_gold_rush_lawlessness = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_cop_negative.dds
+	state_tax_waste_add = 0.10
+	state_radicals_from_sol_change_mult = 0.10
+	state_colony_growth_speed_mult = 0.20
+	state_standard_of_living_add = -1
+	state_mortality_mult = 0.10
+	state_birth_rate_mult = -0.20
+}

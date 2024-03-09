@@ -33,6 +33,13 @@ usfp_a_house_divided.6.f: ""Freesoilers and abolitionists are the only true frie
 usfp_a_house_divided.6.a: "Slavery is bad for the South!"
 usfp_a_house_divided.6.b: "This whole notion is completely ridiculous."
 
+usfp_a_house_divided.7.t: "[SCOPE.sState('california_scope').GetName] Petitions for Statehood"
+usfp_a_house_divided.7.d: "As the population of [SCOPE.sState('california_scope').GetName] has exploded, the new settlers have recognized the need for an organized government. The locals have held a constitutional convention and are now petitioning for statehood. Their constitution outlaws slavery and claims a territory that crosses the Missouri Compromise line, causing consternation in Congress over upsetting the balance between free and slave states."
+usfp_a_house_divided.7.f: ""Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, that the state of California shall be one, and is hereby declared to be one, of the United States of America, and admitted into the Union on an equal footing with the original states in all respects whatever. ""
+usfp_a_house_divided.7.a: "Welcome to the Union!"
+usfp_a_house_divided.7.b: "We cannot add a free state without some additional compromise"
+compromise_of_1850_soon: "Our westward expansion has made the Missouri Compromise untenable. A new compromise will need to be developed."
+
 usfp_acw.1.t: "A Traitor's Peace"
 usfp_acw.1.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has published a scathing criticism of [SCOPE.sCountry('csa_scope').GetAdjective] peace demands, depicting them as dishonoring the Union and self-destructive to the North. The [SCOPE.sParty('republican_party_scope').GetName] has ran with it to bolster public support for continuing the war, denouncing what they call a Traitor\'s Peace."
 usfp_acw.1.f: ""People of the United States! Will you give your assent to such a base surrender of our cause? If not, then rally only with those who keep step to the music of the Union, who stand by our brave soldiers in the field! Rally for liberty and union, now and forever, one and separable!""
@@ -96,6 +103,13 @@ usfp_manifest_destiny.9.d: "As the economy and territory of the [ROOT.GetCountry
 usfp_manifest_destiny.9.f: ""All over it is felt that the old era of stage coaches and ox and mule transportation is rapidly passing away, and that the locomotive, soon to penetrate the State in all directions, will in future carry the wheat to the wharf, the ore to the mill, the timber to the mine; supply the deficiency of navigable streams, open up millions of acres of the best fruit and grain lands in the world, and make accessible and workable thousands of rich mines."" #Henry George
 usfp_manifest_destiny.9.a: "The railroads will transform the country!"
 usfp_manifest_destiny.9.b: "The railroads are too financially risky."
+
+usfp_manifest_destiny.10.t: "Tales of Gold Mountain"
+usfp_manifest_destiny.10.d: "News of the discovery of $gold$ in [SCOPE.sState('california_scope').GetName] has reached across the Pacific to [SCOPE.sCountry('china_scope').GetName]. Thousands of [SCOPE.sCulture('han_scope').GetName] migrants have begun to arrive, drawn by tales of the vast wealth flowing from \'Gold Mountain\'."
+usfp_manifest_destiny.10.f: ""O, just marry all the daughters to men from Gold Mountain—\n\nAll those trunks from Gold Mountain — you can demand as many as you want!\n\nO, don\'t ever marry your daughter to a man from Gold Mountain—\n\nLonely and sad — a cooking pot is her only companion!"" #Cantonese Rhyme
+usfp_manifest_destiny.10.a: "Gold fever is irresistable!"
+usfp_manifest_destiny.10.b: "We don't need even more foolish gold-seekers!"
+usfp_manifest_destiny.10.a.t: "In defiance of [SCOPE.sCountry('china_scope').GetAdjective] policies, upwards of 30,000 [SCOPE.sCulture('han_scope').GetName] $laborers$ will arrive in [SCOPE.sState('california_scope').GetName] over the next few years."
 
 ### Native Removal
 usfp_native_removal.1.t: "The Seminole Removal"
@@ -246,6 +260,12 @@ usfp_usa.11.d: "[SCOPE.sCharacter('bryan_scope').GetFullName] has catapulted him
 usfp_usa.11.f: ""Having behind us the producing masses of this nation and the world, supported by the commercial interests, the laboring interests, and the toilers everywhere, we will answer their demand for a gold standard by saying to them: \'You shall not press down upon the brow of labor this crown of thorns; you shall not crucify mankind upon a cross of gold!\'""
 usfp_usa.11.a: "The [SCOPE.sCharacter('bryan_scope').GetLastName] ticket will sweep the nation!"
 usfp_usa.11.b: "Free Silver is ridiculous, we need sound money!"
+
+usfp_usa.12.t: "The [ROOT.GetCountry.GetAdjective] Hippo Plan"
+usfp_usa.12.d: "A novel proposal has been submitted to Congress as a solution to the rising cost of $meat$. The plan calls for a population of African Hippopotamuses to be introduced to the [SCOPE.sState('louisiana_scope').GetName] bayou, where they can feast on invasive plants and be slaughtered for their meat."
+usfp_usa.12.f: ""Great Britain has eaten the Australian kangaroo and likes him, horseflesh is a staple in continental Europe, and the people of Central America eat the lizard. Why cannot Americans absorb the hippopotamus?""
+usfp_usa.12.a: "This idea is... absolutely ludicrous."
+usfp_usa.12.b: "This idea is brilliant! We shall feast on lake cow bacon!"
 
 
 ### Labor Events

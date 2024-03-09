@@ -758,3 +758,111 @@ usfp_manifest_destiny.9 = {
 		}
 	}
 }
+
+#California Gold Mountain
+usfp_manifest_destiny.10 = {
+	type = country_event
+	placement = scope:california_scope
+
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/invention_icons/prospecting_tech.dds"
+	
+	title = usfp_manifest_destiny.10.t
+	desc = usfp_manifest_destiny.10.d
+	flavor = usfp_manifest_destiny.10.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			OR = {
+				has_modifier = state_gold_rush
+				has_modifier = state_gold_rush_explotation
+				has_modifier = state_gold_rush_less_migration
+			}
+		}
+		has_law = law_type:law_no_migration_controls
+		NOT = {
+			has_global_variable = usfp_gold_mountain
+		}
+		game_date > 1851.1.1
+	}
+	immediate = {
+		s:STATE_CALIFORNIA.region_state:USA = {
+			save_scope_as = california_scope
+		}
+		set_global_variable = usfp_gold_mountain
+		c:CHI = {
+			save_scope_as = china_scope
+		}
+		cu:han = {
+			save_scope_as = han_scope
+		}
+	}
+
+	#yes good
+	option = {
+		name = usfp_manifest_destiny.10.a
+		default_option = yes
+		scope:california_scope = {
+			add_modifier = {
+				name = usfp_gold_rush_lawlessness
+				years = 3
+			}
+		}
+		custom_tooltip = {
+			text = usfp_manifest_destiny.10.a.t
+			trigger_event = usfp_manifest_destiny.11
+		}
+	}
+
+	#no bad
+	option = {
+		name = usfp_manifest_destiny.10.b
+		scope:california_scope = {
+			add_modifier = {
+				name = usfp_gold_rush_lawlessness
+				years = 3
+			}
+		}
+		custom_tooltip = {
+			text = usfp_manifest_destiny.10.a.t
+			trigger_event = usfp_manifest_destiny.11
+		}
+	}
+}
+
+#Hidden event to handle Chinese arrivals to California, since vanilla game mechanics make this impossible otherwise
+usfp_manifest_destiny.11 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		scope:california_scope = {
+			create_pop = {
+				culture = han
+				size = 4000
+			}
+			if = {
+				limit = { 
+					game_date < 1853.1.1
+				}
+				owner = {
+					trigger_event = {
+						id = usfp_manifest_destiny.11
+						months = 1
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+#California Genocide

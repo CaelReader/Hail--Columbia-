@@ -173,23 +173,23 @@
 			}
 		}
 		
-		create_character = {
-			is_general = yes
-			first_name = Edmund_P
-			last_name = Gaines
-			historical = yes
-			culture = cu:dixie
-			birth_date = 1777.4.20
-			interest_group = ig_armed_forces
-			ideology = ideology_moderate
-			commander_rank = commander_rank_1
-			hq = region_dixie
-			traits = { 
-				direct
-				scarred
-				basic_artillery_commander
-			}
-		}
+		# create_character = {
+		# 	is_general = yes
+		# 	first_name = Edmund_P
+		# 	last_name = Gaines
+		# 	historical = yes
+		# 	culture = cu:dixie
+		# 	birth_date = 1777.4.20
+		# 	interest_group = ig_armed_forces
+		# 	ideology = ideology_moderate
+		# 	commander_rank = commander_rank_1
+		# 	hq = region_dixie
+		# 	traits = { 
+		# 		direct
+		# 		scarred
+		# 		basic_artillery_commander
+		# 	}
+		# }
 		
 		
 		create_character = { # Sea

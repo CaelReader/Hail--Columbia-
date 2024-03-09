@@ -126,6 +126,7 @@
 				size = 1131
 			}
 		}
+		add_homeland = cu:caddoan
 	}
 	c:USA = {
 		create_diplomatic_pact = {
@@ -176,6 +177,7 @@
 				size = 1008
 			}
 		}
+		add_homeland = cu:cherokee
 	}
 	s:STATE_ALABAMA = {
 		set_owner_of_provinces = {
@@ -197,6 +199,7 @@
 				size = 168
 			}
 		}
+		add_homeland = cu:cherokee
 	}
 	s:STATE_TENNESSEE = {
 		set_owner_of_provinces = {
@@ -218,6 +221,7 @@
 				size = 280
 			}
 		}
+		add_homeland = cu:cherokee
 	}
 	c:USA = {
 		create_diplomatic_pact = {
@@ -234,6 +238,15 @@
 			country = c:CHE
 			months = 60
 		}
+	}
+	s:STATE_KENTUCKY = {
+		add_homeland = cu:cherokee
+	}
+	s:STATE_SOUTH_CAROLINA = {
+		add_homeland = cu:cherokee
+	}
+	s:STATE_NORTH_CAROLINA = {
+		add_homeland = cu:cherokee
 	}
 	#Comancheria
 	s:STATE_TEXAS = {

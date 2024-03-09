@@ -1,8 +1,8 @@
 {
   "name" : "Hail, Columbia!",
   "id" : "",
-  "version" : "",
-  "supported_game_version" : "",
+  "version" : "1.0-Washington",
+  "supported_game_version" : "1.6.*",
   "short_description" : "",
   "tags" : [],
   "relationships" : [],

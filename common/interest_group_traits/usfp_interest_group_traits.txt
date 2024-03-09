@@ -48,6 +48,7 @@ usfp_ig_trait_go_west = {
 	
 	modifier = {
 		state_migration_pull_mult = 0.25
+		country_resource_discovery_chance_mult = 0.10
 	}
 }
 usfp_ig_trait_republican_virtue = {

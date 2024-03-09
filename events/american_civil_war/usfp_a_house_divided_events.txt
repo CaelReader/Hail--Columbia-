@@ -128,7 +128,10 @@ usfp_a_house_divided.3 = {
 				years = 5
 			}
 		}
-
+		add_modifier = {
+			name = usfp_imminent_secession
+			years = 1
+		}
 		if = {
 			limit = { 
 				has_modifier = usfp_missouri_compromise_decaying
@@ -358,4 +361,66 @@ usfp_a_house_divided.6 = {
 		}
 	}
 
+}
+
+#California Statehood
+usfp_a_house_divided.7 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	event_image = {
+		video = "southamerica_election"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	title = usfp_a_house_divided.7.t
+	desc = usfp_a_house_divided.7.d
+	flavor = usfp_a_house_divided.7.f
+	dlc = dlc_usfp
+	placement = scope:california_scope
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			state_population > 60000
+			is_incorporated = no 
+		}
+		NOT = {
+			has_variable = california_state_ask
+		}
+		has_journal_entry = je_usfp_a_house_divided_missouri_compromise
+	}
+
+	immediate = {
+		s:STATE_CALIFORNIA.region_state:USA = {
+			save_scope_as = california_scope
+		}
+		set_variable = california_state_ask
+	}
+
+	#grant statehood!
+	option = {
+		name = usfp_a_house_divided.7.a
+		scope:california_scope = {
+			set_state_type = incorporated
+		}
+		custom_tooltip = {
+			text = missouri_compromise_break
+			set_variable = missouri_compromise_broken_var
+		}
+	}
+
+	#we need to compromise
+	option = {
+		name = usfp_a_house_divided.7.b
+		default_option = yes
+		scope:california_scope = {
+			add_radicals_in_state = {
+				value = 0.05
+				culture = cu:yankee
+			}
+		}
+		custom_tooltip = compromise_of_1850_soon
+	}
 }
