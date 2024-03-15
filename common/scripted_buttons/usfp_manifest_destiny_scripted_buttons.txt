@@ -210,6 +210,17 @@ usfp_homestead_act_button = {
 	}
 
 	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = usfp_homestead_administration
+				}
+			 }
+			 add_modifier = {
+				name = usfp_homestead_administration
+				years = 5
+			 }
+		}
 		every_scope_state = {
 			limit = {
 				usfp_american_west_zone = yes
