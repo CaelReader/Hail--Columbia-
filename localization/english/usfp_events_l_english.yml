@@ -2,11 +2,14 @@
 #ACW
 acw_events.1.a.t: "An [SCOPE.sIdeology('abolitionist_scope').GetName] [concept_agitator] will appear in [SCOPE.sCountry('usa_scope').GetName]."
 acw_events.1.b.t: "A [SCOPE.sIdeology('slaver_scope').GetName] [concept_agitator] will appear in [SCOPE.sCountry('usa_scope').GetName]."
+acw_events.3.a.t: "The status of the Missouri Compromise will remain uncertain."
+acw_events.3.c.t: "The Missouri Compromise may not survive the realities of westward expansion."
 
 usfp_a_house_divided.1.t: "The Pickney Resolutions"
-usfp_a_house_divided.1.d: "The House of Representatives has been buried in a flood of abolitionist petitions. In response, the [SCOPE.sParty('democratic_party').GetName] has passed resolutions forbidding the consideration or discussion of matters pertaining to slavery."
+usfp_a_house_divided.1.d: "In recent months, the House of Representatives has been buried in a flood of abolitionist petitions. In response, the [SCOPE.sParty('democratic_party').GetName] has passed resolutions forbidding the consideration or discussion of any matters pertaining to slavery."
 usfp_a_house_divided.1.f: ""Resolved — that all petitions, memorials, resolutions, propositions, or papers, relating in any way, or to any extent whatever, to the subject of slavery, or the abolition of slavery, shall, without being either printed or referred, be laid upon the table, and that no further action whatever shall be had thereon.""
 usfp_a_house_divided.1.a: "This is flagrantly unconstitutional."
+usfp_a_house_divided.1.b: "Finally, lets get on with business as usual."
 
 usfp_a_house_divided.3.t: "Secessionist Conventions"
 usfp_a_house_divided.3.d: "In response to the openly anti-slavery platform of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName], several states of the Deep South have immediately called conventions to consider secession from the [ROOT.GetCountry.GetName]."
@@ -16,13 +19,13 @@ usfp_a_house_divided.3.a: "You can have no conflict without being yourselves the
 missouri_compromise_break: "This will #red break#! the Missouri Compromise!"
 
 usfp_a_house_divided.4.t: "Twelve Years A Slave"
-usfp_a_house_divided.4.d: "[SCOPE.sCharacter('northup_scope').GetFullName], a free black man from the North, was kidnapped and sold into slavery in the South. After over a decade in bondage, he has returned to freedom and published Twelve Years a Slave, which has immediately become a best-seller. [SCOPE.sCharacter('northup_scope').GetLastName]\'s detailed account of the abhorrent conditions of slavery corroborate the North's worst fears, even as they are denied by slave-holders."
+usfp_a_house_divided.4.d: "[SCOPE.sCharacter('northup_scope').GetFullName], a free black man from the North, was kidnapped and sold into slavery in the South. After over a decade in bondage, he has returned to freedom and published Twelve Years a Slave, which has immediately become a best-seller. [SCOPE.sCharacter('northup_scope').GetLastName]\\'s detailed account of the abhorrent conditions of slavery corroborate the North's worst fears, even as they are denied by slave-holders."
 usfp_a_house_divided.4.f: ""Let them know the heart of the poor slave — learn his secret thoughts — thoughts he dare not utter in the hearing of the white man; let them sit by him in the silent watches of the night — converse with him in trustful confidence, of "life, liberty, and the pursuit of happiness," and they will find that ninety-nine out of every hundred are intelligent enough to understand their situation, and to cherish in their bosoms the love of freedom, as passionately as themselves."" #Solomon Northup
 usfp_a_house_divided.4.a: "A harrowing tale of the evils of the South."
 usfp_a_house_divided.4.b: "His story is naught but lies and slander."
 
-usfp_a_house_divided.5.t: "Uncle Tom\'s Cabin"
-usfp_a_house_divided.5.d: "Harriet Stowe\'s anti-slavery novel Uncle Tom\'s Cabin has taken the country by storm, selling hundreds of thousands of copies in only a few months. The novel's melodramatic account of the horrors of life under slavery have swayed thousands of readers to the [SCOPE.sIdeology('abolitionist_scope').GetName] cause, and drawn just as many outraged protests from the South."
+usfp_a_house_divided.5.t: "Uncle Tom\\'s Cabin"
+usfp_a_house_divided.5.d: "Harriet Stowe\\'s anti-slavery novel Uncle Tom\\'s Cabin has taken the country by storm, selling hundreds of thousands of copies in only a few months. The novel's melodramatic account of the horrors of life under slavery have swayed thousands of readers to the [SCOPE.sIdeology('abolitionist_scope').GetName] cause, and drawn just as many outraged protests from the South."
 usfp_a_house_divided.5.f: ""I don't want anything of your country, except to be let alone,--to go peaceably out of it; and when I get to Canada, where the laws will own me and protect me, that shall be my country, and its laws I will obey. But if any man tries to stop me, let him take care, for I am desperate. I'll fight for my liberty to the last breath I breathe. You say your fathers did it; if it was right for them, it is right for me!""
 usfp_a_house_divided.5.a: "Everyone should know of the injustices of slavery."
 usfp_a_house_divided.5.b: "This book is an outrageous fiction."
@@ -34,14 +37,44 @@ usfp_a_house_divided.6.a: "Slavery is bad for the South!"
 usfp_a_house_divided.6.b: "This whole notion is completely ridiculous."
 
 usfp_a_house_divided.7.t: "[SCOPE.sState('california_scope').GetName] Petitions for Statehood"
-usfp_a_house_divided.7.d: "As the population of [SCOPE.sState('california_scope').GetName] has exploded, the new settlers have recognized the need for an organized government. The locals have held a constitutional convention and are now petitioning for statehood. Their constitution outlaws slavery and claims a territory that crosses the Missouri Compromise line, causing consternation in Congress over upsetting the balance between free and slave states."
+usfp_a_house_divided.7.d: "As the population of [SCOPE.sState('california_scope').GetName] has exploded, the new settlers have recognized the need for an organized government. They have held a constitutional convention and are now petitioning for statehood. Their constitution outlaws slavery and claims a territory that crosses the Missouri Compromise line, causing consternation in Congress over upsetting the balance between free and slave states."
 usfp_a_house_divided.7.f: ""Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, that the state of California shall be one, and is hereby declared to be one, of the United States of America, and admitted into the Union on an equal footing with the original states in all respects whatever. ""
 usfp_a_house_divided.7.a: "Welcome to the Union!"
-usfp_a_house_divided.7.b: "We cannot add a free state without some additional compromise"
+usfp_a_house_divided.7.b: "We cannot unilaterally add a new free state."
 compromise_of_1850_soon: "Our westward expansion has made the Missouri Compromise untenable. A new compromise will need to be developed."
 
+usfp_a_house_divided.8.t: "A New Compromise"
+usfp_a_house_divided.8.d_california: "The admission of [SCOPE.sState('california_scope').GetName] to the Union has incensed the [SCOPE.gsInterestGroup('planters_scope').GetName], who have already begun to discuss secession amongst themselves. [SCOPE.sCharacter('compromise_leader').GetFullName] has assembled a compromise package to defuse tensions: The doctrine of popular sovereignty will allow the people of each western territory to decide the status of slavery, and the Fugitive Slave Act will compel citizens of free states to help catch runaway slaves."
+usfp_a_house_divided.8.d: "The status of our western territories has continued to divide Congress.  [SCOPE.sCharacter('compromise_leader').GetFullName] has assembled a compromise package to defuse tensions: [SCOPE.sState('california_scope').GetName] will be admitted to the Union as a free state. In turn, the doctrine of popular sovereignty will allow the people of each western territory to decide the status of slavery, and the Fugitive Slave Act will compel citizens of free states to help catch runaway slaves."
+usfp_a_house_divided.8.f: ""With these bills, we shall arrive at a final settlement between the sections, and preserve the union henceforth.""
+usfp_a_house_divided.8.a: "The Union is saved!"
+usfp_a_house_divided.8.b: "The Fugitive Slave Act is a step too far."
+usfp_a_house_divided.8.c: "Reject popular sovereignty, but offer the Fugitive Slave Act as redress."
+usfp_a_house_divided.8.e: "We are done compromising with the [SCOPE.gsInterestGroup('planters_scope').GetName]."
+popular_sovereignty_enabled: "Our western territories may now become Slave states if the local settlers vote in favor of it."
+
+usfp_a_house_divided.10.t: "The Kansas-Nebraska Act"
+usfp_a_house_divided.10.d: "With the western territories in need of governance, the [SCOPE.sParty('democratic_party').GetName] has put forth a bill to organize territorial governments in [SCOPE.sState('kansas_scope').GetName] and [SCOPE.sState('Nebraska_scope').GetName]. The act would allow the people of these territories to vote on the status of slavery, ending the Missouri Compromise."
+usfp_a_house_divided.10.f: ""What is the excuse for all this turmoil and mischief? We are told it is to keep the question of slavery out of Congress! Great God! It was out of Congress, completely, entirely, and forever out of Congress, until Congress dragged it in by breaking down the sacred laws which settled it!"" #Thomas Hart
+usfp_a_house_divided.10.a: "Popular sovereignty will settle the matter."
+usfp_a_house_divided.10.b: "This bill would tear the country apart."
+
+usfp_a_house_divided.11.t: "Bleeding Kansas"
+usfp_a_house_divided.11.d: "With the question of slavery in [SCOPE.sState('kansas_scope').GetName] now open, abolitionists and proponents of slavery alike have begun to pour into the state, intent on influencing the outcome of local elections."
+usfp_a_house_divided.11.f: ""Far in the West rolls the thunder -\nThe tumult of battle is raging\nWhere bleeding Kansas is waging\nWar against Slavery!"" #Charles Weyman
+usfp_a_house_divided.11.a: "[SCOPE.sState('kansas_scope').GetName] will be free soil!"
+usfp_a_house_divided.11.b: "Yankees should mind their own business."
+usfp_a_house_divided.11.c: "This will be decided at the ballot box."
+
+usfp_a_house_divided.14.t: "Breaking the Compromise"
+usfp_a_house_divided.14.d: "Representatives from across the sectional divide have opposed [SCOPE.sLaw('current_law_scope').GetName] as a breach of the accord between North and South, denouncing it as a danger to national unity."
+usfp_a_house_divided.14.f: ""Maintain the compromise! Stir not up agitation! Give us peace!"" #Same Houston
+usfp_a_house_divided.14.a: "The Union must be preserved at any cost."
+usfp_a_house_divided.14.b: "Compromise with Slavery is immoral!"
+usfp_a_house_divided.14.c: "Compromise with the abolitionists is untenable!"
+
 usfp_acw.1.t: "A Traitor's Peace"
-usfp_acw.1.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has published a scathing criticism of [SCOPE.sCountry('csa_scope').GetAdjective] peace demands, depicting them as dishonoring the Union and self-destructive to the North. The [SCOPE.sParty('republican_party_scope').GetName] has ran with it to bolster public support for continuing the war, denouncing what they call a Traitor\'s Peace."
+usfp_acw.1.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has published a scathing criticism of [SCOPE.sCountry('csa_scope').GetAdjective] peace demands, depicting them as dishonoring the Union and self-destructive to the North. The [SCOPE.sParty('republican_party_scope').GetName] has ran with it to bolster public support for continuing the war, denouncing what they call a Traitor\\'s Peace."
 usfp_acw.1.f: ""People of the United States! Will you give your assent to such a base surrender of our cause? If not, then rally only with those who keep step to the music of the Union, who stand by our brave soldiers in the field! Rally for liberty and union, now and forever, one and separable!""
 usfp_acw.1.a: "The Union forever!"
 
@@ -54,18 +87,19 @@ usfp_manifest_destiny.1.b: "What a preposterous notion."
 
 usfp_manifest_destiny.2.t: "[SCOPE.sStateRegion('texas_scope').GetName] Calls for Aid!"
 usfp_manifest_destiny.2.d: "A delegation from the former Republic of Texas has arrived in Washington. In the wake of their failed rebellion, they claim that [SCOPE.sCulture('dixie_culture').GetName] settlers have been subjected to harsh punishments by the [SCOPE.sCountry('mexico_scope').GetAdjectiveNoFormatting] authorities. The delegation is beseeching our intervention to free the Texians from the tyranny of [SCOPE.sCountry('mexico_scope').GetName]"
+usfp_manifest_destiny.2.f: ""The Mexican nation has acquiesced in the late changes made in the government by General Antonio Lopez de Santa Anna, who having overturned the constitution of his country, now offers us the cruel alternative, either to abandon our homes, acquired by so many privations, or submit to the most intolerable of all tyranny, the combined despotism of the sword and the priesthood."" #texas declaration of independence
 usfp_manifest_destiny.2.a: "Texas calls for aid, and the [ROOT.GetCountry.GetName] shall answer!"
 usfp_manifest_destiny.2.b: "We have no interest in antagonizing [SCOPE.sCountry('mexico_scope').GetName]."
 
 usfp_manifest_destiny.3.t: "An Offer for the North"
-usfp_manifest_destiny.3.d: "The government of the [SCOPE.sCountry('usa_scope').GetName] have offered to purchase our northern territories for an appropiate sum. The Americans seem insistent on acquiring more land, and accepting may be a way to avoid hostilities."
+usfp_manifest_destiny.3.d: "The government of the [SCOPE.sCountry('usa_scope').GetName] have offered to purchase our northern territories for a sum of @money!#yellow 3 Million#!, to be paid over a period of 4 years. The Americans seem insistent on acquiring more land, and accepting may be a way to avoid hostilities."
 usfp_manifest_destiny.3.f: ""Alta California #italic and#! New Mexico? Surely they must be joking, they expect us to sell half our country for pennies?"\n\n"Well señor, our treasury could use the help, and the Americans second offer might not be as diplomatic."\n\n"Preposterous! If they want to steal our land, let them bring their guns, and we'll bring ours.""
 usfp_manifest_destiny.3.a: "We will accept the deal."
 usfp_manifest_destiny.3.b: "A ridiculous offer. We refuse to even meet with the diplomats."
 
 usfp_manifest_destiny.4.t: "Mexico Refuses"
-usfp_manifest_destiny.4.d: "[SCOPE.sCountry('mexico_scope').GetName] has rejected our offer to purchase their territory."
-usfp_manifest_destiny.4.f: ""They refused to even see me, Sir."\n\n"I see. I will meet with the generals today.""
+usfp_manifest_destiny.4.d: "[SCOPE.sCountry('mexico_scope').GetName] has rejected our offer to purchase their territory. Jingoistic elements in our administration have already begun to call for war, with a few even proposing that we seize all of Mexico as new [ROOT.GetCountry.GetAdjective] territory."
+usfp_manifest_destiny.4.f: ""They refused to even see me, Sir. Turned me away at the gates."\n\n"I see. Send a dispatch to the papers. I will meet with the generals later today.""
 usfp_manifest_destiny.4.a: "Another time perhaps."
 usfp_manifest_destiny.4.b: "We will have that land one way or another."
 
@@ -82,8 +116,8 @@ usfp_manifest_destiny.6.d: "With the enemy army in tatters and [SCOPE.sState('me
 usfp_manifest_destiny.6.f: "The United States of America and the United Mexican States animated by a sincere desire to put an end to the calamities of the war which unhappily exists between the two Republics and to establish Upon a solid basis relations of peace and friendship..."
 usfp_manifest_destiny.6.a: "We shall secure the Mexican Cession, and provide some recompense for their losses."
 usfp_manifest_destiny.6.b: "An end to hostilies is our priority."
-usfp_manifest_destiny.6.c: "Not only Alta California and New Mexico, but also the rest of northern Mexico will become our territory."
-usfp_manifest_destiny.6.e: "They will cede their northern lands and become an American dominion."
+usfp_manifest_destiny.6.c: "We would prefer to shift the border even further south."
+usfp_manifest_destiny.6.e: "They will cede their northern lands and accept American occupation."
 usfp_manifest_destiny.6.g: "After all, why not? Why shouldn't we take all of Mexico?"
 
 usfp_manifest_destiny.7.t: "[SCOPE.gsInterestGroup('pb_ig').GetName] Embrace Continentalism"
@@ -105,11 +139,43 @@ usfp_manifest_destiny.9.a: "The railroads will transform the country!"
 usfp_manifest_destiny.9.b: "The railroads are too financially risky."
 
 usfp_manifest_destiny.10.t: "Tales of Gold Mountain"
-usfp_manifest_destiny.10.d: "News of the discovery of $gold$ in [SCOPE.sState('california_scope').GetName] has reached across the Pacific to [SCOPE.sCountry('china_scope').GetName]. Thousands of [SCOPE.sCulture('han_scope').GetName] migrants have begun to arrive, drawn by tales of the vast wealth flowing from \'Gold Mountain\'."
-usfp_manifest_destiny.10.f: ""O, just marry all the daughters to men from Gold Mountain—\n\nAll those trunks from Gold Mountain — you can demand as many as you want!\n\nO, don\'t ever marry your daughter to a man from Gold Mountain—\n\nLonely and sad — a cooking pot is her only companion!"" #Cantonese Rhyme
+usfp_manifest_destiny.10.d: "News of the discovery of $gold$ in [SCOPE.sState('california_scope').GetName] has reached across the Pacific to [SCOPE.sCountry('china_scope').GetName]. Thousands of [SCOPE.sCulture('han_scope').GetName] migrants have begun to arrive, drawn by tales of the vast wealth flowing from \\'Gold Mountain\\'."
+usfp_manifest_destiny.10.f: ""O, just marry all the daughters to men from Gold Mountain—\n\nAll those trunks from Gold Mountain — you can demand as many as you want!\n\nO, don\\'t ever marry your daughter to a man from Gold Mountain—\n\nLonely and sad — a cooking pot is her only companion!"" #Cantonese Rhyme
 usfp_manifest_destiny.10.a: "Gold fever is irresistable!"
 usfp_manifest_destiny.10.b: "We don't need even more foolish gold-seekers!"
 usfp_manifest_destiny.10.a.t: "In defiance of [SCOPE.sCountry('china_scope').GetAdjective] policies, upwards of 30,000 [SCOPE.sCulture('han_scope').GetName] $laborers$ will arrive in [SCOPE.sState('california_scope').GetName] over the next few years."
+
+usfp_manifest_destiny.12.t: "The California Genocide"
+usfp_manifest_destiny.12.d: "As [ROOT.GetCountry.GetAdjective] settlers continue to press into the interior of [SCOPE.sState('california_scope').GetName], the state government has seen fit to embark on a campaign of extermination against the [SCOPE.sCulture('hokan_scope').GetName] natives. Rapes, massacres, enslavement, and displacement have become commonplace in the state, encouraged by government bounties and protections for settlers."
+usfp_manifest_destiny.12.f: ""Extermination is no longer even a question of time — the time has already arrived, the work has been commenced, and let the first white man who says treaty or peace be regarded as a traitor and coward.""
+usfp_manifest_destiny.12.a: "Our people must come first."
+usfp_manifest_destiny.12.b: "This is absolutely barbaric, we need to intervene."
+
+usfp_manifest_destiny.14.t: "The Ostend Circular"
+usfp_manifest_destiny.14.d: "Several [ROOT.GetCountry.GetAdjective] diplomats have composed a dispatch to [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] laying out the case for the acquisition of [SCOPE.sStateRegion('cuba_scope').GetName]. The circular suggests purchasing the island from the [SCOPE.sCountry('cuba_owner_scope').GetAdjective] government, but also justifies taking the island by force if necessary."
+usfp_manifest_destiny.14.f: ""The Union can never enjoy repose, nor possess reliable security, as long as Cuba is not embraced within its boundaries. Its immediate acquisition by our government is of paramount importance, and we cannot doubt but that it is a consummation devoutly wished for by its inhabitants."" #Ostend Manifesto
+usfp_manifest_destiny.14.a: "This suggestion is crass imperalism."
+usfp_manifest_destiny.14.b: "[SCOPE.sStateRegion('cuba_scope').GetName] is critical to our national security."
+usfp_manifest_destiny.14.c: "Oh, we won\\'t be #italic purchasing#! anything from [SCOPE.sCountry('cuba_owner_scope').GetName]"
+cuba_offer_available: "We can make an offer to purchase [SCOPE.sStateRegion('cuba_scope').GetName] from [SCOPE.sCountry('cuba_owner_scope').GetName]."
+
+usfp_manifest_destiny.15.t: "The Cuban Purchase"
+usfp_manifest_destiny.15.d: "The [SCOPE.sCountry('usa_scope').GetName] have offered to purchase the island of [SCOPE.sStateRegion('cuba_scope').GetName] from us, claiming that it is imperative to their national security. They have offered @money!#yellow 13 Million#!, to be paid over the course of 30 years."
+usfp_manifest_destiny.15.f: ""This object once accomplished, [ROOT.GetCountry.GetNameNoFormatting] would become a centre of attraction for the traveling world, and secure a permanent and profitable market for her various productions. Her fields, under the stimulus given to industry by remunerative prices, would teem with cereal grain, and her vineyards would bring forth a vastly increased quantity of choice wines. [ROOT.GetCountry.GetNameNoFormatting] would speedily become what a bountiful Providence intended she should be - rich, powerful, and contended."" #Ostend Manifesto
+usfp_manifest_destiny.15.b: "Preposterous!"
+usfp_manifest_destiny.15.a: "Let us be rid of [SCOPE.sStateRegion('cuba_scope').GetName]."
+
+usfp_manifest_destiny.16.t: "[SCOPE.sCountry('cuba_owner_scope').GetName] Refuses"
+usfp_manifest_destiny.16.d: "[SCOPE.sCountry('cuba_owner_scope').GetName] has categorically refused our offer to purchase [SCOPE.sStateRegion('cuba_scope').GetName]. Military intervention will be required if we wish to take control of the island."
+usfp_manifest_destiny.16.f: ""After we shall have offered [SCOPE.sCountry('cuba_owner_scope').GetNameNoFormatting] a price for Cuba far beyond its present value, and this shall have been refused, it will then be time to consider the question; does Cuba, in the possession of Spain, seriously endanger our internal peace and the existence of our cherished Union?"" #Ostend Manifesto
+usfp_manifest_destiny.16.a: "If they refuse to sell, we will not force them."
+usfp_manifest_destiny.16.b: "We must assert our control over the Gulf."
+
+usfp_manifest_destiny.17.t: "[SCOPE.sCountry('cuba_owner_scope').GetName] Sells [SCOPE.sStateRegion('cuba_scope').GetName]"
+usfp_manifest_destiny.17.d: "[SCOPE.sCountry('cuba_owner_scope').GetName] has agreed to our purchase of [SCOPE.sStateRegion('cuba_scope').GetName]."
+usfp_manifest_destiny.17.f: ""The United States and every commercial nation would be benefited by this transfer, and the interests of Spain would also be greatly and essentially promoted. She cannot but see what such a sum of money as we are willing to pay for the island would effect in the development of her vast natural resources.""
+usfp_manifest_destiny.17.a: "Cigars all around!"
+
 
 ### Native Removal
 usfp_native_removal.1.t: "The Seminole Removal"
@@ -222,22 +288,22 @@ usfp_usa.5.a: "Fires always burn themselves out."
 usfp_usa.5.b: "We will help fund the recovery efforts."
 
 usfp_usa.6.t: "The Great [SCOPE.sState('illinois_scope').GetCityHubName] Fire"
-usfp_usa.6.d: "A massive fire has raged for two days throughout the central section of [SCOPE.sState('illinois_scope').GetCityHubName], [SCOPE.sState('illinois_scope').GetName]. Over fifteen thousand structures have burned, leaving almost a hundred thousand of the city's residents homeless. Donations and supplies have flooded in from all parts to the stricken city. Fueled by the same winds, large wildfires have also blazed across the shorelines of [SCOPE.sStateRegion('michigan_scope').GetName] and [SCOPE.sStateRegion('wisconsin_scope').GetName]"
+usfp_usa.6.d: "A massive fire has raged for two days throughout the central section of [SCOPE.sState('illinois_scope').GetCityHubName], [SCOPE.sState('illinois_scope').GetName]. Over fifteen thousand structures have burned, leaving almost a hundred thousand of the city's residents homeless. Donations and supplies have flooded in from all parts to the stricken city. Fueled by the same winds, large wildfires have also blazed across the shorelines of [SCOPE.sStateRegion('michigan_scope').GetName] and [SCOPE.sStateRegion('wisconsin_scope').GetName]."
 usfp_usa.6.f: ""Listening for a few moments, and thinking it must be near morning, I composed myself to sleep again, but was restless, and my mind became gradually filled with a dread for which I could not account. At length, to assure myself, I rose and went to the window, threw open the blinds, and gazed upon a sheet of flame towering one hundred feet above the top of the hotel, and upon a shower of sparks as copious as drops in a thunder-storm.""
 usfp_usa.6.a: "What a terrible catastrophe."
 usfp_usa.6.b: "Federal funding will bolster the donations."
 
-usfp_usa.7.t: "Harper\'s Weekly"
-usfp_usa.7.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has risen to prominence through his scathing political cartoons. Published nationwide in the ever-popular #italic Harper\'s Weekly#!, his illustrations have come to shape the national discourse, as well as relentlessly mock his political opponents."
+usfp_usa.7.t: "Harper\\'s Weekly"
+usfp_usa.7.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has risen to prominence through his scathing political cartoons. Published nationwide in the ever-popular #italic Harper\\'s Weekly#!, his illustrations have come to shape the national discourse, as well as relentlessly mock his political opponents."
 usfp_usa.7.f: ""You cannot help seeing Mr. Nast's pictures, and when you have seen them you cannot fail to understand them. When he caricatures a politician, the name of that politician ever afterwards recalls the countenance of which Mr. Nast has made him a present. An artist of this stamp — and such artists are very rare indeed — does more to affect public opinion than a score of writers.""
 usfp_usa.7.a: "Let us hope he's not a thorn in our side."
 usfp_usa.7.b: "Cartoons are for the small-minded."
 
 usfp_usa.8.t: "The [SCOPE.sCharacter('nast_scope').GetLastName] Effect"
-usfp_usa.8.d: "The latest issue of Harper\'s Weekly includes an intricate piece by [SCOPE.sCharacter('nast_scope').GetFullName] in support of [SCOPE.sCharacter('nast_support_scope').GetFullName]\'s candidacy. The cartoon also includes a mocking depiction of [SCOPE.sCharacter('nast_target_scope').GetFullName] and [SCOPE.sCharacter('nast_support_scope').GetHerHis] policies."
+usfp_usa.8.d: "The latest issue of Harper\\'s Weekly includes an intricate piece by [SCOPE.sCharacter('nast_scope').GetFullName] in support of [SCOPE.sCharacter('nast_support_scope').GetFullName]\\'s candidacy. The cartoon also includes a mocking depiction of [SCOPE.sCharacter('nast_target_scope').GetFullName] and [SCOPE.sCharacter('nast_support_scope').GetHerHis] policies."
 usfp_usa.8.f: ""Let's stop them damn pictures! I don't care so much what the papers write about — my constituents can't read — but damn it, they can see pictures!""
 usfp_usa.8.a: "Good one, Nast!"
-usfp_usa.8.b: "We need to discredit Harper\'s Weekly."
+usfp_usa.8.b: "We need to discredit Harper\\'s Weekly."
 usfp_usa.8.c: "Stop those presses."
 
 usfp_usa.9.t: "Constitutional Challenge"
@@ -246,7 +312,7 @@ usfp_usa.9.f: ""The powers of the legislature are defined and limited; and that 
 usfp_usa.9.a: "The law cannot go forward."
 usfp_usa.9.b: "Under a certain interpretation, the law is perfectly constitutional!"
 usfp_usa.9.c: "Loyal judges will read the Constitution as suits our needs."
-usfp_usa.9.d: "The Constitution must bend to the will of the workers."
+usfp_usa.9.e: "The Constitution must bend to the will of the workers."
 
 usfp_usa.10.t: "Scientific Management"
 usfp_usa.10.d: "A new theory of industrial management has risen to prominence among the [SCOPE.gsInterestGroup('industrialists_scope').GetName] and [SCOPE.gsInterestGroup('intelligentsia_scope').GetName]. This new Scientific Management seeks to determine an objectively optimal method for any given task, which is then implemented via close cooperation between managers and workers."
@@ -256,8 +322,8 @@ usfp_usa.10.b: "Our esteemed [SCOPE.gsInterestGroup('intelligentsia_scope').GetN
 usfp_usa.10.c: "The bosses already micromanage too much."
 
 usfp_usa.11.t: "The Cross of Gold"
-usfp_usa.11.d: "[SCOPE.sCharacter('bryan_scope').GetFullName] has catapulted himself to the heights of the [SCOPE.sParty('bryan_party').GetName], delivering an electrifying speech to the party's covention. In his \'Cross of Gold\' address, [SCOPE.sCharacter('bryan_scope').GetLastName] extoled silver coinage as a bulwark against big city moneyed interests, and presented a populist platform that would ensure prosperity for the common masses."
-usfp_usa.11.f: ""Having behind us the producing masses of this nation and the world, supported by the commercial interests, the laboring interests, and the toilers everywhere, we will answer their demand for a gold standard by saying to them: \'You shall not press down upon the brow of labor this crown of thorns; you shall not crucify mankind upon a cross of gold!\'""
+usfp_usa.11.d: "[SCOPE.sCharacter('bryan_scope').GetFullName] has catapulted himself to the heights of the [SCOPE.sParty('bryan_party').GetName], delivering an electrifying speech to the party's covention. In his \\'Cross of Gold\\' address, [SCOPE.sCharacter('bryan_scope').GetLastName] extoled silver coinage as a bulwark against big city moneyed interests, and presented a populist platform that would ensure prosperity for the common masses."
+usfp_usa.11.f: ""Having behind us the producing masses of this nation and the world, supported by the commercial interests, the laboring interests, and the toilers everywhere, we will answer their demand for a gold standard by saying to them: \\'You shall not press down upon the brow of labor this crown of thorns; you shall not crucify mankind upon a cross of gold!\\'""
 usfp_usa.11.a: "The [SCOPE.sCharacter('bryan_scope').GetLastName] ticket will sweep the nation!"
 usfp_usa.11.b: "Free Silver is ridiculous, we need sound money!"
 
@@ -267,6 +333,11 @@ usfp_usa.12.f: ""Great Britain has eaten the Australian kangaroo and likes him, 
 usfp_usa.12.a: "This idea is... absolutely ludicrous."
 usfp_usa.12.b: "This idea is brilliant! We shall feast on lake cow bacon!"
 
+usfp_usa.13.t: "Wild Hippos"
+usfp_usa.13.d: "Our imported Hippopotamuses have proven quite unruly, regularly maiming their handlers and escaping into the bayou. Wild hippos have begun to crop up in the waterways of several nearby states, terrorizing unsuspecting locals and wreaking havoc on local plants and crops."
+usfp_usa.13.f: ""The hippo can be easily domesticated. It is as gentle as a lamb in all the zoo. It can be lead about with a halter. A young hippo will even take milk from a baby's bottle!""
+usfp_usa.13.a: "The hippos will be a boon to the local ecosystem!"
+usfp_usa.13.b: "Put out a bounty on these rampaging beasts."
 
 ### Labor Events
 usfp_usa_labor.1.t: "The Industrial Workers of the World"

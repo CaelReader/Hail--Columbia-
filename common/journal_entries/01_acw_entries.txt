@@ -1,4 +1,4 @@
-﻿#A House Divided: Main JE
+﻿#USFP: repurposed into A House Divided: Main JE
 je_acw_countdown = {
 	icon = "gfx/interface/icons/event_icons/waving_flag_usa.dds"
 
@@ -36,8 +36,16 @@ je_acw_countdown = {
 		government_legitimacy > 20
 	}
 
+	on_complete = {
+		trigger_event = {
+			id = usfp_a_house_divided.12
+			popup = yes
+		}
+	}
+
 	modifiers_while_active = {
 		usfp_a_house_divided_modifier
+		usfp_slave_power_modifier
 	}
 	fail = {
 		OR = {
@@ -117,23 +125,21 @@ je_acw_countdown = {
 		}
 		random_events = {
 			# American Civil War buildup
-			200 = 0
+			300 = 0
 			10 = acw_events.1 # The Abolitionist's Martyrdom
 			100 = usfp_a_house_divided.4 #Twelve Years a Slave
 			100 = usfp_a_house_divided.5 # Uncle Tom's Cabin
 			50 = usfp_a_house_divided.6 # The Impending Crisis of the South
+			50 = usfp_a_house_divided.13 #Slavery expands west
+			#Dred Scott decision
 		}
 		events = {
+			acw_events.3 # The Wilmot Proviso
 			usfp_a_house_divided.1 #Gag Rule implemented
-		}
-	}
-	on_yearly_pulse = {
-		random_events = {
-			40 = 0
-			# 20 = acw_events.2 # The Fugitive Slave
-			10 = acw_events.3 # The Wilmot Proviso
-			# 20 = acw_events.5 # Bleeding Kansas
-			20 = acw_events.6 # The Caning of Charles Sumner
+			usfp_a_house_divided.7 #California Statehood
+			usfp_a_house_divided.9 #Texas slavery
+			usfp_a_house_divided.10 #Kansas-Nebraska Act
+			usfp_a_house_divided.11 #Bleeding Kansas
 		}
 	}
 
@@ -141,7 +147,6 @@ je_acw_countdown = {
 		value = 120
 	}
 
-	progressbar = yes
 
 	weight = 100
 }
@@ -150,6 +155,17 @@ je_acw_war = {
 	icon = "gfx/interface/icons/event_icons/waving_flag_usa_distress.dds"
 
 	group = je_group_historical_content
+
+
+	immediate = {
+		usfp_manifest_less_destiny_effect = yes
+		if = {
+			limit = { 
+				has_modifier = usfp_1850_compromise_decaying
+			}
+			remove_modifier = usfp_1850_compromise_decaying
+		}
+	}
 
 	complete = {
 		custom_tooltip = {
@@ -170,9 +186,29 @@ je_acw_war = {
 		}
 	}
 
+	fail = {
+		exists = c:CSA
+		NOT = {
+			has_war_with = c:CSA
+		}
+	}
+
+	on_fail = {
+		usfp_manifest_less_destiny_effect = yes
+	}
+
 	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			25 = usfp_acw.1 #A Traitor's Peace
+			#Trent Affair
+			#Ironclads
+			#Draft Riot
+		}
 		events = {
-			acw_je_events.4
+			#Indians declare for Confederacy
+			# acw_je_events.4 #Emancipation Proclamation
+			#March to the Sea
 		}
 	}
 
@@ -188,6 +224,20 @@ je_acw_reconstruction = {
 	icon = "gfx/interface/icons/invention_icons/egalitarianism.dds"
 
 	group = je_group_historical_content
+
+	#clean up election-spawned agitators
+	immediate = {
+		every_scope_character = {
+			limit = {
+				has_variable = usfp_acw_agitator
+				OR = {
+					has_ideology = ideology:ideology_slaver
+					has_ideology = ideology:ideology_abolitionist
+				}
+			}
+			kill_character = yes
+		}
+	}
 
 	complete = {
 		scope:journal_entry = {
@@ -212,6 +262,8 @@ je_acw_reconstruction = {
 	goal_add_value = {
 		add = 3
 	}
+
+	progressbar = yes
 
 	timeout = 4380
 

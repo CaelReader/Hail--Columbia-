@@ -1,4 +1,4 @@
-namespace = usfp_usa
+﻿namespace = usfp_usa
 
 #Seneca Falls Convention
 usfp_usa.1 = {
@@ -258,6 +258,7 @@ usfp_usa.4 = {
 	#Cool
 	option = {
 		name = usfp_usa.4.a
+		default_option = yes
 		scope:new_york_scope = {
 			add_modifier = {
 				name = usfp_ellis_island_modifier
@@ -723,6 +724,7 @@ usfp_usa.8 = {
 		trigger = {
 			any_interest_group = {
 				is_in_government = no
+				is_marginal = no
 				party = scope:republican_party_scope
 			}
 			OR = {
@@ -884,7 +886,7 @@ usfp_usa.9 = {
 
 	#Revolutionary Reformism
 	option = {
-		name = usfp_usa.9.d
+		name = usfp_usa.9.e
 		trigger = {
 			OR = {
 				is_enacting_law = law_type:law_council_republic
@@ -967,6 +969,7 @@ usfp_usa.10 = {
 	#Industrialists get Scientific Management
 	option = {
 		name = usfp_usa.10.a
+		default_option = yes
 		ig:ig_industrialists = {
 			set_ig_trait = ig_trait:usfp_ig_trait_scientific_management
 		}
@@ -1103,11 +1106,31 @@ usfp_usa.11 = {
 		ig:ig_rural_folk = {
 			set_ig_trait = ig_trait:usfp_ig_trait_free_silver
 		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					ig:ig_rural_folk = {
+						is_in_government = yes
+					}
+				}
+				multiply = 3
+			}
+			modifier = {
+				trigger = {
+					ig:ig_rural_folk = {
+						is_powerful = yes
+					}
+				}
+				multiply = 3
+			}
+		}
 	}
 
 	#Sound Money is better
 	option = {
 		name = usfp_usa.11.b
+		default_option = yes
 		scope:bryan_scope = {
 			add_character_role = agitator
 			interest_group = {
@@ -1124,6 +1147,9 @@ usfp_usa.11 = {
 				name = usfp_free_silver_ig
 				years = 4
 			}
+		}
+		ai_chance = {
+			base = 100
 		}
 	}
 }
@@ -1209,3 +1235,90 @@ usfp_usa.12 = {
 		}
 	}
 }
+
+#Loose Hippos
+usfp_usa.13 = {
+	type = country_event
+	placement = scope:louisiana_scope
+
+	title = usfp_usa.13.t
+	desc = usfp_usa.13.d
+	flavor = usfp_usa.13.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/hippo.dds"
+
+	duration = 3
+	cooldown = {
+		years = 1000
+	}
+
+	trigger = {
+		any_scope_building = {
+			is_building_type = usfp_hippo_ranch
+		}
+	}
+
+	immediate = {
+		s:STATE_LOUISIANA = {
+			random_scope_state = {
+				save_scope_as = louisiana_scope
+			}
+		}
+		random_scope_building = {
+			limit = {
+				is_building_type = usfp_hippo_ranch
+			}
+			save_scope_as = hippo_ranch_scope
+		}
+	}
+
+	#wow this was totally unexpected
+	option = {
+		name = usfp_usa.13.a
+		every_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_LOUISIANA
+					state_region = s:STATE_MISSISSIPPI
+					state_region = s:STATE_FLORIDA
+				}
+			}
+			add_modifier = {
+				name = usfp_loose_hippos
+			}
+			state_region = {
+				add_devastation = 5
+			}
+		}
+	}
+	#put a bounty on the hippos
+	option = {
+		name = usfp_usa.13.b
+		default_option = yes
+		add_treasury = -10000
+		every_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_LOUISIANA
+					state_region = s:STATE_MISSISSIPPI
+					state_region = s:STATE_FLORIDA
+				}
+			}
+			add_modifier = {
+				name = usfp_loose_hippos
+				years = 10
+			}
+			state_region = {
+				add_devastation = 5
+			}
+		}
+	}
+}
+
+#Collapse of the Second Party System

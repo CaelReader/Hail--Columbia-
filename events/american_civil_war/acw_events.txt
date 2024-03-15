@@ -168,128 +168,130 @@ acw_events.1 = {
 }
 
 # The Fugitive Slave
-acw_events.2 = {
-	type = country_event
+# acw_events.2 = {
+# 	type = country_event
 
-	event_image = {
-		video = "southamerica_slaves_night"
-	}
+# 	event_image = {
+# 		video = "southamerica_slaves_night"
+# 	}
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+# 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-	title = acw_events.2.t
-	desc = acw_events.2.d
-	flavor = acw_events.2.f
+# 	title = acw_events.2.t
+# 	desc = acw_events.2.d
+# 	flavor = acw_events.2.f
 
-	duration = 3
+# 	duration = 3
 
-	trigger = {
-		NOT = { has_law = law_type:law_slavery_banned }
-		NOT = { has_variable = american_civil_war }
-		any_interest_group = {
-			is_revolutionary = no
-			is_insurrectionary = no
-			is_marginal = no
-			OR = {
-				has_ideology = ideology:ideology_pro_slavery
-				leader = {
-					has_ideology = ideology:ideology_slaver
-				}
-			}
-		}
-		NOT = { has_variable = fugitive_slave_var }
-	}
+# 	trigger = {
+# 		NOT = { has_law = law_type:law_slavery_banned }
+# 		NOT = { has_variable = american_civil_war }
+# 		any_interest_group = {
+# 			is_revolutionary = no
+# 			is_insurrectionary = no
+# 			is_marginal = no
+# 			OR = {
+# 				has_ideology = ideology:ideology_pro_slavery
+# 				leader = {
+# 					has_ideology = ideology:ideology_slaver
+# 				}
+# 			}
+# 		}
+# 		NOT = { has_variable = fugitive_slave_var }
+# 	}
 
-	immediate = {
-		random_interest_group = {
-			limit = {
-				is_revolutionary = no
-				is_insurrectionary = no
-				is_marginal = no
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = {
-						has_ideology = ideology:ideology_slaver
-					}
-				}
-			}
-			save_scope_as = slaver_ig
-			leader = {
-				save_scope_as = slaver_ig_leader
-			}
-		}
-		set_variable = {
-			name = fugitive_slave_var
-			months = short_modifier_time
-		}
-	}
+# 	immediate = {
+# 		random_interest_group = {
+# 			limit = {
+# 				is_revolutionary = no
+# 				is_insurrectionary = no
+# 				is_marginal = no
+# 				OR = {
+# 					has_ideology = ideology:ideology_pro_slavery
+# 					leader = {
+# 						has_ideology = ideology:ideology_slaver
+# 					}
+# 				}
+# 			}
+# 			save_scope_as = slaver_ig
+# 			leader = {
+# 				save_scope_as = slaver_ig_leader
+# 			}
+# 		}
+# 		set_variable = {
+# 			name = fugitive_slave_var
+# 			months = short_modifier_time
+# 		}
+# 	}
 
-	cancellation_trigger = {
-		has_global_variable = american_civil_war
-	}
+# 	cancellation_trigger = {
+# 		has_global_variable = american_civil_war
+# 	}
 
-	option = {
-		name = acw_events.2.a
-        default_option = yes
+# 	option = {
+# 		name = acw_events.2.a
+#         default_option = yes
 
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-			}
-			add_modifier = {
-				name = ig_slavers_happy
-				months = short_modifier_time
-			}
-		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { has_ideology = ideology:ideology_abolitionist }
-				}
-			}
-			add_modifier = {
-				name = ig_abolitionists_mad
-				months = short_modifier_time
-			}
-		}
-	}
-	option = {
-		name = acw_events.2.b
+# 		every_interest_group = {
+# 			limit = {
+# 				OR = {
+# 					has_ideology = ideology:ideology_pro_slavery
+# 					leader = { has_ideology = ideology:ideology_slaver }
+# 				}
+# 			}
+# 			add_modifier = {
+# 				name = ig_slavers_happy
+# 				months = short_modifier_time
+# 			}
+# 		}
+# 		every_interest_group = {
+# 			limit = {
+# 				OR = {
+# 					has_ideology = ideology:ideology_anti_slavery
+# 					leader = { usfp_anti_slavery_leader_trigger = yes}
+# 				}
+# 			}
+# 			add_modifier = {
+# 				name = ig_abolitionists_mad
+# 				months = short_modifier_time
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = acw_events.2.b
 
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-				NOT = { has_modifier = ig_slavers_mad }
-			}
-			add_modifier = {
-				name = ig_slavers_mad
-				months = short_modifier_time
-			}
-		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { has_ideology = ideology:ideology_abolitionist }
-				}
-				NOT = { has_modifier = ig_abolitionists_happy }
-			}
-			add_modifier = {
-				name = ig_abolitionists_happy
-				months = short_modifier_time
-			}
-		}
-	}
-}
+# 		every_interest_group = {
+# 			limit = {
+# 				OR = {
+# 					has_ideology = ideology:ideology_pro_slavery
+# 					leader = { has_ideology = ideology:ideology_slaver }
+# 				}
+# 				NOT = { has_modifier = ig_slavers_mad }
+# 			}
+# 			add_modifier = {
+# 				name = ig_slavers_mad
+# 				months = short_modifier_time
+# 			}
+# 		}
+# 		every_interest_group = {
+# 			limit = {
+# 				OR = {
+# 					has_ideology = ideology:ideology_anti_slavery
+# 					leader = { 
+# 						usfp_anti_slavery_leader_trigger = yes
+# 					}
+# 				}
+# 				NOT = { has_modifier = ig_abolitionists_happy }
+# 			}
+# 			add_modifier = {
+# 				name = ig_abolitionists_happy
+# 				months = short_modifier_time
+# 			}
+# 		}
+# 	}
+# }
 
 # The [Leader Name] Proviso - a.k.a. The (Dynamic) Wilmot Proviso
 acw_events.3 = {
@@ -315,7 +317,6 @@ acw_events.3 = {
 		NOT = { has_law = law_type:law_slavery_banned }
 		NOT = { has_global_variable = american_civil_war }
 		NOT = { has_variable = USA_wilmot_proviso }
-		exists = c:MEX
 		any_scope_state = {
 			usfp_mexican_cession_trigger = yes
 		}
@@ -354,6 +355,9 @@ acw_events.3 = {
 				save_scope_as = wilmot_proviso_ig_leader
 			}
 		}
+		ig:ig_landowners = {
+			save_scope_as = planters_scope
+		}
 	}
 
 	cancellation_trigger = {
@@ -364,6 +368,36 @@ acw_events.3 = {
 	option = {
 		name = acw_events.3.a
 		default_option = yes
+		custom_tooltip = acw_events.3.a.t
+		every_interest_group = {
+					limit = {
+						OR = {
+							has_ideology = ideology:ideology_pro_slavery
+							leader = { has_ideology = ideology:ideology_slaver }
+						}
+						NOT = { has_modifier = disappointing_compromise }
+					}
+					add_modifier = {
+						name = disappointing_compromise
+						months = short_modifier_time
+					}
+				}
+				every_interest_group = {
+					limit = {
+						OR = {
+							has_ideology = ideology:ideology_anti_slavery
+							leader = { has_ideology = ideology:ideology_abolitionist }
+						}
+						NOT = { has_modifier = disappointing_compromise }
+					}
+					add_modifier = {
+						name = disappointing_compromise
+						months = short_modifier_time
+					}
+		}
+		ai_chance = {
+			base = 100
+		}
 	}
 
 	#Accept Proviso - This will break the Missouri Compromise!
@@ -373,111 +407,106 @@ acw_events.3 = {
 			text = missouri_compromise_break
 			set_variable = missouri_compromise_broken_var
 		}
+		hidden_effect = {
+			set_variable = accepted_wilmot_proviso
+		}
+		every_scope_state = {
+			limit = {
+				usfp_mexican_cession_trigger = yes
+			}
+			liberate_slaves = yes # this is going to be rough for freed pops initially, and that's to be expected.
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_pro_slavery
+					leader = { has_ideology = ideology:ideology_slaver }
+				}
+				NOT = { has_modifier = ig_slavers_mad }
+			}
+			add_modifier = {
+				name = ig_slavers_mad
+				months = short_modifier_time
+				multiplier = 2
+			}
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_anti_slavery
+					leader = { usfp_anti_slavery_leader_trigger = yes}
+				}
+				NOT = { has_modifier = ig_abolitionists_happy }
+			}
+			add_modifier = {
+				name = ig_abolitionists_happy
+				months = short_modifier_time
+			}
+		}
+		every_interest_group = {
+			limit = {
+				NOR = {
+					has_ideology = ideology:ideology_anti_slavery
+					leader = { has_ideology = ideology:ideology_abolitionist }
+					has_ideology = ideology:ideology_pro_slavery
+					leader = { has_ideology = ideology:ideology_slaver }
+				}
+			}
+			add_modifier = {
+				name = usfp_threatening_union
+				months = short_modifier_time
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				trigger = {
+					ruler = {
+						has_ideology = ideology:ideology_abolitionist
+					}
+				}
+				add = 200
+			}
+		}
 	}
 
 	#Just draw the line all the way to the pacific!
 	option = {
 		name = acw_events.3.c
+		custom_tooltip = {
+			text = acw_events.3.c.t
+			set_variable = missouri_compromise_extended
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_pro_slavery
+					leader = { has_ideology = ideology:ideology_slaver }
+				}
+				NOT = { has_modifier = ig_slavers_happy }
+			}
+			add_modifier = {
+				name = ig_slavers_happy
+				months = short_modifier_time
+			}
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_anti_slavery
+					leader = { usfp_anti_slavery_leader_trigger = yes}
+				}
+				NOT = { has_modifier = ig_abolitionists_mad }
+			}
+			add_modifier = {
+				name = ig_abolitionists_mad
+				months = short_modifier_time
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
 	}
-
-	# option = {
-	# 	name = acw_events.3.a # a compromise is when nobody is happy at the end
-	# 	default_option = yes
-
-	# 	every_interest_group = {
-	# 		limit = {
-	# 			OR = {
-	# 				has_ideology = ideology:ideology_pro_slavery
-	# 				leader = { has_ideology = ideology:ideology_slaver }
-	# 			}
-	# 			NOT = { has_modifier = disappointing_compromise }
-	# 		}
-	# 		add_modifier = {
-	# 			name = disappointing_compromise
-	# 			months = short_modifier_time
-	# 		}
-	# 	}
-	# 	every_interest_group = {
-	# 		limit = {
-	# 			OR = {
-	# 				has_ideology = ideology:ideology_anti_slavery
-	# 				leader = { has_ideology = ideology:ideology_abolitionist }
-	# 			}
-	# 			NOT = { has_modifier = disappointing_compromise }
-	# 		}
-	# 		add_modifier = {
-	# 			name = disappointing_compromise
-	# 			months = short_modifier_time
-	# 		}
-	# 	}
-	# }
-	# option = { # Abolish slavery in all the new territories
-	# 	name = acw_events.3.b
-
-	# 	every_scope_state = {
-	# 		limit = {
-	# 			has_claim_by = c:MEX
-	# 		}
-	# 		liberate_slaves = yes # this is going to be rough for freed pops initially, and that's to be expected.
-	# 	}
-	# 	every_interest_group = {
-	# 		limit = {
-	# 			OR = {
-	# 				has_ideology = ideology:ideology_pro_slavery
-	# 				leader = { has_ideology = ideology:ideology_slaver }
-	# 			}
-	# 			NOT = { has_modifier = ig_slavers_mad }
-	# 		}
-	# 		add_modifier = {
-	# 			name = ig_slavers_mad
-	# 			months = short_modifier_time
-	# 		}
-	# 	}
-	# 	every_interest_group = {
-	# 		limit = {
-	# 			OR = {
-	# 				has_ideology = ideology:ideology_anti_slavery
-	# 				leader = { has_ideology = ideology:ideology_abolitionist }
-	# 			}
-	# 			NOT = { has_modifier = ig_abolitionists_happy }
-	# 		}
-	# 		add_modifier = {
-	# 			name = ig_abolitionists_happy
-	# 			months = short_modifier_time
-	# 		}
-	# 	}
-
-	# }
-	# option = { # Enable slavery in all the new territories
-	# 	name = acw_events.3.c
-
-	# 	every_interest_group = {
-	# 		limit = {
-	# 			OR = {
-	# 				has_ideology = ideology:ideology_pro_slavery
-	# 				leader = { has_ideology = ideology:ideology_slaver }
-	# 			}
-	# 			NOT = { has_modifier = ig_slavers_happy }
-	# 		}
-	# 		add_modifier = {
-	# 			name = ig_slavers_happy
-	# 			months = short_modifier_time
-	# 		}
-	# 	}
-	# 	every_interest_group = {
-	# 		limit = {
-	# 			OR = {
-	# 				has_ideology = ideology:ideology_anti_slavery
-	# 				leader = { has_ideology = ideology:ideology_abolitionist }
-	# 			}
-	# 			NOT = { has_modifier = ig_abolitionists_mad }
-	# 		}
-	# 		add_modifier = {
-	# 			name = ig_abolitionists_mad
-	# 			months = short_modifier_time
-	# 		}
-	# 	}
-	# }
 }
 
 # Bleeding [State], a.k.a. Dynamic Bleeding Kansas
@@ -589,7 +618,7 @@ acw_events.6 = {
 		exists = c:USA
 		c:USA = ROOT
 		NOT = { has_law = law_type:law_slavery_banned }
-		has_variable = bleeding_kansas_happened # More historical
+		# has_variable = bleeding_kansas_happened # More historical
 		NOT = { has_variable = slave_power_speech }
 		any_interest_group = {
 			is_revolutionary = no
@@ -605,7 +634,10 @@ acw_events.6 = {
 			is_insurrectionary = no
 			is_marginal = no
 			any_scope_character = {
-				has_ideology = ideology:ideology_abolitionist
+				OR = {
+					has_ideology = ideology:ideology_abolitionist
+					has_ideology = ideology:ideology_usfp_abolitionist_radical
+				}
 				is_ruler = no
 			}
 		}
@@ -642,7 +674,10 @@ acw_events.6 = {
 				is_insurrectionary = no
 				is_marginal = no
 				any_scope_character = {
-					has_ideology = ideology:ideology_abolitionist
+					OR = {
+						has_ideology = ideology:ideology_abolitionist
+						has_ideology = ideology:ideology_usfp_abolitionist_radical
+					}
 					is_ruler = no
 				}
 			}
@@ -667,12 +702,18 @@ acw_events.6 = {
 
 	option = {
 		name = acw_events.6.a
-		custom_tooltip = acw_events.6.a.tt
+		# custom_tooltip = acw_events.6.a.tt
 
 		default_option = yes
 
-		hidden_effect = {
-			scope:charles_sumner_leader = { # Didn't Die
+		random_list = {
+			20 = {
+				scope:charles_sumner_leader = {
+					kill_character = yes
+				}
+			}
+			80 = {
+				scope:charles_sumner_leader = {
 				add_trait = shellshocked
 				add_trait = wounded
 				add_trait = persistent
@@ -681,18 +722,55 @@ acw_events.6 = {
 				add_modifier = {
 					name = modifier_health_treatments
 					months = normal_modifier_time
-				}
+					}
+				}	
 			}
 		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_pro_slavery
+					leader = { has_ideology = ideology:ideology_slaver }
+				}
+				NOT = { has_modifier = ig_slavers_mad }
+			}
+			add_modifier = {
+				name = ig_slavers_happy
+				months = short_modifier_time
+			}
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_anti_slavery
+					leader = { usfp_anti_slavery_leader_trigger = yes}
+				}
+				NOT = { has_modifier = ig_abolitionists_happy }
+			}
+			add_modifier = {
+				name = ig_abolitionists_mad
+				months = short_modifier_time
+			}
+		}
+		add_modifier = {
+			name = usfp_fighting_in_congress
+			months = 6
+			is_decaying = yes
+		}
+
 	}
 	option = {
 		name = acw_events.6.b
-		custom_tooltip = acw_events.6.a.tt
-		custom_tooltip = acw_events.6.b.tt
+		# custom_tooltip = acw_events.6.a.tt
 
-
-		hidden_effect = {
-			scope:charles_sumner_leader = { # Didn't Die
+		random_list = {
+			20 = {
+				scope:charles_sumner_leader = {
+					kill_character = yes
+				}
+			}
+			80 = {
+				scope:charles_sumner_leader = {
 				add_trait = shellshocked
 				add_trait = wounded
 				add_trait = persistent
@@ -701,16 +779,53 @@ acw_events.6 = {
 				add_modifier = {
 					name = modifier_health_treatments
 					months = normal_modifier_time
-				}
-			}
-			scope:preston_brooks_leader = { # REAL JERK!
-	 			add_modifier = {
-	 				name = a_real_jerk
-	 				years = 50
-	 				is_decaying = yes
-	 			}
+					}
+				}	
 			}
 		}
+
+		random_list = {
+			20 = {
+				scope:preston_brooks_leader = {
+					exile_character = yes
+				}
+			}
+			80 = {
+				custom_tooltip = {
+					text = acw_events.6.b.tt
+					scope:preston_brooks_leader = {
+						kill_character = yes
+					}
+				}
+			}
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_pro_slavery
+					leader = { has_ideology = ideology:ideology_slaver }
+				}
+				NOT = { has_modifier = ig_slavers_mad }
+			}
+			add_modifier = {
+				name = ig_slavers_mad
+				months = short_modifier_time
+			}
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_anti_slavery
+					leader = { usfp_anti_slavery_leader_trigger = yes}
+				}
+				NOT = { has_modifier = ig_abolitionists_happy }
+			}
+			add_modifier = {
+				name = ig_abolitionists_happy
+				months = short_modifier_time
+			}
+		}
+
 	}
 }
 

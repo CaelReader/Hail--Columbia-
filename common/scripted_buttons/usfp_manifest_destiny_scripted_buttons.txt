@@ -23,10 +23,17 @@ usfp_western_purchase_button = {
 	}
 
 	possible = {
-		var:manifest_destiny_var > 2
-		NOT = {
-			has_variable = usa_western_purchase_var
+		custom_tooltip = {
+			text = enough_manifest_destiny
+			var:manifest_destiny_var > 2
 		}
+		custom_tooltip = {
+			text = usa_western_purchase_var
+			NOT = {
+				has_variable = usa_western_purchase_var
+			}
+		}
+
 		in_default = no
 		taking_loans = no
 		is_diplomatic_play_committed_participant = no
@@ -38,6 +45,9 @@ usfp_western_purchase_button = {
 	}
 
 	effect = {
+		custom_tooltip = {
+			text = mexican_payment_cost
+		}
 		set_variable = {
 			name = usa_western_purchase_var
 			years = 4
@@ -167,4 +177,127 @@ usfp_suppress_manifest_destiny_button = {
 	ai_chance = {
 		base = 0
 	}
+}
+
+usfp_homestead_act_button = {
+	name = "usfp_homestead_act_button"
+	desc = "usfp_homestead_act_button_desc"
+
+	visible = {
+		any_scope_state = {
+			usfp_american_west_zone = yes
+			# is_incorporated = yes
+			NOT = {
+				has_modifier = usfp_homestead_act_modifier
+			}
+		}
+	}
+
+	possible = {
+		has_law = law_type:law_homesteading
+		custom_tooltip = {
+			text = enough_manifest_destiny
+			var:manifest_destiny_var > 2
+		}
+		any_scope_state = {
+			count > 3
+			usfp_american_west_zone = yes
+			is_split_state = no
+		}
+		ig:ig_landowners = {
+				is_in_government = no
+		}
+	}
+
+	effect = {
+		every_scope_state = {
+			limit = {
+				usfp_american_west_zone = yes
+				NOT = {
+					has_modifier = usfp_homestead_act_modifier
+				}
+			}
+			add_modifier = {
+				name = usfp_homestead_act_modifier
+				years = 50
+			}
+		}
+	}
+
+}
+
+usfp_cuban_purchase_button = {
+	name = "usfp_cuban_purchase_button"
+	desc = "usfp_cuban_purchase_button_desc"
+
+	visible = {
+		has_variable = ostend_manifesto
+		NOR = {
+			has_variable = offered_for_cuba
+			owns_entire_state_region = STATE_CUBA
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = enough_manifest_destiny
+			var:manifest_destiny_var >= 5
+		}
+		in_default = no
+		taking_loans = no
+		is_diplomatic_play_committed_participant = no
+ 		is_at_war = no
+		NOT = {
+			owns_entire_state_region = STATE_CUBA
+		}
+		NOT = {
+			any_subject_or_below = {
+				owns_entire_state_region = STATE_CUBA
+			}
+		}
+		OR = {
+			NOT = {
+				exists = c:CUB
+			}
+			c:CUB = {
+				is_subject = yes
+			}
+		}
+	}
+
+	effect = {
+		set_variable = offered_for_cuba
+		s:STATE_CUBA = {
+			random_scope_state = {
+				limit = {
+					NOT = {
+						owner = c:USA
+					}
+					is_incorporated = yes
+					is_treaty_port = no
+				}
+				owner = {
+					if = {
+						limit = { 
+							is_subject = yes
+						}
+						overlord = {
+							save_scope_as = cuba_owner_scope
+						}
+					}
+					else = {
+						save_scope_as = cuba_owner_scope
+					}
+				}
+			}
+			save_scope_as = cuba_scope
+		}
+		scope:cuba_owner_scope = {
+			trigger_event = {
+				id = usfp_manifest_destiny.15
+				days = 7
+			}
+		}
+	}
+
 }

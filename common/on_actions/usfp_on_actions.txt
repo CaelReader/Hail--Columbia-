@@ -12,11 +12,12 @@ usfp_monthly_pulse = {
 		usfp_usa.11 #Cross of Gold
 	}
 	random_events = {
-		150 = 0
+		200 = 0
 		100 = usfp_usa.7 #Thomas Nast spawn event
 		100 = usfp_usa.8 #Thomas Nast weighs in on Election
 		50 = usfp_usa.10 #Scientific Management
 		50 = usfp_usa.12 #American Hippo Bill
+		10 = usfp_usa.13 #Wild Hippos
 
 		##Labor events
 		100 = usfp_usa_labor.1 #founding of the IWW
@@ -32,6 +33,7 @@ usfp_monthly_pulse = {
 on_election_campaign_start = {
 	on_actions = {
 		usfp_acw_election_agitators
+		usfp_us_first_election_railroad
 	}
 }
 
@@ -54,7 +56,10 @@ usfp_acw_election_agitators = {
 						trait_generation = {
 							usfp_acw_agitators_traits = yes
 						}
-						on_created = { set_variable = { name = temp_event_target_in_use years = 8 } }
+						on_created = { 
+							set_variable = { name = temp_event_target_in_use years = 8 }
+							set_variable = { name = usfp_acw_agitator }  
+						}
 					}
 				}
 				40 = {
@@ -67,7 +72,10 @@ usfp_acw_election_agitators = {
 						trait_generation = {
 							usfp_acw_agitators_traits = yes
 						}
-						on_created = { set_variable = { name = temp_event_target_in_use years = 8 } }
+						on_created = { 
+							set_variable = { name = temp_event_target_in_use years = 8 }
+							set_variable = { name = usfp_acw_agitator } 
+						}
 					}
 				}
 				10 = {
@@ -80,7 +88,10 @@ usfp_acw_election_agitators = {
 						trait_generation = {
 							usfp_acw_agitators_traits = yes
 						}
-						on_created = { set_variable = { name = temp_event_target_in_use years = 8 } }
+						on_created = { 
+							set_variable = { name = temp_event_target_in_use years = 8 }
+							set_variable = { name = usfp_acw_agitator } 
+						}
 					}
 				}
 			}
@@ -89,6 +100,24 @@ usfp_acw_election_agitators = {
 				limit = { desired_law = law_type:law_slave_trade }
 				# add_modifier = modifier_uncommitted_government
 				# add_modifier = modifier_movement_state_paramilitarism
+			}
+		}
+	}
+}
+
+#Add momentum to the Democrats as soft historical railroading
+usfp_us_first_election_railroad = {
+	effect = {
+		if = {
+			limit = { 
+				c:USA ?= this
+				NOT = {
+					has_variable = had_first_election
+				}
+			}
+			set_variable = had_first_election
+			py:conservative_party = {
+				add_momentum = momentum_medium
 			}
 		}
 	}
@@ -152,7 +181,14 @@ usfp_elected_abolitionist = {
 
 #Constitutional Challenge event
 on_law_checkpoint_success = {
+	on_actions = {
+		usfp_law_events
+	}
+}
+
+usfp_law_events = {
 	events = {
-		usfp_usa.9
+		usfp_usa.9 #Constitutional Challenge
+		usfp_a_house_divided.14 #Missouri/1850 Compromise Violation
 	}
 }

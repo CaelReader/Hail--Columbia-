@@ -70,10 +70,16 @@ usfp_remove_starting_buildings_effect = {
 usfp_manifest_more_destiny_effect = {
 	custom_tooltip = {
 		text = usfp_manifest_more_destiny
-		change_variable = {
-			name = manifest_destiny_var
-			add = 1
+		if = {
+			limit = { 
+				var:manifest_destiny_var < 12
+			}
+			change_variable = {
+				name = manifest_destiny_var
+				add = 1
+			}
 		}
+
 	}
 	hidden_effect = {
 		remove_modifier = usfp_manifest_destiny_modifier
@@ -87,11 +93,15 @@ usfp_manifest_more_destiny_effect = {
 usfp_manifest_less_destiny_effect = {
 	custom_tooltip = {
 		text = usfp_manifest_less_destiny
-		change_variable = {
-			name = manifest_destiny_var
-			subtract = 1
-			min = 0
-		}
+		if = {
+			limit = {
+				var:manifest_destiny_var > 0
+			 }
+			 change_variable = {
+				name = manifest_destiny_var
+				subtract = 1
+			}
+		}	
 	}
 	hidden_effect = {
 		remove_modifier = usfp_manifest_destiny_modifier
@@ -198,6 +208,26 @@ usfp_mexican_north_purchase_effect = {
 			}
 			region_state:MEX = {
 				set_state_owner = c:USA
+			}
+		}
+	}
+}
+
+usfp_planters_to_landowners_effect = {
+	set_interest_group_name = ig_landowners
+	remove_ideology = ideology_pro_slavery
+	set_ig_trait = ig_trait:ig_trait_noble_privileges
+	set_ig_trait = ig_trait:usfp_ig_trait_lawmen
+	every_scope_character = {
+		limit = {
+			has_ideology = ideology:ideology_slaver
+		}
+		random_list = {
+			75 = {
+				set_ideology = ideology:ideology_moderate
+			}
+			25 = {
+				set_ideology = ideology:ideology_ethno_nationalist
 			}
 		}
 	}

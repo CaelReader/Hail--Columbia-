@@ -1,4 +1,4 @@
-usfp_usa_washington_gladden = {
+﻿usfp_usa_washington_gladden = {
 	portrait_info = {
 		genes={ 		
 			hair_color={ 218 163 218 163 }

@@ -34,7 +34,7 @@
 			usfp_native_removal.2 #Treaty of New Echota
 		}
 		random_events = {
-			100 = 0 
+			300 = 0 
 			# 1 = native_resettlement.2 # john ross
 			30 = native_resettlement.3 # Preparing for resettlement
 			40 = native_resettlement.4 # Trail of Tears

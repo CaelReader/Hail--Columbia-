@@ -57,6 +57,7 @@ usfp_usa_labor.1 = {
 	#Solidarity
 	option = {
 		name = usfp_usa_labor.1.a
+		default_option = yes
 		ig:ig_trade_unions = {
 			set_ig_trait = ig_trait:usfp_ig_trait_direct_action
 			add_modifier = {

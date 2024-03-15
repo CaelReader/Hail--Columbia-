@@ -19,6 +19,9 @@ usfp_acw.1 = {
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
 	duration = 3
+	cooldown = {
+		years = 30
+	}
 
 	trigger = {
 		#trigger by ACW JE

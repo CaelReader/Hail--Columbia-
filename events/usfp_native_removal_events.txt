@@ -597,7 +597,7 @@ usfp_native_removal.8 = {
 	dlc = dlc_usfp
 	duration = 3
 	cooldown = {
-		years = 2
+		years = 3
 	}
 	
 	trigger = {
@@ -804,7 +804,7 @@ usfp_native_removal.9 = {
 	dlc = dlc_usfp
 	duration = 3
 	cooldown = {
-		years = 2
+		years = 3
 	}
 	
 	trigger = {

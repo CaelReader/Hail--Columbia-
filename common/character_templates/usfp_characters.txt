@@ -328,6 +328,7 @@ usfp_robert_la_follette_character_template = {
     ideology = ideology_usfp_progressive
     interest_group = ig_intelligentsia
     birth_date = 1855.6.14
+    dna = usfp_usa_robert_la_follette
     traits = { experienced_political_operator persistent inspirational_orator }
     interest_group_leader_usage = {
         country_trigger = {
@@ -474,5 +475,42 @@ usfp_thaddeus_stevens_character_template = {
         earliest_usage_date = 1848.1.1
         latest_usage_date = 1868.1.1
         chance = 90
+    }
+}
+
+#USFP: easter egg character from the mockumentary C.S.A
+usfp_usa_john_fauntroy = {
+    first_name = John_Ambrose
+    last_name = Fauntroy
+    culture = cu:dixie
+    religion = rel:protestant
+    female = no
+    ideology = ideology_slaver
+    interest_group = ig_landowners
+    birth_date = 1836.2.15
+    traits = { bigoted experienced_political_operator charismatic experienced_diplomat }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:USA
+                    this = c:USA
+                    NOT = { exists = c:CSA }
+                }
+                AND = {
+                    exists = c:CSA
+                    this = c:CSA
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_marginal = no
+			OR = {
+				is_interest_group_type = ig_landowners
+			}
+        }
+        earliest_usage_date = 1854.1.1
+        latest_usage_date = 1880.1.1
+        chance = 10
     }
 }

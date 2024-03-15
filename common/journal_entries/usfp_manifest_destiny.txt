@@ -31,6 +31,8 @@ usfp_manifest_destiny_main = {
 	scripted_button = usfp_western_purchase_button
 	scripted_button = usfp_promote_manifest_destiny_button
 	scripted_button = usfp_suppress_manifest_destiny_button
+	scripted_button = usfp_homestead_act_button
+	scripted_button = usfp_cuban_purchase_button
 
 
 	fail = {
@@ -176,16 +178,20 @@ usfp_manifest_destiny_main = {
 			}
 		}
 		random_events = {
-			100 = 0
+			200 = 0
 			25 = usfp_manifest_destiny.2 #Texas Calls for Aid
 			#Call for Cuban Annexation
 			25 = usfp_manifest_destiny.7 #PB gains Empire of Liberty
 			200 = usfp_manifest_destiny.8 #Gunboat Diplomacy
 			25 = usfp_manifest_destiny.9 #Railroad Tycoons
+			100 = usfp_manifest_destiny.12 #California Genocide
+			100 = usfp_manifest_destiny.14 #Ostend Manifesto
+			
 		}
 		events = {
 			usfp_manifest_destiny.6 #Treaty of GH
 			usfp_manifest_destiny.10 #California Gold Rush
+			usfp_manifest_destiny.13 #new homelands
 		}
 	}
 

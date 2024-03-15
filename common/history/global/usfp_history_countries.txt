@@ -31,9 +31,6 @@
 	c:USA = {
 		trigger_event = { id = USCWF.1 days = 1 }
 		add_declared_interest = region_great_plains
-		py:conservative_party = {
-			add_momentum = momentum_medium
-		}
 	}
 	c:ONT = {
 		activate_law = law_type:law_frontier_colonization
@@ -49,68 +46,68 @@
 	}
 
 	#Russian American Company
-	s:STATE_ALASKA = {
-		create_country = {
-			tag = ASK
-			origin = c:RUS
-			state = s:STATE_ALASKA.region_state:RUS
-			on_created = {
-				effect_starting_technology_tier_3_tech = yes
-				add_technology_researched = napoleonic_warfare
-				# add_technology_researched = cr_fur_trapping_tech
+	# s:STATE_ALASKA = {
+	# 	create_country = {
+	# 		tag = ASK
+	# 		origin = c:RUS
+	# 		state = s:STATE_ALASKA.region_state:RUS
+	# 		on_created = {
+	# 			effect_starting_technology_tier_3_tech = yes
+	# 			add_technology_researched = napoleonic_warfare
+	# 			# add_technology_researched = cr_fur_trapping_tech
 
-				activate_law = law_type:law_presidential_republic
-				activate_law = law_type:law_autocracy 
-				activate_law = law_type:law_freedom_of_conscience
-				activate_law = law_type:law_racial_segregation
-				activate_law = law_type:law_mercantilism
-				activate_law = law_type:law_interventionism
-				activate_law = law_type:law_no_colonial_affairs
-				activate_law = law_type:law_right_of_assembly
-				activate_law = law_type:law_land_based_taxation
-				activate_law = law_type:law_appointed_bureaucrats
+	# 			activate_law = law_type:law_presidential_republic
+	# 			activate_law = law_type:law_autocracy 
+	# 			activate_law = law_type:law_freedom_of_conscience
+	# 			activate_law = law_type:law_racial_segregation
+	# 			activate_law = law_type:law_mercantilism
+	# 			activate_law = law_type:law_interventionism
+	# 			activate_law = law_type:law_no_colonial_affairs
+	# 			activate_law = law_type:law_right_of_assembly
+	# 			activate_law = law_type:law_land_based_taxation
+	# 			activate_law = law_type:law_appointed_bureaucrats
 
-				ig:ig_devout = {
-					set_interest_group_name = ig_orthodox_church
-					remove_ideology = ideology_patriarchal
-					add_ideology = ideology_russian_patriarch
-				}
+	# 			ig:ig_devout = {
+	# 				set_interest_group_name = ig_orthodox_church
+	# 				remove_ideology = ideology_patriarchal
+	# 				add_ideology = ideology_russian_patriarch
+	# 			}
 
-				ig:ig_landowners = {
-					set_interest_group_name = ig_gentry_assembly
-				}
-				ig:ig_rural_folk = {
-					remove_ideology = ideology_isolationist
-					# add_ideology = ideology_isolationist_expansionism
-				}
-				set_variable = african_chartered_company_var
-				# add_journal_entry = {
-				# 	type = je_cr_fort_ross
-				# }
-				create_character = {
-					first_name = Ivan
-					last_name = Kupreyanov
-					historical = yes
-					culture = cu:russian
-					religion = rel:orthodox
-					female = no
-					ideology = ideology_royalist
-					interest_group = ig_armed_forces
-					birth_date = 1794.4.20
-					traits = { explorer tactful basic_naval_commander }
-					is_admiral = yes
-					ruler = yes
-				}
-				set_ruling_interest_groups = {
-					ig_armed_forces ig_landowners
-				}
-			}
-		}
-	}
-	c:RUS = {
-		create_diplomatic_pact = {
-			country = c:ASK
-			type = puppet
-		}
-	}
+	# 			ig:ig_landowners = {
+	# 				set_interest_group_name = ig_gentry_assembly
+	# 			}
+	# 			ig:ig_rural_folk = {
+	# 				remove_ideology = ideology_isolationist
+	# 				# add_ideology = ideology_isolationist_expansionism
+	# 			}
+	# 			set_variable = african_chartered_company_var
+	# 			# add_journal_entry = {
+	# 			# 	type = je_cr_fort_ross
+	# 			# }
+	# 			create_character = {
+	# 				first_name = Ivan
+	# 				last_name = Kupreyanov
+	# 				historical = yes
+	# 				culture = cu:russian
+	# 				religion = rel:orthodox
+	# 				female = no
+	# 				ideology = ideology_royalist
+	# 				interest_group = ig_armed_forces
+	# 				birth_date = 1794.4.20
+	# 				traits = { explorer tactful basic_naval_commander }
+	# 				is_admiral = yes
+	# 				ruler = yes
+	# 			}
+	# 			set_ruling_interest_groups = {
+	# 				ig_armed_forces ig_landowners
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# c:RUS = {
+	# 	create_diplomatic_pact = {
+	# 		country = c:ASK
+	# 		type = puppet
+	# 	}
+	# }
 }

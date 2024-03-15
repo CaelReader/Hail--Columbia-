@@ -9,6 +9,12 @@ usfp_seminole_modifier = {
 	unit_mobilization_speed_mult = 1.0
 	building_training_rate_add = 1000
 	unit_morale_loss_mult = -0.5
+	unit_kill_rate_add = -0.20
+	unit_advancement_speed_mult = -0.80
+}
+usfp_cherokee_syllabary = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_education_access_add = 0.25
 }
 usfp_missouri_compromise_decaying = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
@@ -62,14 +68,36 @@ albany_regency_uscwf = {
 	country_farmers_voting_power_add = 15
 }
 
-a_house_divided_uscwf = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	country_war_exhaustion_casualties_mult = -0.9375
-	unit_morale_loss_mult = -0.9375
+# a_house_divided_uscwf = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+# 	country_war_exhaustion_casualties_mult = -0.9375
+# 	unit_morale_loss_mult = -0.9375
+# 	military_formation_organization_gain_mult = 1.0
+# 	building_training_rate_mult = 3.0
+# 	state_conscription_rate_mult = 3.0
+# 	country_legitimacy_base_add = 200
+# }
+
+usfp_acw_union_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
+	country_war_exhaustion_casualties_mult = -0.20
+	unit_morale_loss_mult = -0.50
 	military_formation_organization_gain_mult = 1.0
-	building_training_rate_mult = 3.0
-	state_conscription_rate_mult = 3.0
-	country_legitimacy_base_add = 200
+	building_training_rate_mult = 1
+	state_conscription_rate_mult = 1
+	country_legitimacy_base_add = 50
+	unit_kill_rate_add = 0.20
+}
+
+usfp_acw_csa_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
+	country_war_exhaustion_casualties_mult = -0.75
+	unit_morale_loss_mult = -0.50
+	military_formation_organization_gain_mult = 1.0
+	building_training_rate_mult = 1
+	state_conscription_rate_mult = 1
+	country_legitimacy_base_add = 50
+	unit_kill_rate_add = 0.20
 }
 
 civil_war_reshuffle_uscwf = {
@@ -117,17 +145,31 @@ usa_paying_for_mexico = {
 }
 
 mexico_getting_paid_by_usa = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_currency_negative.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_currency_positive.dds
 	country_tax_income_add = 62500
 }
 
+usa_paying_for_cuba = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_currency_negative.dds
+	country_expenses_add = 36000
+}
+
+spain_getting_paid_by_usa = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_currency_positive.dds
+	country_tax_income_add = 36000
+}
+
+#Dynamic modifier, multiplied by current Manifest Destiny value
 usfp_manifest_destiny_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_blue.dds
-	country_diplomatic_play_maneuvers_add = 4
+	country_diplomatic_play_maneuvers_add = 2
 	country_infamy_decay_mult = -0.03
 	unit_morale_recovery_mult = 0.01
 	interest_group_ig_armed_forces_pop_attraction_mult = 0.03
 	interest_group_ig_armed_forces_pol_str_mult = 0.02
+	state_assimilation_mult = 0.02
+	state_radicals_from_discrimination_mult = 0.02
+	country_tension_decay_mult = -0.1
 }
 
 usfp_vanishing_indian_modifier = {
@@ -181,4 +223,28 @@ usfp_imminent_secession = {
 usfp_modifier_supreme_court_bribery = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_currency_negative.dds
 	country_expenses_add = 1
+}
+
+usfp_fugitive_slave_law = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
+	state_afro_american_standard_of_living_add = -1
+	interest_group_ig_landowners_pol_str_mult = 0.10
+	state_pop_support_law_slavery_banned_add = 0.05
+}
+
+usfp_1850_compromise_decaying = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
+	country_revolution_clock_time_add = -0.125
+	country_revolution_progress_mult = -0.50
+	state_pop_support_law_slavery_banned_add = -1.0
+	state_pop_support_law_slave_trade_add = -1.0
+	interest_group_ig_landowners_approval_add = 20
+	political_movement_radicalism_add = -15
+}
+
+usfp_fighting_in_congress = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_negative.dds
+	country_law_enactment_time_mult = 1
+	country_authority_mult = -0.20
+	country_legitimacy_base_add = -5
 }

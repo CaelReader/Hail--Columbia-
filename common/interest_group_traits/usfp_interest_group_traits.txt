@@ -20,6 +20,16 @@ usfp_ig_trait_peculiar_institution = {
 	}
 }
 
+#Landowners post Civil War
+usfp_ig_trait_lawmen = {
+	icon = "gfx/interface/icons/ig_trait_icons/lawmen.dds"
+	min_approval = happy
+	
+	modifier = {
+		state_turmoil_effects_mult = -0.10
+	}
+}
+
 #Evangelicals
 usfp_ig_trait_postmillennialism = {
 	icon = "gfx/interface/icons/ig_trait_icons/postmillenialism.dds"

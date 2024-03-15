@@ -17,10 +17,7 @@ usfp_seminole_war_modifier = {
 
 usfp_trail_of_tears_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
-	state_cherokee_standard_of_living_add = -3
-	state_caddoan_standard_of_living_add = -3
-	state_muskogean_standard_of_living_add = -3
-	state_afro_american_standard_of_living_add = -3
+	state_standard_of_living_add = -3
 }
 
 usfp_ellis_island_modifier = {
@@ -44,10 +41,37 @@ usfp_great_urban_fire_modifier = {
 
 usfp_gold_rush_lawlessness = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_cop_negative.dds
+	state_migration_pull_mult = 1.00
+	state_migration_pull_add = 20
 	state_tax_waste_add = 0.10
 	state_radicals_from_sol_change_mult = 0.10
 	state_colony_growth_speed_mult = 0.20
 	state_standard_of_living_add = -1
 	state_mortality_mult = 0.10
 	state_birth_rate_mult = -0.20
+}
+
+usfp_loose_hippos = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_hippo_negative.dds
+	building_group_bg_agriculture_throughput_add = -0.05
+	state_pollution_generation_add = 5
+	state_mortality_mult = 0.01
+}
+
+usfp_homestead_act_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds
+	tax_land_add = -0.3
+	state_migration_pull_mult = 0.10
+	building_subsistence_output_mult = 0.1
+	interest_group_ig_landowners_pol_str_mult = -0.20
+	state_colony_growth_speed_mult = 0.15
+	state_animist_standard_of_living_add = -2
+	# state_dakota_standard_of_living_add = -1
+	# state_siouan_standard_of_living_add = -1
+	# state_algonquian_standard_of_living_add = -1
+	# state_paiute_standard_of_living_add = -1
+	# state_caddoan_standard_of_living_add = -1
+	# state_apache_standard_of_living_add = -1
+	# state_navajo_standard_of_living_add = -1
+	# state_nez_perce_standard_of_living_add = -1
 }

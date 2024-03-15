@@ -248,6 +248,23 @@
 	s:STATE_NORTH_CAROLINA = {
 		add_homeland = cu:cherokee
 	}
+	c:CHE = {
+		#Cherokee syllabary
+		every_scope_pop = {
+			limit = {
+				culture = cu:cherokee
+			}
+			set_pop_literacy = {
+				literacy_rate = {
+					value = 0.61
+				}
+			}
+		}
+		add_modifier = {
+			name = usfp_cherokee_syllabary
+			years = 30
+		}
+	}
 	#Comancheria
 	s:STATE_TEXAS = {
 		set_owner_of_provinces = {
@@ -366,7 +383,7 @@
 		set_owner_of_provinces = {
 			country = c:APC
 			provinces = { x900E30 xC6C267 xAB6EDB x8C162F x093F42 x8F17E5 x2FD5DD x52AD57 x2392B7 xBF471B xD29C90 x44CC50 
-		x1A5AE7 x2392B7 x8737CC xD331E1 x8755F3 x911882  }
+		x1A5AE7 x2392B7 xD331E1 x8755F3 x911882  }
 		}
 	}
 	c:APC = {

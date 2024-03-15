@@ -61,12 +61,16 @@ usfp_manifest_destiny.2 = {
 		c:MEX = {
 			save_scope_as = mexico_scope
 		}
+		set_variable = texas_called_for_aid
 	}
 
 	trigger = {
 		NOT = {
 			exists = c:TEX
 			has_war_with = c:MEX
+		}
+		NOT = {
+			has_variable = texas_called_for_aid
 		}
 		s:STATE_TEXAS = {
 			any_scope_state = {
@@ -101,10 +105,16 @@ usfp_manifest_destiny.2 = {
 				years = 2
 			}
 		}
-		ig:ig_landowners = {
+		ig:ig_rural_folk = {
 			add_modifier = {
 				name = usfp_manifest_destiny_refused_texas
 				years = 2
+			}
+		}
+		s:STATE_LOUISIANA.region_state:USA = {
+			add_radicals_in_state = {
+				value = 0.01
+				culture = cu:dixie
 			}
 		}
 	}
@@ -240,7 +250,10 @@ usfp_manifest_destiny.4 = {
 	option = {
 		name = usfp_manifest_destiny.4.b
 		trigger = {
-			root.var:manifest_destiny_var > 2
+			custom_tooltip = {
+				text = enough_manifest_destiny
+				root.var:manifest_destiny_var > 2
+			}
 		}
 		highlighted_option = yes
 		s:STATE_CALIFORNIA = {
@@ -261,6 +274,7 @@ usfp_manifest_destiny.4 = {
 		s:STATE_TEXAS = {
 			add_claim = c:USA
 		}
+		custom_tooltip = treaty_of_guadalupe
 	}
 }
 
@@ -405,7 +419,10 @@ usfp_manifest_destiny.6 = {
 	option = {
 		name = usfp_manifest_destiny.6.c
 		trigger = {
-			root.var:manifest_destiny_var >= 5
+			custom_tooltip = {
+				text = enough_manifest_destiny
+				root.var:manifest_destiny_var >= 5
+			}
 		}
 		every_diplomatic_play = {
 			limit = {
@@ -476,7 +493,10 @@ usfp_manifest_destiny.6 = {
 	option = {
 		name = usfp_manifest_destiny.6.g
 		trigger = {
-			root.var:manifest_destiny_var >= 7
+			custom_tooltip = {
+				text = enough_manifest_destiny
+				root.var:manifest_destiny_var >= 7
+			}
 		}
 		usfp_manifest_more_destiny_effect = yes
 		usfp_mexican_north_purchase_effect = yes
@@ -608,6 +628,7 @@ usfp_manifest_destiny.8 = {
 
 	option = {
 		name = usfp_manifest_destiny.8.a
+		default_option = yes
 		ig:ig_armed_forces = {
 			set_ig_trait = ig_trait:usfp_ig_trait_gunboat_diplomacy
 		}
@@ -646,7 +667,7 @@ usfp_manifest_destiny.9 = {
 			has_variable = had_railroad_tycoons
 		}
 		root.var:manifest_destiny_var >= 1
-		has_technology_researched = steel_railway_cars
+		has_technology_researched = railways
 		#railroads to the west!
 		any_scope_state = {
 			OR = {
@@ -709,7 +730,7 @@ usfp_manifest_destiny.9 = {
 		#need trains to build trains
 		any_scope_building = {
 			is_building_type = building_railway
-			count > 30
+			count > 10
 		}
 		ig:ig_industrialists = {
 			is_marginal = no
@@ -744,6 +765,7 @@ usfp_manifest_destiny.9 = {
 	#I like trains
 	option = {
 		name = usfp_manifest_destiny.9.a
+		default_option = yes
 		ig:ig_industrialists = {
 			set_ig_trait = ig_trait:usfp_ig_trait_rail_tycoons
 		}
@@ -781,10 +803,8 @@ usfp_manifest_destiny.10 = {
 	trigger = {
 		any_scope_state = {
 			state_region = s:STATE_CALIFORNIA
-			OR = {
-				has_modifier = state_gold_rush
-				has_modifier = state_gold_rush_explotation
-				has_modifier = state_gold_rush_less_migration
+			any_scope_building = {
+				is_building_type = building_gold_fields
 			}
 		}
 		has_law = law_type:law_no_migration_controls
@@ -866,3 +886,592 @@ usfp_manifest_destiny.11 = {
 }
 
 #California Genocide
+usfp_manifest_destiny.12 = {
+	type = country_event
+	placement = scope:california_scope
+
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	title = usfp_manifest_destiny.12.t
+	desc = usfp_manifest_destiny.12.d
+	flavor = usfp_manifest_destiny.12.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			is_incorporated = yes
+		}
+		NOT = {
+			has_variable = california_genocide
+		}
+	}
+
+	immediate = {
+		set_variable = california_genocide
+		s:STATE_CALIFORNIA.region_state:USA = {
+			save_scope_as = california_scope
+		}
+		cu:hokan = {
+			save_scope_as = hokan_scope
+		}
+	}
+
+	#Okay
+	option = {
+		name = usfp_manifest_destiny.12.a
+		default_option = yes
+		scope:california_scope = {
+			add_culture_standard_of_living_modifier = {
+				culture = cu:hokan
+				multiplier = -8
+			}
+			add_radicals_in_state = {
+				value = 0.50
+				culture = cu:hokan
+			}
+			kill_population_percent_in_state = {
+				percent = 0.20
+				culture = cu:hokan
+			}
+		}
+		s:STATE_CALIFORNIA = {
+			every_scope_state = {
+				limit = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+				owner = {
+					change_tension = {
+						country = c:USA
+						value = 30
+					}
+				}
+			}
+		}
+	}
+	#Bastards!
+	option = {
+		name = usfp_manifest_destiny.12.b
+		scope:california_scope = {
+			add_culture_standard_of_living_modifier = {
+				culture = cu:hokan
+				multiplier = -4
+			}
+			add_radicals_in_state = {
+				value = 0.25
+				culture = cu:hokan
+			}
+			add_radicals_in_state = {
+				value = 0.2
+				culture = cu:yankee
+			}
+			kill_population_percent_in_state = {
+				percent = 0.15
+				culture = cu:hokan
+			}
+		}
+	}
+}
+
+#hidden event to add american homelands where relevant
+usfp_manifest_destiny.13 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				usfp_american_west_zone = yes
+				usfp_mexican_cession_trigger = yes
+				#in case of manifesting extra destiny
+				state_region = s:STATE_RIO_GRANDE
+				state_region = s:STATE_CHIHUAHUA
+				state_region = s:STATE_SONORA
+				state_region = s:STATE_BAJA_CALIFORNIA
+			}
+			NOR = {
+				cu:yankee = {
+					has_homeland = prev
+				}
+				cu:dixie = {
+					has_homeland = prev
+				}
+			}
+			is_split_state = no
+			state_population > 60000
+			religion_percent_state = {
+				target = rel:animist
+				value < 0.30
+			}
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				OR = {
+					usfp_american_west_zone = yes
+					usfp_mexican_cession_trigger = yes
+					#in case of manifesting extra destiny
+					state_region = s:STATE_RIO_GRANDE
+					state_region = s:STATE_CHIHUAHUA
+					state_region = s:STATE_SONORA
+					state_region = s:STATE_BAJA_CALIFORNIA
+				}
+				NOR = {
+					cu:yankee = {
+						has_homeland = prev
+					}
+					cu:dixie = {
+						has_homeland = prev
+					}
+				}
+				is_split_state = no
+				state_population > 60000
+				religion_percent_state = {
+					target = rel:animist
+					value < 0.30
+				}
+			}
+			save_scope_as = new_homeland_state
+		}
+		scope:new_homeland_state = {
+			if = {
+				limit = { 
+					OR = {
+						state_region = s:STATE_ARIZONA
+						state_region = s:STATE_CHIHUAHUA
+						state_region = s:STATE_RIO_GRANDE
+						state_region = s:STATE_SONORA
+						state_region = s:STATE_OKLAHOMA
+						state_region = s:STATE_NEW_MEXICO
+					}
+				}
+				state_region = {
+					add_homeland = cu:dixie
+				}
+				cu:dixie = {
+					save_scope_as = new_homeland_culture
+				}
+			}
+			else = {
+				state_region = {
+					add_homeland = cu:yankee
+				}
+				cu:yankee = {
+					save_scope_as = new_homeland_culture
+				}
+			}
+		}
+		post_notification = usfp_new_american_homeland
+	}
+}
+
+#Ostend Manifesto
+usfp_manifest_destiny.14 = {
+	type = country_event
+	placement = root
+
+	event_image = {
+		video = "votp_conspiring"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_manifest_destiny.14.t
+	desc = usfp_manifest_destiny.14.d
+	flavor = usfp_manifest_destiny.14.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		NOT = {
+			has_variable = ostend_manifesto
+		}
+		ig:ig_landowners = {
+			is_marginal = no
+			has_ideology = ideology:ideology_pro_slavery
+		}
+		game_date > 1854.1.1
+		var:manifest_destiny_var >= 3
+		NOT = {
+			owns_entire_state_region = STATE_CUBA
+		}
+		NOT = {
+			any_subject_or_below = {
+				owns_entire_state_region = STATE_CUBA
+			}
+		}
+		OR = {
+			NOT = {
+				exists = c:CUB
+			}
+			c:CUB = {
+				is_subject = yes
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = ostend_manifesto
+		s:STATE_CUBA = {
+			random_scope_state = {
+				limit = {
+					NOT = {
+						owner = c:USA
+					}
+					is_incorporated = yes
+					is_treaty_port = no
+				}
+				owner = {
+					if = {
+						limit = { 
+							is_subject = yes
+						}
+						overlord = {
+							save_scope_as = cuba_owner_scope
+						}
+					}
+					else = {
+						save_scope_as = cuba_owner_scope
+					}
+				}
+			}
+			save_scope_as = cuba_scope
+		}
+	}
+
+	#Let's not
+	option = {
+		name = usfp_manifest_destiny.14.a
+		default_option = yes
+		custom_tooltip = cuba_offer_available
+		create_incident = {
+			country = scope:cuba_owner_scope
+			value = 5
+		}
+	}
+	#Good idea
+	option = {
+		name = usfp_manifest_destiny.14.b
+		trigger = {
+			any_scope_politician = {
+				OR = {
+					interest_group = {
+						is_in_government = yes
+					}
+					is_ruler = yes
+				}
+				usfp_manifest_destiny_pro_expansion_trigger = yes
+			}
+		}
+		highlighted_option = yes
+		custom_tooltip = cuba_offer_available
+		usfp_manifest_more_destiny_effect = yes
+		create_incident = {
+			country = scope:cuba_owner_scope
+			value = 10
+		}
+	}
+	#Rivalry with spain
+	option = {
+		name = usfp_manifest_destiny.14.c
+		trigger = {
+			has_diplomatic_pact = {
+				who = scope:cuba_owner_scope
+				type = rivalry
+			}
+		}
+		highlighted_option = yes
+		usfp_manifest_more_destiny_effect = yes
+		create_incident = {
+			country = scope:cuba_owner_scope
+			value = 30
+		}
+		s:STATE_CUBA = {
+			add_claim = root
+		}
+	}
+}
+
+#Cuba overlord: offer to buy Cuba
+usfp_manifest_destiny.15 = {
+	type = country_event
+	placement = scope:cuba_state_scope
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_usa.dds"
+	
+	title = usfp_manifest_destiny.15.t
+	desc = usfp_manifest_destiny.15.d
+	flavor = usfp_manifest_destiny.15.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+		s:STATE_CUBA = {
+			save_scope_as = cuba_scope
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_CUBA
+			}
+			save_scope_as = cuba_state_scope
+		}
+	}
+
+	#Accept
+	option = {
+		name = usfp_manifest_destiny.15.a
+		c:USA = {
+			change_relations = {
+				country = ROOT
+				value = 25
+			}
+			trigger_event = {
+				id = usfp_manifest_destiny.17
+				days = 7
+				popup = yes
+			}
+		}
+		show_as_tooltip = {
+			add_modifier = {
+				name = usa_paying_for_cuba
+				years = 4
+			}
+			c:MEX = {
+				add_modifier = {
+					name = spain_getting_paid_by_usa
+					years = 4
+				}
+			}
+			every_scope_state = {
+				limit = {
+					state_region = s:STATE_CUBA
+				}
+				set_state_owner = c:USA
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				trigger = {
+					taking_loans = yes
+				}
+				add = 10
+			}
+			modifier = {
+				trigger = {
+					OR = {
+						in_default = yes
+						has_modifier = declared_bankruptcy
+					}
+				}
+				add = 100
+			}
+		}
+	}
+	#Refuse
+	option = {
+		name = usfp_manifest_destiny.15.b
+		default_option = yes
+		ai_chance = {
+			base = 100
+		}
+		c:USA = {
+			change_relations = {
+				country = ROOT
+				value = -10
+			}
+			trigger_event = {
+				id = usfp_manifest_destiny.16
+				days = 7
+			}
+		}
+	}
+
+
+}
+
+#Cuban overlord refuses
+usfp_manifest_destiny.16 = {
+	type = country_event
+	placement = ROOT
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_manifest_destiny.16.t
+	desc = usfp_manifest_destiny.16.d
+	flavor = usfp_manifest_destiny.16.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+		s:STATE_CUBA = {
+			random_scope_state = {
+				limit = {
+					NOT = {
+						owner = c:USA
+					}
+				}
+				owner = {
+					if = {
+						limit = { 
+							is_subject = yes
+						}
+						overlord = {
+							save_scope_as = cuba_owner_scope
+						}
+					}
+					else = {
+						save_scope_as = cuba_owner_scope
+					}
+				}
+			}
+			save_scope_as = cuba_scope
+		}
+	}
+
+	#can't try again
+	option = {
+		name = usfp_manifest_destiny.16.a
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_abandoned_cuba
+				months = short_modifier_time
+			}
+		}
+	}
+
+	#gibs me your island
+	option = {
+		name = usfp_manifest_destiny.16.b
+		s:STATE_CUBA = {
+			add_claim = c:USA
+		}
+		create_incident = {
+			country = scope:cuba_owner_scope
+			value = 20
+		}
+		if = {
+			limit = { 
+				exists = c:CUB
+				c:CUB = {
+					has_attitude = {
+						who = scope:cuba_owner_scope
+						attitude = loyal
+					}
+				}
+			}
+			change_relations = {
+				country = c:CUB
+				value = -50
+			}
+			c:CUB = {
+				change_relations = {
+					country = ROOT
+					value = -50
+				}
+			}
+		}
+	}
+
+}
+
+#Cuban overlord accepts
+usfp_manifest_destiny.17 = {
+	type = country_event
+	placement = ROOT
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_manifest_destiny.17.t
+	desc = usfp_manifest_destiny.17.d
+	flavor = usfp_manifest_destiny.17.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+		s:STATE_CUBA = {
+			random_scope_state = {
+				limit = {
+					NOT = {
+						owner = c:USA
+					}
+				}
+				owner = {
+					if = {
+						limit = { 
+							is_subject = yes
+						}
+						overlord = {
+							save_scope_as = cuba_owner_scope
+						}
+					}
+					else = {
+						save_scope_as = cuba_owner_scope
+					}
+				}
+			}
+			save_scope_as = cuba_scope
+		}
+	}
+
+	#Annex
+	option = {
+		name = usfp_manifest_destiny.17.a
+		usfp_manifest_less_destiny_effect = yes
+		add_modifier = {
+			name = usa_paying_for_cuba
+			years = 30
+		}
+		scope:cuba_owner_scope = {
+			add_modifier = {
+				name = spain_getting_paid_by_usa
+				years = 30
+			}
+		}
+		s:STATE_CUBA = {
+			every_scope_state = {
+				limit = {
+					OR = {
+						owner = scope:cuba_owner_scope
+						owner = c:CUB
+					}
+				}
+				set_state_owner = c:USA
+			}
+		}
+	}
+}

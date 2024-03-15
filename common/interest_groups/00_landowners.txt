@@ -366,7 +366,10 @@
 					
 				}
 				state = {
-					is_slave_state = no
+					NOR = {
+						has_variable = former_slave_state
+						is_slave_state = yes
+					}
 				}
 			}
 			multiply = 0

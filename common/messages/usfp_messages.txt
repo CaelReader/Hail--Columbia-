@@ -6,3 +6,21 @@
 
 	notification_type = toast
 }
+
+usfp_new_american_homeland = {
+	type = country
+	group = "colony_notification_group"
+	
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+
+	notification_type = toast
+}
+
+usfp_slavery_expands = {
+	type = country
+	group = "colony_notification_group"
+	
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+
+	notification_type = toast
+}

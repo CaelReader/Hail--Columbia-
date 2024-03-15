@@ -96,11 +96,18 @@ je_usfp_a_house_divided_missouri_compromise = {
 			}
 			has_law = law_type:law_slavery_banned
 			has_law = law_type:law_slave_trade
-			hidden_trigger = {
-				has_variable = missouri_compromise_broken_var
-			}
+			has_variable = missouri_compromise_broken_var
 		}
 
+	}
+
+	on_fail = {
+		if = {
+			limit = { 
+				has_modifier = usfp_missouri_compromise_decaying
+			}
+			remove_modifier = usfp_missouri_compromise_decaying
+		}
 	}
 
 	invalid = {
@@ -143,7 +150,7 @@ je_usfp_a_house_divided_gag_rule = {
 		ig:ig_landowners = {
 			is_in_government = no
 		}
-		government_legitimacy >= 20
+		government_legitimacy >= 51
 	}
 
 	invalid = {
@@ -160,6 +167,21 @@ je_usfp_a_house_divided_bleeding_kansas = {
 	group = je_group_historical_content
 
 	should_be_pinned_by_default = yes
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			100 = historical_agitators.5 # John Brown spawn
+			20 = acw_events.6 # The Caning of Charles Sumner
+			#New England Emigrant Aid Society
+			#Border Ruffians
+			#Ballot Violence
+			#Harper's Ferry
+			#Competing Constitutions
+		}
+	}
+
+	timeout = 1825
 }
 
 #The Border States: track and influence the loyalty of the border states in the leadup
