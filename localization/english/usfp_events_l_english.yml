@@ -151,8 +151,8 @@ usfp_manifest_destiny.9.a: "The railroads will transform the country!"
 usfp_manifest_destiny.9.b: "The railroads are too financially risky."
 
 usfp_manifest_destiny.10.t: "Tales of Gold Mountain"
-usfp_manifest_destiny.10.d: "News of the discovery of $gold$ in [SCOPE.sState('california_scope').GetName] has reached across the Pacific to [SCOPE.sCountry('china_scope').GetName]. Thousands of [SCOPE.sCulture('han_scope').GetName] migrants have begun to arrive, drawn by tales of the vast wealth flowing from \\'Gold Mountain\\'."
-usfp_manifest_destiny.10.f: ""O, just marry all the daughters to men from Gold Mountain—\n\nAll those trunks from Gold Mountain — you can demand as many as you want!\n\nO, don\\'t ever marry your daughter to a man from Gold Mountain—\n\nLonely and sad — a cooking pot is her only companion!"" #Cantonese Rhyme
+usfp_manifest_destiny.10.d: "News of the discovery of $gold$ in [SCOPE.sState('california_scope').GetName] has reached across the Pacific to [SCOPE.sCountry('china_scope').GetName]. Thousands of [SCOPE.sCulture('han_scope').GetName] migrants have begun to arrive, drawn by tales of the vast wealth flowing from 'Gold Mountain'."
+usfp_manifest_destiny.10.f: ""O, just marry all the daughters to men from Gold Mountain—\n\nAll those trunks from Gold Mountain — you can demand as many as you want!\n\nO, don't ever marry your daughter to a man from Gold Mountain—\n\nLonely and sad — a cooking pot is her only companion!"" #Cantonese Rhyme
 usfp_manifest_destiny.10.a: "Gold fever is irresistable!"
 usfp_manifest_destiny.10.b: "We don't need even more foolish gold-seekers!"
 usfp_manifest_destiny.10.a.t: "In defiance of [SCOPE.sCountry('china_scope').GetAdjective] policies, upwards of 30,000 [SCOPE.sCulture('han_scope').GetName] $laborers$ will arrive in [SCOPE.sState('california_scope').GetName] over the next few years."
@@ -268,7 +268,7 @@ usfp_native_removal.13.a: "His words ring true."
 usfp_native_removal.13.b: "His words ring hollow."
 
 usfp_native_removal.14.t: "Assassin Strikes at [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting]!"
-usfp_native_removal.14.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] has been shot in the streets of [ROOT.GetCountry.GetCapital.GetCityHubName]! In the ensuing scuffle, the assassin was themselves shot dead. While the exact motives are unclear, the assassin has been identified as a [SCOPE.sCulture('assassin_culture_scope').GetName] man, causing many to immediately assume a connection to Indian Removal. The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] was rushed to the hospital in critical condition."
+usfp_native_removal.14.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] has been shot in the streets of [ROOT.GetCountry.GetCapital.GetCityHubName]! In the ensuing scuffle, the assassin was themselves shot dead. While the exact motives are unclear, the assassin has been identified as a [SCOPE.sCulture('assassin_culture_scope').GetName] man, causing many to immediately assume a connection to Indian Removal. The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] has been rushed to the hospital in critical condition."
 usfp_native_removal.14.f: ""Make way! Make way! The President has been shot! The President has been shot, my God!""
 usfp_native_removal.14.a: "This is an outrage!"
 
@@ -343,8 +343,8 @@ usfp_usa.10.b: "Our esteemed [SCOPE.gsInterestGroup('intelligentsia_scope').GetN
 usfp_usa.10.c: "The bosses already micromanage too much."
 
 usfp_usa.11.t: "The Cross of Gold"
-usfp_usa.11.d: "[SCOPE.sCharacter('bryan_scope').GetFullName] has catapulted himself to the heights of the [SCOPE.sParty('bryan_party').GetName], delivering an electrifying speech to the party's covention. In his \\'Cross of Gold\\' address, [SCOPE.sCharacter('bryan_scope').GetLastName] extoled silver coinage as a bulwark against big city moneyed interests, and presented a populist platform that would ensure prosperity for the common masses."
-usfp_usa.11.f: ""Having behind us the producing masses of this nation and the world, supported by the commercial interests, the laboring interests, and the toilers everywhere, we will answer their demand for a gold standard by saying to them: \\'You shall not press down upon the brow of labor this crown of thorns; you shall not crucify mankind upon a cross of gold!\\'""
+usfp_usa.11.d: "[SCOPE.sCharacter('bryan_scope').GetFullName] has catapulted himself to the heights of the [SCOPE.sParty('bryan_party').GetName], delivering an electrifying speech to the party's covention. In his 'Cross of Gold' address, [SCOPE.sCharacter('bryan_scope').GetLastName] extoled silver coinage as a bulwark against big city moneyed interests, and presented a populist platform that would ensure prosperity for the common masses."
+usfp_usa.11.f: ""Having behind us the producing masses of this nation and the world, supported by the commercial interests, the laboring interests, and the toilers everywhere, we will answer their demand for a gold standard by saying to them: You shall not press down upon the brow of labor this crown of thorns; you shall not crucify mankind upon a cross of gold!""
 usfp_usa.11.a: "The [SCOPE.sCharacter('bryan_scope').GetLastName] ticket will sweep the nation!"
 usfp_usa.11.b: "Free Silver is ridiculous, we need sound money!"
 
