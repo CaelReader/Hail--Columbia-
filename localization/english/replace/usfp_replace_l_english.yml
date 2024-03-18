@@ -2,7 +2,7 @@
 COM:0 "Comancheria"
 
 je_acw_countdown:0 "A House Divided"
-je_acw_countdown_reason:0 "The issue of slavery has divided the North and South of the [ROOT.GetCountry.GetName] since before the drafting of the Declaration of Independence. Then as now, a series of compromises in the Federal government have forestalled open conflict. As the [SCOPE.sIdeology('abolitionist_scope').GetName] cause continues to grow in the North, the [SCOPE.gsInterestGroup('landowners_scope').GetName] have continued to demand more concessions and compromises to protect their '\peculiar institution'\ from interference.\n\nOne way or another, the Union cannot endure half slave and half free for much longer."
+je_acw_countdown_reason:0 "The issue of slavery has divided the North and South of the [ROOT.GetCountry.GetName] since before the drafting of the Declaration of Independence. Then as now, a series of compromises in the Federal government have forestalled open conflict. As the [SCOPE.sIdeology('abolitionist_scope').GetName] cause continues to grow in the North, the [SCOPE.gsInterestGroup('landowners_scope').GetName] have continued to demand more concessions and compromises to protect their '\\peculiar institution'\\ from interference.\n\nOne way or another, the Union cannot endure half slave and half free for much longer."
 
  acw_events.3.t:0 "The [SCOPE.sCharacter('wilmot_proviso_ig_leader').GetLastName] Proviso"
  acw_events.3.d:0 "[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetFullName], leader of the [SCOPE.gsInterestGroup('wilmot_proviso_ig').GetName], has proposed outright prohibiting slavery in all our new western territories. This proposal is unacceptable to the [SCOPE.gsInterestGroup('planters_scope').GetName], but they have put forth few alternatives."

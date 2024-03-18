@@ -1,0 +1,42 @@
+﻿namespace = usfp_bleeding_kansas
+
+#New England Emigrant Aid Society
+usfp_bleeding_kansas.1 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	event_image = {
+		video = "europenorthamerica_rich_and_poor"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	title = usfp_bleeding_kansas.1.t
+	desc = usfp_bleeding_kansas.1.d
+	flavor = usfp_bleeding_kansas.1.f
+	dlc = dlc_usfp
+	placement = scope:kansas_scope
+
+	duration = 3
+
+	immediate = {
+		s:STATE_KANSAS.region_state:USA = {
+			save_scope_as = kansas_scope
+		}
+	}
+
+	#good
+	option = {
+		name = usfp_bleeding_kansas.1.a
+	}
+
+	#bad
+	option = {
+		name = usfp_bleeding_kansas.1.b
+	}
+}
+
+#Border Ruffians
+#Ballot Violence
+#Harper's Ferry (historical)
+#Harper's Ferry (successful)
+#Competing Constitutions

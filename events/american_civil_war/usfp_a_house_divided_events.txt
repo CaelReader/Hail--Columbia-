@@ -160,6 +160,23 @@ usfp_a_house_divided.3 = {
 			}
 			remove_modifier = usfp_missouri_compromise_decaying
 		}
+		if = {
+			limit = {
+				game_date > 1857.3.4
+				NOT = {
+					any_scope_character = {
+						has_template = ecchi_usa_jefferson_davis_character_template
+					}
+				}
+			 }
+			 create_character = {
+				template = ecchi_usa_jefferson_davis_character_template
+				on_created = {
+					set_as_interest_group_leader = yes
+				}
+			}
+		}
+		
 	}
 }
 
@@ -1050,12 +1067,32 @@ usfp_a_house_divided.11 = {
 		add_journal_entry = {
 			type = je_usfp_a_house_divided_bleeding_kansas
 		}
+		scope:kansas_scope = {
+			add_radicals_in_state = {
+				value = 0.1
+				culture = cu:yankee
+			}
+			add_radicals_in_state = {
+				value = 0.05
+				culture = cu:yankee
+			}
+		}
 	}
 	#For Slavery!
 	option = {
 		name = usfp_a_house_divided.11.b
 		add_journal_entry = {
 			type = je_usfp_a_house_divided_bleeding_kansas
+		}
+		scope:kansas_scope = {
+			add_radicals_in_state = {
+				value = 0.05
+				culture = cu:yankee
+			}
+			add_radicals_in_state = {
+				value = 0.1
+				culture = cu:yankee
+			}
 		}
 	}
 	#To the Strongest!
@@ -1064,6 +1101,16 @@ usfp_a_house_divided.11 = {
 		default_option = yes
 		add_journal_entry = {
 			type = je_usfp_a_house_divided_bleeding_kansas
+		}
+		scope:kansas_scope = {
+			add_radicals_in_state = {
+				value = 0.05
+				culture = cu:yankee
+			}
+			add_radicals_in_state = {
+				value = 0.05
+				culture = cu:yankee
+			}
 		}
 	}
 }
@@ -1387,4 +1434,258 @@ usfp_a_house_divided.14 = {
 			}
 		}
 	}
+}
+
+#Collapse of the Whigs
+usfp_a_house_divided.15 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	title = usfp_a_house_divided.15.t
+	desc = usfp_a_house_divided.15.d
+	flavor = usfp_a_house_divided.15.f
+	dlc = dlc_usfp
+	placement = root
+	duration = 3
+
+	immediate = {
+		py:liberal_party = {
+			save_scope_as = whig_scope
+		}
+	}
+
+	trigger = {
+		OR = {
+			has_variable = kansas_nebraska_act
+			has_variable = accepted_wilmot_proviso
+			has_modifier = usfp_breaking_compromise
+		}
+		has_modifier = usfp_second_party_system_modifier
+		in_election_campaign = no
+	}
+
+
+	option = {
+		name = usfp_a_house_divided.15.a
+		default_option = yes
+		remove_modifier = usfp_second_party_system_modifier
+		custom_tooltip = usfp_a_house_divided.15.a.tt
+		add_modifier = {
+			name = usfp_third_party_system_modifier
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_ig_sectional_realignment
+				years = 2
+			}
+		}
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = usfp_ig_sectional_realignment
+				years = 2
+			}
+		}
+		ig:ig_industrialists = {
+			add_modifier = {
+				name = usfp_ig_sectional_realignment
+				years = 2
+			}
+		}
+		recalculate_pop_ig_support = yes
+	}
+
+}
+
+#Dred Scott Decision
+usfp_a_house_divided.16 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	event_image = {
+		video = "votp_hostile_court"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	title = usfp_a_house_divided.16.t
+	desc = usfp_a_house_divided.16.d
+	flavor = usfp_a_house_divided.16.f
+	dlc = dlc_usfp
+	placement = root
+	duration = 3
+
+	trigger = {
+		NOR = {
+			has_variable = dred_scott
+			has_law = law_type:law_slavery_banned
+		}
+		game_date > 1857.1.1
+	}
+
+	immediate = {
+		set_variable = dred_scott
+		cu:afro_american = {
+			save_scope_as = afro_american_scope
+		}
+	}
+
+	#what the fuck
+	option = {
+		name = usfp_a_house_divided.16.a
+		default_option = yes
+		if = {
+			limit = { 
+				has_journal_entry = je_usfp_a_house_divided_missouri_compromise
+			}
+			custom_tooltip = {
+				text = missouri_compromise_break
+				set_variable = missouri_compromise_broken_var
+			}
+		}
+		if = {
+			limit = { 
+				has_modifier = usfp_1850_compromise_decaying
+			}
+			remove_modifier = usfp_1850_compromise_decaying
+		}
+		add_modifier = {
+			name = usfp_dred_scott_fallout
+			years = 3
+		}
+		add_radicals = {
+			value = 0.05
+			culture = cu:afro_american
+		}
+		add_radicals = {
+			value = 0.01
+			culture = cu:yankee
+		}
+		add_loyalists = {
+			value = 0.01
+			culture = cu:dixie
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_pro_slavery
+					leader = { has_ideology = ideology:ideology_slaver }
+				}
+			}
+			add_modifier = {
+				name = ig_slavers_happy
+				months = short_modifier_time
+				multiplier = 2
+			}
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_anti_slavery
+					leader = { usfp_anti_slavery_leader_trigger = yes}
+				}
+				NOT = { has_modifier = ig_abolitionists_happy }
+			}
+			add_modifier = {
+				name = ig_abolitionists_mad
+				months = short_modifier_time
+				multiplier = 2
+			}
+		}
+		every_interest_group = {
+			limit = {
+				NOR = {
+					has_ideology = ideology:ideology_anti_slavery
+					leader = { usfp_anti_slavery_leader_trigger = yes }
+					has_ideology = ideology:ideology_pro_slavery
+					leader = { has_ideology = ideology:ideology_slaver }
+				}
+			}
+			add_modifier = {
+				name = usfp_threatening_union
+				months = short_modifier_time
+			}
+		}
+	}
+
+	#brilliant!
+	option = {
+		name = usfp_a_house_divided.16.b
+		if = {
+			limit = { 
+				has_journal_entry = je_usfp_a_house_divided_missouri_compromise
+			}
+			custom_tooltip = {
+				text = missouri_compromise_break
+				set_variable = missouri_compromise_broken_var
+			}
+		}
+		if = {
+			limit = { 
+				has_modifier = usfp_1850_compromise_decaying
+			}
+			remove_modifier = usfp_1850_compromise_decaying
+		}
+		add_modifier = {
+			name = usfp_dred_scott_fallout
+			years = 3
+		}
+		add_radicals = {
+			value = 0.05
+			culture = cu:afro_american
+		}
+		add_radicals = {
+			value = 0.01
+			culture = cu:yankee
+		}
+		add_loyalists = {
+			value = 0.01
+			culture = cu:dixie
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_pro_slavery
+					leader = { has_ideology = ideology:ideology_slaver }
+				}
+			}
+			add_modifier = {
+				name = ig_slavers_happy
+				months = short_modifier_time
+				multiplier = 2
+			}
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_anti_slavery
+					leader = { usfp_anti_slavery_leader_trigger = yes}
+				}
+				NOT = { has_modifier = ig_abolitionists_happy }
+			}
+			add_modifier = {
+				name = ig_abolitionists_mad
+				months = short_modifier_time
+				multiplier = 2
+			}
+		}
+		every_interest_group = {
+			limit = {
+				NOR = {
+					has_ideology = ideology:ideology_anti_slavery
+					leader = { usfp_anti_slavery_leader_trigger = yes }
+					has_ideology = ideology:ideology_pro_slavery
+					leader = { has_ideology = ideology:ideology_slaver }
+				}
+			}
+			add_modifier = {
+				name = usfp_threatening_union
+				months = short_modifier_time
+			}
+		}
+	}
+
 }

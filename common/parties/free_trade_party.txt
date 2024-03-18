@@ -61,6 +61,15 @@ free_trade_party = {
 					exists = c:USA
 					THIS = c:USA
 					exists = owner.py:liberal_party
+					NOT = { has_global_variable = american_civil_war }
+				}
+			}
+			triggered_desc = {
+				desc = party_liberal_republican_party
+				trigger = {
+					exists = c:USA
+					THIS = c:USA
+					exists = owner.py:liberal_party
 				}
 			}
 			triggered_desc = {

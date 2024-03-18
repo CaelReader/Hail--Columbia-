@@ -21,5 +21,5 @@
  #ideology_SRA_desc:0 "#lore This character advocates for the states' rights to maintain slavery.#!"
 
  ai_strategy_anti_slavery_agenda:0 "Emancipation Legislation"
- ai_strategy_anti_slavery_agenda_desc:0 "[COUNTRY.GetName] is ready to begin the process of legislatively abolishing slavery. The house will cease to be divided - one way or another.\n\n#lore "An inspection of the Constitution will show that the right of property in a slave is not "distinctly and expressly affirmed" in it."#!"
+ ai_strategy_anti_slavery_agenda_desc:0 "[COUNTRY.GetName] is ready to begin the process of legislatively abolishing slavery. The house will cease to be divided - one way or another."
  

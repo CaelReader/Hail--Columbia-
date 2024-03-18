@@ -16,7 +16,7 @@ USCWF_IG_ideology_on_action = {
 on_election_campaign_end = {
 	on_actions = {
 		USCWF_precedent_on_action #Doodlez Precedent
-		USCWF_jefferson_davis_on_action
+		# USCWF_jefferson_davis_on_action
 	}
 }
 
@@ -32,21 +32,21 @@ USCWF_precedent_on_action = {
 	}
 }
 
-USCWF_jefferson_davis_on_action = {
-	effect = {
-		if = {
-			limit = {
-				c:USA ?= this
-				game_date < 1861.1.1
-				game_date > 1860.1.1
-			}
-			create_character = {
-				template = ecchi_usa_jefferson_davis_character_template
-				on_created = { set_variable = memento_mori_immunity }
-			}
-		}
-	}
-}
+# USCWF_jefferson_davis_on_action = {
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				c:USA ?= this
+# 				game_date < 1861.1.1
+# 				game_date > 1860.1.1
+# 			}
+# 			create_character = {
+# 				template = ecchi_usa_jefferson_davis_character_template
+# 				on_created = { set_variable = memento_mori_immunity }
+# 			}
+# 		}
+# 	}
+# }
 
 on_revolution_checkpoint_reached = {
 	on_actions = {

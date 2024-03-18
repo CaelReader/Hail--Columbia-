@@ -99,6 +99,57 @@
 		add_state_trait = state_trait_comanche_domain
 	}
 
+	s:STATE_LOUISIANA.region_state:USA = {
+		add_modifier = {
+			name = usfp_deep_south_modifier
+		}
+	}
+	s:STATE_MISSISSIPPI.region_state:USA = {
+		add_modifier = {
+			name = usfp_deep_south_modifier
+		}
+	}
+	s:STATE_ALABAMA.region_state:USA = {
+		add_modifier = {
+			name = usfp_deep_south_modifier
+		}
+	}
+	s:STATE_GEORGIA.region_state:USA = {
+		add_modifier = {
+			name = usfp_deep_south_modifier
+		}
+	}
+	s:STATE_FLORIDA.region_state:USA = {
+		add_modifier = {
+			name = usfp_deep_south_modifier
+		}
+	}
+	s:STATE_SOUTH_CAROLINA.region_state:USA = {
+		add_modifier = {
+			name = usfp_deep_south_modifier
+		}
+	}
+	s:STATE_NORTH_CAROLINA.region_state:USA = {
+		add_modifier = {
+			name = usfp_upper_south_modifier
+		}
+	}
+	s:STATE_TENNESSEE.region_state:USA = {
+		add_modifier = {
+			name = usfp_upper_south_modifier
+		}
+	}
+	s:STATE_VIRGINIA.region_state:USA = {
+		add_modifier = {
+			name = usfp_upper_south_modifier
+		}
+	}
+	s:STATE_ARKANSAS.region_state:USA = {
+		add_modifier = {
+			name = usfp_upper_south_modifier
+		}
+	}
+
 	##from State Traits Expanded
 	## Canadian Boreal Forests
 		

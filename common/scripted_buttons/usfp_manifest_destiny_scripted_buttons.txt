@@ -312,3 +312,84 @@ usfp_cuban_purchase_button = {
 	}
 
 }
+
+usfp_claim_canada_button = {
+	name = "usfp_claim_canada_button"
+	desc = "usfp_claim_canada_button_desc"
+
+	visible = {
+		var:manifest_destiny_var >= 10
+		NOT = {
+			has_variable = claimed_canada
+		}
+	}
+
+	possible = {
+		ruler = {
+			usfp_manifest_destiny_pro_expansion_trigger = yes
+		}
+		OR = {
+			AND = {
+				exists = c:GBR
+				c:GBR = {
+					any_subject_or_below = {
+						country_is_in_north_america = yes
+					}
+					relations:root <= relations_threshold:poor
+				}
+			}
+			AND = {
+				exists = c:CAN
+				c:CAN = {
+					is_subject = no
+					relations:root <= relations_threshold:poor
+				}
+			}
+		}
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+	}
+
+	effect = {
+		set_variable = claimed_canada
+		every_state_region = {
+			limit = {
+				OR = {
+					region = sr:region_canada
+					region = sr:region_new_england
+					region = sr:region_pacific_coast
+					region = sr:region_great_plains
+				}
+				any_scope_state = {
+					OR = {
+						owner = c:GBR
+						owner = c:CAN
+						owner = {
+							is_subject_of = c:GBR
+						}
+					}
+				}
+			}
+			add_claim = ROOT
+		}
+		s:STATE_ONTARIO = {
+			random_scope_state = {
+				limit = {
+					OR = {
+						owner = c:GBR
+						owner = c:CAN
+						owner = {
+							is_subject_of = c:GBR
+						}
+					}
+				}
+				root = {
+					create_incident = {
+						country = prev.owner
+						value = 30
+					}
+				}
+			}
+		}
+	}
+}

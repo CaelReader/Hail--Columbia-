@@ -131,7 +131,9 @@ je_acw_countdown = {
 			100 = usfp_a_house_divided.5 # Uncle Tom's Cabin
 			50 = usfp_a_house_divided.6 # The Impending Crisis of the South
 			50 = usfp_a_house_divided.13 #Slavery expands west
-			#Dred Scott decision
+			300 = usfp_a_house_divided.15 #collapse of the Second Party System
+			200 = usfp_a_house_divided.16 #Dred Scott decision
+
 		}
 		events = {
 			acw_events.3 # The Wilmot Proviso
@@ -147,6 +149,9 @@ je_acw_countdown = {
 		value = 120
 	}
 
+	is_progressing = {
+		has_law = law_type:law_slavery_banned
+	}
 
 	weight = 100
 }
@@ -164,6 +169,12 @@ je_acw_war = {
 				has_modifier = usfp_1850_compromise_decaying
 			}
 			remove_modifier = usfp_1850_compromise_decaying
+		}
+		if = {
+			limit = { 
+				has_modifier = usfp_second_party_system_modifier
+			}
+			trigger_event = usfp_a_house_divided.15
 		}
 	}
 

@@ -91,6 +91,8 @@ usa_lincoln_character_template = {
                 }
             }
             set_ideology = ideology:ideology_radical
+        } else = {
+            set_ideology = ideology:ideology_abolitionist
         }
     }
 }

@@ -128,3 +128,28 @@ usfp_abandoned_cuba = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	interest_group_approval_add = -2
 }
+
+usfp_ig_sectional_realignment = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	interest_group_pop_attraction_mult = 0.25
+}
+
+usfp_ignored_monroe = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_manowar_negative.dds
+	interest_group_approval_add = -2
+}
+
+usfp_prosecuted_anarchists_positive = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_cop_positive.dds
+	interest_group_approval_add = 2
+}
+
+usfp_prosecuted_anarchists_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_cop_negative.dds
+	interest_group_approval_add = -3
+}
+
+usfp_international_workers_day = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_socialism_positive.dds
+	interest_group_pop_attraction_mult = 0.15
+}

@@ -1527,7 +1527,7 @@ ecchi_usa_jefferson_davis_character_template = {
     female = no
     religion = protestant
     ideology = ideology_slaver
-    interest_group = ig_rural_folk
+    interest_group = ig_landowners
     birth_date = 1808.6.3
 	dna = ecchi_dna_jefferson_davis
     traits = { meticulous arrogant persistent }
@@ -1544,7 +1544,7 @@ ecchi_usa_jefferson_davis_character_template = {
 				is_interest_group_type = ig_armed_forces
 			}
         }
-        earliest_usage_date = 1862.2.22
+        earliest_usage_date = 1857.3.4
         latest_usage_date = 1889.12.6
         chance = 90
     }

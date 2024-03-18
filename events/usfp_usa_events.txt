@@ -1321,4 +1321,25 @@ usfp_usa.13 = {
 	}
 }
 
-#Collapse of the Second Party System
+#Hidden event to weight first election
+usfp_usa.14 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		exists = c:USA
+		c:USA = root
+		in_election_campaign = yes
+		NOT = {
+			has_variable = had_first_election
+		}
+	}
+
+	immediate = {
+		set_variable = had_first_election
+		py:conservative_party = {
+			add_momentum = momentum_medium
+		}
+	}
+}
+

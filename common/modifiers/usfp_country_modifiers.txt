@@ -19,7 +19,7 @@ usfp_cherokee_syllabary = {
 usfp_missouri_compromise_decaying = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
 	# Faltering Acquiescence
-	country_revolution_clock_time_add = -0.125
+	# country_revolution_clock_time_add = -0.125
 	country_revolution_progress_mult = -1.00
 	state_pop_support_law_slavery_banned_add = -2.0
 	state_pop_support_law_slave_trade_add = -0.5
@@ -42,6 +42,12 @@ usfp_slave_power_modifier = {
 	interest_group_ig_landowners_pol_str_mult = 0.25
 }
 
+usfp_indian_removal_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
+	state_animist_standard_of_living_add = -2
+	state_radicals_from_discrimination_mult = 0.15
+}
+
 usfp_second_party_system_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
 	# Enduring Recalcitrance
@@ -59,6 +65,35 @@ usfp_second_party_system_modifier = {
 	# LGHGH request (USCWF)
 	country_legitimacy_govt_size_add = -1 #TPS
 	# country_legitimacy_headofstate_add = 20 #TPS
+	country_legitimacy_ideological_incoherence_mult = -0.10 #TPS, 0.2 presrep 0.1 censuf 0.20 actual
+}
+
+usfp_second_party_system_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
+	# Enduring Recalcitrance
+	#country_revolution_clock_time_add = 0.0625
+	#country_revolution_progress_mult = 0.5
+	# Tippecanoe
+	# interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.5
+	# interest_group_ig_intelligentsia_pol_str_mult = 1.0
+	# interest_group_ig_armed_forces_pol_str_mult = 0.25 #otherwise AI will waste AUT boosting them
+	# country_voting_power_from_literacy_add = 20
+	country_voting_power_base_add = 20
+	state_pop_pol_str_mult = 0.25
+	interest_group_ig_intelligentsia_pop_attraction_mult = 1
+	interest_group_ig_petty_bourgeoisie_pop_attraction_mult = 2
+	# LGHGH request (USCWF)
+	country_legitimacy_govt_size_add = -1 #TPS
+	country_legitimacy_headofstate_add = 10 #TPS
+	country_legitimacy_ideological_incoherence_mult = -0.10 #TPS, 0.2 presrep 0.1 censuf 0.20 actual
+}
+
+usfp_third_party_system_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
+	country_voting_power_base_add = 20
+	state_pop_pol_str_mult = 0.25
+	country_legitimacy_govt_size_add = -1 #TPS
+	country_legitimacy_headofstate_add = 10 #TPS
 	country_legitimacy_ideological_incoherence_mult = -0.10 #TPS, 0.2 presrep 0.1 censuf 0.20 actual
 }
 
@@ -87,6 +122,7 @@ usfp_acw_union_modifier = {
 	state_conscription_rate_mult = 1
 	country_legitimacy_base_add = 50
 	unit_kill_rate_add = 0.20
+	unit_devastation_mult = 0.10
 }
 
 usfp_acw_csa_modifier = {
@@ -98,6 +134,7 @@ usfp_acw_csa_modifier = {
 	state_conscription_rate_mult = 1
 	country_legitimacy_base_add = 50
 	unit_kill_rate_add = 0.20
+	unit_devastation_mult = 0.10
 }
 
 civil_war_reshuffle_uscwf = {
@@ -216,7 +253,7 @@ usfp_congressional_uproar = {
 
 usfp_imminent_secession = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
-	country_revolution_clock_time_add = 0.5
+	# country_revolution_clock_time_add = 0.5
 	country_revolution_progress_mult = 1
 }
 
@@ -234,7 +271,7 @@ usfp_fugitive_slave_law = {
 
 usfp_1850_compromise_decaying = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
-	country_revolution_clock_time_add = -0.125
+	# country_revolution_clock_time_add = -0.125
 	country_revolution_progress_mult = -0.50
 	state_pop_support_law_slavery_banned_add = -1.0
 	state_pop_support_law_slave_trade_add = -1.0
@@ -252,4 +289,17 @@ usfp_fighting_in_congress = {
 usfp_homestead_administration = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bureaucracy_negative.dds
 	country_bureaucracy_mult = -0.05
+}
+
+usfp_dred_scott_fallout = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
+	state_pop_support_law_slavery_banned_add = 0.20
+	political_movement_radicalism_mult = 0.20
+	interest_group_ig_intelligentsia_pol_str_mult = 0.50
+}
+
+usfp_ignored_monroe_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_manowar_negative.dds
+	country_prestige_mult = -0.05
+	country_influence_mult = -0.05
 }

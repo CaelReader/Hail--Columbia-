@@ -20,6 +20,8 @@ usfp_usa_labor.1 = {
 	duration = 3
 
 	trigger = {
+		exists = c:USA
+		c:USA = root
 		NOT = {
 			has_global_variable = iww_founded
 		}
@@ -29,6 +31,9 @@ usfp_usa_labor.1 = {
 		has_technology_researched = socialism
 		ig:ig_trade_unions = {
 			is_marginal = no
+		}
+		any_scope_state = {
+			state_region = s:STATE_ILLINOIS
 		}
 	}
 
@@ -83,6 +88,124 @@ usfp_usa_labor.1 = {
 		add_radicals = {
 			value = small_radicals
 			strata = poor
+		}
+	}
+}
+
+# Haymarket Affair
+usfp_usa_labor.2 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	event_image = {
+		video = "votp_cops_march"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	placement = scope:illinois_scope
+
+	title = usfp_usa_labor.2.t
+	desc = usfp_usa_labor.2.d
+	flavor = usfp_usa_labor.2.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		exists = c:USA
+		c:USA = root
+		game_date > 1886.5.1
+		NOT = {
+			has_global_variable = had_haymarket_affair
+		}
+		ig:ig_trade_unions = {
+			is_marginal = no
+		}
+		any_scope_state = {
+			state_region = s:STATE_ILLINOIS
+			radical_fraction = {
+				value > 0.05
+			}
+		}
+		has_technology_researched = anarchism
+		NOR = {
+			has_law = law_type:law_no_police
+			has_law = law_type:law_old_age_pension
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_cooperative_ownership
+		}
+	}
+
+	immediate = {
+		set_global_variable = had_haymarket_affair
+		s:STATE_ILLINOIS.region_state:USA = {
+			save_scope_as = illinois_scope
+		}
+	}
+
+	#Prosecute!
+	option = {
+		name = usfp_usa_labor.2.a
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_trade_unions
+		}
+		ig:ig_industrialists = {
+			add_modifier = {
+				name = usfp_prosecuted_anarchists_positive
+				years = 2
+			}
+		}
+		ig:ig_petty_bourgeoisie = {
+			add_modifier = {
+				name = usfp_prosecuted_anarchists_positive
+				years = 2
+			}
+		}
+		if = {
+			limit = { 
+				ig:ig_trade_unions = {
+					leader = {
+						NOR = {
+							has_ideology = ideology:ideology_vanguardist
+							has_ideology = ideology:ideology_social_democrat
+						}
+					}
+				}
+			}
+			ig:ig_trade_unions = {
+				add_modifier = {
+					name = usfp_prosecuted_anarchists_negative
+					years = 2
+				}
+			}
+		}
+		ig:ig_trade_unions = {
+			add_modifier = {
+				name = usfp_international_workers_day
+				years = 5
+			}
+		}
+	}
+
+	#Let them go
+	option = {
+		name = usfp_usa_labor.2.b
+		scope:illinois_scope = {
+			add_radicals_in_state = {
+				value = small_radicals
+				strata = rich
+			}
+			add_loyalists_in_state = {
+				value = small_radicals
+				pop_type = laborers
+			}
+		}
+		ig:ig_trade_unions = {
+			add_modifier = {
+				name = usfp_international_workers_day
+				years = 5
+			}
 		}
 	}
 }

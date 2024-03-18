@@ -59,7 +59,7 @@ usfp_a_house_divided.10.f: ""What is the excuse for all this turmoil and mischie
 usfp_a_house_divided.10.a: "Popular sovereignty will settle the matter."
 usfp_a_house_divided.10.b: "This bill would tear the country apart."
 
-usfp_a_house_divided.11.t: "Bleeding Kansas"
+usfp_a_house_divided.11.t: "Bleeding [SCOPE.sState('kansas_scope').GetName]"
 usfp_a_house_divided.11.d: "With the question of slavery in [SCOPE.sState('kansas_scope').GetName] now open, abolitionists and proponents of slavery alike have begun to pour into the state, intent on influencing the outcome of local elections."
 usfp_a_house_divided.11.f: ""Far in the West rolls the thunder -\nThe tumult of battle is raging\nWhere bleeding Kansas is waging\nWar against Slavery!"" #Charles Weyman
 usfp_a_house_divided.11.a: "[SCOPE.sState('kansas_scope').GetName] will be free soil!"
@@ -70,8 +70,20 @@ usfp_a_house_divided.14.t: "Breaking the Compromise"
 usfp_a_house_divided.14.d: "Representatives from across the sectional divide have opposed [SCOPE.sLaw('current_law_scope').GetName] as a breach of the accord between North and South, denouncing it as a danger to national unity."
 usfp_a_house_divided.14.f: ""Maintain the compromise! Stir not up agitation! Give us peace!"" #Same Houston
 usfp_a_house_divided.14.a: "The Union must be preserved at any cost."
-usfp_a_house_divided.14.b: "Compromise with Slavery is immoral!"
-usfp_a_house_divided.14.c: "Compromise with the abolitionists is untenable!"
+usfp_a_house_divided.14.c: "Compromise with Slavery is immoral!"
+usfp_a_house_divided.14.b: "Compromise with the abolitionists is untenable!"
+
+usfp_a_house_divided.15.t: "Collapse of the Whigs"
+usfp_a_house_divided.15.d: "The deepening of the Slavery conflict has led to mass defections from the [SCOPE.sParty('whig_scope').GetName], leaving it completely defunct as a political organization. Already a new Republican party has been formed to take its place."
+usfp_a_house_divided.15.f: ""This new party will fitly designate those who had united to restore the Union to its true mission: that of champion and promulgator of Liberty rather than propagandist of slavery."" #Horace Greeley
+usfp_a_house_divided.15.a: "A new political era."
+usfp_a_house_divided.15.a.tt: "The [SCOPE.sParty('whig_scope').GetName] will now be known as the Republican Party."
+
+usfp_a_house_divided.16.t: "Dred Scott v. Sandford"
+usfp_a_house_divided.16.d: "The Supreme Court has handed down a landmark decision over the case of an [SCOPE.sCulture('afro_american_scope').GetName] man suing for his freedom. The court has ruled that the Constitution extends no rights to any [SCOPE.sCulture('afro_american_scope').GetName], free or slave, and further that Congress has no power to restrict Slavery in the territories."
+usfp_a_house_divided.16.f: "They were not intended to be included, under the word 'citizens' in the Constitution, and can therefore claim none of the rights and privileges which that instrument provides for and secures to citizens of the United States. On the contrary, they were considered by the founders as a subordinate and inferior class of beings who had been subjugated by the dominant race, and, whether emancipated or not, yet remained subject to their authority, and had no rights or privileges but such as those who held the power and the Government might choose to grant them."
+usfp_a_house_divided.16.a: "This is the most obscene ruling in history!"
+usfp_a_house_divided.16.b: "Property is property, that is the end of it."
 
 usfp_acw.1.t: "A Traitor's Peace"
 usfp_acw.1.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has published a scathing criticism of [SCOPE.sCountry('csa_scope').GetAdjective] peace demands, depicting them as dishonoring the Union and self-destructive to the North. The [SCOPE.sParty('republican_party_scope').GetName] has ran with it to bolster public support for continuing the war, denouncing what they call a Traitor\\'s Peace."
@@ -158,6 +170,7 @@ usfp_manifest_destiny.14.a: "This suggestion is crass imperalism."
 usfp_manifest_destiny.14.b: "[SCOPE.sStateRegion('cuba_scope').GetName] is critical to our national security."
 usfp_manifest_destiny.14.c: "Oh, we won\\'t be #italic purchasing#! anything from [SCOPE.sCountry('cuba_owner_scope').GetName]"
 cuba_offer_available: "We can make an offer to purchase [SCOPE.sStateRegion('cuba_scope').GetName] from [SCOPE.sCountry('cuba_owner_scope').GetName]."
+usfp_manifest_destiny.14.e: "Recall and reprimand these diplomats at once."
 
 usfp_manifest_destiny.15.t: "The Cuban Purchase"
 usfp_manifest_destiny.15.d: "The [SCOPE.sCountry('usa_scope').GetName] have offered to purchase the island of [SCOPE.sStateRegion('cuba_scope').GetName] from us, claiming that it is imperative to their national security. They have offered @money!#yellow 13 Million#!, to be paid over the course of 30 years."
@@ -175,6 +188,14 @@ usfp_manifest_destiny.17.t: "[SCOPE.sCountry('cuba_owner_scope').GetName] Sells 
 usfp_manifest_destiny.17.d: "[SCOPE.sCountry('cuba_owner_scope').GetName] has agreed to our purchase of [SCOPE.sStateRegion('cuba_scope').GetName]."
 usfp_manifest_destiny.17.f: ""The United States and every commercial nation would be benefited by this transfer, and the interests of Spain would also be greatly and essentially promoted. She cannot but see what such a sum of money as we are willing to pay for the island would effect in the development of her vast natural resources.""
 usfp_manifest_destiny.17.a: "Cigars all around!"
+
+usfp_manifest_destiny.18.t: "Monroe Doctrine Violated!"
+usfp_manifest_destiny.18.d: "The Monroe Doctrine states that the United States will not accept any further colonization of the western hemisphere by foreign powers. [SCOPE.sCountry('initiator_scope').GetName] has initiated hostile actions against [SCOPE.sCountry('target_scope').GetName], in violation of the doctrine."
+usfp_manifest_destiny.18.f: ""We owe it, therefore, to candor and to the amicable relations existing between the United States and those powers to declare that we should consider any attempt on their part to extend their system to any portion of this hemisphere as dangerous to our peace and safety.""
+usfp_manifest_destiny.18.a: "We will not stand idly by!"
+usfp_manifest_destiny.18.b: "[SCOPE.sCountry('target_scope').GetName] is of no concern to us."
+usfp_manifest_destiny.18.c: "We can't enforce the doctrine without a navy to match."
+usfp_manifest_destiny.18.e: "We are a bit preoccupied at the moment!"
 
 
 ### Native Removal
@@ -242,7 +263,7 @@ usfp_native_removal.12.b: "They are free to go or stay."
 
 usfp_native_removal.13.t: "Letter to [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName]"
 usfp_native_removal.13.d: "Poet [SCOPE.sCharacter('emerson_scope').GetFullName] has published an open letter criticizing our policy of Indian Removal. The letter lays out a moral case for the ending of the policy, and claims that many average Americans are shocked and dismayed by the position we have forced the Indians into."
-usfp_native_removal.13.f: ""Such a dereliction of all faith and virtue, such a denial of justice, and such deafness to screams for mercy were never heard of in times of peace and in the dealing of a nation with its own allies and wards, since the earth was made. Sir, does this government think that the people of the United States are become savage and mad? From their mind are the sentiments of love and a good nature wiped clean out? The soul of man, the justice, the mercy that is the heart’s heart in all men, from Maine to Georgia, does abhor this business.""
+usfp_native_removal.13.f: ""Such a dereliction of all faith and virtue, such a denial of justice, and such deafness to screams for mercy were never heard of in times of peace and in the dealing of a nation with its own allies and wards, since the earth was made. Sir, does this government think that the people of the United States are become savage and mad? From their mind are the sentiments of love and a good nature wiped clean out? The soul of man, the justice, the mercy that is the heart\\'s heart in all men, from Maine to Georgia, does abhor this business.""
 usfp_native_removal.13.a: "His words ring true."
 usfp_native_removal.13.b: "His words ring hollow."
 
@@ -345,3 +366,9 @@ usfp_usa_labor.1.d: "A convention of radical trade unionists has met in [SCOPE.s
 usfp_usa_labor.1.f: ""It is the historic mission of the working class to do away with capitalism. The army of production must be organized, not only for everyday struggle with capitalists, but also to carry on production when capitalism shall have been overthrown. By organizing industrially we are forming the structure of the new society within the shell of the old.""
 usfp_usa_labor.1.a: "An injury to one is an injury to all!"
 usfp_usa_labor.1.b: "These radicals are a threat to social order."
+
+usfp_usa_labor.2.t: "Bombing in Haymarket Square"
+usfp_usa_labor.2.d: "A labor rally in [SCOPE.sState('illinois_scope').GetCityHubName] suddenly became a massacre when a bomb was thrown at advancing police officers. In response, the police opened fire blindly into the demonstrators, killing and injuring dozens. In the aftermath, local authorities have rounded up a group of anarchists, blaming them for the bombing and seeking the death penalty."
+usfp_usa_labor.2.f: ""After the bomb exploded there was pistol shooting. The crowd was running in the same direction as me. I had to jump over a man lying down, and I saw another man fall in front of me about 100 to 200 feet west of Des Plaines Street. I took hold of his arm and wanted to help him, but the firing was so lively behind me that I just let go and ran."" #An Eyewitness Account by Barton Simonson
+usfp_usa_labor.2.a: "Hang them all!"
+usfp_usa_labor.2.b: "The police are out of line."

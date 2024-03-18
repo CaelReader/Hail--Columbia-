@@ -1010,7 +1010,7 @@ usfp_manifest_destiny.13 = {
 			state_population > 60000
 			religion_percent_state = {
 				target = rel:animist
-				value < 0.30
+				value < 0.2
 			}
 		}
 	}
@@ -1039,7 +1039,7 @@ usfp_manifest_destiny.13 = {
 				state_population > 60000
 				religion_percent_state = {
 					target = rel:animist
-					value < 0.30
+					value < 0.2
 				}
 			}
 			save_scope_as = new_homeland_state
@@ -1201,6 +1201,44 @@ usfp_manifest_destiny.14 = {
 		}
 		s:STATE_CUBA = {
 			add_claim = root
+		}
+	}
+	#Bad idea
+	option = {
+		name = usfp_manifest_destiny.14.e
+		trigger = {
+			any_scope_politician = {
+				OR = {
+					interest_group = {
+						is_in_government = yes
+					}
+					is_ruler = yes
+				}
+				usfp_manifest_destiny_anti_expansion_trigger = yes
+			}
+		}
+		highlighted_option = yes
+		custom_tooltip = cuba_offer_available
+		usfp_manifest_less_destiny_effect = yes
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_abandoned_cuba
+				months = short_modifier_time
+			}
+		}
+		every_interest_group = {
+			limit = {
+				NOT = {
+					is_interest_group_type = ig_landowners
+				}
+				leader = {
+					usfp_manifest_destiny_pro_expansion_trigger = yes
+				}
+			}
+			add_modifier = {
+				name = usfp_abandoned_cuba
+				months = short_modifier_time
+			}
 		}
 	}
 }
@@ -1392,12 +1430,6 @@ usfp_manifest_destiny.16 = {
 				country = c:CUB
 				value = -50
 			}
-			c:CUB = {
-				change_relations = {
-					country = ROOT
-					value = -50
-				}
-			}
 		}
 	}
 
@@ -1471,6 +1503,181 @@ usfp_manifest_destiny.17 = {
 					}
 				}
 				set_state_owner = c:USA
+			}
+		}
+	}
+}
+
+#Monroe Doctrine Violation
+usfp_manifest_destiny.18 = {
+	type = country_event
+	placement = ROOT
+
+	event_image = {
+		video = "votp_gunboat_diplomacy"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_manifest_destiny.18.t
+	desc = usfp_manifest_destiny.18.d
+	flavor = usfp_manifest_destiny.18.f
+	dlc = dlc_usfp
+	duration = 3
+
+	cooldown = {
+		years = 1
+	}
+
+	trigger = {
+		any_diplomatic_play = {
+			target = {
+				OR = {
+					country_is_in_north_america = yes
+					country_is_in_central_america = yes
+					country_is_in_south_america = yes
+				}
+				has_diplomatic_relevance = ROOT
+				NOT = {
+					this = ROOT
+				}
+				is_revolutionary = no
+			}
+			initiator = {
+				country_is_in_north_america = no
+				country_is_in_central_america = no
+				country_is_in_south_america = no
+				NOT = {
+					this = ROOT
+				}
+				is_revolutionary = no
+			}
+			NOR = {
+				is_diplomatic_play_type = dp_reduce_autonomy
+				is_diplomatic_play_type = dp_increase_autonomy
+				is_diplomatic_play_type = dp_secession
+			}
+		}
+	}
+
+	immediate = {
+		random_diplomatic_play = {
+			limit = {
+				target = {
+					OR = {
+						country_is_in_north_america = yes
+						country_is_in_central_america = yes
+						country_is_in_south_america = yes
+					}
+					has_diplomatic_relevance = ROOT
+					NOT = {
+						this = ROOT
+					}
+					is_revolutionary = no
+				}
+				initiator = {
+					country_is_in_north_america = no
+					country_is_in_central_america = no
+					country_is_in_south_america = no
+					NOT = {
+						this = ROOT
+					}
+					is_revolutionary = no
+				}
+				NOR = {
+					is_diplomatic_play_type = dp_reduce_autonomy
+					is_diplomatic_play_type = dp_increase_autonomy
+					is_diplomatic_play_type = dp_secession
+				}
+			}
+			target = {
+				save_scope_as = target_scope
+			}
+			initiator = {
+				save_scope_as = initiator_scope
+			}
+		}
+	}
+
+	#Intervene!
+	option = {
+		name = usfp_manifest_destiny.18.a
+		trigger = {
+			naval_power_projection >= 80
+		}
+		default_option = yes
+		if = {
+			limit = {
+				NOT = {
+					has_variable = destiny_manifested_monroe_doctrine
+				}
+			 }
+			 set_variable = destiny_manifested_monroe_doctrine
+			 usfp_manifest_more_destiny_effect = yes
+		}
+		change_relations = {
+			country = scope:target_scope
+			value = 30
+		}
+		change_relations = {
+			country = scope:initiator_scope
+			value = -30
+		}
+	}
+	#Don't care
+	option = {
+		name = usfp_manifest_destiny.18.b
+		add_modifier = {
+			name = usfp_ignored_monroe_modifier
+			years = 2
+		}
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = usfp_ignored_monroe
+				years = 2
+			}
+		}
+		every_interest_group = {
+			limit = {
+				NOT = {
+					is_interest_group_type = ig_armed_forces
+				}
+				leader = {
+					usfp_manifest_destiny_pro_expansion_trigger = yes
+				}
+			}
+			add_modifier = {
+				name = usfp_ignored_monroe
+				years = 2
+			}
+		}
+		change_relations = {
+			country = scope:target_scope
+			value = -10
+		}
+	}
+	#Our navy is too weak
+	option = {
+		name = usfp_manifest_destiny.18.c
+		trigger = {
+			naval_power_projection < 80
+		}
+		highlighted_option = yes
+		change_relations = {
+			country = scope:target_scope
+			value = -10
+		}
+	}
+	#We are preoccupied
+	option = {
+		name = usfp_manifest_destiny.18.e
+		highlighted_option = yes
+		trigger = {
+			OR = {
+				has_insurrectionary_interest_groups = yes
+				is_in_civil_war = yes
 			}
 		}
 	}

@@ -10,6 +10,7 @@ usfp_monthly_pulse = {
 		usfp_usa.4 #Opening of Ellis Island
 		usfp_usa.6 #Great Chicago Fire
 		usfp_usa.11 #Cross of Gold
+		usfp_usa.14 #Hidden event to weight first election
 	}
 	random_events = {
 		200 = 0
@@ -21,6 +22,7 @@ usfp_monthly_pulse = {
 
 		##Labor events
 		100 = usfp_usa_labor.1 #founding of the IWW
+		100 = usfp_usa_labor.2 #Haymarket Affair
 
 		##Disasters
 		1 = usfp_usa.2 #Atlantic Hurricane
@@ -33,7 +35,7 @@ usfp_monthly_pulse = {
 on_election_campaign_start = {
 	on_actions = {
 		usfp_acw_election_agitators
-		usfp_us_first_election_railroad
+		# usfp_us_first_election_railroad
 	}
 }
 
@@ -106,22 +108,22 @@ usfp_acw_election_agitators = {
 }
 
 #Add momentum to the Democrats as soft historical railroading
-usfp_us_first_election_railroad = {
-	effect = {
-		if = {
-			limit = { 
-				c:USA ?= this
-				NOT = {
-					has_variable = had_first_election
-				}
-			}
-			set_variable = had_first_election
-			py:conservative_party = {
-				add_momentum = momentum_medium
-			}
-		}
-	}
-}
+# usfp_us_first_election_railroad = {
+# 	effect = {
+# 		if = {
+# 			limit = { 
+# 				c:USA ?= this
+# 				NOT = {
+# 					has_variable = had_first_election
+# 				}
+# 			}
+# 			trigger_event = {
+# 				id = usfp_usa.14
+# 				days = 1
+# 			}
+# 		}
+# 	}
+# }
 
 #Gag Rule enforcement, to allow for Political Movements to still exist
 on_law_enactment_started = {

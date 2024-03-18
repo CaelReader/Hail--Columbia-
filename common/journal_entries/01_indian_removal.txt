@@ -28,6 +28,10 @@
 			years = 10
 		}
 	}
+
+	modifiers_while_active = {
+		usfp_indian_removal_modifier
+	}
 	
 	on_monthly_pulse = {
 		events = {

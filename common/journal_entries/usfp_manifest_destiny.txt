@@ -33,6 +33,7 @@ usfp_manifest_destiny_main = {
 	scripted_button = usfp_suppress_manifest_destiny_button
 	scripted_button = usfp_homestead_act_button
 	scripted_button = usfp_cuban_purchase_button
+	scripted_button = usfp_claim_canada_button
 
 
 	fail = {
@@ -122,6 +123,21 @@ usfp_manifest_destiny_main = {
 				usfp_manifest_more_destiny_effect = yes
 				set_variable = destiny_manifested_professional_army
 			}
+			#Attacked by Mexico
+			if = {
+				limit = {
+					exists = c:MEX 
+					any_diplomatic_play = {
+						target = ROOT
+						initiator = c:MEX
+					}
+					NOT = {
+						has_variable = destiny_manifested_mexican_aggression
+					}
+				}
+				usfp_manifest_more_destiny_effect = yes
+				set_variable = destiny_manifested_mexican_aggression
+			}
 			### Manifest Destiny Decreases
 			#Anti-Expansion President
 			if = {
@@ -176,6 +192,26 @@ usfp_manifest_destiny_main = {
 				usfp_manifest_less_destiny_effect = yes
 				set_variable = destiny_manifested_no_colonial_affairs
 			}
+			#Lose ACW
+			if = {
+				limit = { 
+					OR = {
+						AND = {
+							exists = c:CSA
+							has_truce_with = c:CSA
+						}
+						AND = {
+							exists = c:FSA
+							has_truce_with = c:FSA
+						}
+					}
+					NOT = {
+						has_variable = destiny_manifested_acw_lost
+					}
+				}
+				usfp_manifest_less_destiny_effect = yes
+				set_variable = destiny_manifested_acw_lost
+			}
 		}
 		random_events = {
 			200 = 0
@@ -192,6 +228,7 @@ usfp_manifest_destiny_main = {
 			usfp_manifest_destiny.6 #Treaty of GH
 			usfp_manifest_destiny.10 #California Gold Rush
 			usfp_manifest_destiny.13 #new homelands
+			usfp_manifest_destiny.18 #Monroe violation
 		}
 	}
 
