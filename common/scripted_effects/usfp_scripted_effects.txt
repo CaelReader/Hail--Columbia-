@@ -321,3 +321,16 @@ usfp_calculate_bleeding_kansas_progress = {
 	change_variable = {name = bleeding_kansas_var_next add = var:bleeding_kansas_dixie_radicals}
 	change_variable = {name = bleeding_kansas_var_next add = var:bleeding_kansas_aristocrats}
 }
+
+usfp_cleanup_bleeding_kansas_variables = {
+	remove_variable = bleeding_kansas_yankee_percent
+	remove_variable = bleeding_kansas_yankee_radicals
+	remove_variable = bleeding_kansas_freedmen
+	remove_variable = bleeding_kansas_dixie_percent
+	remove_variable = bleeding_kansas_dixie_radicals
+	remove_variable = bleeding_kansas_aristocrats
+	remove_variable = bleeding_kansas_var_next
+	remove_variable = bleeding_kansas_var
+	remove_variable = new_england_emigrant_aid_society
+	remove_variable = had_border_ruffians
+}

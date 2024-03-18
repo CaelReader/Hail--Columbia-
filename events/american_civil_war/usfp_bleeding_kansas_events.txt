@@ -18,24 +18,106 @@ usfp_bleeding_kansas.1 = {
 
 	duration = 3
 
+	trigger = {
+		NOT = {
+			has_variable = new_england_emigrant_aid_society
+		}
+	}
+
 	immediate = {
 		s:STATE_KANSAS.region_state:USA = {
 			save_scope_as = kansas_scope
 		}
+		set_variable = new_england_emigrant_aid_society
 	}
 
 	#good
 	option = {
 		name = usfp_bleeding_kansas.1.a
+		scope:kansas_scope = {
+			custom_tooltip = {
+				text = usfp_bleeding_kansas.1.a.tt
+				create_pop = {
+					culture = yankee
+					size = 4000
+				}
+			}
+			add_radicals_in_state = {
+				culture = cu:yankee
+				value = 0.02
+			}
+		}
+		custom_tooltip = {
+			text = usfp_bleeding_kansas_swing_free
+			change_variable = {
+				name = bleeding_kansas_var
+				add = 5
+			}
+		}
 	}
 
 	#bad
 	option = {
 		name = usfp_bleeding_kansas.1.b
+		scope:kansas_scope = {
+			custom_tooltip = {
+				text = usfp_bleeding_kansas.1.a.tt
+				create_pop = {
+					culture = yankee
+					size = 2000
+				}
+			}
+			add_radicals_in_state = {
+				culture = cu:dixie
+				value = 0.02
+			}
+		}
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = ig_abolitionists_mad
+				months = short_modifier_time
+			}
+		}
 	}
 }
 
 #Border Ruffians
+usfp_bleeding_kansas.2 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	event_image = {
+		video = "europenorthamerica_american_civil_war"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	title = usfp_bleeding_kansas.2.t
+	desc = usfp_bleeding_kansas.2.d
+	flavor = usfp_bleeding_kansas.2.f
+	dlc = dlc_usfp
+	placement = scope:kansas_scope
+
+	duration = 3
+	cooldown = {
+		years = 2
+	}
+
+	immediate = {
+		s:STATE_KANSAS.region_state:USA = {
+			save_scope_as = kansas_scope
+		}
+		set_variable = had_border_ruffians
+	}
+
+	#damn
+	option = {
+		name = usfp_bleeding_kansas.2.a
+	}
+	#good for them
+	option = {
+		name = usfp_bleeding_kansas.2.b
+	}
+}
 #Ballot Violence
 #Harper's Ferry (historical)
 #Harper's Ferry (successful)
