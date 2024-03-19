@@ -422,8 +422,13 @@ usfp_a_house_divided.7 = {
 	trigger = {
 		any_scope_state = {
 			state_region = s:STATE_CALIFORNIA
-			state_population > 60000
-			is_incorporated = no 
+			state_population > 100000
+			religion_percent_state = {
+				target = rel:animist
+				value < 0.2
+			}
+			is_incorporated = no
+			 
 		}
 		NOT = {
 			has_variable = california_state_ask
@@ -453,6 +458,16 @@ usfp_a_house_divided.7 = {
 				liberate_slaves = yes
 			}
 			add_homeland = cu:yankee
+			if = {
+				limit = { 
+					state_is_eligible_as_mass_migration_target = yes
+					is_mass_migration_target = no
+				}
+				create_mass_migration = {
+					origin = ROOT
+					culture = cu:yankee
+				}
+			}
 		}
 		custom_tooltip = {
 			text = missouri_compromise_break
@@ -464,46 +479,9 @@ usfp_a_house_divided.7 = {
 				culture = cu:yankee
 			}
 		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-				NOT = { has_modifier = ig_slavers_mad }
-			}
-			add_modifier = {
-				name = ig_slavers_mad
-				months = short_modifier_time
-			}
-		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes}
-				}
-				NOT = { has_modifier = ig_abolitionists_happy }
-			}
-			add_modifier = {
-				name = ig_abolitionists_happy
-				months = short_modifier_time
-			}
-		}
-		every_interest_group = {
-			limit = {
-				NOR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes }
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-			}
-			add_modifier = {
-				name = usfp_threatening_union
-				months = short_modifier_time
-			}
-		}
+		usfp_anger_slavers_effect = {MULT = 1}
+		usfp_appease_abolitionists_effect = {MULT = 1}
+		usfp_destabilize_union_effect = {MULT = 1}
 		hidden_effect = {
 			trigger_event = {
 				id = usfp_a_house_divided.8
@@ -626,6 +604,16 @@ usfp_a_house_divided.8 = {
 				set_state_type = incorporated
 			}
 			add_homeland = cu:yankee
+			if = {
+				limit = { 
+					state_is_eligible_as_mass_migration_target = yes
+					is_mass_migration_target = no
+				}
+				create_mass_migration = {
+					origin = ROOT
+					culture = cu:yankee
+				}
+			}
 		}
 
 		custom_tooltip = {
@@ -640,33 +628,8 @@ usfp_a_house_divided.8 = {
 		add_modifier = {
 			name = usfp_fugitive_slave_law
 		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-				NOT = { has_modifier = ig_slavers_happy }
-			}
-			add_modifier = {
-				name = ig_slavers_happy
-				months = short_modifier_time
-			}
-		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes}
-				}
-				NOT = { has_modifier = ig_abolitionists_mad }
-			}
-			add_modifier = {
-				name = ig_abolitionists_mad
-				months = short_modifier_time
-				multiplier = 2
-			}
-		}
+		usfp_appease_slavers_effect = {MULT = 1}
+		usfp_anger_abolitionists_effect = {MULT = 2}
 		if = {
 			limit = {
 				s:STATE_DISTRICT_OF_COLUMBIA.region_state:USA = {
@@ -702,6 +665,16 @@ usfp_a_house_divided.8 = {
 				set_state_type = incorporated
 			}
 			add_homeland = cu:yankee
+			if = {
+				limit = { 
+					state_is_eligible_as_mass_migration_target = yes
+					is_mass_migration_target = no
+				}
+				create_mass_migration = {
+					origin = ROOT
+					culture = cu:yankee
+				}
+			}
 		}
 		custom_tooltip = {
 			text = popular_sovereignty_enabled
@@ -713,33 +686,8 @@ usfp_a_house_divided.8 = {
 			is_decaying = yes
 			multiplier = 0.5
 		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-				NOT = { has_modifier = ig_slavers_happy }
-			}
-			add_modifier = {
-				name = ig_slavers_happy
-				months = short_modifier_time
-				multiplier = 0.5
-			}
-		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes}
-				}
-				NOT = { has_modifier = ig_abolitionists_mad }
-			}
-			add_modifier = {
-				name = ig_abolitionists_mad
-				months = short_modifier_time
-			}
-		}
+		usfp_appease_slavers_effect = {MULT = 0.5}
+		usfp_anger_abolitionists_effect = {MULT = 1}
 		if = {
 			limit = {
 				s:STATE_DISTRICT_OF_COLUMBIA.region_state:USA = {
@@ -778,34 +726,19 @@ usfp_a_house_divided.8 = {
 				set_state_type = incorporated
 			}
 			add_homeland = cu:yankee
-		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
+			if = {
+				limit = { 
+					state_is_eligible_as_mass_migration_target = yes
+					is_mass_migration_target = no
 				}
-				NOT = { has_modifier = ig_slavers_happy }
-			}
-			add_modifier = {
-				name = ig_slavers_happy
-				months = short_modifier_time
-				multiplier = 0.5
-			}
-		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes}
+				create_mass_migration = {
+					origin = ROOT
+					culture = cu:yankee
 				}
-				NOT = { has_modifier = ig_abolitionists_mad }
-			}
-			add_modifier = {
-				name = ig_abolitionists_mad
-				months = short_modifier_time
 			}
 		}
+		usfp_appease_slavers_effect = {MULT = 0.5}
+		usfp_anger_abolitionists_effect = {MULT = 1}
 		if = {
 			limit = {
 				s:STATE_DISTRICT_OF_COLUMBIA.region_state:USA = {
@@ -825,46 +758,9 @@ usfp_a_house_divided.8 = {
 	#Reject Outright - untenable
 	option = {
 		name = usfp_a_house_divided.8.e
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-			}
-			add_modifier = {
-				name = ig_slavers_mad
-				months = short_modifier_time
-				multiplier = 2
-			}
-		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes}
-				}
-				NOT = { has_modifier = ig_abolitionists_happy }
-			}
-			add_modifier = {
-				name = ig_abolitionists_happy
-				months = short_modifier_time
-			}
-		}
-		every_interest_group = {
-			limit = {
-				NOR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes }
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-			}
-			add_modifier = {
-				name = usfp_threatening_union
-				months = short_modifier_time
-			}
-		}
+		usfp_anger_slavers_effect = {MULT = 1}
+		usfp_appease_abolitionists_effect = {MULT = 1}
+		usfp_destabilize_union_effect = {MULT = 1}
 		ai_chance = {
 			base = 5
 			modifier = {
@@ -921,11 +817,9 @@ usfp_a_house_divided.10 = {
 		}
 		any_scope_state = {
 			state_region = s:STATE_KANSAS
-			is_incorporated = no
 		}
 		any_scope_state = {
 			state_region = s:STATE_NEBRASKA
-			is_incorporated = no
 		}
 		ig:ig_landowners = {
 			is_in_government = yes
@@ -958,65 +852,19 @@ usfp_a_house_divided.10 = {
 			set_variable = missouri_compromise_broken_var
 		}
 		default_option = yes
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-			}
-			add_modifier = {
-				name = ig_slavers_happy
-				months = short_modifier_time
-			}
-		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes}
-				}
-				NOT = { has_modifier = ig_abolitionists_happy }
-			}
-			add_modifier = {
-				name = ig_abolitionists_mad
-				months = short_modifier_time
-			}
-		}
-		every_interest_group = {
-			limit = {
-				NOR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes }
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-			}
-			add_modifier = {
-				name = usfp_threatening_union
-				months = short_modifier_time
-			}
-		}
+		usfp_appease_slavers_effect = {MULT = 1}
+		usfp_anger_abolitionists_effect = {MULT = 1}
+		usfp_destabilize_union_effect = {MULT = 1}
 		ai_chance = {
 			base = 100
 		}
+		set_variable = kansas_nebraska_act_passed
 	}
 
 	#Reject
 	option = {
 		name = usfp_a_house_divided.10.b
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-			}
-			add_modifier = {
-				name = ig_slavers_mad
-				months = short_modifier_time
-			}
-		}
+		usfp_anger_slavers_effect = {MULT = 1}
 		ai_chance = {
 			base = 5
 		}
@@ -1044,7 +892,7 @@ usfp_a_house_divided.11 = {
 	#triggered by Kansas-Nebraska Act or Dred Scott decision
 	trigger = {
 		OR = {
-			has_variable = kansas_nebraska_act
+			has_variable = kansas_nebraska_act_passed
 			has_variable = dred_scott
 		}
 		NOT = {
@@ -1203,7 +1051,7 @@ usfp_a_house_divided.13 = {
 		}
 		OR = {
 			has_variable = popular_sovereignty_enabled
-			has_variable = kansas_nebraska_act
+			has_variable = kansas_nebraska_act_passed
 			has_variable = missouri_compromise_extended
 			has_variable = dred_scott
 		}
@@ -1338,45 +1186,9 @@ usfp_a_house_divided.14 = {
 		add_enactment_modifier = {
 			name = usfp_breaking_compromise
 		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-			}
-			add_modifier = {
-				name = ig_slavers_happy
-				months = short_modifier_time
-			}
-		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes}
-				}
-				NOT = { has_modifier = ig_abolitionists_happy }
-			}
-			add_modifier = {
-				name = ig_abolitionists_mad
-				months = short_modifier_time
-			}
-		}
-		every_interest_group = {
-			limit = {
-				NOR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes }
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-			}
-			add_modifier = {
-				name = usfp_threatening_union
-				months = short_modifier_time
-			}
-		}
+		usfp_appease_slavers_effect = {MULT = 1}
+		usfp_anger_abolitionists_effect = {MULT = 1}
+		usfp_destabilize_union_effect = {MULT = 1}
 	}
 
 	#Anti-Slavery
@@ -1394,45 +1206,9 @@ usfp_a_house_divided.14 = {
 		add_enactment_modifier = {
 			name = usfp_breaking_compromise
 		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-			}
-			add_modifier = {
-				name = ig_slavers_mad
-				months = short_modifier_time
-			}
-		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes}
-				}
-				NOT = { has_modifier = ig_abolitionists_happy }
-			}
-			add_modifier = {
-				name = ig_abolitionists_happy
-				months = short_modifier_time
-			}
-		}
-		every_interest_group = {
-			limit = {
-				NOR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes }
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-			}
-			add_modifier = {
-				name = usfp_threatening_union
-				months = short_modifier_time
-			}
-		}
+		usfp_anger_slavers_effect = {MULT = 1}
+		usfp_appease_abolitionists_effect = {MULT = 1}
+		usfp_destabilize_union_effect = {MULT = 1}
 	}
 }
 
@@ -1461,7 +1237,7 @@ usfp_a_house_divided.15 = {
 
 	trigger = {
 		OR = {
-			has_variable = kansas_nebraska_act
+			has_variable = kansas_nebraska_act_passed
 			has_variable = accepted_wilmot_proviso
 			has_modifier = usfp_breaking_compromise
 		}
@@ -1568,47 +1344,9 @@ usfp_a_house_divided.16 = {
 			value = 0.01
 			culture = cu:dixie
 		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-			}
-			add_modifier = {
-				name = ig_slavers_happy
-				months = short_modifier_time
-				multiplier = 2
-			}
-		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes}
-				}
-				NOT = { has_modifier = ig_abolitionists_happy }
-			}
-			add_modifier = {
-				name = ig_abolitionists_mad
-				months = short_modifier_time
-				multiplier = 2
-			}
-		}
-		every_interest_group = {
-			limit = {
-				NOR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes }
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-			}
-			add_modifier = {
-				name = usfp_threatening_union
-				months = short_modifier_time
-			}
-		}
+		usfp_appease_slavers_effect = {MULT = 2}
+		usfp_anger_abolitionists_effect = {MULT = 2}
+		usfp_destabilize_union_effect = {MULT = 1}
 	}
 
 	#brilliant!
@@ -1645,47 +1383,9 @@ usfp_a_house_divided.16 = {
 			value = 0.01
 			culture = cu:dixie
 		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-			}
-			add_modifier = {
-				name = ig_slavers_happy
-				months = short_modifier_time
-				multiplier = 2
-			}
-		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes}
-				}
-				NOT = { has_modifier = ig_abolitionists_happy }
-			}
-			add_modifier = {
-				name = ig_abolitionists_mad
-				months = short_modifier_time
-				multiplier = 2
-			}
-		}
-		every_interest_group = {
-			limit = {
-				NOR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes }
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-			}
-			add_modifier = {
-				name = usfp_threatening_union
-				months = short_modifier_time
-			}
-		}
+		usfp_appease_slavers_effect = {MULT = 2}
+		usfp_anger_abolitionists_effect = {MULT = 2}
+		usfp_destabilize_union_effect = {MULT = 1}
 	}
 
 }

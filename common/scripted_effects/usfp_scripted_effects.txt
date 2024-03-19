@@ -334,3 +334,87 @@ usfp_cleanup_bleeding_kansas_variables = {
 	remove_variable = new_england_emigrant_aid_society
 	remove_variable = had_border_ruffians
 }
+
+usfp_anger_slavers_effect = {
+	every_interest_group = {
+		limit = {
+			OR = {
+				has_ideology = ideology:ideology_pro_slavery
+				leader = { has_ideology = ideology:ideology_slaver }
+			}
+		}
+		add_modifier = {
+			name = ig_slavers_mad
+			months = short_modifier_time
+			multiplier = $MULT$
+		}
+	}
+}
+
+usfp_appease_slavers_effect = {
+	every_interest_group = {
+		limit = {
+			OR = {
+				has_ideology = ideology:ideology_pro_slavery
+				leader = { has_ideology = ideology:ideology_slaver }
+			}
+		}
+		add_modifier = {
+			name = ig_slavers_happy
+			months = short_modifier_time
+			multiplier = $MULT$
+		}
+	}
+}
+
+usfp_anger_abolitionists_effect = {
+	every_interest_group = {
+		limit = {
+			OR = {
+				has_ideology = ideology:ideology_anti_slavery
+				leader = { usfp_anti_slavery_leader_trigger = yes}
+			}
+			NOT = { has_modifier = ig_abolitionists_happy }
+		}
+		add_modifier = {
+			name = ig_abolitionists_mad
+			months = short_modifier_time
+			multiplier = $MULT$
+		}
+	}
+}
+
+usfp_appease_abolitionists_effect = {
+	every_interest_group = {
+		limit = {
+			OR = {
+				has_ideology = ideology:ideology_anti_slavery
+				leader = { usfp_anti_slavery_leader_trigger = yes}
+			}
+			NOT = { has_modifier = ig_abolitionists_happy }
+		}
+		add_modifier = {
+			name = ig_abolitionists_happy
+			months = short_modifier_time
+			multiplier = $MULT$
+		}
+	}
+}
+
+usfp_destabilize_union_effect = {
+	every_interest_group = {
+		limit = {
+			NOR = {
+				has_ideology = ideology:ideology_anti_slavery
+				leader = { usfp_anti_slavery_leader_trigger = yes }
+				has_ideology = ideology:ideology_pro_slavery
+				leader = { has_ideology = ideology:ideology_slaver }
+			}
+		}
+		add_modifier = {
+			name = usfp_threatening_union
+			months = short_modifier_time
+			multiplier = $MULT$
+		}
+	}
+}

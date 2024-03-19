@@ -19,13 +19,13 @@ usfp_a_house_divided.3.a: "You can have no conflict without being yourselves the
 missouri_compromise_break: "This will #red break#! the Missouri Compromise!"
 
 usfp_a_house_divided.4.t: "Twelve Years A Slave"
-usfp_a_house_divided.4.d: "[SCOPE.sCharacter('northup_scope').GetFullName], a free black man from the North, was kidnapped and sold into slavery in the South. After over a decade in bondage, he has returned to freedom and published Twelve Years a Slave, which has immediately become a best-seller. [SCOPE.sCharacter('northup_scope').GetLastName]\\'s detailed account of the abhorrent conditions of slavery corroborate the North's worst fears, even as they are denied by slave-holders."
+usfp_a_house_divided.4.d: "[SCOPE.sCharacter('northup_scope').GetFullName], a free black man from the North, was kidnapped and sold into slavery in the South. After over a decade in bondage, he has returned to freedom and published Twelve Years a Slave, which has immediately become a best-seller. [SCOPE.sCharacter('northup_scope').GetLastName]'s detailed account of the abhorrent conditions of slavery corroborate the North's worst fears, even as they are denied by slave-holders."
 usfp_a_house_divided.4.f: ""Let them know the heart of the poor slave — learn his secret thoughts — thoughts he dare not utter in the hearing of the white man; let them sit by him in the silent watches of the night — converse with him in trustful confidence, of "life, liberty, and the pursuit of happiness," and they will find that ninety-nine out of every hundred are intelligent enough to understand their situation, and to cherish in their bosoms the love of freedom, as passionately as themselves."" #Solomon Northup
 usfp_a_house_divided.4.a: "A harrowing tale of the evils of the South."
 usfp_a_house_divided.4.b: "His story is naught but lies and slander."
 
-usfp_a_house_divided.5.t: "Uncle Tom\\'s Cabin"
-usfp_a_house_divided.5.d: "Harriet Stowe\\'s anti-slavery novel Uncle Tom\\'s Cabin has taken the country by storm, selling hundreds of thousands of copies in only a few months. The novel's melodramatic account of the horrors of life under slavery have swayed thousands of readers to the [SCOPE.sIdeology('abolitionist_scope').GetName] cause, and drawn just as many outraged protests from the South."
+usfp_a_house_divided.5.t: "Uncle Tom's Cabin"
+usfp_a_house_divided.5.d: "Harriet Stowe's anti-slavery novel Uncle Tom's Cabin has taken the country by storm, selling hundreds of thousands of copies in only a few months. The novel's melodramatic account of the horrors of life under slavery have swayed thousands of readers to the [SCOPE.sIdeology('abolitionist_scope').GetName] cause, and drawn just as many outraged protests from the South."
 usfp_a_house_divided.5.f: ""I don't want anything of your country, except to be let alone,--to go peaceably out of it; and when I get to Canada, where the laws will own me and protect me, that shall be my country, and its laws I will obey. But if any man tries to stop me, let him take care, for I am desperate. I'll fight for my liberty to the last breath I breathe. You say your fathers did it; if it was right for them, it is right for me!""
 usfp_a_house_divided.5.a: "Everyone should know of the injustices of slavery."
 usfp_a_house_divided.5.b: "This book is an outrageous fiction."
@@ -54,7 +54,7 @@ usfp_a_house_divided.8.e: "We are done compromising with the [SCOPE.gsInterestGr
 popular_sovereignty_enabled: "Our western territories may now become Slave states if the local settlers vote in favor of it."
 
 usfp_a_house_divided.10.t: "The Kansas-Nebraska Act"
-usfp_a_house_divided.10.d: "With the western territories in need of governance, the [SCOPE.sParty('democratic_party').GetName] has put forth a bill to organize territorial governments in [SCOPE.sState('kansas_scope').GetName] and [SCOPE.sState('Nebraska_scope').GetName]. The act would allow the people of these territories to vote on the status of slavery, ending the Missouri Compromise."
+usfp_a_house_divided.10.d: "With the western territories in need of governance, the [SCOPE.sParty('democratic_party').GetName] has put forth a bill to organize  governments for [SCOPE.sState('kansas_scope').GetName] and [SCOPE.sState('nebraska_scope').GetName]. The act would allow the people of these territories to vote on the status of slavery, ending the Missouri Compromise."
 usfp_a_house_divided.10.f: ""What is the excuse for all this turmoil and mischief? We are told it is to keep the question of slavery out of Congress! Great God! It was out of Congress, completely, entirely, and forever out of Congress, until Congress dragged it in by breaking down the sacred laws which settled it!"" #Thomas Hart
 usfp_a_house_divided.10.a: "Popular sovereignty will settle the matter."
 usfp_a_house_divided.10.b: "This bill would tear the country apart."
@@ -85,8 +85,45 @@ usfp_a_house_divided.16.f: "They were not intended to be included, under the wor
 usfp_a_house_divided.16.a: "This is the most obscene ruling in history!"
 usfp_a_house_divided.16.b: "Property is property, that is the end of it."
 
+usfp_bleeding_kansas.1.t: "The New England Emigrant Aid Company"
+usfp_bleeding_kansas.1.d: "An enterprising [SCOPE.sIdeology('abolitionist_scope').GetName] from [SCOPE.sState('massachusetts_scope').GetCityHubName] has established a transportation company with the goal of sending anti-slavery immigrants into [SCOPE.sState('kansas_scope').GetName]. Hundreds of migrants have already signed on, eager to turn [SCOPE.sState('kansas_scope').GetName] into a free state."
+usfp_bleeding_kansas.1.f: ""WANTED: Homesteaders eager to do their patriotic duty in the Kansas Territory. Monetary aid, transportation, information provided to those who wish to see Kansas a properly free and white state.""
+usfp_bleeding_kansas.1.a: "Splendid!"
+usfp_bleeding_kansas.1.a.tt: "1000 Yankees will move to [SCOPE.sState('kansas_scope').GetName]."
+usfp_bleeding_kansas.1.b: "Investigate this company for fraud."
+usfp_bleeding_kansas.1.b.tt: "500 Yankees will move to [SCOPE.sState('kansas_scope').GetName]."
+
+usfp_bleeding_kansas_swing_free: "The #bold Free-Staters#! will gain influence in Kansas."
+usfp_bleeding_kansas_swing_slave: "The #bold Border Ruffians#! will gain influence in Kansas."
+
+usfp_bleeding_kansas.2.t: "Border Ruffians"
+usfp_bleeding_kansas.2.d: "Proslavery agitators from [SCOPE.sState('missouri_scope').GetName] have crossed over into [SCOPE.sState('kansas_scope').GetName] to engage in general banditry: raiding towns, ransacking houses, and stealing horses. Many have also taken up residence in [SCOPE.sState('kansas_scope').GetName] to influence the outcome of local politics in their favor."
+usfp_bleeding_kansas.2.f: ""Gentlemen, Officers & Soldiers! This is the most glorious day of my life! This is the day I am a border ruffian! Spring like your bloodhounds at home upon that damned accursed abolition hole; break through every thing that may oppose your never flinching courage! Yes, ruffians, draw your revolvers & bowie knives, & cool them in the heart's blood of all those damned dogs, that dare defend that damned breathing hole of hell."" #David Rice Atchison
+usfp_bleeding_kansas.2.a: "This is criminal activity!"
+usfp_bleeding_kansas.2.a.tt: "500 Dixies will move to [SCOPE.sState('kansas_scope').GetName]."
+usfp_bleeding_kansas.2.b: "We will look the other way."
+usfp_bleeding_kansas.2.b.tt: "1000 Dixies will move to [SCOPE.sState('kansas_scope').GetName]."
+
+usfp_bleeding_kansas.3.t: "Violence at the Polls"
+usfp_bleeding_kansas.3.d: "Local elections in [SCOPE.sState('kansas_scope').GetName] have been marred with violence and intimidation at polling places by proslavery ruffians. Thousands of fraudulent votes have been cast as a result, swinging elections for local officials in their favor."
+usfp_bleeding_kansas.3.f: ""Now you leave that ballot box behind, and come on out here at once! Otherwise, we'll knock this whole house down, and shoot you all dead!""
+usfp_bleeding_kansas.3.a: "Our elections should be held sacrosanct!"
+usfp_bleeding_kansas.3.b: "Election interference? What interference?"
+
+usfp_bleeding_kansas.4.t: "Sacking of Lawrence"
+usfp_bleeding_kansas.4.d: "The small town of Lawrence, [SCOPE.sState('kansas_scope').GetName] has been raided by a band of proslavery ruffians. Home to a prominent waystation for the New England Emigrant Aid Company, the bandits plundered the town and burned the company's building, as well as destroying printing presses belonging to an abolitionist newspaper."
+usfp_bleeding_kansas.4.f: ""As soon as the ruffians had possession of the cannon and other arms, they proceeded to carry out their purpose to destroy the Free-State Hotel. They gave the inhabitants till five o'clock to get out their personal effects. When all was ready, they turned the posse's very own cannon upon the hotel and fired. After bombarding away, they burned the building to the ground."" #Richard Cordley
+usfp_bleeding_kansas.4.a: "This is an outrage!"
+usfp_bleeding_kansas.4.b: "The abolitionists brought this on themselves."
+
+usfp_bleeding_kansas.5.t: "Massacres in [SCOPE.sState('kansas_scope').GetName]"
+usfp_bleeding_kansas.5.d: "Horrific stories of slaughter have emerged from rural [SCOPE.sState('kansas_scope').GetName]. A band of militant abolitionists ambushed the homes of multiple proslavery men, hacking them to death with swords in front of their families before fleeing into the night. Retaliatory raids have followed in their wake, intensifying the cycle of violence."
+usfp_bleeding_kansas.5.f: ""The killings had the effect of a clap of thunder from a clear sky. The slave men stood aghast. The officials were frightened at this new move on the part of the supposed subdued free men. This was a warfare they were not prepared to wage, as of the bona fide settlers there were four free men to one slave man."" #Charles Robinson
+usfp_bleeding_kansas.5.a: "Such barbarity!"
+usfp_bleeding_kansas.5.b: "The ruffians had it coming."
+
 usfp_acw.1.t: "A Traitor's Peace"
-usfp_acw.1.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has published a scathing criticism of [SCOPE.sCountry('csa_scope').GetAdjective] peace demands, depicting them as dishonoring the Union and self-destructive to the North. The [SCOPE.sParty('republican_party_scope').GetName] has ran with it to bolster public support for continuing the war, denouncing what they call a Traitor\\'s Peace."
+usfp_acw.1.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has published a scathing criticism of [SCOPE.sCountry('csa_scope').GetAdjective] peace demands, depicting them as dishonoring the Union and self-destructive to the North. The [SCOPE.sParty('republican_party_scope').GetName] has ran with it to bolster public support for continuing the war, denouncing what they call a Traitor's Peace."
 usfp_acw.1.f: ""People of the United States! Will you give your assent to such a base surrender of our cause? If not, then rally only with those who keep step to the music of the Union, who stand by our brave soldiers in the field! Rally for liberty and union, now and forever, one and separable!""
 usfp_acw.1.a: "The Union forever!"
 
@@ -168,7 +205,7 @@ usfp_manifest_destiny.14.d: "Several [ROOT.GetCountry.GetAdjective] diplomats ha
 usfp_manifest_destiny.14.f: ""The Union can never enjoy repose, nor possess reliable security, as long as Cuba is not embraced within its boundaries. Its immediate acquisition by our government is of paramount importance, and we cannot doubt but that it is a consummation devoutly wished for by its inhabitants."" #Ostend Manifesto
 usfp_manifest_destiny.14.a: "This suggestion is crass imperalism."
 usfp_manifest_destiny.14.b: "[SCOPE.sStateRegion('cuba_scope').GetName] is critical to our national security."
-usfp_manifest_destiny.14.c: "Oh, we won\\'t be #italic purchasing#! anything from [SCOPE.sCountry('cuba_owner_scope').GetName]"
+usfp_manifest_destiny.14.c: "Oh, we won't be #italic purchasing#! anything from [SCOPE.sCountry('cuba_owner_scope').GetName]"
 cuba_offer_available: "We can make an offer to purchase [SCOPE.sStateRegion('cuba_scope').GetName] from [SCOPE.sCountry('cuba_owner_scope').GetName]."
 usfp_manifest_destiny.14.e: "Recall and reprimand these diplomats at once."
 
@@ -263,7 +300,7 @@ usfp_native_removal.12.b: "They are free to go or stay."
 
 usfp_native_removal.13.t: "Letter to [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName]"
 usfp_native_removal.13.d: "Poet [SCOPE.sCharacter('emerson_scope').GetFullName] has published an open letter criticizing our policy of Indian Removal. The letter lays out a moral case for the ending of the policy, and claims that many average Americans are shocked and dismayed by the position we have forced the Indians into."
-usfp_native_removal.13.f: ""Such a dereliction of all faith and virtue, such a denial of justice, and such deafness to screams for mercy were never heard of in times of peace and in the dealing of a nation with its own allies and wards, since the earth was made. Sir, does this government think that the people of the United States are become savage and mad? From their mind are the sentiments of love and a good nature wiped clean out? The soul of man, the justice, the mercy that is the heart\\'s heart in all men, from Maine to Georgia, does abhor this business.""
+usfp_native_removal.13.f: ""Such a dereliction of all faith and virtue, such a denial of justice, and such deafness to screams for mercy were never heard of in times of peace and in the dealing of a nation with its own allies and wards, since the earth was made. Sir, does this government think that the people of the United States are become savage and mad? From their mind are the sentiments of love and a good nature wiped clean out? The soul of man, the justice, the mercy that is the heart's heart in all men, from Maine to Georgia, does abhor this business.""
 usfp_native_removal.13.a: "His words ring true."
 usfp_native_removal.13.b: "His words ring hollow."
 
@@ -314,17 +351,17 @@ usfp_usa.6.f: ""Listening for a few moments, and thinking it must be near mornin
 usfp_usa.6.a: "What a terrible catastrophe."
 usfp_usa.6.b: "Federal funding will bolster the donations."
 
-usfp_usa.7.t: "Harper\\'s Weekly"
-usfp_usa.7.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has risen to prominence through his scathing political cartoons. Published nationwide in the ever-popular #italic Harper\\'s Weekly#!, his illustrations have come to shape the national discourse, as well as relentlessly mock his political opponents."
+usfp_usa.7.t: "Harper's Weekly"
+usfp_usa.7.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has risen to prominence through his scathing political cartoons. Published nationwide in the ever-popular #italic Harper's Weekly#!, his illustrations have come to shape the national discourse, as well as relentlessly mock his political opponents."
 usfp_usa.7.f: ""You cannot help seeing Mr. Nast's pictures, and when you have seen them you cannot fail to understand them. When he caricatures a politician, the name of that politician ever afterwards recalls the countenance of which Mr. Nast has made him a present. An artist of this stamp — and such artists are very rare indeed — does more to affect public opinion than a score of writers.""
 usfp_usa.7.a: "Let us hope he's not a thorn in our side."
 usfp_usa.7.b: "Cartoons are for the small-minded."
 
 usfp_usa.8.t: "The [SCOPE.sCharacter('nast_scope').GetLastName] Effect"
-usfp_usa.8.d: "The latest issue of Harper\\'s Weekly includes an intricate piece by [SCOPE.sCharacter('nast_scope').GetFullName] in support of [SCOPE.sCharacter('nast_support_scope').GetFullName]\\'s candidacy. The cartoon also includes a mocking depiction of [SCOPE.sCharacter('nast_target_scope').GetFullName] and [SCOPE.sCharacter('nast_support_scope').GetHerHis] policies."
+usfp_usa.8.d: "The latest issue of Harper's Weekly includes an intricate piece by [SCOPE.sCharacter('nast_scope').GetFullName] in support of [SCOPE.sCharacter('nast_support_scope').GetFullName]'s candidacy. The cartoon also includes a mocking depiction of [SCOPE.sCharacter('nast_target_scope').GetFullName] and [SCOPE.sCharacter('nast_support_scope').GetHerHis] policies."
 usfp_usa.8.f: ""Let's stop them damn pictures! I don't care so much what the papers write about — my constituents can't read — but damn it, they can see pictures!""
 usfp_usa.8.a: "Good one, Nast!"
-usfp_usa.8.b: "We need to discredit Harper\\'s Weekly."
+usfp_usa.8.b: "We need to discredit Harper's Weekly."
 usfp_usa.8.c: "Stop those presses."
 
 usfp_usa.9.t: "Constitutional Challenge"

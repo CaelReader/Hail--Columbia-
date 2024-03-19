@@ -85,3 +85,8 @@ usfp_upper_south_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_positive.dds
 	interest_group_ig_landowners_pol_str_mult = 0.10
 }
+
+usfp_emigrant_aid_company = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds
+	state_migration_pull_mult = 0.25
+}

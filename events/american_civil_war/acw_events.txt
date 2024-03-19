@@ -477,32 +477,8 @@ acw_events.3 = {
 			text = acw_events.3.c.t
 			set_variable = missouri_compromise_extended
 		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-				NOT = { has_modifier = ig_slavers_happy }
-			}
-			add_modifier = {
-				name = ig_slavers_happy
-				months = short_modifier_time
-			}
-		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes}
-				}
-				NOT = { has_modifier = ig_abolitionists_mad }
-			}
-			add_modifier = {
-				name = ig_abolitionists_mad
-				months = short_modifier_time
-			}
-		}
+		usfp_appease_slavers_effect = {MULT = 1}
+		usfp_anger_abolitionists_effect = {MULT = 1}
 		ai_chance = {
 			base = 30
 		}
@@ -623,7 +599,6 @@ acw_events.6 = {
 		any_interest_group = {
 			is_revolutionary = no
 			is_insurrectionary = no
-			is_marginal = no
 			any_scope_character = {
 				has_ideology = ideology:ideology_slaver
 				is_ruler = no
@@ -632,7 +607,6 @@ acw_events.6 = {
 		any_interest_group = {
 			is_revolutionary = no
 			is_insurrectionary = no
-			is_marginal = no
 			any_scope_character = {
 				OR = {
 					has_ideology = ideology:ideology_abolitionist
@@ -653,7 +627,6 @@ acw_events.6 = {
 			limit = {
 				is_revolutionary = no
 				is_insurrectionary = no
-				is_marginal = no
 				any_scope_character = {
 					has_ideology = ideology:ideology_slaver
 					is_ruler = no
@@ -672,7 +645,6 @@ acw_events.6 = {
 			limit = {
 				is_revolutionary = no
 				is_insurrectionary = no
-				is_marginal = no
 				any_scope_character = {
 					OR = {
 						has_ideology = ideology:ideology_abolitionist
@@ -684,7 +656,10 @@ acw_events.6 = {
 			save_scope_as = charles_sumner_ig
 			random_scope_character = {
 				limit = {
-					has_ideology = ideology:ideology_slaver
+					OR = {
+						has_ideology = ideology:ideology_abolitionist
+						has_ideology = ideology:ideology_usfp_abolitionist_radical
+					}
 					is_ruler = no
 				}
 				save_scope_as = charles_sumner_leader
@@ -726,32 +701,8 @@ acw_events.6 = {
 				}	
 			}
 		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = { has_ideology = ideology:ideology_slaver }
-				}
-				NOT = { has_modifier = ig_slavers_mad }
-			}
-			add_modifier = {
-				name = ig_slavers_happy
-				months = short_modifier_time
-			}
-		}
-		every_interest_group = {
-			limit = {
-				OR = {
-					has_ideology = ideology:ideology_anti_slavery
-					leader = { usfp_anti_slavery_leader_trigger = yes}
-				}
-				NOT = { has_modifier = ig_abolitionists_happy }
-			}
-			add_modifier = {
-				name = ig_abolitionists_mad
-				months = short_modifier_time
-			}
-		}
+		usfp_appease_slavers_effect = {MULT = 1}
+		usfp_anger_abolitionists_effect = {MULT = 1}
 		add_modifier = {
 			name = usfp_fighting_in_congress
 			months = 6

@@ -730,7 +730,7 @@ usfp_manifest_destiny.9 = {
 		#need trains to build trains
 		any_scope_building = {
 			is_building_type = building_railway
-			count > 10
+			count > 20
 		}
 		ig:ig_industrialists = {
 			is_marginal = no
@@ -941,6 +941,16 @@ usfp_manifest_destiny.12 = {
 				percent = 0.20
 				culture = cu:hokan
 			}
+			if = {
+				limit = { 
+					state_is_eligible_as_mass_migration_target = yes
+					is_mass_migration_target = no
+				}
+				create_mass_migration = {
+					origin = ROOT
+					culture = cu:yankee
+				}
+			}
 		}
 		s:STATE_CALIFORNIA = {
 			every_scope_state = {
@@ -977,6 +987,16 @@ usfp_manifest_destiny.12 = {
 			kill_population_percent_in_state = {
 				percent = 0.15
 				culture = cu:hokan
+			}
+			if = {
+				limit = { 
+					state_is_eligible_as_mass_migration_target = yes
+					is_mass_migration_target = no
+				}
+				create_mass_migration = {
+					origin = ROOT
+					culture = cu:yankee
+				}
 			}
 		}
 	}

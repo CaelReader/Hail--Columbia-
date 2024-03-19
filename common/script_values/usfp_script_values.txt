@@ -16,6 +16,7 @@
         }
         min = 1 # DIV/0 guard
     }
+	multiply = 3
 }
 
 usfp_bleeding_kansas_get_yankee_percent = {
@@ -142,6 +143,7 @@ usfp_bleeding_kansas_get_yankee_percent = {
 		 }
 		 value = 1.00
 	}
+	multiply = 2
 }
 
 usfp_bleeding_kansas_get_freedmen = {
@@ -176,6 +178,7 @@ usfp_bleeding_kansas_get_dixie_radicals = {
         }
         min = 1 # DIV/0 guard
     }
+	multiply = 3
 }
 
 usfp_bleeding_kansas_get_dixie_percent = {
@@ -302,6 +305,7 @@ usfp_bleeding_kansas_get_dixie_percent = {
 		 }
 		 value = 1.00
 	}
+	multiply = 2
 }
 usfp_bleeding_kansas_get_dixie_aristocrats = {
     value = {
