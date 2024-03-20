@@ -122,6 +122,38 @@ usfp_bleeding_kansas.5.f: ""The killings had the effect of a clap of thunder fro
 usfp_bleeding_kansas.5.a: "Such barbarity!"
 usfp_bleeding_kansas.5.b: "The ruffians had it coming."
 
+usfp_bleeding_kansas.6.t: "Insurrection at Harper's Ferry"
+usfp_bleeding_kansas.6.d: "In an attempt to spark a general slave uprising, [SCOPE.sCharacter('john_brown_scope').GetFullName] attacked and seized the federal arsenal at Harper's Ferry, Virginia. Unfortunately for Brown, support for his rebellion faile`d to materialize, leading to his capture after a brief siege of the arsenal. He has been pronounced guilty of murder and insurrection, and sentenced to death."
+usfp_bleeding_kansas.6.f: ""If it is deemed necessary that I should forfeit my life for the furtherance of the ends of justice, and mingle my blood further with the blood of my children and with the blood of millions in this slave country whose rights are disregarded by wicked, cruel, and unjust enactments-I submit; so let it be done."" #John Brown
+usfp_bleeding_kansas.6.a: "He chose his own fate."
+usfp_bleeding_kansas.6.b: "We must ensure [SCOPE.sCharacter('john_brown_scope').GetFullName] survives."
+
+usfp_bleeding_kansas.7.t: "The Virginia Slave Uprising"
+usfp_bleeding_kansas.7.d: "Militant abolitionist [SCOPE.sCharacter('john_brown_scope').GetFullName] has attacked the federal arsenal at Harper's Ferry, Virginia! The weapons within were seized by a band of escaped slaves, who have now fanned out across [SCOPE.sState('virginia_scope').GetName], inciting terror and slave revolts across the plantations."
+usfp_bleeding_kansas.7.f: ""I have only a short time to live, only one death to die, and I will die fighting for this cause. There will be no peace in this land until slavery is done for."" #John Brown
+usfp_bleeding_kansas.7.a: "By God, the madman's done it!"
+usfp_bleeding_kansas.7.b: "We must crush these uppity slaves at once!"
+
+usfp_bleeding_kansas.8.t: "Competing Constitutions"
+usfp_bleeding_kansas.8.d: "Two separate delegations have arrived from [SCOPE.sState('kansas_scope').GetName], both carrying state Constitutions to be ratified by Congress: one banning slavery and the other allowing it. Both claim to be the legitimate representatives of the people of [SCOPE.sState('kansas_scope').GetName], but it falls to us to decide which to accept."
+usfp_bleeding_kansas.8.f: ""Our Constitution has been duly ratified by the rightfully elected delegates of the free state of Kansas. We've just come from Constitution Hall in Topeka, despite these border ruffians trying to stop us!"\n\n"Well our Constitution has been duly ratified by the true delegates of the people of Kansas. And we wrote ours in the #italic real#! Constitution Hall, in Lecompton!""
+usfp_bleeding_kansas.8.a: "The Free-Staters' Constitution is clearly the legitimate choice."
+usfp_bleeding_kansas.8.b: "The pro-slavery Constitution is obviously the will of the voters."
+usfp_bleeding_kansas.8.c: "Kansas won't have a Constitution until it can agree on #italic one#! Constitution!"
+usfp_bleeding_kansas_enforce_constitution: "A $decree_violent_suppression$ [concept_decree] will allow us to enforce our chosen constitution."
+
+usfp_bleeding_kansas.9.t: "Free-Stater Victory"
+usfp_bleeding_kansas.9.d_acw: "With the outbreak of civil war, the dominant Free-Stater forces of [SCOPE.sState('kansas_scope').GetName] have rallied, securing the state for the Union."
+usfp_bleeding_kansas.9.d: "After much violence and conflict, the Free-Staters have emerged victorious from Bleeding [SCOPE.sState('kansas_scope').GetName], preventing slavery from spreading to the state."
+usfp_bleeding_kansas.9.f: ""Struggling with the foes who surround her, Lo!\nShe implores you to stay her!\nWill you to slavery betray her?\nHurrah! Swear that you'll never betray her;\nKansas shall yet be free!"" #Charles Weyman
+usfp_bleeding_kansas.9.a: "Finally, this tragic chapter might close."
+
+usfp_bleeding_kansas.10.t: "Border Ruffians Take [SCOPE.sState('kansas_scope').GetName]"
+usfp_bleeding_kansas.10.d_acw: "With the outbreak of civil war, the Border Ruffians have overwhelmed [SCOPE.sState('kansas_scope').GetName] and declared for the [SCOPE.sCountry('csa_scope').GetName]."
+usfp_bleeding_kansas.10.d: "After much violence and conflict, the Border Ruffians have emerged victorious from Bleeding [SCOPE.sState('kansas_scope').GetName], enshrining slavery in the state."
+usfp_bleeding_kansas.10.f: ""Listen! hear ye not the sighing,\nOf the Goddess, Freedom, dying,\nOn the fields of Kansas lying, Weltering in her gore!\nHear ye not her mournful pleading?\nSee ye not her votaries bleeding?\nLo! their souls from earth receding,\nCall for vengeance sore.""
+usfp_bleeding_kansas.10.a: "Finally, this tragic chapter might close."
+
 usfp_acw.1.t: "A Traitor's Peace"
 usfp_acw.1.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has published a scathing criticism of [SCOPE.sCountry('csa_scope').GetAdjective] peace demands, depicting them as dishonoring the Union and self-destructive to the North. The [SCOPE.sParty('republican_party_scope').GetName] has ran with it to bolster public support for continuing the war, denouncing what they call a Traitor's Peace."
 usfp_acw.1.f: ""People of the United States! Will you give your assent to such a base surrender of our cause? If not, then rally only with those who keep step to the music of the Union, who stand by our brave soldiers in the field! Rally for liberty and union, now and forever, one and separable!""

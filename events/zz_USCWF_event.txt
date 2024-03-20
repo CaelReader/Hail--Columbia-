@@ -14,6 +14,9 @@ USCWF.1 = {
 			limit = {
 				is_country_type = decentralized
 				country_is_in_north_america = yes
+				NOT = {
+					this = c:CTF
+				}
 			}
 			if = {
 				limit = {

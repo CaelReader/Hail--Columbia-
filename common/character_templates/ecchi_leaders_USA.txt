@@ -1250,7 +1250,7 @@ ecchi_usa_seward_character_template = {
     female = no
     religion = protestant
     ideology = ideology_abolitionist
-    interest_group = ig_rural_folk
+    interest_group = ig_intelligentsia
 	dna = ecchi_dna_william_h_seward
     birth_date = 1801.5.16
     traits = { brave persistent }
@@ -1264,11 +1264,12 @@ ecchi_usa_seward_character_template = {
             OR = {
                 is_interest_group_type = ig_rural_folk
                 is_interest_group_type = ig_intelligentsia
+                is_interest_group_type = ig_petty_bourgeoisie
             }
         }
         earliest_usage_date = 1839.1.1
         latest_usage_date = 1872.10.10
-        chance = 90
+        chance = 100
     }
 }
 

@@ -90,8 +90,9 @@ usfp_second_party_system_modifier = {
 
 usfp_third_party_system_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
-	country_voting_power_base_add = 20
-	state_pop_pol_str_mult = 0.25
+	country_voting_power_base_add = 10
+	country_voting_power_from_literacy_add = 10
+	state_pop_pol_str_mult = 0.15
 	country_legitimacy_govt_size_add = -1 #TPS
 	country_legitimacy_headofstate_add = 10 #TPS
 	country_legitimacy_ideological_incoherence_mult = -0.10 #TPS, 0.2 presrep 0.1 censuf 0.20 actual

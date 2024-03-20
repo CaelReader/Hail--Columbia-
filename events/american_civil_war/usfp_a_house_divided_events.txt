@@ -628,6 +628,7 @@ usfp_a_house_divided.8 = {
 		add_modifier = {
 			name = usfp_fugitive_slave_law
 		}
+		set_variable = fugitive_slave_var
 		usfp_appease_slavers_effect = {MULT = 1}
 		usfp_anger_abolitionists_effect = {MULT = 2}
 		if = {
@@ -710,6 +711,7 @@ usfp_a_house_divided.8 = {
 		add_modifier = {
 			name = usfp_fugitive_slave_law
 		}
+		set_variable = fugitive_slave_var
 		scope:california_scope = {
 			if = {
 				limit = { 
@@ -782,15 +784,23 @@ usfp_a_house_divided.9 = {
 
 	trigger = {
 		any_scope_state = {
-			state_region = s:STATE_TEXAS
-			is_slave_state = no
+			AND = {
+				state_region = s:STATE_TEXAS
+				is_slave_state = no
+			}
 		}
 	}
 
 	immediate = {
 		s:STATE_TEXAS.region_state:USA = {
+			create_pop = {
+				pop_type = slaves
+				culture = afro_american
+				size = 1000			
+			}
 			enslave_discriminated_farm_workers = yes
 		}
+		
 	}
 }
 
@@ -917,8 +927,8 @@ usfp_a_house_divided.11 = {
 		}
 		scope:kansas_scope = {
 			add_radicals_in_state = {
-				value = 0.1
-				culture = cu:yankee
+				value = 0.01
+				culture = cu:dixie
 			}
 			add_radicals_in_state = {
 				value = 0.05
@@ -935,10 +945,10 @@ usfp_a_house_divided.11 = {
 		scope:kansas_scope = {
 			add_radicals_in_state = {
 				value = 0.05
-				culture = cu:yankee
+				culture = cu:dixie
 			}
 			add_radicals_in_state = {
-				value = 0.1
+				value = 0.01
 				culture = cu:yankee
 			}
 		}
@@ -957,7 +967,7 @@ usfp_a_house_divided.11 = {
 			}
 			add_radicals_in_state = {
 				value = 0.05
-				culture = cu:yankee
+				culture = cu:dixie
 			}
 		}
 	}
@@ -1257,19 +1267,27 @@ usfp_a_house_divided.15 = {
 		ig:ig_landowners = {
 			add_modifier = {
 				name = usfp_ig_sectional_realignment
-				years = 2
+				years = 4
+				multiplier = 0.5
 			}
 		}
 		ig:ig_intelligentsia = {
 			add_modifier = {
 				name = usfp_ig_sectional_realignment
-				years = 2
+				years = 4
+				multiplier = 2
 			}
+		}
+		ig:ig_petty_bourgeoisie = {
+			add_modifier = {
+				name = usfp_ig_sectional_realignment
+				years = 4
+			}	
 		}
 		ig:ig_industrialists = {
 			add_modifier = {
 				name = usfp_ig_sectional_realignment
-				years = 2
+				years = 4
 			}
 		}
 		recalculate_pop_ig_support = yes

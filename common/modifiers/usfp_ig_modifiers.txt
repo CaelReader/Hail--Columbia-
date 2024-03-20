@@ -132,6 +132,7 @@ usfp_abandoned_cuba = {
 usfp_ig_sectional_realignment = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	interest_group_pop_attraction_mult = 0.25
+	interest_group_pol_str_mult = 0.25
 }
 
 usfp_ignored_monroe = {
@@ -151,5 +152,10 @@ usfp_prosecuted_anarchists_negative = {
 
 usfp_international_workers_day = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_socialism_positive.dds
+	interest_group_pop_attraction_mult = 0.15
+}
+
+usfp_john_browns_body = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	interest_group_pop_attraction_mult = 0.15
 }

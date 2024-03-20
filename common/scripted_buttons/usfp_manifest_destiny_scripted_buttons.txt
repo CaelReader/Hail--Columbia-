@@ -90,15 +90,19 @@ usfp_western_purchase_button = {
 		}
 		modifier = {
 			trigger = { 
-				ruler = {has_ideology = ideology:ideology_jingoist_leader}
+				ruler = {
+					usfp_manifest_destiny_pro_expansion_trigger = yes
+				}
 			}
-			add = -100
+			add = 100
 		}
 		modifier = {
 			trigger = { 
-				ruler = {has_ideology = ideology:ideology_pacifist}
+				ruler = {
+					usfp_manifest_destiny_anti_expansion_trigger = yes
+				}
 			}
-			add = 100
+			add = -100
 		}
 	}
 }
