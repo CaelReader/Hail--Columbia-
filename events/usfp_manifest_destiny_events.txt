@@ -1702,3 +1702,112 @@ usfp_manifest_destiny.18 = {
 		}
 	}
 }
+
+#Max Manifest Destiny: American Superculture
+usfp_manifest_destiny.19 = {
+	type = country_event
+	placement = ROOT
+
+	event_image = {
+		video = "votp_gunboat_diplomacy"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_usa.dds"
+	
+	title = usfp_manifest_destiny.19.t
+	desc = usfp_manifest_destiny.19.d
+	flavor = usfp_manifest_destiny.19.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		NOT = {
+			has_variable = had_american_superculture
+		}
+		var:manifest_destiny_var >= 12
+		radical_fraction = {
+			value < 0.2
+			culture = cu:dixie
+		}
+		radical_fraction = {
+			value < 0.2
+			culture = cu:yankee
+		}
+		radical_fraction = {
+			value < 0.2
+			culture = cu:anglo_canadian
+		}
+		OR = {
+			has_global_variable = american_civil_war
+		}
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+	}
+
+	immediate = {
+		set_variable = had_american_superculture
+	}
+
+	#Absolute Nativism
+	option = {
+		name = usfp_manifest_destiny.19.a
+		trigger = {
+			OR = {
+				has_law = law_type:law_national_supremacy
+				has_law = law_type:law_ethnostate
+			}
+		}
+		highlighted_option = yes
+	}
+	#American Culture: Schizmogenesis
+	option = {
+		name = usfp_manifest_destiny.19.b
+		trigger = {
+			OR = {
+				has_law = law_type:law_national_supremacy
+				has_law = law_type:law_ethnostate
+			}
+		}
+		highlighted_option = yes
+	}
+	#American Culture + Melting Pot
+	option = {
+		name = usfp_manifest_destiny.19.c
+		default_option = yes
+		trigger = {
+			NOT = {
+				has_law = law_type:law_multicultural
+			}
+		}
+		add_modifier = {
+			name = usfp_the_melting_pot_modifier
+		}
+	}
+	#Just Melting Pot
+	option = {
+		name = usfp_manifest_destiny.19.g
+		add_modifier = {
+			name = usfp_the_melting_pot_modifier
+		}
+	}
+	#Pluralistic America
+	option = {
+		name = usfp_manifest_destiny.19.h
+		trigger = {
+			NOT = {
+				has_law = law_type:law_state_religion
+			}
+			has_law = law_type:law_multicultural
+		}
+		highlighted_option = yes
+		add_modifier = {
+			name = usfp_e_pluribus_unum_modifier
+		}
+		add_loyalists = {
+			value = large_radicals
+		}
+	}
+
+}

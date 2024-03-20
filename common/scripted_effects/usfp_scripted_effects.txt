@@ -333,6 +333,13 @@ usfp_cleanup_bleeding_kansas_variables = {
 	remove_variable = bleeding_kansas_var
 	remove_variable = new_england_emigrant_aid_society
 	remove_variable = had_border_ruffians
+	remove_variable = had_sacking_of_lawrence
+	remove_variable = had_pottawatomie_massacre
+	remove_variable = slave_power_speech
+	remove_variable = had_harpers_ferry
+	remove_variable = had_kansas_constitution
+	remove_variable = kansas_free_constitution
+	remove_variable = kansas_slave_constitution
 }
 
 usfp_anger_slavers_effect = {
@@ -417,4 +424,32 @@ usfp_destabilize_union_effect = {
 			multiplier = $MULT$
 		}
 	}
+}
+
+usfp_cleanup_indian_removal_variables = {
+	remove_variable = usfp_cherokee_treaty_ratified_var
+	remove_variable = trail_of_tears_stall
+	remove_variable = usfp_cherokee_removed
+	remove_variable = chickasaw_removal_forced
+	remove_variable = usfp_chickasaw_removed
+	remove_variable = usfp_seminole_removed
+	remove_variable = indian_removal_slow
+	remove_variable = usfp_creek_removed
+	remove_variable = indian_removal_assassin
+}
+
+usfp_cleanup_a_house_divided_variables = {
+	remove_variable = usfp_had_gag_rule
+	remove_variable = california_state_ask
+	remove_variable = accepted_wilmot_proviso
+	remove_variable = USA_wilmot_proviso
+	remove_variable = missouri_compromise_broken_var
+	remove_variable = compromise_of_1850
+	remove_variable = popular_sovereignty_enabled
+	remove_variable = fugitive_slave_var
+	remove_variable = kansas_nebraska_act
+	remove_variable = kansas_nebraska_act_passed
+	remove_variable = dred_scott
+	remove_variable = bleeding_kansas_happened
+	remove_variable = missouri_compromise_extended
 }

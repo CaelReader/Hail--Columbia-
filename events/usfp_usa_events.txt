@@ -23,14 +23,14 @@ usfp_usa.1 = {
 		s:STATE_NEW_YORK.region_state:USA = {
 			save_scope_as = new_york_scope
 		}
-		set_variable = seneca_falls
+		set_global_variable = seneca_falls
 	}
 
 	trigger = {
 		exists = c:USA
 		c:USA = root
 		NOT = {
-			has_variable = seneca_falls
+			has_global_variable = seneca_falls
 		}
 		game_date > 1848.6.1
 	}
