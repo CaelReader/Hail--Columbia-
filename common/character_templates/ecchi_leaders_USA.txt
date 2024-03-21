@@ -187,7 +187,7 @@ ecchi_usa_fillmore_template = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1874.3.8
-        chance = 90
+        chance = 50
     }
 }
 
@@ -1547,7 +1547,7 @@ ecchi_usa_jefferson_davis_character_template = {
         }
         earliest_usage_date = 1850.1.1
         latest_usage_date = 1889.12.6
-        chance = 90
+        chance = 100
     }
 }
 

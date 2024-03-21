@@ -39,6 +39,7 @@
 			remove_ideology = ideology_republican_reactionary
 			add_ideology = ideology_republican
 			add_ideology = ideology_empire_of_liberty
+			add_ideology = ideology_reactionary_segregationist
 		}
 	}
 }

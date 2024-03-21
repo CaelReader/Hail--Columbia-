@@ -872,7 +872,7 @@ liberal_party = {
 						NOT = {
 							has_law = law_type:law_slavery_banned
 						}
-						has_modifier = missouri_compromise
+						has_journal_entry = je_acw_countdown
 					}
 				}
 				leader = {
@@ -895,7 +895,7 @@ liberal_party = {
 						NOT = {
 							has_law = law_type:law_slavery_banned
 						}
-						has_modifier = missouri_compromise
+						has_journal_entry = je_acw_countdown
 					}
 				}
 				leader = {

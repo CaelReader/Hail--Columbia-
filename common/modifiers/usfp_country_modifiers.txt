@@ -109,10 +109,10 @@ usfp_acw_union_modifier = {
 usfp_acw_csa_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
 	country_war_exhaustion_casualties_mult = -0.75
-	unit_morale_loss_mult = -0.50
-	military_formation_organization_gain_mult = 1.0
-	building_training_rate_mult = 1
-	state_conscription_rate_mult = 1
+	unit_morale_loss_mult = -0.60
+	military_formation_organization_gain_mult = 1.5
+	building_training_rate_mult = 1.5
+	state_conscription_rate_mult = 1.5
 	country_legitimacy_base_add = 50
 	unit_kill_rate_add = 0.20
 	unit_devastation_mult = 0.10
@@ -150,7 +150,7 @@ usfp_a_house_divided_modifier = {
 	state_pop_support_law_legacy_slavery_add = 1.0
 	state_pop_support_law_slave_trade_add = 0.5
 	interest_group_ig_landowners_approval_add = -20 #40
-	country_agitator_slots_add = 8
+	country_agitator_slots_add = 10
 }
 
 modifier_texas_war_of_independence = {
@@ -314,4 +314,16 @@ usfp_e_pluribus_unum_modifier = {
 	country_prestige_mult = 0.05
 	state_loyalists_from_sol_change_mult = 0.05
 	country_loyalists_from_legitimacy_mult = 0.05
+}
+
+usfp_diplomats_intercepted = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_influence_negative.dds
+	country_influence_mult = -0.25
+}
+
+usfp_draft_exemptions = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_soldier_negative.dds
+	building_training_rate_mult = -0.10
+	state_conscription_rate_mult = -0.10
+	interest_group_ig_armed_forces_approval_add = -2
 }

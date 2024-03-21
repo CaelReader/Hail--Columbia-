@@ -159,3 +159,8 @@ usfp_john_browns_body = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	interest_group_pop_attraction_mult = 0.15
 }
+
+usfp_restrained_looting = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
+	interest_group_approval_add = -2
+}

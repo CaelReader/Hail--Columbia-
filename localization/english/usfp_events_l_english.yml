@@ -165,6 +165,41 @@ usfp_acw.1.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has published a scat
 usfp_acw.1.f: ""People of the United States! Will you give your assent to such a base surrender of our cause? If not, then rally only with those who keep step to the music of the Union, who stand by our brave soldiers in the field! Rally for liberty and union, now and forever, one and separable!""
 usfp_acw.1.a: "The Union forever!"
 
+usfp_acw.2.t: "[SCOPE.sCountry('csa_scope').GetAdjective] Envoys Captured"
+usfp_acw.2.d: "An [ROOT.GetCountry.GetAdjective] ship has boarded a [SCOPE.sCountry('britain_scope').GetAdjective] Royal Mail ship and captured a group of [SCOPE.sCountry('csa_scope').GetAdjective] diplomats who were traveling aboard. As a neutral party, [SCOPE.sCountry('britain_scope').GetName] has protested and demanded the release of the envoys."
+usfp_acw.2.f: ""Illegal and unjustifiable by international law. Our ship, under the circumstances, cannot be considered as acting in breach of international law. It follows, that from on board a merchant-ship of a neutral power, pursuing a lawful and innocent voyage, certain individuals have been taken by force. Her Majesty's Government will, therefore, in our opinion, be justified in requiring reparation for the international wrong which has been on this occasion committed."" #British Parliament
+usfp_acw.2.a: "We do not wish war with [SCOPE.sCountry('britain_scope').GetName]. Release the envoys."
+usfp_acw.2.b: "The envoys will remain in our custody, regardless of the circumstances."
+
+usfp_acw.3.t: "[SCOPE.sState('west_virginia_scope').GetName] Breaks Away"
+usfp_acw.3.d: "Outraged by the seccession of [SCOPE.sState('virginia_scope').GetName], local delegates in [SCOPE.sState('west_virginia_scope').GetName] have organized their own state government and declared for the Union."
+usfp_acw.3.f: ""The Convention's decision is unconstitutional, unconscionable treason! We of West Virginia will follow the rebels in their headlong plunge into ruin and fratricide!""
+usfp_acw.3.a: "Welcome to the Union, [SCOPE.sState('west_virginia_scope').GetName]!"
+
+usfp_acw.4.t: "The Ironclad Concept"
+usfp_acw.4.d: "An enterprising inventor has come up with a plan to ensure our naval dominance in the Civil War: ironclad ships. By quickly converting some of our existing ships into ironclads, we could smash the rebel ships and control Atlantic shipping with impunity. Rumor has it that the insurrectionists are already in the process of acquiring their own ironclads."
+usfp_acw.4.f: "Now is the age of iron, sirs. If the Union is slow to act on this matter, the rebels will be in New York Harbor by the end of the year!"
+usfp_acw.4.a: "Fund it!"
+usfp_acw.4.b: "This is too costly of a gamble."
+usfp_acw.4.a.tt: "An Ironclad will be built in [SCOPE.sState('new_york_scope').GetName]"
+
+usfp_acw.5.t: "Indians Declare for [SCOPE.sCountry('csa_scope').GetName]"
+usfp_acw.5.d: "The Indian nations remaining in the South have signed treaties with the [SCOPE.sCountry('csa_scope').GetName] and joined in the war on their side."
+usfp_acw.5.f: "There was an uneasy tension between the Indians and the Confederates at the meeting. While each side knew this accord would likely not survive the war, for now they were united by a common cause."
+usfp_acw.5.a: "Damn them!"
+
+usfp_acw.6.t: "The March to the Sea"
+usfp_acw.6.d: "Union forces marching through [SCOPE.sState('georgia_scope').GetName] have embarked on a campaign of scorched earth against the rebel heartland, leaving devastation and civilian casualties in their wake."
+usfp_acw.6.f: ""Behind us lay Atlanta, smouldering and in ruins, the black smoke rising high in air, and hanging like a pall over the ruined city. Some band, by accident, struck up the anthem of "John Brown's Body"; the men caught up the strain, and never before or since have I heard the chorus of "Glory, glory, hallelujah!" done with more spirit, or in better harmony of time and place."" #William Sherman
+usfp_acw.6.a: "The price of rebellion."
+usfp_acw.6.b: "We need to restrain our forces."
+
+usfp_acw.7.t: "Draft Week"
+usfp_acw.7.d: "[SCOPE.sState('new_york_scope').GetCityHubName] has been engulfed in riots against the new drafts, driven particularly by the city's [SCOPE.sCulture('irish_culture').GetName] community. The rioters have smashed public buildings, burned homes, and turned their ire against local [SCOPE.sCulture('afro_american_culture').GetName] citizens."
+usfp_acw.7.f: ""You will, no doubt, be hard on us rioters tomorrow morning, but that 300-dollar law has made us nobodies, vagabonds and cast-outs of society, for whom nobody cares when we must go to war and be shot down. We are the poor rabble, and the rich rabble is our enemy by this law. Therefore we will give our enemy battle right here, and ask no quarter."" #letter to the editor of the new york times
+usfp_acw.7.a: "Crack down on this disorder!"
+usfp_acw.7.b: "Offer exemptions to cool tensions."
+
 #### Manifest Destiny
 usfp_manifest_destiny.1.t: "From Sea to Shining Sea?"
 usfp_manifest_destiny.1.d: "Since the days of the Thirteen Colonies, the settlers of the [ROOT.GetCountry.GetName] have desired the lands to the west, with complete disregard for their existing inhabitants. Now a justification for expansion is beginning to emerge in our national consciousness — that of Manifest Destiny. Proponents of the idea claim that it is not only our right but our sacred duty to take control of and populate the entirety of the continent."

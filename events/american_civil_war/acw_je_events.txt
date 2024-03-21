@@ -79,26 +79,29 @@ acw_je_events.1 = {
 				change_tag = CSA
 				save_scope_as = csa_scope	
 				
-				# c:USA = {
-				# 	every_scope_state = {
-				# 		limit = { OR = { is_slave_state = yes has_variable = former_slave_state } }
-				# 		set_state_owner = c:CSA
-				# 	}
-				# }
-				# s:STATE_DISTRICT_OF_COLUMBIA.region_state:CSA = { set_state_owner = c:USA } # LMAO
-				# set_capital = STATE_DISTRICT_OF_COLUMBIA # ROFLMAO
-				# s:STATE_MISSOURI.region_state:CSA = { set_state_owner = c:USA }
-				# s:STATE_KENTUCKY.region_state:CSA = { set_state_owner = c:USA }
-				# s:STATE_MARYLAND.region_state:CSA = { set_state_owner = c:USA }
-				# s:STATE_DELAWARE.region_state:CSA = { set_state_owner = c:USA }
-				# s:STATE_WEST_VIRGINIA.region_state:CSA = { set_state_owner = c:USA }
-				# s:STATE_NEBRASKA.region_state:CSA = { set_state_owner = c:USA }
-				# s:STATE_IOWA.region_state:CSA = { set_state_owner = c:USA }
-				# s:STATE_KANSAS.region_state:CSA = { set_state_owner = c:USA }
-				# s:STATE_COLORADO.region_state:CSA = { set_state_owner = c:USA }
-				# s:STATE_UTAH.region_state:CSA = { set_state_owner = c:USA }
-				# s:STATE_NEVADA.region_state:CSA = { set_state_owner = c:USA }
-				# s:STATE_CALIFORNIA.region_state:CSA = { set_state_owner = c:USA }
+				#forced CSA states in script
+				c:USA = {
+					every_scope_state = {
+						limit = { OR = { is_slave_state = yes has_variable = former_slave_state } }
+						set_state_owner = c:CSA
+					}
+				}
+				s:STATE_DISTRICT_OF_COLUMBIA.region_state:CSA = { set_state_owner = c:USA } # LMAO
+				c:USA = {
+					set_capital = STATE_DISTRICT_OF_COLUMBIA # ROFLMAO
+				}
+				s:STATE_MISSOURI.region_state:CSA = { set_state_owner = c:USA }
+				s:STATE_KENTUCKY.region_state:CSA = { set_state_owner = c:USA }
+				s:STATE_MARYLAND.region_state:CSA = { set_state_owner = c:USA }
+				s:STATE_DELAWARE.region_state:CSA = { set_state_owner = c:USA }
+				# s:STATE_WEST_VIRGINIA.region_state:CSA = { set_state_owner = c:USA } #breaks away from the CSA by event
+				s:STATE_NEBRASKA.region_state:CSA = { set_state_owner = c:USA }
+				s:STATE_IOWA.region_state:CSA = { set_state_owner = c:USA }
+				s:STATE_KANSAS.region_state:CSA = { set_state_owner = c:USA }
+				s:STATE_COLORADO.region_state:CSA = { set_state_owner = c:USA }
+				s:STATE_UTAH.region_state:CSA = { set_state_owner = c:USA }
+				s:STATE_NEVADA.region_state:CSA = { set_state_owner = c:USA }
+				s:STATE_CALIFORNIA.region_state:CSA = { set_state_owner = c:USA }
 
 				# Re-enslave pops if the ACW happens after slavery has been abolished
 				if = {
@@ -118,6 +121,14 @@ acw_je_events.1 = {
 					state_region = {
 						add_claim = root
 					}
+				}
+				if = {
+					limit = { 
+						NOT = {
+							has_law = law_type:law_presidential_republic
+						}
+					}
+					activate_law = law_type:law_presidential_republic
 				}
 			}
 		}
@@ -236,12 +247,12 @@ acw_je_events.1 = {
 acw_je_events.2 = {
 	type = country_event
 	event_image = {
-		video = "europenorthamerica_capitalists_meeting"
+		video = "unspecific_military_parade"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	icon = "gfx/interface/icons/event_icons/waving_flag_usa.dds"
 
 	title = acw_je_events.2.t
 	desc = acw_je_events.2.d
@@ -300,7 +311,7 @@ acw_je_events.2 = {
 	}
 
 	option = {
-		name = acw_je_events.1.a
+		name = acw_je_events.2.a
 		
 		add_journal_entry = {
 			type = je_acw_reconstruction

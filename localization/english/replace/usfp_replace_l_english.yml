@@ -2,7 +2,7 @@
 COM:0 "Comancheria"
 
 je_acw_countdown:0 "A House Divided"
-je_acw_countdown_reason:0 "The issue of slavery has divided the North and South of the [ROOT.GetCountry.GetName] since before the drafting of the Declaration of Independence. Then as now, a series of compromises in the Federal government have forestalled open conflict. As the [SCOPE.sIdeology('abolitionist_scope').GetName] cause continues to grow in the North, the [SCOPE.gsInterestGroup('landowners_scope').GetName] have continued to demand more concessions and compromises to protect their '\\peculiar institution'\\ from interference.\n\nOne way or another, the Union cannot endure half slave and half free for much longer."
+je_acw_countdown_reason:0 "The issue of slavery has divided the North and South of the [ROOT.GetCountry.GetName] since before the drafting of the Declaration of Independence. Then as now, a series of compromises in the Federal government have forestalled open conflict. As the [SCOPE.sIdeology('abolitionist_scope').GetName] cause continues to grow in the North, the [SCOPE.gsInterestGroup('landowners_scope').GetName] have continued to demand more concessions and compromises to protect their 'peculiar institution' from interference.\n\nOne way or another, the Union cannot endure half slave and half free for much longer."
 
  acw_events.3.t:0 "The [SCOPE.sCharacter('wilmot_proviso_ig_leader').GetLastName] Proviso"
  acw_events.3.d:0 "[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetFullName], leader of the [SCOPE.gsInterestGroup('wilmot_proviso_ig').GetName], has proposed outright prohibiting slavery in all our new western territories. This proposal is unacceptable to the [SCOPE.gsInterestGroup('planters_scope').GetName], but they have put forth few alternatives."
@@ -10,6 +10,17 @@ je_acw_countdown_reason:0 "The issue of slavery has divided the North and South 
  acw_events.3.a:0 "Reject the proviso."
  acw_events.3.b:0 "Accept the proviso, abolishing slavery in the West."
  acw_events.3.c:0 "Why don't we just draw the Compromise Line all the way to the Pacific?"
+
+acw_je_events.2.t:0 "Reconstructing the Nation"
+ acw_je_events.2.d:0 "While the military fight has finished, the fight for the nation's soul has not. The [ROOT.GetCountry.GetName] must rebuild itself after being split in two."
+ acw_je_events.2.f:0 ""I do not expect this nation to fall. Welcome or unwelcome, whether it becomes all one thing or all the other, this nation shall cease to be divided in body and soul.""
+ unreconstructed_state:0 "Unreconstructed State"
+acw_je_events.2.a: "We must rebuild ourselves and our nation."
+
+ acw_je_events.3.t:0 "The Nation, Reconstructed"
+ acw_je_events.3.d:0 "Our nation has rebuilt itself, making something distinct, something new, and most importantly, something united."
+ acw_je_events.3.f:0 ""For all our faults, we have reforged our nation, and have built ourselves a government that shall not perish from this earth.""
+ acw_je_events.3.a:0 "We stand united once more."
 
  je_indian_removal:1 "Indian Removal"
  je_indian_removal_reason:2 "The Five Civilized Tribes have long lived in the American south, and have been the target of 'civilizing' missions since the days of independence. In recent decades, [SCOPE.sCulture('yankee_culture').GetName] and [SCOPE.sCulture('dixie_culture').GetName] settlers have increasingly encroached on the lands of the Five Tribes, sparking violent conflicts.\n\nThe Jackson administration chose to support the incoming settlers, and resolved to see all natives removed to the [SCOPE.sCountry('indian_territory_scope').GetName], regardless of the cost."

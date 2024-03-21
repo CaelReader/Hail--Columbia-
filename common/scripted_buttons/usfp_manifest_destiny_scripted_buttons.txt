@@ -214,7 +214,10 @@ usfp_homestead_act_button = {
 		any_scope_state = {
 			count > 3
 			usfp_american_west_zone = yes
-			is_split_state = no
+			NOT = {
+				has_modifier = usfp_homestead_act_modifier
+			}
+			free_arable_land > 100
 		}
 		ig:ig_landowners = {
 				is_in_government = no
