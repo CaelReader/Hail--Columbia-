@@ -1545,7 +1545,7 @@ ecchi_usa_jefferson_davis_character_template = {
 				is_interest_group_type = ig_armed_forces
 			}
         }
-        earliest_usage_date = 1857.3.4
+        earliest_usage_date = 1850.1.1
         latest_usage_date = 1889.12.6
         chance = 90
     }

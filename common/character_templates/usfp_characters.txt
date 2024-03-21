@@ -66,6 +66,9 @@ usa_lincoln_character_template = {
         country_trigger = {
             exists = c:USA
             this = c:USA
+            NOT = {
+                has_global_variable = lincoln_spawned
+            }
         }
         interest_group_trigger = {
             is_marginal = no

@@ -162,7 +162,7 @@ usfp_a_house_divided.3 = {
 		}
 		if = {
 			limit = {
-				game_date > 1857.3.4
+				game_date > 1850.1.1
 				NOT = {
 					any_scope_character = {
 						has_template = ecchi_usa_jefferson_davis_character_template
@@ -1406,4 +1406,81 @@ usfp_a_house_divided.16 = {
 		usfp_destabilize_union_effect = {MULT = 1}
 	}
 
+}
+
+#Lincoln spawn event
+usfp_a_house_divided.17 = {
+	type = country_event
+	placement = root
+
+	title = usfp_a_house_divided.17.t
+	desc = usfp_a_house_divided.17.d
+	flavor = usfp_a_house_divided.17.f
+	dlc = dlc_usfp
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:real_abraham_lincoln_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	duration = 3
+
+	trigger = {
+		game_date > 1859.1.1
+		NOR = {
+			any_scope_character = {
+				has_template = usa_lincoln_character_template
+			}
+			has_global_variable = lincoln_spawned
+		}
+		in_election_campaign = yes
+		NOT = {
+			has_modifier = usfp_second_party_system_modifier
+		}
+		ig:ig_petty_bourgeoisie = {
+			is_marginal = no
+			has_party = yes
+		}
+	}
+
+	immediate = {
+		set_global_variable = lincoln_spawned
+		create_character = {
+			template = usa_lincoln_character_template
+			on_created = {
+				set_variable = is_real_abraham_lincoln
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_template = usa_lincoln_character_template
+			}
+			save_scope_as = real_abraham_lincoln_scope
+		}
+		ig:ig_petty_bourgeoisie = {
+			leader = {
+				save_scope_as = current_pb_leader
+			}
+			party = {
+				save_scope_as = republican_party_scope
+			}
+		}
+	}
+
+	#go with Lincoln
+	option = {
+		name = usfp_a_house_divided.17.a
+		default_option = yes
+		scope:real_abraham_lincoln_scope = {
+			set_as_interest_group_leader = yes
+		}
+	}
+
+	#Keep current leader
+	option = {
+		name = usfp_a_house_divided.17.b
+	}
 }

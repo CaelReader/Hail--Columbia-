@@ -85,6 +85,12 @@ usfp_a_house_divided.16.f: "They were not intended to be included, under the wor
 usfp_a_house_divided.16.a: "This is the most obscene ruling in history!"
 usfp_a_house_divided.16.b: "Property is property, that is the end of it."
 
+usfp_a_house_divided.17.t: "The Rail Candidate"
+usfp_a_house_divided.17.d: "Admist factional divisions within the [SCOPE.sParty('republican_party_scope').GetName], [SCOPE.sCharacter('real_abraham_lincoln_scope').GetFullName] has emerged as a surprise contender for the nomination. "
+usfp_a_house_divided.17.f: ""We must have though a man who recognizes the slavery issue as being the living issue of the day; who does not hesitate to declare slavery a wrong, nor to deal with it as such; who believes in the power and duty of Congress to prevent the spread of it.""
+usfp_a_house_divided.17.a: "Honest Abe will carry the day!"
+usfp_a_house_divided.17.b: "We prefer [SCOPE.sCharacter('current_pb_leader').GetFullName]."
+
 usfp_bleeding_kansas.1.t: "The New England Emigrant Aid Company"
 usfp_bleeding_kansas.1.d: "An enterprising [SCOPE.sIdeology('abolitionist_scope').GetName] from [SCOPE.sState('massachusetts_scope').GetCityHubName] has established a transportation company with the goal of sending anti-slavery immigrants into [SCOPE.sState('kansas_scope').GetName]. Hundreds of migrants have already signed on, eager to turn [SCOPE.sState('kansas_scope').GetName] into a free state."
 usfp_bleeding_kansas.1.f: ""WANTED: Homesteaders eager to do their patriotic duty in the Kansas Territory. Monetary aid, transportation, information provided to those who wish to see Kansas a properly free and white state.""
@@ -266,6 +272,16 @@ usfp_manifest_destiny.18.b: "[SCOPE.sCountry('target_scope').GetName] is of no c
 usfp_manifest_destiny.18.c: "We can't enforce the doctrine without a navy to match."
 usfp_manifest_destiny.18.e: "We are a bit preoccupied at the moment!"
 
+usfp_manifest_destiny.19.t: "The [SCOPE.sCulture('american_culture').GetName] Superculture"
+usfp_manifest_destiny.19.d: "The ideals of Manifest Destiny now suffuse the entire nation. From coast to coast, our people talk of the great divine purpose bestowed upon the [ROOT.GetCountry.GetName]. As our culture has expanded, this unifying purpose binds us together more than ever before."
+usfp_manifest_destiny.19.f: ""Divine task! immortal mission! Let us tread fast and joyfully the open trail before us! Let every American heart open wide for patriotism to glow undimmed, and confide with religious faith in the sublime and prodigious destiny of his well-loved country!""
+usfp_manifest_destiny.19.a: "We must guard our sacred identity against foreign influence."
+usfp_manifest_destiny.19.b: "America for Americans!"
+usfp_manifest_destiny.19.c: "We are, all of us, [SCOPE.sCulture('american_culture').GetName]!"
+usfp_manifest_destiny.19.g: "Let all come and find their place here!"
+usfp_manifest_destiny.19.h: "Not a melting pot, but a great mosaic!"
+american_superculture_emerges: "25% of [SCOPE.sCulture('yankee_culture').GetName], [SCOPE.sCulture('dixie_culture').GetName], and [SCOPE.sCulture('anglo_canadian_culture').GetName] [Concept('concept_pop', '$concept_pops$')] adopt the [SCOPE.sCulture('american_culture').GetName] culture."
+american_superculture_homelands: "[SCOPE.sCulture('yankee_culture').GetName], [SCOPE.sCulture('dixie_culture').GetName], and [SCOPE.sCulture('anglo_canadian_culture').GetName] [Concept('concept_homeland', '$concept_homelands$')] become [SCOPE.sCulture('american_culture').GetName] [Concept('concept_homeland', '$concept_homelands$')]."
 
 ### Native Removal
 usfp_native_removal.1.t: "The Seminole Removal"

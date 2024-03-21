@@ -118,6 +118,18 @@ usfp_acw_csa_modifier = {
 	unit_devastation_mult = 0.10
 }
 
+usfp_acw_fsa_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
+	country_war_exhaustion_casualties_mult = -0.75
+	unit_morale_loss_mult = -0.50
+	military_formation_organization_gain_mult = 1.0
+	building_training_rate_mult = 1
+	state_conscription_rate_mult = 1
+	country_legitimacy_base_add = 50
+	unit_kill_rate_add = 0.20
+	unit_devastation_mult = 0.10
+}
+
 civil_war_reshuffle_uscwf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	interest_group_ig_landowners_pol_str_mult = -2.0

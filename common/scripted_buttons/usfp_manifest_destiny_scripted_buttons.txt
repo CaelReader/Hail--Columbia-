@@ -64,18 +64,26 @@ usfp_western_purchase_button = {
 		base = 0	
 		modifier = {
 			trigger = {
-				owns_entire_state_region = STATE_WASHINGTON
+				owns_entire_state_region = STATE_OREGON
 			}
-			add = 10
+			add = 100
 		}	
 		modifier = {
-			trigger = { gold_reserves > 3000000 }
+			trigger = { gold_reserves > 1000000 }
 			add = 10
-		}		
+		}
+		modifier = {
+			trigger = { gold_reserves > 2000000 }
+			add = 50
+		}
+		modifier = {
+			trigger = { gold_reserves > 3000000 }
+			add = 1000
+		}					
 		modifier = {
 			trigger = { 
 				gold_reserves > 0
-				weekly_net_fixed_income > 100000
+				weekly_net_fixed_income > 50000
 			}
 			add = 10
 		}
@@ -94,7 +102,7 @@ usfp_western_purchase_button = {
 					usfp_manifest_destiny_pro_expansion_trigger = yes
 				}
 			}
-			add = 100
+			add = 1000
 		}
 		modifier = {
 			trigger = { 
@@ -102,7 +110,7 @@ usfp_western_purchase_button = {
 					usfp_manifest_destiny_anti_expansion_trigger = yes
 				}
 			}
-			add = -100
+			add = -1000
 		}
 	}
 }

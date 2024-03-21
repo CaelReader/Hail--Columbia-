@@ -19,6 +19,7 @@ usfp_monthly_pulse = {
 		50 = usfp_usa.10 #Scientific Management
 		50 = usfp_usa.12 #American Hippo Bill
 		10 = usfp_usa.13 #Wild Hippos
+		100 = usfp_usa.15 #Hidden event to kill off the Great Triumvirate
 
 		##Labor events
 		100 = usfp_usa_labor.1 #founding of the IWW

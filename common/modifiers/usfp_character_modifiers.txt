@@ -12,3 +12,10 @@ usfp_harpers_weekly_character = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_newspaper_positive.dds
 	character_popularity_add = 75
 }
+
+usfp_great_triumvirate = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	character_popularity_add = 10
+	interest_group_pop_attraction_mult = 0.10
+	interest_group_pol_str_mult = 0.10
+}

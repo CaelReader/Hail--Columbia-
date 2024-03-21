@@ -1343,3 +1343,26 @@ usfp_usa.14 = {
 	}
 }
 
+#Hidden event to kill off the Great Triumvirate
+usfp_usa.15 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		exists = c:USA
+		c:USA = root
+		game_date > 1850.3.1
+		any_scope_character = {
+			has_modifier = usfp_great_triumvirate
+		}
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_modifier = usfp_great_triumvirate
+			}
+			kill_character = yes
+		}
+	}
+}

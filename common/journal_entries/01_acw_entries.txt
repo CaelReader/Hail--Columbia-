@@ -98,7 +98,10 @@ je_acw_countdown = {
 		}
 		custom_tooltip = {
 			text = acw_will_happen_tt
-			trigger_event = { id = acw_je_events.1 }
+			trigger_event = { 
+				id = acw_je_events.1
+				popup = yes
+			}
 		}
 	}
 
@@ -142,6 +145,7 @@ je_acw_countdown = {
 			usfp_a_house_divided.9 #Texas slavery
 			usfp_a_house_divided.10 #Kansas-Nebraska Act
 			usfp_a_house_divided.11 #Bleeding Kansas
+			usfp_a_house_divided.17 #Lincoln spawn event
 		}
 	}
 
@@ -204,9 +208,10 @@ je_acw_war = {
 	}
 
 	fail = {
-		exists = c:CSA
-		NOT = {
-			has_war_with = c:CSA
+		exists = scope:target
+		NOR = {
+			has_war_with = scope:target
+			is_diplomatic_play_enemy_of = scope:target
 		}
 	}
 

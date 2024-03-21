@@ -453,3 +453,52 @@ usfp_cleanup_a_house_divided_variables = {
 	remove_variable = bleeding_kansas_happened
 	remove_variable = missouri_compromise_extended
 }
+
+usfp_american_superculture_effect = {
+	add_primary_culture = cu:usfp_american
+	remove_primary_culture = cu:dixie
+	remove_primary_culture = cu:yankee
+	custom_tooltip = {
+		text = american_superculture_emerges
+		every_scope_pop = {
+			limit = {
+				OR = {
+					culture = cu:dixie
+					culture = cu:anglo_canadian
+					culture = cu:yankee
+				}
+			}
+			change_pop_culture = {
+				target = cu:usfp_american
+				value = 0.25
+			}
+		}
+		cu:usfp_american = {
+			add_cultural_obsession = small_arms
+		}
+	}
+	custom_tooltip = {
+		text = american_superculture_homelands
+		every_scope_state = {
+			limit = {
+					OR = {
+						cu:yankee = {
+							has_homeland = prev
+						}
+						cu:dixie = {
+							has_homeland = prev
+						}
+						cu:anglo_canadian = {
+							has_homeland = prev
+						}
+					}
+			}
+			state_region = {
+				remove_homeland = cu:dixie
+				remove_homeland = cu:yankee
+				remove_homeland = cu:anglo_canadian
+				add_homeland = cu:usfp_american
+			}
+		}
+	}
+}

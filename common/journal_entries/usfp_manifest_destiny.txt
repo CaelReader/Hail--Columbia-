@@ -222,6 +222,7 @@ usfp_manifest_destiny_main = {
 			25 = usfp_manifest_destiny.9 #Railroad Tycoons
 			100 = usfp_manifest_destiny.12 #California Genocide
 			100 = usfp_manifest_destiny.14 #Ostend Manifesto
+			100 = usfp_manifest_destiny.19 #American Superculture
 			
 		}
 		events = {
