@@ -49,7 +49,8 @@ usfp_acw_election_agitators = {
 				NOT = { has_global_variable = american_civil_war }
 			}
 			random_list = {
-				50 = {
+				20 = {}
+				35 = {
 					create_character = {
 						culture = cu:dixie
 						interest_group = ig_landowners
@@ -65,7 +66,7 @@ usfp_acw_election_agitators = {
 						}
 					}
 				}
-				40 = {
+				35 = {
 					create_character = {
 						culture = cu:yankee
 						interest_group = ig_intelligentsia
@@ -99,11 +100,11 @@ usfp_acw_election_agitators = {
 				}
 			}
 
-			random_political_movement = {
-				limit = { desired_law = law_type:law_slave_trade }
-				# add_modifier = modifier_uncommitted_government
-				# add_modifier = modifier_movement_state_paramilitarism
-			}
+			# random_political_movement = {
+			# 	limit = { desired_law = law_type:law_slave_trade }
+			# 	# add_modifier = modifier_uncommitted_government
+			# 	# add_modifier = modifier_movement_state_paramilitarism
+			# }
 		}
 	}
 }
@@ -193,5 +194,30 @@ usfp_law_events = {
 	events = {
 		usfp_usa.9 #Constitutional Challenge
 		usfp_a_house_divided.14 #Missouri/1850 Compromise Violation
+	}
+}
+
+on_capitulation = {
+	on_actions = {
+		usfp_mexico_defeats_usa
+	}
+}
+
+usfp_mexico_defeats_usa = {
+	effect = {
+		if = {
+			limit = {
+				exists = c:USA
+				exists = c:MEX
+				this = c:USA
+				has_journal_entry = usfp_manifest_destiny_main
+				has_truce_with = c:MEX
+				NOT = {
+					has_variable = destiny_manifested_mexico_defeat
+				}
+			 }
+			 set_variable = destiny_manifested_mexico_defeat
+			 usfp_manifest_less_destiny_effect = yes
+		}
 	}
 }

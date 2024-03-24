@@ -26,7 +26,7 @@ usfp_test.1 = {
 
 	immediate = {
 		create_character = {
-			template = usfp_robert_la_follette_character_template
+			template = usfp_thaddeus_stevens_character_template
 			on_created = {
 				set_variable = test_var
 				add_character_role = agitator
@@ -42,7 +42,7 @@ usfp_test.1 = {
 
 	#Cool
 	option = {
-		name = EXCELLENT
+		name = usfp_test.1.a
 	}
 
 }

@@ -104,6 +104,7 @@ usfp_acw_union_modifier = {
 	country_legitimacy_base_add = 50
 	unit_kill_rate_add = 0.20
 	unit_devastation_mult = 0.10
+	country_military_goods_cost_mult = -0.20
 }
 
 usfp_acw_csa_modifier = {
@@ -116,6 +117,7 @@ usfp_acw_csa_modifier = {
 	country_legitimacy_base_add = 50
 	unit_kill_rate_add = 0.20
 	unit_devastation_mult = 0.10
+	country_military_goods_cost_mult = -0.20
 }
 
 usfp_acw_fsa_modifier = {
@@ -128,6 +130,7 @@ usfp_acw_fsa_modifier = {
 	country_legitimacy_base_add = 50
 	unit_kill_rate_add = 0.20
 	unit_devastation_mult = 0.10
+	country_military_goods_cost_mult = -0.20
 }
 
 civil_war_reshuffle_uscwf = {
@@ -326,4 +329,22 @@ usfp_draft_exemptions = {
 	building_training_rate_mult = -0.10
 	state_conscription_rate_mult = -0.10
 	interest_group_ig_armed_forces_approval_add = -2
+}
+
+usfp_enforcing_reconstruction = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_negative.dds
+	country_authority_add = -50
+}
+
+usfp_freedmens_bureau = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_bureaucracy_positive.dds
+	country_authority_add = 100
+	country_bureaucracy_mult = -0.05
+	country_expenses_add = 3000
+}
+
+usfp_radical_reconstruction_demand = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	state_pop_support_law_cultural_exclusion_add = 0.15
+	state_pop_support_law_multicultural_add = 0.10
 }

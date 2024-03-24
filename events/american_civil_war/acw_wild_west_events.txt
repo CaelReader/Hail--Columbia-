@@ -215,6 +215,7 @@ wild_west.3 = {
 	title = wild_west.3.t
 	desc = wild_west.3.d
 	flavor = wild_west.3.f
+	placement = scope:OK_corral_state
 
 	duration = 3
 
@@ -233,6 +234,7 @@ wild_west.3 = {
 		random_scope_state = {
 			limit = {
 				is_incorporated = no
+				usfp_american_west_zone = yes
 			}
 			save_scope_as = OK_corral_state
 		}

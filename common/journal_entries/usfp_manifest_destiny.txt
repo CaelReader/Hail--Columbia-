@@ -192,25 +192,26 @@ usfp_manifest_destiny_main = {
 				usfp_manifest_less_destiny_effect = yes
 				set_variable = destiny_manifested_no_colonial_affairs
 			}
-			#Lose ACW
-			if = {
-				limit = { 
-					OR = {
-						AND = {
-							exists = c:CSA
-							has_truce_with = c:CSA
-						}
-						AND = {
-							exists = c:FSA
-							has_truce_with = c:FSA
-						}
-					}
-					NOT = {
-						has_variable = destiny_manifested_acw_lost
-					}
-				}
-				usfp_manifest_less_destiny_effect = yes
-				set_variable = destiny_manifested_acw_lost
+			# #Lose ACW
+			# moved to the ACW JE itself
+			# if = {
+			# 	limit = { 
+			# 		OR = {
+			# 			AND = {
+			# 				exists = c:CSA
+			# 				has_truce_with = c:CSA
+			# 			}
+			# 			AND = {
+			# 				exists = c:FSA
+			# 				has_truce_with = c:FSA
+			# 			}
+			# 		}
+			# 		NOT = {
+			# 			has_variable = destiny_manifested_acw_lost
+			# 		}
+			# 	}
+			# 	usfp_manifest_less_destiny_effect = yes
+			# 	set_variable = destiny_manifested_acw_lost
 			}
 		}
 		random_events = {

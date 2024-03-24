@@ -1,0 +1,112 @@
+﻿#Enforce Voting Rights
+usfp_reconstruction_enforce_rights_button = {
+	name = "usfp_reconstruction_enforce_rights_button"
+	desc = "usfp_reconstruction_enforce_rights_button_desc"
+
+	visible = {
+		NOT = {
+			has_variable = reconstruction_enforced_voting_rights
+		}
+	}
+
+	possible = {
+		cu:afro_american = {
+			NOT = {
+				culture_is_discriminated_in = root
+			}
+		}
+		authority >= 150
+	}
+
+	effect = {
+		set_variable = reconstruction_enforced_voting_rights
+		add_radicals = {
+			value = medium_radicals
+			culture = cu:dixie
+		}
+		add_loyalists = {
+			value = medium_radicals
+			culture = cu:afro_american
+		}
+		usfp_reconstruction_swing_freedmen = yes
+		hidden_effect = {
+			usfp_reconstruction_swing_freedmen = yes
+			usfp_reconstruction_swing_freedmen = yes
+		}
+		add_modifier = {
+			name = usfp_enforcing_reconstruction
+			multiplier = 3
+			years = 3
+		}
+		usfp_destabilize_union_effect = {MULT = 1}
+		usfp_anger_slavers_effect = {MULT = 1}
+	}
+
+	ai_chance = {
+		base = 100
+		modifier = {
+			trigger = {
+				OR = {
+					ig:ig_landowners = {
+						is_in_government = yes
+					}
+					ig:ig_rural_folk = {
+						is_in_government = yes
+					}
+				}
+			}
+			add = -100
+		}
+	}
+}
+
+#Amnesty for Confederates
+usfp_reconstruction_confederate_amnesty_button = {
+	name = "usfp_reconstruction_confederate_amnesty_button"
+	desc = "usfp_reconstruction_confederate_amnesty_button_desc"
+
+	visible = {
+		NOT = {
+			has_variable = reconstruction_confederate_amnesty
+		}
+	}
+
+	possible = {
+		ruler = {
+			NOR = {
+				has_ideology = ideology:ideology_abolitionist
+				has_ideology = ideology:ideology_usfp_abolitionist_radical
+			}
+		}
+	}
+
+	effect = {
+		set_variable = reconstruction_confederate_amnesty
+		usfp_reconstruction_swing_south = yes
+		hidden_effect = {
+			usfp_reconstruction_swing_south = yes
+			usfp_reconstruction_swing_south = yes
+		}
+		add_loyalists = {
+			value = medium_radicals
+			culture = cu:dixie
+		}
+		add_loyalists = {
+			value = medium_radicals
+			culture = cu:dixie
+			strata = rich
+		}
+		add_radicals = {
+			value = medium_radicals
+			culture = cu:afro_american
+		}
+		add_radicals = {
+			value = small_radicals
+			culture = cu:yankee
+		}
+		usfp_appease_slavers_effect = {MULT = 2}
+		ig:ig_landowners = {
+			remove_modifier = revolution_lost_ig
+		}
+	}
+}

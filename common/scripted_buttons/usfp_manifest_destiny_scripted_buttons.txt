@@ -1,5 +1,4 @@
-﻿#Western Purchase
-#Adapted from NFM
+﻿#Western Purchase - Adapted from NFM
 
 usfp_western_purchase_button = {
 	name = "usfp_western_purchase_button"

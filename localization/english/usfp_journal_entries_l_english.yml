@@ -53,6 +53,9 @@ usfp_border_state_northcarolina_button_desc: "desc"
 usfp_border_state_tennessee_button: "[SCOPE.sState('tennessee_scope').GetName] is [SCOPE.GetRootScope.GetCountry.GetCustom('dynamic_tennessee_loyalty')]!"
 usfp_border_state_tennessee_button_desc: "desc"
 
+usfp_emancipation_proclamation_button: "Emancipate the Slaves"
+usfp_emancipation_proclamation_button_desc: "War-time exigencies give us the opportunity to liberate slaves in rebel territories, paving the way for a swift and final abolition of slavery."
+
 usfp_indian_removal_seminole_button: "Begin Seminole Removal"
 usfp_indian_removal_seminole_button_desc: "The Seminole have broken out in open revolt against the Indian Removal Act. We have no choice but to crush the rebellion and enforce their removal. The harsh terrain and hostility of the Seminole are likely to make the process long and costly."
 usfp_indian_removal_cherokee_button: "Begin Cherokee Removal"
@@ -113,3 +116,13 @@ notification_usfp_new_american_homeland_name: "Westward Expansion"
 notification_usfp_slavery_expands_name: "Slavery Spreads to [SCOPE.sState('slavery_expanded_state').GetName]"
  notification_usfp_slavery_expands_desc: "[SCOPE.sState('slavery_expanded_state').GetName] is now a Slave State."
  notification_usfp_slavery_expands_tooltip: "#header $notification_usfp_slavery_expands_name$#!\n$notification_usfp_slavery_expands_desc$"
+
+usfp_reconstruction_swing_freedmen: "Reconstruction will progress in favor of the #bold Freedmen#!."
+usfp_reconstruction_swing_south: "Reconstruction will regress, empowering the #bold Redeemers#!."
+usfp_reconstruction_enforce_rights_button: "Enforce Voting Rights"
+usfp_reconstruction_enforce_rights_button_desc: "Freedmen continue to be denied their lawful rights across the South. By deploying additional federal forces, we can ensure that liberty extends to all our citizens."
+usfp_reconstruction_confederate_amnesty_button: "Grant Amnesty to Confederates"
+usfp_reconstruction_confederate_amnesty_button_desc: "A true accord can be reached between the gentlemen of the North and South. By pardoning former rebels and allowing them back into government, unrest in the South will be quelled."
+
+usfp_reconstruction_long: "Long Reconstruction"
+usfp_reconstruction_long_reason: "While Reconstruction has largely been a success for the Freedmen, racial prejudice remains deeply engrained at all levels of the [ROOT.GetCountry.GetName]. It will take at least a generation before [SCOPE.sCulture('afro_american_culture').GetName] citizens are truly accepted as a central part of the [ROOT.GetCountry.GetAdjectiveNoFormatting] nation."

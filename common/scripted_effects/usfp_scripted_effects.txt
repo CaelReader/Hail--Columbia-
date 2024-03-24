@@ -502,3 +502,23 @@ usfp_american_superculture_effect = {
 		}
 	}
 }
+
+usfp_reconstruction_swing_freedmen = {
+	custom_tooltip = {
+		text = usfp_reconstruction_swing_freedmen
+		change_variable = {
+			name = reconstruction_var
+			add = 1
+		}
+	}
+}
+
+usfp_reconstruction_swing_south = {
+	custom_tooltip = {
+		text = usfp_reconstruction_swing_south
+		change_variable = {
+			name = reconstruction_var
+			subtract = 1
+		}
+	}
+}

@@ -200,6 +200,60 @@ usfp_acw.7.f: ""You will, no doubt, be hard on us rioters tomorrow morning, but 
 usfp_acw.7.a: "Crack down on this disorder!"
 usfp_acw.7.b: "Offer exemptions to cool tensions."
 
+usfp_reconstruction.1.t: "The Freedmen's Bureau"
+usfp_reconstruction.1.d: "A commission on the conditions in the South has suggested the creation of a new government agency: the Freedmen's Bureau. The agency would give direct aid to refugees and recently-liberated former slaves, and help transition them into free society."
+usfp_reconstruction.1.f: ""Offer the freedmen temporary aid and counsel until they become accustomed to their new sphere of life; secure to them, by law, their just rights of person and property; relieve them, by a fair and equal administration of justice, from tle depressing influence of disgraceful prejudice. Above all, guard them against the virtual restoration of slavery in any form, under any pretext, and then let them take care of themselves. If we allow this, the future of the African race in this country will be conducive to its prosperity and associated with its well-being."" #Freedmen's Inquiry Commission
+usfp_reconstruction.1.a: "The Bureau will be an invaluable tool in advancing Reconstruction."
+usfp_reconstruction.1.b: "This is an unnecessary expense."
+
+usfp_reconstruction.2.t: "The Ku Klux Klan"
+usfp_reconstruction.2.d: "A white supremacist organization calling itself the Ku Klux Klan has emerged in [SCOPE.sState('tennessee_scope').GetName], and embarked on a campaign of terror against Reconstruction. Horrific stories of lynchings, arson, and mutilations at the hands of the Klan have spread the group's infamy far and wide."
+usfp_reconstruction.2.f: ""You do solemnly swear, in the presence of Almighty God and before this assembly of witnesses, that you will do the acts commanded of you by the commander of this Ku Klux Klan, outside of the civil law, to suppress the negro and keep him in the position where he belongs, and to see that the Democratic party controls this country, so help you God."" #Klan oath
+usfp_reconstruction.2.a: "Crack down on these terrorists!"
+usfp_reconstruction.2.b: "We will turn a blind eye."
+
+usfp_reconstruction.3.t: "[SCOPE.sCulture('afro_american_culture').GetName] Legislators"
+usfp_reconstruction.3.d: "With freedmen granted the vote, they have quickly elected a slate of [SCOPE.sCulture('afro_american_culture').GetName] representatives to the [SCOPE.sState('original_33_state').GetName] state legislature. While a minority in the assembly, white opponents to their presence have already launched a series of legal challenges to their right to hold office in the state."
+usfp_reconstruction.3.f: "There was disquiet in the chamber when the new delegates entered. The old guard filled the room with boos, jeers, and slurs. Only after they were satisfied was the assembly brought to order."
+usfp_reconstruction.3.a: "Ensure that they are not ousted from their offices."
+usfp_reconstruction.3.b: "They chose to run for office, now they can fend for themselves."
+
+usfp_reconstruction.4.t: "The Lost Cause"
+usfp_reconstruction.4.d: "In the wake of their defeat, the South has turned to denying history to justify its own actions. Proponents of this new 'Lost Cause' idea claim that slavery was only marginally relevant to the civil war, and that the Confederacy's cause was just and pure."
+usfp_reconstruction.4.f: ""The greatest efforts made by the defeated insurgents since the close of the war have been to promulgate the idea that the cause of liberty, justice, humanity, equality, and all the calendar of the virtues of freedmen, suffered violence and wrong when the effort for southern independence failed."" #George Thomas
+usfp_reconstruction.4.a: "This view of history will speed reconciliation."
+usfp_reconstruction.4.b: "We will not forget the crimes of the South."
+
+usfp_reconstruction.6.t: "Confederate Émigrés"
+usfp_reconstruction.6.d: "In the aftermath of the [SCOPE.sCountry('usa_scope').GetAdjective] Civil War, many former slave-holders have determined that [ROOT.GetCountry.GetName] is more amenable to their way of life, and declared their intention to migrate here. Several delegations have petitioned the government for aid in this matter, and many ministers agree that the former Confederates would bring valuable agricultural expertise with them."
+usfp_reconstruction.6.f: ""Those northern Yankees made our lives so impossible in the United States that we have been compelled to leave. We of the South hold Brazil in the greatest respect, and already feel welcomed by her hospitality.""
+usfp_reconstruction.6.a: "These Confederados will be of great value to our economy."
+usfp_reconstruction.6.b: "We don't need to take on the cast-offs of America."
+
+usfp_reconstruction.7.t: "Confederados"
+usfp_reconstruction.7.d: "At the invitation of the [SCOPE.sCountry('brazil_scope').GetAdjective] government, thousands of ex-Confederates have begun to depart for [SCOPE.sState('confederados_state_scope').GetName]. With slavery defeated in the [ROOT.GetCountry.GetName], [SCOPE.sCountry('brazil_scope').GetNameNoFormatting] presents an opportunity for them to carry on the peculiar institution, although transplanted to the other side of the equator."
+usfp_reconstruction.7.f: ""The official authorities have manifested great readiness to receive favorably all of our people; and they hold out the encouragement of prospective assistance to all who would need aid in emigrating to this empire with their families. The people everywhere exhibit likewise the most cordial disposition towards our movement to their land."" #Hunting a Home in Brazil
+usfp_reconstruction.7.a: "They are free to leave, good riddance to them."
+
+usfp_reconstruction.8.t: "The Second Founding"
+usfp_reconstruction.8.d: "Reconstruction is finally coming to a close as the South is reincorporated fully into the [ROOT.GetCountry.GetName]. Our efforts to uphold the promise of [SCOPE.sCulture('afro_american_culture').GetName] liberty have born fruit, and have enabled them to transform themselves. What were once down-trodden slaves are now free citizens, homeowners, even officials. [SCOPE.sCulture('dixie_culture').GetName] rage will continue, but their attempts to return to the Antebellum have been thwarted, hopefully for good."
+usfp_reconstruction.8.f: ""It is not light that we need, but fire; it is not the gentle shower, but thunder. We need the storm, the whirlwind, and the earthquake."" #Frederick Douglass
+usfp_reconstruction.8.a: "There is no progress without struggle."
+usfp_reconstruction.8.b: "Our promise is only half-fulfilled."
+
+usfp_reconstruction.9.t: "Divided Dixie"
+usfp_reconstruction.9.d: "Reconstruction is finally coming to a close as the South is reincorporated fully into the [ROOT.GetCountry.GetName]. States with large [SCOPE.sCulture('afro_american_culture').GetName] populations have been able to secure the fruits of Reconstruction, while those with [SCOPE.sCulture('dixie_culture').GetName] majorities have succumbed to Redeemer control. The wounds of the war have been closed, but the South has been divided up into a patchwork of free states and 'Jim Crow' states."
+usfp_reconstruction.9.f: ""All I ask is, give the black man a chance to stand on his own legs! Let him alone! If you see him on his way to school, let him alone, -- don't disturb him! If you see him going to the dinner-table at a hotel, let him go! If you see him going to the ballot-box, let him alone, -- don't disturb him!"" #Frederick Douglass
+usfp_reconstruction.9.a: "Time will heal all wounds."
+
+usfp_reconstruction.10.t: "The Redemption of the South"
+usfp_reconstruction.10.d: "Reconstruction is finally coming to a close as the South is reincorporated fully into the [ROOT.GetCountry.GetName]. In the face of violent opposition and weak government support, Reconstruction has failed, leaving the Redeemers in full control of the former Confederacy. While this has allowed a reconciliation with the rebels on the national level, it entails the destruction of [SCOPE.sCulture('afro_american_culture').GetName] rights across the South."
+usfp_reconstruction.10.f: ""Where justice is denied, where poverty is enforced, where ignorance prevails, and where any one class is made to feel that society is an organized conspiracy to oppress, rob and degrade them, neither persons nor property will be safe."" #Frederick Douglass
+usfp_reconstruction.10.a: "This will haunt our country for centuries to come."
+usfp_reconstruction.10.b: "Reconciliation with the South is all that matters."
+usfp_reconstruction_full_jim_crow: "Jim Crow laws will be enacted in all southern states."
+usfp_reconstruction_partial_jim_crow: "Jim Crow laws will be enacted in southern states that lack a large Afro-American population."
+
 #### Manifest Destiny
 usfp_manifest_destiny.1.t: "From Sea to Shining Sea?"
 usfp_manifest_destiny.1.d: "Since the days of the Thirteen Colonies, the settlers of the [ROOT.GetCountry.GetName] have desired the lands to the west, with complete disregard for their existing inhabitants. Now a justification for expansion is beginning to emerge in our national consciousness — that of Manifest Destiny. Proponents of the idea claim that it is not only our right but our sacred duty to take control of and populate the entirety of the continent."
@@ -492,3 +546,9 @@ usfp_usa_labor.2.d: "A labor rally in [SCOPE.sState('illinois_scope').GetCityHub
 usfp_usa_labor.2.f: ""After the bomb exploded there was pistol shooting. The crowd was running in the same direction as me. I had to jump over a man lying down, and I saw another man fall in front of me about 100 to 200 feet west of Des Plaines Street. I took hold of his arm and wanted to help him, but the firing was so lively behind me that I just let go and ran."" #An Eyewitness Account by Barton Simonson
 usfp_usa_labor.2.a: "Hang them all!"
 usfp_usa_labor.2.b: "The police are out of line."
+
+usfp_test.1.t: "DEBUG EVENT"
+usfp_test.1.d: "force spawn a character"
+usfp_test.1.f: ""
+usfp_test.1.a: "amazing, that right there is why you're the best boss!!!"
+

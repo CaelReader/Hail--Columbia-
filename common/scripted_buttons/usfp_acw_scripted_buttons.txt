@@ -188,3 +188,46 @@ usfp_border_state_tennessee_button = {
 	}
 }
 
+
+#Emancipation Proclamation
+usfp_emancipation_proclamation_button = {
+	name = "usfp_emancipation_proclamation_button"
+	desc = "usfp_emancipation_proclamation_button_desc"
+
+	visible = {
+		NOT = {
+			has_law = law_type:law_slavery_banned
+		}
+		exists = c:CSA
+	}
+
+	possible = {
+		any_scope_character = {
+			law_stance = {
+				law = law_type:law_slavery_banned
+				value = strongly_disapprove
+			}
+		}
+	}
+
+	effect = {
+		activate_law = law_type:law_slavery_banned
+		hidden_effect = {
+			every_scope_state = {
+				liberate_slaves = yes
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			culture = cu:yankee
+		}
+		add_loyalists = {
+			value = large_radicals
+			culture = cu:afro_american
+		}
+	}
+
+	ai_chance = {
+		base = 1000
+	}
+}

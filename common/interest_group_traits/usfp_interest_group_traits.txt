@@ -27,6 +27,7 @@ usfp_ig_trait_lawmen = {
 	
 	modifier = {
 		state_turmoil_effects_mult = -0.10
+		country_authority_mult = 0.05
 	}
 }
 

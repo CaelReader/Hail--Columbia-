@@ -163,6 +163,7 @@ je_acw_war = {
 
 	group = je_group_historical_content
 
+	scripted_button = usfp_emancipation_proclamation_button
 
 	immediate = {
 		usfp_manifest_less_destiny_effect = yes
@@ -241,7 +242,32 @@ je_acw_war = {
 	# acw_events.8 fires for the USA, FSA or CSA, but requires the je_acw_war journal to be active
 }
 
+#USFP: overhauled into just dealing with CSA aftermath
 je_acw_reconstruction = {
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = { 
+				trigger = {
+					var:reconstruction_var > 15
+				}
+				desc = je_acw_reconstruction_status_radical
+			}
+			triggered_desc = { 
+				trigger = {
+					var:reconstruction_var <= 15
+					var:reconstruction_var > 5
+				}
+				desc = je_acw_reconstruction_status_mixed
+			}
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = je_acw_reconstruction_status_failure
+			}
+		}
+	}
 	icon = "gfx/interface/icons/invention_icons/egalitarianism.dds"
 
 	group = je_group_historical_content
@@ -256,43 +282,141 @@ je_acw_reconstruction = {
 					has_ideology = ideology:ideology_abolitionist
 				}
 			}
-			kill_character = yes
+			kill_character = {
+				hidden = yes
+			}
+		}
+		set_variable = {
+			name = reconstruction_var
+			value = 5
+		}
+		cu:afro_american = {
+			save_scope_as = afro_american_culture
+		}
+		cu:dixie = {
+			save_scope_as = dixie_culture
+		}
+		cu:yankee = {
+			save_scope_as = yankee_culture
 		}
 	}
 
-	complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
+	# complete = {
+	# 	scope:journal_entry = {
+	# 		is_goal_complete = yes
+	# 	}
+	# }
+
+	scripted_button = usfp_reconstruction_enforce_rights_button
+	scripted_button = usfp_reconstruction_confederate_amnesty_button
+
+	on_monthly_pulse = {
+		random_events = {
+			180 = 0
+			20 = acw_followup_events.4 # Forty Acres and a Mule
+			20 = acw_followup_events.5 # Supremacist Violence
+			20 = acw_followup_events.6 # Black Codes
+			20 = acw_followup_events.7 # Paramilitaries
+			20 = acw_followup_events.8 # Carpetbaggers
+			100 = usfp_reconstruction.1 #Freedmens Bureau
+			20 = usfp_reconstruction.2 #Ku Klux Klan
+			20 = usfp_reconstruction.3 #Black Legislature
+			20 = usfp_reconstruction.4 #The Lost Cause
+			20 = usfp_reconstruction.5 #Confederados
 		}
 	}
 
-	on_complete = {
-		trigger_event = { id = acw_je_events.3 }
+	on_timeout = {
+		# trigger_event = { id = acw_je_events.3 }
+		if = {
+			limit = {
+				var:reconstruction_var > 15
+			 }
+			 #Radical Reconstruction
+			 trigger_event = {
+				id = usfp_reconstruction.8
+				popup = yes
+			 }
+			 show_as_tooltip = {
+				remove_primary_culture = cu:dixie
+				if = {
+					limit = { 
+						cu:afro_american = {
+							NOT = { culture_is_discriminated_in = ROOT }
+						}
+					}
+					add_journal_entry = {
+						type = usfp_reconstruction_long
+					}
+				} else = {
+					add_modifier = {
+						name = usfp_radical_reconstruction_demand
+						years = 10
+					}
+				}
+			 }
+		}
+		else_if = {
+			limit = { 
+				var:reconstruction_var <= 15
+				var:reconstruction_var > 5
+			}
+			#Mixed Reconstruction
+			trigger_event = {
+				id = usfp_reconstruction.9
+				popup = yes
+			 }
+			 custom_tooltip = usfp_reconstruction_partial_jim_crow 
+		} else = {
+			#Failed Reconstruction
+			trigger_event = {
+				id = usfp_reconstruction.10
+				popup = yes
+			 }
+			 custom_tooltip = usfp_reconstruction_full_jim_crow
+		}
+		
+		
 		hidden_effect = { # sanity check just in case something somehow falls through the cracks
 			every_scope_state = {
 				limit = { has_modifier = unreconstructed_state }
 				remove_modifier = unreconstructed_state
 			}
+			remove_modifier = usfp_enforcing_reconstruction
+			remove_modifier = usfp_freedmens_bureau
 		}
 	}
 
 	current_value = {
-		value = var:reconstruction_var
+		if = {
+			limit = {
+				scope:journal_entry = {
+					goal_value = 0
+				}
+			}
+			value = 0
+		}
+		else = {
+			value = root.var:reconstruction_var
+		}
+	}
+
+	invalid = {
+		NOT = {
+			has_law = law_type:law_slavery_banned
+		}
 	}
 
 	goal_add_value = {
-		add = 3
+		add = 20
 	}
+
 
 	progressbar = yes
 
 	timeout = 4380
 
 	should_be_pinned_by_default = yes
-
-	on_timeout = {
-		trigger_event = { id = acw_je_events.3 }
-	}
 }
 
 je_acw_reincorporate = {
@@ -417,12 +541,7 @@ je_acw_wild_wild_west = {
 		}
 		NOT = {
 			any_scope_state = {
-				state_region = {
-					OR = {
-						is_homeland = cu:dixie
-						is_homeland = cu:yankee
-					}
-				}
+				usfp_american_west_zone = yes
 				devastation > 0.1
 				turmoil > 0.1
 			}
@@ -433,13 +552,13 @@ je_acw_wild_wild_west = {
 		custom_tooltip = {
 			text = acw_no_outlaw_crisis
 		}
-		custom_tooltip = {
-			text = reconstruction_progress
-			change_variable = {
-				name = reconstruction_var
-				add = 1
-			}
-		}
+		# custom_tooltip = {
+		# 	text = reconstruction_progress
+		# 	change_variable = {
+		# 		name = reconstruction_var
+		# 		add = 1
+		# 	}
+		# }
 	}
 
 	on_monthly_pulse = {
@@ -455,12 +574,13 @@ je_acw_wild_wild_west = {
 				limit = {
 					NOT = {
 						any_scope_state = {
-							state_region = {
-								OR = {
-									is_homeland = cu:dixie
-									is_homeland = cu:yankee
-								}
-							}
+							# state_region = {
+							# 	OR = {
+							# 		is_homeland = cu:dixie
+							# 		is_homeland = cu:yankee
+							# 	}
+							# }
+							usfp_american_west_zone = yes
 							devastation > 0.1
 							turmoil > 0.1
 						}
@@ -477,12 +597,7 @@ je_acw_wild_wild_west = {
 	invalid = {
 		NOT = {
 			any_scope_state = {
-				state_region = {
-					OR = {
-						is_homeland = cu:dixie
-						is_homeland = cu:yankee
-					}
-				}
+				usfp_american_west_zone = yes
 			}
 		}
 	}
