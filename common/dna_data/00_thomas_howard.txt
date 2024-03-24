@@ -110,9 +110,9 @@ dna_thomas_howard = {
           eye_lashes_accessory={ "normal_eyelashes" 0 "normal_eyelashes" 0 }
           teeth_accessory={ "normal_teeth" 0 "normal_teeth" 0 }
  }
- enabled=yes
+ 
 }
-
+enabled=yes
 }
 
 

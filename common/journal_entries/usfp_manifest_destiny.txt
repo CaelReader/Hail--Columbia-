@@ -1,7 +1,9 @@
 ﻿#Manifest Destiny JE tracks the influence of the concept in american politics
 usfp_manifest_destiny_main = {
-	group = je_group_historical_content
+	
 	icon = gfx/interface/icons/event_icons/hail_columbia_icon.dds
+
+	group = je_group_historical_content
 
 	is_shown_when_inactive = {
 		exists = c:USA
@@ -212,7 +214,7 @@ usfp_manifest_destiny_main = {
 			# 	}
 			# 	usfp_manifest_less_destiny_effect = yes
 			# 	set_variable = destiny_manifested_acw_lost
-			}
+			# }
 		}
 		random_events = {
 			200 = 0
@@ -235,7 +237,7 @@ usfp_manifest_destiny_main = {
 	}
 
 	goal_add_value = {
-		add = 12
+		value = 12
 	}
 
 	weight = 500

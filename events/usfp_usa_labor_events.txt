@@ -146,6 +146,7 @@ usfp_usa_labor.2 = {
 	#Prosecute!
 	option = {
 		name = usfp_usa_labor.2.a
+		default_option = yes
 		add_radicals = {
 			value = small_radicals
 			interest_group = ig:ig_trade_unions

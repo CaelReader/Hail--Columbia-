@@ -307,15 +307,6 @@
 				
 				x504080 x38BB61 
 			 }
-			 region_state:COM = {
-				kill_population_percent_in_state = {
-					percent = 1
-				}
-				create_pop = {
-					culture = comanche
-					size = 3000
-				}
-			}
 		}
 		region_state:COM = {
 			kill_population_percent_in_state = {

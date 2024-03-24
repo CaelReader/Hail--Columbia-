@@ -107,7 +107,7 @@ is_jennings_bryan: "is #bold William Jennings Bryan#!"
 is_theodore_roosevelt: "is #bold Theodore Roosevelt#!"
 enough_manifest_destiny: "#bold Manifest Destiny#! has sufficiently high influence."
 low_manifest_destiny: "#bold Manifest Destiny#! has low enough influence."
-usfp_homestead_act_button: "Promote Western Settlement"
+usfp_homestead_act_button: "Encourage Western Settlement"
 usfp_homestead_act_button_desc: "Our western territories yearn to be populated and made productive. By doling out free plots of land to settlers, we can encourage migration and self-sufficiency."
 
 notification_usfp_new_american_homeland_name: "Westward Expansion"

@@ -100,7 +100,7 @@
 				gene_surprise={ "surprise_01" 0 "surprise_01" 0 }
 				gene_eyebrows_shape={ "far_spacing_low_thickness" 255 "far_spacing_low_thickness" 255 }
 				gene_eyebrows_fullness={ "layer_2_avg_thickness" 89 "layer_2_avg_thickness" 159 }
-				hairstyles={ "african_diaspora_hairstyles" 240 }
+				hairstyles={ "african_diaspora_hairstyles" 240 "african_diaspora_hairstyles" 240 }
 				beards={ "no_beard" 97 "no_beard" 97 }
 				mustaches={ "no_mustache" 143 "no_mustache" 143 }
 				props={ "no_prop" 0 "no_prop" 0 }

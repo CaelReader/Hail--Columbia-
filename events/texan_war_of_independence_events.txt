@@ -155,7 +155,7 @@ texan_war_of_independence.2 = {
 		trigger = {
 			has_variable = tex_annexation
 		}
-		annex = c:TEX
+		annex_with_incorporation  = c:TEX
 		c:MEX = {
 			change_relations = {
 				country = ROOT

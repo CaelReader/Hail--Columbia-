@@ -40,6 +40,7 @@ je_acw_countdown = {
 		trigger_event = {
 			id = usfp_a_house_divided.12
 		}
+		set_variable = je_acw_countdown_complete
 	}
 
 	modifiers_while_active = {
@@ -419,116 +420,116 @@ je_acw_reconstruction = {
 	should_be_pinned_by_default = yes
 }
 
-je_acw_reincorporate = {
-	icon = "gfx/interface/icons/generic_icons/secession_culture_ongoing.dds"
+# je_acw_reincorporate = {
+# 	icon = "gfx/interface/icons/generic_icons/secession_culture_ongoing.dds"
 
-	group = je_group_historical_content
+# 	group = je_group_historical_content
 
-	complete = {
-		NOT = {
-			any_scope_state = {
-				has_modifier = unreconstructed_state
-				is_incorporated = no
-			}
-		}
-		NOT = {
-			any_scope_state = {
-				state_region = {
-					is_homeland = cu:dixie
-				}
-				loyalist_fraction = {
-					value < 0.2
-					culture = cu:dixie
-				}
-			}
-		}
-	}
+# 	complete = {
+# 		NOT = {
+# 			any_scope_state = {
+# 				has_modifier = unreconstructed_state
+# 				is_incorporated = no
+# 			}
+# 		}
+# 		NOT = {
+# 			any_scope_state = {
+# 				state_region = {
+# 					is_homeland = cu:dixie
+# 				}
+# 				loyalist_fraction = {
+# 					value < 0.2
+# 					culture = cu:dixie
+# 				}
+# 			}
+# 		}
+# 	}
 
-	on_complete = {
-		custom_tooltip = {
-			text = dont_lose_dixie_culture
-			set_variable = acw_keep_dixie
-		}
-		custom_tooltip = {
-			text = reconstruction_progress
-			change_variable = {
-				name = reconstruction_var
-				add = 1
-			}
-		}
-	}
+# 	on_complete = {
+# 		custom_tooltip = {
+# 			text = dont_lose_dixie_culture
+# 			set_variable = acw_keep_dixie
+# 		}
+# 		custom_tooltip = {
+# 			text = reconstruction_progress
+# 			change_variable = {
+# 				name = reconstruction_var
+# 				add = 1
+# 			}
+# 		}
+# 	}
 
-	on_monthly_pulse = {
-		random_events = {
-			180 = 0
-			20 = acw_followup_events.6
-			20 = acw_followup_events.7
-			20 = acw_followup_events.8
-		}
-	}
+# 	on_monthly_pulse = {
+# 		random_events = {
+# 			180 = 0
+# 			20 = acw_followup_events.6
+# 			20 = acw_followup_events.7
+# 			20 = acw_followup_events.8
+# 		}
+# 	}
 
-	invalid = {
-		NOT = {
-			any_scope_state = {
-				state_region = {
-					is_homeland = cu:dixie
-				}
-			}
-		}
-	}
+# 	invalid = {
+# 		NOT = {
+# 			any_scope_state = {
+# 				state_region = {
+# 					is_homeland = cu:dixie
+# 				}
+# 			}
+# 		}
+# 	}
 
-	timeout = 4380
-}
+# 	timeout = 4380
+# }
 
-je_acw_equality = {
-	icon = "gfx/interface/icons/invention_icons/international_diplomacy.dds"
+# je_acw_equality = {
+# 	icon = "gfx/interface/icons/invention_icons/international_diplomacy.dds"
 
-	group = je_group_historical_content
+# 	group = je_group_historical_content
 
-	complete = {
-		custom_tooltip = {
-			text = acw_african_american_culture_complete_tt
-			cu:afro_american = {
-				NOT = { culture_is_discriminated_in = ROOT }
-			}
-		}
-	}
+# 	complete = {
+# 		custom_tooltip = {
+# 			text = acw_african_american_culture_complete_tt
+# 			cu:afro_american = {
+# 				NOT = { culture_is_discriminated_in = ROOT }
+# 			}
+# 		}
+# 	}
 
-	on_complete = {
-		custom_tooltip = {
-			text = acw_african_american_culture
-			set_variable = acw_gain_african_american
-		}
-		custom_tooltip = {
-			text = reconstruction_progress
-			change_variable = {
-				name = reconstruction_var
-				add = 1
-			}
-		}
-	}
+# 	on_complete = {
+# 		custom_tooltip = {
+# 			text = acw_african_american_culture
+# 			set_variable = acw_gain_african_american
+# 		}
+# 		custom_tooltip = {
+# 			text = reconstruction_progress
+# 			change_variable = {
+# 				name = reconstruction_var
+# 				add = 1
+# 			}
+# 		}
+# 	}
 
-	on_monthly_pulse = {
-		random_events = {
-			180 = 0
-			20 = acw_followup_events.4 # Forty Acres and a Mule
-			20 = acw_followup_events.5 # Supremacist Violence
-			20 = acw_followup_events.6 # Redeemers
-		}
-	}
+# 	on_monthly_pulse = {
+# 		random_events = {
+# 			180 = 0
+# 			20 = acw_followup_events.4 # Forty Acres and a Mule
+# 			20 = acw_followup_events.5 # Supremacist Violence
+# 			20 = acw_followup_events.6 # Redeemers
+# 		}
+# 	}
 
-	timeout = 4380
+# 	timeout = 4380
 
-	invalid = {
-		NOT = {
-			any_scope_state = {
-				state_region = {
-					is_homeland = cu:afro_american
-				}
-			}
-		}
-	}
-}
+# 	invalid = {
+# 		NOT = {
+# 			any_scope_state = {
+# 				state_region = {
+# 					is_homeland = cu:afro_american
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 je_acw_wild_wild_west = {
 	icon = "gfx/interface/icons/war_goals/take_colony.dds"

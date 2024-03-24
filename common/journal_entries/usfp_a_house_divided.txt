@@ -314,170 +314,170 @@ je_usfp_a_house_divided_bleeding_kansas = {
 	progressbar = yes
 }
 
-#The Border States: track and influence the loyalty of the border states in the leadup
-je_usfp_a_house_divided_border_states = {
-	icon = "gfx/interface/icons/generic_icons/secession_culture_ongoing.dds"
+# #The Border States: track and influence the loyalty of the border states in the leadup
+# je_usfp_a_house_divided_border_states = {
+# 	icon = "gfx/interface/icons/generic_icons/secession_culture_ongoing.dds"
 
-	group = je_group_historical_content
+# 	group = je_group_historical_content
 
-	should_be_pinned_by_default = yes
+# 	should_be_pinned_by_default = yes
 
-	#variables track likelyhood of state joining the CSA
-	#below -1: secessionist
-	#-1, 0, or 1: divided
-	#above 1: loyal
-	immediate = {
-		#Border States
-		s:STATE_MISSOURI = {
-			random_scope_state = {
-				limit = {
-					OR = {
-						owner = c:USA
-						owner = c:CSA
-					}
-				}
-				set_variable = {
-					name = usfp_acw_state_loyalty
-					value = 0
-				}
-				save_scope_as = missouri_scope
-			}
-		}
-		#Kansas is handled seperately via Bleeding Kansas JE
-		s:STATE_KENTUCKY = {
-			random_scope_state = {
-				limit = {
-					OR = {
-						owner = c:USA
-						owner = c:CSA
-					}
-				}
-				set_variable = {
-					name = usfp_acw_state_loyalty
-					value = 2
-				}
-				save_scope_as = kentucky_scope
-			}
-		}
-		s:STATE_DELAWARE = {
-			random_scope_state = {
-				limit = {
-					OR = {
-						owner = c:USA
-						owner = c:CSA
-					}
-				}
-				set_variable = {
-					name = usfp_acw_state_loyalty
-					value = 3
-				}
-				save_scope_as = delaware_scope
-			}
-		}
-		s:STATE_MARYLAND = {
-			random_scope_state = {
-				limit = {
-					OR = {
-						owner = c:USA
-						owner = c:CSA
-					}
-				}
-				set_variable = {
-					name = usfp_acw_state_loyalty
-					value = 0
-				}
-				save_scope_as = maryland_scope
-			}
-		}
-		##Upper South
-		s:STATE_VIRGINIA = {
-			random_scope_state = {
-				limit = {
-					OR = {
-						owner = c:USA
-						owner = c:CSA
-					}
-				}
-				set_variable = {
-					name = usfp_acw_state_loyalty
-					value = -3
-				}
-				save_scope_as = virginia_scope
-			}
-		}
-		s:STATE_NORTH_CAROLINA = {
-			random_scope_state = {
-				limit = {
-					OR = {
-						owner = c:USA
-						owner = c:CSA
-					}
-				}
-				set_variable = {
-					name = usfp_acw_state_loyalty
-					value = -4
-				}
-				save_scope_as = north_carolina_scope
-			}
-		}
-		s:STATE_TENNESSEE = {
-			random_scope_state = {
-				limit = {
-					OR = {
-						owner = c:USA
-						owner = c:CSA
-					}
-				}
-				set_variable = {
-					name = usfp_acw_state_loyalty
-					value = -4
-				}
-				save_scope_as = tennessee_scope
-			}
-		}
-		s:STATE_ARKANSAS = {
-			random_scope_state = {
-				limit = {
-					OR = {
-						owner = c:USA
-						owner = c:CSA
-					}
-				}
-				set_variable = {
-					name = usfp_acw_state_loyalty
-					value = -4
-				}
-				save_scope_as = arkansas_scope
-			}
-		}
-		# set_variable = { name = border_states_kentucky_loyalty value = 2 }
-		# set_variable = { name = border_states_delaware_loyalty value = 3 }
-		# set_variable = { name = border_states_maryland_loyalty value = 3 }
-		# #Upper South
-		# set_variable = { name = border_states_virginia_loyalty value = -3 }
-		# set_variable = { name = border_states_arkansas_loyalty value = -4 }
-		# set_variable = { name = border_states_northcarolina_loyalty value = -4 }
-		# set_variable = { name = border_states_tennessee_loyalty value = -4 }
-		# s:STATE_MISSOURI.region_state:USA = {save_scope_as = missouri_scope}
-		# s:STATE_KANSAS.region_state:USA = {save_scope_as = kansas_scope}
-		# s:STATE_KENTUCKY.region_state:USA = {save_scope_as = kentucky_scope}
-		# s:STATE_DELAWARE.region_state:USA = {save_scope_as = delaware_scope}
-		# s:STATE_MARYLAND.region_state:USA = {save_scope_as = maryland_scope}
-		# s:STATE_VIRGINIA.region_state:USA = {save_scope_as = virginia_scope}
-		# s:STATE_NORTH_CAROLINA.region_state:USA = {save_scope_as = northcarolina_scope}
-		# s:STATE_TENNESSEE.region_state:USA = {save_scope_as = tennessee_scope}
-		# s:STATE_ARKANSAS.region_state:USA = {save_scope_as = arkansas_scope}
-	}
+# 	#variables track likelyhood of state joining the CSA
+# 	#below -1: secessionist
+# 	#-1, 0, or 1: divided
+# 	#above 1: loyal
+# 	immediate = {
+# 		#Border States
+# 		s:STATE_MISSOURI = {
+# 			random_scope_state = {
+# 				limit = {
+# 					OR = {
+# 						owner = c:USA
+# 						owner = c:CSA
+# 					}
+# 				}
+# 				set_variable = {
+# 					name = usfp_acw_state_loyalty
+# 					value = 0
+# 				}
+# 				save_scope_as = missouri_scope
+# 			}
+# 		}
+# 		#Kansas is handled seperately via Bleeding Kansas JE
+# 		s:STATE_KENTUCKY = {
+# 			random_scope_state = {
+# 				limit = {
+# 					OR = {
+# 						owner = c:USA
+# 						owner = c:CSA
+# 					}
+# 				}
+# 				set_variable = {
+# 					name = usfp_acw_state_loyalty
+# 					value = 2
+# 				}
+# 				save_scope_as = kentucky_scope
+# 			}
+# 		}
+# 		s:STATE_DELAWARE = {
+# 			random_scope_state = {
+# 				limit = {
+# 					OR = {
+# 						owner = c:USA
+# 						owner = c:CSA
+# 					}
+# 				}
+# 				set_variable = {
+# 					name = usfp_acw_state_loyalty
+# 					value = 3
+# 				}
+# 				save_scope_as = delaware_scope
+# 			}
+# 		}
+# 		s:STATE_MARYLAND = {
+# 			random_scope_state = {
+# 				limit = {
+# 					OR = {
+# 						owner = c:USA
+# 						owner = c:CSA
+# 					}
+# 				}
+# 				set_variable = {
+# 					name = usfp_acw_state_loyalty
+# 					value = 0
+# 				}
+# 				save_scope_as = maryland_scope
+# 			}
+# 		}
+# 		##Upper South
+# 		s:STATE_VIRGINIA = {
+# 			random_scope_state = {
+# 				limit = {
+# 					OR = {
+# 						owner = c:USA
+# 						owner = c:CSA
+# 					}
+# 				}
+# 				set_variable = {
+# 					name = usfp_acw_state_loyalty
+# 					value = -3
+# 				}
+# 				save_scope_as = virginia_scope
+# 			}
+# 		}
+# 		s:STATE_NORTH_CAROLINA = {
+# 			random_scope_state = {
+# 				limit = {
+# 					OR = {
+# 						owner = c:USA
+# 						owner = c:CSA
+# 					}
+# 				}
+# 				set_variable = {
+# 					name = usfp_acw_state_loyalty
+# 					value = -4
+# 				}
+# 				save_scope_as = north_carolina_scope
+# 			}
+# 		}
+# 		s:STATE_TENNESSEE = {
+# 			random_scope_state = {
+# 				limit = {
+# 					OR = {
+# 						owner = c:USA
+# 						owner = c:CSA
+# 					}
+# 				}
+# 				set_variable = {
+# 					name = usfp_acw_state_loyalty
+# 					value = -4
+# 				}
+# 				save_scope_as = tennessee_scope
+# 			}
+# 		}
+# 		s:STATE_ARKANSAS = {
+# 			random_scope_state = {
+# 				limit = {
+# 					OR = {
+# 						owner = c:USA
+# 						owner = c:CSA
+# 					}
+# 				}
+# 				set_variable = {
+# 					name = usfp_acw_state_loyalty
+# 					value = -4
+# 				}
+# 				save_scope_as = arkansas_scope
+# 			}
+# 		}
+# 		# set_variable = { name = border_states_kentucky_loyalty value = 2 }
+# 		# set_variable = { name = border_states_delaware_loyalty value = 3 }
+# 		# set_variable = { name = border_states_maryland_loyalty value = 3 }
+# 		# #Upper South
+# 		# set_variable = { name = border_states_virginia_loyalty value = -3 }
+# 		# set_variable = { name = border_states_arkansas_loyalty value = -4 }
+# 		# set_variable = { name = border_states_northcarolina_loyalty value = -4 }
+# 		# set_variable = { name = border_states_tennessee_loyalty value = -4 }
+# 		# s:STATE_MISSOURI.region_state:USA = {save_scope_as = missouri_scope}
+# 		# s:STATE_KANSAS.region_state:USA = {save_scope_as = kansas_scope}
+# 		# s:STATE_KENTUCKY.region_state:USA = {save_scope_as = kentucky_scope}
+# 		# s:STATE_DELAWARE.region_state:USA = {save_scope_as = delaware_scope}
+# 		# s:STATE_MARYLAND.region_state:USA = {save_scope_as = maryland_scope}
+# 		# s:STATE_VIRGINIA.region_state:USA = {save_scope_as = virginia_scope}
+# 		# s:STATE_NORTH_CAROLINA.region_state:USA = {save_scope_as = northcarolina_scope}
+# 		# s:STATE_TENNESSEE.region_state:USA = {save_scope_as = tennessee_scope}
+# 		# s:STATE_ARKANSAS.region_state:USA = {save_scope_as = arkansas_scope}
+# 	}
 
-	scripted_button = usfp_border_state_missouri_button
-	scripted_button = usfp_border_state_kansas_button
-	scripted_button = usfp_border_state_kentucky_button
-	scripted_button = usfp_border_state_delaware_button
-	scripted_button = usfp_border_state_maryland_button
-	scripted_button = usfp_border_state_virginia_button
-	scripted_button = usfp_border_state_arkansas_button
-	scripted_button = usfp_border_state_northcarolina_button
-	scripted_button = usfp_border_state_tennessee_button
+# 	scripted_button = usfp_border_state_missouri_button
+# 	scripted_button = usfp_border_state_kansas_button
+# 	scripted_button = usfp_border_state_kentucky_button
+# 	scripted_button = usfp_border_state_delaware_button
+# 	scripted_button = usfp_border_state_maryland_button
+# 	scripted_button = usfp_border_state_virginia_button
+# 	scripted_button = usfp_border_state_arkansas_button
+# 	scripted_button = usfp_border_state_northcarolina_button
+# 	scripted_button = usfp_border_state_tennessee_button
 
 
-}
+# }

@@ -70,6 +70,7 @@ indian_removal_end: "The Five Civilized Tribes will be removed from their ancest
 
  je_acw_reconstruction:0 "Reconstruction"
  je_acw_reconstruction_status:1 "Rebuild the nation after the divisive Civil War."
+je_acw_reconstruction_goal:0 "Reconstruct the formerly-rebellious states."
  je_acw_reconstruction_reason:0 "With the Civil War over and slavery abolished, the South's entire way of life has been upended. We must now attempt to reintegrate the rebellious states into the Union, while also incorporating the liberated slaves into our society.\n\nThe #bold Progress Bar#! tracks the status of Reconstruction. Advancing Reconstruction will uphold our promise to the #bold Freedmen#! and ensure their rights and liberties. Unfortunately, the White #bold Redeemers#! of the South will not accept anything even approaching racial equality, and will actively fight to reverse Reconstruction.\n\nWe must choose which is more important to us: the rights and lives of our [SCOPE.sCulture('afro_american_culture').GetName] citizens, or a swift reconciliation with the [SCOPE.sCulture('dixie_culture').GetName] states."
 je_acw_reconstruction_status_radical: "The #bold Freedmen#! are asserting their new rights and positions in society."
 je_acw_reconstruction_status_mixed: "Reconstruction remains highly contested across the South."

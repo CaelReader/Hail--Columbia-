@@ -64,29 +64,31 @@
     }
     
     bill_haywood_hair = {
-        accessory = {
-            mode = replace
-            gene = hairstyles
-            template = european_hairstyles
-            accessory = male_european_hair_16
-        }
-        accessory = {
-            mode = add
-            gene = mustaches
-            template = no_mustache
-            range = { 0 1 } # For the randomness to work correctly
-        }
-        accessory = {
-            mode = add
-            gene = beards
-            template = no_beard
-            range = { 0 1 } # For the randomness to work correctly
-        }
-        accessory = {
-            mode = replace
-            gene = headgear
-            template = european_bowlerhat
-            accessory = male_headgear_european_common_01
+        dna_modifiers = {
+            # accessory = {
+            #     mode = replace
+            #     gene = hairstyles
+            #     template = european_hairstyles
+            #     accessory = male_european_hair_16
+            # }
+            accessory = {
+                mode = add
+                gene = mustaches
+                template = no_mustache
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = no_beard
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = replace
+                gene = headgear
+                template = european_bowlerhat
+                accessory = male_headgear_european_common_01
+            }
         }
         weight = {
             base = 0

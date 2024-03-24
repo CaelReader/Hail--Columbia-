@@ -1114,7 +1114,7 @@ usfp_usa.11 = {
 						is_in_government = yes
 					}
 				}
-				multiply = 3
+				add = 100
 			}
 			modifier = {
 				trigger = {
@@ -1122,7 +1122,7 @@ usfp_usa.11 = {
 						is_powerful = yes
 					}
 				}
-				multiply = 3
+				add = 100
 			}
 		}
 	}
@@ -1322,26 +1322,26 @@ usfp_usa.13 = {
 }
 
 #Hidden event to weight first election
-usfp_usa.14 = {
-	type = country_event
-	hidden = yes
+# usfp_usa.14 = {
+# 	type = country_event
+# 	hidden = yes
 
-	trigger = {
-		exists = c:USA
-		c:USA = root
-		in_election_campaign = yes
-		NOT = {
-			has_variable = had_first_election
-		}
-	}
+# 	trigger = {
+# 		exists = c:USA
+# 		c:USA = root
+# 		in_election_campaign = yes
+# 		NOT = {
+# 			has_variable = had_first_election
+# 		}
+# 	}
 
-	immediate = {
-		set_variable = had_first_election
-		py:conservative_party = {
-			add_momentum = momentum_medium
-		}
-	}
-}
+# 	immediate = {
+# 		set_variable = had_first_election
+# 		py:conservative_party = {
+# 			add_momentum = momentum_medium
+# 		}
+# 	}
+# }
 
 #Hidden event to kill off the Great Triumvirate
 usfp_usa.15 = {

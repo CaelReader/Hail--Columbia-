@@ -637,6 +637,39 @@ ecchi_usa_hoover_character_template = {
 # United States - Other famous politicians
 
 #Emperor Norton is now a base-game agitator
+ecchi_usa_norton_character_template = {
+    first_name = Joshua
+    last_name = Norton
+    culture = cu:british
+    female = no
+    religion = protestant
+    ideology = ideology_royalist
+    interest_group = ig_rural_folk
+    birth_date = 1818.2.4
+	# dna = ecchi_dna_joshua_norton
+    traits = { psychological_affliction imperious romantic }
+    # interest_group_leader_usage = {
+    #     country_trigger = {
+    #         OR = {
+    #             AND = {
+    #                 exists = c:USA
+    #                 this = c:USA
+    #                 NOT = { exists = c:CAL }
+    #             }
+    #             AND = {
+    #                 exists = c:CAL
+    #                 this = c:CAL
+    #             }
+    #         }
+    #     }
+    #     interest_group_trigger = {
+	# 		is_interest_group_type = ig_rural_folk
+    #     }
+    #     earliest_usage_date = 1859.9.1
+    #     latest_usage_date = 1880.1.8
+    #     chance = 10 #Easter Egg
+    # }
+}
 
 ecchi_usa_fremont_character_template = {
     first_name = ecchi_John_C
@@ -676,6 +709,32 @@ ecchi_usa_fremont_character_template = {
         latest_usage_date = 1890.7.13
         chance = 90
     }
+}
+
+#john Brown is now in the base game
+ecchi_usa_brown_character_template = {
+    first_name = John
+    last_name = Brown
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_abolitionist
+    interest_group = ig_rural_folk
+	# dna = ecchi_dna_john_brown
+    birth_date = 1800.5.9
+    traits = { reckless pious brave}
+    # interest_group_leader_usage = {
+    #     country_trigger = {
+    #         exists = c:USA
+    #         this = c:USA
+    #     }
+    #     interest_group_trigger = {
+    #         is_interest_group_type = ig_rural_folk
+    #     }
+    #     earliest_usage_date = 1854.1.1
+    #     latest_usage_date = 1859.12.2
+    #     chance = 90
+    # }
 }
 
 # United States - USA - GENERALS
@@ -736,6 +795,39 @@ ecchi_usa_custer_character_template = {
 # United States - USA - INDUSTRIALISTS
 
 #Henry Ford is now a base-game agitator
+ecchi_usa_ford_character_template = {
+    first_name = Henry
+    # last_name = ecchi_Ford
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_pacifist
+    interest_group = ig_industrialists
+    birth_date = 1863.7.30
+	# dna = ecchi_dna_henry_ford
+    traits = { bigoted innovative meticulous }
+    # interest_group_leader_usage = {
+    #     country_trigger = {
+    #         OR = {
+    #             AND = {
+    #                 exists = c:USA
+    #                 this = c:USA
+    #                 NOT = { exists = c:UOM }
+    #             }
+    #             AND = {
+    #                 exists = c:UOM
+    #                 this = c:UOM
+    #             }
+    #         }
+    #     }
+    #     interest_group_trigger = {
+	# 		is_interest_group_type = ig_industrialists
+    #     }
+    #     earliest_usage_date = 1908.10.1
+    #     latest_usage_date = 1947.4.7
+    #     chance = 90
+    # }
+}
 
 ecchi_usa_astor_character_template = {
     first_name = ecchi_John_Jacob
@@ -768,8 +860,57 @@ ecchi_usa_astor_character_template = {
 }
 
 #JP Morgan is now in the base game
+ecchi_usa_morgan_character_template = {
+    # first_name = ecchi_J_P
+    last_name = Morgan
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_reformer
+    interest_group = ig_industrialists
+    birth_date = 1837.4.17
+	# dna = ecchi_dna_j_p_morgan
+    traits = { meticulous tactful persistent }
+    # interest_group_leader_usage = {
+    #     country_trigger = {
+    #         exists = c:USA
+    #         this = c:USA
+    #     }
+    #     interest_group_trigger = {
+	# 		is_interest_group_type = ig_industrialists
+    #     }
+    #     earliest_usage_date = 1895.1.1
+    #     latest_usage_date = 1913.3.31
+    #     chance = 90
+    # }
+}
 
 #John Rockefeller is now in the base game
+ecchi_usa_rockefeller_character_template = {
+    # # first_name = ecchi_John_D
+    # last_name = ecchi_Rockefeller
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_traditionalist
+    interest_group = ig_industrialists
+	# dna = ecchi_dna_john_rockefeller
+    birth_date = 1839.7.8
+    traits = { pious arrogant expensive_tastes }
+    # interest_group_leader_usage = {
+    #     country_trigger = {
+    #         exists = c:USA
+    #         this = c:USA
+    #     }
+    #     interest_group_trigger = {
+	# 		is_interest_group_type = ig_industrialists
+    #     }
+    #     earliest_usage_date = 1874.1.1
+    #     latest_usage_date = 1937.5.23
+    #     chance = 90
+    # }
+}
+
 
 ecchi_usa_hearst_character_template = {
     first_name = ecchi_William_Randolph
@@ -812,10 +953,62 @@ ecchi_usa_hearst_character_template = {
 }
 
 #Thomas Edison is now in the base game
+ecchi_usa_edison_character_template = {
+    first_name = Thomas
+    # last_name = ecchi_Edison
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_feminist
+    interest_group = ig_industrialists
+    birth_date = 1847.2.11
+	# dna = ecchi_dna_thomas_edison
+    traits = { grifter innovative arrogant }
+    # interest_group_leader_usage = {
+    #     country_trigger = {
+    #         exists = c:USA
+    #         this = c:USA
+    #     }
+    #     interest_group_trigger = {
+    #         is_marginal = no
+	# 		OR = {
+	# 			is_interest_group_type = ig_industrialists
+	# 			is_interest_group_type = ig_intelligentsia
+	# 		}
+    #     }
+    #     earliest_usage_date = 1877.1.1
+    #     latest_usage_date = 1931.10.18
+    #     chance = 90
+    # }
+}
 
 # United States - USA - SOCIALISTS
 
 #Eugene Debs is now a base game agitator
+ecchi_usa_debs_character_template = {
+    # first_name = ecchi_Eugene_V
+    # last_name = ecchi_Debs
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_reformer
+    interest_group = ig_trade_unions
+	# dna = ecchi_dna_eugene_debs
+    birth_date = 1855.11.5
+    traits = { inspirational_orator persistent romantic }
+    # interest_group_leader_usage = {
+    #     country_trigger = {
+    #         exists = c:USA
+    #         this = c:USA
+    #     }
+    #     interest_group_trigger = {
+	# 		is_interest_group_type = ig_trade_unions
+    #     }
+    #     earliest_usage_date = 1879.1.1
+    #     latest_usage_date = 1926.10.20
+    #     chance = 90
+    # }
+}
 
 ecchi_usa_thomas_character_template = {
     first_name = Norman
@@ -824,7 +1017,7 @@ ecchi_usa_thomas_character_template = {
     culture = cu:yankee
     female = no
     religion = protestant
-    ideology = ideology_reformer
+    ideology = ideology_social_democrat #usfp
     interest_group = ig_trade_unions
 	dna = ecchi_dna_norman_thomas
     birth_date = 1884.11.20
@@ -885,7 +1078,7 @@ ecchi_usa_browder_character_template = {
     culture = cu:yankee
     female = no
     religion = protestant
-    ideology = ideology_communist
+    ideology = ideology_vanguardist #usfp
     interest_group = ig_trade_unions
 	dna = ecchi_dna_earl_browder
     birth_date = 1891.5.20
@@ -1214,6 +1407,30 @@ ecchi_usa_hill_character_template = {
 }
 
 #mark twain is in the base game now
+ecchi_usa_twain_character_template = {
+    first_name = Mark
+    # last_name = ecchi_Twain
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_social_democrat
+    interest_group = ig_intelligentsia
+	# dna = ecchi_dna_mark_twain
+    birth_date = 1835.11.30
+    traits = { inspirational_orator charismatic }
+    # interest_group_leader_usage = {
+    #     country_trigger = {
+    #         exists = c:USA
+    #         this = c:USA
+    #     }
+    #     interest_group_trigger = {
+    #         is_interest_group_type = ig_intelligentsia
+    #     }
+    #     earliest_usage_date = 1865.1.1
+    #     latest_usage_date = 1910.4.21
+    #     chance = 90
+    # }
+}
 
 #USFP: agitator instead of IG Leader
 ecchi_usa_chrysler_character_template = {
@@ -1313,7 +1530,7 @@ ecchi_usa_capone_character_template = {
 	dna = ecchi_dna_al_capone
     birth_date = 1899.1.17
     traits = { cruel grifter imperious expensive_tastes scarred }
-    #USFP: removed from leadership role, saved for Event usage
+    #USFP: removed from leadership role, saved for Event usage maybe
 }
 
 
@@ -1722,6 +1939,29 @@ ecchi_tex_crockett_character_template = {
 # United States - ASA - Afro-America
 
 #harriet Tubman is now a base game agitator
+ecchi_asa_tubman_character_template = {
+    first_name = Harriet
+    last_name = Tubman
+    culture = cu:afro_american
+    female = yes
+    religion = protestant
+    ideology = ideology_feminist
+    interest_group = ig_armed_forces
+	# dna = ecchi_dna_harriet_tubman
+    birth_date = 1822.3.23
+    traits = { brave surveyor }
+    commander_rank = default
+    # commander_usage = {
+    #     country_trigger = {
+    #         exists = c:ASA
+    #         this = c:ASA
+    #     }
+    #     role = general
+    #     earliest_usage_date = 1855.1.1
+    #     latest_usage_date = 1913.3.10
+    #     chance = 25
+    # }
+}
 
 #USFP: agitator instead of IG Leader
 ecchi_asa_delany_character_template = {
@@ -1851,8 +2091,68 @@ ecchi_asa_garnet_character_template = {
 
 
 #frederick douglass is now a base game agitator
+ecchi_usa_douglass_character_template = {
+    first_name = Frederick
+    last_name = Douglass
+    culture = cu:afro_american
+    female = no
+    religion = protestant
+    ideology = ideology_reformer
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1818.2.8
+	# dna = ecchi_dna_frederick_douglass
+    traits = { persistent tactful expert_political_operator }
+    # interest_group_leader_usage = {
+    #     country_trigger = {
+	# 		AND = {
+	# 			exists = c:ASA
+	# 			this = c:ASA
+	# 		}
+	# 	}
+    #     interest_group_trigger = {
+    #         is_marginal = no
+	# 		OR = {
+	# 			is_interest_group_type = ig_petty_bourgeoisie
+	# 			is_interest_group_type = ig_intelligentsia
+	# 		}
+    #     }
+    #     earliest_usage_date = 1847.1.1
+    #     latest_usage_date = 1895.2.20
+    #     chance = 90
+    # }
+}
+
 
 #WEB Du Bois is now a base game agitator
+ecchi_asa_du_bois_character_template = {
+    # first_name = ecchi_W_E_B
+    last_name = Du_Bois
+    culture = cu:afro_american
+    female = no
+    religion = protestant
+    ideology = ideology_reformer
+    interest_group = ig_trade_unions
+	# dna = ecchi_dna_web_du_bois
+    birth_date = 1868.2.23
+    traits = { tactful romantic }
+    # interest_group_leader_usage = {
+    #     country_trigger = {
+    #         exists = c:ASA
+    #         this = c:ASA
+    #     }
+    #     interest_group_trigger = {
+    #         is_marginal = no
+	# 		OR = {
+	# 			is_interest_group_type = ig_trade_unions
+	# 			is_interest_group_type = ig_intelligentsia
+	# 		}
+    #     }
+    #     earliest_usage_date = 1899.1.1
+    #     latest_usage_date = 1963.8.27
+    #     chance = 90
+    # }
+}
+
 
 # US theologians
 

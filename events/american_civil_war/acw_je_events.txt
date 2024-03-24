@@ -221,7 +221,7 @@ acw_je_events.1 = {
 				add_modifier = { name = usfp_acw_fsa_modifier months = 48 }
 			}
 		}
-		set_variable = union_side_acw
+		# set_variable = union_side_acw
 	}
 
 	option = {

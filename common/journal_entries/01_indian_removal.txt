@@ -4,10 +4,10 @@
 	group = je_group_historical_content
 
 	immediate = {
-		set_variable = indian_removal_var
-		ruler = {
-			save_scope_as = indian_removal_president
-		}
+		# set_variable = indian_removal_var
+		# ruler = {
+		# 	save_scope_as = indian_removal_president
+		# }
 		c:SEQ = {
 			save_scope_as = indian_territory_scope
 		}

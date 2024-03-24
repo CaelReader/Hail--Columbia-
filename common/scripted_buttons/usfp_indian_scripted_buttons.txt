@@ -146,7 +146,7 @@ usfp_indian_removal_creek_button = {
 
 	possible = {
 		custom_tooltip = {
-			text = usfp_chickasaw_removal_ongoing_tooltip
+			text = usfp_creek_removal_ongoing_tooltip
 			always = no
 		}
 	}

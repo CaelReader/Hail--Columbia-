@@ -1418,6 +1418,7 @@ usfp_manifest_destiny.16 = {
 	#can't try again
 	option = {
 		name = usfp_manifest_destiny.16.a
+		default_option = yes
 		ig:ig_landowners = {
 			add_modifier = {
 				name = usfp_abandoned_cuba
