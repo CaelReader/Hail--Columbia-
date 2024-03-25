@@ -19,6 +19,7 @@ usfp_western_purchase_button = {
 				
 			}
 		}
+		has_variable = manifest_destiny_var
 	}
 
 	possible = {
@@ -123,6 +124,7 @@ usfp_promote_manifest_destiny_button = {
 		NOT = {
 			has_variable = promoted_manifest_destiny_var
 		}
+		has_variable = manifest_destiny_var
 		var:manifest_destiny_var < 6
 	}
 
@@ -163,6 +165,7 @@ usfp_suppress_manifest_destiny_button = {
 		NOT = {
 			has_variable = suppressed_manifest_destiny_var
 		}
+		has_variable = manifest_destiny_var
 		var:manifest_destiny_var > 2
 	}
 
@@ -202,6 +205,7 @@ usfp_homestead_act_button = {
 				has_modifier = usfp_homestead_act_modifier
 			}
 		}
+		has_variable = manifest_destiny_var
 	}
 
 	possible = {
@@ -264,6 +268,7 @@ usfp_cuban_purchase_button = {
 			has_variable = offered_for_cuba
 			owns_entire_state_region = STATE_CUBA
 		}
+		has_variable = manifest_destiny_var
 	}
 
 	possible = {
@@ -335,6 +340,7 @@ usfp_claim_canada_button = {
 	desc = "usfp_claim_canada_button_desc"
 
 	visible = {
+		has_variable = manifest_destiny_var
 		var:manifest_destiny_var >= 10
 		NOT = {
 			has_variable = claimed_canada

@@ -106,6 +106,20 @@ usfp_acw_election_agitators = {
 						has_law = law_type:law_slavery_banned
 					}
 				 }
+				 create_character = {
+					culture = cu:dixie
+					interest_group = ig_landowners
+					female = no
+					is_agitator = yes
+					ideology = ideology_slaver
+					trait_generation = {
+						usfp_acw_agitators_traits = yes
+					}
+					on_created = { 
+						set_variable = { name = temp_event_target_in_use years = 8 }
+						set_variable = { name = usfp_acw_agitator }  
+					}
+				}
 				random_political_movement = {
 				limit = { desired_law = law_type:law_slave_trade }
 					add_modifier = {

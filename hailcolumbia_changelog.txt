@@ -1,0 +1,13 @@
+1.1 "Washington"
+first post-launch patch
+
+Millard Filmore is now a Moderate
+John Sutter shouldn't spawn as Planters leader anymore
+Tweaks to Two-Party System (merged from USCWF by Ferrous)
+Additional support to the Democrats in initial elections
+Slavery Banned will now empower the Enact Slave Trade movement
+Slavery will no longer spread west if you banned slavery
+Adjusted parameters for the Homestead Acts
+Fixed error log spam from Manifest Destiny buttons
+Fixed Bleeding Kansas not ending if you go above 100%
+Fixed Missouri Compromise Broken trigger tooltip

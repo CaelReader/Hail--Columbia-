@@ -182,8 +182,12 @@ free_trade_party = {
 				limit = {
 					OR = {
 						AND = {
-							owner = { ig:ig_intelligentsia = { is_marginal = no } }
 							exists = owner.py:liberal_party
+							owner = {
+								ig:ig_intelligentsia = {
+									is_member_of_party = owner.py:liberal_party
+								}
+							}
 						}
 						year < 1837
 					}
@@ -236,10 +240,14 @@ free_trade_party = {
 						desc = "from_abolitionist_leader"
 					}					
 				}
-				if = { # If WP is around but IT isn't, then it is time to JUMP SHIP!
+				if = { # If WP is around but IT isn't in it, then it is time to JUMP SHIP!
 					limit = {
 						exists = owner.py:liberal_party
-						owner = { ig:ig_intelligentsia = { is_marginal = yes } }
+						owner = {
+							ig:ig_intelligentsia = {
+								NOT = { is_member_of_party = owner.py:liberal_party }
+							}
+						}
 					}
 					multiply = {
 						value = 100

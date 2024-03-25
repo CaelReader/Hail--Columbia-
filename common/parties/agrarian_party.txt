@@ -207,14 +207,18 @@ agrarian_party = {
 				limit = {
 					OR = {
 						AND = {
-							owner = { ig:ig_landowners = { is_marginal = no } }
 							exists = owner.py:conservative_party
+							owner = {
+								ig:ig_landowners = {
+									is_member_of_party = owner.py:conservative_party
+								}
+							}
 						}
 						year < 1837
 					}
 				}
 				add = {
-					value = -20
+					value = -10
 					desc = "usa_two_party_system"
 				}
 			}
@@ -261,10 +265,14 @@ agrarian_party = {
 						desc = "from_abolitionist_leader"
 					}					
 				}
-				if = { # If DP is around but LO isn't, then it is time to JUMP SHIP!
+				if = { # If DP is around but LO isn't in it, then it is time to JUMP SHIP!
 					limit = {
 						exists = owner.py:conservative_party
-						owner = { ig:ig_landowners = { is_marginal = yes } }
+						owner = {
+							ig:ig_landowners = {
+								NOT = { is_member_of_party = owner.py:conservative_party }
+							}
+						}
 					}
 					multiply = {
 						value = 100
