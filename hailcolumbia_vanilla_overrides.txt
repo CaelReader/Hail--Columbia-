@@ -1,0 +1,42 @@
+overrides all vanilla US characters, including votp agitators
+
+common/decisions/manifest_destiny.txt
+common/decisions/texan_statehood.txt
+common/decisions/west_america_expidition_decision.txt
+
+decree_greener_grass_campaign #to prevent stacking with the US's Homestead Acts decision
+common/government_types/00_chiefdoms.txt
+
+common/history/characters/usa - america.txt
+common/history/countries/tex - texas.txt
+common/history/countries/usa - usa.txt
+common/history/governments/usa - usa.txt
+#Note: does NOT override 00_states.txt. All map changes are performed after-the-fact in a global history file for compatibility. May break if a mod changes the underlying state structure of North America.
+
+common/parties/agrarian_party.txt
+common/parties/conservative_party.txt
+common/parties/fascist_party.txt
+common/parties/free_trade_party.txt
+common/parties/liberal_party.txt
+
+ideology_republican_paternalistic
+
+common/interest_groups/00_landowners.txt
+
+common/journal_entries/00_liberalism.txt #to stop the US from getting it
+common/journal_entries/01_acw_entries.txt
+common/journal_entries/01_alaska.txt
+common/journal_entries/01_indian_removal.txt
+common/journal_entries/01_texas.txt
+je_oregon
+
+All slavery laws are overwritten for ai purposes #also includes VTM's "is law important" functionality
+
+events/american_civil_war/acw_events.txt
+events/american_civil_war/acw_followup_events.txt
+events/american_civil_war/acw_je_events.txt
+events/american_civil_war/acw_wild_west_events.txt
+events/manifest_destiny_events.txt
+events/native_resettlement.txt
+events/oregon_events.txt
+events/texan_war_of_independence_events.txt

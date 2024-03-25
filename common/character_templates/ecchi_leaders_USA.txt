@@ -1569,7 +1569,7 @@ ecchi_usa_sutter_sr_character_template = {
         }
         earliest_usage_date = 1840.1.1
         latest_usage_date = 1880.6.21
-        chance = 25 #USFP
+        chance = 5 #USFP
     }
 }
 
@@ -1751,8 +1751,17 @@ ecchi_usa_jefferson_davis_character_template = {
     traits = { meticulous arrogant persistent }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:CSA
-            this = c:CSA
+            OR = {
+                AND = {
+                    exists = c:USA
+                    this = c:USA
+                    NOT = { exists = c:CSA }
+                }
+                AND = {
+                    exists = c:CSA
+                    this = c:CSA
+                }
+            }
         }
         interest_group_trigger = {
             is_marginal = no

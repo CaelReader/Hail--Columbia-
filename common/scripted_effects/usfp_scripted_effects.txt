@@ -232,6 +232,9 @@ usfp_planters_to_landowners_effect = {
 			}
 		}
 	}
+	owner = {
+		recalculate_pop_ig_support = yes
+	}
 }
 
 usfp_calculate_bleeding_kansas_progress = {
@@ -506,19 +509,31 @@ usfp_american_superculture_effect = {
 usfp_reconstruction_swing_freedmen = {
 	custom_tooltip = {
 		text = usfp_reconstruction_swing_freedmen
-		change_variable = {
-			name = reconstruction_var
-			add = 1
+		if = {
+			limit = {
+				var:reconstruction_var < 20
+			 }
+			 change_variable = {
+				name = reconstruction_var
+				add = 1
+			}
 		}
+
 	}
 }
 
 usfp_reconstruction_swing_south = {
 	custom_tooltip = {
 		text = usfp_reconstruction_swing_south
-		change_variable = {
-			name = reconstruction_var
-			subtract = 1
+		if = {
+			limit = {
+				var:reconstruction_var > 0
+			 }
+			 change_variable = {
+				name = reconstruction_var
+				subtract = 1
+			}
 		}
+
 	}
 }

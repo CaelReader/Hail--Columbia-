@@ -729,8 +729,11 @@ usfp_manifest_destiny.9 = {
 		}
 		#need trains to build trains
 		any_scope_building = {
+			count > 15
 			is_building_type = building_railway
-			count > 20
+			NOT = {
+				has_active_production_method = pm_government_run_building_railway
+			}
 		}
 		ig:ig_industrialists = {
 			is_marginal = no
@@ -840,6 +843,10 @@ usfp_manifest_destiny.10 = {
 			text = usfp_manifest_destiny.10.a.t
 			trigger_event = usfp_manifest_destiny.11
 		}
+		set_variable = {
+			name = gold_mountain_arrivals
+			years = 2
+		}
 	}
 
 	#no bad
@@ -854,6 +861,10 @@ usfp_manifest_destiny.10 = {
 		custom_tooltip = {
 			text = usfp_manifest_destiny.10.a.t
 			trigger_event = usfp_manifest_destiny.11
+		}
+		set_variable = {
+			name = gold_mountain_arrivals
+			years = 2
 		}
 	}
 }
@@ -870,8 +881,10 @@ usfp_manifest_destiny.11 = {
 				size = 4000
 			}
 			if = {
-				limit = { 
-					game_date < 1853.1.1
+				limit = {
+					owner = {
+						has_variable = gold_mountain_arrivals
+					} 
 				}
 				owner = {
 					trigger_event = {
@@ -1032,6 +1045,16 @@ usfp_manifest_destiny.13 = {
 				target = rel:animist
 				value < 0.2
 			}
+			# OR = {
+			# 	culture_percent_state = {  
+			# 		target = cu:yankee
+			# 		value > 0.10  
+			# 	}
+			# 	culture_percent_state = {  
+			# 		target = cu:dixie
+			# 		value > 0.10  
+			# 	}  
+			# }
 		}
 	}
 
@@ -1061,6 +1084,16 @@ usfp_manifest_destiny.13 = {
 					target = rel:animist
 					value < 0.2
 				}
+				# OR = {
+				# 	culture_percent_state = {  
+				# 		target = cu:yankee
+				# 		value > 0.10  
+				# 	}
+				# 	culture_percent_state = {  
+				# 		target = cu:dixie
+				# 		value > 0.10  
+				# 	}  
+				# }
 			}
 			save_scope_as = new_homeland_state
 		}

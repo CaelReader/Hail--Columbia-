@@ -30,6 +30,7 @@ wild_west.1 = {
 			}
 			state_population < 100000
 			has_building = building_urban_center
+			usfp_american_west_zone = yes
 		}
 	}
 
@@ -46,6 +47,7 @@ wild_west.1 = {
 				has_building = building_urban_center
 			}
 			save_scope_as = bank_robbery_state
+			usfp_american_west_zone = yes
 		}
 	}
 
@@ -120,6 +122,7 @@ wild_west.2 = {
 			NOT = {
 				has_modifier = iron_horse_raids
 			}
+			usfp_american_west_zone = yes
 		}
 	}
 	
@@ -131,6 +134,7 @@ wild_west.2 = {
 				any_scope_pop = { 
 					culture = { has_discrimination_trait = indigenous_american_heritage }
 				}
+				usfp_american_west_zone = yes
 			}
 			random_scope_pop = { 
 				limit = {

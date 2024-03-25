@@ -353,6 +353,9 @@ acw_followup_events.5 = {
 			}
 		}
 		usfp_reconstruction_swing_freedmen = yes
+		ai_chance = {
+			base = 25
+		}
 	}
 
 	option = {
@@ -374,6 +377,15 @@ acw_followup_events.5 = {
 			}
 		}
 		usfp_reconstruction_swing_south = yes
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					usfp_anti_abolitionist_government = yes
+				}
+				add = 100
+			}
+		}
 	}
 }
 
@@ -450,6 +462,15 @@ acw_followup_events.6 = {
 			}
 		}
 		usfp_reconstruction_swing_south = yes
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					usfp_anti_abolitionist_government = yes
+				}
+				add = 100
+			}
+		}
 	}
 
 	option = {
@@ -473,6 +494,9 @@ acw_followup_events.6 = {
 			}
 		}
 		usfp_reconstruction_swing_freedmen = yes
+		ai_chance = {
+			base = 25
+		}
 	}
 }
 
@@ -541,6 +565,15 @@ acw_followup_events.7 = {
 			}
 		}
 		usfp_reconstruction_swing_south = yes
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					usfp_anti_abolitionist_government = yes
+				}
+				add = 100
+			}
+		}
 	}
 	
 	option = {
@@ -565,6 +598,9 @@ acw_followup_events.7 = {
 			}
 		}
 		usfp_reconstruction_swing_freedmen = yes
+		ai_chance = {
+			base = 75
+		}
 	}
 }
 

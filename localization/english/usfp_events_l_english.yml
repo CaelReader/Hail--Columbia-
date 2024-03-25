@@ -81,7 +81,7 @@ usfp_a_house_divided.15.a.tt: "The [SCOPE.sParty('whig_scope').GetName] will now
 
 usfp_a_house_divided.16.t: "Dred Scott v. Sandford"
 usfp_a_house_divided.16.d: "The Supreme Court has handed down a landmark decision over the case of an [SCOPE.sCulture('afro_american_scope').GetName] man suing for his freedom. The court has ruled that the Constitution extends no rights to any [SCOPE.sCulture('afro_american_scope').GetName], free or slave, and further that Congress has no power to restrict Slavery in the territories."
-usfp_a_house_divided.16.f: "They were not intended to be included, under the word 'citizens' in the Constitution, and can therefore claim none of the rights and privileges which that instrument provides for and secures to citizens of the United States. On the contrary, they were considered by the founders as a subordinate and inferior class of beings who had been subjugated by the dominant race, and, whether emancipated or not, yet remained subject to their authority, and had no rights or privileges but such as those who held the power and the Government might choose to grant them."
+usfp_a_house_divided.16.f: ""They were not intended to be included, under the word 'citizens' in the Constitution, and can therefore claim none of the rights and privileges which that instrument provides for and secures to citizens of the United States. On the contrary, they were considered by the founders as a subordinate and inferior class of beings who had been subjugated by the dominant race, and, whether emancipated or not, yet remained subject to their authority, and had no rights or privileges but such as those who held the power and the Government might choose to grant them.""
 usfp_a_house_divided.16.a: "This is the most obscene ruling in history!"
 usfp_a_house_divided.16.b: "Property is property, that is the end of it."
 
@@ -309,7 +309,7 @@ usfp_manifest_destiny.8.a: "With the navy at our back, we shall go far!"
 usfp_manifest_destiny.8.b: "The military should keep its focus at home."
 
 usfp_manifest_destiny.9.t: "Railroad Tycoons"
-usfp_manifest_destiny.9.d: "As the economy and territory of the [ROOT.GetCountry.GetName] have grown, the [SCOPE.sBuilding('railway_scope').GetName] has steadily grown in importance alongside. Seeing an opportunity for unprecedented profits, [SCOPE.gsInterestGroup('industrialists_scope').GetName] have begun to invest heavily in railroad expansion, and seek favorable land grants from the government."
+usfp_manifest_destiny.9.d: "As the economy and territory of the [ROOT.GetCountry.GetName] has grown, the [SCOPE.sBuilding('railway_scope').GetName] has steadily grown in importance alongside. Seeing an opportunity for unprecedented profits, [SCOPE.gsInterestGroup('industrialists_scope').GetName] have begun to invest heavily in railroad expansion, and seek favorable land grants from the government."
 usfp_manifest_destiny.9.f: ""All over it is felt that the old era of stage coaches and ox and mule transportation is rapidly passing away, and that the locomotive, soon to penetrate the State in all directions, will in future carry the wheat to the wharf, the ore to the mill, the timber to the mine; supply the deficiency of navigable streams, open up millions of acres of the best fruit and grain lands in the world, and make accessible and workable thousands of rich mines."" #Henry George
 usfp_manifest_destiny.9.a: "The railroads will transform the country!"
 usfp_manifest_destiny.9.b: "The railroads are too financially risky."

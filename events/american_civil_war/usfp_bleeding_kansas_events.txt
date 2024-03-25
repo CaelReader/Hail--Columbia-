@@ -65,6 +65,9 @@ usfp_bleeding_kansas.1 = {
 				add = 5
 			}
 		}
+		ai_chance = {
+			base = 100
+		}
 	}
 
 	#bad
@@ -87,6 +90,15 @@ usfp_bleeding_kansas.1 = {
 			add_modifier = {
 				name = ig_abolitionists_mad
 				months = short_modifier_time
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					usfp_anti_abolitionist_government = yes
+				}
+				add = 100
 			}
 		}
 	}
@@ -148,6 +160,9 @@ usfp_bleeding_kansas.2 = {
 				value = 0.05
 			}
 		}
+		ai_chance = {
+			base = 100
+		}
 	}
 	#oh well
 	option = {
@@ -174,6 +189,15 @@ usfp_bleeding_kansas.2 = {
 			change_variable = {
 				name = bleeding_kansas_var
 				subtract = 5
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					usfp_anti_abolitionist_government = yes
+				}
+				add = 100
 			}
 		}
 	}
@@ -216,6 +240,9 @@ usfp_bleeding_kansas.3 = {
 				value = 0.05
 			}
 		}
+		ai_chance = {
+			base = 100
+		}
 	}
 	#fuck em
 	option = {
@@ -232,6 +259,9 @@ usfp_bleeding_kansas.3 = {
 				culture = cu:yankee
 				value = 0.02
 			}
+		}
+		ai_chance = {
+			base = 25
 		}
 	}
 }
@@ -277,6 +307,9 @@ usfp_bleeding_kansas.4 = {
 				value = 0.05
 			}
 		}
+		ai_chance = {
+			base = 100
+		}
 	}
 
 	#they had it coming
@@ -296,6 +329,15 @@ usfp_bleeding_kansas.4 = {
 			change_variable = {
 				name = bleeding_kansas_var
 				subtract = 5
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					usfp_anti_abolitionist_government = yes
+				}
+				add = 100
 			}
 		}
 	}
@@ -346,6 +388,9 @@ usfp_bleeding_kansas.5 = {
 			culture = cu:dixie
 			value = 0.01
 		}
+		ai_chance = {
+			base = 100
+		}
 	}
 	#justified
 	option = {
@@ -366,6 +411,9 @@ usfp_bleeding_kansas.5 = {
 				name = bleeding_kansas_var
 				add = 5
 			}
+		}
+		ai_chance = {
+			base = 5
 		}
 	}
 }
@@ -437,6 +485,9 @@ usfp_bleeding_kansas.6 = {
 				years = 1
 			}
 		}
+		ai_chance = {
+			base = 100
+		}
 	}
 	#intervene!
 	option = {
@@ -453,6 +504,9 @@ usfp_bleeding_kansas.6 = {
 		add_radicals = {
 			value = small_radicals
 			culture = cu:dixie
+		}
+		ai_chance = {
+			base = 0
 		}
 	}
 }
@@ -536,6 +590,9 @@ usfp_bleeding_kansas.7 = {
 			}
 		}
 		usfp_anger_slavers_effect = { MULT = 1 }
+		ai_chance = {
+			base = 100
+		}
 	}
 	#crack down!!
 	option = {
@@ -577,6 +634,15 @@ usfp_bleeding_kansas.7 = {
 			}
 		}
 		usfp_anger_slavers_effect = { MULT = 0.5 }
+		ai_chance = {
+			base = 100
+			modifier = {
+				trigger = {
+					usfp_anti_abolitionist_government = yes
+				}
+				add = 100
+			}
+		}
 	}
 }
 #Competing Constitutions
@@ -621,6 +687,17 @@ usfp_bleeding_kansas.8 = {
 				add = 15
 			}
 		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					ruler = {
+						usfp_anti_slavery_leader_trigger = yes
+					}
+				}
+				add = 1000
+			}
+		}
 	}
 	#Slave Constitution!
 	option = {
@@ -634,6 +711,15 @@ usfp_bleeding_kansas.8 = {
 			change_variable = {
 				name = bleeding_kansas_var
 				subtract = 5
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					usfp_anti_abolitionist_government = yes
+				}
+				add = 100
 			}
 		}
 	}
@@ -650,6 +736,9 @@ usfp_bleeding_kansas.8 = {
 				culture = cu:yankee
 				value = 0.05
 			}
+		}
+		ai_chance = {
+			base = 100
 		}
 	}
 

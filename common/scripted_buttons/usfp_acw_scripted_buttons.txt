@@ -205,7 +205,7 @@ usfp_emancipation_proclamation_button = {
 		any_scope_character = {
 			law_stance = {
 				law = law_type:law_slavery_banned
-				value = strongly_disapprove
+				value = strongly_approve
 			}
 		}
 	}
@@ -229,5 +229,59 @@ usfp_emancipation_proclamation_button = {
 
 	ai_chance = {
 		base = 1000
+	}
+}
+
+#remove the Gag Rule in case you end up with Slaver dominance who want to pass Slave Trade
+usfp_end_gag_rule_button = {
+	name = "usfp_end_gag_rule_button"
+	desc = "usfp_end_gag_rule_button_desc"
+
+	visible = {
+		ruler = {
+			OR = {
+				has_ideology = ideology:ideology_slaver
+				has_ideology = ideology:ideology_ethno_nationalist	
+			}
+		}
+		ig:ig_landowners = {
+			is_in_government = yes
+		}
+	}
+
+	possible = {
+		AND = {
+			ig:ig_landowners = {
+				ig_clout > 0.40
+				is_in_government = yes
+			}
+			ig:ig_intelligentsia = {
+				is_marginal = yes
+			}
+		}
+
+		OR = {
+			custom_tooltip = {
+				text = usfp_end_gag_rule_button_no_abolitionists
+				NOT = {
+					any_political_movement = {
+						desired_law = law_type:law_slavery_banned
+					}
+				}
+			}
+			custom_tooltip = {
+				text = usfp_end_gag_rule_button_slave_trade
+				any_political_movement = {
+					desired_law = law_type:law_slave_trade
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = usfp_end_gag_rule
+			set_variable = removed_gag_rule
+		}
 	}
 }

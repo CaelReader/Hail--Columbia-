@@ -1105,7 +1105,7 @@ usfp_a_house_divided.13 = {
 			create_pop = {
 				pop_type = slaves
 				culture = afro_american
-				size = 200			
+				size = 2000			
 			}
 			save_scope_as = slavery_expanded_state
 		}

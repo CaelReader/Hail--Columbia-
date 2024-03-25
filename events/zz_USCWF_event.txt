@@ -10,50 +10,50 @@ USCWF.1 = {
 		trigger_event = { id = USCWF.2 years = 8 }
 		trigger_event = { id = USCWF.4 months = 7 }
 		#Truces to reset AI consideration of where to begin colonies
-		every_country = {
-			limit = {
-				is_country_type = decentralized
-				country_is_in_north_america = yes
-				NOT = {
-					this = c:CTF
-				}
-			}
-			if = {
-				limit = {
-					c:USA = {
-						is_ai = yes
-					}
-				 }
-				 create_truce = {
-					country = c:USA
-					months = 1
-				 }
-			}
-			if = {
-				limit = {
-					c:MEX = {
-						is_ai = yes
-					}
-				 }
-				 create_truce = {
-					country = c:MEX
-					months = 1
-				 }
-			}
-		}
-		c:COM = {
-			if = {
-				limit = {
-					c:MEX = {
-						is_ai = yes
-					}
-				 }
-				 create_truce = {
-					country = c:MEX
-					months = 24
-				 }
-			}
-		}
+		# every_country = {
+		# 	limit = {
+		# 		is_country_type = decentralized
+		# 		country_is_in_north_america = yes
+		# 		NOT = {
+		# 			this = c:CTF
+		# 		}
+		# 	}
+		# 	if = {
+		# 		limit = {
+		# 			c:USA = {
+		# 				is_ai = yes
+		# 			}
+		# 		 }
+		# 		 create_truce = {
+		# 			country = c:USA
+		# 			months = 1
+		# 		 }
+		# 	}
+		# 	if = {
+		# 		limit = {
+		# 			c:MEX = {
+		# 				is_ai = yes
+		# 			}
+		# 		 }
+		# 		 create_truce = {
+		# 			country = c:MEX
+		# 			months = 1
+		# 		 }
+		# 	}
+		# }
+		# c:COM = {
+		# 	if = {
+		# 		limit = {
+		# 			c:MEX = {
+		# 				is_ai = yes
+		# 			}
+		# 		 }
+		# 		 create_truce = {
+		# 			country = c:MEX
+		# 			months = 24
+		# 		 }
+		# 	}
+		# }
 		ig:ig_petty_bourgeoisie = {
 			leader = {
 				set_variable = is_daniel_webster

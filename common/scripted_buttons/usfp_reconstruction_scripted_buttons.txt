@@ -43,20 +43,7 @@ usfp_reconstruction_enforce_rights_button = {
 	}
 
 	ai_chance = {
-		base = 100
-		modifier = {
-			trigger = {
-				OR = {
-					ig:ig_landowners = {
-						is_in_government = yes
-					}
-					ig:ig_rural_folk = {
-						is_in_government = yes
-					}
-				}
-			}
-			add = -100
-		}
+		base = 5
 	}
 }
 
@@ -107,6 +94,16 @@ usfp_reconstruction_confederate_amnesty_button = {
 		usfp_appease_slavers_effect = {MULT = 2}
 		ig:ig_landowners = {
 			remove_modifier = revolution_lost_ig
+		}
+	}
+
+	ai_chance = {
+		base = 25
+		modifier = {
+			trigger = {
+				usfp_anti_abolitionist_government = yes
+			}
+			add = 100
 		}
 	}
 }

@@ -35,12 +35,7 @@ usfp_acw.1 = {
 		has_global_variable = american_civil_war
 		is_at_war = yes
 		exists = c:CSA
-		any_diplomatic_play = {
-			any_scope_play_involved = {
-				c:USA = this
-				c:CSA = this
-			}
-		}
+		has_war_with = c:CSA
 		in_election_campaign = yes
 	}
 

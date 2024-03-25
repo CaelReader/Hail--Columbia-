@@ -49,6 +49,18 @@ usfp_support_free_kansas_button = {
 			value = 0.01
 		}
 	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = {
+				ruler = {
+					usfp_anti_slavery_leader_trigger = yes
+				}
+			}
+			add = 1000
+		}
+	}
 }
 #Support Border Ruffians
 usfp_support_slave_kansas_button = {
@@ -100,6 +112,16 @@ usfp_support_slave_kansas_button = {
 		add_radicals = {
 			culture = cu:yankee
 			value = 0.01
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = {
+				usfp_anti_abolitionist_government = yes
+			}
+			add = 1000
 		}
 	}
 }
@@ -160,6 +182,9 @@ usfp_enforce_kansas_constitution_button = {
 				}
 			}
 		}
+	}
+	ai_chance = {
+		base = 100
 	}
 
 }

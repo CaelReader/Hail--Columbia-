@@ -3,8 +3,9 @@
 	valid = {
 		is_isolated_from_market = no
 		#USFP: prevent stacking Greener Grass with Homestead Act
-		NOT = {
+		NOR = {
 			has_modifier = usfp_homestead_act_modifier
+			has_modifier = usfp_gold_rush_lawlessness
 		}
 	}
 	modifier = {

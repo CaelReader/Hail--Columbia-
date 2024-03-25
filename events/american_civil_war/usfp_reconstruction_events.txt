@@ -99,6 +99,9 @@ usfp_reconstruction.2 = {
 				months = 6
 			}
 		}
+		ai_chance = {
+			base = 500
+		}
 	}
 
 	#leave them be
@@ -125,6 +128,15 @@ usfp_reconstruction.2 = {
 				culture = cu:afro_american
 				multiplier = -2
 				years = 2
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					usfp_anti_abolitionist_government = yes
+				}
+				add = 100
 			}
 		}
 	}
@@ -209,6 +221,9 @@ usfp_reconstruction.3 = {
 			}
 		}
 		usfp_reconstruction_swing_freedmen = yes
+		ai_chance = {
+			base = 5
+		}
 	}
 	#they must fend for themselves
 	option = {
@@ -220,6 +235,15 @@ usfp_reconstruction.3 = {
 			}
 		}
 		usfp_reconstruction_swing_south = yes
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					usfp_anti_abolitionist_government = yes
+				}
+				add = 100
+			}
+		}
 	}
 }
 #The Lost Cause
@@ -274,6 +298,9 @@ usfp_reconstruction.4 = {
 				years = 5
 			}
 		}
+		ai_chance = {
+			base = 100
+		}
 	}
 	#this is ridiculous
 	option = {
@@ -290,6 +317,9 @@ usfp_reconstruction.4 = {
 			}
 		}
 		usfp_reconstruction_swing_freedmen = yes
+		ai_chance = {
+			base = 5
+		}
 	}
 }
 #hidden event to spawn Confederados
@@ -509,6 +539,10 @@ usfp_reconstruction.8 = {
 		add_loyalists = {
 			value = very_large_radicals
 			culture = cu:afro_american
+		}
+		add_radicals = {
+			value = very_large_radicals
+			culture = cu:dixie
 		}
 		ig:ig_landowners = {
 			usfp_planters_to_landowners_effect = yes

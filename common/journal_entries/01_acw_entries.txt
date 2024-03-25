@@ -205,6 +205,9 @@ je_acw_war = {
 				set_variable = abraham_lincoln
 			}
 		}
+		hidden_effect = {
+			remove_modifier = usfp_acw_union_modifier
+		}
 	}
 
 	fail = {
@@ -217,6 +220,9 @@ je_acw_war = {
 
 	on_fail = {
 		usfp_manifest_less_destiny_effect = yes
+		hidden_effect = {
+			remove_modifier = usfp_acw_union_modifier
+		}
 	}
 
 	on_monthly_pulse = {

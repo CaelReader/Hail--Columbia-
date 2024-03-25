@@ -634,6 +634,7 @@ usfp_usa.8 = {
 		}
 		ordered_interest_group = {
 			limit = {
+				has_party = yes
 				party = scope:republican_party_scope
 			}
 			order_by = ig_clout
@@ -646,6 +647,7 @@ usfp_usa.8 = {
 		}
 		random_interest_group = {
 			limit = {
+				has_party = yes
 				NOT = {
 					party = scope:republican_party_scope
 				}
@@ -690,6 +692,7 @@ usfp_usa.8 = {
 		trigger = {
 			any_interest_group = {
 				is_in_government = no
+				has_party = yes
 				party = scope:republican_party_scope
 			}
 		}
