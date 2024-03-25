@@ -18,6 +18,9 @@ usfp_reconstruction_long = {
 
 	on_timeout = {
 		add_primary_culture = cu:afro_american
+		ig:ig_petty_bourgeoisie = {
+			remove_ideology = ideology_reactionary_segregationist
+		}
 	}
 
 	timeout = 14610

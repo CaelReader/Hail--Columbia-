@@ -26,7 +26,7 @@
 		activate_law = law_type:law_local_police
 		activate_law = law_type:law_no_womens_rights # Women couldn't hold property until ~1839
 		start_enactment = law_type:law_universal_suffrage #states are in the middle of piecemeal removing tax obligations at the start date
-		add_enactment_phase = 1
+		# add_enactment_phase = 1
 		
 		set_institution_investment_level = {
 			institution = institution_colonial_affairs

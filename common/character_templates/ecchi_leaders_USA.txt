@@ -168,7 +168,7 @@ ecchi_usa_fillmore_template = {
     culture = cu:yankee
     female = no
     religion = protestant #Nontrinitarian
-    ideology = ideology_ethno_nationalist #Know Nothing Party
+    ideology = ideology_moderate
     interest_group = ig_petty_bourgeoisie
     birth_date = 1800.1.7
 	dna = ecchi_dna_millard_fillmore
@@ -187,7 +187,7 @@ ecchi_usa_fillmore_template = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1874.3.8
-        chance = 50
+        chance = 25
     }
 }
 
