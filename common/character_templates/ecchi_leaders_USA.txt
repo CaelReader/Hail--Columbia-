@@ -1546,7 +1546,7 @@ ecchi_usa_sutter_sr_character_template = {
 	dna = ecchi_dna_john_sutter_sr
     birth_date = 1803.2.23
     traits = { bigoted cruel ambitious tactful }
-    interest_group_leader_usage = {
+    agitator_usage = {
         country_trigger = {
             OR = {
                 AND = {
@@ -1791,8 +1791,17 @@ ecchi_usa_stephens_character_template = {
     traits = { scarred basic_diplomat }
     interest_group_leader_usage = {
         country_trigger = {
-            exists = c:CSA
-            this = c:CSA
+            OR = {
+                AND = {
+                    exists = c:USA
+                    this = c:USA
+                    NOT = { exists = c:CSA }
+                }
+                AND = {
+                    exists = c:CSA
+                    this = c:CSA
+                }
+            }
         }
         interest_group_trigger = {
             is_marginal = no

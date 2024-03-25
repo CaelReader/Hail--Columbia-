@@ -36,7 +36,7 @@ usfp_monthly_pulse = {
 on_election_campaign_start = {
 	on_actions = {
 		usfp_acw_election_agitators
-		# usfp_us_first_election_railroad
+		usfp_us_first_election_railroad
 	}
 }
 
@@ -99,33 +99,48 @@ usfp_acw_election_agitators = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					OR = {
+						is_enacting_law = law_type:law_slavery_banned
+						has_law = law_type:law_slavery_banned
+					}
+				 }
+				random_political_movement = {
+				limit = { desired_law = law_type:law_slave_trade }
+					add_modifier = {
+						name = modifier_uncommitted_government
+						months = very_long_modifier_time
+					}
+					add_modifier = {
+						name = modifier_movement_state_paramilitarism
+						months = very_long_modifier_time
+					}
+				}
+			}
 
-			# random_political_movement = {
-			# 	limit = { desired_law = law_type:law_slave_trade }
-			# 	# add_modifier = modifier_uncommitted_government
-			# 	# add_modifier = modifier_movement_state_paramilitarism
-			# }
+
 		}
 	}
 }
 
 #Add momentum to the Democrats as soft historical railroading
-# usfp_us_first_election_railroad = {
-# 	effect = {
-# 		if = {
-# 			limit = { 
-# 				c:USA ?= this
-# 				NOT = {
-# 					has_variable = had_first_election
-# 				}
-# 			}
-# 			trigger_event = {
-# 				id = usfp_usa.14
-# 				days = 1
-# 			}
-# 		}
-# 	}
-# }
+usfp_us_first_election_railroad = {
+	effect = {
+		if = {
+			limit = { 
+				c:USA ?= this
+				NOT = {
+					has_variable = had_first_election
+				}
+			}
+			trigger_event = {
+				id = usfp_usa.14
+				days = 1
+			}
+		}
+	}
+}
 
 #Gag Rule enforcement, to allow for Political Movements to still exist
 on_law_enactment_started = {

@@ -86,7 +86,7 @@ usfp_a_house_divided.16.a: "This is the most obscene ruling in history!"
 usfp_a_house_divided.16.b: "Property is property, that is the end of it."
 
 usfp_a_house_divided.17.t: "The Rail Candidate"
-usfp_a_house_divided.17.d: "Admist factional divisions within the [SCOPE.sParty('republican_party_scope').GetName], [SCOPE.sCharacter('real_abraham_lincoln_scope').GetFullName] has emerged as a surprise contender for the nomination. "
+usfp_a_house_divided.17.d: "Amidst factional divisions within the [SCOPE.sParty('republican_party_scope').GetName], [SCOPE.sCharacter('real_abraham_lincoln_scope').GetFullName] has emerged as a surprise contender for the nomination. "
 usfp_a_house_divided.17.f: ""We must have though a man who recognizes the slavery issue as being the living issue of the day; who does not hesitate to declare slavery a wrong, nor to deal with it as such; who believes in the power and duty of Congress to prevent the spread of it.""
 usfp_a_house_divided.17.a: "Honest Abe will carry the day!"
 usfp_a_house_divided.17.b: "We prefer [SCOPE.sCharacter('current_pb_leader').GetFullName]."

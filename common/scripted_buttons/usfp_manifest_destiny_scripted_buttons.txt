@@ -211,12 +211,15 @@ usfp_homestead_act_button = {
 			var:manifest_destiny_var > 2
 		}
 		any_scope_state = {
-			count > 3
+			# count > 3
 			usfp_american_west_zone = yes
 			NOT = {
 				has_modifier = usfp_homestead_act_modifier
 			}
-			free_arable_land > 100
+			OR = {
+				free_arable_land > 100
+				is_split_state = no
+			}
 		}
 		ig:ig_landowners = {
 				is_in_government = no
