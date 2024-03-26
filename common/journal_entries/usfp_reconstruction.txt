@@ -20,6 +20,7 @@ usfp_reconstruction_long = {
 		add_primary_culture = cu:afro_american
 		ig:ig_petty_bourgeoisie = {
 			remove_ideology = ideology_reactionary_segregationist
+			add_ideology = ideology_reactionary_exclusionist
 		}
 	}
 

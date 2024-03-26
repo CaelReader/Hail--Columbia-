@@ -9,6 +9,8 @@
  ideology_republican_moralist_desc:0 "#lore This group, while moralist, still supports a republican form of government.#!"
  ideology_reactionary_segregationist:0 "Segregationist"
  ideology_reactionary_segregationist_desc:0 "#lore This group believes that racial laws are needed to safeguard their interests.#!"
+ ideology_reactionary_exclusionist:0 "Exclusionary"
+ ideology_reactionary_exclusionist_desc:0 "#lore This group is suspicious of cultures they consider to be "too foreign", and believes that the state should curtail their rights.#!"
  ideology_anti_tariff:0 "Anti-Tariff"
  ideology_anti_tariff_desc:0 "#lore This group wants to nullify all tariffs on imports and exports.#!"
  ideology_pro_tariff:0 "Pro-Tariff"
