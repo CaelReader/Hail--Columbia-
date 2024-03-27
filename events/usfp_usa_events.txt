@@ -781,7 +781,7 @@ usfp_usa.9 = {
 
 	trigger = {
 		exists = c:USA
-		c:USA = this
+		c:USA = root
 		OR = {
 			usfp_enacting_super_unconstitutional_law = yes
 			usfp_enacting_unconstitutional_law = yes

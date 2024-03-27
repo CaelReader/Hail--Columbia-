@@ -218,7 +218,7 @@ agrarian_party = {
 					}
 				}
 				add = {
-					value = -10
+					value = -20
 					desc = "usa_two_party_system"
 				}
 			}
@@ -595,7 +595,7 @@ agrarian_party = {
 				}
 			}
 			add = {
-				value = -10
+				value = -20
 				desc = "from_two_party_system"
 			}
 		}

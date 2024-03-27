@@ -349,6 +349,12 @@ usfp_radical_reconstruction_demand = {
 	state_pop_support_law_multicultural_add = 0.10
 }
 
+usfp_colony_ai_workaround = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_colony_growth_creation_mult = 2.00
+	state_colony_growth_speed_mult = -0.50
+}
+
 ##vanilla override
 canada_test_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds

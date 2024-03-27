@@ -46,3 +46,22 @@
 # 	}
 
 # }
+
+# usfp_test.2 = {
+# 	type = country_event
+# 	hidden = yes
+	
+# 	immediate = {
+# 		every_country = {
+# 			limit = {
+# 				is_ai = yes
+# 				country_is_in_north_america = yes
+# 				is_country_type = colonial
+# 			}
+# 			add_modifier = {
+# 				name = usfp_colony_ai_workaround
+# 				months = 2
+# 			}
+# 		}
+# 	}
+# }

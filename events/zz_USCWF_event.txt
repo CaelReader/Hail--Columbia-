@@ -9,6 +9,26 @@ USCWF.1 = {
 		ruler = { set_variable = memento_mori_immunity }
 		trigger_event = { id = USCWF.2 years = 8 }
 		trigger_event = { id = USCWF.4 months = 7 }
+		#trick the AI into colonizing more
+		every_country = {
+			limit = {
+				is_ai = yes
+				OR = {
+					country_is_in_north_america = yes
+					this = c:MEX
+				}
+				NOT = {
+					this = c:TEX
+				}
+				NOT = {
+					is_country_type = decentralized
+				}
+			}
+			add_modifier = {
+				name = usfp_colony_ai_workaround
+				months = 3
+			}
+		}
 		#Truces to reset AI consideration of where to begin colonies
 		# every_country = {
 		# 	limit = {
@@ -53,6 +73,27 @@ USCWF.1 = {
 		# 			months = 24
 		# 		 }
 		# 	}
+		# }
+		# if = {
+		# 	limit = {
+		# 		c:USA = {
+		# 			is_ai = yes
+		# 		}
+		# 	 }
+		# 	 c:LKT = {
+		# 		create_diplomatic_play = {
+		# 			type = dp_native_uprising
+		# 			target_country = c:USA
+		# 			escalation = 100
+		# 		}
+		# 	 }
+		# 	 c:USA = {
+		# 		trigger_event = {
+		# 			id = usfp_test.2
+		# 			days = 1
+		# 		}
+		# 	 }
+
 		# }
 		ig:ig_petty_bourgeoisie = {
 			leader = {
@@ -133,3 +174,5 @@ USCWF.4 = {
 		}
 	}
 }
+
+

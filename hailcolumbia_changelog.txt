@@ -20,3 +20,9 @@ Introduced more chaos into election campaigns for all countries with Census or U
 Adjusted Canadian Confederation to account for map changes
 Fixed event-spawned characters spawning without an IG
 Fixed special loc on Suppress/Promote Continentalism tooltips
+
+1.3 "Washington"
+Encouraged the north american AI to place more colonies at game start
+Define NUM_GROWING_COLONIES_MAX is now 7
+Increased the strength of the US Two-Party System
+A House Divided JE will no longer fire slavery-related events if slavery is banned
