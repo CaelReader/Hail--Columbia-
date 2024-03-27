@@ -171,6 +171,7 @@ usfp_a_house_divided.3 = {
 			 }
 			 create_character = {
 				template = ecchi_usa_jefferson_davis_character_template
+				interest_group = ig:ig_landowners
 				on_created = {
 					set_as_interest_group_leader = yes
 				}
@@ -201,6 +202,9 @@ usfp_a_house_divided.4 = {
 	duration = 3
 
 	trigger = {
+		NOT = {
+			has_law = law_type:law_slavery_banned
+		}
 		game_date > 1853.2.1
 		NOT = {
 			has_global_variable = solomon_northup_spawned
@@ -288,6 +292,9 @@ usfp_a_house_divided.5 = {
 	duration = 3
 
 	trigger = {
+		NOT = {
+			has_law = law_type:law_slavery_banned
+		}
 		game_date > 1852.1.1
 		NOT = {
 			has_global_variable = uncle_toms_cabin
@@ -364,6 +371,9 @@ usfp_a_house_divided.6 = {
 	duration = 3
 
 	trigger = {
+		NOT = {
+			has_law = law_type:law_slavery_banned
+		}
 		game_date > 1857.1.1
 		NOT = {
 			has_global_variable = crisis_of_the_south_published
@@ -783,6 +793,9 @@ usfp_a_house_divided.9 = {
 	hidden = yes
 
 	trigger = {
+		NOT = {
+			has_law = law_type:law_slavery_banned
+		}
 		any_scope_state = {
 			AND = {
 				state_region = s:STATE_TEXAS
@@ -822,6 +835,9 @@ usfp_a_house_divided.10 = {
 	duration = 3
 
 	trigger = {
+		NOT = {
+			has_law = law_type:law_slavery_banned
+		}
 		NOT = {
 			has_variable = kansas_nebraska_act
 		}
@@ -901,6 +917,9 @@ usfp_a_house_divided.11 = {
 
 	#triggered by Kansas-Nebraska Act or Dred Scott decision
 	trigger = {
+		NOT = {
+			has_law = law_type:law_slavery_banned
+		}
 		OR = {
 			has_variable = kansas_nebraska_act_passed
 			has_variable = dred_scott
@@ -1253,6 +1272,8 @@ usfp_a_house_divided.15 = {
 			has_variable = kansas_nebraska_act_passed
 			has_variable = accepted_wilmot_proviso
 			has_modifier = usfp_breaking_compromise
+			has_law = law_type:law_slavery_banned
+			has_journal_entry = je_acw_war
 		}
 		has_modifier = usfp_second_party_system_modifier
 		in_election_campaign = no
@@ -1453,6 +1474,7 @@ usfp_a_house_divided.17 = {
 		set_global_variable = lincoln_spawned
 		create_character = {
 			template = usa_lincoln_character_template
+			interest_group = ig:ig_petty_bourgeoisie
 			# on_created = {
 			# 	set_variable = is_real_abraham_lincoln
 			# }

@@ -1015,7 +1015,7 @@ usfp_manifest_destiny.12 = {
 	}
 }
 
-#hidden event to add american homelands where relevant
+#hidden event to add new homelands where relevant
 usfp_manifest_destiny.13 = {
 	type = country_event
 	hidden = yes
@@ -1030,6 +1030,7 @@ usfp_manifest_destiny.13 = {
 				state_region = s:STATE_CHIHUAHUA
 				state_region = s:STATE_SONORA
 				state_region = s:STATE_BAJA_CALIFORNIA
+				state_region = s:STATE_OKLAHOMA
 			}
 			NOR = {
 				cu:yankee = {
@@ -1044,6 +1045,11 @@ usfp_manifest_destiny.13 = {
 			religion_percent_state = {
 				target = rel:animist
 				value < 0.2
+			}
+			any_scope_pop = {
+				culture = {
+					shares_trait_with_any_primary_culture = root
+				}
 			}
 			# OR = {
 			# 	culture_percent_state = {  
@@ -1069,6 +1075,7 @@ usfp_manifest_destiny.13 = {
 					state_region = s:STATE_CHIHUAHUA
 					state_region = s:STATE_SONORA
 					state_region = s:STATE_BAJA_CALIFORNIA
+					state_region = s:STATE_OKLAHOMA
 				}
 				NOR = {
 					cu:yankee = {
@@ -1083,6 +1090,11 @@ usfp_manifest_destiny.13 = {
 				religion_percent_state = {
 					target = rel:animist
 					value < 0.2
+				}
+				any_scope_pop = {
+					culture = {
+						shares_trait_with_any_primary_culture = root
+					}
 				}
 				# OR = {
 				# 	culture_percent_state = {  

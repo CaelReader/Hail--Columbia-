@@ -1,0 +1,44 @@
+﻿namespace = can_aus
+# Canada complete event for Canada
+can_aus.5 = {
+	type = country_event
+	placement = ROOT
+
+	title = can_aus.5.t
+	desc = can_aus.5.d
+	flavor = can_aus.5.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		top_overlord = {
+			save_scope_as = canada_overlord_country
+		}
+	}
+
+	option = {
+		name = can_aus.5.a
+		add_modifier = {
+			name = can_unified_canada
+			months = normal_modifier_time
+		}
+		if = {
+			limit = {
+				NOT = { is_subject_type = subject_type_dominion }
+			}
+			change_subject_type = subject_type_dominion
+		}
+		change_tag = CAN
+	}
+}

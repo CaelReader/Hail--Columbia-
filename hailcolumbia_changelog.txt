@@ -12,3 +12,11 @@ Adjusted parameters for the Homestead Acts
 Fixed error log spam from Manifest Destiny buttons
 Fixed Bleeding Kansas not ending if you go above 100%
 Fixed Missouri Compromise Broken trigger tooltip
+
+Long Reconstruction now replaces the PB's Segregationist ideology with Exclusionary
+
+1.2 "Washington"
+Introduced more chaos into election campaigns for all countries with Census or Universal Suffrage
+Adjusted Canadian Confederation to account for map changes
+Fixed event-spawned characters spawning without an IG
+Fixed special loc on Suppress/Promote Continentalism tooltips

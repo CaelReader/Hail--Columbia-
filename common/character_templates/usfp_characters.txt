@@ -367,6 +367,7 @@ usfp_william_jennings_bryan_character_template = {
     birth_date = 1860.3.19
     dna = usfp_usa_william_jennings_bryan
     traits = { experienced_political_operator pious firebrand charismatic }
+    # is_agitator = yes
     # Spawned by Event
     on_created = {
         set_variable = is_jennings_bryan

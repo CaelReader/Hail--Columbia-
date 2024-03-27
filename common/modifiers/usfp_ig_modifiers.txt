@@ -176,3 +176,9 @@ usfp_confederados_ig = {
 	interest_group_pop_attraction_mult = 0.10
 	interest_group_pol_str_mult = 0.10
 }
+
+usfp_election_underdog = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_election_positive.dds
+	interest_group_pop_attraction_mult = 0.20
+	interest_group_pol_str_mult = 0.20
+}

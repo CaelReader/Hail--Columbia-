@@ -196,6 +196,7 @@ usa_admiral_sigsbee = {
 	last_name = Dwight_Sigsbee
 	historical = yes
 	culture = cu:yankee
+	ideology = ideology_jingoist_leader
 	female = no
 	birth_date = 1845.1.16
 	commander_usage = {

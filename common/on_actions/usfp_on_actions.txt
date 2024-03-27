@@ -11,6 +11,7 @@ usfp_monthly_pulse = {
 		usfp_usa.6 #Great Chicago Fire
 		usfp_usa.11 #Cross of Gold
 		# usfp_usa.14 #Hidden event to weight first election
+		usfp_usa.16 #Election chaos (ALL democracies, not just the US)
 	}
 	random_events = {
 		200 = 0

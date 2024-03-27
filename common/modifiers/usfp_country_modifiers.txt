@@ -348,3 +348,10 @@ usfp_radical_reconstruction_demand = {
 	state_pop_support_law_cultural_exclusion_add = 0.15
 	state_pop_support_law_multicultural_add = 0.10
 }
+
+##vanilla override
+canada_test_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_add = 50
+	state_colony_growth_speed_mult = 0.25
+}

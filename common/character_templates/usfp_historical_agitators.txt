@@ -297,3 +297,22 @@ usa_mark_twain_character_template = { #Mark Twain
     }
 }
 
+usa_emperor_norton_character_template = {
+    first_name = Joshua
+	last_name = Norton
+	historical = yes
+	culture = cu:british
+	religion = rel:protestant
+	female = no
+    is_agitator = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_humanitarian_royalist
+	birth_date = 1818.2.4
+	dna = dna_emperor_norton
+	traits = {
+		charismatic
+		honorable
+		ambitious
+	}
+}
+
