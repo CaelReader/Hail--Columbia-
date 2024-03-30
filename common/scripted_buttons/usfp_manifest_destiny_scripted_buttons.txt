@@ -289,6 +289,10 @@ usfp_homestead_act_button = {
 		}
 	}
 
+	ai_chance = {
+		base = 1000
+	}
+
 }
 
 usfp_cuban_purchase_button = {
@@ -363,6 +367,18 @@ usfp_cuban_purchase_button = {
 				id = usfp_manifest_destiny.15
 				days = 7
 			}
+		}
+	}
+
+	ai_chance = {
+		base = 5
+		modifier = {
+			trigger = {
+				ruler = {
+					usfp_manifest_destiny_pro_expansion_trigger = yes
+				}
+			}
+			add = 100
 		}
 	}
 
@@ -446,6 +462,17 @@ usfp_claim_canada_button = {
 					}
 				}
 			}
+		}
+	}
+	ai_chance = {
+		base = 5
+		modifier = {
+			trigger = {
+				ruler = {
+					usfp_manifest_destiny_pro_expansion_trigger = yes
+				}
+			}
+			add = 100
 		}
 	}
 }

@@ -278,6 +278,18 @@ usfp_manifest_destiny.4 = {
 			add_claim = c:USA
 		}
 		custom_tooltip = treaty_of_guadalupe
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = yes
+					c:MEX ?= { is_ai = yes }
+				}
+				set_secret_goal = {
+					country = c:MEX
+					secret_goal = conquer
+				}
+			}
+		}
 		ai_chance = {
 			base = 1000
 		}

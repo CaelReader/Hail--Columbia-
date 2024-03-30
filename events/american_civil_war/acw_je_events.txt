@@ -195,14 +195,14 @@ acw_je_events.1 = {
 				}
 				add_declared_interest = region_england
 				add_declared_interest = region_france
-				create_diplomatic_pact = {
-					country = c:GBR
-					type = increase_relations
-				}
-				create_diplomatic_pact = {
-					country = c:FRA
-					type = increase_relations
-				}
+				# create_diplomatic_pact = {
+				# 	country = c:GBR
+				# 	type = increase_relations
+				# }
+				# create_diplomatic_pact = {
+				# 	country = c:FRA
+				# 	type = increase_relations
+				# }
 			}
 		}
 		else = {

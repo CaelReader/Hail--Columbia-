@@ -37,9 +37,11 @@ Confederate soldiers now wear grey uniforms
 New flags for alternate US governments (Dictatorship, Monarchy, Anarchy, Council Republic w/ Universal Suffrage)
 Mexican Purchase can't be offered again if choose to gain claims
 Reduced cooldown on Mexican Purchase offer to 3 years
-Ensured AI US will get claims on Mexico if possible
+Ensured AI US will get claims on Mexico and pursue them if possible
 Re-added vanilla Bison Hunting event, to the Wild West JE
 Hopefully ensured the Democratic Party doesn't dissolve before the ACW
 Adjusted parameters for the Homestead Acts
 Bleeding Kansas spawns more radicals upon starting
+Trent Affair will now spawn correctly
+Slightly nerfed the colony debuff from Effective Native Resistance
 Fixed some script errors

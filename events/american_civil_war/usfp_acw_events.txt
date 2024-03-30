@@ -124,12 +124,12 @@ usfp_acw.2 = {
 			has_variable = trent_affair
 		}
 		exists = c:CSA
-		c:CSA = {
-			has_diplomatic_pact = {
-				who = c:GBR
-				type = increase_relations
-			}
-		}
+		# c:CSA = {
+		# 	has_diplomatic_pact = {
+		# 		who = c:GBR
+		# 		type = increase_relations
+		# 	}
+		# }
 		c:GBR = {
 			NOR = {
 				is_diplomatic_play_participant_with = c:USA
@@ -165,10 +165,10 @@ usfp_acw.2 = {
 				name = usfp_diplomats_intercepted 
 				years = 2
 			}
-			remove_diplomatic_pact = {
-				country = c:GBR
-				type = increase_relations
-			}
+			# remove_diplomatic_pact = {
+			# 	country = c:GBR
+			# 	type = increase_relations
+			# }
 		}
 	}
 }
