@@ -40,5 +40,6 @@ Reduced cooldown on Mexican Purchase offer to 3 years
 Ensured AI US will get claims on Mexico if possible
 Re-added vanilla Bison Hunting event, to the Wild West JE
 Hopefully ensured the Democratic Party doesn't dissolve before the ACW
-Adjusted parameters for the Homestead Acts 
+Adjusted parameters for the Homestead Acts
+Bleeding Kansas spawns more radicals upon starting
 Fixed some script errors
