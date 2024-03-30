@@ -25,6 +25,16 @@
 			add_ideology = ideology_reactionary_segregationist
 			add_ideology = ideology_anti_tariff
 			set_ig_trait = ig_trait:ig_trait_profitable_estates
+			if = {
+				limit = {
+					NOT = {
+						this = c:CSA
+					}
+				 }
+				 set_interest_group_name = ig_landowners
+				 set_ig_trait = ig_trait:usfp_ig_trait_lawmen
+
+			}
 		}
 		ig:ig_industrialists = {
 			add_ideology = ideology_pro_tariff

@@ -520,3 +520,70 @@ usfp_usa_john_fauntroy = {
         chance = 10
     }
 }
+
+usa_general_grant = {
+	first_name = Ulysses
+	last_name = Grant
+	historical = yes
+	culture = cu:dixie
+	female = no
+	religion = protestant
+	ideology = ideology_usfp_abolitionist_radical
+	commander_rank = default
+	interest_group = ig_armed_forces
+	birth_date = 1822.1.21
+	dna = dna_ulysses_s_grant
+	traits = {
+		expert_offensive_planner
+		persistent
+		meticulous
+	}
+	commander_usage = {
+		country_trigger = {
+			exists = c:USA
+			this = c:USA
+		}
+		role = general
+		earliest_usage_date = 1846.1.1
+		latest_usage_date = 1874.1.1	
+		chance = 100
+	}
+}
+
+usa_general_lee = {
+	first_name = Robert
+	last_name = Lee
+	historical = yes
+	culture = cu:dixie
+	female = no
+	religion = protestant
+	ideology = ideology_moderate
+	commander_rank = default
+	interest_group = ig_landowners
+	birth_date = 1807.1.19
+	dna = dna_robert_e_lee
+	traits = {
+		experienced_defensive_strategist
+		innovative
+		celebrity_commander
+	}
+	commander_usage = {
+		country_trigger = {
+			OR ={
+				AND = {
+					exists = c:USA
+					this = c:USA
+					NOT = { exists = c:CSA }
+				}
+				AND = {
+					exists = c:CSA
+					this = c:CSA
+				}
+			}
+		}
+		role = general
+		earliest_usage_date = 1846.1.1
+		latest_usage_date = 1870.1.1	
+		chance = 50
+	}
+}

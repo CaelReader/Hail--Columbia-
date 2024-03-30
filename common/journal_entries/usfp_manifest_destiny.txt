@@ -45,6 +45,12 @@ usfp_manifest_destiny_main = {
 		}
 	}
 
+	invalid = {
+		NOT = {
+			root = c:USA
+		}
+	}
+
 	should_be_pinned_by_default = yes
 
 	on_monthly_pulse = {
@@ -241,6 +247,8 @@ usfp_manifest_destiny_main = {
 	}
 
 	weight = 500
+
+	can_revolution_inherit = yes
 
 }
 

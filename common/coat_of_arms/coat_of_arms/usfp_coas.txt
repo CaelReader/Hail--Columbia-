@@ -1,4 +1,8 @@
-﻿SMN = {
+﻿@third = @[1/3]
+@sixth = @[1/6]
+@pi = 3.1416
+
+SMN = {
 	pattern = "pattern_horizontal_split_01.tga"
 	color1 = "white"
 	color2 = "red"
@@ -58,4 +62,389 @@ ASK_sub_RUS  = {
         parent = "sub_RUS_coa" 
         instance = { scale = { 0.5 0.5 } offset = { 0.025 0.025 } }
     }
+}
+
+USA = {
+	@usa_canton_width = 0.5
+	@usa_canton_height = @[ 1 / 13 * 7 ]
+	
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "blue"
+
+	sub = { 
+		parent = "sub_USA_stripes" 
+	} 
+    sub = {
+        parent = "sub_USA_canton_24" 
+        instance = { scale = { @usa_canton_width @usa_canton_height }  } # top left
+    }
+}
+
+sub_USA_canton_24 = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "white"
+	
+	@usa_star_scale_24 = 0.2
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = color2
+		color2 = color2
+		
+		# 24 stars
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 1 ] @[ 1 / 5 * 1 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 2 ] @[ 1 / 5 * 1 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 3 ] @[ 1 / 5 * 1 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 4 ] @[ 1 / 5 * 1 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 5 ] @[ 1 / 5 * 1 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 6 ] @[ 1 / 5 * 1 ] } }
+		
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 1 ] @[ 1 / 5 * 2 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 2 ] @[ 1 / 5 * 2 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 3 ] @[ 1 / 5 * 2 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 4 ] @[ 1 / 5 * 2 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 5 ] @[ 1 / 5 * 2 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 6 ] @[ 1 / 5 * 2 ] } }
+		
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 1 ] @[ 1 / 5 * 3 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 2 ] @[ 1 / 5 * 3 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 3 ] @[ 1 / 5 * 3 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 4 ] @[ 1 / 5 * 3 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 5 ] @[ 1 / 5 * 3 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 6 ] @[ 1 / 5 * 3 ] } }
+		
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 1 ] @[ 1 / 5 * 4 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 2 ] @[ 1 / 5 * 4 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 3 ] @[ 1 / 5 * 4 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 4 ] @[ 1 / 5 * 4 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 5 ] @[ 1 / 5 * 4 ] } }
+		instance = { scale = { @usa_star_scale_24 @usa_star_scale_24 } position = { @[ 1 / 7 * 6 ] @[ 1 / 5 * 4 ] } }
+	}
+}
+
+USA_coa = {
+	# USA Coat of Arms used as a royal banner
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "white"
+	color3 = "red"
+	
+	sub = {
+		parent = "sub_usa_monarch_eagle"
+	}
+	colored_emblem = {
+		texture = "ce_stripes_13.dds"
+		color1 = "red"
+		instance = { position = { 0.5 0.5 } scale = { 1 1 }}
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "white"
+		instance = { scale = { 1.1 1.1 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "blue"
+	}
+	# colored_emblem = {
+	# 	texture = "ce_bicolor_right.dds"
+	# 	color1 = "white"
+	# 	instance = { position = { 0.7 0.5 } scale = { 1 1 }}
+	# }
+
+	colored_emblem = {
+		texture = "ce_wreath.dds"
+		color1 = "yellow"
+		instance = { scale = { 1.1 1.1 } position = { 0.5 0.5 } }
+	}
+
+}
+sub_usa_monarch_eagle = {
+	textured_emblem = {
+		texture = "usa_glory.dds"
+		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
+	}
+	# textured_emblem = {
+	# 	texture = "te_usa_bald_eagle.dds"
+	# 	instance = { scale = { 0.75 0.75 } position = { 0.5 0.5 } }
+	# }		
+	# textured_emblem = {
+	# 	texture = "te_coa_usa.dds" 
+	# 	instance = { scale = { 0.32 0.32 } position = { 0.5 0.52 } }
+	# }
+}
+USA_theocracy = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_stripes_13.dds"
+		color1 = "red"
+		color2 = "red"
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "blue"
+		color2 = "blue"
+		instance = { position = { 0.25 @[ 1 / 13 * 7 / 2 ] } scale = { 0.5 @[ 1 / 13 * 7 ] } }		
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.25 @[ 1 / 13 * 7 / 2 ] } scale = { 0.06 0.4 } }
+		instance = { position = { 0.25 @[ 1 / 13 * 7 / 2 - 0.05 ] } scale = { 0.2 0.09 } }		
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.25 @[ 1 / 13 * 7 / 2 ] } scale = { 0.04 0.37 } }
+		instance = { position = { 0.25 @[ 1 / 13 * 7 / 2 - 0.05 ] } scale = { 0.18 0.06 } }		
+	}	
+}
+
+USA_dictatorship = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "white"
+	
+	sub = {
+		parent = "sub_usa_autocrat_eagle"
+		instance = { scale = { 0.9 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_bicolor_right.dds"
+		color1 = "white"
+		instance = { position = { 0.65 0.5 } scale = { 1 1 }}
+	}
+	colored_emblem = {
+		texture = "ce_stripes_13.dds"
+		color1 = "red"
+		instance = { position = { 0.85 0.5 } scale = { 0.35 1 }}
+	}
+}
+
+sub_usa_autocrat_eagle = {
+	colored_emblem = {
+		texture = "ce_eagle_usa_simple.dds"
+		color1 = "white"
+		color2 = "yellow"
+		color3 = "blue"
+		instance = { scale = { 1.1 1.1 } position = { 0.4 0.52 } }
+	}		
+	textured_emblem = {
+		texture = "te_coa_usa.dds"
+		instance = { scale = { 0.45 0.45 } position = { 0.4 0.55 } }
+	}
+}
+
+USA_communist = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_stars_circle_13.dds"
+		color1 = "yellow"
+		color2 = "red"
+		instance = { position = { 0.20 0.30 } scale = { 0.5 0.5 } } 
+	}	
+	colored_emblem = {
+		texture = "ce_hammer_sickle_cogwheel_usa.dds"
+		color1 = "yellow"
+		color2 = "red"
+		instance = { position = { 0.20 0.31 } scale = { 0.33 0.33 } } 
+	}
+}
+
+USA_anarchist = {
+	pattern = "pattern_per_bend_senester.dds"
+	color1 = "black"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_bend_sinister_thin.dds"
+		color1 = "white"
+	}
+	colored_emblem = {
+		texture = "usa_iww_globe.dds"
+		color1 = "black"
+		color2 = "white"
+		instance = { scale = {0.75 0.75}}
+	}
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = "white"
+		instance = { position = { 0.5 0.32 } scale = { 0.18 0.18 } } 
+		instance = { position = { 0.39 0.40 } scale = { 0.18 0.18 } }
+		instance = { position = { 0.61 0.40 } scale = { 0.18 0.18 } } 
+	}
+}
+
+USA_syndicalist = {
+	pattern = "pattern_per_bend_senester.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "blue"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "white"
+	}
+	colored_emblem = {
+		texture = "ce_stripes_13.dds"
+		color1 = "red"
+		color2 = "red"
+	}
+	colored_emblem = {
+		texture = "ce_bend_sinister_thin_filled.dds"
+		color1 = "white"
+		color2 = "blue"
+	}
+	colored_emblem = {
+		texture = "ce_stars_circle_13.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.20 0.30 } scale = { 0.5 0.5 } } 
+	}	
+	colored_emblem = {
+		texture = "ce_hammer_sickle_cogwheel_usa.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.20 0.31 } scale = { 0.33 0.33 } } 
+	} 
+}
+
+USA_fascist = {	
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_stripes_13.dds"
+		color1 = "red"
+		color2 = "red"
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "blue"
+		color2 = "blue"
+		instance = { scale = { 0.5 0.5 } position = { 0.25 0.25 } }	
+	}
+    sub = {
+        parent = "sub_USA_fascist_eagle" 
+        instance = { scale = { 0.5 0.5 } }
+    }			
+}
+
+USA_technocracy = { 
+	pattern = "pattern_solid.tga"
+	color1 = "grey"
+	color2 = "white"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_korea_taegeuk.dds"
+		color1 = "red"
+		color2 = "white"
+        instance = { position = { 0.5 0.5 } scale = { 0.85 0.85 } }		
+	}
+
+	colored_emblem = {
+		texture = "ce_frame_circle_outline.dds"
+		color1 = "grey"
+		color2 = "grey"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.5 } }		
+	}
+}
+
+CSA = {
+	# Stars & bars (13 stars version, arranged & rotated in circle)	
+	pattern = "pattern_solid.tga"
+	color1 = "grey"
+	color2 = "blue"
+	color3 = "grey"
+
+	colored_emblem = {
+		texture = "ce_bicolor_top.dds"
+		color1 = "red"
+	}
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+    sub = {
+        parent = "sub_CSA_canton_stars" 
+        instance = { scale = { 0.5 @[third*2.005] }  } # top left
+    }
+}
+CSA_stainless = {
+	# Stainless banner (13 stars design, aligned with saltire)
+	
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+    sub = {
+        parent = "sub_CSA_canton_saltire" 
+        instance = { scale = { 0.5 @[third*2.005] }  } # top left
+    }
+}
+CSA_blood_stained = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+    sub = {
+        parent = "sub_CSA_canton_saltire" 
+        instance = { scale = { 0.5 @[third*2.005] }  } # top left
+    }
+}
+CSA_battle_flag = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+    sub = {
+        parent = "sub_CSA_saltire" 
+    }
+}
+sub_CSA_canton_stars = {
+	# 13 stars design
+
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red"
+	
+	colored_emblem = {
+		texture = "ce_stars_circle_13.dds"
+		color1 = color2
+		color2 = color2
+		instance = { scale = { 1.5 1.0 }  }		
+	}	
+}
+
+sub_CSA_canton_saltire = {
+	# Saltire with titled stars. Too use with ratio close to 1:1 
+
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+
+	colored_emblem = {
+		texture = "ce_saltire_fimbriated.dds"
+		color1 = color2
+		color2 = color3
+	}
+	colored_emblem = {
+		texture = "ce_star_saltire_13.dds"
+		color1 = color2
+		color2 = color2
+		instance = { scale = { 1.5 1.0 } position = { 0.5 0.5 } }		
+	}		
 }

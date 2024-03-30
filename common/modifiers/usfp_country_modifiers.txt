@@ -355,9 +355,17 @@ usfp_colony_ai_workaround = {
 	state_colony_growth_speed_mult = -0.50
 }
 
+usfp_labor_agitation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_socialism_negative.dds
+	country_laborers_pol_str_mult = 0.10
+	country_machinists_pol_str_mult = 0.10
+	state_radicals_from_sol_change_mult = 0.10
+}
+
 ##vanilla override
 canada_test_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 	country_prestige_add = 50
 	state_colony_growth_speed_mult = 0.25
 }
+

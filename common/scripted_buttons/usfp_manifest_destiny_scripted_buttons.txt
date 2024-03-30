@@ -20,6 +20,9 @@ usfp_western_purchase_button = {
 			}
 		}
 		has_variable = manifest_destiny_var
+		NOT = {
+			has_claim = s:STATE_CALIFORNIA
+		}
 	}
 
 	possible = {
@@ -50,7 +53,7 @@ usfp_western_purchase_button = {
 		}
 		set_variable = {
 			name = usa_western_purchase_var
-			years = 4
+			years = 3
 		}
 		c:MEX = {
 			trigger_event = {
@@ -229,6 +232,7 @@ usfp_homestead_act_button = {
 			}
 		}
 		has_variable = manifest_destiny_var
+		game_date < 1910.1.1
 	}
 
 	possible = {
@@ -243,8 +247,9 @@ usfp_homestead_act_button = {
 			NOT = {
 				has_modifier = usfp_homestead_act_modifier
 			}
+			free_arable_land >= 40
 			OR = {
-				free_arable_land > 100
+				free_arable_land >= 100
 				is_split_state = no
 			}
 		}
@@ -270,6 +275,11 @@ usfp_homestead_act_button = {
 				usfp_american_west_zone = yes
 				NOT = {
 					has_modifier = usfp_homestead_act_modifier
+				}
+				free_arable_land >= 40
+				OR = {
+					free_arable_land >= 100
+					is_split_state = no
 				}
 			}
 			add_modifier = {

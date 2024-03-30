@@ -182,3 +182,9 @@ usfp_election_underdog = {
 	interest_group_pop_attraction_mult = 0.20
 	interest_group_pol_str_mult = 0.20
 }
+
+usfp_party_nominee_ig = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_election_positive.dds
+	interest_group_pol_str_mult = 0.25
+	interest_group_pol_str_mult = 0.05
+}

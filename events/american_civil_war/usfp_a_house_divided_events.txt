@@ -1501,6 +1501,12 @@ usfp_a_house_divided.17 = {
 		default_option = yes
 		scope:real_abraham_lincoln_scope = {
 			set_as_interest_group_leader = yes
+			interest_group = {
+				add_modifier = {
+					name = usfp_party_nominee_ig
+					months = 6
+				}
+			}
 		}
 	}
 

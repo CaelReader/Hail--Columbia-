@@ -40,3 +40,6 @@ events/manifest_destiny_events.txt
 events/native_resettlement.txt
 events/oregon_events.txt
 events/texan_war_of_independence_events.txt
+can_aus.5
+
+common/scripted_buttons/turtle_island_buttons.txt

@@ -68,6 +68,9 @@ USCWF_opportunist_CSA_on_action = {
 					is_civil_war_type = revolution
 					civil_war_progress >= 0.75
 				}
+				ig:ig_landowners = {
+					is_insurrectionary = no
+				}
 			}
 			ig:ig_landowners = {
 				remove_ruling_interest_group = yes

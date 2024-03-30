@@ -95,13 +95,76 @@ acw_je_events.1 = {
 				s:STATE_MARYLAND.region_state:CSA = { set_state_owner = c:USA }
 				s:STATE_DELAWARE.region_state:CSA = { set_state_owner = c:USA }
 				# s:STATE_WEST_VIRGINIA.region_state:CSA = { set_state_owner = c:USA } #breaks away from the CSA by event
-				s:STATE_NEBRASKA.region_state:CSA = { set_state_owner = c:USA }
-				s:STATE_IOWA.region_state:CSA = { set_state_owner = c:USA }
-				s:STATE_KANSAS.region_state:CSA = { set_state_owner = c:USA }
-				s:STATE_COLORADO.region_state:CSA = { set_state_owner = c:USA }
-				s:STATE_UTAH.region_state:CSA = { set_state_owner = c:USA }
-				s:STATE_NEVADA.region_state:CSA = { set_state_owner = c:USA }
-				s:STATE_CALIFORNIA.region_state:CSA = { set_state_owner = c:USA }
+				if = {
+					limit = { 
+						s:STATE_NEBRASKA = {
+							any_scope_state = {
+								owner = c:CSA
+							}
+						}
+					}
+					s:STATE_NEBRASKA.region_state:CSA = { set_state_owner = c:USA }
+				}
+				if = {
+					limit = { 
+						s:STATE_IOWA = {
+							any_scope_state = {
+								owner = c:CSA
+							}
+						}
+					}
+					s:STATE_IOWA.region_state:CSA = { set_state_owner = c:USA }
+				}
+				if = {
+					limit = { 
+						s:STATE_KANSAS = {
+							any_scope_state = {
+								owner = c:CSA
+							}
+						}
+					}
+					s:STATE_KANSAS.region_state:CSA = { set_state_owner = c:USA }
+				}
+				if = {
+					limit = { 
+						s:STATE_COLORADO = {
+							any_scope_state = {
+								owner = c:CSA
+							}
+						}
+					}
+					s:STATE_COLORADO.region_state:CSA = { set_state_owner = c:USA }
+				}
+				if = {
+					limit = { 
+						s:STATE_UTAH = {
+							any_scope_state = {
+								owner = c:CSA
+							}
+						}
+					}
+					s:STATE_UTAH.region_state:CSA = { set_state_owner = c:USA }
+				}
+				if = {
+					limit = { 
+						s:STATE_NEVADA = {
+							any_scope_state = {
+								owner = c:CSA
+							}
+						}
+					}
+					s:STATE_NEVADA.region_state:CSA = { set_state_owner = c:USA }
+				}
+				if = {
+					limit = { 
+						s:STATE_CALIFORNIA = {
+							any_scope_state = {
+								owner = c:CSA
+							}
+						}
+					}
+					s:STATE_CALIFORNIA.region_state:CSA = { set_state_owner = c:USA }
+				}
 
 				# Re-enslave pops if the ACW happens after slavery has been abolished
 				if = {
@@ -130,6 +193,8 @@ acw_je_events.1 = {
 					}
 					activate_law = law_type:law_presidential_republic
 				}
+				add_declared_interest = region_england
+				add_declared_interest = region_france
 				create_diplomatic_pact = {
 					country = c:GBR
 					type = increase_relations
@@ -184,12 +249,26 @@ acw_je_events.1 = {
 		}
 		random_diplomatic_play = {
 			limit = {
-				any_scope_play_involved = {
-					OR = {
-						this = scope:csa_scope
-						this = scope:fsa_scope
+				OR = {
+					AND = {
+						exists = scope:fsa_scope
+						any_scope_play_involved = {
+							this = scope:fsa_scope
+						}
+					}
+					AND = {
+						exists = scope:csa_scope
+						any_scope_play_involved = {
+							this = scope:csa_scope
+						}
 					}
 				}
+				# any_scope_play_involved = {
+				# 	OR = {
+				# 		this = scope:csa_scope
+				# 		this = scope:fsa_scope
+				# 	}
+				# }
 			}
 			remove_war_goal = {
 				who = initiator

@@ -244,6 +244,9 @@ usfp_manifest_destiny.4 = {
 	option = {
 		name = usfp_manifest_destiny.4.a
 		default_option = yes
+		ai_chance = {
+			base = 100
+		}
 	}
 
 	#MANIFEST DESTINY
@@ -275,6 +278,9 @@ usfp_manifest_destiny.4 = {
 			add_claim = c:USA
 		}
 		custom_tooltip = treaty_of_guadalupe
+		ai_chance = {
+			base = 1000
+		}
 	}
 }
 

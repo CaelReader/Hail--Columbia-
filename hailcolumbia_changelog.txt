@@ -26,3 +26,19 @@ Encouraged the north american AI to place more colonies at game start
 Define NUM_GROWING_COLONIES_MAX is now 7
 Increased the strength of the US Two-Party System
 A House Divided JE will no longer fire slavery-related events if slavery is banned
+
+1.4 "Washington"
+Added ideologies to historical generals/admirals, mostly to prevent them from spawning as vanguardists erroneously
+Bill Haywood no longer automatically becomes leader of the TUs
+Nominating Lincoln now grants his IG a temporary clout boost
+Ulysses Grant is now a Radical Abolitionist
+American soldiers now wear blue uniforms
+Confederate soldiers now wear grey uniforms
+New flags for alternate US governments (Dictatorship, Monarchy, Anarchy, Council Republic w/ Universal Suffrage)
+Mexican Purchase can't be offered again if choose to gain claims
+Reduced cooldown on Mexican Purchase offer to 3 years
+Ensured AI US will get claims on Mexico if possible
+Re-added vanilla Bison Hunting event, to the Wild West JE
+Hopefully ensured the Democratic Party doesn't dissolve before the ACW
+Adjusted parameters for the Homestead Acts 
+Fixed some script errors
