@@ -45,9 +45,10 @@ wild_west.1 = {
 				}
 				state_population < 100000
 				has_building = building_urban_center
+				usfp_american_west_zone = yes
 			}
 			save_scope_as = bank_robbery_state
-			usfp_american_west_zone = yes
+			
 		}
 	}
 

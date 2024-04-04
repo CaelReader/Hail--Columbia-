@@ -41,7 +41,14 @@ Ensured AI US will get claims on Mexico and pursue them if possible
 Re-added vanilla Bison Hunting event, to the Wild West JE
 Hopefully ensured the Democratic Party doesn't dissolve before the ACW
 Adjusted parameters for the Homestead Acts
-Bleeding Kansas spawns more radicals upon starting
+Bleeding Kansas spawns more radicals at the outset
 Trent Affair will now spawn correctly
 Slightly nerfed the colony debuff from Effective Native Resistance
 Fixed some script errors
+
+2.0 "Jefferson"
+Added new decentralized tags across Canada and Alaska
+Adjustments to decentralized tags in the american west
+New flags for some decentralized tags
+Peculiar Reconciliation can now lead into Long Reconstruction if you've lifted racial segregration
+

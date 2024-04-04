@@ -1813,6 +1813,14 @@ ecchi_usa_stephens_character_template = {
         earliest_usage_date = 1862.2.22
         latest_usage_date = 1883.3.4
         chance = 90
+        on_created = {
+            if = {
+                limit = {
+                    has_global_variable = american_civil_war
+                }
+                set_ideology = ideology:ideology_moderate
+            }
+        }
     }
 }
 

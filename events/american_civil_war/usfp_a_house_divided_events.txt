@@ -1066,6 +1066,18 @@ usfp_a_house_divided.12 = {
 		# 	}
 		# 	remove_ideology = ideology_pro_slavery
 		# }
+		if = {
+			limit = { 
+				cu:afro_american = {
+					NOT = {
+						culture_is_discriminated_in = root
+					}
+				}
+			}
+			add_journal_entry = {
+				type = usfp_reconstruction_long
+			}
+		}
 	}
 }
 

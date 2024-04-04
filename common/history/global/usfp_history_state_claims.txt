@@ -55,6 +55,7 @@
 	}
 	s:STATE_ONTARIO = {
 		add_claim = c:ONT
+		add_claim = c:HBC
 	}
 	s:STATE_ALBERTA = {
 		add_claim = c:HBC
@@ -65,9 +66,23 @@
 	s:STATE_MANITOBA = {
 		add_claim = c:HBC
 	}
+	s:STATE_NUNAVUT = {
+		add_claim = c:HBC
+	}
+	s:STATE_NORTHWEST_TERRITORIES = {
+		add_claim = c:HBC
+	}
+	s:STATE_YUKON_TERRITORY = {
+		add_claim = c:HBC
+	}
+	s:STATE_QUEBEC = {
+		add_claim = c:HBC
+	}
 	s:STATE_COLORADO = {
 		add_claim = c:USA
 		add_claim = c:MEX
 	}
-
+	s:STATE_ALASKA = {
+		add_claim = c:RUS
+	}
 }

@@ -587,3 +587,35 @@ usa_general_lee = {
 		chance = 50
 	}
 }
+
+#USFP: William Lloyd Garrison, starting abolitionist agitator
+usfp_usa_william_lloyd_garrison = {
+    first_name = William_Lloyd
+    last_name = Garrison
+    historical = yes
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    ideology = ideology_usfp_abolitionist_radical
+    interest_group = ig_intelligentsia
+    birth_date = 1805.12.10
+    # dna
+    is_agitator = yes
+    traits = { persistent literary honorable romantic }
+}
+
+#USFP: Robert Rhett, starting slaver agitator
+usfp_usa_robert_rhett = {
+    first_name = Robert
+    last_name = Rhett
+    historical = yes
+    culture = cu:dixie
+    religion = rel:protestant
+    female = no
+    ideology = ideology_slaver
+    interest_group = ig_landowners
+    birth_date = 1800.12.21
+    # dna
+    is_agitator = yes
+    traits = { persistent wrathful basic_political_operator literary }
+}

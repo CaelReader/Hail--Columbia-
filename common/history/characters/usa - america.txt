@@ -154,7 +154,21 @@
 				set_variable = memento_mori_immunity
 			}
 		}
+
+		create_character = {
+			template = usfp_usa_william_lloyd_garrison
+			on_created = {
+				set_variable = usfp_acw_agitator
+			}
+		}
 		
+		create_character = {
+			template = usfp_usa_robert_rhett
+			on_created = {
+				set_variable = usfp_acw_agitator
+			}
+		}
+
 		create_character = {
 			is_general = yes
 			first_name = Zachary
@@ -163,7 +177,7 @@
 			culture = cu:dixie
 			birth_date = 1784.11.24
 			dna = dna_zachary_taylor
-			interest_group = ig_landowners
+			interest_group = ig_armed_forces
 			ideology = ideology_moderate
 			hq = region_the_midwest
 			traits = {
