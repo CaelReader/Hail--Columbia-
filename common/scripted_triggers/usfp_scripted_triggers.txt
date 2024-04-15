@@ -126,3 +126,29 @@ usfp_anti_abolitionist_government = {
 		}
 	}
 }
+
+usfp_canada_zone = {
+	OR = {
+		region = sr:region_canada
+		state_region = s:STATE_YUKON_TERRITORY
+		state_region = s:STATE_SASKATCHEWAN
+		state_region = s:STATE_ALBERTA
+		state_region = s:STATE_BRITISH_COLUMBIA
+	}
+}
+
+usfp_greater_canada_zone = {
+	OR = {
+		usfp_canada_zone = yes
+		state_region = s:STATE_ALASKA
+	}
+}
+
+usfp_is_canadian_colony = {
+	OR = {
+		this = c:HBC
+		this = c:ORG
+		this = c:ONT
+		this = c:QUE
+	}
+}

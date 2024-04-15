@@ -129,6 +129,9 @@ usfp_mexican_north_purchase_effect = {
 			}
 		}
 	}
+	hidden_effect = {
+		annex = c:YUR
+	}
 	s:STATE_NEVADA = {
 		add_claim = c:USA
 		remove_claim = c:MEX

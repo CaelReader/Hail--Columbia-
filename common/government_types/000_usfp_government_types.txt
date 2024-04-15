@@ -14,6 +14,9 @@
 			c:TEX ?= this
 			c:ORG ?= this
 		}
+		NOT = {
+			has_law = law_type:law_technocracy
+		}
 		country_has_voting_franchise = yes
 		has_law = law_type:law_presidential_republic
 	}
@@ -22,7 +25,6 @@
 		change_to_presidential_elective = yes
 	}
 }
-
 
 gov_usfp_principal_chiefdom = {
 	transfer_of_power = hereditary

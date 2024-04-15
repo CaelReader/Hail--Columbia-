@@ -484,3 +484,15 @@ SWP = {
 	
 	capital = STATE_BRITISH_COLUMBIA
 }
+
+HDA = {
+	color = { 180 14 23 }
+	
+	country_type = decentralized
+
+	tier = principality
+	
+	cultures = { salish }
+	
+	capital = STATE_BRITISH_COLUMBIA
+}

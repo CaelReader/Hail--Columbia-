@@ -1555,7 +1555,7 @@
 			country = c:CPW
 			provinces = { 
 				x280549 x281860 x5410DE x0A2CCF x4B1FA6 x4623FF xD30931 x871AA5 x5C25D6 xC10E8D x2837F0 xCE1D48 xFF08D7 xF01C28 x364CB6 xE1280E x166B44 xC826E9 
-				x8E4372 xEA25BC x7A4B9B xF42C50 x95534B x5C699D x7F64BC xF7519A xCE6B2C xD9665F x8080A7 x01B33D x06AB9D x469FF1 xC18671 xEF8B24 xC09F00 x17C895 
+				x8E4372 xEA25BC x7A4B9B xF42C50 x95534B x5C699D x7F64BC xF7519A xCE6B2C xD9665F x8080A7 x01B33D x06AB9D xC18671 xEF8B24 xC09F00 x17C895 
 				x4AD41C xE3A0FD x1EF389 xC6C382 xC0D10F x5FEE31 xD9C98F xD0DF51 x73F1E8 xCEDAE2 xE1DCD7 
 				x19A2EE x922237 x1FDE39 x58A79E xBBB0E5 x3168F1 x43634B xF083ED x79210D x6AE53A x12E022 x8DA75A xE51C72 x4E53E1 
 				x08B4F9 xAEB7C5 x9FF6E4 x5DDBF4 x2322DE xDD93B6 x43AD4A x94B087 xEBAFE0 xE4775E x97993B x44502C x5B2E01 x928EE3 
@@ -1781,8 +1781,23 @@
 			country = c:TSI
 			provinces = { x462445 x353F41 xBB5D4E xD46521 x9B707D xBC873D xE9756F x83A2F7 x75CE92 x3EF318 x89CEC2 
 			x26FE6E xC4F8BE 
-			x5DC4E3 xCEC8BC xA5C52C x3F0544 xD3E426 
+			x5DC4E3 xCEC8BC xA5C52C x3F0544 xD3E426 x32E810 xE040C0 
 		}
+		}
+	}
+	#Haida
+	s:STATE_BRITISH_COLUMBIA = {
+		create_country = {
+			tag = HDA
+			origin = c:TSI
+			province = p:x003E09
+			on_created = {
+				usfp_native_startup = yes
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:HDA
+			provinces = { x5D8407 x607082 x74B3F3 xA941A4 x853C2D x0D541B }
 		}
 	}
 	#Dene
@@ -2003,7 +2018,7 @@
 			provinces = {  x400644 x1F0BA5 x2C272D x4F1D47 xC4080A xCB038A xAF1462 x8B29AC x2D5321 xCB16EC x096D1F x2754DF 
 			x1A6735 x365975 xA43B5F x6A4CD7 x47676B xFF4334 xE742CD xA86F61 x898427 x6286E4 xB58175 x44B13A xF9820F xFD7E50 
 			xDE80AC x90AF53 xFC8CBC xABA3F4 xB2A8E6 xFBAF0C xE4B798 xBFD8B9 xA8E775 
-			x833289 x3E2849 x37B983 xFE60E4 x19EE3B xFA31E3 xAC9F19 x47136C x2D2C2D x7298A0 xE13AB4 x55143A x39101E x403C43 
+			x3E2849 x37B983 xFE60E4 x19EE3B xFA31E3 xAC9F19 x47136C x2D2C2D x7298A0 xE13AB4 x55143A x39101E x403C43 
 			xDB7755 x09BD9A xEF3D84 x183A03 x5817B5 xB39C1B x9E99FC xCB7E23 x2E3941 xB9B72B 
 			xBFEC14 x4DE6D8 x0EFEB5 xC3EC0A x65CD76 x38C295 x81667A x7626D3 xBCDB8D xB38A2C x15A49A x5255B3 xA63A3F x23AEA8 x3CC6B1 xAF2C3D 
 			xD62445 xA8D5F5 x14A33F xC666BD x2D2B9A x703870 x244229 x33A055 xDD8241 x4BF0E8 xB8405D xE0383C x24C2C1 x703870 x73210A x89A524 
@@ -2147,10 +2162,24 @@
 			xEE75BD xDF2A67 x1FF6F0 xC3425B xCA3299 xDE84A4 xB62FF6 x32050F xCF9C19 x2919A0 x8C1AF2 xCF3FED x118711 x2BA484 x922E7D x82B66A 
 			x7D1262 x445E37 xFC2D40 x8C4339 xBD23EA xBFDADD xBFD965 xFA9725 xDB502E x2BE1B4 x98B340 x5C61D9 x62DCD3 x5FCC5F xCB054C 
 			x6B7277 x53ECD7 x4AA500 x41C4B1 x3F7A53 x4C7F1B xA9C595 x8FE5AB x1FC5DB x25A09F x3DCE92 xA2F971 x064764 xD91154 
-			x20427C x863BE3 x910EE4 xE3B9DD x4D40FB x543A2C xC5631B x645235 x134775 xF4A312 x7E592E xAB9CFD x60097A 
+			x20427C x863BE3 x910EE4 xE3B9DD x4D40FB x543A2C xC5631B x645235 x134775 x7E592E xAB9CFD 
 		}
 		}
 	}
+	#HBC hookup
+	s:STATE_MANITOBA = {
+		set_owner_of_provinces = {
+			country = c:HBC
+			provinces = { x3EC4D4 xE6B251 x67745A x5F7D84 x42F2E2 }
+		}
+	}
+	s:STATE_ONTARIO = {
+		set_owner_of_provinces = {
+			country = c:HBC
+			provinces = { x578996 x403994 xC8D6E6 xD1DB51 x6E31A1 }
+		}
+	}
+
 	s:STATE_ALASKA = {
 		every_scope_state = {
 			limit = {
@@ -2253,6 +2282,40 @@
 				}
 				move_pop = s:STATE_ONTARIO.region_state:HBC
 			}
+		}
+	}
+	# c:CPW = {
+	# 	every_scope_pop = {
+	# 		change_poptype = pop_type:peasants
+	# 	}
+	# }
+	# c:SVY = {
+	# 	every_scope_pop = {
+	# 		change_poptype = pop_type:peasants
+	# 	}
+	# }
+	# c:SWC = {
+	# 	every_scope_pop = {
+	# 		change_poptype = pop_type:peasants
+	# 	}
+	# }
+	# c:WCR = {
+	# 	every_scope_pop = {
+	# 		change_poptype = pop_type:peasants
+	# 	}
+	# }
+	# c:OJI = {
+	# 	every_scope_pop = {
+	# 		change_poptype = pop_type:peasants
+	# 	}
+	# }
+	every_country = {
+		limit = {
+			is_country_type = decentralized
+			country_is_in_north_america = yes
+		}
+		every_scope_pop = {
+			change_poptype = pop_type:peasants
 		}
 	}
 }

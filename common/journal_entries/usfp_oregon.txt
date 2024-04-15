@@ -68,8 +68,16 @@ je_oregon = {
 					text = oregon_tt
 					has_global_variable = oregon_trail_mapped
 				}
-				owns_entire_state_region = STATE_MONTANA
-				owns_entire_state_region = STATE_WYOMING
+				s:STATE_MONTANA = {
+					any_scope_state = {
+						owner = root
+					}
+				}
+				s:STATE_WYOMING = {
+					any_scope_state = {
+						owner = root
+					}
+				}
 				c:GBR = {
 					relations:ROOT >= relations_threshold:cordial
 				}
@@ -77,17 +85,17 @@ je_oregon = {
 			AND = {
 				s:STATE_WASHINGTON = {
 					any_scope_state = {
-						owner = c:USA
+						owner = root
 					}
 				}
 				s:STATE_IDAHO  = {
 					any_scope_state = {
-						owner = c:USA
+						owner = root
 					}
 				}
 				s:STATE_OREGON = {
 					any_scope_state = {
-						owner = c:USA
+						owner = root
 					}
 				}
 			}

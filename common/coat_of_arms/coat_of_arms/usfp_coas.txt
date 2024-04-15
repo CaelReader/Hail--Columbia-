@@ -635,15 +635,15 @@ SHO = {
 	}
 }
 
-GWC = {
-	pattern = "pattern_solid.tga"
-	color1 = "white"
+# GWC = {
+# 	pattern = "pattern_solid.tga"
+# 	color1 = "white"
 
-	textured_emblem = {
-		texture = "te_caribou_by_kananginak_pootoogook.dds"
-		instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 } }
-	}
-}
+# 	textured_emblem = {
+# 		texture = "te_caribou_by_kananginak_pootoogook.dds"
+# 		instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 } }
+# 	}
+# }
 
 IPQ = {
 	pattern = "pattern_solid.tga"
@@ -679,5 +679,175 @@ TLT = {
 		texture = "ce_stripe_bottom.dds"
 		color1 = "white"
 		instance = { scale = { 1 0.5 } position = { 0.5 0.75 } }
+	}
+}
+
+HDA = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"	
+
+	colored_emblem = {
+		texture = "ce_haida_coa.dds"
+		color1 = "white"
+	}
+}
+
+KYK = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "blue"
+		instance = { scale = { 1.5 1.5 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_athabascan_circle.dds"
+		color1 = "white"
+		instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_circle_quadcolor.dds"
+		color1 = "red"
+		color2 = "yellow"
+		color3 = "white"
+		instance = { scale = { 0.6 0.6 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_cross_quadcolor.dds"
+		color1 = "red"
+		color2 = "yellow"
+		color3 = "white"
+		instance = { scale = { 0.9 0.9 } position = { 0.5 0.5 } }
+	}
+}
+
+TNN = {
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+
+	colored_emblem = {
+		texture = "ce_stripes_06.dds"
+		color1 = "blue"
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "blue_light"
+		instance = { scale = { 1.5 1.5 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_athabascan_circle.dds"
+		color1 = "white"
+		instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_circle_quadcolor.dds"
+		color1 = "red"
+		color2 = "yellow"
+		color3 = "white"
+		instance = { scale = { 0.6 0.6 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_cross_quadcolor.dds"
+		color1 = "red"
+		color2 = "yellow"
+		color3 = "white"
+		instance = { scale = { 0.9 0.9 } position = { 0.5 0.5 } }
+	}
+}
+TTC = {
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = "white"
+		color2 = "blue"
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "teal"
+		instance = { scale = { 1.5 1.5 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_athabascan_circle.dds"
+		color1 = "white"
+		instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_thunderbird.dds"
+		color1 = "black"
+		color2 = "white"
+		color3 = "black"
+		instance = { scale = { 0.6 0.6 } position = { 0.5 0.5 } }
+	}
+}
+YUR = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "red"
+		instance = { scale = { 1.4 1.4 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle_outline.dds"
+		color1 = "white"
+		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
+		instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "white"
+		instance = { scale = { 0.98 0.98 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_yurok_circle.dds"
+		color1 = "black"
+		instance = { scale = { 0.9 0.9 } position = { 0.5 0.5 } }
+	}
+}
+YOK = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+	
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "white"
+		instance = { scale = { 0.6 0.2 } position = { 1 0.5 } }
+		instance = { scale = { 0.6 0.2 } position = { 1 0.7 } }
+		instance = { scale = { 0.6 0.2 } position = { 1 0.9 } }
+		instance = { scale = { 0.6 0.2 } position = { 1 0.3 } }
+		instance = { scale = { 0.6 0.2 } position = { 1 0.1 } }
+		instance = { scale = { 0.6 0.2 } position = { 0 0.5 } }
+		instance = { scale = { 0.6 0.2 } position = { 0 0.7 } }
+		instance = { scale = { 0.6 0.2 } position = { 0 0.9 } }
+		instance = { scale = { 0.6 0.2 } position = { 0 0.3 } }
+		instance = { scale = { 0.6 0.2 } position = { 0 0.1 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_frame_circle_outline.dds"
+		color1 = "saffron"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.5 } }
+	}
+}
+
+CPW = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue_light"
+
+	colored_emblem = {
+		texture = "ce_tricolor_thick.dds"
+		color1 = "white"
+		color2 = "blue_light"
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle_per_fess.dds"
+		color1 = "black"
+		color2 = "saffron"
+		color3 = "blue_light"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.5 } }
 	}
 }

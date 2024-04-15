@@ -412,24 +412,21 @@ usfp_manifest_destiny.6 = {
 				initiator_is = c:USA
 				target_is = c:MEX
 			}
-			resolve_play_for = initiator
+			end_play = yes
 		}
 		usfp_mexican_north_purchase_effect = yes
 
 	}
 	
-	#We will not take additional territory
+	#Reject the treaty
 	option = {
 		name = usfp_manifest_destiny.6.b
-		trigger = {
-			root.var:manifest_destiny_var <= 2
+		create_incident = {
+			country = c:MEX
+			value = 20
 		}
-		every_diplomatic_play = {
-			limit = {
-				initiator_is = c:USA
-				target_is = c:MEX
-			}
-			resolve_play_for = initiator
+		ai_chance = {
+			base = 0
 		}
 	}
 
@@ -447,7 +444,7 @@ usfp_manifest_destiny.6 = {
 				initiator_is = c:USA
 				target_is = c:MEX
 			}
-			resolve_play_for = initiator
+			end_play = yes
 		}
 		usfp_mexican_north_purchase_effect = yes
 		s:STATE_BAJA_CALIFORNIA.region_state:MEX = {
@@ -481,7 +478,7 @@ usfp_manifest_destiny.6 = {
 				initiator_is = c:USA
 				target_is = c:MEX
 			}
-			resolve_play_for = initiator
+			end_play = yes
 		}
 		usfp_mexican_north_purchase_effect = yes
 		s:STATE_BAJA_CALIFORNIA.region_state:MEX = {
@@ -1057,6 +1054,9 @@ usfp_manifest_destiny.13 = {
 				cu:dixie = {
 					has_homeland = prev
 				}
+				cu:usfp_american = {
+					has_homeland = prev
+				}
 			}
 			is_split_state = no
 			state_population > 60000
@@ -1102,6 +1102,9 @@ usfp_manifest_destiny.13 = {
 					cu:dixie = {
 						has_homeland = prev
 					}
+					cu:usfp_american = {
+						has_homeland = prev
+					}
 				}
 				is_split_state = no
 				state_population > 60000
@@ -1129,6 +1132,19 @@ usfp_manifest_destiny.13 = {
 		}
 		scope:new_homeland_state = {
 			if = {
+				limit = {
+					owner = {
+						country_has_primary_culture = cu:usfp_american
+					}
+				}
+				state_region = {
+					add_homeland = cu:usfp_american
+				}
+				cu:usfp_american = {
+					save_scope_as = new_homeland_culture
+				}
+			}
+			else_if = {
 				limit = { 
 					OR = {
 						state_region = s:STATE_ARIZONA

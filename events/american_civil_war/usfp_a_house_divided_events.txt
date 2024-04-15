@@ -1286,6 +1286,30 @@ usfp_a_house_divided.15 = {
 			has_modifier = usfp_breaking_compromise
 			has_law = law_type:law_slavery_banned
 			has_journal_entry = je_acw_war
+            any_civil_war = {
+                this.political_movement ?= {
+                    any_supporting_interest_group = {
+                        law_stance = {
+                            law = law_type:law_slavery_banned
+                            value > neutral
+                        }
+                    }
+                }
+                is_civil_war_type = revolution
+                civil_war_progress > 0.50
+            }
+			any_civil_war = {
+                this.political_movement ?= {
+                    any_supporting_interest_group = {
+                        law_stance = {
+                            law = law_type:law_slave_trade
+                            value > neutral
+                        }
+                    }
+                }
+                is_civil_war_type = revolution
+                civil_war_progress > 0.50
+            }
 		}
 		has_modifier = usfp_second_party_system_modifier
 		in_election_campaign = no
