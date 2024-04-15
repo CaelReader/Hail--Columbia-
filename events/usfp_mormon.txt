@@ -1,0 +1,6 @@
+namespace = usfp_mormon
+
+#Death of Joseph Smith
+#Mormon Exodus west
+#Deseret spawns
+#Utah statehood proposal
