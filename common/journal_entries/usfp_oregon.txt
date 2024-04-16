@@ -49,12 +49,17 @@ je_oregon = {
 			}
 			s:STATE_MONTANA = {
 				any_scope_state = {
-					owner = c:USA
+					owner = root
 				}
 			}
 			s:STATE_WYOMING = {
 				any_scope_state = {
-					owner = c:USA
+					owner = root
+				}
+			}
+			s:STATE_CALIFORNIA = {
+				any_scope_state = {
+					owner = root
 				}
 			}
 		}
@@ -68,14 +73,21 @@ je_oregon = {
 					text = oregon_tt
 					has_global_variable = oregon_trail_mapped
 				}
-				s:STATE_MONTANA = {
-					any_scope_state = {
-						owner = root
+				OR = {
+					s:STATE_MONTANA = {
+						any_scope_state = {
+							owner = root
+						}
 					}
-				}
-				s:STATE_WYOMING = {
-					any_scope_state = {
-						owner = root
+					s:STATE_WYOMING = {
+						any_scope_state = {
+							owner = root
+						}
+					}
+					s:STATE_CALIFORNIA = {
+						any_scope_state = {
+							owner = root
+						}
 					}
 				}
 				c:GBR = {
