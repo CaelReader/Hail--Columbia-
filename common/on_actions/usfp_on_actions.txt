@@ -251,3 +251,20 @@ usfp_mexico_defeats_usa = {
 		}
 	}
 }
+
+on_civil_war_won = {
+	on_actions = {
+		usfp_fsa_annex
+	}
+}
+
+usfp_fsa_annex = {
+	effect = {
+		if = {
+			limit = {
+				has_variable = fsa_annex_var
+			 }
+			 trigger_event = acw_je_events.2
+		}
+	}
+}

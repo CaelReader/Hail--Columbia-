@@ -28,10 +28,26 @@ liberal_party = {
 				}
 			}
 			triggered_desc = {
+				desc = party_free_soil_party
+				trigger = {
+					exists = c:FSA
+					THIS = c:FSA
+					has_modifier = usfp_acw_fsa_modifier
+				}
+			}
+			triggered_desc = {
 				desc = party_republicans
 				trigger = {
-					exists = c:USA
-					THIS = c:USA
+					OR = {
+						AND = {
+							exists = c:USA
+							THIS = c:USA
+						}
+						AND = {
+							exists = c:FSA
+							THIS = c:FSA
+						}
+					}
 					NOT = {
 						has_modifier = usfp_second_party_system_modifier
 					}
@@ -861,52 +877,52 @@ liberal_party = {
 				desc = "usa_two_party_system"
 			}
 		}
-		if = {
-			limit = {
-				owner = {
-					OR = {
-						country_has_primary_culture = cu:yankee
-						country_has_primary_culture = cu:dixie
-					}
-					OR = {
-						NOT = {
-							has_law = law_type:law_slavery_banned
-						}
-						has_journal_entry = je_acw_countdown
-					}
-				}
-				leader = {
-					culture = cu:yankee
-				}
-			}
-			add = {
-				value = 3
-				desc = "from_northern_interests"
-			}
-		}
-		if = {
-			limit = {
-				owner = {
-					OR = {
-						country_has_primary_culture = cu:yankee
-						country_has_primary_culture = cu:dixie
-					}
-					OR = {
-						NOT = {
-							has_law = law_type:law_slavery_banned
-						}
-						has_journal_entry = je_acw_countdown
-					}
-				}
-				leader = {
-					culture = cu:dixie
-				}
-			}
-			add = {
-				value = -5
-				desc = "from_southern_interests"
-			}
-		}
+		# if = {
+		# 	limit = {
+		# 		owner = {
+		# 			OR = {
+		# 				country_has_primary_culture = cu:yankee
+		# 				country_has_primary_culture = cu:dixie
+		# 			}
+		# 			OR = {
+		# 				NOT = {
+		# 					has_law = law_type:law_slavery_banned
+		# 				}
+		# 				has_journal_entry = je_acw_countdown
+		# 			}
+		# 		}
+		# 		leader = {
+		# 			culture = cu:yankee
+		# 		}
+		# 	}
+		# 	add = {
+		# 		value = 3
+		# 		desc = "from_northern_interests"
+		# 	}
+		# }
+		# if = {
+		# 	limit = {
+		# 		owner = {
+		# 			OR = {
+		# 				country_has_primary_culture = cu:yankee
+		# 				country_has_primary_culture = cu:dixie
+		# 			}
+		# 			OR = {
+		# 				NOT = {
+		# 					has_law = law_type:law_slavery_banned
+		# 				}
+		# 				has_journal_entry = je_acw_countdown
+		# 			}
+		# 		}
+		# 		leader = {
+		# 			culture = cu:dixie
+		# 		}
+		# 	}
+		# 	add = {
+		# 		value = -5
+		# 		desc = "from_southern_interests"
+		# 	}
+		# }
 		if = {
 			limit = {
 				owner = {

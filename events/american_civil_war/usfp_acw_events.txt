@@ -500,6 +500,7 @@ usfp_acw.6 = {
 	duration = 1
 
 	trigger = {
+		exists = c:CSA
 		NOT = {
 			has_variable = marched_to_the_sea
 		}
@@ -664,6 +665,65 @@ usfp_acw.7 = {
 		add_modifier = {
 			name = usfp_draft_exemptions
 			years = 4
+		}
+	}
+}
+
+#FSA chooses war goal
+usfp_acw.8 = {
+	type = country_event
+	placement = root
+
+	title = usfp_acw.8.t
+	desc = usfp_acw.8.d
+	flavor = usfp_acw.8.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_american_civil_war"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_fsa.dds"
+
+	duration = 3
+
+	trigger = {
+		#triggered by event
+	}
+
+	#Remain a secession
+	option = {
+		name = usfp_acw.8.a
+		ai_chance = {
+			base = 30
+		}
+	}
+	#Go for Annex
+	option = {
+		name = usfp_acw.8.b
+		default_option = yes
+		random_diplomatic_play = {
+			limit = {
+				exists = scope:fsa_scope
+				any_scope_play_involved = {
+					this = scope:fsa_scope
+				}
+			}
+			remove_war_goal = {
+				who = initiator
+				war_goal = revoke_all_claims
+			}
+			add_war_goal = {
+				holder = initiator
+				type = annex_country
+				target_country = target				
+				primary_demand = yes
+			}			
+		}
+		set_variable = fsa_annex_var
+		ai_chance = {
+			base = 70
 		}
 	}
 }

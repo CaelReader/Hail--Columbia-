@@ -47,14 +47,19 @@ Slightly nerfed the colony debuff from Effective Native Resistance
 Fixed some script errors
 
 2.0 "Jefferson"
+New Content:
+The FSA can now choose to attempt to annex the USA
 Added new decentralized tags across Canada and Alaska
+
+Updates & Fixes:
+Buffed the Compromise of 1820
 Adjustments to decentralized tags in the american west
 New flags for some decentralized tags
 Peculiar Reconciliation can now lead into Long Reconstruction if you've lifted racial segregration
-Added some migration pull to the White House
+Added some migration pull and MAPI to the White House
 The Whigs will now collapse if a slavery revolt reaches 50% progress
 Fixed westward expansion homelands not accounting for the American Superculture
 The Mexican Cession now also takes northern California to prevent weirdness around Frontier Colonization limitations
 Adjusted treaty options for the Treaty of Guadalupe Hidalgo
 Oregon Treaty no longer requires owning all of Montana and Wyoming, a colony in each will do
-
+Paraguay can no longer become Turtle Island

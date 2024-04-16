@@ -1310,7 +1310,7 @@
 	c:USA = {
 		create_truce = {
 			country = c:SEQ
-			months = 120
+			months = 240
 		}
 	}
 
@@ -1481,7 +1481,7 @@
 		region_state:INV = {
 			add_culture_standard_of_living_modifier = {
 				culture = cu:athabaskan
-				multiplier = 6
+				multiplier = 7
 			}
 			every_scope_pop = {
 				change_poptype = pop_type:peasants
@@ -1993,7 +1993,7 @@
 		region_state:STU = {
 			add_culture_standard_of_living_modifier = {
 				culture = cu:athabaskan
-				multiplier = 6
+				multiplier = 7
 			}
 			every_scope_pop = {
 				change_poptype = pop_type:peasants
@@ -2015,22 +2015,23 @@
 		# }
 		set_owner_of_provinces = {
 			country = c:GWC
-			provinces = {  x400644 x1F0BA5 x2C272D x4F1D47 xC4080A xCB038A xAF1462 x8B29AC x2D5321 xCB16EC x096D1F x2754DF 
-			x1A6735 x365975 xA43B5F x6A4CD7 x47676B xFF4334 xE742CD xA86F61 x898427 x6286E4 xB58175 x44B13A xF9820F xFD7E50 
-			xDE80AC x90AF53 xFC8CBC xABA3F4 xB2A8E6 xFBAF0C xE4B798 xBFD8B9 xA8E775 
-			x3E2849 x37B983 xFE60E4 x19EE3B xFA31E3 xAC9F19 x47136C x2D2C2D x7298A0 xE13AB4 x55143A x39101E x403C43 
-			xDB7755 x09BD9A xEF3D84 x183A03 x5817B5 xB39C1B x9E99FC xCB7E23 x2E3941 xB9B72B 
-			xBFEC14 x4DE6D8 x0EFEB5 xC3EC0A x65CD76 x38C295 x81667A x7626D3 xBCDB8D xB38A2C x15A49A x5255B3 xA63A3F x23AEA8 x3CC6B1 xAF2C3D 
-			xD62445 xA8D5F5 x14A33F xC666BD x2D2B9A x703870 x244229 x33A055 xDD8241 x4BF0E8 xB8405D xE0383C x24C2C1 x703870 x73210A x89A524 
-			x93473A x30D4A3 xB9E827 x7C4BE7 x8C2B38 x9F9A64 xFB2B85 xF2BAB1 x48EFD3 xF3CDF6 x8D0001 x2FB1A9 xD3D91D xFD9177 x69BF88 x793A86 
-			xE280A6 x911E83 x57A279 xC83863 x688A87 
+			provinces = {  
+				x400644 x1F0BA5 x2C272D x4F1D47 xC4080A xCB038A xAF1462 x8B29AC x2D5321 xCB16EC x096D1F x2754DF 
+				x1A6735 x365975 xA43B5F x6A4CD7 x47676B xFF4334 xE742CD xA86F61 x898427 x6286E4 xB58175 x44B13A xF9820F xFD7E50 
+				xDE80AC x90AF53 xFC8CBC xABA3F4 xB2A8E6 xFBAF0C xE4B798 xBFD8B9 xA8E775 
+				x37B983 xFE60E4 x19EE3B xFA31E3 xAC9F19 x47136C x2D2C2D x7298A0 xE13AB4 x55143A x39101E x403C43 
+				x833289 x3E2849
+				xDB7755 x09BD9A xEF3D84 x183A03 x5817B5 xB39C1B x9E99FC xCB7E23 x2E3941 xB9B72B 
+				xBFEC14 x4DE6D8 x0EFEB5 xC3EC0A x65CD76 x38C295 x81667A x7626D3 xBCDB8D xB38A2C x15A49A x5255B3 xA63A3F x23AEA8 x3CC6B1 xAF2C3D 
+				xD62445 xA8D5F5 x14A33F xC666BD x2D2B9A x703870 x244229 x33A055 xDD8241 x4BF0E8 xB8405D xE0383C x24C2C1 x703870 x73210A x89A524 
+				x93473A x30D4A3 xB9E827 x7C4BE7 x8C2B38 x9F9A64 xFB2B85 xF2BAB1 x48EFD3 xF3CDF6 x8D0001 x2FB1A9 xD3D91D xFD9177 x69BF88 x793A86 
+				xE280A6 x911E83 x57A279 xC83863  
 			}
 		}
-		add_arable_land = 1
 		region_state:GWC = {
 			add_culture_standard_of_living_modifier = {
 				culture = cu:athabaskan
-				multiplier = 6
+				multiplier = 7
 			}
 			every_scope_pop = {
 				change_poptype = pop_type:peasants
@@ -2048,7 +2049,7 @@
 			x2E34E5 x33F024 x7E7B8F xC98575 xAD005A x7E85A9 x31861A x568651 x4F5E4C x94BEF4 x943D34 x4C6183 x3E347B x193407 
 			x4CD34B x7B73F1 xBEF1F0 xD9F480 x8E0FC3 x28EC12 x756618 x78D3B9 x1E26E1 x2B301E x6BDCBC x991DD8 x68E22B x3C4807 
 			x29F3A6 xA6F50B x53D559 xEB22CE x89449F xE66133 x9CD17E xD5BE4A xB92E1C x01014E x4B17DB x483E8A xFAB0F8 xADC7CF 
-			x1711CF xE35510 
+			x1711CF xE35510 x688A87
 		}
 		}
 		region_state:GWC = {
@@ -2112,7 +2113,7 @@
 		region_state:IPQ = {
 			add_culture_standard_of_living_modifier = {
 				culture = cu:athabaskan
-				multiplier = 6
+				multiplier = 7
 			}
 			every_scope_pop = {
 				change_poptype = pop_type:peasants
@@ -2316,6 +2317,23 @@
 		}
 		every_scope_pop = {
 			change_poptype = pop_type:peasants
+		}
+	}
+	every_country = {
+		limit = {
+			is_country_type = decentralized
+			OR = {
+				country_has_primary_culture = cu:athabaskan
+				country_has_primary_culture = cu:inuit
+			}
+			NOT = {
+				capital = {
+					state_region = s:STATE_BRITISH_COLUMBIA
+				}
+			}
+		}
+		add_modifier = {
+			name = usfp_arctic_isolation
 		}
 	}
 }

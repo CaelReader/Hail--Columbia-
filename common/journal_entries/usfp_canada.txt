@@ -31,18 +31,18 @@
 				owns_entire_state_region = STATE_NORTHWEST_TERRITORIES
 				owns_entire_state_region = STATE_NUNAVUT
 			}
-			NOT = {
-				any_country = {
-					NOT = {
-						this = root
-					}
-					country_is_in_north_america = yes
-					OR = {
-						country_has_primary_culture = cu:anglo_canadian
-						country_has_primary_culture = cu:franco_canadian
-					}
-				}
-			}
+			# NOT = {
+			# 	any_country = {
+			# 		NOT = {
+			# 			this = root
+			# 		}
+			# 		country_is_in_north_america = yes
+			# 		OR = {
+			# 			country_has_primary_culture = cu:anglo_canadian
+			# 			country_has_primary_culture = cu:franco_canadian
+			# 		}
+			# 	}
+			# }
 		}
 
 		is_at_war = no

@@ -182,7 +182,6 @@ ecchi_usa_fillmore_template = {
             is_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
-				is_interest_group_type = ig_landowners
 			}
         }
         earliest_usage_date = 1836.1.1

@@ -1021,52 +1021,52 @@ conservative_party = {
 				desc = "caudillo_support"
 			}
 		}
-		if = {
-			limit = {
-				owner = {
-					OR = {
-						country_has_primary_culture = cu:yankee
-						country_has_primary_culture = cu:dixie
-					}
-					OR = {
-						NOT = {
-							has_law = law_type:law_slavery_banned
-						}
-						has_journal_entry = je_acw_countdown
-					}
-				}
-				leader = {
-					culture = cu:yankee
-				}
-			}
-			add = {
-				value = -15
-				desc = "from_northern_interests"
-			}
-		}
-		if = {
-			limit = {
-				owner = {
-					OR = {
-						country_has_primary_culture = cu:yankee
-						country_has_primary_culture = cu:dixie
-					}
-					OR = {
-						NOT = {
-							has_law = law_type:law_slavery_banned
-						}
-						has_journal_entry = je_acw_countdown
-					}
-				}
-				leader = {
-					culture = cu:dixie
-				}
-			}
-			add = {
-				value = 3
-				desc = "from_southern_interests"
-			}
-		}
+		# if = {
+		# 	limit = {
+		# 		owner = {
+		# 			OR = {
+		# 				country_has_primary_culture = cu:yankee
+		# 				country_has_primary_culture = cu:dixie
+		# 			}
+		# 			OR = {
+		# 				NOT = {
+		# 					has_law = law_type:law_slavery_banned
+		# 				}
+		# 				has_journal_entry = je_acw_countdown
+		# 			}
+		# 		}
+		# 		leader = {
+		# 			culture = cu:yankee
+		# 		}
+		# 	}
+		# 	add = {
+		# 		value = -15
+		# 		desc = "from_northern_interests"
+		# 	}
+		# }
+		# if = {
+		# 	limit = {
+		# 		owner = {
+		# 			OR = {
+		# 				country_has_primary_culture = cu:yankee
+		# 				country_has_primary_culture = cu:dixie
+		# 			}
+		# 			OR = {
+		# 				NOT = {
+		# 					has_law = law_type:law_slavery_banned
+		# 				}
+		# 				has_journal_entry = je_acw_countdown
+		# 			}
+		# 		}
+		# 		leader = {
+		# 			culture = cu:dixie
+		# 		}
+		# 	}
+		# 	add = {
+		# 		value = 3
+		# 		desc = "from_southern_interests"
+		# 	}
+		# }
 		if = {
 			limit = {
 				owner = {

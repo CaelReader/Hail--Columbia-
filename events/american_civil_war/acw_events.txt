@@ -1004,6 +1004,9 @@ acw_events.9 = {
 		NOT = {
 			has_global_variable = csa_victory_event_var
 		}
+		NOT = {
+			has_law = law_type:law_slavery_banned
+		}
 		has_variable = acw_slave_nation_var
 		is_at_war = no
 		is_active_in_diplomatic_play = no

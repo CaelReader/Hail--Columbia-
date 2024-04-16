@@ -19,6 +19,8 @@ usfp_end_gag_rule_button_desc: "With the Abolitionists cowed, the Gag Rule no lo
 usfp_end_gag_rule: "The #Bold A House Divided: The Gag Rule#! [concept_journal_entry] will end"
 usfp_end_gag_rule_button_no_abolitionists: "We do NOT have a [concept_political_movement] to end slavery"
 usfp_end_gag_rule_button_slave_trade: "We have a [concept_political_movement] to expand slavery"
+usfp_break_gag_rule_button: "Break Gag Rule"
+usfp_break_gag_rule_button_desc: "The election results are clear, and the House must be reconvened without the Gag Rule. Our mandate will not be denied!"
 
 je_usfp_a_house_divided_bleeding_kansas:0 "A House Divided: Bleeding Kansas"
 je_usfp_a_house_divided_bleeding_kansas_reason:0 "[SCOPE.sState('kansas_scope').GetName] has become a battleground over the matter of slavery. The #bold Progress Bar#! tracks the influence of each side in the state. Progress to the right indicates #bold Free-Stater#! influence, while progress to the left indicates the advance of the proslavery #bold Border Ruffians#!. If the progress bar reaches 0 or 100, the fate of [SCOPE.sState('kansas_scope').GetName] will be decided in that faction's favor.\n\nThe balance of power is expected to shift by #tooltippable;tooltip:[Country.GetTooltipTag],je_usfp_a_house_divided_bleeding_kansas_special_tooltip [Country.MakeScope.Var('bleeding_kansas_var_next').GetValue|+=]#! next month"

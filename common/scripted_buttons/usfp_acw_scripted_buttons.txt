@@ -285,3 +285,32 @@ usfp_end_gag_rule_button = {
 		}
 	}
 }
+
+#remove the gag rule in case republicans win the election but are already revolutionary
+usfp_break_gag_rule_button = {
+	name = "usfp_break_gag_rule_button"
+	desc = "usfp_break_gag_rule_button_desc"
+
+	visible = {
+		ruler = {
+			interest_group = {
+				is_in_government = no
+			}
+		}
+	}
+
+	possible = {
+		any_revolution_ongoing = yes
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = usfp_end_gag_rule
+			set_variable = removed_gag_rule
+		}
+	}
+
+	ai_chance = {
+		base = 1000
+	}
+}

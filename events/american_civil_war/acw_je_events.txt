@@ -221,6 +221,11 @@ acw_je_events.1 = {
 					}
 				}
 
+				s:STATE_DISTRICT_OF_COLUMBIA.region_state:FSA = { set_state_owner = c:USA }
+				c:USA = {
+					set_capital = STATE_DISTRICT_OF_COLUMBIA
+				}
+
 				every_scope_state = {
 					state_region = {
 						add_claim = root
@@ -240,6 +245,11 @@ acw_je_events.1 = {
 						NOT = { has_law = law_type:law_slavery_banned }
 					}
 					activate_law = law_type:law_slavery_banned
+				}
+
+				trigger_event = {
+					id = usfp_acw.8
+					days = 10
 				}
 			}
 		}
@@ -356,13 +366,22 @@ acw_je_events.2 = {
 		# 	name = reconstruction_var
 		# 	value = 0
 		# }
+		if = {
+			limit = { 
+				has_variable = fsa_annex_var
+			}
+			remove_variable = acw_slave_nation_var
+		}
 		set_variable = {
 			name = je_acw_wild_west_var
 			value = 0
 		}
 		if = {
 			limit = {
-				has_variable = csa_will_spawn_var
+				OR = {
+					has_variable = csa_will_spawn_var
+					has_variable = fsa_annex_var
+				}
 			}
 			every_scope_state = {
 				limit = {
@@ -401,13 +420,19 @@ acw_je_events.2 = {
 				}
 			}
 		}
+		remove_modifier = usfp_acw_fsa_modifier
+		remove_modifier = usfp_acw_csa_modifier
+		remove_modifier = usfp_acw_union_modifier
 	}
 
 	#Historical Reconstruction
 	option = {
 		name = acw_je_events.2.a
 		trigger = {
-			has_variable = csa_will_spawn_var
+			OR = {
+				has_variable = fsa_annex_var
+				has_variable = csa_will_spawn_var
+			}
 			has_law = law_type:law_slavery_banned
 		}
 		default_option = yes
@@ -435,14 +460,16 @@ acw_je_events.2 = {
 		ai_chance = {
 			base = 1000
 		}
+		remove_variable = fsa_annex_var
 	}
 
-	#FSA Reconstruction
+	#Reconstruction of the North
 	option = {
 		name = acw_je_events.2.b
 		trigger = {
-			NOT = {
+			NOR = {
 				has_variable = csa_will_spawn_var
+				has_variable = fsa_annex_var
 			}
 		}
 		#unfinished

@@ -1351,6 +1351,7 @@ usfp_a_house_divided.15 = {
 			}
 		}
 		recalculate_pop_ig_support = yes
+		update_party_support = yes
 	}
 
 }
