@@ -61,9 +61,6 @@ gov_usfp_indian_territory = {
 	}
 }
 
-
-
-
 # gov_usfp_tribal_confederation = {
 # 	transfer_of_power = hereditary
 

@@ -5,22 +5,42 @@
 	texture = "gfx/interface/icons/notification_icons/laws.dds"
 
 	notification_type = toast
+	color = bad
+
 }
 
 usfp_new_american_homeland = {
 	type = country
-	group = "colony_notification_group"
+	group = "usfp_westward_expansion_group"
 	
 	texture = "gfx/interface/icons/notification_icons/colonial.dds"
 
 	notification_type = toast
+	color = good
 }
 
 usfp_slavery_expands = {
 	type = country
-	group = "colony_notification_group"
+	group = "usfp_westward_expansion_group"
 	
 	texture = "gfx/interface/icons/notification_icons/colonial.dds"
 
 	notification_type = toast
+	color = bad
+}
+
+usfp_manifest_more_destiny_president = {
+	type = country
+	group = "usfp_manifest_destiny_group"
+	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
+	notification_type = feed
+	color = good
+}
+
+usfp_manifest_less_destiny_president = {
+	type = country
+	group = "usfp_manifest_destiny_group"
+	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
+	notification_type = feed
+	color = bad
 }

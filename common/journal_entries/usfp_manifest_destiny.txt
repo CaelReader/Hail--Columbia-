@@ -22,6 +22,9 @@ usfp_manifest_destiny_main = {
 		trigger_event = {
 			id = usfp_manifest_destiny.1
 		}
+		root = {
+			save_scope_as = usa_scope
+		}
 	}
 
 	current_value = {
@@ -81,6 +84,7 @@ usfp_manifest_destiny_main = {
 				ruler = {
 					set_variable = destiny_manifested_expansionist_president
 				}
+				post_notification = usfp_manifest_more_destiny_president
 			}
 			#Expansionist Powerful IG
 			if = {
@@ -161,6 +165,7 @@ usfp_manifest_destiny_main = {
 				ruler = {
 					set_variable = destiny_manifested_antiexpansion_president
 				}
+				post_notification = usfp_manifest_less_destiny_president
 			}
 			#Anti-Expansion Powerful IG
 			if = {

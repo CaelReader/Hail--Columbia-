@@ -110,4 +110,27 @@
 	# 		type = puppet
 	# 	}
 	# }
+
+	#Newfoundland Colony
+	#Wasn't absorbed by Canada until the 1950s, so its set to be English rather than Anglo-Canadian
+	s:STATE_NEWFOUNDLAND = {
+		create_country = {
+			tag = NEW
+			state = region_state:GBR
+			origin = c:NVS
+			on_created = {
+				activate_law = law_type:law_parliamentary_republic
+				c:GBR = {
+					create_diplomatic_pact = {
+						country = c:NEW
+						type = puppet
+					}
+				}
+				trigger_event = {
+					id = usfp_canada.1
+					days = 1
+				}
+			}
+		}
+	}
 }

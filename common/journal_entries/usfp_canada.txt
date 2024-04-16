@@ -31,6 +31,51 @@
 				owns_entire_state_region = STATE_NORTHWEST_TERRITORIES
 				owns_entire_state_region = STATE_NUNAVUT
 			}
+
+			#Canadian Highlander
+			custom_tooltip = {
+				text = usfp_canadian_highlander
+				AND = {
+					OR = {
+						NOT	= {
+							exists = c:HBC
+						}
+						c:HBC = root
+					}
+					OR = {
+						NOT	= {
+							exists = c:ORG
+						}
+						c:ORG = root
+					}
+					OR = {
+						NOT	= {
+							exists = c:ONT
+						}
+						c:ONT = root
+					}
+					OR = {
+						NOT	= {
+							exists = c:QUE
+						}
+						c:QUE = root
+					}
+					OR = {
+						NOT	= {
+							exists = c:NVS
+						}
+						c:NBS = root
+					}
+					OR = {
+						NOT	= {
+							exists = c:NBS
+						}
+						c:NBS = root
+					}
+				}
+			}
+
+
 			# NOT = {
 			# 	any_country = {
 			# 		NOT = {
@@ -44,12 +89,12 @@
 			# 	}
 			# }
 		}
-
-		is_at_war = no
+		is_diplomatic_play_committed_participant = no
 	}
 
 	on_complete = {
 		trigger_event = { id = can_aus.5 }
+		change_tag = CAN
 	}
 
 	invalid = {

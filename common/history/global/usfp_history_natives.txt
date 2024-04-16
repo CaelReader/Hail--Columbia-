@@ -2319,21 +2319,21 @@
 			change_poptype = pop_type:peasants
 		}
 	}
-	every_country = {
-		limit = {
-			is_country_type = decentralized
-			OR = {
-				country_has_primary_culture = cu:athabaskan
-				country_has_primary_culture = cu:inuit
-			}
-			NOT = {
-				capital = {
-					state_region = s:STATE_BRITISH_COLUMBIA
-				}
-			}
-		}
-		add_modifier = {
-			name = usfp_arctic_isolation
-		}
-	}
+	# every_country = {
+	# 	limit = {
+	# 		is_country_type = decentralized
+	# 		OR = {
+	# 			country_has_primary_culture = cu:athabaskan
+	# 			country_has_primary_culture = cu:inuit
+	# 		}
+	# 		NOT = {
+	# 			capital = {
+	# 				state_region = s:STATE_BRITISH_COLUMBIA
+	# 			}
+	# 		}
+	# 	}
+	# 	add_modifier = {
+	# 		name = usfp_arctic_isolation
+	# 	}
+	# }
 }

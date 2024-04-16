@@ -121,13 +121,6 @@ low_manifest_destiny: "#bold Manifest Destiny#! has low enough influence."
 usfp_homestead_act_button: "Encourage Western Settlement"
 usfp_homestead_act_button_desc: "Our western territories yearn to be populated and made productive. By doling out free plots of land to settlers, we can encourage migration and self-sufficiency."
 
-notification_usfp_new_american_homeland_name: "Westward Expansion"
- notification_usfp_new_american_homeland_desc: "[SCOPE.sState('new_homeland_state').GetName] is now considered a [SCOPE.sCulture('new_homeland_culture').GetName] [concept_homeland]."
- notification_usfp_new_american_homeland_tooltip: "#header $notification_usfp_new_american_homeland_name$#!\n$notification_usfp_new_american_homeland_desc$"
-notification_usfp_slavery_expands_name: "Slavery Spreads to [SCOPE.sState('slavery_expanded_state').GetName]"
- notification_usfp_slavery_expands_desc: "[SCOPE.sState('slavery_expanded_state').GetName] is now a Slave State."
- notification_usfp_slavery_expands_tooltip: "#header $notification_usfp_slavery_expands_name$#!\n$notification_usfp_slavery_expands_desc$"
-
 usfp_reconstruction_swing_freedmen: "Reconstruction will progress in favor of the #bold Freedmen#!."
 usfp_reconstruction_swing_south: "Reconstruction will regress, empowering the #bold Redeemers#!."
 usfp_reconstruction_enforce_rights_button: "Enforce Voting Rights"
@@ -137,3 +130,5 @@ usfp_reconstruction_confederate_amnesty_button_desc: "A true accord can be reach
 
 usfp_reconstruction_long: "Long Reconstruction"
 usfp_reconstruction_long_reason: "While Reconstruction has largely been a success for the Freedmen, racial prejudice remains deeply engrained at all levels of the [ROOT.GetCountry.GetName]. It will take at least a generation before [SCOPE.sCulture('afro_american_culture').GetName] citizens are truly accepted as a central part of the [ROOT.GetCountry.GetAdjectiveNoFormatting] nation."
+
+usfp_canadian_highlander: "We are the only Canadian colony remaining"

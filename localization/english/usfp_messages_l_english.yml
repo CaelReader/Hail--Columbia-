@@ -1,0 +1,23 @@
+﻿l_english:
+
+usfp_westward_expansion_group: "@america_icon! #yellow Hail, Columbia!#! | Westward Expansion"
+usfp_manifest_destiny_group: "@america_icon! #yellow Hail, Columbia!#! | Manifest Destiny"
+
+notification_usfp_new_american_homeland_name: "Westward Expansion"
+ notification_usfp_new_american_homeland_desc: "[SCOPE.sState('new_homeland_state').GetName] is now considered a [SCOPE.sCulture('new_homeland_culture').GetName] [concept_homeland]."
+ notification_usfp_new_american_homeland_tooltip: "#header $notification_usfp_new_american_homeland_name$#!\n$notification_usfp_new_american_homeland_desc$"
+
+notification_usfp_slavery_expands_name: "Slavery Spreads to [SCOPE.sState('slavery_expanded_state').GetName]"
+ notification_usfp_slavery_expands_desc: "[SCOPE.sState('slavery_expanded_state').GetName] is now a Slave State."
+ notification_usfp_slavery_expands_tooltip: "#header $notification_usfp_slavery_expands_name$#!\n$notification_usfp_slavery_expands_desc$"
+
+manifest_destiny_increase: "Manifest Destiny gains influence"
+manifest_destiny_decrease: "Manifest Destiny loses influence"
+
+notification_usfp_manifest_more_destiny_president_name: "$manifest_destiny_increase$"
+ notification_usfp_manifest_more_destiny_president_desc: "[SCOPE.sCountry('usa_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('usa_scope').GetRuler.GetLastName] promotes the importance of Manifest Destiny."
+ notification_usfp_manifest_more_destiny_president_tooltip: "#header $notification_usfp_manifest_more_destiny_president_name$#!\n$notification_usfp_manifest_more_destiny_president_desc$"
+
+notification_usfp_manifest_more_destiny_president_name: "$manifest_destiny_decrease$"
+ notification_usfp_manifest_more_destiny_president_desc: "The anti-expansionist [SCOPE.sCountry('usa_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('usa_scope').GetRuler.GetLastName] dismisses the legitimacy of Manifest Destiny."
+ notification_usfp_manifest_more_destiny_president_tooltip: "#header $notification_usfp_manifest_more_destiny_president_name$#!\n$notification_usfp_manifest_more_destiny_president_desc$"

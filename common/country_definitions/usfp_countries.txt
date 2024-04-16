@@ -496,3 +496,15 @@ HDA = {
 	
 	capital = STATE_BRITISH_COLUMBIA
 }
+
+NEW = {
+	color = { 255  211  56 }
+	
+	country_type = colonial
+	
+	tier = principality
+	
+	cultures = { british }
+	capital = STATE_NEWFOUNDLAND
+	is_named_from_capital = yes
+}

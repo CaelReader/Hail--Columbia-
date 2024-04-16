@@ -113,11 +113,12 @@ je_oregon = {
 			}
 			AND = {
 				c:GBR = { relations:ROOT >= relations_threshold:amicable }
-				any_country = {
+				s:STATE_CALIFORNIA = {
 					any_scope_state = {
-						state_region = s:STATE_CALIFORNIA
+						owner = {
+							has_war_with = root
+						}
 					}
-					has_war_with = prev
 				}
 			}
 		}
