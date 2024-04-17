@@ -259,7 +259,7 @@ agrarian_party = {
 					}					
 				}	
 				else_if = {
-					limit = { leader = { has_ideology = ideology:ideology_abolitionist } }
+					limit = { leader = { usfp_anti_slavery_leader_trigger = yes } }
 					add = {
 						value = -100
 						desc = "from_abolitionist_leader"
@@ -485,9 +485,11 @@ agrarian_party = {
 					has_ideology = ideology:ideology_laissez_faire
 					has_ideology = ideology:ideology_particularist
 					leader = {
-						has_ideology = ideology:ideology_abolitionist
-						has_ideology = ideology:ideology_social_democrat
-						has_ideology = ideology:ideology_communist
+						OR = {
+							usfp_anti_slavery_leader_trigger = yes
+							has_ideology = ideology:ideology_social_democrat
+							has_ideology = ideology:ideology_communist
+						}
 					}
 				}
 			}
@@ -504,7 +506,7 @@ agrarian_party = {
 				OR = {
 					has_ideology = ideology:ideology_anti_slavery
 					leader = {
-						has_ideology = ideology:ideology_abolitionist
+						usfp_anti_slavery_leader_trigger = yes
 					}
 				}
 			}

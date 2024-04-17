@@ -248,6 +248,12 @@ usfp_mexico_defeats_usa = {
 			 }
 			 set_variable = destiny_manifested_mexico_defeat
 			 usfp_manifest_less_destiny_effect = yes
+			 usfp_manifest_less_destiny_effect = yes
+			 usfp_manifest_less_destiny_effect = yes
+			 c:MEX = {
+				save_scope_as = mexico_scope
+			 }
+			 post_notification = usfp_manifest_less_destiny_mexico
 		}
 	}
 }
@@ -265,6 +271,39 @@ usfp_fsa_annex = {
 				has_variable = fsa_annex_var
 			 }
 			 trigger_event = acw_je_events.2
+		}
+	}
+}
+
+on_diplomatic_play_started = {
+	on_actions = {
+		usfp_mexico_attacks_usa
+	}
+}
+
+usfp_mexico_attacks_usa = {
+	effect = {
+		if = {
+			limit = { 
+				exists = c:MEX
+				scope:initiator = c:MEX
+				exists = c:USA
+				scope:target = c:USA
+				c:USA = {
+					NOT = {
+						has_variable = destiny_manifested_mexican_aggression
+					}
+					has_journal_entry = usfp_manifest_destiny_main
+				}
+			}
+			c:USA = {
+				usfp_manifest_more_destiny_effect = yes
+				set_variable = destiny_manifested_mexican_aggression
+				c:MEX = {
+					save_scope_as = mexico_scope
+				}
+				post_notification = usfp_manifest_more_destiny_mexico
+			}
 		}
 	}
 }

@@ -3,11 +3,8 @@
 	
 	group = je_group_foreign_affairs
 
-	scripted_button = je_unite_the_nations_proclaim_turtle_island_button
-    scripted_button = je_unite_the_nations_organize_the_tribes_button
-    scripted_button = je_unite_the_nations_offer_confederation_button
-
 	is_shown_when_inactive = {
+		exists = this
 		NOT = { is_country_type = decentralized }
 		country_is_in_north_america = yes
 		any_primary_culture = {
@@ -26,6 +23,10 @@
 			c:PRG ?= this
 		}
 	}
+
+	scripted_button = je_unite_the_nations_proclaim_turtle_island_button
+    scripted_button = je_unite_the_nations_organize_the_tribes_button
+    scripted_button = je_unite_the_nations_offer_confederation_button
 
 	possible = {
 		is_subject = no

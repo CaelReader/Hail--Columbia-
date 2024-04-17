@@ -99,7 +99,6 @@ usfp_manifest_destiny_main = {
 						}
 					}
 				}
-				usfp_manifest_more_destiny_effect = yes
 				random_interest_group = {
 					limit = {
 						is_powerful = yes
@@ -111,7 +110,10 @@ usfp_manifest_destiny_main = {
 						}
 					}
 					set_variable = destiny_manifested_expansionist_ig
+					save_scope_as = destiny_manifested_expansionist_ig
 				}
+				usfp_manifest_more_destiny_effect = yes
+				post_notification = usfp_manifest_more_destiny_ig
 			}
 			#Colonial Exploitation
 			if = {
@@ -121,8 +123,15 @@ usfp_manifest_destiny_main = {
 						has_variable = destiny_manifested_colonial_exploitation
 					}
 				}
+				random_law = {
+					limit = {
+						type = law_type:law_colonial_exploitation
+					}
+					save_scope_as = manifest_destiny_law_scope
+				}
 				usfp_manifest_more_destiny_effect = yes
 				set_variable = destiny_manifested_colonial_exploitation
+				post_notification = usfp_manifest_more_destiny_law
 			}
 			#Professional Army
 			if = {
@@ -132,24 +141,35 @@ usfp_manifest_destiny_main = {
 						has_variable = destiny_manifested_professional_army
 					}
 				}
-				usfp_manifest_more_destiny_effect = yes
-				set_variable = destiny_manifested_professional_army
-			}
-			#Attacked by Mexico
-			if = {
-				limit = {
-					exists = c:MEX 
-					any_diplomatic_play = {
-						target = ROOT
-						initiator = c:MEX
+				random_law = {
+					limit = {
+						type = law_type:law_professional_army
 					}
-					NOT = {
-						has_variable = destiny_manifested_mexican_aggression
-					}
+					save_scope_as = manifest_destiny_law_scope
 				}
 				usfp_manifest_more_destiny_effect = yes
-				set_variable = destiny_manifested_mexican_aggression
+				set_variable = destiny_manifested_professional_army
+				post_notification = usfp_manifest_more_destiny_law
 			}
+			#Attacked by Mexico
+			# if = {
+			# 	limit = {
+			# 		exists = c:MEX 
+			# 		any_diplomatic_play = {
+			# 			target = ROOT
+			# 			initiator = c:MEX
+			# 		}
+			# 		NOT = {
+			# 			has_variable = destiny_manifested_mexican_aggression
+			# 		}
+			# 	}
+			# 	usfp_manifest_more_destiny_effect = yes
+			# 	set_variable = destiny_manifested_mexican_aggression
+			# 	c:MEX = {
+			# 		save_scope_as = mexico_scope
+			# 	}
+			# 	post_notification = usfp_manifest_more_destiny_mexico
+			# }
 			### Manifest Destiny Decreases
 			#Anti-Expansion President
 			if = {
@@ -180,7 +200,6 @@ usfp_manifest_destiny_main = {
 						}
 					}
 				}
-				usfp_manifest_less_destiny_effect = yes
 				random_interest_group = {
 					limit = {
 						is_powerful = yes
@@ -192,7 +211,10 @@ usfp_manifest_destiny_main = {
 						}
 					}
 					set_variable = destiny_manifested_antiexpansion_ig
+					save_scope_as = destiny_manifested_antiexpansion_ig
 				}
+				usfp_manifest_less_destiny_effect = yes
+				post_notification = usfp_manifest_less_destiny_ig
 			}
 			#No Colonial Affairs
 			if = {
@@ -202,8 +224,15 @@ usfp_manifest_destiny_main = {
 						has_variable = destiny_manifested_no_colonial_affairs
 					}
 				}
+				random_law = {
+					limit = {
+						type = law_type:law_no_colonial_affairs
+					}
+					save_scope_as = manifest_destiny_law_scope
+				}
 				usfp_manifest_less_destiny_effect = yes
 				set_variable = destiny_manifested_no_colonial_affairs
+				post_notification = usfp_manifest_less_destiny_law
 			}
 			# #Lose ACW
 			# moved to the ACW JE itself

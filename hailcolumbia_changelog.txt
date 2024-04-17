@@ -65,4 +65,6 @@ Updates & Fixes:
 	Oregon Treaty no longer requires owning all of Montana and Wyoming, merely having a colony in Montana, Wyoming, or California will suffice
 	Paraguay can no longer become Turtle Island
 	Millard Filmore will no longer spawn in the Landowners
-	Removed the vanilla "northern/southern interests" party attraction modifiers
+	Adjusted "northern/southern interests" party attraction modifiers
+	Updated party attraction to account for Radical Abolitionists
+	Added notifications for when Manifest Destiny gains/loses influence

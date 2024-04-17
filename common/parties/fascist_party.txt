@@ -357,7 +357,7 @@
 						has_ideology = ideology:ideology_atheist
 						has_ideology = ideology:ideology_feminist
 						has_ideology = ideology:ideology_reformer
-						has_ideology = ideology:ideology_abolitionist
+						usfp_anti_slavery_leader_trigger = yes
 						has_ideology = ideology:ideology_pacifist
 						has_ideology = ideology:ideology_humanitarian
 						has_ideology = ideology:ideology_humanitarian_royalist

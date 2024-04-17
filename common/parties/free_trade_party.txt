@@ -234,7 +234,7 @@ free_trade_party = {
 					}					
 				}	
 				else_if = {
-					limit = { leader = { has_ideology = ideology:ideology_abolitionist } }
+					limit = { leader = { usfp_anti_slavery_leader_trigger = yes } }
 					add = {
 						value = 100
 						desc = "from_abolitionist_leader"

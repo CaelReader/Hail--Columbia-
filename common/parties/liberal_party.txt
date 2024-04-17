@@ -379,7 +379,7 @@ liberal_party = {
 				leader = {
 					OR = {
 						has_ideology = ideology:ideology_feminist
-						has_ideology = ideology:ideology_abolitionist
+						usfp_anti_slavery_leader_trigger = yes
 						has_ideology = ideology:ideology_pacifist
 						has_ideology = ideology:ideology_social_democrat
 						has_ideology = ideology:ideology_atheist
@@ -601,7 +601,7 @@ liberal_party = {
 				OR = {
 					has_ideology = ideology:ideology_particularist
 					leader = {
-						has_ideology = ideology:ideology_abolitionist
+						usfp_anti_slavery_leader_trigger = yes
 					}
 				}
 			}
@@ -621,7 +621,7 @@ liberal_party = {
 				OR = {
 					has_ideology = ideology:ideology_anti_slavery
 					leader = {
-						has_ideology = ideology:ideology_abolitionist
+						usfp_anti_slavery_leader_trigger = yes
 					}
 				}
 			}
@@ -642,9 +642,11 @@ liberal_party = {
 					has_ideology = ideology:ideology_laissez_faire
 					has_ideology = ideology:ideology_particularist
 					leader = {
-						has_ideology = ideology:ideology_abolitionist
-						has_ideology = ideology:ideology_social_democrat
-						has_ideology = ideology:ideology_communist
+						OR = {
+							usfp_anti_slavery_leader_trigger = yes
+							has_ideology = ideology:ideology_social_democrat
+							has_ideology = ideology:ideology_communist
+						}
 					}
 				}
 			}
@@ -684,7 +686,7 @@ liberal_party = {
 				}					
 			}	
 			else_if = {
-				limit = { leader = { has_ideology = ideology:ideology_abolitionist } }
+				limit = { leader = { usfp_anti_slavery_leader_trigger = yes } }
 				add = {
 					value = 100
 					desc = "from_abolitionist_leader"
@@ -877,52 +879,58 @@ liberal_party = {
 				desc = "usa_two_party_system"
 			}
 		}
-		# if = {
-		# 	limit = {
-		# 		owner = {
-		# 			OR = {
-		# 				country_has_primary_culture = cu:yankee
-		# 				country_has_primary_culture = cu:dixie
-		# 			}
-		# 			OR = {
-		# 				NOT = {
-		# 					has_law = law_type:law_slavery_banned
-		# 				}
-		# 				has_journal_entry = je_acw_countdown
-		# 			}
-		# 		}
-		# 		leader = {
-		# 			culture = cu:yankee
-		# 		}
-		# 	}
-		# 	add = {
-		# 		value = 3
-		# 		desc = "from_northern_interests"
-		# 	}
-		# }
-		# if = {
-		# 	limit = {
-		# 		owner = {
-		# 			OR = {
-		# 				country_has_primary_culture = cu:yankee
-		# 				country_has_primary_culture = cu:dixie
-		# 			}
-		# 			OR = {
-		# 				NOT = {
-		# 					has_law = law_type:law_slavery_banned
-		# 				}
-		# 				has_journal_entry = je_acw_countdown
-		# 			}
-		# 		}
-		# 		leader = {
-		# 			culture = cu:dixie
-		# 		}
-		# 	}
-		# 	add = {
-		# 		value = -5
-		# 		desc = "from_southern_interests"
-		# 	}
-		# }
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						country_has_primary_culture = cu:yankee
+						country_has_primary_culture = cu:dixie
+					}
+					OR = {
+						NOT = {
+							has_law = law_type:law_slavery_banned
+						}
+						has_journal_entry = je_acw_countdown
+					}
+				}
+				OR = {
+					leader = {
+						culture = cu:yankee
+					}
+					is_interest_group_type = ig_petty_bourgeoisie
+				}
+			}
+			add = {
+				value = 5
+				desc = "from_northern_interests"
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						country_has_primary_culture = cu:yankee
+						country_has_primary_culture = cu:dixie
+					}
+					OR = {
+						NOT = {
+							has_law = law_type:law_slavery_banned
+						}
+						has_journal_entry = je_acw_countdown
+					}
+				}
+				OR = {
+					leader = {
+						culture = cu:dixie
+					}
+					is_interest_group_type = ig_landowners
+				}
+			}
+			add = {
+				value = -5
+				desc = "from_southern_interests"
+			}
+		}
 		if = {
 			limit = {
 				owner = {
