@@ -206,6 +206,12 @@ usfp_acw.8.f: ""The abolitionism which I advocate is as absolute as the law of G
 usfp_acw.8.a: "Leave the South to their evil ways."
 usfp_acw.8.b: "We must crush the South and liberate the slaves!"
 
+usfp_acw.9.t: "The Union Forever?"
+usfp_acw.9.d: "With the victory of the [SCOPE.sCountry('acw_secession_country').GetName], the great Union assembled by the founding fathers seems to have been irreparably shattered. Even now with the nation reeling from defeat, radicals have begun to openly question the very idea of the states remaining united."
+usfp_acw.9.f: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting] watched the lowering of the Stars and Stripes solemnly. Some of those stars will have to be removed now, [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting] thought, and perhaps next year another star, then another. The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] could see only dark clouds ahead."
+usfp_acw.9.a: "The [SCOPE.sCountry('acw_secession_country').GetName] cannot be allowed to exist."
+usfp_acw.9.b: "The Union requires a firm hand to guide it through this catastrophe."
+
 usfp_reconstruction.1.t: "The Freedmen's Bureau"
 usfp_reconstruction.1.d: "A commission on the conditions in the South has suggested the creation of a new government agency: the Freedmen's Bureau. The agency would give direct aid to refugees and recently-liberated former slaves, and help transition them into free society."
 usfp_reconstruction.1.f: ""Offer the freedmen temporary aid and counsel until they become accustomed to their new sphere of life; secure to them, by law, their just rights of person and property; relieve them, by a fair and equal administration of justice, from tle depressing influence of disgraceful prejudice. Above all, guard them against the virtual restoration of slavery in any form, under any pretext, and then let them take care of themselves. If we allow this, the future of the African race in this country will be conducive to its prosperity and associated with its well-being."" #Freedmen's Inquiry Commission

@@ -24,6 +24,9 @@
 	on_government_type_change = {
 		change_to_presidential_elective = yes
 	}
+	on_post_government_type_change = {
+		post_change_to_presidential_elective = yes
+	}
 }
 
 gov_usfp_principal_chiefdom = {
@@ -58,6 +61,33 @@ gov_usfp_indian_territory = {
 
 	on_government_type_change = {
 		change_to_presidential_elective = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_presidential_elective = yes
+	}
+}
+
+gov_usfp_theodemocracy = {
+	transfer_of_power = presidential_elective
+	new_leader_on_reform_government = no
+
+	male_ruler = "RULER_TITLE_PRESIDENT"
+	female_ruler = "RULER_TITLE_PRESIDENT"
+	
+	possible = {
+		has_law = law_type:law_theocracy
+		country_has_state_religion = rel:mormon
+		NOT = {
+			has_law = law_type:law_technocracy
+		}
+		country_has_voting_franchise = yes
+	}
+
+	on_government_type_change = {
+		change_to_presidential_elective = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_presidential_elective = yes
 	}
 }
 

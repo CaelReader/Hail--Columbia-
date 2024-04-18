@@ -727,3 +727,107 @@ usfp_acw.8 = {
 		}
 	}
 }
+
+#The Union Forever? ACW Defeat
+usfp_acw.9 = {
+	type = country_event
+	placement = root
+
+	title = usfp_acw.9.t
+	desc = usfp_acw.9.d
+	flavor = usfp_acw.9.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_american_civil_war"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_usa_distress.dds"
+
+	duration = 3
+
+	trigger = {
+		#triggered by JE
+	}
+
+	immediate = {
+		if = {
+			limit = { 
+				exists = c:FSA
+			}
+			c:FSA = {
+				save_scope_as = acw_secession_country
+			}
+		} else_if = {
+			limit = {
+				exists = c:CSA
+			 }
+			 c:CSA = {
+				save_scope_as = acw_secession_country
+			 }
+			 usfp_planters_to_landowners_effect = yes
+		}		
+	}
+
+	#Regain claims
+	option = {
+		name = usfp_acw.9.a
+		default_option = yes
+		scope:acw_secession_country = {
+			every_scope_state = {
+				state_region = {
+					add_claim = root
+				}
+			}
+		}
+		change_relations = {
+			country = scope:acw_secession_country
+			value = -100
+		}
+		add_modifier = {
+			name = usfp_secession_legimitized
+			is_decaying = yes
+			years = 50
+		}
+		create_diplomatic_pact = {
+			country = scope:acw_secession_country
+			type = rivalry
+		}
+		ruler = {
+			add_modifier = {
+				name = usfp_lost_civil_war
+				years = 10
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	#Become Authoritarian
+	option = {
+		name = usfp_acw.9.b
+		ruler = {
+			set_ideology = ideology:ideology_authoritarian
+			add_modifier = {
+				name = usfp_lost_civil_war
+				multiplier = 0.5
+				years = 10
+			}
+		}
+		add_modifier = {
+			name = usfp_secession_legimitized
+			is_decaying = yes
+			years = 50
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+
+}
+#Post-ACW Armed Forces Boost
+
+#Rio Grande breaks away from CSA
+#CSA: Rio Grande breaks away!
+#Mexico revolt

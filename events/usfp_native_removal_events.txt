@@ -777,7 +777,7 @@ usfp_native_removal.8 = {
 			}
 		}
 		scope:massacre_state_scope = {
-			add_radicals = {
+			add_radicals_in_state = {
 				value = small_radicals
 				culture = scope:massacrer_culture
 			}

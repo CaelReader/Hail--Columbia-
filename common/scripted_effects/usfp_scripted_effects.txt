@@ -222,7 +222,14 @@ usfp_mexican_north_purchase_effect = {
 usfp_planters_to_landowners_effect = {
 	set_interest_group_name = ig_landowners
 	remove_ideology = ideology_pro_slavery
-	set_ig_trait = ig_trait:ig_trait_noble_privileges
+	if = {
+		limit = { 
+			NOT = {
+				has_global_variable = usfp_lost_cause_of_the_confederacy
+			}
+		}
+		set_ig_trait = ig_trait:ig_trait_noble_privileges
+	}
 	set_ig_trait = ig_trait:usfp_ig_trait_lawmen
 	every_scope_character = {
 		limit = {

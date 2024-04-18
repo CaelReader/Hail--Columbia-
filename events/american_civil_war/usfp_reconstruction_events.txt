@@ -297,7 +297,9 @@ usfp_reconstruction.4 = {
 				name = modifier_slavery_forgotten
 				years = 5
 			}
+			set_ig_trait = ig_trait:usfp_ig_trait_lost_cause
 		}
+		set_global_variable = usfp_lost_cause_of_the_confederacy
 		ai_chance = {
 			base = 100
 		}
@@ -315,8 +317,10 @@ usfp_reconstruction.4 = {
 				years = 20
 				multiplier = 0.5
 			}
+			set_ig_trait = ig_trait:usfp_ig_trait_lost_cause
 		}
 		usfp_reconstruction_swing_freedmen = yes
+		set_global_variable = usfp_lost_cause_of_the_confederacy
 		ai_chance = {
 			base = 5
 		}

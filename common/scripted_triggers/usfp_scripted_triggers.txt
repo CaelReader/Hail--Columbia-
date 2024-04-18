@@ -152,3 +152,41 @@ usfp_is_canadian_colony = {
 		this = c:QUE
 	}
 }
+
+usfp_owns_all_canada = {
+	owns_entire_state_region = STATE_ONTARIO
+	owns_entire_state_region = STATE_NEW_BRUNSWICK
+	owns_entire_state_region = STATE_QUEBEC
+	owns_entire_state_region = STATE_NEWFOUNDLAND
+	owns_entire_state_region = STATE_ALBERTA
+	owns_entire_state_region = STATE_BRITISH_COLUMBIA
+	owns_entire_state_region = STATE_SASKATCHEWAN
+	owns_entire_state_region = STATE_MANITOBA
+	owns_entire_state_region = STATE_YUKON_TERRITORY
+	owns_entire_state_region = STATE_NORTHWEST_TERRITORIES
+	owns_entire_state_region = STATE_NUNAVUT
+}
+
+usfp_owns_all_greater_mexico = {
+	owns_entire_state_region = STATE_CALIFORNIA
+	owns_entire_state_region = STATE_NEW_MEXICO
+	owns_entire_state_region = STATE_UTAH
+	owns_entire_state_region = STATE_NEVADA
+	owns_entire_state_region = STATE_ARIZONA
+	owns_entire_state_region = STATE_RIO_GRANDE
+	owns_entire_state_region = STATE_TEXAS
+	owns_entire_state_region = STATE_CHIHUAHUA
+	owns_entire_state_region = STATE_BAJA_CALIFORNIA
+	owns_entire_state_region = STATE_SONORA
+	owns_entire_state_region = STATE_SINALOA
+	owns_entire_state_region = STATE_DURANGO
+	owns_entire_state_region = STATE_ZACATECAS
+	owns_entire_state_region = STATE_BAJIO
+	owns_entire_state_region = STATE_VERACRUZ
+	owns_entire_state_region = STATE_JALISCO
+	owns_entire_state_region = STATE_MEXICO
+	owns_entire_state_region = STATE_GUERRERO
+	owns_entire_state_region = STATE_OAXACA
+	owns_entire_state_region = STATE_YUCATAN
+	owns_entire_state_region = STATE_CHIAPAS
+}

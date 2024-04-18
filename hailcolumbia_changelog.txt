@@ -48,9 +48,14 @@ Fixed some script errors
 
 2.0 "Jefferson"
 New Content:
-	The FSA can now choose to attempt to annex the USA
 	Added new decentralized tags across Canada and Alaska
+	New set of dynamic country names for various american governments, such as the Union of Sociliast American States or the American Technate
+	New game rule that controls whether the USA should always retain the "USA" initials or not
+	Added the Lost Cause as a post-civil war Landowner IG Trait
+	The FSA can now choose to attempt to annex the USA
+	New event for losing the ACW
 Updates & Fixes:
+	Democratic Experiment is now Loyalists from Legitimacy rather than SoL
 	Newfoundland now begins as a puppet of Great Britain
 	Canadian Confederation now completes if you annex the rest of the canadian tags (excluding Newfoundland)
 	Buffed the Compromise of 1820
@@ -68,3 +73,4 @@ Updates & Fixes:
 	Adjusted "northern/southern interests" party attraction modifiers
 	Updated party attraction to account for Radical Abolitionists
 	Added notifications for when Manifest Destiny gains/loses influence
+	The Oregon Territory no longer automatically becomes Yankee homelands upon completing the Oregon Treaty. The Westward Expansion mechanic now applies to them instead.

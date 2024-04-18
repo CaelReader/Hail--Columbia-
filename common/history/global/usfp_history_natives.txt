@@ -2332,8 +2332,5 @@
 	# 			}
 	# 		}
 	# 	}
-	# 	add_modifier = {
-	# 		name = usfp_arctic_isolation
-	# 	}
 	# }
 }

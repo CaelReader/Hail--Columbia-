@@ -1,6 +1,13 @@
 namespace = usfp_mormon
 
-#Death of Joseph Smith
+#Mormon War in Missouri
+#Killing of Joseph Smith
 #Mormon Exodus west
-#Deseret spawns
-#Utah statehood proposal
+#Deseret spawns - protectorate
+#Deseret statehood proposal 
+#DES: End polygamy?
+#USA: Deseret will not end polygamy
+#USA: Deseret will end polygamy
+#Twin Evils: Polygamy and Slavery
+#LDS Church ends Polygamy
+#Annihilate the LDS?

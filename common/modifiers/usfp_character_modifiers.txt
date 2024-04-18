@@ -19,3 +19,8 @@ usfp_great_triumvirate = {
 	interest_group_pop_attraction_mult = 0.10
 	interest_group_pol_str_mult = 0.10
 }
+
+usfp_lost_civil_war = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds	
+	character_popularity_add = -50
+}

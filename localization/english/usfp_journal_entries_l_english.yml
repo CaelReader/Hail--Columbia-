@@ -129,6 +129,6 @@ usfp_reconstruction_confederate_amnesty_button: "Grant Amnesty to Confederates"
 usfp_reconstruction_confederate_amnesty_button_desc: "A true accord can be reached between the gentlemen of the North and South. By pardoning former rebels and allowing them back into government, unrest in the South will be quelled."
 
 usfp_reconstruction_long: "Long Reconstruction"
-usfp_reconstruction_long_reason: "While Reconstruction has largely been a success for the Freedmen, racial prejudice remains deeply engrained at all levels of the [ROOT.GetCountry.GetName]. It will take at least a generation before [SCOPE.sCulture('afro_american_culture').GetName] citizens are truly accepted as a central part of the [ROOT.GetCountry.GetAdjectiveNoFormatting] nation."
+usfp_reconstruction_long_reason: "While Reconstruction has largely been a success for the Freedmen, racial prejudice remains deeply engrained at all levels of the [ROOT.GetCountry.GetName]. It will take at least a generation before [SCOPE.sCulture('afro_american_culture').GetName] citizens are truly accepted as a core element of the [ROOT.GetCountry.GetAdjectiveNoFormatting] nation."
 
 usfp_canadian_highlander: "We are the only Canadian colony remaining"

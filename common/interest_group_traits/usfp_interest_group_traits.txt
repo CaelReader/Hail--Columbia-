@@ -20,6 +20,18 @@ usfp_ig_trait_peculiar_institution = {
 	}
 }
 
+usfp_ig_trait_lost_cause = {
+	icon = "gfx/interface/icons/ig_trait_icons/lost_cause.dds"
+	max_approval = unhappy
+	
+	modifier = {
+		country_radicals_from_legitimacy_mult = 0.10
+		state_radicals_from_discrimination_mult = 0.20
+		state_pop_support_law_racial_segregation_add = 0.10
+		state_pop_support_law_national_supremacy_add = 0.10
+	}
+}
+
 #Landowners post Civil War
 usfp_ig_trait_lawmen = {
 	icon = "gfx/interface/icons/ig_trait_icons/lawmen.dds"
@@ -99,7 +111,7 @@ usfp_ig_trait_democratic_experiment = {
 	min_approval = happy
 	
 	modifier = {
-		state_loyalists_from_sol_change_accepted_culture_mult = 0.1
+		country_loyalists_from_legitimacy_mult = 0.07
 		country_society_tech_research_speed_mult = 0.05
 	}
 }

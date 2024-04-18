@@ -1040,6 +1040,9 @@ usfp_manifest_destiny.13 = {
 			OR = {
 				usfp_american_west_zone = yes
 				usfp_mexican_cession_trigger = yes
+				state_region = s:STATE_OREGON
+				state_region = s:STATE_WASHINGTON
+				state_region = s:STATE_IDAHO
 				#in case of manifesting extra destiny
 				state_region = s:STATE_RIO_GRANDE
 				state_region = s:STATE_CHIHUAHUA

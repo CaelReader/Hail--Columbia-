@@ -1,6 +1,7 @@
 ﻿on_monthly_pulse_country = {
 	on_actions = {
 		usfp_monthly_pulse
+		usfp_arctic_isolation
 	}
 }
 
@@ -30,6 +31,34 @@ usfp_monthly_pulse = {
 		1 = usfp_usa.2 #Atlantic Hurricane
 		3 = usfp_usa.3 #Major Tornado
 		2 = usfp_usa.5 #Wildfire 
+	}
+}
+
+#this tries to prevent native uprisings in the far north where the impassable terrain would cause problems
+usfp_arctic_isolation = {
+	effect = {
+		every_country = {
+			limit = {
+				is_country_type = decentralized
+				OR = {
+					country_has_primary_culture = cu:athabaskan
+					country_has_primary_culture = cu:inuit
+				}
+				NOT = {
+					capital = {
+						state_region = s:STATE_BRITISH_COLUMBIA
+					}
+				}
+			}
+			every_neighbouring_state = {
+				owner = {
+					set_tension = {
+						country = root
+						value = 0
+					}
+				}
+			}
+		}
 	}
 }
 

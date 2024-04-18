@@ -362,10 +362,15 @@ usfp_labor_agitation = {
 	state_radicals_from_sol_change_mult = 0.10
 }
 
-usfp_arctic_isolation = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_tension_decay_mult = 1
+usfp_secession_legimitized = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_negative.dds
+	country_secession_progress_mult = 0.20
+	state_radicals_from_discrimination_mult = 0.20
+	state_radicals_from_sol_change_mult = 0.20
+	political_movement_radicalism_mult = 0.15
+	country_radicals_from_legitimacy_mult = 0.15
 }
+
 
 ##vanilla override
 canada_test_modifier = {

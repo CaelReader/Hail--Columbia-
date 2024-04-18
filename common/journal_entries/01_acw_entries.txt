@@ -221,6 +221,7 @@ je_acw_war = {
 	}
 
 	on_fail = {
+		trigger_event = usfp_acw.9
 		usfp_manifest_less_destiny_effect = yes
 		hidden_effect = {
 			remove_modifier = usfp_acw_union_modifier
