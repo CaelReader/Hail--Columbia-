@@ -384,6 +384,24 @@ usfp_manifest_destiny.19.h: "Not a melting pot, but a great mosaic!"
 american_superculture_emerges: "25% of [SCOPE.sCulture('yankee_culture').GetName], [SCOPE.sCulture('dixie_culture').GetName], and [SCOPE.sCulture('anglo_canadian_culture').GetName] [Concept('concept_pop', '$concept_pops$')] adopt the [SCOPE.sCulture('american_culture').GetName] culture."
 american_superculture_homelands: "[SCOPE.sCulture('yankee_culture').GetName], [SCOPE.sCulture('dixie_culture').GetName], and [SCOPE.sCulture('anglo_canadian_culture').GetName] [Concept('concept_homeland', '$concept_homelands$')] become [SCOPE.sCulture('american_culture').GetName] [Concept('concept_homeland', '$concept_homelands$')]."
 
+usfp_manifest_destiny.20.t: "Oregon Bound"
+usfp_manifest_destiny.20.d: "With the opening of the Oregon Trail, great wagon trains have begun to set out west towards a new life in [SCOPE.sState('oregon_scope').GetName]. The route across the Great Plains and the Rockies is treacherous, but supply outposts have begun to crop up along the trail to aid the hopeful serttlers' journey."
+usfp_manifest_destiny.20.f: ""To the far-far off Pacific sea,\nWill you go - will you go - dear girl with me?\nBy a quiet brook, in a lovely spot\nWe'll jump from our wagon and build our cot!\nThen hip-hurrah for the prairie life!\nHip-hurrah for the mountain strife\nAnd if rifles must crack, if we swords must draw,\nOur country forever, hurrah, hurrah!"" #St. Louis Missouri Republican, 1840
+usfp_manifest_destiny.20.a: "Army forts in the west will provide assistance to the pioneers."
+usfp_manifest_destiny.20.b: "We could make a killing selling supplies to hungry pioneers!"
+
+usfp_manifest_destiny.21.t: "The Horse Creek Treaty"
+usfp_manifest_destiny.21.d: "Our agents on the frontier have negotiated a treaty with the plains nations along the route of the Oregon Trail. The treaty grants us rights to build roads and forts along the trail, and guarantees the safety of pioneers using the route. In return, we are to pay an anuity and recognize the territorial boundaries of the Indians."
+usfp_manifest_destiny.21.f: "Over ten thousand Indians had gathered for the treaty signing. Many of the represented nations had been enemies until recently, but the endless streams of settlers had become too great a problem to ignore. The American delegation seemed meek in comparison. Perhaps with this show of force, and the contract signed, there could be peace in the plains."
+usfp_manifest_destiny.21.a: "This treaty is too important for us to breach."
+usfp_manifest_destiny.21.b: "With our forts in place, they can't force us to leave, nor to pay."
+
+usfp_manifest_destiny.22.t: "Pikes Peak or Bust!"
+usfp_manifest_destiny.22.d: "The discovery of gold in [SCOPE.sState('colorado_scope').GetName] has spurred a frenzy of activity as gold-seekers rush into the territory, violating the treaty we signed with the local Indian nations. Settlers pressing further into the mountains have already come under attack by native warriors defending their lands."
+usfp_manifest_destiny.22.f: "THE NEW EL DORADO!!!\nGOLD IN KANSAS TERRITORY!!!\nAble-bodied men wanted for expeditions to Pikes Peak!\NGuaranteed riches for all concerned!"
+usfp_manifest_destiny.22.a: "We need to control these miners."
+usfp_manifest_destiny.22.b: "Ignore the treaty, there's gold to be had!"
+
 ### Native Removal
 usfp_native_removal.1.t: "The Seminole Removal"
 usfp_native_removal.1.d: "With the Second Seminole War finally winding down, the Army can begin the slow process of removing the remainder of the [SCOPE.sCulture('muskogean_scope').GetName] population across the Mississippi."

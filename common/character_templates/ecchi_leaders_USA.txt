@@ -2223,7 +2223,7 @@ ecchi_usa_joseph_smith_character_template = {
     historical = yes
     culture = cu:yankee
     female = no
-    religion = protestant #Mormon
+    religion = mormon
     ideology = ideology_theocrat
     interest_group = ig_devout
 	dna = ecchi_dna_joseph_smith
@@ -2253,19 +2253,18 @@ ecchi_usa_joseph_smith_character_template = {
     }
 }
 
-#USFP: agitator instead of IG Leader
+#USFP: leader of Deseret
 ecchi_usa_brigham_young_character_template = {
     first_name = ecchi_Brigham
     last_name = Young
     historical = yes
     culture = cu:yankee
     female = no
-    religion = protestant #Mormon
+    religion = mormon
     ideology = ideology_theocrat
     interest_group = ig_devout
 	dna = ecchi_dna_brigham_young
     birth_date = 1801.6.1
-    is_agitator = yes
     traits = { bigoted hedonist persistent }
     agitator_usage = {
         country_trigger = {

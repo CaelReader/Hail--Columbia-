@@ -1,9 +1,350 @@
 namespace = usfp_mormon
 
 #Mormon War in Missouri
+usfp_mormon.1 = {
+	type = country_event
+	placement = scope:missouri_scope
+
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	
+	title = usfp_mormon.1.t
+	desc = usfp_mormon.1.d
+	flavor = usfp_mormon.1.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		game_date > 1838.10.1
+		NOT = {
+			has_global_variable = missouri_mormons
+		}
+		s:STATE_MISSOURI = {
+			any_scope_state = {
+				owner = root
+				any_scope_pop = {
+					religion = rel:mormon
+				}
+			}
+		}
+	}
+
+	immediate = {
+		set_global_variable = missouri_mormons
+		s:STATE_MISSOURI.region_state:USA = {
+			save_scope_as = missouri_scope
+		}
+		s:STATE_ILLINOIS.region_state:USA = {
+			save_scope_as = illinois_scope
+		}
+		rel:mormon = {
+			save_scope_as = mormonism_scope
+		}
+	}
+
+	#how barbaric
+	option = {
+		name = usfp_mormon.1.a
+		scope:missouri_scope = {
+			add_radicals_in_state = {
+				value = small_radicals
+				religion = rel:mormon
+			}
+			kill_population_percent_in_state = {
+				percent = 0.01
+				religion = rel:mormon
+			}
+			every_scope_pop = {
+				limit = {
+					religion = rel:mormon
+				}
+				move_pop = scope:illinois_scope
+			}
+		}
+	}
+	#they deserve it
+	option = {
+		name = usfp_mormon.1.b
+		default_option = yes
+		scope:missouri_scope = {
+			add_radicals_in_state = {
+				value = small_radicals
+				religion = rel:mormon
+			}
+			kill_population_percent_in_state = {
+				percent = 0.01
+				religion = rel:mormon
+			}
+			every_scope_pop = {
+				limit = {
+					religion = rel:mormon
+				}
+				move_pop = scope:illinois_scope
+			}
+		}
+	}
+}
 #Killing of Joseph Smith
+usfp_mormon.2 = {
+	type = country_event
+	placement = scope:missouri_scope
+
+	event_image = {
+		video = "votp_prison"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	title = usfp_mormon.2.t
+	desc = usfp_mormon.2.d
+	flavor = usfp_mormon.2.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		game_date > 1844.6.1
+		NOT = {
+			has_global_variable = joseph_smith_killed
+		}
+		s:STATE_ILLINOIS.region_state:USA = {
+			any_scope_pop = {
+				religion = rel:mormon
+			}
+		}
+		has_global_variable = missouri_mormons
+	}
+
+	immediate = {
+		set_global_variable = joseph_smith_killed
+		s:STATE_ILLINOIS.region_state:USA = {
+			save_scope_as = illinois_scope
+		}
+		rel:mormon = {
+			save_scope_as = mormonism_scope
+		}
+	}
+
+	#what did they expect
+	option = {
+		name = usfp_mormon.2.a
+		scope:illinois_scope = {
+			add_radicals_in_state = {
+				value = small_radicals
+				religion = rel:mormon
+			}
+		}
+	}
+	#this is a breach of justice!
+	option = {
+		name = usfp_mormon.2.b
+		scope:illinois_scope = {
+			add_radicals_in_state = {
+				value = small_radicals
+				religion = rel:mormon
+			}
+		}
+	}
+}
 #Mormon Exodus west
+usfp_mormon.3 = {
+	type = country_event
+	placement = scope:missouri_scope
+
+	event_image = {
+		video = "asia_poor_people_moving"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_mormon.3.t
+	desc = usfp_mormon.3.d
+	flavor = usfp_mormon.3.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		game_date > 1847.1.1
+		NOT = {
+			has_global_variable = mormon_exodus
+		}
+		s:STATE_ILLINOIS.region_state:USA = {
+			any_scope_pop = {
+				religion = rel:mormon
+			}
+		}
+		has_global_variable = joseph_smith_killed
+		s:STATE_UTAH = {
+			NOT = {
+				any_scope_state = {
+					owner = {
+						NOT = {
+							is_country_type = decentralized
+						}
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		set_global_variable = mormon_exodus
+		s:STATE_ILLINOIS.region_state:USA = {
+			save_scope_as = illinois_scope
+		}
+		rel:mormon = {
+			save_scope_as = mormonism_scope
+		}
+	}
+
+	#fare well
+	option = {
+		name = usfp_mormon.3.a
+		custom_tooltip = {
+			text = usfp_mormon.3.t
+			#actually just kill them and then respawn the correct amount in Deseret later
+			scope:illinois_scope = {
+				kill_population_percent_in_state = {
+					percent = 1
+					religion = rel:mormon
+				}
+			}
+		}
+	}
+}
 #Deseret spawns - protectorate
+usfp_mormon.4 = {
+	type = country_event
+	placement = scope:missouri_scope
+
+	event_image = {
+		video = "asia_poor_people_moving"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/religion_icons/mormonism.dds"
+	
+	title = usfp_mormon.4.t
+	desc = usfp_mormon.4.d
+	flavor = usfp_mormon.4.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		#triggered by mormon.3
+	}
+
+	immediate = {
+		set_global_variable = deseret_spawned
+		s:STATE_UTAH = {
+			create_country = {
+				tag = DES
+				province = p:xF3B4BA
+				origin = c:USA
+				on_created = {
+					s:STATE_UTAH = {
+						set_owner_of_provinces = {
+							country = c:DES
+							provinces = { x9FC5C3 xA7E6DC }
+						}
+						region_state:DES = {
+							create_pop = {
+								culture = yankee
+								size = 20000
+								religion = mormon
+								pop_type = peasants
+							}
+							create_pop = {
+								culture = yankee
+								size = 500
+								religion = mormon
+								pop_type = clergymen
+							}
+						}
+						add_claim = c:DES
+					}
+					capital = {
+						add_modifier = {
+							name = usfp_lds_farms
+							years = 30
+							is_decaying = yes
+						}
+						every_scope_pop = {
+							limit = {
+								is_pop_type = peasants
+								religion = rel:mormon
+							}
+							set_pop_literacy = {
+								literacy_rate = 50
+							}
+						}
+					}
+					add_modifier = {
+						name = usfp_lds_church_des
+					}
+					set_state_religion = rel:mormon
+					activate_law = law_type:law_theocracy
+					activate_law = law_type:law_universal_suffrage
+					activate_law = law_type:law_religious_schools
+					activate_law = law_type:law_charitable_health_system
+					activate_law = law_type:law_freedom_of_conscience
+					set_ruling_interest_groups = {
+						ig_devout
+					}
+					create_character = {
+						template = ecchi_usa_brigham_young_character_template
+						ruler = yes
+						ig_leader = yes
+						on_created = {
+							add_modifier = {
+								name = usfp_american_moses
+							}
+						}
+					}
+					set_next_election_date = 1876.1.1
+				}
+			}
+		}
+	}
+
+	#interesting
+	option = {
+		name = usfp_mormon.4.a
+		default_option = yes
+		if = {
+			limit = {
+				c:USA = {
+					has_claim = s:STATE_UTAH
+				}
+			 }
+			 c:USA = {
+				create_diplomatic_pact = {
+					country = c:DES
+					type = protectorate
+				 }
+			 }
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#this is a problem
+	option = {
+		name = usfp_mormon.4.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
 #Deseret statehood proposal 
 #DES: End polygamy?
 #USA: Deseret will not end polygamy

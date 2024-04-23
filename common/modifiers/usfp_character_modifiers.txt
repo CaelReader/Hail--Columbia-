@@ -24,3 +24,8 @@ usfp_lost_civil_war = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds	
 	character_popularity_add = -50
 }
+
+usfp_american_moses = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_theocracy_positive.dds
+	character_popularity_add = 100
+}

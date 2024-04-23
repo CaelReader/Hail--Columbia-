@@ -508,3 +508,14 @@ NEW = {
 	capital = STATE_NEWFOUNDLAND
 	is_named_from_capital = yes
 }
+
+DES = {
+	color = { 54 106 170 }
+	
+	country_type = colonial
+	
+	tier = principality
+	
+	cultures = { yankee dixie }
+	capital = STATE_UTAH
+}

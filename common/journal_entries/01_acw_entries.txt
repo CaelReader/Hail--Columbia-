@@ -210,6 +210,9 @@ je_acw_war = {
 		hidden_effect = {
 			remove_modifier = usfp_acw_union_modifier
 		}
+		hidden_effect = {
+			usfp_cleanup_a_house_divided_variables = yes
+		}
 	}
 
 	fail = {
@@ -225,6 +228,9 @@ je_acw_war = {
 		usfp_manifest_less_destiny_effect = yes
 		hidden_effect = {
 			remove_modifier = usfp_acw_union_modifier
+		}
+		hidden_effect = {
+			usfp_cleanup_a_house_divided_variables = yes
 		}
 	}
 

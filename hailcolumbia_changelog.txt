@@ -49,6 +49,7 @@ Fixed some script errors
 2.0 "Jefferson"
 New Content:
 	Added new decentralized tags across Canada and Alaska
+	New Oregon Trail events
 	New set of dynamic country names for various american governments, such as the Union of Sociliast American States or the American Technate
 	New game rule that controls whether the USA should always retain the "USA" initials or not
 	Added the Lost Cause as a post-civil war Landowner IG Trait
@@ -74,3 +75,4 @@ Updates & Fixes:
 	Updated party attraction to account for Radical Abolitionists
 	Added notifications for when Manifest Destiny gains/loses influence
 	The Oregon Territory no longer automatically becomes Yankee homelands upon completing the Oregon Treaty. The Westward Expansion mechanic now applies to them instead.
+	Added cleanup effects to clear variables for journal entries after they are no longer relevant.

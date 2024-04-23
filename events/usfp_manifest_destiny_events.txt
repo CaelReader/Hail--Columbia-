@@ -1930,3 +1930,353 @@ usfp_manifest_destiny.19 = {
 	}
 
 }
+
+#Oregon Trail Migration
+usfp_manifest_destiny.20 = {
+	type = country_event
+	placement = scope:oregon_scope
+
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_manifest_destiny.20.t
+	desc = usfp_manifest_destiny.20.d
+	flavor = usfp_manifest_destiny.20.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		has_global_variable = oregon_trail_mapped
+		s:STATE_OREGON = {
+			any_scope_state = {
+				state_is_eligible_as_mass_migration_target = yes
+				is_mass_migration_target = no
+				owner = {
+					NOT = {
+						is_country_type = decentralized
+					}
+				}
+			}
+		}
+		NOT = {
+			has_variable = had_oregon_migration
+		}
+	}
+
+	immediate = {
+		set_variable = had_oregon_migration
+		s:STATE_OREGON = {
+			random_scope_state = {
+				limit = {
+					state_is_eligible_as_mass_migration_target = yes
+					is_mass_migration_target = no
+					owner = {
+						NOT = {
+							is_country_type = decentralized
+						}
+					}
+				}
+				save_scope_as = oregon_scope
+			}
+		}
+	}
+
+	#establish some supply outposts
+	option = {
+		name = usfp_manifest_destiny.20.a
+		default_option = yes
+		scope:oregon_scope = {
+			create_mass_migration = {
+				origin = ROOT
+				culture = cu:yankee
+			}
+			add_modifier = {
+				name = usfp_oregon_migration
+				years = 15
+			}
+		}
+
+	}
+
+	#we could make a killing
+	option = {
+		name = usfp_manifest_destiny.20.b
+		scope:oregon_scope = {
+			create_mass_migration = {
+				origin = ROOT
+				culture = cu:yankee
+			}
+			add_modifier = {
+				name = usfp_oregon_migration
+				years = 15
+				multiplier = 0.5
+			}
+		}
+		add_modifier = {
+			name = usfp_oregon_gouging
+			years = 5
+		}
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_rural_folk
+		}
+	}
+}
+#Horse Creek Treaty
+usfp_manifest_destiny.21 = {
+	type = country_event
+	placement = scope:colorado_scope
+
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_manifest_destiny.21.t
+	desc = usfp_manifest_destiny.21.d
+	flavor = usfp_manifest_destiny.21.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		game_date > 1851.1.1
+		has_global_variable = oregon_trail_mapped
+		NOT = {
+			has_variable = horse_creek_treaty
+		}
+		s:STATE_OREGON = {
+			any_scope_state = {
+				owner = {
+					NOT = {
+						is_country_type = decentralized
+					}
+				}
+			}
+		}
+		s:STATE_KANSAS = {
+			any_scope_state = {
+				owner = root
+			}
+		}
+		has_claim = s:STATE_WYOMING
+		has_claim = s:STATE_NEBRASKA
+		NOT = {
+			exists = c:TIS
+		}
+		NOT = {
+			owns_entire_state_region = STATE_WYOMING
+		}
+		NOT = {
+			has_law = law_type:law_no_colonial_affairs
+		}
+		is_at_war = no
+	}
+
+	immediate = {
+		set_variable = horse_creek_treaty
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_COLORADO
+			}
+			save_scope_as = colorado_scope
+		}
+	}
+
+	#Pay
+	option = {
+		name = usfp_manifest_destiny.21.a
+		usfp_oregon_trail_provinces_effect = yes
+		c:PWN ?= {
+			create_truce = {
+				country = root
+				months = 60
+			}
+			change_tension = {
+				country = root
+				value = -20
+			}
+		}
+		c:LKT ?= {
+			create_truce = {
+				country = root
+				months = 60
+			}
+			change_tension = {
+				country = root
+				value = -20
+			}
+		}
+		c:ARP ?= {
+			create_truce = {
+				country = root
+				months = 60
+			}
+			change_tension = {
+				country = root
+				value = -20
+			}
+		}
+		c:ABS ?= {
+			create_truce = {
+				country = root
+				months = 60
+			}
+			change_tension = {
+				country = root
+				value = -20
+			}
+		}
+		add_modifier = {
+			name = usfp_horse_creek_treaty
+			years = 10
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	#Do not pay
+	option = {
+		name = usfp_manifest_destiny.21.b
+		default_option = yes
+		usfp_oregon_trail_provinces_effect = yes
+		c:PWN ?= {
+			change_tension = {
+				country = root
+				value = 10
+			}
+		}
+		c:LKT ?= {
+			change_tension = {
+				country = root
+				value = 10
+			}
+		}
+		c:ARP ?= {
+			change_tension = {
+				country = root
+				value = 10
+			}
+		}
+		c:ABS ?= {
+			change_tension = {
+				country = root
+				value = 10
+			}
+		}
+		add_treasury = -1000
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+#Pikes Peak Gold Rush
+usfp_manifest_destiny.22 = {
+	type = country_event
+	placement = scope:colorado_scope
+
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/invention_icons/prospecting_tech.dds"
+	
+	title = usfp_manifest_destiny.22.t
+	desc = usfp_manifest_destiny.22.d
+	flavor = usfp_manifest_destiny.22.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		has_variable = horse_creek_treaty
+		game_date > 1858.1.1
+		any_scope_state = {
+			state_region = s:STATE_COLORADO
+			any_scope_building = {
+				is_building_type = building_gold_fields
+			}
+		}
+		s:STATE_COLORADO = {
+			any_scope_state = {
+				owner = {
+					is_country_type = decentralized
+				}
+			}
+		}
+		NOT = {
+			has_variable = pikes_peak
+		}
+	}
+
+	immediate = {
+		set_variable = pikes_peak
+		s:STATE_COLORADO.region_state:USA = {
+			save_scope_as = colorado_scope
+		}
+	}
+
+	#Restrain gold rush
+	option = {
+		name = usfp_manifest_destiny.22.a
+		scope:colorado_scope = {
+			add_modifier = {
+				name = usfp_gold_rush_lawlessness
+				years = 3
+				multiplier = 0.5
+			}
+			add_radicals_in_state = {
+				value = small_radicals
+				culture = cu:yankee
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	#Don't
+	option = {
+		name = usfp_manifest_destiny.22.b
+		scope:colorado_scope = {
+			add_modifier = {
+				name = usfp_gold_rush_lawlessness
+				years = 3
+			}
+			state_region = {
+				every_scope_state = {
+					limit = {
+						owner = {
+							is_country_type = decentralized
+						}
+					}
+					owner = {
+						change_tension = {
+							country = root
+							value = 30
+						}
+						if = {
+							limit = {
+								has_truce_with = root
+							 }
+							 end_truce = {
+								country = root
+								months = 0
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}

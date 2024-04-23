@@ -549,3 +549,53 @@ usfp_reconstruction_swing_south = {
 
 	}
 }
+
+usfp_oregon_trail_provinces_effect = {
+	s:STATE_OREGON = {
+		random_scope_state = {
+			limit = {
+				owner = {
+					NOT = {
+						is_country_type = decentralized
+					}
+				}
+				is_treaty_port = no
+			}
+			owner = {
+				save_scope_as = oregon_owner_scope
+			}
+		}
+	}
+	s:STATE_KANSAS = {
+		set_owner_of_provinces = {
+			country = root
+			provinces = { x6C6CF4 xBE4BF0 x9324D1 }
+		}
+	}
+	s:STATE_NEBRASKA = {
+		set_owner_of_provinces = {
+			country = root
+			provinces = { x085848 x5A6816 x09025B xD7F409 xB83435 xD1616D x814008 xC547CE x4C746E xF972E7 x0F6ED8 x63FFC3 }
+		}
+	}
+	s:STATE_WYOMING = {
+		set_owner_of_provinces = {
+			country = root
+			provinces = { x90C080 x5B63B5 x109BC0 xF3326F x5B70BB xCF073F x1F5624 x2CC9D7 xD7B8D9 x952F3F x3DC80A x465DC8 
+		x36DEC9 x319B3E }
+		}
+	}
+	s:STATE_IDAHO = {
+		set_owner_of_provinces = {
+			country = scope:oregon_owner_scope
+			provinces = { xD00080 x9888F6 xBC0AA9 xA1C84D x236126 xA1A13A xA1A13A xEC9F6C x44332A xB95EB2 xE65BC2 
+		x017C34 x2C976D xFD9C12  }
+		}
+	}
+	s:STATE_OREGON = {
+		set_owner_of_provinces = {
+			country = scope:oregon_owner_scope
+			provinces = { xBC98A3 xCD9293 xFB0F43 xBDE344 x9B28DC x30DED0 xC77F08 }
+		}
+	}
+}

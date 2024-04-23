@@ -266,6 +266,9 @@ usfp_manifest_destiny_main = {
 			100 = usfp_manifest_destiny.12 #California Genocide
 			100 = usfp_manifest_destiny.14 #Ostend Manifesto
 			100 = usfp_manifest_destiny.19 #American Superculture
+			100 = usfp_manifest_destiny.20 #Oregon Pioneers
+			100 = usfp_manifest_destiny.21 #Horse Creek Treaty
+			100 = usfp_manifest_destiny.22 #Pike's Peak Gold Rush
 			
 		}
 		events = {

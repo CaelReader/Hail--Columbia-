@@ -109,3 +109,14 @@ usfp_jim_crow = {
 	interest_group_ig_landowners_pol_str_mult = 0.20
 	state_afro_american_standard_of_living_add = -2
 }
+
+usfp_oregon_migration = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds
+	state_migration_pull_add = 20
+}
+
+usfp_lds_farms = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds
+	state_poor_standard_of_living_add = 1
+	state_welfare_payments_add = 0.10
+}
