@@ -1075,6 +1075,7 @@ usfp_usa.11 = {
 			limit = {
 				has_variable = is_jennings_bryan
 			}
+			add_character_role = agitator
 			save_scope_as = bryan_scope
 			interest_group = {
 				party = {
@@ -1495,6 +1496,70 @@ usfp_usa.17 = {
 						}
 					}
 				}	
+			}
+		}
+	}
+}
+
+#Garfield-style assassination
+usfp_usa.18 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/invention_icons/triage.dds"
+	event_image = {
+		video = "southamerica_public_figure_assassination"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	placement = root
+
+	title = usfp_usa.18.t
+	desc = usfp_usa.18.d
+	flavor = usfp_usa.18.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		exists = c:USA
+		c:USA = root
+		in_election_campaign = no
+		NOT = {
+			has_variable = garfield_assassination
+		}
+		NOT = {
+			has_journal_entry = je_acw_countdown
+		}
+	}
+
+	immediate = {
+		ruler = {
+			save_scope_as = us_president_scope
+		}
+		set_variable = garfield_assassination
+	}
+
+	option = {
+		name = usfp_usa.18.a
+		default_option = yes
+		scope:us_president_scope = {
+			interest_group = {
+				add_modifier = {
+					name = usfp_removal_martyr
+					years = 2
+				}
+			}
+		}
+		random_list = {
+			30 = {
+				scope:us_president_scope = {
+					add_trait = wounded
+				}
+			}
+			70 = {
+				scope:us_president_scope = {
+					kill_character = yes
+				}
 			}
 		}
 	}

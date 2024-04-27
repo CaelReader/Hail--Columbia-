@@ -11,7 +11,6 @@ usfp_monthly_pulse = {
 		usfp_usa.4 #Opening of Ellis Island
 		usfp_usa.6 #Great Chicago Fire
 		usfp_usa.11 #Cross of Gold
-		# usfp_usa.14 #Hidden event to weight first election
 		usfp_usa.16 #Election chaos (ALL democracies, not just the US)
 	}
 	random_events = {
@@ -22,6 +21,7 @@ usfp_monthly_pulse = {
 		50 = usfp_usa.12 #American Hippo Bill
 		10 = usfp_usa.13 #Wild Hippos
 		100 = usfp_usa.15 #Hidden event to kill off the Great Triumvirate
+		1 = usfp_usa.18 #Garfield-style Assassination
 
 		##Labor events
 		100 = usfp_usa_labor.1 #founding of the IWW
@@ -31,6 +31,16 @@ usfp_monthly_pulse = {
 		1 = usfp_usa.2 #Atlantic Hurricane
 		3 = usfp_usa.3 #Major Tornado
 		2 = usfp_usa.5 #Wildfire 
+
+		#Mormon events
+		20 = usfp_mormon.1 #Missouri Mormon War
+		20 = usfp_mormon.2 #Killing of Joseph Smith
+		20 = usfp_mormon.3 #Mormon Exodus
+		50 = usfp_mormon.9 #Twin Relics of Barbarism
+		20 = usfp_mormon.10 #LDS ends polygamy
+		20 = usfp_mormon.11 #Utah War instigation
+		1 = usfp_mormon.14 #Mormon assassinates president
+		
 	}
 }
 
@@ -70,17 +80,17 @@ on_election_campaign_start = {
 	}
 }
 
-#Spawn a new Slaver, Abolitonist, or RadAbolitionist agitator every election
+#Chance to spawn a new Slaver, Abolitonist, or RadAbolitionist agitator every election
 usfp_acw_election_agitators = {
 	effect = {
 		if = {
 			limit = {
 				c:USA ?= this
-				NOT = { has_global_variable = american_civil_war }
+				has_journal_entry = je_acw_countdown
 			}
 			random_list = {
-				20 = {}
-				35 = {
+				50 = {}
+				30 = {
 					create_character = {
 						culture = cu:dixie
 						interest_group = ig_landowners
@@ -96,7 +106,7 @@ usfp_acw_election_agitators = {
 						}
 					}
 				}
-				35 = {
+				15 = {
 					create_character = {
 						culture = cu:yankee
 						interest_group = ig_intelligentsia
@@ -112,7 +122,7 @@ usfp_acw_election_agitators = {
 						}
 					}
 				}
-				10 = {
+				5 = {
 					create_character = {
 						culture = cu:yankee
 						interest_group = ig_intelligentsia
@@ -162,8 +172,6 @@ usfp_acw_election_agitators = {
 					}
 				}
 			}
-
-
 		}
 	}
 }
@@ -332,6 +340,39 @@ usfp_mexico_attacks_usa = {
 					save_scope_as = mexico_scope
 				}
 				post_notification = usfp_manifest_more_destiny_mexico
+			}
+		}
+	}
+}
+
+on_wargoal_enforced = {
+	on_actions = {
+		usfp_utah_war
+	}
+}
+
+usfp_utah_war = {
+	effect = {
+		if = {
+			limit = { 
+				c:USA ?= root
+				NOT = {
+					exists = c:DES
+				}
+				s:STATE_UTAH = {
+					any_scope_state = {
+						owner = root
+					}
+				}
+				has_global_variable = utah_war
+				NOR = {
+					has_variable = utah_war_amnesty
+					has_variable = lds_fate
+				}
+			}
+			trigger_event = {
+				id = usfp_mormon.13
+				popup = yes
 			}
 		}
 	}

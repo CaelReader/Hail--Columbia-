@@ -276,3 +276,25 @@ USA = { # United States of America
 		}
 	}
 }
+
+DES = {
+	dynamic_country_name = {
+		name = dyn_c_utah_territory
+		adjective = dyn_c_utah_territory_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor = {
+				AND = {
+					exists = c:USA
+					scope:actor = {
+						is_subject_of = c:USA
+					}
+					is_subject_type = subject_type_puppet
+				}
+			}
+		}
+	}
+}

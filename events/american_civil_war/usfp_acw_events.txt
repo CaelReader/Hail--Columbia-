@@ -827,6 +827,152 @@ usfp_acw.9 = {
 
 }
 #Post-ACW Armed Forces Boost
+usfp_acw.10 = {
+	type = country_event
+	placement = root
+
+	title = usfp_acw.10.t
+	desc = usfp_acw.10.d
+	flavor = usfp_acw.10.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+
+	trigger = {
+		#triggered by JE
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				any_scope_general = {
+					has_template = usa_general_grant
+				}
+			 }
+			 random_scope_general = {
+				limit = {
+					has_template = usa_general_grant
+					}
+					save_scope_as = general_grant_scope
+				}
+		}
+		ig:ig_armed_forces = {
+			ordered_scope_general = {
+				limit = {
+					is_ruler = no
+					NOR = {
+						has_role = politician
+						has_template = usa_general_grant
+					}
+				}
+				order_by = commander_rank
+				save_scope_as = civil_war_general
+			}
+		}
+	}
+
+	#We salute our heroes!
+	option = {
+		name = usfp_acw.10.a
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = usfp_post_civil_war_army
+				years = 10
+				is_decaying = yes
+			}
+		}
+		add_loyalists = {
+			value = medium_radicals
+			pop_type = soldiers
+		}
+		add_loyalists = {
+			value = large_radicals
+			pop_type = officers
+		}
+	}
+	#General takes the lead!
+	option = {
+		name = usfp_acw.10.b
+		default_option = yes
+		trigger = {
+			exists = scope:civil_war_general
+		}
+		scope:civil_war_general = {
+			if = {
+				limit = { 
+					commander_rank < 5
+				}
+				add_commander_rank = 1
+			}
+			add_modifier = {
+				name = usfp_civil_war_hero
+			}
+			set_as_interest_group_leader = yes
+		}
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = usfp_post_civil_war_army
+				years = 10
+				is_decaying = yes
+			}
+		}
+		add_loyalists = {
+			value = medium_radicals
+			pop_type = soldiers
+		}
+		add_loyalists = {
+			value = large_radicals
+			pop_type = officers
+		}
+	}
+	#Grant takes the lead!
+	option = {
+		name = usfp_acw.10.c
+		trigger = {
+			any_scope_general = {
+				has_template = usa_general_grant
+				is_ruler = no
+				NOT = {
+					has_role = politician
+				}
+			}
+		}
+		scope:general_grant_scope = {
+			if = {
+				limit = { 
+					commander_rank < 5
+				}
+				add_commander_rank = 1
+			}
+			add_modifier = {
+				name = usfp_civil_war_hero
+			}
+			set_as_interest_group_leader = yes
+		}
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = usfp_post_civil_war_army
+				years = 10
+				is_decaying = yes
+			}
+		}
+		add_loyalists = {
+			value = medium_radicals
+			pop_type = soldiers
+		}
+		add_loyalists = {
+			value = large_radicals
+			pop_type = officers
+		}
+	}
+}
 
 #Rio Grande breaks away from CSA
 #CSA: Rio Grande breaks away!

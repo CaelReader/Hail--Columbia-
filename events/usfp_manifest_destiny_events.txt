@@ -2280,3 +2280,65 @@ usfp_manifest_destiny.22 = {
 		}
 	}
 }
+
+#Manifest Destiny failure event
+usfp_manifest_destiny.23 = {
+	type = country_event
+	placement = root
+
+	event_image = {
+		video = "europenorthamerica_rich_and_poor"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_usa_distress.dds"
+	
+	title = usfp_manifest_destiny.23.t
+	desc = usfp_manifest_destiny.23.d
+	flavor = usfp_manifest_destiny.23.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		#triggered by Manifest Destiny JE
+	}
+
+	#Liberal
+	option = {
+		name = usfp_manifest_destiny.23.a
+		add_radicals = {
+			value = very_large_radicals
+		}
+		ruler = {
+			set_ideology = ideology:ideology_market_liberal
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+	#Reactionary
+	option = {
+		name = usfp_manifest_destiny.23.b
+		default_option = yes
+		add_radicals = {
+			value = very_large_radicals
+		}
+		ruler = {
+			set_ideology = ideology:ideology_ethno_nationalist
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+	#Neutral
+	option = {
+		name = usfp_manifest_destiny.23.c
+		add_radicals = {
+			value = very_large_radicals
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+}

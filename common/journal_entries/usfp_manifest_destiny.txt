@@ -48,6 +48,13 @@ usfp_manifest_destiny_main = {
 		}
 	}
 
+	on_fail = {
+		trigger_event = {
+			id = usfp_manifest_destiny.23
+			popup = yes
+		}
+	}
+
 	invalid = {
 		NOT = {
 			root = c:USA

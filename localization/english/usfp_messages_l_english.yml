@@ -3,7 +3,7 @@
 usfp_westward_expansion_group: "@america_icon! #yellow Hail, Columbia!#! | Westward Expansion"
 usfp_manifest_destiny_group: "@america_icon! #yellow Hail, Columbia!#! | Manifest Destiny"
 
-notification_usfp_new_american_homeland_name: "Westward Expansion"
+notification_usfp_new_american_homeland_name: "[concept_usfp_westward_expansion]"
  notification_usfp_new_american_homeland_desc: "[SCOPE.sState('new_homeland_state').GetName] is now considered a [SCOPE.sCulture('new_homeland_culture').GetName] [concept_homeland]."
  notification_usfp_new_american_homeland_tooltip: "#header $notification_usfp_new_american_homeland_name$#!\n$notification_usfp_new_american_homeland_desc$"
 

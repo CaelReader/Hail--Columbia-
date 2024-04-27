@@ -213,6 +213,26 @@ je_acw_war = {
 		hidden_effect = {
 			usfp_cleanup_a_house_divided_variables = yes
 		}
+		hidden_effect = {
+			every_scope_character = {
+				limit = {
+					has_variable = usfp_acw_agitator
+					OR = {
+						has_ideology = ideology:ideology_slaver
+						has_ideology = ideology:ideology_abolitionist
+					}
+				}
+				kill_character = {
+					hidden = yes
+				}
+			}
+		}
+		hidden_effect = {
+			trigger_event = {
+				id = usfp_acw.10
+				months = 1
+			}
+		}
 	}
 
 	fail = {
@@ -231,6 +251,20 @@ je_acw_war = {
 		}
 		hidden_effect = {
 			usfp_cleanup_a_house_divided_variables = yes
+		}
+		hidden_effect = {
+			every_scope_character = {
+				limit = {
+					has_variable = usfp_acw_agitator
+					OR = {
+						has_ideology = ideology:ideology_slaver
+						has_ideology = ideology:ideology_abolitionist
+					}
+				}
+				kill_character = {
+					hidden = yes
+				}
+			}
 		}
 	}
 

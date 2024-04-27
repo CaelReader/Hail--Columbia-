@@ -66,6 +66,7 @@ usfp_second_party_system_modifier = {
 	country_legitimacy_govt_size_add = -1 #TPS
 	country_legitimacy_headofstate_add = 10 #TPS
 	country_legitimacy_ideological_incoherence_mult = -0.10 #TPS, 0.2 presrep 0.1 censuf 0.20 actual
+	country_agitator_slots_add = 3
 }
 
 usfp_third_party_system_modifier = {
@@ -76,6 +77,7 @@ usfp_third_party_system_modifier = {
 	country_legitimacy_govt_size_add = -1 #TPS
 	country_legitimacy_headofstate_add = 10 #TPS
 	country_legitimacy_ideological_incoherence_mult = -0.10 #TPS, 0.2 presrep 0.1 censuf 0.20 actual
+	country_agitator_slots_add = 3
 }
 
 albany_regency_uscwf = {
@@ -153,7 +155,7 @@ usfp_a_house_divided_modifier = {
 	state_pop_support_law_legacy_slavery_add = 1.0
 	state_pop_support_law_slave_trade_add = 0.5
 	interest_group_ig_landowners_approval_add = -20 #40
-	country_agitator_slots_add = 10
+	country_agitator_slots_add = 7
 }
 
 modifier_texas_war_of_independence = {
@@ -388,6 +390,8 @@ usfp_lds_church_des = {
 	interest_group_ig_rural_folk_pol_str_mult = -1
 	interest_group_ig_rural_folk_pop_attraction_mult = -1
 	state_conversion_mult = 1
+	country_legitimacy_base_add = 50
+	state_birth_rate_mult = 0.10
 }
 
 

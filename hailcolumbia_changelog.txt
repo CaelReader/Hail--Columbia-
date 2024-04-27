@@ -48,13 +48,17 @@ Fixed some script errors
 
 2.0 "Jefferson"
 New Content:
-	Added new decentralized tags across Canada and Alaska
+	Added Mormon Content, including the founding of Deseret and the Utah War
+	New decentralized tags added across Canada and Alaska
 	New Oregon Trail events
 	New set of dynamic country names for various american governments, such as the Union of Sociliast American States or the American Technate
 	New game rule that controls whether the USA should always retain the "USA" initials or not
 	Added the Lost Cause as a post-civil war Landowner IG Trait
 	The FSA can now choose to attempt to annex the USA
 	New event for losing the ACW
+	New event for failing Manifest Destiny
+	New post-ACW event that bolsters the Armed Forces
+	New rare assassination attempt on the President by an insane office-seeker (ala James Garfield)
 Updates & Fixes:
 	Democratic Experiment is now Loyalists from Legitimacy rather than SoL
 	Newfoundland now begins as a puppet of Great Britain
@@ -76,3 +80,10 @@ Updates & Fixes:
 	Added notifications for when Manifest Destiny gains/loses influence
 	The Oregon Territory no longer automatically becomes Yankee homelands upon completing the Oregon Treaty. The Westward Expansion mechanic now applies to them instead.
 	Added cleanup effects to clear variables for journal entries after they are no longer relevant.
+	Added extra check to try and make sure abolitionist/slaver ACW agitators retire after the war or reconciliation.
+	Decreased the frequency of election-spawned agitators
+	Moved some agitator slots to the Second/Third Party System modifiers
+	Universal Suffrage now begins with a positive enactment modifier
+	Added is_usfp_active scripted trigger as a mod compatibility hook
+	ACW Agitators should now only spawn while A House Divided is active
+	Added Concept explaining the Westward Expansion requirements

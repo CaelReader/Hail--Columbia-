@@ -1024,6 +1024,20 @@ usfp_a_house_divided.12 = {
 			limit = { type = law_type:law_slavery_banned }
 			save_scope_as = slavery_banned_scope
 		}
+		hidden_effect = {
+			every_scope_character = {
+				limit = {
+					has_variable = usfp_acw_agitator
+					OR = {
+						has_ideology = ideology:ideology_slaver
+						has_ideology = ideology:ideology_abolitionist
+					}
+				}
+				kill_character = {
+					hidden = yes
+				}
+			}
+		}
 	}
 
 	option = {
@@ -1520,6 +1534,7 @@ usfp_a_house_divided.17 = {
 			limit = {
 				has_template = usa_lincoln_character_template
 			}
+			add_character_role = agitator
 			save_scope_as = real_abraham_lincoln_scope
 		}
 		ig:ig_petty_bourgeoisie = {

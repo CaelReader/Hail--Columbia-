@@ -29,3 +29,8 @@ usfp_american_moses = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_theocracy_positive.dds
 	character_popularity_add = 100
 }
+
+usfp_civil_war_hero = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_officer_positive.dds
+	character_popularity_add = 30
+}
