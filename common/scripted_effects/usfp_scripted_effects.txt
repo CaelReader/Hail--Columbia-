@@ -595,7 +595,24 @@ usfp_oregon_trail_provinces_effect = {
 	s:STATE_OREGON = {
 		set_owner_of_provinces = {
 			country = scope:oregon_owner_scope
-			provinces = { xBC98A3 xCD9293 xFB0F43 xBDE344 x9B28DC x30DED0 xC77F08 }
+			provinces = { xBC98A3 xCD9293 xFB0F43 xBDE344 x9B28DC }
 		}
+	}
+	s:STATE_WASHINGTON = {
+		set_owner_of_provinces = {
+			country = scope:oregon_owner_scope
+			provinces = { x30DED0 xC77F08 }
+		}
+	}
+}
+
+usfp_remove_manifest_destiny_claims_effect = {
+	every_state_region = {
+		limit = {
+			root = {
+				has_claim = prev
+			}
+		}
+		remove_claim = ROOT
 	}
 }

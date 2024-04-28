@@ -51,7 +51,7 @@ usfp_a_house_divided.8.a: "The Union is saved!"
 usfp_a_house_divided.8.b: "The Fugitive Slave Act is a step too far."
 usfp_a_house_divided.8.c: "Reject popular sovereignty, but offer the Fugitive Slave Act as redress."
 usfp_a_house_divided.8.e: "We are done compromising with the [SCOPE.gsInterestGroup('planters_scope').GetName]."
-popular_sovereignty_enabled: "Our western territories may now become Slave states if the local settlers vote in favor of it."
+popular_sovereignty_enabled: "Our territories west of Kansas may now become Slave states if the local settlers vote in favor of it."
 
 usfp_a_house_divided.10.t: "The Kansas-Nebraska Act"
 usfp_a_house_divided.10.d: "With the western territories in need of governance, the [SCOPE.sParty('democratic_party').GetName] has put forth a bill to organize  governments for [SCOPE.sState('kansas_scope').GetName] and [SCOPE.sState('nebraska_scope').GetName]. The act would allow the people of these territories to vote on the status of slavery, ending the Missouri Compromise."
@@ -213,7 +213,7 @@ usfp_acw.9.a: "The [SCOPE.sCountry('acw_secession_country').GetName] cannot be a
 usfp_acw.9.b: "The Union requires a firm hand to guide it through this catastrophe."
 
 usfp_acw.10.t: "Heroes of the Republic"
-usfp_acw.10.d: "Our armies have returned home to great celebration and triumph. In the wake of their victory, many of our valiant officers and commanders have risen to new political prominence."
+usfp_acw.10.d: "Our armies have returned home from the Civil War to great celebration and triumph. In the wake of their victory, many of our valiant officers and commanders have risen to new political prominence."
 usfp_acw.10.f: ""You see in these armies, the foundation of the Republic: our future railroad managers, congressmen, bank presidents, senators, manufacturers, judges, governors and diplomats; yes and not less than a half dozen presidents."" #Edwin Stanton
 usfp_acw.10.a: "Honor to the brave!"
 usfp_acw.10.b: "[SCOPE.sCharacter('civil_war_general').GetFullName] has great political prospects."
@@ -616,13 +616,14 @@ usfp_mormon.3.a: "Farewell, Mormons."
 usfp_mormon.3.a.t: "All [SCOPE.sReligion('mormonism_scope').GetName] [Concept('concept_pop', '$concept_pops$')] in [SCOPE.sState('illinois_scope').GetName] will depart for parts unknown"
 
 usfp_mormon.4.t: "A New Zion"
-usfp_mormon.4.d: "Word has reached us that the Mormons have established a colony in [SCOPE.sState('utah_scope').GetStateRegion.GetName] calling itself [SCOPE.sCountry('deseret_scope').GetName]. The settlers appear to have no desire to found their own independent country, and instead intend to remain in the political orbit of the [ROOT.GetCountry.GetName]. Reports also indicate that they have begun to openly practice polygamy as a tenet of their faith."
+usfp_mormon.4.d: "Word has reached us that the Mormons have established a colony in [SCOPE.sState('utah_scope').GetStateRegion.GetName] and formed a religious government known as [SCOPE.sCountry('deseret_scope').GetName]. The settlers appear to have no desire to found their own independent country, and instead intend to remain in the political orbit of the [ROOT.GetCountry.GetName]. Reports also indicate that they have now begun to openly practice polygamy as a tenet of their faith."
 usfp_mormon.4.f: ""The word of the Lord, was, 'go to that valley and the best place you can find in it is the spot.' Well, I prayed that he would lead us directly to the best spot, which he has done, for after searching we can find no better."" #Brigham Young
 usfp_mormon.4.a: "We will accept their colonial efforts for now."
 usfp_mormon.4.b: "They must fend for themselves."
 
 usfp_mormon.5.t: "The State of Deseret?"
 usfp_mormon.5.d: "The Mormons of [SCOPE.sCountry('deseret_scope').GetName] have drafted a state consitution and petitioned us for inclusion into the Union. Their proposed state seems to claim a vast territory, much more than they actually control, and is silent on the matter of slavery."
+usfp_mormon.5.d_noslavery: "The Mormons of [SCOPE.sCountry('deseret_scope').GetName] have drafted a state consitution and petitioned us for inclusion into the Union. Their proposed state seems to claim a vast territory, much more than they actually control."
 usfp_mormon.5.f: ""We therefore, ask your honorable body to favorably consider their interests; and, if consistent with the constitution and usages of the federal government, that our constitution be ratified, and that the State of Deseret be admitted into the Union on an equal footing with other States; or such other form of civil government as your wisdom and magnanimity may award to the people of Deseret."" #Deseret to the House
 usfp_mormon.5.a: "We will admit Deseret post-haste!"
 usfp_mormon.5.b: "Deseret will be organized as the Utah Territory, with more reasonable borders."

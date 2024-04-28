@@ -49,7 +49,7 @@ Fixed some script errors
 2.0 "Jefferson"
 New Content:
 	Added Mormon Content, including the founding of Deseret and the Utah War
-	New decentralized tags added across Canada and Alaska
+	Added new decentralized tags across northern Canada and Alaska
 	New Oregon Trail events
 	New set of dynamic country names for various american governments, such as the Union of Sociliast American States or the American Technate
 	New game rule that controls whether the USA should always retain the "USA" initials or not
@@ -59,7 +59,8 @@ New Content:
 	New event for failing Manifest Destiny
 	New post-ACW event that bolsters the Armed Forces
 	New rare assassination attempt on the President by an insane office-seeker (ala James Garfield)
-Updates & Fixes:
+	USA now begins the game with Abolitionist (William Lloyd Garrison) and Slaver (Robert Rhett) agitators
+Updates:
 	Democratic Experiment is now Loyalists from Legitimacy rather than SoL
 	Newfoundland now begins as a puppet of Great Britain
 	Canadian Confederation now completes if you annex the rest of the canadian tags (excluding Newfoundland)
@@ -68,22 +69,24 @@ Updates & Fixes:
 	New flags for some decentralized tags
 	Peculiar Reconciliation can now lead into Long Reconstruction if you've lifted racial segregration
 	Added some migration pull and MAPI to the White House
+	Added notifications for when Manifest Destiny gains/loses influence
+	Decreased the frequency of ACW election-spawned agitators
+	Moved some agitator slots to the Second/Third Party System modifiers
+	Universal Suffrage now begins with a positive enactment modifier
+	Added is_usfp_active scripted trigger as a mod compatibility hook
+	Added Game Concept explaining the Westward Expansion requirements
+Fixes:
 	The Whigs will now collapse if a slavery revolt reaches 50% progress
-	Fixed westward expansion homelands not accounting for the American Superculture
-	The Mexican Cession now also takes northern California to prevent weirdness around Frontier Colonization limitations
+	Fixed Westward Expansion homelands not accounting for the American Superculture
+	The Mexican Cession now also annexes northern California to prevent weirdness around Frontier Colonization limitations
 	Adjusted treaty options for the Treaty of Guadalupe Hidalgo
 	Oregon Treaty no longer requires owning all of Montana and Wyoming, merely having a colony in Montana, Wyoming, or California will suffice
 	Paraguay can no longer become Turtle Island
 	Millard Filmore will no longer spawn in the Landowners
 	Adjusted "northern/southern interests" party attraction modifiers
 	Updated party attraction to account for Radical Abolitionists
-	Added notifications for when Manifest Destiny gains/loses influence
-	The Oregon Territory no longer automatically becomes Yankee homelands upon completing the Oregon Treaty. The Westward Expansion mechanic now applies to them instead.
+	Monroe Doctrine event should no longer fire multiple times for the same incident
+	The Oregon Treaty no longer automatically becomes Yankee homelands upon completing the Oregon Treaty. The Westward Expansion mechanic now applies to them instead.
 	Added cleanup effects to clear variables for journal entries after they are no longer relevant.
 	Added extra check to try and make sure abolitionist/slaver ACW agitators retire after the war or reconciliation.
-	Decreased the frequency of election-spawned agitators
-	Moved some agitator slots to the Second/Third Party System modifiers
-	Universal Suffrage now begins with a positive enactment modifier
-	Added is_usfp_active scripted trigger as a mod compatibility hook
 	ACW Agitators should now only spawn while A House Divided is active
-	Added Concept explaining the Westward Expansion requirements

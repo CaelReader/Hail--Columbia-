@@ -1,4 +1,4 @@
-namespace = usfp_mormon
+﻿namespace = usfp_mormon
 
 #Mormon War in Missouri
 usfp_mormon.1 = {
@@ -148,6 +148,7 @@ usfp_mormon.2 = {
 	#what did they expect
 	option = {
 		name = usfp_mormon.2.a
+		default_option = yes
 		scope:illinois_scope = {
 			add_radicals_in_state = {
 				value = small_radicals
@@ -216,6 +217,9 @@ usfp_mormon.3 = {
 			}
 		}
 		has_global_variable = oregon_trail_mapped
+		NOT = {
+			has_global_variable = deseret_spawned
+		}
 	}
 
 	immediate = {
@@ -416,7 +420,25 @@ usfp_mormon.5 = {
 	icon = "gfx/interface/icons/religion_icons/mormonism.dds"
 	
 	title = usfp_mormon.5.t
-	desc = usfp_mormon.5.d
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = usfp_mormon.5.d_noslavery
+				trigger = {
+					c:USA = {
+						has_law = law_type:law_slavery_banned
+					}
+				}
+			}
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = usfp_mormon.5.d
+			}
+		}
+
+	}
 	flavor = usfp_mormon.5.f
 	dlc = dlc_usfp
 	duration = 3
@@ -433,6 +455,10 @@ usfp_mormon.5 = {
 			}
 		}
 		set_variable = utah_statehood_proposal
+		set_variable = {
+			name = utah_war_wait
+			years = 3
+		}
 	}
 
 	#State
@@ -471,6 +497,14 @@ usfp_mormon.5 = {
 		c:DES = {
 			activate_law = law_type:law_autocracy
 			activate_law = law_type:law_presidential_republic
+			if = {
+				limit = { 
+					c:USA = {
+						has_law = law_type:law_slavery_banned
+					}
+				}
+				activate_law = law_type:law_slavery_banned
+			}
 		}
 		ai_chance = {
 			base = 100
@@ -617,6 +651,14 @@ usfp_mormon.8 = {
 		c:DES = {
 			activate_law = law_type:law_autocracy
 			activate_law = law_type:law_presidential_republic
+			if = {
+				limit = { 
+					c:USA = {
+						has_law = law_type:law_slavery_banned
+					}
+				}
+				activate_law = law_type:law_slavery_banned
+			}
 		}
 		scope:utah_scope = {
 			add_radicals_in_state = {
@@ -794,6 +836,9 @@ usfp_mormon.11 = {
 			is_subject_type = subject_type_puppet
 		}
 		is_at_war = no
+		NOT = {
+			has_variable = utah_war_wait
+		}
 	}
 
 	immediate = {
@@ -888,6 +933,11 @@ usfp_mormon.12 = {
 		add_loyalists = {
 			value = small_radicals
 			religion = rel:mormon
+		}
+		scope:utah_scope = {
+			add_modifier = {
+				name = usfp_lds_church_utah
+			}
 		}
 		set_variable = utah_war_amnesty
 	}

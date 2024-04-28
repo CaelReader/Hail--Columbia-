@@ -10,7 +10,7 @@ deseret_statehood_des = {
 
 	possible = {
 		OR = {
-			total_population > 50000
+			total_population > 40000
 			s:STATE_CALIFORNIA = {
 				any_scope_state = {
 					owner = c:USA

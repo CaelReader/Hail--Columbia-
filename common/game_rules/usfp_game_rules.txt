@@ -1,4 +1,4 @@
-usfp_usa_names = {
+﻿usfp_usa_names = {
 	default = usa_dynamic_names
 
 	usa_initial_names = {

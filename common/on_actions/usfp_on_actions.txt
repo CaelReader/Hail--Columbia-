@@ -35,10 +35,10 @@ usfp_monthly_pulse = {
 		#Mormon events
 		20 = usfp_mormon.1 #Missouri Mormon War
 		20 = usfp_mormon.2 #Killing of Joseph Smith
-		20 = usfp_mormon.3 #Mormon Exodus
+		100 = usfp_mormon.3 #Mormon Exodus
 		50 = usfp_mormon.9 #Twin Relics of Barbarism
-		20 = usfp_mormon.10 #LDS ends polygamy
-		20 = usfp_mormon.11 #Utah War instigation
+		50 = usfp_mormon.10 #LDS ends polygamy
+		50 = usfp_mormon.11 #Utah War instigation
 		1 = usfp_mormon.14 #Mormon assassinates president
 		
 	}

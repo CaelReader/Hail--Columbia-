@@ -392,13 +392,8 @@ usfp_lds_church_des = {
 	state_conversion_mult = 1
 	country_legitimacy_base_add = 50
 	state_birth_rate_mult = 0.10
+	state_migration_pull_mult = 0.60
 }
 
 
-##vanilla override
-canada_test_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_prestige_add = 50
-	state_colony_growth_speed_mult = 0.25
-}
 

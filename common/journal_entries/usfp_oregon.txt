@@ -174,17 +174,14 @@ je_oregon = {
 				}
 			}
 			s:STATE_IDAHO = {
-				add_homeland = cu:yankee
 				add_claim = ROOT
 				remove_claim = scope:oregon_holder_scope
 			}
 			s:STATE_WASHINGTON = {
-				add_homeland = cu:yankee
 				add_claim = ROOT
 				remove_claim = scope:oregon_holder_scope
 			}
 			s:STATE_OREGON = {
-				add_homeland = cu:yankee
 				add_claim = ROOT
 				remove_claim = scope:oregon_holder_scope
 			}
