@@ -1,4 +1,4 @@
-deseret_statehood_des = {
+﻿deseret_statehood_des = {
 	is_shown = {
 		exists = c:DES
 		root = c:DES

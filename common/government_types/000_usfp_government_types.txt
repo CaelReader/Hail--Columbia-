@@ -19,6 +19,11 @@
 		}
 		country_has_voting_franchise = yes
 		has_law = law_type:law_presidential_republic
+		OR = {
+			country_tier = empire
+			country_tier = kingdom
+			country_tier = hegemony
+		}
 	}
 
 	on_government_type_change = {

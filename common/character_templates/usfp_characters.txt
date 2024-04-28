@@ -599,7 +599,7 @@ usfp_usa_william_lloyd_garrison = {
     ideology = ideology_usfp_abolitionist_radical
     interest_group = ig_intelligentsia
     birth_date = 1805.12.10
-    # dna
+    dna = usfp_usa_garrison_william_lloyd
     is_agitator = yes
     traits = { persistent literary honorable romantic }
 }
@@ -615,7 +615,7 @@ usfp_usa_robert_rhett = {
     ideology = ideology_slaver
     interest_group = ig_landowners
     birth_date = 1800.12.21
-    # dna
+    dna = usfp_usa_rhett_robert
     is_agitator = yes
     traits = { persistent wrathful basic_political_operator literary }
 }

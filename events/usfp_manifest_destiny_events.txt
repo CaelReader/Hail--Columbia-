@@ -856,7 +856,10 @@ usfp_manifest_destiny.10 = {
 		}
 		custom_tooltip = {
 			text = usfp_manifest_destiny.10.a.t
-			trigger_event = usfp_manifest_destiny.11
+			trigger_event = {
+				id = usfp_manifest_destiny.11
+				days = 1
+			}
 		}
 		set_variable = {
 			name = gold_mountain_arrivals
@@ -875,7 +878,10 @@ usfp_manifest_destiny.10 = {
 		}
 		custom_tooltip = {
 			text = usfp_manifest_destiny.10.a.t
-			trigger_event = usfp_manifest_destiny.11
+			trigger_event = {
+				id = usfp_manifest_destiny.11
+				days = 1
+			}
 		}
 		set_variable = {
 			name = gold_mountain_arrivals
@@ -909,7 +915,6 @@ usfp_manifest_destiny.11 = {
 				}
 			}
 		}
-		
 	}
 }
 
@@ -1065,7 +1070,7 @@ usfp_manifest_destiny.13 = {
 			state_population > 60000
 			religion_percent_state = {
 				target = rel:animist
-				value < 0.2
+				value < 0.3
 			}
 			any_scope_pop = {
 				culture = {
@@ -1116,7 +1121,7 @@ usfp_manifest_destiny.13 = {
 				state_population > 60000
 				religion_percent_state = {
 					target = rel:animist
-					value < 0.2
+					value < 0.3
 				}
 				any_scope_pop = {
 					culture = {

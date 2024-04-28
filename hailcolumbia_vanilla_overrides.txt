@@ -28,10 +28,12 @@ common/journal_entries/01_acw_entries.txt
 common/journal_entries/01_alaska.txt
 common/journal_entries/01_indian_removal.txt
 common/journal_entries/01_texas.txt
+common/journal_entries/05_turtle_island.txt
 je_oregon
 
 All slavery laws are overwritten for ai purposes #also includes VTM's "is law important" functionality
 
+events/alaska_events.txt
 events/american_civil_war/acw_events.txt
 events/american_civil_war/acw_followup_events.txt
 events/american_civil_war/acw_je_events.txt
@@ -43,3 +45,7 @@ events/texan_war_of_independence_events.txt
 can_aus.5
 
 common/scripted_buttons/turtle_island_buttons.txt
+
+common/flag_definitions/01_flag_definitions_usa.txt
+common/coat_of_arms/coat_of_arms/01_subs_usa.txt
+common/coat_of_arms/coat_of_arms/02_countries_usa.txt

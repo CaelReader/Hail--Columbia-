@@ -127,7 +127,9 @@ je_alaska = {
 	}
 
 	complete = {
-		owns_entire_state_region = STATE_ALASKA
+		scope:alaska_state = {
+			owner = root
+		}
 	}
 
 	on_complete = {

@@ -90,3 +90,4 @@ Fixes:
 	Added cleanup effects to clear variables for journal entries after they are no longer relevant.
 	Added extra check to try and make sure abolitionist/slaver ACW agitators retire after the war or reconciliation.
 	ACW Agitators should now only spawn while A House Divided is active
+	Fixed Han migrants to California not properly spawning
