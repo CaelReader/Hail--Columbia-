@@ -1,4 +1,5 @@
-﻿#USFP JE replacement for vanilla ACW leadup journals
+﻿###### Hail, Columbia! by CaelReader ######
+#USFP JE replacement for vanilla ACW leadup journals
 
 
 #Slave Power: the strangehold of the Southern Planters

@@ -1,8 +1,6 @@
 ﻿DIPLOMATIC_PLAYS = {
 	c:USA = {
 		create_diplomatic_play = {
-			name = cr_seminole_war
-		
 			target_state = s:STATE_FLORIDA.region_state:SMN
 			
 			war = yes

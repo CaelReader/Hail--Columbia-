@@ -77,6 +77,37 @@ USA = {	# United States of America
 			}
 		}
 	}
+	#NAU
+	flag_definition = {
+		coa = USA_technocracy_NAU
+		subject_canton = USA_technocracy_NAU
+		priority = 2500
+		trigger = { 
+			scope:actor ?= {
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+				}
+				has_law = law_type:law_technocracy
+				OR = {
+					AND = {
+						exists = c:CAN
+						c:CAN = {
+							is_subject_of = scope:actor
+						}
+						exists = c:MEX
+						c:MEX = {
+							is_subject_of = scope:actor
+						}
+					}
+					scope:actor ?= {
+						usfp_owns_all_canada = yes
+						usfp_owns_all_greater_mexico = yes
+					}
+				}
+			}
+		}
+	}
 	# 25 to 100 star flag definitions
 	flag_definition = {
 		coa = USA_25

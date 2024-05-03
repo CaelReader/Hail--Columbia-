@@ -139,6 +139,7 @@ usfp_acw_election_agitators = {
 					}
 				}
 			}
+			#You banned slavery? fuck you
 			if = {
 				limit = {
 					OR = {
@@ -223,7 +224,7 @@ usfp_gag_rule_on_action = {
 
 on_new_ruler = {
 	on_actions = {
-		usfp_elected_abolitionist
+		usfp_elected_abolitionist 
 	}
 }
 

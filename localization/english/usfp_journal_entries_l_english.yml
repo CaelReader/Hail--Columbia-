@@ -135,3 +135,6 @@ usfp_canadian_highlander: "We are the only Canadian colony remaining"
 
 deseret_statehood_des: "Petition for Statehood"
 deseret_statehood_des_desc: "Our goal has always been to create a place for ourselves within the United States. We should draft a state constitution and send it to Washington for consideration."
+
+usfp_je_westward_expansion: "Westward Expansion"
+usfp_je_westward_expansion_reason: "$concept_usfp_westward_expansion_desc$"

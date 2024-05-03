@@ -1,4 +1,5 @@
-﻿#Long Reconstruction, must maintain afro-american acceptance for 40 years
+﻿###### Hail, Columbia! by CaelReader ######
+#Long Reconstruction, must maintain afro-american acceptance for 40 years
 usfp_reconstruction_long = {
 	icon = "gfx/interface/icons/invention_icons/international_diplomacy.dds"
 

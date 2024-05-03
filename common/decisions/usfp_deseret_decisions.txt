@@ -10,8 +10,21 @@
 
 	possible = {
 		OR = {
-			total_population > 40000
+			game_date > 1858.1.1
+			total_population > 35000
 			s:STATE_CALIFORNIA = {
+				any_scope_state = {
+					owner = c:USA
+					is_incorporated = yes
+				}
+			}
+			s:STATE_WYOMING = {
+				any_scope_state = {
+					owner = c:USA
+					is_incorporated = yes
+				}
+			}
+			s:STATE_OREGON = {
 				any_scope_state = {
 					owner = c:USA
 					is_incorporated = yes

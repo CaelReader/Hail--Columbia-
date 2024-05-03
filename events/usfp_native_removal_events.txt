@@ -1,5 +1,5 @@
 ﻿namespace = usfp_native_removal
-
+###### Hail, Columbia! by CaelReader ######
 #Seminole Removal Begins
 usfp_native_removal.1 = {
 	type = country_event
@@ -1200,26 +1200,7 @@ usfp_native_removal.14 = {
 	option = {
 		name = usfp_native_removal.14.a
 		default_option = yes
-		scope:us_president_scope = {
-			interest_group = {
-				add_modifier = {
-					name = usfp_removal_martyr
-					years = 2
-				}
-			}
-		}
-		random_list = {
-			30 = {
-				scope:us_president_scope = {
-					add_trait = wounded
-				}
-			}
-			70 = {
-				scope:us_president_scope = {
-					kill_character = yes
-				}
-			}
-		}
+		usfp_assassinate_president_effect = yes
 	}
 }
 
@@ -1262,25 +1243,6 @@ usfp_native_removal.15 = {
 	option = {
 		name = usfp_native_removal.15.a
 		default_option = yes
-		scope:us_president_scope = {
-			interest_group = {
-				add_modifier = {
-					name = usfp_removal_martyr
-					years = 2
-				}
-			}
-		}
-		random_list = {
-			30 = {
-				scope:us_president_scope = {
-					add_trait = wounded
-				}
-			}
-			70 = {
-				scope:us_president_scope = {
-					kill_character = yes
-				}
-			}
-		}
+		usfp_assassinate_president_effect = yes
 	}
 }

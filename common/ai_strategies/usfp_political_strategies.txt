@@ -124,7 +124,7 @@ ai_strategy_anti_slavery_agenda = {
 		if = {
 			limit = {
 				ruler ?= {
-					has_ideology = ideology:ideology_abolitionist
+					usfp_anti_slavery_leader_trigger = yes
 				}
 			}
 			add = 10000

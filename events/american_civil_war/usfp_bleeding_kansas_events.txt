@@ -1,5 +1,5 @@
 ﻿namespace = usfp_bleeding_kansas
-
+###### Hail, Columbia! by CaelReader ######
 #New England Emigrant Aid Society
 usfp_bleeding_kansas.1 = {
 	type = country_event

@@ -91,3 +91,17 @@ Fixes:
 	Added extra check to try and make sure abolitionist/slaver ACW agitators retire after the war or reconciliation.
 	ACW Agitators should now only spawn while A House Divided is active
 	Fixed Han migrants to California not properly spawning
+
+2.1 "Jefferson"
+Radical Abolitionist should now only spawn in Yankee and Dixie countries
+Loosened requirements for Deseret to ask for statehood
+Manifest Destiny JE won't fail while at war
+New goal-style JE explaining the Westward Expansion mechanic and prompting the player to annex the west
+Abolitionists Martyrdom event no longer spawns agitators
+Internal script cleanup, moving more things into scripted effects and triggers
+Manifest Destiny options that grant claims now also set the AI Strategy to Expand Core Territory
+New Technocratic USA flags
+Fixed some dynamic name triggers
+Replaced the Evangelical's Moralist ideology with a version that is okay with republics and total separation
+Fixed Claim Canada button
+Adjusted province setup of some american decentralized tags

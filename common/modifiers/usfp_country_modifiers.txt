@@ -395,5 +395,11 @@ usfp_lds_church_des = {
 	state_migration_pull_mult = 0.60
 }
 
+usfp_sea_to_shining_sea_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
+	state_assimilation_mult = 0.15
+	state_conversion_mult = 0.15
+	country_prestige_mult = 0.10
+}
 
 

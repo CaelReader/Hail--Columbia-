@@ -65,7 +65,7 @@ PIU = {
 }
 
 SHO = {
-	color = { 143 178 196 }
+	color = { 184 149 200 }
 	
 	country_type = decentralized
 	
@@ -87,7 +87,7 @@ YUR = {
 }
 
 SRN = {
-	color = { 133 94 56 }
+	color = { 234 135 70 }
 	
 	country_type = decentralized
 	
@@ -98,7 +98,7 @@ SRN = {
 }
 
 GVT = {
-	color = { 75 193 45 }
+	color = { 23 152 88 }
 	
 	country_type = decentralized
 	
@@ -109,7 +109,7 @@ GVT = {
 }
 
 AIA = {
-	color = { 24 189 132 }
+	color = { 183 178 59 }
 	
 	country_type = decentralized
 	
@@ -121,7 +121,7 @@ AIA = {
 }
 
 FLT = {
-	color = { 189 64 61 }
+	color = { 216 30 4 }
 	
 	country_type = decentralized
 	
@@ -132,7 +132,7 @@ FLT = {
 }
 
 KTN = {
-	color = { 153 197 29 }
+	color = { 25 163 105 }
 	
 	country_type = decentralized
 	

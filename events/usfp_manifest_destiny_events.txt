@@ -1,5 +1,5 @@
 ﻿namespace = usfp_manifest_destiny
-
+###### Hail, Columbia! by CaelReader ######
 #startup event, introducing Manifest Destiny
 usfp_manifest_destiny.1 = {
 	type = country_event
@@ -24,11 +24,17 @@ usfp_manifest_destiny.1 = {
 		name = usfp_manifest_destiny.1.a
 		default_option = yes
 		usfp_manifest_more_destiny_effect = yes
+		add_journal_entry = {
+			type = usfp_je_westward_expansion
+		}
 	}
 
 	#no bad
 	option = {
 		name = usfp_manifest_destiny.1.b
+		add_journal_entry = {
+			type = usfp_je_westward_expansion
+		}
 	}
 }
 
@@ -289,6 +295,16 @@ usfp_manifest_destiny.4 = {
 					secret_goal = conquer
 				}
 			}
+		}
+		if = {
+			limit = {
+				is_ai = yes
+			 }
+			 set_strategy = ai_strategy_territorial_expansion
+			 set_secret_goal = {
+				 country = c:MEX
+				 secret_goal = conquer
+			 }
 		}
 		ai_chance = {
 			base = 1000
@@ -1035,109 +1051,23 @@ usfp_manifest_destiny.12 = {
 	}
 }
 
-#hidden event to add new homelands where relevant
+#Westward Expansion: hidden event to add new homelands where relevant
 usfp_manifest_destiny.13 = {
 	type = country_event
 	hidden = yes
 
 	trigger = {
 		any_scope_state = {
-			OR = {
-				usfp_american_west_zone = yes
-				usfp_mexican_cession_trigger = yes
-				state_region = s:STATE_OREGON
-				state_region = s:STATE_WASHINGTON
-				state_region = s:STATE_IDAHO
-				#in case of manifesting extra destiny
-				state_region = s:STATE_RIO_GRANDE
-				state_region = s:STATE_CHIHUAHUA
-				state_region = s:STATE_SONORA
-				state_region = s:STATE_BAJA_CALIFORNIA
-				state_region = s:STATE_OKLAHOMA
-			}
-			NOR = {
-				cu:yankee = {
-					has_homeland = prev
-				}
-				cu:dixie = {
-					has_homeland = prev
-				}
-				cu:usfp_american = {
-					has_homeland = prev
-				}
-			}
-			is_split_state = no
-			state_population > 60000
-			religion_percent_state = {
-				target = rel:animist
-				value < 0.3
-			}
-			any_scope_pop = {
-				culture = {
-					shares_trait_with_any_primary_culture = root
-				}
-			}
-			# OR = {
-			# 	culture_percent_state = {  
-			# 		target = cu:yankee
-			# 		value > 0.10  
-			# 	}
-			# 	culture_percent_state = {  
-			# 		target = cu:dixie
-			# 		value > 0.10  
-			# 	}  
-			# }
+			usfp_westward_expansion_zone = yes
+			usfp_westward_expansion_criteria = yes
 		}
 	}
 
 	immediate = {
 		random_scope_state = {
 			limit = {
-				OR = {
-					usfp_american_west_zone = yes
-					usfp_mexican_cession_trigger = yes
-					state_region = s:STATE_OREGON
-					state_region = s:STATE_WASHINGTON
-					state_region = s:STATE_IDAHO
-					#in case of manifesting extra destiny
-					state_region = s:STATE_RIO_GRANDE
-					state_region = s:STATE_CHIHUAHUA
-					state_region = s:STATE_SONORA
-					state_region = s:STATE_BAJA_CALIFORNIA
-					state_region = s:STATE_OKLAHOMA
-				}
-				NOR = {
-					cu:yankee = {
-						has_homeland = prev
-					}
-					cu:dixie = {
-						has_homeland = prev
-					}
-					cu:usfp_american = {
-						has_homeland = prev
-					}
-				}
-				is_split_state = no
-				state_population > 60000
-				religion_percent_state = {
-					target = rel:animist
-					value < 0.3
-				}
-				any_scope_pop = {
-					culture = {
-						shares_trait_with_any_primary_culture = root
-					}
-				}
-				# OR = {
-				# 	culture_percent_state = {  
-				# 		target = cu:yankee
-				# 		value > 0.10  
-				# 	}
-				# 	culture_percent_state = {  
-				# 		target = cu:dixie
-				# 		value > 0.10  
-				# 	}  
-				# }
+				usfp_westward_expansion_zone = yes
+				usfp_westward_expansion_criteria = yes
 			}
 			save_scope_as = new_homeland_state
 		}
@@ -1515,6 +1445,9 @@ usfp_manifest_destiny.16 = {
 				months = short_modifier_time
 			}
 		}
+		ai_chance = {
+			base = 10
+		}
 	}
 
 	#gibs me your island
@@ -1541,6 +1474,15 @@ usfp_manifest_destiny.16 = {
 				country = c:CUB
 				value = -50
 			}
+		}
+		if = {
+			limit = {
+				is_ai = yes
+			 }
+			 set_strategy = ai_strategy_territorial_expansion
+		}
+		ai_chance = {
+			base = 100
 		}
 	}
 
@@ -2355,3 +2297,7 @@ usfp_manifest_destiny.23 = {
 		}
 	}
 }
+
+#Revolutionary Destiny
+#Monarchy Destiny
+#Bear Flag Revolt

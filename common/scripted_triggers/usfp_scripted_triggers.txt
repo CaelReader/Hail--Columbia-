@@ -77,6 +77,53 @@ usfp_american_west_zone = {
 	}
 }
 
+usfp_northern_mexico_zone = {
+	OR = {
+		state_region = s:STATE_RIO_GRANDE
+		state_region = s:STATE_CHIHUAHUA
+		state_region = s:STATE_SONORA
+		state_region = s:STATE_BAJA_CALIFORNIA
+	}
+}
+
+usfp_westward_expansion_zone = {
+	OR = {
+		usfp_american_west_zone = yes
+		usfp_mexican_cession_trigger = yes
+		state_region = s:STATE_OREGON
+		state_region = s:STATE_WASHINGTON
+		state_region = s:STATE_IDAHO
+		state_region = s:STATE_OKLAHOMA
+		#in case of manifesting extra destiny
+		usfp_northern_mexico_zone = yes
+	}
+}
+
+usfp_westward_expansion_criteria = {
+	NOR = {
+		cu:yankee = {
+			has_homeland = prev
+		}
+		cu:dixie = {
+			has_homeland = prev
+		}
+		cu:usfp_american = {
+			has_homeland = prev
+		}
+	}
+	is_split_state = no
+	state_population > 60000
+	religion_percent_state = {
+		target = rel:animist
+		value < 0.3
+	}
+	any_scope_pop = {
+		culture = {
+			shares_trait_with_any_primary_culture = root
+		}
+	}
+}
+
 usfp_enacting_unconstitutional_law = {
 	OR = {
 		is_enacting_law = law_type:law_censorship
@@ -189,4 +236,25 @@ usfp_owns_all_greater_mexico = {
 	owns_entire_state_region = STATE_OAXACA
 	owns_entire_state_region = STATE_YUCATAN
 	owns_entire_state_region = STATE_CHIAPAS
+}
+
+usfp_owns_american_west = {
+	owns_entire_state_region = STATE_CALIFORNIA
+	owns_entire_state_region = STATE_NEW_MEXICO
+	owns_entire_state_region = STATE_UTAH
+	owns_entire_state_region = STATE_NEVADA
+	owns_entire_state_region = STATE_ARIZONA
+	owns_entire_state_region = STATE_OREGON
+	owns_entire_state_region = STATE_WASHINGTON
+	owns_entire_state_region = STATE_IDAHO
+	owns_entire_state_region = STATE_WYOMING
+	owns_entire_state_region = STATE_MONTANA
+	owns_entire_state_region = STATE_OKLAHOMA
+	owns_entire_state_region = STATE_COLORADO
+	owns_entire_state_region = STATE_NORTH_DAKOTA
+	owns_entire_state_region = STATE_SOUTH_DAKOTA
+	owns_entire_state_region = STATE_NEBRASKA
+	owns_entire_state_region = STATE_KANSAS
+	owns_entire_state_region = STATE_TEXAS
+	owns_entire_state_region = STATE_MINNESOTA
 }

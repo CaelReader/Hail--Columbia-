@@ -1,5 +1,5 @@
 ﻿namespace = usfp_reconstruction
-
+###### Hail, Columbia! by CaelReader ######
 #Freedmens Bureau
 usfp_reconstruction.1 = {
 	type = country_event

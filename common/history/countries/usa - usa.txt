@@ -100,7 +100,8 @@
 			add_ideology = ideology_republican
 		}
 		ig:ig_devout = {
-			add_ideology = ideology_republican_moralist
+			remove_ideology = ideology_moralist
+			add_ideology = ideology_usfp_evangelical_moralist
 			set_ig_trait = ig_trait:usfp_ig_trait_postmillennialism
 			set_ig_trait = ig_trait:usfp_ig_trait_revivalism
 		}

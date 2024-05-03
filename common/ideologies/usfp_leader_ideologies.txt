@@ -473,6 +473,10 @@ ideology_usfp_abolitionist_radical = {
 	# Character scope
 	possible = {
 		owner = {
+			OR = {
+				country_has_primary_culture = cu:yankee
+				country_has_primary_culture = cu:dixie
+			}
 			NOT = {
 				has_law = law_type:law_slavery_banned
 			} 

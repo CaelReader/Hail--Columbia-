@@ -72,47 +72,18 @@ acw_events.1 = {
 	option = {
 		name = acw_events.1.a
         default_option = yes
-        custom_tooltip = {
-			text = acw_events.1.a.t
-			random_list = {
-				30 = {
-					create_character = {
-						culture = cu:yankee
-						interest_group = ig_intelligentsia
-						female = no
-						is_agitator = yes
-						ideology = ideology_abolitionist
-						on_created = { set_variable = { name = temp_event_target_in_use years = 8 } }
-						trait_generation = {
-							usfp_acw_agitators_traits = yes
-						}
-					}
-				}
-				30 = {
-					create_character = {
-						culture = cu:yankee
-						interest_group = ig_devout
-						female = no
-						is_agitator = yes
-						ideology = ideology_abolitionist
-						on_created = { set_variable = { name = temp_event_target_in_use years = 8 } }
-						trait_generation = {
-							usfp_acw_agitators_traits = yes
-						}
-					}
-				}
-				30 = {
-					create_character = {
-						culture = cu:yankee
-						interest_group = ig_trade_unions
-						female = no
-						is_agitator = yes
-						ideology = ideology_abolitionist
-						on_created = { set_variable = { name = temp_event_target_in_use years = 8 } }
-						trait_generation = {
-							usfp_acw_agitators_traits = yes
-						}
-					}
+		random_scope_character = {
+			limit = {
+				has_role = agitator
+				usfp_anti_slavery_leader_trigger = yes
+			}
+			add_modifier = {
+				name = usfp_public_sympathy
+				years = 5
+			}
+			interest_group = {
+				add_modifier = {
+					name = usfp_abolitionist_literature_ig
 				}
 			}
 		}
@@ -120,49 +91,16 @@ acw_events.1 = {
 
 	option = {
 		name = acw_events.1.b
-        custom_tooltip = {
-			text = acw_events.1.b.t
-			random_list = {
-				50 = {
-					create_character = {
-						culture = cu:dixie
-						interest_group = ig_landowners
-						female = no
-						is_agitator = yes
-						ideology = ideology_slaver
-						on_created = { set_variable = { name = temp_event_target_in_use years = 8 } }
-						trait_generation = {
-							usfp_acw_agitators_traits = yes
-						}
-					}
-				}
-				30 = {
-					create_character = {
-						culture = cu:dixie
-						interest_group = ig_devout
-						female = no
-						is_agitator = yes
-						ideology = ideology_slaver
-						on_created = { set_variable = { name = temp_event_target_in_use years = 8 } }
-						trait_generation = {
-							usfp_acw_agitators_traits = yes
-						}
-					}
-				}
-				30 = {
-					create_character = {
-						culture = cu:yankee
-						interest_group = ig_rural_folk
-						female = no
-						is_agitator = yes
-						ideology = ideology_slaver
-						on_created = { set_variable = { name = temp_event_target_in_use years = 8 } }
-						trait_generation = {
-							usfp_acw_agitators_traits = yes
-						}
-					}
-				}
+		random_scope_character = {
+			limit = {
+				has_role = agitator
+				has_ideology = ideology:ideology_slaver
 			}
+			add_modifier = {
+				name = usfp_public_sympathy
+				years = 5
+			}
+			usfp_appease_slavers_effect = {MULT = 1}
 		}
 	}
 }

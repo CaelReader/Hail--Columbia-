@@ -90,21 +90,6 @@ ideology_reactionary_exclusionist  = { #IPB Compatibility
 	}
 }
 
-
-ideology_republican_moralist = { # USTD
-	icon = "gfx/interface/icons/ideology_icons/radical.dds"
-	
-	priority = 100
-	
-	lawgroup_governance_principles = {		
-		law_presidential_republic = approve
-		law_parliamentary_republic = approve
-		law_theocracy = neutral #approve
-		law_monarchy = neutral
-		law_council_republic = disapprove
-	}
-}
-
 ideology_anti_tariff = { # USLO
 	icon = "gfx/interface/icons/ideology_icons/ideology_usfp_anti_tariff.dds"
 	
@@ -163,5 +148,32 @@ ideology_empire_of_liberty = { # USIT + USPB
 		law_colonial_resettlement = disapprove
 		law_colonial_exploitation = disapprove
 		law_frontier_colonization = approve
+	}
+}
+
+ideology_usfp_evangelical_moralist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_usfp_evangelical_moralist.dds"
+	
+	lawgroup_governance_principles = {
+		law_monarchy = neutral
+		law_theocracy = neutral
+		law_presidential_republic = approve
+		law_parliamentary_republic = neutral
+		law_council_republic = strongly_disapprove
+	}
+
+	lawgroup_church_and_state = {
+		law_state_religion = approve
+		law_freedom_of_conscience = approve
+		law_total_separation = approve
+		law_state_atheism = strongly_disapprove
+	}
+
+	lawgroup_citizenship = {
+		law_ethnostate = neutral
+		law_national_supremacy = approve
+		law_racial_segregation = neutral
+		law_cultural_exclusion = disapprove
+		law_multicultural = strongly_disapprove	
 	}
 }

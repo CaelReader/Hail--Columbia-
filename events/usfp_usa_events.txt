@@ -1,5 +1,5 @@
 ﻿namespace = usfp_usa
-
+###### Hail, Columbia! by CaelReader ######
 #Seneca Falls Convention
 usfp_usa.1 = {
 	type = country_event
@@ -1542,25 +1542,6 @@ usfp_usa.18 = {
 	option = {
 		name = usfp_usa.18.a
 		default_option = yes
-		scope:us_president_scope = {
-			interest_group = {
-				add_modifier = {
-					name = usfp_removal_martyr
-					years = 2
-				}
-			}
-		}
-		random_list = {
-			30 = {
-				scope:us_president_scope = {
-					add_trait = wounded
-				}
-			}
-			70 = {
-				scope:us_president_scope = {
-					kill_character = yes
-				}
-			}
-		}
+		usfp_assassinate_president_effect = yes
 	}
 }

@@ -402,8 +402,7 @@ usfp_claim_canada_button = {
 		}
 		OR = {
 			AND = {
-				exists = c:GBR
-				c:GBR = {
+				c:GBR ?= {
 					any_subject_or_below = {
 						country_is_in_north_america = yes
 					}
@@ -411,8 +410,7 @@ usfp_claim_canada_button = {
 				}
 			}
 			AND = {
-				exists = c:CAN
-				c:CAN = {
+				c:CAN ?= {
 					is_subject = no
 					relations:root <= relations_threshold:poor
 				}
@@ -424,34 +422,42 @@ usfp_claim_canada_button = {
 
 	effect = {
 		set_variable = claimed_canada
-		every_state_region = {
-			limit = {
-				OR = {
-					region = sr:region_canada
-					region = sr:region_new_england
-					region = sr:region_pacific_coast
-					region = sr:region_great_plains
-				}
-				any_scope_state = {
-					OR = {
-						owner = c:GBR
-						owner = c:CAN
-						owner = {
-							is_subject_of = c:GBR
-						}
-					}
-				}
-			}
-			add_claim = ROOT
+		s:STATE_YUKON_TERRITORY = {
+			add_claim = root
+		}
+		s:STATE_BRITISH_COLUMBIA = {
+			add_claim = root
+		}
+		s:STATE_SASKATCHEWAN = {
+			add_claim = root
+		}
+		s:STATE_NORTHWEST_TERRITORIES = {
+			add_claim = root
+		}
+		s:STATE_NUNAVUT = {
+			add_claim = root
+		}
+		s:STATE_MANITOBA = {
+			add_claim = root
+		}
+		s:STATE_ONTARIO = {
+			add_claim = root
+		}
+		s:STATE_QUEBEC = {
+			add_claim = root
+		}
+		s:STATE_NEW_BRUNSWICK = {
+			add_claim = root
+		}
+		s:STATE_NEWFOUNDLAND = {
+			add_claim = root
 		}
 		s:STATE_ONTARIO = {
 			random_scope_state = {
 				limit = {
-					OR = {
-						owner = c:GBR
-						owner = c:CAN
-						owner = {
-							is_subject_of = c:GBR
+					owner = {
+						NOT = {
+							is_country_type = decentralized
 						}
 					}
 				}
@@ -462,6 +468,12 @@ usfp_claim_canada_button = {
 					}
 				}
 			}
+		}
+		if = {
+			limit = {
+				is_ai = yes
+			 }
+			 set_strategy = ai_strategy_territorial_expansion
 		}
 	}
 	ai_chance = {

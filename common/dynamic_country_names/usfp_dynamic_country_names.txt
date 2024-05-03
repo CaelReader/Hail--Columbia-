@@ -146,7 +146,7 @@ USA = { # United States of America
 		adjective = dyn_c_usfp_grand_columbia_adj
 		
 		is_main_tag_only = yes
-		priority = 0
+		priority = 10
 		
 		trigger = {
 			has_game_rule = usa_dynamic_names
@@ -238,6 +238,9 @@ USA = { # United States of America
 			has_game_rule = usa_dynamic_names
 			coa_def_republic_flag_trigger = yes
 			scope:actor ?= {
+				NOT = {
+					has_law = law_type:law_council_republic
+				}
 				has_law = law_type:law_technocracy
 			}
 		}
@@ -255,6 +258,9 @@ USA = { # United States of America
 			has_game_rule = usa_dynamic_names
 			coa_def_republic_flag_trigger = yes
 			scope:actor ?= {
+				NOT = {
+					has_law = law_type:law_council_republic
+				}
 				has_law = law_type:law_technocracy
 			}
 			OR = {

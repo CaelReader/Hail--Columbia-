@@ -1,7 +1,7 @@
 ﻿l_english:
+
  SMN:0 "Seminole"
  SMN_ADJ:0 "Seminole"
- cr_seminole_war:0 "2nd Seminole War"
  CSW:0 "Chickasaw"
  CSW_ADJ:0 "Chickasaw"
  YOK:0 "Yokut"
@@ -14,8 +14,8 @@
  SHO_ADJ:0 "Shoshoni"
  YUR:0 "Yurok"
  YUR_ADJ:0 "Yurok"
- SRN:0 "Serrano"
- SRN_ADJ:0 "Serrano"
+ SRN:0 "Taaqtam"
+ SRN_ADJ:0 "Takic"
  GVT:0 "Gros Ventre"
  GVT_ADJ:0 "Aaniiih"
  AIA:0 "Arikara"
@@ -30,10 +30,7 @@
  SAL_ADJ:0 "Salishan"
  KLA:0 "Klamath"
  KLA_ADJ:0 "Klamathan"
- dyn_c_russian_alaska:0 "Russian-American Company"
- dyn_c_russian_alaska_ADJ:0 "Russian American"
- ASK:0 "Alaska"
- ASK_ADJ:0 "Alaskan"
+
 SPI: "Southern Paiute"
 SPI_ADJ: "South Paiute"
  ECR: "Eastern Cree"

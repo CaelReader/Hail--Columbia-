@@ -1,4 +1,5 @@
-﻿#Manifest Destiny JE tracks the influence of the concept in american politics
+﻿###### Hail, Columbia! by CaelReader ######
+#Manifest Destiny JE tracks the influence of the concept in american politics
 usfp_manifest_destiny_main = {
 	
 	icon = gfx/interface/icons/event_icons/hail_columbia_icon.dds
@@ -46,6 +47,7 @@ usfp_manifest_destiny_main = {
 			country_rank < rank_value:major_power
 			is_subject = yes
 		}
+		is_at_war = no
 	}
 
 	on_fail = {
@@ -53,6 +55,7 @@ usfp_manifest_destiny_main = {
 			id = usfp_manifest_destiny.23
 			popup = yes
 		}
+		remove_modifier = usfp_manifest_destiny_modifier
 	}
 
 	invalid = {
@@ -319,3 +322,32 @@ usfp_manifest_destiny_main = {
 # Anti-Expansion Powerful IG
 # ACW breaks out
 # Lose ACW
+
+#Goal-type JE that explains westward expansion mechanic
+usfp_je_westward_expansion = {
+
+	icon = gfx/interface/icons/event_icons/event_map.dds
+
+	group = je_group_historical_content
+
+	invalid = {
+		has_law = law_type:law_no_colonial_affairs
+	}
+
+	complete = {
+		usfp_owns_american_west = yes
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = usfp_sea_to_shining_sea_modifier
+			years = 10
+		}
+	}
+
+	should_be_pinned_by_default = no
+
+	weight = 10
+
+	can_revolution_inherit = yes
+}

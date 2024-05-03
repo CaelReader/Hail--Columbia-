@@ -1,5 +1,5 @@
 ﻿namespace = usfp_mormon
-
+###### Hail, Columbia! by CaelReader ######
 #Mormon War in Missouri
 usfp_mormon.1 = {
 	type = country_event

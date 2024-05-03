@@ -228,3 +228,21 @@ je_oregon = {
 	should_be_pinned_by_default = yes
 	weight = 100
 }
+
+je_conquer_oregon = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_historical_content
+
+	complete = {
+		c:USA = {
+			owns_entire_state_region = STATE_WASHINGTON
+			owns_entire_state_region = STATE_IDAHO
+			owns_entire_state_region = STATE_OREGON
+		}
+	}
+
+	weight = 100
+
+	transferable = no
+}

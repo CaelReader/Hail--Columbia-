@@ -616,3 +616,49 @@ usfp_remove_manifest_destiny_claims_effect = {
 		remove_claim = ROOT
 	}
 }
+
+usfp_cleanup_acw_agitators = {
+	hidden_effect = {
+		every_scope_character = {
+			limit = {
+				has_variable = usfp_acw_agitator
+				OR = {
+					has_ideology = ideology:ideology_slaver
+					has_ideology = ideology:ideology_abolitionist
+				}
+				NOR = {
+					has_role = politician
+					has_role = general
+					has_role = admiral
+				}
+				is_ruler = no
+			}
+			kill_character = {
+				hidden = yes
+			}
+		}
+	}
+}
+
+usfp_assassinate_president_effect = {
+	scope:us_president_scope = {
+		interest_group = {
+			add_modifier = {
+				name = usfp_removal_martyr
+				years = 2
+			}
+		}
+	}
+	random_list = {
+		30 = {
+			scope:us_president_scope = {
+				add_trait = wounded
+			}
+		}
+		70 = {
+			scope:us_president_scope = {
+				kill_character = yes
+			}
+		}
+	}
+}

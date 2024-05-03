@@ -1,5 +1,5 @@
 ﻿namespace = usfp_usa_labor
-
+###### Hail, Columbia! by CaelReader ######
 #Founding of the IWW
 usfp_usa_labor.1 = {
 	type = country_event

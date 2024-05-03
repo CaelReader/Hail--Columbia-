@@ -1,4 +1,5 @@
 ﻿namespace = usfp_a_house_divided
+###### Hail, Columbia! by CaelReader ######
 
 #Gag Rule put into place
 usfp_a_house_divided.1 = {
@@ -1024,20 +1025,7 @@ usfp_a_house_divided.12 = {
 			limit = { type = law_type:law_slavery_banned }
 			save_scope_as = slavery_banned_scope
 		}
-		hidden_effect = {
-			every_scope_character = {
-				limit = {
-					has_variable = usfp_acw_agitator
-					OR = {
-						has_ideology = ideology:ideology_slaver
-						has_ideology = ideology:ideology_abolitionist
-					}
-				}
-				kill_character = {
-					hidden = yes
-				}
-			}
-		}
+		usfp_cleanup_acw_agitators = yes
 	}
 
 	option = {
