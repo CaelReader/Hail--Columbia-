@@ -486,26 +486,7 @@ usfp_mormon.5 = {
 	option = {
 		name = usfp_mormon.5.b
 		default_option = yes
-		create_diplomatic_pact = {
-			country = c:DES
-			type = puppet
-		}
-		change_relations = {
-			country = c:DES
-			value = 50
-		}
-		c:DES = {
-			activate_law = law_type:law_autocracy
-			activate_law = law_type:law_presidential_republic
-			if = {
-				limit = { 
-					c:USA = {
-						has_law = law_type:law_slavery_banned
-					}
-				}
-				activate_law = law_type:law_slavery_banned
-			}
-		}
+		usfp_deseret_into_utah_effect = yes
 		ai_chance = {
 			base = 100
 		}
@@ -644,22 +625,7 @@ usfp_mormon.8 = {
 	option = {
 		name = usfp_mormon.8.b
 		default_option = yes
-		create_diplomatic_pact = {
-			country = c:DES
-			type = puppet
-		}
-		c:DES = {
-			activate_law = law_type:law_autocracy
-			activate_law = law_type:law_presidential_republic
-			if = {
-				limit = { 
-					c:USA = {
-						has_law = law_type:law_slavery_banned
-					}
-				}
-				activate_law = law_type:law_slavery_banned
-			}
-		}
+		usfp_deseret_into_utah_effect = yes
 		scope:utah_scope = {
 			add_radicals_in_state = {
 				value = small_radicals
@@ -719,18 +685,7 @@ usfp_mormon.9 = {
 			save_scope_as = mormonism_scope
 		}
 		set_variable = had_polygamy_issue
-		if = {
-			limit = { 
-				exists = py:liberal_party
-			}
-			py:liberal_party = {
-				save_scope_as = republican_party_scope
-			}
-		} else = {
-			py:free_trade_party = {
-				save_scope_as = republican_party_scope
-			}
-		}
+		usfp_find_republican_party_effect = yes
 	}
 
 	#barbarism!

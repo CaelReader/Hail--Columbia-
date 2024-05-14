@@ -95,6 +95,7 @@
 		}
 		add_claim = c:SMN
 		add_homeland = cu:muskogean
+		remove_homeland = cu:caddoan
 	}
 	#Chickasaw
 	s:STATE_MISSISSIPPI = {
@@ -120,7 +121,7 @@
 				move_pop = s:STATE_MISSISSIPPI.region_state:USA
 			}
 			create_pop = {
-				culture = caddoan # Chickasaw
+				culture = muskogean # Chickasaw
 				size = 4906
 			}
 			create_pop = {
@@ -129,7 +130,14 @@
 				size = 1131
 			}
 		}
-		add_homeland = cu:caddoan
+		region_state:USA = {
+			create_pop = {
+				culture = muskogean # Choctaw remainers (MBCI forefathers)
+				size = 5500
+			}
+		}
+		add_homeland = cu:muskogean
+		remove_homeland = cu:caddoan
 	}
 	c:USA = {
 		create_diplomatic_pact = {
@@ -180,7 +188,15 @@
 				size = 1008
 			}
 		}
+		region_state:USA = {
+			kill_population_percent_in_state = { #reduce redundancy with CHE state region
+				percent = 0.95
+				culture = cu:cherokee
+			}
+		}
+		
 		add_homeland = cu:cherokee
+		add_homeland = cu:muskogean
 	}
 	s:STATE_ALABAMA = {
 		set_owner_of_provinces = {
@@ -202,7 +218,15 @@
 				size = 168
 			}
 		}
+		region_state:USA = {
+			kill_population_percent_in_state = { #reduce redundancy with CHE state region
+				percent = 0.95
+				culture = cu:cherokee
+			}
+		}
 		add_homeland = cu:cherokee
+		add_homeland = cu:muskogean
+		remove_homeland = cu:caddoan
 	}
 	s:STATE_TENNESSEE = {
 		set_owner_of_provinces = {
@@ -222,6 +246,12 @@
 				pop_type = slaves
 				culture = afro_american
 				size = 280
+			}
+		}
+		region_state:USA = {
+			kill_population_percent_in_state = { #reduce redundancy with CHE state region
+				percent = 0.95
+				culture = cu:cherokee
 			}
 		}
 		add_homeland = cu:cherokee
@@ -246,6 +276,12 @@
 		add_homeland = cu:cherokee
 	}
 	s:STATE_SOUTH_CAROLINA = {
+		region_state:USA = {
+			kill_population_percent_in_state = { #reduce redundancy
+				percent = 0.95
+				culture = cu:cherokee
+			}
+		}
 		add_homeland = cu:cherokee
 	}
 	s:STATE_NORTH_CAROLINA = {
@@ -268,6 +304,44 @@
 			years = 30
 		}
 	}
+	#Northeast & Mid Atlantic
+	s:STATE_CONNECTICUT = {
+		add_homeland = cu:algonquian
+	}
+	s:STATE_MASSACHUSETTS = {
+		add_homeland = cu:algonquian
+	}
+	s:STATE_RHODE_ISLAND = {
+		add_homeland = cu:algonquian
+	}
+	s:STATE_MAINE = {
+		add_homeland = cu:algonquian
+	}
+	s:STATE_MARYLAND = {
+		add_homeland = cu:algonquian
+	}
+	s:STATE_VIRGINIA = {
+		add_homeland = cu:algonquian
+	}
+	s:STATE_NEW_BRUNSWICK = {
+		add_homeland = cu:algonquian
+	}
+	s:STATE_QUEBEC = {
+		add_homeland = cu:algonquian
+	}
+	#Mississippi River
+	s:STATE_ARKANSAS = {
+		region_state:USA = {
+			kill_population_percent_in_state = { #never this many Old Settlers
+				percent = 0.95
+				culture = cu:cherokee
+			}
+		}
+	}
+	s:STATE_LOUISIANA = {
+		add_homeland = cu:muskogean
+		add_homeland = cu:caddoan
+	}
 	#Comancheria
 	s:STATE_TEXAS = {
 		set_owner_of_provinces = {
@@ -285,6 +359,9 @@
 				size = 12000
 			}
 		}
+		add_homeland = cu:muskogean
+		add_homeland = cu:caddoan
+		add_homeland = cu:apache
 	}
 	c:COM = {
 		create_character = {
@@ -339,6 +416,23 @@
 				size = 5000
 			}
 		}
+		region_state:SEQ = {
+			create_pop = {
+				culture = algonquian
+				size = 4235 #(Absentee) Shawnee, Lenape, Kickapoo. Texas was often more attractive than Oklahoma. Most were removed by Texas in 1839 following their war with the Cherokee & Delaware allies
+			}
+			create_pop = {
+				culture = iroquoian
+				size = 551 #Seneca portion of the Lewistown Band removed to Oklahoma, 1825 McKenney estimate figures from Ohio
+			}
+			kill_population_percent_in_state = { #too many Old Settlers portrayed
+				percent = 0.90
+				culture = cu:cherokee
+			}
+		}
+		add_homeland = cu:muskogean
+		add_homeland = cu:algonquian
+		add_homeland = cu:caddoan
 	}
 	s:STATE_KANSAS = {
 		set_owner_of_provinces = {
@@ -356,6 +450,13 @@
 				size = 4250
 			}
 		}
+		region_state:USA = {
+			create_pop = {
+				culture = algonquian
+				size = 3976 #Lenape, Miami, Illini (Peoria etc), Kickapoo, Shawnee, etc. LOT of Midwestern tribes removed to Kansas, then part of Indian Territory prior to the Kansas/Nebraska Act, before final removal to Oklahoma. number estimated using 1825 McKenney and 1837 McCoy estimates and other sources.
+			}
+		}
+		add_homeland = cu:caddoan
 	}
 	s:STATE_COLORADO = {
 		set_owner_of_provinces = {
@@ -688,6 +789,16 @@
 				xDAEDDD xE3FA4D 
 			}
 		}
+		region_state:FLT = {
+			create_pop = {
+				culture = salish
+				size = 5000
+			}
+			kill_population_percent_in_state = {
+				percent = 0.90
+				culture = cu:siouan
+			}
+		}
 	}
 	s:STATE_IDAHO = {
 		set_owner_of_provinces = {
@@ -743,6 +854,14 @@
 				}
 				move_pop = s:STATE_OREGON.region_state:PIU
 			}
+			create_pop = {
+				culture = nez_perce
+				size = 2600 # rebalancing
+			}
+			kill_population_percent_in_state = { #rebalancing
+				percent = 1
+				culture = cu:salish
+			}
 		}
 		region_state:PIU = {
 			every_scope_pop = {
@@ -765,6 +884,14 @@
 					culture = cu:yankee
 				}
 				move_pop = s:STATE_WASHINGTON.region_state:ORG
+			}
+			create_pop = {
+				culture = nez_perce
+				size = 650 # rebalancing
+			}
+			kill_population_percent_in_state = { #rebalancing
+				percent = 0.8
+				culture = cu:salish
 			}
 		}
 	}
@@ -847,6 +974,33 @@
 
 
 	#Midwest
+	s:STATE_OHIO = {
+		add_homeland = cu:algonquian
+		add_homeland = cu:iroquoian
+	}
+	s:STATE_INDIANA = {
+		add_homeland = cu:algonquian
+	}
+	s:STATE_ILLINOIS = {
+		add_homeland = cu:algonquian
+	}
+	s:STATE_IOWA = {
+		region_state:USA = {
+			kill_population_percent_in_state = { #lot of Sauk & Fox here. Not 12k though
+				percent = 0.66
+				culture = cu:algonquian
+			}
+		}
+		add_homeland = cu:algonquian
+	}
+	s:STATE_MISSOURI = {
+		region_state:USA = {
+			create_pop = {
+				culture = algonquian
+				size = 2200  #Sauk & Fox before final removal, plus the Prairie Band of Potowatomie in transition west
+			}
+		}
+	}
 	#Arapaho
 	s:STATE_COLORADO = {
 		set_owner_of_provinces = {
@@ -871,6 +1025,7 @@
 			country = c:PWN
 			provinces = { xC547CE }
 		}
+		add_homeland = cu:caddoan
 	}
 	s:STATE_KANSAS = {
 		set_owner_of_provinces = {

@@ -1,4 +1,4 @@
-﻿SMN = {
+SMN = {
 	color = { 136 48 47 }
 	
 	country_type = unrecognized
@@ -17,7 +17,7 @@ CSW = {
 	tier = principality
 	
 	capital = STATE_MISSISSIPPI
-	cultures = { caddoan }
+	cultures = { muskogean }
 }
 
 CHE = {
@@ -72,7 +72,7 @@ SHO = {
 	tier = principality
 	
 	capital = STATE_NEVADA
-	cultures = { caddoan }
+	cultures = { paiute }
 }
 
 YUR = {
@@ -128,7 +128,7 @@ FLT = {
 	tier = principality
 	
 	capital = STATE_MONTANA
-	cultures = { algonquian }
+	cultures = { salish }
 }
 
 KTN = {
@@ -151,7 +151,7 @@ SHP = {
 	tier = principality
 	
 	capital = STATE_OREGON
-	cultures = { salish }
+	cultures = { nez_perce }
 }
 
 #Salish

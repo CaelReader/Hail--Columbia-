@@ -39,6 +39,65 @@ can_aus.5 = {
 			}
 			change_subject_type = subject_type_dominion
 		}
+		if = {
+			limit = { 
+				any_scope_state = {
+					state_region = s:STATE_BRITISH_COLUMBIA
+				}
+			}
+			s:STATE_BRITISH_COLUMBIA = {
+				if = {
+					limit = {
+						exists = region_state:SYX
+					}
+					region_state:SYX = {
+						set_state_owner = root
+					}
+				}
+				if = {
+					limit = {
+						exists = region_state:SAL
+					}
+					region_state:SAL = {
+						set_state_owner = root
+					}
+				}
+				if = {
+					limit = {
+						exists = region_state:LLT
+					}
+					region_state:LLT = {
+						set_state_owner = root
+					}
+				}
+				if = {
+					limit = {
+						exists = region_state:SWP
+					}
+					region_state:SWP = {
+						set_state_owner = root
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_ONTARIO
+				}
+			 }
+			 s:STATE_ONTARIO = {
+				if = {
+					limit = {
+						exists = region_state:OJI
+					 }
+					 region_state:OJI = {
+						set_state_owner = root
+					 }
+				 }
+			 }
+
+		}
 	}
 }
 

@@ -34,7 +34,6 @@ Probably incompatible with any mod that changes the US or the state structure of
 Currently only includes English localization.
 
 [img]https://i.imgur.com/nxLtJMt.png[/img]
-Incorporates map information from [url=https://forum.paradoxplaza.com/forum/threads/mod-just-another-map-mod-working-title.1573236/]Just Another Map Mod[/url] by crownsteler
 Incorporates [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3121178205]US Civil War Fixed[/url] by Ferrous
 Incorporates some fixes from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2935989855]VTM[/url] by Doodlez and OPB
 Incorporates and updates American characters from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2882342752]ECCHI[/url] by rinbro

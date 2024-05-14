@@ -620,18 +620,7 @@ usfp_usa.8 = {
 			save_scope_as = nast_scope
 			set_variable = { name = agitator_election_participation days = 180 }
 		}
-		if = {
-			limit = { 
-				exists = py:liberal_party
-			}
-			py:liberal_party = {
-				save_scope_as = republican_party_scope
-			}
-		} else = {
-			py:free_trade_party = {
-				save_scope_as = republican_party_scope
-			}
-		}
+		usfp_find_republican_party_effect = yes
 		ordered_interest_group = {
 			limit = {
 				has_party = yes

@@ -84,6 +84,7 @@ acw_events.1 = {
 			interest_group = {
 				add_modifier = {
 					name = usfp_abolitionist_literature_ig
+					years = 5
 				}
 			}
 		}
@@ -100,8 +101,8 @@ acw_events.1 = {
 				name = usfp_public_sympathy
 				years = 5
 			}
-			usfp_appease_slavers_effect = {MULT = 1}
 		}
+		usfp_appease_slavers_effect = {MULT = 1}
 	}
 }
 

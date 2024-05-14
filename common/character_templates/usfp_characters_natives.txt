@@ -8,7 +8,7 @@ usfp_chief_john_ross_template = {
     ruler = yes
     ig_leader = yes
     ideology = ideology:ideology_pacifist
-    culture = cherokee
+    culture = cu:cherokee
     traits = {
         persistent
         basic_political_operator
@@ -21,7 +21,7 @@ usfp_chief_mushulatubbee_template = {
     last_name = usfp_Blank
     historical = yes
     birth_date = 1770.2.12 #approx
-    culture = caddoan
+    culture = cu:muskogean
     interest_group = ig_landowners
     ruler = yes
     ig_leader = yes
@@ -39,7 +39,7 @@ usfp_chief_george_colbert = {
     last_name = Colbert
     historical = yes
     birth_date = 1764.7.15 #sometime in 1764
-    culture = caddoan
+    culture = cu:muskogean
     interest_group = ig_landowners
     ideology = ideology:ideology_moderate
     ruler = yes

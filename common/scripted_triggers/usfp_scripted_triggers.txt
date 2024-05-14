@@ -5,10 +5,7 @@
 		has_ideology = ideology:ideology_authoritarian
 		has_ideology = ideology:ideology_fascist
 		has_ideology = ideology:ideology_slaver
-		custom_tooltip = {
-			text = is_theodore_roosevelt
-			has_variable = is_theodore_roosevelt
-		}
+		has_trait = usfp_trait_expansionist
 	}
 }
 
@@ -17,15 +14,7 @@ usfp_manifest_destiny_anti_expansion_trigger = {
 		has_ideology = ideology:ideology_pacifist
 		has_ideology = ideology:ideology_anarchist
 		has_ideology = ideology:ideology_humanitarian
-		custom_tooltip = {
-			text = is_daniel_webster
-			has_variable = is_daniel_webster
-		}
-		custom_tooltip = {
-			text = is_jennings_bryan
-			has_variable = is_jennings_bryan
-		}
-
+		has_trait = usfp_trait_antiexpansionist
 	}
 
 }

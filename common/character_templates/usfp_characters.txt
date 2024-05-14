@@ -15,6 +15,7 @@
         celebrity_commander
         explorer
         brave
+        usfp_trait_expansionist
     }   
     interest_group_leader_usage = {
         country_trigger = {
@@ -115,6 +116,7 @@ usa_andrew_jackson_template = {
         bigoted
         demagogue
         expert_political_operator
+        usfp_trait_expansionist
     }
     on_created = {
         set_variable = {
@@ -366,7 +368,7 @@ usfp_william_jennings_bryan_character_template = {
     interest_group = ig_rural_folk
     birth_date = 1860.3.19
     dna = usfp_usa_william_jennings_bryan
-    traits = { experienced_political_operator pious firebrand charismatic }
+    traits = { experienced_political_operator pious firebrand charismatic usfp_trait_antiexpansionist }
     # is_agitator = yes
     # Spawned by Event
     on_created = {

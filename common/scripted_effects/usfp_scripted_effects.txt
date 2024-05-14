@@ -662,3 +662,57 @@ usfp_assassinate_president_effect = {
 		}
 	}
 }
+
+usfp_deseret_into_utah_effect = {
+	create_diplomatic_pact = {
+		country = c:DES
+		type = puppet
+	}
+	change_relations = {
+		country = c:DES
+		value = 50
+	}
+	c:DES = {
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_presidential_republic
+		if = {
+			limit = { 
+				c:USA = {
+					has_law = law_type:law_slavery_banned
+				}
+			}
+			activate_law = law_type:law_slavery_banned
+		}
+		add_modifier = {
+			name = usfp_federal_territory_colony
+			years = 20
+		}
+	}
+	if = {
+		limit = { 
+			s:STATE_UTAH = {
+				any_scope_state = {
+					owner = c:USA
+				}
+			}
+		}
+		s:STATE_UTAH.region_state:USA = {
+			set_state_owner = c:DES
+		}
+	}
+}
+
+usfp_find_republican_party_effect = {
+	if = {
+		limit = { 
+			exists = py:liberal_party
+		}
+		py:liberal_party = {
+			save_scope_as = republican_party_scope
+		}
+	} else = {
+		py:free_trade_party = {
+			save_scope_as = republican_party_scope
+		}
+	}
+}

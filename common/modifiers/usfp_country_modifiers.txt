@@ -402,4 +402,8 @@ usfp_sea_to_shining_sea_modifier = {
 	country_prestige_mult = 0.10
 }
 
-
+usfp_federal_territory_colony = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
+	state_migration_pull_mult = 0.20
+	state_colony_growth_creation_mult = 0.10
+}

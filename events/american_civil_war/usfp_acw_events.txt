@@ -59,18 +59,7 @@ usfp_acw.1 = {
 		c:CSA = {
 			save_scope_as = csa_scope
 		}
-		if = {
-			limit = { 
-				exists = py:liberal_party
-			}
-			py:liberal_party = {
-				save_scope_as = republican_party_scope
-			}
-		} else = {
-			py:free_trade_party = {
-				save_scope_as = republican_party_scope
-			}
-		}
+		usfp_find_republican_party_effect = yes
 		ordered_interest_group = {
 			limit = {
 				party = scope:republican_party_scope

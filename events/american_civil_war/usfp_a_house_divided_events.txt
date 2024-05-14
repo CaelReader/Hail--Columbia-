@@ -1274,6 +1274,9 @@ usfp_a_house_divided.15 = {
 	dlc = dlc_usfp
 	placement = root
 	duration = 3
+	cooldown = {
+		years = 1
+	}
 
 	immediate = {
 		py:liberal_party = {

@@ -11,8 +11,9 @@
 					size = 11000
 				}
 			}
-			add_primary_culture = cu:caddoan
-			add_primary_culture = cu:muskogean	
+			add_primary_culture = cu:caddoan #indigenous inhabitants the Wichita, as well as related Caddo proper removed to the north
+			add_primary_culture = cu:muskogean	#Creek, Seminole, Choctaw, Chickasaw removed to the west
+			add_primary_culture = cu:algonquian	 #Potowatomie, Shawnee, others removed to the west
 	}
 	cu:yankee = {
 		add_cultural_obsession = liquor

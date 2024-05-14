@@ -97,7 +97,7 @@ USCWF.1 = {
 		# }
 		ig:ig_petty_bourgeoisie = {
 			leader = {
-				set_variable = is_daniel_webster
+				# set_variable = is_daniel_webster
 				add_modifier = {
 					name = usfp_great_triumvirate
 				}
