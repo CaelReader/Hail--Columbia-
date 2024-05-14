@@ -61,14 +61,6 @@ ecchi_usa_van_buren_character_template = {
         latest_usage_date = 1862.7.24
         chance = 100
     }
-    on_created = {
-        if = {
-            limit = {
-                year > 1845
-            }
-            set_ideology = ideology:ideology_abolitionist
-        }
-    }
 }
 
 ecchi_usa_w_harrison_character_template = {
