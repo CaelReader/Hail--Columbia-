@@ -519,3 +519,13 @@ DES = {
 	cultures = { yankee dixie }
 	capital = STATE_UTAH
 }
+
+SON = {
+	color = { 212 27 46 }
+	country_type = colonial
+	
+	tier = principality
+
+	cultures = { dixie mexican }
+	capital = STATE_BAJA_CALIFORNIA
+}

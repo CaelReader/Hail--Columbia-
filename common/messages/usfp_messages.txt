@@ -95,3 +95,12 @@ usfp_manifest_less_destiny_mexico = {
 	notification_type = feed
 	color = bad
 }
+
+#Washington Precedent message
+usfp_washington_precedent = {
+	type = country
+	group = "new_ruler_notification_group"
+	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
+	notification_type = toast
+	color = neutral
+}

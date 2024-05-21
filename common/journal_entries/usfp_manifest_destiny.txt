@@ -265,6 +265,36 @@ usfp_manifest_destiny_main = {
 			# 	usfp_manifest_less_destiny_effect = yes
 			# 	set_variable = destiny_manifested_acw_lost
 			# }
+			#Failsafe to add claims in case you acquire mexican states by other means
+			if = {
+				limit = { 
+					any_scope_state = {
+						usfp_mexican_cession_trigger = yes
+						state_region = {
+							NOT = {
+								root = {
+									has_claim = prev
+								}
+							}
+						}
+					}
+				}
+				random_scope_state = {
+					limit = {
+						usfp_mexican_cession_trigger = yes
+						state_region = {
+							NOT = {
+								root = {
+									has_claim = prev
+								}
+							}
+						}
+					}
+					state_region = {
+						add_claim = root
+					}
+				}
+			}
 		}
 		random_events = {
 			200 = 0
@@ -279,6 +309,7 @@ usfp_manifest_destiny_main = {
 			100 = usfp_manifest_destiny.20 #Oregon Pioneers
 			100 = usfp_manifest_destiny.21 #Horse Creek Treaty
 			100 = usfp_manifest_destiny.22 #Pike's Peak Gold Rush
+			100 = usfp_filibuster.1 #William Walker attacks Sonora
 			
 		}
 		events = {

@@ -1,4 +1,4 @@
-#Population data gathered by Argendauss
+﻿#Population data gathered by Argendauss
 #separated these out in case they cause issues and need to be toggleable
 GLOBAL = {
 	s:STATE_GEORGIA.region_state:USA = {

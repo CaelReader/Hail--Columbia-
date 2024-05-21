@@ -67,6 +67,7 @@ usfp_second_party_system_modifier = {
 	country_legitimacy_headofstate_add = 10 #TPS
 	country_legitimacy_ideological_incoherence_mult = -0.10 #TPS, 0.2 presrep 0.1 censuf 0.20 actual
 	country_agitator_slots_add = 3
+	country_institution_size_change_speed_mult = -0.25
 }
 
 usfp_third_party_system_modifier = {

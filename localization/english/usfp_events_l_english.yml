@@ -681,6 +681,33 @@ usfp_mormon.14.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCount
 usfp_mormon.14.f: ""Make way! Make way! The President has been shot! The President has been shot, my God!""
 usfp_mormon.14.a: "This is an outrage!"
 
+#Filibuster events
+usfp_filibuster.1.t: "The [SCOPE.sCharacter('william_walker_scope').GetLastName] Expedition"
+usfp_filibuster.1.d: "A band of [ROOT.GetCountry.GetAdjective] adventurers under the command of [SCOPE.sCharacter('william_walker_scope').GetFullName] have invaded [SCOPE.sState('baja_scope').GetName]. They have declared the Republic of [SCOPE.sCountry('sonora_scope').GetName] and seek our recognition."
+usfp_filibuster.1.f: ""In a country devastated by savages. any civilized nation has a right to enter and possess it. This Is the principle on which I based my action - this Is the authority on which I rely."" #William Walker
+usfp_filibuster.1.a: "These filibusters are a disgrace."
+usfp_filibuster.1.b: "Let's wait and see what happens."
+usfp_filibuster.1.c: "We will defend the indepedent Republic of [SCOPE.sCountry('sonora_scope').GetName]!"
+
+usfp_filibuster.2.t: "American Filibuster Invades [SCOPE.sState('baja_scope').GetName]"
+usfp_filibuster.2.d: "A band of [SCOPE.sCountry('usa_scope').GetAdjective] adventurers under the command of [SCOPE.sCharacter('william_walker_scope').GetFullName] have invaded [SCOPE.sState('baja_scope').GetName] and declared the Republic of [SCOPE.sCountry('sonora_scope').GetName]."
+usfp_filibuster.2.f: ""In a country devastated by savages. any civilized nation has a right to enter and possess it. This Is the principle on which I based my action - this Is the authority on which I rely.""
+usfp_filibuster.2.a: "To arms!"
+
+usfp_filibuster.3.t: "Walker's Trial"
+usfp_filibuster.3.d: "With the defeat of William Walker's filibuster expedition, he and his compatriots have been prosecuted for waging an illegal war. With widespread popular support for his activities, Walker is likely to be acquitted by the jury."
+usfp_filibuster.3.f: ""It is stated that the statute under which the indictment was found, was passed under the section of the Constitution giving to Congress the powers to define offences against the Law of Nations, and therefore the deduction is, that if no offence has been committed against the Law of Nations, I stand here guiltless before you.""
+usfp_filibuster.3.a: "A slap on the wrist is sufficient."
+usfp_filibuster.3.a.t: "William Walker may continue his filibustering activities..."
+usfp_filibuster.3.b: "Ensure that these pirates stay locked up."
+
+usfp_filibuster.4.t: "The Republic of [SCOPE.sCountry('sonora_scope').GetName]"
+usfp_filibuster.4.d: "With the success of [SCOPE.sCharacter('william_walker_scope').GetFullName]'s expedition, the Republic of [SCOPE.sCountry('sonora_scope').GetName] is now petitioning for inclusion into the [ROOT.GetCountry.GetName]."
+usfp_filibuster.4.f: ""Civilization belongs to the whites. But what civilization? And until when?""
+usfp_filibuster.4.a: "We will annex the territory."
+usfp_filibuster.4.b: "[SCOPE.sCharacter('william_walker_scope').GetFullName] will granted governorship of the territory."
+usfp_filibuster.4.c: "We will not associate with these filibusters."
+
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"
 usfp_test.1.f: "sunrise, parabellum"

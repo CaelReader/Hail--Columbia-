@@ -349,6 +349,7 @@ usfp_mexico_attacks_usa = {
 on_wargoal_enforced = {
 	on_actions = {
 		usfp_utah_war
+		usfp_sonora_defeat
 	}
 }
 
@@ -374,6 +375,35 @@ usfp_utah_war = {
 			trigger_event = {
 				id = usfp_mormon.13
 				popup = yes
+			}
+		}
+	}
+}
+
+usfp_sonora_defeat = {
+	effect = {
+		if = {
+			limit = { 
+				c:MEX ?= root
+				has_global_variable = had_walker_sonora
+				NOT = {
+					has_variable = walker_sonora_defeated
+				}
+				exists = c:USA
+				# NOT = {
+				# 	exists = c:SON
+				# }
+				owns_entire_state_region = STATE_SONORA
+				owns_entire_state_region = STATE_BAJA_CALIFORNIA
+			}
+			c:USA = {
+				trigger_event = {
+					id = usfp_filibuster.3
+					days = 7
+				}
+			}
+			c:MEX = {
+				set_variable = walker_sonora_defeated
 			}
 		}
 	}

@@ -136,5 +136,11 @@ usfp_canadian_highlander: "We are the only Canadian colony remaining"
 deseret_statehood_des: "Petition for Statehood"
 deseret_statehood_des_desc: "Our goal has always been to create a place for ourselves within the United States. We should draft a state constitution and send it to Washington for consideration."
 
+sonora_statehood: "Petition for Statehood"
+sonora_statehood_desc: "With our expedition successful, we should seek recognition and annexation by the United States."
+
+nicaragua_revolt_walker: "Invite American Filibusters"
+nicaragua_revolt_walker_desc: "American volunteers can surely be only a boon to our cause."
+
 usfp_je_westward_expansion: "Westward Expansion"
 usfp_je_westward_expansion_reason: "$concept_usfp_westward_expansion_desc$"

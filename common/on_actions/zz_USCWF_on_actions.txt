@@ -26,6 +26,7 @@ USCWF_precedent_on_action = {
 		if = {
 			limit = {
 				c:USA ?= this
+				has_law = law_type:law_presidential_republic
 			}
 			trigger_event = { id = USCWF.4 days = 1 }
 		}

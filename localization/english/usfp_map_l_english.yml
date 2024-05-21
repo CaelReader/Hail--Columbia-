@@ -86,6 +86,11 @@ WCR_ADJ: "Woodland Cree"
  HDA: "Haida Gwaii"
  HDA_ADJ: "Haida"
 
+ ASK:0 "Alaska"
+ ASK_ADJ:0 "Alaskan"
+ SON:0 "Sonora"
+ SON_ADJ:0 "Sonoran"
+
 rule_usfp_usa_names:0 "@america_icon! #yellow Hail, Columbia!#! | USA Names"
  setting_usa_initial_names:1 "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_usa_initial_names_desc #high Vanilla #!#!#!"
  setting_usa_initial_names_desc:0 "The country name of the United States will change based on government type, always retaining the initials "USA""

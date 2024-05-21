@@ -1,0 +1,79 @@
+﻿sonora_statehood = {
+	is_shown = {
+		exists = c:SON
+		root = c:SON
+		exists = c:USA
+		NOT = {
+			has_variable = sonoran_statehood_ask
+		}
+		is_subject = no
+	}
+
+	possible = {
+		is_at_war = no
+		has_truce_with = c:MEX
+	}
+
+	when_taken = {
+		c:USA = {
+			trigger_event = usfp_filibuster.4
+		}
+		set_variable = sonoran_statehood_ask
+	}
+
+	ai_chance = {
+		base = 1000
+	}
+}
+
+nicaragua_revolt_walker = {
+	is_shown = {
+		exists = c:NIC
+		is_revolutionary = yes
+		civil_war_origin_country = c:NIC
+		NOT = {
+			has_global_variable = walker_to_nicaragua
+		}
+		has_global_variable = had_walker_sonora
+		game_date < 1865.1.1 
+		NOT = {
+			has_global_variable = walker_imprisoned
+		}
+	}
+
+	possible = {
+		exists = c:NIC
+		exists = c:USA
+		NOT = {
+			exists = c:SON
+		}
+	}
+
+	when_taken = {
+		set_global_variable = walker_to_nicaragua
+		create_character = {
+			template = usfp_usa_william_walker
+			ruler = yes
+			is_general = yes
+		}
+		hidden_effect = {
+			if = {
+				limit = { 
+					c:USA = {
+						NOT = {
+							has_law = law_type:law_slavery_banned
+						}
+					}
+				}
+				activate_law = law_type:law_slave_trade
+			}
+		}
+		hidden_effect = {
+			activate_law = law_type:law_autocracy
+		}
+	}
+
+	ai_chance = {
+		base = 1000
+	}
+}

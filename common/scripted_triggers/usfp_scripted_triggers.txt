@@ -247,3 +247,9 @@ usfp_owns_american_west = {
 	owns_entire_state_region = STATE_TEXAS
 	owns_entire_state_region = STATE_MINNESOTA
 }
+
+root_has_state_here = {
+	any_scope_state = {
+		owner = root
+	}
+}

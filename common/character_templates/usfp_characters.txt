@@ -621,3 +621,34 @@ usfp_usa_robert_rhett = {
     is_agitator = yes
     traits = { persistent wrathful basic_political_operator literary }
 }
+
+#USFP: Henry George
+usfp_usa_henry_george = {
+    first_name = Henry
+    last_name = George
+    historical = yes
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    ideology = ideology_usfp_georgist_leader
+    interest_group = ig_intelligentsia
+    birth_date = 1839.9.2
+    is_agitator = yes
+    dna = usfp_usa_henry_george
+    traits = { persistent inspirational_orator literary honorable }
+}
+
+#USFP: William Walker, filibuster
+usfp_usa_william_walker = {
+    first_name = William
+    last_name = Walker
+    historical = yes
+    culture = cu:dixie
+    religion = rel:protestant
+    female = no
+    ideology = ideology_jingoist_leader
+    interest_group = ig_landowners
+    birth_date = 1824.5.8
+    dna = usfp_william_walker
+    traits = { persistent celebrity_commander reckless bandit usfp_trait_expansionist }
+}

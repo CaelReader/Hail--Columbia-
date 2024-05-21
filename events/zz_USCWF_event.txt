@@ -162,6 +162,7 @@ USCWF.4 = {
 
 	immediate = {
 		ruler = {
+			save_scope_as = ruler_scope
 			if = {
 				limit = {
 					NOT = { has_variable = var_elected_once }
@@ -170,6 +171,15 @@ USCWF.4 = {
 			}
 			else = {
 				remove_as_interest_group_leader = yes
+				interest_group = {
+					save_scope_as = ruler_interest_group_scope
+					leader = {
+						save_scope_as = ruler_interest_group_new_leader_scope
+					}
+				}
+				root = {
+					post_notification = usfp_washington_precedent
+				}
 			}
 		}
 	}

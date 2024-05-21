@@ -194,3 +194,8 @@ usfp_post_civil_war_army = {
 	interest_group_pol_str_mult = 0.25
 	interest_group_pop_attraction_mult = 0.25
 }
+
+usfp_rejected_filibustering = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_negative.dds
+	interest_group_approval_add = -2
+}
