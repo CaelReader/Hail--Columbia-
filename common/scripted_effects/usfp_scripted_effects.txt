@@ -734,3 +734,17 @@ usfp_find_republican_party_effect = {
 		}
 	}
 }
+
+usfp_washington_precedent_effect = {
+	save_scope_as = ruler_scope
+	remove_as_interest_group_leader = yes
+	interest_group = {
+		save_scope_as = ruler_interest_group_scope
+		leader = {
+			save_scope_as = ruler_interest_group_new_leader_scope
+		}
+	}
+	root = {
+		post_notification = usfp_washington_precedent
+	}
+}

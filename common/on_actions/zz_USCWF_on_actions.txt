@@ -9,7 +9,7 @@ on_country_released_as_independent = { on_actions = { USCWF_IG_ideology_on_actio
 
 USCWF_IG_ideology_on_action = {
 	effect = {
-		scope:target = { USCWF_WERE_ALL_LIVING_IN_AMERIKA_effect = yes }
+		scope:target ?= { USCWF_WERE_ALL_LIVING_IN_AMERIKA_effect = yes }
 	}
 }
 

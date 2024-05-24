@@ -963,6 +963,490 @@ usfp_acw.10 = {
 	}
 }
 
-#Rio Grande breaks away from CSA
-#CSA: Rio Grande breaks away!
-#Mexico revolt
+#Rio Grande breaks away
+# usfp_acw.11 = {
+# 	type = country_event
+# 	placement = scope:rio_grande_state_scope
+
+# 	title = usfp_acw.11.t
+# 	desc = usfp_acw.11.d
+# 	flavor = usfp_acw.11.f
+# 	dlc = dlc_usfp
+# 	event_image = {
+# 		video = "votp_barricade"
+# 	}
+
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+# 	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+# 	duration = 3
+
+# 	trigger = {
+# 		s:STATE_RIO_GRANDE = {
+# 			OR = {
+# 				root_has_state_here = yes
+# 				any_scope_state = {
+# 					exists = c:CSA
+# 					owner = c:CSA
+# 				}
+# 			}
+# 		}
+# 		NOT = {
+# 			has_variable = had_rio_grande_breakaway
+# 		}
+# 		NOT = {
+# 			c:MEX ?= {
+# 				is_subject_of = c:USA
+# 			}
+# 		}
+# 		NOT = {
+# 			owns_entire_state_region = STATE_MEXICO
+# 		}
+# 	}
+
+# 	immediate = {
+# 		c:MEX = {
+# 			save_scope_as = mexican_scope
+# 		}
+# 		s:STATE_RIO_GRANDE = {
+# 			random_scope_state = {
+# 				limit = {
+# 					OR = {
+# 						AND = {
+# 							exists = c:CSA
+# 							owner = c:CSA
+# 						}
+# 						owner = root
+# 					}
+# 				}
+# 				save_scope_as = rio_grande_state_scope
+# 			}
+# 		}
+# 		set_variable = had_rio_grande_breakaway
+# 		create_country = {
+# 			tag = RIO
+# 			state = scope:rio_grande_state_scope
+# 			origin = c:MEX
+# 			on_created = {
+# 				add_loyalists = {
+# 					value = large_radicals
+# 					culture = cu:mexican
+# 				}
+# 				add_radicals = {
+# 					value = very_large_radicals
+# 					culture = cu:dixie
+# 				}
+# 				if = {
+# 					limit = { 
+# 						exists = c:MEX
+# 					}
+# 					every_scope_state = {
+# 						state_region = {
+# 							add_claim = c:MEX
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		c:RIO = {
+# 			save_scope_as = rio_grande_scope
+# 		}
+# 		create_diplomatic_play = {
+# 			type = dp_secession
+# 			target_country = c:RIO
+# 		}
+# 		if = {
+# 			limit = { 
+# 				s:STATE_CHIHUAHUA = {
+# 					OR = {
+# 						root_has_state_here = yes
+# 						any_scope_state = {
+# 							exists = c:CSA
+# 							owner = c:CSA
+# 						}
+# 					}
+# 				}
+# 			}
+# 			s:STATE_CHIHUAHUA = {
+# 				random_scope_state = {
+# 					limit = {
+# 						OR = {
+# 							AND = {
+# 								exists = c:CSA
+# 								owner = c:CSA
+# 							}
+# 							owner = root
+# 						}
+# 					}
+# 					set_state_owner = c:RIO
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				s:STATE_DURANGO = {
+# 					OR = {
+# 						root_has_state_here = yes
+# 						any_scope_state = {
+# 							exists = c:CSA
+# 							owner = c:CSA
+# 						}
+# 					}
+# 				}
+# 			}
+# 			s:STATE_DURANGO = {
+# 				random_scope_state = {
+# 					limit = {
+# 						OR = {
+# 							AND = {
+# 								exists = c:CSA
+# 								owner = c:CSA
+# 							}
+# 							owner = root
+# 						}
+# 					}
+# 					set_state_owner = c:RIO
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				exists = c:CSA
+# 			}
+# 			c:CSA = {
+# 				trigger_event = {
+# 					id = usfp_acw.12
+# 				}
+# 			}
+# 		}
+# 	}
+
+# 	#we must accept this
+# 	option = {
+# 		name = usfp_acw.11.a
+# 		default_option = yes
+# 		add_loyalists = {
+# 			value = small_radicals
+# 			culture = cu:mexican
+# 		}
+# 		create_truce = {
+# 			country = c:RIO
+# 			months = 60
+# 		}
+# 		ai_chance = {
+# 			base = 10
+# 		}
+# 	}
+# 	#get them later
+# 	option = {
+# 		name = usfp_acw.11.b
+# 		add_radicals = {
+# 			value = small_radicals
+# 			culture = cu:mexican
+# 		}
+# 		c:RIO = {
+# 			every_scope_state = {
+# 				state_region = {
+# 					add_claim = root
+# 				}
+# 			}
+# 		}
+# 		create_truce = {
+# 			country = c:RIO
+# 			months = 60
+# 		}
+# 		change_relations = {
+# 			country = c:RIO
+# 			value = -30
+# 		}
+# 		ai_chance = {
+# 			base = 40
+# 		}
+# 	}
+# 	#attack!
+# 	option = {
+# 		name = usfp_acw.11.c
+# 		add_radicals = {
+# 			value = small_radicals
+# 			culture = cu:mexican
+# 		}
+# 		c:RIO = {
+# 			every_scope_state = {
+# 				state_region = {
+# 					add_claim = root
+# 				}
+# 			}
+# 		}
+# 		change_relations = {
+# 			country = c:RIO
+# 			value = -50
+# 		}
+# 		ai_chance = {
+# 			base = 50
+# 		}
+# 	}
+# }
+# #CSA: Rio Grande breaks away!
+# usfp_acw.12 = {
+# 	type = country_event
+# 	placement = scope:rio_grande_state_scope
+
+# 	title = usfp_acw.11.t
+# 	desc = usfp_acw.11.d
+# 	flavor = usfp_acw.11.f
+# 	dlc = dlc_usfp
+# 	event_image = {
+# 		video = "votp_barricade"
+# 	}
+
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+# 	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+# 	duration = 3
+
+# 	#we must accept this
+# 	option = {
+# 		name = usfp_acw.11.a
+# 		default_option = yes
+# 		add_loyalists = {
+# 			value = small_radicals
+# 			culture = cu:mexican
+# 		}
+# 		create_truce = {
+# 			country = c:RIO
+# 			months = 60
+# 		}
+# 		ai_chance = {
+# 			base = 10
+# 		}
+# 	}
+# 	#get them later
+# 	option = {
+# 		name = usfp_acw.11.b
+# 		add_radicals = {
+# 			value = small_radicals
+# 			culture = cu:mexican
+# 		}
+# 		c:RIO = {
+# 			every_scope_state = {
+# 				state_region = {
+# 					add_claim = root
+# 				}
+# 			}
+# 		}
+# 		create_truce = {
+# 			country = c:RIO
+# 			months = 60
+# 		}
+# 		change_relations = {
+# 			country = c:RIO
+# 			value = -30
+# 		}
+# 		ai_chance = {
+# 			base = 20
+# 		}
+# 	}
+# 	#attack!
+# 	option = {
+# 		name = usfp_acw.11.c
+# 		add_radicals = {
+# 			value = small_radicals
+# 			culture = cu:mexican
+# 		}
+# 		c:RIO = {
+# 			every_scope_state = {
+# 				state_region = {
+# 					add_claim = root
+# 				}
+# 			}
+# 		}
+# 		change_relations = {
+# 			country = c:RIO
+# 			value = -50
+# 		}
+# 		create_diplomatic_play = {
+# 			type = dp_annex_war
+# 			target_country = c:RIO
+# 			add_war_goal = {
+# 				holder = c:RIO
+# 				type = revoke_all_claims
+# 				target_country = root
+# 			}
+# 		}
+# 		ai_chance = {
+# 			base = 50
+# 		}
+# 	}
+# }
+#Mexico revolt (subject)
+# usfp_acw.13 = {
+# 	type = country_event
+# 	placement = scope:mexico_scope.capital
+
+# 	title = usfp_acw.13.t
+# 	desc = usfp_acw.13.d
+# 	flavor = usfp_acw.13.f
+# 	dlc = dlc_usfp
+# 	event_image = {
+# 		video = "votp_barricade"
+# 	}
+
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+# 	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+# 	duration = 3
+
+# 	trigger = {
+# 		NOT = {
+# 			has_variable = had_mexican_rebellion
+# 		}
+# 		c:MEX ?= {
+# 			is_subject_of = root
+# 		}
+# 	}
+
+# 	immediate = {
+# 		set_variable = had_mexican_rebellion
+# 		remove_diplomatic_pact = {
+# 			country = c:MEX
+# 			type = dominion
+# 		}
+# 		remove_diplomatic_pact = {
+# 			country = c:MEX
+# 			type = puppet
+# 		}
+# 		create_diplomatic_pact = {
+# 			country = c:MEX
+# 			type = protectorate
+# 		}
+# 		c:MEX = {
+# 			save_scope_as = mexico_scope
+# 			add_loyalists = {
+# 				value = medium_radicals
+# 				culture = cu:mexican
+# 			}
+# 			add_radicals = {
+# 				value = large_radicals
+# 				culture = cu:dixie
+# 			}
+# 		}
+# 		every_scope_state = {
+# 			limit = {
+# 				region = sr:region_mexico
+# 			}
+# 			state_region = {
+# 				add_claim = c:MEX
+# 			}
+# 		}
+# 		every_diplomatic_play = {
+# 			limit = {
+# 				initiator = c:USA
+# 			}
+# 			remove_initiator_backers = {
+# 				c:MEX
+# 			}
+# 		}
+# 		every_diplomatic_play = {
+# 			limit = {
+# 				target = c:USA
+# 			}
+# 			remove_target_backers = {
+# 				c:MEX
+# 			}
+# 		}
+# 		c:MEX = {
+# 			create_diplomatic_play = {
+# 				type = dp_independence
+# 				target_country = root
+# 			}
+# 		}
+# 	}
+
+# 	#fine
+# 	option = {
+# 		name = usfp_acw.13.a
+# 		default_option = yes
+# 		c:MEX = {
+# 			make_independent = yes
+# 		}
+# 		create_truce = {
+# 			country = c:MEX
+# 			months = 60
+# 		}
+# 		every_diplomatic_play = {
+# 			limit = {
+# 				initiator = c:USA
+# 			}
+# 			remove_initiator_backers = {
+# 				c:MEX
+# 			}
+# 		}
+# 		every_diplomatic_play = {
+# 			limit = {
+# 				target = c:USA
+# 			}
+# 			remove_target_backers = {
+# 				c:MEX
+# 			}
+# 		}
+# 		ai_chance = {
+# 			base = 100
+# 		}
+# 	}
+# 	#no!
+# 	option = {
+# 		name = usfp_acw.13.b
+# 		ai_chance = {
+# 			base = 10
+# 			modifier = {
+# 				trigger = {
+# 					ruler = {
+# 						usfp_manifest_destiny_pro_expansion_trigger = yes
+# 					}
+# 				}
+# 				add = 1000
+# 			}
+# 		}
+# 		every_diplomatic_play = {
+# 			limit = {
+# 				initiator = c:USA
+# 			}
+# 			remove_initiator_backers = {
+# 				c:MEX
+# 			}
+# 		}
+# 		every_diplomatic_play = {
+# 			limit = {
+# 				target = c:USA
+# 			}
+# 			remove_target_backers = {
+# 				c:MEX
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				exists = c:CSA
+# 			}
+# 			every_diplomatic_play = {
+# 				limit = {
+# 					initiator = c:CSA
+# 				}
+# 				remove_initiator_backers = {
+# 					c:MEX
+# 				}
+				
+# 			}
+# 			every_diplomatic_play = {
+# 				limit = {
+# 					target = c:CSA
+# 				}
+# 				remove_target_backers = {
+# 					c:MEX
+# 				}
+# 			}
+# 		}
+# 	}
+# }

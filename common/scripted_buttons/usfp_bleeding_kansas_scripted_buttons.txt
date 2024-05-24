@@ -140,9 +140,20 @@ usfp_enforce_kansas_constitution_button = {
 		}
 	}
 	possible = {
-		scope:kansas_scope = {
-			has_decree = decree_violent_suppression
+		OR = {
+			institution_investment_level = {
+				institution = institution_police
+				value >= 3
+			}
+			institution_investment_level = {
+				institution = institution_home_affairs
+				value >= 2
+			}
+			scope:kansas_scope = {
+				has_decree = decree_violent_suppression
+			}
 		}
+
 	}
 
 	effect = {

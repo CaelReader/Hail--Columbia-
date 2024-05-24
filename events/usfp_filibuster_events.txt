@@ -96,6 +96,10 @@ usfp_filibuster.1 = {
 				ruler = {
 					save_scope_as = william_walker_scope
 				}
+				add_modifier = {
+					name = usfp_filibusters_modifier
+					years = 4
+				}
 			}
 		}
 		s:STATE_BAJA_CALIFORNIA.region_state:SON = {

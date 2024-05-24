@@ -253,3 +253,16 @@ root_has_state_here = {
 		owner = root
 	}
 }
+
+usfp_president_might_go_for_third_term = {
+	OR = {
+		has_ideology = ideology:ideology_authoritarian
+		has_ideology = ideology:ideology_vanguardist
+		has_ideology = ideology:ideology_fascist
+		has_ideology = ideology:ideology_communist
+		has_ideology = ideology:ideology_usfp_strongman_populist
+		has_ideology = ideology:ideology_usfp_social_darwinist_leader
+		has_ideology = ideology:ideology_usfp_progressive
+		has_ideology = ideology:ideology_ethno_nationalist
+	}
+}

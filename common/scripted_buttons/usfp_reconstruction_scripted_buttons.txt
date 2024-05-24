@@ -16,6 +16,16 @@ usfp_reconstruction_enforce_rights_button = {
 			}
 		}
 		authority >= 150
+		OR = {
+			institution_investment_level = {
+				institution = institution_police
+				value >= 3
+			}
+			institution_investment_level = {
+				institution = institution_home_affairs
+				value >= 2
+			}
+		}
 	}
 
 	effect = {
@@ -35,7 +45,7 @@ usfp_reconstruction_enforce_rights_button = {
 		}
 		add_modifier = {
 			name = usfp_enforcing_reconstruction
-			multiplier = 3
+			multiplier = 2
 			years = 3
 		}
 		usfp_destabilize_union_effect = {MULT = 1}
@@ -104,6 +114,78 @@ usfp_reconstruction_confederate_amnesty_button = {
 				usfp_anti_abolitionist_government = yes
 			}
 			add = 100
+		}
+	}
+}
+
+usfp_reconstruction_cointelpro_freedmen_button = {
+	name = "usfp_reconstruction_cointelpro_freedmen_button"
+	desc = "usfp_reconstruction_cointelpro_freedmen_button_desc"
+
+	visible = {
+		has_law = law_type:law_secret_police
+		NOT = {
+			has_variable = reconstruction_secret_police
+		}
+	}
+
+	possible = {
+		authority >= 75
+	}
+
+	effect = {
+		set_variable = reconstruction_secret_police
+		usfp_reconstruction_swing_freedmen = yes
+		add_modifier = {
+			name = usfp_enforcing_reconstruction
+			multiplier = 1
+			years = 3
+		}
+	}
+
+	ai_chance = {
+		base = 25
+		modifier = {
+			trigger = {
+				usfp_anti_abolitionist_government = yes
+			}
+			add = -25
+		}
+	}
+}
+
+usfp_reconstruction_cointelpro_slaver_button = {
+	name = "usfp_reconstruction_cointelpro_slaver_button"
+	desc = "usfp_reconstruction_cointelpro_slaver_button_desc"
+
+	visible = {
+		has_law = law_type:law_secret_police
+		NOT = {
+			has_variable = reconstruction_secret_police
+		}
+	}
+
+	possible = {
+		authority >= 75
+	}
+
+	effect = {
+		set_variable = reconstruction_secret_police
+		usfp_reconstruction_swing_south = yes
+		add_modifier = {
+			name = usfp_enforcing_reconstruction
+			multiplier = 1
+			years = 3
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = {
+				usfp_anti_abolitionist_government = yes
+			}
+			add = 25
 		}
 	}
 }

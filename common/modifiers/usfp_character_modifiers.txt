@@ -39,3 +39,13 @@ usfp_public_sympathy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 	character_popularity_add = 25
 }
+
+usfp_caesarism = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_negative.dds
+	character_popularity_add = -30
+}
+
+usfp_kingfish = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	character_popularity_add = 20
+}

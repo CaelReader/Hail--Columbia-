@@ -650,5 +650,5 @@ usfp_usa_william_walker = {
     interest_group = ig_landowners
     birth_date = 1824.5.8
     dna = usfp_william_walker
-    traits = { persistent celebrity_commander reckless bandit usfp_trait_expansionist }
+    traits = { reserved celebrity_commander reckless bandit usfp_trait_expansionist }
 }

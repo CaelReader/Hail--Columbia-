@@ -310,13 +310,14 @@ usfp_manifest_destiny_main = {
 			100 = usfp_manifest_destiny.21 #Horse Creek Treaty
 			100 = usfp_manifest_destiny.22 #Pike's Peak Gold Rush
 			100 = usfp_filibuster.1 #William Walker attacks Sonora
-			
 		}
 		events = {
 			usfp_manifest_destiny.6 #Treaty of GH
 			usfp_manifest_destiny.10 #California Gold Rush
 			usfp_manifest_destiny.13 #new homelands
 			usfp_manifest_destiny.18 #Monroe violation
+			usfp_manifest_destiny.24 #Revolutionary Destiny
+			usfp_manifest_destiny.25 #Monarchy Destiny
 		}
 	}
 

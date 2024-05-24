@@ -190,6 +190,68 @@ je_acw_war = {
 			 }
 			 remove_modifier = usfp_fugitive_slave_law
 		}
+		# if Sonora exists, they declare for the Confederacy
+			if = {
+				limit = { 
+					exists = c:SON
+					exists = c:CSA
+					c:SON = {
+						is_ai = yes
+						OR = {
+							is_subject_of = c:USA
+							is_subject = no
+						}
+					}
+				}
+				c:SON = {
+					make_independent = yes
+					every_diplomatic_play = {
+						limit = {
+							initiator = c:USA
+						}
+						remove_initiator_backers = {
+							c:SON
+						}
+					}
+					every_diplomatic_play = {
+						limit = {
+							target = c:USA
+						}
+						remove_target_backers = {
+							c:SON
+						}
+					}
+					random_diplomatic_play = {
+						limit = {
+							any_scope_play_involved = {
+								this = c:CSA
+							}
+							any_scope_play_involved = {
+								this = c:USA
+							}
+						}
+						add_initiator_backers = {
+							c:SON
+						}
+						add_war_goal = {
+							holder = c:USA
+							type = annex_country
+							target_country = c:SON
+						}
+					}
+				}
+			}
+		if = {
+			limit = { 
+				c:MEX ?= {
+					is_subject_of = root
+				}
+			}
+			change_relations = {
+				country = c:MEX
+				value = -100
+			}
+		}
 	}
 
 	complete = {
@@ -257,6 +319,8 @@ je_acw_war = {
 			usfp_acw.5 #Indians declare for Confederacy
 			# acw_je_events.4 #Emancipation Proclamation
 			usfp_acw.6 #March to the Sea
+			# usfp_acw.11 #Rio Grande breaks away 
+			# usfp_acw.13 #Mexican revolt (subject)
 		}
 	}
 
@@ -324,6 +388,8 @@ je_acw_reconstruction = {
 
 	scripted_button = usfp_reconstruction_enforce_rights_button
 	scripted_button = usfp_reconstruction_confederate_amnesty_button
+	scripted_button = usfp_reconstruction_cointelpro_freedmen_button
+	scripted_button = usfp_reconstruction_cointelpro_slaver_button 
 
 	on_monthly_pulse = {
 		random_events = {

@@ -1534,3 +1534,117 @@ usfp_usa.18 = {
 		usfp_assassinate_president_effect = yes
 	}
 }
+
+#President breaks washington precedent
+usfp_usa.19 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/hail_columbia_icon.dds"
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	placement = root
+
+	title = usfp_usa.19.t
+	desc = usfp_usa.19.d
+	flavor = usfp_usa.19.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		c:USA ?= root
+		has_law = law_type:law_presidential_republic
+		ruler = {
+			has_variable = president_might_break_precedent
+			NOT = {
+				has_variable = president_broke_precedent
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = {
+			ruler = {
+				has_variable = president_might_break_precedent
+			}
+		}
+	}
+
+	#step down
+	option = {
+		name = usfp_usa.19.a
+		trigger = {
+			NOT = {
+				ruler = {
+					has_ideology = ideology:ideology_usfp_strongman_populist
+				}
+			}
+		}
+		default_option = yes
+		ruler = {
+			usfp_washington_precedent_effect = yes
+		}
+	}
+	#go for third term
+	option = {
+		name = usfp_usa.19.b
+		trigger = {
+			NOT = {
+				ruler = {
+					has_ideology = ideology:ideology_usfp_strongman_populist
+				}
+			}
+		}
+		ruler = {
+			set_variable = president_broke_precedent
+			interest_group = {
+				party ?= {
+					add_momentum = momentum_medium_decrease
+				}
+			}
+			add_modifier = {
+				name = usfp_caesarism
+			}
+		}
+	}
+	#huey long - cannot normally be achieved before 1936
+	option = {
+		name = usfp_usa.19.c
+		trigger = {
+			ruler = {
+				has_ideology = ideology:ideology_usfp_strongman_populist
+			}
+		}
+		highlighted_option = yes
+		ruler = {
+			set_variable = president_broke_precedent
+			interest_group = {
+				party ?= {
+					add_momentum = momentum_small
+				}
+			}
+			add_modifier = {
+				name = usfp_kingfish
+			}
+		}
+	}
+	#FDR
+	option = {
+		name = usfp_usa.19.d
+		highlighted_option = yes
+		trigger = {
+			is_at_war = yes
+		}
+		ruler = {
+			set_variable = president_broke_precedent
+			interest_group = {
+				party ?= {
+					add_momentum = momentum_small
+				}
+			}
+		}
+	}
+}

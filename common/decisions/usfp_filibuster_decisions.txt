@@ -56,6 +56,10 @@ nicaragua_revolt_walker = {
 			ruler = yes
 			is_general = yes
 		}
+		add_modifier = {
+			name = usfp_filibusters_modifier
+			years = 4
+		}
 		hidden_effect = {
 			if = {
 				limit = { 

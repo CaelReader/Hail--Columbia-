@@ -219,6 +219,21 @@ usfp_acw.10.a: "Honor to the brave!"
 usfp_acw.10.b: "[SCOPE.sCharacter('civil_war_general').GetFullName] has great political prospects."
 usfp_acw.10.c: "[SCOPE.sCharacter('general_grant_scope').GetFullName] will secure the peace!"
 
+usfp_acw.11.t: "[SCOPE.sCountry('rio_grande_scope').GetAdjective] Secession"
+usfp_acw.11.d: "Capitalizing on the chaos of the Civil War, [SCOPE.sCulture('afro_american_culture').GetName] seperatists in [SCOPE.sCountry('rio_grande_scope').GetName] have formed a breakaway republic, declaring neutrality in the conflict."
+usfp_acw.11.f: ""This is not our fight! The yankees came and imposed their laws upon us, and now they can't decide what those laws should be!""
+usfp_acw.11.a: "We must accept this."
+usfp_acw.11.b: "[SCOPE.sCountry('rio_grande_scope').GetName] is illegitimate."
+usfp_acw.11.c: "They are belligerents and will be treated accordingly."
+
+#acw.12 is the same thing as 11 just for the CSA's viewing
+
+usfp_acw.13.t: "[SCOPE.sCountry('mexico_scope').GetName] Revolts!"
+usfp_acw.13.d: "With the [ROOT.GetCountry.GetName] in chaos, [SCOPE.sCountry('mexico_scope').GetAdjective] nationalists have seized on the opportunity to oust our occupation and declare independence once more."
+usfp_acw.13.f: ""The Mexican Nation, which has had its will strnagled and its voice silenced, leaves today the oppression forced upon it."" #adapted from Mexican Declaration of Independence
+usfp_acw.13.a: "We cannot stop them."
+usfp_acw.13.b: "Stop them!"
+
 usfp_reconstruction.1.t: "The Freedmen's Bureau"
 usfp_reconstruction.1.d: "A commission on the conditions in the South has suggested the creation of a new government agency: the Freedmen's Bureau. The agency would give direct aid to refugees and recently-liberated former slaves, and help transition them into free society."
 usfp_reconstruction.1.f: ""Offer the freedmen temporary aid and counsel until they become accustomed to their new sphere of life; secure to them, by law, their just rights of person and property; relieve them, by a fair and equal administration of justice, from the depressing influence of disgraceful prejudice. Above all, guard them against the virtual restoration of slavery in any form, under any pretext, and then let them take care of themselves. If we allow this, the future of the African race in this country will be conducive to its prosperity and associated with its well-being."" #Freedmen's Inquiry Commission
@@ -416,6 +431,19 @@ usfp_manifest_destiny.23.a: "We should focus on trade and business."
 usfp_manifest_destiny.23.b: "Foreign agents have destroyed us from within!"
 usfp_manifest_destiny.23.c: "What a disaster..."
 
+usfp_manifest_destiny.24.t: "A Revolutionary Destiny"
+usfp_manifest_destiny.24.d: "With the [ROOT.GetCountry.GetName] in the hands of the workers, the place of Manifest Destiny in the future of the nation remains contested. We must reckon with our culture and history of colonialism."
+usfp_manifest_destiny.24.f: ""Capitalism first makes it impossible for the wage worker to have home and family by reducing him to abject poverty; then it forces him to take up arms to make a living and invade foreign lands for the purpose of fulfilling the 'Manifest Destiny' of the class which robs and rules him."" #Daniel De Leon
+usfp_manifest_destiny.24.a: "Our destiny is one of world revolution!"
+usfp_manifest_destiny.24.b: "The workers do not support further conquest."
+usfp_manifest_destiny.24.c: "The heinous imperialism of Manifest Destiny must be repudiated!"
+
+usfp_manifest_destiny.25.t: "A Royal Destiny"
+usfp_manifest_destiny.25.d: "With the coronation of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFullName], the underpinnings of Manifest Destiny are now in doubt. Without a great Republic to spread across the earth, how can expansion be justified?"
+usfp_manifest_destiny.25.f: ""We have crowned our very own Julius Caesar, and thus forsaken the destiny bestowed upon us by Providence. Are we truly so debased as to abandon the ideals of self-government and give ourselves to base imperialism, in the fashion of those tottering monarchies of old Europe?""
+usfp_manifest_destiny.25.a: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] will carry forth the torch of civilization!"
+usfp_manifest_destiny.25.b: "Manifest Destiny cannot coexist with the monarchy."
+
 ### Native Removal
 usfp_native_removal.1.t: "The Seminole Removal"
 usfp_native_removal.1.d: "With the Second Seminole War finally winding down, the Army can begin the slow process of removing the remainder of the [SCOPE.sCulture('muskogean_scope').GetName] population across the Mississippi."
@@ -584,6 +612,15 @@ usfp_usa.18.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.
 usfp_usa.18.f: ""Make way! Make way! The President has been shot! The President has been shot, my God!""
 usfp_usa.18.a: "What a senseless tragedy."
 
+usfp_usa.19.t: "Breaking With Precedent"
+usfp_usa.19.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] has yet to confirm or deny whether they seek a third term in office. While there is no rule against it, the precedent set down by George Washington has made third terms an [ROOT.GetCountry.GetAdjective] political taboo. With the beginning of this election's campaigns, [ROOT.GetCountry.GetRuler.GetFullName] must decide."
+usfp_usa.19.f: ""The cry of Caesarism has been sounded through the land. No King, No Emperor, No Third Term, in glaring capitals, meet the eye in sensational journals. And yet neither the Constitution, the laws, nor the teaching of the Fathers, stand in the way of the third or the thirteenth term, if the people will!""
+#pro-Grant pamphlet Caesarism
+usfp_usa.19.a: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] will not seek re-election."
+usfp_usa.19.b: "Four more years!"
+usfp_usa.19.c: "I defy any sonofabitch to get me out under four terms!"
+usfp_usa.19.d: "We should not change horses mid stream!"
+
 ### Labor Events
 usfp_usa_labor.1.t: "The Industrial Workers of the World"
 usfp_usa_labor.1.d: "A convention of radical trade unionists has met in [SCOPE.sState('illinois_scope').GetCityHubName] to found the Industrial Workers of the World. Taking a much more militant stance than traditional labor organizations, the IWW seeks to unite workers of all trades into one big union. Their stated objective is the abolition of the wage system via direct action, general strikes, and sabotage."
@@ -684,14 +721,14 @@ usfp_mormon.14.a: "This is an outrage!"
 #Filibuster events
 usfp_filibuster.1.t: "The [SCOPE.sCharacter('william_walker_scope').GetLastName] Expedition"
 usfp_filibuster.1.d: "A band of [ROOT.GetCountry.GetAdjective] adventurers under the command of [SCOPE.sCharacter('william_walker_scope').GetFullName] have invaded [SCOPE.sState('baja_scope').GetName]. They have declared the Republic of [SCOPE.sCountry('sonora_scope').GetName] and seek our recognition."
-usfp_filibuster.1.f: ""In a country devastated by savages. any civilized nation has a right to enter and possess it. This Is the principle on which I based my action - this Is the authority on which I rely."" #William Walker
+usfp_filibuster.1.f: ""The territory under Mexican rule would forever remain wild, half savage and uncultivated, covered with an indolent and half civilized people. When the people of a territory fail almost entirely to develop the resources nature has placed at their command, the interests of civilization require others to go in and possess the land."" #William Walker
 usfp_filibuster.1.a: "These filibusters are a disgrace."
 usfp_filibuster.1.b: "Let's wait and see what happens."
 usfp_filibuster.1.c: "We will defend the indepedent Republic of [SCOPE.sCountry('sonora_scope').GetName]!"
 
 usfp_filibuster.2.t: "American Filibuster Invades [SCOPE.sState('baja_scope').GetName]"
 usfp_filibuster.2.d: "A band of [SCOPE.sCountry('usa_scope').GetAdjective] adventurers under the command of [SCOPE.sCharacter('william_walker_scope').GetFullName] have invaded [SCOPE.sState('baja_scope').GetName] and declared the Republic of [SCOPE.sCountry('sonora_scope').GetName]."
-usfp_filibuster.2.f: ""In a country devastated by savages. any civilized nation has a right to enter and possess it. This Is the principle on which I based my action - this Is the authority on which I rely.""
+usfp_filibuster.2.f: ""The territory under Mexican rule would forever remain wild, half savage and uncultivated, covered with an indolent and half civilized people. When the people of a territory fail almost entirely to develop the resources nature has placed at their command, the interests of civilization require others to go in and possess the land."" #William Walker
 usfp_filibuster.2.a: "To arms!"
 
 usfp_filibuster.3.t: "Walker's Trial"

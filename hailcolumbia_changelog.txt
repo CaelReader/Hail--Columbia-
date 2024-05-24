@@ -119,14 +119,20 @@ Incorporated additional Native American pop and culture data by Argendauss
 2.3 "Jefferson"
 New Content:
 	Added William Walker's filibuster expeditions to Sonora and Nicaragua
+	New events concerning the future of Manifest Destiny under a socialist or monarchist government
 Updates:
 	Second Party System now reduces Institution Change Speed
 	Minor buff to Democratic Experiment
 	Grover Cleveland is now Honorable and Anti-Expansionist
 	Added Concept and notification for the Washington Precedent
+	Certain types of presidents can now choose to break the Washington Precedent
+	Secret Police can now be deployed during Reconstruction
+	The Kansas Constitution can now be enforced with sufficient Law Enforcement or Home Affairs
 	Added Korean translation courtesy of 케말 파샤
 Fixes:
 	Added failsafe that will grant US claims to mexican cession states if you acquire them through other means
 	Fixed Canada forming without both versions of canadian culture as primary
+	The Second/Third Party System modifier will be removed if the US stops being a Presidential Republic
+	Inuit and Athabaskan tags should properly not generate native uprisings (to avoid impassable terrain weirdness)
 
 

@@ -29,8 +29,7 @@ je_unite_the_nations_organize_the_tribes_button = {
 	desc = "je_unite_the_nations_organize_the_tribes_button_desc"
 
 	visible = {
-		# exists = c:TIS
-		c:TIS = this
+		root = c:TIS
 	}
 
 	possible = {
@@ -93,8 +92,7 @@ je_unite_the_nations_offer_confederation_button = {
 	desc = "je_unite_the_nations_offer_confederation_button_desc"
 
 	visible = {
-		# exists = c:TIS
-		c:TIS = this
+		root = c:TIS
 	}
 
 	possible = {

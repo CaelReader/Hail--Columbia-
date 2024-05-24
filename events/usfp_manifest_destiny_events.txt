@@ -2299,5 +2299,181 @@ usfp_manifest_destiny.23 = {
 }
 
 #Revolutionary Destiny
+usfp_manifest_destiny.24 = {
+	type = country_event
+	placement = root
+
+	event_image = {
+		video = "votp_agitator_speaking"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/invention_icons/socialism.dds"
+	
+	title = usfp_manifest_destiny.24.t
+	desc = usfp_manifest_destiny.24.d
+	flavor = usfp_manifest_destiny.24.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		has_law = law_type:law_council_republic
+		NOT = {
+			has_variable = had_revolutionary_destiny
+		}
+	}
+
+	immediate = {
+		set_variable = had_revolutionary_destiny
+	}
+
+	#world revolution
+	option = {
+		name = usfp_manifest_destiny.24.a
+		usfp_manifest_more_destiny_low_effect = yes
+		add_loyalists = {
+			value = small_radicals
+			religion = rel:protestant
+		}
+		add_radicals = {
+			value = medium_radicals
+			religion = rel:animist
+		}
+		if = {
+			limit = {
+				is_ai = yes
+			 }
+			 set_strategy = ai_strategy_world_revolution
+		}
+		ai_chance = {
+			base = 30
+			modifier = {
+				trigger = {
+					any_scope_character = {
+						has_ideology = ideology:ideology_vanguardist
+					}
+				}
+				add = 100
+			}
+		}
+	}
+	#socialism in one country
+	option = {
+		name = usfp_manifest_destiny.24.b
+		default_option = yes
+		usfp_manifest_less_destiny_high_effect = yes
+		if = {
+			limit = {
+				is_ai = yes
+			 }
+			 set_strategy = ai_strategy_socialism_in_one_country
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				trigger = {
+					any_scope_character = {
+						has_ideology = ideology:ideology_communist
+					}
+				}
+				add = 50
+			}
+		}
+	}
+	#anti-imperialism
+	option = {
+		name = usfp_manifest_destiny.24.c
+		usfp_manifest_less_destiny_effect = yes
+		add_loyalists = {
+			value = medium_radicals
+			religion = rel:animist
+		}
+		add_radicals = {
+			value = small_radicals
+			religion = rel:protestant
+		}
+		hidden_effect = {
+			usfp_manifest_less_destiny_effect = yes
+			usfp_manifest_less_destiny_effect = yes
+		}
+		if = {
+			limit = {
+				is_ai = yes
+			 }
+			 set_strategy = ai_strategy_anti_imperialism
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					any_scope_character = {
+						has_ideology = ideology:ideology_anarchist
+					}
+				}
+				add = 50
+			}
+		}
+	}
+}
 #Monarchy Destiny
+usfp_manifest_destiny.25 = {
+	type = country_event
+	placement = root
+
+	event_image = {
+		video = "votp_monarch_holding_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/hail_columbia_icon.dds"
+	
+	title = usfp_manifest_destiny.25.t
+	desc = usfp_manifest_destiny.25.d
+	flavor = usfp_manifest_destiny.25.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+		set_variable = had_monarchy_destiny
+	}
+
+	trigger = {
+		has_law = law_type:law_monarchy
+		NOT = {
+			has_variable = had_monarchy_destiny
+		}
+	}
+
+	#imperial
+	option = {
+		name = usfp_manifest_destiny.25.a
+		usfp_manifest_more_destiny_low_effect = yes
+		add_radicals = {
+			value = medium_radicals
+			religion = rel:animist
+		}
+		add_loyalists = {
+			value = small_radicals
+			religion = rel:protestant
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+	#destiny was republican
+	option = {
+		name = usfp_manifest_destiny.25.b
+		usfp_manifest_less_destiny_effect = yes
+		default_option = yes
+		add_loyalists = {
+			value = small_radicals
+			religion = rel:animist
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
 #Bear Flag Revolt

@@ -170,16 +170,21 @@ USCWF.4 = {
 				set_variable = var_elected_once
 			}
 			else = {
-				remove_as_interest_group_leader = yes
-				interest_group = {
-					save_scope_as = ruler_interest_group_scope
-					leader = {
-						save_scope_as = ruler_interest_group_new_leader_scope
+				if = {
+					limit = {
+						usfp_president_might_go_for_third_term = no
+						NOT = {
+							has_variable = president_broke_precedent
+						}
+					 }
+					 usfp_washington_precedent_effect = yes 
+				}
+				else_if = {
+					limit = {
+						usfp_president_might_go_for_third_term = yes
 					}
-				}
-				root = {
-					post_notification = usfp_washington_precedent
-				}
+					set_variable = president_might_break_precedent
+				}	
 			}
 		}
 	}
