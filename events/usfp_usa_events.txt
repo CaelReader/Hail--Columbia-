@@ -1675,6 +1675,7 @@ usfp_usa.20 = {
 			has_variable = had_congressional_republic
 		}
 		country_has_voting_franchise = yes
+		in_election_campaign = no
 	}
 
 	immediate = {
