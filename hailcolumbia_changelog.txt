@@ -144,7 +144,7 @@ William Walker can only attack Sonora if the USA actually borders Baja Californi
 The event option to support Walker costs less Infamy and always grants a Manifest Destiny point, and protectorates Sonora
 Fixed Sonora not being able to ask for statehood if they are a US protectorate
 Powerful IGs can now influence Manifest Destiny once every 20 years, rather than once ever
-Added tooltip explaining the CSA's infinite war support
+Added tooltips explaining the CSA's infinite war support and the ACW war modifiers
 Manifest Destiny now maxes out at 13 for enhanced patriotism
 slightly buffed Gunboat Diplomacy
 Texas is now a releasable nation

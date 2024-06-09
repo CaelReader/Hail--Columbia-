@@ -330,11 +330,44 @@ acw_je_events.1 = {
 			 }
 			 custom_tooltip = acw_war_support_tooltip
 		}
+		show_as_tooltip = {
+			add_modifier = { name = usfp_acw_union_modifier months = 48 }
+			if = {
+				limit = {
+					exists = c:CSA
+				 }
+				 c:CSA = {
+					add_modifier = { name = usfp_acw_csa_modifier months = 48 }
+				 }
+			}
+			if = {
+				limit = { 
+					exists = c:FSA
+				}
+				add_modifier = { name = usfp_acw_fsa_modifier months = 48 }
+			}
+		}
 	}
 	option = {
 		name = acw_je_events.1.b
 		trigger = { is_player = yes }
-
+		show_as_tooltip = {
+			add_modifier = { name = usfp_acw_union_modifier months = 48 }
+			if = {
+				limit = {
+					exists = c:CSA
+				 }
+				 c:CSA = {
+					add_modifier = { name = usfp_acw_csa_modifier months = 48 }
+				 }
+			}
+			if = {
+				limit = { 
+					exists = c:FSA
+				}
+				add_modifier = { name = usfp_acw_fsa_modifier months = 48 }
+			}
+		}
 		if = {
 			limit = { exists = c:CSA }
 			play_as = scope:csa_scope
