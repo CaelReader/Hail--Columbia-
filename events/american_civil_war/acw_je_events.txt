@@ -324,6 +324,12 @@ acw_je_events.1 = {
 	option = {
 		name = acw_je_events.1.a
 		default_option = yes
+		if = {
+			limit = {
+				exists = c:CSA
+			 }
+			 custom_tooltip = acw_war_support_tooltip
+		}
 	}
 	option = {
 		name = acw_je_events.1.b

@@ -17,3 +17,7 @@ gov_usfp_theodemocracy_desc: "A [concept_government_type] combining democratic t
 
 gov_usfp_federal_territory: "Federal Territory"
 gov_usfp_federal_territory_desc: "This is a territory controlled by the federal government of the United States, administered by an appointed [Concept('concept_ruler','$RULER_TITLE_GOVERNOR$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+gov_usfp_congressional_republic: "Congressional Republic"
+gov_usfp_congressional_republic_desc: "This is a [concept_government_type] ruled by an [Concept('concept_election','$concept_elected$')] congress lead by the [Concept('concept_ruler','$RULER_TITLE_SPEAKER_OF_THE_HOUSE$')]. Though there is nominally an [Concept('concept_election','$concept_elected$')] [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')], they have no real power in government.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+RULER_TITLE_SPEAKER_OF_THE_HOUSE: "Speaker of the House"

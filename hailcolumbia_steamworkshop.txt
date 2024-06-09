@@ -32,6 +32,7 @@ Check out the full list of Vanilla Overrides in the discussion section.
 [*]Compatible with VTM. Load this mod after that mod.
 [*]Compatible with ECCHI. Load this mod after that mod.
 [*]Probably incompatible with any mod that changes the US or the state structure of North America.
+[*]Incompatible with Better Politics Mod (it will technically work, but stuff will break)
 [/list]
 
 [img]https://i.imgur.com/nxLtJMt.png[/img]

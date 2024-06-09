@@ -1998,41 +1998,10 @@ usfp_manifest_destiny.21 = {
 	duration = 3
 
 	trigger = {
-		game_date > 1851.1.1
-		has_global_variable = oregon_trail_mapped
-		NOT = {
-			has_variable = horse_creek_treaty
-		}
-		s:STATE_OREGON = {
-			any_scope_state = {
-				owner = {
-					NOT = {
-						is_country_type = decentralized
-					}
-				}
-			}
-		}
-		s:STATE_KANSAS = {
-			any_scope_state = {
-				owner = root
-			}
-		}
-		has_claim = s:STATE_WYOMING
-		has_claim = s:STATE_NEBRASKA
-		NOT = {
-			exists = c:TIS
-		}
-		NOT = {
-			owns_entire_state_region = STATE_WYOMING
-		}
-		NOT = {
-			has_law = law_type:law_no_colonial_affairs
-		}
-		is_at_war = no
+		#triggered by button
 	}
 
 	immediate = {
-		set_variable = horse_creek_treaty
 		random_scope_state = {
 			limit = {
 				state_region = s:STATE_COLORADO
@@ -2045,6 +2014,7 @@ usfp_manifest_destiny.21 = {
 	option = {
 		name = usfp_manifest_destiny.21.a
 		usfp_oregon_trail_provinces_effect = yes
+		usfp_manifest_more_destiny_low_effect = yes
 		c:PWN ?= {
 			create_truce = {
 				country = root
@@ -2098,6 +2068,7 @@ usfp_manifest_destiny.21 = {
 		name = usfp_manifest_destiny.21.b
 		default_option = yes
 		usfp_oregon_trail_provinces_effect = yes
+		usfp_manifest_more_destiny_low_effect = yes
 		c:PWN ?= {
 			change_tension = {
 				country = root
@@ -2475,5 +2446,60 @@ usfp_manifest_destiny.25 = {
 			base = 100
 		}
 	}
+}
+#Overseas Colony Event
+usfp_manifest_destiny.26 = {
+	type = country_event
+	placement = scope:usa_overseas_territory_scope
+
+	event_image = {
+		video = "africa_construction_colony"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_manifest_destiny.26.t
+	desc = usfp_manifest_destiny.26.d
+	flavor = usfp_manifest_destiny.26.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		NOT = {
+			has_variable = had_american_empire
+		}
+		any_scope_state = {
+			state_is_in_americas = no
+			is_treaty_port = no
+		}
+	}
+
+	immediate = {
+		set_variable = had_american_empire
+		random_scope_state = {
+			limit = {
+				state_is_in_americas = no
+				is_treaty_port = no
+			}
+			save_scope_as = usa_overseas_territory_scope
+		}
+	}
+
+	#manifest more destiny
+	option = {
+		name = usfp_manifest_destiny.26.a
+		usfp_manifest_more_destiny_effect = yes
+		add_modifier = {
+			name = usfp_imperial_ambitions
+			years = 5
+		}
+		default_option = yes
+		ai_chance = {
+			base = 100
+		}
+	}
+
 }
 #Bear Flag Revolt

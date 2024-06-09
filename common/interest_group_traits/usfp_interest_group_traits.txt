@@ -164,7 +164,7 @@ usfp_ig_trait_gunboat_diplomacy = {
 	min_approval = happy
 	
 	modifier = {
-		country_prestige_from_navy_power_projection_mult = 0.10
+		country_prestige_from_navy_power_projection_mult = 0.15
 		country_prestige_from_army_power_projection_mult = 0.05
 	}
 }

@@ -136,3 +136,18 @@ Fixes:
 	Inuit and Athabaskan tags should properly not generate native uprisings (to avoid impassable terrain weirdness)
 
 
+2.4 "Jefferson"
+Added event to increase Manifest Destiny if you take an overseas territory
+Added flavor government for a 'Parliamentary' USA
+Added event to reset to Presidential Republic as a parliamentary USA
+William Walker can only attack Sonora if the USA actually borders Baja California
+The event option to support Walker costs less Infamy and always grants a Manifest Destiny point
+Powerful IGs can now influence Manifest Destiny once every 20 years, rather than once ever
+Added tooltip explaining the CSA's infinite war support
+Manifest Destiny now maxes out at 13 for enhanced patriotism
+slightly buffed Gunboat Diplomacy
+Texas is now a releasable nation
+Horse Creek Treaty is now a Manifest Destiny button instead of a random event
+Manifest Destiny messages are now Toasts by default
+sightly reduced the number of agitator slots granted by A House Divided
+localization updates

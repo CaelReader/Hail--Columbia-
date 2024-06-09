@@ -5,3 +5,10 @@
 	}
 	ai_will_do = { always = no }
 }
+
+TEX = {
+	states = {
+		STATE_TEXAS
+	}
+	ai_will_do = { always = no }
+}

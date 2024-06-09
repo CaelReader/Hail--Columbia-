@@ -444,6 +444,11 @@ usfp_manifest_destiny.25.f: ""We have crowned our very own Julius Caesar, and th
 usfp_manifest_destiny.25.a: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] will carry forth the torch of civilization!"
 usfp_manifest_destiny.25.b: "Manifest Destiny cannot coexist with the monarchy."
 
+usfp_manifest_destiny.26.t: "An American Empire?"
+usfp_manifest_destiny.26.d: "Our acquisition of [SCOPE.sState('usa_overseas_territory_scope').GetName] has prompted debate over the validity of adding overseas territories to the [ROOT.GetCountry.GetName]. Those in support claim that we have a duty to bring civilization to the destitute, while anti-imperialists deride the current administration as no different than the tyrants of old Europe."
+usfp_manifest_destiny.26.f: ""It is yet another Civilized Power, with its banner of the Prince of Peace in one hand and its loot-basket and its butcher-knife in the other. Is there no salvation for a conquered people, but to adopt Civilization and lift themselves down to its level?"" #Mark Twain
+usfp_manifest_destiny.26.a: "It is our burden to spread the light of self-government."
+
 ### Native Removal
 usfp_native_removal.1.t: "The Seminole Removal"
 usfp_native_removal.1.d: "With the Second Seminole War finally winding down, the Army can begin the slow process of removing the remainder of the [SCOPE.sCulture('muskogean_scope').GetName] population across the Mississippi."
@@ -621,6 +626,12 @@ usfp_usa.19.b: "Four more years!"
 usfp_usa.19.c: "I defy any sonofabitch to get me out under four terms!"
 usfp_usa.19.d: "We should not change horses mid stream!"
 
+usfp_usa.20.t: "Separation of Powers"
+usfp_usa.20.d: "With chaos in the Executive Branch, Congress has been forced to take a leading role in the [ROOT.GetCountry.GetAdjective] government, in violation of the constitution. With no obvious mechanism to restore normalcy, it falls to Congress to determine the future structure of the republic."
+usfp_usa.20.f: ""The principle of the Constitution is that of a separation of legislative, Executive and Judiciary functions, except in cases specified. If this principle be not expressed in direct terms, it is clearly the spirit of the Constitution, and it ought to be so commented and acted on by every friend of free government."" #Thomas Jefferson
+usfp_usa.20.a: "We must restore the rightful republic."
+usfp_usa.20.b: "Amend the constitution. Congress will reign supreme."
+
 ### Labor Events
 usfp_usa_labor.1.t: "The Industrial Workers of the World"
 usfp_usa_labor.1.d: "A convention of radical trade unionists has met in [SCOPE.sState('illinois_scope').GetCityHubName] to found the Industrial Workers of the World. Taking a much more militant stance than traditional labor organizations, the IWW seeks to unite workers of all trades into one big union. Their stated objective is the abolition of the wage system via direct action, general strikes, and sabotage."
@@ -659,11 +670,11 @@ usfp_mormon.4.a: "We will accept their colonial efforts for now."
 usfp_mormon.4.b: "They must fend for themselves."
 
 usfp_mormon.5.t: "The State of Deseret?"
-usfp_mormon.5.d: "The Mormons of [SCOPE.sCountry('deseret_scope').GetName] have drafted a state consitution and petitioned us for inclusion into the Union. Their proposed state seems to claim a vast territory, much more than they actually control, and is silent on the matter of slavery."
-usfp_mormon.5.d_noslavery: "The Mormons of [SCOPE.sCountry('deseret_scope').GetName] have drafted a state consitution and petitioned us for inclusion into the Union. Their proposed state seems to claim a vast territory, much more than they actually control."
+usfp_mormon.5.d: "The Mormons of [SCOPE.sCountry('deseret_scope').GetName] have drafted a state constitution and are petitioning for inclusion into the Union. Their proposed constitution is silent on the matter of slavery, and some have raised concerns about the influence of their Church on local government."
+usfp_mormon.5.d_noslavery: "The Mormons of [SCOPE.sCountry('deseret_scope').GetName] have drafted a state constitution and are petitioning for inclusion into the Union. Some have raised concerns about the influence of their Church on local government, deriding the Mormons as theocrats in all but name."
 usfp_mormon.5.f: ""We therefore, ask your honorable body to favorably consider their interests; and, if consistent with the constitution and usages of the federal government, that our constitution be ratified, and that the State of Deseret be admitted into the Union on an equal footing with other States; or such other form of civil government as your wisdom and magnanimity may award to the people of Deseret."" #Deseret to the House
 usfp_mormon.5.a: "We will admit Deseret post-haste!"
-usfp_mormon.5.b: "Deseret will be organized as the Utah Territory, with more reasonable borders."
+usfp_mormon.5.b: "Deseret will be organized as the Utah Territory."
 usfp_mormon.5.c: "The Mormons must abandon polygamy before we will treat with them."
 
 usfp_mormon.6.t: "The Polygamy Ultimatum"
@@ -690,7 +701,7 @@ usfp_mormon.9.a: "Both of these vile practices belong in the dustbin!"
 usfp_mormon.9.b: "The one has nothing to do with the other!"
 
 usfp_mormon.10.t: "An End to Polygamy"
-usfp_mormon.10.d: "Facing unrelenting opposition from [ROOT.GetCountry.GetAdjective] society and local governments, the Church of Jesus Christ of Latter-Day Saints has officialy renounced the practice of plural marriage, forbidding any further such unions from taking place among its members."
+usfp_mormon.10.d: "Facing unrelenting opposition from [ROOT.GetCountry.GetAdjective] society and local governments, the Church of Jesus Christ of Latter-Day Saints has officially renounced the practice of plural marriage, forbidding any further such unions from taking place among its members."
 usfp_mormon.10.f: ""There is nothing in my teachings to the Church or in those of my associates, during the time specified, which can be reasonably construed to inculcate or encourage polygamy; and when any Elder of the Church has used language which appeared to convey such teaching, he has been promptly reproved. And I now publicly declare that my advice to the Latter-day Saints is to refrain from contracting any marriage forbidden by the law of the land."" #1890 Manifesto
 usfp_mormon.10.a: "Perhaps we can finally put this issue to rest."
 

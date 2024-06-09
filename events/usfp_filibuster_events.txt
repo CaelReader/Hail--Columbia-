@@ -29,13 +29,18 @@ usfp_filibuster.1 = {
 		NOT = {
 			has_global_variable = had_walker_sonora
 		}
-		s:STATE_CALIFORNIA = {
-			root_has_state_here = yes
-		}
 		exists = c:MEX
 		c:MEX = {
 			owns_entire_state_region = STATE_BAJA_CALIFORNIA
 			owns_entire_state_region = STATE_SONORA
+		}
+		s:STATE_CALIFORNIA = {
+			root_has_state_here = yes
+			region_state:USA = {
+				any_neighbouring_state = {
+					state_region = s:STATE_BAJA_CALIFORNIA
+				}
+			}
 		}
 		is_at_war = no
 	}
@@ -128,7 +133,7 @@ usfp_filibuster.1 = {
 	option = {
 		name = usfp_filibuster.1.c
 		highlighted_option = yes
-		usfp_manifest_more_destiny_low_effect = yes
+		usfp_manifest_more_destiny_effect = yes
 		trigger = {
 			OR = {
 				custom_tooltip = {
@@ -150,7 +155,7 @@ usfp_filibuster.1 = {
 		}
 		create_incident = {
 			country = c:MEX
-			value = 20
+			value = 10
 		}
 		random_diplomatic_play = {
 			limit = {

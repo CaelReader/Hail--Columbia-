@@ -36,7 +36,7 @@ usfp_manifest_more_destiny_president = {
 	type = country
 	group = "usfp_manifest_destiny_group"
 	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
-	notification_type = feed
+	notification_type = toast
 	color = good
 }
 
@@ -44,7 +44,7 @@ usfp_manifest_less_destiny_president = {
 	type = country
 	group = "usfp_manifest_destiny_group"
 	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
-	notification_type = feed
+	notification_type = toast
 	color = bad
 }
 
@@ -52,7 +52,7 @@ usfp_manifest_more_destiny_ig = {
 	type = country
 	group = "usfp_manifest_destiny_group"
 	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
-	notification_type = feed
+	notification_type = toast
 	color = good
 }
 
@@ -60,7 +60,7 @@ usfp_manifest_less_destiny_ig = {
 	type = country
 	group = "usfp_manifest_destiny_group"
 	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
-	notification_type = feed
+	notification_type = toast
 	color = bad
 }
 
@@ -68,7 +68,7 @@ usfp_manifest_more_destiny_law = {
 	type = country
 	group = "usfp_manifest_destiny_group"
 	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
-	notification_type = feed
+	notification_type = toast
 	color = good
 }
 
@@ -76,7 +76,7 @@ usfp_manifest_less_destiny_law = {
 	type = country
 	group = "usfp_manifest_destiny_group"
 	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
-	notification_type = feed
+	notification_type = toast
 	color = bad
 }
 
@@ -84,7 +84,7 @@ usfp_manifest_more_destiny_mexico = {
 	type = country
 	group = "usfp_manifest_destiny_group"
 	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
-	notification_type = feed
+	notification_type = toast
 	color = good
 }
 
@@ -92,7 +92,7 @@ usfp_manifest_less_destiny_mexico = {
 	type = country
 	group = "usfp_manifest_destiny_group"
 	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
-	notification_type = feed
+	notification_type = toast
 	color = bad
 }
 

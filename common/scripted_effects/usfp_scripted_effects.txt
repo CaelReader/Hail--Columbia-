@@ -74,7 +74,7 @@ usfp_manifest_more_destiny_effect = {
 		text = usfp_manifest_more_destiny
 		if = {
 			limit = { 
-				var:manifest_destiny_var < 12
+				var:manifest_destiny_var < 13
 			}
 			change_variable = {
 				name = manifest_destiny_var

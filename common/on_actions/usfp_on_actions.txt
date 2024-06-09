@@ -22,6 +22,7 @@ usfp_monthly_pulse = {
 		10 = usfp_usa.13 #Wild Hippos
 		100 = usfp_usa.15 #Hidden event to kill off the Great Triumvirate
 		1 = usfp_usa.18 #Garfield-style Assassination
+		1000 = usfp_usa.20 #Reset Parliamentary Republic to Presidential
 
 		##Labor events
 		100 = usfp_usa_labor.1 #founding of the IWW

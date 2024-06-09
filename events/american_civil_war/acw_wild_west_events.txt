@@ -101,6 +101,7 @@ wild_west.1 = {
 # Raids on the Iron Horse
 wild_west.2 = {
 	type = country_event
+	placement = scope:raided_railroad
 	event_image = {
 		video = "unspecific_trains"
 	}

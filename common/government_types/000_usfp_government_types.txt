@@ -34,6 +34,42 @@
 	}
 }
 
+gov_usfp_congressional_republic = {
+	transfer_of_power = parliamentary_elective
+	new_leader_on_reform_government = yes
+
+	male_ruler = "RULER_TITLE_SPEAKER_OF_THE_HOUSE"
+	female_ruler = "RULER_TITLE_SPEAKER_OF_THE_HOUSE"
+	
+	possible = {
+		OR = {
+			country_has_primary_culture = cu:yankee
+			country_has_primary_culture = cu:dixie
+		}
+		NOR = {
+			c:TEX ?= this
+			c:ORG ?= this
+		}
+		NOT = {
+			has_law = law_type:law_technocracy
+		}
+		country_has_voting_franchise = yes
+		has_law = law_type:law_parliamentary_republic
+		OR = {
+			country_tier = empire
+			country_tier = kingdom
+			country_tier = hegemony
+		}
+	}
+
+	on_government_type_change = {
+		change_to_parliamentary_elective = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_parliamentary_elective = yes
+	}
+}
+
 gov_usfp_principal_chiefdom = {
 	transfer_of_power = hereditary
 

@@ -465,3 +465,57 @@ usfp_claim_canada_button = {
 		}
 	}
 }
+
+usfp_secure_trail_button = {
+	name = "usfp_secure_trail_button"
+	desc = "usfp_secure_trail_button_desc"
+
+	visible = {
+		game_date > 1850.1.1
+		has_global_variable = oregon_trail_mapped
+		NOT = {
+			has_variable = horse_creek_treaty
+		}
+		s:STATE_OREGON = {
+			any_scope_state = {
+				owner = {
+					NOT = {
+						is_country_type = decentralized
+					}
+				}
+			}
+		}
+		s:STATE_KANSAS = {
+			any_scope_state = {
+				owner = root
+			}
+		}
+		has_claim = s:STATE_WYOMING
+		has_claim = s:STATE_NEBRASKA
+		NOT = {
+			exists = c:TIS
+		}
+		NOT = {
+			owns_entire_state_region = STATE_WYOMING
+		}
+	}
+
+	possible = {
+		NOT = {
+			has_law = law_type:law_no_colonial_affairs
+		}
+		is_at_war = no
+	}
+
+	effect = {
+		set_variable = horse_creek_treaty
+		trigger_event = {
+			id = usfp_manifest_destiny.21
+			years = 1
+		}
+	}
+
+	ai_chance = {
+		base = 1000
+	}
+}

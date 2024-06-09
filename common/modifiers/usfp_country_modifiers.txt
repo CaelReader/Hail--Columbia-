@@ -156,7 +156,7 @@ usfp_a_house_divided_modifier = {
 	state_pop_support_law_legacy_slavery_add = 1.0
 	state_pop_support_law_slave_trade_add = 0.5
 	interest_group_ig_landowners_approval_add = -20 #40
-	country_agitator_slots_add = 7
+	country_agitator_slots_add = 5
 }
 
 modifier_texas_war_of_independence = {
@@ -414,4 +414,18 @@ usfp_filibusters_modifier = {
 	unit_kill_rate_add = 0.10
 	unit_devastation_mult = 0.10
 	country_military_goods_cost_mult = -0.20
+}
+
+usfp_imperial_ambitions = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	state_radicals_from_discrimination_mult = 0.10
+	country_tension_decay_mult = -0.10
+}
+
+usfp_constitutional_chaos = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_negative.dds
+	country_legitimacy_base_add = -15
+	country_law_enactment_time_mult = 0.50
+	country_opposition_ig_approval_add = -5
+	state_pop_support_law_presidential_republic_add = 0.20
 }
