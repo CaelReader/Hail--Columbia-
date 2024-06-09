@@ -145,6 +145,10 @@ usfp_a_house_divided.3 = {
 
 	option = {
 		name = usfp_a_house_divided.3.a
+		add_radicals = {
+			value = 0.4
+			interest_group = ig:ig_landowners
+		}
 		ig:ig_landowners = {
 			add_modifier = {
 				name = usfp_slavers_reject_abolition

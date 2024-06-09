@@ -173,7 +173,7 @@ state_trait_mission_grapes = {
 	icon = "gfx/interface/icons/state_trait_icons/grapes.dds"
 	
 	modifier = {
-		building_vineyard_plantation_throughput_add = 0.025
+		goods_output_wine_mult = 0.05
 	}
 }
 

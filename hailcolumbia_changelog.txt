@@ -151,4 +151,6 @@ Texas is now a releasable nation
 Horse Creek Treaty is now a Manifest Destiny button instead of a random event
 Manifest Destiny messages are now Toasts by default
 sightly reduced the number of agitator slots granted by A House Divided
+Secessionist Conventions event now adds 40% landowner radicals
+buffed Mission Grapes state trait
 localization updates
