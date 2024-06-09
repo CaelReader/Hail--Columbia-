@@ -22,7 +22,7 @@ usfp_filibuster.1 = {
 	trigger = {
 		game_date > 1853.1.1
 		game_date < 1865.1.1 
-		var:manifest_destiny_var > 4
+		var:manifest_destiny_var > 3
 		NOT = {
 			exists = c:SON
 		}
@@ -148,6 +148,10 @@ usfp_filibuster.1 = {
 		change_relations = {
 			country = c:SON
 			value = 50
+		}
+		create_diplomatic_pact = {
+			country = c:SON
+			type = protectorate
 		}
 		change_relations = {
 			country = c:MEX

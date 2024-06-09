@@ -6,7 +6,10 @@
 		NOT = {
 			has_variable = sonoran_statehood_ask
 		}
-		is_subject = no
+		OR = {
+			is_subject = no
+			is_subject_of = c:USA
+		}
 	}
 
 	possible = {

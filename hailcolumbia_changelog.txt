@@ -140,8 +140,9 @@ Fixes:
 Added event to increase Manifest Destiny if you take an overseas territory
 Added flavor government for a 'Parliamentary' USA
 Added event to reset to Presidential Republic as a parliamentary USA
-William Walker can only attack Sonora if the USA actually borders Baja California
-The event option to support Walker costs less Infamy and always grants a Manifest Destiny point
+William Walker can only attack Sonora if the USA actually borders Baja California, but requires less Manifest Destiny
+The event option to support Walker costs less Infamy and always grants a Manifest Destiny point, and protectorates Sonora
+Fixed Sonora not being able to ask for statehood if they are a US protectorate
 Powerful IGs can now influence Manifest Destiny once every 20 years, rather than once ever
 Added tooltip explaining the CSA's infinite war support
 Manifest Destiny now maxes out at 13 for enhanced patriotism
