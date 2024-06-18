@@ -915,7 +915,7 @@ usfp_usa.9 = {
 
 }
 
-#Rise of Scientific Management
+#Progress and Poverty, Henry George
 usfp_usa.10 = {
 	type = country_event
 	placement = root
@@ -924,100 +924,145 @@ usfp_usa.10 = {
 	desc = usfp_usa.10.d
 	flavor = usfp_usa.10.f
 	dlc = dlc_usfp
-	event_image = {
-		video = "unspecific_gears_pistons"
-	}
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:george_scope
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
 
-	icon = "gfx/interface/icons/invention_icons/corporate_management.dds"
+	icon = "gfx/interface/icons/invention_icons/mutual_funds.dds"
 
 	duration = 3
 
 	trigger = {
 		exists = c:USA
 		c:USA = root
-		has_technology_researched = central_planning
 		NOT = {
-			has_variable = scientific_management_spawned
+			has_global_variable = progress_and_poverty
 		}
-		ig:ig_industrialists = {
-			is_marginal = no
-		}
-		ig:ig_intelligentsia = {
-			is_marginal = no
+		game_date > 1879.1.1
+		NOR = {
+			has_law = law_type:law_cooperative_ownership
+			has_law = law_type:law_command_economy
 		}
 	}
 
 	immediate = {
-		set_variable = scientific_management_spawned
-		ig:ig_industrialists = {
-			save_scope_as = industrialists_scope
+		set_global_variable = progress_and_poverty
+		create_character = {
+			template = usfp_usa_henry_george
+			on_created = {
+				set_variable = is_henry_george
+			}
 		}
-		ig:ig_intelligentsia = {
-			save_scope_as = intelligentsia_scope
+		random_scope_character = {
+			limit = {
+				has_template = usfp_usa_henry_george
+			}
+			save_scope_as = george_scope
+		}
+		ideology:ideology_usfp_georgist_leader = {
+			save_scope_as = georgism_scope
 		}
 	}
 
-	#Industrialists get Scientific Management
+	#cool
 	option = {
 		name = usfp_usa.10.a
 		default_option = yes
-		ig:ig_industrialists = {
-			set_ig_trait = ig_trait:usfp_ig_trait_scientific_management
+		show_as_tooltip = {
+			create_character = {
+				template = usfp_usa_henry_george
+				on_created = {
+					set_variable = is_henry_george
+				}
+			}
 		}
+		custom_tooltip = georgists_can_spawn
 		ig:ig_intelligentsia = {
 			add_modifier = {
-				name = usfp_ig_embraced_scientific_management_positive
-				years = 2
+				name = usfp_progress_and_poverty_modifier
+				years = 5
 			}
 		}
 		ig:ig_trade_unions = {
 			add_modifier = {
-				name = usfp_ig_embraced_scientific_management_negative
-				years = 2
+				name = usfp_progress_and_poverty_modifier
+				years = 5
 			}
 		}
 	}
-
-	#Intelligentsia get Scientific Management
+	#dumb
 	option = {
 		name = usfp_usa.10.b
-		ig:ig_intelligentsia = {
-			set_ig_trait = ig_trait:usfp_ig_trait_scientific_management
+		show_as_tooltip = {
+			create_character = {
+				template = usfp_usa_henry_george
+				on_created = {
+					set_variable = is_henry_george
+				}
+			}
 		}
-		ig:ig_industrialists = {
+		add_radicals = {
+			value = small_radicals
+			pop_type = academics
+		}
+		custom_tooltip = georgists_can_spawn
+		ig:ig_intelligentsia = {
 			add_modifier = {
-				name = usfp_ig_embraced_scientific_management_positive
-				years = 2
+				name = usfp_progress_and_poverty_modifier
+				years = 5
+				multiplier = 0.5
 			}
 		}
 		ig:ig_trade_unions = {
 			add_modifier = {
-				name = usfp_ig_embraced_scientific_management_negative
-				years = 2
+				name = usfp_progress_and_poverty_modifier
+				years = 5
+				multiplier = 0.5
 			}
 		}
 	}
-
-	#Reject Scientific Management
+	#promote
 	option = {
 		name = usfp_usa.10.c
-		ig:ig_trade_unions = {
-			add_modifier = {
-				name = usfp_ig_rejected_scientific_management_positive
-				years = 2
+		show_as_tooltip = {
+			create_character = {
+				template = usfp_usa_henry_george
+				on_created = {
+					set_variable = is_henry_george
+				}
 			}
+		}
+		add_loyalists = {
+			value = small_radicals
+			pop_type = academics
+		}
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_landowners
 		}
 		add_radicals = {
 			value = small_radicals
 			interest_group = ig:ig_industrialists
 		}
-		add_radicals = {
-			value = small_radicals
-			interest_group = ig:ig_intelligentsia
+		custom_tooltip = georgists_can_spawn_double
+		set_variable = georgism_promoted
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = usfp_progress_and_poverty_modifier
+				years = 5
+			}
+		}
+		ig:ig_trade_unions = {
+			add_modifier = {
+				name = usfp_progress_and_poverty_modifier
+				years = 5
+			}
 		}
 	}
+
 }
 
 #Cross of Gold Speech
@@ -1709,3 +1754,4 @@ usfp_usa.20 = {
 		}
 	}
 }
+

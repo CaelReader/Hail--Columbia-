@@ -1,0 +1,17 @@
+﻿###### Hail, Columbia! by CaelReader ######
+namespace = usfp_gilded_age
+
+#Gilded Age startup event
+#Crédit Mobilier scandal
+#Star Route scandal
+#Social Darwinism
+#Tammany Hall
+#Gospel of Wealth
+#California Oranges
+#Grange Movement
+#James-Younger Gang
+#Capture of Jesse James
+#Death of Jesse James
+#Political corruption in state
+#Railroad volatility
+#New Rich

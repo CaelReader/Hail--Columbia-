@@ -1,0 +1,120 @@
+﻿###### Hail, Columbia! by CaelReader ######
+namespace = usfp_progressive_era
+
+#Progressive Era begin event
+#Scientific Management
+usfp_progressive_era.2 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.2.t
+	desc = usfp_progressive_era.2.d
+	flavor = usfp_progressive_era.2.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_gears_pistons"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/invention_icons/corporate_management.dds"
+
+	duration = 3
+
+	trigger = {
+		exists = c:USA
+		c:USA = root
+		has_technology_researched = central_planning
+		NOT = {
+			has_variable = scientific_management_spawned
+		}
+		ig:ig_industrialists = {
+			is_marginal = no
+		}
+		ig:ig_intelligentsia = {
+			is_marginal = no
+		}
+	}
+
+	immediate = {
+		set_variable = scientific_management_spawned
+		ig:ig_industrialists = {
+			save_scope_as = industrialists_scope
+		}
+		ig:ig_intelligentsia = {
+			save_scope_as = intelligentsia_scope
+		}
+	}
+
+	#Industrialists get Scientific Management
+	option = {
+		name = usfp_progressive_era.2.a
+		default_option = yes
+		ig:ig_industrialists = {
+			set_ig_trait = ig_trait:usfp_ig_trait_scientific_management
+		}
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = usfp_ig_embraced_scientific_management_positive
+				years = 2
+			}
+		}
+		ig:ig_trade_unions = {
+			add_modifier = {
+				name = usfp_ig_embraced_scientific_management_negative
+				years = 2
+			}
+		}
+	}
+
+	#Intelligentsia get Scientific Management
+	option = {
+		name = usfp_progressive_era.2.b
+		ig:ig_intelligentsia = {
+			set_ig_trait = ig_trait:usfp_ig_trait_scientific_management
+		}
+		ig:ig_industrialists = {
+			add_modifier = {
+				name = usfp_ig_embraced_scientific_management_positive
+				years = 2
+			}
+		}
+		ig:ig_trade_unions = {
+			add_modifier = {
+				name = usfp_ig_embraced_scientific_management_negative
+				years = 2
+			}
+		}
+	}
+
+	#Reject Scientific Management
+	option = {
+		name = usfp_progressive_era.2.c
+		ig:ig_trade_unions = {
+			add_modifier = {
+				name = usfp_ig_rejected_scientific_management_positive
+				years = 2
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_industrialists
+		}
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+	}
+}
+#American Anti-Imperialist League
+#World Parliament of Religions
+#Eugenics movement
+#City Beautiful movement
+#Social Hygiene movement
+#Antitrust Action
+#Direct Democracy in State
+#Muckraker: Medicine
+#Muckraker: Upton Sinclair, The Jungle
+#Muckraker: Child Labor 
+#Muckraker: Political Machines
+#Muckraker: Ida Tarbell, Standard Oil Company

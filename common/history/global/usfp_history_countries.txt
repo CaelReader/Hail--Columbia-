@@ -33,9 +33,6 @@
 		trigger_event = { id = USCWF.1 days = 1 }
 		add_declared_interest = region_great_plains
 	}
-	c:ONT = {
-		activate_law = law_type:law_frontier_colonization
-	}
 	c:TEX = {
 		create_diplomatic_pact = {
 			country = c:USA
@@ -66,6 +63,39 @@
 					days = 1
 				}
 			}
+		}
+	}
+	c:QUE = {
+		activate_law = law_type:law_frontier_colonization
+		add_modifier = {
+			name = usfp_canadian_colonization_modifier
+			years = 30
+		}
+	}
+	c:NBS = {
+		activate_law = law_type:law_frontier_colonization
+		add_modifier = {
+			name = usfp_canadian_colonization_modifier
+			years = 30
+		}
+	}
+	c:ONT = {
+		activate_law = law_type:law_frontier_colonization
+		add_modifier = {
+			name = usfp_canadian_colonization_modifier
+			years = 30
+		}
+	}
+	c:HBC = {
+		add_modifier = {
+			name = usfp_canadian_colonization_modifier
+			years = 30
+		}
+	}
+	c:ORG = {
+		add_modifier = {
+			name = usfp_canadian_colonization_modifier
+			years = 30
 		}
 	}
 }

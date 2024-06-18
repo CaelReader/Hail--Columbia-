@@ -187,8 +187,16 @@ ideology_usfp_progressive = {
 			}
 			has_technology_researched = human_rights
 		}
-		# Any Interest Group
+		
 		scope:interest_group = {
+			OR = {
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_petty_bourgeoisie
+			}
 			NOR = {
 				has_variable = communist_ig_var
 				has_variable = chose_vanguardism
@@ -201,6 +209,25 @@ ideology_usfp_progressive = {
 	
 	leader_weight = {
 		value = 0
+		if = {
+			limit = {
+				has_variable = had_progressive_era
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				scope:interest_group = {
+					OR = {
+						is_interest_group_type = ig_rural_folk
+						is_interest_group_type = ig_armed_forces
+						is_interest_group_type = ig_industrialists
+					}
+				}
+			}
+			multiply = 0.5
+		}
+
 	}
 }
 
@@ -550,6 +577,14 @@ ideology_usfp_georgist_leader = {
 		law_industry_banned = strongly_disapprove
 	}
 
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_collectivized_agriculture = neutral
+		law_tenant_farmers = strongly_disapprove
+		law_commercialized_agriculture = approve
+		law_homesteading = approve
+	}
+	
 	lawgroup_taxation = {
 		law_consumption_based_taxation = neutral
 		law_land_based_taxation = disapprove
@@ -575,16 +610,27 @@ ideology_usfp_georgist_leader = {
 
 	possible = {
 		owner = {
-			exists = c:USA
+			has_global_variable = progress_and_poverty
 			OR = {
-				c:USA = this
-				civil_war_origin_country = c:USA
+				#historical spread of Georgist influence
+				country_has_primary_culture = cu:yankee
+				country_has_primary_culture = cu:dixie
+				country_has_primary_culture = cu:british
+				country_has_primary_culture = cu:australian
+				country_has_primary_culture = cu:danish
+				country_has_primary_culture = cu:anglo_canadian
+			}
+			NOR = {
+				has_law = law_type:law_command_economy
+				has_law = law_type:law_cooperative_ownership
 			}
 		}
 		scope:interest_group = {
 			OR = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_rural_folk
 			}
 			NOR = {
 				has_variable = communist_ig_var
@@ -597,7 +643,50 @@ ideology_usfp_georgist_leader = {
 	}
 	
 	leader_weight = {
-		value = 0
+		value = 10
+		if = {
+			limit = {
+				owner = {
+					has_variable = georgism_promoted
+				}
+			}
+			add = 15
+		}
+		#Georgists more likely in reaction to poor land laws
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_tenant_farmers
+						has_law = law_type:law_serfdom
+					}
+				}
+			}
+			multiply = 2
+		}
+		#Georgists more likely in reaction to regressive taxes
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_per_capita_based_taxation
+						has_law = law_type:law_land_based_taxation
+					}
+				}
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				scope:interest_group = {
+					OR = {
+						is_interest_group_type = ig_rural_folk
+						is_interest_group_type = ig_trade_unions
+					}
+				}
+			}
+			multiply = 0.5
+		}
 	}
 
 }

@@ -587,12 +587,14 @@ usfp_usa.9.c: "Loyal judges will read the Constitution as suits our needs."
 usfp_usa.9.e: "We will need a new, People's Constitution!"
 usfp_usa.9.g: "The Constitution requires a proper, royal protector!"
 
-usfp_usa.10.t: "Scientific Management"
-usfp_usa.10.d: "A new theory of industrial management has risen to prominence among the [SCOPE.gsInterestGroup('industrialists_scope').GetName] and [SCOPE.gsInterestGroup('intelligentsia_scope').GetName]. This new Scientific Management seeks to determine an objectively optimal method for any given task, which is then implemented via close cooperation between managers and workers."
-usfp_usa.10.f: ""The idea of training a workman under a competent teacher into new working habits until he continually and habitually works in accordance with scientific laws, is directly antagonistic to the old idea that each workman can best regulate his own way of doing the work. The philosophy of the old management puts the entire responsibility upon the workmen, while the philosophy of the new places a great part of it upon the management.""
-usfp_usa.10.a: "The [SCOPE.gsInterestGroup('industrialists_scope').GetName] will ensure maximum efficiency!"
-usfp_usa.10.b: "Our esteemed [SCOPE.gsInterestGroup('intelligentsia_scope').GetName] will lead the cutting edge!"
-usfp_usa.10.c: "The bosses already micromanage too much."
+usfp_usa.10.t: "Progress and Poverty"
+usfp_usa.10.d: "[SCOPE.sCharacter('george_scope').GetFullName] has published Progress and Poverty, a treatise that purports to explain why rising economic development has failed to eliminate poverty. George puts forth a radical proposal for a single tax on land value that would eliminate the harmful impact of rent-seeking landowners on the economy. The book has become an instant best-seller across the country and beyond, with many readers finding its arguments to be irrefutable."
+usfp_usa.10.f: ""The great cause of inequality in the distribution of wealth is inequality in the ownership of land. The ownership of land is the great fundamental fact which ultimately determines the social, the political, and consequently the intellectual and moral condition of a people."" #Henry George
+usfp_usa.10.a: "A landmark text to be sure."
+usfp_usa.10.b: "George's ideas are pure fantasy."
+usfp_usa.10.c: "Single Value Tax is the future!"
+georgists_can_spawn: "[SCOPE.sIdeology('georgism_scope').GetName] characters can now appear."
+georgists_can_spawn_double: "[SCOPE.sIdeology('georgism_scope').GetName] characters are more likely to appear in our country."
 
 usfp_usa.11.t: "The Cross of Gold"
 usfp_usa.11.d: "[SCOPE.sCharacter('bryan_scope').GetFullName] has catapulted himself to the heights of the [SCOPE.sParty('bryan_party').GetName], delivering an electrifying speech to the party's covention. In his 'Cross of Gold' address, [SCOPE.sCharacter('bryan_scope').GetLastName] extoled silver coinage as a bulwark against big city moneyed interests, and presented a populist platform that would ensure prosperity for the common masses."
@@ -644,6 +646,34 @@ usfp_usa_labor.2.d: "A labor rally in [SCOPE.sState('illinois_scope').GetCityHub
 usfp_usa_labor.2.f: ""After the bomb exploded there was pistol shooting. The crowd was running in the same direction as me. I had to jump over a man lying down, and I saw another man fall in front of me about 100 to 200 feet west of Des Plaines Street. I took hold of his arm and wanted to help him, but the firing was so lively behind me that I just let go and ran."" #An Eyewitness Account by Barton Simonson
 usfp_usa_labor.2.a: "Hang them all!"
 usfp_usa_labor.2.b: "The police are out of line."
+
+usfp_usa_labor.3.t: "The Knights of Labor"
+usfp_usa_labor.3.d: "A labor federation calling itself the Knights of Labor has exploded in popularity across the [ROOT.GetCountry.GetName], attracting both skilled and unskilled workers in droves. Though lacking in organization and funding, local chapters of the Knights have begun to push for better working conditions and wages for their members."
+usfp_usa_labor.3.f: ""Individually, workingmen are weak, and, when separated, each one follows a different course, without accomplishing anything for himself or his fellow man; but when combined in one common bond of brotherhood, they become as the cable, each strand of which, though weak and insignificant enough in itself, is assisted and strengthened by being joined with others, and the work that one could not perform alone is easily accomplished by a combination of strands."" #Terrence V. Powderly
+usfp_usa_labor.3.a: "The workingman deserves his fair dues."
+usfp_usa_labor.3.b: "We will not cooperate with these agitators."
+usfp_usa_labor.3.c: "We welcome their support for the [ROOT.GetCountry.GetAdjective] worker."
+
+usfp_usa_labor.4.t: "The Great Railroad Strike"
+usfp_usa_labor.4.d: "In response to a wage cut, [SCOPE.sBuilding('railway_scope').GetName] workers in [SCOPE.sState('strike_start_scope').GetName] have gone on strike, shutting down their stations. Unorganized copycat strikes have quickly spread to several neighboring states, crippling rail traffic across the entire region. Local militias and private security have fought the workers in violent clashes, but have failed to contain the strike."
+usfp_usa_labor.4.f: ""It is said that several strikers who were seriously shot were taken to their homes, of whom no account can be had tonight. At 10 o'clock the Dispatch House was fired and totally destroyed, and the depot badly burned as far up as Barre street."" #San Diego Union, 1877
+usfp_usa_labor.4.a: "We need to try and negotate with the strikers."
+usfp_usa_labor.4.b: "This is for the railways to handle themselves."
+usfp_usa_labor.4.c: "Send in federal troops to break the strike."
+usfp_usa_labor.4.e: "Establish a commission to hear the strikers' demands."
+
+usfp_usa_labor.5.t: "The American Federation of Labor"
+usfp_usa_labor.5.d: "Breaking from the Knights of Labor, a new labor organization has risen to pre-eminence in the [ROOT.GetCountry.GetName]: the American Federation of Labor. Adopting a strategy of 'business unionism', the AFL seeks to coordinate union activity in cooperation with management, in defiance of more radical labor movements."
+usfp_usa_labor.5.f: ""To be free, the workers must have choice. To have choice they must retain in their own hands the right to determine under what conditions they will work."" #Samuel Gompers
+usfp_usa_labor.5.a: "We can work with the AFL."
+usfp_usa_labor.5.b: "All unions are a threat to the economy."
+usfp_usa_labor.5.c: "The AFL seeks to sell out the working man!"
+
+usfp_usa_labor.6.t: "Looking Backward"
+usfp_usa_labor.6.d: "A newly published utopian novel by Edward Bellamy portrays a future [ROOT.GetCountry.GetName] where the economy has been nationalized and all social ills have been cured. Inspired by its vision, over a hundred so-called 'Nationalist Clubs' have sprung up across the country to advocate for socialization of the economy."
+usfp_usa_labor.6.f: ""Their misery came, with all your other miseries, from that incapacity for cooperation which followed from the individualism on which your social system was founded, from your inability to perceive that you could make ten times more profit out of your fellow men by uniting with them than by contending with them."" #Edward Bellamy, Looking Backward
+usfp_usa_labor.6.a: "An inspiring vision of utopia."
+usfp_usa_labor.6.b: "A deranged socialist fantasy."
 
 usfp_mormon.1.t: "The [SCOPE.sState('missouri_scope').GetName] [SCOPE.sReligion('mormonism_scope').GetName] War"
 usfp_mormon.1.d: "Tensions in [SCOPE.sState('missouri_scope').GetName] between mainstream Protestants and an eccentric sect calling themselves the Latter Day Saints have boiled over into open violence. Protestant vigilantes have committed massacres and clashed with [SCOPE.sReligion('mormonism_scope').GetName] militias. After running afoul of state troopers, the followers of Joseph Smith have now been forced out of their homes by the local government, fleeing north to [SCOPE.sState('illinois_scope').GetName]."
@@ -755,6 +785,14 @@ usfp_filibuster.4.f: ""Civilization belongs to the whites. But what civilization
 usfp_filibuster.4.a: "We will annex the territory."
 usfp_filibuster.4.b: "[SCOPE.sCharacter('william_walker_scope').GetFullName] will granted governorship of the territory."
 usfp_filibuster.4.c: "We will not associate with these filibusters."
+
+usfp_progressive_era.2.t: "Scientific Management"
+usfp_progressive_era.2.d: "A new theory of industrial management has risen to prominence among the [SCOPE.gsInterestGroup('industrialists_scope').GetName] and [SCOPE.gsInterestGroup('intelligentsia_scope').GetName]. This new Scientific Management seeks to determine an objectively optimal method for any given task, which is then implemented via close cooperation between managers and workers."
+usfp_progressive_era.2.f: ""The idea of training a workman under a competent teacher into new working habits until he continually and habitually works in accordance with scientific laws, is directly antagonistic to the old idea that each workman can best regulate his own way of doing the work. The philosophy of the old management puts the entire responsibility upon the workmen, while the philosophy of the new places a great part of it upon the management.""
+usfp_progressive_era.2.a: "The [SCOPE.gsInterestGroup('industrialists_scope').GetName] will ensure maximum efficiency!"
+usfp_progressive_era.2.b: "Our esteemed [SCOPE.gsInterestGroup('intelligentsia_scope').GetName] will lead the cutting edge!"
+usfp_progressive_era.2.c: "The bosses already micromanage too much."
+
 
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"

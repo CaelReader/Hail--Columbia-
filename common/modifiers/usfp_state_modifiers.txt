@@ -128,3 +128,9 @@ usfp_lds_church_utah = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_theocracy_positive.dds
 	interest_group_ig_devout_pol_str_mult = 2.00
 }
+
+usfp_railway_strike = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_machinist_negative.dds
+	building_railway_throughput_add = -0.50
+	state_radicals_from_sol_change_mult = 0.10
+}

@@ -548,6 +548,10 @@ usfp_reconstruction.8 = {
 			value = very_large_radicals
 			culture = cu:dixie
 		}
+		add_radicals = {
+			value = small_radicals
+			culture = cu:yankee
+		}
 		ig:ig_landowners = {
 			usfp_planters_to_landowners_effect = yes
 		}
@@ -740,3 +744,8 @@ usfp_reconstruction.10 = {
 	}
 
 }
+#Election held hostage
+#Radical Republicans
+#Radical Reconstruction: PB Backlash
+#Radical Reconstruction: Electoral Backlash
+#Radical Reconstruction: Assassination

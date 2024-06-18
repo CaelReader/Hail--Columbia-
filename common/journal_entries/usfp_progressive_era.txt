@@ -1,0 +1,92 @@
+﻿###### Hail, Columbia! by CaelReader ######
+usfp_progressive_era = {
+	icon = gfx/interface/icons/event_icons/event_election.dds
+	group = je_group_internal_affairs
+	should_be_pinned_by_default = yes
+	is_shown_when_inactive = {
+		exists = c:USA
+		c:USA = ROOT
+		has_law = law_type:law_presidential_republic
+	}
+	timeout = 7300 #20 years
+	possible = {
+		has_technology_researched = human_rights
+		custom_tooltip = {
+			text = gilded_age_ended
+			has_variable = gilded_age_complete
+		}
+		NOT = {
+			has_law = law_type:law_outlawed_dissent
+		}
+		calc_true_if = {
+			amount >= 2
+			has_technology_researched = feminism
+			has_technology_researched = political_agitation
+			has_technology_researched = central_planning
+			has_technology_researched = psychoanalysis
+			ruler = {
+				has_ideology = ideology:ideology_usfp_progressive
+			}
+			any_interest_group = {
+				is_powerful = yes
+				leader = {
+					has_ideology = ideology:ideology_usfp_progressive
+				}
+			}
+			game_date > 1896.1.1
+		}
+	}
+	invalid = {
+		NOT = {
+			has_law = law_type:law_presidential_republic
+		}
+	}
+	fail = {
+		OR = {
+			NOT = {
+				has_law = law_type:law_presidential_republic
+			}
+			has_law = law_type:law_outlawed_dissent
+		}
+	}
+	complete = {
+		OR = {
+			has_law = law_type:law_universal_suffrage
+			has_law = law_type:law_technocracy
+		}
+		has_law = law_type:law_interventionism
+		has_law = law_type:law_graduated_taxation
+		has_law = law_type:law_womens_suffrage
+		has_law = law_type:law_compulsory_primary_school
+		has_law = law_type:law_elected_bureaucrats
+		has_law = law_type:law_public_health_insurance
+		institution_investment_level = {
+			institution = institution_health_system
+			value >= 3
+		}
+		institution_investment_level = {
+			institution = institution_social_security
+			value >= 3
+		}
+		institution_investment_level = {
+			institution = institution_workplace_safety
+			value >= 3
+		}
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 4
+		}
+		bureaucracy > 100 
+	}
+}
+usfp_progressive_era_eugenics = {
+	icon = gfx/interface/icons/event_icons/event_skull.dds
+	group = je_group_historical_content
+	#added by event
+	goal_add_value = 100
+	complete = {
+		scope:journal_entry = {
+			is_goal_complete = yes
+		}
+	}
+}

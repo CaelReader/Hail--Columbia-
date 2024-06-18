@@ -636,6 +636,7 @@ usfp_usa_henry_george = {
     is_agitator = yes
     dna = usfp_usa_henry_george
     traits = { persistent inspirational_orator literary honorable }
+    #event-spawned
 }
 
 #USFP: William Walker, filibuster
@@ -651,4 +652,36 @@ usfp_usa_william_walker = {
     birth_date = 1824.5.8
     dna = usfp_william_walker
     traits = { reserved celebrity_commander reckless bandit usfp_trait_expansionist }
+    #event-spawned
+}
+
+#USFP: Terrence V. Powderly, head of the Knights of Labor
+usfp_usa_terrence_powderly = {
+    first_name = Terrence
+    last_name = Powderly
+    historical = yes
+    culture = cu:irish
+    religion = rel:catholic
+    female = no
+    is_agitator = yes
+    ideology = ideology_moderate
+    interest_group = ig_trade_unions
+    birth_date = 1849.1.22
+    traits = { basic_political_operator wounded tactful erudite }
+    #event-spawned
+}
+
+#USFP: Samuel Gompers, AFL president
+usfp_usa_samuel_gompers = {
+    first_name = Samuel
+    last_name = Gompers
+    historical = yes
+    culture = cu:british
+    religion = rel:protestant
+    female = no
+    ideology = ideology_republican_leader
+    interest_group = ig_trade_unions
+    birth_date = 1850.1.27
+    traits = { basic_political_operator meticulous usfp_trait_antiexpansionist master_bureaucrat }
+    #event-spawned
 }

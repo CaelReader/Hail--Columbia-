@@ -177,3 +177,28 @@ ideology_usfp_evangelical_moralist = {
 		law_multicultural = strongly_disapprove	
 	}
 }
+
+ideology_usfp_eugenicist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_usfp_eugenicist.dds"
+
+	lawgroup_health_system = {
+		law_private_health_insurance = approve
+		law_no_health_system = strongly_disapprove
+		law_charitable_health_system = neutral
+		law_public_health_insurance = approve
+	}
+
+	lawgroup_migration = {
+		law_no_migration_controls = strongly_disapprove
+		law_migration_controls = approve
+		law_closed_borders = neutral
+	}
+
+	lawgroup_citizenship = {
+		law_ethnostate = strongly_approve
+		law_national_supremacy = approve
+		law_racial_segregation = neutral
+		law_cultural_exclusion = disapprove
+		law_multicultural = strongly_disapprove
+	}
+}

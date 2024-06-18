@@ -154,3 +154,14 @@ sightly reduced the number of agitator slots granted by A House Divided
 Secessionist Conventions event now adds 40% landowner radicals
 buffed Mission Grapes state trait
 localization updates
+
+3.0 "Cleveland"
+New Content:
+	Added Henry George and Georgism
+	New Labor Events: Knights of Labor, AFL, Great Railroad Strike, Looking Backward
+Updates:
+	Added "Bourbon Democrats" modifier that will attract Market Liberal industrialists to the Democratic Party after the civil war
+	Scientific Management event is now part of the Progressive Era pool of events
+Fixes:
+	Lower Canada and New Brunswick now start with Frontier Colonization
+	Canadian tags now start with a colonization boost

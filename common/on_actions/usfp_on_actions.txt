@@ -17,7 +17,7 @@ usfp_monthly_pulse = {
 		200 = 0
 		100 = usfp_usa.7 #Thomas Nast spawn event
 		100 = usfp_usa.8 #Thomas Nast weighs in on Election
-		50 = usfp_usa.10 #Scientific Management
+		50 = usfp_usa.10 #Henry George, Progress & Poverty
 		50 = usfp_usa.12 #American Hippo Bill
 		10 = usfp_usa.13 #Wild Hippos
 		100 = usfp_usa.15 #Hidden event to kill off the Great Triumvirate
@@ -27,6 +27,10 @@ usfp_monthly_pulse = {
 		##Labor events
 		100 = usfp_usa_labor.1 #founding of the IWW
 		100 = usfp_usa_labor.2 #Haymarket Affair
+		100 = usfp_usa_labor.3 #Knights of Labor
+		50 = usfp_usa_labor.4 #Great Railroad Strike
+		100 = usfp_usa_labor.5 #AFL
+		50 = usfp_usa_labor.6 #Looking Backwards
 
 		##Disasters
 		1 = usfp_usa.2 #Atlantic Hurricane

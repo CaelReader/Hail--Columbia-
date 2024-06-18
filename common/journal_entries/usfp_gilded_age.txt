@@ -1,0 +1,70 @@
+﻿###### Hail, Columbia! by CaelReader ######
+usfp_gilded_age = {
+	icon = gfx/interface/icons/event_icons/boss_tweed_icon.dds
+	group = je_group_internal_affairs
+	should_be_pinned_by_default = yes
+	is_shown_when_inactive = {
+		exists = c:USA
+		c:USA = ROOT
+	}
+	timeout = 7300 #20 years
+	possible = {
+		has_technology_researched = mutual_funds
+		calc_true_if = {
+			amount >= 2
+			has_technology_researched = investment_banks
+			has_technology_researched = shift_work
+			has_technology_researched = steel_frame_buildings
+			has_technology_researched = camera
+			has_technology_researched = steam_donkey
+			has_technology_researched = steel_railway_cars
+			has_law = law_type:law_laissez_faire
+			game_date > 1873.1.1
+		}
+		ig:ig_industrialists = {
+			is_powerful = yes
+		}
+		NOR = {
+			has_journal_entry = je_acw_countdown
+			has_journal_entry = je_acw_war
+			has_journal_entry = je_acw_reconstruction
+		}
+	}
+	on_timeout = {
+		set_variable = gilded_age_complete
+	}
+	fail = {
+		OR = {
+			ig:ig_industrialists = {
+				is_marginal = yes
+			}
+			has_law = law_type:law_council_republic
+			AND = {
+				institution_investment_level = {
+					institution = institution_workplace_safety
+					value > 3
+				}
+				institution_investment_level = {
+					institution = institution_social_security
+					value > 3
+				}
+			}
+			in_default = yes
+		}
+	}
+	on_fail = {
+		add_radicals = {
+			value = large_radicals
+			strata = rich
+		}
+	}
+	modifiers_while_active = {
+		usfp_gilded_age_modifier
+		usfp_gilded_age_corruption_modifier
+	}
+	on_monthly_pulse = {
+		random_events = {
+			300 = 0
+		}
+	}
+}

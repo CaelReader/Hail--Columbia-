@@ -273,6 +273,7 @@
 						has_ideology = ideology:ideology_fascist
 						has_ideology = ideology:ideology_ethno_nationalist
 						has_ideology = ideology:ideology_integralist
+						has_ideology = ideology:ideology_usfp_social_darwinist_leader #USFP
 					}
 				}
 			}
@@ -288,6 +289,7 @@
 					OR = {
 						has_ideology = ideology:ideology_fascist
 						has_ideology = ideology:ideology_integralist
+						has_ideology = ideology:ideology_usfp_social_darwinist_leader #USFP
 					}
 				}
 			}

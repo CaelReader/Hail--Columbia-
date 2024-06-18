@@ -151,3 +151,10 @@ nicaragua_revolt_walker_desc: "American volunteers can surely be only a boon to 
 
 usfp_je_westward_expansion: "Westward Expansion"
 usfp_je_westward_expansion_reason: "$concept_usfp_westward_expansion_desc$"
+
+usfp_gilded_age: "The Gilded Age"
+usfp_gilded_age_reason: ""
+usfp_progressive_era: "The Progressive Cause"
+usfp_progressive_era_reason: ""
+usfp_progressive_era_eugenics: "The Eugenics Movement"
+usfp_progressive_era_eugenics_reason: ""
