@@ -786,12 +786,148 @@ usfp_filibuster.4.a: "We will annex the territory."
 usfp_filibuster.4.b: "[SCOPE.sCharacter('william_walker_scope').GetFullName] will granted governorship of the territory."
 usfp_filibuster.4.c: "We will not associate with these filibusters."
 
+usfp_gilded_age.1.t: "A Story Of Today"
+usfp_gilded_age.1.d: ""
+usfp_gilded_age.1.f: ""To the young American, here or elsewhere, the paths to fortune are innumerable and all open; There is invitation in the air and success in all his wide horizon."" #Mark Twain
+usfp_gilded_age.1.a: "A toast to prosperity!"
+
+usfp_gilded_age.2.t: "Fraudulent Lines"
+usfp_gilded_age.2.d: ""
+usfp_gilded_age.2.f: """"
+usfp_gilded_age.2.a: ""
+
+usfp_gilded_age.3.t: "Corruption in the Mail"
+usfp_gilded_age.3.d: ""
+usfp_gilded_age.3.f: """"
+usfp_gilded_age.3.a: ""
+
+usfp_gilded_age.4.t: "Social Darwinism"
+usfp_gilded_age.4.d: ""
+usfp_gilded_age.4.f: """"
+usfp_gilded_age.4.a: ""
+
+usfp_gilded_age.5.t: "The Tammany Hall Regime"
+usfp_gilded_age.5.d: ""
+usfp_gilded_age.5.f: """"
+usfp_gilded_age.5.a: ""
+
+usfp_gilded_age.6.t: "The Gospel of Wealth"
+usfp_gilded_age.6.d: ""
+usfp_gilded_age.6.f: """"
+usfp_gilded_age.6.a: ""
+
+usfp_gilded_age.7.t: "The Sun-Kissed State"
+usfp_gilded_age.7.d: ""
+usfp_gilded_age.7.f: """"
+usfp_gilded_age.7.a: ""
+
+usfp_gilded_age.8.t: "A Gift for the Grangers"
+usfp_gilded_age.8.d: ""
+usfp_gilded_age.8.f: """"
+usfp_gilded_age.8.a: ""
+
+usfp_gilded_age.9.t: "James-Younger Bank Robbery"
+usfp_gilded_age.9.d: ""
+usfp_gilded_age.9.f: """"
+usfp_gilded_age.9.a: ""
+
+usfp_gilded_age.10.t: "Jesse James in Custody"
+usfp_gilded_age.10.d: ""
+usfp_gilded_age.10.f: """"
+usfp_gilded_age.10.a: ""
+
+usfp_gilded_age.11.t: "Jesse James Shot!"
+usfp_gilded_age.11.d: ""
+usfp_gilded_age.11.f: """"
+usfp_gilded_age.11.a: ""
+
+usfp_gilded_age.12.t: "State Corruption"
+usfp_gilded_age.12.d: ""
+usfp_gilded_age.12.f: """"
+usfp_gilded_age.12.a: ""
+
+usfp_gilded_age.13.t: "Railroad Boom, Railroad Bust"
+usfp_gilded_age.13.d: ""
+usfp_gilded_age.13.f: """"
+usfp_gilded_age.13.a: ""
+
+usfp_gilded_age.14.t: "New Money"
+usfp_gilded_age.14.d: "As modern industries expand across the country, they have created a new cohort of wealthy [SCOPE.gsInterestGroup('industrialists_scope').GetName] whose fortunes exceed that of the established [SCOPE.gsInterestGroup('landowner_scope').GetName] families. Many have flocked to [SCOPE.sState('new_york_scope').GetName], building elaborate new mansions and attempting to integrate themselves into high society, much to the chagrin of the Old Money aristocrats."
+usfp_gilded_age.14.f: ""She’s got an indiscreet voice," I remarked. "It’s full of–" I hesitated.\n\n"Her voice is full of money," he said suddenly.\n\nThat was it. I’d never understood before. It was full of money–that was the inexhaustible charm that rose and fell in it, the jingle of it, the cymbals’ song of it." #- F. Scott Fitzgerald
+usfp_gilded_age.14.a: "Old Money will have to make room for the New."
+usfp_gilded_age.14.b: "A toast to our rising captains of industry!"
+
+usfp_progressive_era.1.t: "Rise of the Progressives"
+usfp_progressive_era.1.d: ""
+usfp_progressive_era.1.f: """"
+usfp_progressive_era.1.a: ""
+
 usfp_progressive_era.2.t: "Scientific Management"
 usfp_progressive_era.2.d: "A new theory of industrial management has risen to prominence among the [SCOPE.gsInterestGroup('industrialists_scope').GetName] and [SCOPE.gsInterestGroup('intelligentsia_scope').GetName]. This new Scientific Management seeks to determine an objectively optimal method for any given task, which is then implemented via close cooperation between managers and workers."
 usfp_progressive_era.2.f: ""The idea of training a workman under a competent teacher into new working habits until he continually and habitually works in accordance with scientific laws, is directly antagonistic to the old idea that each workman can best regulate his own way of doing the work. The philosophy of the old management puts the entire responsibility upon the workmen, while the philosophy of the new places a great part of it upon the management.""
 usfp_progressive_era.2.a: "The [SCOPE.gsInterestGroup('industrialists_scope').GetName] will ensure maximum efficiency!"
 usfp_progressive_era.2.b: "Our esteemed [SCOPE.gsInterestGroup('intelligentsia_scope').GetName] will lead the cutting edge!"
 usfp_progressive_era.2.c: "The bosses already micromanage too much."
+
+usfp_progressive_era.3.t: "The American Anti-Imperialist League"
+usfp_progressive_era.3.d: ""
+usfp_progressive_era.3.f: """"
+usfp_progressive_era.3.a: ""
+
+usfp_progressive_era.4.t: "World Parliament of Religions"
+usfp_progressive_era.4.d: ""
+usfp_progressive_era.4.f: """"
+usfp_progressive_era.4.a: ""
+
+usfp_progressive_era.5.t: "Popular Eugenics"
+usfp_progressive_era.5.d: ""
+usfp_progressive_era.5.f: """"
+usfp_progressive_era.5.a: ""
+
+usfp_progressive_era.6.t: "City Beautiful"
+usfp_progressive_era.6.d: ""
+usfp_progressive_era.6.f: """"
+usfp_progressive_era.6.a: ""
+
+usfp_progressive_era.7.t: "Social Hygiene"
+usfp_progressive_era.7.d: ""
+usfp_progressive_era.7.f: """"
+usfp_progressive_era.7.a: ""
+
+usfp_progressive_era.8.t: "Fruits of Monopoly"
+usfp_progressive_era.8.d: ""
+usfp_progressive_era.8.f: """"
+usfp_progressive_era.8.a: ""
+
+usfp_progressive_era.9.t: "State Adopts the Initiative"
+usfp_progressive_era.9.d: ""
+usfp_progressive_era.9.f: """"
+usfp_progressive_era.9.a: ""
+
+usfp_progressive_era.10.t: "Death's Laboratory"
+usfp_progressive_era.10.d: ""
+usfp_progressive_era.10.f: """"
+usfp_progressive_era.10.a: ""
+
+usfp_progressive_era.11.t: "The Jungle"
+usfp_progressive_era.11.d: ""
+usfp_progressive_era.11.f: """"
+usfp_progressive_era.11.a: ""
+
+usfp_progressive_era.12.t: "The Bitter Cry of Children"
+usfp_progressive_era.12.d: ""
+usfp_progressive_era.12.f: """"
+usfp_progressive_era.12.a: ""
+
+usfp_progressive_era.13.t: "The Shame of the Cities"
+usfp_progressive_era.13.d: ""
+usfp_progressive_era.13.f: """"
+usfp_progressive_era.13.a: ""
+
+usfp_progressive_era.14.t: "The History of [SCOPE.sCompany('standard_oil_scope').GetName]"
+usfp_progressive_era.14.d: ""
+usfp_progressive_era.14.f: """"
+usfp_progressive_era.14.a: ""
 
 
 usfp_test.1.t: "DEBUG EVENT"

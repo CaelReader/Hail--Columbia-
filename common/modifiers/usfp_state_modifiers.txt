@@ -134,3 +134,20 @@ usfp_railway_strike = {
 	building_railway_throughput_add = -0.50
 	state_radicals_from_sol_change_mult = 0.10
 }
+
+usfp_octopus_garden = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds
+	building_railway_throughput_add = 0.10
+	state_migration_pull_mult = 0.10
+	state_loyalists_from_sol_change_accepted_culture_mult = 0.10
+}
+
+usfp_railroad_boom = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_machinist_positive.dds
+	building_railway_throughput_add = 0.15
+}
+
+usfp_railroad_bust = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_machinist_negative.dds
+	building_railway_throughput_add = -0.30
+}

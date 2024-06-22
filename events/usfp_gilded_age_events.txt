@@ -2,16 +2,635 @@
 namespace = usfp_gilded_age
 
 #Gilded Age startup event
+usfp_gilded_age.1 = {
+	type = country_event
+	placement = root
+
+	title = usfp_gilded_age.1.t
+	desc = usfp_gilded_age.1.d
+	flavor = usfp_gilded_age.1.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_rich_and_poor"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 3
+
+	#triggered by JE
+	
+	option = {
+		name = usfp_gilded_age.1.a
+		default_option = yes
+		add_loyalists = {
+			value = small_radicals
+			strata = rich
+		}
+		add_loyalists = {
+			value = small_radicals
+			strata = middle
+		}
+	}
+}
 #Crédit Mobilier scandal
+usfp_gilded_age.2 = {
+	type = country_event
+	placement = root
+
+	title = usfp_gilded_age.2.t
+	desc = usfp_gilded_age.2.d
+	flavor = usfp_gilded_age.2.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		in_election_campaign = yes
+		NOT = {
+			has_variable = had_credit_mobilier
+		}
+	}
+	
+	#damn 
+	option = {
+		name = usfp_gilded_age.2.a
+		default_option = yes
+	}
+	#coverup
+	option = {
+		name = usfp_gilded_age.2.b
+	}
+	#censor
+	option = {
+		name = usfp_gilded_age.2.c
+		trigger = {
+			OR = {
+				has_law = law_type:law_censorship
+				has_law = law_type:law_outlawed_dissent
+			}
+		}
+	}
+}
 #Star Route scandal
+usfp_gilded_age.3 = {
+	type = country_event
+	placement = root
+
+	title = usfp_gilded_age.3.t
+	desc = usfp_gilded_age.3.d
+	flavor = usfp_gilded_age.3.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+	
+	option = {
+		name = usfp_gilded_age.3.a
+	}
+}
 #Social Darwinism
+usfp_gilded_age.4 = {
+	type = country_event
+	placement = root
+
+	title = usfp_gilded_age.4.t
+	desc = usfp_gilded_age.4.d
+	flavor = usfp_gilded_age.4.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_rich_and_poor"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+	
+	option = {
+		name = usfp_gilded_age.4.a
+	}
+}
 #Tammany Hall
+usfp_gilded_age.5 = {
+	type = country_event
+	placement = root
+
+	title = usfp_gilded_age.5.t
+	desc = usfp_gilded_age.5.d
+	flavor = usfp_gilded_age.5.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/boss_tweed_icon.dds"
+
+	duration = 3
+	
+	option = {
+		name = usfp_gilded_age.5.a
+	}
+}
 #Gospel of Wealth
+usfp_gilded_age.6 = {
+	type = country_event
+	placement = root
+
+	title = usfp_gilded_age.6.t
+	desc = usfp_gilded_age.6.d
+	flavor = usfp_gilded_age.6.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_rich_and_poor"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 3
+	
+	option = {
+		name = usfp_gilded_age.6.a
+	}
+}
 #California Oranges
+usfp_gilded_age.7 = {
+	type = country_event
+	placement = scope:california_scope
+
+	title = usfp_gilded_age.7.t
+	desc = usfp_gilded_age.7.d
+	flavor = usfp_gilded_age.7.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "africa_prosperous_farm"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/goods_icons/fruit.dds"
+
+	duration = 3
+
+	trigger = {
+		NOT = {
+			has_variable = had_california_oranges
+		}
+		owns_entire_state_region = STATE_CALIFORNIA
+		s:STATE_CALIFORNIA.region_state:USA = {
+			any_scope_building = {
+				has_active_production_method = pm_citrus_orchards
+			}
+		} 
+	}
+
+	immediate = {
+		set_variable = had_california_oranges
+		s:STATE_CALIFORNIA.region_state:USA = { 
+			save_scope_as = california_scope 
+		}
+	}
+	
+	#cool
+	option = {
+		name = usfp_gilded_age.7.a
+		default_option = yes
+		s:STATE_CALIFORNIA = {
+			add_state_trait = state_trait_navel_oranges
+		}
+		scope:california_scope = {
+			add_modifier = {
+				name = usfp_octopus_garden
+				years = 10
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#put them in washington too
+	option = {
+		name = usfp_gilded_age.7.b
+		trigger = {
+			s:STATE_WASHINGTON = {
+				root_has_state_here = yes
+			}
+			taking_loans = no
+		}
+		s:STATE_CALIFORNIA = {
+			add_state_trait = state_trait_navel_oranges
+		}
+		scope:california_scope = {
+			add_modifier = {
+				name = usfp_octopus_garden
+				years = 10
+			}
+		}
+		add_treasury = -50000
+		s:STATE_WASHINGTON = {
+			add_state_trait = state_trait_navel_oranges
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
 #Grange Movement
+usfp_gilded_age.8 = {
+	type = country_event
+	placement = root
+
+	title = usfp_gilded_age.8.t
+	desc = usfp_gilded_age.8.d
+	flavor = usfp_gilded_age.8.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "africa_prosperous_farm"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/invention_icons/intensive_agriculture.dds"
+
+	duration = 3
+	
+	option = {
+		name = usfp_gilded_age.8.a
+	}
+}
 #James-Younger Gang
+usfp_gilded_age.9 = {
+	type = country_event
+	placement = root
+
+	title = usfp_gilded_age.9.t
+	desc = usfp_gilded_age.9.d
+	flavor = usfp_gilded_age.9.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_american_civil_war"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+	
+	trigger = {
+		NOT = {
+			has_variable = had_james_younger
+		}
+	}
+
+	immediate = {
+		set_variable = had_james_younger
+	}
+
+	#bastards
+	option = {
+		name = usfp_gilded_age.9.a
+		default_option = yes
+	}
+	#hunt them down!
+	option = {
+		name = usfp_gilded_age.9.b
+		random_list = {
+			80 = {}
+			20 = {
+				trigger_event = {
+					id = usfp_gilded_age.10
+					months = 6
+				}
+			}
+		}
+	}
+}
 #Capture of Jesse James
+usfp_gilded_age.10 = {
+	type = country_event
+	placement = root
+
+	title = usfp_gilded_age.10.t
+	desc = usfp_gilded_age.10.d
+	flavor = usfp_gilded_age.10.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "votp_hostile_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+	
+
+	#triggered by gilded_age.9
+
+	#good work
+	option = {
+		name = usfp_gilded_age.10.a
+		default_option = yes
+	}
+}
 #Death of Jesse James
+usfp_gilded_age.11 = {
+	type = country_event
+	placement = root
+
+	title = usfp_gilded_age.11.t
+	desc = usfp_gilded_age.11.d
+	flavor = usfp_gilded_age.11.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "votp_hostile_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+	
+	#deserved
+	option = {
+		name = usfp_gilded_age.11.a
+		default_option = yes
+	}
+	#shame
+	option = {
+		name = usfp_gilded_age.11.b
+	}
+}
 #Political corruption in state
+usfp_gilded_age.12 = {
+	type = country_event
+	placement = root
+
+	title = usfp_gilded_age.12.t
+	desc = usfp_gilded_age.12.d
+	flavor = usfp_gilded_age.12.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	duration = 3
+	cooldown = {
+		months = 36
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				any_scope_pop = {
+					is_pop_type = capitalists
+				}
+			}
+			save_scope_as = corruption_state
+		}
+	}
+	
+	#bastards
+	option = {
+		name = usfp_gilded_age.12.a
+		default_option = yes
+	}
+	#crack down!
+	option = {
+		name = usfp_gilded_age.12.b
+	}
+	#kickbacks
+	option = {
+		name = usfp_gilded_age.12.c
+	}
+}
 #Railroad volatility
-#New Rich
+usfp_gilded_age.13 = {
+	type = country_event
+	placement = scope:railway_state
+
+	title = usfp_gilded_age.13.t
+	desc = usfp_gilded_age.13.d
+	flavor = usfp_gilded_age.13.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_trains"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	duration = 3
+	
+	cooldown = {
+		months = 36
+	}
+
+	trigger = {
+		any_scope_state = {
+			has_building = building_railway
+			is_incorporated = yes
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_building = building_railway
+				is_incorporated = yes
+			}
+			random_scope_building = {
+				limit = {
+					is_building_type = building_railway
+				}
+				save_scope_as = railway_scope
+			}
+			save_scope_as = railway_boom_state
+		}
+		random_scope_state = {
+			limit = {
+				has_building = building_railway
+				is_incorporated = yes
+				NOT = {
+					this = scope:railway_boom_state
+				}
+			}
+			save_scope_as = railway_bust_state
+		}
+	}
+	
+	#such is business
+	option = {
+		name = usfp_gilded_age.13.a
+		default_option = yes
+		scope:railway_boom_state = {
+			add_modifier = {
+				name = usfp_railroad_boom
+				years = 2
+			}
+		}
+		scope:railway_bust_state = {
+			add_modifier = {
+				name = usfp_railroad_bust
+				years = 2
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#rich get richer
+	option = {
+		name = usfp_gilded_age.13.b
+		scope:railway_boom_state = {
+			add_modifier = {
+				name = usfp_railroad_boom
+				years = 2
+			}
+		}
+		scope:railway_bust_state = {
+			add_modifier = {
+				name = usfp_railroad_bust
+				years = 2
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	#government buyout!
+	option = {
+		name = usfp_gilded_age.13.c
+		scope:railway_boom_state = {
+			add_modifier = {
+				name = usfp_railroad_boom
+				years = 2
+			}
+		}
+		scope:railway_bust_state = {
+			add_modifier = {
+				name = usfp_railroad_bust
+				years = 2
+			}
+		}
+		#pending nationalization mechanic
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+#New Rich - copied from Belle Epoque
+usfp_gilded_age.14 = {
+	type = country_event
+	placement = scope:new_york_scope
+
+	title = usfp_gilded_age.14.t
+	desc = usfp_gilded_age.14.d
+	flavor = usfp_gilded_age.14.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 3
+	cooldown = { months = very_long_modifier_time } #once
+
+	trigger = {
+		s:STATE_NEW_YORK = {
+			root_has_state_here = yes
+			region_state:USA = {
+				average_sol >= 16
+			}
+		}
+	}
+
+	immediate = {
+		s:STATE_NEW_YORK.region_state:USA = {
+			save_scope_as = new_york_scope
+		}
+		ig:ig_industrialists = {
+			save_scope_as = industrialists_scope
+		}
+		ig:ig_landowners = {
+			save_scope_as = landowners_scope
+		}
+	}
+	
+	#good for them
+	option = {
+		name = usfp_gilded_age.14.a
+		default_option = yes
+		scope:new_york_scope = {
+			add_modifier = {
+				name = modifier_noveaux_riches
+				months = long_modifier_time
+			}
+		}
+	}
+	#political maneuvering
+	option = {
+		name = usfp_gilded_age.14.b
+		scope:new_york_scope = {
+			add_modifier = {
+				name = modifier_noveaux_riches
+				months = long_modifier_time
+			}
+		}
+		ig:ig_industrialists = {
+			add_modifier = {
+				name = usfp_supported_new_rich_positive_modifier
+				years = 2
+			}
+		}
+		ig:ig_petty_bourgeoisie = {
+			add_modifier = {
+				name = usfp_supported_new_rich_negative_modifier
+				years = 2
+			}
+		}
+		ig:ig_trade_unions = {
+			add_modifier = {
+				name = usfp_supported_new_rich_negative_modifier
+				years = 2
+			}
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_supported_new_rich_negative_modifier
+				years = 2
+			}
+		}
+	}
+}

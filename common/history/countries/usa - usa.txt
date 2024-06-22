@@ -8,7 +8,7 @@
 		
 		set_market_capital = STATE_NEW_YORK
 		
-		set_tariffs_export_priority = g:fabric		
+		set_tariffs_export_priority = g:fabric
 		
 		set_variable = monroe_doctrine
 		

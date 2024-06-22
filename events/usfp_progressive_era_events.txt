@@ -2,6 +2,28 @@
 namespace = usfp_progressive_era
 
 #Progressive Era begin event
+usfp_progressive_era.1 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.1.t
+	desc = usfp_progressive_era.1.d
+	flavor = usfp_progressive_era.1.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_rich_and_poor"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	duration = 3
+
+	option = {
+		name = usfp_progressive_era.1.a
+	}
+}
 #Scientific Management
 usfp_progressive_era.2 = {
 	type = country_event
@@ -22,8 +44,6 @@ usfp_progressive_era.2 = {
 	duration = 3
 
 	trigger = {
-		exists = c:USA
-		c:USA = root
 		has_technology_researched = central_planning
 		NOT = {
 			has_variable = scientific_management_spawned
@@ -107,14 +127,345 @@ usfp_progressive_era.2 = {
 	}
 }
 #American Anti-Imperialist League
+usfp_progressive_era.3 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.3.t
+	desc = usfp_progressive_era.3.d
+	flavor = usfp_progressive_era.3.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "southamerica_election"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+	cooldown = {months = very_long_modifier_time } #once
+	option = {
+		name = usfp_progressive_era.3.a
+		#pending lobby mechanic
+	}
+}
 #World Parliament of Religions
+usfp_progressive_era.4 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.4.t
+	desc = usfp_progressive_era.4.d
+	flavor = usfp_progressive_era.4.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "asia_hinduism_sikhism"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/invention_icons/unused/secularism.dds"
+
+	duration = 3
+	cooldown = {months = very_long_modifier_time } #once
+	option = {
+		name = usfp_progressive_era.4.a
+	}
+}
 #Eugenics movement
+usfp_progressive_era.5 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.5.t
+	desc = usfp_progressive_era.5.d
+	flavor = usfp_progressive_era.5.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+	cooldown = {months = very_long_modifier_time } #once
+	option = {
+		name = usfp_progressive_era.5.a
+	}
+}
 #City Beautiful movement
+usfp_progressive_era.6 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.6.t
+	desc = usfp_progressive_era.6.d
+	flavor = usfp_progressive_era.6.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/invention_icons/urban_planning.dds"
+
+	duration = 3
+	cooldown = {months = very_long_modifier_time } #once
+	option = {
+		name = usfp_progressive_era.6.a
+	}
+}
 #Social Hygiene movement
-#Antitrust Action
+usfp_progressive_era.7 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.7.t
+	desc = usfp_progressive_era.7.d
+	flavor = usfp_progressive_era.7.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_sufferage"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/invention_icons/antibiotics.dds"
+
+	duration = 3
+	cooldown = {months = very_long_modifier_time } #once
+	option = {
+		name = usfp_progressive_era.7.a
+	}
+}
+#Monopoly
+usfp_progressive_era.8 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.8.t
+	desc = usfp_progressive_era.8.d
+	flavor = usfp_progressive_era.8.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_factory_closed"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+	cooldown = {
+		months = 36
+	}
+	option = {
+		name = usfp_progressive_era.8.a
+	}
+}
 #Direct Democracy in State
+usfp_progressive_era.9 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.9.t
+	desc = usfp_progressive_era.9.d
+	flavor = usfp_progressive_era.9.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "southamerica_election"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	duration = 3
+
+	cooldown = {
+		months = 36
+	}
+
+	trigger = {
+		
+	}
+
+	immediate = {
+		
+	}
+
+	#cool
+	option = {
+		name = usfp_progressive_era.9.a
+		default_option = yes
+	}
+}
 #Muckraker: Medicine
+usfp_progressive_era.10 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.10.t
+	desc = usfp_progressive_era.10.d
+	flavor = usfp_progressive_era.10.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/invention_icons/vitamins.dds"
+
+	duration = 3
+
+	option = {
+		name = usfp_progressive_era.10.a
+	}
+}
 #Muckraker: Upton Sinclair, The Jungle
-#Muckraker: Child Labor 
+usfp_progressive_era.11 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.11.t
+	desc = usfp_progressive_era.11.d
+	flavor = usfp_progressive_era.11.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "asia_factory_accident"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/goods_icons/meat.dds"
+
+	duration = 3
+	cooldown = {months = very_long_modifier_time } #once
+	trigger = {
+		
+	}
+
+	option = {
+		name = usfp_progressive_era.11.a
+	}
+}
+#Muckraker: Child Labor
+usfp_progressive_era.12 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.12.t
+	desc = usfp_progressive_era.12.d
+	flavor = usfp_progressive_era.12.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "southamerica_child_labor"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	duration = 3
+	cooldown = {months = very_long_modifier_time } #once
+	option = {
+		name = usfp_progressive_era.12.a
+	}
+} 
 #Muckraker: Political Machines
+usfp_progressive_era.13 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.13.t
+	desc = usfp_progressive_era.13.d
+	flavor = usfp_progressive_era.13.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+	cooldown = {months = very_long_modifier_time } #once
+	option = {
+		name = usfp_progressive_era.13.a
+	}
+}
 #Muckraker: Ida Tarbell, Standard Oil Company
+usfp_progressive_era.14 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.14.t
+	desc = usfp_progressive_era.14.d
+	flavor = usfp_progressive_era.14.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "middleeast_oil_derricks"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	cooldown = {months = very_long_modifier_time } #once
+
+	trigger = {
+		any_company = {
+			count > 0
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { 
+				has_company = company_type:company_standard_oil
+			}
+			company:company_standard_oil = {
+				save_scope_as = standard_oil_scope
+			}
+		}
+		else = {
+			random_company = {
+				save_scope_as = standard_oil_scope
+			}
+		}
+	}
+
+	#lets bust some trusts!
+	option = {
+		name = usfp_progressive_era.14.a
+		default_option = yes
+		remove_company = scope:standard_oil_scope
+		ai_chance = {
+			base = 10
+		}
+	}
+	#they are too big to fail
+	option = {
+		name = usfp_progressive_era.14.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				trigger = {
+					ig:ig_industrialists = {
+						is_in_government = yes
+					}
+				}
+				multiply = 10
+			}
+		}
+	}
+
+}

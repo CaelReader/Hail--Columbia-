@@ -210,3 +210,10 @@ state_trait_zihuatanejo_bay = {
 		state_building_naval_base_max_level_add = 10
 	}
 }
+
+state_trait_navel_oranges = {
+	icon = "gfx/interface/icons/state_trait_icons/citrus.dds"
+	modifier = {
+		goods_output_fruit_mult = 0.05
+	}
+}

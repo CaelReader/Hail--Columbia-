@@ -447,6 +447,8 @@ usfp_gilded_age_modifier = {
 	state_radicals_from_sol_change_mult = 0.10
 	state_capitalists_investment_pool_contribution_add = 0.10
 	state_capitalists_investment_pool_efficiency_mult = 0.10
+	country_company_construction_efficiency_bonus_add = 0.05
+	country_company_throughput_bonus_add = 0.05
 }
 
 usfp_gilded_age_corruption_modifier = {
