@@ -1,4 +1,5 @@
-﻿usfp_usa_thomas_nast = {
+﻿#by Lord R
+usfp_usa_thomas_nast = {
 	portrait_info = {
 		genes={
 			hair_color={ 73 177 0 0 }

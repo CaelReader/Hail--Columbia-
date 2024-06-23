@@ -685,3 +685,18 @@ usfp_usa_samuel_gompers = {
     traits = { basic_political_operator meticulous usfp_trait_antiexpansionist master_bureaucrat }
     #event-spawned
 }
+
+#USFP: William Graham Sumner, social darwinist
+usfp_usa_william_sumner = {
+    first_name = William_Graham
+    last_name = Sumner
+    historical = yes
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    ideology = ideology_usfp_social_darwinist_leader
+    interest_group = ig_intelligentsia
+    birth_date = 1840.11.30
+    traits = { literary arrogant direct usfp_trait_antiexpansionist }
+    #event-spawned
+}

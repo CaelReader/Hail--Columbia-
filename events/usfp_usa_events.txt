@@ -1755,3 +1755,60 @@ usfp_usa.20 = {
 	}
 }
 
+#Afro-American President
+usfp_usa.21 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:us_president_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	placement = root
+
+	title = usfp_usa.21.t
+	desc = usfp_usa.21.d
+	flavor = usfp_usa.21.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		c:USA ?= this
+		ruler = {
+			has_culture = cu:afro_american
+		}
+		NOT = {
+			has_variable = had_afro_american_president
+		}
+	}
+
+	immediate = {
+		set_variable = had_afro_american_president
+		ruler = {
+			save_scope_as = us_president_scope
+		}
+		cu:afro_american = {
+			save_scope_as = afro_american_scope
+		}
+	}
+
+	#huzzah
+	option = {
+		name = usfp_usa.21.a
+		default_option = yes
+		add_loyalists = {
+			value = very_large_radicals
+			culture = cu:afro_american
+		}
+		add_radicals = {
+			value = medium_radicals
+			culture = cu:dixie
+		}
+		add_radicals = {
+			value = small_radicals
+			culture = cu:yankee
+		}
+	}
+
+}

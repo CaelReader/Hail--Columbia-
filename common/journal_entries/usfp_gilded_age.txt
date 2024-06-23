@@ -30,6 +30,9 @@ usfp_gilded_age = {
 			has_journal_entry = je_acw_reconstruction
 		}
 	}
+	immediate = {
+		trigger_event = usfp_gilded_age.1
+	}
 	on_timeout = {
 		set_variable = gilded_age_complete
 	}
@@ -49,7 +52,6 @@ usfp_gilded_age = {
 					value > 3
 				}
 			}
-			in_default = yes
 		}
 	}
 	on_fail = {
@@ -64,7 +66,7 @@ usfp_gilded_age = {
 	}
 	on_monthly_pulse = {
 		random_events = {
-			300 = 0
+			1000 = 0
 		}
 	}
 }

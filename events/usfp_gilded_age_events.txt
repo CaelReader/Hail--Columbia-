@@ -21,7 +21,13 @@ usfp_gilded_age.1 = {
 	duration = 3
 
 	#triggered by JE
-	
+
+	immediate = {
+		ig:ig_industrialists = {
+			save_scope_as = industrialists_scope
+		}
+	}
+
 	option = {
 		name = usfp_gilded_age.1.a
 		default_option = yes
@@ -55,29 +61,134 @@ usfp_gilded_age.2 = {
 	duration = 3
 
 	trigger = {
+		ruler = {
+			interest_group = {
+				has_party = yes
+			}
+		}
 		in_election_campaign = yes
 		NOT = {
 			has_variable = had_credit_mobilier
 		}
 	}
+
+	immediate = {
+		set_variable = had_credit_mobilier
+		ruler = {
+			interest_group = {
+				party = {
+					save_scope_as = scandal_party
+				}
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		in_election_campaign = no
+	}
 	
-	#damn 
+	#investigation I guess
 	option = {
 		name = usfp_gilded_age.2.a
 		default_option = yes
+		add_treasury = -500000
+		scope:scandal_party = {
+			add_momentum = momentum_large_decrease
+		}
+		add_modifier = {
+			name = usfp_scandal_outrage_modifier
+			years = 10
+			is_decaying = yes
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#lets root out corruption!
+	option = {
+		name = usfp_gilded_age.2.b
+		add_treasury = -500000
+		every_interest_group = {
+			limit = {
+				has_party = yes
+				party = scope:scandal_party
+			}
+			add_modifier = {
+				name = usfp_investigated_scandal_modifier
+				years = 5
+			}
+		}
+		add_modifier = {
+			name = usfp_scandal_outrage_modifier
+			years = 10
+			is_decaying = yes
+			multiplier = 0.5
+		}
+		ai_chance = {
+			base = 0
+		}
 	}
 	#coverup
 	option = {
-		name = usfp_gilded_age.2.b
+		name = usfp_gilded_age.2.c
+		add_treasury = -500000
+		random_list = {
+			30 = {
+				scope:scandal_party = {
+					add_momentum = momentum_very_large_decrease
+				}
+				add_modifier = {
+					name = usfp_scandal_outrage_modifier
+					years = 10
+					is_decaying = yes
+				}
+				add_radicals = {
+					value = medium_radicals
+					strata = poor
+				}
+			}
+			30 = {
+				scope:scandal_party = {
+					add_momentum = momentum_large_decrease
+				}
+				add_modifier = {
+					name = usfp_scandal_outrage_modifier
+					years = 10
+					is_decaying = yes
+				}
+			}
+			30 = {
+				scope:scandal_party = {
+					add_momentum = momentum_medium_decrease
+				}
+				add_modifier = {
+					name = usfp_scandal_outrage_modifier
+					years = 10
+					is_decaying = yes
+					multiplier = 0.5
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
 	}
 	#censor
 	option = {
-		name = usfp_gilded_age.2.c
+		name = usfp_gilded_age.2.e
+		add_treasury = -500000
 		trigger = {
 			OR = {
 				has_law = law_type:law_censorship
 				has_law = law_type:law_outlawed_dissent
 			}
+		}
+		highlighted_option = yes
+		scope:scandal_party = {
+			add_momentum = momentum_small_decrease
+		}
+		ai_chance = {
+			base = 1000
 		}
 	}
 }
@@ -99,9 +210,18 @@ usfp_gilded_age.3 = {
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	duration = 3
-	
+	cooldown = {months = very_long_modifier_time } #once
+
+	#shut this down at once!
 	option = {
 		name = usfp_gilded_age.3.a
+		default_option = yes
+		add_treasury = -500000
+	}
+	#not a big deal
+	option = {
+		name = usfp_gilded_age.3.b
+		add_treasury = -1000000
 	}
 }
 #Social Darwinism
@@ -122,9 +242,63 @@ usfp_gilded_age.4 = {
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	duration = 3
-	
+	cooldown = {months = very_long_modifier_time } #once
+
+
+	trigger = {
+		game_date > 1860.1.1
+	}
+
+	immediate = {
+		ideology:ideology_usfp_social_darwinist_leader = {
+			save_scope_as = social_darwinism_scope
+		}
+		root = {
+			save_scope_as = usa_scope
+		}
+	}
+
+	#uh oh
 	option = {
 		name = usfp_gilded_age.4.a
+		default_option = yes
+		custom_tooltip = {
+			text = social_darwinism_unlocked
+			set_global_variable = social_darwinism_appeared
+		}
+		custom_tooltip = {
+			text = social_darwinist_appears
+			create_character = {
+				template = usfp_usa_william_sumner
+				is_agitator = yes
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#great idea!
+	option = {
+		name = usfp_gilded_age.4.b
+		custom_tooltip = {
+			text = social_darwinism_promoted
+			set_global_variable = social_darwinism_appeared
+			set_variable = social_darwinism_promoted
+		}
+		custom_tooltip = {
+			text = social_darwinist_appears
+			create_character = {
+				template = usfp_usa_william_sumner
+				is_agitator = yes
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			pop_type = academics
+		}
+		ai_chance = {
+			base = 0
+		}
 	}
 }
 #Tammany Hall
@@ -145,7 +319,7 @@ usfp_gilded_age.5 = {
 	icon = "gfx/interface/icons/event_icons/boss_tweed_icon.dds"
 
 	duration = 3
-	
+	cooldown = {months = very_long_modifier_time } #once
 	option = {
 		name = usfp_gilded_age.5.a
 	}
@@ -168,7 +342,7 @@ usfp_gilded_age.6 = {
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
 	duration = 3
-	
+	cooldown = {months = very_long_modifier_time } #once
 	option = {
 		name = usfp_gilded_age.6.a
 	}
@@ -273,7 +447,7 @@ usfp_gilded_age.8 = {
 	icon = "gfx/interface/icons/invention_icons/intensive_agriculture.dds"
 
 	duration = 3
-	
+	cooldown = {months = very_long_modifier_time } #once
 	option = {
 		name = usfp_gilded_age.8.a
 	}
@@ -345,7 +519,9 @@ usfp_gilded_age.10 = {
 
 	duration = 3
 	
-
+	immediate = {
+		set_variable = jesse_james_captured
+	}
 	#triggered by gilded_age.9
 
 	#good work
@@ -373,6 +549,18 @@ usfp_gilded_age.11 = {
 
 	duration = 3
 	
+	trigger = {
+		has_variable = had_james_younger
+		NOR = {
+			has_variable = jesse_james_dead
+			has_variable = jesse_james_captured
+		}
+	}
+
+	immediate = {
+		set_variable = jesse_james_dead
+	}
+
 	#deserved
 	option = {
 		name = usfp_gilded_age.11.a

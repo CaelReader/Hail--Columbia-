@@ -1773,8 +1773,10 @@ usfp_manifest_destiny.19 = {
 			value < 0.2
 			culture = cu:anglo_canadian
 		}
-		OR = {
-			has_global_variable = american_civil_war
+		ig:ig_landowners = {
+			NOT = {
+				has_ideology = ideology:ideology_pro_slavery
+			}
 		}
 		is_at_war = no
 		is_diplomatic_play_committed_participant = no

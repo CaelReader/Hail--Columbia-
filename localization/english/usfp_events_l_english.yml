@@ -634,6 +634,11 @@ usfp_usa.20.f: ""The principle of the Constitution is that of a separation of le
 usfp_usa.20.a: "We must restore the rightful republic."
 usfp_usa.20.b: "Amend the constitution. Congress will reign supreme."
 
+usfp_usa.21.t: "The First [SCOPE.sCulture('afro_american_scope').GetName] [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]"
+usfp_usa.21.d: "The inauguration of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetName] marks a historic moment for the [ROOT.GetCountry.GetName]. Less than a century ago, the [SCOPE.sCulture('afro_american_scope').GetName] people were enslaved, and now one has been elected to the highest office in the land. [SCOPE.sCulture('afro_american_scope').GetName] citizens across the nation celebrate at this momentous occasion, while White America reels from the election."
+usfp_usa.21.f: ""Now is the accepted time, not tomorrow, not some more convenient season. It is today that our best work can be done and not some future day or future year. It is today that we fit ourselves for the greater usefulness of tomorrow. Today is the seed time, now are the hours of work, and tomorrow comes the harvest and the playtime."" #WEB Du Bois
+usfp_usa.21.a: "The cost of liberty is less than the price of repression."
+
 ### Labor Events
 usfp_usa_labor.1.t: "The Industrial Workers of the World"
 usfp_usa_labor.1.d: "A convention of radical trade unionists has met in [SCOPE.sState('illinois_scope').GetCityHubName] to found the Industrial Workers of the World. Taking a much more militant stance than traditional labor organizations, the IWW seeks to unite workers of all trades into one big union. Their stated objective is the abolition of the wage system via direct action, general strikes, and sabotage."
@@ -786,15 +791,19 @@ usfp_filibuster.4.a: "We will annex the territory."
 usfp_filibuster.4.b: "[SCOPE.sCharacter('william_walker_scope').GetFullName] will granted governorship of the territory."
 usfp_filibuster.4.c: "We will not associate with these filibusters."
 
+#Gilded Age events
 usfp_gilded_age.1.t: "A Story Of Today"
-usfp_gilded_age.1.d: ""
+usfp_gilded_age.1.d: "New railroads, new industries, and new companies have roared across the [ROOT.GetCountry.GetName], precipitating a meteoric rise in the station of the [SCOPE.gsInterestGroup('industrialists_scope').GetName]. With no end in sight to the economic growth, the new fortunes of the upper class have propelled them into lifestyles of lavish excess, but has also enabled widespread political corruption at all levels of government."
 usfp_gilded_age.1.f: ""To the young American, here or elsewhere, the paths to fortune are innumerable and all open; There is invitation in the air and success in all his wide horizon."" #Mark Twain
 usfp_gilded_age.1.a: "A toast to prosperity!"
 
 usfp_gilded_age.2.t: "Fraudulent Lines"
-usfp_gilded_age.2.d: ""
-usfp_gilded_age.2.f: """"
-usfp_gilded_age.2.a: ""
+usfp_gilded_age.2.d: "The press has unveiled a massive government corruption scheme involving railroad contracts worth double the actual cost of construction, allowing the fraudsters to pocket millions. A dozen prominent members of the [SCOPE.sParty('scandal_party').GetName] are alleged to have taken part, facilitating approval of the contracts while taking a cut of the proceeds. The opposition is demanding a comprehensive investigation and the censure of all involved."
+usfp_gilded_age.2.f: ""COLOSSAL BRIBERY.\n\nCongressmen who have robbed the people, and who now support the national robber!\n\nPrincely gifts to the chairmen of committees in congress!"" #The New York Sun
+usfp_gilded_age.2.a: "Perform a token investigation."
+usfp_gilded_age.2.b: "We need to take this seriously."
+usfp_gilded_age.2.c: "Deny everything!"
+usfp_gilded_age.2.e: "Stop the spread of this misinformation."
 
 usfp_gilded_age.3.t: "Corruption in the Mail"
 usfp_gilded_age.3.d: ""
@@ -802,11 +811,16 @@ usfp_gilded_age.3.f: """"
 usfp_gilded_age.3.a: ""
 
 usfp_gilded_age.4.t: "Social Darwinism"
-usfp_gilded_age.4.d: ""
-usfp_gilded_age.4.f: """"
-usfp_gilded_age.4.a: ""
+usfp_gilded_age.4.d: "Darwin's theory of evolution describes a world where species must constantly struggle to survive. Some sociologists have now begun to transfer these ideas from biology into politics, promoting 'survival of the fittest' as the natural and correct model for society."
+usfp_gilded_age.4.f: ""Before the tribunal of nature a man has no more right to life than a rattlesnake; he has no more right to liberty than any wild beast; his right to pursuit of happiness is nothing but a license to maintain the struggle for existence."" #William Graham Sumner
+usfp_gilded_age.4.a: "That's not what Darwin meant..."
+usfp_gilded_age.4.b: "All life is struggle!"
+social_darwinism_unlocked: "[SCOPE.sIdeology('social_darwinism_scope').GetName] characters can now appear."
+social_darwinism_promoted:"[SCOPE.sIdeology('social_darwinism_scope').GetName] characters are more likely to appear in our country."
+social_darwinist_appears: "A [SCOPE.sIdeology('social_darwinism_scope').GetName] [concept_agitator] will appear in [SCOPE.sCountry('usa_scope').GetName]."
 
-usfp_gilded_age.5.t: "The Tammany Hall Regime"
+
+usfp_gilded_age.5.t: "The Tammany Hall Machine"
 usfp_gilded_age.5.d: ""
 usfp_gilded_age.5.f: """"
 usfp_gilded_age.5.a: ""
@@ -817,16 +831,17 @@ usfp_gilded_age.6.f: """"
 usfp_gilded_age.6.a: ""
 
 usfp_gilded_age.7.t: "The Sun-Kissed State"
-usfp_gilded_age.7.d: ""
-usfp_gilded_age.7.f: """"
-usfp_gilded_age.7.a: ""
+usfp_gilded_age.7.d: "The introduction of 'Washington Navel' oranges into southern [SCOPE.sState('california_scope').GetName] has precipitated a boom in the citrus industry there. Vast orange groves have been planted alongside fresh new railroad tracks built for the purpose. Local boosters and rail companies have begun a nationwide ad campaign promoting migration to the area, promising health, prosperity, and endless sunshine."
+usfp_gilded_age.7.f: ""Here is our Mediterranean! Here is our Italy! It is a Mediterranean without marshes and without malaria… It is a Mediterranean with more equitable climate, warmer winters and cooler summers…\n\nThe time is not distant when this corner of the United States will produce in abundance, and year after year without failure, all the fruits and nuts which for a thousand years the civilized world of Europe has looked to the Mediterranean to supply."" #Charles Dudley Warner
+usfp_gilded_age.7.a: "Delicious and profitable!"
+usfp_gilded_age.7.b: "They're called Washington Navels, they should also be grown in Washington!"
 
 usfp_gilded_age.8.t: "A Gift for the Grangers"
 usfp_gilded_age.8.d: ""
 usfp_gilded_age.8.f: """"
 usfp_gilded_age.8.a: ""
 
-usfp_gilded_age.9.t: "James-Younger Bank Robbery"
+usfp_gilded_age.9.t: "James-Younger Gang Strikes!"
 usfp_gilded_age.9.d: ""
 usfp_gilded_age.9.f: """"
 usfp_gilded_age.9.a: ""
@@ -852,7 +867,7 @@ usfp_gilded_age.13.f: """"
 usfp_gilded_age.13.a: ""
 
 usfp_gilded_age.14.t: "New Money"
-usfp_gilded_age.14.d: "As modern industries expand across the country, they have created a new cohort of wealthy [SCOPE.gsInterestGroup('industrialists_scope').GetName] whose fortunes exceed that of the established [SCOPE.gsInterestGroup('landowner_scope').GetName] families. Many have flocked to [SCOPE.sState('new_york_scope').GetName], building elaborate new mansions and attempting to integrate themselves into high society, much to the chagrin of the Old Money aristocrats."
+usfp_gilded_age.14.d: "As modern industries expand across the country, they have created a new cohort of wealthy [SCOPE.gsInterestGroup('industrialists_scope').GetName] whose fortunes exceed that of established families. Many have flocked to [SCOPE.sState('new_york_scope').GetName], building elaborate mansions and attempting to integrate themselves into high society, much to the chagrin of the Old Money aristocrats."
 usfp_gilded_age.14.f: ""She’s got an indiscreet voice," I remarked. "It’s full of–" I hesitated.\n\n"Her voice is full of money," he said suddenly.\n\nThat was it. I’d never understood before. It was full of money–that was the inexhaustible charm that rose and fell in it, the jingle of it, the cymbals’ song of it." #- F. Scott Fitzgerald
 usfp_gilded_age.14.a: "Old Money will have to make room for the New."
 usfp_gilded_age.14.b: "A toast to our rising captains of industry!"

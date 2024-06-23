@@ -270,7 +270,8 @@ usfp_gag_rule_on_action = {
 
 on_new_ruler = {
 	on_actions = {
-		usfp_elected_abolitionist 
+		usfp_elected_abolitionist
+		usfp_new_president 
 	}
 }
 
@@ -294,6 +295,12 @@ usfp_elected_abolitionist = {
 				}
 			}
 		}
+	}
+}
+
+usfp_new_president = {
+	events = {
+		usfp_usa.21
 	}
 }
 

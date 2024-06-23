@@ -241,3 +241,8 @@ usfp_supported_new_rich_negative_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_negative.dds
 	interest_group_approval_add = -2
 }
+
+usfp_investigated_scandal_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	interest_group_approval_add = -3
+}

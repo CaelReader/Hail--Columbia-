@@ -766,10 +766,15 @@ ideology_usfp_social_darwinist_leader = {
 
 	possible = {
 		owner = {
-			exists = c:USA
+			has_global_variable = social_darwinism_appeared
 			OR = {
-				c:USA = this
-				civil_war_origin_country = c:USA
+				country_has_primary_culture = cu:yankee
+				country_has_primary_culture = cu:dixie
+				country_has_primary_culture = cu:german
+				country_has_primary_culture = cu:turkish
+				country_has_primary_culture = cu:han
+				country_has_primary_culture = cu:manchu
+				country_has_primary_culture = cu:japanese
 			}
 		}
 		scope:interest_group = {
@@ -791,7 +796,26 @@ ideology_usfp_social_darwinist_leader = {
 	}
 	
 	leader_weight = {
-		value = 0
+		value = 10
+		if = {
+			limit = {
+				owner = {
+					has_variable = social_darwinism_promoted
+				}
+			}
+			add = 15
+		}
+		if = {
+			limit = {
+				scope:interest_group = {
+					OR = {
+						is_interest_group_type = ig_petty_bourgeoisie
+						is_interest_group_type = ig_armed_forces
+					}
+				}
+			}
+			multiply = 0.5
+		}
 	}
 
 }

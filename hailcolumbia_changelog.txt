@@ -159,9 +159,11 @@ localization updates
 New Content:
 	Added Henry George and Georgism
 	New Labor Events: Knights of Labor, AFL, Great Railroad Strike, Looking Backward
+	Added event marking the election of the first Afro-American president
 Updates:
 	Added "Bourbon Democrats" modifier that will attract Market Liberal industrialists to the Democratic Party after the civil war
 	Scientific Management event is now part of the Progressive Era pool of events
 Fixes:
 	Lower Canada and New Brunswick now start with Frontier Colonization
 	Canadian tags now start with a colonization boost
+	American Superculture should properly fire after Peculiar Reconciliation
