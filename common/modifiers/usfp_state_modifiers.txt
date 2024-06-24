@@ -152,3 +152,11 @@ usfp_railroad_bust = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_machinist_negative.dds
 	building_railway_throughput_add = -0.30
 }
+
+usfp_tammany_hall_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_negative.dds
+	state_pop_pol_str_mult = -0.20
+	interest_group_ig_landowners_pol_str_mult = 1.00
+	interest_group_ig_industrialists_pol_str_mult = 0.50
+	state_tax_waste_add = 0.20
+}

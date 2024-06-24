@@ -246,3 +246,18 @@ usfp_investigated_scandal_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	interest_group_approval_add = -3
 }
+
+usfp_trust_busting_positive_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
+	interest_group_approval_add = 2
+}
+
+usfp_trust_busting_negative_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_negative.dds
+	interest_group_approval_add = -3
+}
+
+usfp_pro_monopoly_negative_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_negative.dds
+	interest_group_approval_add = -3
+}

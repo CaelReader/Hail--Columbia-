@@ -20,8 +20,13 @@ usfp_progressive_era.1 = {
 
 	duration = 3
 
+	#cool
 	option = {
 		name = usfp_progressive_era.1.a
+	}
+	#bad
+	option = {
+		name = usfp_progressive_era.1.b
 	}
 }
 #Scientific Management
@@ -145,9 +150,14 @@ usfp_progressive_era.3 = {
 
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
+	#cool
 	option = {
 		name = usfp_progressive_era.3.a
 		#pending lobby mechanic
+	}
+	#bad
+	option = {
+		name = usfp_progressive_era.3.b
 	}
 }
 #World Parliament of Religions
@@ -169,8 +179,15 @@ usfp_progressive_era.4 = {
 
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
+
+
+	#neat
 	option = {
 		name = usfp_progressive_era.4.a
+	}
+	#keep him here
+	option = {
+		name = usfp_progressive_era.4.b
 	}
 }
 #Eugenics movement
@@ -192,8 +209,63 @@ usfp_progressive_era.5 = {
 
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
+	
+	#this is bad
 	option = {
 		name = usfp_progressive_era.5.a
+		default_option = yes
+		add_radicals = {
+			value = small_radicals
+			strata = middle
+		}
+	}
+	#interesting
+	option = {
+		name = usfp_progressive_era.5.b
+		add_modifier = {
+			name = usfp_eugenics_movement_rising_modifier
+			years = 4
+		}
+	}
+	#immediately adopt!
+	option = {
+		name = usfp_progressive_era.5.c
+		highlighted_option = yes
+		trigger = {
+			any_interest_group = {
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_usfp_social_darwinist_leader
+						has_ideology = ideology:ideology_fascist
+						has_ideology = ideology:ideology_ethno_nationalist
+					}
+				}
+			}
+		}
+		random_interest_group = {
+			limit = {
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_usfp_social_darwinist_leader
+						has_ideology = ideology:ideology_fascist
+						has_ideology = ideology:ideology_ethno_nationalist
+					}
+				}
+			}
+			if = {
+				limit = { 
+					has_ideology = ideology:ideology_reactionary_segregationist
+				}
+				remove_ideology = ideology_reactionary_segregationist
+			}
+			if = {
+				limit = { 
+					has_ideology = ideology:ideology_reactionary_exclusionist
+				}
+				remove_ideology = ideology_reactionary_exclusionist
+			}
+			add_ideology = ideology_usfp_eugenicist
+		}
 	}
 }
 #City Beautiful movement
@@ -448,6 +520,33 @@ usfp_progressive_era.14 = {
 		name = usfp_progressive_era.14.a
 		default_option = yes
 		remove_company = scope:standard_oil_scope
+		trigger = {
+			NOT = {
+				has_law = law_type:law_laissez_faire
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			pop_type = capitalists
+		}
+		every_interest_group = {
+			limit = {
+				usfp_ig_dislikes_trusts = yes
+			}
+			add_modifier = {
+				name = usfp_trust_busting_positive_modifier
+				years = 4
+			}
+		}
+		every_interest_group = {
+			limit = {
+				usfp_ig_likes_trusts = yes
+			}
+			add_modifier = {
+				name = usfp_trust_busting_negative_modifier
+				years = 4
+			}
+		}
 		ai_chance = {
 			base = 10
 		}
@@ -455,6 +554,24 @@ usfp_progressive_era.14 = {
 	#they are too big to fail
 	option = {
 		name = usfp_progressive_era.14.b
+		trigger = {
+			NOT = {
+				has_law = law_type:law_laissez_faire
+			}
+		}
+		add_loyalists = {
+			value = medium_radicals
+			pop_type = capitalists
+		}
+		every_interest_group = {
+			limit = {
+				usfp_ig_dislikes_trusts = yes
+			}
+			add_modifier = {
+				name = usfp_pro_monopoly_negative_modifier
+				years = 4
+			}
+		}
 		ai_chance = {
 			base = 5
 			modifier = {
@@ -465,6 +582,22 @@ usfp_progressive_era.14 = {
 				}
 				multiply = 10
 			}
+		}
+	}
+	#our hands are tied
+	option = {
+		name = usfp_progressive_era.14.c
+		trigger = {
+			has_law = law_type:law_laissez_faire
+		}
+		highlighted_option = yes
+		add_modifier = {
+			name = usfp_anti_trust_agitation
+			years = 4
+		}
+		add_radicals = {
+			value = small_radicals
+			pop_type = academics
 		}
 	}
 

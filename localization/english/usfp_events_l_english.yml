@@ -805,10 +805,11 @@ usfp_gilded_age.2.b: "We need to take this seriously."
 usfp_gilded_age.2.c: "Deny everything!"
 usfp_gilded_age.2.e: "Stop the spread of this misinformation."
 
-usfp_gilded_age.3.t: "Corruption in the Mail"
-usfp_gilded_age.3.d: ""
-usfp_gilded_age.3.f: """"
-usfp_gilded_age.3.a: ""
+usfp_gilded_age.3.t: "Postal Fraud"
+usfp_gilded_age.3.d: "A corruption ring within the Post Office has been discovered, funneling millions from the treasury into the hands of corrupt senators and secretaries via fraudulent mail contracts. National newspapers have already begun printing the scandal in frontpage headlines, and Congress has demanded a thorough investigation."
+usfp_gilded_age.3.f: ""THE STAR ROUTE SWINDLE" was across all the papers. Caricactures of the men involved stole away bags of treasury funds while an impotent congress looked away. The mockery would have been less effective if it wasn't so accurate."
+usfp_gilded_age.3.a: "This cannot be allowed to continue."
+usfp_gilded_age.3.b: "Downplay the issue."
 
 usfp_gilded_age.4.t: "Social Darwinism"
 usfp_gilded_age.4.d: "Darwin's theory of evolution describes a world where species must constantly struggle to survive. Some sociologists have now begun to transfer these ideas from biology into politics, promoting 'survival of the fittest' as the natural and correct model for society."
@@ -820,10 +821,11 @@ social_darwinism_promoted:"[SCOPE.sIdeology('social_darwinism_scope').GetName] c
 social_darwinist_appears: "A [SCOPE.sIdeology('social_darwinism_scope').GetName] [concept_agitator] will appear in [SCOPE.sCountry('usa_scope').GetName]."
 
 
-usfp_gilded_age.5.t: "The Tammany Hall Machine"
-usfp_gilded_age.5.d: ""
-usfp_gilded_age.5.f: """"
-usfp_gilded_age.5.a: ""
+usfp_gilded_age.5.t: "The Tweed Regime"
+usfp_gilded_age.5.d: "While political machines have taken root across the country, [SCOPE.sState('new_york_scope').GetName] has been effectively taken over by William 'Boss' Tweed and his Tammany Hall organization. With cronies placed in political offices, purchased votes, and bribed judges, the entire apparatus of the state government is now at his beck and call. Details of Tweed's corruption and fraud have begun to leak to the press, driving public calls for his removal."
+usfp_gilded_age.5.f: "The press were calling them the "Forty Thieves", the ring of Tweed's underlings who stole as much as they could from the state's budget. Inflated contracts worth five, ten, hundreds of times their true value were handed out in exchange for support. The operation wasn't particularly well hidden, but Tammany Hall controlled all the mechanisms of government, and so could simply block any complaint or inquiry."
+usfp_gilded_age.5.a: "Tweed must go."
+usfp_gilded_age.5.b: "[SCOPE.sState('new_york_scope').GetName] seems to be doing just fine under Tweed."
 
 usfp_gilded_age.6.t: "The Gospel of Wealth"
 usfp_gilded_age.6.d: ""
@@ -940,9 +942,11 @@ usfp_progressive_era.13.f: """"
 usfp_progressive_era.13.a: ""
 
 usfp_progressive_era.14.t: "The History of [SCOPE.sCompany('standard_oil_scope').GetName]"
-usfp_progressive_era.14.d: ""
-usfp_progressive_era.14.f: """"
-usfp_progressive_era.14.a: ""
+usfp_progressive_era.14.d: "Muckraker Ida Tarbell has published a series of articles exposing the underhanded business practices of [SCOPE.sCompany('standard_oil_scope').GetName], detailing their intentional monopolization of the market. Newspapers across the country have praised Tarbell's work and denounced the company's illegal and rapacious behavior. Progressive voices within Congress have already put together a plan to strengthen antitrust laws and break up [SCOPE.sCompany('standard_oil_scope').GetName]."
+usfp_progressive_era.14.f: ""Now, if this company were the only concern in the country guilty of the practices which have given it monopolistic power, this story never would have been written. But it is simply the most conspicuous type of what can be done by these practices. The methods it employs with such acumen, persistency, and secrecy are employed by all sorts of business men, from corner grocers up to bankers. If exposed, they are excused on the ground that this is business."" #Ida Tarbell
+usfp_progressive_era.14.a: "Let's bust some trusts!"
+usfp_progressive_era.14.b: "Why should [SCOPE.sCompany('standard_oil_scope').GetName] be punished for being successful?"
+usfp_progressive_era.14.c: "We must let the market handle itself."
 
 
 usfp_test.1.t: "DEBUG EVENT"

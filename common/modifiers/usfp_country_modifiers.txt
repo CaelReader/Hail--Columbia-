@@ -485,3 +485,15 @@ usfp_scandal_outrage_modifier = {
 	interest_group_in_government_attraction_mult = -0.20
 	country_loyalists_from_legitimacy_mult = -0.50
 }
+
+usfp_eugenics_movement_rising_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	state_radicals_from_discrimination_mult = 0.15
+}
+
+usfp_anti_trust_agitation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	state_pop_support_law_interventionism_add = 0.10
+	state_radicals_from_sol_change_mult = 0.10
+	country_legitimacy_base_add = -5
+}

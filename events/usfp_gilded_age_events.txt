@@ -82,10 +82,6 @@ usfp_gilded_age.2 = {
 			}
 		}
 	}
-
-	cancellation_trigger = {
-		in_election_campaign = no
-	}
 	
 	#investigation I guess
 	option = {
@@ -216,12 +212,38 @@ usfp_gilded_age.3 = {
 	option = {
 		name = usfp_gilded_age.3.a
 		default_option = yes
-		add_treasury = -500000
+		add_treasury = -1000000
+		add_modifier = {
+			name = usfp_scandal_outrage_modifier
+			years = 5
+		}
+		capital = {
+			add_radicals_in_state = {
+				value = small_radicals
+				pop_type = bureaucrats
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
 	}
 	#not a big deal
 	option = {
 		name = usfp_gilded_age.3.b
 		add_treasury = -1000000
+		add_modifier = {
+			name = usfp_scandal_outrage_modifier
+			years = 10
+		}
+		capital = {
+			add_loyalists_in_state = {
+				value = small_radicals
+				pop_type = bureaucrats
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
 	}
 }
 #Social Darwinism
@@ -320,8 +342,50 @@ usfp_gilded_age.5 = {
 
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
+
+	trigger = {
+		owns_entire_state_region = STATE_NEW_YORK
+	}
+	immediate = {
+		s:STATE_NEW_YORK.region_state:USA = {
+			save_scope_as = new_york_scope	
+		} 
+	}
+
+	#crack down!
 	option = {
 		name = usfp_gilded_age.5.a
+		default_option = yes
+		scope:new_york_scope = {
+			add_radicals_in_state = {
+				value = small_radicals
+				pop_type = capitalists
+			}
+			add_modifier = {
+				name = usfp_tammany_hall_modifier
+				years = 2
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#don't do anything
+	option = {
+		name = usfp_gilded_age.5.b
+		scope:new_york_scope = {
+			add_loyalists_in_state = {
+				value = small_radicals
+				pop_type = capitalists
+			}
+			add_modifier = {
+				name = usfp_tammany_hall_modifier
+				years = 5
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
 	}
 }
 #Gospel of Wealth
@@ -343,8 +407,30 @@ usfp_gilded_age.6 = {
 
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
+
+	trigger = {
+		any_scope_character = {
+			has_template = usa_carnegie_character_template
+		}
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_template = usa_carnegie_character_template
+			}
+			save_scope_as = carnegie_scope
+		}
+	}
+
+	#cool
 	option = {
 		name = usfp_gilded_age.6.a
+		default_option = yes
+	}
+	#bah
+	option = {
+		name = usfp_gilded_age.6.b
 	}
 }
 #California Oranges
@@ -448,21 +534,33 @@ usfp_gilded_age.8 = {
 
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
+
+	#cool
 	option = {
 		name = usfp_gilded_age.8.a
+		default_option = yes
 	}
+	#they're going to get uppity
+	option = {
+		name = usfp_gilded_age.8.b
+	}
+	#maybe we can organize them
+	option = {
+		name = usfp_gilded_age.8.c
+	}
+
 }
-#James-Younger Gang
+#James-Younger Gang failed bank robbery
 usfp_gilded_age.9 = {
 	type = country_event
-	placement = root
+	placement = scope:minnesota_scope
 
 	title = usfp_gilded_age.9.t
 	desc = usfp_gilded_age.9.d
 	flavor = usfp_gilded_age.9.f
 	dlc = dlc_usfp
 	event_image = {
-		video = "europenorthamerica_american_civil_war"
+		video = "unspecific_vandalized_storefront"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -475,20 +573,43 @@ usfp_gilded_age.9 = {
 		NOT = {
 			has_variable = had_james_younger
 		}
+		owns_entire_state_region = STATE_MINNESOTA
 	}
 
 	immediate = {
 		set_variable = had_james_younger
+		s:STATE_MINNESOTA.region_State:USA = {
+			save_scope_as = minnesota_scope
+		}
 	}
 
-	#bastards
+	#they got what was coming to them
 	option = {
 		name = usfp_gilded_age.9.a
 		default_option = yes
+		scope:minnesota_scope = {
+			state_region = {
+				add_devastation = 5
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
 	}
-	#hunt them down!
+	#hunt down Jesse James!
 	option = {
 		name = usfp_gilded_age.9.b
+		trigger = {
+			NOT = {
+				has_law = law_type:law_no_police
+			}
+		}
+		scope:minnesota_scope = {
+			state_region = {
+				add_devastation = 5
+			}
+		}
+		add_treasury = -50000
 		random_list = {
 			80 = {}
 			20 = {
@@ -496,6 +617,15 @@ usfp_gilded_age.9 = {
 					id = usfp_gilded_age.10
 					months = 6
 				}
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					taking_loans = yes
+				}
+				multiply = 0
 			}
 		}
 	}
@@ -528,12 +658,17 @@ usfp_gilded_age.10 = {
 	option = {
 		name = usfp_gilded_age.10.a
 		default_option = yes
+		scope:minnesota_scope = {
+			add_loyalists_in_state = {
+				value = small_radicals
+			}
+		}
 	}
 }
 #Death of Jesse James
 usfp_gilded_age.11 = {
 	type = country_event
-	placement = root
+	placement = scope:missouri_scope
 
 	title = usfp_gilded_age.11.t
 	desc = usfp_gilded_age.11.d
@@ -555,20 +690,26 @@ usfp_gilded_age.11 = {
 			has_variable = jesse_james_dead
 			has_variable = jesse_james_captured
 		}
+		owns_entire_state_region = STATE_MISSOURI
 	}
 
 	immediate = {
 		set_variable = jesse_james_dead
+		s:STATE_MISSOURI.region_state:USA = {
+			save_scope_as = missouri_scope
+		}
 	}
 
 	#deserved
 	option = {
 		name = usfp_gilded_age.11.a
 		default_option = yes
-	}
-	#shame
-	option = {
-		name = usfp_gilded_age.11.b
+		scope:missouri_scope = {
+			add_radicals_in_state = {
+				culture = cu:dixie
+				value = small_radicals
+			}
+		}
 	}
 }
 #Political corruption in state

@@ -163,7 +163,9 @@ New Content:
 Updates:
 	Added "Bourbon Democrats" modifier that will attract Market Liberal industrialists to the Democratic Party after the civil war
 	Scientific Management event is now part of the Progressive Era pool of events
+	Added flavor government form for council republic USA
 Fixes:
 	Lower Canada and New Brunswick now start with Frontier Colonization
 	Canadian tags now start with a colonization boost
 	American Superculture should properly fire after Peculiar Reconciliation
+	The US President can't resign while A House Divided is active

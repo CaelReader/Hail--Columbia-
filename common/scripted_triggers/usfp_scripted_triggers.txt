@@ -266,3 +266,32 @@ usfp_president_might_go_for_third_term = {
 		has_ideology = ideology:ideology_ethno_nationalist
 	}
 }
+
+usfp_ig_dislikes_trusts = {
+	OR = {
+		leader = {
+			OR = {
+				has_ideology = ideology:ideology_usfp_progressive
+				has_ideology = ideology:ideology_social_democrat
+				has_ideology = ideology:ideology_usfp_georgist_leader
+				has_ideology = ideology:ideology_communist
+				has_ideology = ideology:ideology_anarchist
+				has_ideology = ideology:ideology_vanguardist
+			}
+		}
+		is_interest_group_type = ig_trade_unions
+		is_interest_group_type = ig_rural_folk
+	}
+}
+
+usfp_ig_likes_trusts = {
+	OR = {
+		is_interest_group_type = ig_industrialists
+		leader = {
+			OR = {
+				has_ideology = ideology:ideology_laissez_faire
+				has_ideology = ideology:ideology_usfp_social_darwinist_leader
+			}
+		}
+	}
+}
