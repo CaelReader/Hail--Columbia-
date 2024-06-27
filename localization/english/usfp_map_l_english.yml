@@ -1,7 +1,7 @@
 ﻿l_english:
 
- SMN:0 "Seminole"
- SMN_ADJ:0 "Seminole"
+#  SMN:0 "Seminole"
+#  SMN_ADJ:0 "Seminole"
  CSW:0 "Chickasaw"
  CSW_ADJ:0 "Chickasaw"
  YOK:0 "Yokut"
@@ -85,6 +85,11 @@ WCR_ADJ: "Woodland Cree"
  SWP_ADJ: "Shuswap"
  HDA: "Haida Gwaii"
  HDA_ADJ: "Haida"
+AHT: "Atna Nenn'"
+AHT_ADJ: "Ahtna"
+DXG: "Deg Xinag"
+DXG_ADJ: "Deg Xinag"
+
 
  ASK:0 "Alaska"
  ASK_ADJ:0 "Alaskan"

@@ -1,99 +1,94 @@
 ﻿GLOBAL = {
 	s:STATE_FLORIDA = {
-		create_country = {
-			tag = SMN
-			origin = c:USA
-			province = p:xF41CC0
-			on_created = {
-				add_modifier = {
-					name = usfp_seminole_modifier
-					years = 10
-				}
-		
-				effect_starting_technology_tier_4_tech = yes
+		c:SML = {
+			add_modifier = {
+				name = usfp_seminole_modifier
+				years = 10
+			}
+	
+			effect_starting_technology_tier_4_tech = yes
+			
+			activate_law = law_type:law_chiefdom
+			activate_law = law_type:law_autocracy
+			activate_law = law_type:law_cultural_exclusion
+			activate_law = law_type:law_elected_bureaucrats
+			activate_law = law_type:law_freedom_of_conscience
+			activate_law = law_type:law_national_militia
+			
+			activate_law = law_type:law_closed_borders
+			activate_law = law_type:law_legacy_slavery
+			activate_law = law_type:law_women_own_property
+			
+			ig:ig_devout = {
+				set_interest_group_name = ig_evangelical_church
+			}
+			create_military_formation = {
+				type = army
+				hq_region = sr:region_dixie
+				name = "Osceola's Warband"
 				
-				activate_law = law_type:law_chiefdom
-				activate_law = law_type:law_autocracy
-				activate_law = law_type:law_cultural_exclusion
-				activate_law = law_type:law_elected_bureaucrats
-				activate_law = law_type:law_freedom_of_conscience
-				activate_law = law_type:law_national_militia
-				
-				activate_law = law_type:law_closed_borders
-				activate_law = law_type:law_legacy_slavery
-				activate_law = law_type:law_women_own_property
-				
-				ig:ig_devout = {
-					set_interest_group_name = ig_evangelical_church
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_irregular_infantry
+					state_region = s:STATE_FLORIDA
+					count = 2
 				}
-				create_military_formation = {
-					type = army
-					hq_region = sr:region_dixie
-					name = "Osceola's Warband"
-					
-		
-					combat_unit = {
-						type = unit_type:combat_unit_type_irregular_infantry
-						state_region = s:STATE_FLORIDA
-						count = 2
-					}
-					save_scope_as = osceola_warband
+				save_scope_as = osceola_warband
+			}
+	
+			create_character = {
+				# Osceola
+				first_name = Asiyahola
+				last_name = Osceola
+				historical = yes
+				birth_date = 1804.4.18 #random date
+				hq = region_dixie
+				ig_leader = yes # Both general and IG leader
+				is_general = yes # Both general and IG leader
+				interest_group = ig_armed_forces
+				ideology = ideology_jingoist_leader
+				commander_rank = commander_rank_1
+				traits = {
+					pillager
+					experienced_defensive_strategist
+					defense_in_depth_specialist
 				}
-		
-				create_character = {
-					# Osceola
-					first_name = Asiyahola
-					last_name = Osceola
-					historical = yes
-					birth_date = 1804.4.18 #random date
-					hq = region_dixie
-					ig_leader = yes # Both general and IG leader
-					is_general = yes # Both general and IG leader
-					interest_group = ig_armed_forces
-					ideology = ideology_jingoist_leader
-					commander_rank = commander_rank_1
-					traits = {
-						pillager
-						experienced_defensive_strategist
-						defense_in_depth_specialist
-					}
-					culture = muskogean
-					save_scope_as = osceola_gen
-				}
-		
-				scope:osceola_gen = {
-					transfer_to_formation = scope:osceola_warband
-				}
+				culture = muskogean
+				save_scope_as = osceola_gen
+			}
+	
+			scope:osceola_gen = {
+				transfer_to_formation = scope:osceola_warband
+			}
 
-				create_character = {
-					#Micanopy
-					first_name = Micanopy
-					last_name = usfp_EmptyMicanopy
-					historical = yes
-					culture = muskogean
-					birth_date = 1780.8.21 #approx
-					interest_group = ig_landowners
-					ig_leader = yes
-					ideology = ideology_jingoist_leader
-					ruler = yes
-					traits = {
-						cautious
-						persistent
-					}
-				}
-				set_ruling_interest_groups = {
-					ig_armed_forces ig_landowners
+			create_character = {
+				#Micanopy
+				first_name = Micanopy
+				last_name = usfp_EmptyMicanopy
+				historical = yes
+				culture = muskogean
+				birth_date = 1780.8.21 #approx
+				interest_group = ig_landowners
+				ig_leader = yes
+				ideology = ideology_jingoist_leader
+				ruler = yes
+				traits = {
+					cautious
+					persistent
 				}
 			}
+			set_ruling_interest_groups = {
+				ig_armed_forces ig_landowners
+			}	
 		}
 		set_owner_of_provinces = {
-			country = c:SMN
+			country = c:SML
 			provinces = {  
 				xFE627B x7BCB55 x4407A0 xAAF2AF xC60D66 x7FA347 x3CDD1A xE740E5 x552AD8
-				x65ECBE x9088D5 xF0B481 x4070C0
+				# x65ECBE x9088D5 xF0B481 x4070C0
 		 }
 		}
-		add_claim = c:SMN
+		add_claim = c:SML
 		add_homeland = cu:muskogean
 		remove_homeland = cu:caddoan
 	}
@@ -144,14 +139,8 @@
 			country = c:CSW
 			type = protectorate
 		}
-		create_truce = {
+		create_unidirectional_truce = {
 			country = c:CSW
-			months = 60
-		}
-	}
-	c:CSW = {
-		create_truce = {
-			country = c:USA
 			months = 60
 		}
 	}
@@ -261,13 +250,13 @@
 			country = c:CHE
 			type = protectorate
 		}
-		create_truce = {
+		create_unidirectional_truce = {
 			country = c:CHE
 			months = 60
 		}
 	}
 	c:CSW = {
-		create_truce = {
+		create_bi_directional_truce = {
 			country = c:CHE
 			months = 60
 		}
@@ -371,12 +360,6 @@
 			traits = {
 				experienced_offensive_planner
 			}
-		}
-	}
-	c:MEX = {
-		create_truce = {
-			country = c:COM
-			months = 1
 		}
 	}
 	s:STATE_NEW_MEXICO = {
@@ -1433,7 +1416,7 @@
 	
 	#prevent Indian Removal cheese
 	c:USA = {
-		create_truce = {
+		create_unidirectional_truce = {
 			country = c:SEQ
 			months = 240
 		}
@@ -1486,6 +1469,7 @@
 			province = p:x0000C0
 			on_created = {
 				usfp_native_startup = yes
+				remove_modifier = native_conscription_10
 			}
 		}
 		set_owner_of_provinces = {
@@ -1604,6 +1588,7 @@
 			province = p:x2D1043
 			on_created = {
 				usfp_native_startup = yes
+				remove_modifier = native_conscription_10
 			}
 		}
 		#Chipewyan
@@ -1724,6 +1709,7 @@
 			province = p:x9D05EB
 			on_created = {
 				usfp_native_startup = yes
+				remove_modifier = native_conscription_10
 			}
 		}
 		set_owner_of_provinces = {
@@ -1781,6 +1767,7 @@
 			province = p:x0E182E
 			on_created = {
 				usfp_native_startup = yes
+				remove_modifier = native_conscription_10
 			}
 		}
 		set_owner_of_provinces = {
@@ -1909,6 +1896,7 @@
 			province = p:x810660
 			on_created = {
 				usfp_native_startup = yes
+				remove_modifier = native_conscription_10
 			}
 		}
 		set_owner_of_provinces = {
@@ -1951,6 +1939,7 @@
 			province = p:x3B027F
 			on_created = {
 				usfp_native_startup = yes
+				remove_modifier = native_conscription_10
 			}
 		}
 		set_owner_of_provinces = {
@@ -1997,6 +1986,7 @@
 			province = p:x1C0D58
 			on_created = {
 				usfp_native_startup = yes
+				remove_modifier = native_conscription_10
 			}
 		}
 		set_owner_of_provinces = {
@@ -2041,6 +2031,7 @@
 			province = p:x191F58
 			on_created = {
 				usfp_native_startup = yes
+				remove_modifier = native_conscription_10
 			}
 		}
 		set_owner_of_provinces = {
@@ -2066,6 +2057,7 @@
 			province = p:x19041A
 			on_created = {
 				usfp_native_startup = yes
+				remove_modifier = native_conscription_10
 			}
 		}
 		set_owner_of_provinces = {
@@ -2103,6 +2095,7 @@
 			province = p:x05137C
 			on_created = {
 				usfp_native_startup = yes
+				remove_modifier = native_conscription_10
 			}
 		}
 		# region_state:HBC = {
@@ -2166,6 +2159,7 @@
 			province = p:x150B2F
 			on_created = {
 				usfp_native_startup = yes
+				remove_modifier = native_conscription_10
 			}
 		}
 		set_owner_of_provinces = {
@@ -2223,6 +2217,7 @@
 			province = p:x0D0BF4
 			on_created = {
 				usfp_native_startup = yes
+				remove_modifier = native_conscription_10
 			}
 		}
 		set_owner_of_provinces = {
@@ -2246,6 +2241,7 @@
 			province = p:x021948
 			on_created = {
 				usfp_native_startup = yes
+				remove_modifier = native_conscription_10
 			}
 		}
 		set_owner_of_provinces = {
@@ -2261,7 +2257,77 @@
 			x20427C x863BE3 x910EE4 xE3B9DD x4D40FB x543A2C xC5631B x645235 x134775 x7E592E xAB9CFD 
 		}
 		}
+		region_state:KYK = {
+			add_culture_standard_of_living_modifier = {
+				culture = cu:athabaskan
+				multiplier = 7
+			}
+		}
 	}
+	#Ahtna
+	s:STATE_ALASKA = {
+		create_country = {
+			tag = AHT
+			origin = c:INV
+			province = p:x2CEF6D
+			on_created = {
+				usfp_native_startup = yes
+				remove_modifier = native_conscription_10
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:AHT
+			provinces = {  
+				x916497 x6F12FB x8F9677 xC3D539 xBAF8DF x3828AD xCC5FFD xBBE95B x96B11B xC83CB2 x8D4313 xCEE90B xCAAAC5 x8EA9A3 
+				xA4730D x6CBD13 x62CBC5 xFCA5FD x34BBBD xE7536B xD30D06 x3050C5 xE9B02B x05DAFE x214628 x50F6C0 xB03FB7 x4B6A2E 
+				x9A9180 x52B770 x73CFB5 x3BFC39 x53DDFF x5BF345 x69F4C8 x9569C3 x8B5AB4 x8CED2A xAE1E42 xE79B4F x0B8E9E x4B0B65 
+				xB14641 x37EB3F x49F08A x0948A5 xC4D870 x458462 x68A4C2 x38170E x8C8283 x954256 x6BA2F0 x2F56C5 x84EB43 xEAA023 
+				x5252F1 x6D881E xBE50E0 x9B4806 xB85DF0 xF181C1 x10FB9E xC06675 xF55596 xB48393 x757B4E x4E2DE8 xF34270 xA97C02 
+				x491F76 x4156EE x82A904 x1F8C10 xA11D55 xCBAB01 xF86B0B
+			}
+		}
+		region_state:AHT = {
+			add_culture_standard_of_living_modifier = {
+				culture = cu:athabaskan
+				multiplier = 7
+			}
+		}
+	}
+	#Deg Xinag
+	s:STATE_ALASKA = {
+		create_country = {
+			tag = DXG
+			origin = c:INV
+			province = p:xCB79A9
+			on_created = {
+				usfp_native_startup = yes
+				remove_modifier = native_conscription_10
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:DXG
+			provinces = {  
+				x93145A xC7D063 x93459C x4FDC2B x1B8BE4 x2E8502 x0017A3 x2FA59B x718119 x8C1AF2 xCF3FED x191D87 x6B64B0 
+			}
+		}
+		c:DXG = {
+			annex = c:ATB
+		}
+		region_state:DXG = {
+			add_culture_standard_of_living_modifier = {
+				culture = cu:athabaskan
+				multiplier = 7
+			}
+		}
+	}
+	#Russian island
+	s:STATE_ALASKA = {
+		set_owner_of_provinces = {
+			country = c:RUS
+			provinces = { x5C9007 xF423DB x63A92C x5C9007 }
+		}
+	}
+
 	#HBC hookup
 	s:STATE_MANITOBA = {
 		set_owner_of_provinces = {
@@ -2392,5 +2458,10 @@
 			change_poptype = pop_type:peasants
 		}
 		activate_law = law_type:law_elder_council
+	}
+	c:SEQ = {
+		capital = {
+			usfp_remove_starting_buildings_effect = yes
+		}
 	}
 }

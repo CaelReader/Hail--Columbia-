@@ -314,7 +314,7 @@ usfp_progressive_era.7 = {
 		name = usfp_progressive_era.7.a
 	}
 }
-#Monopoly
+#Monopoly in state
 usfp_progressive_era.8 = {
 	type = country_event
 	placement = root
@@ -459,7 +459,7 @@ usfp_progressive_era.13 = {
 	flavor = usfp_progressive_era.13.f
 	dlc = dlc_usfp
 	event_image = {
-		video = "europenorthamerica_capitalists_meeting"
+		video = "ep1_clandestine_meeting"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -497,6 +497,7 @@ usfp_progressive_era.14 = {
 		any_company = {
 			count > 0
 		}
+		has_company = company_type:company_standard_oil
 	}
 
 	immediate = {
@@ -519,7 +520,8 @@ usfp_progressive_era.14 = {
 	option = {
 		name = usfp_progressive_era.14.a
 		default_option = yes
-		remove_company = scope:standard_oil_scope
+		#I would like to be able to have this dynamic but there seems no way to get a dynamic company_type to plug in here
+		remove_company = company_type:company_standard_oil
 		trigger = {
 			NOT = {
 				has_law = law_type:law_laissez_faire

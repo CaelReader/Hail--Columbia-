@@ -8,6 +8,10 @@ je_liberalism_1 = {
 		NOT = { has_variable = liberalism_1_done }
 		has_technology_researched = democracy
 		has_technology_researched = international_trade
+		#USFP: USA is already liberal, this JE just messes things up
+		NOT = {
+			c:USA ?= ROOT
+		}
 	}
 
 	possible = {
@@ -42,11 +46,6 @@ je_liberalism_1 = {
 					}
 				}
 			}
-		}
-		#USFP: USA is already liberal, this JE just messes things up
-		NOT = {
-			exists = c:USA
-			c:USA = ROOT
 		}
 	}
 

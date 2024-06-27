@@ -11,7 +11,7 @@ usfp_gilded_age.1 = {
 	flavor = usfp_gilded_age.1.f
 	dlc = dlc_usfp
 	event_image = {
-		video = "europenorthamerica_rich_and_poor"
+		video = "europenorthamerica_capitalists_meeting"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -198,12 +198,12 @@ usfp_gilded_age.3 = {
 	flavor = usfp_gilded_age.3.f
 	dlc = dlc_usfp
 	event_image = {
-		video = "unspecific_politicians_arguing"
+		video = "ep1_octopus"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	icon = "gfx/interface/icons/invention_icons/postal_savings.dds"
 
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
@@ -216,6 +216,10 @@ usfp_gilded_age.3 = {
 		add_modifier = {
 			name = usfp_scandal_outrage_modifier
 			years = 5
+		}
+		add_modifier = {
+			name = usfp_post_office_undermined_modifier
+			years = 1
 		}
 		capital = {
 			add_radicals_in_state = {
@@ -234,6 +238,19 @@ usfp_gilded_age.3 = {
 		add_modifier = {
 			name = usfp_scandal_outrage_modifier
 			years = 10
+		}
+		add_modifier = {
+			name = usfp_post_office_undermined_modifier
+			years = 2
+		}
+		every_interest_group = {
+			limit = {
+				is_in_government = yes
+			}
+			add_modifier = {
+				name = usfp_corruption_lure_modifier
+				years = 2
+			}
 		}
 		capital = {
 			add_loyalists_in_state = {
@@ -333,7 +350,7 @@ usfp_gilded_age.5 = {
 	flavor = usfp_gilded_age.5.f
 	dlc = dlc_usfp
 	event_image = {
-		video = "europenorthamerica_capitalists_meeting"
+		video = "ep1_clandestine_meeting"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -722,7 +739,7 @@ usfp_gilded_age.12 = {
 	flavor = usfp_gilded_age.12.f
 	dlc = dlc_usfp
 	event_image = {
-		video = "europenorthamerica_capitalists_meeting"
+		video = "ep1_clandestine_meeting"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -787,6 +804,11 @@ usfp_gilded_age.13 = {
 		any_scope_state = {
 			has_building = building_railway
 			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				private_ownership_fraction > 0
+			}
+			count > 1
 		}
 	}
 
@@ -795,6 +817,10 @@ usfp_gilded_age.13 = {
 			limit = {
 				has_building = building_railway
 				is_incorporated = yes
+				any_scope_building = {
+					is_building_type = building_railway
+					private_ownership_fraction > 0
+				}
 			}
 			random_scope_building = {
 				limit = {
@@ -810,6 +836,10 @@ usfp_gilded_age.13 = {
 				is_incorporated = yes
 				NOT = {
 					this = scope:railway_boom_state
+				}
+				any_scope_building = {
+					is_building_type = building_railway
+					private_ownership_fraction > 0
 				}
 			}
 			save_scope_as = railway_bust_state
@@ -851,26 +881,6 @@ usfp_gilded_age.13 = {
 				years = 2
 			}
 		}
-		ai_chance = {
-			base = 0
-		}
-	}
-	#government buyout!
-	option = {
-		name = usfp_gilded_age.13.c
-		scope:railway_boom_state = {
-			add_modifier = {
-				name = usfp_railroad_boom
-				years = 2
-			}
-		}
-		scope:railway_bust_state = {
-			add_modifier = {
-				name = usfp_railroad_bust
-				years = 2
-			}
-		}
-		#pending nationalization mechanic
 		ai_chance = {
 			base = 0
 		}

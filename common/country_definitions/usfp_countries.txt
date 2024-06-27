@@ -1,4 +1,4 @@
-SMN = {
+SML = {
 	color = { 136 48 47 }
 	
 	country_type = unrecognized
@@ -528,4 +528,28 @@ SON = {
 
 	cultures = { dixie mexican }
 	capital = STATE_BAJA_CALIFORNIA
+}
+
+AHT = {
+	color = { 78 20 37 }
+	
+	country_type = decentralized
+
+	tier = principality
+	
+	cultures = { athabaskan }
+	
+	capital = STATE_ALASKA
+}
+
+DXG = {
+	color = { 97 73 102 }
+	
+	country_type = decentralized
+
+	tier = principality
+	
+	cultures = { athabaskan }
+	
+	capital = STATE_ALASKA
 }

@@ -945,8 +945,8 @@ usfp_progressive_era.14.t: "The History of [SCOPE.sCompany('standard_oil_scope')
 usfp_progressive_era.14.d: "Muckraker Ida Tarbell has published a series of articles exposing the underhanded business practices of [SCOPE.sCompany('standard_oil_scope').GetName], detailing their intentional monopolization of the market. Newspapers across the country have praised Tarbell's work and denounced the company's illegal and rapacious behavior. Progressive voices within Congress have already put together a plan to strengthen antitrust laws and break up [SCOPE.sCompany('standard_oil_scope').GetName]."
 usfp_progressive_era.14.f: ""Now, if this company were the only concern in the country guilty of the practices which have given it monopolistic power, this story never would have been written. But it is simply the most conspicuous type of what can be done by these practices. The methods it employs with such acumen, persistency, and secrecy are employed by all sorts of business men, from corner grocers up to bankers. If exposed, they are excused on the ground that this is business."" #Ida Tarbell
 usfp_progressive_era.14.a: "Let's bust some trusts!"
-usfp_progressive_era.14.b: "Why should [SCOPE.sCompany('standard_oil_scope').GetName] be punished for being successful?"
-usfp_progressive_era.14.c: "We must let the market handle itself."
+usfp_progressive_era.14.b: "Why should [SCOPE.sCompany('standard_oil_scope').GetName] be punished for its success?"
+usfp_progressive_era.14.c: "The invisible hand will handle this."
 
 
 usfp_test.1.t: "DEBUG EVENT"

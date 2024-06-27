@@ -953,7 +953,7 @@ usfp_usa.10 = {
 		create_character = {
 			template = usfp_usa_henry_george
 			on_created = {
-				set_variable = is_henry_george
+				# set_variable = is_henry_george
 			}
 		}
 		random_scope_character = {
@@ -975,7 +975,7 @@ usfp_usa.10 = {
 			create_character = {
 				template = usfp_usa_henry_george
 				on_created = {
-					set_variable = is_henry_george
+					# set_variable = is_henry_george
 				}
 			}
 		}
@@ -1000,7 +1000,7 @@ usfp_usa.10 = {
 			create_character = {
 				template = usfp_usa_henry_george
 				on_created = {
-					set_variable = is_henry_george
+					# set_variable = is_henry_george
 				}
 			}
 		}
@@ -1031,7 +1031,7 @@ usfp_usa.10 = {
 			create_character = {
 				template = usfp_usa_henry_george
 				on_created = {
-					set_variable = is_henry_george
+					# set_variable = is_henry_george
 				}
 			}
 		}

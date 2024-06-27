@@ -377,7 +377,7 @@ usfp_mormon.4 = {
 			country = c:DES
 			type = protectorate
 		 }
-		create_truce = {
+		create_unidirectional_truce = {
 			country = c:DES
 			months = 60
 		}

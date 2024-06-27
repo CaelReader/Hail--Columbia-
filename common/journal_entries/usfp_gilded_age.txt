@@ -35,14 +35,25 @@ usfp_gilded_age = {
 	}
 	on_timeout = {
 		set_variable = gilded_age_complete
+		add_modifier = {
+			name = usfp_gilded_age_corruption_modifier
+			years = 4
+			is_decaying = yes
+		}
+		add_modifier = {
+			name = usfp_gilded_age_modifier
+			years = 4
+			is_decaying = yes
+		}
 	}
 	fail = {
 		OR = {
-			ig:ig_industrialists = {
-				is_marginal = yes
-			}
-			has_law = law_type:law_council_republic
 			AND = {
+				has_law = law_type:law_elected_bureaucrats
+				OR = {
+					has_law = law_type:law_proportional_taxation
+					has_law = law_type:law_graduated_taxation
+				}
 				institution_investment_level = {
 					institution = institution_workplace_safety
 					value > 3
@@ -51,7 +62,12 @@ usfp_gilded_age = {
 					institution = institution_social_security
 					value > 3
 				}
+				bureaucracy > 500
 			}
+			ig:ig_industrialists = {
+				is_marginal = yes
+			}
+			has_law = law_type:law_council_republic
 		}
 	}
 	on_fail = {

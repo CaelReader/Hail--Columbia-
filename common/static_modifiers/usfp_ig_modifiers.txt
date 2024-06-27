@@ -261,3 +261,8 @@ usfp_pro_monopoly_negative_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_negative.dds
 	interest_group_approval_add = -3
 }
+
+usfp_corruption_lure_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_currency_positive.dds
+	interest_group_pop_attraction_mult = 0.10
+}

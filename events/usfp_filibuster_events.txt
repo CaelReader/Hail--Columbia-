@@ -315,7 +315,7 @@ usfp_filibuster.4 = {
 	placement = scope:sonora_scope.capital
 
 	event_image = {
-		video = "rp1_social_banditry"
+		video = "ep1_transfer_of_authority"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"

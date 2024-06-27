@@ -319,7 +319,7 @@ usfp_manifest_destiny.5 = {
 	placement = ROOT
 
 	event_image = {
-		video = "southamerica_aristocrats"
+		video = "ep1_transfer_of_authority"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -762,9 +762,7 @@ usfp_manifest_destiny.9 = {
 		any_scope_building = {
 			count > 15
 			is_building_type = building_railway
-			NOT = {
-				has_active_production_method = pm_government_run_building_railway
-			}
+			private_ownership_fraction > 0
 		}
 		ig:ig_industrialists = {
 			is_marginal = no
@@ -1122,7 +1120,7 @@ usfp_manifest_destiny.14 = {
 	placement = root
 
 	event_image = {
-		video = "votp_conspiring"
+		video = "ep1_clandestine_meeting"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -1494,7 +1492,7 @@ usfp_manifest_destiny.17 = {
 	placement = ROOT
 
 	event_image = {
-		video = "southamerica_aristocrats"
+		video = "ep1_transfer_of_authority"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -2018,7 +2016,7 @@ usfp_manifest_destiny.21 = {
 		usfp_oregon_trail_provinces_effect = yes
 		usfp_manifest_more_destiny_low_effect = yes
 		c:PWN ?= {
-			create_truce = {
+			create_bidirectional_truce = {
 				country = root
 				months = 60
 			}
@@ -2028,7 +2026,7 @@ usfp_manifest_destiny.21 = {
 			}
 		}
 		c:LKT ?= {
-			create_truce = {
+			create_bidirectional_truce = {
 				country = root
 				months = 60
 			}
@@ -2038,7 +2036,7 @@ usfp_manifest_destiny.21 = {
 			}
 		}
 		c:ARP ?= {
-			create_truce = {
+			create_bidirectional_truce = {
 				country = root
 				months = 60
 			}
@@ -2048,7 +2046,7 @@ usfp_manifest_destiny.21 = {
 			}
 		}
 		c:ABS ?= {
-			create_truce = {
+			create_bidirectional_truce = {
 				country = root
 				months = 60
 			}
@@ -2191,10 +2189,7 @@ usfp_manifest_destiny.22 = {
 							limit = {
 								has_truce_with = root
 							 }
-							 end_truce = {
-								country = root
-								months = 0
-							}
+							 end_truce = root
 						}
 					}
 				}

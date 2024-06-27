@@ -6,7 +6,7 @@ usfp_bleeding_kansas.1 = {
 
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	event_image = {
-		video = "europenorthamerica_rich_and_poor"
+		video = "ep1_printing_press"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 

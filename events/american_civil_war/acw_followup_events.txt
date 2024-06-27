@@ -399,7 +399,7 @@ acw_followup_events.6 = {
 	placement = scope:redeemer_state
 
 	event_image = {
-		video = "europenorthamerica_capitalists_meeting"
+		video = "ep1_clandestine_meeting"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"

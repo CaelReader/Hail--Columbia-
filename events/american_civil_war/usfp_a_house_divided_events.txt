@@ -119,7 +119,7 @@ usfp_a_house_divided.3 = {
 
 	icon = "gfx/interface/icons/event_icons/waving_flag_csa.dds"
 	event_image = {
-		video = "unspecific_politicians_arguing"
+		video = "ep1_clandestine_meeting"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -364,7 +364,7 @@ usfp_a_house_divided.6 = {
 
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 	event_image = {
-		video = "unspecific_politicians_arguing"
+		video = "ep1_printing_press"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 

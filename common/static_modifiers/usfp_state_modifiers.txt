@@ -146,11 +146,15 @@ usfp_octopus_garden = {
 usfp_railroad_boom = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_machinist_positive.dds
 	building_railway_throughput_add = 0.15
+	building_nationalization_cost_mult = 0.15
+	building_nationalization_radicals_mult = 0.15
 }
 
 usfp_railroad_bust = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_machinist_negative.dds
 	building_railway_throughput_add = -0.30
+	building_nationalization_cost_mult = -0.25
+	building_nationalization_radicals_mult = -0.25
 }
 
 usfp_tammany_hall_modifier = {
