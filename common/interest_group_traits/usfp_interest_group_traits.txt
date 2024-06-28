@@ -70,7 +70,7 @@ usfp_ig_trait_go_west = {
 	min_approval = loyal
 	
 	modifier = {
-		state_migration_pull_mult = 0.25
+		state_migration_pull_mult = 0.15
 		country_resource_discovery_chance_mult = 0.10
 	}
 }

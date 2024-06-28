@@ -79,11 +79,7 @@ usfp_reconstruction_confederate_amnesty_button = {
 
 	effect = {
 		set_variable = reconstruction_confederate_amnesty
-		usfp_reconstruction_swing_south = yes
-		hidden_effect = {
-			usfp_reconstruction_swing_south = yes
-			usfp_reconstruction_swing_south = yes
-		}
+		usfp_reconstruction_swing_south_severe = yes
 		add_loyalists = {
 			value = medium_radicals
 			culture = cu:dixie
@@ -104,6 +100,20 @@ usfp_reconstruction_confederate_amnesty_button = {
 		usfp_appease_slavers_effect = {MULT = 2}
 		ig:ig_landowners = {
 			remove_modifier = revolution_lost_ig
+		}
+		every_interest_group = {
+			limit = {
+				NOR = {
+					has_ideology = ideology:ideology_anti_slavery
+					leader = { usfp_anti_slavery_leader_trigger = yes }
+					has_ideology = ideology:ideology_pro_slavery
+					leader = { has_ideology = ideology:ideology_slaver }
+				}
+			}
+			add_modifier = {
+				name = usfp_healing_the_nation_modifier
+				years = 4
+			}
 		}
 	}
 

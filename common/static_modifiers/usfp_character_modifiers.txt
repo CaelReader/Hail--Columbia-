@@ -49,3 +49,8 @@ usfp_kingfish = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 	character_popularity_add = 20
 }
+
+usfp_philanthropist = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	character_popularity_add = 20
+}

@@ -11,9 +11,14 @@ usfp_progressive_era = {
 	timeout = 7300 #20 years
 	possible = {
 		has_technology_researched = human_rights
-		custom_tooltip = {
-			text = gilded_age_ended
-			has_variable = gilded_age_complete
+		OR = {
+			custom_tooltip = {
+				text = gilded_age_ended
+				has_variable = gilded_age_complete
+			}
+			ig:ig_trade_unions = {
+				is_insurrectionary = yes
+			}
 		}
 		NOT = {
 			has_law = law_type:law_outlawed_dissent
@@ -36,6 +41,11 @@ usfp_progressive_era = {
 			game_date > 1896.1.1
 		}
 	}
+	immediate = {
+		ideology:ideology_usfp_progressive = {
+			save_scope_as = progressive_ideology
+		}
+	}
 	invalid = {
 		NOT = {
 			has_law = law_type:law_presidential_republic
@@ -44,6 +54,7 @@ usfp_progressive_era = {
 	fail = {
 		OR = {
 			has_law = law_type:law_outlawed_dissent
+			has_law = law_type:law_single_party_state
 		}
 	}
 	complete = {
@@ -73,7 +84,8 @@ usfp_progressive_era = {
 			institution = institution_schools
 			value >= 4
 		}
-		bureaucracy > 100 
+		bureaucracy > 300
+		root.average_sol > 15
 	}
 }
 usfp_progressive_era_eugenics = {

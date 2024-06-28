@@ -32,6 +32,9 @@ usfp_gilded_age = {
 	}
 	immediate = {
 		trigger_event = usfp_gilded_age.1
+		ig:ig_industrialists = {
+			save_scope_as = industrialists_scope
+		}
 	}
 	on_timeout = {
 		set_variable = gilded_age_complete
@@ -75,6 +78,10 @@ usfp_gilded_age = {
 			value = large_radicals
 			strata = rich
 		}
+		set_variable = gilded_age_complete
+	}
+	on_invalid = {
+		set_variable = gilded_age_complete
 	}
 	modifiers_while_active = {
 		usfp_gilded_age_modifier
@@ -82,7 +89,20 @@ usfp_gilded_age = {
 	}
 	on_monthly_pulse = {
 		random_events = {
-			1000 = 0
+			chance_of_no_event = 90
+			10 = usfp_gilded_age.2 #Crédit Mobilier Scandal
+			10 = usfp_gilded_age.3 #Star Route Scandal
+			10 = usfp_gilded_age.4 #Social Darwinism
+			10 = usfp_gilded_age.5 #Tammany Hall
+			10 = usfp_gilded_age.6 #Gospel of Wealth
+			10 = usfp_gilded_age.7 #California Oranges
+			10 = usfp_gilded_age.8 #Grange Movement
+			10 = usfp_gilded_age.9 #James-Younger Gang failed bank robbery
+			10 = usfp_gilded_age.11 #Shooting of Jesse James
+			10 = usfp_gilded_age.12 #Political Machine takes control of state
+			10 = usfp_gilded_age.13 #Railroad volatility
+			10 = usfp_gilded_age.14 #New Rich
+			10 = usfp_gilded_age.15 #Monopoly in state
 		}
 	}
 }

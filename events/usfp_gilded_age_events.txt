@@ -444,10 +444,76 @@ usfp_gilded_age.6 = {
 	option = {
 		name = usfp_gilded_age.6.a
 		default_option = yes
+		scope:carnegie_scope = {
+			add_modifier = {
+				name = usfp_philanthropist
+			}
+		}
+		add_modifier = {
+			name = usfp_gospel_of_wealth_modifier
+			years = 5
+		}
+		if = {
+			limit = { 
+				any_scope_state = {
+					is_incorporated = yes
+					NOT = {
+						has_building = building_university
+					}
+				}
+			}
+			random_scope_state = {
+				limit = {
+					is_incorporated = yes
+					NOT = {
+						has_building = building_university
+					}
+				}
+				create_building = {
+					building = building_university
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
 	}
-	#bah
+	#he's just trying to cover up his crimes
 	option = {
 		name = usfp_gilded_age.6.b
+		scope:carnegie_scope = {
+			add_modifier = {
+				name = usfp_philanthropist
+				multiplier = 0.5
+			}
+		}
+		add_modifier = {
+			name = usfp_gospel_of_wealth_modifier
+			years = 5
+			multiplier = 0.5
+		}
+		add_radicals = {
+			value = small_radicals
+			pop_type = laborers
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	#why should we give away anything to the poor?
+	option = {
+		name = usfp_gilded_age.6.c
+		add_radicals = {
+			value = small_radicals
+			pop_type = laborers
+		}
+		add_loyalists = {
+			value = small_radicals
+			pop_type = capitalists
+		}
+		ai_chance = {
+			base = 0
+		}
 	}
 }
 #California Oranges
@@ -552,18 +618,54 @@ usfp_gilded_age.8 = {
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
 
+	immediate = {
+		ig:ig_rural_folk = {
+			save_scope_as = rural_folk_ig
+		}
+	}
+
 	#cool
 	option = {
 		name = usfp_gilded_age.8.a
 		default_option = yes
+		add_modifier = {
+			name = usfp_grange_movement_modifier
+			years = 5
+		}
 	}
 	#they're going to get uppity
 	option = {
 		name = usfp_gilded_age.8.b
+		add_modifier = {
+			name = usfp_grange_movement_modifier
+			years = 5
+			multiplier = 0.5
+		}
+		add_radicals = {
+			value = small_radicals
+			pop_type = farmers
+		}
 	}
 	#maybe we can organize them
 	option = {
 		name = usfp_gilded_age.8.c
+		trigger = {
+			ig:ig_trade_unions = {
+				is_marginal = no
+				is_being_suppressed = no
+			}
+		}
+		add_modifier = {
+			name = usfp_grange_movement_modifier
+			years = 5
+		}
+		ig:ig_trade_unions = {
+			add_modifier = {
+				name = the_cooperative_movement
+				months = normal_modifier_time
+				multiplier = 0.5
+			}
+		}
 	}
 
 }
@@ -680,6 +782,8 @@ usfp_gilded_age.10 = {
 				value = small_radicals
 			}
 		}
+		custom_tooltip = jesse_james_bounty
+		add_treasury = -10000
 	}
 }
 #Death of Jesse James
@@ -751,12 +855,33 @@ usfp_gilded_age.12 = {
 		months = 36
 	}
 
+	trigger = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_pop = {
+				is_pop_type = capitalists
+			}
+			NOT = {
+				state_region = s:STATE_NEW_YORK #new york gets the special Tammany Hall event
+			}
+			NOT = {
+				has_modifier = usfp_captive_state_government
+			}
+		}
+	}
+
 	immediate = {
 		random_scope_state = {
 			limit = {
 				is_incorporated = yes
 				any_scope_pop = {
 					is_pop_type = capitalists
+				}
+				NOT = {
+					state_region = s:STATE_NEW_YORK
+				}
+				NOT = {
+					has_modifier = usfp_captive_state_government
 				}
 			}
 			save_scope_as = corruption_state
@@ -767,14 +892,70 @@ usfp_gilded_age.12 = {
 	option = {
 		name = usfp_gilded_age.12.a
 		default_option = yes
+		scope:corruption_state = {
+			add_modifier = {
+				name = usfp_captive_state_government
+				years = 3
+			}
+		}
 	}
 	#crack down!
 	option = {
 		name = usfp_gilded_age.12.b
+		show_as_unavailable = {
+			ig:ig_industrialists = {
+				is_in_government = yes
+			}
+		}
+		scope:corruption_state = {
+			add_modifier = {
+				name = usfp_captive_state_government
+				years = 1
+			}
+			add_radicals_in_state = {
+				value = medium_radicals
+				pop_type = capitalists
+			}
+		}
 	}
 	#kickbacks
 	option = {
 		name = usfp_gilded_age.12.c
+		trigger = {
+			any_scope_character = {
+				interest_group = {
+					is_in_government = yes
+				}
+				NOT = {
+					has_trait = grifter
+				}
+			}
+		}
+		random_scope_character = {
+			limit = {
+				interest_group = {
+					is_in_government = yes
+				}
+				NOT = {
+					has_trait = grifter
+				}
+			}
+			add_trait = grifter
+		}
+		scope:corruption_state = {
+			add_modifier = {
+				name = usfp_captive_state_government
+				years = 4
+			}
+			add_loyalists_in_state = {
+				value = small_radicals
+				pop_type = capitalists
+			}
+			add_radicals_in_state = {
+				value = medium_radicals
+				strata = poor
+			}
+		}
 	}
 }
 #Railroad volatility
@@ -873,8 +1054,10 @@ usfp_gilded_age.13 = {
 			add_modifier = {
 				name = usfp_railroad_boom
 				years = 2
+				multiplier = 2
 			}
 		}
+		add_treasury = -500000
 		scope:railway_bust_state = {
 			add_modifier = {
 				name = usfp_railroad_bust
@@ -969,6 +1152,118 @@ usfp_gilded_age.14 = {
 			add_modifier = {
 				name = usfp_supported_new_rich_negative_modifier
 				years = 2
+			}
+		}
+	}
+}
+#Monopoly in state
+usfp_gilded_age.15 = {
+	type = country_event
+	placement = scope:monopoly_state
+
+	title = usfp_gilded_age.15.t
+	desc = usfp_gilded_age.15.d
+	flavor = usfp_gilded_age.15.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_factory_closed"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	duration = 3
+	
+	cooldown = {
+		months = 36
+	}
+
+	trigger = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				private_ownership_fraction >= 0.75
+				NOR = {
+					is_building_group = bg_arms_industries
+					is_building_group = bg_munition_plants
+					is_building_group = bg_artillery_foundaries
+					is_building_group = bg_military_shipyards
+				}
+			}
+			state_has_building_levels > 20
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				any_scope_building = {
+					private_ownership_fraction >= 0.75
+					NOR = {
+						is_building_group = bg_arms_industries
+						is_building_group = bg_munition_plants
+						is_building_group = bg_artillery_foundaries
+						is_building_group = bg_military_shipyards
+					}
+				}
+				state_has_building_levels > 20
+			}
+			save_scope_as = monopoly_state
+			random_scope_building = {
+				limit = {
+					private_ownership_fraction >= 0.75
+					NOR = {
+						is_building_group = bg_arms_industries
+						is_building_group = bg_munition_plants
+						is_building_group = bg_artillery_foundaries
+						is_building_group = bg_military_shipyards
+					}
+				}
+				save_scope_as = monopoly_building_scope
+			}
+		}
+	}
+
+	#damn
+	option = {
+		name = usfp_gilded_age.15.a
+		default_option = yes
+		scope:monopoly_state = {
+			add_modifier = {
+				name = usfp_monopolistic_business
+				years = 2
+			}
+		}
+	}
+	#intervene
+	option = {
+		name = usfp_gilded_age.15.b
+		show_as_unavailable = {
+			OR = {
+				has_law = law_type:law_laissez_faire
+				authority < 100
+			}
+		}
+		scope:monopoly_state = {
+			add_radicals_in_state = {
+				value = small_radicals
+				strata = rich
+			}
+			add_radicals_in_state = {
+				value = small_radicals
+				strata = middle
+			}
+		}
+		add_treasury = -50000
+		every_interest_group = {
+			limit = {
+				usfp_ig_likes_trusts = yes
+			}
+			add_modifier = {
+				name = usfp_trust_busting_negative_modifier
+				years = 4
 			}
 		}
 	}

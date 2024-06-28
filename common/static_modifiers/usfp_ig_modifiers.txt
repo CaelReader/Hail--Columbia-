@@ -266,3 +266,27 @@ usfp_corruption_lure_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_currency_positive.dds
 	interest_group_pop_attraction_mult = 0.10
 }
+
+usfp_getting_things_done_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
+	interest_group_pop_attraction_mult = 0.10
+}
+
+usfp_peoples_petitions_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
+	interest_group_pop_attraction_mult = 0.10
+}
+
+usfp_healing_the_nation_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_positive.dds
+	interest_group_approval_add = 3
+}
+
+usfp_socialist_press_for_more_modifier = {
+	interest_group_pop_attraction_mult = 0.25
+}
+
+usfp_progressive_victory_modifier = {
+	interest_group_pol_str_mult = 0.10
+	interest_group_pop_attraction_mult = 0.15
+}

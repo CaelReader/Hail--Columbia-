@@ -568,6 +568,17 @@ usfp_reconstruction_swing_south = {
 	}
 }
 
+usfp_reconstruction_swing_south_severe = {
+	custom_tooltip = {
+		text = usfp_reconstruction_swing_south_severe
+		usfp_reconstruction_swing_south = yes
+		usfp_reconstruction_swing_south = yes
+		usfp_reconstruction_swing_south = yes
+		usfp_reconstruction_swing_south = yes
+		usfp_reconstruction_swing_south = yes
+	}
+}
+
 usfp_oregon_trail_provinces_effect = {
 	s:STATE_OREGON = {
 		random_scope_state = {

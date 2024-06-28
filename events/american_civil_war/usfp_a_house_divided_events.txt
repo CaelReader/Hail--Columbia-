@@ -64,6 +64,12 @@ usfp_a_house_divided.1 = {
 			value = small_radicals
 			interest_group = ig:ig_intelligentsia
 		}
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = usfp_peoples_petitions_modifier
+				years = 4
+			}
+		}
 		if = {
 			limit = {
 				OR = {
@@ -85,6 +91,12 @@ usfp_a_house_divided.1 = {
 		add_radicals = {
 			value = small_radicals
 			interest_group = ig:ig_intelligentsia
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_getting_things_done_modifier
+				years = 4
+			}
 		}
 		if = {
 			limit = {

@@ -157,19 +157,22 @@ localization updates
 
 3.0 "Cleveland"
 New Content:
+	Gilded Age JE that activates in the 70s with powerful industrialists, along with 15 flavor events
 	Added Henry George and Georgism
 	New Labor Events: Knights of Labor, AFL, Great Railroad Strike, Looking Backward
 	Added event marking the election of the first Afro-American president
 Updates:
 	1.7 Compatibility
 	Added "Bourbon Democrats" modifier that will attract Market Liberal industrialists to the Democratic Party after the civil war
-	Scientific Management event is now part of the Progressive Era pool of events
+	Cross of Gold and Scientific Management events are now part of the Progressive Era pool of events
 	Added flavor government form for council republic USA
 	Liberia and Indian Territory start out in their own markets
 	Indian Territory starts out exempt from service and with lowered payments
 	Added two new Alaskan decentralized tags
 	Adjusted Seminole starting borders
 	Removed military buffs from Canadian native tags (to help the HBC not get crushed)
+	Added extra minor effects to a couple of previously identical event options to differentiate them
+	Nerfed Go West, Young Man to +15%/30% migration attraction to match 1.7.1's nerf to Propagandists
 Fixes:
 	Lower Canada and New Brunswick now start with Frontier Colonization
 	Canadian tags now start with a colonization boost

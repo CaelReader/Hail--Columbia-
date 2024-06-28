@@ -442,7 +442,7 @@ usfp_constitutional_chaos = {
 
 usfp_gilded_age_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
-	state_rich_expected_sol = 3
+	state_rich_expected_sol = 4
 	interest_group_ig_industrialists_pop_attraction_mult = 0.15
 	state_radicals_from_sol_change_mult = 0.10
 	state_capitalists_investment_pool_contribution_add = 0.10
@@ -504,4 +504,20 @@ usfp_anti_trust_agitation = {
 usfp_post_office_undermined_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	state_bureaucracy_population_base_cost_factor_mult = 0.10
+}
+
+usfp_gospel_of_wealth_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	interest_group_ig_industrialists_pol_str_mult = 0.10
+	interest_group_ig_industrialists_pop_attraction_mult = 0.10
+	state_poor_standard_of_living_add = 1
+	state_political_strength_from_welfare_mult = -0.10
+	state_rich_expected_sol = -1
+}
+
+usfp_grange_movement_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds
+	interest_group_ig_rural_folk_pol_str_mult = 0.10
+	interest_group_ig_rural_folk_pop_attraction_mult = 0.10
+	state_farmers_investment_pool_efficiency_mult = 0.10
 }

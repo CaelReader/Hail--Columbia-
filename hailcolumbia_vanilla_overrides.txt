@@ -49,3 +49,5 @@ common/scripted_buttons/turtle_island_buttons.txt
 common/flag_definitions/01_flag_definitions_usa.txt
 common/coat_of_arms/coat_of_arms/01_subs_usa.txt
 common/coat_of_arms/coat_of_arms/02_countries_usa.txt
+
+resign_from_office #to prevent cheesing Slavery Banned

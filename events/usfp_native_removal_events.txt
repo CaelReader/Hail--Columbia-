@@ -930,6 +930,14 @@ usfp_native_removal.10 = {
 				}
 				move_pop = scope:oklahoma_state
 			}
+			add_loyalists = {
+				value = small_radicals
+				culture = cu:dixie
+			}
+			change_relations = {
+				country = c:SEQ
+				value = -10
+			}
 		}
 	}
 
@@ -941,7 +949,7 @@ usfp_native_removal.10 = {
 				add_devastation = 10
 			}
 			kill_population_percent_in_state = {
-				percent = 0.10
+				percent = 0.08
 				culture = cu:muskogean
 			}
 			every_scope_pop = {
@@ -1067,11 +1075,7 @@ usfp_native_removal.12 = {
 		default_option = yes
 		scope:indian_stragglers_state = {
 			state_region = {
-				add_devastation = 5
-			}
-			add_radicals_in_state = {
-				value = small_radicals
-				culture = cu:dixie
+				add_devastation = 7
 			}
 		}
 	}
@@ -1081,7 +1085,7 @@ usfp_native_removal.12 = {
 		name = usfp_native_removal.12.b
 		scope:indian_stragglers_state = {
 			state_region = {
-				add_devastation = 5
+				add_devastation = 4
 			}
 			add_radicals_in_state = {
 				value = small_radicals

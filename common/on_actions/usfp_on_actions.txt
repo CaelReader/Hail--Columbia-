@@ -10,7 +10,6 @@ usfp_monthly_pulse = {
 		usfp_usa.1 #Seneca Falls Conference
 		usfp_usa.4 #Opening of Ellis Island
 		usfp_usa.6 #Great Chicago Fire
-		usfp_usa.11 #Cross of Gold
 		usfp_usa.16 #Election chaos (ALL democracies, not just the US)
 	}
 	random_events = {
@@ -45,7 +44,6 @@ usfp_monthly_pulse = {
 		50 = usfp_mormon.10 #LDS ends polygamy
 		50 = usfp_mormon.11 #Utah War instigation
 		1 = usfp_mormon.14 #Mormon assassinates president
-		
 	}
 }
 

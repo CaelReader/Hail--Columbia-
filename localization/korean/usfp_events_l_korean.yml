@@ -468,11 +468,7 @@
  usfp_usa.10.a: "[SCOPE.gsInterestGroup('industrialists_scope').GetName]이(가) 최대 효율성을 보장할 것이다!"
  usfp_usa.10.b: "존경받는 [SCOPE.gsInterestGroup('intelligentsia_scope').GetName]이(가) 최첨단을 선도할 것이다!"
  usfp_usa.10.c: "관리자는 이미 너무 세세하게 관리하고 있다."
- usfp_usa.11.t: "황금 십자가"
- usfp_usa.11.d: "[SCOPE.sCharacter('bryan_scope').GetFullName]이(가) [SCOPE.sParty('bryan_party').GetName]의 지도부에 등극해 당원들에게 짜릿한 연설을 전했습니다. 그의 '황금 십자가' 연설에서 [SCOPE.sCharacter('bryan_scope').GetLastName]은(는) 은본위제를 대도시 자본가들에 대항하는 방어벽으로 찬양하면서 서민 대중의 번영을 보장하는 인민주의 공약을 제시했습니다."
- usfp_usa.11.f: "\"우리 뒤에는 이 나라와 세계의 생산자 대중이 있습니다. 상업적 이익, 노동자들의 이익, 그리고 사방의 임금노동자들이 우리를 지지합니다. 우리는 금본위제를 요구하는 이들에게 이렇게 대답할 것입니다. 너희는 노동자들의 이마에 가시 면류관을 씌우지 마십시오, 그리고 인류를 황금의 십자가에 못박지 마십시오!\""
- usfp_usa.11.a: "[SCOPE.sCharacter('bryan_scope').GetLastName]의 후보자가 전국을 휩쓸 것이다!"
- usfp_usa.11.b: "은화자유주조는 말도 안 된다. 우리에게는 안정된 통화가 필요하다!"
+
  usfp_usa.12.t: "[ROOT.GetCountry.GetAdjective]의 하마 계획"
  usfp_usa.12.d: "$meat$ 가격 상승에 대한 해결책으로서 새로운 제안이 의회에 제시되었습니다. 이 계획은 아프리카에 서식하는 하마를 [SCOPE.sState('louisiana_scope').GetName] 지역에 위치한 강 하구의 습지에서 사육하여 외래종 식물을 사료로 사용하고 고기로 활용하자는 것입니다."
  usfp_usa.12.f: "\"그레이트 브리튼은 호주 캥거루를 먹고 좋아하며, 말고기는 유럽 대륙의 필수품이고, 중앙아메리카 사람들은 도마뱀을 먹습니다. 왜 미국인들이 하마를 먹지 못한다는 말입니까?\""
@@ -567,6 +563,14 @@
  usfp_mormon.14.d: "[ROOT.GetCountry.GetCapital.GetCityHubName] 거리에서 [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName]이(가) 저격당했습니다! 체포된 이후, 총격범은 교회에 대항하는 정부의 행동애 대한 복수를 열망하는 급진적인 [SCOPE.sReligion('mormonism_scope').GetName]이었음이 밝혀졌습니다. [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]은(는) 위독한 상태로 병원으로 후송되었습니다."
  usfp_mormon.14.f: "\"비키십시오! 비키십시오! 대통령께서 총에 맞았습니다! 세상에, 대통령께서 총에 맞았습니다!\""
  usfp_mormon.14.a: "무도한 짓이다!"
+
+
+ usfp_progressive_era.15.t: "황금 십자가"
+ usfp_progressive_era.15.d: "[SCOPE.sCharacter('bryan_scope').GetFullName]이(가) [SCOPE.sParty('bryan_party').GetName]의 지도부에 등극해 당원들에게 짜릿한 연설을 전했습니다. 그의 '황금 십자가' 연설에서 [SCOPE.sCharacter('bryan_scope').GetLastName]은(는) 은본위제를 대도시 자본가들에 대항하는 방어벽으로 찬양하면서 서민 대중의 번영을 보장하는 인민주의 공약을 제시했습니다."
+ usfp_progressive_era.15.f: "\"우리 뒤에는 이 나라와 세계의 생산자 대중이 있습니다. 상업적 이익, 노동자들의 이익, 그리고 사방의 임금노동자들이 우리를 지지합니다. 우리는 금본위제를 요구하는 이들에게 이렇게 대답할 것입니다. 너희는 노동자들의 이마에 가시 면류관을 씌우지 마십시오, 그리고 인류를 황금의 십자가에 못박지 마십시오!\""
+ usfp_progressive_era.15.a: "[SCOPE.sCharacter('bryan_scope').GetLastName]의 후보자가 전국을 휩쓸 것이다!"
+ usfp_progressive_era.15.b: "은화자유주조는 말도 안 된다. 우리에게는 안정된 통화가 필요하다!"
+
  usfp_test.1.t: "디버그 이벤트"
  usfp_test.1.d: "강제로 캐릭터 생성"
  usfp_test.1.f: "일출, 파라벨럼"

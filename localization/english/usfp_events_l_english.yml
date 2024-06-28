@@ -596,11 +596,7 @@ usfp_usa.10.c: "Single Value Tax is the future!"
 georgists_can_spawn: "[SCOPE.sIdeology('georgism_scope').GetName] characters can now appear."
 georgists_can_spawn_double: "[SCOPE.sIdeology('georgism_scope').GetName] characters are more likely to appear in our country."
 
-usfp_usa.11.t: "The Cross of Gold"
-usfp_usa.11.d: "[SCOPE.sCharacter('bryan_scope').GetFullName] has catapulted himself to the heights of the [SCOPE.sParty('bryan_party').GetName], delivering an electrifying speech to the party's covention. In his 'Cross of Gold' address, [SCOPE.sCharacter('bryan_scope').GetLastName] extoled silver coinage as a bulwark against big city moneyed interests, and presented a populist platform that would ensure prosperity for the common masses."
-usfp_usa.11.f: ""Having behind us the producing masses of this nation and the world, supported by the commercial interests, the laboring interests, and the toilers everywhere, we will answer their demand for a gold standard by saying to them: You shall not press down upon the brow of labor this crown of thorns; you shall not crucify mankind upon a cross of gold!""
-usfp_usa.11.a: "The [SCOPE.sCharacter('bryan_scope').GetLastName] ticket will sweep the nation!"
-usfp_usa.11.b: "Free Silver is ridiculous, we need sound money!"
+#11 moved to progressive
 
 usfp_usa.12.t: "The [ROOT.GetCountry.GetAdjective] Hippo Plan"
 usfp_usa.12.d: "A novel proposal has been submitted to Congress as a solution to the rising cost of $meat$. The plan calls for a population of African Hippopotamuses to be introduced to the [SCOPE.sState('louisiana_scope').GetName] bayou, where they can feast on invasive plants and be slaughtered for their meat."
@@ -828,9 +824,11 @@ usfp_gilded_age.5.a: "Tweed must go."
 usfp_gilded_age.5.b: "[SCOPE.sState('new_york_scope').GetName] seems to be doing just fine under Tweed."
 
 usfp_gilded_age.6.t: "The Gospel of Wealth"
-usfp_gilded_age.6.d: ""
-usfp_gilded_age.6.f: """"
-usfp_gilded_age.6.a: ""
+usfp_gilded_age.6.d: "Wealthy industrialists [SCOPE.sCharacter('carnegie_scope').GetFullName] has penned a controversial article asserting that the newly wealthy have a duty of philanthropy to the rest of society. According to [SCOPE.sCharacter('carnegie_scope').GetLastName], the rich should eschew extravagance and self-indulgent spending, and instead act as good shepherds of their wealth, using it to provide opportunities for the poor to uplift themselves."
+usfp_gilded_age.6.f: ""This, then, is held to be the duty of the man of Wealth: First, to set an example of modest, unostentatious living; to provide moderately for the legitimate wants of those dependent upon him; and after doing so to consider all surplus revenues which come to him simply as trust funds, which he is called upon to administer, and strictly bound as a matter of duty to administer in the manner best calculated to produce the most beneficial result for the community - the man of wealth thus becoming the sole agent and trustee for his poorer brethren, bringing to their service his superior wisdom, experience, and ability to administer - doing for them better than they would or could do for themselves."" #Andrew Carnegie
+usfp_gilded_age.6.a: "Better to build libraries than throw parties."
+usfp_gilded_age.6.b: "He's just trying to repent for his business practices!"
+usfp_gilded_age.6.c: "Why do the poor deserve anything at all?"
 
 usfp_gilded_age.7.t: "The Sun-Kissed State"
 usfp_gilded_age.7.d: "The introduction of 'Washington Navel' oranges into southern [SCOPE.sState('california_scope').GetName] has precipitated a boom in the citrus industry there. Vast orange groves have been planted alongside fresh new railroad tracks built for the purpose. Local boosters and rail companies have begun a nationwide ad campaign promoting migration to the area, promising health, prosperity, and endless sunshine."
@@ -839,40 +837,54 @@ usfp_gilded_age.7.a: "Delicious and profitable!"
 usfp_gilded_age.7.b: "They're called Washington Navels, they should also be grown in Washington!"
 
 usfp_gilded_age.8.t: "A Gift for the Grangers"
-usfp_gilded_age.8.d: ""
-usfp_gilded_age.8.f: """"
-usfp_gilded_age.8.a: ""
+usfp_gilded_age.8.d: "A network of farmers' advocacy groups known as The Grange has spread rapidly across the vast rural regions of the [ROOT.GetCountry.GetName]. While most chapters are focused on local legislation and establishing consumer cooperatives, the organization also serves to advance the cause of the [SCOPE.gsInterestGroup('rural_folk_ig').GetName] nationally."
+usfp_gilded_age.8.f: ""The Grange is the foe to selfishness. It is too much the habit of the farmer to regard himself and his own family only, and to be carless of the welfare or interests of others. The Grange teaches him that he is only a single member of the vast community of men who till the ground, and that this interests are identical with theirs, and that he must consider others as well as himself."" #History of the Grange Movement, James Dabney McCabe
+usfp_gilded_age.8.a: "Prosperous farmers are good for the nation."
+usfp_gilded_age.8.b: "This is a network of radical agitators!"
+usfp_gilded_age.8.c: "Perhaps they can be awakened to their class interests."
 
 usfp_gilded_age.9.t: "James-Younger Gang Strikes!"
-usfp_gilded_age.9.d: ""
-usfp_gilded_age.9.f: """"
-usfp_gilded_age.9.a: ""
+usfp_gilded_age.9.d: "The notorious James-Younger Gang has once again staged a daring bank robbery, this time in [SCOPE.sState('minnesota_scope').GetName]. Confronted by armed locals, the gang was forced into a running gunfight and dispersed into the countryside. Officials have placed substantial bounties on the gang's leader, legendary outlaw Jesse James, in an attempt to end their activities once and for all."
+usfp_gilded_age.9.f: "The cry went out - “Get your guns, boys — they’re robbing the bank!” After that all was chaos, bullets flying everywhere, men on horses firing wildly with revolvers. But soon enough the desperadoes were fleeing down the dusty road with naught but a few nickels to show for it."
+usfp_gilded_age.9.a: "Let's hope that's the last of them."
+usfp_gilded_age.9.b: "Jesse James belongs in prison!"
 
 usfp_gilded_age.10.t: "Jesse James in Custody"
-usfp_gilded_age.10.d: ""
-usfp_gilded_age.10.f: """"
-usfp_gilded_age.10.a: ""
+usfp_gilded_age.10.d: "Our police forces have finally apprehended Jesse James thanks to the collaboration of one of his close associates. Under heavy guard he was escorted to jail awaiting trial for the many brazen crimes committed by him and his gang."
+usfp_gilded_age.10.f: ""Eight officers on either side kept James separated from the crowd. Hundreds had turned out to see the outlaw's fate, some yelled in support and others booed. It was hard to tell whether they were booing the police or the prisoner. Most of the onlookers were just there for the spectacle, to see the final capture of the celebrity-outlaw Jesse James.""
+usfp_gilded_age.10.a: "Fine work!"
+jesse_james_bounty: "#i We pay out the bounty:#!"
+
 
 usfp_gilded_age.11.t: "Jesse James Shot!"
-usfp_gilded_age.11.d: ""
-usfp_gilded_age.11.f: """"
-usfp_gilded_age.11.a: ""
+usfp_gilded_age.11.d: "The celebrity outlaw Jesse James has been shot by one of his accomplices! The news of his murder has become a sensation across the country, with many hailing James as a modern Robin Hood and protector of the White Race, while others celebrate the murderer's downfall."
+usfp_gilded_age.11.f: ""A great sensation was created in this city this morning by the announcement that Hesse James, the notorious bandit and train robber, had been shot and killed here. The news spread with great rapidity, but most persons received it with doubt until investigation established the fac tbeyond question. Then the excitement bcame more and more intense, and crowds of people rushed to the quarter of the city where the shooting had occurred, anxious to view the body of the dead outlaw."" #New York Tribune
+usfp_gilded_age.11.a: "It was inevitable."
 
-usfp_gilded_age.12.t: "State Corruption"
-usfp_gilded_age.12.d: ""
-usfp_gilded_age.12.f: """"
-usfp_gilded_age.12.a: ""
+usfp_gilded_age.12.t: "Corrupt Dealings in [SCOPE.sState('corruption_state').GetName]"
+usfp_gilded_age.12.d: "A political machine funded by and serving the whims of the robber barons has taken control of [SCOPE.sState('corruption_state').GetName]. All opposition has been sidelined in the courts, the legislature, and the bureaucracy, allowing corruption to run rampant."
+usfp_gilded_age.12.f: ""I've been called a boss. All there is to it is having friends, doing things for people, and then later on they'll do things for you ... You can't coerce people into doing things for you—you can't make them vote for you. I never coerced anybody in my life. Wherever you see a man bulldozing anybody he don't last long."" #James Pendergast
+usfp_gilded_age.12.a: "Democracy is being sold to the highest bidder!"
+usfp_gilded_age.12.b: "We need to shut down these machines!"
+usfp_gilded_age.12.c: "As long as we get our cut..."
 
 usfp_gilded_age.13.t: "Railroad Boom, Railroad Bust"
-usfp_gilded_age.13.d: ""
-usfp_gilded_age.13.f: """"
-usfp_gilded_age.13.a: ""
+usfp_gilded_age.13.d: "The railroads have become the backbone of the [ROOT.GetCountry.GetAdjective] economy, but all is not well with them. Land speculation and poor management of the railways in [SCOPE.sState('railway_bust_state').GetName] has lead to the collapse of several local rail companies, leaving lines empty and abandoned. Meanwhile, the railway business in [SCOPE.sState('railway_boom_state').GetName] is entering a period of sustained growth and high returns on investment."
+usfp_gilded_age.13.f: "The stretch of track lie half-completed. Tools and materials were scattered around the construction site. Even several railcars sat on the track, rusting away in the sun. The company went under, and nobody was interested in buying, and so the detritus of industry is simply abandoned."
+usfp_gilded_age.13.a: "Such is the natural business cycle."
+usfp_gilded_age.13.b: "We should boost the successful railways even further."
 
 usfp_gilded_age.14.t: "New Money"
 usfp_gilded_age.14.d: "As modern industries expand across the country, they have created a new cohort of wealthy [SCOPE.gsInterestGroup('industrialists_scope').GetName] whose fortunes exceed that of established families. Many have flocked to [SCOPE.sState('new_york_scope').GetName], building elaborate mansions and attempting to integrate themselves into high society, much to the chagrin of the Old Money aristocrats."
 usfp_gilded_age.14.f: ""She’s got an indiscreet voice," I remarked. "It’s full of–" I hesitated.\n\n"Her voice is full of money," he said suddenly.\n\nThat was it. I’d never understood before. It was full of money–that was the inexhaustible charm that rose and fell in it, the jingle of it, the cymbals’ song of it." #- F. Scott Fitzgerald
 usfp_gilded_age.14.a: "Old Money will have to make room for the New."
 usfp_gilded_age.14.b: "A toast to our rising captains of industry!"
+
+usfp_gilded_age.15.t: "The [SCOPE.sState('monopoly_state').GetName] [SCOPE.sBuilding('monopoly_building_scope').GetName] Monopoly"
+usfp_gilded_age.15.d: "The [SCOPE.sBuilding('monopoly_building_scope').GetName] industry in [SCOPE.sState('monopoly_state').GetName] has come under the control of a congolomerate that has pushed out all competition. Using their position they have enforced higher prices, lower wages, and worse conditions, with a negative impact on the entire local economy."
+usfp_gilded_age.15.f: "You couldn't walk two blocks in the city without seeing one of the company's advertisements or its logo stamped on something. A whole group of workers was fired yesterday, and now many were packing up to move to another state. The company was the only game in town."
+usfp_gilded_age.15.a: "Let's hope the market punishes them."
+usfp_gilded_age.15.b: "We should promote competition in [SCOPE.sState('monopoly_state').GetName]."
 
 usfp_progressive_era.1.t: "Rise of the Progressives"
 usfp_progressive_era.1.d: ""
@@ -948,6 +960,17 @@ usfp_progressive_era.14.a: "Let's bust some trusts!"
 usfp_progressive_era.14.b: "Why should [SCOPE.sCompany('standard_oil_scope').GetName] be punished for its success?"
 usfp_progressive_era.14.c: "The invisible hand will handle this."
 
+usfp_progressive_era.15.t: "The Cross of Gold"
+usfp_progressive_era.15.d: "[SCOPE.sCharacter('bryan_scope').GetFullName] has catapulted himself to the heights of the [SCOPE.sParty('bryan_party').GetName], delivering an electrifying speech to the party's covention. In his 'Cross of Gold' address, [SCOPE.sCharacter('bryan_scope').GetLastName] extoled silver coinage as a bulwark against big city moneyed interests, and presented a populist platform that would ensure prosperity for the common masses."
+usfp_progressive_era.15.f: ""Having behind us the producing masses of this nation and the world, supported by the commercial interests, the laboring interests, and the toilers everywhere, we will answer their demand for a gold standard by saying to them: You shall not press down upon the brow of labor this crown of thorns; you shall not crucify mankind upon a cross of gold!""
+usfp_progressive_era.15.a: "The [SCOPE.sCharacter('bryan_scope').GetLastName] ticket will sweep the nation!"
+usfp_progressive_era.15.b: "Free Silver is ridiculous, we need sound money!"
+
+usfp_progressive_era.16.t: "The Square Deal"
+usfp_progressive_era.16.d: "The [SCOPE.sIdeology('progressive_ideology').GetName] movement has succeeded in its sweeping reforms. Trusts have been busted, the power of the ballot and initiative have deepened and broadened our democracy, and the American Dream is attainable to all. A square deal for every man, big or small, rich or poor."
+usfp_progressive_era.16.f: ""This administration stands for a square deal all around, for an attitude of kindly justice as between man and man, without regard to what any man’s creed or birthplace or social position may be, so long as, in his life and in his work, he shows the qualities that entitle him to the respect of his fellows."" #Theodore Roosevelt
+usfp_progressive_era.16.a: "To progress and good government!"
+usfp_progressive_era.16.b: "Capitalism is a threat to the gains we have earned."
 
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"
