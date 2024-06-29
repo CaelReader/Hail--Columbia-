@@ -1,4 +1,4 @@
-usfp_find_maine_state_scope = {
+﻿usfp_find_maine_state_scope = {
 	s:STATE_MAINE = {
 		region_state:USA = {
 			save_scope_as = maine_scope

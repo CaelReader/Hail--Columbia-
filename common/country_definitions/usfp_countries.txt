@@ -1,4 +1,4 @@
-SML = {
+﻿SML = {
 	color = { 136 48 47 }
 	
 	country_type = unrecognized

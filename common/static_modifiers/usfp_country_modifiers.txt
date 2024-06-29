@@ -6,7 +6,7 @@
 usfp_seminole_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds
 	unit_defense_mult = 2.0
-	unit_mobilization_speed_mult = 1.0
+	military_formation_mobilization_speed_mult = 1.0
 	building_training_rate_add = 1000
 	unit_morale_loss_mult = -0.5
 	unit_kill_rate_add = -0.20
