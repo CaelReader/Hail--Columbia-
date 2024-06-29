@@ -923,7 +923,7 @@ usfp_progressive_era.7.d: ""
 usfp_progressive_era.7.f: """"
 usfp_progressive_era.7.a: ""
 
-usfp_progressive_era.8.t: "Fruits of Monopoly"
+usfp_progressive_era.8.t: ""
 usfp_progressive_era.8.d: ""
 usfp_progressive_era.8.f: """"
 usfp_progressive_era.8.a: ""
@@ -970,7 +970,7 @@ usfp_progressive_era.16.t: "The Square Deal"
 usfp_progressive_era.16.d: "The [SCOPE.sIdeology('progressive_ideology').GetName] movement has succeeded in its sweeping reforms. Trusts have been busted, the power of the ballot and initiative have deepened and broadened our democracy, and the American Dream is attainable to all. A square deal for every man, big or small, rich or poor."
 usfp_progressive_era.16.f: ""This administration stands for a square deal all around, for an attitude of kindly justice as between man and man, without regard to what any man’s creed or birthplace or social position may be, so long as, in his life and in his work, he shows the qualities that entitle him to the respect of his fellows."" #Theodore Roosevelt
 usfp_progressive_era.16.a: "To progress and good government!"
-usfp_progressive_era.16.b: "Capitalism is a threat to the gains we have earned."
+usfp_progressive_era.16.b: "Capitalism remains a threat to the gains we have earned."
 
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"

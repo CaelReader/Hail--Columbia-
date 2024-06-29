@@ -8,6 +8,8 @@ usfp_gilded_age = {
 		c:USA = ROOT
 	}
 	timeout = 7300 #20 years
+	scripted_button = usfp_take_bribes_button
+	scripted_button = usfp_consolidate_trust_button
 	possible = {
 		has_technology_researched = mutual_funds
 		calc_true_if = {

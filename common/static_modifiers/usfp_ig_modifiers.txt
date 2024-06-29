@@ -283,10 +283,19 @@ usfp_healing_the_nation_modifier = {
 }
 
 usfp_socialist_press_for_more_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_socialism_positive.dds
 	interest_group_pop_attraction_mult = 0.25
 }
 
 usfp_progressive_victory_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
 	interest_group_pol_str_mult = 0.10
 	interest_group_pop_attraction_mult = 0.15
+}
+
+usfp_industrialists_corruption_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_currency_positive.dds
+	interest_group_pol_str_mult = 0.10
+	interest_group_pop_attraction_mult = 0.10
+	interest_group_approval_add = 2
 }

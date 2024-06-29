@@ -926,8 +926,9 @@ usfp_gilded_age.12 = {
 				interest_group = {
 					is_in_government = yes
 				}
-				NOT = {
+				NOR = {
 					has_trait = grifter
+					has_trait = honorable
 				}
 			}
 		}
@@ -936,8 +937,9 @@ usfp_gilded_age.12 = {
 				interest_group = {
 					is_in_government = yes
 				}
-				NOT = {
+				NOR = {
 					has_trait = grifter
+					has_trait = honorable
 				}
 			}
 			add_trait = grifter
@@ -1265,6 +1267,10 @@ usfp_gilded_age.15 = {
 				name = usfp_trust_busting_negative_modifier
 				years = 4
 			}
+		}
+		add_modifier = {
+			name = usfp_trust_busting_authority_modifier
+			years = 4
 		}
 	}
 }

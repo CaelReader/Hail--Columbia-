@@ -445,6 +445,7 @@ usfp_gilded_age_modifier = {
 	state_rich_expected_sol = 4
 	interest_group_ig_industrialists_pop_attraction_mult = 0.15
 	state_radicals_from_sol_change_mult = 0.10
+	state_loyalists_from_sol_change_accepted_culture_mult = 0.10
 	state_capitalists_investment_pool_contribution_add = 0.10
 	state_capitalists_investment_pool_efficiency_mult = 0.10
 	country_company_construction_efficiency_bonus_add = 0.05
@@ -454,6 +455,7 @@ usfp_gilded_age_modifier = {
 usfp_gilded_age_corruption_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bank_negative.dds
 	country_bureaucracy_mult = -0.10
+	country_authority_mult = -0.15
 	country_institution_size_change_speed_mult = -0.20
 	building_group_bg_infrastructure_tax_mult = -0.15
 	building_group_bg_manufacturing_tax_mult = -0.15
@@ -520,4 +522,24 @@ usfp_grange_movement_modifier = {
 	interest_group_ig_rural_folk_pol_str_mult = 0.10
 	interest_group_ig_rural_folk_pop_attraction_mult = 0.10
 	state_farmers_investment_pool_efficiency_mult = 0.10
+}
+
+usfp_trust_busting_authority_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_negative.dds
+	country_authority_add = -100
+}
+
+usfp_federal_corruption_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_currency_negative.dds
+	country_authority_mult = -0.10
+	country_loyalists_from_legitimacy_mult = -0.25
+}
+
+usfp_trust_dominance_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
+	country_max_companies_add = 1
+	country_company_construction_efficiency_bonus_add = 0.10
+	state_construction_mult = -0.05
+	country_company_throughput_bonus_add = 0.10
+	building_throughput_add = -0.05
 }

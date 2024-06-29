@@ -17,7 +17,7 @@ usfp_progressive_era = {
 				has_variable = gilded_age_complete
 			}
 			ig:ig_trade_unions = {
-				is_insurrectionary = yes
+				ig_approval <= 15
 			}
 		}
 		NOT = {

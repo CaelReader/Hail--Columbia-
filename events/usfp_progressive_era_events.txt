@@ -150,10 +150,10 @@ usfp_progressive_era.3 = {
 
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
+	
 	#cool
 	option = {
 		name = usfp_progressive_era.3.a
-		#pending lobby mechanic
 	}
 	#bad
 	option = {
@@ -524,10 +524,15 @@ usfp_progressive_era.14 = {
 		default_option = yes
 		#I would like to be able to have this dynamic but there seems no way to get a dynamic company_type to plug in here
 		remove_company = company_type:company_standard_oil
-		trigger = {
-			NOT = {
+		show_as_unavailable = {
+			OR = {
 				has_law = law_type:law_laissez_faire
+				authority < 100
 			}
+		}
+		add_modifier = {
+			name = usfp_trust_busting_authority_modifier
+			years = 4
 		}
 		add_radicals = {
 			value = small_radicals
