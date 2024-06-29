@@ -1,4 +1,4 @@
-usfp_trait_expansionist = {
+﻿usfp_trait_expansionist = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/expansionist.dds"
 

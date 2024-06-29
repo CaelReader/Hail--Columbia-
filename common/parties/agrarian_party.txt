@@ -307,7 +307,7 @@ agrarian_party = {
 						}
 					}
 				}
-				is_interest_group_type = ig:ig_industrialists
+				is_interest_group_type = ig_industrialists
 				leader = {
 					has_ideology = ideology:ideology_market_liberal
 				}
