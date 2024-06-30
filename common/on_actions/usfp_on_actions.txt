@@ -486,5 +486,14 @@ usfp_remove_party_system = {
 			 }
 			remove_modifier = usfp_third_party_system_modifier
 		}
+		if = {
+			limit = {
+				has_modifier = usfp_fourth_party_system_modifier
+				NOT = {
+					has_law = law_type:law_presidential_republic
+				}
+			 }
+			remove_modifier = usfp_fourth_party_system_modifier
+		}
 	}
 }

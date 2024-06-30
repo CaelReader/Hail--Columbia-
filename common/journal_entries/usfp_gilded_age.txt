@@ -26,6 +26,11 @@ usfp_gilded_age = {
 		ig:ig_industrialists = {
 			is_powerful = yes
 		}
+		any_scope_state = {
+			is_incorporated = yes
+			has_building = building_railway
+			count >= 15
+		}
 		NOR = {
 			has_journal_entry = je_acw_countdown
 			has_journal_entry = je_acw_war
@@ -92,7 +97,7 @@ usfp_gilded_age = {
 	on_monthly_pulse = {
 		random_events = {
 			chance_of_no_event = 90
-			10 = usfp_gilded_age.2 #Crédit Mobilier Scandal
+			200 = usfp_gilded_age.2 #Crédit Mobilier Scandal
 			10 = usfp_gilded_age.3 #Star Route Scandal
 			10 = usfp_gilded_age.4 #Social Darwinism
 			10 = usfp_gilded_age.5 #Tammany Hall

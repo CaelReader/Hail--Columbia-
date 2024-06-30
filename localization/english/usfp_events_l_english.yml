@@ -808,7 +808,7 @@ usfp_gilded_age.3.a: "This cannot be allowed to continue."
 usfp_gilded_age.3.b: "Downplay the issue."
 
 usfp_gilded_age.4.t: "Social Darwinism"
-usfp_gilded_age.4.d: "Darwin's theory of evolution describes a world where species must constantly struggle to survive. Some sociologists have now begun to transfer these ideas from biology into politics, promoting 'survival of the fittest' as the natural and correct model for society."
+usfp_gilded_age.4.d: "Darwin's theory of evolution describes a world where species must constantly struggle to survive. Some theorists have now begun to transfer these ideas from biology into politics, promoting 'survival of the fittest' as the natural and correct model for society."
 usfp_gilded_age.4.f: ""Before the tribunal of nature a man has no more right to life than a rattlesnake; he has no more right to liberty than any wild beast; his right to pursuit of happiness is nothing but a license to maintain the struggle for existence."" #William Graham Sumner
 usfp_gilded_age.4.a: "That's not what Darwin meant..."
 usfp_gilded_age.4.b: "All life is struggle!"
@@ -818,7 +818,7 @@ social_darwinist_appears: "A [SCOPE.sIdeology('social_darwinism_scope').GetName]
 
 
 usfp_gilded_age.5.t: "The Tweed Regime"
-usfp_gilded_age.5.d: "While political machines have taken root across the country, [SCOPE.sState('new_york_scope').GetName] has been effectively taken over by William 'Boss' Tweed and his Tammany Hall organization. With cronies placed in political offices, purchased votes, and bribed judges, the entire apparatus of the state government is now at his beck and call. Details of Tweed's corruption and fraud have begun to leak to the press, driving public calls for his removal."
+usfp_gilded_age.5.d: "As political machines have taken root across the country, [SCOPE.sState('new_york_scope').GetName] has been effectively taken over by William 'Boss' Tweed and his Tammany Hall club. With cronies placed in political offices, purchased votes, and bribed judges, the entire apparatus of the state government is now at his beck and call. Details of Tweed's corruption and fraud have begun to leak to the press, driving public calls for his removal."
 usfp_gilded_age.5.f: "The press were calling them the "Forty Thieves", the ring of Tweed's underlings who stole as much as they could from the state's budget. Inflated contracts worth five, ten, hundreds of times their true value were handed out in exchange for support. The operation wasn't particularly well hidden, but Tammany Hall controlled all the mechanisms of government, and so could simply block any complaint or inquiry."
 usfp_gilded_age.5.a: "Tweed must go."
 usfp_gilded_age.5.b: "[SCOPE.sState('new_york_scope').GetName] seems to be doing just fine under Tweed."
@@ -853,7 +853,7 @@ usfp_gilded_age.10.t: "Jesse James in Custody"
 usfp_gilded_age.10.d: "Our police forces have finally apprehended Jesse James thanks to the collaboration of one of his close associates. Under heavy guard he was escorted to jail awaiting trial for the many brazen crimes committed by him and his gang."
 usfp_gilded_age.10.f: ""Eight officers on either side kept James separated from the crowd. Hundreds had turned out to see the outlaw's fate, some yelled in support and others booed. It was hard to tell whether they were booing the police or the prisoner. Most of the onlookers were just there for the spectacle, to see the final capture of the celebrity-outlaw Jesse James.""
 usfp_gilded_age.10.a: "Fine work!"
-jesse_james_bounty: "#i We pay out the bounty:#!"
+jesse_james_bounty: "#italic We pay out the bounty:#!"
 
 
 usfp_gilded_age.11.t: "Jesse James Shot!"
@@ -862,9 +862,9 @@ usfp_gilded_age.11.f: ""A great sensation was created in this city this morning 
 usfp_gilded_age.11.a: "It was inevitable."
 
 usfp_gilded_age.12.t: "Corrupt Dealings in [SCOPE.sState('corruption_state').GetName]"
-usfp_gilded_age.12.d: "A political machine funded by and serving the whims of the robber barons has taken control of [SCOPE.sState('corruption_state').GetName]. All opposition has been sidelined in the courts, the legislature, and the bureaucracy, allowing corruption to run rampant."
+usfp_gilded_age.12.d: "A political machine serving the interests of the [SCOPE.gsInterestGroup('industrialists_scope').GetName] has taken control of [SCOPE.sState('corruption_state').GetName]. All opposition has been sidelined in the courts, the legislature, and the bureaucracy, allowing corruption to run rampant."
 usfp_gilded_age.12.f: ""I've been called a boss. All there is to it is having friends, doing things for people, and then later on they'll do things for you ... You can't coerce people into doing things for you—you can't make them vote for you. I never coerced anybody in my life. Wherever you see a man bulldozing anybody he don't last long."" #James Pendergast
-usfp_gilded_age.12.a: "Democracy is being sold to the highest bidder!"
+usfp_gilded_age.12.a: "[SCOPE.sState('corruption_state').GetName] will need to sort itself out."
 usfp_gilded_age.12.b: "We need to shut down these machines!"
 usfp_gilded_age.12.c: "As long as we get our cut..."
 

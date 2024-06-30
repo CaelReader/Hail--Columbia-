@@ -65,7 +65,8 @@ usfp_second_party_system_modifier = {
 	# LGHGH request (USCWF)
 	country_legitimacy_govt_size_add = -1 #TPS
 	country_legitimacy_headofstate_add = 10 #TPS
-	country_legitimacy_ideological_incoherence_mult = -0.10 #TPS, 0.2 presrep 0.1 censuf 0.20 actual
+	# country_legitimacy_ideological_incoherence_mult = -0.10 #TPS, 0.2 presrep 0.1 censuf 0.20 actual
+	country_party_whip_impact_mult = 0.10
 	country_agitator_slots_add = 3
 	country_institution_size_change_speed_mult = -0.25
 }
@@ -77,7 +78,7 @@ usfp_third_party_system_modifier = {
 	state_pop_pol_str_mult = 0.15
 	country_legitimacy_govt_size_add = -1 #TPS
 	country_legitimacy_headofstate_add = 10 #TPS
-	country_legitimacy_ideological_incoherence_mult = -0.10 #TPS, 0.2 presrep 0.1 censuf 0.20 actual
+	country_party_whip_impact_mult = 0.10
 	country_agitator_slots_add = 3
 }
 
@@ -86,7 +87,7 @@ usfp_fourth_party_system_modifier = {
 	state_pop_pol_str_mult = 0.10
 	country_legitimacy_govt_size_add = -1 #TPS
 	country_legitimacy_headofstate_add = 10 #TPS
-	country_legitimacy_ideological_incoherence_mult = -0.10 #TPS, 0.2 presrep 0.1 censuf 0.20 actual
+	country_party_whip_impact_mult = 0.10
 	country_agitator_slots_add = 3
 	country_institution_size_change_speed_mult = 0.10
 }
@@ -460,8 +461,8 @@ usfp_gilded_age_corruption_modifier = {
 	building_group_bg_infrastructure_tax_mult = -0.15
 	building_group_bg_manufacturing_tax_mult = -0.15
 	interest_group_ig_industrialists_pol_str_mult = 0.10
-	building_nationalization_cost_mult = 0.10
-	building_nationalization_radicals_mult = 0.10
+	building_nationalization_cost_mult = 0.50
+	building_nationalization_radicals_mult = 0.50
 	country_government_dividends_waste_add = 0.10
 }
 
@@ -540,6 +541,5 @@ usfp_trust_dominance_modifier = {
 	country_max_companies_add = 1
 	country_company_construction_efficiency_bonus_add = 0.10
 	state_construction_mult = -0.05
-	country_company_throughput_bonus_add = 0.10
-	building_throughput_add = -0.05
+	country_bureaucracy_mult = -0.10
 }

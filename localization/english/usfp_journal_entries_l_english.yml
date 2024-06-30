@@ -155,7 +155,7 @@ usfp_je_westward_expansion: "Westward Expansion"
 usfp_je_westward_expansion_reason: "$concept_usfp_westward_expansion_desc$"
 
 usfp_gilded_age: "The Gilded Age"
-usfp_gilded_age_reason: "Opulence and corruption have come to define the new [SCOPE.gsInterestGroup('industrialists_scope').GetName] ruling class. Trusts and political machines dominate politics and the economy, while corruption scandals continually degrade public trust in the government.\n\nUnless the administration revitalizes itself and passes sweeping reforms, the [ROOT.GetCountry.GetName] will remain at the whims of the Robber Barons for the forseeable future."
+usfp_gilded_age_reason: "Opulence and corruption have come to define the new elite class of [SCOPE.gsInterestGroup('industrialists_scope').GetName]. Large trusts dominate the economy, political machines take control of local politics, all while corruption scandals continually degrade public trust in the government.\n\nUnless the administration revitalizes itself and passes sweeping reforms, the [ROOT.GetCountry.GetName] will remain at the whims of the Robber Barons for the forseeable future."
 usfp_take_bribes_button: "Take Bribes"
 usfp_take_bribes_button_desc: "We're all friends and colleagues here in the Capitol. What’s a few gifts among friends?"
 usfp_consolidate_trust_button: "Consolidate Trust"

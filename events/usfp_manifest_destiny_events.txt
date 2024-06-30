@@ -186,6 +186,10 @@ usfp_manifest_destiny.3 = {
 				popup = yes
 			}
 		}
+		add_radicals = {
+			value = medium_radicals
+			culture = cu:mexican
+		}
 		show_as_tooltip = {
 			add_modifier = {
 				name = usa_paying_for_mexico
@@ -263,6 +267,9 @@ usfp_manifest_destiny.4 = {
 				text = enough_manifest_destiny
 				root.var:manifest_destiny_var > 2
 			}
+		}
+		show_as_unavailable = {
+			always = yes
 		}
 		highlighted_option = yes
 		s:STATE_CALIFORNIA = {
@@ -480,6 +487,9 @@ usfp_manifest_destiny.6 = {
 			value = 30
 		}
 		highlighted_option = yes
+		show_as_unavailable = {
+			always = yes
+		}
 	}
 
 	#Take the northern part of Mexico, and turn Mexico into a dominion
@@ -518,6 +528,9 @@ usfp_manifest_destiny.6 = {
 			value = 40
 		}
 		highlighted_option = yes
+		show_as_unavailable = {
+			always = yes
+		}
 	}
 
 	#ALL OF MEXICO
@@ -537,6 +550,9 @@ usfp_manifest_destiny.6 = {
 			value = 60
 		}
 		highlighted_option = yes
+		show_as_unavailable = {
+			always = yes
+		}
 	}
 
 }

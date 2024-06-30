@@ -23,10 +23,35 @@ usfp_progressive_era.1 = {
 	#cool
 	option = {
 		name = usfp_progressive_era.1.a
+		default_option = yes
+		remove_modifier = usfp_third_party_system_modifier
+		add_modifier = {
+			name = usfp_fourth_party_system_modifier
+		}
+		recalculate_pop_ig_support = yes
+		update_party_support = yes
 	}
 	#bad
 	option = {
 		name = usfp_progressive_era.1.b
+		remove_modifier = usfp_third_party_system_modifier
+		add_modifier = {
+			name = usfp_fourth_party_system_modifier
+		}
+		recalculate_pop_ig_support = yes
+		update_party_support = yes
+		add_radicals = {
+			value = small_radicals
+			strata = poor
+		}
+		add_radicals = {
+			value = small_radicals
+			strata = middle
+		}
+		add_loyalists = {
+			value = small_radicals
+			strata = rich
+		}
 	}
 }
 #Scientific Management
@@ -150,7 +175,7 @@ usfp_progressive_era.3 = {
 
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
-	
+
 	#cool
 	option = {
 		name = usfp_progressive_era.3.a
@@ -316,7 +341,8 @@ usfp_progressive_era.7 = {
 		name = usfp_progressive_era.7.a
 	}
 }
-#Monopoly in state
+
+#Jane Addams and PB embrace feminism
 usfp_progressive_era.8 = {
 	type = country_event
 	placement = root
@@ -325,22 +351,63 @@ usfp_progressive_era.8 = {
 	desc = usfp_progressive_era.8.d
 	flavor = usfp_progressive_era.8.f
 	dlc = dlc_usfp
-	event_image = {
-		video = "unspecific_factory_closed"
-	}
+
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	icon = "gfx/interface/icons/invention_icons/feminism.dds"
+	event_image = {
+		video = "europenorthamerica_sufferage"
+	}
 
 	duration = 3
 	cooldown = {
 		months = 36
+	} #once
+
+	trigger = {
+		ig:ig_petty_bourgeoisie = {
+			NOR = {
+				has_ideology = ideology:ideology_feminist_ig
+			}
+		}
+		NOT = {
+			has_law = law_type:law_womens_suffrage
+		}
 	}
+
+	immediate = {
+		create_character = {
+			template = usfp_usa_jane_addams
+		}
+	}
+
+	#cool
 	option = {
 		name = usfp_progressive_era.8.a
+		default_option = yes
+		ig:ig_petty_bourgeoisie = {
+			add_ideology = ideology_feminist_ig
+		}
+	}
+	#no!
+	option = {
+		name = usfp_progressive_era.8.b
+		add_radicals = {
+			value = medium_radicals
+			interest_group = ig:ig_petty_bourgeoisie
+		}
+		every_interest_group = {
+			limit = {
+				has_ideology = ideology:ideology_patriarchal
+			}
+			add_modifier = {
+				name = usfp_rejected_feminism_positive
+				years = 2
+			}
+		}
 	}
 }
+
 #Direct Democracy in State
 usfp_progressive_era.9 = {
 	type = country_event
@@ -522,14 +589,18 @@ usfp_progressive_era.14 = {
 	option = {
 		name = usfp_progressive_era.14.a
 		default_option = yes
-		#I would like to be able to have this dynamic but there seems no way to get a dynamic company_type to plug in here
-		remove_company = company_type:company_standard_oil
-		show_as_unavailable = {
-			OR = {
+		highlighted_option = yes
+		trigger = {
+			NOR = {
 				has_law = law_type:law_laissez_faire
 				authority < 100
 			}
 		}
+		show_as_unavailable = {
+			always = yes
+		}
+		#I would like to be able to have this dynamic but there seems no way to get a dynamic company_type to plug in here
+		remove_company = company_type:company_standard_oil
 		add_modifier = {
 			name = usfp_trust_busting_authority_modifier
 			years = 4

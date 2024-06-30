@@ -39,6 +39,16 @@ usfp_gilded_age.1 = {
 			value = small_radicals
 			strata = middle
 		}
+		show_as_tooltip = {
+			add_modifier = {
+				name = usfp_gilded_age_modifier
+				years = 20
+			}
+			add_modifier = {
+				name = usfp_gilded_age_corruption_modifier
+				years = 20
+			}
+		}
 	}
 }
 #Crédit Mobilier scandal
@@ -87,7 +97,7 @@ usfp_gilded_age.2 = {
 	option = {
 		name = usfp_gilded_age.2.a
 		default_option = yes
-		add_treasury = -500000
+		add_treasury = -1000000
 		scope:scandal_party = {
 			add_momentum = momentum_large_decrease
 		}
@@ -103,7 +113,7 @@ usfp_gilded_age.2 = {
 	#lets root out corruption!
 	option = {
 		name = usfp_gilded_age.2.b
-		add_treasury = -500000
+		add_treasury = -1000000
 		every_interest_group = {
 			limit = {
 				has_party = yes
@@ -127,7 +137,7 @@ usfp_gilded_age.2 = {
 	#coverup
 	option = {
 		name = usfp_gilded_age.2.c
-		add_treasury = -500000
+		add_treasury = -1000000
 		random_list = {
 			30 = {
 				scope:scandal_party = {
@@ -172,7 +182,7 @@ usfp_gilded_age.2 = {
 	#censor
 	option = {
 		name = usfp_gilded_age.2.e
-		add_treasury = -500000
+		add_treasury = -1000000
 		trigger = {
 			OR = {
 				has_law = law_type:law_censorship
@@ -212,7 +222,7 @@ usfp_gilded_age.3 = {
 	option = {
 		name = usfp_gilded_age.3.a
 		default_option = yes
-		add_treasury = -1000000
+		add_treasury = -400000
 		add_modifier = {
 			name = usfp_scandal_outrage_modifier
 			years = 5
@@ -234,7 +244,7 @@ usfp_gilded_age.3 = {
 	#not a big deal
 	option = {
 		name = usfp_gilded_age.3.b
-		add_treasury = -1000000
+		add_treasury = -400000
 		add_modifier = {
 			name = usfp_scandal_outrage_modifier
 			years = 10
@@ -343,7 +353,7 @@ usfp_gilded_age.4 = {
 #Tammany Hall
 usfp_gilded_age.5 = {
 	type = country_event
-	placement = root
+	placement = scope:new_york_scope
 
 	title = usfp_gilded_age.5.t
 	desc = usfp_gilded_age.5.d
@@ -471,6 +481,7 @@ usfp_gilded_age.6 = {
 				}
 				create_building = {
 					building = building_university
+					level = 1
 				}
 			}
 		}
@@ -871,6 +882,9 @@ usfp_gilded_age.12 = {
 	}
 
 	immediate = {
+		ig:ig_industrialists = {
+			save_scope_as = industrialists_scope
+		}
 		random_scope_state = {
 			limit = {
 				is_incorporated = yes
@@ -902,10 +916,14 @@ usfp_gilded_age.12 = {
 	#crack down!
 	option = {
 		name = usfp_gilded_age.12.b
-		show_as_unavailable = {
+		highlighted_option = yes
+		trigger = {
 			ig:ig_industrialists = {
-				is_in_government = yes
+				is_in_government = no
 			}
+		}
+		show_as_unavailable = {
+			always = yes
 		}
 		scope:corruption_state = {
 			add_modifier = {
@@ -1242,11 +1260,15 @@ usfp_gilded_age.15 = {
 	#intervene
 	option = {
 		name = usfp_gilded_age.15.b
-		show_as_unavailable = {
-			OR = {
+		highlighted_option = yes
+		trigger = {
+			NOR = {
 				has_law = law_type:law_laissez_faire
 				authority < 100
 			}
+		}
+		show_as_unavailable = {
+			always = yes
 		}
 		scope:monopoly_state = {
 			add_radicals_in_state = {
@@ -1274,3 +1296,4 @@ usfp_gilded_age.15 = {
 		}
 	}
 }
+#Confederate Monuments

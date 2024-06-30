@@ -158,7 +158,7 @@ localization updates
 3.0 "Cleveland"
 New Content:
 	Gilded Age JE that activates in the 70s with powerful industrialists, along with 15 flavor events
-	Added Henry George and Georgism
+	Henry George spawn event and subsequent Georgism ideology that can appear in anglophone countries
 	New Labor Events: Knights of Labor, AFL, Great Railroad Strike, Looking Backward
 	Added event marking the election of the first Afro-American president
 Updates:
@@ -173,8 +173,10 @@ Updates:
 	Removed military buffs from Canadian native tags (to help the HBC not get crushed)
 	Added extra minor effects to a couple of previously identical event options to differentiate them
 	Nerfed Go West, Young Man to +15%/30% migration attraction to match 1.7.1's nerf to Propagandists
+	Added show_as_unavailable to some Manifest Destiny events to show the player that higher Manifest Destiny unlocks more options
 Fixes:
 	Lower Canada and New Brunswick now start with Frontier Colonization
 	Canadian tags now start with a colonization boost
 	American Superculture should properly fire after Peculiar Reconciliation
 	The US President can't resign while A House Divided is active
+	Increased spawn rate of Frederick Douglass

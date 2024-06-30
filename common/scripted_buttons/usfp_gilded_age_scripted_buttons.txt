@@ -15,6 +15,7 @@
 			interest_group = {
 				is_in_government = yes
 			}
+			has_role = politician
 			NOR = {
 				has_trait = grifter
 				has_trait = honorable
@@ -31,6 +32,7 @@
 				interest_group = {
 					is_in_government = yes
 				}
+				has_role = politician
 				NOR = {
 					has_trait = grifter
 					has_trait = honorable

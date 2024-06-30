@@ -700,3 +700,31 @@ usfp_usa_william_sumner = {
     traits = { literary arrogant direct usfp_trait_antiexpansionist }
     #event-spawned
 }
+
+#USFP: Jane Addams, social work reformer and suffragist
+usfp_usa_jane_addams = {
+    first_name = Jane
+    last_name = Addams
+    historical = yes
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    ideology = ideology_feminist
+    interest_group = ig_intelligentsia
+    birth_date = 1860.10.6
+    traits = { persistent literary ambitious usfp_trait_antiexpansionist }
+    #event-spawned
+    is_agitator = yes
+    on_created = {
+        if = {
+            limit = {
+                owner = {
+                    has_law = law_type:law_womens_suffrage
+                }
+            }
+            set_ideology = ideology:ideology_pacifist
+        } else = {
+            set_ideology = ideology:ideology_feminist
+        }
+    }
+}

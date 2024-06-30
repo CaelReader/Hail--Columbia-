@@ -20,8 +20,13 @@ usfp_reconstruction_long = {
 	on_timeout = {
 		add_primary_culture = cu:afro_american
 		ig:ig_petty_bourgeoisie = {
-			remove_ideology = ideology_reactionary_segregationist
-			add_ideology = ideology_reactionary_exclusionist
+			if = {
+				limit = { 
+					has_ideology = ideology:ideology_reactionary_segregationist
+				}
+				remove_ideology = ideology_reactionary_segregationist
+				add_ideology = ideology_reactionary_exclusionist
+			}
 		}
 	}
 
