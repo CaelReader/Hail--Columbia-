@@ -211,7 +211,7 @@ ideology_usfp_progressive = {
 		value = 0
 		if = {
 			limit = {
-				has_variable = had_progressive_era
+				has_global_variable = had_progressive_era
 			}
 			add = 25
 		}

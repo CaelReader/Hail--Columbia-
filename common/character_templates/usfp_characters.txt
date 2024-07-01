@@ -728,3 +728,19 @@ usfp_usa_jane_addams = {
         }
     }
 }
+
+#USFP: Swami Vivekananda, introduced Yoga and Hinduism to the West
+usfp_usa_swami_vivekananda = {
+    first_name = Swami
+    last_name = Vivekananda
+    historical = yes
+    culture = cu:bengali
+    religion = rel:hindu
+    female = no
+    ideology = ideology:ideology_pacifist
+    interest_group = ig_devout
+    birth_date = 1863.1.12
+    traits = { pious sickly inspirational_orator innovative }
+    #event-spawned
+    is_agitator = yes
+}

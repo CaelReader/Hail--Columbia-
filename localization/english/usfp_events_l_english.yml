@@ -887,9 +887,11 @@ usfp_gilded_age.15.a: "Let's hope the market punishes them."
 usfp_gilded_age.15.b: "We should promote competition in [SCOPE.sState('monopoly_state').GetName]."
 
 usfp_progressive_era.1.t: "Rise of the Progressives"
-usfp_progressive_era.1.d: ""
-usfp_progressive_era.1.f: """"
-usfp_progressive_era.1.a: ""
+usfp_progressive_era.1.d: "The social and economic conditions of the [ROOT.GetCountry.GetName] have prompted calls for reform from all levels of society. These movements have now begun to coalesce into a greater [SCOPE.sIdeology('progressive_ideology').GetName] cause. Local, state, and even federal officials are winning elections on a platform of ending corruption and uplifting the general welfare."
+usfp_progressive_era.1.f: ""Our great industrial organizations are in control of politics, government and national resources. They manage conventions, make platforms, dictate legislation. They rule through the very men elected to represent the people. The battle is just on. It is young yet. It will be the longest and hardest ever fought for Democracy. In other lands, the people have lost. Here we shall win. It is a glorious privilege to live in this time, and have a free hand in this fight for government by the people."" #Robert La Follette
+usfp_progressive_era.1.a: "For a square deal!"
+usfp_progressive_era.1.b: "These communists are going to tear the country apart!"
+progressives_can_spawn: "[SCOPE.sIdeology('progressive_ideology').GetName] characters can now appear."
 
 usfp_progressive_era.2.t: "Scientific Management"
 usfp_progressive_era.2.d: "A new theory of industrial management has risen to prominence among the [SCOPE.gsInterestGroup('industrialists_scope').GetName] and [SCOPE.gsInterestGroup('intelligentsia_scope').GetName]. This new Scientific Management seeks to determine an objectively optimal method for any given task, which is then implemented via close cooperation between managers and workers."
@@ -923,12 +925,13 @@ usfp_progressive_era.7.d: ""
 usfp_progressive_era.7.f: """"
 usfp_progressive_era.7.a: ""
 
-usfp_progressive_era.8.t: ""
-usfp_progressive_era.8.d: ""
-usfp_progressive_era.8.f: """"
-usfp_progressive_era.8.a: ""
+usfp_progressive_era.8.t: "Womens’ Clubs"
+usfp_progressive_era.8.d: "Middle class women across the [ROOT.GetCountry.GetName] have begun to embrace the cause of women's rights, forming clubs and social groups advocating for suffrage. Activists like [SCOPE.sCharacter('bryan_scope').GetFullName] promote women's rights as an extension of their household duties, as a means to provide care to their communities."
+usfp_progressive_era.8.f: ""It is annoying to have to stop in the midst of our social work and realize that we cannot pass important measure till we obtain a vote, and that we must start parades and hold meetings and maybe throw things before we get it. When people realize that the highest interests of the nation cannot be secured and preserved except by the cooperation of men and women in government, I think we shall be surprised by the quick way in which the franchise will come to our hands."" #Jane Addams
+usfp_progressive_era.8.a: "Women deserve access to the ballot."
+usfp_progressive_era.8.b: "Voting would sully the pure hands of women."
 
-usfp_progressive_era.9.t: "State Adopts the Initiative"
+usfp_progressive_era.9.t: "[SCOPE.sState('initiative_state_scope').GetName] Adopts the Initiative"
 usfp_progressive_era.9.d: ""
 usfp_progressive_era.9.f: """"
 usfp_progressive_era.9.a: ""

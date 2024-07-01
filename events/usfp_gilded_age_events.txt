@@ -844,7 +844,7 @@ usfp_gilded_age.11 = {
 		}
 	}
 }
-#Political corruption in state
+#Political Machine in State
 usfp_gilded_age.12 = {
 	type = country_event
 	placement = root
@@ -909,7 +909,6 @@ usfp_gilded_age.12 = {
 		scope:corruption_state = {
 			add_modifier = {
 				name = usfp_captive_state_government
-				years = 3
 			}
 		}
 	}
@@ -965,7 +964,6 @@ usfp_gilded_age.12 = {
 		scope:corruption_state = {
 			add_modifier = {
 				name = usfp_captive_state_government
-				years = 4
 			}
 			add_loyalists_in_state = {
 				value = small_radicals

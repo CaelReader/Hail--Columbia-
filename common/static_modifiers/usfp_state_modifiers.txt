@@ -186,3 +186,8 @@ usfp_monopolistic_business = {
 	building_nationalization_radicals_mult = 1.00
 	state_radicals_from_sol_change_mult = 0.10
 }
+
+usfp_state_ballot_initiatives_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_election_positive.dds
+	state_pop_pol_str_mult = 0.10
+}
