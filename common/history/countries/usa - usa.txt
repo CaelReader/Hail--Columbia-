@@ -149,5 +149,9 @@
 			country = c:SEQ
 			type = grant_own_market
 		}
+		create_unidirectional_truce = {
+			country = c:LIB
+			months = 240
+		}
 	}
 }

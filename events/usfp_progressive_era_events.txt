@@ -171,40 +171,118 @@ usfp_progressive_era.2 = {
 	}
 }
 #American Anti-Imperialist League
-# usfp_progressive_era.3 = {
-# 	type = country_event
-# 	placement = root
+usfp_progressive_era.3 = {
+	type = country_event
+	placement = root
 
-# 	title = usfp_progressive_era.3.t
-# 	desc = usfp_progressive_era.3.d
-# 	flavor = usfp_progressive_era.3.f
-# 	dlc = dlc_usfp
-# 	event_image = {
-# 		video = "southamerica_election"
-# 	}
+	title = usfp_progressive_era.3.t
+	desc = usfp_progressive_era.3.d
+	flavor = usfp_progressive_era.3.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "southamerica_election"
+	}
 
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-# 	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
-# 	duration = 3
-# 	cooldown = {months = very_long_modifier_time } #once
+	duration = 3
+	cooldown = {months = very_long_modifier_time } #once
 
-# 	#okay
-# 	option = {
-# 		name = usfp_progressive_era.3.a
-# 		default_option = yes
-# 		create_political_lobby = {  
-# 			type = usfp_lobby_anti_imperial  
-# 			add_interest_group = ig:ig_intelligentsia
-# 			target = root
-# 		}
-# 	}
-# 	#bad
-# 	option = {
-# 		name = usfp_progressive_era.3.b
-# 	}
-# }
+	trigger = {
+		OR = {
+			any_subject_or_below = {
+				count > 0
+			}
+			any_diplomatic_play = {
+				initiator_is = root
+				OR = {
+					is_diplomatic_play_type = dp_annex_subject
+					is_diplomatic_play_type = dp_conquer_state
+					is_diplomatic_play_type = dp_make_protectorate
+					is_diplomatic_play_type = dp_take_treaty_port
+				}
+			}
+			var:manifest_destiny_var > 7
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { 
+				any_interest_group = {
+					leader = {
+						has_ideology = ideology:ideology_pacifist
+					}
+				}
+			}
+			random_interest_group = {
+				limit = {
+					leader = {
+						has_ideology = ideology:ideology_pacifist
+					}
+				}
+				save_scope_as = pacifist_ig
+			}
+		}
+	}
+	#okay
+	option = {
+		name = usfp_progressive_era.3.a
+		default_option = yes
+		add_modifier = {
+			name = usfp_anti_imperialist_league_modifier
+			years = 10
+		}
+		usfp_manifest_less_destiny_effect = yes
+	}
+	#bad
+	option = {
+		name = usfp_progressive_era.3.b
+		add_modifier = {
+			name = usfp_anti_imperialist_league_modifier
+			years = 10
+			multiplier = 0.5
+		}
+		add_radicals = {
+			value = medium_radicals
+			pop_type = academics
+		}
+		add_radicals = {
+			value = small_radicals
+			strata = poor
+		}
+		add_loyalists = {
+			value = medium_radicals
+			pop_type = officers
+		}
+	}
+	#pacifist
+	option = {
+		name = usfp_progressive_era.3.c
+		highlighted_option = yes
+		trigger = {
+			any_interest_group = {
+				leader = {
+					has_ideology = ideology:ideology_pacifist
+				}
+			}
+		}
+		add_modifier = {
+			name = usfp_anti_imperialist_league_modifier
+			years = 10
+			multiplier = 1.5
+		}
+		usfp_manifest_less_destiny_effect = yes
+		scope:pacifist_ig = {
+			add_modifier = {
+				name = usfp_anti_imperialist_league_ig_modifier
+				years = 10
+			}
+		}
+	}
+}
 #World Parliament of Religions
 usfp_progressive_era.4 = {
 	type = country_event
@@ -230,17 +308,55 @@ usfp_progressive_era.4 = {
 		s:STATE_ILLINOIS.region_state:USA = {
 			save_scope_as = illinois_scope
 		}
+		create_character = {
+			template = usfp_usa_swami_vivekananda
+		}
+		random_scope_character = {
+			limit = {
+				has_template = usfp_usa_swami_vivekananda
+			}
+			save_scope_as = vivekananda_scope
+		}
+		s:STATE_SOUTH_BENGAL = {
+			random_scope_state = {
+				owner = {
+					save_scope_as = bengal_scope
+				}
+			}
+		}
 	}
 	#neat
 	option = {
 		name = usfp_progressive_era.4.a
+		default_option = yes
+		scope:vivekananda_scope = {
+			add_modifier = {
+				name = usfp_raja_yoga
+			}
+		}
+		custom_tooltip = {
+			text = usfp_progressive_era.4.a.t
+			trigger_event = {
+				id = usfp_progressive_era.19
+				years = 3
+			}
+		}
 	}
-	#keep him here
+	#bad foreign religion
 	option = {
 		name = usfp_progressive_era.4.b
+		scope:vivekananda_scope = {
+			transfer_character = scope:bengal_scope
+		}
+		ig:ig_devout = {
+			add_modifier = {
+				name = usfp_true_faith_ig_modifier
+				years = 2
+			}
+		}
 	}
 }
-#Eugenics movement
+#Eugenics movement spawns
 usfp_progressive_era.5 = {
 	type = country_event
 	placement = root
@@ -260,21 +376,46 @@ usfp_progressive_era.5 = {
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
 	
+	immediate = {
+		ideology:ideology_usfp_eugenicist = {
+			save_scope_as = eugenicist_ideology
+		}
+		if = {
+			limit = { 
+				any_interest_group = {
+					usfp_ig_eugenicist_candidate = yes
+				}
+			}
+			random_interest_group = {
+				limit = {
+					usfp_ig_eugenicist_candidate = yes
+				}
+				save_scope_as = eugenicist_ig
+			}
+		}
+	}
+
 	#this is bad
 	option = {
 		name = usfp_progressive_era.5.a
-		default_option = yes
 		add_radicals = {
 			value = small_radicals
 			strata = middle
+		}
+		add_journal_entry = {
+			type = usfp_progressive_era_eugenics
 		}
 	}
 	#interesting
 	option = {
 		name = usfp_progressive_era.5.b
+		default_option = yes
 		add_modifier = {
 			name = usfp_eugenics_movement_rising_modifier
 			years = 4
+		}
+		add_journal_entry = {
+			type = usfp_progressive_era_eugenics
 		}
 	}
 	#immediately adopt!
@@ -283,40 +424,14 @@ usfp_progressive_era.5 = {
 		highlighted_option = yes
 		trigger = {
 			any_interest_group = {
-				leader = {
-					OR = {
-						has_ideology = ideology:ideology_usfp_social_darwinist_leader
-						has_ideology = ideology:ideology_fascist
-						has_ideology = ideology:ideology_ethno_nationalist
-						has_trait = bigoted
-					}
-				}
+				usfp_ig_eugenicist_candidate = yes
 			}
 		}
-		random_interest_group = {
-			limit = {
-				leader = {
-					OR = {
-						has_ideology = ideology:ideology_usfp_social_darwinist_leader
-						has_ideology = ideology:ideology_fascist
-						has_ideology = ideology:ideology_ethno_nationalist
-						has_trait = bigoted
-					}
-				}
-			}
-			if = {
-				limit = { 
-					has_ideology = ideology:ideology_reactionary_segregationist
-				}
-				remove_ideology = ideology_reactionary_segregationist
-			}
-			if = {
-				limit = { 
-					has_ideology = ideology:ideology_reactionary_exclusionist
-				}
-				remove_ideology = ideology_reactionary_exclusionist
-			}
-			add_ideology = ideology_usfp_eugenicist
+		add_journal_entry = {
+			type = usfp_progressive_era_eugenics
+		}
+		scope:eugenicist_ig = {
+			usfp_become_eugenicist_effect = yes
 		}
 	}
 }
@@ -503,6 +618,10 @@ usfp_progressive_era.9 = {
 				limit = { has_modifier = usfp_captive_state_government }
 				remove_modifier = usfp_captive_state_government
 			}
+			add_loyalists_in_state = {
+				value = small_radicals
+				pop_type = bureaucrats
+			}
 		}
 	}
 	#bad
@@ -515,6 +634,10 @@ usfp_progressive_era.9 = {
 			if = {
 				limit = { has_modifier = usfp_captive_state_government }
 				remove_modifier = usfp_captive_state_government
+			}
+			add_radicals_in_state = {
+				value = small_radicals
+				pop_type = capitalists
 			}
 		}
 	}
@@ -971,6 +1094,152 @@ usfp_progressive_era.16 = {
 		add_radicals = {
 			value = large_radicals
 			strata = rich
+		}
+	}
+}
+
+#IG potentially adopts Eugenics
+usfp_progressive_era.17 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.17.t
+	desc = usfp_progressive_era.17.d
+	flavor = usfp_progressive_era.17.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+	cooldown = { years = 5 }
+
+	trigger = {
+		any_interest_group = {
+			usfp_ig_eugenicist_candidate = yes
+		}
+	}
+
+	immediate = {
+		random_interest_group = {
+			limit = {
+				usfp_ig_eugenicist_candidate = yes
+			}
+			save_scope_as = eugenicist_ig
+			leader = {
+				save_scope_as = eugenicist_character
+			}
+		}
+	}
+
+	#yes
+	option = {
+		name = usfp_progressive_era.17.a
+		scope:eugenicist_ig = {
+			usfp_become_eugenicist_effect = yes
+		}
+		add_modifier = {
+			name = usfp_eugenics_movement_rising_modifier
+			years = 5
+		}
+	}
+	#no
+	option = {
+		name = usfp_progressive_era.17.b
+		default_option = yes
+		add_radicals = {
+			value = medium_radicals
+			interest_group = scope:eugenicist_ig
+		}
+	}
+}
+
+#Feminist promotes Eugenics
+usfp_progressive_era.18 = {
+	type = country_event
+	placement = root
+
+	title = usfp_progressive_era.18.t
+	desc = usfp_progressive_era.18.d
+	flavor = usfp_progressive_era.18.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_sufferage"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+	cooldown = { years = 20 }
+
+	trigger = {
+		any_scope_character = {
+			has_ideology = ideology:ideology_feminist
+			OR = {
+				interest_group = { is_interest_group_type = ig_intelligentsia }
+				interest_group = { is_interest_group_type = ig_petty_bourgeoisie }
+			}
+			popularity > 25
+			is_female = yes
+		}
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_ideology = ideology:ideology_feminist
+				OR = {
+					interest_group = { is_interest_group_type = ig_intelligentsia }
+					interest_group = { is_interest_group_type = ig_petty_bourgeoisie }
+				}
+				popularity > 25
+				is_female = yes
+			}
+			save_scope_as = eugenicist_character
+			interest_group = {
+				save_scope_as = eugenicist_ig
+			}
+		}
+		ideology:ideology_feminist = {
+			save_scope_as = feminist_ideology
+		}
+	}
+
+	#no
+	option = {
+		name = usfp_progressive_era.18.a
+		default_option = yes
+		add_modifier = {
+			name = usfp_eugenics_movement_rising_modifier
+			multiplier = 0.5
+			years = 2
+		}
+	}
+	#yes
+	option = {
+		name = usfp_progressive_era.18.b
+		default_option = yes
+		scope:eugenicist_ig = {
+			usfp_become_eugenicist_effect = yes
+		}
+	}
+
+}
+
+#hidden event to send Vivekananda home
+usfp_progressive_era.19 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		scope:vivekananda_scope = {
+			transfer_character = scope:bengal_scope
 		}
 	}
 }

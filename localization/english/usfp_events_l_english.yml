@@ -887,7 +887,7 @@ usfp_gilded_age.15.a: "Let's hope the market punishes them."
 usfp_gilded_age.15.b: "We should promote competition in [SCOPE.sState('monopoly_state').GetName]."
 
 usfp_progressive_era.1.t: "Rise of the Progressives"
-usfp_progressive_era.1.d: "The social and economic conditions of the [ROOT.GetCountry.GetName] have prompted calls for reform from all levels of society. These movements have now begun to coalesce into a greater [SCOPE.sIdeology('progressive_ideology').GetName] cause. Local, state, and even federal officials are winning elections on a platform of ending corruption and uplifting the general welfare."
+usfp_progressive_era.1.d: "The social and economic conditions of the [ROOT.GetCountry.GetName] have prompted calls for reform from all levels of society, which have now begun to coalesce into a greater [SCOPE.sIdeology('progressive_ideology').GetName] cause. Local, state, and even federal officials are winning elections on a platform of ending corruption and uplifting the general welfare."
 usfp_progressive_era.1.f: ""Our great industrial organizations are in control of politics, government and national resources. They manage conventions, make platforms, dictate legislation. They rule through the very men elected to represent the people. The battle is just on. It is young yet. It will be the longest and hardest ever fought for Democracy. In other lands, the people have lost. Here we shall win. It is a glorious privilege to live in this time, and have a free hand in this fight for government by the people."" #Robert La Follette
 usfp_progressive_era.1.a: "For a square deal!"
 usfp_progressive_era.1.b: "These communists are going to tear the country apart!"
@@ -901,19 +901,26 @@ usfp_progressive_era.2.b: "Our esteemed [SCOPE.gsInterestGroup('intelligentsia_s
 usfp_progressive_era.2.c: "The bosses already micromanage too much."
 
 usfp_progressive_era.3.t: "The American Anti-Imperialist League"
-usfp_progressive_era.3.d: ""
-usfp_progressive_era.3.f: """"
-usfp_progressive_era.3.a: ""
+usfp_progressive_era.3.d: "The American Anti-Imperialist League has been founded to oppose [ROOT.GetCountry.GetAdjective] military expansionism. While small in number, many prominent writers and politicans have lent their support to the organization, calling for restraint in our foreign policy."
+usfp_progressive_era.3.f: ""These policies will furnish an excuse, and to many a justifying reason for the creation and maintenance of vast navies and mighty armies, through the lifetime of the nation, whether called a republic or empire. Despotism — absolutism in government — is the necessity of the army and the navy, and in such schools and from such training can we expect to create or even to preserve ideas and practices that are consistent with republican institutions?"" #George S Boutwell
+usfp_progressive_era.3.a: "We must preserve peace to preserve the republic."
+usfp_progressive_era.3.b: "Cowards!"
+usfp_progressive_era.3.c: "The [SCOPE.gsInterestGroup('pacifist_ig').GetName] stand with the League."
 
 usfp_progressive_era.4.t: "World Parliament of Religions"
-usfp_progressive_era.4.d: ""
-usfp_progressive_era.4.f: """"
-usfp_progressive_era.4.a: ""
+usfp_progressive_era.4.d: "A novel interfaith gathering held in [SCOPE.sState('illinois_scope').GetCityHubName] has brought together a wide array of religious leaders, many representing foreign faiths unfamiliar to the average [ROOT.GetCountry.GetAdjective]. Hindu monk [SCOPE.sCharacter('vivekananda_scope').GetFullName] gave an inspired speech on the universal brotherhood between all religions, becoming an instant celebrity and prompting invitations for him to lecture across the country."
+usfp_progressive_era.4.f: ""I will quote to you brethren a few lines from a hymn which I remember to have repeated from my earliest childhood, which is every day repeated by millions of human beings: As the different streams having their sources in different places all mingle their water in the sea, so, O Lord, the different paths which men take through different tendencies, various though they appear, crooked or straight, all lead to Thee."" #Swami Vivekananda
+usfp_progressive_era.4.a: "A truly divine speaker."
+usfp_progressive_era.4.a.t: "[SCOPE.sCharacter('vivekananda_scope').GetFullName] will leave for India in a few years."
+usfp_progressive_era.4.b: "We don't need exotic religions polluting our morals."
 
 usfp_progressive_era.5.t: "Popular Eugenics"
-usfp_progressive_era.5.d: ""
-usfp_progressive_era.5.f: """"
-usfp_progressive_era.5.a: ""
+usfp_progressive_era.5.d: "A peculiar solution to our social problems has emerged among some [ROOT.GetCountry.GetAdjective] intellectuals and professionals - that of Eugenics, the selective breeding of humans. Proponents claim that the underlying source of crime and deliquency is poor family planning, and that the solution is to limit the reproduction of 'defective' members of society."
+usfp_progressive_era.5.f: ""The more severely burdened should not propagate themselves. If we do nothing but make mental and physical cripples capable of propagating themselves, and the healthy stocks have to limit the number of their children because so much has to be done for the maintenance of others, if natural selection is generally suppressed, then unless we will get new measures our race must rapidly deteriorate."" #Eugen Bleuler, textbook of Psychiatry
+usfp_progressive_era.5.a: "This just an excuse for discrimination."
+usfp_progressive_era.5.b: "Could the population truly be improved this way?"
+usfp_progressive_era.5.c: "The [SCOPE.gsInterestGroup('eugenicist_ig').GetName] stand for fitter families!"
+
 
 usfp_progressive_era.6.t: "City Beautiful"
 usfp_progressive_era.6.d: ""
@@ -926,15 +933,16 @@ usfp_progressive_era.7.f: """"
 usfp_progressive_era.7.a: ""
 
 usfp_progressive_era.8.t: "Womens’ Clubs"
-usfp_progressive_era.8.d: "Middle class women across the [ROOT.GetCountry.GetName] have begun to embrace the cause of women's rights, forming clubs and social groups advocating for suffrage. Activists like [SCOPE.sCharacter('bryan_scope').GetFullName] promote women's rights as an extension of their household duties, as a means to provide care to their communities."
+usfp_progressive_era.8.d: "Middle class women across the [ROOT.GetCountry.GetName] have begun to embrace the cause of women's rights, forming clubs and social groups advocating for suffrage. Activists like [SCOPE.sCharacter('jane_addams_scope').GetFullName] promote women's rights as an extension of their household duties, as a means to provide care to their communities."
 usfp_progressive_era.8.f: ""It is annoying to have to stop in the midst of our social work and realize that we cannot pass important measure till we obtain a vote, and that we must start parades and hold meetings and maybe throw things before we get it. When people realize that the highest interests of the nation cannot be secured and preserved except by the cooperation of men and women in government, I think we shall be surprised by the quick way in which the franchise will come to our hands."" #Jane Addams
 usfp_progressive_era.8.a: "Women deserve access to the ballot."
 usfp_progressive_era.8.b: "Voting would sully the pure hands of women."
 
 usfp_progressive_era.9.t: "[SCOPE.sState('initiative_state_scope').GetName] Adopts the Initiative"
-usfp_progressive_era.9.d: ""
-usfp_progressive_era.9.f: """"
-usfp_progressive_era.9.a: ""
+usfp_progressive_era.9.d: "In an effort to extend democratic power directly to its citizens, [SCOPE.sState('initiative_state_scope').GetName] has adopted a system of direct ballot initiatives that can bypass the existing structure of political parties, machines, and candidates."
+usfp_progressive_era.9.f: ""Among the plainest signs of the times is the popular distrust of legislators. The citizens are gradually and surely resuming the law-making and money-spending power unwisely delegated in the past to bodies whose custom it is to abuse the trust."" #JW Sullivan
+usfp_progressive_era.9.a: "Direct democracy will strengthen the republic."
+usfp_progressive_era.9.b: "The mob doesn't know whats best for it."
 
 usfp_progressive_era.10.t: "Death's Laboratory"
 usfp_progressive_era.10.d: ""
@@ -974,6 +982,18 @@ usfp_progressive_era.16.d: "The [SCOPE.sIdeology('progressive_ideology').GetName
 usfp_progressive_era.16.f: ""This administration stands for a square deal all around, for an attitude of kindly justice as between man and man, without regard to what any man’s creed or birthplace or social position may be, so long as, in his life and in his work, he shows the qualities that entitle him to the respect of his fellows."" #Theodore Roosevelt
 usfp_progressive_era.16.a: "To progress and good government!"
 usfp_progressive_era.16.b: "Capitalism remains a threat to the gains we have earned."
+
+usfp_progressive_era.17.t: "[SCOPE.gsInterestGroup('eugenicist_ig').GetName] Flirt with Eugenics"
+usfp_progressive_era.17.d: "[SCOPE.sCharacter('eugenicist_character').GetFullName]'s advocacy for eugenics programs has spread the idea among members of the [SCOPE.gsInterestGroup('eugenicist_ig').GetName], where its support base has begun to grow rapidly."
+usfp_progressive_era.17.f: ""Sooner or later we must limit the families of the unintelligent classes, and if our government cannot send them doctor and clinic it must, till it get tired of it, send monk and confession box. We cannot go back as some dreamers would have us, to the old way of big families everywhere, even if the intelligent classes would consent, because that old way worked through lack of science and consequent great mortality among the children of those least fitted for modem civilisation."" #YB Yeats
+usfp_progressive_era.17.a: "[SCOPE.gsInterestGroup('eugenicist_ig').GetName] are simply higher quality people."
+usfp_progressive_era.17.b: "Surely the [SCOPE.gsInterestGroup('eugenicist_ig').GetName] know better than this."
+
+usfp_progressive_era.18.t: "[SCOPE.sCharacter('eugenicist_character').GetFullName] Promotes Eugenics"
+usfp_progressive_era.18.d: "Prominent [SCOPE.sIdeology('feminist_ideology').GetName] [SCOPE.sCharacter('eugenicist_character').GetFullName] has given her support to eugenicist policies, asserting that women's social work would be made easier and more thorough by an elinination of hereditary disease."
+usfp_progressive_era.18.f: ""When this new science makes clear to the public that those diseases which are a direct outcome of the social evil are clearly responsible for race deterioration, effective indignation may at last be aroused, both against preventable infant mortality for which these diseases are responsible, and against the ghastly fact that the survivors among these afflicted children infect their contemporaries and hand on the evil heritage to another generation."" #Jane Addams
+usfp_progressive_era.18.a: "This is not the way."
+usfp_progressive_era.18.b: "This is the way."
 
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"

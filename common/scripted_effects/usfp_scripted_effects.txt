@@ -759,3 +759,19 @@ usfp_washington_precedent_effect = {
 		post_notification = usfp_washington_precedent
 	}
 }
+
+usfp_become_eugenicist_effect = {
+	if = {
+		limit = { 
+			has_ideology = ideology:ideology_reactionary_segregationist
+		}
+		remove_ideology = ideology_reactionary_segregationist
+	}
+	if = {
+		limit = { 
+			has_ideology = ideology:ideology_reactionary_exclusionist
+		}
+		remove_ideology = ideology_reactionary_exclusionist
+	}
+	add_ideology = ideology_usfp_eugenicist
+}

@@ -299,3 +299,15 @@ usfp_industrialists_corruption_modifier = {
 	interest_group_pop_attraction_mult = 0.10
 	interest_group_approval_add = 2
 }
+
+usfp_anti_imperialist_league_ig_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_influence_positive.dds
+	interest_group_pol_str_mult = 0.10
+	interest_group_pop_attraction_mult = 0.10
+}
+
+usfp_true_faith_ig_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_theocracy_positive.dds
+	interest_group_pop_attraction_mult = 0.10
+	interest_group_approval_add = 2
+}

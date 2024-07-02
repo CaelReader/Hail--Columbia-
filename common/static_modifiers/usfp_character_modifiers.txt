@@ -54,3 +54,8 @@ usfp_philanthropist = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	character_popularity_add = 20
 }
+
+usfp_raja_yoga = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_clergy_positive.dds
+	character_popularity_add = 30
+}

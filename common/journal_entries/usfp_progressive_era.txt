@@ -45,6 +45,7 @@ usfp_progressive_era = {
 		ideology:ideology_usfp_progressive = {
 			save_scope_as = progressive_ideology
 		}
+		trigger_event = usfp_progressive_era.1
 	}
 	invalid = {
 		NOT = {
@@ -55,6 +56,20 @@ usfp_progressive_era = {
 		OR = {
 			has_law = law_type:law_outlawed_dissent
 			has_law = law_type:law_single_party_state
+		}
+	}
+	on_fail = {
+		add_radicals = {
+			value = medium_radicals
+			strata = poor
+		}
+		add_radicals = {
+			value = medium_radicals
+			strata = middle
+		}
+		add_loyalists = {
+			value = small_radicals
+			strata = rich
 		}
 	}
 	complete = {
@@ -87,15 +102,81 @@ usfp_progressive_era = {
 		bureaucracy > 300
 		root.average_sol > 15
 	}
+	on_complete = {
+		trigger_event = usfp_progressive_era.16
+	}
+	on_monthly_pulse = {
+		random_events = {
+			chance_of_no_event = 85
+			100 = usfp_progressive_era.2 #Scientific Management
+			200 = usfp_progressive_era.3 #Anti-Imperialist League
+			10 = usfp_progressive_era.4 #World Parliament of Religions
+			100 = usfp_progressive_era.5 #Eugenics Movement
+			10 = usfp_progressive_era.6 #City Beautiful Movement
+			10 = usfp_progressive_era.7 #Social Hygiene Movement
+			50 = usfp_progressive_era.8 #Jane Addams spawn, PB embrace Feminism
+			10 = usfp_progressive_era.9 #State adopts Initiative and Referendum
+			10 = usfp_progressive_era.10 #Muckraker: Death's Laboratory
+			10 = usfp_progressive_era.11 #Muckraker: The Jungle
+			10 = usfp_progressive_era.12 #Muckraker: The Bitter Cry of Children
+			10 = usfp_progressive_era.13 #Muckraker: The Shame of the Cities
+			10 = usfp_progressive_era.14 #Muckraker: History of Standard Oil
+		}
+		events = {
+			usfp_progressive_era.15 #Cross of Gold, Bryan spawn
+		}
+	}
 }
+
 usfp_progressive_era_eugenics = {
 	icon = gfx/interface/icons/event_icons/event_skull.dds
 	group = je_group_historical_content
 	#added by event
-	goal_add_value = 100
+	timeout = 18000 #50 years, lol
 	complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
+		has_law = law_type:law_ethnostate
+		OR = {
+			has_law = law_type:law_migration_controls
+			has_law = law_type:law_closed_borders
 		}
+		institution_investment_level = {
+			institution = institution_health_system
+			value > 3
+		}
+	}
+	on_complete = {
+		add_loyalists = {
+			value = small_radicals
+			strata = middle
+		}
+		random_interest_group = {
+			limit = {
+				is_in_government = yes
+				NOT = {
+					has_ideology = ideology:ideology_usfp_eugenicist
+				}
+			}
+			usfp_become_eugenicist_effect = yes
+		}
+	}
+	fail = {
+		any_interest_group = {
+			law_stance = {
+				law = law_type:law_multicultural
+				value >= approve
+			}
+			count >= 6
+		}
+	}
+	on_fail = {
+		add_radicals = {
+			value = small_radicals
+			strata = middle
+		}
+	}
+	on_monthly_pulse = {
+		chance_of_no_event = 90
+		100 = usfp_progressive_era.17 #ig becomes eugenicist
+		300 = usfp_progressive_era.18 #feminist promotes eugenics
 	}
 }

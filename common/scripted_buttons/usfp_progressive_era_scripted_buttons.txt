@@ -1,0 +1,53 @@
+﻿usfp_bust_trust_button = {
+	name = "usfp_bust_trust_button"
+	desc = "usfp_bust_trust_button_desc"
+
+	visible = {
+		any_company = {
+			count > 0
+		}
+	}
+
+	possible = {
+		NOT = {
+			has_modifier = usfp_trust_busting_authority_modifier
+		}
+		authority >= 100
+	}
+
+	effect = {
+		add_modifier = {
+			name = usfp_trust_busting_authority_modifier
+			years = 4
+		}
+		add_radicals = {
+			value = small_radicals
+			pop_type = capitalists
+		}
+		every_interest_group = {
+			limit = {
+				usfp_ig_dislikes_trusts = yes
+			}
+			add_modifier = {
+				name = usfp_trust_busting_positive_modifier
+				years = 4
+			}
+		}
+		every_interest_group = {
+			limit = {
+				usfp_ig_likes_trusts = yes
+			}
+			add_modifier = {
+				name = usfp_trust_busting_negative_modifier
+				years = 4
+			}
+		}
+	}
+
+	
+}
+
+usfp_remove_machine_button = {
+	name = "usfp_remove_machine_button"
+	desc = "usfp_remove_machine_button_desc"
+}

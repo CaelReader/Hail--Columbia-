@@ -528,6 +528,7 @@ usfp_grange_movement_modifier = {
 usfp_trust_busting_authority_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_negative.dds
 	country_authority_add = -100
+	country_capitalists_pol_str_mult = -0.10
 }
 
 usfp_federal_corruption_modifier = {
@@ -542,4 +543,13 @@ usfp_trust_dominance_modifier = {
 	country_company_construction_efficiency_bonus_add = 0.10
 	state_construction_mult = -0.05
 	country_bureaucracy_mult = -0.10
+}
+
+usfp_anti_imperialist_league_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_influence_negative.dds
+	country_infamy_generation_mult = 0.10
+	country_war_exhaustion_casualties_mult = 0.15
+	state_pop_support_law_no_colonial_affairs_add = 0.10
+	country_liberty_desire_of_subjects_add = 0.02
+	state_radicals_from_discrimination_mult = -0.05
 }
