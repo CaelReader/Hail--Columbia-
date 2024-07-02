@@ -454,8 +454,42 @@ usfp_progressive_era.6 = {
 
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
+
+	immediate = {
+		s:STATE_DISTRICT_OF_COLUMBIA.region_state:USA = {
+			save_scope_as = dc_scope
+		}
+	}
+
+	#cool
 	option = {
 		name = usfp_progressive_era.6.a
+		default_option = yes
+		add_modifier = {
+			name = usfp_city_beautiful_modifier
+			years = 10
+		}
+		add_treasury = -500000
+		scope:dc_scope = {
+			add_modifier = {
+				name = usfp_national_mall_modifier
+			}
+		}
+	}
+	#seems expensive
+	option = {
+		name = usfp_progressive_era.6.b
+		add_modifier = {
+			name = usfp_city_beautiful_modifier
+			multiplier = 0.5
+			years = 10
+		}
+		scope:dc_scope = {
+			add_radicals_in_state = {
+				value = small_radicals
+				strata = middle
+			}
+		}
 	}
 }
 #Social Hygiene movement

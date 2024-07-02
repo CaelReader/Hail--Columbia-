@@ -553,3 +553,8 @@ usfp_anti_imperialist_league_modifier = {
 	country_liberty_desire_of_subjects_add = 0.02
 	state_radicals_from_discrimination_mult = -0.05
 }
+
+usfp_city_beautiful_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_positive.dds
+	building_urban_center_throughput_add = 0.10
+}

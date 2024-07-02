@@ -923,9 +923,10 @@ usfp_progressive_era.5.c: "The [SCOPE.gsInterestGroup('eugenicist_ig').GetName] 
 
 
 usfp_progressive_era.6.t: "City Beautiful"
-usfp_progressive_era.6.d: ""
-usfp_progressive_era.6.f: """"
-usfp_progressive_era.6.a: ""
+usfp_progressive_era.6.d: "The new generation of [ROOT.GetCountry.GetAdjective] architects and urban planners have embraced a philosophy they call 'City Beautiful', that seeks to uplift our cities through grand projects of monumental architecture and open green spaces. Not only will these new designs promote beauty in our cities, but they will also promote civic virtue and a higher quality of life. A grand plan to renovate [SCOPE.sState('dc_scope').GetCityHubName] in this mold has been proposed, to show the country that it can be done."
+usfp_progressive_era.6.f: "The plan was to recreate Washington into the grand monumental capital that it was always meant to be. A grand open mall lined with elm trees would serve as the new core of the city, flanked by government buildings and museums. At the center of it all, the Washington Monument would stand tall, a proud symbol for a proud capital."
+usfp_progressive_era.6.a: "Some remodeling would certainly be appreciated."
+usfp_progressive_era.6.b: "This all sounds rather wasteful."
 
 usfp_progressive_era.7.t: "Social Hygiene"
 usfp_progressive_era.7.d: ""
