@@ -929,9 +929,10 @@ usfp_progressive_era.6.a: "Some remodeling would certainly be appreciated."
 usfp_progressive_era.6.b: "This all sounds rather wasteful."
 
 usfp_progressive_era.7.t: "Social Hygiene"
-usfp_progressive_era.7.d: ""
-usfp_progressive_era.7.f: """"
-usfp_progressive_era.7.a: ""
+usfp_progressive_era.7.d: "Prostitution and venereal disease have long been a reality of urban life in the [ROOT.GetCountry.GetName], issues often ignored and hushed up by 'polite' society. A new 'Social Hygiene' reform movement seeks to remedy these ills by outlawing prostitution entirely and educating young people on proper moral behavior, while also publicizing new scientific methods of understanding sexual health and diseases."
+usfp_progressive_era.7.f: ""If we saw a venomous snake slipping unawares upon its unsuspecting victim, would we fail to give the warning because we preferred the victim should not know of the existence of the reptile? No! But we allow innocent girls to pay the penalty of ignorance, by their lives, because false modestry says they should not know anything about venereal diseases, and the their very names must be spoken in hushed tones."" #False Modesty, EB Lowry
+usfp_progressive_era.7.a: "Good health is a virtue."
+usfp_progressive_era.7.b: "How unseemly."
 
 usfp_progressive_era.8.t: "Womens’ Clubs"
 usfp_progressive_era.8.d: "Middle class women across the [ROOT.GetCountry.GetName] have begun to embrace the cause of women's rights, forming clubs and social groups advocating for suffrage. Activists like [SCOPE.sCharacter('jane_addams_scope').GetFullName] promote women's rights as an extension of their household duties, as a means to provide care to their communities."
@@ -946,24 +947,29 @@ usfp_progressive_era.9.a: "Direct democracy will strengthen the republic."
 usfp_progressive_era.9.b: "The mob doesn't know whats best for it."
 
 usfp_progressive_era.10.t: "Death's Laboratory"
-usfp_progressive_era.10.d: ""
-usfp_progressive_era.10.f: """"
-usfp_progressive_era.10.a: ""
+usfp_progressive_era.10.d: "Newspapers and billboards across the country advertise patent medicines, drugs to cure all ills without any listed ingredients or verification. A shocking muckraker exposé has revealed to the country that not only do many of these drugs not deliver health, they in fact lead to harm, addiction, and death! The public has already begun pressing for new regulations to be placed on medicines to ensure their quality."
+usfp_progressive_era.10.f: ""Gullible America will spend this year some seventy-five millions of dollars in the purchase of patent medicines. In consideration of this sum it will swallow huge quantities of alcohol, an appalling amount of opiates and narcotics, a wide assortment of varied drugs ranging from powerful and dangerous heart depressants to insidious liver stimulants; and, far in excess of all other ingredients, undiluted fraud. For fraud, exploited by the skillfulest of advertising bunco men, is the basis of the trade."" #Samuel Hopkins Adams
+usfp_progressive_era.10.a: "We can't let this fraud continue."
+usfp_progressive_era.10.b: "Consumers can make their own decisions."
+usfp_progressive_era_censor_muckraker: "These muckrakers must be told when to stop."
 
 usfp_progressive_era.11.t: "The Jungle"
-usfp_progressive_era.11.d: ""
-usfp_progressive_era.11.f: """"
-usfp_progressive_era.11.a: ""
+usfp_progressive_era.11.d: "Muckraker Upton Sinclair has published a novel detailing the horrors of the [ROOT.GetCountry.GetAdjective] meat-packing industry, filled with lurid details of mutilated workers, animal cruelty, and unsanitary conditions. While the author emphasizes the plight of the factory workers, public outcry has gripped the nation over the claims of plants intentionally including diseased and rotten meat in their processes. One passage even describes a hapless worker falling into a vat of lard and being incorporated into the end product!"
+usfp_progressive_era.11.f: ""The great packing machine ground on remorselessly, without thinking of green fields; and the men and women and children who were part of it never saw any green thing, not even a flower. Four or five miles to the east of them lay the blue waters of Lake Michigan; but for all the good it did them it might have been as far away as the Pacific Ocean. They had only Sundays, and then they were too tired to walk. They were tied to the great packing machine, and tied to it for life."" #Upton Sinclair
+usfp_progressive_era.11.a: "These working conditions are intolerable!"
+usfp_progressive_era.11.b: "They put #italic what#! in the sausage?!"
 
 usfp_progressive_era.12.t: "The Bitter Cry of Children"
-usfp_progressive_era.12.d: ""
-usfp_progressive_era.12.f: """"
-usfp_progressive_era.12.a: ""
+usfp_progressive_era.12.d: "A muckraker has released their detailed investigation into the conditions of child laborers in the [ROOT.GetCountry.GetName], highlighting the deleterious impact on the childrens' education, intelligence, and emotional health. This heartbreaking account has fueled further public support for [SCOPE.sLaw('compulsory_school_scope').GetName]."
+usfp_progressive_era.12.f: ""I could not do that work and live, but there were boys of ten and twelve years of age doing it for fifty and sixty cents a day. Some of them had never been inside of a school; few of them could read a child's primer. True, some of them attended the night schools, but after working ten hours in the breaker the educational results from attending school were practically nil."" #John Spargo
+usfp_progressive_era.12.a: "These children belong in school."
+usfp_progressive_era.12.b: "The children yearn for the factories!"
 
 usfp_progressive_era.13.t: "The Shame of the Cities"
-usfp_progressive_era.13.d: ""
-usfp_progressive_era.13.f: """"
-usfp_progressive_era.13.a: ""
+usfp_progressive_era.13.d: "A muckraker has penned a series of articles exposing the illegal activities of various political machines across the [ROOT.GetCountry.GetName]. With each article targeting a different city, the author documents not only the corruption of the elite but also the efforts of local citizens to thwart the political machines. Through these, the author has called citizens across the country to action against corruption in their local governments."
+usfp_progressive_era.13.f: ""These events have shown St. Louis that its bankers, brokers, corporation officers, its business men are the sources of evil, so that from the start it will know the municipal problem in its true light. With a tradition for public spirit, it may push aside the scruples of the hundreds of men down in blue book, and red book, and church register, who are lying hidden behind the statutes of limitations, and the city may restore good government. Otherwise the exposures of these crimes will result only in the perfection of the corrupt system. For the corrupt can learn a lesson when the good citizens cannot.""
+usfp_progressive_era.13.a: "We must revitalize our public institutions."
+usfp_progressive_era.13.b: "Machines keep the money flowing."
 
 usfp_progressive_era.14.t: "The History of [SCOPE.sCompany('standard_oil_scope').GetName]"
 usfp_progressive_era.14.d: "Muckraker Ida Tarbell has published a series of articles exposing the underhanded business practices of [SCOPE.sCompany('standard_oil_scope').GetName], detailing their intentional monopolization of the market. Newspapers across the country have praised Tarbell's work and denounced the company's illegal and rapacious behavior. Progressive voices within Congress have already put together a plan to strengthen antitrust laws and break up [SCOPE.sCompany('standard_oil_scope').GetName]."
@@ -991,7 +997,7 @@ usfp_progressive_era.17.a: "[SCOPE.gsInterestGroup('eugenicist_ig').GetName] are
 usfp_progressive_era.17.b: "Surely the [SCOPE.gsInterestGroup('eugenicist_ig').GetName] know better than this."
 
 usfp_progressive_era.18.t: "[SCOPE.sCharacter('eugenicist_character').GetFullName] Promotes Eugenics"
-usfp_progressive_era.18.d: "Prominent [SCOPE.sIdeology('feminist_ideology').GetName] [SCOPE.sCharacter('eugenicist_character').GetFullName] has given her support to eugenicist policies, asserting that women's social work would be made easier and more thorough by an elinination of hereditary disease."
+usfp_progressive_era.18.d: "Prominent [SCOPE.sIdeology('feminist_ideology').GetName] [SCOPE.sCharacter('eugenicist_character').GetFullName] has given her support to eugenicist policies, asserting that women's social work would be made easier and more thorough by an elimination of hereditary disease."
 usfp_progressive_era.18.f: ""When this new science makes clear to the public that those diseases which are a direct outcome of the social evil are clearly responsible for race deterioration, effective indignation may at last be aroused, both against preventable infant mortality for which these diseases are responsible, and against the ghastly fact that the survivors among these afflicted children infect their contemporaries and hand on the evil heritage to another generation."" #Jane Addams
 usfp_progressive_era.18.a: "This is not the way."
 usfp_progressive_era.18.b: "This is the way."

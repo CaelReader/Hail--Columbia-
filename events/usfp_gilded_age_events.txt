@@ -26,6 +26,23 @@ usfp_gilded_age.1 = {
 		ig:ig_industrialists = {
 			save_scope_as = industrialists_scope
 		}
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				any_scope_pop = {
+					is_pop_type = capitalists
+				}
+				NOT = {
+					state_region = s:STATE_NEW_YORK
+				}
+				NOT = {
+					has_modifier = usfp_captive_state_government
+				}
+			}
+			add_modifier = {
+				name = usfp_captive_state_government
+			}
+		}
 	}
 
 	option = {
@@ -47,6 +64,23 @@ usfp_gilded_age.1 = {
 			add_modifier = {
 				name = usfp_gilded_age_corruption_modifier
 				years = 20
+			}
+		}
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				any_scope_pop = {
+					is_pop_type = capitalists
+				}
+				NOT = {
+					state_region = s:STATE_NEW_YORK
+				}
+				NOT = {
+					has_modifier = usfp_captive_state_government
+				}
+			}
+			add_modifier = {
+				name = usfp_captive_state_government
 			}
 		}
 	}

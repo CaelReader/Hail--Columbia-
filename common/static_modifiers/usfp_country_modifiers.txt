@@ -529,6 +529,7 @@ usfp_trust_busting_authority_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_negative.dds
 	country_authority_add = -100
 	country_capitalists_pol_str_mult = -0.10
+	country_company_construction_efficiency_bonus_add = -0.10
 }
 
 usfp_federal_corruption_modifier = {
@@ -557,4 +558,39 @@ usfp_anti_imperialist_league_modifier = {
 usfp_city_beautiful_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_positive.dds
 	building_urban_center_throughput_add = 0.10
+}
+
+usfp_fighting_corruption_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_negative.dds
+	country_authority_add = -75
+	country_bureaucracy_add = -100
+}
+
+usfp_social_hygiene_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_positive.dds
+	state_mortality_mult = -0.02
+	state_loyalists_from_sol_change_accepted_culture_mult = 0.05
+}
+
+usfp_bitter_cry_of_children_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_pop_support_law_compulsory_primary_school_add = 0.10
+}
+
+usfp_the_jungle_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_pop_support_law_regulatory_bodies_add = 0.10
+	state_pop_support_law_worker_protections_add = 0.10
+}
+
+usfp_meat_inspectors_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_machinist_positive.dds
+	building_food_industry_throughput_add = -0.10
+	country_bureaucracy_add = -100
+}
+
+usfp_pure_drugs_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_positive.dds
+	state_mortality_mult = -0.02
+	country_bureaucracy_add = -100
 }

@@ -47,3 +47,26 @@ state_pop_support_law_interventionism_add={
 		ai_value=0
 	}
 }
+state_pop_support_law_compulsory_primary_school_add = {
+	decimals=2
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_pop_support_law_regulatory_bodies_add = {
+	decimals=2
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_pop_support_law_worker_protections_add = {
+	decimals=2
+	color=good
+	game_data={
+		ai_value=0
+	}
+}

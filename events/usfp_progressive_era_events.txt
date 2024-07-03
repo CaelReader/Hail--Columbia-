@@ -511,8 +511,45 @@ usfp_progressive_era.7 = {
 
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
+
+	#cool
 	option = {
 		name = usfp_progressive_era.7.a
+		default_option = yes
+		add_radicals = {
+			value = small_radicals
+			pop_type = laborers
+		}
+		add_modifier = {
+			name = usfp_social_hygiene_modifier
+			years = 10
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#nah
+	option = {
+		name = usfp_progressive_era.7.b
+		add_radicals = {
+			value = small_radicals
+			strata = middle
+		}
+		ig:ig_devout = {
+			add_modifier = {
+				name = usfp_victorian_modesty_modifier
+				years = 2
+			}
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_victorian_modesty_modifier
+				years = 2
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
 	}
 }
 
@@ -699,9 +736,51 @@ usfp_progressive_era.10 = {
 		has_technology_researched = pharmaceuticals
 	}
 	
+	#how terrible
 	option = {
 		name = usfp_progressive_era.10.a
+		default_option = yes
+		trigger = {
+			NOT = {
+				has_law = law_type:law_laissez_faire
+			}
+		}
+		show_as_unavailable = {
+			always = yes
+		}
+		add_modifier = {
+			name = usfp_pure_drugs_modifier
+			years = 10
+		}
 	}
+	#good for business!
+	option = {
+		name = usfp_progressive_era.10.b
+		add_loyalists = {
+			value = small_radicals
+			pop_type = shopkeepers
+		}
+		add_radicals = {
+			value = small_radicals
+			pop_type = academics
+		}
+	}
+	#Censor
+	option = {
+		name = usfp_progressive_era_censor_muckraker
+		trigger = {
+			OR = {
+				has_law = law_type:law_censorship
+				has_law = law_type:law_outlawed_dissent
+			}
+		}
+		highlighted_option = yes
+		add_radicals = {
+			value = small_radicals
+			pop_type = academics
+		}
+	}
+
 }
 #Muckraker: Upton Sinclair, The Jungle
 usfp_progressive_era.11 = {
@@ -722,12 +801,85 @@ usfp_progressive_era.11 = {
 
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
+
 	trigger = {
-		
+		any_scope_building = {
+			is_building_type = building_food_industry
+		}
 	}
 
+	immediate = {
+		random_scope_building = {
+			save_scope_as = food_industry_scope
+		}
+	}
+
+	#the heart
 	option = {
 		name = usfp_progressive_era.11.a
+		add_radicals = {
+			value = small_radicals
+			pop_type = laborers
+		}
+		if = {
+			limit = { 
+				any_political_movement = {
+					OR = {
+						desired_law = law_type:law_worker_protections
+						desired_law = law_type:law_regulatory_bodies
+					}
+				}
+			}
+			random_political_movement = {
+				limit = {
+					OR = {
+						desired_law = law_type:law_worker_protections
+						desired_law = law_type:law_regulatory_bodies
+					}
+				}
+				add_modifier = {
+					name = usfp_muckraker_movement_modifier
+					months = normal_modifier_time
+				}
+			}
+		} else = {
+			add_modifier = {
+				name = usfp_the_jungle_modifier
+				months = normal_modifier_time
+			}
+		}
+	}
+	#the stomach
+	option = {
+		name = usfp_progressive_era.11.b
+		default_option = yes
+		trigger = {
+			NOT = {
+				has_law = law_type:law_laissez_faire
+			}
+		}
+		show_as_unavailable = {
+			always = yes
+		}
+		add_modifier = {
+			name = usfp_meat_inspectors_modifier
+			months = normal_modifier_time
+		}
+	}
+	#Censor
+	option = {
+		name = usfp_progressive_era_censor_muckraker
+		trigger = {
+			OR = {
+				has_law = law_type:law_censorship
+				has_law = law_type:law_outlawed_dissent
+			}
+		}
+		highlighted_option = yes
+		add_radicals = {
+			value = small_radicals
+			pop_type = academics
+		}
 	}
 }
 #Muckraker: Child Labor
@@ -756,8 +908,82 @@ usfp_progressive_era.12 = {
 		}
 	}
 
+	immediate = {
+		random_law = {
+			limit = {
+				type = law_type:law_compulsory_primary_school
+			}
+			save_scope_as = compulsory_school_scope
+		}
+	}
+
+	#barbaric
 	option = {
 		name = usfp_progressive_era.12.a
+		default_option = yes
+		if = {
+			limit = { 
+				any_political_movement = {
+					desired_law = law_type:law_compulsory_primary_school
+				}
+			}
+			random_political_movement = {
+				limit = {
+					desired_law = law_type:law_compulsory_primary_school
+				}
+				add_modifier = {
+					name = usfp_muckraker_movement_modifier
+					months = normal_modifier_time
+				}
+			}
+		} else = {
+			add_modifier = {
+				name = usfp_bitter_cry_of_children_modifier
+				months = normal_modifier_time
+			}
+		}
+	}
+	#children yearn for the mines
+	option = {
+		name = usfp_progressive_era.12.b
+		trigger = {
+			NOT = {
+				is_enacting_law = law_type:law_compulsory_primary_school
+			}
+			any_interest_group = {
+				law_stance = {
+					law = law_type:law_child_labor_allowed
+					value > neutral
+				}
+			}
+		}
+		random_interest_group = {
+			limit = {
+				law_stance = {
+					law = law_type:law_child_labor_allowed
+					value > neutral
+				}
+			}
+			add_modifier = {
+				name = usfp_pro_child_labor_modifier
+				years = 4
+			}
+		}
+	}
+	#Censor
+	option = {
+		name = usfp_progressive_era_censor_muckraker
+		trigger = {
+			OR = {
+				has_law = law_type:law_censorship
+				has_law = law_type:law_outlawed_dissent
+			}
+		}
+		highlighted_option = yes
+		add_radicals = {
+			value = small_radicals
+			pop_type = academics
+		}
 	}
 } 
 #Muckraker: Political Machines
@@ -780,10 +1006,53 @@ usfp_progressive_era.13 = {
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
 
+	trigger = {
+		any_scope_state = {
+			has_modifier = usfp_captive_state_government
+		}
+	}
 
-
+	#we need democracy
 	option = {
 		name = usfp_progressive_era.13.a
+		default_option = yes
+		random_scope_state = {
+			limit = {
+				has_modifier = usfp_captive_state_government
+			}
+			remove_modifier = usfp_captive_state_government
+			add_loyalists_in_state = {
+				value = small_radicals
+				strata = middle
+			}
+		}
+	}
+	#eh its fine
+	option = {
+		name = usfp_progressive_era.13.b
+		add_radicals = {
+			value = medium_radicals
+			strata = middle
+		}
+		add_loyalists = {
+			value = small_radicals
+			pop_type = capitalists
+		}
+	}
+	#Censor
+	option = {
+		name = usfp_progressive_era_censor_muckraker
+		trigger = {
+			OR = {
+				has_law = law_type:law_censorship
+				has_law = law_type:law_outlawed_dissent
+			}
+		}
+		highlighted_option = yes
+		add_radicals = {
+			value = small_radicals
+			pop_type = academics
+		}
 	}
 }
 #Muckraker: Ida Tarbell, Standard Oil Company
@@ -925,7 +1194,21 @@ usfp_progressive_era.14 = {
 			pop_type = academics
 		}
 	}
-
+	#Censor
+	option = {
+		name = usfp_progressive_era_censor_muckraker
+		trigger = {
+			OR = {
+				has_law = law_type:law_censorship
+				has_law = law_type:law_outlawed_dissent
+			}
+		}
+		highlighted_option = yes
+		add_radicals = {
+			value = small_radicals
+			pop_type = academics
+		}
+	}
 }
 
 #Cross of Gold speech
@@ -1258,7 +1541,6 @@ usfp_progressive_era.18 = {
 	#yes
 	option = {
 		name = usfp_progressive_era.18.b
-		default_option = yes
 		scope:eugenicist_ig = {
 			usfp_become_eugenicist_effect = yes
 		}

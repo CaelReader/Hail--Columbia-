@@ -158,8 +158,11 @@ localization updates
 3.0 "Cleveland"
 New Content:
 	Gilded Age JE that activates in the 70s with powerful industrialists, along with 15 flavor events
-	Henry George spawn event and subsequent Georgism ideology that can appear in anglophone countries
+	Progressive Era JE in the 90s, featuring 14 new flavor events
+	Late-game Eugenics Movement JE that can entrench scientific racism into IG ideologies
 	New Labor Events: Knights of Labor, AFL, Great Railroad Strike, Looking Backward
+	New Characters: Terrence V. Powderly, Samuel Gompers, William Graham Sumner, Jane Addams, Swami Vivekananda
+	New ideologies: Georgist, Social Darwinist, Eugenicist
 	Added event marking the election of the first Afro-American president
 Updates:
 	1.7 Compatibility

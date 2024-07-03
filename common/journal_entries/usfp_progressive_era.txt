@@ -9,6 +9,8 @@ usfp_progressive_era = {
 		has_law = law_type:law_presidential_republic
 	}
 	timeout = 7300 #20 years
+	scripted_button = usfp_bust_trust_button
+	scripted_button = usfp_remove_machine_button 
 	possible = {
 		has_technology_researched = human_rights
 		OR = {

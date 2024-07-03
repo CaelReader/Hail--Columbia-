@@ -194,7 +194,7 @@ usfp_state_ballot_initiatives_modifier = {
 
 usfp_national_mall_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
-	state_migration_pull_add = 0.10
+	state_migration_pull_add = 10
 	state_loyalists_from_sol_change_accepted_culture_mult = 0.10
 	state_middle_standard_of_living_add = 1
 }
