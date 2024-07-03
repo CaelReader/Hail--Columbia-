@@ -1686,3 +1686,54 @@ usfp_usa.21 = {
 	}
 
 }
+#Centennial Exposition
+usfp_usa.22 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_usa.dds"
+	event_image = {
+		video = "unspecific_world_fair"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	placement = scope:pennsylvania_scope
+
+	title = usfp_usa.22.t
+	desc = usfp_usa.22.d
+	flavor = usfp_usa.22.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		c:USA ?= this
+		NOT = {
+			has_variable = had_american_centennial
+		}
+		game_date > 1876.5.1
+		game_date < 1877.1.1
+		has_law = law_type:law_presidential_republic
+	}
+
+	immediate = {
+		set_variable = had_american_centennial
+		s:STATE_PENNSYLVANIA.region_state:USA = {
+			save_scope_as = pennsylvania_scope
+		}
+	}
+
+	option = {
+		name = usfp_usa.22.a
+		default_option = yes
+		add_modifier = {
+			name = usfp_hundred_years_of_america_modifier
+			years = 5
+			is_decaying = yes
+		}
+		scope:pennsylvania_scope = {
+			add_loyalists_in_state = {
+				value = small_radicals
+			}
+		}
+	}
+}

@@ -234,6 +234,7 @@ usfp_acw.13.f: ""The Mexican Nation, which has had its will strnagled and its vo
 usfp_acw.13.a: "We cannot stop them."
 usfp_acw.13.b: "Stop them!"
 
+#Reconstruction Events
 usfp_reconstruction.1.t: "The Freedmen's Bureau"
 usfp_reconstruction.1.d: "A commission on the conditions in the South has suggested the creation of a new government agency: the Freedmen's Bureau. The agency would give direct aid to refugees and recently-liberated former slaves, and help transition them into free society."
 usfp_reconstruction.1.f: ""Offer the freedmen temporary aid and counsel until they become accustomed to their new sphere of life; secure to them, by law, their just rights of person and property; relieve them, by a fair and equal administration of justice, from the depressing influence of disgraceful prejudice. Above all, guard them against the virtual restoration of slavery in any form, under any pretext, and then let them take care of themselves. If we allow this, the future of the African race in this country will be conducive to its prosperity and associated with its well-being."" #Freedmen's Inquiry Commission
@@ -287,6 +288,30 @@ usfp_reconstruction.10.a: "This will haunt our country for centuries to come."
 usfp_reconstruction.10.b: "Reconciliation with the South is all that matters."
 usfp_reconstruction_full_jim_crow: "Jim Crow laws will be enacted in all southern states."
 usfp_reconstruction_partial_jim_crow: "Jim Crow laws will be enacted in southern states that lack a large Afro-American population."
+
+usfp_reconstruction.11.t: "A Devil's Bargain"
+usfp_reconstruction.11.d: "A conspiracy of southern states has concocted a plan to contest the upcoming election results and prevent the ascension of the lawfully elected president. Through backroom channels, the South is attempting to blackmail the federal government: either end Reconstruction now, or the election will be cast into jeopardy."
+usfp_reconstruction.11.f: "The plan was simple and totally legal. The state legislatures of a few key, southern states would be blocked from certifying their state's electors to the presidency. Without their presence, the federal government would be forced to find some alternative way of proceeding with the election, or face the entire system grinding to a halt. Unless of course, the demands of the South were met."
+usfp_reconstruction.11.a: "The election must be secured."
+usfp_reconstruction.11.b: "We will not be swayed by the slavers' threats."
+
+usfp_reconstruction.12.t: "[SCOPE.gsInterestGroup('pb_ig').GetName] Reject Reconstruction!"
+usfp_reconstruction.12.d: "While largely a solid support base of the [SCOPE.sParty('republican_party_scope').GetName], many members of the [SCOPE.gsInterestGroup('pb_ig').GetName] have been alarmed by the government's aggressive policy of Reconstruction. Full racial integration is unpopular among the middle class, and they have begun to vocally oppose what they see as undeserved government support of the southern freedmen."
+usfp_reconstruction.12.f: ""Too far, too fast." was the message heard by the representatives. Of course slavery was a great moral evil that needed to be stopped, but now with the war over, surely we should be reconciling with the noble Whites of the south? Anti-reconstructionists conjured up a frightening image of the North imposing a colored regime on the South as punishment, a state of affairs many White moderates can not tolerate."
+usfp_reconstruction.12.a: "Reconstruction must be thorough and complete."
+usfp_reconstruction.12.b: "We can't lose our base."
+
+usfp_reconstruction.13.t: "The White Man's Platform"
+usfp_reconstruction.13.d: "Opponents of Reconstruction have launched a concerted propaganda campaign against the [SCOPE.sParty('republican_party_scope').GetName], playing on racial animosities among the populace. If the leaflets are to be believed, then the [SCOPE.sParty('republican_party_scope').GetName] is a government entirely by and for [SCOPE.sCulture('afro_american_culture').GetName]s, a message that has resonated with voters."
+usfp_reconstruction.13.f: "OUR MOTTO:\n\nThis is a White Man's Country; Let White Men Rule!" #Seymour/Blair Campaign Badge
+usfp_reconstruction.13.a: "Some leaflets aren't going to change our tune."
+usfp_reconstruction.13.b: "We need some new messaging."
+
+usfp_reconstruction.14.t: "[SCOPE.sCharacter('assassination_target').GetFullName] Shot!"
+usfp_reconstruction.14.d: "[SCOPE.sCharacter('assassination_target').GetFullName] and several of [SCOPE.sCharacter('assassination_target').GetHerHis] staff have been shot by a [SCOPE.sCulture('dixie_culture').GetName] man! The attacker, who loudly proclaimed their opposition to Reconstruction, was quickly apprehended. [SCOPE.sCharacter('assassination_target').GetFullName] has been rushed to medical care in critical condition."
+usfp_reconstruction.14.f: "A man in a coat came through the door. I heard him shout "Bastard!", then the shots rang out and everything was chaos."
+usfp_reconstruction.14.a: "Violence cannot stop righteousness!"
+usfp_reconstruction.14.b: "Maybe we should save our own skins."
 
 #### Manifest Destiny
 usfp_manifest_destiny.1.t: "From Sea to Shining Sea?"
@@ -634,6 +659,11 @@ usfp_usa.21.t: "The First [SCOPE.sCulture('afro_american_scope').GetName] [ROOT.
 usfp_usa.21.d: "The inauguration of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetName] marks a historic moment for the [ROOT.GetCountry.GetName]. Less than a century ago, the [SCOPE.sCulture('afro_american_scope').GetName] people were enslaved, and now one has been elected to the highest office in the land. [SCOPE.sCulture('afro_american_scope').GetName] citizens across the nation celebrate at this momentous occasion, while White America reels from the election."
 usfp_usa.21.f: ""Now is the accepted time, not tomorrow, not some more convenient season. It is today that our best work can be done and not some future day or future year. It is today that we fit ourselves for the greater usefulness of tomorrow. Today is the seed time, now are the hours of work, and tomorrow comes the harvest and the playtime."" #WEB Du Bois
 usfp_usa.21.a: "The cost of liberty is less than the price of repression."
+
+usfp_usa.22.t: "The Centennial Exposition"
+usfp_usa.22.d: "This year marks the 100th anniversary of the signing of the Declaration of Independence and the birth of the [ROOT.GetCountry.GetName]. A grand fair has opened in [SCOPE.sState('pennsylvania_scope_scope').GetCityHubName] to celebrate the occasion, featuring dozens of attractions, and showcases of [ROOT.GetCountry.GetAdjective] culture and invention."
+usfp_usa.22.f: "Crowds buzzed through the streets set aside for the exposition, winding their way into the grand pavillions that housed all manner of wonders. As the sun set, families gathered on the grass to watch a grand fireworks display, illuminating the city in dazzling displays of red, white and blue."
+usfp_usa.22.a: "Here's to another 100 years!"
 
 ### Labor Events
 usfp_usa_labor.1.t: "The Industrial Workers of the World"

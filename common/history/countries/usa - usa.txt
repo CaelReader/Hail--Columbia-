@@ -95,6 +95,11 @@
 		add_modifier = {
 			name = usfp_second_party_system_modifier
 		}
+		add_modifier = {
+			name = usfp_victory_over_nullification_crisis_modifier
+			is_decaying = yes
+			years = 2	
+		}
 		set_variable = { name = gov_petition_fired months = 150 }
 		ig:ig_armed_forces = { 
 			add_ideology = ideology_republican

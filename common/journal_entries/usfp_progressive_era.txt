@@ -75,10 +75,7 @@ usfp_progressive_era = {
 		}
 	}
 	complete = {
-		OR = {
-			has_law = law_type:law_universal_suffrage
-			has_law = law_type:law_technocracy
-		}
+		has_law = law_type:law_universal_suffrage
 		has_law = law_type:law_interventionism
 		has_law = law_type:law_graduated_taxation
 		has_law = law_type:law_womens_suffrage

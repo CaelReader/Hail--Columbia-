@@ -11,6 +11,7 @@ usfp_monthly_pulse = {
 		usfp_usa.4 #Opening of Ellis Island
 		usfp_usa.6 #Great Chicago Fire
 		usfp_usa.16 #Election chaos (ALL democracies, not just the US)
+		usfp_usa.22 #American Centennial
 	}
 	random_events = {
 		200 = 0

@@ -160,10 +160,12 @@ New Content:
 	Gilded Age JE that activates in the 70s with powerful industrialists, along with 15 flavor events
 	Progressive Era JE in the 90s, featuring 14 new flavor events
 	Late-game Eugenics Movement JE that can entrench scientific racism into IG ideologies
+	4 new Reconstruction events to make Radical Reconstruction more painful
 	New Labor Events: Knights of Labor, AFL, Great Railroad Strike, Looking Backward
 	New Characters: Terrence V. Powderly, Samuel Gompers, William Graham Sumner, Jane Addams, Swami Vivekananda
 	New ideologies: Georgist, Social Darwinist, Eugenicist
 	Added event marking the election of the first Afro-American president
+	Added event celebrating the American Centennial
 Updates:
 	1.7 Compatibility
 	Added "Bourbon Democrats" modifier that will attract Market Liberal industrialists to the Democratic Party after the civil war
@@ -178,6 +180,9 @@ Updates:
 	Nerfed Go West, Young Man to +15%/30% migration attraction to match 1.7.1's nerf to Propagandists
 	Added show_as_unavailable to some Manifest Destiny events to show the player that higher Manifest Destiny unlocks more options
 	Updated Party System modifiers to use new Party Whip Impact modifier
+	Adjusted Deep South and Homestead Acts modifiers to use new minimum worker-owned levels modifiers
+	Added a decaying legitimacy buff to the US at game start to ensure Jackson's government survives
+	Radical Reconstruction takes one extra point to achieve
 Fixes:
 	Lower Canada and New Brunswick now start with Frontier Colonization
 	Canadian tags now start with a colonization boost

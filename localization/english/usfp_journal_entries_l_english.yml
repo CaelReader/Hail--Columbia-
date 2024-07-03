@@ -125,7 +125,7 @@ usfp_homestead_act_button_desc: "Our western territories yearn to be populated a
 
 usfp_reconstruction_swing_freedmen: "Reconstruction will progress in favor of the #bold Freedmen#!."
 usfp_reconstruction_swing_south: "Reconstruction will regress, empowering the #bold Redeemers#!."
-usfp_reconstruction_swing_south: "Reconstruction will #r severely#! regress, empowering the #bold Redeemers#!."
+usfp_reconstruction_swing_south_severe: "Reconstruction will #r severely#! regress, empowering the #bold Redeemers#!."
 usfp_reconstruction_end_early: "#r #b Reconstruction will immediately end!#!"
 usfp_reconstruction_enforce_rights_button: "Enforce Voting Rights"
 usfp_reconstruction_enforce_rights_button_desc: "Freedmen continue to be denied their lawful rights across the South. By deploying additional federal forces, we can ensure that liberty extends to all our citizens."
@@ -135,7 +135,7 @@ usfp_reconstruction_cointelpro_freedmen_button: "Infiltrate Redeemer Groups"
 usfp_reconstruction_cointelpro_freedmen_button_desc: "These white supremacists are a dangerous criminal element. The Bureau will disrupt their activities."
 usfp_reconstruction_cointelpro_slaver_button: "Disrupt Black Organizations"
 usfp_reconstruction_cointelpro_slaver_button_desc: "Radicalism is spreading among the freedmen. The Bureau will hamper their efforts to coordinate."
-
+made_devils_bargain: "We have made the Devil's Bargain with the South"
 
 usfp_reconstruction_long: "Long Reconstruction"
 usfp_reconstruction_long_reason: "While Reconstruction has largely been a success for the Freedmen, racial prejudice remains deeply engrained at all levels of the [ROOT.GetCountry.GetName]. It will take at least a generation before [SCOPE.sCulture('afro_american_culture').GetName] citizens are truly accepted as a core element of the [ROOT.GetCountry.GetAdjectiveNoFormatting] nation."

@@ -775,3 +775,63 @@ usfp_become_eugenicist_effect = {
 	}
 	add_ideology = ideology_usfp_eugenicist
 }
+
+usfp_reconstruction_conclusion_effect = {
+	if = {
+		limit = {
+			var:reconstruction_var > 16
+		 }
+		 #Radical Reconstruction
+		 trigger_event = {
+			id = usfp_reconstruction.8
+			popup = yes
+		 }
+		 show_as_tooltip = {
+			remove_primary_culture = cu:dixie
+			if = {
+				limit = { 
+					cu:afro_american = {
+						NOT = { culture_is_discriminated_in = ROOT }
+					}
+				}
+				add_journal_entry = {
+					type = usfp_reconstruction_long
+				}
+			} else = {
+				add_modifier = {
+					name = usfp_radical_reconstruction_demand
+					years = 10
+				}
+			}
+		 }
+	}
+	else_if = {
+		limit = { 
+			var:reconstruction_var <= 16
+			var:reconstruction_var > 5
+		}
+		#Mixed Reconstruction
+		trigger_event = {
+			id = usfp_reconstruction.9
+			popup = yes
+		 }
+		 custom_tooltip = usfp_reconstruction_partial_jim_crow 
+	} else = {
+		#Failed Reconstruction
+		trigger_event = {
+			id = usfp_reconstruction.10
+			popup = yes
+		 }
+		 custom_tooltip = usfp_reconstruction_full_jim_crow
+	}
+	
+	
+	hidden_effect = { # sanity check just in case something somehow falls through the cracks
+		every_scope_state = {
+			limit = { has_modifier = unreconstructed_state }
+			remove_modifier = unreconstructed_state
+		}
+		remove_modifier = usfp_enforcing_reconstruction
+		remove_modifier = usfp_freedmens_bureau
+	}
+}

@@ -339,13 +339,13 @@ je_acw_reconstruction = {
 		first_valid = {
 			triggered_desc = { 
 				trigger = {
-					var:reconstruction_var > 15
+					var:reconstruction_var > 16
 				}
 				desc = je_acw_reconstruction_status_radical
 			}
 			triggered_desc = { 
 				trigger = {
-					var:reconstruction_var <= 15
+					var:reconstruction_var <= 16
 					var:reconstruction_var > 5
 				}
 				desc = je_acw_reconstruction_status_mixed
@@ -378,6 +378,10 @@ je_acw_reconstruction = {
 		cu:yankee = {
 			save_scope_as = yankee_culture
 		}
+		set_variable = {
+			name = reconstruction_slow
+			years = 10
+		}
 	}
 
 	# complete = {
@@ -404,68 +408,16 @@ je_acw_reconstruction = {
 			20 = usfp_reconstruction.3 #Black Legislature
 			20 = usfp_reconstruction.4 #The Lost Cause
 			20 = usfp_reconstruction.5 #Confederados
+			100 = usfp_reconstruction.11 #Election held hostage
+			20 = usfp_reconstruction.12 #PB backlash to Radical Reconstruction
+			20 = usfp_reconstruction.13 #Electoral backlash to Reconstruction
+			5 = usfp_reconstruction.14 #Radical Reconstruction assassination
 		}
 	}
 
 	on_timeout = {
 		# trigger_event = { id = acw_je_events.3 }
-		if = {
-			limit = {
-				var:reconstruction_var > 15
-			 }
-			 #Radical Reconstruction
-			 trigger_event = {
-				id = usfp_reconstruction.8
-				popup = yes
-			 }
-			 show_as_tooltip = {
-				remove_primary_culture = cu:dixie
-				if = {
-					limit = { 
-						cu:afro_american = {
-							NOT = { culture_is_discriminated_in = ROOT }
-						}
-					}
-					add_journal_entry = {
-						type = usfp_reconstruction_long
-					}
-				} else = {
-					add_modifier = {
-						name = usfp_radical_reconstruction_demand
-						years = 10
-					}
-				}
-			 }
-		}
-		else_if = {
-			limit = { 
-				var:reconstruction_var <= 15
-				var:reconstruction_var > 5
-			}
-			#Mixed Reconstruction
-			trigger_event = {
-				id = usfp_reconstruction.9
-				popup = yes
-			 }
-			 custom_tooltip = usfp_reconstruction_partial_jim_crow 
-		} else = {
-			#Failed Reconstruction
-			trigger_event = {
-				id = usfp_reconstruction.10
-				popup = yes
-			 }
-			 custom_tooltip = usfp_reconstruction_full_jim_crow
-		}
-		
-		
-		hidden_effect = { # sanity check just in case something somehow falls through the cracks
-			every_scope_state = {
-				limit = { has_modifier = unreconstructed_state }
-				remove_modifier = unreconstructed_state
-			}
-			remove_modifier = usfp_enforcing_reconstruction
-			remove_modifier = usfp_freedmens_bureau
-		}
+		usfp_reconstruction_conclusion_effect = yes
 	}
 
 	current_value = {
@@ -483,8 +435,14 @@ je_acw_reconstruction = {
 	}
 
 	invalid = {
-		NOT = {
-			has_law = law_type:law_slavery_banned
+		OR = {
+			custom_tooltip = {
+				text = made_devils_bargain
+				has_variable = reconstruction_ended_early
+			}
+			NOT = {
+				has_law = law_type:law_slavery_banned
+			}
 		}
 	}
 
