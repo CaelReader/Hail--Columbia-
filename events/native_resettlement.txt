@@ -62,7 +62,7 @@ native_resettlement.1 = {
 # John Ross' Protest Petition
 native_resettlement.2 = {
 	type = country_event
-	icon = "gfx/interface/icons/war_goals/force_recognition.dds"
+	icon = "gfx/interface/icons/war_goals/unused/force_recognition.dds"
 	event_image = {
 		video = "europenorthamerica_native_american"
 	}

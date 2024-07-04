@@ -1174,7 +1174,7 @@ usfp_progressive_era.14 = {
 						is_in_government = yes
 					}
 				}
-				multiply = 10
+				add = 100
 			}
 		}
 	}

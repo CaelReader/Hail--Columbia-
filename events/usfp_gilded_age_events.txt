@@ -513,9 +513,10 @@ usfp_gilded_age.6 = {
 						has_building = building_university
 					}
 				}
-				create_building = {
-					building = building_university
-					level = 1
+				create_building={
+					building="building_university"
+					level=1
+					reserves=1
 				}
 			}
 		}
@@ -789,7 +790,7 @@ usfp_gilded_age.9 = {
 				trigger = {
 					taking_loans = yes
 				}
-				multiply = 0
+				add = -50
 			}
 		}
 	}
@@ -881,7 +882,7 @@ usfp_gilded_age.11 = {
 #Political Machine in State
 usfp_gilded_age.12 = {
 	type = country_event
-	placement = root
+	placement = scope:corruption_state
 
 	title = usfp_gilded_age.12.t
 	desc = usfp_gilded_age.12.d

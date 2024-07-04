@@ -862,6 +862,7 @@ usfp_reconstruction.12 = {
 	#damn them
 	option = {
 		name = usfp_reconstruction.12.a
+		default_option = yes
 		ig:ig_petty_bourgeoisie = {
 			add_modifier = {
 				name = usfp_threatening_union

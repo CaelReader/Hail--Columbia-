@@ -647,7 +647,7 @@ usfp_usa.19.f: ""The cry of Caesarism has been sounded through the land. No King
 usfp_usa.19.a: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] will not seek re-election."
 usfp_usa.19.b: "Four more years!"
 usfp_usa.19.c: "I defy any sonofabitch to get me out under four terms!"
-usfp_usa.19.d: "We should not change horses mid stream!"
+usfp_usa.19.e: "We should not change horses mid stream!"
 
 usfp_usa.20.t: "Separation of Powers"
 usfp_usa.20.d: "With chaos in the Executive Branch, Congress has been forced to take a leading role in the [ROOT.GetCountry.GetAdjective] government, in violation of the constitution. With no obvious mechanism to restore normalcy, it falls to Congress to determine the future structure of the republic."
@@ -656,13 +656,13 @@ usfp_usa.20.a: "We must restore the rightful republic."
 usfp_usa.20.b: "Amend the constitution. Congress will reign supreme."
 
 usfp_usa.21.t: "The First [SCOPE.sCulture('afro_american_scope').GetName] [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]"
-usfp_usa.21.d: "The inauguration of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetName] marks a historic moment for the [ROOT.GetCountry.GetName]. Less than a century ago, the [SCOPE.sCulture('afro_american_scope').GetName] people were enslaved, and now one has been elected to the highest office in the land. [SCOPE.sCulture('afro_american_scope').GetName] citizens across the nation celebrate at this momentous occasion, while White America reels from the election."
+usfp_usa.21.d: "The inauguration of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] marks a historic moment for the [ROOT.GetCountry.GetName]. Less than a century ago, the [SCOPE.sCulture('afro_american_scope').GetName] people were enslaved, and now one has been elected to the highest office in the land! [SCOPE.sCulture('afro_american_scope').GetName] citizens across the nation celebrate at this momentous occasion, while White America reels from the news."
 usfp_usa.21.f: ""Now is the accepted time, not tomorrow, not some more convenient season. It is today that our best work can be done and not some future day or future year. It is today that we fit ourselves for the greater usefulness of tomorrow. Today is the seed time, now are the hours of work, and tomorrow comes the harvest and the playtime."" #WEB Du Bois
 usfp_usa.21.a: "The cost of liberty is less than the price of repression."
 
 usfp_usa.22.t: "The Centennial Exposition"
-usfp_usa.22.d: "This year marks the 100th anniversary of the signing of the Declaration of Independence and the birth of the [ROOT.GetCountry.GetName]. A grand fair has opened in [SCOPE.sState('pennsylvania_scope_scope').GetCityHubName] to celebrate the occasion, featuring dozens of attractions, and showcases of [ROOT.GetCountry.GetAdjective] culture and invention."
-usfp_usa.22.f: "Crowds buzzed through the streets set aside for the exposition, winding their way into the grand pavillions that housed all manner of wonders. As the sun set, families gathered on the grass to watch a grand fireworks display, illuminating the city in dazzling displays of red, white and blue."
+usfp_usa.22.d: "This year marks the 100th anniversary of the signing of the Declaration of Independence — the birth of the [ROOT.GetCountry.GetName]. A grand fair has opened in [SCOPE.sState('pennsylvania_scope').GetCityHubName] to celebrate the occasion, featuring dozens of attractions and showcases of [ROOT.GetCountry.GetAdjective] culture and invention."
+usfp_usa.22.f: "Crowds buzzed through the streets set aside for the exposition, winding their way past the grand pavillions that housed all manner of wonders. As the sun set, families gathered on the grass to watch a grand fireworks display that illuminated the city in dazzling displays of red, white and blue."
 usfp_usa.22.a: "Here's to another 100 years!"
 
 ### Labor Events
@@ -819,7 +819,7 @@ usfp_filibuster.4.c: "We will not associate with these filibusters."
 
 #Gilded Age events
 usfp_gilded_age.1.t: "A Story Of Today"
-usfp_gilded_age.1.d: "New railroads, new industries, and new companies have roared across the [ROOT.GetCountry.GetName], precipitating a meteoric rise in the station of the [SCOPE.gsInterestGroup('industrialists_scope').GetName]. With no end in sight to the economic growth, the new fortunes of the upper class have propelled them into lifestyles of lavish excess, but has also enabled widespread political corruption at all levels of government."
+usfp_gilded_age.1.d: "New railroads, new industries, and new companies have roared across the [ROOT.GetCountry.GetName], precipitating a meteoric rise in the station of the [SCOPE.gsInterestGroup('industrialists_scope').GetName]. With no end in sight to the economic growth, the enormous fortunes of the upper class have propelled them into lifestyles of lavish excess, but has also enabled widespread political corruption at all levels of government."
 usfp_gilded_age.1.f: ""To the young American, here or elsewhere, the paths to fortune are innumerable and all open; There is invitation in the air and success in all his wide horizon."" #Mark Twain
 usfp_gilded_age.1.a: "A toast to prosperity!"
 

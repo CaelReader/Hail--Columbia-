@@ -8,19 +8,20 @@ Hail, Columbia! is a United States Flavor Pack, including overhauled and expande
 [*]Overhauled map of [b]Native North America[/b], including many more indigenous nations than vanilla, as well as new state traits. Claims are assigned appropiately to prevent weird colonization. The American west will take much longer to be fully colonized by the United States.
 [*]Overhauled [b]Indian Removal[/b] JE, including more involved tribes and more events.
 [*]Overhauled [b]Slavery Debate[/b] JE, including the full historical lead-up to the civil war: Missouri Compromise, Wilmot Proviso, Compromise of 1850, Kansas-Nebraska Act, Bleeding Kansas, Scott v Sandford. The civil war can be triggered at different times or be split along different borders based on the results.
+[*][b]Gilded Age[/b] JE showing the rise of corruption and Trusts in the United States, followed by the [b]Progressive Era[/b] of reform and new ideologies.
 [*]New permanent journal entry for the US tracking the influence of [b]Manifest Destiny[/b]. You can choose to avoid expansion and entanglements, stick to the historical borders, or promote Manifest Destiny to new heights and incorporate the entire continent into your great republic.
-[*][b]New flavor events[/b] for the US, such as the Seneca Falls Convention and the Great Chicago Fire, as well as various american natural disasters like wildfires and tornados. The mod includes [b]70+ new events[/b] in total.
+[*][b]Mormon[/b] content, including the exodus to Deseret and the Utah War.
+[*][b]New flavor events[/b] for the US, such as the Seneca Falls Convention and the Great Chicago Fire, as well as various american natural disasters like wildfires and tornados. The mod includes [b]over 100 new events[/b] in total.
 [*]Overhauled Ideologies and Traits for American IGs, including [b]new alternate IG Traits[/b] unlocked during a playthrough.
 [*]Historical agitators, commanders, and politicians for the US, including every historical president from Martin Van Buren to FDR.
-[*]Tweaks to the american political system, including a Term Limit for presidents, additional party names, and the Second/Third Party Systems.
-[*][b]Mormon[/b] content, including the exodus to Deseret and the Utah War.
+[*]Tweaks to the american political system, including a Term Limit for presidents, dynamic party names, and Constitutional precedents.
 [/list]
 
 [img]https://i.imgur.com/Xw5ZcI9.png[/img]
 [list]
-[*]More Social & Political Movements (Third Great Awakening, Progressive Era, Muckrakers)
+[*]More Social & Political Movements (Third Great Awakening)
 [*]More Economic & Labor Events (Coal Wars, Roaring 20s, Panics)
-[*]More Foreign Policy Events (Great White Fleet, Panama Rebellion, Filibusters)
+[*]More Foreign Policy Events (Great White Fleet, Panama Rebellion)
 [*]Post-Removal Indian History (Allotment, Wounded Knee, Ghost Dance)
 [*]Post-Reconstruction Black History (NAACP, Great Migration, Harlem Renaissance)
 [*]Alternate History Content (CSA Victory, FSA, United Syndicates, Turtle Island) 

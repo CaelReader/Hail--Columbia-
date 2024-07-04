@@ -174,8 +174,10 @@ usfp_progressive_era_eugenics = {
 		}
 	}
 	on_monthly_pulse = {
-		chance_of_no_event = 90
-		100 = usfp_progressive_era.17 #ig becomes eugenicist
-		300 = usfp_progressive_era.18 #feminist promotes eugenics
+		random_events = {
+			chance_of_no_event = 90
+			100 = usfp_progressive_era.17 #ig becomes eugenicist
+			300 = usfp_progressive_era.18 #feminist promotes eugenics
+		}
 	}
 }

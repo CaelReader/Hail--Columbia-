@@ -1552,7 +1552,7 @@ usfp_usa.19 = {
 	}
 	#FDR
 	option = {
-		name = usfp_usa.19.d
+		name = usfp_usa.19.e
 		highlighted_option = yes
 		trigger = {
 			is_at_war = yes

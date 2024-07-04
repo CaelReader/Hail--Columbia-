@@ -298,8 +298,10 @@ usfp_elected_abolitionist = {
 }
 
 usfp_new_president = {
-	events = {
-		usfp_usa.21
+	effect = {
+		owner = {
+			trigger_event = usfp_usa.21
+		}
 	}
 }
 

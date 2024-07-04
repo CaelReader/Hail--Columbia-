@@ -70,3 +70,19 @@ state_pop_support_law_worker_protections_add = {
 		ai_value=0
 	}
 }
+
+state_mormon_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_usfp_american_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}

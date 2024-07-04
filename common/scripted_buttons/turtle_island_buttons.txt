@@ -29,6 +29,7 @@ je_unite_the_nations_organize_the_tribes_button = {
 	desc = "je_unite_the_nations_organize_the_tribes_button_desc"
 
 	visible = {
+		exists = c:TIS
 		root = c:TIS
 	}
 
@@ -92,6 +93,7 @@ je_unite_the_nations_offer_confederation_button = {
 	desc = "je_unite_the_nations_offer_confederation_button_desc"
 
 	visible = {
+		exists = c:TIS
 		root = c:TIS
 	}
 

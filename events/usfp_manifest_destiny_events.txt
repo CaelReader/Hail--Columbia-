@@ -1622,9 +1622,10 @@ usfp_manifest_destiny.18 = {
 				is_revolutionary = no
 			}
 			NOR = {
-				is_diplomatic_play_type = dp_reduce_autonomy
+				# is_diplomatic_play_type = dp_reduce_autonomy
 				is_diplomatic_play_type = dp_increase_autonomy
 				is_diplomatic_play_type = dp_secession
+				is_diplomatic_play_type = dp_independence
 			}
 			is_war = no
 		}
@@ -1655,9 +1656,10 @@ usfp_manifest_destiny.18 = {
 					is_revolutionary = no
 				}
 				NOR = {
-					is_diplomatic_play_type = dp_reduce_autonomy
+					# is_diplomatic_play_type = dp_reduce_autonomy
 					is_diplomatic_play_type = dp_increase_autonomy
 					is_diplomatic_play_type = dp_secession
+					is_diplomatic_play_type = dp_independence
 				}
 			}
 			target = {

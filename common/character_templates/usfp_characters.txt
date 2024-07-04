@@ -667,6 +667,7 @@ usfp_usa_terrence_powderly = {
     ideology = ideology_moderate
     interest_group = ig_trade_unions
     birth_date = 1849.1.22
+    dna = usfp_usa_terrence_powderly
     traits = { basic_political_operator wounded tactful erudite }
     #event-spawned
 }
@@ -682,6 +683,7 @@ usfp_usa_samuel_gompers = {
     ideology = ideology_republican_leader
     interest_group = ig_trade_unions
     birth_date = 1850.1.27
+    dna = usfp_usa_samuel_gompers
     traits = { basic_political_operator meticulous usfp_trait_antiexpansionist master_bureaucrat }
     #event-spawned
 }
@@ -697,6 +699,7 @@ usfp_usa_william_sumner = {
     ideology = ideology_usfp_social_darwinist_leader
     interest_group = ig_intelligentsia
     birth_date = 1840.11.30
+    dna = usfp_usa_william_sumner
     traits = { literary arrogant direct usfp_trait_antiexpansionist }
     #event-spawned
 }
@@ -712,6 +715,7 @@ usfp_usa_jane_addams = {
     ideology = ideology_feminist
     interest_group = ig_intelligentsia
     birth_date = 1860.10.6
+    dna = usfp_usa_jane_addams
     traits = { persistent literary ambitious usfp_trait_antiexpansionist }
     #event-spawned
     is_agitator = yes
@@ -740,6 +744,7 @@ usfp_usa_swami_vivekananda = {
     ideology = ideology:ideology_pacifist
     interest_group = ig_devout
     birth_date = 1863.1.12
+    dna = usfp_swami_vivekananda
     traits = { pious sickly inspirational_orator innovative }
     #event-spawned
     is_agitator = yes
