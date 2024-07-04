@@ -160,7 +160,7 @@ New Content:
 	Gilded Age JE that activates in the 70s with powerful industrialists, along with 15 flavor events
 	Progressive Era JE in the 90s, featuring 14 new flavor events
 	Late-game Eugenics Movement JE that can entrench scientific racism into IG ideologies
-	4 new Reconstruction events to make Radical Reconstruction more painful
+	4 new Reconstruction events that make Radical Reconstruction more painful
 	New Labor Events: Knights of Labor, AFL, Great Railroad Strike, Looking Backward
 	New Characters: Terrence V. Powderly, Samuel Gompers, William Graham Sumner, Jane Addams, Swami Vivekananda
 	New ideologies: Georgist, Social Darwinist, Eugenicist
@@ -182,10 +182,17 @@ Updates:
 	Updated Party System modifiers to use new Party Whip Impact modifier
 	Adjusted Deep South and Homestead Acts modifiers to use new minimum worker-owned levels modifiers
 	Added a decaying legitimacy buff to the US at game start to ensure Jackson's government survives
-	Radical Reconstruction takes one extra point to achieve
+	Radical Reconstruction takes one extra point to achieve (16/20 instead of 15/20), making it easier to backslide out of it
+	The Oregon Treaty now only reduces Manifest Destiny if its already high (6+)
+	Mexico is now more likely to accept the Northern Purchase with pacifists or friendly Lobbies in power, and less likely with Jingoists or anti-USA lobbies in power
+	Pursuing claims on mexico can now spawn an Anti-Mexico Lobby
+	Divided Dixie: Upper South states can now enact Jim Crow, and states require a larger percentage of Afro-Americans to avoid it
 Fixes:
 	Lower Canada and New Brunswick now start with Frontier Colonization
 	Canadian tags now start with a colonization boost
 	American Superculture should properly fire after Peculiar Reconciliation
 	The US President can't resign while A House Divided is active
 	Increased spawn rate of Frederick Douglass
+	Script error cleanup in a few triggers
+	Vanilla Peculiar Reconciliation event can no longer trigger for the USA
+	Texas can't ask for statehood while the USA is at war

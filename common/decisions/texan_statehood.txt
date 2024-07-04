@@ -14,6 +14,7 @@
 		}
 		c:USA = {
 			relations:root >= relations_threshold:cordial
+			is_at_war = no
 		}
 	}
 

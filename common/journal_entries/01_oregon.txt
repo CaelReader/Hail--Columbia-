@@ -194,7 +194,7 @@ je_oregon = {
 			limit = { 
 				has_journal_entry = usfp_manifest_destiny_main
 			}
-			usfp_manifest_less_destiny_effect = yes
+			usfp_manifest_less_destiny_high_effect = yes
 		}
 	}
 

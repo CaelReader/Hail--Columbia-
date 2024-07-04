@@ -606,16 +606,20 @@ usfp_reconstruction.9 = {
 			text = usfp_reconstruction_partial_jim_crow 
 			every_scope_state = {
 				limit = {
-					state_region = { 
-						is_homeland = cu:dixie
-						NOT = { is_homeland = cu:yankee }
+					OR = {
+						has_modifier = usfp_deep_south_modifier
+						has_modifier = usfp_upper_south_modifier
+						state_region = { 
+							is_homeland = cu:dixie
+							NOT = { is_homeland = cu:yankee }
+						}
 					}
 					NOT = {
 						state_region = s:STATE_DISTRICT_OF_COLUMBIA
 					}
 					culture_percent_state = {
 						target = cu:afro_american
-						value < 0.45
+						value < 0.60
 					}
 				}
 				add_modifier = {
@@ -631,11 +635,11 @@ usfp_reconstruction.9 = {
 				}
 				culture_percent_state = {
 					target = cu:afro_american
-					value >= 0.45
+					value >= 0.60
 				}
 			}
 			add_loyalists_in_state = {
-				value = 0.25
+				value = large_radicals
 				culture = cu:afro_american
 			}
 		}
@@ -957,6 +961,7 @@ usfp_reconstruction.14 = {
 				}
 			}
 		}
+		var:reconstruction_var > 15
 	}
 
 	immediate = {

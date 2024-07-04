@@ -81,8 +81,12 @@ usfp_mormon.1 = {
 		default_option = yes
 		scope:missouri_scope = {
 			add_radicals_in_state = {
-				value = small_radicals
+				value = medium_radicals
 				religion = rel:mormon
+			}
+			add_loyalists_in_state = {
+				value = small_radicals
+				religion = rel:protestant
 			}
 			kill_population_percent_in_state = {
 				percent = 0.01
@@ -151,8 +155,12 @@ usfp_mormon.2 = {
 		default_option = yes
 		scope:illinois_scope = {
 			add_radicals_in_state = {
-				value = small_radicals
+				value = large_radicals
 				religion = rel:mormon
+			}
+			add_loyalists_in_state = {
+				value = small_radicals
+				religion = rel:protestant
 			}
 			state_region = {
 				add_devastation = 2
@@ -376,6 +384,14 @@ usfp_mormon.4 = {
 		create_diplomatic_pact = {
 			country = c:DES
 			type = protectorate
+		 }
+		 create_diplomatic_pact = {
+			country = c:DES
+			type = grant_own_market
+		 }
+		 create_diplomatic_pact = {
+			country = c:DES
+			type = exempt_from_service
 		 }
 		create_unidirectional_truce = {
 			country = c:DES

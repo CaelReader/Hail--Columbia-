@@ -71,6 +71,7 @@ usfp_manifest_destiny.2 = {
 	}
 
 	trigger = {
+		exists = c:MEX
 		NOT = {
 			exists = c:TEX
 			has_war_with = c:MEX
@@ -78,6 +79,7 @@ usfp_manifest_destiny.2 = {
 		NOT = {
 			has_variable = texas_called_for_aid
 		}
+		exists = c:MEX
 		s:STATE_TEXAS = {
 			any_scope_state = {
 				owner = c:MEX
@@ -173,6 +175,54 @@ usfp_manifest_destiny.3 = {
 					}
 				}
 				add = 100
+			}
+			modifier = {
+				trigger = {
+					any_scope_character = {
+						interest_group = {
+							is_in_government = yes
+						}
+						has_ideology = ideology:ideology_jingoist_leader
+					}
+				}
+				add = -50
+			}
+			modifier = {
+				trigger = {
+					ig:ig_armed_forces = {
+						is_in_government = yes
+					}
+				}
+				add = -50
+			}
+			modifier = {
+				trigger = {
+					any_scope_character = {
+						interest_group = {
+							is_in_government = yes
+						}
+						has_ideology = ideology:ideology_pacifist
+					}
+				}
+				add = 50
+			}
+			modifier = {
+				trigger = {
+					any_political_lobby = {
+						is_political_lobby_type = lobby_pro_country
+						target = c:USA
+					}
+				}
+				add = 50
+			}
+			modifier = {
+				trigger = {
+					any_political_lobby = {
+						is_political_lobby_type = lobby_anti_country
+						target = c:USA
+					}
+				}
+				add = -50
 			}
 		}
 		c:USA = {
@@ -313,6 +363,37 @@ usfp_manifest_destiny.4 = {
 				 secret_goal = conquer
 			 }
 		}
+		if = {
+			limit = { 
+				any_interest_group = {
+					leader = {
+						usfp_manifest_destiny_pro_expansion_trigger = yes
+					}
+					is_marginal = no
+				}
+				NOT = {
+					any_political_lobby = {
+						is_political_lobby_type = lobby_anti_country
+						target = c:MEX
+					}
+				}
+			}
+			random_interest_group = {
+				limit = {
+					leader = {
+						usfp_manifest_destiny_pro_expansion_trigger = yes
+					}
+					is_marginal = no
+				}
+				save_scope_as = jingoist_ig
+			}
+			create_political_lobby = {  
+				type = lobby_anti_country  
+				target = c:MEX
+				add_interest_group = scope:jingoist_ig
+				lobby_formation_reason = diplomacy
+			}
+		}
 		ai_chance = {
 			base = 1000
 		}
@@ -385,6 +466,7 @@ usfp_manifest_destiny.6 = {
 	duration = 3
 
 	trigger = {
+		exists = c:MEX
 		has_war_with = c:MEX
 		c:MEX = {
 			capital = {

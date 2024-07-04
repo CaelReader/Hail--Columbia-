@@ -117,7 +117,7 @@ usfp_manifest_less_destiny_effect = {
 usfp_manifest_more_destiny_low_effect = {
 	if = {
 		limit = {
-			var:manifest_destiny_var < 5
+			var:manifest_destiny_var <= 5
 		}
 		usfp_manifest_more_destiny_effect = yes
 	}
@@ -126,7 +126,7 @@ usfp_manifest_more_destiny_low_effect = {
 usfp_manifest_less_destiny_high_effect = {
 	if = {
 		limit = { 
-			var:manifest_destiny_var > 7
+			var:manifest_destiny_var >= 6
 		}
 		usfp_manifest_less_destiny_effect = yes
 	}
