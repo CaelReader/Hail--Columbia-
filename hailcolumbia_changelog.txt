@@ -196,3 +196,11 @@ Fixes:
 	Script error cleanup in a few triggers
 	Vanilla Peculiar Reconciliation event can no longer trigger for the USA
 	Texas can't ask for statehood while the USA is at war
+
+3.1 "Cleveland"
+Fixed missing Bourbon Democrats loc
+Bourbon Democrats attraction is now based on approving Free Trade rather than specifically the Market Liberal leader ieology
+Fixed NULL_STATE in railway boom/bust event
+Fixed missing negative sign in Progressive Era start conditions
+Fixed missing cooldown on Death's Laboratory
+Progressive IGs are less inclined to join the Free Trade Party

@@ -578,7 +578,10 @@ usfp_manifest_destiny.6 = {
 	option = {
 		name = usfp_manifest_destiny.6.e
 		trigger = {
-			root.var:manifest_destiny_var >= 6
+			custom_tooltip = {
+				text = enough_manifest_destiny
+				root.var:manifest_destiny_var >= 6
+			}
 		}
 		usfp_manifest_more_destiny_effect = yes
 		every_diplomatic_play = {

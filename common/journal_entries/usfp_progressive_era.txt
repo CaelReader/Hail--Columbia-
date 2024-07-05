@@ -19,7 +19,7 @@ usfp_progressive_era = {
 				has_variable = gilded_age_complete
 			}
 			ig:ig_trade_unions = {
-				ig_approval <= 15
+				ig_approval <= -15
 			}
 		}
 		NOT = {

@@ -801,8 +801,9 @@ conservative_party = {
 					}
 				}
 				is_interest_group_type = ig_industrialists
-				leader = {
-					has_ideology = ideology:ideology_market_liberal
+				law_stance = {
+					law = law_type:law_free_trade
+					value >= approve
 				}
 			}
 			add = {

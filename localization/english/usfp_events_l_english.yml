@@ -824,7 +824,7 @@ usfp_gilded_age.1.f: ""To the young American, here or elsewhere, the paths to fo
 usfp_gilded_age.1.a: "A toast to prosperity!"
 
 usfp_gilded_age.2.t: "Fraudulent Lines"
-usfp_gilded_age.2.d: "The press has unveiled a massive government corruption scheme involving railroad contracts worth double the actual cost of construction, allowing the fraudsters to pocket millions. A dozen prominent members of the [SCOPE.sParty('scandal_party').GetName] are alleged to have taken part, facilitating approval of the contracts while taking a cut of the proceeds. The opposition is demanding a comprehensive investigation and the censure of all involved."
+usfp_gilded_age.2.d: "The press has unveiled a massive government corruption scheme involving railroad contracts worth twice the actual cost of construction. The fraud has enabled a select few to plunder the national treasury to an obscene degree. A dozen prominent members of the [SCOPE.sParty('scandal_party').GetName] are alleged to have taken part, facilitating approval of the contracts while taking a cut of the proceeds. The opposition is demanding a comprehensive investigation and the censure of all involved."
 usfp_gilded_age.2.f: ""COLOSSAL BRIBERY.\n\nCongressmen who have robbed the people, and who now support the national robber!\n\nPrincely gifts to the chairmen of committees in congress!"" #The New York Sun
 usfp_gilded_age.2.a: "Perform a token investigation."
 usfp_gilded_age.2.b: "We need to take this seriously."

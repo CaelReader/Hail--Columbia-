@@ -665,6 +665,17 @@ free_trade_party = {
 				desc = "from_two_party_system"
 			}
 		}
+		if = { # USFP: Progressives shouldn't join the Free Trade Party
+			limit = {
+				leader = {
+					has_ideology = ideology:ideology_usfp_progressive
+				}
+			}
+			add = {
+				value = -50
+				desc = from_progressive_leader
+			}
+		}
 		if = {
 			limit = {
 				owner = {

@@ -735,6 +735,7 @@ usfp_progressive_era.10 = {
 	trigger = {
 		has_technology_researched = pharmaceuticals
 	}
+	cooldown = {months = very_long_modifier_time } #once
 	
 	#how terrible
 	option = {

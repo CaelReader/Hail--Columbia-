@@ -1,0 +1,13 @@
+﻿l_english:
+usfp_lobby_anti_imperial: "Anti-Imperialist Lobby" 
+usfp_lobby_anti_imperial_name: "[COUNTRY.GetAdjectiveNoFormatting] Anti-Imperialist League"
+usfp_lobby_anti_imperial_icon: "@usfp_lobby_anti_imperial!"
+
+party_movement_party: "Movement Party"
+party_american_party: "American Party"
+party_free_soil_party: "Free Soil Party"
+usfp_bourbon_democrats: "Bourbon Democrats"
+from_progressive_leader: "Progressive Leader"
+
+lds_church: "Church of Jesus Christ of Latter-Day Saints"
+lds_church_desc: "The Mormon Church was founded during the Second Great Awakening by Joseph Smith, who is said to have recieved new revelations from God in the form of golden tablets. The church's distinct beliefs and practices, including polygamy, put them at odds with most of the rest of Christian society."

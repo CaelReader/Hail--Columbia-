@@ -1014,7 +1014,7 @@ usfp_gilded_age.12 = {
 #Railroad volatility
 usfp_gilded_age.13 = {
 	type = country_event
-	placement = scope:railway_state
+	placement = scope:railway_boom_state
 
 	title = usfp_gilded_age.13.t
 	desc = usfp_gilded_age.13.d
