@@ -1,41 +1,5 @@
 ﻿# United States - USA - Presidents
 
-ecchi_usa_adams_character_template = {
-    first_name = ecchi_John_Quincy
-    last_name = Adams
-    historical = yes
-    culture = cu:yankee
-    female = no
-    religion = protestant #Nontrinitarian
-    ideology = ideology_abolitionist
-    interest_group = ig_petty_bourgeoisie
-    birth_date = 1767.7.11
-	dna = ecchi_dna_john_quincy_adams
-    traits = { meticulous ambitious experienced_political_operator }
-    interest_group_leader_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:USA
-                    this = c:USA
-                    NOT = { exists = c:NEN }
-                }
-                AND = {
-                    exists = c:NEN
-                    this = c:NEN
-                }
-            }
-        }
-        interest_group_trigger = {
-            is_marginal = no
-            is_interest_group_type = ig_petty_bourgeoisie
-        }
-        earliest_usage_date = 1836.1.1
-        latest_usage_date = 1848.2.23
-        chance = 90
-    }
-}
-
 ecchi_usa_van_buren_character_template = {
     first_name = Martin
     last_name = Van_Buren
@@ -119,6 +83,42 @@ ecchi_usa_tyler_character_template = {
         chance = 100
     }
     on_created = { set_variable =  { name = memento_mori_immunity years = 8 } }
+}
+
+ecchi_usa_adams_character_template = {
+    first_name = ecchi_John_Quincy
+    last_name = Adams
+    historical = yes
+    culture = cu:yankee
+    female = no
+    religion = protestant #Nontrinitarian
+    ideology = ideology_abolitionist
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1767.7.11
+	dna = ecchi_dna_john_quincy_adams
+    traits = { meticulous ambitious experienced_political_operator }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:USA
+                    this = c:USA
+                    NOT = { exists = c:NEN }
+                }
+                AND = {
+                    exists = c:NEN
+                    this = c:NEN
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1848.2.23
+        chance = 50
+    }
 }
 
 ecchi_usa_polk_character_template = {

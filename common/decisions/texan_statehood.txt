@@ -6,6 +6,10 @@
 			is_subject = no
 			is_at_war = no
 		}
+		exists = c:USA
+		NOT = {
+			has_variable = confederate_texas
+		}
 	}
 
 	possible = {
@@ -16,6 +20,9 @@
 			relations:root >= relations_threshold:cordial
 			is_at_war = no
 		}
+		any_neighbouring_state = {
+			owner = c:USA
+		}
 	}
 
 	when_taken = {
@@ -23,6 +30,54 @@
 		set_variable = {
 			name = texas_asked_statehood
 			years = 4
+		}
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
+
+texan_csa = {
+	is_shown = {
+		exists = c:TEX
+		root = c:TEX
+		root = {
+			is_subject = no
+			is_at_war = no
+		}
+		exists = c:CSA
+		NOT = {
+			has_law = law_type:law_slavery_banned
+		}
+	}
+
+	possible = {
+		any_neighbouring_state = {
+			owner = c:CSA
+		}
+		c:CSA = {
+			relations:root >= relations_threshold:cordial
+			is_at_war = no
+		}
+		NOT = {
+			has_variable = confederate_texas
+		}
+		prestige < c:CSA.prestige
+	}
+
+	when_taken = {
+		set_variable = confederate_texas
+		usfp_entrench_slavery_effect = yes
+		c:CSA = {
+			create_diplomatic_pact = {
+				country = root
+				type = dominion
+			}
+		}
+		change_relations = {
+			country = c:CSA
+			value = 50
 		}
 	}
 

@@ -30,6 +30,7 @@ Hail, Columbia! is a United States Flavor Pack, including overhauled and expande
 [img]https://i.imgur.com/eD5BaRs.png[/img]
 Check out the full list of Vanilla Overrides in the discussion section.
 [list]
+[*]Compatible with Morgenrote.
 [*]Compatible with VTM. Load this mod after that mod.
 [*]Compatible with ECCHI. Load this mod after that mod.
 [*]Probably incompatible with any mod that changes the US or the state structure of North America.

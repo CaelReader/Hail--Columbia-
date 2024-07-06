@@ -49,7 +49,7 @@ gov_chiefdom = {
 	possible = {
 		has_law = law_type:law_chiefdom
 		NOT = {
-			c:SEQ = ROOT
+			c:SEQ ?= ROOT
 		}
 	}
 

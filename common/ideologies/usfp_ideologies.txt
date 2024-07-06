@@ -138,9 +138,9 @@ ideology_empire_of_liberty = { # USIT + USPB
 	
 	lawgroup_army_model = {
 		law_national_militia = approve
-		law_professional_army = disapprove
+		law_professional_army = neutral
 		law_peasant_levies = disapprove
-		law_mass_conscription = disapprove
+		law_mass_conscription = neutral
 	}
 
 	lawgroup_colonization = {		

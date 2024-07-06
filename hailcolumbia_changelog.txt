@@ -199,8 +199,24 @@ Fixes:
 
 3.1 "Cleveland"
 Fixed missing Bourbon Democrats loc
-Bourbon Democrats attraction is now based on approving Free Trade rather than specifically the Market Liberal leader ieology
+Bourbon Democrats attraction is now based on approving Free Trade rather than specifically the Market Liberal leader ideology
 Fixed NULL_STATE in railway boom/bust event
 Fixed missing negative sign in Progressive Era start conditions
 Fixed missing cooldown on Death's Laboratory
 Progressive IGs are less inclined to join the Free Trade Party
+
+3.2 "Cleveland"
+fixed script error in government_types
+Thomas Nast will now retire at the end of the Gilded Age if he's still around
+Breaking the Washington Precedent now looks worse at the polls
+Nerfed CSA's bonus in the ACW
+Walker's filibustering in Nicaragua can now occur if the US conquers Sonora themselves
+Reduced spawn rate of John Quincy Adams
+Texas must now border the USA to ask for statehood
+USA must now border Mexico to offer the northern purchase
+Texas can now join the CSA as a dominion
+If the CSA wins, their IGs embrace slavery
+Harmonized Slavery Law edits with vanilla game changes
+Claim Canada now properly includes Alberta
+Seminole no longer have a coastline, to prevent Naval Invasions
+Empire of Liberty is now neutral towards professional army and mass conscription

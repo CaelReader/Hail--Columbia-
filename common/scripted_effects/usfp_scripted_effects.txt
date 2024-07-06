@@ -835,3 +835,29 @@ usfp_reconstruction_conclusion_effect = {
 		remove_modifier = usfp_freedmens_bureau
 	}
 }
+
+usfp_entrench_slavery_effect = {
+	ig:ig_landowners = {
+		if = {limit = {NOT = {has_ideology = ideology:ideology_pro_slavery}}
+			 add_ideology = ideology_pro_slavery
+		}
+	}
+	ig:ig_rural_folk = {
+		if = {limit = {NOT = {has_ideology = ideology:ideology_pro_slavery}}
+			 add_ideology = ideology_pro_slavery
+		}
+	}
+	ig:ig_intelligentsia = {
+		remove_ideology = ideology_anti_slavery
+	}
+	ig:ig_devout = {
+		if = {limit = {NOT = {has_ideology = ideology:ideology_pro_slavery}}
+			add_ideology = ideology_pro_slavery
+   		}
+	}
+	ig:ig_armed_forces = {
+		if = {limit = {NOT = {has_ideology = ideology:ideology_pro_slavery}}
+		add_ideology = ideology_pro_slavery
+	   }
+	}
+}

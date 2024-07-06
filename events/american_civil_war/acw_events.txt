@@ -1004,6 +1004,7 @@ acw_events.9 = {
         		months = long_modifier_time
         	}
         }
+		usfp_entrench_slavery_effect = yes
 	}
 
 	option = { # Restart the slave trade
@@ -1035,5 +1036,6 @@ acw_events.9 = {
 				value = -30
 			}
         }
+		usfp_entrench_slavery_effect = yes
 	}
 }

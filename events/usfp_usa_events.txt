@@ -1521,7 +1521,7 @@ usfp_usa.19 = {
 			set_variable = president_broke_precedent
 			interest_group = {
 				party ?= {
-					add_momentum = momentum_medium_decrease
+					add_momentum = momentum_very_large_decrease
 				}
 			}
 			add_modifier = {

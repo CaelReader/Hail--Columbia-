@@ -83,9 +83,13 @@
 		set_owner_of_provinces = {
 			country = c:SML
 			provinces = {  
-				xFE627B x7BCB55 x4407A0 xAAF2AF xC60D66 x7FA347 x3CDD1A xE740E5 x552AD8
-				# x65ECBE x9088D5 xF0B481 x4070C0
+				xFE627B x7FA347 x3CDD1A  x552AD8
+				# x65ECBE x9088D5 xF0B481 x4070C0 xC60D66 xAAF2AF x4407A0 x7BCB55 xE740E5
 		 }
+		}
+		set_owner_of_provinces = {
+			country = c:USA
+			provinces = { xE740E5 }
 		}
 		add_claim = c:SML
 		add_homeland = cu:muskogean

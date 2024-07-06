@@ -930,14 +930,14 @@ usfp_native_removal.10 = {
 				}
 				move_pop = scope:oklahoma_state
 			}
-			add_loyalists = {
+			add_loyalists_in_state = {
 				value = small_radicals
 				culture = cu:dixie
 			}
-			change_relations = {
-				country = c:SEQ
-				value = -10
-			}
+		}
+		change_relations = {
+			country = c:SEQ
+			value = -10
 		}
 	}
 

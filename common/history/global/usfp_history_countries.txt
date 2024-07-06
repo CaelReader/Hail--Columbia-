@@ -98,4 +98,16 @@
 			years = 30
 		}
 	}
+	c:USA = {
+		ig:ig_petty_bourgeoisie = {
+			save_scope_as = pb_ig
+		}
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_pro_country
+				target = c:GBR
+			}
+			add_lobby_member = scope:pb_ig		
+		}
+	}
 }

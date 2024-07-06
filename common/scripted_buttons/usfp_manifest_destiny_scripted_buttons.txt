@@ -23,6 +23,9 @@ usfp_western_purchase_button = {
 		NOT = {
 			has_claim = s:STATE_CALIFORNIA
 		}
+		any_neighbouring_state = {
+			owner = c:MEX
+		}
 	}
 
 	possible = {
@@ -427,6 +430,9 @@ usfp_claim_canada_button = {
 			add_claim = root
 		}
 		s:STATE_NEWFOUNDLAND = {
+			add_claim = root
+		}
+		s:STATE_ALBERTA = {
 			add_claim = root
 		}
 		s:STATE_ONTARIO = {

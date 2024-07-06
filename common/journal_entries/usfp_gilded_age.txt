@@ -55,6 +55,23 @@ usfp_gilded_age = {
 			years = 4
 			is_decaying = yes
 		}
+		hidden_effect = {
+			if = {
+				limit = { 
+					any_scope_character = {
+						has_template = usfp_thomas_nast_character_template
+					}
+				}
+				random_scope_character = {
+					limit = {
+						has_template = usfp_thomas_nast_character_template
+					}
+					kill_character = {
+						hidden = yes
+					}
+				}
+			}
+		}
 	}
 	fail = {
 		OR = {
@@ -86,9 +103,43 @@ usfp_gilded_age = {
 			strata = rich
 		}
 		set_variable = gilded_age_complete
+		hidden_effect = {
+			if = {
+				limit = { 
+					any_scope_character = {
+						has_template = usfp_thomas_nast_character_template
+					}
+				}
+				random_scope_character = {
+					limit = {
+						has_template = usfp_thomas_nast_character_template
+					}
+					kill_character = {
+						hidden = yes
+					}
+				}
+			}
+		}
 	}
 	on_invalid = {
 		set_variable = gilded_age_complete
+		hidden_effect = {
+			if = {
+				limit = { 
+					any_scope_character = {
+						has_template = usfp_thomas_nast_character_template
+					}
+				}
+				random_scope_character = {
+					limit = {
+						has_template = usfp_thomas_nast_character_template
+					}
+					kill_character = {
+						hidden = yes
+					}
+				}
+			}
+		}
 	}
 	modifiers_while_active = {
 		usfp_gilded_age_modifier
