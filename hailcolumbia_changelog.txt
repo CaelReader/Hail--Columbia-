@@ -220,3 +220,10 @@ Harmonized Slavery Law edits with vanilla game changes
 Claim Canada now properly includes Alberta
 Seminole no longer have a coastline, to prevent Naval Invasions
 Empire of Liberty is now neutral towards professional army and mass conscription
+PB now start as part of the Pro-Britain lobby
+
+3.3 "Cleveland"
+Disabled ACW modifiers pending rework
+Fixed Jesse James being erroneously called Hesse James
+Pursuing the Horse Creek Treaty now costs a bit of Influence
+Cracking down on Political Machines during the gilded age now costs authority and bureaucracy

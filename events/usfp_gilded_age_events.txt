@@ -955,14 +955,20 @@ usfp_gilded_age.12 = {
 			ig:ig_industrialists = {
 				is_in_government = no
 			}
+			authority >= 75
+			bureaucracy >= 100
 		}
 		show_as_unavailable = {
 			always = yes
 		}
+		add_modifier = {
+			name = usfp_fighting_corruption_modifier
+			years = 2
+		}
 		scope:corruption_state = {
 			add_modifier = {
 				name = usfp_captive_state_government
-				years = 1
+				years = 2
 			}
 			add_radicals_in_state = {
 				value = medium_radicals

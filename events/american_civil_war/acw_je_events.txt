@@ -298,12 +298,12 @@ acw_je_events.1 = {
 				type = je_acw_war
 				target = scope:csa_scope
 			}
-			add_modifier = { name = usfp_acw_union_modifier months = 48 }
+			# add_modifier = { name = usfp_acw_union_modifier months = 48 }
 			# add_modifier = { name = civil_war_reshuffle_uscwf months = 48 }
 			ig:ig_intelligentsia = { remove_ruling_interest_group = yes } 
 			c:CSA = {
 				set_variable = acw_slave_nation_var
-				add_modifier = { name = usfp_acw_csa_modifier months = 48 }
+				# add_modifier = { name = usfp_acw_csa_modifier months = 48 }
 			}
 		}
 		else_if = {
@@ -313,9 +313,9 @@ acw_je_events.1 = {
 				target = scope:fsa_scope
 			}
 			set_variable = acw_slave_nation_var
-			add_modifier = { name = usfp_acw_csa_modifier months = 48 }
+			# add_modifier = { name = usfp_acw_csa_modifier months = 48 }
 			c:FSA = {
-				add_modifier = { name = usfp_acw_fsa_modifier months = 48 }
+				# add_modifier = { name = usfp_acw_fsa_modifier months = 48 }
 			}
 		}
 		# set_variable = union_side_acw
@@ -331,20 +331,20 @@ acw_je_events.1 = {
 			 custom_tooltip = acw_war_support_tooltip
 		}
 		show_as_tooltip = {
-			add_modifier = { name = usfp_acw_union_modifier months = 48 }
+			# add_modifier = { name = usfp_acw_union_modifier months = 48 }
 			if = {
 				limit = {
 					exists = c:CSA
 				 }
 				 c:CSA = {
-					add_modifier = { name = usfp_acw_csa_modifier months = 48 }
+					# add_modifier = { name = usfp_acw_csa_modifier months = 48 }
 				 }
 			}
 			if = {
 				limit = { 
 					exists = c:FSA
 				}
-				add_modifier = { name = usfp_acw_fsa_modifier months = 48 }
+				# add_modifier = { name = usfp_acw_fsa_modifier months = 48 }
 			}
 		}
 	}
@@ -352,20 +352,20 @@ acw_je_events.1 = {
 		name = acw_je_events.1.b
 		trigger = { is_player = yes }
 		show_as_tooltip = {
-			add_modifier = { name = usfp_acw_union_modifier months = 48 }
+			# add_modifier = { name = usfp_acw_union_modifier months = 48 }
 			if = {
 				limit = {
 					exists = c:CSA
 				 }
 				 c:CSA = {
-					add_modifier = { name = usfp_acw_csa_modifier months = 48 }
+					# add_modifier = { name = usfp_acw_csa_modifier months = 48 }
 				 }
 			}
 			if = {
 				limit = { 
 					exists = c:FSA
 				}
-				add_modifier = { name = usfp_acw_fsa_modifier months = 48 }
+				# add_modifier = { name = usfp_acw_fsa_modifier months = 48 }
 			}
 		}
 		if = {

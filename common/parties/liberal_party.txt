@@ -32,7 +32,7 @@ liberal_party = {
 				trigger = {
 					exists = c:FSA
 					THIS = c:FSA
-					has_modifier = usfp_acw_fsa_modifier
+					# has_modifier = usfp_acw_fsa_modifier
 				}
 			}
 			triggered_desc = {

@@ -511,10 +511,15 @@ usfp_secure_trail_button = {
 			has_law = law_type:law_no_colonial_affairs
 		}
 		is_at_war = no
+		influence >= 50
 	}
 
 	effect = {
 		set_variable = horse_creek_treaty
+		add_modifier = {
+			name = usfp_frontier_agents_modifier
+			years = 1
+		}
 		trigger_event = {
 			id = usfp_manifest_destiny.21
 			years = 1

@@ -116,40 +116,40 @@ usfp_victory_over_nullification_crisis_modifier = {
 
 usfp_acw_union_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
-	country_war_exhaustion_casualties_mult = -0.20
-	unit_morale_loss_mult = -0.50
-	military_formation_organization_gain_mult = 1.0
-	building_training_rate_mult = 1
-	state_conscription_rate_mult = 1
+	country_war_exhaustion_casualties_mult = -0.50
+	# unit_morale_loss_mult = -0.50
+	# military_formation_organization_gain_mult = 1.0
+	building_training_rate_mult = 0.5
+	state_conscription_rate_mult = 0.5
 	country_legitimacy_base_add = 50
 	unit_kill_rate_add = 0.20
-	unit_devastation_mult = 0.10
+	unit_devastation_mult = 0.15
 	country_military_goods_cost_mult = -0.20
 }
 
 usfp_acw_csa_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
-	country_war_exhaustion_casualties_mult = -0.75
-	unit_morale_loss_mult = -0.60
-	military_formation_organization_gain_mult = 1.0
-	building_training_rate_mult = 1.0
-	state_conscription_rate_mult = 1.0
+	country_war_exhaustion_casualties_mult = -0.50
+	# unit_morale_loss_mult = -0.50
+	# military_formation_organization_gain_mult = 1.0
+	building_training_rate_mult = 0.5
+	state_conscription_rate_mult = 0.5
 	country_legitimacy_base_add = 50
 	unit_kill_rate_add = 0.20
-	unit_devastation_mult = 0.10
+	unit_devastation_mult = 0.15
 	country_military_goods_cost_mult = -0.20
 }
 
 usfp_acw_fsa_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
-	country_war_exhaustion_casualties_mult = -0.75
-	unit_morale_loss_mult = -0.50
-	military_formation_organization_gain_mult = 1.0
-	building_training_rate_mult = 1
-	state_conscription_rate_mult = 1
+	country_war_exhaustion_casualties_mult = -0.50
+	# unit_morale_loss_mult = -0.50
+	# military_formation_organization_gain_mult = 1.0
+	building_training_rate_mult = 0.5
+	state_conscription_rate_mult = 0.5
 	country_legitimacy_base_add = 50
 	unit_kill_rate_add = 0.20
-	unit_devastation_mult = 0.10
+	unit_devastation_mult = 0.15
 	country_military_goods_cost_mult = -0.20
 }
 
@@ -610,4 +610,9 @@ usfp_hundred_years_of_america_modifier = {
 usfp_contested_election_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_election_negative.dds
 	country_legitimacy_base_add = -10
+}
+
+usfp_frontier_agents_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_influence_negative.dds
+	country_influence_add = -50
 }

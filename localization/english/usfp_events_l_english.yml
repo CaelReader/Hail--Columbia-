@@ -843,7 +843,7 @@ usfp_gilded_age.4.f: ""Before the tribunal of nature a man has no more right to 
 usfp_gilded_age.4.a: "That's not what Darwin meant..."
 usfp_gilded_age.4.b: "All life is struggle!"
 social_darwinism_unlocked: "[SCOPE.sIdeology('social_darwinism_scope').GetName] characters can now appear."
-social_darwinism_promoted:"[SCOPE.sIdeology('social_darwinism_scope').GetName] characters are more likely to appear in our country."
+social_darwinism_promoted: "[SCOPE.sIdeology('social_darwinism_scope').GetName] characters are more likely to appear in our country."
 social_darwinist_appears: "A [SCOPE.sIdeology('social_darwinism_scope').GetName] [concept_agitator] will appear in [SCOPE.sCountry('usa_scope').GetName]."
 
 
@@ -888,7 +888,7 @@ jesse_james_bounty: "#italic We pay out the bounty:#!"
 
 usfp_gilded_age.11.t: "Jesse James Shot!"
 usfp_gilded_age.11.d: "The celebrity outlaw Jesse James has been shot by one of his accomplices! The news of his murder has become a sensation across the country, with many hailing James as a modern Robin Hood and protector of the White Race, while others celebrate the murderer's downfall."
-usfp_gilded_age.11.f: ""A great sensation was created in this city this morning by the announcement that Hesse James, the notorious bandit and train robber, had been shot and killed here. The news spread with great rapidity, but most persons received it with doubt until investigation established the fac tbeyond question. Then the excitement bcame more and more intense, and crowds of people rushed to the quarter of the city where the shooting had occurred, anxious to view the body of the dead outlaw."" #New York Tribune
+usfp_gilded_age.11.f: ""A great sensation was created in this city this morning by the announcement that Jesse James, the notorious bandit and train robber, had been shot and killed here. The news spread with great rapidity, but most persons received it with doubt until investigation established the fact beyond question. Then the excitement became more and more intense, and crowds of people rushed to the quarter of the city where the shooting had occurred, anxious to view the body of the dead outlaw."" #New York Tribune
 usfp_gilded_age.11.a: "It was inevitable."
 
 usfp_gilded_age.12.t: "Corrupt Dealings in [SCOPE.sState('corruption_state').GetName]"
