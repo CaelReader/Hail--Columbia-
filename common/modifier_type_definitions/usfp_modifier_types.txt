@@ -86,3 +86,21 @@ state_usfp_american_standard_of_living_add={
 		ai_value=0
 	}
 }
+
+state_pop_support_law_slavery_banned_mult={
+	decimals=2
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_pop_support_law_legacy_slavery_mult={
+	decimals=2
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}

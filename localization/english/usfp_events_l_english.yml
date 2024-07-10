@@ -91,6 +91,11 @@ usfp_a_house_divided.17.f: ""We must have though a man who recognizes the slaver
 usfp_a_house_divided.17.a: "Honest Abe will carry the day!"
 usfp_a_house_divided.17.b: "We prefer [SCOPE.sCharacter('current_pb_leader').GetFullName]."
 
+usfp_a_house_divided.18.t: "Seccessionists Stand Down"
+usfp_a_house_divided.18.d: "The inauguration of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] has mollified the most extreme calls for seccession in the South, for now."
+usfp_a_house_divided.18.f: "Moderate voices prevailed in the hall. The new president had walked back from the dangerous rhetoric of their predecessor. The planters could work with the government rather than separate from it."
+usfp_a_house_divided.18.a: "Perhaps we can resolve this without a civil war?"
+
 usfp_bleeding_kansas.1.t: "The New England Emigrant Aid Company"
 usfp_bleeding_kansas.1.d: "An enterprising [SCOPE.sIdeology('abolitionist_scope').GetName] from [SCOPE.sState('massachusetts_scope').GetCityHubName] has established a transportation company with the goal of sending anti-slavery immigrants into [SCOPE.sState('kansas_scope').GetName]. Hundreds of migrants have already signed on, eager to turn [SCOPE.sState('kansas_scope').GetName] into a free state."
 usfp_bleeding_kansas.1.f: ""WANTED: Homesteaders eager to do their patriotic duty in the Kansas Territory. Monetary aid, transportation, information provided to those who wish to see Kansas a properly free and white state.""

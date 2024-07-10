@@ -154,15 +154,23 @@ law_slavery_banned = {
 				OR = {
 					any_interest_group = {
 						is_in_government = yes
+						is_powerful = yes
 						leader = {
-							has_ideology = ideology:ideology_abolitionist
+							usfp_anti_slavery_leader_trigger = yes
 						}
 					}
-					ruler = { has_ideology = ideology:ideology_abolitionist }
-					heir ?= { has_ideology = ideology:ideology_abolitionist }
+					ruler = { usfp_anti_slavery_leader_trigger = yes }
+					heir ?= { usfp_anti_slavery_leader_trigger = yes }
 				}
 			}
 			add = 750
+		}
+		#USFP: AI should avoid breaking the compromise
+		if = {
+			limit = { 
+				has_journal_entry = je_usfp_a_house_divided_missouri_compromise
+			}
+			add = -1000
 		}
 		if = {
 			limit = {
@@ -240,6 +248,7 @@ law_debt_slavery = {
 	}
 	
 	modifier = {
+		interest_group_ig_landowners_pol_str_mult = 0.5
 	}
 	
 	pop_support = {
@@ -470,6 +479,10 @@ law_legacy_slavery = {
 				add_ideology = ideology_pro_slavery 
 			}
 		}
+	}
+
+	modifier = {
+		interest_group_ig_landowners_pol_str_mult = 0.25
 	}
 
 	possible_political_movements = {

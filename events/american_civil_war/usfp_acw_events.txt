@@ -50,8 +50,10 @@ usfp_acw.1 = {
 		random_diplomatic_play = {
 			limit = {
 				any_scope_play_involved = {
-					c:USA = this
-					c:CSA = this
+					OR = {
+						c:USA = this
+						c:CSA = this
+					}
 				}
 			}
 			save_scope_as = acw_scope
@@ -81,9 +83,11 @@ usfp_acw.1 = {
 			add_momentum = momentum_medium
 		}
 		scope:acw_scope = {
-			add_war_war_support = {
-				target = ROOT
-				value = 25
+			war = {
+				add_war_war_support = {
+					target = ROOT
+					value = 50
+				}
 			}
 		}
 	}
@@ -756,7 +760,16 @@ usfp_acw.9 = {
 				save_scope_as = acw_secession_country
 			 }
 			 usfp_planters_to_landowners_effect = yes
-		}		
+		}
+		create_political_lobby = {
+			type = lobby_anti_country
+			target = scope:acw_secession_country
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_intelligentsia
+		}
+		ig:ig_landowners = {
+			usfp_planters_to_landowners_effect = yes	
+		}
 	}
 
 	#Regain claims

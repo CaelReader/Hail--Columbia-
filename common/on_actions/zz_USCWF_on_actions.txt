@@ -181,6 +181,9 @@ USCWF_fierce_defiance_on_action = {
 						has_journal_entry = je_acw_war
 					}
 				}
+				s:STATE_MISSISSIPPI.region_state:CSA = {
+					controller = c:CSA
+				}
 			}
 			every_scope_war = {
 				add_war_war_support = { target = ROOT value = 25 }

@@ -32,6 +32,9 @@ usfp_a_house_divided.1 = {
 		NOT = {
 			has_variable = usfp_had_gag_rule
 		}
+		any_political_movement = {
+			desired_law = law_type:law_slavery_banned
+		}
 	}
 
 	cancellation_trigger = {
@@ -64,6 +67,15 @@ usfp_a_house_divided.1 = {
 			value = small_radicals
 			interest_group = ig:ig_intelligentsia
 		}
+		random_political_movement = {
+			limit = {
+				desired_law = law_type:law_slavery_banned
+			}
+			add_modifier = {
+				name = usfp_gag_rule_movement_modifier
+				years = 5
+			}
+		}
 		ig:ig_intelligentsia = {
 			add_modifier = {
 				name = usfp_peoples_petitions_modifier
@@ -91,6 +103,15 @@ usfp_a_house_divided.1 = {
 		add_radicals = {
 			value = small_radicals
 			interest_group = ig:ig_intelligentsia
+		}
+		random_political_movement = {
+			limit = {
+				desired_law = law_type:law_slavery_banned
+			}
+			add_modifier = {
+				name = usfp_gag_rule_movement_modifier
+				years = 5
+			}
 		}
 		ig:ig_landowners = {
 			add_modifier = {
@@ -169,7 +190,7 @@ usfp_a_house_divided.3 = {
 		}
 		add_modifier = {
 			name = usfp_imminent_secession
-			years = 1
+			years = 5
 		}
 		if = {
 			limit = { 
@@ -1572,5 +1593,72 @@ usfp_a_house_divided.17 = {
 	#Keep current leader
 	option = {
 		name = usfp_a_house_divided.17.b
+	}
+}
+
+#secession cancelled if abolitionist president dies
+usfp_a_house_divided.18 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_csa.dds"
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	title = usfp_a_house_divided.18.t
+	desc = usfp_a_house_divided.18.d
+	flavor = usfp_a_house_divided.18.f
+	dlc = dlc_usfp
+	placement = s:STATE_GEORGIA.region_state:USA
+
+	duration = 1
+
+	immediate = {
+	}
+
+	cooldown = {
+		months = 120
+	}
+	
+	trigger = {
+		NOT = {
+			is_enacting_law = law_type:law_slavery_banned
+		}
+		NOT = {
+			has_law = law_type:law_slavery_banned
+		}
+		ruler = {
+			usfp_anti_slavery_leader_trigger = no
+		}
+		has_modifier = usfp_imminent_secession
+	}
+
+	option = {
+		name = usfp_a_house_divided.18.a
+		remove_modifier = usfp_imminent_secession
+		ig:ig_landowners = {
+			remove_modifier = usfp_slavers_reject_abolition
+		}
+		add_loyalists = {
+			value = small_radicals
+			interest_group = ig:ig_landowners
+		}
+		if = {
+			limit = { 
+				any_political_movement = {
+					desired_law = law_type:law_slave_trade
+				}
+			}
+			random_political_movement = {
+				limit = {
+					desired_law = law_type:law_slave_trade
+				}
+				add_modifier = {
+					name = usfp_secession_defused_modifier
+					years = 5
+				}
+			}
+		}
 	}
 }

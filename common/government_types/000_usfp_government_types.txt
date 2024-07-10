@@ -6,10 +6,7 @@
 	female_ruler = "RULER_TITLE_PRESIDENT"
 	
 	possible = {
-		OR = {
-			country_has_primary_culture = cu:yankee
-			country_has_primary_culture = cu:dixie
-		}
+		usfp_country_is_american = yes
 		NOR = {
 			c:TEX ?= this
 			c:ORG ?= this
@@ -42,10 +39,7 @@ gov_usfp_congressional_republic = {
 	female_ruler = "RULER_TITLE_SPEAKER_OF_THE_HOUSE"
 	
 	possible = {
-		OR = {
-			country_has_primary_culture = cu:yankee
-			country_has_primary_culture = cu:dixie
-		}
+		usfp_country_is_american = yes
 		NOR = {
 			c:TEX ?= this
 			c:ORG ?= this
@@ -204,7 +198,11 @@ gov_usfp_syndicalist_federation = {
 			has_law = law_type:law_single_party_state
 			has_law = law_type:law_anarchy
 		}
-		country_has_primary_culture = cu:yankee
+		OR = {
+			country_has_primary_culture = cu:yankee
+			country_has_primary_culture = cu:usfp_american
+		}
+		
 	}
 
 	on_government_type_change = {
@@ -225,7 +223,10 @@ gov_usfp_syndicalist_federation_anarchist = {
 	possible = {
 		has_law = law_type:law_council_republic
 		has_law = law_type:law_anarchy
-		country_has_primary_culture = cu:yankee
+		OR = {
+			country_has_primary_culture = cu:yankee
+			country_has_primary_culture = cu:usfp_american
+		}
 	}
 
 	on_government_type_change = {

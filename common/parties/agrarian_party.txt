@@ -196,10 +196,7 @@ agrarian_party = {
 			limit = {
 				owner = {
 					country_is_in_north_america = yes
-					OR = {
-						country_has_primary_culture = cu:yankee
-						country_has_primary_culture = cu:dixie
-					}
+					usfp_country_is_american = yes
 					has_law = law_type:law_presidential_republic
 				}
 			}
@@ -300,7 +297,10 @@ agrarian_party = {
 					NOT = {
 						exists = py:conservative_party
 					}
-					country_has_primary_culture = cu:yankee
+					OR = {
+						country_has_primary_culture = cu:yankee
+						country_has_primary_culture = cu:usfp_american
+					}
 					ig:ig_landowners = {
 						NOT = {
 							has_ideology = ideology:ideology_pro_slavery

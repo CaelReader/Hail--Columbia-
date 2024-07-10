@@ -18,7 +18,7 @@ usfp_manifest_destiny_main = {
 	immediate = {
 		set_variable = {
 			name = manifest_destiny_var
-			value = 0
+			value = 1
 		}
 		trigger_event = {
 			id = usfp_manifest_destiny.1
@@ -29,7 +29,17 @@ usfp_manifest_destiny_main = {
 	}
 
 	current_value = {
-		value = root.var:manifest_destiny_var
+		if = {
+			limit = {
+				scope:journal_entry = {
+					goal_value = 0
+				}
+			}
+			value = 0
+		}
+		else = {
+			value = root.var:manifest_destiny_var
+		}
 	}
 
 	progressbar = yes

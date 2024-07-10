@@ -19,6 +19,10 @@ usfp_manifest_destiny.1 = {
 	dlc = dlc_usfp
 	duration = 3
 
+	immediate = {
+		
+	}
+
 	#yes good
 	option = {
 		name = usfp_manifest_destiny.1.a

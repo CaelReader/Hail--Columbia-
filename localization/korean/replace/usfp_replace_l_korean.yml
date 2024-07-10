@@ -60,3 +60,8 @@
  je_acw_reconstruction_status_radical: "#bold 해방노예#!들은 사회에서 새로운 권리와 지위를 주장하고 있습니다."
  je_acw_reconstruction_status_mixed: "재건은 남부 전역에서 치열한 경쟁을 남겨두었습니다."
  je_acw_reconstruction_status_failure: "백인 우월주의자 #bold 리디머#!가 남부에 대한 지배권을 잡았습니다."
+ je_acw_war:0 "미국 내전"
+ je_acw_war_reason:0 "주들 사이의 전쟁이 다가오고 있습니다. 지금은 연방을 지키거나 죽음을 택할 때입니다.\n\n"
+ acw_war_tt_complete:0 "분리주의자들이 패배하고 재합병되었습니다."
+ acw_war_support_tooltip: "[SCOPE.sCountry('csa_scope').GetName]은 우리의 싸우겠다는 의지보다 더 오래 버틸 수 있다고 믿습니다. 전장에서 저들을 상대로 승리한다면, 저들을 완전히 [Concept('concept_occupation', '$concept_occupied$')]하기 전까지 저들의 [concept_war_support]가 #italic 상승#!시킬 것입니다."
+ law_worker_protections:0 "노동자 보호"

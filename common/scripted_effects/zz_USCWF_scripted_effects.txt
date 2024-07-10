@@ -2,8 +2,7 @@
 	if = {
 		limit = {
 			OR = {
-				country_has_primary_culture = cu:yankee
-				country_has_primary_culture = cu:dixie
+				usfp_country_is_american = yes
 				country_has_primary_culture = cu:afro_american
 			}
 			NOR = {

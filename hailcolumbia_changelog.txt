@@ -227,3 +227,20 @@ Disabled ACW modifiers pending rework
 Fixed Jesse James being erroneously called Hesse James
 Pursuing the Horse Creek Treaty now costs a bit of Influence
 Cracking down on Political Machines during the gilded age now costs authority and bureaucracy
+
+3.4 "Cleveland"
+Manifest Destiny now starts with an extra initial point
+AI will now avoid breaking the missouri compromise
+Moved some missouri compromise modifiers from the decaying modifier to the JE to make them last longer
+reduced A House Divided planter opinion penalty to -15 (from -20)
+adjusted A House Divided law support modifiers to use mult instead of add
+The Gag Rule now directly nerfs the Slavery Banned movement
+Re-added slave law LO power modifiers inline with 1.7.4
+Yankee Aristocrats can now align with the Rural Folk
+buffed the Albany Regency to bias a victory for Van Buren
+updated various triggers to account for the American Superculture
+Imminent Secession modifier is now more impactful
+New event that will cancel Imminent Secession if a new president is non-abolitionist
+John Quincy Adams cannot spawn later than 1840 (otherwise he's too old)
+Losing the civil war immediately spawns an anti-CSA lobby and sets the LO to be Landowners
+Doubled Thomas Nast's bonus to war support (and also fixed it)
