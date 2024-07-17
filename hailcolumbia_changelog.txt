@@ -244,3 +244,18 @@ New event that will cancel Imminent Secession if a new president is non-abolitio
 John Quincy Adams cannot spawn later than 1840 (otherwise he's too old)
 Losing the civil war immediately spawns an anti-CSA lobby and sets the LO to be Landowners
 Doubled Thomas Nast's bonus to war support (and also fixed it)
+
+3.5 "Cleveland"
+Added Manifest Destiny AI Strategy that pro-expansionist presidents will adopt, making them incredibly aggressive towards their claims in North America
+Claiming Cuba gives slightly less infamy
+the Cuban Purchase button will not appear if you already have a claim on Cuba
+The Square Deal will now remove any lingering Political Machines
+Turning Deseret into the Utah Territory automatically adds them to your market
+New icon for A House Divided
+Lawless Gold Rush now increases Migration Quota
+The California Gold Rush now spawns some Yankee laborers to ensure a cultural community forms and pulls more migrants there
+Dred scott decision will now collapse the Whigs
+slightly reduced the clout bonus from the Slave Power modifier
+added tooltip explaining that new homelands will continue to be added after completing Westward Expansion JE
+A House Divided and Compromise of 1820/1850 now impact Intelligentsia approval
+The ACW now radicalizes a lot of mexicans in your states within the Mexico region

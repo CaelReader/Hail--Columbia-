@@ -1,6 +1,6 @@
 ﻿#USFP: repurposed into A House Divided: Main JE
 je_acw_countdown = {
-	icon = "gfx/interface/icons/event_icons/waving_flag_usa.dds"
+	icon = "gfx/interface/icons/event_icons/abolition_slave.dds"
 
 	group = je_group_historical_content
 
@@ -251,6 +251,15 @@ je_acw_war = {
 			change_relations = {
 				country = c:MEX
 				value = -100
+			}
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_mexico
+			}
+			add_radicals_in_state = {
+				value = very_large_radicals
+				culture = cu:mexican
 			}
 		}
 	}

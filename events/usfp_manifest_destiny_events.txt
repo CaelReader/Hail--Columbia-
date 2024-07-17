@@ -361,7 +361,6 @@ usfp_manifest_destiny.4 = {
 			limit = {
 				is_ai = yes
 			 }
-			 set_strategy = ai_strategy_territorial_expansion
 			 set_secret_goal = {
 				 country = c:MEX
 				 secret_goal = conquer
@@ -972,6 +971,11 @@ usfp_manifest_destiny.10 = {
 				name = usfp_gold_rush_lawlessness
 				years = 3
 			}
+			create_pop = {
+				culture = yankee
+				size = 1000
+				pop_type = laborers
+			}
 		}
 		custom_tooltip = {
 			text = usfp_manifest_destiny.10.a.t
@@ -993,6 +997,11 @@ usfp_manifest_destiny.10 = {
 			add_modifier = {
 				name = usfp_gold_rush_lawlessness
 				years = 3
+			}
+			create_pop = {
+				culture = yankee
+				size = 1000
+				pop_type = laborers
 			}
 		}
 		custom_tooltip = {
@@ -1340,7 +1349,7 @@ usfp_manifest_destiny.14 = {
 		usfp_manifest_more_destiny_effect = yes
 		create_incident = {
 			country = scope:cuba_owner_scope
-			value = 30
+			value = 20
 		}
 		s:STATE_CUBA = {
 			add_claim = root
@@ -1561,7 +1570,7 @@ usfp_manifest_destiny.16 = {
 		}
 		create_incident = {
 			country = scope:cuba_owner_scope
-			value = 20
+			value = 15
 		}
 		if = {
 			limit = { 
@@ -1582,7 +1591,10 @@ usfp_manifest_destiny.16 = {
 			limit = {
 				is_ai = yes
 			 }
-			 set_strategy = ai_strategy_territorial_expansion
+			 set_secret_goal = {
+				country = scope:cuba_owner_scope
+				secret_goal = conquer
+			 }
 		}
 		ai_chance = {
 			base = 100
@@ -1711,7 +1723,7 @@ usfp_manifest_destiny.18 = {
 				is_revolutionary = no
 			}
 			NOR = {
-				# is_diplomatic_play_type = dp_reduce_autonomy
+				is_diplomatic_play_type = dp_reduce_autonomy
 				is_diplomatic_play_type = dp_increase_autonomy
 				is_diplomatic_play_type = dp_secession
 				is_diplomatic_play_type = dp_independence
@@ -1745,7 +1757,7 @@ usfp_manifest_destiny.18 = {
 					is_revolutionary = no
 				}
 				NOR = {
-					# is_diplomatic_play_type = dp_reduce_autonomy
+					is_diplomatic_play_type = dp_reduce_autonomy
 					is_diplomatic_play_type = dp_increase_autonomy
 					is_diplomatic_play_type = dp_secession
 					is_diplomatic_play_type = dp_independence

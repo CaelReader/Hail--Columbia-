@@ -1325,6 +1325,7 @@ usfp_a_house_divided.15 = {
 		OR = {
 			has_variable = kansas_nebraska_act_passed
 			has_variable = accepted_wilmot_proviso
+			has_variable = dred_scott
 			has_modifier = usfp_breaking_compromise
 			has_law = law_type:law_slavery_banned
 			has_journal_entry = je_acw_war

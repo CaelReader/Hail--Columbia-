@@ -43,6 +43,7 @@ usfp_gold_rush_lawlessness = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_cop_negative.dds
 	state_migration_pull_mult = 1.00
 	state_migration_pull_add = 20
+	state_migration_quota_mult = 1.00
 	state_tax_waste_add = 0.10
 	state_radicals_from_sol_change_mult = 0.10
 	state_colony_growth_speed_mult = 0.20

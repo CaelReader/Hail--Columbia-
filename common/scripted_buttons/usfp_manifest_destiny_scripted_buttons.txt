@@ -284,6 +284,7 @@ usfp_cuban_purchase_button = {
 		NOR = {
 			has_variable = offered_for_cuba
 			owns_entire_state_region = STATE_CUBA
+			has_claim = s:STATE_CUBA
 		}
 		has_variable = manifest_destiny_var
 	}
@@ -451,12 +452,6 @@ usfp_claim_canada_button = {
 					}
 				}
 			}
-		}
-		if = {
-			limit = {
-				is_ai = yes
-			 }
-			 set_strategy = ai_strategy_territorial_expansion
 		}
 	}
 	ai_chance = {

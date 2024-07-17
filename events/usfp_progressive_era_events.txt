@@ -1395,6 +1395,12 @@ usfp_progressive_era.16 = {
 				remove_ideology = ideology_socialist
 			}
 		}
+		every_scope_state = {
+			limit = {
+				has_modifier = usfp_captive_state_government
+			}
+			remove_modifier = usfp_captive_state_government
+		}
 	}
 	#lets go socialist
 	option = {
@@ -1412,6 +1418,12 @@ usfp_progressive_era.16 = {
 		add_radicals = {
 			value = large_radicals
 			strata = rich
+		}
+		every_scope_state = {
+			limit = {
+				has_modifier = usfp_captive_state_government
+			}
+			remove_modifier = usfp_captive_state_government
 		}
 	}
 }

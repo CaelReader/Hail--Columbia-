@@ -153,6 +153,7 @@ nicaragua_revolt_walker_desc: "American volunteers can surely be only a boon to 
 
 usfp_je_westward_expansion: "Westward Expansion"
 usfp_je_westward_expansion_reason: "$concept_usfp_westward_expansion_desc$"
+usfp_je_westward_expansion_complete: "New [Concept('concept_homeland','$concept_homelands$')] will continue to be added to your [Concept('concept_state', '$concept_states$')] for the rest of the game."
 
 texan_statehood_tex: "Appeal for Statehood"
 texan_statehood_tex_desc: "Our republic was founded by settlers from the United States. We would be stronger as part of the union, if they'll have us."

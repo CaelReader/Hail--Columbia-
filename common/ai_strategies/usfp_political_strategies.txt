@@ -131,3 +131,299 @@ ai_strategy_anti_slavery_agenda = {
 		}		
 	}
 }
+
+ai_strategy_manifest_destiny = {
+	icon = "gfx/interface/icons/ai_strategy_icons/manifest_destiny_strategy.dds"
+	
+	type = diplomatic
+
+	possible = {
+		has_journal_entry = usfp_manifest_destiny_main
+		has_variable = manifest_destiny_var
+		var:manifest_destiny_var > 1
+		any_state = {
+			has_claim_by = root
+			state_is_in_americas = yes
+			NOT = {
+				owner = root
+			}
+		}
+	}
+	
+	weight = {
+		value = 10
+		
+		if = {
+			limit = {
+				ruler = {
+					usfp_manifest_destiny_pro_expansion_trigger = yes
+				}
+			}
+			add = 100
+		}
+
+		if = {
+			limit = {
+				has_variable = manifest_destiny_var
+			}
+			multiply = var:manifest_destiny_var
+		}
+
+		if = {
+			limit = {
+				ruler = {
+					usfp_manifest_destiny_anti_expansion_trigger = yes
+				}
+			}
+			add = -1000
+		}
+	}
+	
+	will_form_power_bloc = {
+		OR = {
+			global_country_ranking <= 3
+			AND = {
+				country_rank >= rank_value:great_power
+				has_technology_researched = nationalism
+			}
+		}
+	}
+	
+	undesirable_infamy_level = {
+		value = 50
+		
+		if = {
+			limit = { 
+				has_technology_researched = pan-nationalism
+			}
+			multiply = 1.5
+		}
+		else_if = {
+			limit = { 
+				has_technology_researched = nationalism
+			}
+			multiply = 1.25
+		}		
+	}
+	
+	unacceptable_infamy_level = {
+		value = 100
+	}
+	
+	ideological_opinion_effect_mult = {
+		value = 0.75
+	}
+	
+	wargoal_maneuvers_fraction = {
+		value = 0.15
+	}		
+	
+	diplomatic_play_neutrality = {
+		value = 25
+	}
+	
+	diplomatic_play_boldness = {
+		value = 25
+	}
+	
+	recklessness = {
+		value = 0.25
+		# USA should be confident against owners of their Manifest Destiny states
+		if = {
+			limit = {
+				scope:target_country = {
+					any_scope_state = {
+						has_claim_by = root
+						state_is_in_americas = yes
+						# OR = {
+						# 	state_region = s:STATE_CALIFORNIA
+						# 	state_region = s:STATE_NEVADA
+						# 	state_region = s:STATE_UTAH
+						# 	state_region = s:STATE_COLORADO
+						# 	state_region = s:STATE_ARIZONA
+						# 	state_region = s:STATE_NEW_MEXICO
+						# 	state_region = s:STATE_TEXAS
+						# 	state_region = s:STATE_KANSAS
+						# 	state_region = s:STATE_OKLAHOMA # if they somehow lose it						
+						# }
+					}
+				}
+			}
+			add = 1
+		}
+	}
+	
+	aggression = {
+		value = 1
+		
+		if = {
+			limit = { 
+				NOT = { is_country_type = unrecognized }
+				scope:target_country = { is_country_type = unrecognized } 
+			}
+			add = 1
+		}	
+
+		# Less aggressive against countries we're just antagonistic against, rather than belligerent/domineering
+		if = {
+			limit = {
+				has_attitude = {
+					who = scope:target_country
+					attitude = antagonistic
+				}					
+			}
+			multiply = 0.25
+		}	
+
+		# More aggressive against ideological enemies, a bit less aggressive against ideological allies
+		if = {
+			limit = {
+				"ai_ideological_opinion(scope:target_country)" < 0
+			}
+			
+			multiply = {
+				value = "ai_ideological_opinion(scope:target_country)"
+				multiply = -0.2
+				add = 1
+				max = 4.0
+			}				
+		}	
+		else = {
+			multiply = {
+				value = "ai_ideological_opinion(scope:target_country)"
+				multiply = -0.05
+				add = 1
+				min = 0.5
+			}			
+		}
+		
+		# USA should be extremely aggressive against owners of their Manifest Destiny states
+		if = {
+			limit = {
+				scope:target_country = {
+					any_scope_state = {
+						has_claim_by = root
+						state_is_in_americas = yes
+						# OR = {
+						# 	state_region = s:STATE_CALIFORNIA
+						# 	state_region = s:STATE_NEVADA
+						# 	state_region = s:STATE_UTAH
+						# 	state_region = s:STATE_COLORADO
+						# 	state_region = s:STATE_ARIZONA
+						# 	state_region = s:STATE_NEW_MEXICO
+						# 	state_region = s:STATE_TEXAS
+						# 	state_region = s:STATE_KANSAS
+						# 	state_region = s:STATE_OKLAHOMA # if they somehow lose it	
+						# }
+					}
+				}
+			}
+			add = 5
+		}
+
+		if = {
+			limit = {
+				has_variable = manifest_destiny_var
+			}
+			multiply = var:manifest_destiny_var
+		}
+	}
+
+	building_group_weights = {
+		bg_army = 1.5
+	}
+	
+	secret_goal_weights = {
+		protect = 0.5
+		conquer = 1.5
+	}
+
+	wargoal_weights = {
+		conquer_state = 0.5
+		return_state = 3.0
+		force_nationalization = 0.25
+	}
+
+	wargoal_maneuvers_fraction = {
+		value = 0.35
+		# USA should Manifest a lot of Destiny
+		if = {
+			limit = {
+				scope:enemy_country = {
+					any_scope_state = {
+						has_claim_by = root
+						state_is_in_americas = yes
+						# OR = {
+						# 	state_region = s:STATE_CALIFORNIA
+						# 	state_region = s:STATE_NEVADA
+						# 	state_region = s:STATE_UTAH
+						# 	state_region = s:STATE_COLORADO
+						# 	state_region = s:STATE_ARIZONA
+						# 	state_region = s:STATE_NEW_MEXICO
+						# 	state_region = s:STATE_TEXAS
+						# 	state_region = s:STATE_KANSAS
+						# 	state_region = s:STATE_OKLAHOMA # if they somehow lose it
+						# }
+					}
+				}
+			}
+			add = 0.25
+		}
+	}
+
+	state_value = {
+		if = {
+			limit = {
+				scope:target_state = {
+					has_claim_by = root
+					state_is_in_americas = yes
+					# OR = {
+					# 	state_region = s:STATE_COLORADO
+					# 	state_region = s:STATE_UTAH
+					# 	state_region = s:STATE_TEXAS
+					# 	state_region = s:STATE_KANSAS
+					# 	state_region = s:STATE_OKLAHOMA
+					# 	state_region = s:STATE_ARIZONA						
+					# 	state_region = s:STATE_CALIFORNIA
+					# 	state_region = s:STATE_NEVADA
+					# 	state_region = s:STATE_NEW_MEXICO								
+					# }
+				}					
+			}
+			add = 50 
+			
+			if = {
+				limit = { is_adjacent_to_state = scope:target_state }
+				multiply = 2
+			}
+		}
+	}
+
+	secret_goal_scores = {
+		conquer = {
+			if = {
+				limit = {
+					NOT = { scope:target_country = { is_subject_of = root } }
+					can_reach_target_country = yes
+					has_strategic_adjacency = scope:target_country
+					scope:target_country.country_rank <= root.country_rank
+				}
+				
+				if = {
+					limit = {
+						NOT = { is_country_type = unrecognized }
+						scope:target_country = { NOT = { is_country_type = unrecognized } }
+					}
+					add = 25
+				}		
+				else_if = {
+					limit = {				
+						scope:target_country = { is_country_type = unrecognized }						
+					}
+					add = 50
+				}
+			}
+		}
+	}
+	
+}

@@ -21,6 +21,7 @@ usfp_missouri_compromise_decaying = {
 	country_revolution_progress_mult = -1.00
 	state_pop_support_law_slavery_banned_mult = -2.0
 	interest_group_ig_landowners_approval_add = 15
+	interest_group_ig_intelligentsia_approval_add = 5
 }
 
 usfp_missouri_compromise_modifier = {
@@ -41,7 +42,7 @@ usfp_gag_rule_modifier = {
 usfp_slave_power_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
 	# country_aristocrats_voting_power_add = 30
-	interest_group_ig_landowners_pol_str_mult = 0.25
+	interest_group_ig_landowners_pol_str_mult = 0.15
 	interest_group_ig_landowners_pop_attraction_mult = 1.00
 }
 
@@ -175,6 +176,7 @@ usfp_a_house_divided_modifier = {
 	state_pop_support_law_legacy_slavery_mult = 1.0
 	state_pop_support_law_slave_trade_mult = 0.25
 	interest_group_ig_landowners_approval_add = -15
+	interest_group_ig_intelligentsia_approval_add = -10
 	country_agitator_slots_add = 5
 }
 
@@ -296,6 +298,7 @@ usfp_1850_compromise_decaying = {
 	state_pop_support_law_slavery_banned_add = -1.0
 	state_pop_support_law_slave_trade_add = -1.0
 	interest_group_ig_landowners_approval_add = 20
+	interest_group_ig_intelligentsia_approval_add = 5
 	political_movement_radicalism_add = -15
 }
 

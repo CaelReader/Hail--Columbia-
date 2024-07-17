@@ -25,6 +25,7 @@ common/parties/liberal_party.txt
 ideology_republican_paternalistic
 
 common/interest_groups/00_landowners.txt #to block any attraction to the Southern Planters outside of slave states
+common/interest_groups/00_rural_folk.txt
 
 common/journal_entries/00_liberalism.txt #to stop the US from getting it
 common/journal_entries/01_acw_entries.txt

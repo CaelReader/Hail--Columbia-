@@ -729,6 +729,18 @@ usfp_deseret_into_utah_effect = {
 			set_state_owner = c:DES
 		}
 	}
+	if = {
+		limit = { 
+			has_diplomatic_pact = {
+				who = c:DES
+				type = grant_own_market
+			}
+		}
+		remove_diplomatic_pact = {
+			country = c:DES
+			type = grant_own_market
+		}
+	}
 }
 
 usfp_find_republican_party_effect = {
