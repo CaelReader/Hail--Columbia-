@@ -52,5 +52,11 @@
 			add_ideology = ideology_empire_of_liberty
 			add_ideology = ideology_reactionary_segregationist
 		}
+		ig:ig_rural_folk = {
+			remove_ideology = ideology_particularist
+			add_ideology = ideology_usfp_localist
+			set_ig_trait = ig_trait:usfp_ig_trait_go_west
+			set_ig_trait = ig_trait:usfp_ig_trait_republican_virtue
+		}
 	}
 }

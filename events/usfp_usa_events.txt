@@ -823,7 +823,7 @@ usfp_usa.9 = {
 		every_interest_group = {
 			limit = {
 				law_stance = {
-					law = scope:current_law_scope
+					law = scope:current_law_scope.type
 					value < approve
 				}
 			}
@@ -842,6 +842,10 @@ usfp_usa.9 = {
 		name = usfp_usa.9.c
 		trigger = {
 			usfp_enacting_super_unconstitutional_law = yes
+			NOR = {
+				is_enacting_law = law_type:law_council_republic
+				is_enacting_law = law_type:law_monarchy
+			}
 		}
 		add_enactment_modifier = {
 			name = usfp_breaking_constitution
@@ -854,7 +858,7 @@ usfp_usa.9 = {
 		every_interest_group = {
 			limit = {
 				law_stance = {
-					law = scope:current_law_scope
+					law = scope:current_law_scope.type
 					value < strongly_approve
 				}
 			}
@@ -909,7 +913,49 @@ usfp_usa.9 = {
 			add_modifier = {
 				name = usfp_ig_constitutional_protector
 				years = 4
+				multiplier = 2
 			}
+		}
+	}
+
+	#enacting Monarchy
+	option = {
+		name = usfp_usa.9.g
+		trigger = {
+			is_enacting_law = law_type:law_monarchy
+		}
+		highlighted_option = yes
+		ai_chance = {
+			base = 300
+		}
+		add_enactment_modifier = {
+			name = usfp_breaking_constitution
+		}
+		every_interest_group = {
+			limit = {
+				law_stance = {
+					law = scope:current_law_scope.type
+					value < strongly_approve
+				}
+			}
+			add_modifier = {
+				name = usfp_ig_constitutional_protector
+				years = 4
+				multiplier = 2
+			}
+		}
+		every_interest_group = {
+			limit = {
+				is_in_government = yes
+			}
+			add_modifier = {
+				name = usfp_ig_breaking_constitution
+				years = 4
+			}
+		}
+		add_radicals = {
+			value = large_radicals
+			culture = cu:yankee
 		}
 	}
 

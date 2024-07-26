@@ -21,6 +21,8 @@ common/parties/conservative_party.txt
 common/parties/fascist_party.txt
 common/parties/free_trade_party.txt
 common/parties/liberal_party.txt
+common/parties/communist_party.txt
+common/parties/radical_party.txt
 
 ideology_republican_paternalistic
 
@@ -36,7 +38,7 @@ common/journal_entries/05_turtle_island.txt
 common/journal_entries/06_seminole_wars.txt #disabled in favor of Indian Removal JE
 je_oregon
 
-All slavery laws are overwritten for ai purposes #also includes VTM's "is law important" functionality
+All slavery laws are overwritten for ai purposes
 
 events/alaska_events.txt
 events/american_civil_war/acw_events.txt

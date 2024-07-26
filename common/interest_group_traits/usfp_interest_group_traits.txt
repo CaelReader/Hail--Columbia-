@@ -112,6 +112,7 @@ usfp_ig_trait_democratic_experiment = {
 	
 	modifier = {
 		country_loyalists_from_legitimacy_mult = 0.10
+		country_radicals_from_legitimacy_mult = -0.10
 		country_society_tech_research_speed_mult = 0.05
 	}
 }

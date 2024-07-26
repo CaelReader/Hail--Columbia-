@@ -810,8 +810,20 @@ conservative_party = {
 				}
 			}
 			add = {
-				value = 50
+				value = 75
 				desc = "usfp_bourbon_democrats"
+			}
+		}
+		#USFP: American IGs should prefer to join an existing party even if its not their preferred
+		if = {
+			limit = {
+				owner = {usfp_country_is_american = yes}
+				has_party = no
+				exists = owner.py:conservative_party
+			}
+			add = {
+				value = 20
+				desc = "join_existing_party"
 			}
 		}
 

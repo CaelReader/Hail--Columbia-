@@ -70,20 +70,22 @@ usfp_western_purchase_button = {
 		base = 0	
 		modifier = {
 			trigger = {
-				owns_entire_state_region = STATE_OREGON
+				s:STATE_OREGON = {
+					root_has_state_here = yes
+				}
 			}
 			add = 100
 		}	
 		modifier = {
-			trigger = { gold_reserves > 1000000 }
+			trigger = { gold_reserves > 250000 }
 			add = 10
 		}
 		modifier = {
-			trigger = { gold_reserves > 2000000 }
+			trigger = { gold_reserves > 500000 }
 			add = 50
 		}
 		modifier = {
-			trigger = { gold_reserves > 3000000 }
+			trigger = { gold_reserves > 1000000 }
 			add = 1000
 		}					
 		modifier = {

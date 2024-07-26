@@ -220,8 +220,14 @@ ecchi_usa_long_character_template = {
 			OR = {
 				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_landowners
-				is_interest_group_type = ig_intelligentsia
 			}
+            NOR = {
+                has_variable = communist_ig_var
+                has_variable = chose_vanguardism
+                # has_variable = chose_fascism
+                # has_variable = chose_conservatism
+                # has_variable = chose_ethno_nationalism
+            }
         }
         earliest_usage_date = 1928.5.21
         latest_usage_date = 1935.9.10
@@ -252,6 +258,7 @@ ecchi_usa_f_roosevelt_character_template = {
 				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_intelligentsia
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1913.3.17
         latest_usage_date = 1945.4.12
@@ -349,6 +356,7 @@ usfp_robert_la_follette_character_template = {
 				is_interest_group_type = ig_intelligentsia
                 is_interest_group_type = ig_petty_bourgeoisie
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1901.1.1
         latest_usage_date = 1925.6.1
@@ -479,6 +487,7 @@ usfp_thaddeus_stevens_character_template = {
 				is_interest_group_type = ig_intelligentsia
                 is_interest_group_type = ig_petty_bourgeoisie
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1848.1.1
         latest_usage_date = 1868.1.1
@@ -516,6 +525,7 @@ usfp_usa_john_fauntroy = {
 			OR = {
 				is_interest_group_type = ig_landowners
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1854.1.1
         latest_usage_date = 1880.1.1

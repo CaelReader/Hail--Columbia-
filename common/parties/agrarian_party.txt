@@ -226,8 +226,8 @@ agrarian_party = {
 							OR = {
 								has_reactionary_ideology = yes
 								has_conservative_ideology = yes
-								has_socialist_ideology = yes
 							}
+							has_socialist_ideology = no #USFP
 						}
 					}
 					add = {
@@ -241,6 +241,9 @@ agrarian_party = {
 							is_interest_group_type = ig_rural_folk
 							is_interest_group_type = ig_trade_unions
 							is_interest_group_type = ig_landowners
+						}
+						leader = {
+							has_socialist_ideology = no #USFP
 						}
 					}
 					add = {
@@ -314,8 +317,20 @@ agrarian_party = {
 				}
 			}
 			add = {
-				value = 50
+				value = 75
 				desc = "usfp_bourbon_democrats"
+			}
+		}
+		#USFP: American IGs should prefer to join an existing party even if its not their preferred
+		if = {
+			limit = {
+				owner = {usfp_country_is_american = yes}
+				has_party = no
+				exists = owner.py:agrarian_party
+			}
+			add = {
+				value = 20
+				desc = "join_existing_party"
 			}
 		}
 		if = { # a party for powerful farmers

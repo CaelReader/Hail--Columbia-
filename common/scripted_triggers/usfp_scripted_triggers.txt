@@ -5,7 +5,14 @@
 		has_ideology = ideology:ideology_authoritarian
 		has_ideology = ideology:ideology_fascist
 		has_ideology = ideology:ideology_slaver
+		has_ideology = ideology:ideology_usfp_social_darwinist_leader
 		has_trait = usfp_trait_expansionist
+	}
+	NOT = {
+		has_trait = usfp_trait_antiexpansionist
+	}
+	NOT = {
+		has_trait = trait_child
 	}
 }
 
@@ -14,9 +21,15 @@ usfp_manifest_destiny_anti_expansion_trigger = {
 		has_ideology = ideology:ideology_pacifist
 		has_ideology = ideology:ideology_anarchist
 		has_ideology = ideology:ideology_humanitarian
+		has_ideology = ideology:ideology_humanitarian_royalist
 		has_trait = usfp_trait_antiexpansionist
 	}
-
+	NOT = {
+		has_trait = usfp_trait_expansionist
+	}
+	NOT = {
+		has_trait = trait_child
+	}
 }
 
 usfp_anti_slavery_leader_trigger = {
@@ -315,5 +328,15 @@ usfp_country_is_american = {
 		country_has_primary_culture = cu:yankee
 		country_has_primary_culture = cu:dixie
 		country_has_primary_culture = cu:usfp_american
+	}
+}
+
+ig_hasnt_chosen_ideology_trigger = {
+	NOR = {
+		has_variable = communist_ig_var
+		has_variable = chose_vanguardism
+		has_variable = chose_fascism
+		has_variable = chose_conservatism
+		has_variable = chose_ethno_nationalism
 	}
 }

@@ -117,14 +117,14 @@ ideology_american_school = { # USIT
 	
 	lawgroup_trade_policy = {		
 		law_free_trade = disapprove	
-		law_mercantilism = approve
-		law_protectionism = strongly_approve
+		law_mercantilism = neutral
+		law_protectionism = approve
 		law_isolationism = strongly_disapprove
 	}
 
 	lawgroup_economic_system = {	
-		law_laissez_faire = approve
-		law_interventionism = strongly_approve
+		law_laissez_faire = neutral
+		law_interventionism = approve
 		law_agrarianism = disapprove
 		law_traditionalism = 	strongly_disapprove
 		law_cooperative_ownership = strongly_disapprove
@@ -200,5 +200,50 @@ ideology_usfp_eugenicist = {
 		law_racial_segregation = neutral
 		law_cultural_exclusion = disapprove
 		law_multicultural = strongly_disapprove
+	}
+}
+
+ideology_usfp_localist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_usfp_localist.dds"
+	
+	lawgroup_policing = {
+		law_militarized_police = strongly_disapprove
+		law_local_police = approve
+		law_dedicated_police = neutral
+		law_no_police = approve
+	}		
+
+	lawgroup_army_model = {
+		law_national_militia = strongly_approve
+		law_professional_army = neutral
+		law_mass_conscription = disapprove
+		law_peasant_levies = disapprove
+	}
+
+	lawgroup_slavery = {
+		law_slavery_banned = neutral
+		law_legacy_slavery = neutral
+		law_debt_slavery = strongly_disapprove
+		law_slave_trade = neutral
+	}
+
+	lawgroup_bureaucracy = {
+		law_hereditary_bureaucrats = strongly_disapprove
+		law_appointed_bureaucrats = disapprove
+		law_elected_bureaucrats = neutral
+	}
+
+	lawgroup_internal_security = {
+		law_secret_police = strongly_disapprove
+		law_national_guard = neutral
+		law_no_home_affairs = neutral
+		law_guaranteed_liberties = neutral
+	}
+	
+	lawgroup_church_and_state = {
+		law_state_religion = disapprove
+		law_freedom_of_conscience = neutral
+		law_total_separation = neutral
+		law_state_atheism = strongly_disapprove
 	}
 }

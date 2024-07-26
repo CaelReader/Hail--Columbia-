@@ -32,7 +32,6 @@ ai_strategy_anti_slavery_agenda = {
 						has_journal_entry = je_government_petition
 						var:desired_law_var	?= scope:law			
 					}
-					law_is_important = yes
 				}
 			}
 			multiply = 0.5
@@ -144,8 +143,11 @@ ai_strategy_manifest_destiny = {
 		any_state = {
 			has_claim_by = root
 			state_is_in_americas = yes
-			NOT = {
+			NOR = {
 				owner = root
+				owner = {
+					is_subject_of = root
+				}
 			}
 		}
 	}
@@ -235,17 +237,6 @@ ai_strategy_manifest_destiny = {
 					any_scope_state = {
 						has_claim_by = root
 						state_is_in_americas = yes
-						# OR = {
-						# 	state_region = s:STATE_CALIFORNIA
-						# 	state_region = s:STATE_NEVADA
-						# 	state_region = s:STATE_UTAH
-						# 	state_region = s:STATE_COLORADO
-						# 	state_region = s:STATE_ARIZONA
-						# 	state_region = s:STATE_NEW_MEXICO
-						# 	state_region = s:STATE_TEXAS
-						# 	state_region = s:STATE_KANSAS
-						# 	state_region = s:STATE_OKLAHOMA # if they somehow lose it						
-						# }
 					}
 				}
 			}
@@ -304,17 +295,9 @@ ai_strategy_manifest_destiny = {
 					any_scope_state = {
 						has_claim_by = root
 						state_is_in_americas = yes
-						# OR = {
-						# 	state_region = s:STATE_CALIFORNIA
-						# 	state_region = s:STATE_NEVADA
-						# 	state_region = s:STATE_UTAH
-						# 	state_region = s:STATE_COLORADO
-						# 	state_region = s:STATE_ARIZONA
-						# 	state_region = s:STATE_NEW_MEXICO
-						# 	state_region = s:STATE_TEXAS
-						# 	state_region = s:STATE_KANSAS
-						# 	state_region = s:STATE_OKLAHOMA # if they somehow lose it	
-						# }
+					}
+					NOT = {
+						is_subject_of = root
 					}
 				}
 			}
@@ -353,17 +336,6 @@ ai_strategy_manifest_destiny = {
 					any_scope_state = {
 						has_claim_by = root
 						state_is_in_americas = yes
-						# OR = {
-						# 	state_region = s:STATE_CALIFORNIA
-						# 	state_region = s:STATE_NEVADA
-						# 	state_region = s:STATE_UTAH
-						# 	state_region = s:STATE_COLORADO
-						# 	state_region = s:STATE_ARIZONA
-						# 	state_region = s:STATE_NEW_MEXICO
-						# 	state_region = s:STATE_TEXAS
-						# 	state_region = s:STATE_KANSAS
-						# 	state_region = s:STATE_OKLAHOMA # if they somehow lose it
-						# }
 					}
 				}
 			}
@@ -377,17 +349,6 @@ ai_strategy_manifest_destiny = {
 				scope:target_state = {
 					has_claim_by = root
 					state_is_in_americas = yes
-					# OR = {
-					# 	state_region = s:STATE_COLORADO
-					# 	state_region = s:STATE_UTAH
-					# 	state_region = s:STATE_TEXAS
-					# 	state_region = s:STATE_KANSAS
-					# 	state_region = s:STATE_OKLAHOMA
-					# 	state_region = s:STATE_ARIZONA						
-					# 	state_region = s:STATE_CALIFORNIA
-					# 	state_region = s:STATE_NEVADA
-					# 	state_region = s:STATE_NEW_MEXICO								
-					# }
 				}					
 			}
 			add = 50 

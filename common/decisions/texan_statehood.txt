@@ -3,7 +3,6 @@
 		exists = c:TEX
 		root = c:TEX
 		root = {
-			is_subject = no
 			is_at_war = no
 		}
 		exists = c:USA
@@ -22,6 +21,13 @@
 		}
 		any_neighbouring_state = {
 			owner = c:USA
+		}
+		OR = {
+			is_subject = no
+			AND = {
+				is_subject_of = c:USA
+				is_subject_type = subject_type_protectorate
+			}
 		}
 	}
 

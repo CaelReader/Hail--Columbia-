@@ -20,6 +20,7 @@ ecchi_usa_van_buren_character_template = {
         interest_group_trigger = {
             is_marginal = no
             is_interest_group_type = ig_rural_folk
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1862.7.24
@@ -50,6 +51,7 @@ ecchi_usa_w_harrison_character_template = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_armed_forces
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1841.4.7
@@ -77,6 +79,7 @@ ecchi_usa_tyler_character_template = {
         interest_group_trigger = {
             is_marginal = no
             is_interest_group_type = ig_petty_bourgeoisie
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1845.1.1
@@ -114,6 +117,7 @@ ecchi_usa_adams_character_template = {
         interest_group_trigger = {
             is_marginal = no
             is_interest_group_type = ig_petty_bourgeoisie
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1840.2.23
@@ -144,6 +148,7 @@ ecchi_usa_polk_character_template = {
 				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_landowners
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1849.6.15
@@ -175,6 +180,7 @@ ecchi_usa_fillmore_template = {
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1874.3.8
@@ -210,6 +216,7 @@ ecchi_usa_pierce_character_template = {
         }
         interest_group_trigger = {
             is_interest_group_type = ig_rural_folk
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1869.10.8
@@ -236,6 +243,7 @@ ecchi_usa_buchanan_character_template = {
         }
         interest_group_trigger = {
             is_interest_group_type = ig_rural_folk
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1868.6.1
@@ -267,6 +275,7 @@ ecchi_usa_johnson_character_template = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1853.10.17
         latest_usage_date = 1875.7.31
@@ -300,6 +309,7 @@ ecchi_usa_hayes_character_template = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1865.3.4
         latest_usage_date = 1893.1.17
@@ -330,6 +340,7 @@ ecchi_usa_garfield_character_template = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1863.3.4
         latest_usage_date = 1881.9.19
@@ -369,6 +380,7 @@ ecchi_usa_arthur_character_template = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1871.12.1
         latest_usage_date = 1886.11.18
@@ -401,6 +413,7 @@ ecchi_usa_cleveland_character_template = {
 				is_interest_group_type = ig_industrialists
 				is_interest_group_type = ig_landowners
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1883.1.1
         latest_usage_date = 1908.6.24
@@ -431,6 +444,7 @@ ecchi_usa_b_harrison_character_template = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1881.3.4
         latest_usage_date = 1893.3.4
@@ -464,6 +478,7 @@ ecchi_usa_mckinley_character_template = {
                 is_interest_group_type = ig_armed_forces
                 is_interest_group_type = ig_devout #USFP
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1885.3.4
         latest_usage_date = 1901.9.14
@@ -494,6 +509,7 @@ ecchi_usa_taft_character_template = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1890.2.4
         latest_usage_date = 1930.3.8
@@ -509,7 +525,7 @@ ecchi_usa_wilson_character_template = {
     female = no
     religion = protestant
     ideology = ideology_reformer
-    interest_group = ig_rural_folk
+    interest_group = ig_intelligentsia
     birth_date = 1856.12.28
 	dna = ecchi_dna_woodrow_wilson
     traits = { bigoted masterful_diplomat }
@@ -524,6 +540,7 @@ ecchi_usa_wilson_character_template = {
 				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_intelligentsia
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1911.1.17
         latest_usage_date = 1924.2.3
@@ -550,6 +567,7 @@ ecchi_usa_harding_character_template = {
         }
         interest_group_trigger = {
 			is_interest_group_type = ig_petty_bourgeoisie
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1904.1.11
         latest_usage_date = 1923.8.2
@@ -590,6 +608,7 @@ ecchi_usa_coolidge_character_template = {
 				is_interest_group_type = ig_industrialists
 				is_interest_group_type = ig_landowners
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1914.1.7
         latest_usage_date = 1933.1.5
@@ -616,6 +635,7 @@ ecchi_usa_hoover_character_template = {
         }
         interest_group_trigger = {
 			is_interest_group_type = ig_petty_bourgeoisie
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1914.10.22
         latest_usage_date = 1964.10.20
@@ -695,6 +715,7 @@ ecchi_usa_fremont_character_template = {
 				is_interest_group_type = ig_armed_forces
 				is_interest_group_type = ig_intelligentsia
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1847.1.19
         latest_usage_date = 1890.7.13
@@ -843,6 +864,7 @@ ecchi_usa_astor_character_template = {
 				is_interest_group_type = ig_industrialists
 				is_interest_group_type = ig_landowners
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1936.1.1
         latest_usage_date = 1848.3.29
@@ -936,6 +958,7 @@ ecchi_usa_hearst_character_template = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_petty_bourgeoisie
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1895.1.1
         latest_usage_date = 1951.8.14
@@ -1020,6 +1043,7 @@ ecchi_usa_thomas_character_template = {
         }
         interest_group_trigger = {
 			is_interest_group_type = ig_trade_unions
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1922.1.1
         latest_usage_date = 1968.12.19
@@ -1055,6 +1079,13 @@ ecchi_usa_foster_character_template = {
         }
         interest_group_trigger = {
 			is_interest_group_type = ig_trade_unions
+            NOR = {
+                # has_variable = communist_ig_var
+                has_variable = chose_vanguardism
+                has_variable = chose_fascism
+                has_variable = chose_conservatism
+                has_variable = chose_ethno_nationalism
+            }
         }
         earliest_usage_date = 1924.1.1
         latest_usage_date = 1961.9.1
@@ -1081,6 +1112,13 @@ ecchi_usa_browder_character_template = {
         }
         interest_group_trigger = {
 			is_interest_group_type = ig_trade_unions
+            NOR = {
+                # has_variable = communist_ig_var
+                # has_variable = chose_vanguardism
+                has_variable = chose_fascism
+                has_variable = chose_conservatism
+                has_variable = chose_ethno_nationalism
+            }
         }
         earliest_usage_date = 1919.1.1
         latest_usage_date = 1973.1.27
@@ -1123,6 +1161,13 @@ ecchi_usa_lindbergh_character_template = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_petty_bourgeoisie
 			}
+            NOR = {
+                has_variable = communist_ig_var
+                has_variable = chose_vanguardism
+                has_variable = chose_fascism
+                has_variable = chose_conservatism
+                # has_variable = chose_ethno_nationalism
+            }
         }
         earliest_usage_date = 1927.1.1
         latest_usage_date = 1974.8.26
@@ -1474,6 +1519,7 @@ ecchi_usa_seward_character_template = {
                 is_interest_group_type = ig_intelligentsia
                 is_interest_group_type = ig_petty_bourgeoisie
             }
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1839.1.1
         latest_usage_date = 1872.10.10
@@ -1557,6 +1603,7 @@ ecchi_usa_sutter_sr_character_template = {
                 is_interest_group_type = ig_landowners
                 is_interest_group_type = ig_industrialists
             }
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1840.1.1
         latest_usage_date = 1880.6.21
@@ -1761,6 +1808,7 @@ ecchi_usa_jefferson_davis_character_template = {
 				is_interest_group_type = ig_landowners
 				is_interest_group_type = ig_armed_forces
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1850.1.1
         latest_usage_date = 1889.12.6
@@ -1808,6 +1856,7 @@ ecchi_usa_stephens_character_template = {
 				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_landowners
 			}
+            ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1862.2.22
         latest_usage_date = 1883.3.4

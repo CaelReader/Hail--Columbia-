@@ -858,3 +858,7 @@
  usfp_progressive_era.18.f: "\"이 새로운 과학이 사회악의 직접적인 결과인 유전병이 인종 약화에 책임이 있다는 사실을 대중에게 분명히 밝힐 때, 마침내 유전병을 막기만 한다면 피할 수 있었던 영아 사망과, 고통받는 아이들 중 생존한 이들이 동시대의 사람들을 감염시키고 악의 유산을 다음 세대에 물려준다는 끔찍한 사실에 대한 효과적인 분노가 일어날 것이다.\""
  usfp_progressive_era.18.a: "이렇게 하면 안된다."
  usfp_progressive_era.18.b: "그렇게 해라."
+ usfp_a_house_divided.18.t: "물러난 분리주의자들"
+ usfp_a_house_divided.18.d: "The inauguration of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] has mollified the most extreme calls for seccession in the South, for now."
+ usfp_a_house_divided.18.f: "회의장에서는 온건파가 우세했습니다. 새 대통령이 전임자의 위험한 발언에서 한 발 물러섰기 때문입니다. 농장주들은 정부와 분리되지 않고 함께 일할 수 있게 되었습니다."
+ usfp_a_house_divided.18.a: "내전 없이도 이 문제를 해결할 수 있지 않을까?"

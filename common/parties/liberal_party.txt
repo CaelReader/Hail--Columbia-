@@ -398,6 +398,7 @@ liberal_party = {
 						has_ideology = ideology:ideology_atheist
 						has_ideology = ideology:ideology_humanitarian
 						has_ideology = ideology:ideology_humanitarian_royalist
+						has_ideology = ideology:ideology_usfp_progressive
 					}
 				}
 			}
@@ -682,7 +683,8 @@ liberal_party = {
 			limit = {
 				owner = { 
 					OR = {
-						has_journal_entry = je_acw_countdown 
+						has_journal_entry = je_acw_countdown
+						has_journal_entry = je_acw_war 
 						AND = { # JE not active yet at initialization
 							exists = c:USA
 							this = c:USA
@@ -872,26 +874,6 @@ liberal_party = {
 		if = {
 			limit = {
 				owner = {
-					country_is_in_north_america = yes
-					usfp_country_is_american = yes
-					has_law = law_type:law_presidential_republic
-				}
-				leader = {
-					NOR = {
-						has_reactionary_ideology = yes
-						has_conservative_ideology = yes
-						has_socialist_ideology = yes
-					}
-				}
-			}
-			add = {
-				value = 3
-				desc = "usa_two_party_system"
-			}
-		}
-		if = {
-			limit = {
-				owner = {
 					usfp_country_is_american = yes
 					OR = {
 						NOT = {
@@ -935,6 +917,57 @@ liberal_party = {
 				desc = "from_southern_interests"
 			}
 		}
+		if = { # This is America
+			limit = {
+				owner = {
+					country_is_in_north_america = yes
+					usfp_country_is_american = yes
+					has_law = law_type:law_presidential_republic
+				}
+			}
+			if = {
+				limit = {
+					leader = {
+						NOR = {
+							has_reactionary_ideology = yes
+							has_conservative_ideology = yes
+							has_socialist_ideology = yes
+						}
+					}
+				}
+				add = {
+					value = 3
+					desc = "usa_two_party_system"
+				}
+			}
+			if = { # If Free Trade Party is the Republicans, but the Industrialists Aren't in it, it's time to JUMP SHIP!
+				limit = {
+					exists = owner.py:free_trade_party
+					owner = {
+						ig:ig_industrialists = {
+							NOT = { is_member_of_party = owner.py:free_trade_party }
+						}
+					}
+				}
+				multiply = {
+					value = 100
+					desc = "industrialists_missing"
+				}
+			}
+			#USFP: American IGs should prefer to join a party even if its not their preferred
+			if = {
+				limit = {
+					has_party = no
+					exists = owner.py:free_trade_party
+				}
+				add = {
+					value = 20
+					desc = "join_existing_party"
+				}
+			}
+		}
+
+		
 		if = {
 			limit = {
 				owner = {

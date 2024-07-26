@@ -217,6 +217,9 @@ free_trade_party = {
 							is_interest_group_type = ig_petty_bourgeoisie
 							is_interest_group_type = ig_intelligentsia
 						}
+						leader = {
+							has_socialist_ideology = no
+						}
 					}
 					add = {
 						value = 20
@@ -237,20 +240,67 @@ free_trade_party = {
 						desc = "from_abolitionist_leader"
 					}					
 				}
-				if = { # If WP is around but IT isn't in it, then it is time to JUMP SHIP!
+				# if = { # If WP is around but IT isn't in it, then it is time to JUMP SHIP!
+				# 	limit = {
+				# 		exists = owner.py:liberal_party
+				# 		owner = {
+				# 			ig:ig_intelligentsia = {
+				# 				NOT = { is_member_of_party = owner.py:liberal_party }
+				# 			}
+				# 		}
+				# 		NOT = {
+				# 			is_interest_group_type = ig_intelligentsia
+				# 		}
+				# 		has_party = yes
+				# 		party = py:liberal_party
+				# 	}
+				# 	multiply = {
+				# 		value = 100
+				# 		desc = "intelligentsia_missing"
+				# 	}
+				# }
+				#USFP: American IGs should prefer to join a party even if its not their preferred
+				if = {
 					limit = {
-						exists = owner.py:liberal_party
-						owner = {
-							ig:ig_intelligentsia = {
-								NOT = { is_member_of_party = owner.py:liberal_party }
-							}
-						}
+						has_party = no
+						exists = owner.py:free_trade_party
 					}
-					multiply = {
-						value = 100
-						desc = "usa_two_party_system"
+					add = {
+						value = 20
+						desc = "join_existing_party"
 					}
 				}
+
+			}
+		}
+		#USFP: Bourbon Democrats
+		#LF Industrialists might switch to the Democratic party post civil war
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						exists = py:conservative_party
+						exists = py:agrarian_party
+					}
+					OR = {
+						country_has_primary_culture = cu:yankee
+						country_has_primary_culture = cu:usfp_american
+					}
+					ig:ig_landowners = {
+						NOT = {
+							has_ideology = ideology:ideology_pro_slavery
+						}
+					}
+				}
+				is_interest_group_type = ig_industrialists
+				law_stance = {
+					law = law_type:law_free_trade
+					value >= approve
+				}
+			}
+			add = {
+				value = -75
+				desc = "usfp_bourbon_democrats"
 			}
 		}
 		
@@ -662,10 +712,16 @@ free_trade_party = {
 				desc = "from_two_party_system"
 			}
 		}
-		if = { # USFP: Progressives shouldn't join the Free Trade Party
+		if = { # USFP: Progressives shouldn't join the Free Trade Party (if the Industrialists are in it)
 			limit = {
 				leader = {
 					has_ideology = ideology:ideology_usfp_progressive
+				}
+				owner = {
+					ig:ig_industrialists = {
+						has_party = yes
+						party = py:free_trade_party
+					}
 				}
 			}
 			add = {

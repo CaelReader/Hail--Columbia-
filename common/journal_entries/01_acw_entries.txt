@@ -169,6 +169,11 @@ je_acw_war = {
 
 	scripted_button = usfp_emancipation_proclamation_button
 
+
+	modifiers_while_active = {
+		usfp_war_caucus_modifier
+	}
+	
 	immediate = {
 		usfp_manifest_less_destiny_effect = yes
 		if = {

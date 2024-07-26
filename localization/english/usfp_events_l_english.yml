@@ -122,7 +122,7 @@ usfp_bleeding_kansas.3.a: "Our elections should be held sacrosanct!"
 usfp_bleeding_kansas.3.b: "Election interference? What interference?"
 
 usfp_bleeding_kansas.4.t: "Sacking of Lawrence"
-usfp_bleeding_kansas.4.d: "The small town of Lawrence, [SCOPE.sState('kansas_scope').GetName] has been raided by a band of proslavery ruffians. Home to a prominent waystation for the New England Emigrant Aid Company, the bandits plundered the town and burned the company's building, as well as destroying printing presses belonging to an abolitionist newspaper."
+usfp_bleeding_kansas.4.d: "The small town of Lawrence, [SCOPE.sState('kansas_scope').GetName] has been raided by a band of proslavery ruffians. Home to a prominent waystation for the New England Emigrant Aid Company, the bandits plundered the town, burned the company's building, and demolished the printing presses of an abolitionist newspaper."
 usfp_bleeding_kansas.4.f: ""As soon as the ruffians had possession of the cannon and other arms, they proceeded to carry out their purpose to destroy the Free-State Hotel. They gave the inhabitants till five o'clock to get out their personal effects. When all was ready, they turned the posse's very own cannon upon the hotel and fired. After bombarding away, they burned the building to the ground."" #Richard Cordley
 usfp_bleeding_kansas.4.a: "This is an outrage!"
 usfp_bleeding_kansas.4.b: "The abolitionists brought this on themselves."
@@ -276,7 +276,7 @@ usfp_reconstruction.7.f: ""The official authorities have manifested great readin
 usfp_reconstruction.7.a: "They are free to leave, good riddance to them."
 
 usfp_reconstruction.8.t: "The Second Founding"
-usfp_reconstruction.8.d: "Reconstruction is finally coming to a close as the South is reincorporated fully into the [ROOT.GetCountry.GetName]. Our efforts to uphold the promise of [SCOPE.sCulture('afro_american_culture').GetName] liberty have born fruit, and have enabled them to transform themselves. What were once down-trodden slaves are now free citizens, homeowners, even officials. [SCOPE.sCulture('dixie_culture').GetName] rage will continue, but their attempts to return to the Antebellum have been thwarted, hopefully for good."
+usfp_reconstruction.8.d: "Reconstruction is finally coming to a close as the South is reincorporated fully into the [ROOT.GetCountry.GetName]. Our efforts to uphold the promise of [SCOPE.sCulture('afro_american_culture').GetName] liberty have borne fruit, and have enabled them to transform themselves. What were once down-trodden slaves are now free citizens, homeowners, even officials. [SCOPE.sCulture('dixie_culture').GetName] rage is sure to continue, but their attempts to return to the Antebellum have been thwarted, hopefully for good."
 usfp_reconstruction.8.f: ""It is not light that we need, but fire; it is not the gentle shower, but thunder. We need the storm, the whirlwind, and the earthquake."" #Frederick Douglass
 usfp_reconstruction.8.a: "There is no progress without struggle."
 usfp_reconstruction.8.b: "Our promise is only half-fulfilled."
@@ -392,7 +392,7 @@ usfp_manifest_destiny.12.a: "Our people must come first."
 usfp_manifest_destiny.12.b: "This is absolutely barbaric, we need to intervene."
 
 usfp_manifest_destiny.14.t: "The Ostend Circular"
-usfp_manifest_destiny.14.d: "Several [ROOT.GetCountry.GetAdjective] diplomats have composed a dispatch to [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] laying out the case for the acquisition of [SCOPE.sStateRegion('cuba_scope').GetName]. The circular suggests purchasing the island from the [SCOPE.sCountry('cuba_owner_scope').GetAdjective] government, but also justifies taking the island by force if necessary."
+usfp_manifest_destiny.14.d: "Several [ROOT.GetCountry.GetAdjective] diplomats have composed a dispatch to [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] laying out the case for the acquisition of [SCOPE.sStateRegion('cuba_scope').GetName]. The circular suggests purchasing the island from the [SCOPE.sCountry('cuba_owner_scope').GetAdjective] government, but also justifies taking the island by force if necessary. Abolitionists and European governments alike have protested the idea."
 usfp_manifest_destiny.14.f: ""The Union can never enjoy repose, nor possess reliable security, as long as Cuba is not embraced within its boundaries. Its immediate acquisition by our government is of paramount importance, and we cannot doubt but that it is a consummation devoutly wished for by its inhabitants."" #Ostend Manifesto
 usfp_manifest_destiny.14.a: "This suggestion is crass imperalism."
 usfp_manifest_destiny.14.b: "[SCOPE.sStateRegion('cuba_scope').GetName] is critical to our national security."
@@ -615,7 +615,7 @@ usfp_usa.9.a: "The law cannot go forward."
 usfp_usa.9.b: "Under a certain interpretation, the law is perfectly constitutional!"
 usfp_usa.9.c: "Loyal judges will read the Constitution as suits our needs."
 usfp_usa.9.e: "We will need a new, People's Constitution!"
-usfp_usa.9.g: "The Constitution requires a proper, royal protector!"
+usfp_usa.9.g: "The Constitution requires a proper royal protector!"
 
 usfp_usa.10.t: "Progress and Poverty"
 usfp_usa.10.d: "[SCOPE.sCharacter('george_scope').GetFullName] has published Progress and Poverty, a treatise that purports to explain why rising economic development has failed to eliminate poverty. George puts forth a radical proposal for a single tax on land value that would eliminate the harmful impact of rent-seeking landowners on the economy. The book has become an instant best-seller across the country and beyond, with many readers finding its arguments to be irrefutable."

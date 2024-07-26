@@ -172,12 +172,6 @@ law_slavery_banned = {
 			}
 			add = -1000
 		}
-		if = {
-			limit = {
-				law_is_important = yes
-			}
-			add = 750
-		}
 		#Petitions
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }

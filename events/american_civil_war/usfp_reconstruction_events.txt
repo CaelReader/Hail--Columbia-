@@ -780,6 +780,7 @@ usfp_reconstruction.11 = {
 			is_in_government = no
 		}
 		var:reconstruction_var > 5
+		has_law = law_type:law_presidential_republic
 	}
 
 	immediate = {
@@ -852,6 +853,10 @@ usfp_reconstruction.12 = {
 				law = law_type:law_cultural_exclusion
 				value < approve
 			}
+			law_stance = {
+				law = law_type:law_multicultural
+				value < approve
+			}
 			has_party = yes
 			is_in_government = yes
 		}
@@ -861,6 +866,7 @@ usfp_reconstruction.12 = {
 		ig:ig_petty_bourgeoisie = {
 			save_scope_as = pb_ig
 		}
+		usfp_find_republican_party_effect = yes
 	}
 
 	#damn them

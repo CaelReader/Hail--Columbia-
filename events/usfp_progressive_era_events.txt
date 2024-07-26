@@ -1239,6 +1239,9 @@ usfp_progressive_era.15 = {
 			has_global_variable = cross_of_gold
 		}
 		game_date > 1896.1.1
+		ig:ig_rural_folk = {
+			ig_hasnt_chosen_ideology_trigger = yes
+		}
 	}
 
 	immediate = {

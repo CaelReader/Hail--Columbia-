@@ -83,7 +83,6 @@ usfp_manifest_destiny.2 = {
 		NOT = {
 			has_variable = texas_called_for_aid
 		}
-		exists = c:MEX
 		s:STATE_TEXAS = {
 			any_scope_state = {
 				owner = c:MEX
@@ -479,6 +478,14 @@ usfp_manifest_destiny.6 = {
 		NOT = {
 			has_variable = g_h_treaty_var
 		}
+		s:STATE_CALIFORNIA = {
+			root_has_state_here = no
+		}
+		NOT = {
+			any_scope_state = {
+				region = sr:region_mexico
+			}
+		}
 	}
 	
 
@@ -630,13 +637,13 @@ usfp_manifest_destiny.6 = {
 				root.var:manifest_destiny_var >= 7
 			}
 		}
-		usfp_manifest_more_destiny_effect = yes
-		usfp_mexican_north_purchase_effect = yes
-		annex = c:MEX
 		create_incident = {
 			country = c:MEX
 			value = 60
 		}
+		usfp_manifest_more_destiny_effect = yes
+		usfp_mexican_north_purchase_effect = yes
+		annex = c:MEX
 		highlighted_option = yes
 		show_as_unavailable = {
 			always = yes
@@ -1311,8 +1318,9 @@ usfp_manifest_destiny.14 = {
 		custom_tooltip = cuba_offer_available
 		create_incident = {
 			country = scope:cuba_owner_scope
-			value = 5
+			value = 3
 		}
+		usfp_anger_abolitionists_effect = { MULT = 0.5 }
 	}
 	#Good idea
 	option = {
@@ -1333,8 +1341,9 @@ usfp_manifest_destiny.14 = {
 		usfp_manifest_more_destiny_effect = yes
 		create_incident = {
 			country = scope:cuba_owner_scope
-			value = 10
+			value = 5
 		}
+		usfp_anger_abolitionists_effect = { MULT = 1 }
 	}
 	#Rivalry with spain
 	option = {
@@ -1349,11 +1358,12 @@ usfp_manifest_destiny.14 = {
 		usfp_manifest_more_destiny_effect = yes
 		create_incident = {
 			country = scope:cuba_owner_scope
-			value = 20
+			value = 5
 		}
 		s:STATE_CUBA = {
 			add_claim = root
 		}
+		usfp_anger_abolitionists_effect = { MULT = 1 }
 	}
 	#Bad idea
 	option = {
@@ -1462,13 +1472,7 @@ usfp_manifest_destiny.15 = {
 			}
 		}
 		ai_chance = {
-			base = 5
-			modifier = {
-				trigger = {
-					taking_loans = yes
-				}
-				add = 10
-			}
+			base = 0
 			modifier = {
 				trigger = {
 					OR = {
@@ -1476,7 +1480,7 @@ usfp_manifest_destiny.15 = {
 						has_modifier = declared_bankruptcy
 					}
 				}
-				add = 100
+				add = 75
 			}
 		}
 	}
@@ -1570,7 +1574,7 @@ usfp_manifest_destiny.16 = {
 		}
 		create_incident = {
 			country = scope:cuba_owner_scope
-			value = 15
+			value = 5
 		}
 		if = {
 			limit = { 

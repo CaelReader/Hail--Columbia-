@@ -1,8 +1,14 @@
 ﻿# For on_actions launched by the code itself.
 
 # Root = Country
-on_revolution_start = { on_actions = { USCWF_IG_ideology_on_action } }
-on_secession_start = { on_actions = { USCWF_IG_ideology_on_action } }
+on_revolution_start = { on_actions = { 
+	USCWF_IG_ideology_on_action
+	usfp_fix_monarchy_revolt 
+} }
+on_secession_start = { on_actions = { 
+	USCWF_IG_ideology_on_action
+	usfp_fix_monarchy_revolt  
+} }
 on_country_released_as_own_subject = { on_actions = { USCWF_IG_ideology_on_action } }
 on_country_released_as_overlord_subject = { on_actions = { USCWF_IG_ideology_on_action } }
 on_country_released_as_independent = { on_actions = { USCWF_IG_ideology_on_action } }
@@ -10,6 +16,25 @@ on_country_released_as_independent = { on_actions = { USCWF_IG_ideology_on_actio
 USCWF_IG_ideology_on_action = {
 	effect = {
 		scope:target ?= { USCWF_WERE_ALL_LIVING_IN_AMERIKA_effect = yes }
+	}
+}
+
+usfp_fix_monarchy_revolt = {
+	effect = { scope:target ?= { 
+		if = {
+			limit = {
+				OR = {
+					usfp_country_is_american = yes
+					country_has_primary_culture = cu:afro_american
+				}
+				OR = {
+					has_law = law_type:law_monarchy
+					has_law = law_type:law_theocracy
+				}
+			 }
+			 activate_law = law_type:law_presidential_republic
+		}
+	}
 	}
 }
 
