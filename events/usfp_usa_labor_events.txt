@@ -396,7 +396,7 @@ usfp_usa_labor.4 = {
 			OR = {
 				state_region = s:STATE_WEST_VIRGINIA
 				state_region = s:STATE_NEW_YORK
-				state_region = s:STATE_MARYLAND
+				is_state_region_maryland = yes
 				state_region = s:STATE_ILLINOIS
 				state_region = s:STATE_MISSOURI
 			}
@@ -411,7 +411,7 @@ usfp_usa_labor.4 = {
 				OR = {
 					state_region = s:STATE_WEST_VIRGINIA
 					state_region = s:STATE_NEW_YORK
-					state_region = s:STATE_MARYLAND
+					is_state_region_maryland = yes
 					state_region = s:STATE_ILLINOIS
 					state_region = s:STATE_MISSOURI
 				}
@@ -447,7 +447,7 @@ usfp_usa_labor.4 = {
 				OR = {
 					state_region = s:STATE_WEST_VIRGINIA
 					state_region = s:STATE_NEW_YORK
-					state_region = s:STATE_MARYLAND
+					is_state_region_maryland = yes
 					state_region = s:STATE_ILLINOIS
 					state_region = s:STATE_MISSOURI
 				}
@@ -474,7 +474,7 @@ usfp_usa_labor.4 = {
 				OR = {
 					state_region = s:STATE_WEST_VIRGINIA
 					state_region = s:STATE_NEW_YORK
-					state_region = s:STATE_MARYLAND
+					is_state_region_maryland = yes
 					state_region = s:STATE_ILLINOIS
 					state_region = s:STATE_MISSOURI
 				}
@@ -511,7 +511,7 @@ usfp_usa_labor.4 = {
 				OR = {
 					state_region = s:STATE_WEST_VIRGINIA
 					state_region = s:STATE_NEW_YORK
-					state_region = s:STATE_MARYLAND
+					is_state_region_maryland = yes
 					state_region = s:STATE_ILLINOIS
 					state_region = s:STATE_MISSOURI
 				}
@@ -567,7 +567,7 @@ usfp_usa_labor.4 = {
 				OR = {
 					state_region = s:STATE_WEST_VIRGINIA
 					state_region = s:STATE_NEW_YORK
-					state_region = s:STATE_MARYLAND
+					is_state_region_maryland = yes
 					state_region = s:STATE_ILLINOIS
 					state_region = s:STATE_MISSOURI
 				}

@@ -984,7 +984,7 @@ acw_events.9 = {
 		else = {
 			random_state = {
 				limit = {
-					state_region = s:STATE_DISTRICT_OF_COLUMBIA
+					is_state_region_dc = yes
 				}
 				save_scope_as = acw_victory_capital_scope
 			}

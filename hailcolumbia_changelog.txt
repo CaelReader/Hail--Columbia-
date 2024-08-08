@@ -303,3 +303,8 @@ Added decision to dismantle Jim Crow if you later pass Multiculturalism
 Made AI more inclined to make the offer to Mexico
 Manifest Destiny AI should be less aggressive against their own subjects
 AI will now immediately cancel enactment of a non-slavery law if Secessionist Conventions occurs
+
+3.6.1 "Cleveland"
+Grant Amnesty to Confederates now removes "Loser in Revolutionary Struggle" from all IGs rather than just the Planters
+Setup compatibility triggers for new england states
+Updated Korean Localization

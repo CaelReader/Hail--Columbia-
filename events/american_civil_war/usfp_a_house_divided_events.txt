@@ -429,7 +429,8 @@ usfp_a_house_divided.6 = {
 	}
 
 	immediate = {
-		s:STATE_MARYLAND.region_state:USA = {
+		usfp_find_maryland_sr_scope = yes
+		scope:maryland_sr_scope.region_state:USA = {
 			save_scope_as = maryland_scope
 		}
 		set_global_variable = crisis_of_the_south_published
@@ -639,6 +640,7 @@ usfp_a_house_divided.8 = {
 		ig:ig_landowners = {
 			save_scope_as = planters_scope
 		}
+		usfp_find_dc_sr_scope = yes
 	}
 
 	#Accept fully
@@ -691,13 +693,13 @@ usfp_a_house_divided.8 = {
 		# usfp_anger_abolitionists_effect = {MULT = 2}
 		if = {
 			limit = {
-				s:STATE_DISTRICT_OF_COLUMBIA.region_state:USA = {
+				scope:dc_sr_scope.region_state:USA = {
 					any_scope_pop = {
 						is_pop_type = slaves
 					}
 				}
 			 }
-			 s:STATE_DISTRICT_OF_COLUMBIA.region_state:USA = {
+			 scope:dc_sr_scope.region_state:USA = {
 				liberate_slaves = yes
 			 }
 		}
@@ -749,13 +751,13 @@ usfp_a_house_divided.8 = {
 		# usfp_anger_abolitionists_effect = {MULT = 1}
 		if = {
 			limit = {
-				s:STATE_DISTRICT_OF_COLUMBIA.region_state:USA = {
+				scope:dc_sr_scope.region_state:USA = {
 					any_scope_pop = {
 						is_pop_type = slaves
 					}
 				}
 			 }
-			 s:STATE_DISTRICT_OF_COLUMBIA.region_state:USA = {
+			 scope:dc_sr_scope.region_state:USA = {
 				liberate_slaves = yes
 			 }
 		}
@@ -801,13 +803,13 @@ usfp_a_house_divided.8 = {
 		usfp_anger_abolitionists_effect = {MULT = 0.5}
 		if = {
 			limit = {
-				s:STATE_DISTRICT_OF_COLUMBIA.region_state:USA = {
+				scope:dc_sr_scope.region_state:USA = {
 					any_scope_pop = {
 						is_pop_type = slaves
 					}
 				}
 			 }
-			 s:STATE_DISTRICT_OF_COLUMBIA.region_state:USA = {
+			 scope:dc_sr_scope.region_state:USA = {
 				liberate_slaves = yes
 			 }
 		}

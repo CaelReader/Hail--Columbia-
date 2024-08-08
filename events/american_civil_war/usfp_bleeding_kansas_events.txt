@@ -32,7 +32,8 @@ usfp_bleeding_kansas.1 = {
 		ideology:ideology_abolitionist = {
 			save_scope_as = abolitionist_scope
 		}
-		s:STATE_MASSACHUSETTS.region_state:USA = {
+		usfp_find_massachusetts_sr_scope = yes
+		scope:massachusetts_sr_scope.region_state:USA = {
 			save_scope_as = massachusetts_scope 
 		}
 	}

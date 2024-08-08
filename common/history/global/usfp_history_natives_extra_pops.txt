@@ -20,7 +20,8 @@ GLOBAL = {
 		}
 	}
 	#Northeast & Mid Atlantic
-	s:STATE_CONNECTICUT = {
+	usfp_find_connecticut_sr_scope = yes
+	scope:connecticut_sr_scope = {
 		region_state:USA = {
 			create_pop = {
 				culture = algonquian
@@ -28,7 +29,8 @@ GLOBAL = {
 			}
 		}
 	}
-	s:STATE_MASSACHUSETTS = {
+	usfp_find_massachusetts_sr_scope = yes
+	scope:massachusetts_sr_scope = {
 		region_state:USA = {
 			create_pop = {
 				culture = algonquian
@@ -36,7 +38,8 @@ GLOBAL = {
 			}
 		}
 	}
-	s:STATE_RHODE_ISLAND = {
+	usfp_find_rhode_island_sr_scope = yes
+	scope:rhode_island_sr_scope = {
 		region_state:USA = {
 			create_pop = {
 				culture = algonquian
@@ -44,7 +47,8 @@ GLOBAL = {
 			}
 		}
 	}
-	s:STATE_MAINE = {
+	usfp_find_maine_sr_scope = yes
+	scope:maine_sr_scope = {
 		region_state:USA = {
 			create_pop = {
 				culture = algonquian

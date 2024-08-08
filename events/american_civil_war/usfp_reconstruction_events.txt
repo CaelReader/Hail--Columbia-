@@ -614,9 +614,7 @@ usfp_reconstruction.9 = {
 							NOT = { is_homeland = cu:yankee }
 						}
 					}
-					NOT = {
-						state_region = s:STATE_DISTRICT_OF_COLUMBIA
-					}
+					is_state_region_dc = no
 					culture_percent_state = {
 						target = cu:afro_american
 						value < 0.60
@@ -678,9 +676,7 @@ usfp_reconstruction.10 = {
 						is_homeland = cu:dixie
 						NOT = { is_homeland = cu:yankee }
 					}
-					NOT = {
-						state_region = s:STATE_DISTRICT_OF_COLUMBIA
-					}
+					is_state_region_dc = no
 				}
 				add_modifier = {
 					name = usfp_jim_crow
@@ -712,9 +708,7 @@ usfp_reconstruction.10 = {
 						is_homeland = cu:dixie
 						NOT = { is_homeland = cu:yankee }
 					}
-					NOT = {
-						state_region = s:STATE_DISTRICT_OF_COLUMBIA
-					}
+					is_state_region_dc = no
 				}
 				add_modifier = {
 					name = usfp_jim_crow

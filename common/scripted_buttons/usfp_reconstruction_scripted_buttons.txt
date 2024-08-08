@@ -98,7 +98,10 @@ usfp_reconstruction_confederate_amnesty_button = {
 			culture = cu:yankee
 		}
 		usfp_appease_slavers_effect = {MULT = 2}
-		ig:ig_landowners = {
+		every_interest_group = {
+			limit = {
+				has_modifier = revolution_lost_ig
+			}
 			remove_modifier = revolution_lost_ig
 		}
 		every_interest_group = {

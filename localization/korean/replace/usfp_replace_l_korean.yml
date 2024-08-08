@@ -63,5 +63,5 @@
  je_acw_war:0 "미국 내전"
  je_acw_war_reason:0 "주들 사이의 전쟁이 다가오고 있습니다. 지금은 연방을 지키거나 죽음을 택할 때입니다.\n\n"
  acw_war_tt_complete:0 "분리주의자들이 패배하고 재합병되었습니다."
- acw_war_support_tooltip: "The [SCOPE.sCountry('csa_scope').GetName] believe that they can outlast our will to fight. Defeating them in battles will #italic increase#! their [concept_war_support]. We can [Concept('concept_occupation', 'Occupy')] the Mississippi river to break their hopes of victory."
+ acw_war_support_tooltip: "[SCOPE.sCountry('csa_scope').GetName]은 우리의 싸우겠다는 의지보다 더 오래 버틸 수 있다고 믿습니다. 전장에서 저들을 상대로 승리한다면 저들의 [concept_war_support]가 #italic 상승#!할 것입니다. 저들의 승리에 대한 희망을 꺾기 위해 미시시피 강을 [Concept('concept_occupation', 'Occupy')]할 수 있습니다."
  law_worker_protections:0 "노동자 보호"

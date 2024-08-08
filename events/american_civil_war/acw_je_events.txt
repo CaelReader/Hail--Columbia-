@@ -86,14 +86,15 @@ acw_je_events.1 = {
 						set_state_owner = c:CSA
 					}
 				}
-				s:STATE_DISTRICT_OF_COLUMBIA.region_state:CSA = { set_state_owner = c:USA } # LMAO
-				c:USA = {
-					set_capital = STATE_DISTRICT_OF_COLUMBIA # ROFLMAO
-				}
+				usfp_find_dc_sr_scope = yes
+				scope:dc_sr_scope.region_state:CSA = { set_state_owner = c:USA } # LMAO
+				usfp_set_usa_capital_dc = yes
 				s:STATE_MISSOURI.region_state:CSA = { set_state_owner = c:USA }
 				s:STATE_KENTUCKY.region_state:CSA = { set_state_owner = c:USA }
-				s:STATE_MARYLAND.region_state:CSA = { set_state_owner = c:USA }
-				s:STATE_DELAWARE.region_state:CSA = { set_state_owner = c:USA }
+				usfp_find_maryland_sr_scope = yes
+				scope:maryland_sr_scope.region_state:CSA = { set_state_owner = c:USA }
+				usfp_find_delaware_sr_scope = yes
+				scope:delaware_sr_scope.region_state:CSA = { set_state_owner = c:USA }
 				# s:STATE_WEST_VIRGINIA.region_state:CSA = { set_state_owner = c:USA } #breaks away from the CSA by event
 				if = {
 					limit = { 
@@ -220,11 +221,9 @@ acw_je_events.1 = {
 						set_state_owner = c:FSA
 					}
 				}
-
-				s:STATE_DISTRICT_OF_COLUMBIA.region_state:FSA = { set_state_owner = c:USA }
-				c:USA = {
-					set_capital = STATE_DISTRICT_OF_COLUMBIA
-				}
+				usfp_find_dc_sr_scope = yes
+				scope:dc_sr_scope.region_state:FSA = { set_state_owner = c:USA }
+				usfp_set_usa_capital_dc = yes
 
 				every_scope_state = {
 					state_region = {
@@ -430,10 +429,10 @@ acw_je_events.2 = {
 						NOT = { is_homeland = cu:yankee }
 					}
 					NOR = {
-						state_region = s:STATE_DISTRICT_OF_COLUMBIA
+						is_state_region_dc = yes
 						state_region = s:STATE_WEST_VIRGINIA
-						state_region = s:STATE_MARYLAND
-						state_region = s:STATE_DELAWARE
+						is_state_region_maryland = yes
+						is_state_region_delaware = yes
 					}
 				}
 				set_state_type = unincorporated
