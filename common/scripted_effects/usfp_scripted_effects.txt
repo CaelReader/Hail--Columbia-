@@ -974,3 +974,26 @@ usfp_radicalize_dixies_in_country = {
 		} 
 	}
 }
+
+usfp_enable_american_indian_culture = {
+
+}
+
+usfp_american_indian_consolidate = {
+	every_scope_state = {
+		limit = {
+			is_incorporated = yes
+		}
+		every_scope_pop = {
+			limit = {
+				culture = {
+					has_discrimination_trait = indigenous_american_heritage
+				}
+			}
+			change_pop_culture = {
+				target = cu:usfp_american_indian
+				value = 0.20
+			}
+		}
+	}
+}

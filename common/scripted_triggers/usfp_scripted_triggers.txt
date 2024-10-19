@@ -347,11 +347,16 @@ usfp_has_dixie_occupation_trigger = {
 	}
 	custom_tooltip = {
 		text = dixie_formation_tt
-		any_military_formation = {
-			is_army = yes
-			current_hq = p:xEE9129.land_hq
-			any_combat_unit = {
-				count >= 20
+		OR = {
+			any_military_formation = {
+				is_army = yes
+				current_hq = p:xEE9129.land_hq
+				any_combat_unit = {
+					count >= 20
+				}
+			}
+			root = {
+				is_ai = yes
 			}
 		}
 	}
