@@ -30,6 +30,8 @@
  SAL_ADJ:0 "Salishan"
  KLA:0 "Klamath"
  KLA_ADJ:0 "Klamathan"
+dyn_c_arp_cheyenne: "Cheyenne-Arapaho"
+dyn_c_arp_cheyenne_ADJ: "Cheyenne-Arapaho"
 
 SPI: "Southern Paiute"
 SPI_ADJ: "South Paiute"

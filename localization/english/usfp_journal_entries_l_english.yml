@@ -129,6 +129,7 @@ usfp_reconstruction_swing_south_severe: "Reconstruction will #r severely#! regre
 usfp_reconstruction_end_early: "#r #b Reconstruction will immediately end!#!"
 usfp_reconstruction_enforce_rights_button: "Enforce Voting Rights"
 usfp_reconstruction_enforce_rights_button_desc: "Freedmen continue to be denied their lawful rights across the South. By deploying additional federal forces, we can ensure that liberty extends to all our citizens."
+dixie_formation_tt: "Any [concept_army] in the [SCOPE.sStrategicRegion('dixie_region').GetName] [concept_hq] has at least #variable 20#! [Concept('concept_unit','$concept_units$')]"
 usfp_reconstruction_confederate_amnesty_button: "Grant Amnesty to Confederates"
 usfp_reconstruction_confederate_amnesty_button_desc: "A true accord can be reached between the gentlemen of the North and South. By pardoning former rebels and allowing them back into government, unrest in the South will be quelled."
 usfp_reconstruction_cointelpro_freedmen_button: "Infiltrate Redeemer Groups"

@@ -670,6 +670,7 @@ usfp_cleanup_acw_agitators = {
 }
 
 usfp_assassinate_president_effect = {
+	usfp_achievement_dead_presidents_effect = yes
 	scope:us_president_scope = {
 		interest_group = {
 			add_modifier = {
@@ -871,5 +872,105 @@ usfp_entrench_slavery_effect = {
 		if = {limit = {NOT = {has_ideology = ideology:ideology_pro_slavery}}
 		add_ideology = ideology_pro_slavery
 	   }
+	}
+}
+
+usfp_radicalize_yankees_in_state = {
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:yankee
+			}
+		 }
+		 add_radicals_in_state = {
+			value = $RADICALS$
+			culture = cu:yankee
+		}
+	}
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:usfp_american
+			}
+		 }
+		 add_radicals_in_state = {
+			value = $RADICALS$
+			culture = cu:usfp_american
+		} 
+	}
+}
+
+usfp_radicalize_yankees_in_country = {
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:yankee
+			}
+		 }
+		 add_radicals = {
+			value = $RADICALS$
+			culture = cu:yankee
+		}
+	}
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:usfp_american
+			}
+		 }
+		 add_radicals = {
+			value = $RADICALS$
+			culture = cu:usfp_american
+		} 
+	}
+}
+
+usfp_radicalize_dixies_in_state = {
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:dixie
+			}
+		 }
+		 add_radicals_in_state = {
+			value = $RADICALS$
+			culture = cu:dixie
+		}
+	}
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:usfp_american
+			}
+		 }
+		 add_radicals_in_state = {
+			value = $RADICALS$
+			culture = cu:usfp_american
+		} 
+	}
+}
+
+usfp_radicalize_dixies_in_country = {
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:dixie
+			}
+		 }
+		 add_radicals = {
+			value = $RADICALS$
+			culture = cu:dixie
+		}
+	}
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:usfp_american
+			}
+		 }
+		 add_radicals = {
+			value = $RADICALS$
+			culture = cu:usfp_american
+		} 
 	}
 }

@@ -1,0 +1,7 @@
+﻿namespace = usfp_indian_postremoval
+
+#Dawes Act
+#Ghost Dance Begins
+#Ghost Dance Spreads
+#Wounded Knee Massacre
+#Sequoyah Constitution

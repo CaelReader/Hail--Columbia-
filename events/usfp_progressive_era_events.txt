@@ -1455,6 +1455,7 @@ usfp_progressive_era.17 = {
 	trigger = {
 		any_interest_group = {
 			usfp_ig_eugenicist_candidate = yes
+			is_marginal = no
 		}
 	}
 
@@ -1462,6 +1463,7 @@ usfp_progressive_era.17 = {
 		random_interest_group = {
 			limit = {
 				usfp_ig_eugenicist_candidate = yes
+				is_marginal = no
 			}
 			save_scope_as = eugenicist_ig
 			leader = {

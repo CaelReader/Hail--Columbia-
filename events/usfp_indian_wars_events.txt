@@ -1,0 +1,6 @@
+﻿namespace = usfp_indian_wars
+
+#Red Cloud Spawn
+#Red Cloud Peace Offer
+#Black Hills Gold
+#Little Bighorn

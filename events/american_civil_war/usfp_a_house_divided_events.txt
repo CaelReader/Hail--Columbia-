@@ -1692,3 +1692,5 @@ usfp_a_house_divided.18 = {
 		}
 	}
 }
+
+#Frederick Douglass spawn event

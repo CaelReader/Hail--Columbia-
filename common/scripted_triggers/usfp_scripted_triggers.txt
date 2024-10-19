@@ -211,9 +211,9 @@ usfp_owns_all_canada = {
 	owns_entire_state_region = STATE_BRITISH_COLUMBIA
 	owns_entire_state_region = STATE_SASKATCHEWAN
 	owns_entire_state_region = STATE_MANITOBA
-	owns_entire_state_region = STATE_YUKON_TERRITORY
-	owns_entire_state_region = STATE_NORTHWEST_TERRITORIES
-	owns_entire_state_region = STATE_NUNAVUT
+	# owns_entire_state_region = STATE_YUKON_TERRITORY
+	# owns_entire_state_region = STATE_NORTHWEST_TERRITORIES
+	# owns_entire_state_region = STATE_NUNAVUT
 }
 
 usfp_owns_all_greater_mexico = {
@@ -338,5 +338,21 @@ ig_hasnt_chosen_ideology_trigger = {
 		has_variable = chose_fascism
 		has_variable = chose_conservatism
 		has_variable = chose_ethno_nationalism
+	}
+}
+
+usfp_has_dixie_occupation_trigger = {
+	sr:region_dixie = {
+		save_temporary_scope_as = dixie_region
+	}
+	custom_tooltip = {
+		text = dixie_formation_tt
+		any_military_formation = {
+			is_army = yes
+			current_hq = p:xEE9129.land_hq
+			any_combat_unit = {
+				count >= 20
+			}
+		}
 	}
 }

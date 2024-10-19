@@ -377,6 +377,9 @@ je_acw_reconstruction = {
 
 	group = je_group_historical_content
 
+	modifiers_while_active = {
+		usfp_reconstruction_army_duties_modifier
+	}
 	#clean up election-spawned agitators
 	immediate = {
 		usfp_cleanup_acw_agitators = yes

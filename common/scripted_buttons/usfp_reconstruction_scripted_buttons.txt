@@ -10,6 +10,7 @@ usfp_reconstruction_enforce_rights_button = {
 	}
 
 	possible = {
+
 		cu:afro_american = {
 			NOT = {
 				culture_is_discriminated_in = root
@@ -26,6 +27,7 @@ usfp_reconstruction_enforce_rights_button = {
 				value >= 2
 			}
 		}
+		usfp_has_dixie_occupation_trigger = yes
 	}
 
 	effect = {

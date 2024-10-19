@@ -160,5 +160,11 @@
 			country = c:LIB
 			months = 240
 		}
+
+		set_variable = usfp_achievements_possible
+		set_variable = {
+			name = usfp_dead_presidents_var
+			value = 0
+		}
 	}
 }

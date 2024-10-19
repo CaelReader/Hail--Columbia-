@@ -440,6 +440,14 @@ acw_je_events.2 = {
 					name = unreconstructed_state
 					years = 12
 				}
+				if = {
+					limit = { has_building =  building_barracks }
+					remove_building = building_barracks
+				}
+				if = {
+					limit = { has_building = building_conscription_center }
+					remove_building = building_conscription_center
+				}
 			}
 		}
 		else = {
@@ -455,6 +463,14 @@ acw_je_events.2 = {
 				add_modifier = {
 					name = unreconstructed_state
 					years = 12
+				}
+				if = {
+					limit = { has_building =  building_barracks }
+					remove_building = building_barracks
+				}
+				if = {
+					limit = { has_building = building_conscription_center }
+					remove_building = building_conscription_center
 				}
 			}
 		}
@@ -499,6 +515,11 @@ acw_je_events.2 = {
 			base = 1000
 		}
 		remove_variable = fsa_annex_var
+		add_modifier = {
+			name = usfp_post_acw_demobilization_modifier
+			years = 25
+			is_decaying = yes
+		}
 	}
 
 	#Reconstruction of the North
@@ -514,7 +535,11 @@ acw_je_events.2 = {
 		add_journal_entry = {
 			type = je_acw_wild_wild_west
 		}
-
+		add_modifier = {
+			name = usfp_post_acw_demobilization_modifier
+			years = 25
+			is_decaying = yes
+		}
 	}
 
 	#CSA but we ban slavery now
@@ -535,6 +560,11 @@ acw_je_events.2 = {
 		}
 		ai_chance = {
 			base = 1000
+		}
+		add_modifier = {
+			name = usfp_post_acw_demobilization_modifier
+			years = 25
+			is_decaying = yes
 		}
 	}
 	#CSA but without banning slavery
@@ -559,6 +589,11 @@ acw_je_events.2 = {
 		add_radicals = {
 			value = very_large_radicals
 			pop_type = slaves
+		}
+		add_modifier = {
+			name = usfp_post_acw_demobilization_modifier
+			years = 25
+			is_decaying = yes
 		}
 	}
 }

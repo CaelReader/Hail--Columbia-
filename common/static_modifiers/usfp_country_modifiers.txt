@@ -629,3 +629,24 @@ usfp_war_caucus_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_election_positive.dds
 	country_legitimacy_min_add = 50	
 }
+
+usfp_post_acw_demobilization_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_logistics_negative.dds
+	building_training_rate_mult = -0.25
+	state_conscription_rate_mult = -0.25
+	unit_experience_gain_mult = -0.25
+	unit_morale_loss_mult = 0.25
+}
+
+usfp_reconstruction_army_duties_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_logistics_negative.dds
+	country_military_goods_cost_mult = 0.10
+}
+
+usfp_nez_perce_warriors_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	unit_morale_damage_mult = 0.20
+	unit_kill_rate_add = 0.10
+	unit_army_offense_mult = 0.20
+	unit_army_defense_mult = 0.20
+}

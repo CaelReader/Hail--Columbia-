@@ -1,0 +1,20 @@
+﻿usfp_achievement_dead_presidents_effect = {
+	hidden_effect = {
+		if = {
+			limit = { 
+				NOT = {
+					ruler = {
+						has_variable = has_been_shot
+					}
+				}
+			}
+			ruler = {
+				set_variable = has_been_shot
+			}
+			change_variable = {
+				name = usfp_dead_presidents_var
+				add = 1
+			}
+		}
+	}
+}

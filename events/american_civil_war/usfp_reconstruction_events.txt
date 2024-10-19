@@ -196,6 +196,12 @@ usfp_reconstruction.3 = {
 	#ensure they stay
 	option = {
 		name = usfp_reconstruction.3.a
+		trigger = {
+			usfp_has_dixie_occupation_trigger = yes
+		}
+		show_as_unavailable = {
+			always = yes
+		}
 		default_option = yes
 		add_modifier = {
 			name = usfp_enforcing_reconstruction
@@ -554,6 +560,19 @@ usfp_reconstruction.8 = {
 		}
 		ig:ig_landowners = {
 			usfp_planters_to_landowners_effect = yes
+		}
+		if = {
+			limit = { 
+				any_scope_character = {
+					has_template = agitator_frederick_douglass
+				}
+			}
+			random_scope_character = {
+				limit = {
+					has_template = agitator_frederick_douglass
+				}
+				set_ideology = ideology:ideology_humanitarian
+			}
 		}
 	}
 	#we demand rights!

@@ -763,6 +763,11 @@
 			}
 		}
 	}
+	c:NZP = {
+		add_modifier = {
+			name = usfp_nez_perce_warriors_modifier
+		}
+	}
 	#Flathead
 	s:STATE_MONTANA = {
 		create_country = {

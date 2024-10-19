@@ -530,7 +530,9 @@ usfp_manifest_destiny.6 = {
 			end_play = yes
 		}
 		usfp_mexican_north_purchase_effect = yes
-
+		change_infamy = {
+			add = -5
+		}
 	}
 	
 	#Reject the treaty
@@ -538,7 +540,7 @@ usfp_manifest_destiny.6 = {
 		name = usfp_manifest_destiny.6.b
 		create_incident = {
 			country = c:MEX
-			value = 20
+			value = 5
 		}
 		ai_chance = {
 			base = 0
@@ -2622,4 +2624,6 @@ usfp_manifest_destiny.26 = {
 	}
 
 }
+#Oklahoma Land Runs
+#Oklahoma Statehood
 #Bear Flag Revolt
