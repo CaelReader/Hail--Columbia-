@@ -96,6 +96,12 @@ usfp_a_house_divided.18.d: "The inauguration of [ROOT.GetCountry.GetRuler.GetPri
 usfp_a_house_divided.18.f: "Moderate voices prevailed in the hall. The new president had walked back from the dangerous rhetoric of their predecessor. The planters could work with the government rather than separate from it."
 usfp_a_house_divided.18.a: "Perhaps we can resolve this without a civil war?"
 
+usfp_a_house_divided.19.t: "The North Star"
+usfp_a_house_divided.19.d: "Firebrand abolitionist [SCOPE.sCharacter('douglass_scope').GetFullName] has returned to the [ROOT.GetCountry.GetName] after a speaking tour abroad. Formerly enslaved himself, [SCOPE.sCharacter('douglass_scope').GetLastName] has quickly gained nationwide fame for his vigorous advocacy against slavery and in favor of [SCOPE.sCulture('afro_american_culture').GetName] rights."
+usfp_a_house_divided.19.f: ""In thinking of America, I sometimes find myself admiring her bright blue sky — her grand old woods — her fertile fields — her beautiful rivers — her mighty lakes, and star-crowned mountains. But my rapture is soon checked, my joy is soon turned to mourning. When I remember that all is cursed with the infernal actions of slaveholding, robbery and wrong, — when I remember that with the waters of her noblest rivers, the tears of my brethren are borne to the ocean, disregarded and forgotten, and that her most fertile fields drink daily of the warm blood of my outraged sisters, I am filled with unutterable loathing."" #Frederick Douglass
+usfp_a_house_divided.19.a: "His agitation is a guiding light to liberty."
+usfp_a_house_divided.19.b: "His agitation is a threat to the Union!"
+
 usfp_bleeding_kansas.1.t: "The New England Emigrant Aid Company"
 usfp_bleeding_kansas.1.d: "An enterprising [SCOPE.sIdeology('abolitionist_scope').GetName] from [SCOPE.sState('massachusetts_scope').GetCityHubName] has established a transportation company with the goal of sending anti-slavery immigrants into [SCOPE.sState('kansas_scope').GetName]. Hundreds of migrants have already signed on, eager to turn [SCOPE.sState('kansas_scope').GetName] into a free state."
 usfp_bleeding_kansas.1.f: ""WANTED: Homesteaders eager to do their patriotic duty in the Kansas Territory. Monetary aid, transportation, information provided to those who wish to see Kansas a properly free and white state.""

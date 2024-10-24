@@ -350,9 +350,36 @@ usfp_has_dixie_occupation_trigger = {
 		OR = {
 			any_military_formation = {
 				is_army = yes
+				any_scope_character = {
+					has_role = general
+				}
 				current_hq = p:xEE9129.land_hq
 				any_combat_unit = {
 					count >= 20
+				}
+			}
+			root = {
+				is_ai = yes
+			}
+		}
+	}
+}
+
+usfp_has_plains_occupation_trigger = {
+	sr:region_great_plains = {
+		save_temporary_scope_as = great_plains_region
+	}
+	custom_tooltip = {
+		text = plains_formation_tt
+		OR = {
+			any_military_formation = {
+				is_army = yes
+				any_scope_character = {
+					has_role = general
+				}
+				current_hq = p:x924593.land_hq
+				any_combat_unit = {
+					count >= 3
 				}
 			}
 			root = {

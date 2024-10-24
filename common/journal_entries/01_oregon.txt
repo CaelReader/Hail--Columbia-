@@ -74,41 +74,12 @@ je_oregon = {
 					has_global_variable = oregon_trail_mapped
 				}
 				OR = {
-					s:STATE_MONTANA = {
-						any_scope_state = {
-							owner = root
-						}
-					}
-					s:STATE_WYOMING = {
-						any_scope_state = {
-							owner = root
-						}
-					}
-					s:STATE_CALIFORNIA = {
-						any_scope_state = {
-							owner = root
-						}
-					}
+					has_state_in_state_region = STATE_MONTANA
+					has_state_in_state_region = STATE_WYOMING
+					has_state_in_state_region = STATE_CALIFORNIA
 				}
 				c:GBR = {
 					relations:ROOT >= relations_threshold:cordial
-				}
-			}
-			AND = {
-				s:STATE_WASHINGTON = {
-					any_scope_state = {
-						owner = root
-					}
-				}
-				s:STATE_IDAHO  = {
-					any_scope_state = {
-						owner = root
-					}
-				}
-				s:STATE_OREGON = {
-					any_scope_state = {
-						owner = root
-					}
 				}
 			}
 			AND = {
@@ -120,6 +91,11 @@ je_oregon = {
 						}
 					}
 				}
+			}
+			AND = {
+				has_state_in_state_region = STATE_IDAHO
+				has_state_in_state_region = STATE_WASHINGTON
+				has_state_in_state_region = STATE_OREGON
 			}
 		}
 	}

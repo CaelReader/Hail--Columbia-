@@ -51,6 +51,7 @@ usfp_manifest_destiny_main = {
 	scripted_button = usfp_cuban_purchase_button
 	scripted_button = usfp_claim_canada_button
 	scripted_button = usfp_secure_trail_button
+	scripted_button = usfp_indian_appropiations_button
 
 
 	fail = {
@@ -329,12 +330,17 @@ usfp_manifest_destiny_main = {
 			100 = usfp_manifest_destiny.26 #American Empire
 		}
 		events = {
-			usfp_manifest_destiny.6 #Treaty of GH
+			# usfp_manifest_destiny.6 #Treaty of GH
 			usfp_manifest_destiny.10 #California Gold Rush
 			usfp_manifest_destiny.13 #new homelands
 			usfp_manifest_destiny.18 #Monroe violation
 			usfp_manifest_destiny.24 #Revolutionary Destiny
 			usfp_manifest_destiny.25 #Monarchy Destiny
+		}
+	}
+	on_yearly_pulse = {
+		effect = {
+			usfp_american_indian_consolidate = yes
 		}
 	}
 
@@ -402,4 +408,51 @@ usfp_je_westward_expansion = {
 	weight = 10
 
 	can_revolution_inherit = yes
+}
+
+#JE for if you pass No Colonial Affairs early
+usfp_je_western_border = {
+	icon = gfx/interface/icons/event_icons/event_map.dds
+
+	group = je_group_historical_content
+
+	modifiers_while_active = {
+		usfp_settler_westward_pressure
+	}
+
+	is_shown_when_inactive = {
+		exists = c:USA
+		c:USA = ROOT
+		has_law = law_type:law_no_colonial_affairs
+	}
+
+	possible = {
+		has_law = law_type:law_no_colonial_affairs
+		NOR = {
+			owns_entire_state_region = STATE_SOUTH_DAKOTA
+			owns_entire_state_region = STATE_NORTH_DAKOTA
+			has_state_in_state_region = STATE_MONTANA
+		}
+	}
+
+	immediate = {
+		root = {
+			save_scope_as = usa_scope
+		}
+	}
+
+	on_monthly_pulse = {
+		random_events = {
+			300 = 0
+			#Mormons
+			#Gold Miners
+			#Cross-Border Raid
+		}
+	}
+
+	fail = {
+		NOT = {
+			has_law = law_type:law_no_colonial_affairs
+		}
+	}
 }

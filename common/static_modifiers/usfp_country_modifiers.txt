@@ -650,3 +650,8 @@ usfp_nez_perce_warriors_modifier = {
 	unit_army_offense_mult = 0.20
 	unit_army_defense_mult = 0.20
 }
+
+usfp_settler_westward_pressure = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_map_negative.dds
+	state_radicals_from_sol_change_accepted_culture_mult = 0.10
+}

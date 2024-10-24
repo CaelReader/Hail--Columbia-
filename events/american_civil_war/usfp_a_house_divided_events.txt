@@ -1097,6 +1097,19 @@ usfp_a_house_divided.12 = {
 		# 	}
 		# 	remove_ideology = ideology_pro_slavery
 		# }
+		if = {
+			limit = { 
+				any_scope_character = {
+					has_template = agitator_frederick_douglass
+				}
+			}
+			random_scope_character = {
+				limit = {
+					has_template = agitator_frederick_douglass
+				}
+				set_ideology = ideology:ideology_humanitarian
+			}
+		}
 	}
 	option = { 
 		name = slavery_law_events.7.b
@@ -1127,6 +1140,19 @@ usfp_a_house_divided.12 = {
 			}
 			add_journal_entry = {
 				type = usfp_reconstruction_long
+			}
+		}
+		if = {
+			limit = { 
+				any_scope_character = {
+					has_template = agitator_frederick_douglass
+				}
+			}
+			random_scope_character = {
+				limit = {
+					has_template = agitator_frederick_douglass
+				}
+				set_ideology = ideology:ideology_humanitarian
 			}
 		}
 	}
@@ -1694,3 +1720,100 @@ usfp_a_house_divided.18 = {
 }
 
 #Frederick Douglass spawn event
+usfp_a_house_divided.19 = {
+	type = country_event
+	placement = root
+
+	title = usfp_a_house_divided.19.t
+	desc = usfp_a_house_divided.19.d
+	flavor = usfp_a_house_divided.19.f
+	dlc = dlc_usfp
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:douglass_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/abolition_slave.dds"
+
+	duration = 3
+
+	cooldown = {years = 100} #once
+
+	trigger = {
+		NOT = {
+			has_law = law_type:law_slavery_banned
+		}
+		cu:afro_american = {
+			culture_is_discriminated_in = root
+		}
+		game_date > 1847.12.3 #The North Star founded
+		NOT = {
+			any_scope_character = {
+				has_template = agitator_frederick_douglass
+			}
+		}
+	}
+
+	immediate = {
+		create_character = {
+			template = agitator_frederick_douglass
+			on_created = {
+				set_variable = douglass_var
+				set_variable = { name = temp_event_target_in_use years = 4 }
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_variable = douglass_var
+			}
+			save_scope_as = douglass_scope
+		}
+		cu:afro_american = {
+			save_scope_as = afro_american_culture
+		}
+	}
+
+	option = {
+		name = usfp_a_house_divided.19.a
+		default_option = yes
+		ai_chance = {
+			base = 100
+		}
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = usfp_abolitionist_literature_ig
+				years = 4
+			}
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_abolitionist_literature_ig_negative
+				years = 4
+			}
+		}
+		add_modifier = {
+			name = usfp_abolitionist_literature_country
+			years = 4
+		}
+	}
+
+	option = {
+		name = usfp_a_house_divided.19.b
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = usfp_abolitionist_literature_ig
+				years = 4
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+}

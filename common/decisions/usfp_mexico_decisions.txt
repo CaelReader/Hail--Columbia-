@@ -1,0 +1,50 @@
+usfp_offer_treaty_of_gh_mex = {
+	is_shown = {
+		exists = c:MEX
+		root = c:MEX
+		NOT = {
+			has_global_variable = g_h_treaty_var
+		}
+		exists = c:USA
+		has_war_with = c:USA
+		c:USA = {
+			NOR = {
+				has_state_in_state_region = STATE_CALIFORNIA
+				any_scope_state = {
+					region = sr:region_mexico
+				}
+			}
+			has_journal_entry = usfp_manifest_destiny_main
+		}
+		game_date < 1900.1.1
+	}
+
+	possible = {
+		OR = {
+			capital = {
+				controller = c:USA
+			}
+			any_scope_war = {
+				attacker_warleader = c:USA
+				has_war_support = {
+					target = root
+					value < -90
+				}
+			}
+		}
+	}
+
+	when_taken = {
+		c:USA = {
+			trigger_event = {
+				id = usfp_manifest_destiny.6
+				popup = yes
+			}
+		}
+		set_global_variable = g_h_treaty_var
+	}
+
+	ai_chance = {
+		base = 1000
+	}
+}

@@ -468,24 +468,24 @@ usfp_manifest_destiny.6 = {
 	duration = 3
 
 	trigger = {
-		exists = c:MEX
-		has_war_with = c:MEX
-		c:MEX = {
-			capital = {
-				controller = c:USA
-			}
-		}
-		NOT = {
-			has_variable = g_h_treaty_var
-		}
-		s:STATE_CALIFORNIA = {
-			root_has_state_here = no
-		}
-		NOT = {
-			any_scope_state = {
-				region = sr:region_mexico
-			}
-		}
+		# exists = c:MEX
+		# has_war_with = c:MEX
+		# c:MEX = {
+		# 	capital = {
+		# 		controller = c:USA
+		# 	}
+		# }
+		# NOT = {
+		# 	has_variable = g_h_treaty_var
+		# }
+		# s:STATE_CALIFORNIA = {
+		# 	root_has_state_here = no
+		# }
+		# NOT = {
+		# 	any_scope_state = {
+		# 		region = sr:region_mexico
+		# 	}
+		# }
 	}
 	
 
@@ -496,12 +496,13 @@ usfp_manifest_destiny.6 = {
 				save_scope_as = mexico_capital_scope
 			}
 		}
-		set_variable = g_h_treaty_var
+		# set_variable = g_h_treaty_var
 	}
 
 	cancellation_trigger = {
-		NOT = {
+		NOR = {
 			exists = c:MEX
+			has_war_with = c:MEX
 		}
 	}
 
@@ -555,6 +556,11 @@ usfp_manifest_destiny.6 = {
 				text = enough_manifest_destiny
 				root.var:manifest_destiny_var >= 5
 			}
+			c:MEX = {
+				capital = {
+					controller = c:USA
+				}
+			}
 		}
 		every_diplomatic_play = {
 			limit = {
@@ -593,6 +599,11 @@ usfp_manifest_destiny.6 = {
 			custom_tooltip = {
 				text = enough_manifest_destiny
 				root.var:manifest_destiny_var >= 6
+			}
+			c:MEX = {
+				capital = {
+					controller = c:USA
+				}
 			}
 		}
 		usfp_manifest_more_destiny_effect = yes
@@ -637,6 +648,11 @@ usfp_manifest_destiny.6 = {
 			custom_tooltip = {
 				text = enough_manifest_destiny
 				root.var:manifest_destiny_var >= 7
+			}
+			c:MEX = {
+				capital = {
+					controller = c:USA
+				}
 			}
 		}
 		create_incident = {
@@ -1883,7 +1899,7 @@ usfp_manifest_destiny.19 = {
 		NOT = {
 			has_variable = had_american_superculture
 		}
-		var:manifest_destiny_var >= 12
+		var:manifest_destiny_var >= 13
 		radical_fraction = {
 			value < 0.2
 			culture = cu:dixie

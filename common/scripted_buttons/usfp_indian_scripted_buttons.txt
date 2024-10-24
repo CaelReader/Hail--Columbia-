@@ -155,3 +155,35 @@ usfp_indian_removal_creek_button = {
 		
 	}
 }
+
+usfp_indian_appropiations_button = {
+	name = "usfp_indian_appropiations_button"
+	desc = "usfp_indian_appropiations_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		NOT = {
+			has_law = law_type:law_no_colonial_affairs
+		}
+		custom_tooltip = {
+			text = enough_manifest_destiny
+			var:manifest_destiny_var > 2
+		}
+	}
+
+	effect = {
+		cu:usfp_american_indian = {
+			save_temporary_scope_as = american_indian_culture
+		}
+		custom_tooltip = usfp_indian_appropiations_button_tt
+		custom_tooltip = usfp_indian_appropiations_button_tt2
+		usfp_enable_american_indian_culture = yes
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}

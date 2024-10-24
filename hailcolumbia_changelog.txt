@@ -312,7 +312,8 @@ Updated Korean Localization
 4.0 "Sitting Bull"
 New Content:
 	Added Achievements
-
+	Added guaranteed Frederick Douglass spawn event
+	Added easter egg flag + name for a USA that incorporates a state on every continent
 Updates:
 	Marginalized IGs will no longer try to become Eugenicist
 	Accepting the Treaty of G-H now refunds a small amount of infamy
@@ -326,3 +327,8 @@ Updates:
 	Added additional ways to trigger the Progressive Era JE if you happen to bypass the Gilded Age
 	Disabled the Womens Suffrage JE for the USA (redundant with the Progressive Era JE)
 	Added an extra military buff to the Nez Perce
+	Treaty of G-H should now trigger more consistently before the war capitulates out
+	Treaty of G-H can now fire without occupying Mexico City, but the options to take additional land beyond the northern cession will not be available
+	Updated the conditions and description for the Oregon Border Treaty to increase clarity
+	Turtle Island JE now requires Pan-Nationalism and a citizenship law other than ethnostate or national supremacy
+	American Superculture now requires 13 Manifest Destiny points

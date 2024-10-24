@@ -32,6 +32,8 @@
  KLA_ADJ:0 "Klamathan"
 dyn_c_arp_cheyenne: "Cheyenne-Arapaho"
 dyn_c_arp_cheyenne_ADJ: "Cheyenne-Arapaho"
+dyn_c_arp_cheyenne_only: "Cheyenne"
+dyn_c_arp_cheyenne_only_ADJ: "Cheyenne"
 
 SPI: "Southern Paiute"
 SPI_ADJ: "South Paiute"
@@ -113,6 +115,8 @@ dyn_c_usfp_american_commonwealth: "American Commonwealth"
 dyn_c_usfp_american_technate: "American Technate"
 dyn_c_usfp_north_american_technate: "North American Union"
 dyn_c_usfp_north_american_technate_adj: "North American"
+dyn_c_united_states_of_earth: "United States of Earth"
+dyn_c_united_states_of_earth_ADJ: "Earthican"
 dyn_c_utah_territory: "Utah Territory"
 dyn_c_utah_territory_ADJ: "Utah"
 

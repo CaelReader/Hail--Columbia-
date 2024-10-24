@@ -976,23 +976,38 @@ usfp_radicalize_dixies_in_country = {
 }
 
 usfp_enable_american_indian_culture = {
-
+	custom_tooltip = {
+		text = usfp_enable_american_indian_culture_tt
+		set_variable = usfp_enable_american_indian_culture_var
+		usfp_american_indian_consolidate = yes
+	}
 }
 
 usfp_american_indian_consolidate = {
 	every_scope_state = {
 		limit = {
 			is_incorporated = yes
+			any_scope_pop = {
+				culture = {
+					has_discrimination_trait = north_american_group
+					NOT = {
+						this = cu:usfp_american_indian
+					}
+				}
+			}
 		}
-		every_scope_pop = {
+		random_scope_pop = {
 			limit = {
 				culture = {
 					has_discrimination_trait = indigenous_american_heritage
+					NOT = {
+						this = cu:usfp_american_indian
+					}
 				}
 			}
 			change_pop_culture = {
 				target = cu:usfp_american_indian
-				value = 0.20
+				value = 1
 			}
 		}
 	}

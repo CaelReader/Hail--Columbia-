@@ -1,5 +1,6 @@
 ﻿l_english:
 COM:0 "Comancheria"
+ APC: "Apacheria"
 
 je_acw_countdown:0 "A House Divided"
 je_acw_countdown_reason:0 "The issue of slavery has divided the North and South of the [ROOT.GetCountry.GetName] since before the drafting of the Declaration of Independence. Then as now, a series of compromises in the Federal government have forestalled open conflict. As the [SCOPE.sIdeology('abolitionist_scope').GetName] cause continues to grow in the North, the [SCOPE.gsInterestGroup('landowners_scope').GetName] have continued to demand more concessions and compromises to protect their 'peculiar institution' from interference.\n\nOne way or another, the Union cannot endure half slave and half free for much longer."
@@ -82,3 +83,7 @@ je_acw_reconstruction_status_mixed: "Reconstruction remains highly contested acr
 je_acw_reconstruction_status_failure: "The white supremacist #bold Redeemers#! tighten their grip on the South."
 
  law_worker_protections:0 "Workers’ Protections"
+
+ je_oregon:0 "The Oregon Border Dispute"
+ je_oregon_reason:0 "The proper location of the Oregon border has long been an undecided matter between Great Britain and the United States. As our settlers continue to push west, we will need to reach a final settlement with the British.\n\nAlternatively, if we find ourselves at war in California, a treaty will become a military necessity."
+ oregon_tt:1 "Have discovered the Oregon Trail by mapping the American Western Frontier"
