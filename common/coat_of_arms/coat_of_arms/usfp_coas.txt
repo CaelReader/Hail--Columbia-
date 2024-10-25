@@ -1021,3 +1021,10 @@ NIC_filibuster = { # Nicaragua under William Walker
 		instance = { scale = { 0.35 0.35 } position = { 0.5 0.5 } }
 	}	
 }
+
+usfp_MDC = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	
+}

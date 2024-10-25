@@ -564,6 +564,7 @@ usfp_GLC = {
 
 }
 
+#Ioway
 usfp_IWY = {
 	color = { 126 58 99 }
 	
@@ -574,4 +575,28 @@ usfp_IWY = {
 	cultures = { siouan }
 	
 	capital = STATE_IOWA
+}
+
+#Modoc
+usfp_MDC = {
+	color = { 35 59 118}
+	country_type = decentralized
+
+	tier = principality
+	
+	cultures = { salish }
+	
+	capital = STATE_CALIFORNIA
+}
+
+#Arikara, Hidatsa, and Mandan
+usfp_ARK = {
+	color = {244 218 128}
+
+	country_type = decentralized
+
+	tier = principality
+	
+	cultures = { siouan caddoan }
+	capital = STATE_MONTANA
 }

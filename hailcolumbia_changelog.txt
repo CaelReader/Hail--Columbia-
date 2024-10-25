@@ -317,9 +317,13 @@ New Content:
 	Added flavor government for Liberia + decision to declare a republic
 	Added easter egg flag + name for a USA that incorporates a state on every continent
 Updates:
+	Updated decentralized nations setup, pushing the 1836 frontier further east and south
+	Updated Indian Territory starting laws
 	Marginalized IGs will no longer try to become Eugenicist
 	Accepting the Treaty of G-H now refunds a small amount of infamy
 	Ignoring the Treaty of G-H now incurs much less infamy
+	Treaty of G-H should now trigger more consistently before the war capitulates out
+	Treaty of G-H can now fire without occupying Mexico City, but the options to take additional land beyond the northern cession will not be available
 	Completing Radical Reconstruction will upgrade Frederick Douglass into a Humanitarian
 	Reconstruction now incurs some additional military costs
 	The US now suffers a decaying military debuff after the civil war
@@ -329,8 +333,6 @@ Updates:
 	Added additional ways to trigger the Progressive Era JE if you happen to bypass the Gilded Age
 	Disabled the Womens Suffrage JE for the USA (redundant with the Progressive Era JE)
 	Added an extra military buff to the Nez Perce
-	Treaty of G-H should now trigger more consistently before the war capitulates out
-	Treaty of G-H can now fire without occupying Mexico City, but the options to take additional land beyond the northern cession will not be available
 	Updated the conditions and description for the Oregon Border Treaty to increase clarity
 	Turtle Island JE now requires Pan-Nationalism and a citizenship law other than ethnostate or national supremacy
-	American Superculture now requires 13 Manifest Destiny points
+	American Superculture now requires 13 Manifest Destiny points (up from 12)

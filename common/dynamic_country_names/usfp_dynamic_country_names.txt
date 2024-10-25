@@ -375,7 +375,9 @@ ARP = {
 		priority = 0
 		
 		trigger = {
-			always = yes
+			scope:actor = {
+				has_state_in_state_region = STATE_COLORADO
+			}
 		}
 	}
 	dynamic_country_name = {
@@ -386,7 +388,11 @@ ARP = {
 		priority = 0
 		
 		trigger = {
-			always = yes
+			scope:actor = {
+				NOT = {
+					has_state_in_state_region = STATE_COLORADO
+				}
+			}
 		}
 	}
 }

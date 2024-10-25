@@ -345,7 +345,8 @@
 			country = c:COM
 			provinces = { xDB68A7 x86122A xC6EE8B x0B77C3 xB2484A xEC7601 x89CD8D x9632BE xD0FCF0 x4439A4 xC32E10 x48FB7B x99A780 x2FA254 
 			xDE7B44 xFAB703 x907490 x94E465 x00A88F x212F2F x3F2F5D x58AF61 xC82BB4 x049490 x5C6475 x6FF4CE x1E553B x22F5CE xE6C09D 
-			x2E8063 xB0D689 x46137E x00B0C0 xB114A9 xBD7887 xAFBF37 x6125F7 x3B9D9E xFE0821 x871357 x0D192D x3751A7 x6363AC xE99673 x7DCECB x04CD6D x5C9120 x9D5716 x5C6FF5 x80287B x869D5F x99A694 x44F322 x860F5A x2C9BF6 xA66212 x317E88 x8B5EC8 xE567C9 x25D807 x2D8E7D xAAFB06 x607C83 xEE1B8C x824F92 }
+			x2E8063 xB0D689 x46137E x00B0C0 xB114A9 xBD7887 xAFBF37 x6125F7 x3B9D9E xFE0821 x871357 x0D192D x3751A7 x6363AC xE99673 x7DCECB x04CD6D x5C9120 x9D5716 
+			x5C6FF5 x80287B x869D5F x99A694 x44F322 x860F5A x2C9BF6 xA66212 x317E88 x8B5EC8 xE567C9 x25D807 x2D8E7D xAAFB06 x607C83 xEE1B8C x824F92 x5E769A xD78928 }
 		}
 		region_state:COM = {
 			kill_population_percent_in_state = {
@@ -466,25 +467,73 @@
 			}
 		}
 	}
-	#Apache
+	#Apacheria
 	s:STATE_ARIZONA = {
 		set_owner_of_provinces = {
 			country = c:APC
 			provinces = { x900E30 xC6C267 xAB6EDB x8C162F x093F42 x8F17E5 x2FD5DD x52AD57 x2392B7 xBF471B xD29C90 x44CC50 
 		x1A5AE7 x2392B7 xD331E1 x8755F3 x911882 
-			x1A06C1 xD08000 x67A8BE  }
+			x1A06C1 xD08000 x67A8BE }
 		}
 	}
 	s:STATE_NEW_MEXICO = {
 		set_owner_of_provinces = {
 			country = c:APC
-			provinces = { xB566BA xC03080 x8A526A xA858F4 xCAEC7A xB0BB90 xD3611A xEED52D xF59F44 xC50565 x0957D1 x3CD2D7 x7C809B xC32AF4 xE9C718 x7EA360 x4BBEE7 x59E5C4 xAE2568 x7D2451  }
+			provinces = { xB566BA xC03080 x8A526A xCAEC7A xB0BB90 xD3611A xEED52D xF59F44 xC50565 x0957D1 x3CD2D7 x7C809B xC32AF4 xE9C718 x7EA360
+			 x4BBEE7 x59E5C4 xAE2568 x7D2451 xB6EC9A x940839 x99C48C }
+		}
+		set_owner_of_provinces = {
+			country = c:MEX
+			provinces = { x650434 }
+		}
+		region_state:APC = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:mexican
+				}
+				move_pop = s:STATE_NEW_MEXICO.region_state:MEX
+			}
 		}
 	}
 	s:STATE_CHIHUAHUA = {
 		set_owner_of_provinces = {
 			country = c:APC
-			provinces = { x8FB2D5 x3A74AB xC6D1E5 x248F66 xE7BA3B x51153D x8910AF x80773D x662FF9 xB009D9 xADD8B8 x535D1C x55FB35 }
+			provinces = { x8FB2D5 x3A74AB xC6D1E5 x248F66 xE7BA3B x51153D x8910AF x80773D x662FF9 xB009D9 xADD8B8 x535D1C x55FB35 xF97F04 x432FE4 xDA4A32 }
+		}
+		region_state:APC = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:mexican
+				}
+				move_pop = s:STATE_CHIHUAHUA.region_state:MEX
+			}
+		}
+		
+	}
+	s:STATE_TEXAS = {
+		set_owner_of_provinces = {
+			country = c:APC
+			provinces = { x5D3843 x90CE2B xC9D330 xA55E5C x951736 x94A617 x6BB536 xB9118E xBB8A78 x760779 x2DA551 x24C127 x4E19F4 x0E125F 
+			xE3F481 x601A4F x6E8169 xA3A810 xC369DB x6958D6 xD08070 }
+		}
+		region_state:APC = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:mexican
+				}
+				move_pop = s:STATE_TEXAS.region_state:MEX
+			}
+		}
+		region_state:APC = {
+			every_scope_pop = {
+				limit = {
+					OR = {
+						culture = cu:dixie
+						culture = cu:afro_american
+					}
+				}
+				move_pop = s:STATE_TEXAS.region_state:TEX
+			}
 		}
 	}
 	c:APC = {
@@ -501,7 +550,10 @@
 		region_state:NVJ = {
 			every_scope_pop = {
 				limit = {
-					culture = cu:mexican
+					OR = {
+						culture = cu:mexican
+						culture = cu:afro_american
+					}
 				}
 				move_pop = s:STATE_NEW_MEXICO.region_state:MEX
 			}
@@ -950,7 +1002,7 @@
 		}
 		set_owner_of_provinces = {
 			country = c:KLA
-			provinces = { x06ADC6 xF62E1E x45A1A9 x9D6DC4 xBB67BF }
+			provinces = { x06ADC6 xF62E1E x45A1A9 x9D6DC4 xBB67BF x500A3C x7E3484 }
 		}
 		region_state:KLA = {
 			every_scope_pop = {
@@ -959,6 +1011,18 @@
 				}
 				move_pop = s:STATE_OREGON.region_state:ORG
 			}
+		}
+	}
+	#Modoc, because they had a famous war
+	s:STATE_CALIFORNIA = {
+		create_country = {
+			tag = usfp_MDC
+			origin = c:KLA
+			province = p:x0425B3
+		}
+		set_owner_of_provinces = {
+			country = c:usfp_MDC
+			provinces = { x5A4650 xC4A8E9 x33EE3B xAF199E  }
 		}
 	}
 	#Wakashan
@@ -1032,7 +1096,7 @@
 		}
 		set_owner_of_provinces = {
 			country = c:PWN
-			provinces = { xC547CE }
+			provinces = { xC547CE x8E9E5A xA912ED xC0F9BB x76F2C5 x924593 xD5A04C x90C040 x939662 x3E62DB  }
 		}
 		add_homeland = cu:caddoan
 	}
@@ -1040,6 +1104,69 @@
 		set_owner_of_provinces = {
 			country = c:ARP
 			provinces = { x0B51E5 }
+		}
+		set_owner_of_provinces = {
+			country = c:PWN
+			provinces = { x24CC25 x2D821B }
+		}
+	}
+	#Ioway
+	s:STATE_IOWA = {
+		create_country = {
+			tag = usfp_IWY
+			origin = c:LKT
+			province = p:x606DBE
+			on_created = {
+				usfp_native_startup = yes
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:usfp_IWY
+			provinces = { x5832CE x71153F xAB3179 xC24F5B xE31CFC x63CD4F x9F7290 x6EE453 x356047 x6EE453 x9080C0 x9DE484 x91CECE x002D4B x9A3850 xC6264B xE8429C x2BB21D x764D7B x5BA80C xE08573  }
+		}
+	}
+	s:STATE_MISSOURI = {
+		set_owner_of_provinces = {
+			country = c:usfp_IWY
+			provinces = { x7B0051 x0AC4E5 x4D6DEF xBF3FF3 x67104C }
+		}
+		region_state:usfp_IWY = {
+			every_scope_pop = {
+				limit = {
+					NOT = {
+						culture = cu:algonquian
+					}
+				}
+				move_pop = s:STATE_MISSOURI.region_state:USA
+			}
+		}
+	}
+	s:STATE_IOWA = {
+		region_state:USA = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:dakota
+				}
+				move_pop = s:STATE_IOWA.region_state:usfp_IWY
+			}
+		}
+		region_state:usfp_IWY = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:yankee
+				}
+				move_pop = s:STATE_IOWA.region_state:USA
+			}
+		}
+	}
+	s:STATE_MISSOURI = {
+		region_state:USA = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:algonquian
+				}
+				move_pop = prevprev.region_state:usfp_IWY
+			}
 		}
 	}
 
@@ -1203,7 +1330,7 @@
 		set_owner_of_provinces = {
 			country = c:IRC
 			provinces = { 				xDE27DA x9C13D9 x860DD4 x3DF911 
-			x64283A xBAAB60 x7C58BC 
+			x64283A xBAAB60 x7C58BC x4CD299
 			}
 		}
 		region_state:IRC = {
@@ -1223,7 +1350,7 @@
 			provinces = {
 				x8F0750 x8C905E xC1C5C5 xCDE122 x20A1FA xAB458E xA4C2F6 xFAD908 x2D7D62 xE24F6E x30BADD x5BED05 x184A57 xAF6E5B x9EA3FF xEE82BD 
 				x98A328 xE5FDC3 xB5FEC3 x96B71E x9255F2 x9D100E x0EADCE x17235E xA5A929 
-				x96D61E x198845 x3EB1F2 x6B9ADF x3816BA xF3EC53 x746873 xF3479B 
+				x198845 x3EB1F2 x6B9ADF x3816BA xF3EC53 x746873 xF3479B 
 			 }
 		}
 		region_state:IRC = {
@@ -1342,7 +1469,7 @@
 			provinces = { 
 				x796B16 x1508A0 xFE4B26 x5392DD xF78700 x0D3B73 xDAF79D xA56B00 
 				x6BD915 x571800 x63252A x89BC19 xB2DF51 x3AAFA5 
-				xE979D9 xD80B74 x51B9BC xB2AFD1 x90FB3B x4CD299 xD51888 xF88E77 x68D8FB
+				xE979D9 xD80B74 x51B9BC xB2AFD1 x90FB3B xD51888 xF88E77 x68D8FB
 				x5DA006 x743F41 x91670D x3ABADD x9A8A93 xA6F6FD x9A73C7 xFA2355 xC7106E xC6BBD4 x664C79 xF17880 
 				x2BAD69 x265A51 x3E174B x7F3DF1 xEC1DF2 x3AC323  
 			}
@@ -1384,31 +1511,7 @@
 			}
 		}
 	}
-	# #Arikara
-	# s:STATE_NORTH_DAKOTA = {
-	# 	create_country = {
-	# 		tag = AIA
-	# 		origin = c:ABS
-	# 		province = p:x002DE6
-	# 		on_created = {
-	# 			usfp_native_startup = yes
-	# 		}
-	# 	}
-	# 	set_owner_of_provinces = {
-	# 		country = c:AIA
-	# 		provinces = { 
-	# 			xF03169 xA5970F 
-	# 			x198845 x746873 xF3479B x18D7A9 x3816BA x3EB1F2 xF3EC53 x6B9ADF 
-	# 			x96D61E x9FB4C1
-	# 		}
-	# 	}
-	# }
-	# s:STATE_MONTANA = {
-	# 	set_owner_of_provinces = {
-	# 		country = c:AIA
-	# 		provinces = { x60CAD8 x265A51 x0F89B6 x3E174B x7F3DF1 x3AC323 xEC1DF2 x11EFF8 x2BAD69 }
-	# 	}
-	# }
+
 	#Sioux
 	s:STATE_WYOMING = {
 		set_owner_of_provinces = {
@@ -1434,12 +1537,56 @@
 			provinces = { x18D7A9 x9FB4C1 }
 		}
 	}
+	s:STATE_IOWA = {
+		set_owner_of_provinces = {
+			country = c:LKT
+			provinces = { xB4D320 xF90AE8 x1E7531 xD4B435 x97AC4F x72D1EA xAC772A x3E306D x8DB752 x4C181C x4A5F7A xE46361 xCD67AD xCF483D x25962B x83139C x03E9D3  }
+		}
+		region_state:LKT = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:yankee
+				}
+				move_pop = s:STATE_IOWA.region_state:USA
+			}
+		}
+	}
+	s:STATE_MINNESOTA = {
+		set_owner_of_provinces = {
+			country = c:LKT
+			provinces = { xC2D863 x450FD3 x5A4A79  }
+		}
+	}
 	c:LKT = {
 		create_character = {
 			template = usfp_old_chief_smoke
 		}
 	}
-	
+	#Arikara
+	s:STATE_NORTH_DAKOTA = {
+		create_country = {
+			tag = usfp_ARK
+			origin = c:ABS
+			province = p:x002DE6
+			on_created = {
+				usfp_native_startup = yes
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:usfp_ARK
+			provinces = { 
+				xF03169 xA5970F 
+				x198845 x746873 xF3479B x18D7A9 x3816BA x3EB1F2 xF3EC53 x6B9ADF 
+				x96D61E x9FB4C1
+			}
+		}
+	}
+	s:STATE_MONTANA = {
+		set_owner_of_provinces = {
+			country = c:usfp_ARK
+			provinces = { x60CAD8 x265A51 x0F89B6 x3E174B x7F3DF1 x3AC323 xEC1DF2 x11EFF8 x2BAD69 x90FB3B  }
+		}
+	}
 	#prevent Indian Removal cheese
 	c:USA = {
 		create_unidirectional_truce = {
@@ -2518,20 +2665,20 @@
 		}
 	}
 
-	#Ioway
-	s:STATE_IOWA = {
-		create_country = {
-			tag = usfp_IWY
-			origin = c:LKT
-			province = p:x606DBE
-			on_created = {
-				usfp_native_startup = yes
+	every_country = {
+		limit = {
+			is_country_type = decentralized
+			capital = {
+				region = sr:region_great_plains
 			}
 		}
-		set_owner_of_provinces = {
-			country = c:usfp_IWY
-			provinces = { x5832CE x71153F xAB3179 xC24F5B xE31CFC x63CD4F x9F7290 x6EE453 x356047 x6EE453 x9080C0 x9DE484 x91CECE x002D4B  }
+		#great plains diseases
+		add_modifier = {
+			name = usfp_white_mans_diseases_modifier
+			years = 50
 		}
+		#tribal laws
+		activate_law = law_type:law_collectivized_agriculture
 	}
 
 	#fix pops
@@ -2544,6 +2691,8 @@
 			change_poptype = pop_type:peasants
 		}
 		activate_law = law_type:law_elder_council
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_women_own_property
 	}
 	c:SEQ = {
 		capital = {
@@ -2551,17 +2700,6 @@
 		}
 	}
 
-	#great plains diseases
-	every_country = {
-		limit = {
-			is_country_type = decentralized
-			capital = {
-				region = sr:region_great_plains
-			}
-		}
-		add_modifier = {
-			name = usfp_white_mans_diseases_modifier
-			years = 50
-		}
-	}
+
+
 }
