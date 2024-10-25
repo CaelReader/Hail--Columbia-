@@ -210,6 +210,8 @@ je_conquer_oregon = {
 
 	group = je_group_historical_content
 
+	scripted_button = usfp_demand_bc_button 
+
 	complete = {
 		c:USA = {
 			owns_entire_state_region = STATE_WASHINGTON

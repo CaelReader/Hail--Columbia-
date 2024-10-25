@@ -313,6 +313,8 @@ Updated Korean Localization
 New Content:
 	Added Achievements
 	Added guaranteed Frederick Douglass spawn event
+	Added the ability to push for taking British Columbia as part of the Annex Oregon JE
+	Added flavor government for Liberia + decision to declare a republic
 	Added easter egg flag + name for a USA that incorporates a state on every continent
 Updates:
 	Marginalized IGs will no longer try to become Eugenicist

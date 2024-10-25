@@ -340,7 +340,12 @@ usfp_manifest_destiny_main = {
 	}
 	on_yearly_pulse = {
 		effect = {
-			usfp_american_indian_consolidate = yes
+			if = {
+				limit = { 
+					has_variable = usfp_enable_american_indian_culture_var
+				}
+				usfp_american_indian_consolidate = yes
+			}	
 		}
 	}
 

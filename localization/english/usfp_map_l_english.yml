@@ -93,12 +93,16 @@ AHT: "Atna Nenn'"
 AHT_ADJ: "Ahtna"
 DXG: "Deg Xinag"
 DXG_ADJ: "Deg Xinag"
-
+usfp_IWY: "Ioway"
+usfp_IWY_ADJ: "Ioway"
 
  ASK:0 "Alaska"
  ASK_ADJ:0 "Alaskan"
  SON:0 "Sonora"
  SON_ADJ:0 "Sonoran"
+
+usfp_GLC: "Great Lakes Confederation"
+usfp_GLC_ADJ: "Great Lakes"
 
 rule_usfp_usa_names:0 "@america_icon! #yellow Hail, Columbia!#! | USA Names"
  setting_usa_initial_names:1 "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_usa_initial_names_desc #high Vanilla #!#!#!"

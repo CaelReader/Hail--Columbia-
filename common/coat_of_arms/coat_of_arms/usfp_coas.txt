@@ -422,9 +422,6 @@ USA_technocracy_NAU = {
 }
 
 USA_earth = {
-	@usa_canton_width = 0.5
-	@usa_canton_height = @[ 1 / 13 * 7 ]
-	
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"

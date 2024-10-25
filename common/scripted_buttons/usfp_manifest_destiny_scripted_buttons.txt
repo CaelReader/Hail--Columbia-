@@ -527,3 +527,52 @@ usfp_secure_trail_button = {
 		base = 1000
 	}
 }
+
+usfp_demand_bc_button = {
+	name = "usfp_demand_bc_button"
+	desc = "usfp_demand_bc_button_desc"
+
+	visible = {
+		exists = c:GBR
+		NOT = {
+			has_claim = s:STATE_BRITISH_COLUMBIA
+		}
+		s:STATE_BRITISH_COLUMBIA = {
+			any_scope_state = {
+				owner = {
+					NOT = {
+						is_country_type = decentralized
+					}
+					OR = {
+						is_subject_of = c:GBR
+						c:GBR = this
+					}
+				}
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = enough_manifest_destiny
+			var:manifest_destiny_var > 5
+		}
+		ruler = {
+			usfp_manifest_destiny_pro_expansion_trigger = yes
+		}
+	}
+
+	effect = {
+		s:STATE_BRITISH_COLUMBIA = {
+			add_claim = root
+		}
+		change_relations = {
+			country = c:GBR
+			value = -10
+		}
+	}
+
+	ai_chance = {
+		base = 25
+	}
+}

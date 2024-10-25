@@ -30,3 +30,5 @@ gov_usfp_syndicalist_federation_anarchist_desc: "This is a [concept_government_t
 
 RULER_TITLE_DELEGATE: "Delegate"
 
+gov_usfp_private_colony: "Private Colony"
+gov_usfp_private_colony_desc: "This is a private [concept_government_type] established by the American Colonization Society with the goal of establishing a freedmans' republic in Africa.\n\n$TRANSFER_OF_POWER_NAME_DESC$"

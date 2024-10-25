@@ -980,6 +980,19 @@ usfp_enable_american_indian_culture = {
 		text = usfp_enable_american_indian_culture_tt
 		set_variable = usfp_enable_american_indian_culture_var
 		usfp_american_indian_consolidate = yes
+		every_state = {
+			limit = {
+				state_is_in_north_america = yes
+				state_region = {
+					NOT = {
+						is_homeland = cu:usfp_american_indian
+					}
+				}
+			}
+			state_region = {
+				add_homeland = usfp_american_indian
+			}
+		}
 	}
 }
 

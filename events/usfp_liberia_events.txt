@@ -1,3 +1,108 @@
-namespace = usfp_liberia
+﻿namespace = usfp_liberia
 
-#Liberian Declaration of Independence
+#USA: Liberian Declaration of Independence
+usfp_liberia.1 = {
+	type = country_event
+	placement = scope:liberia_scope.capital
+
+	event_image = {
+		video = "africa_construction_colony"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_liberia.1.t
+	desc = usfp_liberia.1.d
+	flavor = usfp_liberia.1.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		#fired by decision
+	}
+
+	immediate = {
+		c:LIB = {
+			save_scope_as = liberia_scope
+		}
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+	}
+
+	#okay
+	option = {
+		name = usfp_liberia.1.a
+		default_option = yes
+		change_relations = {
+			country = c:LIB
+			value = 10
+		}
+		create_unidirectional_truce = {
+			country = c:LIB
+			months = 60
+		}
+		c:LIB = {
+			post_notification = usfp_liberia_republic
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#they can survive on their own
+	option = {
+		name = usfp_liberia.1.b
+		c:LIB = {
+			make_independent = yes
+		}
+		if = {
+			limit = { 
+				is_power_bloc_leader = yes
+			}
+			root.power_bloc = {
+				add_leverage = { target = c:LIB value = 100 }
+			}
+		}
+		create_unidirectional_truce = {
+			country = c:LIB
+			months = 12
+		}
+		c:LIB = {
+			post_notification = usfp_liberia_independent
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	#full recognition!
+	option = {
+		name = usfp_liberia.1.c
+		default_option = yes
+		highlighted_option = yes
+		trigger = {
+			ig:ig_landowners = {
+				is_in_government = no
+			}
+		}
+		change_relations = {
+			country = c:LIB
+			value = 20
+		}
+		c:LIB = {
+			set_country_type = recognized
+		}
+		create_unidirectional_truce = {
+			country = c:LIB
+			months = 60
+		}
+		c:LIB = {
+			post_notification = usfp_liberia_recognized
+		}
+		ai_chance = {
+			base = 0
+		}
+		show_as_unavailable = { always = yes }
+	}
+}

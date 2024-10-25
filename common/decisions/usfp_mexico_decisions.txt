@@ -1,4 +1,4 @@
-usfp_offer_treaty_of_gh_mex = {
+﻿usfp_offer_treaty_of_gh_mex = {
 	is_shown = {
 		exists = c:MEX
 		root = c:MEX

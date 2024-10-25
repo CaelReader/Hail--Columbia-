@@ -471,7 +471,20 @@
 		set_owner_of_provinces = {
 			country = c:APC
 			provinces = { x900E30 xC6C267 xAB6EDB x8C162F x093F42 x8F17E5 x2FD5DD x52AD57 x2392B7 xBF471B xD29C90 x44CC50 
-		x1A5AE7 x2392B7 xD331E1 x8755F3 x911882  }
+		x1A5AE7 x2392B7 xD331E1 x8755F3 x911882 
+			x1A06C1 xD08000 x67A8BE  }
+		}
+	}
+	s:STATE_NEW_MEXICO = {
+		set_owner_of_provinces = {
+			country = c:APC
+			provinces = { xB566BA xC03080 x8A526A xA858F4 xCAEC7A xB0BB90 xD3611A xEED52D xF59F44 xC50565 x0957D1 x3CD2D7 x7C809B xC32AF4 xE9C718 x7EA360 x4BBEE7 x59E5C4 xAE2568 x7D2451  }
+		}
+	}
+	s:STATE_CHIHUAHUA = {
+		set_owner_of_provinces = {
+			country = c:APC
+			provinces = { x8FB2D5 x3A74AB xC6D1E5 x248F66 xE7BA3B x51153D x8910AF x80773D x662FF9 xB009D9 xADD8B8 x535D1C x55FB35 }
 		}
 	}
 	c:APC = {
@@ -1406,7 +1419,7 @@
 	s:STATE_SOUTH_DAKOTA = {
 		set_owner_of_provinces = {
 			country = c:LKT
-			provinces = { x0D6439 }
+			provinces = { x0D6439 x49577A x844BD6 x551291 }
 		}
 	}
 	s:STATE_MONTANA = {
@@ -2505,6 +2518,22 @@
 		}
 	}
 
+	#Ioway
+	s:STATE_IOWA = {
+		create_country = {
+			tag = usfp_IWY
+			origin = c:LKT
+			province = p:x606DBE
+			on_created = {
+				usfp_native_startup = yes
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:usfp_IWY
+			provinces = { x5832CE x71153F xAB3179 xC24F5B xE31CFC x63CD4F x9F7290 x6EE453 x356047 x6EE453 x9080C0 x9DE484 x91CECE x002D4B  }
+		}
+	}
+
 	#fix pops
 	every_country = {
 		limit = {
@@ -2519,6 +2548,20 @@
 	c:SEQ = {
 		capital = {
 			usfp_remove_starting_buildings_effect = yes
+		}
+	}
+
+	#great plains diseases
+	every_country = {
+		limit = {
+			is_country_type = decentralized
+			capital = {
+				region = sr:region_great_plains
+			}
+		}
+		add_modifier = {
+			name = usfp_white_mans_diseases_modifier
+			years = 50
 		}
 	}
 }

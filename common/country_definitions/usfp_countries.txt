@@ -553,3 +553,25 @@ DXG = {
 	
 	capital = STATE_ALASKA
 }
+
+#Great Lakes Confederacy, based on Tecumseh's Confederacy or the British Indian Buffer State
+usfp_GLC = {
+	color = {68 109 57}
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { algonquian usfp_american_indian }
+	capital = STATE_MICHIGAN
+
+}
+
+usfp_IWY = {
+	color = { 126 58 99 }
+	
+	country_type = decentralized
+
+	tier = principality
+	
+	cultures = { siouan }
+	
+	capital = STATE_IOWA
+}

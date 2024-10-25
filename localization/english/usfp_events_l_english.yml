@@ -1043,6 +1043,13 @@ usfp_progressive_era.18.f: ""When this new science makes clear to the public tha
 usfp_progressive_era.18.a: "This is not the way."
 usfp_progressive_era.18.b: "This is the way."
 
+usfp_liberia.1.t: "The [SCOPE.sCountry('liberia_scope').GetAdjective] Declaration of Independence"
+usfp_liberia.1.d: "The American Colonization Society has seen fit to establish a proper government for their colonial venture in [SCOPE.sCountry('liberia_scope').GetName]. The new republic has ratified a constitution based on the American model, and seeks recognition by our government."
+usfp_liberia.1.f: ""In view of these facts, this institution, the American Colonization Society, with that good faith which has uniformly marked all its dealings with us did by a set of resolutions, dissolve all political connections with the people of this Republic, returned the power with which it was delegated, and left the people to the government of themselves.\n\nThe people of the Republic of Liberia , they, are of right, and in fact, a free, sovereign, and independent state, possessed of all the rights, powers, and functions of government."" #Liberian Declaration of Independence
+usfp_liberia.1.a: "Politely table their request for now."
+usfp_liberia.1.b: "They want to be independent? Let them survive on their own then."
+usfp_liberia.1.c: "Extend formal recognition of the new government."
+
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"
 usfp_test.1.f: "sunrise, parabellum"
