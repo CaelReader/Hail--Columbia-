@@ -396,3 +396,30 @@ ARP = {
 		}
 	}
 }
+
+LKT = { # Lakota
+	dynamic_country_name = {
+		name = dyn_c_oceti_sakowin
+		adjective = dyn_c_oceti_sakowin_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			NOT = { exists = c:DKT } # Lakota will be considered the united Seven Council Fires if Dakota are not independent
+		}
+	}
+	dynamic_country_name = {
+		name = dync_c_oceti_sakowin_endonym
+		adjective = dync_c_oceti_sakowin_endonym_adj
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			scope:actor = {
+				is_country_type = recognized
+			}
+		}
+	}
+}

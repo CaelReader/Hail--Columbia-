@@ -1050,6 +1050,12 @@ usfp_liberia.1.a: "Politely table their request for now."
 usfp_liberia.1.b: "They want to be independent? Let them survive on their own then."
 usfp_liberia.1.c: "Extend formal recognition of the new government."
 
+usfp_indian_althist.1.t: "The Great [SCOPE.sCountry('sioux_scope').GetAdjective] Council"
+usfp_indian_althist.1.d: "Decades of holding a dominant position on the northern plains has done well for the [SCOPE.sCountry('sioux_scope').GetName]. As their trade links with [ROOT.GetCountry.GetAdjective] border towns have flourished, so too have new ideas flowed into the plains. Now, a council of all the [SCOPE.sCountry('sioux_scope').GetAdjectiveNoFormatting] bands has agreed to adopt a formal government structure under the leadership of [SCOPE.sCountry('sioux_scope').GetRuler.GetFullName]."
+usfp_indian_althist.1.f: "The Seven Council Fires had met for generations, but this meeting was different. The words of [SCOPE.sCountry('sioux_scope').GetRuler.GetFullNameNoFormatting] already held such sway that the naming of a permanent sitting council was a formality. The [SCOPE.sCountry('sioux_scope').GetNameNoFormatting] was united behind [SCOPE.sCountry('sioux_scope').GetRuler.GetHerHis] vision for the future."
+usfp_indian_althist.1.a: "It will be a civilization of their own making."
+usfp_indian_althist.1.b: "This country is ours, and we intend to stay here."
+
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"
 usfp_test.1.f: "sunrise, parabellum"

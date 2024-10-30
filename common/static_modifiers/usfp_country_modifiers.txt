@@ -658,5 +658,12 @@ usfp_settler_westward_pressure = {
 
 usfp_white_mans_diseases_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
-	state_mortality_mult = 0.10
+	state_mortality_mult = 0.20
+}
+
+usfp_plains_tech_trade_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_tech_spread_mult = 0.75
+	market_land_trade_capacity_add = 10
+	country_trade_route_cost_mult = -0.15
 }

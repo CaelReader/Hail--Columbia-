@@ -99,6 +99,8 @@ usfp_MDC: "Modoc"
 usfp_MDC_ADJ: "Modoc"
 usfp_ARK: "Arikara-Hidatsa-Mandan"
 usfp_ARK_ADJ: "Three Tribes"
+dync_c_oceti_sakowin_endonym: "Oceti Sakowin"
+dync_c_oceti_sakowin_endonym_adj: "Sioux" #not sure what the proper alternative would be
 
  ASK:0 "Alaska"
  ASK_ADJ:0 "Alaskan"

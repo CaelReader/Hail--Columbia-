@@ -59,3 +59,8 @@ usfp_raja_yoga = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_clergy_positive.dds
 	character_popularity_add = 30
 }
+
+usfp_plains_master = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	character_popularity_add = 25
+}

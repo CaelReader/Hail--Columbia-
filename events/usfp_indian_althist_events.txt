@@ -1,0 +1,190 @@
+namespace = usfp_indian_althist
+
+#Sioux becomes Centralized
+usfp_indian_althist.1 = {
+	type = country_event
+	placement = scope:sioux_scope.capital
+
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_indian_althist.1.t
+	desc = usfp_indian_althist.1.d
+	flavor = usfp_indian_althist.1.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		exists = c:LKT
+		NOT = {
+			c:USA = {
+				has_state_in_state_region = STATE_NORTH_DAKOTA
+				has_state_in_state_region = STATE_SOUTH_DAKOTA
+			}
+		}
+		c:LKT = {
+			is_country_type = decentralized
+			has_state_in_state_region = STATE_NORTH_DAKOTA
+			has_state_in_state_region = STATE_SOUTH_DAKOTA
+		}
+		scope:journal_entry = {
+			journal_entry_age > 3650 # days
+		}
+		game_date > 1851.1.1
+		has_technology_researched = repeaters
+	}
+
+	immediate = {
+		c:LKT = {
+			save_scope_as = sioux_scope
+			set_country_type = unrecognized
+			add_technology_researched = repeaters
+		}
+	}
+
+	option = {
+		name = usfp_indian_althist.1.a
+		show_as_tooltip = {
+			c:LKT = {
+				set_country_type = unrecognized
+			}
+		}
+		c:LKT = {
+			ruler = {
+				add_modifier = {
+					name = usfp_plains_master
+				}
+				random_list = {
+					30 = {
+						set_ideology = ideology:ideology_authoritarian
+					}
+					30 = {
+						set_ideology = ideology:ideology_jingoist_leader
+					}
+					10 = {
+						set_ideology = ideology:ideology_theocrat
+					}
+					10 = {
+						set_ideology = ideology:ideology_liberal_leader
+					}
+					10 = {
+						set_ideology = ideology:ideology_market_liberal
+					}
+					5 = {
+						set_ideology = ideology:ideology_humanitarian
+					}
+					5 = {
+						set_ideology = ideology:ideology_ethno_nationalist
+					}
+				}
+			}
+			activate_law = law_type:law_frontier_colonization
+			add_modifier = {
+				name = usfp_plains_tech_trade_modifier
+				years = 10
+			}
+			s:STATE_MONTANA = {
+				add_claim = c:LKT
+			}
+			s:STATE_NORTH_DAKOTA = {
+				add_claim = c:LKT
+			}
+			s:STATE_SOUTH_DAKOTA = {
+				add_claim = c:LKT
+			}
+			s:STATE_MINNESOTA = {
+				add_claim = c:LKT
+			}
+			s:STATE_COLORADO = {
+				add_claim = c:LKT
+			}
+			s:STATE_WYOMING = {
+				add_claim = c:LKT
+			}
+			s:STATE_IOWA = {
+				add_claim = c:LKT
+			}
+			s:STATE_NEBRASKA = {
+				add_claim = c:LKT
+			}
+		}
+	}
+
+	option = {
+		name = usfp_indian_althist.1.b
+		show_as_tooltip = {
+			c:LKT = {
+				set_country_type = unrecognized
+			}
+		}
+		c:LKT = {
+			ruler = {
+				add_modifier = {
+					name = usfp_plains_master
+				}
+				random_list = {
+					30 = {
+						set_ideology = ideology:ideology_authoritarian
+					}
+					30 = {
+						set_ideology = ideology:ideology_jingoist_leader
+					}
+					10 = {
+						set_ideology = ideology:ideology_theocrat
+					}
+					10 = {
+						set_ideology = ideology:ideology_liberal_leader
+					}
+					10 = {
+						set_ideology = ideology:ideology_market_liberal
+					}
+					5 = {
+						set_ideology = ideology:ideology_humanitarian
+					}
+					5 = {
+						set_ideology = ideology:ideology_ethno_nationalist
+					}
+				}
+			}
+			activate_law = law_type:law_frontier_colonization
+			add_modifier = {
+				name = usfp_plains_tech_trade_modifier
+				years = 10
+			}
+			s:STATE_MONTANA = {
+				add_claim = c:LKT
+			}
+			s:STATE_NORTH_DAKOTA = {
+				add_claim = c:LKT
+			}
+			s:STATE_SOUTH_DAKOTA = {
+				add_claim = c:LKT
+			}
+			s:STATE_MINNESOTA = {
+				add_claim = c:LKT
+			}
+			s:STATE_COLORADO = {
+				add_claim = c:LKT
+			}
+			s:STATE_WYOMING = {
+				add_claim = c:LKT
+			}
+			s:STATE_IOWA = {
+				add_claim = c:LKT
+			}
+			s:STATE_NEBRASKA = {
+				add_claim = c:LKT
+			}
+		}
+		play_as = c:LKT
+	}
+}
+
+#Cross-Border Raid
+#Lure of Gold
+#Mormon Claims

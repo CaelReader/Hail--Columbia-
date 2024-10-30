@@ -5,7 +5,6 @@
 
 	is_shown_when_inactive = {
 		exists = this
-		NOT = { is_country_type = decentralized }
 		country_is_in_north_america = yes
 		any_primary_culture = {
 			has_discrimination_trait = indigenous_american_heritage
@@ -29,6 +28,7 @@
     scripted_button = je_unite_the_nations_offer_confederation_button
 
 	possible = {
+		NOT = { is_country_type = decentralized }
 		is_subject = no
 		has_technology_researched = pan-nationalism
 		OR = {
