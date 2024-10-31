@@ -183,7 +183,7 @@ usfp_offer_treaty_of_gh_mex_desc: "Our war with the United States is unwinnable.
 plains_formation_tt: "Any [concept_army] in the [SCOPE.sStrategicRegion('great_plains_region').GetName] [concept_hq] has at least #variable 20#! [Concept('concept_unit','$concept_units$')] and a [concept_general]"
 
 usfp_je_western_border: "The Western Demarcation Line"
-usfp_je_western_border_reason: "Much as King George did before the revolution, we have now drawn a line across our western border that no White settlers are to cross. "
+usfp_je_western_border_reason: "Much as King George did before the revolution, we have now drawn a line across our western border that no White settlers are to cross. We have committed to maintaining a peaceable boundary with the Great Plains nations, much to the dismay of prospective settlers."
 
 usfp_indian_appropiations_button: "End the Treaty System"
 usfp_indian_appropiations_button_desc: "Our previous attempts to forge treaties with Indian tribes have proven too cumbersome for our purposes. With the Indian Appropiation Act, we can streamline the acquisition of native lands by dealing with the Indians as individuals."

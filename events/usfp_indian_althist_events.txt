@@ -4,14 +4,14 @@ namespace = usfp_indian_althist
 usfp_indian_althist.1 = {
 	type = country_event
 	placement = scope:sioux_scope.capital
-
+	cooldown = {years = 100} #once
 	event_image = {
 		video = "europenorthamerica_native_american"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 	
 	title = usfp_indian_althist.1.t
 	desc = usfp_indian_althist.1.d
@@ -186,5 +186,60 @@ usfp_indian_althist.1 = {
 }
 
 #Cross-Border Raid
+usfp_indian_althist.2 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 5}
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	
+	title = usfp_indian_althist.2.t
+	desc = usfp_indian_althist.2.d
+	flavor = usfp_indian_althist.2.f
+	dlc = dlc_usfp
+	duration = 3
+}
 #Lure of Gold
+usfp_indian_althist.3 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 5}
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_indian_althist.3.t
+	desc = usfp_indian_althist.3.d
+	flavor = usfp_indian_althist.3.f
+	dlc = dlc_usfp
+	duration = 3
+}
 #Mormon Claims
+usfp_indian_althist.4 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 5}
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_indian_althist.4.t
+	desc = usfp_indian_althist.4.d
+	flavor = usfp_indian_althist.4.f
+	dlc = dlc_usfp
+	duration = 3
+}
+#Families vs the Army

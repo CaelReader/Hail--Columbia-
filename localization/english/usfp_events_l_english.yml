@@ -485,6 +485,12 @@ usfp_manifest_destiny.26.d: "Our acquisition of [SCOPE.sState('usa_overseas_terr
 usfp_manifest_destiny.26.f: ""It is yet another Civilized Power, with its banner of the Prince of Peace in one hand and its loot-basket and its butcher-knife in the other. Is there no salvation for a conquered people, but to adopt Civilization and lift themselves down to its level?"" #Mark Twain
 usfp_manifest_destiny.26.a: "It is our burden to spread the light of self-government."
 
+usfp_manifest_destiny.27.t: "Oklahoma Land Runs"
+usfp_manifest_destiny.27.d: ""
+usfp_manifest_destiny.27.f: """"
+usfp_manifest_destiny.27.a: ""
+usfp_manifest_destiny.27.b: ""
+
 ### Native Removal
 usfp_native_removal.1.t: "The Seminole Removal"
 usfp_native_removal.1.d: "With the Second Seminole War finally winding down, the Army can begin the slow process of removing the remainder of the [SCOPE.sCulture('muskogean_scope').GetName] population across the Mississippi."
@@ -1050,11 +1056,121 @@ usfp_liberia.1.a: "Politely table their request for now."
 usfp_liberia.1.b: "They want to be independent? Let them survive on their own then."
 usfp_liberia.1.c: "Extend formal recognition of the new government."
 
+usfp_indian_wars.1.t: "Red Cloud's War"
+usfp_indian_wars.1.d: ""
+usfp_indian_wars.1.f: """"
+usfp_indian_wars.1.a: ""
+usfp_indian_wars.1.b: ""
+
+usfp_indian_wars.2.t: "Red Cloud's Peace"
+usfp_indian_wars.2.d: ""
+usfp_indian_wars.2.f: """"
+usfp_indian_wars.2.a: ""
+usfp_indian_wars.2.b: ""
+
+usfp_indian_wars.3.t: "Black Hills Gold"
+usfp_indian_wars.3.d: ""
+usfp_indian_wars.3.f: """"
+usfp_indian_wars.3.a: ""
+usfp_indian_wars.3.b: ""
+
+usfp_indian_wars.4.t: "Custer's Last Stand"
+usfp_indian_wars.4.d: ""
+usfp_indian_wars.4.f: """"
+usfp_indian_wars.4.a: ""
+usfp_indian_wars.4.b: ""
+
+usfp_indian_wars.5.t: "Sioux-Crow War"
+usfp_indian_wars.5.d: ""
+usfp_indian_wars.5.f: """"
+usfp_indian_wars.5.a: ""
+usfp_indian_wars.5.b: ""
+
+usfp_indian_wars.6.t: "Indians Massacred"
+usfp_indian_wars.6.d: ""
+usfp_indian_wars.6.f: """"
+usfp_indian_wars.6.a: ""
+usfp_indian_wars.6.b: ""
+
+usfp_indian_wars.7.t: "Captain Jack's Stronghold"
+usfp_indian_wars.7.d: ""
+usfp_indian_wars.7.f: """"
+usfp_indian_wars.7.a: ""
+usfp_indian_wars.7.b: ""
+
+usfp_indian_wars.8.t: "Flight of hte Nez Perce"
+usfp_indian_wars.8.d: ""
+usfp_indian_wars.8.f: """"
+usfp_indian_wars.8.a: ""
+usfp_indian_wars.8.b: ""
+
+usfp_indian_wars.9.t: "Long Walk of the Navajo"
+usfp_indian_wars.9.d: ""
+usfp_indian_wars.9.f: """"
+usfp_indian_wars.9.a: ""
+usfp_indian_wars.9.b: ""
+
+usfp_indian_wars.10.t: "Hunting By Rail"
+usfp_indian_wars.10.d: ""
+usfp_indian_wars.10.f: """"
+usfp_indian_wars.10.a: ""
+usfp_indian_wars.10.b: ""
+
+usfp_indian_wars.10.t: "End of the Buffalo"
+usfp_indian_wars.10.d: ""
+usfp_indian_wars.10.f: """"
+usfp_indian_wars.10.a: ""
+usfp_indian_wars.10.b: ""
+
+usfp_indian_postremoval.1.t: "The Ghost Dance"
+usfp_indian_postremoval.1.d: ""
+usfp_indian_postremoval.1.f: """"
+usfp_indian_postremoval.1.a: ""
+usfp_indian_postremoval.1.b: ""
+
+usfp_indian_postremoval.2.t: "Wounded Knee Massacre"
+usfp_indian_postremoval.2.d: ""
+usfp_indian_postremoval.2.f: """"
+usfp_indian_postremoval.2.a: ""
+usfp_indian_postremoval.2.b: ""
+
+usfp_indian_postremoval.3.t: "Ghosts on the Wind"
+usfp_indian_postremoval.3.d: ""
+usfp_indian_postremoval.3.f: """"
+usfp_indian_postremoval.3.a: ""
+usfp_indian_postremoval.3.b: ""
+
+usfp_indian_postremoval.4.t: "The Sequoyah Constitution"
+usfp_indian_postremoval.4.d: ""
+usfp_indian_postremoval.4.f: """"
+usfp_indian_postremoval.4.a: ""
+usfp_indian_postremoval.4.b: ""
+
+
+
 usfp_indian_althist.1.t: "The Great [SCOPE.sCountry('sioux_scope').GetAdjective] Council"
 usfp_indian_althist.1.d: "Decades of holding a dominant position on the northern plains has done well for the [SCOPE.sCountry('sioux_scope').GetName]. As their trade links with [ROOT.GetCountry.GetAdjective] border towns have flourished, so too have new ideas flowed into the plains. Now, a council of all the [SCOPE.sCountry('sioux_scope').GetAdjectiveNoFormatting] bands has agreed to adopt a formal government structure under the leadership of [SCOPE.sCountry('sioux_scope').GetRuler.GetFullName]."
 usfp_indian_althist.1.f: "The Seven Council Fires had met for generations, but this meeting was different. The words of [SCOPE.sCountry('sioux_scope').GetRuler.GetFullNameNoFormatting] already held such sway that the naming of a permanent sitting council was a formality. The [SCOPE.sCountry('sioux_scope').GetNameNoFormatting] was united behind [SCOPE.sCountry('sioux_scope').GetRuler.GetHerHis] vision for the future."
 usfp_indian_althist.1.a: "It will be a civilization of their own making."
 usfp_indian_althist.1.b: "This country is ours, and we intend to stay here."
+
+usfp_usfp_indian_althist.2.t: ""
+usfp_usfp_indian_althist.2.d: ""
+usfp_usfp_indian_althist.2.f: """"
+usfp_usfp_indian_althist.2.a: ""
+usfp_usfp_indian_althist.2.b: ""
+
+usfp_usfp_indian_althist.3.t: ""
+usfp_usfp_indian_althist.3.d: ""
+usfp_usfp_indian_althist.3.f: """"
+usfp_usfp_indian_althist.3.a: ""
+usfp_usfp_indian_althist.3.b: ""
+
+usfp_usfp_indian_althist.4.t: ""
+usfp_usfp_indian_althist.4.d: ""
+usfp_usfp_indian_althist.4.f: """"
+usfp_usfp_indian_althist.4.a: ""
+usfp_usfp_indian_althist.4.b: ""
 
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"

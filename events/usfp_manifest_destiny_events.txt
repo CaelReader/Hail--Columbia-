@@ -2641,5 +2641,22 @@ usfp_manifest_destiny.26 = {
 
 }
 #Oklahoma Land Runs
-#Oklahoma Statehood
-#Bear Flag Revolt
+usfp_manifest_destiny.27 = {
+	type = country_event
+	placement = scope:oklahoma_state
+	cooldown = { years = 100 } #once
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_manifest_destiny.27.t
+	desc = usfp_manifest_destiny.27.d
+	flavor = usfp_manifest_destiny.27.f
+	dlc = dlc_usfp
+	duration = 3
+}
+#Californian Revolt

@@ -1,11 +1,211 @@
 ﻿namespace = usfp_indian_wars
 
-#Red Cloud Spawn
+#Red Cloud's War
+usfp_indian_wars.1 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 100} #once
+	event_image = {
+		video = "europenorthamerica_before_the_battle"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_indian_wars.1.t
+	desc = usfp_indian_wars.1.d
+	flavor = usfp_indian_wars.1.f
+	dlc = dlc_usfp
+	duration = 3
+}
 #Red Cloud Peace Offer
+usfp_indian_wars.2 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 100} #once
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_indian_wars.2.t
+	desc = usfp_indian_wars.2.d
+	flavor = usfp_indian_wars.2.f
+	dlc = dlc_usfp
+	duration = 3
+}
 #Black Hills Gold
+usfp_indian_wars.3 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 100} #once
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_indian_wars.3.t
+	desc = usfp_indian_wars.3.d
+	flavor = usfp_indian_wars.3.f
+	dlc = dlc_usfp
+	duration = 3
+}
 #Little Bighorn
+usfp_indian_wars.4 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 100} #once
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	title = usfp_indian_wars.4.t
+	desc = usfp_indian_wars.4.d
+	flavor = usfp_indian_wars.4.f
+	dlc = dlc_usfp
+	duration = 3
+}
 #Sioux-Crow War
+usfp_indian_wars.5 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 100} #once
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_indian_wars.5.t
+	desc = usfp_indian_wars.5.d
+	flavor = usfp_indian_wars.5.f
+	dlc = dlc_usfp
+	duration = 3
+}
 #Generic Massacre
+usfp_indian_wars.6 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 5}
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	title = usfp_indian_wars.6.t
+	desc = usfp_indian_wars.6.d
+	flavor = usfp_indian_wars.6.f
+	dlc = dlc_usfp
+	duration = 3
+}
 #Modoc War - Peace Tent Ambush - Captain Jack's Stronghold
-#Nez Perce War
+usfp_indian_wars.7 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 100} #once
+	event_image = {
+		video = "ep1_ca_mountain_pass_military"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	title = usfp_indian_wars.7.t
+	desc = usfp_indian_wars.7.d
+	flavor = usfp_indian_wars.7.f
+	dlc = dlc_usfp
+	duration = 3
+}
+#Flight of the Nez Perce
+usfp_indian_wars.8 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 100} #once
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_indian_wars.8.t
+	desc = usfp_indian_wars.8.d
+	flavor = usfp_indian_wars.8.f
+	dlc = dlc_usfp
+	duration = 3
+}
 #Navajo Long Walk
+usfp_indian_wars.9 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 100} #once
+	event_image = {
+		video = "asia_poor_people_moving"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	title = usfp_indian_wars.9.t
+	desc = usfp_indian_wars.9.d
+	flavor = usfp_indian_wars.9.f
+	dlc = dlc_usfp
+	duration = 3
+}
+#Railway Bison Hunts
+usfp_indian_wars.10 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 100} #once
+	event_image = {
+		video = "unspecific_trains"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	
+	title = usfp_indian_wars.10.t
+	desc = usfp_indian_wars.10.d
+	flavor = usfp_indian_wars.10.f
+	dlc = dlc_usfp
+	duration = 3
+}
+#End of the Buffalo
+usfp_indian_wars.11 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 100} #once
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	title = usfp_indian_wars.10.t
+	desc = usfp_indian_wars.10.d
+	flavor = usfp_indian_wars.10.f
+	dlc = dlc_usfp
+	duration = 3
+}

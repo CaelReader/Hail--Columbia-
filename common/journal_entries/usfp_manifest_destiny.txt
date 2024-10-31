@@ -429,15 +429,17 @@ usfp_je_western_border = {
 		exists = c:USA
 		c:USA = ROOT
 		has_law = law_type:law_no_colonial_affairs
+		NOR = {
+			has_state_in_state_region = STATE_SOUTH_DAKOTA
+			has_state_in_state_region = STATE_NORTH_DAKOTA
+			has_state_in_state_region = STATE_MONTANA
+			has_state_in_state_region = STATE_UTAH
+			has_state_in_state_region = STATE_WYOMING
+		}
 	}
 
 	possible = {
 		has_law = law_type:law_no_colonial_affairs
-		NOR = {
-			owns_entire_state_region = STATE_SOUTH_DAKOTA
-			owns_entire_state_region = STATE_NORTH_DAKOTA
-			has_state_in_state_region = STATE_MONTANA
-		}
 	}
 
 	immediate = {
@@ -446,18 +448,39 @@ usfp_je_western_border = {
 		}
 	}
 
-	on_monthly_pulse = {
+	on_yearly_pulse = {
 		random_events = {
 			300 = 0
-			#Mormons
-			#Gold Miners
-			#Cross-Border Raid
+			100 = usfp_indian_althist.1 #Sioux become centralized
+			100 = usfp_indian_althist.2 #Border Raid
+			100 = usfp_indian_althist.3 #Gold Miners
+			100 = usfp_indian_althist.4 #Mormons
 		}
 	}
 
 	fail = {
+		OR = {
+			NOT = {
+				has_law = law_type:law_no_colonial_affairs
+			}
+			OR = {
+				has_state_in_state_region = STATE_SOUTH_DAKOTA
+				has_state_in_state_region = STATE_NORTH_DAKOTA
+				has_state_in_state_region = STATE_MONTANA
+				has_state_in_state_region = STATE_UTAH
+				has_state_in_state_region = STATE_WYOMING
+			}
+		}
+	}
+
+	invalid = {
 		NOT = {
-			has_law = law_type:law_no_colonial_affairs
+			any_country = {
+				capital = {
+					region = sr:region_great_plains
+				}
+				is_country_type = decentralized
+			}
 		}
 	}
 }

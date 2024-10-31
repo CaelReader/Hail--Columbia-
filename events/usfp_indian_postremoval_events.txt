@@ -1,7 +1,78 @@
 ﻿namespace = usfp_indian_postremoval
 
-#Dawes Act
 #Ghost Dance Begins
+usfp_indian_postremoval.1 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 100} #once
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	
+	title = usfp_indian_postremoval.1.t
+	desc = usfp_indian_postremoval.1.d
+	flavor = usfp_indian_postremoval.1.f
+	dlc = dlc_usfp
+	duration = 3
+}
 #Wounded Knee Massacre
+usfp_indian_postremoval.2 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 100} #once
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	title = usfp_indian_postremoval.2.t
+	desc = usfp_indian_postremoval.2.d
+	flavor = usfp_indian_postremoval.2.f
+	dlc = dlc_usfp
+	duration = 3
+}
 #Ghost Dance Fizzles
+usfp_indian_postremoval.3 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 100} #once
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+	title = usfp_indian_postremoval.3.t
+	desc = usfp_indian_postremoval.3.d
+	flavor = usfp_indian_postremoval.3.f
+	dlc = dlc_usfp
+	duration = 3
+}
 #Sequoyah Constitution
+usfp_indian_postremoval.4 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 100} #once
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+	
+	title = usfp_indian_postremoval.4.t
+	desc = usfp_indian_postremoval.4.d
+	flavor = usfp_indian_postremoval.4.f
+	dlc = dlc_usfp
+	duration = 3
+}
