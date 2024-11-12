@@ -498,7 +498,7 @@
 	s:STATE_CHIHUAHUA = {
 		set_owner_of_provinces = {
 			country = c:APC
-			provinces = { x8FB2D5 x3A74AB xC6D1E5 x248F66 xE7BA3B x51153D x8910AF x80773D x662FF9 xB009D9 xADD8B8 x535D1C x55FB35 xF97F04 x432FE4 xDA4A32 }
+			provinces = { x8FB2D5 x3A74AB xC6D1E5 x248F66 xE7BA3B x51153D x8910AF x80773D x662FF9 xB009D9 xADD8B8 x535D1C x55FB35 xF97F04 x432FE4 xDA4A32 xE941BF }
 		}
 		region_state:APC = {
 			every_scope_pop = {
@@ -514,7 +514,7 @@
 		set_owner_of_provinces = {
 			country = c:APC
 			provinces = { x5D3843 x90CE2B xC9D330 xA55E5C x951736 x94A617 x6BB536 xB9118E xBB8A78 x760779 x2DA551 x24C127 x4E19F4 x0E125F 
-			xE3F481 x601A4F x6E8169 xA3A810 xC369DB x6958D6 xD08070 }
+			xE3F481 x601A4F x6E8169 xA3A810 xC369DB x6958D6 xD08070 xB16A3C }
 		}
 		region_state:APC = {
 			every_scope_pop = {

@@ -44,6 +44,7 @@ usfp_indian_althist.1 = {
 			save_scope_as = sioux_scope
 			set_country_type = unrecognized
 			add_technology_researched = repeaters
+			activate_law = law_type:law_free_trade
 		}
 	}
 
@@ -113,6 +114,7 @@ usfp_indian_althist.1 = {
 				add_claim = c:LKT
 			}
 		}
+		create_unidirectional_truce = { country = c:LKT months = 36 }
 	}
 
 	option = {
@@ -181,6 +183,7 @@ usfp_indian_althist.1 = {
 				add_claim = c:LKT
 			}
 		}
+		create_unidirectional_truce = { country = c:LKT months = 36 }
 		play_as = c:LKT
 	}
 }
@@ -223,11 +226,11 @@ usfp_indian_althist.3 = {
 	dlc = dlc_usfp
 	duration = 3
 }
-#Mormon Claims
+#Mormon Claims free real estate
 usfp_indian_althist.4 = {
 	type = country_event
 	placement = ROOT
-	cooldown = {years = 5}
+	cooldown = {years = 300} #once
 	event_image = {
 		video = "europenorthamerica_gold_prospectors"
 	}
@@ -241,5 +244,98 @@ usfp_indian_althist.4 = {
 	flavor = usfp_indian_althist.4.f
 	dlc = dlc_usfp
 	duration = 3
+
+	trigger = {
+		exists = c:DES
+		c:DES = {
+			NOT = {
+				has_law = law_type:law_no_colonial_affairs
+			}
+		}
+	}
+
+	immediate = {
+		c:DES = {
+			save_scope_as = deseret_scope
+		}
+	}
+
+	#oh dear
+	option = {
+		name = usfp_indian_althist.4.a
+		default_option = yes
+		show_as_tooltip = {
+			s:STATE_WYOMING = {
+				add_claim = c:DES
+			}
+			s:STATE_IDAHO = {
+				add_claim = c:DES
+			}
+			s:STATE_NEVADA = {
+				add_claim = c:DES
+			}
+			s:STATE_CALIFORNIA = {
+				add_claim = c:DES
+			}
+			s:STATE_ARIZONA = {
+				add_claim = c:DES
+			}
+			s:STATE_NEW_MEXICO = {
+				add_claim = c:DES
+			}
+			c:DES = {
+				change_relations = {
+					country = c:MEX
+					value = -20
+				}
+			}
+		}
+	}
+	#disavow
+	option = {
+		name = usfp_indian_althist.4.b
+		show_as_tooltip = {
+			s:STATE_WYOMING = {
+				add_claim = c:DES
+			}
+			s:STATE_IDAHO = {
+				add_claim = c:DES
+			}
+			s:STATE_NEVADA = {
+				add_claim = c:DES
+			}
+			s:STATE_CALIFORNIA = {
+				add_claim = c:DES
+			}
+			s:STATE_ARIZONA = {
+				add_claim = c:DES
+			}
+			s:STATE_NEW_MEXICO = {
+				add_claim = c:DES
+			}
+			c:DES = {
+				change_relations = {
+					country = c:MEX
+					value = -20
+				}
+			}
+		}
+		change_relations = {
+			country = c:DES
+			value = -25
+		}
+		if = {
+			limit = {
+				c:DES = {
+					is_subject_of = root
+				}
+			 }
+			 c:DES = {
+				make_independent = yes
+			 }
+		}
+	}
+
 }
 #Families vs the Army
+#Comanche centralization?

@@ -682,6 +682,11 @@ usfp_usa.22.d: "This year marks the 100th anniversary of the signing of the Decl
 usfp_usa.22.f: "Crowds buzzed through the streets set aside for the exposition, winding their way past the grand pavillions that housed all manner of wonders. As the sun set, families gathered on the grass to watch a grand fireworks display that illuminated the city in dazzling displays of red, white and blue."
 usfp_usa.22.a: "Here's to another 100 years!"
 
+usfp_usa.23.t: "The [ROOT.GetCountry.GetRuler.GetLastName] Presidency"
+usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an inedible mark on the history of the office. After asserting the powers of the Federal government in the Nullification Crisis, he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the Supreme Court rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of slavery continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
+usfp_usa.23.f: ""But you must remember, my fellow-citizens, that eternal vigilance by the people is the price of liberty, and that you must pay the price if you wish to secure the blessing."" #Andrew Jackson
+usfp_usa.23.a: "This is a time of opportunity."
+
 ### Labor Events
 usfp_usa_labor.1.t: "The Industrial Workers of the World"
 usfp_usa_labor.1.d: "A convention of radical trade unionists has met in [SCOPE.sState('illinois_scope').GetCityHubName] to found the Industrial Workers of the World. Taking a much more militant stance than traditional labor organizations, the IWW seeks to unite workers of all trades into one big union. Their stated objective is the abolition of the wage system via direct action, general strikes, and sabotage."
@@ -1068,13 +1073,13 @@ usfp_indian_wars.2.f: """"
 usfp_indian_wars.2.a: ""
 usfp_indian_wars.2.b: ""
 
-usfp_indian_wars.3.t: "Black Hills Gold"
+usfp_indian_wars.3.t: "There's Gold In Those Black Hills"
 usfp_indian_wars.3.d: ""
 usfp_indian_wars.3.f: """"
 usfp_indian_wars.3.a: ""
 usfp_indian_wars.3.b: ""
 
-usfp_indian_wars.4.t: "Custer's Last Stand"
+usfp_indian_wars.4.t: "[SCOPE.sCharacter('custer_scope').GetLastName]'s Last Stand"
 usfp_indian_wars.4.d: ""
 usfp_indian_wars.4.f: """"
 usfp_indian_wars.4.a: ""
@@ -1098,17 +1103,17 @@ usfp_indian_wars.7.f: """"
 usfp_indian_wars.7.a: ""
 usfp_indian_wars.7.b: ""
 
-usfp_indian_wars.8.t: "Flight of hte Nez Perce"
-usfp_indian_wars.8.d: ""
-usfp_indian_wars.8.f: """"
-usfp_indian_wars.8.a: ""
-usfp_indian_wars.8.b: ""
+usfp_indian_wars.8.t: "Flight of the [SCOPE.sCulture('nez_perce_culture').GetName]"
+usfp_indian_wars.8.d: "Several bands of the [SCOPE.sCulture('nez_perce_culture').GetName] have rejected the treaties granting us control over their ancestral lands. With remarkable fighting skill they have led the Army on a 1000-mile chase across the plains before being cornered and made to surrender in eastern [SCOPE.sStateRegion('montana_region_scope').GetName]."
+usfp_indian_wars.8.f: ""I am tired of fighting. Our chiefs are killed. The old men are all dead. It is the young men who say 'yes' or 'no'. He who led on the young men is dead.\n\nIt is cold, and we have no blankets; the little children are freezing to death. My people, some of them, have run away to the hills, and have no blankets, no food. No one knows where they are — perhaps freezing to death. I want to have time to look for my children, to see how many I can find. Maybe I shall find them among the dead.\n\nHear me, my chiefs! I am tired; my heart is sick and sad. From where the sun now stands, I will fight no more forever."" #Chief Joseph, possibly made up/embellished by Charles Erskine Scott Wood
+usfp_indian_wars.8.a: "Ship these rebels off to Indian Territory."
+usfp_indian_wars.8.b: "They showed great spirit. Let them return to [SCOPE.sState('idaho_scope').GetName]."
 
-usfp_indian_wars.9.t: "Long Walk of the Navajo"
-usfp_indian_wars.9.d: ""
-usfp_indian_wars.9.f: """"
-usfp_indian_wars.9.a: ""
-usfp_indian_wars.9.b: ""
+usfp_indian_wars.9.t: "Long Walk of the [SCOPE.sCulture('navajo_culture').GetName]"
+usfp_indian_wars.9.d: "To secure our control over the lands of the [SCOPE.sCulture('navajo_culture').GetName], the Army has forced them to march across the desert into captivity in eastern [SCOPE.sState('new_mexico_scope').GetName]."
+usfp_indian_wars.9.f: ""When we crossed the Rio Grande, many people drowned. We didn't know how to swim — there was hardly any water deep enough to swim in at home. Some babies, children, and some of the older men and women were swept away by the river current. We must not ever forget their screams and the last we saw of them — hands, a let, or strands of their hair floating."" #Excerpt from "1864" By Luci Tapahonso
+usfp_indian_wars.9.a: "A necessary measure."
+usfp_indian_wars.9.b: "We should ensure they are looked after."
 
 usfp_indian_wars.10.t: "Hunting By Rail"
 usfp_indian_wars.10.d: ""
@@ -1116,11 +1121,23 @@ usfp_indian_wars.10.f: """"
 usfp_indian_wars.10.a: ""
 usfp_indian_wars.10.b: ""
 
-usfp_indian_wars.10.t: "End of the Buffalo"
-usfp_indian_wars.10.d: ""
-usfp_indian_wars.10.f: """"
-usfp_indian_wars.10.a: ""
-usfp_indian_wars.10.b: ""
+usfp_indian_wars.11.t: "End of the Buffalo"
+usfp_indian_wars.11.d: ""
+usfp_indian_wars.11.f: """"
+usfp_indian_wars.11.a: ""
+usfp_indian_wars.11.b: ""
+
+usfp_indian_wars.12.t: "Allotment"
+usfp_indian_wars.12.d: ""
+usfp_indian_wars.12.f: """"
+usfp_indian_wars.12.a: ""
+usfp_indian_wars.12.b: ""
+
+usfp_indian_wars.13.t: "The March of Civilization"
+usfp_indian_wars.13.d: "Gold, Land, and Manifest Destiny continue to propel our settlers westward into the Great Plains. As resistance to this encroachment continues to escalate, we will need to determine our policy in dealing with the Indians."
+usfp_indian_wars.13.f: ""My heart is a stone: heavy with sadness for my people; cold with the knowledge that no treaty will keep whites out of our lands; hard with the determination to resist as long as I live and breathe."" #Tecumseh
+usfp_indian_wars.13.a: "Settlement and negotiation will bring these lands into civilization."
+usfp_indian_wars.13.b: "The only good Indian is a dead Indian."
 
 usfp_indian_postremoval.1.t: "The Ghost Dance"
 usfp_indian_postremoval.1.d: ""
@@ -1166,11 +1183,11 @@ usfp_usfp_indian_althist.3.f: """"
 usfp_usfp_indian_althist.3.a: ""
 usfp_usfp_indian_althist.3.b: ""
 
-usfp_usfp_indian_althist.4.t: ""
-usfp_usfp_indian_althist.4.d: ""
-usfp_usfp_indian_althist.4.f: """"
-usfp_usfp_indian_althist.4.a: ""
-usfp_usfp_indian_althist.4.b: ""
+usfp_usfp_indian_althist.4.t: "Mormons Moving In"
+usfp_usfp_indian_althist.4.d: "The Mormons of [SCOPE.sCountry('deseret_scope').GetName] have claimed a vast swath of the West as rightfully the territory of their godly colony. Frustrated settlers have begun to flock to their 'New Zion' in order to evade our anticolonial policies."
+usfp_usfp_indian_althist.4.f: ""It is the duty of a Saint of God to gain all the influence he can on this earth, and to use every particle of that influence to do good."" #Brigham Young
+usfp_usfp_indian_althist.4.a: "This can bring only trouble."
+usfp_usfp_indian_althist.4.b: "Disavow and denounce these criminals!"
 
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"

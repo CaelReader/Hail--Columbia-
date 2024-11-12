@@ -61,9 +61,9 @@ usfp_indian_wars.3 = {
 usfp_indian_wars.4 = {
 	type = country_event
 	placement = ROOT
-	cooldown = {years = 100} #once
+	cooldown = {years = 300} #once
 	event_image = {
-		video = "europenorthamerica_native_american"
+		video = "europenorthamerica_before_the_battle"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -75,6 +75,59 @@ usfp_indian_wars.4 = {
 	flavor = usfp_indian_wars.4.f
 	dlc = dlc_usfp
 	duration = 3
+
+	trigger = {
+		any_military_formation = {
+			is_army = yes
+			any_scope_character = {
+				has_role = general
+				has_trait = reckless
+			}
+			current_hq = p:x924593.land_hq
+		}
+		exists = c:LKT
+		has_war_with = c:LKT
+	}
+
+	immediate = {
+		random_military_formation = {
+			limit = {
+				is_army = yes
+				any_scope_character = {
+					has_role = general
+					has_trait = reckless
+				}
+				current_hq = p:x924593.land_hq
+			}
+			random_scope_general = {
+				limit = {
+					has_trait = reckless
+				}
+				save_scope_as = custer_scope
+			}
+		}
+		c:LKT = {
+			save_scope_as = sioux_scope
+		}
+	}
+
+	#what the fuck
+	option = {
+		name = usfp_indian_wars.4.a
+		default_option = yes
+		scope:custer_scope = {
+			kill_character = yes
+		}
+		random_scope_war = {
+			limit = {
+				attacker_warleader = c:LKT
+			}
+			add_war_war_support = {
+				target = root
+				value = 15
+			}
+		}
+	}
 }
 #Sioux-Crow War
 usfp_indian_wars.5 = {
@@ -94,6 +147,11 @@ usfp_indian_wars.5 = {
 	flavor = usfp_indian_wars.5.f
 	dlc = dlc_usfp
 	duration = 3
+
+	trigger = {
+		exists = c:LKT
+		exists = c:ABS
+	}
 }
 #Generic Massacre
 usfp_indian_wars.6 = {
@@ -132,12 +190,16 @@ usfp_indian_wars.7 = {
 	flavor = usfp_indian_wars.7.f
 	dlc = dlc_usfp
 	duration = 3
+	trigger = {
+		exists = c:usfp_MDC
+		has_war_with = c:usfp_MDC
+	}
 }
 #Flight of the Nez Perce
 usfp_indian_wars.8 = {
 	type = country_event
-	placement = ROOT
-	cooldown = {years = 100} #once
+	placement = scope:montana_scope
+	cooldown = {years = 300} #once
 	event_image = {
 		video = "europenorthamerica_native_american"
 	}
@@ -151,12 +213,78 @@ usfp_indian_wars.8 = {
 	flavor = usfp_indian_wars.8.f
 	dlc = dlc_usfp
 	duration = 3
+	trigger = {
+		NOT = {
+			exists = c:NZP
+		}
+		owns_entire_state_region = STATE_IDAHO
+		has_state_in_state_region = STATE_MONTANA
+	}
+
+	immediate = {
+		cu:nez_perce = {
+			save_scope_as = nez_perce_culture
+		}
+		s:STATE_MONTANA = {
+			save_scope_as = montana_region_scope
+			region_state:USA = {
+				save_scope_as = montana_scope
+			}
+		}
+		s:STATE_IDAHO.region_state:USA = {
+			save_scope_as = idaho_scope
+		}
+		s:STATE_OKLAHOMA = {
+			random_scope_state = {
+				limit = {
+					OR = {
+						owner = c:USA
+						owner = c:SEQ
+					}
+				}
+				save_scope_as = indian_territory_scope
+			}
+		}
+	}
+
+	#ship them to Indian Territory
+	option = {
+		name = usfp_indian_wars.8.a
+		default_option = yes
+		custom_tooltip = {
+			text = usfp_indian_wars.8.a.tt
+			scope:indian_territory_scope = {
+				create_pop = {
+					culture = nez_perce
+					size = 418
+				}
+			}
+		}
+		scope:idaho_scope = {
+			usfp_loyalize_settlers_in_state = {
+				LOYALISTS = small_radicals
+			}
+		}
+	}
+	#allow them to return to Idaho
+	option = {
+		name = usfp_indian_wars.8.b
+		scope:idaho_scope = {
+			add_loyalists_in_state = {
+				culture = cu:nez_perce
+				value = large_radicals
+			}
+			usfp_radicalize_settlers_in_state = {
+				RADICALS = small_radicals
+			}
+		}
+	}
 }
 #Navajo Long Walk
 usfp_indian_wars.9 = {
 	type = country_event
-	placement = ROOT
-	cooldown = {years = 100} #once
+	placement = scope:new_mexico_scope
+	cooldown = {years = 300} #once
 	event_image = {
 		video = "asia_poor_people_moving"
 	}
@@ -170,12 +298,98 @@ usfp_indian_wars.9 = {
 	flavor = usfp_indian_wars.9.f
 	dlc = dlc_usfp
 	duration = 3
+	trigger = {
+		NOT = {
+			exists = c:NVJ
+		}
+		owns_entire_state_region = STATE_NEW_MEXICO
+	}
+
+	immediate = {
+		s:STATE_NEW_MEXICO.region_state:USA = {
+			save_scope_as = new_mexico_scope
+		}
+		s:STATE_ARIZONA.region_state:USA ?= {
+			save_scope_as = arizona_scope
+		}
+		s:STATE_UTAH.region_state:USA ?= {
+			save_scope_as = utah_scope
+		}
+		cu:navajo = {
+			save_scope_as = navajo_culture
+		}
+	}
+
+	#welp
+	option = {
+		name = usfp_indian_wars.9.a
+		default_option = yes
+		scope:arizona_scope ?= {
+			every_scope_pop = {
+				limit = {
+					culture = cu:navajo
+				}
+				move_pop = scope:new_mexico_scope
+			}
+		}
+		scope:utah_scope = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:navajo
+				}
+				move_pop = scope:new_mexico_scope
+			}
+		}
+		scope:new_mexico_scope = {
+			kill_population_percent_in_state = {
+				percent = 0.05
+				culture = cu:navajo
+			}
+			usfp_loyalize_dixies_in_state = {
+				LOYALISTS = small_radicals
+			}
+			add_culture_standard_of_living_modifier = {
+				culture = cu:navajo
+				multiplier = -4
+			}
+		}
+	}
+	#help
+	option = {
+		name = usfp_indian_wars.9.b
+		scope:arizona_scope ?= {
+			every_scope_pop = {
+				limit = {
+					culture = cu:navajo
+				}
+				move_pop = scope:new_mexico_scope
+			}
+		}
+		scope:utah_scope = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:navajo
+				}
+				move_pop = scope:new_mexico_scope
+			}
+		}
+		scope:new_mexico_scope = {
+			kill_population_percent_in_state = {
+				percent = 0.03
+				culture = cu:navajo
+			}
+			add_culture_standard_of_living_modifier = {
+				culture = cu:navajo
+				multiplier = -2
+			}
+		}
+	}
 }
 #Railway Bison Hunts
 usfp_indian_wars.10 = {
 	type = country_event
 	placement = ROOT
-	cooldown = {years = 100} #once
+	cooldown = {years = 300} #once
 	event_image = {
 		video = "unspecific_trains"
 	}
@@ -189,12 +403,47 @@ usfp_indian_wars.10 = {
 	flavor = usfp_indian_wars.10.f
 	dlc = dlc_usfp
 	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			state_region = sr:region_great_plains
+			state_region = {
+				any_scope_state = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+			}
+			any_scope_building = {
+				is_building_type = building_railway
+			}
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = sr:region_great_plains
+				state_region = {
+					any_scope_state = {
+						owner = {
+							is_country_type = decentralized
+						}
+					}
+				}
+				any_scope_building = {
+					is_building_type = building_railway
+				}
+			}
+			save_scope_as = railway_hunting_state
+		}
+	}
 }
 #End of the Buffalo
 usfp_indian_wars.11 = {
 	type = country_event
 	placement = ROOT
-	cooldown = {years = 100} #once
+	cooldown = {years = 300} #once
 	event_image = {
 		video = "europenorthamerica_native_american"
 	}
@@ -203,9 +452,154 @@ usfp_indian_wars.11 = {
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	
-	title = usfp_indian_wars.10.t
-	desc = usfp_indian_wars.10.d
-	flavor = usfp_indian_wars.10.f
+	title = usfp_indian_wars.11.t
+	desc = usfp_indian_wars.11.d
+	flavor = usfp_indian_wars.11.f
 	dlc = dlc_usfp
 	duration = 3
+
+	immediate = {
+		set_global_variable = buffalo_extinction
+	}
+
+	#welp
+	option = {
+		name = usfp_indian_wars.11.a
+		default_option = yes
+		every_scope_state = {
+			limit = {
+				state_region = sr:region_great_plains
+				state_region = {
+					any_scope_state = {
+						owner = {
+							is_country_type = decentralized
+						}
+					}
+				}
+			}
+			state_region = {
+				every_scope_state = {
+					limit = {
+						owner = {
+							is_country_type = decentralized
+						}
+					}
+					owner = {
+						set_tension = {
+							country = root
+							value = 0
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#Dawes Act as the end of the Indian Wars
+usfp_indian_wars.12 = {
+	type = country_event
+	placement = ROOT
+	cooldown = {years = 300} #once
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_indian_wars.12.t
+	desc = usfp_indian_wars.12.d
+	flavor = usfp_indian_wars.12.f
+	dlc = dlc_usfp
+	duration = 3
+
+	#okay
+	option = {
+		name = usfp_indian_wars.12.a
+		default_option = yes
+		remove_modifier = usfp_indian_agencies_modifier
+		usfp_enable_american_indian_culture = yes
+	}
+}
+#Indian Wars startup event
+usfp_indian_wars.13 = {
+	type = country_event
+	placement = scope:south_dakota_scope
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_indian_wars.13.t
+	desc = usfp_indian_wars.13.d
+	flavor = usfp_indian_wars.13.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+		s:STATE_SOUTH_DAKOTA.region_state:USA = {
+			save_scope_as = south_dakota_scope
+		} 
+	}
+
+	#peace policy
+	option = {
+		name = usfp_indian_wars.13.a
+		default_option = yes
+		usfp_manifest_more_destiny_low_effect = yes
+		add_modifier = {
+			name = usfp_indian_agencies_modifier
+			years = 20
+		}
+	}
+	#war policy
+	option = {
+		name = usfp_indian_wars.13.b
+		highlighted_option = yes
+		show_as_unavailable = {always = yes}
+		trigger = {
+			ruler = {
+				OR = {
+					usfp_manifest_destiny_pro_expansion_trigger = yes
+					has_trait = bigoted
+				}
+			}
+		}
+		every_scope_state = {
+			limit = {
+				state_region = sr:region_great_plains
+				state_region = {
+					any_scope_state = {
+						owner = {
+							is_country_type = decentralized
+						}
+					}
+				}
+			}
+			state_region = {
+				every_scope_state = {
+					limit = {
+						owner = {
+							is_country_type = decentralized
+						}
+					}
+					owner = {
+						change_tension = {
+							country = root
+							value = 50
+						}
+					}
+				}
+			}
+		}
+		usfp_manifest_more_destiny_low_effect = yes
+		usfp_loyalize_frontier_settlers = {
+			LOYALISTS = small_radicals
+		}
+	}
+
 }

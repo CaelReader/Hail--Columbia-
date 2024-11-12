@@ -166,5 +166,6 @@
 			name = usfp_dead_presidents_var
 			value = 0
 		}
+		trigger_event = usfp_usa.23
 	}
 }

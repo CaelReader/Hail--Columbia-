@@ -550,6 +550,7 @@ usfp_demand_bc_button = {
 				}
 			}
 		}
+		has_variable = manifest_destiny_var
 	}
 
 	possible = {

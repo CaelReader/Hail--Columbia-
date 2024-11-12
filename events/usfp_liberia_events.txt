@@ -32,7 +32,7 @@ usfp_liberia.1 = {
 		}
 	}
 
-	#okay
+	#nah
 	option = {
 		name = usfp_liberia.1.a
 		default_option = yes

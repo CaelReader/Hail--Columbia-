@@ -1783,3 +1783,79 @@ usfp_usa.22 = {
 		}
 	}
 }
+#Intro event
+usfp_usa.23 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_usa.dds"
+	gui_window = event_window_1char_propaganda
+	left_icon = root.ruler
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	placement = root
+
+	title = usfp_usa.23.t
+	desc = usfp_usa.23.d
+	flavor = usfp_usa.23.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+		ruler = {
+			save_scope_as = jackson_scope
+		}
+		ideology:ideology_jacksonian_democrat = {
+			save_scope_as = jacksonian_ideology
+		}
+		s:STATE_FLORIDA = {
+			save_scope_as = florida_region_scope
+		}
+	}
+
+	option = {
+		name = usfp_usa.23.a
+		show_as_tooltip = {
+			add_journal_entry = {
+				type = je_indian_removal
+			}
+			add_journal_entry = {
+				type = je_acw_countdown
+			}
+			add_journal_entry = {
+				type = je_usfp_a_house_divided_missouri_compromise
+			}
+			add_modifier = {
+				name = usfp_missouri_compromise_decaying
+				years = 25
+				is_decaying = yes
+			}
+			add_modifier = {
+				name = albany_regency_uscwf
+				months = 50
+			}
+			add_modifier = {
+				name = usfp_second_great_awakening
+				is_decaying = yes
+				years = 5
+			}
+			add_modifier = {
+				name = usfp_second_party_system_modifier
+			}
+			add_modifier = {
+				name = usfp_victory_over_nullification_crisis_modifier
+				is_decaying = yes
+				years = 2	
+			}
+			start_enactment = law_type:law_universal_suffrage
+		}
+		hidden_effect = {
+			ruler = {
+				remove_as_interest_group_leader = yes
+			}
+		}
+	}
+
+
+}

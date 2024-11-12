@@ -182,17 +182,20 @@ usfp_offer_treaty_of_gh_mex_desc: "Our war with the United States is unwinnable.
 
 plains_formation_tt: "Any [concept_army] in the [SCOPE.sStrategicRegion('great_plains_region').GetName] [concept_hq] has at least #variable 20#! [Concept('concept_unit','$concept_units$')] and a [concept_general]"
 
-usfp_je_western_border: "The Western Demarcation Line"
+usfp_je_western_border: "The Indian Preserve"
 usfp_je_western_border_reason: "Much as King George did before the revolution, we have now drawn a line across our western border that no White settlers are to cross. We have committed to maintaining a peaceable boundary with the Great Plains nations, much to the dismay of prospective settlers."
 
 usfp_indian_appropiations_button: "End the Treaty System"
 usfp_indian_appropiations_button_desc: "Our previous attempts to forge treaties with Indian tribes have proven too cumbersome for our purposes. With the Indian Appropiation Act, we can streamline the acquisition of native lands by dealing with the Indians as individuals."
-usfp_indian_appropiations_button_tt: "The [ROOT.GetCountry.GetName] ceases to recognize any Indian tribe as an independent nation with which to conduct treaties."
+usfp_indian_appropiations_button_tt: "The [ROOT.GetCountry.GetName] ceases to recognize any Indian tribe as an independent nation with which to conduct new treaties."
 usfp_indian_appropiations_button_tt2: "All Indians within the [ROOT.GetCountry.GetName] are legally designated as wards of the federal government."
 usfp_enable_american_indian_culture_tt: "Indigenous North American [Concept('concept_pop', '$concept_pops$')] in our [Concept('concept_incorporated_state', '$concept_incorporated_states$')] will be merged into a combined [SCOPE.sCulture('american_indian_culture').GetName] [concept_culture] over time."
 
 usfp_demand_bc_button: "Demand British Columbia"
-usfp_demand_bc_button_desc: "The damnable brits should get their grubby hands off of the entire Oregon territory! Fifty-four Forty or Fight!"
+usfp_demand_bc_button_desc: "The damnable Brits should get their grubby hands off of the entire Oregon territory! Fifty-four Forty or Fight!"
 
 usfp_liberia_declare_independence: "Declare Independence"
 usfp_liberia_declare_independence_desc: "The time has come to form a proper Republic of Liberia in the model of the American system."
+
+usfp_je_indian_wars: "Indian Wars"
+usfp_liberia_declare_independence_desc: "In the past we have considered the Great Plains to be a vast desert to be left to the Indians. Now, as White settlers continue to pour west, it is our duty to pacify these lands and bring the Indian to heel - through force if necessary."

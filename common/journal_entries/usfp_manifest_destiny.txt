@@ -51,7 +51,6 @@ usfp_manifest_destiny_main = {
 	scripted_button = usfp_cuban_purchase_button
 	scripted_button = usfp_claim_canada_button
 	scripted_button = usfp_secure_trail_button
-	scripted_button = usfp_indian_appropiations_button
 
 
 	fail = {
@@ -429,6 +428,9 @@ usfp_je_western_border = {
 		exists = c:USA
 		c:USA = ROOT
 		has_law = law_type:law_no_colonial_affairs
+	}
+
+	possible = {
 		NOR = {
 			has_state_in_state_region = STATE_SOUTH_DAKOTA
 			has_state_in_state_region = STATE_NORTH_DAKOTA
@@ -436,10 +438,6 @@ usfp_je_western_border = {
 			has_state_in_state_region = STATE_UTAH
 			has_state_in_state_region = STATE_WYOMING
 		}
-	}
-
-	possible = {
-		has_law = law_type:law_no_colonial_affairs
 	}
 
 	immediate = {
@@ -483,4 +481,54 @@ usfp_je_western_border = {
 			}
 		}
 	}
+}
+
+usfp_je_indian_wars = {
+	icon = gfx/interface/icons/event_icons/event_military.dds
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		exists = c:USA
+		c:USA = ROOT
+		NOT = {
+			has_law = law_type:law_no_colonial_affairs
+		}
+	}
+
+	possible = {
+		has_journal_entry = usfp_manifest_destiny_main
+		has_technology_researched = repeaters
+		has_state_in_state_region = STATE_COLORADO
+		has_state_in_state_region = STATE_SOUTH_DAKOTA
+	}
+
+	invalid = {
+		has_law = law_type:law_no_colonial_affairs
+	}
+
+	complete = {
+		owns_entire_state_region = STATE_MONTANA
+		owns_entire_state_region = STATE_WYOMING
+		owns_entire_state_region = STATE_COLORADO
+		owns_entire_state_region = STATE_NORTH_DAKOTA
+		owns_entire_state_region = STATE_SOUTH_DAKOTA
+		owns_entire_state_region = STATE_NEBRASKA
+		owns_entire_state_region = STATE_KANSAS
+	}
+
+	immediate = {
+		trigger_event = usfp_indian_wars.13
+	}
+
+	on_complete = {
+		trigger_event = usfp_indian_wars.12
+	}
+
+	should_be_pinned_by_default = no
+
+	weight = 10
+
+	can_revolution_inherit = yes
+	
 }

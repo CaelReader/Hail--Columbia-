@@ -1759,6 +1759,7 @@ usfp_a_house_divided.19 = {
 	immediate = {
 		create_character = {
 			template = agitator_frederick_douglass
+			is_agitator = yes
 			on_created = {
 				set_variable = douglass_var
 				set_variable = { name = temp_event_target_in_use years = 4 }

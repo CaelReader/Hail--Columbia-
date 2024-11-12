@@ -73,7 +73,7 @@ ecchi_lkt_sitting_bull_character_template = {
     birth_date = 1822.10.15
     traits = { plains_commander popular_commander explorer experienced_offensive_planner }
     commander_rank = default
-    commander_usage = {
+    interest_group_leader_usage = {
 		country_trigger = {
             OR = {
                 AND = {
@@ -87,10 +87,12 @@ ecchi_lkt_sitting_bull_character_template = {
                 }
             }
         }
-		role = general
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
         earliest_usage_date = 1865.1.1
         latest_usage_date = 1890.12.15
-        chance = 90
+        chance = 100
     }
 }
 
@@ -166,6 +168,7 @@ ecchi_nzp_chief_joseph_character_template = {
     first_name = ecchi_Chief_Joseph
     last_name = ecchi_EmptyChief_Joseph
     historical = yes
+    heir = yes
     culture = cu:nez_perce
     female = no
     religion = animist

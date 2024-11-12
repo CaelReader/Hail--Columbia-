@@ -8,7 +8,7 @@ USCWF.1 = {
 	immediate = {
 		ruler = { set_variable = memento_mori_immunity }
 		trigger_event = { id = USCWF.2 years = 8 }
-		trigger_event = { id = USCWF.4 months = 7 }
+		# trigger_event = { id = USCWF.4 months = 7 }
 		#trick the AI into colonizing more
 		every_country = {
 			limit = {

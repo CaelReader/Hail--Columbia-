@@ -156,34 +156,70 @@ usfp_indian_removal_creek_button = {
 	}
 }
 
-usfp_indian_appropiations_button = {
-	name = "usfp_indian_appropiations_button"
-	desc = "usfp_indian_appropiations_button_desc"
+# usfp_indian_appropiations_button = {
+# 	name = "usfp_indian_appropiations_button"
+# 	desc = "usfp_indian_appropiations_button_desc"
+
+# 	visible = {
+# 		has_technology_researched = identification_documents
+# 	}
+
+# 	possible = {
+# 		NOR = {
+# 			has_law = law_type:law_no_colonial_affairs
+# 			has_law = law_type:law_multicultural
+# 		}
+# 		custom_tooltip = {
+# 			text = enough_manifest_destiny
+# 			var:manifest_destiny_var > 2
+# 		}
+# 	}
+
+# 	effect = {
+# 		cu:usfp_american_indian = {
+# 			save_temporary_scope_as = american_indian_culture
+# 		}
+# 		custom_tooltip = usfp_indian_appropiations_button_tt
+# 		custom_tooltip = usfp_indian_appropiations_button_tt2
+# 		usfp_enable_american_indian_culture = yes
+# 	}
+
+# 	ai_chance = {
+# 		base = 100
+# 	}
+# }
+
+usfp_provoke_lakota_war_button = {
+	name = "usfp_provoke_lakota_war_button"
+	desc = "usfp_provoke_lakota_war_desc"
 
 	visible = {
-		always = yes
+		NOT = {
+			has_variable = usfp_lakota_provoked
+		}
+		exists = c:LKT
+		any_neighbouring_state = {
+			owner = c:LKT
+		}
 	}
 
 	possible = {
+		is_at_war = no
+		usfp_has_plains_occupation_trigger = yes
 		NOT = {
-			has_law = law_type:law_no_colonial_affairs
-		}
-		custom_tooltip = {
-			text = enough_manifest_destiny
-			var:manifest_destiny_var > 2
+			has_truce_with = c:LKT
 		}
 	}
 
 	effect = {
-		cu:usfp_american_indian = {
-			save_temporary_scope_as = american_indian_culture
+		set_variable = usfp_lakota_provoked
+		change_tension = {
+			country = c:LKT
+			value = 100
 		}
-		custom_tooltip = usfp_indian_appropiations_button_tt
-		custom_tooltip = usfp_indian_appropiations_button_tt2
-		usfp_enable_american_indian_culture = yes
-	}
-
-	ai_chance = {
-		base = 100
+		add_radicals = {
+			value = large_radicals
+			culture = cu:dakota
+		}
 	}
 }

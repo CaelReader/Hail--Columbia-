@@ -667,3 +667,11 @@ usfp_plains_tech_trade_modifier = {
 	market_land_trade_capacity_add = 10
 	country_trade_route_cost_mult = -0.15
 }
+
+usfp_indian_agencies_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_bureacracy_positive.dds
+	country_bureaucracy_mult = -0.10
+	country_tension_decay_mult = 0.10
+	state_assimilation_mult = 0.20
+	state_conversion_mult = 0.20
+}
