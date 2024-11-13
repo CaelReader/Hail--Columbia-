@@ -42,7 +42,7 @@
 		add_claim = c:USA
 	}
 	s:STATE_OKLAHOMA = {
-		add_claim = c:USA
+		add_claim = c:SEQ
 	}
 	s:STATE_MICHIGAN = {
 		add_claim = c:USA

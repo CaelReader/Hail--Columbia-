@@ -336,6 +336,7 @@ usfp_mormon.4 = {
 					activate_law = law_type:law_religious_schools
 					activate_law = law_type:law_charitable_health_system
 					activate_law = law_type:law_freedom_of_conscience
+					activate_law = law_type:law_frontier_colonization
 					set_ruling_interest_groups = {
 						ig_devout
 					}

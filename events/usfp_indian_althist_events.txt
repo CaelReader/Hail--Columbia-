@@ -1,4 +1,4 @@
-namespace = usfp_indian_althist
+﻿namespace = usfp_indian_althist
 
 #Sioux becomes Centralized
 usfp_indian_althist.1 = {
@@ -44,12 +44,19 @@ usfp_indian_althist.1 = {
 			save_scope_as = sioux_scope
 			set_country_type = unrecognized
 			add_technology_researched = repeaters
+			add_technology_researched = international_relations
+			add_technology_researched = international_trade
+			add_technology_researched = democracy
+			add_technology_researched = egalitarianism
+			add_technology_researched = mandatory_service
 			activate_law = law_type:law_free_trade
+			activate_law = law_type:law_migration_controls
 		}
 	}
 
 	option = {
 		name = usfp_indian_althist.1.a
+		default_option = yes
 		show_as_tooltip = {
 			c:LKT = {
 				set_country_type = unrecognized
@@ -71,7 +78,7 @@ usfp_indian_althist.1 = {
 						set_ideology = ideology:ideology_theocrat
 					}
 					10 = {
-						set_ideology = ideology:ideology_liberal_leader
+						set_ideology = ideology:ideology_republican_leader
 					}
 					10 = {
 						set_ideology = ideology:ideology_market_liberal
@@ -140,7 +147,7 @@ usfp_indian_althist.1 = {
 						set_ideology = ideology:ideology_theocrat
 					}
 					10 = {
-						set_ideology = ideology:ideology_liberal_leader
+						set_ideology = ideology:ideology_republican_leader
 					}
 					10 = {
 						set_ideology = ideology:ideology_market_liberal
@@ -283,6 +290,9 @@ usfp_indian_althist.4 = {
 			s:STATE_NEW_MEXICO = {
 				add_claim = c:DES
 			}
+			s:STATE_COLORADO = {
+				add_claim = c:DES
+			}
 			c:DES = {
 				change_relations = {
 					country = c:MEX
@@ -313,6 +323,9 @@ usfp_indian_althist.4 = {
 			s:STATE_NEW_MEXICO = {
 				add_claim = c:DES
 			}
+			s:STATE_COLORADO = {
+				add_claim = c:DES
+			}
 			c:DES = {
 				change_relations = {
 					country = c:MEX
@@ -338,4 +351,120 @@ usfp_indian_althist.4 = {
 
 }
 #Families vs the Army
-#Comanche centralization?
+#Comanche centralization
+usfp_indian_althist.5 = {
+	type = country_event
+	placement = scope:comanche_scope.capital
+	cooldown = {years = 100} #once
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	
+	title = usfp_indian_althist.5.t
+	desc = usfp_indian_althist.5.d
+	flavor = usfp_indian_althist.5.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		exists = c:COM
+		NOR = {
+			c:USA = {
+				owns_entire_state_region = STATE_TEXAS
+			}
+			c:MEX = {
+				owns_entire_state_region = STATE_TEXAS
+			}
+		}
+		c:COM = {
+			is_country_type = decentralized
+			has_state_in_state_region = STATE_TEXAS
+		}
+		scope:journal_entry = {
+			journal_entry_age > 3650 # days
+		}
+		game_date > 1851.1.1
+		has_technology_researched = repeaters
+		c:MEX = {
+			OR = {
+				has_law = law_type:law_no_colonial_affairs
+				NOR = {
+					has_state_in_state_region = STATE_TEXAS
+					has_state_in_state_region = STATE_NEW_MEXICO
+				}
+			}
+		}
+	}
+
+	immediate = {
+		c:COM = {
+			save_scope_as = comanche_scope
+			set_country_type = unrecognized
+			add_technology_researched = repeaters
+			add_technology_researched = international_relations
+			add_technology_researched = international_trade
+			add_technology_researched = democracy
+			add_technology_researched = egalitarianism
+			add_technology_researched = mandatory_service
+			add_technology_researched = military_drill
+			activate_law = law_type:law_free_trade
+			activate_law = law_type:law_migration_controls
+			activate_law = law_type:law_multicultural
+		}
+	}
+
+	option = {
+		name = usfp_indian_althist.5.a
+		default_option = yes
+		show_as_tooltip = {
+			c:COM = {
+				set_country_type = unrecognized
+			}
+		}
+		c:COM = {
+			ruler = {
+				add_modifier = {
+					name = usfp_plains_master
+				}
+			}
+			activate_law = law_type:law_frontier_colonization
+			add_modifier = {
+				name = usfp_plains_tech_trade_modifier
+				years = 10
+			}
+			add_modifier = {
+				name = usfp_comancheization_modifier
+				years = 25
+			}
+			s:STATE_COLORADO = {
+				add_claim = c:COM
+			}
+			s:STATE_KANSAS = {
+				add_claim = c:COM
+			}
+			s:STATE_OKLAHOMA = {
+				add_claim = c:COM
+			}
+			s:STATE_TEXAS = {
+				add_claim = c:COM
+			}
+			s:STATE_NEW_MEXICO = {
+				add_claim = c:COM
+			}
+			s:STATE_RIO_GRANDE = {
+				add_claim = c:COM
+			}
+			s:STATE_CHIHUAHUA = {
+				add_claim = c:COM
+			}
+		}
+		create_unidirectional_truce = { country = c:COM months = 36 }
+		c:MEX = {
+			create_unidirectional_truce = { country = c:COM months = 36 }
+		}
+	}
+}

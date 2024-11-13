@@ -113,6 +113,7 @@ manifest_destiny.3 = {
 	title = manifest_destiny.3.t
 	desc = manifest_destiny.3.d
 	flavor = manifest_destiny.3.f
+	cooldown = {years = 300 } #Once
 	
 	event_image = {
 		video = "europenorthamerica_native_american"
@@ -125,7 +126,6 @@ manifest_destiny.3 = {
 	duration = 3
 	
 	trigger = {
-		NOT = { has_variable = bison_hunting_var }
 		institution_investment_level = {
 			institution = institution_colonial_affairs
 			value >= 2
@@ -147,10 +147,6 @@ manifest_destiny.3 = {
 	}
 
 	immediate = {
-		set_variable = {
-			name = bison_hunting_var
-			months = short_modifier_time
-		}
 		random_scope_state = {
 			limit = {
 				usfp_american_west_zone = yes
@@ -211,6 +207,10 @@ manifest_destiny.3 = {
 				value = 15
 			}
 		}
+		change_variable = {
+			name = bison_hunting
+			add = 1
+		}
 	}
 
 	option = { # have the army slaughter bison
@@ -233,6 +233,10 @@ manifest_destiny.3 = {
 				country = ROOT
 				value = 30
 			}
+		}
+		change_variable = {
+			name = bison_hunting
+			add = 2
 		}
 	}
 

@@ -116,6 +116,9 @@ deseret_western_claims_des = {
 		s:STATE_NEW_MEXICO = {
 			add_claim = c:DES
 		}
+		s:STATE_COLORADO = {
+			add_claim = c:DES
+		}
 		c:DES = {
 			change_relations = {
 				country = c:MEX

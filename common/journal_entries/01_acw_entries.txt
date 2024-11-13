@@ -626,7 +626,7 @@ je_acw_wild_wild_west = {
 			10 = wild_west.1 # bank robberies
 			10 = wild_west.2 # Raids on the Iron Horse
 			10 = wild_west.3 # Gunfight at the Corral
-			10 = manifest_destiny.3 #Bison Hunting
+			# 10 = manifest_destiny.3 #Bison Hunting
 		}
 		effect = {
 			if = {

@@ -107,7 +107,7 @@ dync_c_oceti_sakowin_endonym_adj: "Sioux" #not sure what the proper alternative 
  SON:0 "Sonora"
  SON_ADJ:0 "Sonoran"
 
-usfp_GLC: "Great Lakes Confederation"
+usfp_GLC: "Great Lakes"
 usfp_GLC_ADJ: "Great Lakes"
 
 rule_usfp_usa_names:0 "@america_icon! #yellow Hail, Columbia!#! | USA Names"

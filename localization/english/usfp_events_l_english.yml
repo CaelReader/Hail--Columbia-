@@ -1091,7 +1091,7 @@ usfp_indian_wars.5.f: """"
 usfp_indian_wars.5.a: ""
 usfp_indian_wars.5.b: ""
 
-usfp_indian_wars.6.t: "Indians Massacred"
+usfp_indian_wars.6.t: "Indians Massacred in"
 usfp_indian_wars.6.d: ""
 usfp_indian_wars.6.f: """"
 usfp_indian_wars.6.a: ""
@@ -1116,16 +1116,15 @@ usfp_indian_wars.9.a: "A necessary measure."
 usfp_indian_wars.9.b: "We should ensure they are looked after."
 
 usfp_indian_wars.10.t: "Hunting By Rail"
-usfp_indian_wars.10.d: ""
-usfp_indian_wars.10.f: """"
-usfp_indian_wars.10.a: ""
-usfp_indian_wars.10.b: ""
+usfp_indian_wars.10.d: "The [SCOPE.sBuilding('railway_scope').GetName]s crossing [SCOPE.sState('railway_hunting_state').GetName] have provided an easy platform for the mass slaughter of buffalo herds by passing civilians. The railway routes are now lined with the bones and decaying carcasses of thousands of bison."
+usfp_indian_wars.10.f: ""Nearly every railroad train which leaves or arrives at the fort has its race with these herds of buffalo; and a most interesting and exciting scene is the result. The train is slowed to a rate of speed about equal to that of the herd; the passengers get out fire-arms which are provided for the defense of the train against the Indians, and open from the windows and platforms of the cars a fire that resembles a brisk skirmish. Frequently a young bull will turn at bay for a moment. His exhibition of courage is generally his death-warrant, for the whole fire of the train is turned upon him, either killing him or some member of the herd in his immediate vicinity."" #Harper's Weekly
+usfp_indian_wars.10.a: "A great sport for all!"
+usfp_indian_wars.10.b: "Stop this senseless slaughter at once!"
 
-usfp_indian_wars.11.t: "End of the Buffalo"
-usfp_indian_wars.11.d: ""
-usfp_indian_wars.11.f: """"
-usfp_indian_wars.11.a: ""
-usfp_indian_wars.11.b: ""
+usfp_indian_wars.11.t: "Where the Buffalo Once Roamed"
+usfp_indian_wars.11.d: "Years of extermination by White poachers and Army personnel have driven the buffalo into near extinction. Deprived of their fundamental basis of subsistence, the plains Indians' ability to resist Manifest Destiny has collapsed."
+usfp_indian_wars.11.f: ""The hunters have done more in the last two years, and will do more in the next year, to settle the vexed Indian question, than the entire regular army has done in the last forty years. They are destroying the Indians' commissary. It is a well-known fact that an army losing its base of supplies is placed at a great disadvantage. For a lasting peace, let them kill, skin, and sell until the buffaloes are exterminated. Then your prairies can be covered with speckled cattle."" #Philip Sheridan
+usfp_indian_wars.11.a: "The plains have been tamed."
 
 usfp_indian_wars.12.t: "Allotment"
 usfp_indian_wars.12.d: ""
@@ -1158,12 +1157,10 @@ usfp_indian_postremoval.3.a: ""
 usfp_indian_postremoval.3.b: ""
 
 usfp_indian_postremoval.4.t: "The Sequoyah Constitution"
-usfp_indian_postremoval.4.d: ""
-usfp_indian_postremoval.4.f: """"
-usfp_indian_postremoval.4.a: ""
-usfp_indian_postremoval.4.b: ""
-
-
+usfp_indian_postremoval.4.d: "In a bid to maintain some semblence of sovereignty, a delegation of American Indians from [indian territory] have drafted a constitution for a state they call Sequoyah. After recieving overwhelming approval from the locals, the representatives have submitted their formal proposal for incorporation into the union as a new state."
+usfp_indian_postremoval.4.f: ""This Convention does hereby declare on behalf of the people of Indian Territory, that this Constitution has been prepared and submitted to the people of the Indian Territory for their adoption or rejection, with no purpose of setting up or organizing a State government until such time as the Congress of the United States shall enact a law for the admission of the Indian Territory as a State."" #Sequoyah Constitution
+usfp_indian_postremoval.4.a: "It is only right to admit them."
+usfp_indian_postremoval.4.b: "Oklahoma must take precedence."
 
 usfp_indian_althist.1.t: "The Great [SCOPE.sCountry('sioux_scope').GetAdjective] Council"
 usfp_indian_althist.1.d: "Decades of holding a dominant position on the northern plains has done well for the [SCOPE.sCountry('sioux_scope').GetName]. As their trade links with [ROOT.GetCountry.GetAdjective] border towns have flourished, so too have new ideas flowed into the plains. Now, a council of all the [SCOPE.sCountry('sioux_scope').GetAdjectiveNoFormatting] bands has agreed to adopt a formal government structure under the leadership of [SCOPE.sCountry('sioux_scope').GetRuler.GetFullName]."
@@ -1188,6 +1185,12 @@ usfp_usfp_indian_althist.4.d: "The Mormons of [SCOPE.sCountry('deseret_scope').G
 usfp_usfp_indian_althist.4.f: ""It is the duty of a Saint of God to gain all the influence he can on this earth, and to use every particle of that influence to do good."" #Brigham Young
 usfp_usfp_indian_althist.4.a: "This can bring only trouble."
 usfp_usfp_indian_althist.4.b: "Disavow and denounce these criminals!"
+
+usfp_usfp_indian_althist.5.t: "Comanche Empire"
+usfp_usfp_indian_althist.5.d: ""
+usfp_usfp_indian_althist.5.f: """"
+usfp_usfp_indian_althist.5.a: ""
+usfp_usfp_indian_althist.5.b: ""
 
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"

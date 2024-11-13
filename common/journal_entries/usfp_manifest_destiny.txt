@@ -501,6 +501,7 @@ usfp_je_indian_wars = {
 		has_technology_researched = repeaters
 		has_state_in_state_region = STATE_COLORADO
 		has_state_in_state_region = STATE_SOUTH_DAKOTA
+		has_state_in_state_region = STATE_MONTANA
 	}
 
 	invalid = {
@@ -519,10 +520,30 @@ usfp_je_indian_wars = {
 
 	immediate = {
 		trigger_event = usfp_indian_wars.13
+		hidden_effect = {
+			c:LKT = {
+				create_character = {
+					template = ecchi_lkt_sitting_bull_character_template
+					ruler = yes
+				}
+			}
+		}
+		set_variable = {
+			name = bison_hunting
+			value = 0
+		}
 	}
 
 	on_complete = {
 		trigger_event = usfp_indian_wars.12
+	}
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			100 = manifest_destiny.3 #Bison Hunting
+
+		}
 	}
 
 	should_be_pinned_by_default = no

@@ -3,13 +3,13 @@
 #Red Cloud's War
 usfp_indian_wars.1 = {
 	type = country_event
-	placement = ROOT
+	placement = c:LKT.capital
 	cooldown = {years = 100} #once
-	event_image = {
-		video = "europenorthamerica_before_the_battle"
-	}
+	gui_window = event_window_1char_propaganda
+	left_icon = scope:red_cloud_scope
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
 
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 	
@@ -18,6 +18,31 @@ usfp_indian_wars.1 = {
 	flavor = usfp_indian_wars.1.f
 	dlc = dlc_usfp
 	duration = 3
+
+	trigger = {
+		exists = c:LKT
+		
+	}
+
+	immediate = {
+		c:LKT = {
+			create_character = {
+				template = ecchi_lkt_red_cloud_character_template
+				is_general = yes
+			}
+			random_scope_character = {
+				limit = {
+					has_template = ecchi_lkt_red_cloud_character_template
+				}
+				save_scope_as = red_cloud_scope
+			}
+		}
+	}
+
+	#okay
+	option = {
+		name = usfp_indian_wars.1.a
+	}
 }
 #Red Cloud Peace Offer
 usfp_indian_wars.2 = {
@@ -388,8 +413,8 @@ usfp_indian_wars.9 = {
 #Railway Bison Hunts
 usfp_indian_wars.10 = {
 	type = country_event
-	placement = ROOT
-	cooldown = {years = 300} #once
+	placement = scope:railway_hunting_state
+	cooldown = {years = 5}
 	event_image = {
 		video = "unspecific_trains"
 	}
@@ -406,11 +431,14 @@ usfp_indian_wars.10 = {
 
 	trigger = {
 		any_scope_state = {
-			state_region = sr:region_great_plains
+			region = sr:region_great_plains
 			state_region = {
 				any_scope_state = {
 					owner = {
 						is_country_type = decentralized
+					}
+					NOT = {
+						has_modifier = bison_hunting_subsistence
 					}
 				}
 			}
@@ -418,12 +446,15 @@ usfp_indian_wars.10 = {
 				is_building_type = building_railway
 			}
 		}
+		NOT = {
+			has_global_variable = buffalo_extinction
+		}
 	}
 
 	immediate = {
 		random_scope_state = {
 			limit = {
-				state_region = sr:region_great_plains
+				region = sr:region_great_plains
 				state_region = {
 					any_scope_state = {
 						owner = {
@@ -436,13 +467,86 @@ usfp_indian_wars.10 = {
 				}
 			}
 			save_scope_as = railway_hunting_state
+			random_scope_building = {
+				limit = {
+					is_building_type = building_railway
+				}
+				save_scope_as = railway_scope
+			}
+		}
+	}
+
+	#excellent
+	option = {
+		name = usfp_indian_wars.10.a
+		default_option = yes
+		scope:railway_hunting_state = {
+			state_region = {
+				every_scope_state = {
+					limit = {
+						owner = {
+							is_country_type = decentralized
+						}
+					}
+					add_modifier = {
+						name = bison_hunting_subsistence
+						months = long_modifier_time
+						multiplier = 2
+					}
+					owner = {
+						change_tension = {
+							country = root
+							value = 15
+						}
+					}
+				}
+			}
+		}
+		change_variable = {
+			name = bison_hunting
+			add = 1
+		}
+	}
+	#protect the buffalo
+	option = {
+		name = usfp_indian_wars.10.b
+		trigger = {
+			ruler = {
+				usfp_manifest_destiny_pro_expansion_trigger = no
+			}
+		}
+		highlighted_option = yes
+		show_as_unavailable = {always = yes}
+		scope:railway_hunting_state = {
+			usfp_radicalize_settlers_in_state = {
+				RADICALS = small_radicals
+			}
+			state_region = {
+				every_scope_state = {
+					limit = {
+						owner = {
+							is_country_type = decentralized
+						}
+					}
+					owner = {
+						change_tension = {
+							country = root
+							value = -10
+						}
+					}
+				}
+			}
+		}
+		set_variable = {
+			name = buffalo_defender
+			years = 5
 		}
 	}
 }
 #End of the Buffalo
 usfp_indian_wars.11 = {
 	type = country_event
-	placement = ROOT
+	placement = scope:great_plains_state
 	cooldown = {years = 300} #once
 	event_image = {
 		video = "europenorthamerica_native_american"
@@ -460,6 +564,23 @@ usfp_indian_wars.11 = {
 
 	immediate = {
 		set_global_variable = buffalo_extinction
+		random_scope_state = {
+			limit = {
+				region = sr:region_great_plains
+			}
+			save_scope_as = great_plains_state
+		}
+	}
+
+	trigger = {
+		NOT = {
+			has_variable = buffalo_defender
+		}
+		has_variable = bison_hunting
+		var:bison_hunting >= 3
+		scope:journal_entry = {
+			journal_entry_age > 3650 # days
+		}
 	}
 
 	#welp
@@ -468,7 +589,7 @@ usfp_indian_wars.11 = {
 		default_option = yes
 		every_scope_state = {
 			limit = {
-				state_region = sr:region_great_plains
+				region = sr:region_great_plains
 				state_region = {
 					any_scope_state = {
 						owner = {
@@ -483,6 +604,11 @@ usfp_indian_wars.11 = {
 						owner = {
 							is_country_type = decentralized
 						}
+					}
+					add_modifier = {
+						name = bison_hunting_subsistence
+						years = 20
+						multiplier = 4
 					}
 					owner = {
 						set_tension = {
@@ -513,6 +639,12 @@ usfp_indian_wars.12 = {
 	flavor = usfp_indian_wars.12.f
 	dlc = dlc_usfp
 	duration = 3
+
+	immediate = {
+		cu:usfp_american_indian = {
+			save_scope_as = american_indian_culture
+		}
+	}
 
 	#okay
 	option = {
@@ -571,7 +703,7 @@ usfp_indian_wars.13 = {
 		}
 		every_scope_state = {
 			limit = {
-				state_region = sr:region_great_plains
+				region = sr:region_great_plains
 				state_region = {
 					any_scope_state = {
 						owner = {
