@@ -509,6 +509,7 @@ usfp_secure_trail_button = {
 		}
 		is_at_war = no
 		influence >= 50
+		usfp_has_plains_occupation_trigger = yes
 	}
 
 	effect = {

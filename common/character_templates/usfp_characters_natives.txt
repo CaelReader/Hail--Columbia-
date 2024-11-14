@@ -163,3 +163,18 @@ usfp_old_chief_smoke = {
 
 }
 
+usfp_kintpuash = {
+	first_name = Kintpuash
+	last_name = usfp_Blank
+	historical = yes
+	birth_date = 1837.6.6
+	ruler = yes
+    is_general =yes
+	interest_group = ig_armed_forces
+	traits = {
+        cautious
+        persistent
+        expert_defensive_strategist
+	}
+    #manually spawned as Modoc leader
+}

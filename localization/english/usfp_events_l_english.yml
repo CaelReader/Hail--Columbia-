@@ -1080,10 +1080,9 @@ usfp_indian_wars.3.a: ""
 usfp_indian_wars.3.b: ""
 
 usfp_indian_wars.4.t: "[SCOPE.sCharacter('custer_scope').GetLastName]'s Last Stand"
-usfp_indian_wars.4.d: ""
-usfp_indian_wars.4.f: """"
-usfp_indian_wars.4.a: ""
-usfp_indian_wars.4.b: ""
+usfp_indian_wars.4.d: "[SCOPE.sCharacter('custer_scope').GetRank] [SCOPE.sCharacter('custer_scope').GetFullName] has been killed while leading a reckless expedition against the [SCOPE.sCountry('sioux_scope').GetAdjective], along with an entire contingent of his men. While the casualties are small in number, the shock of the defeat has caused outrage in the [ROOT.GetCountry.GetAdjective] press."
+usfp_indian_wars.4.f: ""The Indians poured in a murderous fire from all sides and the greater portion fought on horseback. Not one of the detachment escaped. When the Indians left the battlefield, it looked like a slaughter pen, as it was, being in a narrow ravine. The dead were horribly mutilated."" #Montana Territory Union
+usfp_indian_wars.4.a: "[SCOPE.sCharacter('custer_scope').GetLastName] will be avenged!"
 
 usfp_indian_wars.5.t: "Sioux-Crow War"
 usfp_indian_wars.5.d: ""
@@ -1127,10 +1126,10 @@ usfp_indian_wars.11.f: ""The hunters have done more in the last two years, and w
 usfp_indian_wars.11.a: "The plains have been tamed."
 
 usfp_indian_wars.12.t: "Allotment"
-usfp_indian_wars.12.d: ""
-usfp_indian_wars.12.f: """"
-usfp_indian_wars.12.a: ""
-usfp_indian_wars.12.b: ""
+usfp_indian_wars.12.d: "The western frontier has been closed. With the plains now firmly under [ROOT.GetCountry.GetAdjective] control, the process of turning Indian hunter-gatherers into good Christian farmers can begin in earnest. The former lands of each tribe are being apportioned into individual homesteads to be distributed to each Indian family, with the excess sold off to White settlers. Through a system of boarding schools, we will compel their absorption into the American mainstream."
+usfp_indian_wars.12.f: ""The white men made us many promises, more than I can remember, but they never kept but one. They promised to take our land, and they took it."" #Red Cloud
+usfp_indian_wars.12.a: "Kill the Indian, save the man."
+usfp_indian_wars.12.b: "Save the Indian and the man."
 
 usfp_indian_wars.13.t: "The March of Civilization"
 usfp_indian_wars.13.d: "Gold, Land, and Manifest Destiny continue to propel our settlers westward into the Great Plains. As resistance to this encroachment continues to escalate, we will need to determine our policy in dealing with the Indians."
@@ -1186,11 +1185,11 @@ usfp_usfp_indian_althist.4.f: ""It is the duty of a Saint of God to gain all the
 usfp_usfp_indian_althist.4.a: "This can bring only trouble."
 usfp_usfp_indian_althist.4.b: "Disavow and denounce these criminals!"
 
-usfp_usfp_indian_althist.5.t: "Comanche Empire"
-usfp_usfp_indian_althist.5.d: ""
-usfp_usfp_indian_althist.5.f: """"
-usfp_usfp_indian_althist.5.a: ""
-usfp_usfp_indian_althist.5.b: ""
+usfp_usfp_indian_althist.5.t: "[SCOPE.sCountry('comanche_scope').GetAdjective] Empire"
+usfp_usfp_indian_althist.5.d: "With secure borders to the east and south, the most influential Comanche bands have agreed on a coordinated campaign of expansion and consolidation, aiming to enlarge [SCOPE.sCountry('comanche_scope').GetName] and secure its position as the dominant force on the southern plains."
+usfp_usfp_indian_althist.5.f: "The markets of Comancheria have long accomodated many peoples. Kiowas, Apaches, Wichitas, even Spaniards, Tejanos, and Anglo-Americans. As new industrial goods have made their way west into the plains, the wealth of their neighbors has drawn more and more attention from the chiefs."
+usfp_usfp_indian_althist.5.a: "We would prefer to keep the plains peaceful."
+usfp_usfp_indian_althist.5.b: "We shall be lords of the southern plains once more!"
 
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"

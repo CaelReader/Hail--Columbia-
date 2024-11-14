@@ -191,7 +191,7 @@ usfp_indian_removal_creek_button = {
 
 usfp_provoke_lakota_war_button = {
 	name = "usfp_provoke_lakota_war_button"
-	desc = "usfp_provoke_lakota_war_desc"
+	desc = "usfp_provoke_lakota_war_button_desc"
 
 	visible = {
 		NOT = {
@@ -209,6 +209,9 @@ usfp_provoke_lakota_war_button = {
 		NOT = {
 			has_truce_with = c:LKT
 		}
+		ruler = {
+			usfp_manifest_destiny_pro_expansion_trigger = yes
+		}
 	}
 
 	effect = {
@@ -220,6 +223,38 @@ usfp_provoke_lakota_war_button = {
 		add_radicals = {
 			value = large_radicals
 			culture = cu:dakota
+		}
+	}
+}
+
+usfp_break_treaty_button = {
+	name = "usfp_break_treaties_button"
+	desc = "usfp_break_treaties_button_desc"
+
+	visible = {
+		any_country = {
+			has_truce_with = root
+			is_country_type = decentralized
+		}
+	}
+
+	possible = {
+		ruler = {
+			usfp_manifest_destiny_anti_expansion_trigger = no
+		}
+	}
+
+	effect = {
+		every_country = {
+			limit = {
+				has_truce_with = root
+				is_country_type = decentralized
+			}
+			end_truce = root
+			change_tension = {
+				country = root
+				value = 20
+			}
 		}
 	}
 }

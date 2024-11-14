@@ -483,10 +483,15 @@ usfp_je_western_border = {
 	}
 }
 
+#Indian Wars JE
 usfp_je_indian_wars = {
 	icon = gfx/interface/icons/event_icons/event_military.dds
 
 	group = je_group_historical_content
+
+	scripted_button = usfp_provoke_lakota_war_button
+	scripted_button = usfp_break_treaty_button
+	
 
 	is_shown_when_inactive = {
 		exists = c:USA
@@ -501,7 +506,7 @@ usfp_je_indian_wars = {
 		has_technology_researched = repeaters
 		has_state_in_state_region = STATE_COLORADO
 		has_state_in_state_region = STATE_SOUTH_DAKOTA
-		has_state_in_state_region = STATE_MONTANA
+		has_state_in_state_region = STATE_WYOMING
 	}
 
 	invalid = {
@@ -524,6 +529,12 @@ usfp_je_indian_wars = {
 			c:LKT = {
 				create_character = {
 					template = ecchi_lkt_sitting_bull_character_template
+					ruler = yes
+				}
+			}
+			c:usfp_MDC = {
+				create_character = {
+					template = usfp_kintpuash
 					ruler = yes
 				}
 			}

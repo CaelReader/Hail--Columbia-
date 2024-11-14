@@ -461,10 +461,62 @@ usfp_indian_althist.5 = {
 			s:STATE_CHIHUAHUA = {
 				add_claim = c:COM
 			}
+			set_strategy = ai_strategy_territorial_expansion
 		}
 		create_unidirectional_truce = { country = c:COM months = 36 }
 		c:MEX = {
 			create_unidirectional_truce = { country = c:COM months = 36 }
 		}
+	}
+
+	option = {
+		name = usfp_indian_althist.5.b
+		show_as_tooltip = {
+			c:COM = {
+				set_country_type = unrecognized
+			}
+		}
+		c:COM = {
+			ruler = {
+				add_modifier = {
+					name = usfp_plains_master
+				}
+			}
+			activate_law = law_type:law_frontier_colonization
+			add_modifier = {
+				name = usfp_plains_tech_trade_modifier
+				years = 10
+			}
+			add_modifier = {
+				name = usfp_comancheization_modifier
+				years = 25
+			}
+			s:STATE_COLORADO = {
+				add_claim = c:COM
+			}
+			s:STATE_KANSAS = {
+				add_claim = c:COM
+			}
+			s:STATE_OKLAHOMA = {
+				add_claim = c:COM
+			}
+			s:STATE_TEXAS = {
+				add_claim = c:COM
+			}
+			s:STATE_NEW_MEXICO = {
+				add_claim = c:COM
+			}
+			s:STATE_RIO_GRANDE = {
+				add_claim = c:COM
+			}
+			s:STATE_CHIHUAHUA = {
+				add_claim = c:COM
+			}
+		}
+		create_unidirectional_truce = { country = c:COM months = 36 }
+		c:MEX = {
+			create_unidirectional_truce = { country = c:COM months = 36 }
+		}
+		play_as = c:COM
 	}
 }

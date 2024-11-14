@@ -136,7 +136,7 @@ usfp_indian_wars.4 = {
 		}
 	}
 
-	#what the fuck
+	#avenge!
 	option = {
 		name = usfp_indian_wars.4.a
 		default_option = yes
@@ -176,12 +176,22 @@ usfp_indian_wars.5 = {
 	trigger = {
 		exists = c:LKT
 		exists = c:ABS
+		has_variable = horse_creek_treaty
+	}
+
+	#ally with the Crow
+	option = {
+		name = usfp_indian_wars.5.a
+	}
+	#let them fight
+	option = {
+		name = usfp_indian_wars.5.b
 	}
 }
-#Generic Massacre
+#Settlers Massacre Natives
 usfp_indian_wars.6 = {
 	type = country_event
-	placement = ROOT
+	placement = scope:settler_state_scope
 	cooldown = {years = 5}
 	event_image = {
 		video = "southamerica_war_civilians"
@@ -196,6 +206,69 @@ usfp_indian_wars.6 = {
 	flavor = usfp_indian_wars.6.f
 	dlc = dlc_usfp
 	duration = 3
+
+	trigger = {
+		
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = {
+					any_scope_state = {
+						owner = {
+							is_country_type = decentralized
+						}
+					}
+				}
+			}
+			save_scope_as = settler_state_scope
+			state_region = {
+				random_scope_state = {
+					limit = {
+						owner = {
+							is_country_type = decentralized
+						}
+					}
+					save_scope_as = massacre_state_scope
+				}
+			}
+		}
+	}
+
+	#okay
+	option = {
+		name = usfp_indian_wars.6.a
+		default_option = yes
+		scope:settler_state_scope = {
+			state_region = {
+				add_devastation = 5
+			}
+		}
+		scope:massacre_state_scope = {
+			owner = {
+				change_tension = {
+					country = root
+					value = 10
+				}
+			}
+		}
+	}
+	#stop them!
+	option = {
+		name = usfp_indian_wars.6.b
+		scope:settler_state_scope = {
+			state_region = {
+				add_devastation = 5
+			}
+		}
+		scope:settler_state_scope = {
+			usfp_radicalize_settlers_in_state = {
+				RADICALS = small_radicals
+			}
+		}
+	}
+
 }
 #Modoc War - Peace Tent Ambush - Captain Jack's Stronghold
 usfp_indian_wars.7 = {
@@ -218,6 +291,51 @@ usfp_indian_wars.7 = {
 	trigger = {
 		exists = c:usfp_MDC
 		has_war_with = c:usfp_MDC
+		any_military_formation = {
+			is_army = yes
+			any_scope_character = {
+				has_role = general
+			}
+			current_hq = p:x33ee3b.land_hq
+		}
+	}
+
+	immediate = {
+		c:usfp_MDC = {
+			save_scope_as = modoc_scope
+			add_modifier = {
+				name = usfp_lava_beds_modifier
+				months = 6
+			}
+		}
+		random_military_formation = {
+			limit = {
+				is_army = yes
+				any_scope_character = {
+					has_role = general
+				}
+				current_hq = p:x33ee3b.land_hq
+			}
+			random_scope_general = {
+				save_scope_as = dead_general_scope
+			}
+		}
+	}
+
+	#oh dear
+	option = {
+		name = usfp_indian_wars.7.a
+		scope:dead_general_scope = {
+			kill_character = yes
+		}
+		show_as_tooltip = {
+			c:usfp_MDC = {
+				add_modifier = {
+					name = usfp_lava_beds_modifier
+					months = 6
+				}
+			}
+		}
 	}
 }
 #Flight of the Nez Perce
@@ -579,7 +697,7 @@ usfp_indian_wars.11 = {
 		has_variable = bison_hunting
 		var:bison_hunting >= 3
 		scope:journal_entry = {
-			journal_entry_age > 3650 # days
+			journal_entry_age > 7300 # days
 		}
 	}
 
@@ -624,7 +742,7 @@ usfp_indian_wars.11 = {
 #Dawes Act as the end of the Indian Wars
 usfp_indian_wars.12 = {
 	type = country_event
-	placement = ROOT
+	placement = scope:south_dakota_scope
 	cooldown = {years = 300} #once
 	event_image = {
 		video = "europenorthamerica_native_american"
@@ -644,6 +762,9 @@ usfp_indian_wars.12 = {
 		cu:usfp_american_indian = {
 			save_scope_as = american_indian_culture
 		}
+		s:STATE_SOUTH_DAKOTA.region_state:USA = {
+			save_scope_as = south_dakota_scope
+		}
 	}
 
 	#okay
@@ -651,7 +772,31 @@ usfp_indian_wars.12 = {
 		name = usfp_indian_wars.12.a
 		default_option = yes
 		remove_modifier = usfp_indian_agencies_modifier
+		add_modifier = {
+			name = usfp_indian_boarding_schools_modifier
+			years = 100
+		}
 		usfp_enable_american_indian_culture = yes
+		add_culture_standard_of_living_modifier = {
+			culture = cu:usfp_american_indian
+			multiplier = -2
+		}
+		s:STATE_OKLAHOMA = {
+			add_claim = root
+		}
+	}
+	#multiculturalism
+	option = {
+		name = usfp_indian_wars.12.b
+		trigger = {
+			has_law = law_type:law_multicultural
+		}
+		highlighted_option = yes
+		remove_modifier = usfp_indian_agencies_modifier
+		usfp_enable_american_indian_culture = yes
+		s:STATE_OKLAHOMA = {
+			add_claim = root
+		}
 	}
 }
 #Indian Wars startup event

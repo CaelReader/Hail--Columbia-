@@ -672,7 +672,6 @@ usfp_indian_agencies_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bureacracy_positive.dds
 	country_bureaucracy_mult = -0.10
 	country_tension_decay_mult = 0.10
-	state_assimilation_mult = 0.20
 	state_conversion_mult = 0.20
 }
 
@@ -680,4 +679,18 @@ usfp_comancheization_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds
 	state_assimilation_mult = 0.75
 	unit_kill_rate_add = 0.10
+}
+
+usfp_lava_beds_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds
+	battle_defense_owned_province_mult = 1.00
+	unit_provinces_lost_mult = -0.65
+	unit_morale_loss_mult = -0.95
+}
+
+usfp_indian_boarding_schools_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_bureacracy_positive.dds
+	country_bureaucracy_mult = -0.10
+	state_assimilation_mult = 0.20
+	state_conversion_mult = 0.40
 }
