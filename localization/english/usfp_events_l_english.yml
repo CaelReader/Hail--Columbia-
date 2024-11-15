@@ -485,12 +485,6 @@ usfp_manifest_destiny.26.d: "Our acquisition of [SCOPE.sState('usa_overseas_terr
 usfp_manifest_destiny.26.f: ""It is yet another Civilized Power, with its banner of the Prince of Peace in one hand and its loot-basket and its butcher-knife in the other. Is there no salvation for a conquered people, but to adopt Civilization and lift themselves down to its level?"" #Mark Twain
 usfp_manifest_destiny.26.a: "It is our burden to spread the light of self-government."
 
-usfp_manifest_destiny.27.t: "Oklahoma Land Runs"
-usfp_manifest_destiny.27.d: ""
-usfp_manifest_destiny.27.f: """"
-usfp_manifest_destiny.27.a: ""
-usfp_manifest_destiny.27.b: ""
-
 ### Native Removal
 usfp_native_removal.1.t: "The Seminole Removal"
 usfp_native_removal.1.d: "With the Second Seminole War finally winding down, the Army can begin the slow process of removing the remainder of the [SCOPE.sCulture('muskogean_scope').GetName] population across the Mississippi."
@@ -1158,8 +1152,15 @@ usfp_indian_postremoval.3.b: ""
 usfp_indian_postremoval.4.t: "The Sequoyah Constitution"
 usfp_indian_postremoval.4.d: "In a bid to maintain some semblence of sovereignty, a delegation of American Indians from [indian territory] have drafted a constitution for a state they call Sequoyah. After recieving overwhelming approval from the locals, the representatives have submitted their formal proposal for incorporation into the union as a new state."
 usfp_indian_postremoval.4.f: ""This Convention does hereby declare on behalf of the people of Indian Territory, that this Constitution has been prepared and submitted to the people of the Indian Territory for their adoption or rejection, with no purpose of setting up or organizing a State government until such time as the Congress of the United States shall enact a law for the admission of the Indian Territory as a State."" #Sequoyah Constitution
-usfp_indian_postremoval.4.a: "It is only right to admit them."
-usfp_indian_postremoval.4.b: "Oklahoma must take precedence."
+usfp_indian_postremoval.4.a: "It is only right to admit them as a full state."
+usfp_indian_postremoval.4.b: "Indian Territory will be fused with the new state of Oklahoma."
+usfp_indian_postremoval.4.c: "It's best to keep Oklahoma separated."
+
+usfp_indian_postremoval.5.t: "Oklahoma Land Runs"
+usfp_indian_postremoval.5.d: "With the opening of [SCOPE.sState('oklahoma_scope').GetName] for settlement, a mad dash for land has erupted. Plots of former Indian territory are being handed out in a series of land runs to whomever can physically get there first."
+usfp_indian_postremoval.5.f: "Horsemen and wagons crowded forth to positions on the line, readying themselves for the race. The great dramatic moment came when at the stroke of noon the starting signal was given - at the blast of rifles and cannons a tumultuous avalanche of wagons and horses surged forth amidst a cloud of dust. Families that remained behind at the line cheered for their husbands and fathers as they made their wild dash to claim their 160 acres." #adapted from The Encyclopedia of Oklahoma History and Culture
+usfp_indian_postremoval.5.a: "It won't be long before the whole territory is settled."
+usfp_indian_postremoval.5.b: "We need to ensure there is space enough left for the tribes."
 
 usfp_indian_althist.1.t: "The Great [SCOPE.sCountry('sioux_scope').GetAdjective] Council"
 usfp_indian_althist.1.d: "Decades of holding a dominant position on the northern plains has done well for the [SCOPE.sCountry('sioux_scope').GetName]. As their trade links with [ROOT.GetCountry.GetAdjective] border towns have flourished, so too have new ideas flowed into the plains. Now, a council of all the [SCOPE.sCountry('sioux_scope').GetAdjectiveNoFormatting] bands has agreed to adopt a formal government structure under the leadership of [SCOPE.sCountry('sioux_scope').GetRuler.GetFullName]."

@@ -332,3 +332,8 @@ usfp_caved_to_assassin_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
 	interest_group_approval_add = -2
 }
+
+usfp_accomodating_indians_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = -2
+}

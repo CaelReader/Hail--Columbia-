@@ -765,6 +765,7 @@ usfp_indian_wars.12 = {
 		s:STATE_SOUTH_DAKOTA.region_state:USA = {
 			save_scope_as = south_dakota_scope
 		}
+		set_global_variable = american_frontier_closed
 	}
 
 	#okay

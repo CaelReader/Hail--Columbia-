@@ -206,3 +206,14 @@ usfp_national_mall_modifier = {
 	state_loyalists_from_sol_change_accepted_culture_mult = 0.10
 	state_middle_standard_of_living_add = 1
 }
+
+usfp_land_runs_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_colony_growth_speed_mult = 1.00
+}
+
+usfp_ghost_dance_state_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_theocracy_negative.dds
+	state_conversion_mult = -0.25
+	state_radicals_from_discrimination_mult = 0.25
+}
