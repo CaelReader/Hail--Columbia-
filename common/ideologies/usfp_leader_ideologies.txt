@@ -753,11 +753,11 @@ ideology_usfp_social_darwinist_leader = {
 	}
 
 	lawgroup_colonization = { 
-	law_no_colonial_affairs = strongly_disapprove
-	law_colonial_resettlement = approve
-	law_colonial_exploitation = strongly_approve
-	law_frontier_colonization = neutral
-}
+		law_no_colonial_affairs = strongly_disapprove
+		law_colonial_resettlement = approve
+		law_colonial_exploitation = strongly_approve
+		law_frontier_colonization = neutral
+	}
 
 
 	possible = {
@@ -813,4 +813,99 @@ ideology_usfp_social_darwinist_leader = {
 		}
 	}
 
+}
+
+ideology_usfp_universalist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_pacifist.dds"
+	
+	character_ideology = yes
+
+	lawgroup_colonization = {		
+		law_no_colonial_affairs = approve
+		law_colonial_resettlement = strongly_disapprove
+		law_colonial_exploitation = strongly_disapprove
+		law_frontier_colonization = strongly_disapprove
+	}
+
+	lawgroup_church_and_state = {
+		law_state_religion = disapprove
+		law_freedom_of_conscience = neutral
+		law_total_separation = strongly_approve
+		law_state_atheism = strongly_disapprove
+	}
+
+	lawgroup_free_speech = {
+		law_protected_speech = approve
+		law_right_of_assembly = approve
+		law_censorship = disapprove
+		law_outlawed_dissent = disapprove
+	}
+
+	lawgroup_citizenship = {
+		law_ethnostate = strongly_disapprove
+		law_national_supremacy = disapprove
+		law_racial_segregation = neutral
+		law_cultural_exclusion = approve
+		law_multicultural = strongly_approve
+	}
+
+
+	
+	possible = {
+		owner = {
+			has_technology_researched = human_rights
+		}
+		# Agitators should have an ideology at odds with current laws
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_no_colonial_affairs
+				has_law = law_type:law_total_separation
+				has_law = law_type:law_multicultural
+			}
+		}
+		scope:interest_group = {
+			is_interest_group_type = ig_devout
+		}
+		scope:interest_group = {
+			NOR = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+	
+	leader_weight = {
+		value = 25 #rare
+		#fostered by tolerance
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_protected_speech
+						has_law = law_type:law_freedom_of_conscience
+						has_law = law_type:law_law_right_of_assembly
+						has_law = law_type:law_total_separation
+					}
+				}
+			}
+			add = 25
+		}
+		#fostered by religious subjugation
+		if = {
+			#use the new Minoritarian trigger here
+		}
+		#increases in respose to state atheism
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_state_atheism
+				}
+			}
+			add = 50
+		}
+	}
 }

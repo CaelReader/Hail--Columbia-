@@ -217,3 +217,9 @@ usfp_ghost_dance_state_modifier = {
 	state_conversion_mult = -0.25
 	state_radicals_from_discrimination_mult = 0.25
 }
+
+usfp_ghost_dance_state_legacy_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_theocracy_negative.dds
+	state_conversion_mult = -0.20
+	state_assimilation_mult = -0.20
+}

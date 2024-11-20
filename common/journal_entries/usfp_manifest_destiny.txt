@@ -516,11 +516,19 @@ usfp_je_indian_wars = {
 	complete = {
 		owns_entire_state_region = STATE_MONTANA
 		owns_entire_state_region = STATE_WYOMING
-		owns_entire_state_region = STATE_COLORADO
 		owns_entire_state_region = STATE_NORTH_DAKOTA
 		owns_entire_state_region = STATE_SOUTH_DAKOTA
 		owns_entire_state_region = STATE_NEBRASKA
 		owns_entire_state_region = STATE_KANSAS
+		s:STATE_COLORADO = { #can be split with Mexico
+			NOT = {
+				any_scope_state = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+			}
+		}
 	}
 
 	immediate = {
@@ -531,11 +539,21 @@ usfp_je_indian_wars = {
 					template = ecchi_lkt_sitting_bull_character_template
 					ruler = yes
 				}
+				create_character = {
+					template = ecchi_lkt_crazy_horse_character_template
+					is_general = yes
+				}
 			}
 			c:usfp_MDC = {
 				create_character = {
 					template = usfp_kintpuash
 					ruler = yes
+				}
+			}
+			c:NZP = {
+				create_character = {
+					template = ecchi_nzp_chief_joseph_character_template
+					heir = yes
 				}
 			}
 		}

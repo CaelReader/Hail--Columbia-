@@ -92,7 +92,7 @@
 		add_state_trait = state_trait_native_resistance
 	}
 	s:STATE_NEW_MEXICO = {
-		add_state_trait = state_trait_native_resistance
+		add_state_trait = state_trait_comanche_domain
 	}
 	s:STATE_CALIFORNIA = {
 		add_state_trait = state_trait_native_resistance

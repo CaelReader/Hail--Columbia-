@@ -336,3 +336,6 @@ Updates:
 	Updated the conditions and description for the Oregon Border Treaty to increase clarity
 	Turtle Island JE now requires Pan-Nationalism and a citizenship law other than ethnostate or national supremacy
 	American Superculture now requires 13 Manifest Destiny points (up from 12)
+	Extended the Comanche Domain into New Mexico
+	Comanche Domain now also reduces agricultural tax income
+	Added traits to Nelson Appleton Miles

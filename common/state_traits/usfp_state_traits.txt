@@ -20,6 +20,9 @@ state_trait_comanche_domain= {
 		state_colony_growth_speed_mult = -0.95
 		state_mortality_mult = 0.08 
 		unit_supply_consumption_mult = 0.6
+		building_group_bg_agriculture_tax_mult = -0.1
+		building_group_bg_ranching_tax_mult = -0.1
+		building_group_bg_plantations_tax_mult = -0.1
 	}
 }
 

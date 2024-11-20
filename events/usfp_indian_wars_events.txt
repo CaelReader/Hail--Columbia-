@@ -21,7 +21,16 @@ usfp_indian_wars.1 = {
 
 	trigger = {
 		exists = c:LKT
-		
+		NOR = {
+			has_truce_with = c:LKT
+			has_war_with = c:LKT
+		}
+		has_state_in_state_region = STATE_MONTANA
+		s:STATE_MONTANA.region_state:USA = {
+			any_neighbouring_state = {
+				owner = c:LKT
+			}
+		}
 	}
 
 	immediate = {
@@ -39,12 +48,26 @@ usfp_indian_wars.1 = {
 		}
 	}
 
-	#okay
+	#accept terms
 	option = {
 		name = usfp_indian_wars.1.a
+		default_option = yes
+		create_bidirectional_truce = {
+			country = c:LKT
+			years = 10
+		}
+		
+	}
+	#reject terms
+	option = {
+		name = usfp_indian_wars.1.b
+		change_tension = {
+			country = c:LKT
+			value = 20
+		}
 	}
 }
-#Red Cloud Peace Offer
+#Bozeman Trail
 usfp_indian_wars.2 = {
 	type = country_event
 	placement = ROOT
@@ -62,6 +85,15 @@ usfp_indian_wars.2 = {
 	flavor = usfp_indian_wars.2.f
 	dlc = dlc_usfp
 	duration = 3
+
+	#lets go
+	option = {
+		name = usfp_indian_wars.2.a
+	}
+	#too dangerous
+	option = {
+		name = usfp_indian_wars.2.b
+	}
 }
 #Black Hills Gold
 usfp_indian_wars.3 = {
@@ -81,6 +113,20 @@ usfp_indian_wars.3 = {
 	flavor = usfp_indian_wars.3.f
 	dlc = dlc_usfp
 	duration = 3
+
+	trigger = {
+		has_state_in_state_region = STATE_SOUTH_DAKOTA
+	}
+
+	#lets go!
+	option = {
+		name = usfp_indian_wars.3.a
+		default_option = yes
+	}
+	#this will violate the treaty
+	option = {
+		name = usfp_indian_wars.3.b
+	}
 }
 #Little Bighorn
 usfp_indian_wars.4 = {
@@ -157,7 +203,7 @@ usfp_indian_wars.4 = {
 #Sioux-Crow War
 usfp_indian_wars.5 = {
 	type = country_event
-	placement = ROOT
+	placement = scope:montana_scope
 	cooldown = {years = 100} #once
 	event_image = {
 		video = "europenorthamerica_native_american"
@@ -177,15 +223,61 @@ usfp_indian_wars.5 = {
 		exists = c:LKT
 		exists = c:ABS
 		has_variable = horse_creek_treaty
+		c:LKT = {
+			is_adjacent_to_country = c:ABS
+			NOR = {
+				has_state_in_state_region = STATE_IOWA
+				has_state_in_state_region = STATE_MINNESOTA
+			}
+		}
+	}
+
+	immediate = {
+		c:LKT = {
+			save_scope_as = sioux_scope
+		}
+		c:ABS = {
+			save_scope_as = crow_scope
+		}
+		s:STATE_MONTANA = {
+			region_state:LKT = {
+				save_scope_as = montana_scope
+			}
+		}
 	}
 
 	#ally with the Crow
 	option = {
 		name = usfp_indian_wars.5.a
+		default_option = yes
+		c:LKT = {
+			annex = c:ABS
+		}
+		s:STATE_MONTANA = {
+			region_state:usfp_ARK = {
+				set_state_owner = c:LKT
+			}
+		}
+		change_tension = {
+			country = c:LKT
+			value = 10
+		}
 	}
 	#let them fight
 	option = {
 		name = usfp_indian_wars.5.b
+		c:LKT = {
+			annex = c:ABS
+		}
+		s:STATE_MONTANA = {
+			region_state:usfp_ARK = {
+				set_state_owner = c:LKT
+			}
+		}
+		change_tension = {
+			country = c:LKT
+			value = -10
+		}
 	}
 }
 #Settlers Massacre Natives
@@ -208,7 +300,22 @@ usfp_indian_wars.6 = {
 	duration = 3
 
 	trigger = {
-		
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+		any_scope_state = {
+			state_region = {
+				any_scope_state = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+			}
+			any_scope_pop = {
+				culture = {
+					has_discrimination_trait = native_north_american_culture_group
+				}
+			}
+		}
 	}
 
 	immediate = {
@@ -221,16 +328,21 @@ usfp_indian_wars.6 = {
 						}
 					}
 				}
+				any_scope_pop = {
+					culture = {
+						has_discrimination_trait = native_north_american_culture_group
+					}
+				}
 			}
 			save_scope_as = settler_state_scope
-			state_region = {
-				random_scope_state = {
-					limit = {
-						owner = {
-							is_country_type = decentralized
-						}
+			random_scope_pop = {
+				limit = {
+					culture = {
+						has_discrimination_trait = native_north_american_culture_group
 					}
-					save_scope_as = massacre_state_scope
+				}
+				culture = {
+					save_scope_as = massacre_victims
 				}
 			}
 		}
@@ -243,14 +355,23 @@ usfp_indian_wars.6 = {
 		scope:settler_state_scope = {
 			state_region = {
 				add_devastation = 5
-			}
-		}
-		scope:massacre_state_scope = {
-			owner = {
-				change_tension = {
-					country = root
-					value = 10
+				every_scope_state = {
+					limit = {
+						owner = {
+							is_country_type = decentralized
+						}
+					}
+					owner = {
+						change_tension = {
+							country = root
+							value = 10
+						}
+					}
 				}
+			}
+			kill_population_percent_in_state = {
+				culture = scope:massacre_victims
+				percent = 0.02
 			}
 		}
 	}
@@ -261,8 +382,10 @@ usfp_indian_wars.6 = {
 			state_region = {
 				add_devastation = 5
 			}
-		}
-		scope:settler_state_scope = {
+			kill_population_percent_in_state = {
+				culture = scope:massacre_victims
+				percent = 0.01
+			}
 			usfp_radicalize_settlers_in_state = {
 				RADICALS = small_radicals
 			}
@@ -874,7 +997,7 @@ usfp_indian_wars.13 = {
 				}
 			}
 		}
-		usfp_manifest_more_destiny_low_effect = yes
+		usfp_manifest_more_destiny_effect = yes
 		usfp_loyalize_frontier_settlers = {
 			LOYALISTS = small_radicals
 		}

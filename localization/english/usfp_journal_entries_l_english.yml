@@ -182,7 +182,7 @@ usfp_progressive_era_eugenics_reason: "In an attempt to secure their position in
 usfp_offer_treaty_of_gh_mex: "Surrender the North"
 usfp_offer_treaty_of_gh_mex_desc: "Our war with the United States is unwinnable. We must sue for peace, on whatever terms will end the conflict."
 
-plains_formation_tt: "Any [concept_army] in the [SCOPE.sStrategicRegion('great_plains_region').GetName] [concept_hq] has at least #variable 20#! [Concept('concept_unit','$concept_units$')] and a [concept_general]"
+plains_formation_tt: "Any [concept_army] in the [SCOPE.sStrategicRegion('great_plains_region').GetName] [concept_hq] has at least #variable 3#! [Concept('concept_unit','$concept_units$')] and a [concept_general]"
 
 usfp_je_western_border: "The Indian Preserve"
 usfp_je_western_border_reason: "Much as King George did before the revolution, we have now drawn a line across our western border that no White settlers are to cross. We have committed to maintaining a peaceable boundary with the Great Plains nations, much to the dismay of prospective settlers."

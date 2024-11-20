@@ -190,6 +190,10 @@ usfp_mexican_north_purchase_effect = {
 			region_state:MEX = {
 				set_state_owner = c:USA
 			}
+			set_owner_of_provinces = {
+				country = root
+				provinces = { xd08000  }
+			}
 		}
 	}
 	s:STATE_NEW_MEXICO = {
@@ -203,6 +207,10 @@ usfp_mexican_north_purchase_effect = {
 			}
 			region_state:MEX = {
 				set_state_owner = c:USA
+			}
+			set_owner_of_provinces = {
+				country = root
+				provinces = { xc03080 xB566BA xB6EC9A }
 			}
 		}
 	}

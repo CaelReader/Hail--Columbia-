@@ -249,6 +249,7 @@ gov_usfp_private_colony = {
 		country_has_voting_franchise = no
 		c:LIB ?= this
 		has_variable = american_colonization_society
+		is_subject = yes
 	}
 
 	on_government_type_change = {

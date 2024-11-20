@@ -337,3 +337,20 @@ usfp_accomodating_indians_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	interest_group_approval_add = -2
 }
+
+usfp_manifest_destiny_ig_positive_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
+	interest_group_approval_add = 2
+}
+
+usfp_medals_awarded_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_officer_positive.dds
+	interest_group_approval_add = 2
+	interest_group_pop_attraction_mult = 0.15
+}
+
+usfp_court_martials_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_officer_negative.dds
+	interest_group_approval_add = -2
+	interest_group_pop_attraction_mult = -0.15
+}

@@ -1050,18 +1050,18 @@ usfp_progressive_era.18.b: "This is the way."
 
 usfp_liberia.1.t: "The [SCOPE.sCountry('liberia_scope').GetAdjective] Declaration of Independence"
 usfp_liberia.1.d: "The American Colonization Society has seen fit to establish a proper government for their colonial venture in [SCOPE.sCountry('liberia_scope').GetName]. The new republic has ratified a constitution based on the American model, and seeks recognition by our government."
-usfp_liberia.1.f: ""In view of these facts, this institution, the American Colonization Society, with that good faith which has uniformly marked all its dealings with us did by a set of resolutions, dissolve all political connections with the people of this Republic, returned the power with which it was delegated, and left the people to the government of themselves.\n\nThe people of the Republic of Liberia , they, are of right, and in fact, a free, sovereign, and independent state, possessed of all the rights, powers, and functions of government."" #Liberian Declaration of Independence
+usfp_liberia.1.f: ""In view of these facts, this institution, the American Colonization Society, with that good faith which has uniformly marked all its dealings with us did by a set of resolutions, dissolve all political connections with the people of this Republic, returned the power with which it was delegated, and left the people to the government of themselves.\n\nThe people of the Republic of Liberia, they, are of right, and in fact, a free, sovereign, and independent state, possessed of all the rights, powers, and functions of government."" #Liberian Declaration of Independence
 usfp_liberia.1.a: "Politely table their request for now."
 usfp_liberia.1.b: "They want to be independent? Let them survive on their own then."
-usfp_liberia.1.c: "Extend formal recognition of the new government."
+usfp_liberia.1.c: "Extend formal recognition of the new [SCOPE.sCountry('liberia_scope').GetAdjective] government."
 
-usfp_indian_wars.1.t: "Red Cloud's War"
+usfp_indian_wars.1.t: "[SCOPE.sCharacter('red_cloud_scope').GetFullName]'s War"
 usfp_indian_wars.1.d: ""
 usfp_indian_wars.1.f: """"
 usfp_indian_wars.1.a: ""
 usfp_indian_wars.1.b: ""
 
-usfp_indian_wars.2.t: "Red Cloud's Peace"
+usfp_indian_wars.2.t: "Blazing the Bozeman Trail"
 usfp_indian_wars.2.d: ""
 usfp_indian_wars.2.f: """"
 usfp_indian_wars.2.a: ""
@@ -1084,11 +1084,11 @@ usfp_indian_wars.5.f: """"
 usfp_indian_wars.5.a: ""
 usfp_indian_wars.5.b: ""
 
-usfp_indian_wars.6.t: "Indians Massacred in"
-usfp_indian_wars.6.d: ""
-usfp_indian_wars.6.f: """"
-usfp_indian_wars.6.a: ""
-usfp_indian_wars.6.b: ""
+usfp_indian_wars.6.t: "Indians Massacred in [SCOPE.sState('settler_state_scope').GetStateRegion.GetName]"
+usfp_indian_wars.6.d: "White vigilantes along the frontier of [SCOPE.sState('settler_state_scope').GetStateRegion.GetName] have orchestrated a massacre of non-hostile [SCOPE.sCulture('massacre_victims').GetName] Indians."
+usfp_indian_wars.6.f: ""A more shocking and revolting spectacle was never exhibited to the eyes of a Christian and civilized people. Old women, wrinkled and decrepit, lay weltering in blood, their brains dashed out and dabbled with their long gray hair. Infants scarce a span long, with their faces cloven with hatchets and their bodies ghastly with wounds."" #Bret Harte, report on the Tuluwat Island Massacre
+usfp_indian_wars.6.a: "The settlers are doing our work for us."
+usfp_indian_wars.6.b: "Find and prosecute those responsible."
 
 usfp_indian_wars.7.t: "Captain Jack's Stronghold"
 usfp_indian_wars.7.d: ""
@@ -1115,7 +1115,7 @@ usfp_indian_wars.10.a: "A great sport for all!"
 usfp_indian_wars.10.b: "Stop this senseless slaughter at once!"
 
 usfp_indian_wars.11.t: "Where the Buffalo Once Roamed"
-usfp_indian_wars.11.d: "Years of extermination by White poachers and Army personnel have driven the buffalo into near extinction. Deprived of their fundamental basis of subsistence, the plains Indians' ability to resist Manifest Destiny has collapsed."
+usfp_indian_wars.11.d: "Years of extermination by soldiers and poachers have driven the buffalo into near extinction. Deprived of their fundamental basis of subsistence, the plains Indians' ability to resist Manifest Destiny has collapsed."
 usfp_indian_wars.11.f: ""The hunters have done more in the last two years, and will do more in the next year, to settle the vexed Indian question, than the entire regular army has done in the last forty years. They are destroying the Indians' commissary. It is a well-known fact that an army losing its base of supplies is placed at a great disadvantage. For a lasting peace, let them kill, skin, and sell until the buffaloes are exterminated. Then your prairies can be covered with speckled cattle."" #Philip Sheridan
 usfp_indian_wars.11.a: "The plains have been tamed."
 
@@ -1132,22 +1132,22 @@ usfp_indian_wars.13.a: "Settlement and negotiation will bring these lands into c
 usfp_indian_wars.13.b: "The only good Indian is a dead Indian."
 
 usfp_indian_postremoval.1.t: "The Ghost Dance"
-usfp_indian_postremoval.1.d: ""
-usfp_indian_postremoval.1.f: """"
-usfp_indian_postremoval.1.a: ""
-usfp_indian_postremoval.1.b: ""
+usfp_indian_postremoval.1.d: "A millenarian spiritual movement known as the Ghost Dance has swept across the Indian tribes of the west, promising a return of the buffalo and the wiping away of White settlers. While the movement promotes peaceful behavior from its adherents, the sometimes wild and ecstatic dance rituals have provoked terror in White settlers, who claim the Indians are preparing themselves for apocalyptic war upon their homesteads."
+usfp_indian_postremoval.1.f: ""They told the people they could dance a new world into being. There would be landslides, earthquakes, and big winds. Hills would pile up on each other. The earth would roll up like a carpet with all the white man's ugly things - the stinking new animals, sheep and pigs, the fences, the telegraph poles, the mines and factories. Underneath would be the wonderful old-new world as it had been before the white fat-takers came. The white men will be rolled up, disappear, go back to their own continent."" #Lame Deer
+usfp_indian_postremoval.1.a: "Send in troops to break up the dances."
+usfp_indian_postremoval.1.b: "The dancers are no threat to anyone."
 
-usfp_indian_postremoval.2.t: "Wounded Knee Massacre"
-usfp_indian_postremoval.2.d: ""
-usfp_indian_postremoval.2.f: """"
-usfp_indian_postremoval.2.a: ""
-usfp_indian_postremoval.2.b: ""
+usfp_indian_postremoval.2.t: "Massacre at Wounded Knee"
+usfp_indian_postremoval.2.d: "The troops we sent in to [SCOPE.sState('south_dakota_scope').GetName] to break up the Ghost Dance have slaughtered an entire band of non-hostile [SCOPE.sCulture('dakota_culture').GetName] Indians. The few warriors who resisted were gunned down, while our soldiers fired artillery shells into tipis of unarmed women and children. Those who tried to escape were run down by cavalry and slaughtered."
+usfp_indian_postremoval.2.f: ""I can still see the butchered women and children lying heaped and scattered all along the crooked gulch as plain as when I saw them with eyes still young. And I can see that something else died there in the bloody mud, and was buried in the blizzard. A people's dream died there. It was a beautiful dream. The nation's hoop is broken and scattered. There is no center any longer, and the sacred tree is dead."" #Black Elk
+usfp_indian_postremoval.2.a: "Our men showed exceptional bravery, roll out the Medals of Honor!"
+usfp_indian_postremoval.2.b: "Lets just bury the dead and move on."
+usfp_indian_postremoval.2.c: "A grand court-martial will be needed for this mess."
 
 usfp_indian_postremoval.3.t: "Ghosts on the Wind"
-usfp_indian_postremoval.3.d: ""
-usfp_indian_postremoval.3.f: """"
-usfp_indian_postremoval.3.a: ""
-usfp_indian_postremoval.3.b: ""
+usfp_indian_postremoval.3.d: "The overturning of the world prophesied by the Ghost Dance has not come to pass. While the initial enthusiasm for the movement has waned, its influence has forged cross-cultural links across Indian nations, fostering a pan-Indian sense of identity that stands in opposition to our program of assimilation."
+usfp_indian_postremoval.3.f: ""When the Sun died, I went up to Heaven and saw God and all the people who had died a long time ago. God told me to come back and tell my people they must be good and love one another, and not fight, or steal or lie. He gave me this dance to give to my people."" #Wovoka? no source
+usfp_indian_postremoval.3.a: "Like snow under the hot sun."
 
 usfp_indian_postremoval.4.t: "The Sequoyah Constitution"
 usfp_indian_postremoval.4.d: "In a bid to maintain some semblence of sovereignty, a delegation of American Indians from [indian territory] have drafted a constitution for a state they call Sequoyah. After recieving overwhelming approval from the locals, the representatives have submitted their formal proposal for incorporation into the union as a new state."
@@ -1168,13 +1168,13 @@ usfp_indian_althist.1.f: "The Seven Council Fires had met for generations, but t
 usfp_indian_althist.1.a: "It will be a civilization of their own making."
 usfp_indian_althist.1.b: "This country is ours, and we intend to stay here."
 
-usfp_usfp_indian_althist.2.t: ""
+usfp_usfp_indian_althist.2.t: "Indian Raids in "
 usfp_usfp_indian_althist.2.d: ""
 usfp_usfp_indian_althist.2.f: """"
 usfp_usfp_indian_althist.2.a: ""
 usfp_usfp_indian_althist.2.b: ""
 
-usfp_usfp_indian_althist.3.t: ""
+usfp_usfp_indian_althist.3.t: "The Lure of Gold"
 usfp_usfp_indian_althist.3.d: ""
 usfp_usfp_indian_althist.3.f: """"
 usfp_usfp_indian_althist.3.a: ""

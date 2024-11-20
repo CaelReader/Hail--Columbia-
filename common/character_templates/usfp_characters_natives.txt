@@ -169,7 +169,7 @@ usfp_kintpuash = {
 	historical = yes
 	birth_date = 1837.6.6
 	ruler = yes
-    is_general =yes
+    is_general = yes
 	interest_group = ig_armed_forces
 	traits = {
         cautious
@@ -177,4 +177,59 @@ usfp_kintpuash = {
         expert_defensive_strategist
 	}
     #manually spawned as Modoc leader
+}
+
+usfp_woman_chief = {
+	first_name = Biawacheeitchish
+	last_name = usfp_Blank
+	historical = yes
+	birth_date = 1806.1.20
+	ruler = yes
+    is_general = yes
+	interest_group = ig_armed_forces
+    female = yes
+	traits = {
+        brave
+        imposing
+	}
+    #1836 Absaroka ruler
+}
+
+usfp_plenty_coups = {
+    first_name = Plenty_Coups
+    last_name = usfp_Blank
+    historical = yes
+    birth_date = 1848.1.1 #unknown
+    ig_leader = yes
+    interest_group = ig_devout
+    ideology = ideology:ideology_pacifist
+    ruler = yes
+    traits = {
+        erudite
+        pious
+        experienced_political_operator
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:ABS
+            this = c:ABS
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+                is_interest_group_type = ig_devout
+                is_interest_group_type = ig_landowners
+                is_interest_group_type = ig_armed_forces
+            }
+            NOR = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_ethno_nationalism
+			}
+        }
+        earliest_usage_date = 1876.1.1
+        latest_usage_date = 1932.1.1
+        chance = 100
+    }
 }

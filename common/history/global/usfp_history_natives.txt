@@ -1481,6 +1481,11 @@
 			provinces = { xA5970F xF03169 x002DE6 }
 		}
 	}
+	c:ABS = {
+		create_character = {
+			template = usfp_woman_chief
+		}
+	}
 	#GVT
 	s:STATE_MONTANA = {
 		create_country = {

@@ -350,7 +350,6 @@ usfp_indian_althist.4 = {
 	}
 
 }
-#Families vs the Army
 #Comanche centralization
 usfp_indian_althist.5 = {
 	type = country_event
