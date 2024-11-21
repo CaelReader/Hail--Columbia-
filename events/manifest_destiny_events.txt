@@ -144,6 +144,9 @@ manifest_destiny.3 = {
 				has_modifier = military_bison_hunting
 			}
 		}
+		NOT = {
+			has_global_variable = buffalo_extinction
+		}
 	}
 
 	immediate = {

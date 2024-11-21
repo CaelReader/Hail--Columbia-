@@ -694,3 +694,8 @@ usfp_indian_boarding_schools_modifier = {
 	state_assimilation_mult = 0.20
 	state_conversion_mult = 0.40
 }
+
+usfp_frontier_army_duties_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_logistics_negative.dds
+	country_military_goods_cost_mult = 0.10
+}

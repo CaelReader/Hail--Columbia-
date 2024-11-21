@@ -203,6 +203,8 @@ usfp_plenty_coups = {
     ig_leader = yes
     interest_group = ig_devout
     ideology = ideology:ideology_pacifist
+    culture = cu:siouan
+    religion = rel:animist
     ruler = yes
     traits = {
         erudite
@@ -232,4 +234,21 @@ usfp_plenty_coups = {
         latest_usage_date = 1932.1.1
         chance = 100
     }
+}
+
+usfp_wovoka = {
+    first_name = Wovoka
+	last_name = usfp_Blank
+	historical = yes
+	birth_date = 1856.12.25 #approx
+	interest_group = ig_devout
+    ideology = ideology:ideology_usfp_universalist
+    culture = cu:paiute
+    religion = rel:animist
+	traits = {
+        pious
+        inspirational_orator
+        reserved
+	}
+    #event spawned
 }

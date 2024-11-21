@@ -3,7 +3,7 @@
 #Red Cloud's War
 usfp_indian_wars.1 = {
 	type = country_event
-	placement = c:LKT.capital
+	placement = scope:montana_scope
 	cooldown = {years = 100} #once
 	gui_window = event_window_1char_propaganda
 	left_icon = scope:red_cloud_scope
@@ -45,6 +45,10 @@ usfp_indian_wars.1 = {
 				}
 				save_scope_as = red_cloud_scope
 			}
+			save_scope_as = sioux_scope
+		}
+		s:STATE_MONTANA.region_state:USA = {
+			save_scope_as = montana_scope
 		}
 	}
 
@@ -56,29 +60,53 @@ usfp_indian_wars.1 = {
 			country = c:LKT
 			years = 10
 		}
-		
+		s:STATE_MONTANA = {
+			set_owner_of_provinces = {
+				country = c:LKT
+				provinces = { x91670D x743F41 x3ABADD x9A73C7 xFA2355 xC6BBD4 }
+			}
+		}
+		ig:ig_rural_folk = {
+			add_modifier = {
+				name = usfp_accomodating_indians_modifier
+				years = 4
+			}
+		}
 	}
 	#reject terms
 	option = {
 		name = usfp_indian_wars.1.b
 		change_tension = {
 			country = c:LKT
-			value = 20
+			value = 100
+		}
+		s:STATE_MONTANA = {
+			add_devastation = 10
+		}
+		s:STATE_WYOMING = {
+			add_devastation = 10
+		}
+		add_modifier = {
+			name = usfp_frontier_army_duties_modifier
+			years = 2
+		}
+		usfp_loyalize_frontier_settlers = {
+			LOYALISTS = small_radicals
 		}
 	}
 }
 #Bozeman Trail
 usfp_indian_wars.2 = {
 	type = country_event
-	placement = ROOT
+	placement = scope:montana_scope
 	cooldown = {years = 100} #once
 	event_image = {
-		video = "europenorthamerica_native_american"
+		video = "europenorthamerica_gold_prospectors"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	icon = "gfx/interface/icons/invention_icons/prospecting_tech.dds"
 	
 	title = usfp_indian_wars.2.t
 	desc = usfp_indian_wars.2.d
@@ -86,19 +114,60 @@ usfp_indian_wars.2 = {
 	dlc = dlc_usfp
 	duration = 3
 
+	trigger = {
+		has_state_in_state_region = STATE_WYOMING
+		has_variable = horse_creek_treaty
+		is_diplomatic_play_committed_participant = no
+		game_date > 1866.1.1
+		exists = c:LKT
+		c:LKT = {
+			has_state_in_state_region = STATE_MONTANA
+		}
+	}
+
+	immediate = {
+		s:STATE_MONTANA.region_state:LKT = {
+			save_scope_as = montana_scope
+		}
+	}
+
 	#lets go
 	option = {
 		name = usfp_indian_wars.2.a
+		default_option = yes
+		add_treasury = -10000
+		s:STATE_WYOMING = {
+			set_owner_of_provinces = {
+				country = root
+				provinces = { x170104 xFABE6A x5FBCFF xA55B0A }
+			}
+		}
+		s:STATE_MONTANA = {
+			set_owner_of_provinces = {
+				country = root
+				provinces = { x91670D x743F41 x3ABADD x9A73C7 xFA2355 xC6BBD4 }
+			}
+		}
 	}
 	#too dangerous
 	option = {
 		name = usfp_indian_wars.2.b
+		change_tension = {
+			country = c:LKT
+			value = -5
+		}
+		ig:ig_rural_folk = {
+			add_modifier = {
+				name = usfp_denied_gold_miners_modifier
+				years = 4
+			}
+		}
 	}
 }
 #Black Hills Gold
 usfp_indian_wars.3 = {
 	type = country_event
-	placement = ROOT
+	placement = scope:south_dakota_scope
 	cooldown = {years = 100} #once
 	event_image = {
 		video = "europenorthamerica_gold_prospectors"
@@ -118,14 +187,35 @@ usfp_indian_wars.3 = {
 		has_state_in_state_region = STATE_SOUTH_DAKOTA
 	}
 
+	immediate = {
+		s:STATE_SOUTH_DAKOTA.region_state:USA = {
+			save_scope_as = south_dakota_scope
+		}
+		c:LKT = {
+			save_scope_as = sioux_scope
+		}
+	}
+
 	#lets go!
 	option = {
 		name = usfp_indian_wars.3.a
 		default_option = yes
+		if = {
+			limit = { 
+				has_truce_with = c:LKT
+			}
+			end_truce = c:LKT
+		}
 	}
 	#this will violate the treaty
 	option = {
 		name = usfp_indian_wars.3.b
+		ig:ig_rural_folk = {
+			add_modifier = {
+				name = usfp_denied_gold_miners_modifier
+				years = 4
+			}
+		}
 	}
 }
 #Little Bighorn

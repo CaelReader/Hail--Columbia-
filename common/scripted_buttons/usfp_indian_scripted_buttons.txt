@@ -201,6 +201,7 @@ usfp_provoke_lakota_war_button = {
 		any_neighbouring_state = {
 			owner = c:LKT
 		}
+		has_technology_researched = civilizing_mission
 	}
 
 	possible = {
@@ -236,6 +237,7 @@ usfp_break_treaty_button = {
 			has_truce_with = root
 			is_country_type = decentralized
 		}
+		has_technology_researched = civilizing_mission
 	}
 
 	possible = {

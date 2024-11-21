@@ -4,7 +4,7 @@ first post-launch patch
 The US now starts in phase 1 of Universal Suffrage rather than phase 2
 Millard Filmore is now a Moderate
 John Sutter shouldn't spawn as Planters leader anymore
-Tweaks to Two-Party System (merged from USCWF by Ferrous)
+Tweaks to Two-Party System [merged from USCWF by Ferrous]
 Additional support to the Democrats in initial elections
 Slavery Banned will now empower the Enact Slave Trade movement
 Slavery will no longer spread west if you banned slavery

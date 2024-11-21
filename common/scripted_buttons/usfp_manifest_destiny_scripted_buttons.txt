@@ -229,7 +229,7 @@ usfp_homestead_act_button = {
 			NOT = {
 				has_modifier = usfp_homestead_act_modifier
 			}
-			free_arable_land >= 40
+			free_arable_land >= 45
 			OR = {
 				free_arable_land >= 100
 				is_split_state = no

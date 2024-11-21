@@ -327,6 +327,8 @@ usfp_manifest_destiny_main = {
 			100 = usfp_manifest_destiny.22 #Pike's Peak Gold Rush
 			100 = usfp_filibuster.1 #William Walker attacks Sonora
 			100 = usfp_manifest_destiny.26 #American Empire
+			1000 = usfp_indian_postremoval.1 #Ghost Dance
+			300 = usfp_indian_postremoval.5 #Oklahoma Land Runs
 		}
 		events = {
 			# usfp_manifest_destiny.6 #Treaty of GH
@@ -335,6 +337,7 @@ usfp_manifest_destiny_main = {
 			usfp_manifest_destiny.18 #Monroe violation
 			usfp_manifest_destiny.24 #Revolutionary Destiny
 			usfp_manifest_destiny.25 #Monarchy Destiny
+			usfp_indian_postremoval.4 #Sequoyah Constitution
 		}
 	}
 	on_yearly_pulse = {
@@ -446,15 +449,17 @@ usfp_je_western_border = {
 		}
 	}
 
-	on_yearly_pulse = {
+	on_monthly_pulse = {
 		random_events = {
 			300 = 0
-			100 = usfp_indian_althist.1 #Sioux become centralized
-			100 = usfp_indian_althist.2 #Border Raid
-			100 = usfp_indian_althist.3 #Gold Miners
-			100 = usfp_indian_althist.4 #Mormons
+			1000 = usfp_indian_althist.1 #Sioux become centralized
+			20 = usfp_indian_althist.2 #Border Raid
+			20 = usfp_indian_althist.3 #Gold Miners
+			1000 = usfp_indian_althist.4 #Mormon claims
+			1000 = usfp_indian_althist.5 #Comanche become centralized
 		}
 	}
+	
 
 	fail = {
 		OR = {
@@ -491,7 +496,10 @@ usfp_je_indian_wars = {
 
 	scripted_button = usfp_provoke_lakota_war_button
 	scripted_button = usfp_break_treaty_button
-	
+
+	modifiers_while_active = {
+		usfp_frontier_army_duties_modifier
+	}
 
 	is_shown_when_inactive = {
 		exists = c:USA
@@ -532,7 +540,7 @@ usfp_je_indian_wars = {
 	}
 
 	immediate = {
-		trigger_event = usfp_indian_wars.13
+		trigger_event = usfp_indian_wars.13 #Peace Policy or War Policy
 		hidden_effect = {
 			c:LKT = {
 				create_character = {
@@ -564,14 +572,33 @@ usfp_je_indian_wars = {
 	}
 
 	on_complete = {
-		trigger_event = usfp_indian_wars.12
+		trigger_event = usfp_indian_wars.12 #Allotment
 	}
 
 	on_monthly_pulse = {
 		random_events = {
-			100 = 0
+			300 = 0
 			100 = manifest_destiny.3 #Bison Hunting
+			1000 = usfp_indian_wars.5 #Sioux-Crow War
+			100 = usfp_indian_wars.6 #Indians Massacred
+			100 = usfp_indian_wars.10 #Hunting by Rail
+			1000 = usfp_indian_wars.11 #Buffalo Extinction
 
+		}
+		events = {
+			usfp_indian_wars.1 #Red Cloud's War
+			usfp_indian_wars.2 #Bozeman Trail
+			usfp_indian_wars.3 #Black Hills Gold
+			usfp_indian_wars.8 #Flight of the Nez Perce
+			usfp_indian_wars.9 #Navajo Long Walk
+
+		}
+	}
+
+	on_weekly_pulse = {
+		events = {
+			usfp_indian_wars.4 #Custer's Last Stand
+			usfp_indian_wars.7 #Modoc War
 		}
 	}
 

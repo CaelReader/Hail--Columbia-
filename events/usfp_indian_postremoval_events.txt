@@ -284,6 +284,10 @@ usfp_indian_postremoval.3 = {
 				is_decaying = yes
 			}
 		}
+		create_character = {
+			template = usfp_wovoka
+			is_agitator = yes
+		}
 	}
 }
 #Sequoyah Constitution

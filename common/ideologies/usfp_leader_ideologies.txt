@@ -816,7 +816,7 @@ ideology_usfp_social_darwinist_leader = {
 }
 
 ideology_usfp_universalist = {
-	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_pacifist.dds"
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_usfp_universalist.dds"
 	
 	character_ideology = yes
 

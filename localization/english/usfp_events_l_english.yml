@@ -1056,16 +1056,16 @@ usfp_liberia.1.b: "They want to be independent? Let them survive on their own th
 usfp_liberia.1.c: "Extend formal recognition of the new [SCOPE.sCountry('liberia_scope').GetAdjective] government."
 
 usfp_indian_wars.1.t: "[SCOPE.sCharacter('red_cloud_scope').GetFullName]'s War"
-usfp_indian_wars.1.d: ""
-usfp_indian_wars.1.f: """"
-usfp_indian_wars.1.a: ""
-usfp_indian_wars.1.b: ""
+usfp_indian_wars.1.d: "In response to our encroachment into [SCOPE.sState('montana_scope').GetStateRegion.GetName], the chief [SCOPE.sCharacter('red_cloud_scope').GetFullName] has led an aggressive raiding campaign, cutting off supply lines to our forts and generally embarassing the frontier garrisons. He demands our withdrawal from their hunting grounds and a recognition of [SCOPE.sCountry('sioux_scope').GetAdjective] territorial integrity."
+usfp_indian_wars.1.f: ""The only way that peace can be made with the Indians is giving up this country. It is the best hunting ground they have, and I do not see that we need it for ten or twenty years at least. So, for the sake of economy, if not for the sake of humanity, it would be better to withdraw even at the expense of our pride."" #Colonel Luther P. Bradley
+usfp_indian_wars.1.a: "A treaty is in our best interests for now."
+usfp_indian_wars.1.b: "We will not be cowed by any Indian."
 
 usfp_indian_wars.2.t: "Blazing the Bozeman Trail"
-usfp_indian_wars.2.d: ""
-usfp_indian_wars.2.f: """"
-usfp_indian_wars.2.a: ""
-usfp_indian_wars.2.b: ""
+usfp_indian_wars.2.d: "Rumors of Gold have pushed a steady stream of prospectors north of the Oregon Trail into [SCOPE.sState('montana_scope').GetStateRegion.GetName]. As traffic grows, so too has harassment from Indian raiders. The Army has put forth a plan to build a chain of forts along the route to secure the gold trail."
+usfp_indian_wars.2.f: "The trail trodden by the gold diggers had become a dead zone along the plains. The Indians grew more furious at the Whites as the buffalo and antelope herds were depleted year after year. They would not stand idly by and starve."
+usfp_indian_wars.2.a: "We shall protect the prospectors."
+usfp_indian_wars.2.b: "Building forts would be a provocation."
 
 usfp_indian_wars.3.t: "There's Gold In Those Black Hills"
 usfp_indian_wars.3.d: ""
@@ -1100,6 +1100,7 @@ usfp_indian_wars.8.t: "Flight of the [SCOPE.sCulture('nez_perce_culture').GetNam
 usfp_indian_wars.8.d: "Several bands of the [SCOPE.sCulture('nez_perce_culture').GetName] have rejected the treaties granting us control over their ancestral lands. With remarkable fighting skill they have led the Army on a 1000-mile chase across the plains before being cornered and made to surrender in eastern [SCOPE.sStateRegion('montana_region_scope').GetName]."
 usfp_indian_wars.8.f: ""I am tired of fighting. Our chiefs are killed. The old men are all dead. It is the young men who say 'yes' or 'no'. He who led on the young men is dead.\n\nIt is cold, and we have no blankets; the little children are freezing to death. My people, some of them, have run away to the hills, and have no blankets, no food. No one knows where they are — perhaps freezing to death. I want to have time to look for my children, to see how many I can find. Maybe I shall find them among the dead.\n\nHear me, my chiefs! I am tired; my heart is sick and sad. From where the sun now stands, I will fight no more forever."" #Chief Joseph, possibly made up/embellished by Charles Erskine Scott Wood
 usfp_indian_wars.8.a: "Ship these rebels off to Indian Territory."
+usfp_indian_wars.8.a.tt: "Around 400 [SCOPE.sCulture('nez_perce_culture').GetName] will be sent to [SCOPE.sState('indian_territory_scope').GetName]"
 usfp_indian_wars.8.b: "They showed great spirit. Let them return to [SCOPE.sState('idaho_scope').GetName]."
 
 usfp_indian_wars.9.t: "Long Walk of the [SCOPE.sCulture('navajo_culture').GetName]"
@@ -1168,17 +1169,18 @@ usfp_indian_althist.1.f: "The Seven Council Fires had met for generations, but t
 usfp_indian_althist.1.a: "It will be a civilization of their own making."
 usfp_indian_althist.1.b: "This country is ours, and we intend to stay here."
 
-usfp_usfp_indian_althist.2.t: "Indian Raids in "
-usfp_usfp_indian_althist.2.d: ""
-usfp_usfp_indian_althist.2.f: """"
-usfp_usfp_indian_althist.2.a: ""
-usfp_usfp_indian_althist.2.b: ""
+usfp_usfp_indian_althist.2.t: "Indian Raids in [SCOPE.sState('raid_state').GetName]"
+usfp_usfp_indian_althist.2.d: "An opportunistic band of Indians have raided into [SCOPE.sState('raid_state').GetName], plundering the countryside before returning swiftly to [SCOPE.sCountry('raiding_country').GetAdjective] territory."
+usfp_usfp_indian_althist.2.f: ""The appearance of the Indians caused us no surprise at first, as Indians are often seen on the Plains. We soon discovered, however, that they were on no friendly errand, and were pronounced by the herders to be a raiding party. They were decked in their war paint, and as soon as they saw us raised a shout before advancing upon us."" #Walter Glazier
+usfp_usfp_indian_althist.2.a: "This calls for a punitive expedition."
+usfp_usfp_indian_althist.2.b: "Resupply our forts and increase patrols."
+usfp_usfp_indian_althist.2.c: "The frontier is on its own."
 
 usfp_usfp_indian_althist.3.t: "The Lure of Gold"
-usfp_usfp_indian_althist.3.d: ""
-usfp_usfp_indian_althist.3.f: """"
-usfp_usfp_indian_althist.3.a: ""
-usfp_usfp_indian_althist.3.b: ""
+usfp_usfp_indian_althist.3.d: "Rumors of gold in [SCOPE.sCountry('gold_rumors_country').GetAdjective] territory have drawn bands of wildcat miners to cross the border in search of strikes, sparking conflict with local Indians."
+usfp_usfp_indian_althist.3.f: ""As he drew forth the yellow lumps from his pockets, and passed them around among the eager crowd, the doubts, which had lingered till now, fled. The excitement produced was intense, and many were soon busy in their hasty preparations for a departure to the mines."" #Rev Walter Colton
+usfp_usfp_indian_althist.3.a: "We won't intervene."
+usfp_usfp_indian_althist.3.b: "The border must be enforced."
 
 usfp_usfp_indian_althist.4.t: "Mormons Moving In"
 usfp_usfp_indian_althist.4.d: "The Mormons of [SCOPE.sCountry('deseret_scope').GetName] have claimed a vast swath of the West as rightfully the territory of their godly colony. Frustrated settlers have begun to flock to their 'New Zion' in order to evade our anticolonial policies."
