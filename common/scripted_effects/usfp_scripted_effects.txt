@@ -811,17 +811,21 @@ usfp_reconstruction_conclusion_effect = {
 			remove_primary_culture = cu:dixie
 			if = {
 				limit = { 
-					cu:afro_american = {
-						NOT = { culture_is_discriminated_in = ROOT }
-					}
+					cultural_acceptance_base = { target = cu:afro_american value >= acceptance_status_4 }
 				}
 				add_journal_entry = {
 					type = usfp_reconstruction_long
 				}
 			} else = {
-				add_modifier = {
-					name = usfp_radical_reconstruction_demand
-					years = 10
+				random_political_movement = {
+					limit = {
+						exists = culture
+						culture = cu:afro_american
+					}
+					add_modifier = {
+						name = usfp_radical_reconstruction_demand
+						years = 10
+					}
 				}
 			}
 		 }
@@ -1026,7 +1030,7 @@ usfp_enable_american_indian_culture = {
 				}
 			}
 			state_region = {
-				add_homeland = usfp_american_indian
+				add_homeland = cu:usfp_american_indian
 			}
 		}
 	}
@@ -1172,6 +1176,44 @@ usfp_loyalize_frontier_settlers = {
 				}
 			}
 		}
-		usfp_loyalize_settlers_in_state = $LOYALISTS$
+		if = {
+			limit = {
+				any_scope_pop = {
+					culture = cu:dixie
+					is_pop_type = farmers
+				}
+			 }
+			 add_loyalists_in_state = {
+				value = $LOYALISTS$
+				culture = cu:dixie
+				pop_type = farmers
+			}
+		}
+		if = {
+			limit = {
+				any_scope_pop = {
+					culture = cu:yankee
+					is_pop_type = farmers
+				}
+			 }
+			 add_loyalists_in_state = {
+				value = $LOYALISTS$
+				culture = cu:yankee
+				pop_type = farmers
+			}
+		}
+		if = {
+			limit = {
+				any_scope_pop = {
+					culture = cu:usfp_american
+					is_pop_type = farmers
+				}
+			 }
+			 add_loyalists_in_state = {
+				value = $LOYALISTS$
+				culture = cu:usfp_american
+				pop_type = farmers
+			} 
+		}
 	}
 }

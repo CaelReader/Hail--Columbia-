@@ -19,21 +19,9 @@ ai_strategy_anti_slavery_agenda = {
 	}
 	
 	min_law_chance_to_pass = {
-		value = 20
-		
+		value = 15
 		if = {
-			limit = { 				
-				OR = {
-					any_political_movement = {
-						desired_law ?= scope:law.type
-						political_movement_radicalism >= 75
-					}
-					AND = {
-						has_journal_entry = je_government_petition
-						var:desired_law_var	?= scope:law			
-					}
-				}
-			}
+			limit = { ai_has_reasons_to_not_oppose_law = yes }			
 			multiply = 0.5
 		}
 		if = {

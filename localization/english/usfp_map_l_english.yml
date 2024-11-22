@@ -131,3 +131,6 @@ dyn_c_utah_territory: "Utah Territory"
 dyn_c_utah_territory_ADJ: "Utah"
 
 mormon:"Mormon"
+
+STATE_OKLAHOMA_sequoyah: "Sequoyah"
+STATE_UTAH_deseret: "Deseret"

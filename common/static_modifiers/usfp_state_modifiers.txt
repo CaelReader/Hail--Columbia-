@@ -27,12 +27,6 @@ usfp_ellis_island_modifier = {
 	state_assimilation_mult = 0.20
 }
 
-usfp_wildfire_recovery_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-	building_group_bg_agriculture_throughput_add = -0.20
-	building_group_bg_logging_throughput_add = -0.20
-}
-
 usfp_great_urban_fire_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 	building_urban_center_throughput_add = -0.20
@@ -45,7 +39,6 @@ usfp_gold_rush_lawlessness = {
 	state_migration_pull_add = 20
 	state_migration_quota_mult = 1.00
 	state_tax_waste_add = 0.10
-	state_radicals_from_sol_change_mult = 0.10
 	state_colony_growth_speed_mult = 0.20
 	state_standard_of_living_add = -1
 	state_mortality_mult = 0.10
@@ -100,7 +93,7 @@ usfp_emigrant_aid_company = {
 usfp_slave_revolt = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 	state_mortality_turmoil_mult = 0.01
-	state_radicals_from_discrimination_mult = 0.20
+	state_radicals_from_political_movements_mult = 0.25
 	building_group_bg_agriculture_throughput_add = -0.25
 }
 
@@ -125,8 +118,8 @@ usfp_oregon_migration = {
 
 usfp_lds_farms = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds
-	state_poor_standard_of_living_add = 1
-	state_welfare_payments_add = 0.10
+	state_lower_strata_standard_of_living_add = 1
+	state_food_security_add = 0.10
 	state_migration_pull_add = 10
 	state_migration_pull_mult = 0.20
 	state_colony_growth_speed_mult = 0.25
@@ -140,15 +133,17 @@ usfp_lds_church_utah = {
 usfp_railway_strike = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_machinist_negative.dds
 	building_railway_throughput_add = -0.50
-	state_radicals_from_sol_change_mult = 0.10
+	state_radicals_from_political_movements_mult = 0.10
 }
 
 usfp_octopus_garden = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds
 	building_railway_throughput_add = 0.10
 	state_migration_pull_mult = 0.10
-	state_loyalists_from_sol_change_accepted_culture_mult = 0.10
-	state_radicals_from_discrimination_mult = 0.10
+	state_loyalism_increases_full_acceptance_mult = 0.10
+	state_radicalism_increases_violent_hostility_mult = 0.10
+	state_radicalism_increases_cultural_erasure_mult = 0.10
+	state_radicalism_increases_open_prejudice_mult = 0.10
 }
 
 usfp_railroad_boom = {
@@ -173,7 +168,6 @@ usfp_tammany_hall_modifier = {
 	state_tax_waste_add = 0.20
 	building_nationalization_cost_mult = 1.00
 	building_nationalization_radicals_mult = 1.00
-	state_loyalists_from_sol_change_accepted_culture_mult = 0.15
 }
 
 usfp_captive_state_government = {
@@ -183,16 +177,16 @@ usfp_captive_state_government = {
 	state_tax_waste_add = 0.10
 	building_nationalization_cost_mult = 0.50
 	building_nationalization_radicals_mult = 0.50
-	state_radicals_from_sol_change_mult = 0.10
+	state_loyalists_from_political_movements_mult = -0.10
 }
 
 usfp_monopolistic_business = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_negative.dds
 	state_construction_mult = -0.10
-	state_poor_standard_of_living_add = -1
+	state_lower_strata_standard_of_living_add = -1
 	building_nationalization_cost_mult = 1.00
 	building_nationalization_radicals_mult = 1.00
-	state_radicals_from_sol_change_mult = 0.10
+	state_loyalists_from_political_movements_mult = -0.10
 }
 
 usfp_state_ballot_initiatives_modifier = {
@@ -203,8 +197,8 @@ usfp_state_ballot_initiatives_modifier = {
 usfp_national_mall_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
 	state_migration_pull_add = 10
-	state_loyalists_from_sol_change_accepted_culture_mult = 0.10
-	state_middle_standard_of_living_add = 1
+	state_loyalism_increases_full_acceptance_mult = 0.05
+	state_middle_strata_standard_of_living_add = 1
 }
 
 usfp_land_runs_modifier = {
@@ -215,7 +209,8 @@ usfp_land_runs_modifier = {
 usfp_ghost_dance_state_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_theocracy_negative.dds
 	state_conversion_mult = -0.25
-	state_radicals_from_discrimination_mult = 0.25
+	state_loyalism_increases_violent_hostility_mult = -0.50
+	state_loyalism_increases_cultural_erasure_mult = -0.50
 }
 
 usfp_ghost_dance_state_legacy_modifier = {

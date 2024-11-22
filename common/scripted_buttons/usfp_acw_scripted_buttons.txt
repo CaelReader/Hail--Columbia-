@@ -259,23 +259,34 @@ usfp_end_gag_rule_button = {
 				is_marginal = yes
 			}
 		}
-
 		OR = {
-			custom_tooltip = {
-				text = usfp_end_gag_rule_button_no_abolitionists
-				NOT = {
-					any_political_movement = {
-						desired_law = law_type:law_slavery_banned
-					}
+			any_interest_group = {
+				is_in_government = yes
+				leader = {
+					has_ideology = ideology:ideology_slaver
 				}
 			}
-			custom_tooltip = {
-				text = usfp_end_gag_rule_button_slave_trade
-				any_political_movement = {
-					desired_law = law_type:law_slave_trade
-				}
+			ruler = {
+				has_ideology = ideology:ideology_slaver
 			}
 		}
+
+		# OR = {
+		# 	custom_tooltip = {
+		# 		text = usfp_end_gag_rule_button_no_abolitionists
+		# 		NOT = {
+		# 			any_political_movement = {
+		# 				desired_law = law_type:law_slavery_banned
+		# 			}
+		# 		}
+		# 	}
+		# 	custom_tooltip = {
+		# 		text = usfp_end_gag_rule_button_slave_trade
+		# 		any_political_movement = {
+		# 			desired_law = law_type:law_slave_trade
+		# 		}
+		# 	}
+		# }
 	}
 
 	effect = {

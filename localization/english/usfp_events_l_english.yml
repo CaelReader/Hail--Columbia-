@@ -1079,10 +1079,10 @@ usfp_indian_wars.4.f: ""The Indians poured in a murderous fire from all sides an
 usfp_indian_wars.4.a: "[SCOPE.sCharacter('custer_scope').GetLastName] will be avenged!"
 
 usfp_indian_wars.5.t: "Sioux-Crow War"
-usfp_indian_wars.5.d: ""
+usfp_indian_wars.5.d: "With White settlers pushing into the territory of the [SCOPE.sCountry('sioux_scope').GetName] from the east, [SCOPE.sCountry('sioux_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('sioux_scope').GetRuler.GetFullName] has embarked on a campaign against their old [SCOPE.sCountry('crow_scope').GetAdjective] enemies to the west. Defeated [SCOPE.sCountry('crow_scope').GetAdjectiveNoFormatting] warriors have petitioned for our protection, offering their services as scouts on the plains."
 usfp_indian_wars.5.f: """"
-usfp_indian_wars.5.a: ""
-usfp_indian_wars.5.b: ""
+usfp_indian_wars.5.a: "We would be glad to ally with the Crow people."
+usfp_indian_wars.5.b: "Inter-tribal fighting is not our concern."
 
 usfp_indian_wars.6.t: "Indians Massacred in [SCOPE.sState('settler_state_scope').GetStateRegion.GetName]"
 usfp_indian_wars.6.d: "White vigilantes along the frontier of [SCOPE.sState('settler_state_scope').GetStateRegion.GetName] have orchestrated a massacre of non-hostile [SCOPE.sCulture('massacre_victims').GetName] Indians."
@@ -1105,7 +1105,7 @@ usfp_indian_wars.8.b: "They showed great spirit. Let them return to [SCOPE.sStat
 
 usfp_indian_wars.9.t: "Long Walk of the [SCOPE.sCulture('navajo_culture').GetName]"
 usfp_indian_wars.9.d: "To secure our control over the lands of the [SCOPE.sCulture('navajo_culture').GetName], the Army has forced them to march across the desert into captivity in eastern [SCOPE.sState('new_mexico_scope').GetName]."
-usfp_indian_wars.9.f: ""When we crossed the Rio Grande, many people drowned. We didn't know how to swim — there was hardly any water deep enough to swim in at home. Some babies, children, and some of the older men and women were swept away by the river current. We must not ever forget their screams and the last we saw of them — hands, a let, or strands of their hair floating."" #Excerpt from "1864" By Luci Tapahonso
+usfp_indian_wars.9.f: ""When we crossed the Rio Grande, many people drowned. We didn't know how to swim — there was hardly any water deep enough to swim in at home. Some babies, children, and some of the older men and women were swept away by the river current. We must not ever forget their screams and the last we saw of them — hands, a let, or strands of their hair floating."" #Excerpt from 1864 By Luci Tapahonso
 usfp_indian_wars.9.a: "A necessary measure."
 usfp_indian_wars.9.b: "We should ensure they are looked after."
 

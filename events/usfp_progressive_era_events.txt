@@ -303,17 +303,28 @@ usfp_progressive_era.4 = {
 	duration = 3
 	cooldown = {months = very_long_modifier_time } #once
 
+	trigger = {
+		has_dlc_feature = ip2_content
+		c:BIC ?=  {
+			NOT = {
+				any_scope_character = {
+					has_template = BIC_swami_vivkananda
+				}
+			}
+		}
+	}
+
 
 	immediate = {
 		s:STATE_ILLINOIS.region_state:USA = {
 			save_scope_as = illinois_scope
 		}
 		create_character = {
-			template = usfp_usa_swami_vivekananda
+			template = BIC_swami_vivkananda
 		}
 		random_scope_character = {
 			limit = {
-				has_template = usfp_usa_swami_vivekananda
+				has_template = BIC_swami_vivkananda
 			}
 			save_scope_as = vivekananda_scope
 		}
@@ -827,27 +838,22 @@ usfp_progressive_era.11 = {
 			limit = { 
 				any_political_movement = {
 					OR = {
-						desired_law = law_type:law_worker_protections
-						desired_law = law_type:law_regulatory_bodies
+						is_political_movement_type = movement_labor
+						is_political_movement_type = movement_socialist
 					}
 				}
 			}
 			random_political_movement = {
 				limit = {
 					OR = {
-						desired_law = law_type:law_worker_protections
-						desired_law = law_type:law_regulatory_bodies
+						is_political_movement_type = movement_labor
+						is_political_movement_type = movement_socialist
 					}
 				}
 				add_modifier = {
 					name = usfp_muckraker_movement_modifier
 					months = normal_modifier_time
 				}
-			}
-		} else = {
-			add_modifier = {
-				name = usfp_the_jungle_modifier
-				months = normal_modifier_time
 			}
 		}
 	}

@@ -74,79 +74,79 @@ USCWF_precedent_on_action = {
 # 	}
 # }
 
-on_revolution_checkpoint_reached = {
-	on_actions = {
-		USCWF_opportunist_CSA_on_action
-	}
-}
+# on_revolution_checkpoint_reached = {
+# 	on_actions = {
+# 		USCWF_opportunist_CSA_on_action
+# 	}
+# }
 
-USCWF_opportunist_CSA_on_action = {
-	effect = {
-		if = {
-			limit = {
-				c:USA ?= this
-				OR = {
-					has_revolution_over_law_type = law_type:law_slave_trade
-					has_revolution_over_law_type = law_type:law_legacy_slavery
-					has_revolution_over_law_type = law_type:law_debt_slavery
-				}
-				any_civil_war = {
-					is_civil_war_type = revolution
-					civil_war_progress >= 0.75
-				}
-				ig:ig_landowners = {
-					is_insurrectionary = no
-				}
-			}
-			ig:ig_landowners = {
-				remove_ruling_interest_group = yes
-				join_revolution = yes
-			}
-		}
-		#if = {
-		#	limit = {
-		#		c:USA ?= this
-		#		has_revolution_over_law_type = law_type:law_slavery_banned
-		#		any_civil_war = {
-		#			is_civil_war_type = revolution
-		#			civil_war_progress >= 0.75
-		#		}
-		#	}
-		#	activate_law = law_type:law_slavery_banned
-		#}
-	}
-}
+# USCWF_opportunist_CSA_on_action = {
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				c:USA ?= this
+# 				OR = {
+# 					has_revolution_over_law_type = law_type:law_slave_trade
+# 					has_revolution_over_law_type = law_type:law_legacy_slavery
+# 					has_revolution_over_law_type = law_type:law_debt_slavery
+# 				}
+# 				any_civil_war = {
+# 					is_civil_war_type = revolution
+# 					civil_war_progress >= 0.75
+# 				}
+# 				ig:ig_landowners = {
+# 					is_insurrectionary = no
+# 				}
+# 			}
+# 			ig:ig_landowners = {
+# 				remove_ruling_interest_group = yes
+# 				join_revolution = yes
+# 			}
+# 		}
+# 		#if = {
+# 		#	limit = {
+# 		#		c:USA ?= this
+# 		#		has_revolution_over_law_type = law_type:law_slavery_banned
+# 		#		any_civil_war = {
+# 		#			is_civil_war_type = revolution
+# 		#			civil_war_progress >= 0.75
+# 		#		}
+# 		#	}
+# 		#	activate_law = law_type:law_slavery_banned
+# 		#}
+# 	}
+# }
 
-on_revolution_start = {
-	on_actions = {
-		USCWF_opportunist_FSA_on_action
-	}
-}
+# on_revolution_start = {
+# 	on_actions = {
+# 		USCWF_opportunist_FSA_on_action
+# 	}
+# }
 
-USCWF_opportunist_FSA_on_action = {
-	effect = {
-		if = {
-			limit = {
-				c:USA ?= this
-				OR = {
-					has_revolution_over_law_type = law_type:law_slavery_banned
-					AND = {
-						has_revolution_over_law_type = law_type:law_legacy_slavery
-						OR = {
-							is_enacting_law = law_type:law_slave_trade
-							is_enacting_law = law_type:law_debt_slavery
-							has_law = law_type:law_slave_trade
-							has_law = law_type:law_debt_slavery
-						}
-					}
-				}
-			}
-			ig:ig_landowners = {
-				add_ruling_interest_group = yes
-			}
-		}
-	}
-}
+# USCWF_opportunist_FSA_on_action = {
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				c:USA ?= this
+# 				OR = {
+# 					has_revolution_over_law_type = law_type:law_slavery_banned
+# 					AND = {
+# 						has_revolution_over_law_type = law_type:law_legacy_slavery
+# 						OR = {
+# 							is_enacting_law = law_type:law_slave_trade
+# 							is_enacting_law = law_type:law_debt_slavery
+# 							has_law = law_type:law_slave_trade
+# 							has_law = law_type:law_debt_slavery
+# 						}
+# 					}
+# 				}
+# 			}
+# 			ig:ig_landowners = {
+# 				add_ruling_interest_group = yes
+# 			}
+# 		}
+# 	}
+# }
 
 # Root = owner Country of the Law
 on_law_enactment_started = {
@@ -211,7 +211,7 @@ USCWF_fierce_defiance_on_action = {
 				}
 			}
 			every_scope_war = {
-				add_war_war_support = { target = ROOT value = 25 }
+				add_war_war_support = { target = ROOT value = 20 }
 			}
 		}
 	}

@@ -178,20 +178,6 @@ KLA = {
 	cultures = { salish }
 }
 
-#Alaska
-ASK = {
-	color = { 53 65 97 }
-	
-	country_type = recognized
-	
-	tier = principality
-	
-	capital = STATE_ALASKA
-	cultures = { russian }
-	is_named_from_capital = yes
-
-}
-
 #adapted from Meriadors work
 #Southern Paiute
 SPI = {

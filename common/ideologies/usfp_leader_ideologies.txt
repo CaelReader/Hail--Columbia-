@@ -849,6 +849,13 @@ ideology_usfp_universalist = {
 		law_multicultural = strongly_approve
 	}
 
+	lawgroup_caste_hegemony = {
+		law_hindu_caste_enforced = strongly_disapprove
+		law_hindu_caste_codified = strongly_disapprove
+		law_hindu_caste_not_enforced = neutral
+		law_affirmative_action = strongly_approve
+	}
+
 
 	
 	possible = {

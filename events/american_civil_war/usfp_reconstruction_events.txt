@@ -173,11 +173,7 @@ usfp_reconstruction.3 = {
 				has_modifier = reconstruction_government
 			}
 		}
-		cu:afro_american = {
-			NOT = {
-				culture_is_discriminated_in = root
-			}
-		}
+		cultural_acceptance_base = { target = cu:afro_american value >= acceptance_status_4 }
 	}
 
 	immediate = {
@@ -536,11 +532,7 @@ usfp_reconstruction.8 = {
 		name = usfp_reconstruction.8.a
 		default_option = yes
 		trigger = {
-			cu:afro_american = {
-				NOT = {
-					culture_is_discriminated_in = root
-				}
-			}
+			cultural_acceptance_base = { target = cu:afro_american value >= acceptance_status_4 }
 		}
 		remove_primary_culture = cu:dixie
 		add_journal_entry = {
@@ -580,17 +572,21 @@ usfp_reconstruction.8 = {
 		name = usfp_reconstruction.8.b
 		highlighted_option = yes
 		trigger = {
-			cu:afro_american = {
-				culture_is_discriminated_in = root
-			}
+			cultural_acceptance_base = { target = cu:afro_american value >= acceptance_status_4 }
 		}
 		add_radicals = {
 			value = medium_radicals
 			culture = cu:afro_american
 		}
-		add_modifier = {
-			name = usfp_radical_reconstruction_demand
-			years = 10
+		random_political_movement = {
+			limit = {
+				exists = culture
+				culture = cu:afro_american
+			}
+			add_modifier = {
+				name = usfp_radical_reconstruction_demand
+				years = 10
+			}
 		}
 		remove_primary_culture = cu:dixie
 		ig:ig_landowners = {

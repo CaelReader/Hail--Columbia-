@@ -12,9 +12,7 @@ usfp_reconstruction_long = {
 	}
 
 	fail = {
-		cu:afro_american = {
-			culture_is_discriminated_in = root
-		}
+		cultural_acceptance_base = { target = cu:afro_american value < acceptance_status_4 }
 	}
 
 	on_timeout = {

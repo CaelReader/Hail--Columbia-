@@ -19,7 +19,7 @@ usfp_cherokee_syllabary = {
 usfp_missouri_compromise_decaying = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
 	country_revolution_progress_mult = -1.00
-	state_pop_support_law_slavery_banned_mult = -2.0
+	state_pop_support_movement_anti_slavery_mult = -2.0
 	interest_group_ig_landowners_approval_add = 15
 	interest_group_ig_intelligentsia_approval_add = 5
 }
@@ -27,8 +27,8 @@ usfp_missouri_compromise_decaying = {
 usfp_missouri_compromise_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_positive.dds
 	interest_group_ig_landowners_approval_add = 10
-	political_movement_radicalism_mult = -0.50
-	state_pop_support_law_slave_trade_mult = -0.75
+	political_movement_radicalism_add = -0.25
+	state_pop_support_movement_pro_slavery_mult = -0.75
 }
 
 usfp_gag_rule_modifier = {
@@ -36,7 +36,7 @@ usfp_gag_rule_modifier = {
 	interest_group_ig_intelligentsia_approval_add = -3
 	interest_group_ig_intelligentsia_pol_str_mult = -0.10
 	interest_group_ig_landowners_approval_add = 4
-	political_movement_radicalism_add = 5
+	political_movement_radicalism_add = 0.05
 }
 
 usfp_slave_power_modifier = {
@@ -49,7 +49,9 @@ usfp_slave_power_modifier = {
 usfp_indian_removal_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
 	state_animist_standard_of_living_add = -2
-	state_radicals_from_discrimination_mult = 0.15
+	state_radicalism_increases_violent_hostility_mult = 0.15
+	state_radicalism_increases_cultural_erasure_mult = 0.15
+	country_allow_conversion_violent_hostility_bool = yes
 }
 
 usfp_second_party_system_modifier = {
@@ -163,18 +165,8 @@ civil_war_reshuffle_uscwf = {
 	interest_group_ig_industrialists_pol_str_mult = -0.5
 }
 
-	#interest_group_ig_rural_folk_pop_attraction_mult = 0.25
-	#state_pop_support_law_debt_slavery_add = -0.625
-	#state_pop_support_law_slave_trade_add = -0.625
-	#state_pop_support_law_slavery_banned_add = 0.5
-	#state_pop_support_law_debt_slavery_add = 0.5
-	#state_pop_support_law_oligarchy_add = -1.0
-	#state_pop_support_law_free_trade_add = -1.0
-
 usfp_a_house_divided_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_negative.dds
-	state_pop_support_law_legacy_slavery_mult = 1.0
-	state_pop_support_law_slave_trade_mult = 0.25
 	interest_group_ig_landowners_approval_add = -15
 	interest_group_ig_intelligentsia_approval_add = -5
 	country_agitator_slots_add = 5
@@ -224,14 +216,16 @@ usfp_manifest_destiny_modifier = {
 	unit_morale_recovery_mult = 0.01
 	interest_group_ig_armed_forces_pop_attraction_mult = 0.03
 	interest_group_ig_armed_forces_pol_str_mult = 0.02
-	state_assimilation_mult = 0.02
-	state_radicals_from_discrimination_mult = 0.02
+	state_assimilation_mult = 0.01
+	country_radicalism_increases_violent_hostility_mult = 0.03
+	country_radicalism_increases_cultural_erasure_mult = 0.02
 	country_tension_decay_mult = -0.1
 }
 
 usfp_vanishing_indian_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
-	state_radicals_from_discrimination_mult = 0.25
+	country_radicalism_increases_violent_hostility_mult = 0.25
+	country_radicalism_increases_cultural_erasure_mult = 0.25
 }
 
 usfp_broken_treaties_modifier = {
@@ -242,7 +236,9 @@ usfp_broken_treaties_modifier = {
 
 usfp_opposing_indian_removal = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
-	state_pop_support_law_no_colonial_affairs_add = 0.10
+	country_radicalism_increases_cultural_erasure_mult = -0.10
+	country_loyalism_increases_full_acceptance_mult = -0.10
+	country_assimilation_cultural_erasure_mult = -0.10
 }
 
 usfp_modifier_hurricane_relief = {
@@ -260,11 +256,6 @@ usfp_modifier_wildfire_relief = {
 	country_expenses_add = 1
 }
 
-usfp_abolitionist_literature_country = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_book2_positive.dds
-	state_pop_support_law_slavery_banned_add = 0.05
-}
-
 usfp_congressional_uproar = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_negative.dds
 	country_law_enactment_time_mult = 3
@@ -273,11 +264,7 @@ usfp_congressional_uproar = {
 
 usfp_imminent_secession = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
-	# country_revolution_clock_time_add = 0.5
-	country_revolution_progress_mult = 1
-	state_pop_support_law_slave_trade_mult = 1.00
-	state_pop_support_law_legacy_slavery_mult = 1.00
-	political_movement_radicalism_mult = 1.00
+	country_revolution_progress_mult = 1.00
 }
 
 usfp_modifier_supreme_court_bribery = {
@@ -289,18 +276,18 @@ usfp_fugitive_slave_law = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
 	state_afro_american_standard_of_living_add = -1
 	interest_group_ig_landowners_pol_str_mult = 0.10
-	state_pop_support_law_slavery_banned_add = 0.05
+	state_pop_support_movement_pro_slavery_add = 0.05
 }
 
 usfp_1850_compromise_decaying = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
 	# country_revolution_clock_time_add = -0.125
 	country_revolution_progress_mult = -0.50
-	state_pop_support_law_slavery_banned_add = -1.0
-	state_pop_support_law_slave_trade_add = -1.0
+	state_pop_support_movement_anti_slavery_mult = -0.25
+	state_pop_support_movement_pro_slavery_mult = -0.25
 	interest_group_ig_landowners_approval_add = 20
 	interest_group_ig_intelligentsia_approval_add = 5
-	political_movement_radicalism_add = -15
+	political_movement_radicalism_add = -0.50
 }
 
 usfp_fighting_in_congress = {
@@ -315,12 +302,6 @@ usfp_homestead_administration = {
 	country_bureaucracy_mult = -0.05
 }
 
-usfp_dred_scott_fallout = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
-	state_pop_support_law_slavery_banned_add = 0.20
-	political_movement_radicalism_mult = 0.20
-	interest_group_ig_intelligentsia_pol_str_mult = 0.50
-}
 
 usfp_ignored_monroe_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_manowar_negative.dds
@@ -343,7 +324,8 @@ usfp_e_pluribus_unum_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
 	country_radicals_from_conquest_mult = -0.05
 	country_prestige_mult = 0.05
-	state_loyalists_from_sol_change_mult = 0.05
+	country_loyalism_increases_second_rate_citizen_mult = 0.05
+	country_loyalism_increases_full_acceptance_mult = 0.05
 	country_loyalists_from_legitimacy_mult = 0.05
 }
 
@@ -371,15 +353,9 @@ usfp_freedmens_bureau = {
 	country_expenses_add = 3000
 }
 
-usfp_radical_reconstruction_demand = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
-	state_pop_support_law_cultural_exclusion_add = 0.15
-	state_pop_support_law_multicultural_add = 0.10
-}
-
 usfp_colony_ai_workaround = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	state_colony_growth_creation_mult = 2.00
+	state_colony_growth_creation_factor = 2.00
 	state_colony_growth_speed_mult = -0.50
 }
 
@@ -387,15 +363,16 @@ usfp_labor_agitation = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_socialism_negative.dds
 	country_laborers_pol_str_mult = 0.10
 	country_machinists_pol_str_mult = 0.10
-	state_radicals_from_sol_change_mult = 0.10
+	state_radicals_from_political_movements_mult = 0.10
 }
 
 usfp_secession_legimitized = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_negative.dds
 	country_secession_progress_mult = 0.20
-	state_radicals_from_discrimination_mult = 0.20
-	state_radicals_from_sol_change_mult = 0.20
-	political_movement_radicalism_mult = 0.15
+	state_radicalism_increases_violent_hostility_mult = 0.15
+	state_radicalism_increases_cultural_erasure_mult = 0.15
+	state_radicals_from_political_movements_mult = 0.20
+	political_movement_radicalism_from_enactment_disapproval_mult = 0.25
 	country_radicals_from_legitimacy_mult = 0.15
 }
 
@@ -431,7 +408,7 @@ usfp_sea_to_shining_sea_modifier = {
 usfp_federal_territory_colony = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
 	state_migration_pull_mult = 0.20
-	state_colony_growth_creation_mult = 0.10
+	state_colony_growth_creation_factor = 0.10
 }
 
 usfp_filibusters_modifier = {
@@ -443,7 +420,8 @@ usfp_filibusters_modifier = {
 
 usfp_imperial_ambitions = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
-	state_radicals_from_discrimination_mult = 0.10
+	country_radicalism_increases_violent_hostility_mult = 0.20
+	country_radicalism_increases_cultural_erasure_mult = 0.10
 	country_tension_decay_mult = -0.10
 }
 
@@ -452,15 +430,14 @@ usfp_constitutional_chaos = {
 	country_legitimacy_base_add = -15
 	country_law_enactment_time_mult = 0.50
 	country_opposition_ig_approval_add = -5
-	state_pop_support_law_presidential_republic_add = 0.20
 }
 
 usfp_gilded_age_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
-	state_rich_expected_sol = 4
+	state_upper_strata_expected_sol_add = 4
 	interest_group_ig_industrialists_pop_attraction_mult = 0.15
-	state_radicals_from_sol_change_mult = 0.10
-	state_loyalists_from_sol_change_accepted_culture_mult = 0.10
+	state_radicals_and_loyalists_from_sol_change_mult = 0.10
+	country_loyalism_increases_full_acceptance_mult = 0.05
 	state_capitalists_investment_pool_contribution_add = 0.10
 	state_capitalists_investment_pool_efficiency_mult = 0.10
 	country_company_construction_efficiency_bonus_add = 0.05
@@ -482,21 +459,21 @@ usfp_gilded_age_corruption_modifier = {
 
 usfp_canadian_colonization_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	state_colony_growth_creation_mult = 0.10
+	state_colony_growth_creation_factor = 0.10
 }
 
 usfp_labor_promises = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_laborer_positive.dds
 	interest_group_ig_trade_unions_pop_attraction_mult = 0.15
-	state_pop_support_law_worker_protections_add = 0.10
-	state_pop_support_law_old_age_pension_add = 0.10
+	state_pop_support_movement_labor_mult = 0.15
+	state_pop_support_movement_socialist_mult = 0.15
 }
 
 usfp_nationalist_clubs_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_socialism_positive.dds
 	interest_group_ig_trade_unions_pop_attraction_mult = 0.05
 	interest_group_ig_intelligentsia_pop_attraction_mult = 0.05
-	state_pop_support_law_command_economy_add = 0.05
+	state_pop_support_movement_socialist_add = 0.05
 }
 
 usfp_scandal_outrage_modifier = {
@@ -508,13 +485,16 @@ usfp_scandal_outrage_modifier = {
 
 usfp_eugenics_movement_rising_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
-	state_radicals_from_discrimination_mult = 0.15
+	country_radicalism_increases_violent_hostility_mult = 0.20
+	country_radicalism_increases_cultural_erasure_mult = 0.20
+	country_radicalism_increases_open_prejudice_mult = 0.20
+	country_radicalism_increases_second_rate_citizen_mult = 0.10
 }
 
 usfp_anti_trust_agitation = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
-	state_pop_support_law_interventionism_add = 0.10
-	state_radicals_from_sol_change_mult = 0.10
+	state_pop_support_movement_labor_mult = 0.10
+	state_radicals_and_loyalists_from_sol_change_mult = 0.05
 	country_legitimacy_base_add = -5
 }
 
@@ -527,9 +507,9 @@ usfp_gospel_of_wealth_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	interest_group_ig_industrialists_pol_str_mult = 0.10
 	interest_group_ig_industrialists_pop_attraction_mult = 0.10
-	state_poor_standard_of_living_add = 1
+	state_lower_strata_standard_of_living_add = 1
 	state_political_strength_from_welfare_mult = -0.10
-	state_rich_expected_sol = -1
+	state_upper_strata_expected_sol_add = -1
 }
 
 usfp_grange_movement_modifier = {
@@ -564,9 +544,9 @@ usfp_anti_imperialist_league_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_influence_negative.dds
 	country_infamy_generation_mult = 0.10
 	country_war_exhaustion_casualties_mult = 0.15
-	state_pop_support_law_no_colonial_affairs_add = 0.10
 	country_liberty_desire_of_subjects_add = 0.02
-	state_radicals_from_discrimination_mult = -0.05
+	country_loyalism_increases_violent_hostility_mult = 0.05
+	country_loyalism_increases_cultural_erasure_mult = 0.05
 }
 
 usfp_city_beautiful_modifier = {
@@ -583,18 +563,18 @@ usfp_fighting_corruption_modifier = {
 usfp_social_hygiene_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_positive.dds
 	state_mortality_mult = -0.02
-	state_loyalists_from_sol_change_accepted_culture_mult = 0.05
+	country_loyalism_increases_full_acceptance_mult = 0.05
 }
 
 usfp_bitter_cry_of_children_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
-	state_pop_support_law_compulsory_primary_school_add = 0.10
+	#TODO: send to Progressive Movement
 }
+
 
 usfp_the_jungle_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
-	state_pop_support_law_regulatory_bodies_add = 0.10
-	state_pop_support_law_worker_protections_add = 0.10
+	#TODO: send to Progressive Movement
 }
 
 usfp_meat_inspectors_modifier = {
@@ -653,7 +633,8 @@ usfp_nez_perce_warriors_modifier = {
 
 usfp_settler_westward_pressure = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_map_negative.dds
-	state_radicals_from_sol_change_accepted_culture_mult = 0.10
+	country_radicalism_increases_full_acceptance_mult = 0.15
+	country_radicalism_increases_second_rate_citizen_mult = 0.10
 }
 
 usfp_white_mans_diseases_modifier = {
@@ -670,6 +651,7 @@ usfp_plains_tech_trade_modifier = {
 
 usfp_indian_agencies_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bureacracy_positive.dds
+	country_allow_conversion_violent_hostility_bool = yes
 	country_bureaucracy_mult = -0.10
 	country_tension_decay_mult = 0.10
 	state_conversion_mult = 0.20
@@ -690,9 +672,11 @@ usfp_lava_beds_modifier = {
 
 usfp_indian_boarding_schools_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bureacracy_positive.dds
+	country_allow_conversion_violent_hostility_bool = yes
 	country_bureaucracy_mult = -0.10
 	state_assimilation_mult = 0.20
 	state_conversion_mult = 0.40
+	state_usfp_american_indian_standard_of_living_add = -2
 }
 
 usfp_frontier_army_duties_modifier = {

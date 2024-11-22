@@ -81,11 +81,14 @@ acw_events.1 = {
 				name = usfp_public_sympathy
 				years = 5
 			}
-			interest_group = {
-				add_modifier = {
-					name = usfp_abolitionist_literature_ig
-					years = 5
-				}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			add_modifier = {
+				name = usfp_abolitionist_literature_movement_modifier 
+				years = 4
 			}
 		}
 	}

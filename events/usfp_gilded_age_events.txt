@@ -698,7 +698,6 @@ usfp_gilded_age.8 = {
 		trigger = {
 			ig:ig_trade_unions = {
 				is_marginal = no
-				is_being_suppressed = no
 			}
 		}
 		add_modifier = {

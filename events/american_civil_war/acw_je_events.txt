@@ -71,101 +71,14 @@ acw_je_events.1 = {
 			limit = {
 				has_variable = csa_will_spawn_var
 			}
-			random_country = {
-				limit = {	
-					is_revolutionary = yes
-					country_definition = root.country_definition
-				}
-				change_tag = CSA
+			c:CSA ?= {
 				save_scope_as = csa_scope	
-				
-				#forced CSA states in script
-				c:USA = {
-					every_scope_state = {
-						limit = { OR = { is_slave_state = yes has_variable = former_slave_state } }
-						set_state_owner = c:CSA
-					}
-				}
-				usfp_find_dc_sr_scope = yes
-				scope:dc_sr_scope.region_state:CSA = { set_state_owner = c:USA } # LMAO
-				usfp_set_usa_capital_dc = yes
-				s:STATE_MISSOURI.region_state:CSA = { set_state_owner = c:USA }
-				s:STATE_KENTUCKY.region_state:CSA = { set_state_owner = c:USA }
-				usfp_find_maryland_sr_scope = yes
-				scope:maryland_sr_scope.region_state:CSA = { set_state_owner = c:USA }
-				usfp_find_delaware_sr_scope = yes
-				scope:delaware_sr_scope.region_state:CSA = { set_state_owner = c:USA }
-				# s:STATE_WEST_VIRGINIA.region_state:CSA = { set_state_owner = c:USA } #breaks away from the CSA by event
 				if = {
-					limit = { 
-						s:STATE_NEBRASKA = {
-							any_scope_state = {
-								owner = c:CSA
-							}
-						}
+					limit = {
+						NOT = { has_law = law_type:law_slave_trade }
 					}
-					s:STATE_NEBRASKA.region_state:CSA = { set_state_owner = c:USA }
-				}
-				if = {
-					limit = { 
-						s:STATE_IOWA = {
-							any_scope_state = {
-								owner = c:CSA
-							}
-						}
-					}
-					s:STATE_IOWA.region_state:CSA = { set_state_owner = c:USA }
-				}
-				if = {
-					limit = { 
-						s:STATE_KANSAS = {
-							any_scope_state = {
-								owner = c:CSA
-							}
-						}
-					}
-					s:STATE_KANSAS.region_state:CSA = { set_state_owner = c:USA }
-				}
-				if = {
-					limit = { 
-						s:STATE_COLORADO = {
-							any_scope_state = {
-								owner = c:CSA
-							}
-						}
-					}
-					s:STATE_COLORADO.region_state:CSA = { set_state_owner = c:USA }
-				}
-				if = {
-					limit = { 
-						s:STATE_UTAH = {
-							any_scope_state = {
-								owner = c:CSA
-							}
-						}
-					}
-					s:STATE_UTAH.region_state:CSA = { set_state_owner = c:USA }
-				}
-				if = {
-					limit = { 
-						s:STATE_NEVADA = {
-							any_scope_state = {
-								owner = c:CSA
-							}
-						}
-					}
-					s:STATE_NEVADA.region_state:CSA = { set_state_owner = c:USA }
-				}
-				if = {
-					limit = { 
-						s:STATE_CALIFORNIA = {
-							any_scope_state = {
-								owner = c:CSA
-							}
-						}
-					}
-					s:STATE_CALIFORNIA.region_state:CSA = { set_state_owner = c:USA }
-				}
+					activate_law = law_type:law_slave_trade
+				}	
 
 				# Re-enslave pops if the ACW happens after slavery has been abolished
 				if = {
@@ -179,8 +92,6 @@ acw_je_events.1 = {
 						enslave_discriminated_farm_workers = yes
 					}					
 				}
-									
-				
 				every_scope_state = {
 					state_region = {
 						add_claim = root
@@ -196,34 +107,11 @@ acw_je_events.1 = {
 				}
 				add_declared_interest = region_england
 				add_declared_interest = region_france
-				# create_diplomatic_pact = {
-				# 	country = c:GBR
-				# 	type = increase_relations
-				# }
-				# create_diplomatic_pact = {
-				# 	country = c:FRA
-				# 	type = increase_relations
-				# }
 			}
 		}
 		else = {
-			random_country = {
-				limit = {	
-					is_revolutionary = yes
-					country_definition = root.country_definition
-				}
-				change_tag = FSA
+			c:FSA ?= {
 				save_scope_as = fsa_scope
-				
-				c:USA = {
-					every_scope_state = {
-						limit = { NOR = { is_slave_state = yes has_variable = former_slave_state } }
-						set_state_owner = c:FSA
-					}
-				}
-				usfp_find_dc_sr_scope = yes
-				scope:dc_sr_scope.region_state:FSA = { set_state_owner = c:USA }
-				usfp_set_usa_capital_dc = yes
 
 				every_scope_state = {
 					state_region = {
@@ -256,66 +144,58 @@ acw_je_events.1 = {
 			name = american_civil_war
 			value = yes
 		}
-		random_diplomatic_play = {
-			limit = {
-				OR = {
-					AND = {
-						exists = scope:fsa_scope
-						any_scope_play_involved = {
-							this = scope:fsa_scope
-						}
-					}
-					AND = {
-						exists = scope:csa_scope
-						any_scope_play_involved = {
-							this = scope:csa_scope
-						}
-					}
-				}
-				# any_scope_play_involved = {
-				# 	OR = {
-				# 		this = scope:csa_scope
-				# 		this = scope:fsa_scope
-				# 	}
-				# }
-			}
-			remove_war_goal = {
-				who = initiator
-				war_goal = annex_country
-			}
-			add_war_goal = {
-				holder = initiator
-				type = revoke_all_claims
-				target_country = target				
-				primary_demand = yes
-			}			
-		}
+		# random_diplomatic_play = {
+		# 	limit = {
+		# 		OR = {
+		# 			AND = {
+		# 				exists = scope:fsa_scope
+		# 				any_scope_play_involved = {
+		# 					this = scope:fsa_scope
+		# 				}
+		# 			}
+		# 			AND = {
+		# 				exists = scope:csa_scope
+		# 				any_scope_play_involved = {
+		# 					this = scope:csa_scope
+		# 				}
+		# 			}
+		# 		}
+		# 		# any_scope_play_involved = {
+		# 		# 	OR = {
+		# 		# 		this = scope:csa_scope
+		# 		# 		this = scope:fsa_scope
+		# 		# 	}
+		# 		# }
+		# 	}
+		# 	remove_war_goal = {
+		# 		who = initiator
+		# 		war_goal = annex_country
+		# 	}
+		# 	add_war_goal = {
+		# 		holder = initiator
+		# 		type = revoke_all_claims
+		# 		target_country = target				
+		# 		primary_demand = yes
+		# 	}			
+		# }
 		
 		if = {
 			limit = { exists = c:CSA }
 			add_journal_entry = {
 				type = je_acw_war
-				target = scope:csa_scope
+				target = c:CSA
 			}
-			# add_modifier = { name = usfp_acw_union_modifier months = 48 }
-			# add_modifier = { name = civil_war_reshuffle_uscwf months = 48 }
-			ig:ig_intelligentsia = { remove_ruling_interest_group = yes } 
 			c:CSA = {
 				set_variable = acw_slave_nation_var
-				# add_modifier = { name = usfp_acw_csa_modifier months = 48 }
 			}
 		}
 		else_if = {
 			limit = { exists = c:FSA }
 			add_journal_entry = {
 				type = je_acw_war
-				target = scope:fsa_scope
+				target = c:FSA
 			}
 			set_variable = acw_slave_nation_var
-			# add_modifier = { name = usfp_acw_csa_modifier months = 48 }
-			c:FSA = {
-				# add_modifier = { name = usfp_acw_fsa_modifier months = 48 }
-			}
 		}
 		# set_variable = union_side_acw
 	}
@@ -329,51 +209,17 @@ acw_je_events.1 = {
 			 }
 			 custom_tooltip = acw_war_support_tooltip
 		}
-		show_as_tooltip = {
-			# add_modifier = { name = usfp_acw_union_modifier months = 48 }
-			if = {
-				limit = {
-					exists = c:CSA
-				 }
-				 c:CSA = {
-					# add_modifier = { name = usfp_acw_csa_modifier months = 48 }
-				 }
-			}
-			if = {
-				limit = { 
-					exists = c:FSA
-				}
-				# add_modifier = { name = usfp_acw_fsa_modifier months = 48 }
-			}
-		}
 	}
 	option = {
 		name = acw_je_events.1.b
 		trigger = { is_player = yes }
-		show_as_tooltip = {
-			# add_modifier = { name = usfp_acw_union_modifier months = 48 }
-			if = {
-				limit = {
-					exists = c:CSA
-				 }
-				 c:CSA = {
-					# add_modifier = { name = usfp_acw_csa_modifier months = 48 }
-				 }
-			}
-			if = {
-				limit = { 
-					exists = c:FSA
-				}
-				# add_modifier = { name = usfp_acw_fsa_modifier months = 48 }
-			}
-		}
 		if = {
 			limit = { exists = c:CSA }
-			play_as = scope:csa_scope
+			play_as = c:CSA
 		}
 		else_if = {
 			limit = { exists = c:FSA }
-			play_as = scope:fsa_scope
+			play_as = c:FSA
 		}
 	}
 }

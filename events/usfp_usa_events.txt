@@ -300,22 +300,17 @@ usfp_usa.5 = {
 
 	trigger = {
 		any_scope_state = {
-			usfp_north_american_wildfire_zone = yes
-			NOT = {
-				has_modifier = usfp_wildfire_recovery_modifier
+			state_region = {
+				has_harvest_condition = wildfire
 			}
 		}
-		#fire season in the summer
-		month >= 5
-		month <= 10
 	}
 
 	immediate = {
 		random_scope_state = {
 			limit = {
-				usfp_north_american_wildfire_zone = yes
-				NOT = {
-					has_modifier = usfp_wildfire_recovery_modifier
+				state_region = {
+					has_harvest_condition = wildfire
 				}
 			}
 			save_scope_as = wildfire_state
@@ -326,13 +321,8 @@ usfp_usa.5 = {
 		name = usfp_usa.5.a
 		default_option = yes
 		scope:wildfire_state = {
-			add_modifier = {
-				name = usfp_wildfire_recovery_modifier
-				years = 2
-				is_decaying = yes
-			}
 			state_region = {
-				add_devastation = 15
+				add_devastation = 20
 			}
 		}
 	}
@@ -345,13 +335,8 @@ usfp_usa.5 = {
 			years = 1
 		}
 		scope:wildfire_state = {
-			add_modifier = {
-				name = usfp_wildfire_recovery_modifier
-				years = 1
-				is_decaying = yes
-			}
 			state_region = {
-				add_devastation = 15
+				add_devastation = 10
 			}
 		}
 	}
@@ -409,12 +394,8 @@ usfp_usa.6 = {
 		default_option = yes
 		scope:illinois_scope = {
 			state_region = {
-				add_devastation = 15
-			}
-			add_modifier = {
-				name = usfp_wildfire_recovery_modifier
-				years = 2
-				is_decaying = yes
+				add_devastation = 20
+				start_harvest_condition = wildfire
 			}
 			add_modifier = {
 				name = usfp_great_urban_fire_modifier
@@ -423,24 +404,12 @@ usfp_usa.6 = {
 			}
 		}
 		s:STATE_MICHIGAN = {
-			add_devastation = 15
-			every_scope_state = {
-				add_modifier = {
-					name = usfp_wildfire_recovery_modifier
-					years = 2
-					is_decaying = yes
-				}
-			}
+			add_devastation = 20
+			start_harvest_condition = wildfire
 		}
 		s:STATE_WISCONSIN = {
-			add_devastation = 15
-			every_scope_state = {
-				add_modifier = {
-					name = usfp_wildfire_recovery_modifier
-					years = 2
-					is_decaying = yes
-				}
-			}
+			add_devastation = 20
+			start_harvest_condition = wildfire
 		}
 	}
 
@@ -453,12 +422,8 @@ usfp_usa.6 = {
 		}
 		scope:illinois_scope = {
 			state_region = {
-				add_devastation = 15
-			}
-			add_modifier = {
-				name = usfp_wildfire_recovery_modifier
-				years = 1
-				is_decaying = yes
+				add_devastation = 10
+				start_harvest_condition = wildfire
 			}
 			add_modifier = {
 				name = usfp_great_urban_fire_modifier
@@ -467,24 +432,12 @@ usfp_usa.6 = {
 			}
 		}
 		s:STATE_MICHIGAN = {
-			add_devastation = 15
-			every_scope_state = {
-				add_modifier = {
-					name = usfp_wildfire_recovery_modifier
-					years = 1
-					is_decaying = yes
-				}
-			}
+			add_devastation = 10
+			start_harvest_condition = wildfire
 		}
 		s:STATE_WISCONSIN = {
-			add_devastation = 15
-			every_scope_state = {
-				add_modifier = {
-					name = usfp_wildfire_recovery_modifier
-					years = 1
-					is_decaying = yes
-				}
-			}
+			add_devastation = 10
+			start_harvest_condition = wildfire
 		}
 	}
 }
@@ -1803,9 +1756,6 @@ usfp_usa.23 = {
 	duration = 3
 
 	immediate = {
-		ruler = {
-			save_scope_as = jackson_scope
-		}
 		ideology:ideology_jacksonian_democrat = {
 			save_scope_as = jacksonian_ideology
 		}

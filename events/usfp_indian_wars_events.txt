@@ -58,7 +58,7 @@ usfp_indian_wars.1 = {
 		default_option = yes
 		create_bidirectional_truce = {
 			country = c:LKT
-			years = 10
+			months = 120
 		}
 		s:STATE_MONTANA = {
 			set_owner_of_provinces = {
@@ -340,6 +340,11 @@ usfp_indian_wars.5 = {
 	option = {
 		name = usfp_indian_wars.5.a
 		default_option = yes
+		trigger = {
+			usfp_has_plains_occupation_trigger = yes
+		}
+		highlighted_option = yes
+		show_as_unavailable = { always = yes }
 		c:LKT = {
 			annex = c:ABS
 		}
@@ -402,7 +407,7 @@ usfp_indian_wars.6 = {
 			}
 			any_scope_pop = {
 				culture = {
-					has_discrimination_trait = native_north_american_culture_group
+					has_discrimination_trait = north_american_group
 				}
 			}
 		}
@@ -420,7 +425,7 @@ usfp_indian_wars.6 = {
 				}
 				any_scope_pop = {
 					culture = {
-						has_discrimination_trait = native_north_american_culture_group
+						has_discrimination_trait = north_american_group
 					}
 				}
 			}
@@ -428,7 +433,7 @@ usfp_indian_wars.6 = {
 			random_scope_pop = {
 				limit = {
 					culture = {
-						has_discrimination_trait = native_north_american_culture_group
+						has_discrimination_trait = north_american_group
 					}
 				}
 				culture = {
@@ -991,10 +996,6 @@ usfp_indian_wars.12 = {
 			years = 100
 		}
 		usfp_enable_american_indian_culture = yes
-		add_culture_standard_of_living_modifier = {
-			culture = cu:usfp_american_indian
-			multiplier = -2
-		}
 		s:STATE_OKLAHOMA = {
 			add_claim = root
 		}

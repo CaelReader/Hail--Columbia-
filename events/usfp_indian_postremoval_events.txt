@@ -169,7 +169,7 @@ usfp_indian_postremoval.2 = {
 			}
 		}
 		scope:south_dakota_scope = {
-			kill_population_percentage_in_state = {
+			kill_population_percent_in_state = {
 				culture = cu:dakota
 				percent = 0.02
 			}
@@ -202,7 +202,7 @@ usfp_indian_postremoval.2 = {
 	option = {
 		name = usfp_indian_postremoval.2.b
 		scope:south_dakota_scope = {
-			kill_population_percentage_in_state = {
+			kill_population_percent_in_state = {
 				culture = cu:dakota
 				percent = 0.02
 			}
@@ -225,7 +225,7 @@ usfp_indian_postremoval.2 = {
 			}
 		}
 		scope:south_dakota_scope = {
-			kill_population_percentage_in_state = {
+			kill_population_percent_in_state = {
 				culture = cu:dakota
 				percent = 0.02
 			}
@@ -356,6 +356,22 @@ usfp_indian_postremoval.4 = {
 			annex = c:SEQ
 		}
 		scope:oklahoma_scope = {
+			hidden_effect = {
+				every_scope_pop = {
+					limit = {
+						culture = {
+							has_discrimination_trait = indigenous_american_heritage
+							NOT = {
+								this = cu:usfp_american_indian
+							}
+						}
+					}
+					change_pop_culture = {
+						target = cu:usfp_american_indian
+						value = 1
+					}
+				}
+			}
 			add_loyalists_in_state = {
 				value = medium_radicals
 			}
@@ -366,6 +382,11 @@ usfp_indian_postremoval.4 = {
 			usfp_radicalize_settlers_in_state = {
 				RADICALS = medium_radicals
 			}
+			add_acceptance = {
+				target = cu:usfp_american_indian
+				value = 100
+			}
+			set_state_name = STATE_OKLAHOMA_sequoyah
 			set_state_type = incorporated
 		}
 		ig:ig_rural_folk = {

@@ -478,11 +478,12 @@ usfp_je_western_border = {
 
 	invalid = {
 		NOT = {
-			any_country = {
-				capital = {
-					region = sr:region_great_plains
+			sr:region_great_plains = {
+				any_state = {
+					owner = {
+						is_country_type = decentralized
+					}
 				}
-				is_country_type = decentralized
 			}
 		}
 	}

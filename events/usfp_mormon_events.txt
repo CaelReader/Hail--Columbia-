@@ -498,6 +498,7 @@ usfp_mormon.5 = {
 			add_modifier = {
 				name = usfp_lds_church_utah
 			}
+			set_state_name = STATE_UTAH_deseret
 		}
 		ai_chance = {
 			base = 1

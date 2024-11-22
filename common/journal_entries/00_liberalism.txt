@@ -1,4 +1,6 @@
-﻿# Path to Liberalism
+﻿
+
+# Path to Liberalism
 je_liberalism_1 = {
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 	
@@ -9,17 +11,14 @@ je_liberalism_1 = {
 		has_technology_researched = democracy
 		has_technology_researched = international_trade
 		#USFP: USA is already liberal, this JE just messes things up
-		NOT = {
+		NOR = {
 			c:USA ?= ROOT
 		}
 	}
 
 	possible = {
 		any_interest_group = {
-			OR = {
-				is_being_bolstered = yes
-				is_in_government = yes
-			}
+			is_in_government = yes
 			OR = {
 				trigger_if = {
 					limit = {

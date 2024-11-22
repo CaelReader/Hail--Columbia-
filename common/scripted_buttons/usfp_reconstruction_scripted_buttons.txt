@@ -11,11 +11,7 @@ usfp_reconstruction_enforce_rights_button = {
 
 	possible = {
 
-		cu:afro_american = {
-			NOT = {
-				culture_is_discriminated_in = root
-			}
-		}
+		cultural_acceptance_base = { target = cu:afro_american value >= acceptance_status_4 }
 		authority >= 150
 		OR = {
 			institution_investment_level = {

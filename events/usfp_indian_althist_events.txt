@@ -229,7 +229,7 @@ usfp_indian_althist.2 = {
 		random_scope_state = {
 			limit = {
 				region = sr:region_great_plains
-				any_neighboring_state = {
+				any_neighbouring_state = {
 					owner = {
 						is_country_type = decentralized
 					}
@@ -259,7 +259,7 @@ usfp_indian_althist.2 = {
 		highlighted_option = yes
 		show_as_unavailable = { always = yes }
 		scope:raid_state = {
-			region = {
+			state_region = {
 				add_devastation = 3
 			}
 			usfp_loyalize_settlers_in_state = {
@@ -267,7 +267,7 @@ usfp_indian_althist.2 = {
 			}
 		}
 		scope:raiding_country_state = {
-			region = {
+			state_region = {
 				add_devastation = 5
 			}
 		}
@@ -289,7 +289,7 @@ usfp_indian_althist.2 = {
 		highlighted_option = yes
 		show_as_unavailable = { always = yes }
 		scope:raid_state = {
-			region = {
+			state_region = {
 				add_devastation = 3
 			}
 		}
@@ -302,7 +302,7 @@ usfp_indian_althist.2 = {
 	option = {
 		name = usfp_indian_althist.2.c
 		scope:raid_state = {
-			region = {
+			state_region = {
 				add_devastation = 3
 			}
 		}
@@ -351,7 +351,7 @@ usfp_indian_althist.3 = {
 		random_scope_state = {
 			limit = {
 				region = sr:region_great_plains
-				any_neighboring_state = {
+				any_neighbouring_state = {
 					owner = {
 						is_country_type = decentralized
 					}

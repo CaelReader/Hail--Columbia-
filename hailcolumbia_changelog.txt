@@ -339,3 +339,13 @@ Updates:
 	Extended the Comanche Domain into New Mexico
 	Comanche Domain now also reduces agricultural tax income
 	Added traits to Nelson Appleton Miles
+1.8 Compatibility Updates:
+	Removed ACW state scripting (handled by Political Movements now)
+	Disabled random election-spawned agitators (except when passing Slavery Banned)
+	Updated Wildfire and Great Chicago Fire events to use new Harvest Condition system
+	Removed Citizenship stance from Evangelical Moralist ideology
+	World Parliament of Religions event now uses Pivot of Empire's version of Swami Vivekananda (and thus requires the DLC)
+	Swami Vivekananda is now a Universalist (new ideology) agitator
+	Updated modifiers across the board to new 1.8 modifiers
+	Accepting Deseret Statehood renames Utah to Deseret
+	Updated events and triggers to interface with new Political Movements

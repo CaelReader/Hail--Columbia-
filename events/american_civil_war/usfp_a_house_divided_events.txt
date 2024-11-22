@@ -33,7 +33,7 @@ usfp_a_house_divided.1 = {
 			has_variable = usfp_had_gag_rule
 		}
 		any_political_movement = {
-			desired_law = law_type:law_slavery_banned
+			is_political_movement_type = movement_anti_slavery
 		}
 	}
 
@@ -69,7 +69,7 @@ usfp_a_house_divided.1 = {
 		}
 		random_political_movement = {
 			limit = {
-				desired_law = law_type:law_slavery_banned
+				is_political_movement_type = movement_anti_slavery
 			}
 			add_modifier = {
 				name = usfp_gag_rule_movement_modifier
@@ -106,7 +106,7 @@ usfp_a_house_divided.1 = {
 		}
 		random_political_movement = {
 			limit = {
-				desired_law = law_type:law_slavery_banned
+				is_political_movement_type = movement_anti_slavery
 			}
 			add_modifier = {
 				name = usfp_gag_rule_movement_modifier
@@ -202,6 +202,15 @@ usfp_a_house_divided.3 = {
 			name = usfp_imminent_secession
 			years = 5
 		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_pro_slavery
+			}
+			add_modifier = {
+				name = usfp_imminent_secession_movement
+				years = 5
+			}
+		}
 		if = {
 			limit = { 
 				has_modifier = usfp_missouri_compromise_decaying
@@ -282,32 +291,25 @@ usfp_a_house_divided.4 = {
 		ai_chance = {
 			base = 100
 		}
-		ig:ig_intelligentsia = {
-			add_modifier = {
-				name = usfp_abolitionist_literature_ig
-				years = 4
-			}
-		}
 		ig:ig_landowners = {
 			add_modifier = {
 				name = usfp_abolitionist_literature_ig_negative
 				years = 4
 			}
 		}
-		add_modifier = {
-			name = usfp_abolitionist_literature_country
-			years = 4
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			add_modifier = {
+				name = usfp_abolitionist_literature_movement_modifier 
+				years = 4
+			}
 		}
 	}
 
 	option = {
 		name = usfp_a_house_divided.4.b
-		ig:ig_intelligentsia = {
-			add_modifier = {
-				name = usfp_abolitionist_literature_ig
-				years = 4
-			}
-		}
 		add_radicals = {
 			value = small_radicals
 			interest_group = ig:ig_intelligentsia
@@ -362,34 +364,25 @@ usfp_a_house_divided.5 = {
 		ai_chance = {
 			base = 100
 		}
-		ig:ig_intelligentsia = {
-			add_modifier = {
-				name = usfp_abolitionist_literature_ig
-				years = 4
-				multiplier = 2
-			}
-		}
 		ig:ig_landowners = {
 			add_modifier = {
 				name = usfp_abolitionist_literature_ig_negative
 				years = 4
 			}
 		}
-		add_modifier = {
-			name = usfp_abolitionist_literature_country
-			years = 4
-			multiplier = 2
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			add_modifier = {
+				name = usfp_abolitionist_literature_movement_modifier 
+				years = 4
+			}
 		}
 	}
 
 	option = {
 		name = usfp_a_house_divided.5.b
-		ig:ig_intelligentsia = {
-			add_modifier = {
-				name = usfp_abolitionist_literature_ig
-				years = 4
-			}
-		}
 		add_radicals = {
 			value = medium_radicals
 			interest_group = ig:ig_intelligentsia
@@ -1132,11 +1125,7 @@ usfp_a_house_divided.12 = {
 		# }
 		if = {
 			limit = { 
-				cu:afro_american = {
-					NOT = {
-						culture_is_discriminated_in = root
-					}
-				}
+				cultural_acceptance_base = { target = cu:afro_american value >= acceptance_status_4 }
 			}
 			add_journal_entry = {
 				type = usfp_reconstruction_long
@@ -1368,27 +1357,12 @@ usfp_a_house_divided.15 = {
 			has_law = law_type:law_slavery_banned
 			has_journal_entry = je_acw_war
             any_civil_war = {
-                this.political_movement ?= {
-                    any_supporting_interest_group = {
-                        law_stance = {
-                            law = law_type:law_slavery_banned
-                            value > neutral
-                        }
-                    }
-                }
-                is_civil_war_type = revolution
-                civil_war_progress > 0.50
-            }
-			any_civil_war = {
-                this.political_movement ?= {
-                    any_supporting_interest_group = {
-                        law_stance = {
-                            law = law_type:law_slave_trade
-                            value > neutral
-                        }
-                    }
-                }
-                is_civil_war_type = revolution
+				political_movement ?= {
+					OR = {
+						is_political_movement_type = movement_anti_slavery
+						is_political_movement_type = movement_pro_slavery
+					}
+				}
                 civil_war_progress > 0.50
             }
 		}
@@ -1505,9 +1479,14 @@ usfp_a_house_divided.16 = {
 			}
 			remove_modifier = usfp_1850_compromise_decaying
 		}
-		add_modifier = {
-			name = usfp_dred_scott_fallout
-			years = 3
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			add_modifier = {
+				name = usfp_dred_scott_fallout
+				years = 3
+			}
 		}
 		add_radicals = {
 			value = 0.05
@@ -1544,9 +1523,14 @@ usfp_a_house_divided.16 = {
 			}
 			remove_modifier = usfp_1850_compromise_decaying
 		}
-		add_modifier = {
-			name = usfp_dred_scott_fallout
-			years = 3
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			add_modifier = {
+				name = usfp_dred_scott_fallout
+				years = 3
+			}
 		}
 		add_radicals = {
 			value = 0.05
@@ -1693,6 +1677,12 @@ usfp_a_house_divided.18 = {
 	option = {
 		name = usfp_a_house_divided.18.a
 		remove_modifier = usfp_imminent_secession
+		random_political_movement = {
+			limit = {
+				has_modifier = usfp_imminent_secession_movement
+			}
+			remove_modifier = usfp_imminent_secession_movement
+		}
 		ig:ig_landowners = {
 			remove_modifier = usfp_slavers_reject_abolition
 		}
@@ -1703,12 +1693,12 @@ usfp_a_house_divided.18 = {
 		if = {
 			limit = { 
 				any_political_movement = {
-					desired_law = law_type:law_slave_trade
+					is_political_movement_type = movement_anti_slavery
 				}
 			}
 			random_political_movement = {
 				limit = {
-					desired_law = law_type:law_slave_trade
+					is_political_movement_type = movement_anti_slavery
 				}
 				add_modifier = {
 					name = usfp_secession_defused_modifier
@@ -1745,9 +1735,7 @@ usfp_a_house_divided.19 = {
 		NOT = {
 			has_law = law_type:law_slavery_banned
 		}
-		cu:afro_american = {
-			culture_is_discriminated_in = root
-		}
+		cultural_acceptance_base = { target = cu:afro_american value < acceptance_status_4 }
 		game_date > 1847.12.3 #The North Star founded
 		NOT = {
 			any_scope_character = {
@@ -1782,32 +1770,25 @@ usfp_a_house_divided.19 = {
 		ai_chance = {
 			base = 100
 		}
-		ig:ig_intelligentsia = {
-			add_modifier = {
-				name = usfp_abolitionist_literature_ig
-				years = 4
-			}
-		}
 		ig:ig_landowners = {
 			add_modifier = {
 				name = usfp_abolitionist_literature_ig_negative
 				years = 4
 			}
 		}
-		add_modifier = {
-			name = usfp_abolitionist_literature_country
-			years = 4
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			add_modifier = {
+				name = usfp_abolitionist_literature_movement_modifier 
+				years = 4
+			}
 		}
 	}
 
 	option = {
 		name = usfp_a_house_divided.19.b
-		ig:ig_intelligentsia = {
-			add_modifier = {
-				name = usfp_abolitionist_literature_ig
-				years = 4
-			}
-		}
 		add_radicals = {
 			value = small_radicals
 			interest_group = ig:ig_intelligentsia

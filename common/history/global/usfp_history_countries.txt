@@ -55,7 +55,7 @@
 				c:GBR = {
 					create_diplomatic_pact = {
 						country = c:NEW
-						type = puppet
+						type = colony
 					}
 				}
 				trigger_event = {

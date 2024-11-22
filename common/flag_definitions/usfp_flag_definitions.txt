@@ -1,22 +1,4 @@
-﻿ASK = {
-	flag_definition = {
-		coa = ASK_sub_RUS
-		subject_canton = ASK_sub_RUS
-		allow_overlord_canton = no
-		#coa_with_overlord_canton = MON_principality_variant			
-		priority = 10
-		trigger = { 
-			AND = {
-				exists = c:RUS
-				scope:actor = {
-					is_subject_of = c:RUS
-				}
-			}
-		}
-	}
-}
-
-NEW = { # Newfoundland
+﻿NEW = { # Newfoundland
 	flag_definition = {
 		coa = NEW
 		coa_with_overlord_canton = NEW_subject
