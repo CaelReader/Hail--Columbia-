@@ -207,7 +207,7 @@ usfp_acw_election_agitators = {
 					}
 				}
 				random_political_movement = {
-				limit = { desired_law = law_type:law_slave_trade }
+				limit = { is_political_movement_type = movement_pro_slavery }
 					add_modifier = {
 						name = modifier_uncommitted_government
 						months = very_long_modifier_time

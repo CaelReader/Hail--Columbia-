@@ -25,3 +25,8 @@ ai_strategy_manifest_destiny_desc: "[COUNTRY.GetName] seeks to expand its core t
 
 dismantle_jim_crow: "Dismantle Jim Crow"
 dismantle_jim_crow_desc: "The governments of the South have enforced racial terror on their citizens for far too long. It is time that these Jim Crow laws be nullified."
+
+movement_usfp_progressive: "Progressive Movement"
+movement_usfp_progressive_name: "$movement_usfp_progressive$"
+STATE_POLITICAL_MACHINE: "[concept_state] run by Political Machine"
+STATE_POLLUTED: "High [concept_generated_pollution] in [concept_state]"

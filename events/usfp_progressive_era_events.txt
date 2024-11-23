@@ -38,6 +38,7 @@ usfp_progressive_era.1 = {
 			text = progressives_can_spawn
 			set_global_variable = had_progressive_era
 		}
+		create_political_movement = { type = movement_usfp_progressive }
 		recalculate_pop_ig_support = yes
 		update_party_support = yes
 	}
@@ -52,6 +53,7 @@ usfp_progressive_era.1 = {
 			text = progressives_can_spawn
 			set_global_variable = had_progressive_era
 		}
+		create_political_movement = { type = movement_usfp_progressive }
 		recalculate_pop_ig_support = yes
 		update_party_support = yes
 		add_radicals = {
@@ -929,24 +931,12 @@ usfp_progressive_era.12 = {
 	option = {
 		name = usfp_progressive_era.12.a
 		default_option = yes
-		if = {
-			limit = { 
-				any_political_movement = {
-					desired_law = law_type:law_compulsory_primary_school
-				}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_usfp_progressive
 			}
-			random_political_movement = {
-				limit = {
-					desired_law = law_type:law_compulsory_primary_school
-				}
-				add_modifier = {
-					name = usfp_muckraker_movement_modifier
-					months = normal_modifier_time
-				}
-			}
-		} else = {
 			add_modifier = {
-				name = usfp_bitter_cry_of_children_modifier
+				name = usfp_muckraker_movement_modifier
 				months = normal_modifier_time
 			}
 		}

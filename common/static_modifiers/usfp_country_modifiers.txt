@@ -566,17 +566,6 @@ usfp_social_hygiene_modifier = {
 	country_loyalism_increases_full_acceptance_mult = 0.05
 }
 
-usfp_bitter_cry_of_children_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
-	#TODO: send to Progressive Movement
-}
-
-
-usfp_the_jungle_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
-	#TODO: send to Progressive Movement
-}
-
 usfp_meat_inspectors_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_machinist_positive.dds
 	building_food_industry_throughput_add = -0.10

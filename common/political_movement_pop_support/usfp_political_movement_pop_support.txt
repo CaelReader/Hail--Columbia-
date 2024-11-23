@@ -1,0 +1,15 @@
+﻿movement_support_political_machine = {
+	name = STATE_POLITICAL_MACHINE
+
+	visible = {
+		owner ?= {
+			any_scope_state = { 
+				has_modifier = usfp_captive_state_government
+			 }
+		}
+	}
+}
+
+movement_support_pollution = {
+	name = STATE_POLLUTED
+}
