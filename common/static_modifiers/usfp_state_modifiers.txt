@@ -76,7 +76,8 @@ usfp_homestead_act_modifier = {
 usfp_deep_south_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_positive.dds
 	interest_group_ig_landowners_pol_str_mult = 0.20
-	# building_group_bg_agriculture_allowed_collectivization_add = -0.5
+	building_group_bg_agriculture_allowed_collectivization_add = -0.5
+	
 }
 
 usfp_upper_south_modifier = {

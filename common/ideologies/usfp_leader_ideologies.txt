@@ -177,7 +177,7 @@ ideology_usfp_progressive = {
 	country_trigger = {
 		OR = {
 			c:USA ?= this
-			civil_war_origin_country = c:USA
+			civil_war_origin_country ?= c:USA
 		}
 		has_technology_researched = human_rights
 		has_global_variable =  had_progressive_era
@@ -220,12 +220,10 @@ ideology_usfp_progressive = {
 		value = 100
 		if = {
 			limit = {
-				scope:interest_group = {
-					OR = {
-						is_interest_group_type = ig_rural_folk
-						is_interest_group_type = ig_armed_forces
-						is_interest_group_type = ig_industrialists
-					}
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_armed_forces
+					is_interest_group_type = ig_industrialists
 				}
 			}
 			multiply = 0.5
@@ -600,11 +598,11 @@ ideology_usfp_abolitionist_radical = {
 	interest_group_leader_weight = {
 		value = 10
 		if = {
-			limit = { scope:interest_group = { is_interest_group_type = ig_trade_unions } }
+			limit = { is_interest_group_type = ig_trade_unions }
 			add = 75
 		}	
 		if = {
-			limit = { scope:interest_group = { is_interest_group_type = ig_intelligentsia } }
+			limit = { is_interest_group_type = ig_intelligentsia }
 			add = 75
 			
 			if = {
@@ -944,7 +942,7 @@ ideology_usfp_social_darwinist_leader = {
 	}
 	
 	interest_group_leader_weight = {
-		value = 10
+		value = 50
 		if = {
 			limit = {
 				owner = {

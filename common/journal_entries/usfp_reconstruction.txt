@@ -5,17 +5,28 @@ usfp_reconstruction_long = {
 
 	group = je_group_historical_content
 
+	scripted_progress_bar = usfp_long_reconstruction_progress_bar
 	immediate = {
 		cu:afro_american = {
 			save_scope_as = afro_american_culture
 		}
+		cu:dixie = {
+			save_scope_as = dixie_culture
+		}	
 	}
 
 	fail = {
-		cultural_acceptance_base = { target = cu:afro_american value < acceptance_status_4 }
+		usfp_is_afro_american_discriminated = yes
 	}
-
-	on_timeout = {
+	complete = {
+		custom_tooltip = {
+			text = usfp_long_reconstruction_complete_tt
+			scope:journal_entry = {
+				"scripted_bar_progress(usfp_long_reconstruction_progress_bar)" >= 2000
+			}
+		}
+	}
+	on_complete = {
 		add_primary_culture = cu:afro_american
 		ig:ig_petty_bourgeoisie = {
 			if = {
@@ -28,5 +39,4 @@ usfp_reconstruction_long = {
 		}
 	}
 
-	timeout = 14610
 }

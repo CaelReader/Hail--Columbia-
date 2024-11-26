@@ -318,3 +318,68 @@ usfp_bleeding_kansas_get_dixie_aristocrats = {
         }
     }
 }
+
+usfp_long_reconstruction_get_dixie_radicals = {
+    value = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:dixie
+            }
+            add = pop_radical_fraction
+        }
+    }
+    divide = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:dixie
+            }
+            add = 1
+        }
+        min = 1 # DIV/0 guard
+    }
+	multiply = 10
+}
+
+usfp_long_reconstruction_get_average_afro_american_acceptance = {
+    value = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:afro_american
+            }
+            add = pop_acceptance
+        }
+    }
+    divide = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:afro_american
+            }
+            add = 1
+        }
+        min = 1 # DIV/0 guard
+    }
+}
+
+usfp_long_reconstruction_get_afro_american_popularity = {
+	value = {
+		every_scope_character = {
+			limit = {
+				culture = cu:afro_american
+			}
+			add = popularity
+		}
+	}
+	divide = 10
+}
+
+usfp_long_reconstruction_get_supremacist_movement_support = {
+	value = {
+		every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_cultural_majority
+			}
+			add = this.political_movement_support
+		}
+	}
+	multiply = 100
+}

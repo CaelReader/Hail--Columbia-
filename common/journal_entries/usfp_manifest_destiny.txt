@@ -584,6 +584,7 @@ usfp_je_indian_wars = {
 			100 = usfp_indian_wars.6 #Indians Massacred
 			100 = usfp_indian_wars.10 #Hunting by Rail
 			1000 = usfp_indian_wars.11 #Buffalo Extinction
+			100 = usfp_indian_wars.14 #Reservation Woes
 
 		}
 		events = {

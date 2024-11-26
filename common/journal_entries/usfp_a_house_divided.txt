@@ -501,3 +501,45 @@ je_usfp_a_house_divided_bleeding_kansas = {
 
 
 # }
+je_usfp_a_house_divided_voting_rights = {
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	group = je_group_historical_content
+
+	should_be_pinned_by_default = yes
+
+	modifiers_while_active = {
+		usfp_black_suffrage_denied_modifier
+	}
+
+	immediate = {
+		cu:afro_american = {
+			save_scope_as = afro_american_culture
+		}
+	}
+
+	complete = {
+		OR = {
+			has_law = law_type:law_cultural_exclusion
+			has_law = law_type:law_multicultural
+		}
+	}
+
+	on_complete = {
+		add_loyalists = {
+			value = medium_radicals
+			culture = cu:afro_american
+		}
+		remove_modifier = usfp_black_suffrage_denied_modifier
+	}
+
+
+
+	invalid = {
+		OR = {
+			country_has_voting_franchise = no
+			has_law = law_type:law_council_republic
+		}
+	}
+
+}

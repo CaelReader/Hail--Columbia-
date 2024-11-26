@@ -311,7 +311,7 @@ Updated Korean Localization
 
 4.0 "Sitting Bull"
 New Content:
-	Indian Wars JE with 18 events
+	Indian Wars JE with 19 events
 	Small Alt-History JE upon passing No Colonial Affairs, with 5 events
 	Added 5 mod-specific Achievements
 	Added guaranteed Frederick Douglass spawn event
@@ -344,6 +344,7 @@ Updates:
 	Added traits to Nelson Appleton Miles
 	The USA now starts with Freedom of Conscience, and its IGs prefer it over Total Separation (the constitution claims total separation, but in reality Protestantism was paramount)
 	Republican Virtue no longer provides throughput, but also extends Education Access to Farmers
+	Enforcing Indian Removal now requires an army stationed in Dixie
 1.8 Compatibility Updates:
 	Removed ACW state scripting (handled by Political Movements now)
 	Disabled random election-spawned agitators (except when passing Slavery Banned)
@@ -355,4 +356,6 @@ Updates:
 	Accepting Deseret Statehood renames Utah to Deseret
 	Updated events and triggers to interface with new Political Movements
 	Progressive Cause JE now comes with a unique Progressive political movement
+	Added JE that further decreases Acceptance and Voting Power of afro-americans (removed by passing Cultural Exclusion or Multiculturalism)
+	Long Reconstruction now takes a variable amount of time based on Acceptance of Afro Americans and a few other factors 
 

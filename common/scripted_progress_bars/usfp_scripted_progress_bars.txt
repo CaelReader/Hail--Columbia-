@@ -1,0 +1,28 @@
+﻿usfp_long_reconstruction_progress_bar = {
+	name = "usfp_long_reconstruction_progress_bar"
+	desc = "usfp_long_reconstruction_progress_bar_desc"
+
+	default = yes
+
+	yearly_progress = {
+		add = {
+			desc = "afro_american_average_acceptance"
+			value = usfp_long_reconstruction_get_average_afro_american_acceptance 
+		}
+		add = {
+			desc = "afro_american_character_popularity"
+			value = usfp_long_reconstruction_get_afro_american_popularity
+		}
+		subtract = {
+			desc = "dixie_radicalism"
+			value = usfp_long_reconstruction_get_dixie_radicals
+		}
+		subtract = {
+			desc = "supremacist_movement_support"
+			value = usfp_long_reconstruction_get_supremacist_movement_support 
+		}
+	}
+	start_value = 0
+	min_value = 0
+	max_value = 2000
+ }

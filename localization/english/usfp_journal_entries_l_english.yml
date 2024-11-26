@@ -38,6 +38,9 @@ usfp_enforce_kansas_constitution_button_desc: "The people of Kansas have given u
 je_usfp_a_house_divided_border_states:0 "A House Divided: The Border States"
 je_usfp_a_house_divided_border_states_reason:0 "The border states maintain the practice of slavery, but are sufficiently removed from the Deep South that they might be turned against the secessionist cause."
 
+je_usfp_a_house_divided_voting_rights: "A House Divided: Black Suffrage"
+je_usfp_a_house_divided_voting_rights_reason: "Even in the non-slaveholding states, [SCOPE.sCulture('afro_american_culture').GetName] citizens are almost entirely denied access to the ballot box. Overturning the myriad restrictions on their suffrage will require a concerted effort at the national level."
+
 
 border_state_loyal: "#bold #green Unionist#!"
 border_state_divided: "#bold #yellow Divided#!"
@@ -141,6 +144,13 @@ made_devils_bargain: "We have made the Devil's Bargain with the South"
 
 usfp_reconstruction_long: "Long Reconstruction"
 usfp_reconstruction_long_reason: "While Reconstruction has largely been a success for the Freedmen, racial prejudice remains deeply engrained at all levels of the [ROOT.GetCountry.GetName]. It will take at least a generation before [SCOPE.sCulture('afro_american_culture').GetName] citizens are truly accepted as a core element of the [ROOT.GetCountry.GetAdjectiveNoFormatting] nation."
+usfp_long_reconstruction_progress_bar: "Afro-American Integration"
+usfp_long_reconstruction_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/4000)"
+afro_american_average_acceptance: "Average [concept_acceptance] of Afro-American [Concept('concept_pop', '$concept_pops$')]"
+afro_american_character_popularity: "[concept_popularity] of Afro-American [Concept('concept_character', '$concept_characters$')]"
+dixie_radicalism: "Dixie [Concept('concept_radical', '$concept_radicals$')]"
+supremacist_movement_support: "$movement_cultural_majority$ [concept_political_movement_support]"
+usfp_long_reconstruction_complete_tt: "The #bold Progress Bar#! has reached #bold 2000#!"
 
 usfp_canadian_highlander: "We are the only Canadian colony remaining"
 

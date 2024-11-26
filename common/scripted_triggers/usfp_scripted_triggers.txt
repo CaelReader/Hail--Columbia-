@@ -414,3 +414,10 @@ usfp_has_plains_occupation_trigger = {
 		}
 	}
 }
+
+usfp_is_afro_american_discriminated = {
+	NOR = {
+		has_law = law_type:law_cultural_exclusion
+		has_law = law_type:law_multicultural
+	}
+}

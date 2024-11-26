@@ -364,3 +364,8 @@ usfp_lawless_frontier_ig_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_prospecting_negative.dds
 	interest_group_approval_add = -2
 }
+
+usfp_anti_indian_policy_positive_ig_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
+	interest_group_approval_add = 2
+}

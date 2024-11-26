@@ -32,7 +32,7 @@ nicaragua_revolt_walker = {
 	is_shown = {
 		exists = c:NIC
 		is_revolutionary = yes
-		civil_war_origin_country = c:NIC
+		civil_war_origin_country ?= c:NIC
 		NOT = {
 			has_global_variable = walker_to_nicaragua
 		}

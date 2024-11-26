@@ -1131,6 +1131,13 @@ usfp_indian_wars.13.f: ""My heart is a stone: heavy with sadness for my people; 
 usfp_indian_wars.13.a: "Settlement and negotiation will bring these lands into civilization."
 usfp_indian_wars.13.b: "The only good Indian is a dead Indian."
 
+usfp_indian_wars.14.t: "Empty Promises"
+usfp_indian_wars.14.d: "The [SCOPE.sCulture('reservation_culture').GetName] living on their reservation in [SCOPE.sState('reservation_state').GetName] have lodged complaints against their Indian Agent, citing lack of promised food rations, medical care, and services."
+usfp_indian_wars.14.f: ""The people seemed heavy to men, heavy and dark; so heavy it seemed they could not be lifted; so dark they could not be made to see anymore. Hunger was among us now. There were many lies, but we could not eat them."" #Black Elk
+usfp_indian_wars.14.a: "Ensure that we uphold our end of the agreement."
+usfp_indian_wars.14.b: "The Indian Agents must handle their own affairs."
+usfp_indian_wars.14.c: "Starving the Indians will encourage them to become good Christian farmers."
+
 usfp_indian_postremoval.1.t: "The Ghost Dance"
 usfp_indian_postremoval.1.d: "A millenarian spiritual movement known as the Ghost Dance has swept across the Indian tribes of the west, promising a return of the buffalo and the wiping away of White settlers. While the movement promotes peaceful behavior from its adherents, the sometimes wild and ecstatic dance rituals have provoked terror in White settlers, who claim the Indians are preparing themselves for apocalyptic war upon their homesteads."
 usfp_indian_postremoval.1.f: ""They told the people they could dance a new world into being. There would be landslides, earthquakes, and big winds. Hills would pile up on each other. The earth would roll up like a carpet with all the white man's ugly things - the stinking new animals, sheep and pigs, the fences, the telegraph poles, the mines and factories. Underneath would be the wonderful old-new world as it had been before the white fat-takers came. The white men will be rolled up, disappear, go back to their own continent."" #Lame Deer

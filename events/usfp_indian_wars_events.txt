@@ -254,8 +254,10 @@ usfp_indian_wars.3 = {
 			}
 		}
 		ruler = {
-			add_modifier = usfp_indian_defender
-			years = 5
+			add_modifier = {
+				name = usfp_indian_defender
+				years = 5
+			}
 		}
 	}
 }
@@ -1149,6 +1151,117 @@ usfp_indian_wars.13 = {
 		usfp_manifest_more_destiny_effect = yes
 		usfp_loyalize_frontier_settlers = {
 			LOYALISTS = small_radicals
+		}
+	}
+
+}
+#Reservation Woes
+usfp_indian_wars.14 = {
+	type = country_event
+	placement = scope:reservation_state
+	cooldown = {years = 7}
+	event_image = {
+		video = "votp_realist_household"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_indian_wars.14.t
+	desc = usfp_indian_wars.14.d
+	flavor = usfp_indian_wars.14.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		has_modifier = usfp_indian_agencies_modifier
+		any_scope_state = {
+			any_scope_pop = {
+				has_discrimination_trait = north_american_group
+				is_pop_type = peasants
+			}
+			region = sr:region_great_plains
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = {
+			has_modifier = usfp_indian_agencies_modifier
+			has_journal_entry = usfp_je_indian_wars
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				region = sr:region_great_plains
+				any_scope_pop = {
+					has_discrimination_trait = north_american_group
+					is_pop_type = peasants
+				}
+			}
+			save_scope_as = reservation_state
+			random_scope_pop = {
+				limit = {
+					has_discrimination_trait = north_american_group
+					is_pop_type = peasants
+				}
+				culture = {
+					save_scope_as = reservation_culture
+				}
+			}
+		}
+	}
+
+	#help
+	option = {
+		name = usfp_indian_wars.14.a
+		scope:reservation_state = {
+			add_culture_standard_of_living_modifier = {
+				culture = scope:reservation_culture
+				multiplier = -1
+			}
+			add_loyalists_in_state = {
+				value = small_radicals
+				culture = scope:reservation_culture
+			}
+		}
+		add_modifier = {
+			name = usfp_reservation_spending_modifier
+			multiplier = 3000
+			years = 3
+		}
+	}
+	#nah
+	option = {
+		name = usfp_indian_wars.14.b
+		default_option = yes
+		scope:reservation_state = {
+			add_culture_standard_of_living_modifier = {
+				culture = scope:reservation_culture
+				multiplier = -2
+			}
+		}
+	}
+	#intentional starvation
+	option = {
+		name = usfp_indian_wars.14.c
+		scope:reservation_state = {
+			add_culture_standard_of_living_modifier = {
+				culture = scope:reservation_culture
+				multiplier = -4
+			}
+			add_radicals_in_state = {
+				value = medium_radicals
+				culture = scope:reservation_culture
+			}
+		}
+		ig:ig_rural_folk = {
+			add_modifier = { 
+				name = usfp_anti_indian_policy_positive_ig_modifier
+				years = 4
+			}
 		}
 	}
 
