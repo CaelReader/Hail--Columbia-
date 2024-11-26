@@ -1068,10 +1068,10 @@ usfp_indian_wars.2.a: "We shall protect the prospectors."
 usfp_indian_wars.2.b: "Building forts would be a provocation."
 
 usfp_indian_wars.3.t: "There's Gold In Those Black Hills"
-usfp_indian_wars.3.d: ""
-usfp_indian_wars.3.f: """"
-usfp_indian_wars.3.a: ""
-usfp_indian_wars.3.b: ""
+usfp_indian_wars.3.d: "Confirmed reports of gold to be found in the Black Hills of [SCOPE.sState('south_dakota_scope').GetStateRegion.GetName] have driven a surge of interest by White settlers. However, our previous treaties with the [SCOPE.sCountry('sioux_scope').GetName] confirm their exclusive control of the region, which they consider sacred ground."
+usfp_indian_wars.3.f: ""There is no doubt as to the existence of various metals throughout the hills. Subsequent examinations at numerous points confirm and strengthen the fact of the existence of gold in the Black Hills.""
+usfp_indian_wars.3.a: "The [SCOPE.sCountry('sioux_scope').GetAdjective] will have to abide the prospectors presence."
+usfp_indian_wars.3.b: "We won't be so brazen in breaking the treaty."
 
 usfp_indian_wars.4.t: "[SCOPE.sCharacter('custer_scope').GetLastName]'s Last Stand"
 usfp_indian_wars.4.d: "[SCOPE.sCharacter('custer_scope').GetRank] [SCOPE.sCharacter('custer_scope').GetFullName] has been killed while leading a reckless expedition against the [SCOPE.sCountry('sioux_scope').GetAdjective], along with an entire contingent of his men. While the casualties are small in number, the shock of the defeat has caused outrage in the [ROOT.GetCountry.GetAdjective] press."
@@ -1091,10 +1091,9 @@ usfp_indian_wars.6.a: "The settlers are doing our work for us."
 usfp_indian_wars.6.b: "Find and prosecute those responsible."
 
 usfp_indian_wars.7.t: "Captain Jack's Stronghold"
-usfp_indian_wars.7.d: ""
-usfp_indian_wars.7.f: """"
-usfp_indian_wars.7.a: ""
-usfp_indian_wars.7.b: ""
+usfp_indian_wars.7.d: "In an attempt to secure our control over [SCOPE.sState('modoc_state_scope').GetStateRegion.GetName],[SCOPE.sCharacter('dead_general_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('dead_general_scope').GetLastName] had gone to parley with the [SCOPE.sCountry('modoc_scope').GetName]. Fearing that the general intended to remove them from their lands, [SCOPE.sCharacter('captain_jack_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('captain_jack_scope').GetFirstName] has assassinated [SCOPE.sCharacter('dead_general_scope').GetLastNameNoFormatting] in the peace tent! The Modoc have now retreated deep into the lava beds of their home territory, putting our troops at a serious disadvantage."
+usfp_indian_wars.7.f: ""You deny me the right of a white man. My skin is red; my heart is a white man’s heart; but I am a Modoc. I am not afraid to die."" #Kintpuash
+usfp_indian_wars.7.a: "We'll just have to flush them out."
 
 usfp_indian_wars.8.t: "Flight of the [SCOPE.sCulture('nez_perce_culture').GetName]"
 usfp_indian_wars.8.d: "Several bands of the [SCOPE.sCulture('nez_perce_culture').GetName] have rejected the treaties granting us control over their ancestral lands. With remarkable fighting skill they have led the Army on a 1000-mile chase across the plains before being cornered and made to surrender in eastern [SCOPE.sStateRegion('montana_region_scope').GetName]."
@@ -1169,30 +1168,30 @@ usfp_indian_althist.1.f: "The Seven Council Fires had met for generations, but t
 usfp_indian_althist.1.a: "It will be a civilization of their own making."
 usfp_indian_althist.1.b: "This country is ours, and we intend to stay here."
 
-usfp_usfp_indian_althist.2.t: "Indian Raids in [SCOPE.sState('raid_state').GetName]"
-usfp_usfp_indian_althist.2.d: "An opportunistic band of Indians have raided into [SCOPE.sState('raid_state').GetName], plundering the countryside before returning swiftly to [SCOPE.sCountry('raiding_country').GetAdjective] territory."
-usfp_usfp_indian_althist.2.f: ""The appearance of the Indians caused us no surprise at first, as Indians are often seen on the Plains. We soon discovered, however, that they were on no friendly errand, and were pronounced by the herders to be a raiding party. They were decked in their war paint, and as soon as they saw us raised a shout before advancing upon us."" #Walter Glazier
-usfp_usfp_indian_althist.2.a: "This calls for a punitive expedition."
-usfp_usfp_indian_althist.2.b: "Resupply our forts and increase patrols."
-usfp_usfp_indian_althist.2.c: "The frontier is on its own."
+usfp_indian_althist.2.t: "Indian Raids in [SCOPE.sState('raid_state').GetName]"
+usfp_indian_althist.2.d: "An opportunistic band of Indians have raided into [SCOPE.sState('raid_state').GetName], plundering the countryside before returning swiftly to [SCOPE.sCountry('raiding_country').GetAdjective] territory."
+usfp_indian_althist.2.f: ""The appearance of the Indians caused us no surprise at first, as Indians are often seen on the Plains. We soon discovered, however, that they were on no friendly errand, and were pronounced by the herders to be a raiding party. They were decked in their war paint, and as soon as they saw us raised a shout before advancing upon us."" #Walter Glazier
+usfp_indian_althist.2.a: "This calls for a punitive expedition."
+usfp_indian_althist.2.b: "Resupply our forts and increase patrols."
+usfp_indian_althist.2.c: "The frontier is on its own."
 
-usfp_usfp_indian_althist.3.t: "The Lure of Gold"
-usfp_usfp_indian_althist.3.d: "Rumors of gold in [SCOPE.sCountry('gold_rumors_country').GetAdjective] territory have drawn bands of wildcat miners to cross the border in search of strikes, sparking conflict with local Indians."
-usfp_usfp_indian_althist.3.f: ""As he drew forth the yellow lumps from his pockets, and passed them around among the eager crowd, the doubts, which had lingered till now, fled. The excitement produced was intense, and many were soon busy in their hasty preparations for a departure to the mines."" #Rev Walter Colton
-usfp_usfp_indian_althist.3.a: "We won't intervene."
-usfp_usfp_indian_althist.3.b: "The border must be enforced."
+usfp_indian_althist.3.t: "The Lure of Gold"
+usfp_indian_althist.3.d: "Rumors of gold in [SCOPE.sCountry('gold_rumors_country').GetAdjective] territory have drawn bands of wildcat miners to cross the border in search of strikes, sparking conflict with local Indians."
+usfp_indian_althist.3.f: ""As he drew forth the yellow lumps from his pockets, and passed them around among the eager crowd, the doubts, which had lingered till now, fled. The excitement produced was intense, and many were soon busy in their hasty preparations for a departure to the mines."" #Rev Walter Colton
+usfp_indian_althist.3.a: "We won't intervene."
+usfp_indian_althist.3.b: "The border must be enforced."
 
-usfp_usfp_indian_althist.4.t: "Mormons Moving In"
-usfp_usfp_indian_althist.4.d: "The Mormons of [SCOPE.sCountry('deseret_scope').GetName] have claimed a vast swath of the West as rightfully the territory of their godly colony. Frustrated settlers have begun to flock to their 'New Zion' in order to evade our anticolonial policies."
-usfp_usfp_indian_althist.4.f: ""It is the duty of a Saint of God to gain all the influence he can on this earth, and to use every particle of that influence to do good."" #Brigham Young
-usfp_usfp_indian_althist.4.a: "This can bring only trouble."
-usfp_usfp_indian_althist.4.b: "Disavow and denounce these criminals!"
+usfp_indian_althist.4.t: "Mormons Moving In"
+usfp_indian_althist.4.d: "The Mormons of [SCOPE.sCountry('deseret_scope').GetName] have claimed a vast swath of the West as rightfully the territory of their godly colony. Frustrated settlers have begun to flock to their 'New Zion' in order to evade our anticolonial policies."
+usfp_indian_althist.4.f: ""It is the duty of a Saint of God to gain all the influence he can on this earth, and to use every particle of that influence to do good."" #Brigham Young
+usfp_indian_althist.4.a: "This can bring only trouble."
+usfp_indian_althist.4.b: "Disavow and denounce these criminals!"
 
-usfp_usfp_indian_althist.5.t: "[SCOPE.sCountry('comanche_scope').GetAdjective] Empire"
-usfp_usfp_indian_althist.5.d: "With secure borders to the east and south, the most influential Comanche bands have agreed on a coordinated campaign of expansion and consolidation, aiming to enlarge [SCOPE.sCountry('comanche_scope').GetName] and secure its position as the dominant force on the southern plains."
-usfp_usfp_indian_althist.5.f: "The markets of Comancheria have long accomodated many peoples. Kiowas, Apaches, Wichitas, even Spaniards, Tejanos, and Anglo-Americans. As new industrial goods have made their way west into the plains, the wealth of their neighbors has drawn more and more attention from the chiefs."
-usfp_usfp_indian_althist.5.a: "We would prefer to keep the plains peaceful."
-usfp_usfp_indian_althist.5.b: "We shall be lords of the southern plains once more!"
+usfp_indian_althist.5.t: "[SCOPE.sCountry('comanche_scope').GetAdjective] Empire"
+usfp_indian_althist.5.d: "With their borders on all sides now fixed by treaty, political currents within the ever flexible [SCOPE.sCountry('comanche_scope').GetName] have shifted in favor of consolidation. "
+usfp_indian_althist.5.f: "Many faces could be seen amongst the crowds of the great council. Kiowas, Apaches, Wichitas, even some adopted Spaniards and Tejanos. The prominent chiefs made their case to the people, and the bands of Comancheria responded with their assent."
+usfp_indian_althist.5.a: "We would prefer to keep the plains peaceful."
+usfp_indian_althist.5.b: "We shall be lords of the southern plains once more!"
 
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"

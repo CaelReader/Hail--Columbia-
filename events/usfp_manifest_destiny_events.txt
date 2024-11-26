@@ -576,6 +576,9 @@ usfp_manifest_destiny.6 = {
 		s:STATE_SONORA.region_state:MEX = {
 			set_state_owner = root
 		}
+		s:STATE_CHIHUAHUA = {
+			add_claim = root
+		}
 		s:STATE_CHIHUAHUA.region_state:MEX = {
 			set_state_owner = root
 		}
@@ -592,7 +595,7 @@ usfp_manifest_destiny.6 = {
 		}
 	}
 
-	#Take the northern part of Mexico, and turn Mexico into a dominion
+	#Take the northern part of Mexico, and turn Mexico into a puppet
 	option = {
 		name = usfp_manifest_destiny.6.e
 		trigger = {
@@ -621,6 +624,9 @@ usfp_manifest_destiny.6 = {
 		s:STATE_SONORA.region_state:MEX = {
 			set_state_owner = root
 		}
+		s:STATE_CHIHUAHUA = {
+			add_claim = root
+		}
 		s:STATE_CHIHUAHUA.region_state:MEX = {
 			set_state_owner = root
 		}
@@ -629,7 +635,7 @@ usfp_manifest_destiny.6 = {
 		}
 		create_diplomatic_pact = {
 			country = c:MEX
-			type = dominion
+			type = puppet
 		}
 		create_incident = {
 			country = c:MEX
@@ -660,7 +666,12 @@ usfp_manifest_destiny.6 = {
 			value = 60
 		}
 		usfp_manifest_more_destiny_effect = yes
-		usfp_mexican_north_purchase_effect = yes
+		hidden_effect = {
+			s:STATE_CHIHUAHUA = {
+				add_claim = root
+			}
+			usfp_mexican_north_purchase_effect = yes
+		}
 		annex = c:MEX
 		highlighted_option = yes
 		show_as_unavailable = {

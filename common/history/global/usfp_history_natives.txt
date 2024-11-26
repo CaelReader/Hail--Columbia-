@@ -346,7 +346,9 @@
 			provinces = { xDB68A7 x86122A xC6EE8B x0B77C3 xB2484A xEC7601 x89CD8D x9632BE xD0FCF0 x4439A4 xC32E10 x48FB7B x99A780 x2FA254 
 			xDE7B44 xFAB703 x907490 x94E465 x00A88F x212F2F x3F2F5D x58AF61 xC82BB4 x049490 x5C6475 x6FF4CE x1E553B x22F5CE xE6C09D 
 			x2E8063 xB0D689 x46137E x00B0C0 xB114A9 xBD7887 xAFBF37 x6125F7 x3B9D9E xFE0821 x871357 x0D192D x3751A7 x6363AC xE99673 x7DCECB x04CD6D x5C9120 x9D5716 
-			x5C6FF5 x80287B x869D5F x99A694 x44F322 x860F5A x2C9BF6 xA66212 x317E88 x8B5EC8 xE567C9 x25D807 x2D8E7D xAAFB06 x607C83 xEE1B8C x824F92 x5E769A xD78928 }
+			x5C6FF5 x80287B x869D5F x99A694 x44F322 x860F5A x2C9BF6 xA66212 x317E88 x8B5EC8 
+			xE567C9 x25D807 x824F92 x2D8E7D xAAFB06 x607C83 xEE1B8C
+			xC369DB x601A4F xE3F481 xBB8A78 xB9118E x6BB536 xC9D330 x94A617  } 
 		}
 		region_state:COM = {
 			kill_population_percent_in_state = {
@@ -365,11 +367,6 @@
 		create_character = {
 			template = usfp_chief_iron_jacket
 		}
-		create_character = {
-			traits = {
-				experienced_offensive_planner
-			}
-		}
 	}
 	s:STATE_NEW_MEXICO = {
 		set_owner_of_provinces = {
@@ -379,7 +376,7 @@
 				
 				x0B1E97 x5967A1 
 				
-				x504080 x38BB61 
+				x504080 x38BB61 x5E769A xD78928
 			 }
 		}
 		region_state:COM = {
@@ -498,7 +495,8 @@
 	s:STATE_CHIHUAHUA = {
 		set_owner_of_provinces = {
 			country = c:APC
-			provinces = { x8FB2D5 x3A74AB xC6D1E5 x248F66 xE7BA3B x51153D x8910AF x80773D x662FF9 xB009D9 xADD8B8 x535D1C x55FB35 xF97F04 x432FE4 xDA4A32 xE941BF }
+			provinces = { x8FB2D5 x3A74AB xC6D1E5 x248F66 xE7BA3B x51153D x8910AF x80773D x662FF9 xB009D9 xADD8B8 x535D1C x55FB35 xF97F04 x432FE4 xDA4A32 xE941BF 
+		 x262FDB  }
 		}
 		region_state:APC = {
 			every_scope_pop = {
@@ -513,8 +511,8 @@
 	s:STATE_TEXAS = {
 		set_owner_of_provinces = {
 			country = c:APC
-			provinces = { x5D3843 x90CE2B xC9D330 xA55E5C x951736 x94A617 x6BB536 xB9118E xBB8A78 x760779 x2DA551 x24C127 x4E19F4 x0E125F 
-			xE3F481 x601A4F x6E8169 xA3A810 xC369DB x6958D6 xD08070 xB16A3C }
+			provinces = { x5D3843 x90CE2B x951736 }
+			#border strip: xA3A810 xB16A3C x0E125F x4E19F4 x760779 xD08070 x6958D6 x10CA7B x2DA551 xA55E5C x8ebcc7 x6E8169 x18f9d5
 		}
 		region_state:APC = {
 			every_scope_pop = {
@@ -545,7 +543,7 @@
 	s:STATE_NEW_MEXICO = {
 		set_owner_of_provinces = {
 			country = c:NVJ
-			provinces = { xA84AFD x3CC82C xA156C7 x0DAC3E  }
+			provinces = { xA84AFD x3CC82C xA156C7 x0DAC3E x79844B x00E2A7 x67B298 x23E585 x3385DD  }
 		}
 		region_state:NVJ = {
 			every_scope_pop = {
@@ -564,6 +562,12 @@
 		set_owner_of_provinces = {
 			country = c:UTE
 			provinces = { xB1E3F4 xD0C000 x150652 xD5F00A }
+		}
+	}
+	s:STATE_COLORADO = {
+		set_owner_of_provinces = {
+			country = c:USA
+			provinces = { xFD4329 }
 		}
 	}
 	##The West Coast
@@ -1165,7 +1169,7 @@
 				limit = {
 					culture = cu:algonquian
 				}
-				move_pop = prevprev.region_state:usfp_IWY
+				move_pop = s:STATE_MISSOURI.region_state:usfp_IWY
 			}
 		}
 	}
@@ -2563,7 +2567,7 @@
 				limit = {
 					culture = cu:russian
 				}
-				move_pop = s:STATE_ALASKA.region_state:RUS
+				move_pop = s:STATE_ALASKA.region_state:ALK
 			}
 		}
 	}
@@ -2704,7 +2708,14 @@
 			usfp_remove_starting_buildings_effect = yes
 		}
 	}
+	c:COM = {
+		activate_law = law_type:law_free_trade
+		activate_law = law_type:law_migration_controls
+		activate_law = law_type:law_multicultural
+		activate_law = law_type:law_no_womens_rights
+		activate_law = law_type:law_commercialized_agriculture
+	}
 
 
-
+	
 }

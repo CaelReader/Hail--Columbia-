@@ -50,7 +50,7 @@ usfp_ig_trait_postmillennialism = {
 	max_approval = unhappy
 	
 	modifier = {
-		country_loyalism_increases_full_acceptance_mult = -0.15
+		state_radicals_from_political_movements_mult = 0.10
 	}
 }
 
@@ -79,9 +79,8 @@ usfp_ig_trait_republican_virtue = {
 	min_approval = happy
 	
 	modifier = {
-		building_group_bg_agriculture_throughput_add = 0.1
-		building_group_bg_ranching_throughput_add = 0.1
-		state_peasants_education_access_add = 0.15
+		state_peasants_education_access_add = 0.10
+		state_farmers_education_access_add = 0.10
 	}
 }
 usfp_ig_trait_free_silver = {

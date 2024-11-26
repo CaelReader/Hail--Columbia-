@@ -629,6 +629,7 @@ usfp_settler_westward_pressure = {
 usfp_white_mans_diseases_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
 	state_mortality_mult = 0.35
+	state_birth_rate_mult = -0.10
 }
 
 usfp_plains_tech_trade_modifier = {

@@ -130,7 +130,6 @@ usfp_westward_expansion_criteria = {
 usfp_enacting_unconstitutional_law = {
 	OR = {
 		is_enacting_law = law_type:law_censorship
-		is_enacting_law = law_type:law_freedom_of_conscience
 		is_enacting_law = law_type:law_parliamentary_republic
 		is_enacting_law = law_type:law_peasant_levies
 		is_enacting_law = law_type:law_militarized_police
@@ -336,9 +335,11 @@ ig_hasnt_chosen_ideology_trigger = {
 	NOR = {
 		has_variable = communist_ig_var
 		has_variable = chose_vanguardism
-		has_variable = chose_fascism
-		has_variable = chose_conservatism
+		has_variable = chose_anarchism
+		has_variable = chose_communism
 		has_variable = chose_ethno_nationalism
+		has_variable = chose_conservatism
+		has_variable = chose_fascism
 	}
 }
 
@@ -354,9 +355,33 @@ usfp_has_dixie_occupation_trigger = {
 				any_scope_character = {
 					has_role = general
 				}
-				current_hq = p:xEE9129.land_hq
+				current_hq ?= p:xEE9129.land_hq
 				any_combat_unit = {
 					count >= 20
+				}
+			}
+			root = {
+				is_ai = yes
+			}
+		}
+	}
+}
+
+usfp_has_dixie_indian_occupation_trigger = {
+	sr:region_dixie = {
+		save_temporary_scope_as = dixie_region
+	}
+	custom_tooltip = {
+		text = dixie_indian_formation_tt
+		OR = {
+			any_military_formation = {
+				is_army = yes
+				any_scope_character = {
+					has_role = general
+				}
+				current_hq ?= p:xEE9129.land_hq
+				any_combat_unit = {
+					count >= 2
 				}
 			}
 			root = {
@@ -378,7 +403,7 @@ usfp_has_plains_occupation_trigger = {
 				any_scope_character = {
 					has_role = general
 				}
-				current_hq = p:x924593.land_hq
+				current_hq ?= p:x029975.land_hq
 				any_combat_unit = {
 					count >= 3
 				}

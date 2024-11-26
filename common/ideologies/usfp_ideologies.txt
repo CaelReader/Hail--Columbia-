@@ -8,6 +8,7 @@ ideology_republican_paternalistic = { # Replacing basegame to stop stupid US aut
 		law_theocracy = neutral #approve
 		law_monarchy = neutral
 		law_council_republic = disapprove
+		law_corporate_state = neutral
 	}
 	
 	lawgroup_distribution_of_power = {
@@ -47,6 +48,7 @@ ideology_republican_reactionary = { #Compatch for IPB
 		law_theocracy = neutral #approve
 		law_monarchy = neutral
 		law_council_republic = disapprove
+		law_corporate_state = neutral
 	}
 }
 
@@ -130,6 +132,7 @@ ideology_american_school = { # USIT
 		law_cooperative_ownership = strongly_disapprove
 		law_command_economy = strongly_disapprove
 		law_industry_banned = strongly_disapprove
+		law_extraction_economy = strongly_disapprove
 	}
 }
 
@@ -163,9 +166,9 @@ ideology_usfp_evangelical_moralist = {
 	}
 
 	lawgroup_church_and_state = {
-		law_state_religion = approve
+		law_state_religion = disapprove
 		law_freedom_of_conscience = approve
-		law_total_separation = approve
+		law_total_separation = neutral
 		law_state_atheism = strongly_disapprove
 	}
 
@@ -238,5 +241,36 @@ ideology_usfp_localist = {
 		law_freedom_of_conscience = neutral
 		law_total_separation = neutral
 		law_state_atheism = strongly_disapprove
+	}
+}
+
+ideology_usfp_accomodationist = {
+	icon = "gfx/interface/icons/ideology_icons/moralist.dds"
+	
+	lawgroup_church_and_state = {
+		law_state_atheism = strongly_disapprove
+		law_total_separation = approve
+		law_freedom_of_conscience = approve
+		law_state_religion = disapprove
+	}
+	
+	lawgroup_education_system = {
+		law_public_schools = approve
+		law_private_schools = approve
+		law_no_schools = disapprove
+		law_religious_schools = disapprove		
+	}
+
+	lawgroup_bureaucracy = {
+		law_appointed_bureaucrats = neutral
+		law_elected_bureaucrats = neutral	
+		law_hereditary_bureaucrats = disapprove
+	}
+
+	lawgroup_caste_hegemony = {
+		law_hindu_caste_enforced = strongly_disapprove
+		law_hindu_caste_codified = disapprove
+		law_hindu_caste_not_enforced = neutral
+		law_affirmative_action = approve
 	}
 }

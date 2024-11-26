@@ -384,7 +384,7 @@ usfp_indian_postremoval.4 = {
 			}
 			add_acceptance = {
 				target = cu:usfp_american_indian
-				value = 100
+				value = 50
 			}
 			set_state_name = STATE_OKLAHOMA_sequoyah
 			set_state_type = incorporated

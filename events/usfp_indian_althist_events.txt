@@ -596,9 +596,6 @@ usfp_indian_althist.5 = {
 			add_technology_researched = egalitarianism
 			add_technology_researched = mandatory_service
 			add_technology_researched = military_drill
-			activate_law = law_type:law_free_trade
-			activate_law = law_type:law_migration_controls
-			activate_law = law_type:law_multicultural
 		}
 	}
 

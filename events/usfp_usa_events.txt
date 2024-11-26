@@ -119,24 +119,6 @@ usfp_usa.2 = {
 		scope:hurricane_state.state_region = {
 			add_devastation = 20
 		}
-		custom_tooltip = natural_disaster_variable_tt
-		hidden_effect = {
-			random_list = {
-				20 = {
-					random_scope_state = {
-						limit = {
-							is_incorporated = yes
-						}
-						set_variable = {
-							name = natural_disaster_variable
-							months = short_modifier_time
-						}
-					}
-				}
-				80 = {
-				}
-			}
-		}
 	}
 
 	option = { #Extra help

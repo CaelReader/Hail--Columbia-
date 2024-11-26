@@ -60,10 +60,15 @@ usfp_indian_wars.1 = {
 			country = c:LKT
 			months = 120
 		}
-		s:STATE_MONTANA = {
-			set_owner_of_provinces = {
-				country = c:LKT
-				provinces = { x91670D x743F41 x3ABADD x9A73C7 xFA2355 xC6BBD4 }
+		if = {
+			limit = {
+				has_variable = bozeman_trail
+			 }
+			 s:STATE_MONTANA = {
+				set_owner_of_provinces = {
+					country = c:LKT
+					provinces = { x91670D x743F41 x3ABADD x9A73C7 xFA2355 xC6BBD4 }
+				}
 			}
 		}
 		ig:ig_rural_folk = {
@@ -148,6 +153,7 @@ usfp_indian_wars.2 = {
 				provinces = { x91670D x743F41 x3ABADD x9A73C7 xFA2355 xC6BBD4 }
 			}
 		}
+		set_variable = bozeman_trail
 	}
 	#too dangerous
 	option = {
@@ -185,6 +191,12 @@ usfp_indian_wars.3 = {
 
 	trigger = {
 		has_state_in_state_region = STATE_SOUTH_DAKOTA
+		OR = {
+			s:STATE_SOUTH_DAKOTA.region_state:USA = {
+				has_building = building_gold_fields
+			}
+			game_date > 1874.6.1
+		}
 	}
 
 	immediate = {
@@ -206,6 +218,31 @@ usfp_indian_wars.3 = {
 			}
 			end_truce = c:LKT
 		}
+		scope:south_dakota_scope = {
+			add_modifier = {
+				name = state_gold_rush
+				months = 6
+				multiplier = 0.5
+			}
+		}
+		change_tension = {
+			country = c:LKT
+			value = 50
+		}
+		c:LKT = {
+			every_scope_character = {
+				limit = {
+					OR = {
+						has_role = general
+						is_ruler =  yes
+					}
+				}
+				add_modifier = {
+					name = usfp_sacred_warpath
+					years = 10
+				}
+			}
+		}
 	}
 	#this will violate the treaty
 	option = {
@@ -215,6 +252,10 @@ usfp_indian_wars.3 = {
 				name = usfp_denied_gold_miners_modifier
 				years = 4
 			}
+		}
+		ruler = {
+			add_modifier = usfp_indian_defender
+			years = 5
 		}
 	}
 }
@@ -356,6 +397,17 @@ usfp_indian_wars.5 = {
 		change_tension = {
 			country = c:LKT
 			value = 10
+		}
+		random_military_formation = {
+			limit = {
+				current_hq ?= p:x029975.land_hq
+			}
+			random_scope_general = {
+				add_modifier = {
+					name = usfp_native_auxiliaries
+					years = 10
+				}
+			}
 		}
 	}
 	#let them fight
@@ -524,6 +576,12 @@ usfp_indian_wars.7 = {
 			add_modifier = {
 				name = usfp_lava_beds_modifier
 				months = 6
+			}
+			capital = {
+				save_scope_as = modoc_state_scope
+			}
+			ruler = {
+				save_scope_as = captain_jack_scope
 			}
 		}
 		random_military_formation = {

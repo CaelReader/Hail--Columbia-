@@ -64,3 +64,22 @@ usfp_plains_master = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 	character_popularity_add = 25
 }
+
+usfp_sacred_warpath = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	character_popularity_add = 20
+	battle_offense_owned_province_mult = 0.25
+	battle_defense_owned_province_mult = 0.25
+}
+
+usfp_indian_defender = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	character_popularity_add = -15
+}
+
+usfp_native_auxiliaries = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	character_battle_condition_charted_terrain_mult = 0.5
+	character_battle_condition_lost_mult = -1.00
+	unit_offense_flat_mult = 0.10
+}

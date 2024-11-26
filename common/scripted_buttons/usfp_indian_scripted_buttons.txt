@@ -28,6 +28,7 @@ usfp_indian_removal_seminole_button = {
 				has_variable = seminole_removal_ongoing
 			}
 		}
+		usfp_has_dixie_indian_occupation_trigger = yes
 	}
 
 	effect = {
@@ -79,6 +80,7 @@ usfp_indian_removal_cherokee_button = {
 				has_variable = cherokee_removal_ongoing
 			}
 		}
+		usfp_has_dixie_indian_occupation_trigger = yes
 	}
 
 	effect = {
@@ -119,6 +121,7 @@ usfp_indian_removal_chickasaw_button = {
 				has_variable = chickasaw_removal_ongoing
 			}
 		}
+		usfp_has_dixie_indian_occupation_trigger = yes
 	}
 
 	effect = {
@@ -217,6 +220,16 @@ usfp_provoke_lakota_war_button = {
 
 	effect = {
 		set_variable = usfp_lakota_provoked
+		random_scope_state = {
+			limit = {
+				any_neighbouring_state = {
+					owner = c:LKT
+				}
+			}
+			state_region = {
+				add_devastation = 10
+			}
+		}
 		change_tension = {
 			country = c:LKT
 			value = 100

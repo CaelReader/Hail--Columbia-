@@ -111,50 +111,90 @@
 		add_modifier = {
 			name = usfp_deep_south_modifier
 		}
+		add_acceptance = {
+			target = cu:afro_american
+			value = -30
+		}
 	}
 	s:STATE_MISSISSIPPI.region_state:USA = {
 		add_modifier = {
 			name = usfp_deep_south_modifier
+		}
+		add_acceptance = {
+			target = cu:afro_american
+			value = -30
 		}
 	}
 	s:STATE_ALABAMA.region_state:USA = {
 		add_modifier = {
 			name = usfp_deep_south_modifier
 		}
+		add_acceptance = {
+			target = cu:afro_american
+			value = -30
+		}
 	}
 	s:STATE_GEORGIA.region_state:USA = {
 		add_modifier = {
 			name = usfp_deep_south_modifier
+		}
+		add_acceptance = {
+			target = cu:afro_american
+			value = -30
 		}
 	}
 	s:STATE_FLORIDA.region_state:USA = {
 		add_modifier = {
 			name = usfp_deep_south_modifier
 		}
+		add_acceptance = {
+			target = cu:afro_american
+			value = -30
+		}
 	}
 	s:STATE_SOUTH_CAROLINA.region_state:USA = {
 		add_modifier = {
 			name = usfp_deep_south_modifier
+		}
+		add_acceptance = {
+			target = cu:afro_american
+			value = -30
 		}
 	}
 	s:STATE_NORTH_CAROLINA.region_state:USA = {
 		add_modifier = {
 			name = usfp_upper_south_modifier
 		}
+		add_acceptance = {
+			target = cu:afro_american
+			value = -20
+		}
 	}
 	s:STATE_TENNESSEE.region_state:USA = {
 		add_modifier = {
 			name = usfp_upper_south_modifier
+		}
+		add_acceptance = {
+			target = cu:afro_american
+			value = -20
 		}
 	}
 	s:STATE_VIRGINIA.region_state:USA = {
 		add_modifier = {
 			name = usfp_upper_south_modifier
 		}
+		add_acceptance = {
+			target = cu:afro_american
+			value = -20
+		}
 	}
 	s:STATE_ARKANSAS.region_state:USA = {
 		add_modifier = {
 			name = usfp_upper_south_modifier
+		}
+		add_acceptance = {
+			target = cu:afro_american
+			value = -20
 		}
 	}
 

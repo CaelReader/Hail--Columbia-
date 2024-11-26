@@ -4,15 +4,16 @@ ideology_jacksonian_democrat = { #replacing basegame
 
 	character_ideology = yes
 
-	lawgroup_governance_principles = { #Kept
+	lawgroup_governance_principles = {
 		law_monarchy = strongly_disapprove
 		law_theocracy = strongly_disapprove
 		law_council_republic = strongly_disapprove
 		law_parliamentary_republic = neutral
+		law_corporate_state = disapprove
 		law_presidential_republic = approve
 	}
 	
-	lawgroup_distribution_of_power = { #Kept
+	lawgroup_distribution_of_power = {
 		law_universal_suffrage = strongly_approve
 		law_census_voting = approve
 		law_wealth_voting = neutral
@@ -24,7 +25,7 @@ ideology_jacksonian_democrat = { #replacing basegame
 		law_technocracy = strongly_disapprove
 	}
 
-	lawgroup_bureaucracy = { #Kept
+	lawgroup_bureaucracy = { 
 		law_elected_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
 		law_hereditary_bureaucrats = disapprove
@@ -32,67 +33,61 @@ ideology_jacksonian_democrat = { #replacing basegame
 
 	#Citizenship and Slavery is a divided issue so neutral across
 
-	lawgroup_colonization = { #RAW HIIIIIIIIIIIIIIIIIIIIIDE
+	lawgroup_colonization = { 
 		law_no_colonial_affairs = strongly_disapprove
 		law_colonial_resettlement = strongly_disapprove
 		law_colonial_exploitation = strongly_disapprove
 		law_frontier_colonization = strongly_approve
 	}
 
-	lawgroup_land_reform = { #RAW HIIIIIIIIIIIIIIIIIIIIIDE
+	lawgroup_land_reform = {
 		law_serfdom = strongly_disapprove
 		law_collectivized_agriculture = disapprove
 		law_tenant_farmers = disapprove
 		law_commercialized_agriculture = neutral
 		law_homesteading = strongly_approve
-	}		
-
-	possible = {
-		owner = {
-			exists = c:USA
-			OR = {
-				c:USA = this
-				civil_war_origin_country = c:USA
-			}
-		}
-		scope:interest_group = {
-			OR = {
-				is_interest_group_type = ig_landowners
-				is_interest_group_type = ig_rural_folk
-				is_interest_group_type = ig_trade_unions
-			}
-			NOR = {
-				has_variable = communist_ig_var
-				has_variable = chose_vanguardism
-				has_variable = chose_fascism
-				has_variable = chose_conservatism
-				has_variable = chose_ethno_nationalism
-			}
-		}
+	}
+	
+	country_trigger = {
+		usfp_country_is_american = yes
+		has_modifier = usfp_second_party_system_modifier
 	}
 
-	leader_weight = {
+	interest_group_leader_weight = {
 		value = 300
-		# less likely for landowners
 		if = {
 			limit = {
-				scope:interest_group = {
-					is_interest_group_type = ig_landowners
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_conservatism
+					has_variable = chose_fascism
 				}
 			}
-			multiply = 0.5
+			multiply = 0.1
 		}
+	}
+	
+	non_interest_group_leader_weight = {
+		value = 100
 		if = {
 			limit = {
-				has_global_variable = american_civil_war
+				interest_group = {
+					OR = {
+						has_variable = communist_ig_var
+						has_variable = chose_vanguardism
+						has_variable = chose_anarchism
+						has_variable = chose_communism
+						has_variable = chose_ethno_nationalism
+						has_variable = chose_conservatism
+						has_variable = chose_fascism
+					}
+				}
 			}
-			multiply = 0
-		}
-		if = {
-			limit = { # Death of Jackson + Third Party System
-				game_date >= 1846.1.1 
-			}
-			multiply = 0
+			multiply = 0.1
 		}
 	}
 }
@@ -122,6 +117,7 @@ ideology_usfp_progressive = {
 		law_traditionalism = disapprove	
 		law_laissez_faire = strongly_disapprove
 		law_industry_banned = strongly_disapprove
+		law_extraction_economy = strongly_disapprove
 	}
 
 	lawgroup_taxation = {
@@ -178,17 +174,37 @@ ideology_usfp_progressive = {
 		law_slave_trade = strongly_disapprove
 	}
 	
-	possible = {
-		owner = {
-			exists = c:USA
-			OR = {
-				c:USA = this
-				civil_war_origin_country = c:USA
-			}
-			has_technology_researched = human_rights
+	country_trigger = {
+		OR = {
+			c:USA ?= this
+			civil_war_origin_country = c:USA
 		}
-		
-		scope:interest_group = {
+		has_technology_researched = human_rights
+		has_global_variable =  had_progressive_era
+	}
+
+	interest_group_leader_trigger = {
+		OR = {
+			is_interest_group_type = ig_intelligentsia
+			is_interest_group_type = ig_industrialists
+			is_interest_group_type = ig_trade_unions
+			is_interest_group_type = ig_rural_folk
+			is_interest_group_type = ig_armed_forces
+			is_interest_group_type = ig_petty_bourgeoisie
+		}
+	}
+	non_interest_group_leader_trigger = {
+		# Agitators should have an ideology at odds with current laws
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_compulsory_primary_school
+				has_law = law_type:law_graduated_taxation
+				has_law = law_type:law_old_age_pension
+				has_law = law_type:law_public_health_insurance
+			}
+		}
+		interest_group = {
 			OR = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_industrialists
@@ -197,24 +213,11 @@ ideology_usfp_progressive = {
 				is_interest_group_type = ig_armed_forces
 				is_interest_group_type = ig_petty_bourgeoisie
 			}
-			NOR = {
-				has_variable = communist_ig_var
-				has_variable = chose_vanguardism
-				has_variable = chose_fascism
-				has_variable = chose_conservatism
-				has_variable = chose_ethno_nationalism
-			}
 		}
 	}
 	
-	leader_weight = {
-		value = 0
-		if = {
-			limit = {
-				has_global_variable = had_progressive_era
-			}
-			add = 25
-		}
+	interest_group_leader_weight = {
+		value = 100
 		if = {
 			limit = {
 				scope:interest_group = {
@@ -227,7 +230,22 @@ ideology_usfp_progressive = {
 			}
 			multiply = 0.5
 		}
+		if = {
+			limit = {
+				ig_hasnt_chosen_ideology_trigger = no
+			}
+			multiply = 0.1
+		}
+	}
 
+	non_interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				ig_hasnt_chosen_ideology_trigger = no
+			}
+			multiply = 0.1
+		}
 	}
 }
 
@@ -284,34 +302,48 @@ ideology_usfp_social_gospel_leader = {
 		law_slave_trade = strongly_disapprove
 	}
 
-	possible = {
-		owner = {
-			exists = c:USA
-			OR = {
-				c:USA = this
-				civil_war_origin_country = c:USA
-			}
-		}
-		scope:interest_group = {
-			OR = {
-				is_interest_group_type = ig_devout
-				is_interest_group_type = ig_intelligentsia
-				is_interest_group_type = ig_rural_folk
-				is_interest_group_type = ig_petty_bourgeoisie
-			}
-			NOR = {
-				has_variable = communist_ig_var
-				has_variable = chose_vanguardism
-				has_variable = chose_fascism
-				has_variable = chose_conservatism
-				has_variable = chose_ethno_nationalism
-			}
-		}
+	country_trigger = {
+		usfp_country_is_american = yes
 		religion = rel:protestant
 	}
+
+	interest_group_leader_trigger = {
+		is_interest_group_type = ig_devout
+	}
+
+	non_interest_group_leader_trigger = {
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_multicultural
+				has_law = law_type:law_old_age_pension
+				has_law = law_type:law_compulsory_primary_school
+				has_law = law_type:law_freedom_of_conscience
+			}
+		}
+		interest_group = {
+			is_interest_group_type = ig_devout
+		}
+	}
+
+	interest_group_leader_weight = {
+		value = 25
+		if = {
+			limit = {
+				ig_hasnt_chosen_ideology_trigger = no
+			}
+			multiply = 0.1
+		}
+	}
 	
-	leader_weight = {
-		value = 0
+	non_interest_group_leader_weight = {
+		value = 25
+		if = {
+			limit = {
+				ig_hasnt_chosen_ideology_trigger = no
+			}
+			multiply = 0.1
+		}
 	}
 
 }
@@ -327,13 +359,14 @@ ideology_usfp_strongman_populist = {
 		law_parliamentary_republic = neutral
 		law_theocracy = disapprove
 		law_council_republic = disapprove
+		law_corporate_state = neutral
 	}
 
 	lawgroup_distribution_of_power = {
 		law_universal_suffrage = neutral
 		law_census_voting = neutral
-		law_wealth_voting = oppose
-		law_landed_voting = oppose
+		law_wealth_voting = disapprove
+		law_landed_voting = disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = disapprove
 		law_oligarchy = approve
@@ -390,84 +423,119 @@ ideology_usfp_strongman_populist = {
 		law_outlawed_dissent = strongly_approve
 	}
 
-	possible = {
-		owner = {
-			exists = c:USA
-			OR = {
-				c:USA = this
-				civil_war_origin_country = c:USA
-			}
+	country_trigger = {
+		usfp_country_is_american = yes
+	}
+
+	interest_group_leader_trigger = {
+		OR = {
+			is_interest_group_type = ig_landowners
+			is_interest_group_type = ig_intelligentsia
+			is_interest_group_type = ig_rural_folk
+			is_interest_group_type = ig_petty_bourgeoisie
 		}
-		scope:interest_group = {
+	}
+
+	non_interest_group_leader_trigger = {
+		interest_group = {
 			OR = {
 				is_interest_group_type = ig_landowners
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_petty_bourgeoisie
 			}
-			NOR = {
-				has_variable = communist_ig_var
-				has_variable = chose_vanguardism
-				has_variable = chose_fascism
-				has_variable = chose_conservatism
-				has_variable = chose_ethno_nationalism
+		}
+	}
+
+	interest_group_leader_weight = {
+		value = 25
+		if = {
+			limit = {
+				is_interest_group_type = ig_rural_folk
 			}
+			multiply = 4
+		}
+		if = {
+			limit = {
+				ig_hasnt_chosen_ideology_trigger = no
+			}
+			multiply = 0.1
 		}
 	}
 	
-	leader_weight = {
-		value = 0
+	non_interest_group_leader_weight = {
+		value = 25
+		if = {
+			limit = {
+				is_interest_group_type = ig_rural_folk
+			}
+			multiply = 4
+		}
+		if = {
+			limit = {
+				ig_hasnt_chosen_ideology_trigger = no
+			}
+			multiply = 0.1
+		}
 	}
 }
 
-ideology_american_school_leader = {
-	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_usfp_american_school_leader.dds"
+# ideology_american_school_leader = {
+# 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_usfp_american_school_leader.dds"
 	
-	lawgroup_trade_policy = {		
-		law_free_trade = disapprove	
-		law_mercantilism = approve
-		law_protectionism = strongly_approve
-		law_isolationism = strongly_disapprove
-	}
+# 	lawgroup_trade_policy = {		
+# 		law_free_trade = disapprove	
+# 		law_mercantilism = approve
+# 		law_protectionism = strongly_approve
+# 		law_isolationism = strongly_disapprove
+# 	}
 
-	lawgroup_economic_system = {	
-		law_laissez_faire = approve
-		law_interventionism = strongly_approve
-		law_agrarianism = disapprove
-		law_traditionalism = 	strongly_disapprove
-		law_cooperative_ownership = strongly_disapprove
-		law_command_economy = strongly_disapprove
-		law_industry_banned = strongly_disapprove
-	}
+# 	lawgroup_economic_system = {	
+# 		law_laissez_faire = approve
+# 		law_interventionism = strongly_approve
+# 		law_agrarianism = disapprove
+# 		law_traditionalism = 	strongly_disapprove
+# 		law_cooperative_ownership = strongly_disapprove
+# 		law_command_economy = strongly_disapprove
+# 		law_industry_banned = strongly_disapprove
+# 		law_extraction_economy = strongly_disapprove
+# 	}
 
-	possible = {
-		owner = {
-			exists = c:USA
-			OR = {
-				c:USA = this
-				civil_war_origin_country = c:USA
-			}
-		}
-		scope:interest_group = {
-			OR = {
-				is_interest_group_type = ig_industrialists
-				is_interest_group_type = ig_intelligentsia
-				is_interest_group_type = ig_petty_bourgeoisie
-			}
-			NOR = {
-				has_variable = communist_ig_var
-				has_variable = chose_vanguardism
-				has_variable = chose_fascism
-				has_variable = chose_conservatism
-				has_variable = chose_ethno_nationalism
-			}
-		}
-	}
+# 	country_trigger = {
+# 		usfp_country_is_american = yes
+# 	}
 
-	leader_weight = {
-		value = 0
-	}
-}
+# 	interest_group_leader_trigger = {
+# 		OR = {
+# 			is_interest_group_type = ig_industrialists
+# 			is_interest_group_type = ig_intelligentsia
+# 			is_interest_group_type = ig_petty_bourgeoisie
+# 		}
+# 	}
+
+# 	non_interest_group_leader_trigger = {
+# 		NAND = {
+# 			has_role = agitator
+# 			owner = {
+# 				has_law = law_type:law_protectionism
+# 				has_law = law_type:law_interventionism
+# 			}
+# 		}
+# 		OR = {
+# 			is_interest_group_type = ig_industrialists
+# 			is_interest_group_type = ig_intelligentsia
+# 			is_interest_group_type = ig_petty_bourgeoisie
+# 		}
+# 	}
+
+# 	interest_group_leader_weight = {
+# 		value = 0
+# 	}
+
+# 	non_interest_group_leader_weight = {
+# 		value = 0
+# 	}
+# }
 
 ideology_usfp_abolitionist_radical = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_usfp_abolitionist_radical.dds"
@@ -476,14 +544,14 @@ ideology_usfp_abolitionist_radical = {
 	
 	lawgroup_slavery = {
 		law_slavery_banned = strongly_approve
-		law_legacy_slavery = disapprove
+		law_legacy_slavery = strongly_disapprove
 		law_debt_slavery = strongly_disapprove
 		law_slave_trade = strongly_disapprove
 	}
 
 	lawgroup_land_reform = {
 		law_serfdom = strongly_disapprove
-		law_tenant_farmers = neutral
+		law_tenant_farmers = disapprove
 		law_homesteading = neutral
 		law_collectivized_agriculture = neutral
 		law_commercialized_agriculture = neutral
@@ -493,23 +561,31 @@ ideology_usfp_abolitionist_radical = {
 		law_ethnostate = strongly_disapprove
 		law_national_supremacy = disapprove
 		law_racial_segregation = disapprove
-		law_cultural_exclusion = approve
+		law_cultural_exclusion = strongly_approve
 		law_multicultural = neutral
 	}
-	
-	# Character scope
-	possible = {
-		owner = {
-			usfp_country_is_american = yes
-			NOT = {
-				has_law = law_type:law_slavery_banned
-			} 
-			NOR = {
-				has_law = law_type:law_multicultural
-				has_law = law_type:law_cultural_exclusion
-			}
+
+	country_trigger = {
+		usfp_country_is_american = yes
+		NOT = { has_law = law_type:law_slavery_banned } 
+		NOR = {
+			has_law = law_type:law_multicultural
+			has_law = law_type:law_cultural_exclusion
 		}
-		scope:interest_group = { 
+	}
+
+	interest_group_leader_trigger = {
+		OR = {
+			is_interest_group_type = ig_trade_unions
+			is_interest_group_type = ig_intelligentsia
+			is_interest_group_type = ig_petty_bourgeoisie
+			is_interest_group_type = ig_industrialists
+			is_interest_group_type = ig_devout
+		}
+	}
+
+	non_interest_group_leader_trigger = {
+		interest_group = {
 			OR = {
 				is_interest_group_type = ig_trade_unions
 				is_interest_group_type = ig_intelligentsia
@@ -518,19 +594,11 @@ ideology_usfp_abolitionist_radical = {
 				is_interest_group_type = ig_devout
 			}
 		}
-		scope:interest_group = {
-			NOR = {
-				has_variable = communist_ig_var
-				has_variable = chose_vanguardism
-				has_variable = chose_fascism
-				has_variable = chose_conservatism
-				has_variable = chose_ethno_nationalism
-			}
-		}
 	}
 	
-leader_weight = {
-		value = 25
+	
+	interest_group_leader_weight = {
+		value = 10
 		if = {
 			limit = { scope:interest_group = { is_interest_group_type = ig_trade_unions } }
 			add = 75
@@ -547,16 +615,39 @@ leader_weight = {
 			}		
 		}		
 		if = {
-			limit = { has_trait = tactful }
-			add = 75
-		}
-		if = {
 			limit = {
 				owner = { has_journal_entry = je_acw_countdown }
 			}
 			add = 100
 		}
+		if = {
+			limit = {
+				ig_hasnt_chosen_ideology_trigger = no
+			}
+			multiply = 0.1
+		}
 	}
+
+	non_interest_group_leader_weight = {
+		value = 100
+		
+		if = {
+			limit = { has_trait = tactful }
+			add = 75
+		}
+		if = {
+			limit = {
+				culture = cu:afro_american
+			}
+			add = 500
+		}
+		if = {
+			limit = {
+				ig_hasnt_chosen_ideology_trigger = no
+			}
+			multiply = 0.1
+		}
+	}	
 }
 
 ideology_usfp_georgist_leader = {
@@ -572,6 +663,7 @@ ideology_usfp_georgist_leader = {
 		law_traditionalism = strongly_disapprove	
 		law_laissez_faire = disapprove
 		law_industry_banned = strongly_disapprove
+		law_extraction_economy = strongly_disapprove
 	}
 
 	lawgroup_land_reform = {
@@ -604,41 +696,43 @@ ideology_usfp_georgist_leader = {
 		law_old_age_pension = approve
 	}
 
-
-	possible = {
-		owner = {
-			has_global_variable = progress_and_poverty
-			OR = {
-				#historical spread of Georgist influence
-				usfp_country_is_american = yes
-				country_has_primary_culture = cu:british
-				country_has_primary_culture = cu:australian
-				country_has_primary_culture = cu:danish
-				country_has_primary_culture = cu:anglo_canadian
-			}
-			NOR = {
-				has_law = law_type:law_command_economy
-				has_law = law_type:law_cooperative_ownership
-			}
+	country_trigger = {
+		has_global_variable = progress_and_poverty
+		OR = {
+			#historical spread of Georgist influence
+			usfp_country_is_american = yes
+			country_has_primary_culture = cu:british
+			country_has_primary_culture = cu:australian
+			country_has_primary_culture = cu:danish
+			country_has_primary_culture = cu:anglo_canadian
 		}
-		scope:interest_group = {
+		NOR = {
+			has_law = law_type:law_command_economy
+			has_law = law_type:law_cooperative_ownership
+		}
+	}
+
+	interest_group_leader_trigger = {
+		OR = {
+			is_interest_group_type = ig_intelligentsia
+			is_interest_group_type = ig_petty_bourgeoisie
+			is_interest_group_type = ig_trade_unions
+			is_interest_group_type = ig_rural_folk
+		}
+	}
+
+	non_interest_group_leader_trigger = {
+		interest_group = {
 			OR = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_trade_unions
 				is_interest_group_type = ig_rural_folk
 			}
-			NOR = {
-				has_variable = communist_ig_var
-				has_variable = chose_vanguardism
-				has_variable = chose_fascism
-				has_variable = chose_conservatism
-				has_variable = chose_ethno_nationalism
-			}
 		}
 	}
 	
-	leader_weight = {
+	interest_group_leader_weight = {
 		value = 10
 		if = {
 			limit = {
@@ -674,14 +768,69 @@ ideology_usfp_georgist_leader = {
 		}
 		if = {
 			limit = {
-				scope:interest_group = {
-					OR = {
-						is_interest_group_type = ig_rural_folk
-						is_interest_group_type = ig_trade_unions
-					}
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_trade_unions
 				}
 			}
 			multiply = 0.5
+		}
+		if = {
+			limit = {
+				ig_hasnt_chosen_ideology_trigger = no
+			}
+			multiply = 0.1
+		}
+	}
+
+	non_interest_group_leader_weight = {
+		value = 10
+		if = {
+			limit = {
+				owner = {
+					has_variable = georgism_promoted
+				}
+			}
+			add = 15
+		}
+		#Georgists more likely in reaction to poor land laws
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_tenant_farmers
+						has_law = law_type:law_serfdom
+					}
+				}
+			}
+			multiply = 2
+		}
+		#Georgists more likely in reaction to regressive taxes
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_per_capita_based_taxation
+						has_law = law_type:law_land_based_taxation
+					}
+				}
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_trade_unions
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				ig_hasnt_chosen_ideology_trigger = no
+			}
+			multiply = 0.1
 		}
 	}
 
@@ -700,6 +849,7 @@ ideology_usfp_social_darwinist_leader = {
 		law_traditionalism = neutral	
 		law_laissez_faire = strongly_approve
 		law_industry_banned = strongly_disapprove
+		law_extraction_economy = neutral
 	}
 
 	lawgroup_taxation = {
@@ -759,20 +909,30 @@ ideology_usfp_social_darwinist_leader = {
 		law_frontier_colonization = neutral
 	}
 
-
-	possible = {
-		owner = {
-			has_global_variable = social_darwinism_appeared
-			OR = {
-				usfp_country_is_american = yes
-				country_has_primary_culture = cu:north_german
-				country_has_primary_culture = cu:turkish
-				country_has_primary_culture = cu:han
-				country_has_primary_culture = cu:manchu
-				country_has_primary_culture = cu:japanese
-			}
+	country_trigger = {
+		has_global_variable = social_darwinism_appeared
+		OR = {
+			usfp_country_is_american = yes
+			country_has_primary_culture = cu:north_german
+			country_has_primary_culture = cu:turkish
+			country_has_primary_culture = cu:han
+			country_has_primary_culture = cu:manchu
+			country_has_primary_culture = cu:japanese
 		}
-		scope:interest_group = {
+	}
+
+	interest_group_leader_trigger = {
+		OR = {
+			is_interest_group_type = ig_intelligentsia
+			is_interest_group_type = ig_petty_bourgeoisie
+			is_interest_group_type = ig_industrialists
+			is_interest_group_type = ig_landowners
+			is_interest_group_type = ig_armed_forces
+		}
+	}
+
+	non_interest_group_leader_trigger = {
+		interest_group = {
 			OR = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_petty_bourgeoisie
@@ -780,17 +940,10 @@ ideology_usfp_social_darwinist_leader = {
 				is_interest_group_type = ig_landowners
 				is_interest_group_type = ig_armed_forces
 			}
-			NOR = {
-				has_variable = communist_ig_var
-				has_variable = chose_vanguardism
-				has_variable = chose_fascism
-				has_variable = chose_conservatism
-				has_variable = chose_ethno_nationalism
-			}
 		}
 	}
 	
-	leader_weight = {
+	interest_group_leader_weight = {
 		value = 10
 		if = {
 			limit = {
@@ -802,14 +955,45 @@ ideology_usfp_social_darwinist_leader = {
 		}
 		if = {
 			limit = {
-				scope:interest_group = {
-					OR = {
-						is_interest_group_type = ig_petty_bourgeoisie
-						is_interest_group_type = ig_armed_forces
-					}
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_armed_forces
 				}
 			}
 			multiply = 0.5
+		}
+		if = {
+			limit = {
+				ig_hasnt_chosen_ideology_trigger = no
+			}
+			multiply = 0.1
+		}
+	}
+
+	non_interest_group_leader_weight = {
+		value = 10
+		if = {
+			limit = {
+				owner = {
+					has_variable = social_darwinism_promoted
+				}
+			}
+			add = 15
+		}
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_armed_forces
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				ig_hasnt_chosen_ideology_trigger = no
+			}
+			multiply = 0.1
 		}
 	}
 
@@ -856,13 +1040,15 @@ ideology_usfp_universalist = {
 		law_affirmative_action = strongly_approve
 	}
 
+	country_trigger = {
+		has_technology_researched = human_rights
+	}
 
-	
-	possible = {
-		owner = {
-			has_technology_researched = human_rights
-		}
-		# Agitators should have an ideology at odds with current laws
+	interest_group_leader_trigger = {
+		is_interest_group_type = ig_devout
+	}
+
+	non_interest_group_leader_trigger = {
 		NAND = {
 			has_role = agitator
 			owner = {
@@ -871,21 +1057,13 @@ ideology_usfp_universalist = {
 				has_law = law_type:law_multicultural
 			}
 		}
-		scope:interest_group = {
+		interest_group = {
 			is_interest_group_type = ig_devout
 		}
-		scope:interest_group = {
-			NOR = {
-				has_variable = communist_ig_var
-				has_variable = chose_vanguardism
-				has_variable = chose_fascism
-				has_variable = chose_conservatism
-				has_variable = chose_ethno_nationalism
-			}
-		}
 	}
+
 	
-	leader_weight = {
+	interest_group_leader_weight = {
 		value = 25 #rare
 		#fostered by tolerance
 		if = {
@@ -894,16 +1072,12 @@ ideology_usfp_universalist = {
 					OR = {
 						has_law = law_type:law_protected_speech
 						has_law = law_type:law_freedom_of_conscience
-						has_law = law_type:law_law_right_of_assembly
+						has_law = law_type:law_right_of_assembly
 						has_law = law_type:law_total_separation
 					}
 				}
 			}
 			add = 25
-		}
-		#fostered by religious subjugation
-		if = {
-			#use the new Minoritarian trigger here
 		}
 		#increases in respose to state atheism
 		if = {
@@ -912,7 +1086,58 @@ ideology_usfp_universalist = {
 					has_law = law_type:law_state_atheism
 				}
 			}
-			add = 50
+			add = 100
+		}
+		if = {
+			limit = {
+				ig_hasnt_chosen_ideology_trigger = no
+			}
+			multiply = 0.1
+		}
+	}
+
+	non_interest_group_leader_weight = {
+		value = 100
+		#fostered by tolerance
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_protected_speech
+						has_law = law_type:law_freedom_of_conscience
+						has_law = law_type:law_right_of_assembly
+						has_law = law_type:law_total_separation
+					}
+				}
+			}
+			add = 25
+		}
+		#increases in respose to state atheism
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_state_atheism
+				}
+			}
+			add = 100
+		}
+		#fostered by religious subjugation
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_state_religion
+				}
+				NOT = {
+					religion = owner.religion
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				ig_hasnt_chosen_ideology_trigger = no
+			}
+			multiply = 0.1
 		}
 	}
 }
