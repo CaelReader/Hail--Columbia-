@@ -127,6 +127,19 @@
 			}
 		}
 
+		if = {
+			limit = {
+				standard_of_living < state.average_expected_sol
+				strata = middle
+			}
+			add = { # Increases likelihood of support if impoverished
+				desc = "IS_BELOW_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				max = 10
+			}
+		}
+
 		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
 			desc = "POP_LITERACY"
 			value = literacy_rate
@@ -157,6 +170,169 @@
 	secession = {
 		possible = {
 			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+		
+		weight = {
+			value = 100
+		}		
+	}
+}
+
+movement_usfp_eugenics = {
+	category = movement_category_ideological
+	ideology = ideology_usfp_eugenicist
+	character_ideologies = {
+		ideology_usfp_social_darwinist_leader
+	}
+	creation_trigger = {
+		c:USA ?= this
+	}
+	creation_weight = {
+		value = 0 #event-spawned
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_usfp_social_darwinist_leader
+			has_ideology = ideology:ideology_fascist
+			has_ideology = ideology:ideology_ethno_nationalist
+			has_ideology = ideology:ideology_feminist
+			has_trait = bigoted
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_feminist
+			}
+			multiply = {
+				value = 0.25
+			}
+		}
+	}
+	pop_support_factors = {
+		movement_support_middle_below_expected_sol
+		movement_support_high_literacy
+		movement_support_academics
+		movement_support_bureaucrats
+		movement_support_capitalists
+		movement_support_aristocrats
+	}
+
+	pop_support_trigger = {
+		pop_acceptance >= 60
+	}
+
+	pop_support_weight = {	
+
+		if = {
+			limit = {
+				strata = upper
+			}
+			if = {
+				limit = {
+					is_pop_type = capitalists
+				}
+				add = {
+					value = 9
+					desc = "POP_CAPITALISTS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				add = {
+					value = 3
+					desc = "POP_ARISTOCRATS"
+				}
+			}
+			else = {
+				add = {
+					value = 6
+					desc = "UPPER_NO_ICON"
+				}
+			}
+
+		}
+
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			if = {
+				limit = {
+					is_pop_type = academics
+				}
+				add = {
+					value = 15
+					desc = "POP_ACADEMICS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = bureaucrats
+				}
+				add = {
+					value = 12
+					desc = "POP_BUREAUCRATS"
+				}
+			}
+			else = {
+				add = {
+					value = 9
+					desc = "MIDDLE_NO_ICON"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				standard_of_living < state.average_expected_sol
+				strata = middle
+			}
+			add = { # Increases likelihood of support if impoverished
+				desc = "IS_BELOW_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				max = 10
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+
+		subtract = { #Radicalism pushes people out of Progressive Movement into other spheres
+			desc = "POP_RADICALS"
+			value = pop_radical_fraction
+			multiply = 20
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.33
+		}
+		
+		weight = {
+			value = 1000
+		}	
+	
+		state_weight = {
+			value = 1		
+		}
+	}
+		
+	secession = {
+		possible = {
+			political_movement_support >= 0.33
 			scope:clout <= 0
 		}
 		

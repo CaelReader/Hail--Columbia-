@@ -358,4 +358,5 @@ Updates:
 	Progressive Cause JE now comes with a unique Progressive political movement
 	Added JE that further decreases Acceptance and Voting Power of afro-americans (removed by passing Cultural Exclusion or Multiculturalism)
 	Long Reconstruction now takes a variable amount of time based on Acceptance of Afro Americans and a few other factors 
-
+	Eugenics JE replaced with a Eugenics Political Movement
+	

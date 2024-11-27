@@ -415,8 +415,8 @@ usfp_progressive_era.5 = {
 			value = small_radicals
 			strata = middle
 		}
-		add_journal_entry = {
-			type = usfp_progressive_era_eugenics
+		create_political_movement = {
+			type = movement_usfp_eugenics
 		}
 	}
 	#interesting
@@ -427,8 +427,8 @@ usfp_progressive_era.5 = {
 			name = usfp_eugenics_movement_rising_modifier
 			years = 4
 		}
-		add_journal_entry = {
-			type = usfp_progressive_era_eugenics
+		create_political_movement = {
+			type = movement_usfp_eugenics
 		}
 	}
 	#immediately adopt!
@@ -440,8 +440,8 @@ usfp_progressive_era.5 = {
 				usfp_ig_eugenicist_candidate = yes
 			}
 		}
-		add_journal_entry = {
-			type = usfp_progressive_era_eugenics
+		create_political_movement = {
+			type = movement_usfp_eugenics
 		}
 		scope:eugenicist_ig = {
 			usfp_become_eugenicist_effect = yes
@@ -1449,21 +1449,29 @@ usfp_progressive_era.17 = {
 	cooldown = { years = 5 }
 
 	trigger = {
-		any_interest_group = {
-			usfp_ig_eugenicist_candidate = yes
-			is_marginal = no
+		any_political_movement = {
+			is_political_movement_type = movement_usfp_eugenics
+			any_influenced_interest_group = {
+				usfp_ig_eugenicist_candidate = yes
+				is_marginal = no
+			}
 		}
 	}
 
 	immediate = {
-		random_interest_group = {
+		random_political_movement = {
 			limit = {
-				usfp_ig_eugenicist_candidate = yes
-				is_marginal = no
+				is_political_movement_type = movement_usfp_eugenics
 			}
-			save_scope_as = eugenicist_ig
-			leader = {
-				save_scope_as = eugenicist_character
+			random_influenced_interest_group = {
+				limit = {
+					usfp_ig_eugenicist_candidate = yes
+					is_marginal = no
+				}
+				save_scope_as = eugenicist_ig
+				leader = {
+					save_scope_as = eugenicist_character
+				}
 			}
 		}
 	}
@@ -1519,6 +1527,9 @@ usfp_progressive_era.18 = {
 			}
 			popularity > 25
 			is_female = yes
+		}
+		any_political_movement = {
+			is_political_movement_type = movement_usfp_eugenics
 		}
 	}
 

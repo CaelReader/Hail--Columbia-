@@ -136,15 +136,15 @@ usfp_a_house_divided.1 = {
 }
 
 #Gag Rule enforcement
-usfp_a_house_divided.2 = {
-	type = country_event
-	hidden = yes
+# usfp_a_house_divided.2 = {
+# 	type = country_event
+# 	hidden = yes
 
-	immediate = {
-		post_notification = usfp_gag_rule_upheld
-		cancel_enactment = yes
-	}
-}
+# 	immediate = {
+# 		post_notification = usfp_gag_rule_upheld
+# 		cancel_enactment = yes
+# 	}
+# }
 
 #Slavers will not tolerate an Abolitionist in power
 usfp_a_house_divided.3 = {

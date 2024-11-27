@@ -142,57 +142,57 @@ usfp_progressive_era = {
 	}
 }
 
-usfp_progressive_era_eugenics = {
-	icon = gfx/interface/icons/event_icons/event_skull.dds
-	group = je_group_historical_content
-	#added by event
-	timeout = 18000 #50 years, lol
-	complete = {
-		has_law = law_type:law_ethnostate
-		OR = {
-			has_law = law_type:law_migration_controls
-			has_law = law_type:law_closed_borders
-		}
-		institution_investment_level = {
-			institution = institution_health_system
-			value > 3
-		}
-	}
-	on_complete = {
-		add_loyalists = {
-			value = small_radicals
-			strata = middle
-		}
-		random_interest_group = {
-			limit = {
-				is_in_government = yes
-				NOT = {
-					has_ideology = ideology:ideology_usfp_eugenicist
-				}
-			}
-			usfp_become_eugenicist_effect = yes
-		}
-	}
-	fail = {
-		any_interest_group = {
-			law_stance = {
-				law = law_type:law_multicultural
-				value >= approve
-			}
-			count >= 6
-		}
-	}
-	on_fail = {
-		add_radicals = {
-			value = small_radicals
-			strata = middle
-		}
-	}
-	on_monthly_pulse = {
-		random_events = {
-			chance_of_no_event = 90
-			100 = usfp_progressive_era.17 #ig becomes eugenicist
-			300 = usfp_progressive_era.18 #feminist promotes eugenics
-		}
-	}
-}
+# usfp_progressive_era_eugenics = {
+# 	icon = gfx/interface/icons/event_icons/event_skull.dds
+# 	group = je_group_historical_content
+# 	#added by event
+# 	timeout = 18000 #50 years, lol
+# 	complete = {
+# 		has_law = law_type:law_ethnostate
+# 		OR = {
+# 			has_law = law_type:law_migration_controls
+# 			has_law = law_type:law_closed_borders
+# 		}
+# 		institution_investment_level = {
+# 			institution = institution_health_system
+# 			value > 3
+# 		}
+# 	}
+# 	on_complete = {
+# 		add_loyalists = {
+# 			value = small_radicals
+# 			strata = middle
+# 		}
+# 		random_interest_group = {
+# 			limit = {
+# 				is_in_government = yes
+# 				NOT = {
+# 					has_ideology = ideology:ideology_usfp_eugenicist
+# 				}
+# 			}
+# 			usfp_become_eugenicist_effect = yes
+# 		}
+# 	}
+# 	fail = {
+# 		any_interest_group = {
+# 			law_stance = {
+# 				law = law_type:law_multicultural
+# 				value >= approve
+# 			}
+# 			count >= 6
+# 		}
+# 	}
+# 	on_fail = {
+# 		add_radicals = {
+# 			value = small_radicals
+# 			strata = middle
+# 		}
+# 	}
+# 	on_monthly_pulse = {
+# 		random_events = {
+# 			chance_of_no_event = 90
+# 			100 = usfp_progressive_era.17 #ig becomes eugenicist
+# 			300 = usfp_progressive_era.18 #feminist promotes eugenics
+# 		}
+# 	}
+# }
