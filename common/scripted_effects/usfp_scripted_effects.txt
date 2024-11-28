@@ -811,7 +811,7 @@ usfp_reconstruction_conclusion_effect = {
 			remove_primary_culture = cu:dixie
 			if = {
 				limit = { 
-					cultural_acceptance_base = { target = cu:afro_american value >= acceptance_status_4 }
+					usfp_is_afro_american_discriminated = no
 				}
 				add_journal_entry = {
 					type = usfp_reconstruction_long

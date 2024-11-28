@@ -1125,7 +1125,7 @@ usfp_a_house_divided.12 = {
 		# }
 		if = {
 			limit = { 
-				cultural_acceptance_base = { target = cu:afro_american value >= acceptance_status_4 }
+				usfp_is_afro_american_discriminated = no
 			}
 			add_journal_entry = {
 				type = usfp_reconstruction_long
@@ -1735,7 +1735,7 @@ usfp_a_house_divided.19 = {
 		NOT = {
 			has_law = law_type:law_slavery_banned
 		}
-		cultural_acceptance_base = { target = cu:afro_american value < acceptance_status_4 }
+		usfp_is_afro_american_discriminated = yes
 		game_date > 1847.12.3 #The North Star founded
 		NOT = {
 			any_scope_character = {

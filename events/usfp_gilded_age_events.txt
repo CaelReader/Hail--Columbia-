@@ -1065,6 +1065,7 @@ usfp_gilded_age.13 = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_railway
+				level > 0
 				private_ownership_fraction > 0
 			}
 			count > 1
@@ -1078,6 +1079,7 @@ usfp_gilded_age.13 = {
 				is_incorporated = yes
 				any_scope_building = {
 					is_building_type = building_railway
+					level > 0
 					private_ownership_fraction > 0
 				}
 			}
@@ -1098,6 +1100,7 @@ usfp_gilded_age.13 = {
 				}
 				any_scope_building = {
 					is_building_type = building_railway
+					level > 0
 					private_ownership_fraction > 0
 				}
 			}
@@ -1261,6 +1264,7 @@ usfp_gilded_age.15 = {
 		any_scope_state = {
 			is_incorporated = yes
 			any_scope_building = {
+				level > 0
 				private_ownership_fraction >= 0.75
 				NOR = {
 					is_building_group = bg_arms_industries
@@ -1278,6 +1282,7 @@ usfp_gilded_age.15 = {
 			limit = {
 				is_incorporated = yes
 				any_scope_building = {
+					level > 0
 					private_ownership_fraction >= 0.75
 					NOR = {
 						is_building_group = bg_arms_industries
@@ -1291,6 +1296,7 @@ usfp_gilded_age.15 = {
 			save_scope_as = monopoly_state
 			random_scope_building = {
 				limit = {
+					level > 0
 					private_ownership_fraction >= 0.75
 					NOR = {
 						is_building_group = bg_arms_industries

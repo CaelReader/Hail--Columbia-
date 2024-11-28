@@ -8,5 +8,10 @@
 		activate_law = law_type:law_slave_trade
 		activate_law = law_type:law_national_supremacy
 		set_variable = american_colonization_society
+		create_political_lobby = {
+			type = lobby_pro_overlord
+			target = c:USA
+			add_interest_group = ig:ig_landowners
+		}
 	}
 }

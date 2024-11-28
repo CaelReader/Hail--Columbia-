@@ -173,7 +173,7 @@ usfp_reconstruction.3 = {
 				has_modifier = reconstruction_government
 			}
 		}
-		cultural_acceptance_base = { target = cu:afro_american value >= acceptance_status_4 }
+		usfp_is_afro_american_discriminated = no
 	}
 
 	immediate = {
@@ -192,6 +192,7 @@ usfp_reconstruction.3 = {
 	#ensure they stay
 	option = {
 		name = usfp_reconstruction.3.a
+		highlighted_option = yes
 		trigger = {
 			usfp_has_dixie_occupation_trigger = yes
 		}
@@ -532,7 +533,7 @@ usfp_reconstruction.8 = {
 		name = usfp_reconstruction.8.a
 		default_option = yes
 		trigger = {
-			cultural_acceptance_base = { target = cu:afro_american value >= acceptance_status_4 }
+			usfp_is_afro_american_discriminated = no
 		}
 		remove_primary_culture = cu:dixie
 		add_journal_entry = {
@@ -572,7 +573,7 @@ usfp_reconstruction.8 = {
 		name = usfp_reconstruction.8.b
 		highlighted_option = yes
 		trigger = {
-			cultural_acceptance_base = { target = cu:afro_american value >= acceptance_status_4 }
+			usfp_is_afro_american_discriminated = yes
 		}
 		add_radicals = {
 			value = medium_radicals

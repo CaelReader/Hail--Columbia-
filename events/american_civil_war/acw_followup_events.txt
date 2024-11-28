@@ -236,6 +236,7 @@ acw_followup_events.4 = {
 
 	option = {
 		name = acw_followup_events.4.a
+		highlighted_option = yes
 		trigger = {
 			usfp_has_dixie_occupation_trigger = yes
 		}
@@ -338,6 +339,7 @@ acw_followup_events.5 = {
 
 	option = {
 		name = acw_followup_events.5.a
+		highlighted_option = yes
 		trigger = {
 			usfp_has_dixie_occupation_trigger = yes
 		}
@@ -487,6 +489,7 @@ acw_followup_events.6 = {
 
 	option = {
 		name = acw_followup_events.6.b
+		highlighted_option = yes
 		trigger = {
 			usfp_has_dixie_occupation_trigger = yes
 		}
@@ -596,6 +599,7 @@ acw_followup_events.7 = {
 	
 	option = {
 		name = acw_followup_events.7.b
+		highlighted_option = yes
 		trigger = {
 			usfp_has_dixie_occupation_trigger = yes
 		}

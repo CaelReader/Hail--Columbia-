@@ -131,7 +131,7 @@ manifest_destiny.3 = {
 			value >= 2
 		}
 		any_scope_state = {
-			usfp_american_west_zone = yes
+			region = sr:region_great_plains
 			state_region = {
 				any_scope_state = {
 					owner = {

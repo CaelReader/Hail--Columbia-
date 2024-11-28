@@ -624,6 +624,13 @@ movement_pro_slavery = {
 				limit = { 
 					owner ?= { has_journal_entry = je_acw_countdown }
 				}
+
+				if = {
+					limit = {
+						has_modifier = usfp_deep_south_modifier
+					}
+					add = 10
+				}
 				
 				if = { # Ensure the union retains Washington DC/Maryland/Delaware in case of southern secession
 					limit = {
@@ -641,6 +648,12 @@ movement_pro_slavery = {
 						state_region = s:STATE_VIRGINIA
 					}
 					
+					multiply = 10.0
+				}
+				else_if = { #USFP: West Virginia goes with real Virginia
+					limit = {
+						state_region = s:STATE_WEST_VIRGINIA
+					}
 					multiply = 10.0
 				}
 				#USFP: Missouri is less likely

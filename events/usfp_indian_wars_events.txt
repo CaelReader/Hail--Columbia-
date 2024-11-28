@@ -840,6 +840,8 @@ usfp_indian_wars.10 = {
 			}
 			any_scope_building = {
 				is_building_type = building_railway
+				occupancy > 0.75
+				level > 0
 			}
 		}
 		NOT = {
@@ -860,6 +862,8 @@ usfp_indian_wars.10 = {
 				}
 				any_scope_building = {
 					is_building_type = building_railway
+					occupancy > 0.75
+					level > 0
 				}
 			}
 			save_scope_as = railway_hunting_state

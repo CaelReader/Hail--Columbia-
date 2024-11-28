@@ -900,7 +900,7 @@ usfp_usa_alfred_terry = {
 		chance = 75
 	}
     traits = {
-        meticulous reserved tactful
+        meticulous reserved cautious
     }
 }
 
