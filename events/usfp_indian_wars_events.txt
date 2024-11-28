@@ -1178,7 +1178,9 @@ usfp_indian_wars.14 = {
 		has_modifier = usfp_indian_agencies_modifier
 		any_scope_state = {
 			any_scope_pop = {
-				has_discrimination_trait = north_american_group
+				culture = {
+					has_discrimination_trait = north_american_group
+				}
 				is_pop_type = peasants
 			}
 			region = sr:region_great_plains
@@ -1197,14 +1199,18 @@ usfp_indian_wars.14 = {
 			limit = {
 				region = sr:region_great_plains
 				any_scope_pop = {
-					has_discrimination_trait = north_american_group
+					culture = {
+						has_discrimination_trait = north_american_group
+					}
 					is_pop_type = peasants
 				}
 			}
 			save_scope_as = reservation_state
 			random_scope_pop = {
 				limit = {
-					has_discrimination_trait = north_american_group
+					culture = {
+						has_discrimination_trait = north_american_group
+					}
 					is_pop_type = peasants
 				}
 				culture = {

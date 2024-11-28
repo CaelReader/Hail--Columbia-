@@ -313,7 +313,9 @@ Updated Korean Localization
 New Content:
 	Indian Wars JE with 19 events
 	Small Alt-History JE upon passing No Colonial Affairs, with 5 events
-	Added 5 mod-specific Achievements
+	7 new Native American characters
+	7 new American generals
+	Added 5 mod-specific Achievements (may or not may not function)
 	Added guaranteed Frederick Douglass spawn event
 	Added the ability to push for taking British Columbia as part of the Annex Oregon JE
 	Added flavor government for Liberia + decision to declare a republic

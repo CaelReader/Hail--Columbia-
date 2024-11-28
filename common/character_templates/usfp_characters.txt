@@ -568,7 +568,7 @@ usa_general_lee = {
 	historical = yes
 	culture = cu:dixie
 	female = no
-	religion = protestant
+	religion = rel:protestant
 	ideology = ideology_moderate
 	commander_rank = default
 	interest_group = ig_landowners
@@ -769,7 +769,7 @@ BIC_swami_vivkananda = { #Swami Vivekananda
     dna = dna_swami_vivekananda
     religion = rel:hindu
     ig_leader = yes
-    ideology = ideology:ideology_usfp_universalist #USFP
+    ideology = ideology_usfp_universalist #USFP
     interest_group = ig_devout
     is_agitator = yes 
     birth_date = 1863.1.12
@@ -793,5 +793,194 @@ BIC_swami_vivkananda = { #Swami Vivekananda
         earliest_usage_date = 1885.1.1
         latest_usage_date = 1900.1.1
         chance = 50
+    }
+}
+
+#USFP: Oliver Otis Howard, the Christian General
+usfp_usa_oliver_howard = {
+	first_name = Oliver
+	last_name = Howard
+    dna = usfp_usa_oliver_howard
+	historical = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_reformer
+	culture = cu:yankee
+    religion = rel:protestant
+	female = no
+	birth_date = 1830.11.8
+	commander_usage = {
+		country_trigger = {
+			exists = c:USA
+			this = c:USA
+		}
+		role = general
+		earliest_usage_date = 1854.1.1
+		latest_usage_date = 1894.1.1	
+		chance = 75
+	}
+    traits = {
+        pious honorable basic_defensive_strategist
+    }
+}
+
+#USFP: George Crook
+usfp_usa_george_crook = {
+	first_name = George
+	last_name = Crook
+    dna = usfp_usa_george_crook
+	historical = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_reformer
+	culture = cu:yankee
+    religion = rel:protestant
+	female = no
+	birth_date = 1828.9.8
+	commander_usage = {
+		country_trigger = {
+			exists = c:USA
+			this = c:USA
+		}
+		role = general
+		earliest_usage_date = 1852.1.1
+		latest_usage_date = 1890.1.1	
+		chance = 75
+	}
+    traits = {
+        honorable explorer reckless
+    }
+}
+
+#USFP:John Gibbon
+usfp_usa_john_gibbon = {
+	first_name = John
+	last_name = Gibbon
+    dna = usfp_usa_john_gibbon
+	historical = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_reformer
+	culture = cu:yankee
+    religion = rel:protestant
+	female = no
+	birth_date = 1827.5.20
+	commander_usage = {
+		country_trigger = {
+			exists = c:USA
+			this = c:USA
+		}
+		role = general
+		earliest_usage_date = 1847.1.1
+		latest_usage_date = 1891.1.1	
+		chance = 75
+	}
+    traits = {
+        honorable basic_artillery_commander literary
+    }
+}
+
+#USFP: Alfred H Terry
+usfp_usa_alfred_terry = {
+	first_name = Alfred
+	last_name = Terry
+    dna = usfp_usa_alfred_terry
+	historical = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_reformer
+	culture = cu:yankee
+    religion = rel:protestant
+	female = no
+	birth_date = 1827.11.10
+	commander_usage = {
+		country_trigger = {
+			exists = c:USA
+			this = c:USA
+		}
+		role = general
+		earliest_usage_date = 1861.1.1
+		latest_usage_date = 1888.1.1	
+		chance = 75
+	}
+    traits = {
+        meticulous reserved tactful
+    }
+}
+
+#USFP: Edward Canby
+usfp_usa_edward_canby = {
+	first_name = Edward
+	last_name = Canby
+    dna = usfp_usa_edward_canby
+	historical = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	culture = cu:dixie
+    religion = rel:protestant
+	female = no
+	birth_date = 1817.11.9
+	commander_usage = {
+		country_trigger = {
+			exists = c:USA
+			this = c:USA
+		}
+		role = general
+		earliest_usage_date = 1839.1.1
+		latest_usage_date = 1873.1.1	
+		chance = 75
+	}
+    traits = {
+        tactful honorable basic_diplomat master_bureaucrat
+    }
+}
+
+#USFP: Ranald S. Mackenzie
+usfp_usa_ranald_mackenzie = {
+	first_name = Ranald
+	last_name = Mackenzie
+    dna = usfp_usa_ranald_mackenzie
+	historical = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	culture = cu:yankee
+    religion = rel:protestant
+	female = no
+	birth_date = 1840.7.27
+	commander_usage = {
+		country_trigger = {
+			exists = c:USA
+			this = c:USA
+		}
+		role = general
+		earliest_usage_date = 1862.1.1
+		latest_usage_date = 1884.1.1	
+		chance = 75
+	}
+    traits = {
+        imperious expert_offensive_planner wrathful
+    }
+}
+
+#USFP: Winfield Scott Hancock
+usfp_usa_winfield_hancock = {
+	first_name = Winfield
+	last_name = Hancock
+    dna = usfp_usa_winfield_hancock
+	historical = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	culture = cu:yankee
+    religion = rel:protestant
+	female = no
+	birth_date = 1824.2.14
+	commander_usage = {
+		country_trigger = {
+			exists = c:USA
+			this = c:USA
+		}
+		role = general
+		earliest_usage_date = 1844.1.1
+		latest_usage_date = 1886.1.1	
+		chance = 75
+	}
+    traits = {
+        brave arrogant experienced_defensive_strategist
     }
 }
