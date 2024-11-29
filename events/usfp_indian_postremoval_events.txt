@@ -36,6 +36,7 @@ usfp_indian_postremoval.1 = {
 	option = {
 		name = usfp_indian_postremoval.1.a
 		default_option = yes
+		highlighted_option = yes
 		trigger = {
 			usfp_has_plains_occupation_trigger = yes
 		}
@@ -237,6 +238,12 @@ usfp_indian_postremoval.2 = {
 		scope:massacre_general = {
 			add_trait = war_criminal
 		}
+		ruler = {
+			add_modifier = {
+				name = usfp_indian_defender
+				years = 4
+			}
+		}
 		ai_chance = {
 			base = 0
 		}
@@ -415,6 +422,7 @@ usfp_indian_postremoval.4 = {
 			usfp_loyalize_settlers_in_state = {
 				LOYALISTS = small_radicals
 			}
+			set_state_type = incorporated
 		}
 		if = {
 			limit = { 

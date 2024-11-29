@@ -198,7 +198,7 @@ usfp_indian_althist.1 = {
 #Cross-Border Raid
 usfp_indian_althist.2 = {
 	type = country_event
-	placement = ROOT
+	placement = scope:raid_state
 	cooldown = {years = 5}
 	event_image = {
 		video = "southamerica_war_civilians"
@@ -320,7 +320,7 @@ usfp_indian_althist.2 = {
 #Lure of Gold
 usfp_indian_althist.3 = {
 	type = country_event
-	placement = ROOT
+	placement = scope:gold_base_state
 	cooldown = {years = 5}
 	event_image = {
 		video = "europenorthamerica_gold_prospectors"

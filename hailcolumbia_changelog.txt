@@ -351,6 +351,7 @@ Updates:
 	USA starts the game bankrolling Indian Territory
 	Liberia now begins with a pro-USA lobby
 	Gilded Age JE won't trigger if the Progressives already have spawned
+	Securing the Oregon Trail now applies a temporary colonization/migration malus to the middle sections of the trail
 1.8 Compatibility Updates:
 	Removed ACW state scripting (handled by Political Movements now)
 	Disabled random election-spawned agitators (except when passing Slavery Banned)
@@ -368,4 +369,5 @@ Updates:
 	Westward Expansion homelands will now spawn cultural communities in order to facilitate assimilation
 Fixes:
 	Fixed LDS modifier not being applied to Utah if you also had a colony there
+	Reconstruction no longer requires Multiculturalism
 

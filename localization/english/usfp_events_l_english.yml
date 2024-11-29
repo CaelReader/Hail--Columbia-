@@ -358,7 +358,7 @@ texan_war_of_independence.2.d: "We do not wish to antagonize [SCOPE.sCountry('me
 texan_war_of_independence.2.d.t: "If [SCOPE.sCountry('texas_scope').GetName] remains independent, they will likely continue to ask for statehood."
 
 usfp_manifest_destiny.6.t: "Treaty of Guadalupe Hidalgo"
-usfp_manifest_destiny.6.d: "With the enemy army in tatters and [SCOPE.sState('mexico_capital_scope').GetCityHubName] under our control, [SCOPE.sCountry('mexico_scope').GetName] is at our mercy. We can enforce any treaty that we so choose."
+usfp_manifest_destiny.6.d: "With the enemy army in tatters, [SCOPE.sCountry('mexico_scope').GetName] has been forced to come to terms."
 usfp_manifest_destiny.6.f: "The United States of America and the United Mexican States animated by a sincere desire to put an end to the calamities of the war which unhappily exists between the two Republics and to establish Upon a solid basis relations of peace and friendship..."
 usfp_manifest_destiny.6.a: "We shall secure the Mexican Cession, and provide some recompense for their losses."
 usfp_manifest_destiny.6.b: "We have other plans for Mexico."
@@ -1197,7 +1197,7 @@ usfp_indian_althist.4.b: "Disavow and denounce these criminals!"
 usfp_indian_althist.5.t: "[SCOPE.sCountry('comanche_scope').GetAdjective] Empire"
 usfp_indian_althist.5.d: "With their borders on all sides now fixed by treaty, political currents within the ever flexible [SCOPE.sCountry('comanche_scope').GetName] have shifted in favor of consolidation. "
 usfp_indian_althist.5.f: "Many faces could be seen amongst the crowds of the great council. Kiowas, Apaches, Wichitas, even some adopted Spaniards and Tejanos. The prominent chiefs made their case to the people, and the bands of Comancheria responded with their assent."
-usfp_indian_althist.5.a: "We would prefer to keep the plains peaceful."
+usfp_indian_althist.5.a: "Is a frontier war on the horizon?"
 usfp_indian_althist.5.b: "We shall be lords of the southern plains once more!"
 
 usfp_test.1.t: "DEBUG EVENT"

@@ -628,6 +628,19 @@ usfp_oregon_trail_provinces_effect = {
 			provinces = { xD00080 x9888F6 xBC0AA9 xA1C84D x236126 xA1A13A xA1A13A xEC9F6C x44332A xB95EB2 xE65BC2 
 		x017C34 x2C976D xFD9C12  }
 		}
+		every_scope_state = {
+			limit = {
+				owner = {
+					NOT = {
+						is_country_type = decentralized
+					}
+				}
+			}
+			add_modifier = {
+				name = usfp_settlers_gone_west_modifier
+				years = 10
+			}
+		}
 	}
 	s:STATE_OREGON = {
 		set_owner_of_provinces = {
@@ -639,6 +652,19 @@ usfp_oregon_trail_provinces_effect = {
 		set_owner_of_provinces = {
 			country = scope:oregon_owner_scope
 			provinces = { x30DED0 xC77F08 }
+		}
+	}
+	s:STATE_WYOMING.region_state:USA = {
+		add_modifier = {
+			name = usfp_settlers_gone_west_modifier
+			years = 10
+		}
+	}
+	s:STATE_NEBRASKA.region_state:USA = {
+		add_modifier = {
+			name = usfp_settlers_gone_west_modifier
+			multiplier = 0.5
+			years = 10
 		}
 	}
 }
@@ -1083,6 +1109,19 @@ usfp_radicalize_settlers_in_state = {
 	if = {
 		limit = {
 			any_scope_pop = {
+				culture = cu:dixie
+				is_pop_type = peasants
+			}
+		 }
+		 add_radicals_in_state = {
+			value = $RADICALS$
+			culture = cu:dixie
+			pop_type = peasants
+		}
+	}
+	if = {
+		limit = {
+			any_scope_pop = {
 				culture = cu:yankee
 				is_pop_type = farmers
 			}
@@ -1091,6 +1130,19 @@ usfp_radicalize_settlers_in_state = {
 			value = $RADICALS$
 			culture = cu:yankee
 			pop_type = farmers
+		}
+	}
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:yankee
+				is_pop_type = peasants
+			}
+		 }
+		 add_radicals_in_state = {
+			value = $RADICALS$
+			culture = cu:yankee
+			pop_type = peasants
 		}
 	}
 	if = {
@@ -1106,6 +1158,19 @@ usfp_radicalize_settlers_in_state = {
 			pop_type = farmers
 		} 
 	}
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:usfp_american
+				is_pop_type = peasants
+			}
+		 }
+		 add_radicals_in_state = {
+			value = $RADICALS$
+			culture = cu:usfp_american
+			pop_type = peasants
+		} 
+	}
 }
 
 usfp_radicalize_frontier_settlers = {
@@ -1119,7 +1184,84 @@ usfp_radicalize_frontier_settlers = {
 				}
 			}
 		}
-		usfp_radicalize_settlers_in_state = $RADICALS$
+		if = {
+			limit = {
+				any_scope_pop = {
+					culture = cu:dixie
+					is_pop_type = farmers
+				}
+			 }
+			 add_radicals_in_state = {
+				value = $RADICALS$
+				culture = cu:dixie
+				pop_type = farmers
+			}
+		}
+		if = {
+			limit = {
+				any_scope_pop = {
+					culture = cu:dixie
+					is_pop_type = peasants
+				}
+			 }
+			 add_radicals_in_state = {
+				value = $RADICALS$
+				culture = cu:dixie
+				pop_type = peasants
+			}
+		}
+		if = {
+			limit = {
+				any_scope_pop = {
+					culture = cu:yankee
+					is_pop_type = farmers
+				}
+			 }
+			 add_radicals_in_state = {
+				value = $RADICALS$
+				culture = cu:yankee
+				pop_type = farmers
+			}
+		}
+		if = {
+			limit = {
+				any_scope_pop = {
+					culture = cu:yankee
+					is_pop_type = peasants
+				}
+			 }
+			 add_radicals_in_state = {
+				value = $RADICALS$
+				culture = cu:yankee
+				pop_type = peasants
+			}
+		}
+		if = {
+			limit = {
+				any_scope_pop = {
+					culture = cu:usfp_american
+					is_pop_type = farmers
+				}
+			 }
+			 add_radicals_in_state = {
+				value = $RADICALS$
+				culture = cu:usfp_american
+				pop_type = farmers
+			} 
+		}
+		if = {
+			limit = {
+				any_scope_pop = {
+					culture = cu:usfp_american
+					is_pop_type = peasants
+				}
+			 }
+			 add_radicals_in_state = {
+				value = $RADICALS$
+				culture = cu:usfp_american
+				pop_type = peasants
+			} 
+		}
 	}
 }
 
@@ -1140,6 +1282,19 @@ usfp_loyalize_settlers_in_state = {
 	if = {
 		limit = {
 			any_scope_pop = {
+				culture = cu:dixie
+				is_pop_type = peasants
+			}
+		 }
+		 add_loyalists_in_state = {
+			value = $LOYALISTS$
+			culture = cu:dixie
+			pop_type = peasants
+		}
+	}
+	if = {
+		limit = {
+			any_scope_pop = {
 				culture = cu:yankee
 				is_pop_type = farmers
 			}
@@ -1148,6 +1303,19 @@ usfp_loyalize_settlers_in_state = {
 			value = $LOYALISTS$
 			culture = cu:yankee
 			pop_type = farmers
+		}
+	}
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:yankee
+				is_pop_type = peasants
+			}
+		 }
+		 add_loyalists_in_state = {
+			value = $LOYALISTS$
+			culture = cu:yankee
+			pop_type = peasants
 		}
 	}
 	if = {
@@ -1163,16 +1331,27 @@ usfp_loyalize_settlers_in_state = {
 			pop_type = farmers
 		} 
 	}
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:usfp_american
+				is_pop_type = peasants
+			}
+		 }
+		 add_loyalists_in_state = {
+			value = $LOYALISTS$
+			culture = cu:usfp_american
+			pop_type = peasants
+		} 
+	}
 }
 
 usfp_loyalize_frontier_settlers = {
 	every_scope_state = {
 		limit = {
-			region = {
-				any_scope_state = {
-					owner = {
-						is_country_type = decentralized
-					}
+			any_neighbouring_state = {
+				owner = {
+					is_country_type = decentralized
 				}
 			}
 		}
@@ -1192,6 +1371,19 @@ usfp_loyalize_frontier_settlers = {
 		if = {
 			limit = {
 				any_scope_pop = {
+					culture = cu:dixie
+					is_pop_type = peasants
+				}
+			 }
+			 add_loyalists_in_state = {
+				value = $LOYALISTS$
+				culture = cu:dixie
+				pop_type = peasants
+			}
+		}
+		if = {
+			limit = {
+				any_scope_pop = {
 					culture = cu:yankee
 					is_pop_type = farmers
 				}
@@ -1205,6 +1397,19 @@ usfp_loyalize_frontier_settlers = {
 		if = {
 			limit = {
 				any_scope_pop = {
+					culture = cu:yankee
+					is_pop_type = peasants
+				}
+			 }
+			 add_loyalists_in_state = {
+				value = $LOYALISTS$
+				culture = cu:yankee
+				pop_type = peasants
+			}
+		}
+		if = {
+			limit = {
+				any_scope_pop = {
 					culture = cu:usfp_american
 					is_pop_type = farmers
 				}
@@ -1213,6 +1418,19 @@ usfp_loyalize_frontier_settlers = {
 				value = $LOYALISTS$
 				culture = cu:usfp_american
 				pop_type = farmers
+			} 
+		}
+		if = {
+			limit = {
+				any_scope_pop = {
+					culture = cu:usfp_american
+					is_pop_type = peasants
+				}
+			 }
+			 add_loyalists_in_state = {
+				value = $LOYALISTS$
+				culture = cu:usfp_american
+				pop_type = peasants
 			} 
 		}
 	}
