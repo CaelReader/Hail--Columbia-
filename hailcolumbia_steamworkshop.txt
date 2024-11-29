@@ -1,12 +1,12 @@
 [img]https://i.imgur.com/PsN4QiL.png[/img]
-[i]for Victoria 3 1.7.*[/i]
+[i]for Victoria 3 1.8.*[/i]
 
 Hail, Columbia! is a United States Flavor Pack, including overhauled and expanded journal entries, interest groups, and characters, as well as tons of new events unique to the USA and North America.
 
 [img]https://i.imgur.com/xuNvuA3.png[/img]
 [list]
 [*]Overhauled map of [b]Native North America[/b], including many more indigenous nations than vanilla, as well as new state traits. Claims are assigned appropriately to prevent weird colonization. The American west will take much longer to be fully colonized by the United States than in vanilla.
-[*]Overhauled [b]Indian Removal[/b] JE, including more involved tribes and more events.
+[*]Overhauled [b]Indian Removal[/b] and [b]Indian Wars[/b] content, with custom Journal Entries, expanded events, and new characters extending Indian history up to the 1900s: Seminole Wars, Oregon Trail, Red Cloud's War, the Ghost Dance, the Sequoyah Constitution.
 [*]Overhauled [b]Slavery Debate[/b] JE, including the full historical lead-up to the civil war: Missouri Compromise, Wilmot Proviso, Compromise of 1850, Kansas-Nebraska Act, Bleeding Kansas, Scott v Sandford. The civil war can be triggered at different times or be split along different borders based on the results.
 [*][b]Gilded Age[/b] JE showing the rise of corruption and Trusts in the United States, followed by the [b]Progressive Era[/b] of reform and new ideologies.
 [*]New permanent journal entry for the US tracking the influence of [b]Manifest Destiny[/b]. You can choose to avoid expansion and entanglements, stick to the historical borders, or promote Manifest Destiny to new heights and incorporate the entire continent into your great republic.
@@ -22,7 +22,6 @@ Hail, Columbia! is a United States Flavor Pack, including overhauled and expande
 [*]More Social & Political Movements (Third Great Awakening, Social Gospel)
 [*]More Economic & Labor Events (Coal Wars, Roaring 20s, Panics)
 [*]More Foreign Policy Events (Great White Fleet, Panama Rebellion)
-[*]Post-Removal Indian History (Allotment, Wounded Knee, Ghost Dance)
 [*]Post-Reconstruction Black History (NAACP, Great Migration, Harlem Renaissance)
 [*]Alternate History Content (CSA Victory, FSA, United Syndicates, Turtle Island) 
 [/list]

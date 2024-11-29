@@ -231,7 +231,7 @@ ecchi_usa_long_character_template = {
         }
         earliest_usage_date = 1928.5.21
         latest_usage_date = 1935.9.10
-        chance = 90
+        chance = 75
     }
 }
 
@@ -262,7 +262,7 @@ ecchi_usa_f_roosevelt_character_template = {
         }
         earliest_usage_date = 1913.3.17
         latest_usage_date = 1945.4.12
-        chance = 90
+        chance = 75
     }
 }
 
@@ -360,7 +360,7 @@ usfp_robert_la_follette_character_template = {
         }
         earliest_usage_date = 1901.1.1
         latest_usage_date = 1925.6.1
-        chance = 90
+        chance = 75
     }
 }
 
@@ -491,7 +491,7 @@ usfp_thaddeus_stevens_character_template = {
         }
         earliest_usage_date = 1848.1.1
         latest_usage_date = 1868.1.1
-        chance = 90
+        chance = 75
     }
 }
 
