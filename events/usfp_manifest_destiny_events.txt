@@ -901,9 +901,9 @@ usfp_manifest_destiny.9 = {
 		#need trains to build trains
 		any_scope_building = {
 			count > 15
+			level > 0
 			is_building_type = building_railway
 			private_ownership_fraction > 0
-			level > 0
 		}
 		ig:ig_industrialists = {
 			is_marginal = no
@@ -1229,6 +1229,15 @@ usfp_manifest_destiny.13 = {
 				state_region = {
 					add_homeland = cu:usfp_american
 				}
+				if = {
+					limit = {
+						NOT = {
+							has_cultural_community = cu:usfp_american
+						}
+					 }
+					 add_cultural_community = cu:usfp_american
+				}
+				
 				cu:usfp_american = {
 					save_scope_as = new_homeland_culture
 				}
@@ -1247,6 +1256,14 @@ usfp_manifest_destiny.13 = {
 				state_region = {
 					add_homeland = cu:dixie
 				}
+				if = {
+					limit = {
+						NOT = {
+							has_cultural_community = cu:dixie
+						}
+					 }
+					 add_cultural_community = cu:dixie
+				}
 				cu:dixie = {
 					save_scope_as = new_homeland_culture
 				}
@@ -1254,6 +1271,14 @@ usfp_manifest_destiny.13 = {
 			else = {
 				state_region = {
 					add_homeland = cu:yankee
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_cultural_community = cu:yankee
+						}
+					 }
+					 add_cultural_community = cu:yankee
 				}
 				cu:yankee = {
 					save_scope_as = new_homeland_culture
@@ -2342,6 +2367,12 @@ usfp_manifest_destiny.22 = {
 								has_truce_with = root
 							 }
 							 end_truce = root
+							 root = {
+								remove_diplomatic_pact = {
+									country = prev
+									type = colonization_rights
+								}
+							 }
 						}
 					}
 				}

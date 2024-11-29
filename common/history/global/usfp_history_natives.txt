@@ -2535,7 +2535,7 @@
 	#Russian island
 	s:STATE_ALASKA = {
 		set_owner_of_provinces = {
-			country = c:RUS
+			country = c:ALK
 			provinces = { x5C9007 xF423DB x63A92C x5C9007 }
 		}
 	}
@@ -2674,35 +2674,51 @@
 		}
 	}
 
-	every_country = {
+	# every_country = {
+	# 	limit = {
+	# 		is_country_type = decentralized
+	# 		capital = {
+	# 			region = sr:region_great_plains
+	# 		}
+	# 	}
+	# 	#great plains diseases
+	# 	add_modifier = {
+	# 		name = usfp_white_mans_diseases_modifier
+	# 		years = 50
+	# 	}
+	# }
+
+	# #fix pops
+	# every_country = {
+	# 	limit = {
+	# 		is_country_type = decentralized
+	# 		country_is_in_north_america = yes
+	# 	}
+	# 	every_scope_pop = {
+	# 		change_poptype = pop_type:peasants
+	# 	}
+	# 	activate_law = law_type:law_elder_council
+	# 	activate_law = law_type:law_freedom_of_conscience
+	# 	activate_law = law_type:law_women_own_property
+	# }
+
+	every_state = {
 		limit = {
-			is_country_type = decentralized
-			capital = {
-				region = sr:region_great_plains
+			state_is_in_north_america = yes
+			owner = {
+				is_country_type = decentralized
 			}
 		}
-		#great plains diseases
-		add_modifier = {
-			name = usfp_white_mans_diseases_modifier
-			years = 50
+		owner = {
+			activate_law = law_type:law_collectivized_agriculture
+			activate_law = law_type:law_elder_council
+			activate_law = law_type:law_freedom_of_conscience
+			activate_law = law_type:law_women_own_property
 		}
-		#tribal laws
-		activate_law = law_type:law_collectivized_agriculture
 	}
 
-	#fix pops
-	every_country = {
-		limit = {
-			is_country_type = decentralized
-			country_is_in_north_america = yes
-		}
-		every_scope_pop = {
-			change_poptype = pop_type:peasants
-		}
-		activate_law = law_type:law_elder_council
-		activate_law = law_type:law_freedom_of_conscience
-		activate_law = law_type:law_women_own_property
-	}
+
+
 	c:SEQ = {
 		capital = {
 			usfp_remove_starting_buildings_effect = yes

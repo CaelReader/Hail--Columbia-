@@ -711,9 +711,7 @@ ecchi_usa_fremont_character_template = {
         interest_group_trigger = {
             is_marginal = no
 			OR = {
-				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_armed_forces
-				is_interest_group_type = ig_intelligentsia
 			}
             ig_hasnt_chosen_ideology_trigger = yes
         }
@@ -789,7 +787,7 @@ ecchi_usa_custer_character_template = {
     interest_group = ig_armed_forces
 	dna = ecchi_dna_george_armstrong_custer
     birth_date = 1839.12.5
-    traits = { reckless experienced_defensive_strategist }
+    traits = { reckless experienced_defensive_strategist celebrity_commander }
     commander_rank = default
     commander_usage = {
 		country_trigger = {
@@ -799,7 +797,7 @@ ecchi_usa_custer_character_template = {
 		role = general
         earliest_usage_date = 1860.1.1
         latest_usage_date = 1876.6.25
-        chance = 90
+        chance = 100
     }
 }
 
@@ -1853,7 +1851,6 @@ ecchi_usa_stephens_character_template = {
         interest_group_trigger = {
             is_marginal = no
 			OR = {
-				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_landowners
 			}
             ig_hasnt_chosen_ideology_trigger = yes
@@ -1867,7 +1864,7 @@ ecchi_usa_stephens_character_template = {
             limit = {
                 has_global_variable = american_civil_war
             }
-            set_ideology = ideology:ideology_moderate
+            set_ideology = ideology:ideology_ethno_nationalist
         }
     }
 }

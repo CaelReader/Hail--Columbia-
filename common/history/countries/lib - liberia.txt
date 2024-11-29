@@ -13,5 +13,9 @@
 			target = c:USA
 			add_interest_group = ig:ig_landowners
 		}
+		change_relations = {
+			country = c:USA
+			value = 100
+		}
 	}
 }

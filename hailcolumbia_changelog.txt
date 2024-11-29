@@ -323,7 +323,6 @@ New Content:
 Updates:
 	Updated decentralized nations setup, pushing the 1836 frontier further east and south
 	Updated Indian Territory starting laws
-	Decentralized countries in North America now have a long-lasting White Mans' Diseases modifier that greatly increases mortality
 	Marginalized IGs will no longer try to become Eugenicist
 	Accepting the Treaty of G-H now refunds a small amount of infamy
 	Ignoring the Treaty of G-H now incurs much less infamy
@@ -347,6 +346,11 @@ Updates:
 	The USA now starts with Freedom of Conscience, and its IGs prefer it over Total Separation (the constitution claims total separation, but in reality Protestantism was paramount)
 	Republican Virtue no longer provides throughput, but also extends Education Access to Farmers
 	Enforcing Indian Removal now requires an army stationed in Dixie
+	John C Fremont will now only spawn for the Armed Forces
+	Alexander Stephens will no longer spawn for the Rural Folk
+	USA starts the game bankrolling Indian Territory
+	Liberia now begins with a pro-USA lobby
+	Gilded Age JE won't trigger if the Progressives already have spawned
 1.8 Compatibility Updates:
 	Removed ACW state scripting (handled by Political Movements now)
 	Disabled random election-spawned agitators (except when passing Slavery Banned)
@@ -361,4 +365,7 @@ Updates:
 	Added JE that further decreases Acceptance and Voting Power of afro-americans (removed by passing Cultural Exclusion or Multiculturalism)
 	Long Reconstruction now takes a variable amount of time based on Acceptance of Afro Americans and a few other factors 
 	Eugenics JE replaced with a Eugenics Political Movement
-	
+	Westward Expansion homelands will now spawn cultural communities in order to facilitate assimilation
+Fixes:
+	Fixed LDS modifier not being applied to Utah if you also had a colony there
+

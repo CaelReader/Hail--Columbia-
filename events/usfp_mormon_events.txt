@@ -911,9 +911,17 @@ usfp_mormon.12 = {
 			value = small_radicals
 			religion = rel:mormon
 		}
-		scope:utah_scope = {
-			add_modifier = {
-				name = usfp_lds_church_utah
+		s:STATE_UTAH = {
+			every_scope_state = {
+				limit = {
+					OR = {
+						owner = c:DES
+						owner = root
+					}
+				}
+				add_modifier = {
+					name = usfp_lds_church_utah
+				}
 			}
 		}
 		set_variable = utah_war_amnesty

@@ -205,16 +205,19 @@ usfp_provoke_lakota_war_button = {
 			owner = c:LKT
 		}
 		has_technology_researched = civilizing_mission
+		NOT = {
+			owns_entire_state_region = STATE_SOUTH_DAKOTA
+		}
 	}
 
 	possible = {
 		is_at_war = no
 		usfp_has_plains_occupation_trigger = yes
-		NOT = {
-			has_truce_with = c:LKT
-		}
 		ruler = {
 			usfp_manifest_destiny_pro_expansion_trigger = yes
+		}
+		NOT = {
+			has_truce_with = c:LKT
 		}
 	}
 
@@ -260,16 +263,37 @@ usfp_break_treaty_button = {
 	}
 
 	effect = {
-		every_country = {
+		every_neighbouring_state = {
 			limit = {
-				has_truce_with = root
-				is_country_type = decentralized
+				owner = {
+					is_country_type = decentralized
+					has_truce_with = root
+				}
 			}
-			end_truce = root
-			change_tension = {
-				country = root
-				value = 20
+			owner = {
+				end_truce = root
+				root = {
+					remove_diplomatic_pact = {
+						country = prev
+						type = colonization_rights
+					}
+				 }
+				change_tension = {
+					country = root
+					value = 20
+				}
 			}
 		}
+		# every_country = {
+		# 	limit = {
+		# 		has_truce_with = root
+		# 		is_country_type = decentralized
+		# 	}
+		# 	end_truce = root
+		# 	change_tension = {
+		# 		country = root
+		# 		value = 20
+		# 	}
+		# }
 	}
 }

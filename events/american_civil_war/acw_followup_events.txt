@@ -304,7 +304,7 @@ acw_followup_events.5 = {
 	placement = scope:supremacist_violence_state
 
 	event_image = {
-		video = "southamerica_war_civilians"
+		video = "votp_cops_march"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"

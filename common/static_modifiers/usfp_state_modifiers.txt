@@ -61,14 +61,6 @@ usfp_homestead_act_modifier = {
 	interest_group_ig_rural_folk_pol_str_mult = 0.20
 	state_colony_growth_speed_mult = 0.10
 	state_animist_standard_of_living_add = -2
-	# state_dakota_standard_of_living_add = -1
-	# state_siouan_standard_of_living_add = -1
-	# state_algonquian_standard_of_living_add = -1
-	# state_paiute_standard_of_living_add = -1
-	# state_caddoan_standard_of_living_add = -1
-	# state_apache_standard_of_living_add = -1
-	# state_navajo_standard_of_living_add = -1
-	# state_nez_perce_standard_of_living_add = -1
 	building_group_bg_agriculture_allowed_collectivization_add = 0.20
 	building_group_bg_ranching_allowed_collectivization_add = 0.20
 }
@@ -76,14 +68,14 @@ usfp_homestead_act_modifier = {
 usfp_deep_south_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_positive.dds
 	interest_group_ig_landowners_pol_str_mult = 0.20
-	building_group_bg_agriculture_allowed_collectivization_add = -0.5
+	building_group_bg_agriculture_allowed_collectivization_add = -0.35
 	
 }
 
 usfp_upper_south_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_positive.dds
 	interest_group_ig_landowners_pol_str_mult = 0.10
-	# building_group_bg_agriculture_allowed_collectivization_add = -0.1
+	building_group_bg_agriculture_allowed_collectivization_add = -0.15
 }
 
 usfp_emigrant_aid_company = {

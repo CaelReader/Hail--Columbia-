@@ -14,8 +14,8 @@
 		OR = {
 			has_state_in_state_region = STATE_ALASKA
 			any_subject_or_below = {
-		has_state_in_state_region = STATE_ALASKA
-	}
+				has_state_in_state_region = STATE_ALASKA
+			}
 		}
 	}
 	
@@ -28,9 +28,9 @@
 				state_region = s:STATE_ALASKA
 			}
 			any_subject_or_below = {
-		any_scope_state = {
-			state_region = s:STATE_ALASKA
-		}
+				any_scope_state = {
+					state_region = s:STATE_ALASKA
+				}
 			}
 		}
 		custom_tooltip = {
@@ -91,7 +91,7 @@
 			OR = {
 				has_state_in_state_region = STATE_ALASKA
 				any_subject_or_below = {
-			has_state_in_state_region = STATE_ALASKA
+					has_state_in_state_region = STATE_ALASKA
 				}
 			}
 			custom_tooltip = {
@@ -160,7 +160,7 @@ je_alaska = {
 			}
 			any_scope_state = {
 				OR = {
-			owner = root
+					owner = root
 					owner = {
 						is_country_type = decentralized
 					}

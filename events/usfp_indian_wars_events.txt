@@ -190,6 +190,7 @@ usfp_indian_wars.3 = {
 	duration = 3
 
 	trigger = {
+		has_truce_with = c:LKT
 		has_state_in_state_region = STATE_SOUTH_DAKOTA
 		OR = {
 			s:STATE_SOUTH_DAKOTA.region_state:USA = {
@@ -217,6 +218,10 @@ usfp_indian_wars.3 = {
 				has_truce_with = c:LKT
 			}
 			end_truce = c:LKT
+			remove_diplomatic_pact = {
+				country = c:LKT
+				type = colonization_rights
+			}
 		}
 		scope:south_dakota_scope = {
 			add_modifier = {
@@ -264,7 +269,7 @@ usfp_indian_wars.3 = {
 #Little Bighorn
 usfp_indian_wars.4 = {
 	type = country_event
-	placement = ROOT
+	placement = scope:montana_scope
 	cooldown = {years = 300} #once
 	event_image = {
 		video = "europenorthamerica_before_the_battle"
@@ -281,37 +286,68 @@ usfp_indian_wars.4 = {
 	duration = 3
 
 	trigger = {
-		any_military_formation = {
-			is_army = yes
-			any_scope_character = {
-				has_role = general
-				has_trait = reckless
-			}
-			current_hq = p:x924593.land_hq
-		}
 		exists = c:LKT
 		has_war_with = c:LKT
+		any_scope_war = {
+			attacker_warleader = c:LKT
+			any_scope_front = {
+				any_scope_general = {
+					owner = root
+					OR = {
+						has_trait = reckless
+						has_trait = celebrity_commander
+					}
+					NOT = {
+						has_modifier = usfp_native_auxiliaries
+					}
+				}
+			}
+		}
+		has_state_in_state_region = STATE_MONTANA
+		has_technology_researched = civilizing_mission
+		NOT = {
+			exists = c:ABS
+		}
 	}
 
 	immediate = {
-		random_military_formation = {
+		random_scope_war = {
 			limit = {
-				is_army = yes
-				any_scope_character = {
-					has_role = general
-					has_trait = reckless
-				}
-				current_hq = p:x924593.land_hq
+				attacker_warleader = c:LKT
 			}
-			random_scope_general = {
+			random_scope_front = {
 				limit = {
-					has_trait = reckless
+					any_scope_general = {
+						owner = root
+						OR = {
+							has_trait = reckless
+							has_trait = celebrity_commander
+						}
+						NOT = {
+							has_modifier = usfp_native_auxiliaries
+						}
+					}
 				}
-				save_scope_as = custer_scope
+				random_scope_general = {
+					limit = {
+						owner = root
+						OR = {
+							has_trait = reckless
+							has_trait = celebrity_commander
+						}
+						NOT = {
+							has_modifier = usfp_native_auxiliaries
+						}
+					}
+					save_scope_as = custer_scope
+				}
 			}
 		}
 		c:LKT = {
 			save_scope_as = sioux_scope
+		}
+		s:STATE_MONTANA.region_state:USA = {
+			save_scope_as = montana_scope
 		}
 	}
 
@@ -358,11 +394,10 @@ usfp_indian_wars.5 = {
 		has_variable = horse_creek_treaty
 		c:LKT = {
 			is_adjacent_to_country = c:ABS
-			NOR = {
-				has_state_in_state_region = STATE_IOWA
-				has_state_in_state_region = STATE_MINNESOTA
-			}
 		}
+		has_state_in_state_region = STATE_MINNESOTA
+		has_state_in_state_region = STATE_IOWA
+		is_at_war = no
 	}
 
 	immediate = {
@@ -464,6 +499,14 @@ usfp_indian_wars.6 = {
 					has_discrimination_trait = north_american_group
 				}
 			}
+			any_scope_pop = {
+				is_pop_type = farmers
+				OR = {
+					culture	= cu:yankee
+					culture = cu:dixie
+					culture = cu:usfp_american
+				}
+			}
 		}
 	}
 
@@ -563,12 +606,22 @@ usfp_indian_wars.7 = {
 	trigger = {
 		exists = c:usfp_MDC
 		has_war_with = c:usfp_MDC
-		any_military_formation = {
-			is_army = yes
-			any_scope_character = {
-				has_role = general
+		OR = {
+			any_military_formation = {
+				is_army = yes
+				any_scope_character = {
+					has_role = general
+				}
+				current_hq = p:x33ee3b.land_hq
 			}
-			current_hq = p:x33ee3b.land_hq
+			any_scope_war = {
+				attacker_warleader = c:usfp_MDC
+				any_scope_front = {
+					any_scope_general = {
+						owner = root
+					}
+				}
+			}
 		}
 	}
 
@@ -586,18 +639,42 @@ usfp_indian_wars.7 = {
 				save_scope_as = captain_jack_scope
 			}
 		}
-		random_military_formation = {
-			limit = {
-				is_army = yes
-				any_scope_character = {
-					has_role = general
+		if = {
+			limit = { 
+				any_scope_war = {
+					attacker_warleader = c:usfp_MDC
+					any_scope_front = {
+						any_scope_general = {
+							owner = root
+						}
+					}
 				}
-				current_hq = p:x33ee3b.land_hq
 			}
-			random_scope_general = {
-				save_scope_as = dead_general_scope
+			random_scope_war = {
+				limit = {
+					attacker_warleader = c:usfp_MDC
+				}
+				random_scope_front = {
+					random_scope_general = {
+						save_scope_as = dead_general_scope
+					}
+				}
+			}
+		} else = {
+			random_military_formation = {
+				limit = {
+					is_army = yes
+					any_scope_character = {
+						has_role = general
+					}
+					current_hq = p:x33ee3b.land_hq
+				}
+				random_scope_general = {
+					save_scope_as = dead_general_scope
+				}
 			}
 		}
+		
 	}
 
 	#oh dear
@@ -804,13 +881,19 @@ usfp_indian_wars.9 = {
 				multiplier = -2
 			}
 		}
+		ig:ig_rural_folk = {
+			add_modifier = {
+				name = usfp_accomodating_indians_modifier
+				years = 4
+			}
+		}
 	}
 }
 #Railway Bison Hunts
 usfp_indian_wars.10 = {
 	type = country_event
 	placement = scope:railway_hunting_state
-	cooldown = {years = 5}
+	cooldown = {years = 3}
 	event_image = {
 		video = "unspecific_trains"
 	}
@@ -979,7 +1062,7 @@ usfp_indian_wars.11 = {
 		has_variable = bison_hunting
 		var:bison_hunting >= 3
 		scope:journal_entry = {
-			journal_entry_age > 7300 # days
+			journal_entry_age > 6000 # days
 		}
 	}
 

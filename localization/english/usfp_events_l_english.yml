@@ -1074,13 +1074,13 @@ usfp_indian_wars.3.a: "The [SCOPE.sCountry('sioux_scope').GetAdjective] will hav
 usfp_indian_wars.3.b: "We won't be so brazen in breaking the treaty."
 
 usfp_indian_wars.4.t: "[SCOPE.sCharacter('custer_scope').GetLastName]'s Last Stand"
-usfp_indian_wars.4.d: "[SCOPE.sCharacter('custer_scope').GetRank] [SCOPE.sCharacter('custer_scope').GetFullName] has been killed while leading a reckless expedition against the [SCOPE.sCountry('sioux_scope').GetAdjective], along with an entire contingent of his men. While the casualties are small in number, the shock of the defeat has caused outrage in the [ROOT.GetCountry.GetAdjective] press."
+usfp_indian_wars.4.d: "[SCOPE.sCharacter('custer_scope').GetRankName] [SCOPE.sCharacter('custer_scope').GetFullName] has been killed while leading a reckless expedition against the [SCOPE.sCountry('sioux_scope').GetAdjective], along with an entire contingent of his men. While the casualties are small in number, the shock of the defeat has caused outrage in the [ROOT.GetCountry.GetAdjective] press."
 usfp_indian_wars.4.f: ""The Indians poured in a murderous fire from all sides and the greater portion fought on horseback. Not one of the detachment escaped. When the Indians left the battlefield, it looked like a slaughter pen, as it was, being in a narrow ravine. The dead were horribly mutilated."" #Montana Territory Union
 usfp_indian_wars.4.a: "[SCOPE.sCharacter('custer_scope').GetLastName] will be avenged!"
 
 usfp_indian_wars.5.t: "Sioux-Crow War"
 usfp_indian_wars.5.d: "With White settlers pushing into the territory of the [SCOPE.sCountry('sioux_scope').GetName] from the east, [SCOPE.sCountry('sioux_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('sioux_scope').GetRuler.GetFullName] has embarked on a campaign against their old [SCOPE.sCountry('crow_scope').GetAdjective] enemies to the west. Defeated [SCOPE.sCountry('crow_scope').GetAdjectiveNoFormatting] warriors have petitioned for our protection, offering their services as scouts on the plains."
-usfp_indian_wars.5.f: """"
+usfp_indian_wars.5.f: ""We stole the hunting grounds of the Crows because they were the best. We wanted more room."" #Cheyenne chief
 usfp_indian_wars.5.a: "We would be glad to ally with the Crow people."
 usfp_indian_wars.5.b: "Inter-tribal fighting is not our concern."
 
@@ -1132,7 +1132,7 @@ usfp_indian_wars.13.a: "Settlement and negotiation will bring these lands into c
 usfp_indian_wars.13.b: "The only good Indian is a dead Indian."
 
 usfp_indian_wars.14.t: "Empty Promises"
-usfp_indian_wars.14.d: "The [SCOPE.sCulture('reservation_culture').GetName] living on their reservation in [SCOPE.sState('reservation_state').GetName] have lodged complaints against their Indian Agent, citing lack of promised food rations, medical care, and services."
+usfp_indian_wars.14.d: "[SCOPE.sCulture('reservation_culture').GetName] Indians living on their reservation in [SCOPE.sState('reservation_state').GetName] have lodged complaints against the conditions we have forced them into, citing lack of promised food rations, medical care, and services."
 usfp_indian_wars.14.f: ""The people seemed heavy to men, heavy and dark; so heavy it seemed they could not be lifted; so dark they could not be made to see anymore. Hunger was among us now. There were many lies, but we could not eat them."" #Black Elk
 usfp_indian_wars.14.a: "Ensure that we uphold our end of the agreement."
 usfp_indian_wars.14.b: "The Indian Agents must handle their own affairs."
@@ -1157,7 +1157,7 @@ usfp_indian_postremoval.3.f: ""When the Sun died, I went up to Heaven and saw Go
 usfp_indian_postremoval.3.a: "Like snow under the hot sun."
 
 usfp_indian_postremoval.4.t: "The Sequoyah Constitution"
-usfp_indian_postremoval.4.d: "In a bid to maintain some semblence of sovereignty, a delegation of American Indians from [indian territory] have drafted a constitution for a state they call Sequoyah. After recieving overwhelming approval from the locals, the representatives have submitted their formal proposal for incorporation into the union as a new state."
+usfp_indian_postremoval.4.d: "In a bid to maintain some semblence of sovereignty, a delegation of American Indians from [SCOPE.sState('oklahoma_scope').GetName] have drafted a constitution for a state they call Sequoyah. After recieving overwhelming approval from the locals, the representatives have submitted their formal proposal for incorporation into the union as a new state."
 usfp_indian_postremoval.4.f: ""This Convention does hereby declare on behalf of the people of Indian Territory, that this Constitution has been prepared and submitted to the people of the Indian Territory for their adoption or rejection, with no purpose of setting up or organizing a State government until such time as the Congress of the United States shall enact a law for the admission of the Indian Territory as a State."" #Sequoyah Constitution
 usfp_indian_postremoval.4.a: "It is only right to admit them as a full state."
 usfp_indian_postremoval.4.b: "Indian Territory will be fused with the new state of Oklahoma."
