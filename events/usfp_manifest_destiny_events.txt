@@ -578,6 +578,7 @@ usfp_manifest_destiny.6 = {
 		}
 		s:STATE_CHIHUAHUA = {
 			add_claim = root
+			remove_claim = c:MEX
 		}
 		s:STATE_CHIHUAHUA.region_state:MEX = {
 			set_state_owner = root
@@ -626,6 +627,7 @@ usfp_manifest_destiny.6 = {
 		}
 		s:STATE_CHIHUAHUA = {
 			add_claim = root
+			remove_claim = c:MEX
 		}
 		s:STATE_CHIHUAHUA.region_state:MEX = {
 			set_state_owner = root
@@ -669,6 +671,7 @@ usfp_manifest_destiny.6 = {
 		hidden_effect = {
 			s:STATE_CHIHUAHUA = {
 				add_claim = root
+				remove_claim = c:MEX
 			}
 			usfp_mexican_north_purchase_effect = yes
 		}

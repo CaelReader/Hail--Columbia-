@@ -1,5 +1,5 @@
 ﻿namespace = usfp_indian_wars
-
+###### Hail, Columbia! by CaelReader ######
 #Red Cloud's War
 usfp_indian_wars.1 = {
 	type = country_event

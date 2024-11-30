@@ -43,6 +43,12 @@ law_slavery_banned = {
 		NOT = {
 			has_journal_entry = je_usfp_a_house_divided_gag_rule
 		}
+		hidden_trigger = {
+			NAND = {
+				has_variable = corwin_amendment
+				has_law = law_type:law_presidential_republic
+			}
+		}
 	}
 	
 	#USFP
@@ -188,6 +194,12 @@ law_debt_slavery = {
 		NOT = {
 			has_journal_entry = je_usfp_a_house_divided_gag_rule
 		}
+		hidden_trigger = {
+			NAND = {
+				has_variable = corwin_amendment
+				has_law = law_type:law_presidential_republic
+			}
+		}
 	}
 
 	on_activate = {
@@ -256,6 +268,12 @@ law_slave_trade = {
 	can_enact = {
 		NOT = {
 			has_journal_entry = je_usfp_a_house_divided_gag_rule
+		}
+		hidden_trigger = {
+			NAND = {
+				has_variable = corwin_amendment
+				has_law = law_type:law_presidential_republic
+			}
 		}
 	}
 	

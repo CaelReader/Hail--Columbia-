@@ -85,4 +85,7 @@
 	s:STATE_ALASKA = {
 		add_claim = c:RUS
 	}
+	s:STATE_CHIHUAHUA = {
+		add_claim = c:MEX
+	}
 }

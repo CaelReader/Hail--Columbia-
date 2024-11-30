@@ -1,5 +1,5 @@
 ﻿namespace = usfp_indian_postremoval
-
+###### Hail, Columbia! by CaelReader ######
 #Ghost Dance Begins
 usfp_indian_postremoval.1 = {
 	type = country_event

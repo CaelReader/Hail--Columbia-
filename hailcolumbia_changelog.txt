@@ -371,3 +371,8 @@ Fixes:
 	Fixed LDS modifier not being applied to Utah if you also had a colony there
 	Reconstruction no longer requires Multiculturalism
 
+4.1 "Sitting Bull"
+Elitist Ideology now prefers Agrarianism
+Increased the activism debuff of the Missouri Compromise
+fixed missing Mexican claim on Chihuahua
+added un-attainable Corwin Amendment option to the Secessionist Conventions event

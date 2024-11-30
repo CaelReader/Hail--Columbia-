@@ -188,6 +188,7 @@ usfp_a_house_divided.3 = {
 
 	option = {
 		name = usfp_a_house_divided.3.a
+		default_option = yes
 		add_radicals = {
 			value = 0.4
 			interest_group = ig:ig_landowners
@@ -235,6 +236,53 @@ usfp_a_house_divided.3 = {
 			}
 		}
 		
+	}
+
+	#Corwin Amendment - basically impossible
+	option = {
+		name = usfp_a_house_divided.3.b
+		highlighted_option = yes
+		show_as_unavailable = { always = yes }
+		trigger = {
+			has_law = law_type:law_legacy_slavery
+			NOT = {
+				any_political_movement = {
+					is_political_movement_type = movement_anti_slavery
+					political_movement_support > 0.20
+				}
+			}
+			NOT = {
+				any_political_movement = {
+					is_political_movement_type = movement_pro_slavery
+					political_movement_radicalism > 0.20
+				}
+			}
+			ig:ig_landowners = {
+				leader = {
+					NOT = {
+						has_ideology = ideology:ideology_slaver
+					}
+				}
+			}
+		}
+		if = {
+			limit = { 
+				is_enacting_law = law_type:law_slavery_banned
+			}
+			cancel_enactment = yes
+		}
+		add_loyalists = {
+			value = large_radicals
+			interest_group = ig:ig_landowners
+		}
+		add_radicals = {
+			value = very_large_radicals
+			culture = cu:afro_american
+		}
+		custom_tooltip = {
+			text = usfp_a_house_divided.3.b.tt
+			set_variable = corwin_amendment
+		}
 	}
 }
 
@@ -1690,22 +1738,22 @@ usfp_a_house_divided.18 = {
 			value = small_radicals
 			interest_group = ig:ig_landowners
 		}
-		if = {
-			limit = { 
-				any_political_movement = {
-					is_political_movement_type = movement_anti_slavery
-				}
-			}
-			random_political_movement = {
-				limit = {
-					is_political_movement_type = movement_anti_slavery
-				}
-				add_modifier = {
-					name = usfp_secession_defused_modifier
-					years = 5
-				}
-			}
-		}
+		# if = {
+		# 	limit = { 
+		# 		any_political_movement = {
+		# 			is_political_movement_type = movement_anti_slavery
+		# 		}
+		# 	}
+		# 	random_political_movement = {
+		# 		limit = {
+		# 			is_political_movement_type = movement_anti_slavery
+		# 		}
+		# 		add_modifier = {
+		# 			name = usfp_secession_defused_modifier
+		# 			years = 5
+		# 		}
+		# 	}
+		# }
 	}
 }
 

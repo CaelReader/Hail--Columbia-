@@ -27,7 +27,7 @@ usfp_missouri_compromise_decaying = {
 usfp_missouri_compromise_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_positive.dds
 	interest_group_ig_landowners_approval_add = 10
-	political_movement_radicalism_add = -0.25
+	political_movement_radicalism_add = -0.50
 	state_pop_support_movement_pro_slavery_mult = -0.75
 }
 

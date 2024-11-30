@@ -35,6 +35,17 @@ ideology_republican_paternalistic = { # Replacing basegame to stop stupid US aut
 		law_militarized_police = neutral
 		law_no_police = disapprove
 	}
+
+	lawgroup_economic_system = {		
+		law_traditionalism = neutral
+		law_agrarianism = approve
+		law_interventionism = neutral
+		law_industry_banned = disapprove
+		law_laissez_faire = neutral
+		law_cooperative_ownership = strongly_disapprove
+		law_command_economy = strongly_disapprove
+		law_extraction_economy = disapprove
+	}
 }
 
 ideology_republican_reactionary = { #Compatch for IPB
@@ -101,6 +112,7 @@ ideology_anti_tariff = { # USLO
 		law_protectionism = disapprove
 		law_isolationism = strongly_disapprove
 	}
+	
 }
 
 ideology_pro_tariff = { # USID

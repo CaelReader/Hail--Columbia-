@@ -1,5 +1,5 @@
 ﻿namespace = usfp_liberia
-
+###### Hail, Columbia! by CaelReader ######
 #USA: Liberian Declaration of Independence
 usfp_liberia.1 = {
 	type = country_event
