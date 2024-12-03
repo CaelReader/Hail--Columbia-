@@ -386,13 +386,15 @@ usfp_mormon.4 = {
 			country = c:DES
 			type = protectorate
 		 }
-		 create_diplomatic_pact = {
-			country = c:DES
-			type = grant_own_market
-		 }
-		 create_diplomatic_pact = {
-			country = c:DES
-			type = exempt_from_service
+		 hidden_effect = {
+			create_diplomatic_pact = {
+				country = c:DES
+				type = grant_own_market
+			 }
+			 create_diplomatic_pact = {
+				country = c:DES
+				type = exempt_from_service
+			 }
 		 }
 		create_unidirectional_truce = {
 			country = c:DES

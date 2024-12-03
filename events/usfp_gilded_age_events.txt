@@ -1271,6 +1271,8 @@ usfp_gilded_age.15 = {
 					is_building_group = bg_munition_plants
 					is_building_group = bg_artillery_foundaries
 					is_building_group = bg_military_shipyards
+					is_building_group = bg_subsistence_agriculture
+					is_building_group = bg_subsistence_ranching
 				}
 			}
 			state_has_building_levels > 20
@@ -1289,6 +1291,8 @@ usfp_gilded_age.15 = {
 						is_building_group = bg_munition_plants
 						is_building_group = bg_artillery_foundaries
 						is_building_group = bg_military_shipyards
+						is_building_group = bg_subsistence_agriculture
+						is_building_group = bg_subsistence_ranching
 					}
 				}
 				state_has_building_levels > 20
@@ -1303,6 +1307,8 @@ usfp_gilded_age.15 = {
 						is_building_group = bg_munition_plants
 						is_building_group = bg_artillery_foundaries
 						is_building_group = bg_military_shipyards
+						is_building_group = bg_subsistence_agriculture
+						is_building_group = bg_subsistence_ranching
 					}
 				}
 				save_scope_as = monopoly_building_scope

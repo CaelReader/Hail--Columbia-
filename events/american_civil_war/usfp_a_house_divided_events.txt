@@ -1780,6 +1780,7 @@ usfp_a_house_divided.19 = {
 	cooldown = {years = 100} #once
 
 	trigger = {
+		has_dlc_feature = voice_of_the_people_content
 		NOT = {
 			has_law = law_type:law_slavery_banned
 		}

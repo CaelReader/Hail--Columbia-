@@ -36,7 +36,7 @@
                 has_variable = chose_ethno_nationalism
             }
         }   
-        earliest_usage_date = 1882.1.1
+        earliest_usage_date = 1896.1.1
         latest_usage_date = 1919.1.1
         chance = 100
     }

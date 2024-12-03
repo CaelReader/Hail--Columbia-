@@ -868,8 +868,12 @@ usfp_native_removal.9 = {
 		name = usfp_native_removal.9.b
 		scope:settler_state_scope = {
 			add_radicals_in_state = {
-				value = small_radicals
+				value = medium_radicals
 				culture = scope:settler_culture_scope
+			}
+			add_loyalists_in_state = {
+				value = small_radicals
+				religion = rel:animist
 			}
 		}
 	}

@@ -376,3 +376,13 @@ Elitist Ideology now prefers Agrarianism
 Increased the activism debuff of the Missouri Compromise
 fixed missing Mexican claim on Chihuahua
 added un-attainable Corwin Amendment option to the Secessionist Conventions event
+
+4.2 "Sitting Bull"
+Fixed broken tooltip on New Zion event
+Fixed duplicate event option on Settlers Clamor for Removal
+Updated Korean localization (thanks to 케말 파샤)
+Frederick Douglass event now requires VotP DLC
+Fixed broken character trait on Nelson A Miles
+Fixed Nationalist Clubs modifier
+Monopoly in State event can no longer target subsistence buildings
+Delayed the appearance of Theodore Roosevelt until 1896

@@ -65,3 +65,7 @@
  acw_war_tt_complete:0 "분리주의자들이 패배하고 재합병되었습니다."
  acw_war_support_tooltip: "[SCOPE.sCountry('csa_scope').GetName]은 우리의 싸우겠다는 의지보다 더 오래 버틸 수 있다고 믿습니다. 전장에서 저들을 상대로 승리한다면 저들의 [concept_war_support]가 #italic 상승#!할 것입니다. 저들의 승리에 대한 희망을 꺾기 위해 미시시피 강을 [Concept('concept_occupation', 'Occupy')]할 수 있습니다."
  law_worker_protections:0 "노동자 보호"
+ APC: "아파치 영토"
+ je_oregon:0 "오리건 국경 논쟁"
+ je_oregon_reason:0 "오리건 국경의 적절한 위치는 예로부터 영국과 미국 사이에 결정되지 않은 문제로 남았습니다. 정착민들이 계속 서부로 밀고 나가고 있으니, 영국과 최종적 합의에 도달할 필요가 있습니다.\n\n그렇지 않고, 캘리포니아에서 전쟁이 벌어진다면, 조약이 군사적 필수 사항이 될 것입니다."
+ oregon_tt:1 "아메리카 서부 국경 지도 제작을 통해 오리건 가도를 발견했습니다"

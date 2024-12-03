@@ -17,3 +17,5 @@
  gov_usfp_syndicalist_federation_anarchist: "생디칼리슴 연합"
  gov_usfp_syndicalist_federation_anarchist_desc: "이것은 [concept_country]가 분권화된 노동조합연맹에 의해 통제되는 [concept_government_type]입니다.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  RULER_TITLE_DELEGATE: "대표"
+ gov_usfp_private_colony: "사립 식민지"
+ gov_usfp_private_colony_desc: "이것은 아프리카에 해방 노예들의 공화국을 설립하려는 목적으로 미국 식민 협회에 의해 세워졌던 [concept_government_type]입니다.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
