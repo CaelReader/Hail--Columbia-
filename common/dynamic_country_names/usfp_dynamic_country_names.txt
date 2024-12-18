@@ -402,3 +402,56 @@ LKT = { # Lakota
 		}
 	}
 }
+
+ALK = {
+	dynamic_country_name = {
+		name = dyn_c_russian_american_company
+		adjective = dyn_c_russian_american_company_adj
+		use_overlord_prefix = yes
+
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			scope:actor = {
+				is_subject = yes
+				is_subject_type = subject_type_chartered_company
+				overlord = {
+					usfp_country_is_american = no
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_alyaska
+		adjective = dyn_c_alyaska_adj
+
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor = {
+				any_primary_culture = {
+					cu:russian ?= this
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dync_c_alaska_territory
+		adjective = dync_c_alaska_territory_ADJ
+		use_overlord_prefix = no
+
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			scope:actor = {
+				is_subject = yes
+				overlord = {
+					usfp_country_is_american = yes
+				}
+			}
+		}
+	}
+}

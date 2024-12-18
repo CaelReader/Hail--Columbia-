@@ -1139,3 +1139,99 @@ ideology_usfp_universalist = {
 		}
 	}
 }
+
+ideology_usfp_pan_indianist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_usfp_pan_indianist.dds"
+	character_ideology = yes
+
+	lawgroup_colonization = {		
+		law_no_colonial_affairs = approve
+		law_colonial_resettlement = strongly_disapprove
+		law_colonial_exploitation = strongly_disapprove
+		law_frontier_colonization = strongly_disapprove
+	}
+
+	lawgroup_citizenship = {
+		law_ethnostate = strongly_disapprove
+		law_national_supremacy = disapprove
+		law_racial_segregation = strongly_approve
+		law_cultural_exclusion = approve
+		law_multicultural = neutral
+	}
+
+	lawgroup_church_and_state = {
+		law_state_religion = approve
+		law_freedom_of_conscience = approve
+		law_total_separation = neutral
+		law_state_atheism = strongly_disapprove
+	}
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_collectivized_agriculture = strongly_approve
+		law_tenant_farmers = strongly_disapprove
+		law_commercialized_agriculture = strongly_disapprove
+		law_homesteading = disapprove
+	}
+
+	lawgroup_economic_system = {	
+		law_command_economy = neutral
+		law_cooperative_ownership = neutral
+		law_interventionism = neutral
+		law_agrarianism = approve
+		law_traditionalism = approve	
+		law_laissez_faire = disapprove
+		law_industry_banned = strongly_approve
+		law_extraction_economy = strongly_disapprove
+	}
+
+	lawgroup_migration = {
+		law_no_migration_controls = disapprove
+		law_migration_controls = approve
+		law_closed_borders = neutral
+	}
+
+
+	
+	country_trigger = {
+		any_primary_culture = {
+			has_discrimination_trait = north_american_group
+		}
+		OR = {
+			has_technology_researched = pan-nationalism
+			any_scope_character = {
+				has_ideology = ideology:ideology_usfp_pan_indianist
+			}
+		}
+	}
+
+	interest_group_leader_trigger = {
+		is_interest_group_type = ig_devout
+		is_interest_group_type = ig_intelligentsia
+		is_interest_group_type = ig_armed_forces
+		is_interest_group_type = ig_trade_unions
+	}
+
+	non_interest_group_leader_trigger = {
+		culture = {
+			has_discrimination_trait = north_american_group
+		}
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_no_colonial_affairs
+			}
+		}
+		interest_group = {
+			is_interest_group_type = ig_devout
+		}
+	}
+
+	interest_group_leader_weight = {
+		value = 100
+	}
+
+	non_interest_group_leader_weight = {
+		value = 100
+	}
+}

@@ -397,7 +397,7 @@
 usfp_american_indian = {
 	color= rgb{ 127 20 21}
 	religion = protestant
-	traits = { indigenous_american_heritage north_american_group }
+	traits = { indigenous_american_heritage north_american_group anglophone }
 	obsessions = {
 		liquor
 	}

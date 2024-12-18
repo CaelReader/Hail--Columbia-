@@ -233,6 +233,19 @@ je_acw_war = {
 				culture = cu:mexican
 			}
 		}
+		if = {
+			limit = { 
+				owns_entire_state_region = STATE_WEST_VIRGINIA
+				NOT = {
+					owns_entire_state_region = STATE_VIRGINIA
+				}
+			}
+			s:STATE_WEST_VIRGINIA = {
+				region_state:USA = {
+					reset_state_name = yes
+				}
+			}
+		}
 	}
 
 	complete = {

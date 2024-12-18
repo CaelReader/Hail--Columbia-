@@ -359,6 +359,7 @@ native_resettlement.4 = {
 			capital = {
 				save_scope_as = oklahoma_state
 			}
+			activate_law = law_type:law_migration_controls
 		}
 		cu:cherokee = { 
 			save_scope_as = cherokee_culture 

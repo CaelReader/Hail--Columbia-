@@ -3,8 +3,12 @@
 	
 	group = je_group_foreign_affairs
 
+	scripted_button = je_unite_the_nations_proclaim_turtle_island_button
+    scripted_button = je_unite_the_nations_organize_the_tribes_button
+    scripted_button = je_unite_the_nations_offer_confederation_button
+
 	is_shown_when_inactive = {
-		exists = this
+		NOT = { is_country_type = decentralized }
 		country_is_in_north_america = yes
 		any_primary_culture = {
 			has_discrimination_trait = indigenous_american_heritage
@@ -18,37 +22,86 @@
 				c:TIS = this
 			}
 		}
-		NOT = {
-			c:PRG ?= this
-		}
 	}
 
-	scripted_button = je_unite_the_nations_proclaim_turtle_island_button
-    scripted_button = je_unite_the_nations_organize_the_tribes_button
-    scripted_button = je_unite_the_nations_offer_confederation_button
-
 	possible = {
-		NOT = { is_country_type = decentralized }
 		is_subject = no
-		has_technology_researched = pan-nationalism
-		OR = {
-			has_law = law_type:law_racial_segregation
-			has_law = law_type:law_cultural_exclusion
-			has_law = law_type:law_multicultural
-		}
 	}
 
 	complete = {
 		custom_tooltip = {
 			text = je_unite_the_nations_complete_tt
-			NOT = { 
-				any_country = { 
-					country_is_in_north_america = yes 
-					is_country_type = decentralized 
-					any_primary_culture = {
-						shares_heritage_trait_with_any_primary_culture = ROOT
+			sr:region_canada = {
+				NOT = {
+					any_scope_state = {
+						owner = {
+							is_country_type = decentralized
+							any_primary_culture = {
+								shares_heritage_trait_with_any_primary_culture = ROOT
+							}
+						}
 					}
-				} 
+				}
+			}
+			sr:region_new_england = {
+				NOT = {
+					any_scope_state = {
+						owner = {
+							is_country_type = decentralized
+							any_primary_culture = {
+								shares_heritage_trait_with_any_primary_culture = ROOT
+							}
+						}
+					}
+				}
+			}
+			sr:region_pacific_coast = {
+				NOT = {
+					any_scope_state = {
+						owner = {
+							is_country_type = decentralized
+							any_primary_culture = {
+								shares_heritage_trait_with_any_primary_culture = ROOT
+							}
+						}
+					}
+				}
+			}
+			sr:region_great_plains = {
+				NOT = {
+					any_scope_state = {
+						owner = {
+							is_country_type = decentralized
+							any_primary_culture = {
+								shares_heritage_trait_with_any_primary_culture = ROOT
+							}
+						}
+					}
+				}
+			}
+			sr:region_the_midwest = {
+				NOT = {
+					any_scope_state = {
+						owner = {
+							is_country_type = decentralized
+							any_primary_culture = {
+								shares_heritage_trait_with_any_primary_culture = ROOT
+							}
+						}
+					}
+				}
+			}
+			sr:region_dixie = {
+				NOT = {
+					any_scope_state = {
+						owner = {
+							is_country_type = decentralized
+							any_primary_culture = {
+								shares_heritage_trait_with_any_primary_culture = ROOT
+							}
+						}
+					}
+				}
 			}
 		}
         any_scope_state = {

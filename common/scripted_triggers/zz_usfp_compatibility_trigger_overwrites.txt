@@ -1,0 +1,15 @@
+﻿usfp_country_is_american = {
+	OR = {
+		country_has_primary_culture = cu:yankee
+		country_has_primary_culture = cu:dixie
+		country_has_primary_culture = cu:usfp_american
+	}
+}
+
+usfp_has_american_primary_culture = {
+	country_has_primary_culture = cu:usfp_american
+}
+
+is_usfp_active = {
+	always = yes
+}

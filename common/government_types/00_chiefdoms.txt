@@ -22,6 +22,30 @@
 		post_change_to_hereditary = yes
 	}
 }
+
+gov_usfp_tribal_confederation_centralized = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_PRINCIPAL_CHIEF"
+	female_ruler = "RULER_TITLE_PRINCIPAL_CHIEF"
+	
+	possible = {
+		has_law = law_type:law_chiefdom
+		has_law = law_type:law_elder_council
+		c:usfp_GLC ?= root
+		NOT = {
+			is_country_type = decentralized
+		} 
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
 gov_decentralized_sultanate = {
 	transfer_of_power = hereditary
 

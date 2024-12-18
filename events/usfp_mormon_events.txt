@@ -34,6 +34,7 @@ usfp_mormon.1 = {
 				}
 			}
 		}
+		has_state_in_state_region = STATE_ILLINOIS
 	}
 
 	immediate = {
@@ -131,6 +132,7 @@ usfp_mormon.2 = {
 		NOT = {
 			has_global_variable = joseph_smith_killed
 		}
+		has_state_in_state_region = STATE_ILLINOIS
 		s:STATE_ILLINOIS.region_state:USA = {
 			any_scope_pop = {
 				religion = rel:mormon
@@ -207,6 +209,7 @@ usfp_mormon.3 = {
 		NOT = {
 			has_global_variable = mormon_exodus
 		}
+		has_state_in_state_region = STATE_ILLINOIS
 		s:STATE_ILLINOIS.region_state:USA = {
 			any_scope_pop = {
 				religion = rel:mormon

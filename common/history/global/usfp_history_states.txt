@@ -152,6 +152,9 @@
 			name = usfp_upper_south_modifier
 		}
 	}
+	s:STATE_WEST_VIRGINIA.region_state:USA = {
+		set_state_name = STATE_WEST_VIRGINIA_antebellum
+	}
 	s:STATE_ARKANSAS.region_state:USA = {
 		add_modifier = {
 			name = usfp_upper_south_modifier

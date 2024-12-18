@@ -59,3 +59,34 @@ NIC = { # Nicaragua
 		}
 	}
 }
+
+usfp_GLC = {
+	flag_definition = {
+		coa = usfp_GLC
+		subject_canton = usfp_GLC	
+		coa_with_overlord_canton = usfp_GLC_subject	
+		allow_overlord_canton = yes		
+		priority = 1
+	}
+	flag_definition = {
+		coa = usfp_GLC_british
+		subject_canton = usfp_GLC	
+		priority = 100
+		trigger = {
+			scope:actor ?= {
+				exists = c:GBR
+				is_subject_of = c:GBR
+			}
+		}
+	}
+	flag_definition = {
+		coa = usfp_GLC_independent
+		subject_canton = usfp_GLC_independent	
+		priority = 100
+		trigger = {
+			scope:actor ?= {
+				is_subject = no
+			}
+		}
+	}
+}

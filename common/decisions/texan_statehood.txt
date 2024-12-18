@@ -78,7 +78,7 @@ texan_csa = {
 		c:CSA = {
 			create_diplomatic_pact = {
 				country = root
-				type = dominion
+				type = puppet
 			}
 		}
 		change_relations = {

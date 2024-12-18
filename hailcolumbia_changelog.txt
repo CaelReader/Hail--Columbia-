@@ -386,3 +386,21 @@ Fixed broken character trait on Nelson A Miles
 Fixed Nationalist Clubs modifier
 Monopoly in State event can no longer target subsistence buildings
 Delayed the appearance of Theodore Roosevelt until 1896
+
+4.3 "Sitting Bull"
+NOTICE: Hail, Columbia! now requires the Community Mod Framework
+Removed Party definitions and Pro/Anti-Slavery movement overrides in favor of CMF
+Updated Turtle Island JE with vanilla changes
+Fixed some missing ECCHI dna
+Merged in vanilla change to Pro-Slavery Movement demand for military in slave states
+Aggressive options in Treaty of G-H add additional mexican radicals
+Dialed back the CSA's extra war support and disabled it when the USA is AI-controlled
+Promote/Suppress Continentalism buttons no longer appear once Westward Expansion is complete
+West Virginia is now known as Western Virginia until it breaks away as its own state
+American Indian culture is now Anglophone
+Updated DXG to be called Deg Xit'an
+Fixed William Cramp & Sons HQ location
+Moved Texas subject options over to Puppet rather than Dominion
+Added dynamic name for Alaska when subject to the USA
+Added new IG traits for native american tags
+Backend support for Tecumseh's Legacy

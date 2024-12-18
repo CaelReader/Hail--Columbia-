@@ -65,6 +65,10 @@ usfp_remove_starting_buildings_effect = {
 		limit = { has_building = building_maize_farm  }
 		remove_building = building_maize_farm
 	}
+	if = {
+		limit = { has_building = building_chemical_plants }
+		remove_building = building_chemical_plants
+	}
 	
 }
 
@@ -1433,5 +1437,38 @@ usfp_loyalize_frontier_settlers = {
 				pop_type = peasants
 			} 
 		}
+	}
+}
+
+usfp_native_igs_effect = {
+	ig:ig_intelligentsia = {
+		remove_ideology = ideology_anti_clerical
+		remove_ideology = ideology_republican
+		add_ideology = ideology_constitutionalist
+		add_ideology = ideology_usfp_accomodationist
+		add_ideology = ideology_modernizer
+		set_ig_trait = ig_trait:usfp_ig_trait_european_science
+	}
+	ig:ig_petty_bourgeoisie = {
+		remove_ideology = ideology_reactionary
+		add_ideology = ideology_modernizer
+	}
+	ig:ig_devout = {
+		set_ig_trait = ig_trait:usfp_ig_trait_spiritual_visions
+		set_ig_trait = ig_trait:usfp_ig_trait_strong_medicine
+	}
+	ig:ig_rural_folk = {
+		remove_ideology = ideology_agrarian
+		remove_ideology = ideology_isolationist
+		add_ideology = ideology_usfp_native_american_agrarian
+		add_ideology = ideology_usfp_tribal_government
+		set_ig_trait = ig_trait:usfp_ig_trait_village_life
+	}
+	ig:ig_armed_forces = {
+		set_ig_trait = ig_trait:usfp_ig_trait_native_defenders
+		set_ig_trait = ig_trait:usfp_ig_trait_feuding_warriors
+	}
+	ig:ig_landowners = {
+		set_interest_group_name = ig_big_men
 	}
 }

@@ -134,6 +134,7 @@ usfp_promote_manifest_destiny_button = {
 		}
 		has_variable = manifest_destiny_var
 		var:manifest_destiny_var < 6
+		has_journal_entry = usfp_je_westward_expansion
 	}
 
 	possible = {
@@ -175,6 +176,7 @@ usfp_suppress_manifest_destiny_button = {
 		}
 		has_variable = manifest_destiny_var
 		var:manifest_destiny_var > 2
+		has_journal_entry = usfp_je_westward_expansion
 	}
 
 	possible = {

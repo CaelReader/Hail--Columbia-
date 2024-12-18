@@ -187,6 +187,9 @@ usfp_acw.3 = {
 
 	trigger = {
 		exists = c:CSA
+		c:CSA = {
+			owns_entire_state_region = STATE_WEST_VIRGINIA
+		}
 		NOR = {
 			owns_entire_state_region = STATE_WEST_VIRGINIA
 			has_variable = west_virginia_statehood
@@ -212,6 +215,7 @@ usfp_acw.3 = {
 				value = small_radicals
 				culture = cu:yankee
 			}
+			reset_state_name = yes
 		}
 	}
 }

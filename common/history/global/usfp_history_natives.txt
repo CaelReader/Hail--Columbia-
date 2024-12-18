@@ -1179,7 +1179,7 @@
 	s:STATE_MICHIGAN = {
 		create_country = {
 			tag = CTF
-			origin = c:USA
+			origin = c:LKT
 			province = p:x35EAD6
 			on_created = {
 				usfp_native_startup = yes
@@ -2723,6 +2723,7 @@
 		capital = {
 			usfp_remove_starting_buildings_effect = yes
 		}
+		usfp_native_igs_effect = yes
 	}
 	c:COM = {
 		activate_law = law_type:law_free_trade
@@ -2730,6 +2731,10 @@
 		activate_law = law_type:law_multicultural
 		activate_law = law_type:law_no_womens_rights
 		activate_law = law_type:law_commercialized_agriculture
+		usfp_native_igs_effect = yes
+	}
+	c:LKT = {
+		usfp_native_igs_effect = yes
 	}
 
 

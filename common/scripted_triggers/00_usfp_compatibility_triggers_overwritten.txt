@@ -1,8 +1,4 @@
-﻿is_usfp_active = {
-	always = yes
-}
-
-#Upper New England
+﻿#Upper New England
 is_state_region_maine = {
 	state_region = s:STATE_MAINE
 }
@@ -40,3 +36,4 @@ is_state_region_rhode_island = {
 is_state_region_connecticut = {
 	state_region = s:STATE_CONNECTICUT
 }
+

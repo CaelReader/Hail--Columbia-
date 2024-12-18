@@ -590,6 +590,10 @@ usfp_manifest_destiny.6 = {
 			country = c:MEX
 			value = 30
 		}
+		add_radicals = {
+			value = medium_radicals
+			culture = cu:mexican
+		}
 		highlighted_option = yes
 		show_as_unavailable = {
 			always = yes
@@ -643,6 +647,10 @@ usfp_manifest_destiny.6 = {
 			country = c:MEX
 			value = 40
 		}
+		add_radicals = {
+			value = large_radicals
+			culture = cu:mexican
+		}
 		highlighted_option = yes
 		show_as_unavailable = {
 			always = yes
@@ -676,6 +684,10 @@ usfp_manifest_destiny.6 = {
 			usfp_mexican_north_purchase_effect = yes
 		}
 		annex = c:MEX
+		add_radicals = {
+			value = very_large_radicals
+			culture = cu:mexican
+		}
 		highlighted_option = yes
 		show_as_unavailable = {
 			always = yes

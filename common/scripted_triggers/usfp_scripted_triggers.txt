@@ -323,14 +323,6 @@ usfp_ig_eugenicist_candidate = {
 	}
 }
 
-usfp_country_is_american = {
-	OR = {
-		country_has_primary_culture = cu:yankee
-		country_has_primary_culture = cu:dixie
-		country_has_primary_culture = cu:usfp_american
-	}
-}
-
 ig_hasnt_chosen_ideology_trigger = {
 	NOR = {
 		has_variable = communist_ig_var

@@ -12,6 +12,9 @@ gov_usfp_principal_chiefdom_desc:3 "This is a [concept_government_type] where th
 gov_usfp_tribal_confederation: "Tribal Confederation"
 gov_usfp_tribal_confederation_desc: "This is a [concept_government_type] composed of multiple nations in an alliance. Each constituent nation is largely autonomous, but a tribal council of leaders is called when decisions impact the entire confederation. A [Concept('concept_ruler','$RULER_CHIEFTAIN$')] can act as the #italic de facto#! [concept_head_of_state] when required.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
+gov_usfp_tribal_confederation_centralized: "Confederation"
+gov_usfp_tribal_confederation_centralized_desc: "This is a [concept_government_type] composed of several nations that have joined together in an alliance under the leadership of a [Concept('concept_ruler','$RULER_TITLE_PRINCIPAL_CHIEF$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
 gov_usfp_theodemocracy: "Theodemocracy"
 gov_usfp_theodemocracy_desc: "A [concept_government_type] combining democratic traditions with the hierarchy of the Church of Jesus Christ of Latter-Day Saints. The Quorum of the Presidency is headed by a [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')] who acts as [concept_head_of_state].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 

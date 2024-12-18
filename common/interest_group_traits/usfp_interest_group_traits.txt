@@ -165,3 +165,59 @@ usfp_ig_trait_gunboat_diplomacy = {
 		country_prestige_from_army_power_projection_mult = 0.05
 	}
 }
+
+#Native American
+usfp_ig_trait_native_defenders = {
+	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
+	min_approval = loyal
+	modifier = {
+		state_conscription_rate_mult = 0.10
+		unit_army_defense_mult = 0.10
+	}
+}
+
+usfp_ig_trait_feuding_warriors = {
+	icon = "gfx/interface/icons/ig_trait_icons/feuds.dds"
+	max_approval = unhappy
+	modifier = {
+		country_authority_mult = -0.05
+		state_turmoil_effects_mult = 0.1
+	}
+}
+
+usfp_ig_trait_european_science = {
+	icon = "gfx/interface/icons/ig_trait_icons/rangaku.dds"
+	min_approval = loyal
+	
+	modifier = {
+		country_tech_spread_mult = 0.1
+	}
+}
+
+usfp_ig_trait_village_life = {
+	icon = "gfx/interface/icons/ig_trait_icons/be_fruitful_and_multiply.dds"
+	min_approval = loyal
+	
+	modifier = {
+		state_birth_rate_mult = 0.025
+	}
+}
+
+usfp_ig_trait_spiritual_visions = {
+	icon = "gfx/interface/icons/ig_trait_icons/pious_fiction.dds"
+	max_approval = unhappy
+	modifier = {
+		state_radicals_from_political_movements_mult = 0.10
+		country_radicals_from_legitimacy_mult = 0.10
+	}
+}
+
+usfp_ig_trait_strong_medicine = {
+	icon = "gfx/interface/icons/ig_trait_icons/propagandists.dds"
+	min_approval = loyal
+	
+	modifier = {
+		state_loyalism_increases_full_acceptance_mult = 0.05
+		country_loyalists_from_legitimacy_mult = 0.05
+	}
+}
