@@ -404,3 +404,11 @@ Moved Texas subject options over to Puppet rather than Dominion
 Added dynamic name for Alaska when subject to the USA
 Added new IG traits for native american tags
 Backend support for Tecumseh's Legacy
+
+4.4 "Sitting Bull"
+Melting Pot modifier now allows for Full Acceptance assimilation
+If the Border Ruffians take Kansas due to the outbreak of the civil war, Missouri will go with them
+A Radical Abolitionist president or government can now gain a 1-time boost to war support in the ACW
+Reconstruction backlash events can now trigger at slightly lower levels of Reconstruction
+Internal script cleanup
+Editing pass on all localization

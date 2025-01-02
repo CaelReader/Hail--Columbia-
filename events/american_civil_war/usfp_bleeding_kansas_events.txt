@@ -901,6 +901,15 @@ usfp_bleeding_kansas.10 = {
 				set_state_owner = c:CSA
 			}
 		}
+		if = {
+			limit = {
+				exists = c:CSA
+				has_state_in_state_region = STATE_MISSOURI
+			 }
+			 s:STATE_MISSOURI.region_state:USA = {
+				set_state_owner = c:CSA
+			 }
+		}
 		hidden_effect = {
 			usfp_cleanup_bleeding_kansas_variables = yes
 		}

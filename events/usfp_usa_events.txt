@@ -1345,6 +1345,9 @@ usfp_usa.16 = {
 			days = 15
 		}
 	}
+	cancellation_trigger = {
+		in_election_campaign = no
+	}
 }
 
 #even more election chaos
@@ -1387,6 +1390,9 @@ usfp_usa.17 = {
 				}	
 			}
 		}
+	}
+	cancellation_trigger = {
+		in_election_campaign = no
 	}
 }
 
@@ -1761,7 +1767,7 @@ usfp_usa.23 = {
 				is_decaying = yes
 			}
 			add_modifier = {
-				name = albany_regency_uscwf
+				name = usfp_albany_regency
 				months = 50
 			}
 			add_modifier = {
@@ -1782,6 +1788,26 @@ usfp_usa.23 = {
 		hidden_effect = {
 			ruler = {
 				remove_as_interest_group_leader = yes
+			}
+			every_country = {
+				limit = {
+					is_ai = yes
+					OR = {
+						country_is_in_north_america = yes
+						this = c:MEX
+					}
+					NOR = {
+						this = c:TEX
+						this = c:SEQ
+					}
+					NOT = {
+						is_country_type = decentralized
+					}
+				}
+				add_modifier = {
+					name = usfp_colony_ai_workaround
+					years = 3
+				}
 			}
 		}
 	}

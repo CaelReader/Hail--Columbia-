@@ -30,7 +30,6 @@
 		add_cultural_obsession = tobacco
 	}
 	c:USA = {
-		trigger_event = { id = USCWF.1 days = 1 }
 		add_declared_interest = region_great_plains
 	}
 	c:TEX = {

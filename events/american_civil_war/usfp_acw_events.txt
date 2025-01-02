@@ -200,6 +200,7 @@ usfp_acw.3 = {
 		s:STATE_WEST_VIRGINIA.region_state:CSA = {
 			set_state_owner = c:USA
 			save_scope_as = west_virginia_scope
+			reset_state_name = yes
 		}
 		s:STATE_VIRGINIA.region_state:CSA = {
 			save_scope_as = virginia_scope
@@ -215,7 +216,6 @@ usfp_acw.3 = {
 				value = small_radicals
 				culture = cu:yankee
 			}
-			reset_state_name = yes
 		}
 	}
 }

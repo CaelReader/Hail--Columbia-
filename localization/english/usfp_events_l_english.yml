@@ -6,7 +6,7 @@ acw_events.3.a.t: "The status of the Missouri Compromise will remain uncertain."
 acw_events.3.c.t: "The Missouri Compromise may not survive the realities of westward expansion."
 
 usfp_a_house_divided.1.t: "The Pickney Resolutions"
-usfp_a_house_divided.1.d: "In recent months, the House of Representatives has been buried in a flood of abolitionist petitions. In response, the [SCOPE.sParty('democratic_party').GetName] has passed resolutions forbidding the consideration or discussion of any matters pertaining to slavery."
+usfp_a_house_divided.1.d: "In recent months, the [concept_usfp_house_of_representatives] has been buried in a flood of abolitionist petitions. In response, the [SCOPE.sParty('democratic_party').GetName] has passed resolutions forbidding the consideration or discussion of any matters pertaining to slavery."
 usfp_a_house_divided.1.f: ""Resolved — that all petitions, memorials, resolutions, propositions, or papers, relating in any way, or to any extent whatever, to the subject of slavery, or the abolition of slavery, shall, without being either printed or referred, be laid upon the table, and that no further action whatever shall be had thereon.""
 usfp_a_house_divided.1.a: "This is flagrantly unconstitutional."
 usfp_a_house_divided.1.b: "Finally, lets get on with business as usual."
@@ -21,33 +21,33 @@ usfp_a_house_divided.3.b.tt: "Slavery Laws will no longer be able to be [Concept
 missouri_compromise_break: "This will #red break#! the Missouri Compromise!"
 
 usfp_a_house_divided.4.t: "Twelve Years A Slave"
-usfp_a_house_divided.4.d: "[SCOPE.sCharacter('northup_scope').GetFullName], a free black man from the North, was kidnapped and sold into slavery in the South. After over a decade in bondage, he has returned to freedom and published Twelve Years a Slave, which has immediately become a best-seller. [SCOPE.sCharacter('northup_scope').GetLastName]'s detailed account of the abhorrent conditions of slavery corroborate the North's worst fears, even as they are denied by slave-holders."
+usfp_a_house_divided.4.d: "[SCOPE.sCharacter('northup_scope').GetFullName], a free black man from the North, was kidnapped and sold into slavery in the South. After over a decade in bondage, he has returned to freedom and published his story Twelve Years a Slave, which has immediately become a best-seller. [SCOPE.sCharacter('northup_scope').GetLastName]'s detailed account of the abhorrent conditions of slavery corroborate the worst fears of northern abolitionists, even as southern critics decry them as falsehoods."
 usfp_a_house_divided.4.f: ""Let them know the heart of the poor slave — learn his secret thoughts — thoughts he dare not utter in the hearing of the white man; let them sit by him in the silent watches of the night — converse with him in trustful confidence, of "life, liberty, and the pursuit of happiness," and they will find that ninety-nine out of every hundred are intelligent enough to understand their situation, and to cherish in their bosoms the love of freedom, as passionately as themselves."" #Solomon Northup
 usfp_a_house_divided.4.a: "A harrowing tale of the evils of the South."
-usfp_a_house_divided.4.b: "His story is naught but lies and slander."
+usfp_a_house_divided.4.b: "This story is naught but lies and slander."
 
 usfp_a_house_divided.5.t: "Uncle Tom's Cabin"
-usfp_a_house_divided.5.d: "Harriet Stowe's anti-slavery novel Uncle Tom's Cabin has taken the country by storm, selling hundreds of thousands of copies in only a few months. The novel's melodramatic account of the horrors of life under slavery have swayed thousands of readers to the [SCOPE.sIdeology('abolitionist_scope').GetName] cause, and drawn just as many outraged protests from the South."
+usfp_a_house_divided.5.d: "The anti-slavery novel Uncle Tom's Cabin by author Harriet Stowe has taken the country by storm, selling hundreds of thousands of copies in only a few months. The novel's melodramatic account of the horrors of life under slavery have swayed thousands of readers to the [SCOPE.sIdeology('abolitionist_scope').GetName] cause, and drawn just as many outraged protests from the South."
 usfp_a_house_divided.5.f: ""I don't want anything of your country, except to be let alone,--to go peaceably out of it; and when I get to Canada, where the laws will own me and protect me, that shall be my country, and its laws I will obey. But if any man tries to stop me, let him take care, for I am desperate. I'll fight for my liberty to the last breath I breathe. You say your fathers did it; if it was right for them, it is right for me!""
 usfp_a_house_divided.5.a: "Everyone should know of the injustices of slavery."
 usfp_a_house_divided.5.b: "This book is an outrageous fiction."
 
 usfp_a_house_divided.6.t: "The Impending Crisis of the South"
-usfp_a_house_divided.6.d: "A radical economic treatise has been published in [SCOPE.sState('maryland_scope').GetName], laying out a case that slavery has stunted the growth of the Southern economy and will lead to its long-term ruin. The book has been so controversial that several southern states have declared its possession a capital offense, and the House of Representatives is embroiled in constant argument on the subject."
+usfp_a_house_divided.6.d: "A radical economic treatise has been published in [SCOPE.sState('maryland_scope').GetName], laying out an argument that slavery has stunted the growth of the Southern economy and will lead to its long-term ruin. The book has been so controversial that several southern states have declared its possession a capital offense, and the [concept_usfp_house_of_representatives] has become embroiled in constant argument on the subject."
 usfp_a_house_divided.6.f: ""Freesoilers and abolitionists are the only true friends of the South; slaveholders and slave-breeders are downright enemies of their own section. Anti-slavery men are working for the Union and for the good of the whole world; proslavery men are working for the disunion of the States, and for the good of nothing except themselves.""
 usfp_a_house_divided.6.a: "Slavery is bad for the South!"
-usfp_a_house_divided.6.b: "This whole notion is completely ridiculous."
+usfp_a_house_divided.6.b: "Slavery is the bedrock of Southern civilization!"
 
 usfp_a_house_divided.7.t: "[SCOPE.sState('california_scope').GetName] Petitions for Statehood"
-usfp_a_house_divided.7.d: "As the population of [SCOPE.sState('california_scope').GetName] has exploded, the new settlers have recognized the need for an organized government. They have held a constitutional convention and are now petitioning for statehood. Their constitution outlaws slavery and claims a territory that crosses the Missouri Compromise line, causing consternation in Congress over upsetting the balance between free and slave states."
+usfp_a_house_divided.7.d: "To organize the expanding population of [SCOPE.sState('california_scope').GetName], the new settlers have held a constitutional convention and are now petitioning for statehood. Their constitution outlaws slavery and claims a territory that crosses the Missouri Compromise line, causing consternation in [concept_usfp_congress] over potentially upsetting the balance between free and slave states."
 usfp_a_house_divided.7.f: ""Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, that the state of California shall be one, and is hereby declared to be one, of the United States of America, and admitted into the Union on an equal footing with the original states in all respects whatever. ""
 usfp_a_house_divided.7.a: "Welcome to the Union!"
 usfp_a_house_divided.7.b: "We cannot unilaterally add a new free state."
 compromise_of_1850_soon: "Our westward expansion has made the Missouri Compromise untenable. A new compromise will need to be developed."
 
 usfp_a_house_divided.8.t: "A New Compromise"
-usfp_a_house_divided.8.d_california: "The admission of [SCOPE.sState('california_scope').GetName] to the Union has incensed the [SCOPE.gsInterestGroup('planters_scope').GetName], who have already begun to discuss secession amongst themselves. [SCOPE.sCharacter('compromise_leader').GetFullName] has assembled a compromise package to defuse tensions: The doctrine of popular sovereignty will allow the people of each western territory to decide the status of slavery, and the Fugitive Slave Act will compel citizens of free states to help catch runaway slaves."
-usfp_a_house_divided.8.d: "The status of our western territories has continued to divide Congress.  [SCOPE.sCharacter('compromise_leader').GetFullName] has assembled a compromise package to defuse tensions: [SCOPE.sState('california_scope').GetName] will be admitted to the Union as a free state. In turn, the doctrine of popular sovereignty will allow the people of each western territory to decide the status of slavery, and the Fugitive Slave Act will compel citizens of free states to help catch runaway slaves."
+usfp_a_house_divided.8.d_california: "The admission of [SCOPE.sState('california_scope').GetName] to the Union has incensed the [SCOPE.gsInterestGroup('planters_scope').GetName], who have already begun to discuss secession amongst themselves. [SCOPE.sCharacter('compromise_leader').GetFullName] has assembled a compromise package to defuse tensions: The doctrine of [concept_usfp_popular_sovereignty] will allow the people of each western territory to decide the status of slavery, and the Fugitive Slave Act will compel citizens of free states to help catch runaway slaves."
+usfp_a_house_divided.8.d: "The status of our western territories is threatening to escalate the sectional divide between North and South. [SCOPE.sCharacter('compromise_leader').GetFullName] has assembled a compromise package to defuse tensions: [SCOPE.sState('california_scope').GetName] will be admitted to the Union as a free state. In turn, the doctrine of popular sovereignty will allow the people of each western territory to decide the status of slavery, and the Fugitive Slave Act will compel citizens of free states to help catch runaway slaves."
 usfp_a_house_divided.8.f: ""With these bills, we shall arrive at a final settlement between the sections, and preserve the union henceforth.""
 usfp_a_house_divided.8.a: "The Union is saved!"
 usfp_a_house_divided.8.b: "The Fugitive Slave Act is a step too far."
@@ -56,7 +56,7 @@ usfp_a_house_divided.8.e: "We are done compromising with the [SCOPE.gsInterestGr
 popular_sovereignty_enabled: "Our territories west of Kansas may now become Slave states if the local settlers vote in favor of it."
 
 usfp_a_house_divided.10.t: "The Kansas-Nebraska Act"
-usfp_a_house_divided.10.d: "With the western territories in need of governance, the [SCOPE.sParty('democratic_party').GetName] has put forth a bill to organize  governments for [SCOPE.sState('kansas_scope').GetName] and [SCOPE.sState('nebraska_scope').GetName]. The act would allow the people of these territories to vote on the status of slavery, ending the Missouri Compromise."
+usfp_a_house_divided.10.d: "With the western territories in need of governance, the [SCOPE.sParty('democratic_party').GetName] has put forth a bill to organize governments for [SCOPE.sState('kansas_scope').GetName] and [SCOPE.sState('nebraska_scope').GetName]. The act would allow the people of these territories to vote on the status of slavery, ending the Missouri Compromise."
 usfp_a_house_divided.10.f: ""What is the excuse for all this turmoil and mischief? We are told it is to keep the question of slavery out of Congress! Great God! It was out of Congress, completely, entirely, and forever out of Congress, until Congress dragged it in by breaking down the sacred laws which settled it!"" #Thomas Hart
 usfp_a_house_divided.10.a: "Popular sovereignty will settle the matter."
 usfp_a_house_divided.10.b: "This bill would tear the country apart."
@@ -76,19 +76,19 @@ usfp_a_house_divided.14.c: "Compromise with Slavery is immoral!"
 usfp_a_house_divided.14.b: "Compromise with the abolitionists is untenable!"
 
 usfp_a_house_divided.15.t: "Collapse of the Whigs"
-usfp_a_house_divided.15.d: "The deepening of the Slavery conflict has led to mass defections from the [SCOPE.sParty('whig_scope').GetName], leaving it completely defunct as a political organization. Already a new Republican party has been formed to take its place."
+usfp_a_house_divided.15.d: "Continuing polarization over the matter of Slavery has led to mass defections from the [SCOPE.sParty('whig_scope').GetName], leaving it completely defunct as a political organization. Already a new Republican party has been formed to take its place."
 usfp_a_house_divided.15.f: ""This new party will fitly designate those who had united to restore the Union to its true mission: that of champion and promulgator of Liberty rather than propagandist of slavery."" #Horace Greeley
 usfp_a_house_divided.15.a: "A new political era."
 usfp_a_house_divided.15.a.tt: "The [SCOPE.sParty('whig_scope').GetName] will now be known as the Republican Party."
 
 usfp_a_house_divided.16.t: "Dred Scott v. Sandford"
-usfp_a_house_divided.16.d: "The Supreme Court has handed down a landmark decision over the case of an [SCOPE.sCulture('afro_american_scope').GetName] man suing for his freedom. The court has ruled that the Constitution extends no rights to any [SCOPE.sCulture('afro_american_scope').GetName], free or slave, and further that Congress has no power to restrict Slavery in the territories."
+usfp_a_house_divided.16.d: "The [concept_usfp_supreme_court] has handed down a landmark decision over the case of an [SCOPE.sCulture('afro_american_scope').GetName] man suing for his freedom. The court has ruled that the Constitution extends no rights to any [SCOPE.sCulture('afro_american_scope').GetName], free or slave, and further that [concept_usfp_congress] has no power to restrict Slavery in the territories."
 usfp_a_house_divided.16.f: ""They were not intended to be included, under the word 'citizens' in the Constitution, and can therefore claim none of the rights and privileges which that instrument provides for and secures to citizens of the United States. On the contrary, they were considered by the founders as a subordinate and inferior class of beings who had been subjugated by the dominant race, and, whether emancipated or not, yet remained subject to their authority, and had no rights or privileges but such as those who held the power and the Government might choose to grant them.""
 usfp_a_house_divided.16.a: "This is the most obscene ruling in history!"
 usfp_a_house_divided.16.b: "Property is property, that is the end of it."
 
 usfp_a_house_divided.17.t: "The Rail Candidate"
-usfp_a_house_divided.17.d: "Amidst factional divisions within the [SCOPE.sParty('republican_party_scope').GetName], [SCOPE.sCharacter('real_abraham_lincoln_scope').GetFullName] has emerged as a surprise contender for the nomination. "
+usfp_a_house_divided.17.d: "Amidst factional divisions within the [SCOPE.sParty('republican_party_scope').GetName], [SCOPE.sCharacter('real_abraham_lincoln_scope').GetFullName] has emerged as a surprise contender for the party nomination."
 usfp_a_house_divided.17.f: ""We must have though a man who recognizes the slavery issue as being the living issue of the day; who does not hesitate to declare slavery a wrong, nor to deal with it as such; who believes in the power and duty of Congress to prevent the spread of it.""
 usfp_a_house_divided.17.a: "Honest Abe will carry the day!"
 usfp_a_house_divided.17.b: "We prefer [SCOPE.sCharacter('current_pb_leader').GetFullName]."
@@ -116,7 +116,7 @@ usfp_bleeding_kansas_swing_free: "The #bold Free-Staters#! will gain influence i
 usfp_bleeding_kansas_swing_slave: "The #bold Border Ruffians#! will gain influence in Kansas."
 
 usfp_bleeding_kansas.2.t: "Border Ruffians"
-usfp_bleeding_kansas.2.d: "Proslavery agitators from [SCOPE.sState('missouri_scope').GetName] have crossed over into [SCOPE.sState('kansas_scope').GetName] to engage in general banditry: raiding towns, ransacking houses, and stealing horses. Many have also taken up residence in [SCOPE.sState('kansas_scope').GetName] to influence the outcome of local politics in their favor."
+usfp_bleeding_kansas.2.d: "Proslavery agitators from [SCOPE.sState('missouri_scope').GetName] have begun to cross over into [SCOPE.sState('kansas_scope').GetName] to engage in general banditry: raiding towns, ransacking houses, and stealing horses. Many have also taken up permanent residence in [SCOPE.sState('kansas_scope').GetName], aiming to influence the outcome of local elections in their favor."
 usfp_bleeding_kansas.2.f: ""Gentlemen, Officers & Soldiers! This is the most glorious day of my life! This is the day I am a border ruffian! Spring like your bloodhounds at home upon that damned accursed abolition hole; break through every thing that may oppose your never flinching courage! Yes, ruffians, draw your revolvers & bowie knives, & cool them in the heart's blood of all those damned dogs, that dare defend that damned breathing hole of hell."" #David Rice Atchison
 usfp_bleeding_kansas.2.a: "This is criminal activity!"
 usfp_bleeding_kansas.2.a.tt: "500 Dixies will move to [SCOPE.sState('kansas_scope').GetName]."
@@ -124,8 +124,8 @@ usfp_bleeding_kansas.2.b: "We will look the other way."
 usfp_bleeding_kansas.2.b.tt: "1000 Dixies will move to [SCOPE.sState('kansas_scope').GetName]."
 
 usfp_bleeding_kansas.3.t: "Violence at the Polls"
-usfp_bleeding_kansas.3.d: "Local elections in [SCOPE.sState('kansas_scope').GetName] have been marred with violence and intimidation at polling places by proslavery ruffians. Thousands of fraudulent votes have been cast as a result, swinging elections for local officials in their favor."
-usfp_bleeding_kansas.3.f: ""Now you leave that ballot box behind, and come on out here at once! Otherwise, we'll knock this whole house down, and shoot you all dead!""
+usfp_bleeding_kansas.3.d: "Local elections in [SCOPE.sState('kansas_scope').GetName] have been marred with violence and intimidation at polling places by proslavery ruffians. Thousands of fraudulent votes have been cast as a result, allowing the ruffians to capture many offices and turn their legal powers against the abolitionists."
+usfp_bleeding_kansas.3.f: "A dozen men surrounded the small office where the votes were being counted.\n\n"Now you leave that ballot box behind, and come on out here at once! Otherwise, we'll knock this whole house down, and shoot you all dead!""
 usfp_bleeding_kansas.3.a: "Our elections should be held sacrosanct!"
 usfp_bleeding_kansas.3.b: "Election interference? What interference?"
 
@@ -136,14 +136,14 @@ usfp_bleeding_kansas.4.a: "This is an outrage!"
 usfp_bleeding_kansas.4.b: "The abolitionists brought this on themselves."
 
 usfp_bleeding_kansas.5.t: "Massacres in [SCOPE.sState('kansas_scope').GetName]"
-usfp_bleeding_kansas.5.d: "Horrific stories of slaughter have emerged from rural [SCOPE.sState('kansas_scope').GetName]. A band of militant abolitionists ambushed the homes of multiple proslavery men, hacking them to death with swords in front of their families before fleeing into the night. Retaliatory raids have followed in their wake, intensifying the cycle of violence."
+usfp_bleeding_kansas.5.d: "Horrific stories of slaughter have emerged from rural [SCOPE.sState('kansas_scope').GetName]. As it's told, a band of militant abolitionists ambushed the homes of multiple proslavery men, hacking them to death with swords in front of their families before fleeing into the night. Retaliatory raids by proslavery gangs have followed in their wake, driving the cycle of violence into ever higher gear."
 usfp_bleeding_kansas.5.f: ""The killings had the effect of a clap of thunder from a clear sky. The slave men stood aghast. The officials were frightened at this new move on the part of the supposed subdued free men. This was a warfare they were not prepared to wage, as of the bona fide settlers there were four free men to one slave man."" #Charles Robinson
 usfp_bleeding_kansas.5.a: "Such barbarity!"
 usfp_bleeding_kansas.5.b: "The ruffians had it coming."
 
 usfp_bleeding_kansas.6.t: "Insurrection at Harper's Ferry"
-usfp_bleeding_kansas.6.d: "In an attempt to spark a general slave uprising, [SCOPE.sCharacter('john_brown_scope').GetFullName] attacked and seized the federal arsenal at Harper's Ferry, Virginia. Unfortunately for Brown, support for his rebellion faile`d to materialize, leading to his capture after a brief siege of the arsenal. He has been pronounced guilty of murder and insurrection, and sentenced to death."
-usfp_bleeding_kansas.6.f: ""If it is deemed necessary that I should forfeit my life for the furtherance of the ends of justice, and mingle my blood further with the blood of my children and with the blood of millions in this slave country whose rights are disregarded by wicked, cruel, and unjust enactments-I submit; so let it be done."" #John Brown
+usfp_bleeding_kansas.6.d: "In an attempt to spark a general slave uprising, [SCOPE.sCharacter('john_brown_scope').GetFullName] attacked and seized the federal arsenal at Harper's Ferry, Virginia. Unfortunately for Brown, support for his rebellion failed to materialize, leading to his capture after a brief siege of the arsenal. He has been pronounced guilty of murder and insurrection, and sentenced to death."
+usfp_bleeding_kansas.6.f: ""If it is deemed necessary that I should forfeit my life for the furtherance of the ends of justice, and mingle my blood further with the blood of my children and with the blood of millions in this slave country whose rights are disregarded by wicked, cruel, and unjust enactments - I submit; so let it be done."" #John Brown
 usfp_bleeding_kansas.6.a: "He chose his own fate."
 usfp_bleeding_kansas.6.b: "We must ensure [SCOPE.sCharacter('john_brown_scope').GetFullName] survives."
 
@@ -154,7 +154,7 @@ usfp_bleeding_kansas.7.a: "By God, the madman's done it!"
 usfp_bleeding_kansas.7.b: "We must crush these uppity slaves at once!"
 
 usfp_bleeding_kansas.8.t: "Competing Constitutions"
-usfp_bleeding_kansas.8.d: "Two separate delegations have arrived from [SCOPE.sState('kansas_scope').GetName], both carrying state Constitutions to be ratified by Congress: one banning slavery and the other allowing it. Both claim to be the legitimate representatives of the people of [SCOPE.sState('kansas_scope').GetName], but it falls to us to decide which to accept."
+usfp_bleeding_kansas.8.d: "Two separate delegations have arrived from [SCOPE.sState('kansas_scope').GetName], both carrying state Constitutions to be ratified by [concept_usfp_congress]: one banning slavery and the other enshrining it. Both groups claim to be the legitimate representatives of the people of [SCOPE.sState('kansas_scope').GetName], but it falls to us to decide which to accept."
 usfp_bleeding_kansas.8.f: ""Our Constitution has been duly ratified by the rightfully elected delegates of the free state of Kansas. We've just come from Constitution Hall in Topeka, despite these border ruffians trying to stop us!"\n\n"Well our Constitution has been duly ratified by the true delegates of the people of Kansas. And we wrote ours in the #italic real#! Constitution Hall, in Lecompton!""
 usfp_bleeding_kansas.8.a: "The Free-Staters' Constitution is clearly the legitimate choice."
 usfp_bleeding_kansas.8.b: "The pro-slavery Constitution is obviously the will of the voters."
@@ -169,28 +169,28 @@ usfp_bleeding_kansas.9.a: "Finally, this tragic chapter might close."
 
 usfp_bleeding_kansas.10.t: "Border Ruffians Take [SCOPE.sState('kansas_scope').GetName]"
 usfp_bleeding_kansas.10.d_acw: "With the outbreak of civil war, the Border Ruffians have overwhelmed [SCOPE.sState('kansas_scope').GetName] and declared for the [SCOPE.sCountry('csa_scope').GetName]."
-usfp_bleeding_kansas.10.d: "After much violence and conflict, the Border Ruffians have emerged victorious from Bleeding [SCOPE.sState('kansas_scope').GetName], enshrining slavery in the state."
+usfp_bleeding_kansas.10.d: "After much violence and conflict, the Border Ruffians have emerged victorious from Bleeding [SCOPE.sState('kansas_scope').GetName], securing the territory as a slave state."
 usfp_bleeding_kansas.10.f: ""Listen! hear ye not the sighing,\nOf the Goddess, Freedom, dying,\nOn the fields of Kansas lying, Weltering in her gore!\nHear ye not her mournful pleading?\nSee ye not her votaries bleeding?\nLo! their souls from earth receding,\nCall for vengeance sore.""
 usfp_bleeding_kansas.10.a: "Finally, this tragic chapter might close."
 
 usfp_acw.1.t: "A Traitor's Peace"
-usfp_acw.1.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has published a scathing criticism of [SCOPE.sCountry('csa_scope').GetAdjective] peace demands, depicting them as dishonoring the Union and self-destructive to the North. The [SCOPE.sParty('republican_party_scope').GetName] has ran with it to bolster public support for continuing the war, denouncing what they call a Traitor's Peace."
+usfp_acw.1.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has published a scathing criticism of [SCOPE.sCountry('csa_scope').GetAdjective] peace demands, depicting them as dishonoring the Union and self-destructive to the North. The [SCOPE.sParty('republican_party_scope').GetName] has ran with it to bolster public support for continuing the war, denouncing the notion of what they're calling a Traitor's Peace."
 usfp_acw.1.f: ""People of the United States! Will you give your assent to such a base surrender of our cause? If not, then rally only with those who keep step to the music of the Union, who stand by our brave soldiers in the field! Rally for liberty and union, now and forever, one and separable!""
 usfp_acw.1.a: "The Union forever!"
 
 usfp_acw.2.t: "[SCOPE.sCountry('csa_scope').GetAdjective] Envoys Captured"
-usfp_acw.2.d: "An [ROOT.GetCountry.GetAdjective] ship has boarded a [SCOPE.sCountry('britain_scope').GetAdjective] Royal Mail ship and captured a group of [SCOPE.sCountry('csa_scope').GetAdjective] diplomats who were traveling aboard. As a neutral party, [SCOPE.sCountry('britain_scope').GetName] has protested and demanded the release of the envoys."
+usfp_acw.2.d: "[ROOT.GetCountry.GetAdjective] marines have boarded a [SCOPE.sCountry('britain_scope').GetAdjective] Royal Mail ship and captured a group of [SCOPE.sCountry('csa_scope').GetAdjective] diplomats who were traveling aboard. As a neutral party, [SCOPE.sCountry('britain_scope').GetName] has protested this action, and is demanding the release of the envoys."
 usfp_acw.2.f: ""Illegal and unjustifiable by international law. Our ship, under the circumstances, cannot be considered as acting in breach of international law. It follows, that from on board a merchant-ship of a neutral power, pursuing a lawful and innocent voyage, certain individuals have been taken by force. Her Majesty's Government will, therefore, in our opinion, be justified in requiring reparation for the international wrong which has been on this occasion committed."" #British Parliament
 usfp_acw.2.a: "We do not wish war with [SCOPE.sCountry('britain_scope').GetName]. Release the envoys."
 usfp_acw.2.b: "The envoys will remain in our custody, regardless of the circumstances."
 
 usfp_acw.3.t: "[SCOPE.sState('west_virginia_scope').GetName] Breaks Away"
 usfp_acw.3.d: "Outraged by the seccession of [SCOPE.sState('virginia_scope').GetName], local delegates in [SCOPE.sState('west_virginia_scope').GetName] have organized their own state government and declared for the Union."
-usfp_acw.3.f: ""The Convention's decision is unconstitutional, unconscionable treason! We of West Virginia will follow the rebels in their headlong plunge into ruin and fratricide!""
+usfp_acw.3.f: ""The Convention's decision is unconstitutional, unconscionable treason! We of West Virginia will not follow the rebels in their headlong plunge into ruin and fratricide!""
 usfp_acw.3.a: "Welcome to the Union, [SCOPE.sState('west_virginia_scope').GetName]!"
 
 usfp_acw.4.t: "The Ironclad Concept"
-usfp_acw.4.d: "An enterprising inventor has come up with a plan to ensure our naval dominance in the Civil War: ironclad ships. By quickly converting some of our existing ships into ironclads, we could smash the rebel ships and control Atlantic shipping with impunity. Rumor has it that the insurrectionists are already in the process of acquiring their own ironclads."
+usfp_acw.4.d: "An enterprising inventor has come up with a plan to ensure our naval dominance in the Civil War: ironclad ships. By quickly converting some of our existing ships into ironclads, we could smash the rebel ships and control Atlantic shipping with impunity. Rumor has it that the insurrectionists are already in the process of acquiring their own ironclads, which would threaten to scuttle our entire navy if not countered."
 usfp_acw.4.f: "Now is the age of iron, sirs. If the Union is slow to act on this matter, the rebels will be in New York Harbor by the end of the year!"
 usfp_acw.4.a: "Fund it!"
 usfp_acw.4.b: "This is too costly of a gamble."
@@ -202,7 +202,7 @@ usfp_acw.5.f: "There was an uneasy tension between the Indians and the Confedera
 usfp_acw.5.a: "Damn them!"
 
 usfp_acw.6.t: "The March to the Sea"
-usfp_acw.6.d: "Union forces marching through [SCOPE.sState('georgia_scope').GetName] have embarked on a campaign of scorched earth against the rebel heartland, leaving devastation and civilian casualties in their wake."
+usfp_acw.6.d: "Union forces marching through [SCOPE.sState('georgia_scope').GetName] have embarked on a scorched earth campaign against the rebel heartland, leaving a trail of devastation and civilian dead in their wake."
 usfp_acw.6.f: ""Behind us lay Atlanta, smouldering and in ruins, the black smoke rising high in air, and hanging like a pall over the ruined city. Some band, by accident, struck up the anthem of "John Brown's Body"; the men caught up the strain, and never before or since have I heard the chorus of "Glory, glory, hallelujah!" done with more spirit, or in better harmony of time and place."" #William Sherman
 usfp_acw.6.a: "The price of rebellion."
 usfp_acw.6.b: "We need to restrain our forces."
@@ -220,8 +220,8 @@ usfp_acw.8.a: "Leave the South to their evil ways."
 usfp_acw.8.b: "We must crush the South and liberate the slaves!"
 
 usfp_acw.9.t: "The Union Forever?"
-usfp_acw.9.d: "With the victory of the [SCOPE.sCountry('acw_secession_country').GetName], the great Union assembled by the founding fathers seems to have been irreparably shattered. Even now with the nation reeling from defeat, radicals have begun to openly question the very idea of the states remaining united."
-usfp_acw.9.f: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting] watched the lowering of the Stars and Stripes solemnly. Some of those stars will have to be removed now, [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting] thought, and perhaps next year another star, then another. The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] could see only dark clouds ahead."
+usfp_acw.9.d: "With the victory of the [SCOPE.sCountry('acw_secession_country').GetName], the great Union assembled by the founding fathers seems to have been irreparably shattered. Even as the nation reels from this defeat, radicals have already begun to openly question the legitimacy of the federal government."
+usfp_acw.9.f: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting] watched the lowering of the Stars and Stripes solemnly. Some of those stars will have to be removed now, [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting] thought, and perhaps next year another star, then another. The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] could see only dark clouds ahead for the nation."
 usfp_acw.9.a: "The [SCOPE.sCountry('acw_secession_country').GetName] cannot be allowed to exist."
 usfp_acw.9.b: "The Union requires a firm hand to guide it through this catastrophe."
 
@@ -243,64 +243,64 @@ usfp_acw.11.c: "They are belligerents and will be treated accordingly."
 
 usfp_acw.13.t: "[SCOPE.sCountry('mexico_scope').GetName] Revolts!"
 usfp_acw.13.d: "With the [ROOT.GetCountry.GetName] in chaos, [SCOPE.sCountry('mexico_scope').GetAdjective] nationalists have seized on the opportunity to oust our occupation and declare independence once more."
-usfp_acw.13.f: ""The Mexican Nation, which has had its will strnagled and its voice silenced, leaves today the oppression forced upon it."" #adapted from Mexican Declaration of Independence
+usfp_acw.13.f: ""The Mexican Nation, which has had its will strangled and its voice silenced, leaves today the oppression forced upon it."" #adapted from Mexican Declaration of Independence
 usfp_acw.13.a: "We cannot stop them."
 usfp_acw.13.b: "Stop them!"
 
 #Reconstruction Events
 usfp_reconstruction.1.t: "The Freedmen's Bureau"
-usfp_reconstruction.1.d: "A commission on the conditions in the South has suggested the creation of a new government agency: the Freedmen's Bureau. The agency would give direct aid to refugees and recently-liberated former slaves, and help transition them into free society."
+usfp_reconstruction.1.d: "A commission on the conditions in the South has suggested the creation of a new government agency: the Freedmen's Bureau. This agency would give direct aid to refugees and those recently liberated from slavery, in order to help transition them into free society."
 usfp_reconstruction.1.f: ""Offer the freedmen temporary aid and counsel until they become accustomed to their new sphere of life; secure to them, by law, their just rights of person and property; relieve them, by a fair and equal administration of justice, from the depressing influence of disgraceful prejudice. Above all, guard them against the virtual restoration of slavery in any form, under any pretext, and then let them take care of themselves. If we allow this, the future of the African race in this country will be conducive to its prosperity and associated with its well-being."" #Freedmen's Inquiry Commission
 usfp_reconstruction.1.a: "The Bureau will be an invaluable tool in advancing Reconstruction."
 usfp_reconstruction.1.b: "This is an unnecessary expense."
 
 usfp_reconstruction.2.t: "The Ku Klux Klan"
-usfp_reconstruction.2.d: "A white supremacist organization calling itself the Ku Klux Klan has emerged in [SCOPE.sState('tennessee_scope').GetName], and embarked on a campaign of terror against Reconstruction. Horrific stories of lynchings, arson, and mutilations at the hands of the Klan have spread the group's infamy far and wide."
+usfp_reconstruction.2.d: "A white supremacist organization from [SCOPE.sState('tennessee_scope').GetName] calling itself the Ku Klux Klan has embarked on a campaign of terror against Reconstruction. Horrific stories of lynchings, arson, and mutilations at the hands of the Klan have quickly spread the group's infamy far and wide."
 usfp_reconstruction.2.f: ""You do solemnly swear, in the presence of Almighty God and before this assembly of witnesses, that you will do the acts commanded of you by the commander of this Ku Klux Klan, outside of the civil law, to suppress the negro and keep him in the position where he belongs, and to see that the Democratic party controls this country, so help you God."" #Klan oath
 usfp_reconstruction.2.a: "Crack down on these terrorists!"
 usfp_reconstruction.2.b: "We will turn a blind eye."
 
 usfp_reconstruction.3.t: "[SCOPE.sCulture('afro_american_culture').GetName] Legislators"
-usfp_reconstruction.3.d: "With freedmen granted the vote, they have quickly elected a slate of [SCOPE.sCulture('afro_american_culture').GetName] representatives to the [SCOPE.sState('original_33_state').GetName] state legislature. While a minority in the assembly, white opponents to their presence have already launched a series of legal challenges to their right to hold office in the state."
+usfp_reconstruction.3.d: "With freedmen granted the vote, they have quickly elected a slate of [SCOPE.sCulture('afro_american_culture').GetName] representatives to the [SCOPE.sState('original_33_state').GetName] state legislature. While a minority in the assembly, the racist opposition has already launched a series of legal challenges against any [SCOPE.sCulture('afro_american_culture').GetName]'s right to hold office in the state."
 usfp_reconstruction.3.f: "There was disquiet in the chamber when the new delegates entered. The old guard filled the room with boos, jeers, and slurs. Only after they were satisfied was the assembly brought to order."
 usfp_reconstruction.3.a: "Ensure that they are not ousted from their offices."
 usfp_reconstruction.3.b: "They chose to run for office, now they can fend for themselves."
 
 usfp_reconstruction.4.t: "The Lost Cause"
-usfp_reconstruction.4.d: "In the wake of their defeat, the South has turned to denying history to justify its own actions. Proponents of this new 'Lost Cause' idea claim that slavery was only marginally relevant to the civil war, and that the Confederacy's cause was just and pure."
+usfp_reconstruction.4.d: "To cope with the psychological shock of their defeat, the South has turned to denying history in order to justify its own actions. Proponents of this 'Lost Cause' idea have begun to claim that slavery was only marginally relevant to the civil war, and that the Confederacy's cause was pure and just."
 usfp_reconstruction.4.f: ""The greatest efforts made by the defeated insurgents since the close of the war have been to promulgate the idea that the cause of liberty, justice, humanity, equality, and all the calendar of the virtues of freedmen, suffered violence and wrong when the effort for southern independence failed."" #George Thomas
 usfp_reconstruction.4.a: "This view of history will speed reconciliation."
 usfp_reconstruction.4.b: "We will not forget the crimes of the South."
 
 usfp_reconstruction.6.t: "Confederate Émigrés"
-usfp_reconstruction.6.d: "In the aftermath of the [SCOPE.sCountry('usa_scope').GetAdjective] Civil War, many former slave-holders have determined that [ROOT.GetCountry.GetName] is more amenable to their way of life, and declared their intention to migrate here. Several delegations have petitioned the government for aid in this matter, and many ministers agree that the former Confederates would bring valuable agricultural expertise with them."
+usfp_reconstruction.6.d: "In the aftermath of the [SCOPE.sCountry('usa_scope').GetAdjective] Civil War, many former slave-holders have determined that [ROOT.GetCountry.GetName] is more amenable to their way of life, and declared their intention to migrate here. Several delegations have petitioned our government for aid in this matter, and many ministers agree that the former Confederates would bring valuable agricultural expertise were they allowed to settle."
 usfp_reconstruction.6.f: ""Those northern Yankees made our lives so impossible in the United States that we have been compelled to leave. We of the South hold Brazil in the greatest respect, and already feel welcomed by her hospitality.""
 usfp_reconstruction.6.a: "These Confederados will be of great value to our economy."
-usfp_reconstruction.6.b: "We don't need to take on the cast-offs of America."
+usfp_reconstruction.6.b: "We don't need American renegades in our midst."
 
 usfp_reconstruction.7.t: "Confederados"
-usfp_reconstruction.7.d: "At the invitation of the [SCOPE.sCountry('brazil_scope').GetAdjective] government, thousands of ex-Confederates have begun to depart for [SCOPE.sState('confederados_state_scope').GetName]. With slavery defeated in the [ROOT.GetCountry.GetName], [SCOPE.sCountry('brazil_scope').GetNameNoFormatting] presents an opportunity for them to carry on the peculiar institution, although transplanted to the other side of the equator."
+usfp_reconstruction.7.d: "At the invitation of the [SCOPE.sCountry('brazil_scope').GetAdjective] government, thousands of ex-Confederates have begun to depart for [SCOPE.sState('confederados_state_scope').GetName]. With slavery defeated in the [ROOT.GetCountry.GetName], [SCOPE.sCountry('brazil_scope').GetNameNoFormatting] presents an opportunity for them to transplant their peculiar institution to the other side of the equator."
 usfp_reconstruction.7.f: ""The official authorities have manifested great readiness to receive favorably all of our people; and they hold out the encouragement of prospective assistance to all who would need aid in emigrating to this empire with their families. The people everywhere exhibit likewise the most cordial disposition towards our movement to their land."" #Hunting a Home in Brazil
-usfp_reconstruction.7.a: "They are free to leave, good riddance to them."
+usfp_reconstruction.7.a: "They are free to leave, and good riddance to them!"
 
 usfp_reconstruction.8.t: "The Second Founding"
-usfp_reconstruction.8.d: "Reconstruction is finally coming to a close as the South is reincorporated fully into the [ROOT.GetCountry.GetName]. Our efforts to uphold the promise of [SCOPE.sCulture('afro_american_culture').GetName] liberty have borne fruit, and have enabled them to transform themselves. What were once down-trodden slaves are now free citizens, homeowners, even officials. [SCOPE.sCulture('dixie_culture').GetName] rage is sure to continue, but their attempts to return to the Antebellum have been thwarted, hopefully for good."
+usfp_reconstruction.8.d: "Reconstruction is finally coming to a close as the southern states are reincorporated fully into the [ROOT.GetCountry.GetName]. Our efforts to uphold the promise of [SCOPE.sCulture('afro_american_culture').GetName] liberty have borne fruit through great effort. What were once down-trodden slaves are now free citizens, homeowners, and even elected officials. [SCOPE.sCulture('dixie_culture').GetName] rage will doubtlessly persist for generations, but the Redeemers' attempts to return to the Antebellum have been thwarted, hopefully for good."
 usfp_reconstruction.8.f: ""It is not light that we need, but fire; it is not the gentle shower, but thunder. We need the storm, the whirlwind, and the earthquake."" #Frederick Douglass
 usfp_reconstruction.8.a: "There is no progress without struggle."
 usfp_reconstruction.8.b: "Our promise is only half-fulfilled."
 
 usfp_reconstruction.9.t: "Divided Dixie"
-usfp_reconstruction.9.d: "Reconstruction is finally coming to a close as the South is reincorporated fully into the [ROOT.GetCountry.GetName]. States with large [SCOPE.sCulture('afro_american_culture').GetName] populations have been able to secure the fruits of Reconstruction, while those with [SCOPE.sCulture('dixie_culture').GetName] majorities have succumbed to Redeemer control. The wounds of the war have been closed, but the South has been divided up into a patchwork of free states and 'Jim Crow' states."
+usfp_reconstruction.9.d: "Reconstruction is finally coming to a close as the southern states are reincorporated fully into the [ROOT.GetCountry.GetName]. States with large [SCOPE.sCulture('afro_american_culture').GetName] populations have been able to secure the fruits of Reconstruction, while those with [SCOPE.sCulture('dixie_culture').GetName] majorities have succumbed to Redeemer control. The wounds of the war have scarred over, but the South now stands divided between free states and racist '[concept_usfp_jim_crow]' regimes."
 usfp_reconstruction.9.f: ""All I ask is, give the black man a chance to stand on his own legs! Let him alone! If you see him on his way to school, let him alone, -- don't disturb him! If you see him going to the dinner-table at a hotel, let him go! If you see him going to the ballot-box, let him alone, -- don't disturb him!"" #Frederick Douglass
 usfp_reconstruction.9.a: "Time will heal all wounds."
 
 usfp_reconstruction.10.t: "The Redemption of the South"
-usfp_reconstruction.10.d: "Reconstruction is finally coming to a close as the South is reincorporated fully into the [ROOT.GetCountry.GetName]. In the face of violent opposition and weak government support, Reconstruction has failed, leaving the Redeemers in full control of the former Confederacy. While this has allowed a reconciliation with the rebels on the national level, it entails the destruction of [SCOPE.sCulture('afro_american_culture').GetName] rights across the South."
+usfp_reconstruction.10.d: "Reconstruction is finally coming to a close as the southern states are reincorporated fully into the [ROOT.GetCountry.GetName]. In the face of violent opposition and weak government support, Reconstruction has failed, leaving the Redeemers in full control of the former Confederacy. While this has allowed a reconciliation with the rebels on the national level, it entails the destruction of [SCOPE.sCulture('afro_american_culture').GetName] rights under the heel of racist '[concept_usfp_jim_crow]' laws that have been implemented across the South."
 usfp_reconstruction.10.f: ""Where justice is denied, where poverty is enforced, where ignorance prevails, and where any one class is made to feel that society is an organized conspiracy to oppress, rob and degrade them, neither persons nor property will be safe."" #Frederick Douglass
 usfp_reconstruction.10.a: "This will haunt our country for centuries to come."
 usfp_reconstruction.10.b: "Reconciliation with the South is all that matters."
-usfp_reconstruction_full_jim_crow: "Jim Crow laws will be enacted in all southern states."
-usfp_reconstruction_partial_jim_crow: "Jim Crow laws will be enacted in southern states that lack a large Afro-American population."
+usfp_reconstruction_full_jim_crow: "[concept_usfp_jim_crow] laws will be enacted in all southern states."
+usfp_reconstruction_partial_jim_crow: "[concept_usfp_jim_crow] laws will be enacted in southern states that lack a large Afro-American population."
 
 usfp_reconstruction.11.t: "A Devil's Bargain"
 usfp_reconstruction.11.d: "A conspiracy of southern states has concocted a plan to contest the upcoming election results and prevent the ascension of the lawfully elected president. Through backroom channels, the South is attempting to blackmail the federal government: either end Reconstruction now, or the election will be cast into jeopardy."
@@ -310,19 +310,19 @@ usfp_reconstruction.11.b: "We will not be swayed by the slavers' threats."
 
 usfp_reconstruction.12.t: "[SCOPE.gsInterestGroup('pb_ig').GetName] Reject Reconstruction!"
 usfp_reconstruction.12.d: "While largely a solid support base of the [SCOPE.sParty('republican_party_scope').GetName], many members of the [SCOPE.gsInterestGroup('pb_ig').GetName] have been alarmed by the government's aggressive policy of Reconstruction. Full racial integration is unpopular among the middle class, and they have begun to vocally oppose what they see as undeserved government support of the southern freedmen."
-usfp_reconstruction.12.f: ""Too far, too fast." was the message heard by the representatives. Of course slavery was a great moral evil that needed to be stopped, but now with the war over, surely we should be reconciling with the noble Whites of the south? Anti-reconstructionists conjured up a frightening image of the North imposing a colored regime on the South as punishment, a state of affairs many White moderates can not tolerate."
+usfp_reconstruction.12.f: ""Too far, too fast." was the message heard by the representatives. Of course slavery was a great moral evil that needed to be stopped, but now with the war over, surely we should be reconciling with the noble Whites of the south? Anti-reconstructionists conjured up a frightening image of the North imposing a colored regime on the South as punishment, a state of affairs many White moderates would not tolerate."
 usfp_reconstruction.12.a: "Reconstruction must be thorough and complete."
-usfp_reconstruction.12.b: "We can't lose our base."
+usfp_reconstruction.12.b: "We can't alienate our base."
 
 usfp_reconstruction.13.t: "The White Man's Platform"
-usfp_reconstruction.13.d: "Opponents of Reconstruction have launched a concerted propaganda campaign against the [SCOPE.sParty('republican_party_scope').GetName], playing on racial animosities among the populace. If the leaflets are to be believed, then the [SCOPE.sParty('republican_party_scope').GetName] is a government entirely by and for [SCOPE.sCulture('afro_american_culture').GetName]s, a message that has resonated with voters."
+usfp_reconstruction.13.d: "Opponents of Reconstruction have launched a concerted propaganda campaign against the [SCOPE.sParty('republican_party_scope').GetName], appealing to racial animosities among the White electorate. If the leaflets are to be believed, then the [SCOPE.sParty('republican_party_scope').GetName] is a government entirely by and for [SCOPE.sCulture('afro_american_culture').GetName]s, a message that has unfortunately resonated with the voting public."
 usfp_reconstruction.13.f: "OUR MOTTO:\n\nThis is a White Man's Country; Let White Men Rule!" #Seymour/Blair Campaign Badge
 usfp_reconstruction.13.a: "Some leaflets aren't going to change our tune."
 usfp_reconstruction.13.b: "We need some new messaging."
 
 usfp_reconstruction.14.t: "[SCOPE.sCharacter('assassination_target').GetFullName] Shot!"
-usfp_reconstruction.14.d: "[SCOPE.sCharacter('assassination_target').GetFullName] and several of [SCOPE.sCharacter('assassination_target').GetHerHis] staff have been shot by a [SCOPE.sCulture('dixie_culture').GetName] man! The attacker, who loudly proclaimed their opposition to Reconstruction, was quickly apprehended. [SCOPE.sCharacter('assassination_target').GetFullName] has been rushed to medical care in critical condition."
-usfp_reconstruction.14.f: "A man in a coat came through the door. I heard him shout "Bastard!", then the shots rang out and everything was chaos."
+usfp_reconstruction.14.d: "[SCOPE.sCharacter('assassination_target').GetFullName] and several of [SCOPE.sCharacter('assassination_target').GetHerHis] staff have been shot by a [SCOPE.sCulture('dixie_culture').GetName] radical! The attacker boldly proclaimed their opposition to Reconstruction before making a run for it, but was quickly apprehended. [SCOPE.sCharacter('assassination_target').GetFullName] has been rushed to medical care in critical condition."
+usfp_reconstruction.14.f: ""A man in a coat came through the door. I heard him shout "Bastards!", then shots rang out and everything was chaos. The smell of blood and powder filled the air. Some of us scrambled into cover, others tackled the shooter. Several men were left groaning on the floor with bloody jackets.""
 usfp_reconstruction.14.a: "Violence cannot stop righteousness!"
 usfp_reconstruction.14.b: "Maybe we should save our own skins."
 
@@ -637,7 +637,7 @@ georgists_can_spawn_double: "[SCOPE.sIdeology('georgism_scope').GetName] charact
 #11 moved to progressive
 
 usfp_usa.12.t: "The [ROOT.GetCountry.GetAdjective] Hippo Plan"
-usfp_usa.12.d: "A novel proposal has been submitted to Congress as a solution to the rising cost of $meat$. The plan calls for a population of African Hippopotamuses to be introduced to the [SCOPE.sState('louisiana_scope').GetName] bayou, where they can feast on invasive plants and be slaughtered for their meat."
+usfp_usa.12.d: "A novel proposal has been submitted to [concept_usfp_congress] as a solution to the rising cost of $meat$. The plan calls for a population of African Hippopotamuses to be introduced to the [SCOPE.sState('louisiana_scope').GetName] bayou, where they can feast on invasive plants and be slaughtered for their meat."
 usfp_usa.12.f: ""Great Britain has eaten the Australian kangaroo and likes him, horseflesh is a staple in continental Europe, and the people of Central America eat the lizard. Why cannot Americans absorb the hippopotamus?""
 usfp_usa.12.a: "This idea is... absolutely ludicrous."
 usfp_usa.12.b: "This idea is brilliant! We shall feast on lake cow bacon!"
@@ -663,7 +663,7 @@ usfp_usa.19.c: "I defy any sonofabitch to get me out under four terms!"
 usfp_usa.19.e: "We should not change horses mid stream!"
 
 usfp_usa.20.t: "Separation of Powers"
-usfp_usa.20.d: "With chaos in the Executive Branch, Congress has been forced to take a leading role in the [ROOT.GetCountry.GetAdjective] government, in violation of the constitution. With no obvious mechanism to restore normalcy, it falls to Congress to determine the future structure of the republic."
+usfp_usa.20.d: "With chaos in the Executive Branch, [concept_usfp_congress] has been forced to take a leading role in the [ROOT.GetCountry.GetAdjective] government, in violation of the constitution. With no obvious mechanism to restore normalcy, it falls to the representatives to determine the future structure of the republic."
 usfp_usa.20.f: ""The principle of the Constitution is that of a separation of legislative, Executive and Judiciary functions, except in cases specified. If this principle be not expressed in direct terms, it is clearly the spirit of the Constitution, and it ought to be so commented and acted on by every friend of free government."" #Thomas Jefferson
 usfp_usa.20.a: "We must restore the rightful republic."
 usfp_usa.20.b: "Amend the constitution. Congress will reign supreme."
@@ -679,7 +679,7 @@ usfp_usa.22.f: "Crowds buzzed through the streets set aside for the exposition, 
 usfp_usa.22.a: "Here's to another 100 years!"
 
 usfp_usa.23.t: "The [ROOT.GetCountry.GetRuler.GetLastName] Presidency"
-usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an inedible mark on the history of the office. After asserting the powers of the Federal government in the Nullification Crisis, he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the Supreme Court rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of slavery continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
+usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of the office. After asserting the powers of the Federal government in the [concept_usfp_nullification_crisis] he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the Supreme Court rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of slavery continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
 usfp_usa.23.f: ""But you must remember, my fellow-citizens, that eternal vigilance by the people is the price of liberty, and that you must pay the price if you wish to secure the blessing."" #Andrew Jackson
 usfp_usa.23.a: "This is a time of opportunity."
 
@@ -850,7 +850,7 @@ usfp_gilded_age.2.c: "Deny everything!"
 usfp_gilded_age.2.e: "Stop the spread of this misinformation."
 
 usfp_gilded_age.3.t: "Postal Fraud"
-usfp_gilded_age.3.d: "A corruption ring within the Post Office has been discovered, funneling millions from the treasury into the hands of corrupt senators and secretaries via fraudulent mail contracts. National newspapers have already begun printing the scandal in frontpage headlines, and Congress has demanded a thorough investigation."
+usfp_gilded_age.3.d: "A corruption ring within the Post Office has been discovered, funneling millions from the treasury into the hands of corrupt senators and secretaries via fraudulent mail contracts. National newspapers have already begun printing the scandal in frontpage headlines, and [concept_usfp_congress] has demanded a thorough investigation."
 usfp_gilded_age.3.f: ""THE STAR ROUTE SWINDLE" was across all the papers. Caricactures of the men involved stole away bags of treasury funds while an impotent congress looked away. The mockery would have been less effective if it wasn't so accurate."
 usfp_gilded_age.3.a: "This cannot be allowed to continue."
 usfp_gilded_age.3.b: "Downplay the issue."
@@ -1020,7 +1020,7 @@ usfp_progressive_era.13.a: "We must revitalize our public institutions."
 usfp_progressive_era.13.b: "Machines keep the money flowing."
 
 usfp_progressive_era.14.t: "The History of [SCOPE.sCompany('standard_oil_scope').GetName]"
-usfp_progressive_era.14.d: "Muckraker Ida Tarbell has published a series of articles exposing the underhanded business practices of [SCOPE.sCompany('standard_oil_scope').GetName], detailing their intentional monopolization of the market. Newspapers across the country have praised Tarbell's work and denounced the company's illegal and rapacious behavior. Progressive voices within Congress have already put together a plan to strengthen antitrust laws and break up [SCOPE.sCompany('standard_oil_scope').GetName]."
+usfp_progressive_era.14.d: "Muckraker Ida Tarbell has published a series of articles exposing the underhanded business practices of [SCOPE.sCompany('standard_oil_scope').GetName], detailing their intentional monopolization of the market. Newspapers across the country have praised Tarbell's work and denounced the company's illegal and rapacious behavior. Progressive voices within [concept_usfp_congress] have already put together a plan to strengthen antitrust laws and break up [SCOPE.sCompany('standard_oil_scope').GetName]."
 usfp_progressive_era.14.f: ""Now, if this company were the only concern in the country guilty of the practices which have given it monopolistic power, this story never would have been written. But it is simply the most conspicuous type of what can be done by these practices. The methods it employs with such acumen, persistency, and secrecy are employed by all sorts of business men, from corner grocers up to bankers. If exposed, they are excused on the ground that this is business."" #Ida Tarbell
 usfp_progressive_era.14.a: "Let's bust some trusts!"
 usfp_progressive_era.14.b: "Why should [SCOPE.sCompany('standard_oil_scope').GetName] be punished for its success?"

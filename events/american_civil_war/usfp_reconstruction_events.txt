@@ -857,7 +857,7 @@ usfp_reconstruction.12 = {
 	cooldown = {months = very_long_modifier_time } #once
 
 	trigger = {
-		var:reconstruction_var > 15
+		var:reconstruction_var > 13
 		ig:ig_petty_bourgeoisie = {
 			law_stance = {
 				law = law_type:law_cultural_exclusion
@@ -931,7 +931,7 @@ usfp_reconstruction.13 = {
 	}
 
 	trigger = {
-		var:reconstruction_var > 12 #doesnt even need to be particularly radical
+		var:reconstruction_var > 11 #doesnt even need to be particularly radical
 		in_election_campaign = yes
 	}
 
@@ -977,7 +977,7 @@ usfp_reconstruction.14 = {
 				}
 			}
 		}
-		var:reconstruction_var > 15
+		var:reconstruction_var > 14
 	}
 
 	immediate = {

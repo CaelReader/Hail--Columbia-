@@ -9,3 +9,48 @@
 concept_usfp_washington_precedent = {
 	texture = "gfx/interface/icons/event_icons/hail_columbia_icon.dds"
 }
+
+#historical concepts
+concept_usfp_house_of_representatives = {
+	texture = "gfx/interface/icons/invention_icons/academia.dds"
+}
+
+concept_usfp_senate = {
+	texture = "gfx/interface/icons/invention_icons/academia.dds"
+}
+
+concept_usfp_congress = {
+	texture = "gfx/interface/icons/invention_icons/academia.dds"
+}
+
+concept_usfp_louisiana_purchase = {
+	texture = "gfx/interface/icons/invention_icons/academia.dds"
+}
+
+concept_usfp_trusts = {
+	texture = "gfx/interface/icons/invention_icons/academia.dds"
+}
+
+concept_usfp_political_machines = {
+	texture = "gfx/interface/icons/invention_icons/academia.dds"
+}
+
+concept_usfp_muckrakers = {
+	texture = "gfx/interface/icons/invention_icons/academia.dds"
+}
+
+concept_usfp_popular_sovereignty = {
+	texture = "gfx/interface/icons/invention_icons/academia.dds"
+}
+
+concept_usfp_supreme_court = {
+	texture = "gfx/interface/icons/invention_icons/academia.dds"
+}
+
+concept_usfp_nullification_crisis = {
+	texture = "gfx/interface/icons/invention_icons/academia.dds"
+}
+
+concept_usfp_jim_crow = {
+	texture = "gfx/interface/icons/invention_icons/academia.dds"
+}

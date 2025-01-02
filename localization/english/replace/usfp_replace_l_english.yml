@@ -6,8 +6,8 @@ je_acw_countdown:0 "A House Divided"
 je_acw_countdown_reason:0 "The issue of slavery has divided the North and South of the [ROOT.GetCountry.GetName] since before the drafting of the Declaration of Independence. Then as now, a series of compromises in the Federal government have forestalled open conflict. As the [SCOPE.sIdeology('abolitionist_scope').GetName] cause continues to grow in the North, the [SCOPE.gsInterestGroup('landowners_scope').GetName] have continued to demand more concessions and compromises to protect their 'peculiar institution' from interference.\n\nOne way or another, the Union cannot endure half slave and half free for much longer."
 
  je_acw_war:0 "The American Civil War"
- je_acw_war_reason:0 "War between the states is upon us. Now is the time to preserve the Union, or die trying.\n\n"
- acw_war_tt_complete:0 "Secessionists have been defeated and reannexed."
+ je_acw_war_reason:0 "War between the states is upon us. Now is the time to preserve the Union, or die trying."
+ acw_war_tt_complete:0 "The secessionists have been defeated and reannexed."
 acw_war_support_tooltip: "The [SCOPE.sCountry('csa_scope').GetName] believe that they can outlast our will to fight. Defeating them in battles will #italic increase#! their [concept_war_support]. We can [Concept('concept_occupation', 'Occupy')] the Mississippi river to break their hopes of victory."
 
  acw_events.3.t:0 "The [SCOPE.sCharacter('wilmot_proviso_ig_leader').GetLastName] Proviso"
@@ -35,7 +35,7 @@ acw_je_events.2.g: "We never intended to intrude upon the South's way of life."
  je_indian_removal_reason:2 "The Five Civilized Tribes have long lived in the American south, and have been the target of 'civilizing' missions since the days of independence. In recent decades, [SCOPE.sCulture('yankee_culture').GetName] and [SCOPE.sCulture('dixie_culture').GetName] settlers have increasingly encroached on the lands of the Five Tribes, sparking violent conflicts.\n\nThe Jackson administration chose to support the incoming settlers, and resolved to see all natives removed to the [SCOPE.sCountry('indian_territory_scope').GetName], regardless of the cost."
 
  native_resettlement.2.t:1 "John Ross' Protest Petition"
- native_resettlement.2.d:1 "[SCOPE.sCountry('cherokee_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('cherokee_scope').GetRuler.GetFullName] has presented a petition to Congress asking them to void the treaty which will compel the [SCOPE.sCulture('cherokee_culture').GetName] nation to relocate to the [SCOPE.sCountry('indian_territory_scope').GetName]. His petition has almost as many signatures as the entire eastern Cherokee population."
+ native_resettlement.2.d:1 "[SCOPE.sCountry('cherokee_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('cherokee_scope').GetRuler.GetFullName] has presented a petition to [concept_usfp_congress] asking them to void the treaty which will compel the [SCOPE.sCulture('cherokee_culture').GetName] nation to relocate to the [SCOPE.sCountry('indian_territory_scope').GetName]. His petition has almost as many signatures as the entire eastern Cherokee population."
  native_resettlement.2.f:0 ""By the stipulations of this treaty, we are stripped of every attribute of freedom. Our property may be plundered before our eyes; violence may be committed on our persons, even our lives may be taken away, and there is none to regard our complaints. We are denationalized; we are disfranchised. We are deprived of membership in the human family!""
  native_resettlement.2.a:0 "A treaty is a treaty. We cannot rescind what we have signed."
  native_resettlement.2.b:0 "Our conscience compels us to void the removal treaty."
@@ -81,8 +81,6 @@ je_acw_reconstruction_goal:0 "Reconstruct the formerly-rebellious states."
 je_acw_reconstruction_status_radical: "The #bold Freedmen#! are asserting their new rights and positions in society."
 je_acw_reconstruction_status_mixed: "Reconstruction remains highly contested across the South."
 je_acw_reconstruction_status_failure: "The white supremacist #bold Redeemers#! tighten their grip on the South."
-
- law_worker_protections:0 "Workers’ Protections"
 
  je_oregon:0 "The Oregon Border Dispute"
  je_oregon_reason:0 "The proper location of the Oregon border has long been an undecided matter between Great Britain and the United States. As our settlers continue to push west, we will need to reach a final settlement with the British.\n\nAlternatively, if we find ourselves at war in California, a treaty will become a military necessity."

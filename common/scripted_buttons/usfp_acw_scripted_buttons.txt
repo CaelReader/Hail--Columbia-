@@ -325,3 +325,64 @@ usfp_break_gag_rule_button = {
 		base = 1000
 	}
 }
+
+#radical abolitionists can press this for more war support
+usfp_acw_support_button = {
+	name = "usfp_acw_support_button"
+	desc = "usfp_acw_support_button_desc"
+
+	visible = {
+		NOT = {
+			has_variable = acw_pushed_support
+		}
+		exists = c:CSA
+	}
+
+	possible = {
+		OR = {
+			ruler = {
+				has_ideology = ideology:ideology_usfp_abolitionist_radical
+			}
+			any_interest_group = {
+				is_in_government = yes
+				leader = {
+					has_ideology = ideology:ideology_usfp_abolitionist_radical
+				}
+			}
+		}
+		has_law = law_type:law_slavery_banned
+		custom_tooltip = {
+			text = usfp_acw_support_button.tt
+			any_scope_war = {
+				attacker_warleader = c:CSA
+				has_war_support = {
+					target = root
+					value < 10
+				}
+			}
+		}
+
+	}
+
+	effect = {
+		add_radicals = {
+			value = small_radicals
+			culture = cu:yankee
+			strata = middle
+		}
+		random_scope_war = {
+			limit = {
+				attacker_warleader = c:CSA
+			}
+			add_war_war_support = {
+				target = root
+				value = 90
+			}
+		}
+		set_variable = acw_pushed_support
+	}
+
+	ai_chance = {
+		base = 1000
+	}
+}

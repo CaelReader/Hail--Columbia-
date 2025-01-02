@@ -3,6 +3,8 @@
 
 Hail, Columbia! is a United States Flavor Pack, including overhauled and expanded journal entries, interest groups, and characters, as well as tons of new events unique to the USA and North America.
 
+[b]Requires the [url=https://steamcommunity.com/workshop/filedetails/?id=3385002128]Community Mod Framework[/url]. Load this mod after the CMF in your load order.[/b]
+
 [img]https://i.imgur.com/xuNvuA3.png[/img]
 [list]
 [*]Overhauled map of [b]Native North America[/b], including many more indigenous nations than vanilla, as well as new state traits. Claims are assigned appropriately to prevent weird colonization. The American west will take much longer to be fully colonized by the United States than in vanilla.
@@ -29,9 +31,12 @@ Hail, Columbia! is a United States Flavor Pack, including overhauled and expande
 [img]https://i.imgur.com/eD5BaRs.png[/img]
 Check out the full list of Vanilla Overrides in the discussion section.
 [list]
+[*]Requires the [url=https://steamcommunity.com/workshop/filedetails/?id=3385002128]Community Mod Framework[/url]. Load this mod after the CMF in your load order.
+[*]Compatible with Australia & New Zealand Flavor Pack via the CMF.
+[*]Compatible with Greece, Byzantium, & the Balkans Flavor Pack via the CMF.
 [*]Compatible with Morgenrote.
 [*]Compatible with VTM. Load this mod after that mod.
-[*]Compatible with ECCHI. Load this mod after that mod.
+[*]Compatible with ECCHI Redux. Load this mod after that mod.
 [*]Probably incompatible with any mod that changes the US or the state structure of North America.
 [*]Incompatible with Better Politics Mod (duplicate events, conflicting ACW handling)
 [*]Incompatible with Gilded Age and other large flavor mods (duplicate events & characters)

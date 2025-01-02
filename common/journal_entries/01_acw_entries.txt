@@ -134,6 +134,7 @@ je_acw_war = {
 	group = je_group_historical_content
 
 	scripted_button = usfp_emancipation_proclamation_button
+	scripted_button = usfp_acw_support_button
 
 
 	modifiers_while_active = {
@@ -278,13 +279,34 @@ je_acw_war = {
 				months = 1
 			}
 		}
+		if = {
+			limit = { 
+				has_variable = csa_will_spawn_var
+			}
+			show_as_tooltip = {
+				add_journal_entry = {
+					type = je_acw_reconstruction
+				}
+				add_journal_entry = {
+					type = je_acw_wild_wild_west
+				}
+				add_modifier = {
+					name = usfp_post_acw_demobilization_modifier
+					years = 25
+					is_decaying = yes
+				}
+			}
+		}
+
 	}
 
 	fail = {
 		exists = scope:target
 		NOR = {
 			has_war_with = scope:target
-			is_diplomatic_play_enemy_of = scope:target
+			hidden_trigger = {
+				is_diplomatic_play_enemy_of = scope:target
+			}
 		}
 	}
 
@@ -298,6 +320,13 @@ je_acw_war = {
 			usfp_cleanup_a_house_divided_variables = yes
 		}
 		usfp_cleanup_acw_agitators = yes
+		show_as_tooltip = {
+			add_modifier = {
+				name = usfp_secession_legimitized
+				is_decaying = yes
+				years = 50
+			}
+		}
 	}
 
 	on_monthly_pulse = {

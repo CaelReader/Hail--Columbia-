@@ -81,7 +81,7 @@ usfp_fourth_party_system_modifier = {
 	country_institution_size_change_speed_mult = 0.10
 }
 
-albany_regency_uscwf = {
+usfp_albany_regency = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_agrarians_positive.dds
 	interest_group_ig_rural_folk_pol_str_mult = 1.00
 	country_farmers_voting_power_add = 15
@@ -129,13 +129,6 @@ usfp_acw_fsa_modifier = {
 	unit_kill_rate_add = 0.20
 	unit_devastation_mult = 0.15
 	country_military_goods_cost_mult = -0.20
-}
-
-civil_war_reshuffle_uscwf = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
-	interest_group_ig_landowners_pol_str_mult = -2.0
-	interest_group_ig_intelligentsia_pol_str_mult = -2.0
-	interest_group_ig_industrialists_pol_str_mult = -0.5
 }
 
 usfp_a_house_divided_modifier = {
@@ -291,6 +284,7 @@ usfp_the_melting_pot_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
 	state_assimilation_mult = 0.25
 	state_conversion_mult = 0.25
+	country_allow_assimilation_full_acceptance_bool = yes
 }
 
 usfp_e_pluribus_unum_modifier = {
@@ -305,6 +299,7 @@ usfp_e_pluribus_unum_modifier = {
 usfp_diplomats_intercepted = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_influence_negative.dds
 	country_influence_mult = -0.25
+	country_prestige_mult = -0.10
 }
 
 usfp_draft_exemptions = {

@@ -1,15 +1,4 @@
-﻿usfp_gag_rule_upheld = {
-	type = country
-	group = "enactment_failed_group"
-	
-	texture = "gfx/interface/icons/notification_icons/laws.dds"
-
-	notification_type = toast
-	color = bad
-
-}
-
-#Westward Expansion messages
+﻿#Westward Expansion messages
 usfp_new_american_homeland = {
 	type = country
 	group = "usfp_westward_expansion_group"

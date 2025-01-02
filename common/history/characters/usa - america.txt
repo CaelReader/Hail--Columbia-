@@ -26,6 +26,7 @@
 			}
 			on_created = {
 				set_variable = memento_mori_immunity
+				add_modifier = usfp_great_triumvirate
 			}
 		}
 
@@ -45,6 +46,7 @@
 			}
 			on_created = {
 				set_variable = memento_mori_immunity
+				add_modifier = usfp_great_triumvirate
 			}
 		}
 
@@ -69,6 +71,7 @@
 			}
 			on_created = {
 				set_variable = memento_mori_immunity
+				add_modifier = usfp_great_triumvirate
 			}
 		}
 

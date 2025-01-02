@@ -61,7 +61,7 @@
 			is_decaying = yes
 		}
 		add_modifier = {
-			name = albany_regency_uscwf
+			name = usfp_albany_regency
 			months = 50
 		}
 		
@@ -165,6 +165,10 @@
 		create_unidirectional_truce = {
 			country = c:LIB
 			months = 240
+		}
+		create_diplomatic_pact = {
+			country = c:TEX
+			type = increase_relations
 		}
 
 		set_variable = usfp_achievements_possible

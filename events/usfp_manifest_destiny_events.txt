@@ -348,22 +348,12 @@ usfp_manifest_destiny.4 = {
 			if = {
 				limit = {
 					is_ai = yes
-					c:MEX ?= { is_ai = yes }
 				}
 				set_secret_goal = {
 					country = c:MEX
 					secret_goal = conquer
 				}
 			}
-		}
-		if = {
-			limit = {
-				is_ai = yes
-			 }
-			 set_secret_goal = {
-				 country = c:MEX
-				 secret_goal = conquer
-			 }
 		}
 		if = {
 			limit = { 
@@ -1665,7 +1655,7 @@ usfp_manifest_destiny.16 = {
 				is_ai = yes
 			 }
 			 set_secret_goal = {
-				country = scope:cuba_owner_scope
+				country = c:CUB
 				secret_goal = conquer
 			 }
 		}
@@ -2028,6 +2018,8 @@ usfp_manifest_destiny.19 = {
 	option = {
 		name = usfp_manifest_destiny.19.c
 		default_option = yes
+		highlighted_option = yes
+		show_as_unavailable = { always = yes }
 		trigger = {
 			NOR = {
 				has_law = law_type:law_ethnostate

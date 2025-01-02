@@ -245,33 +245,6 @@ usfp_us_first_election_railroad = {
 	}
 }
 
-#Gag Rule enforcement, to allow for Political Movements to still exist
-# on_law_enactment_started = {
-# 	on_actions = {
-# 		usfp_gag_rule_on_action
-# 	}
-# }
-
-# usfp_gag_rule_on_action = {
-# 	effect = {
-# 		if = {
-# 			limit = { 
-# 				has_journal_entry = je_usfp_a_house_divided_gag_rule
-# 				OR = {
-# 					is_enacting_law = law_type:law_slave_trade
-# 					is_enacting_law = law_type:law_slavery_banned
-# 					is_enacting_law = law_type:law_debt_slavery
-# 					is_enacting_law = law_type:law_legacy_slavery
-# 				}
-# 			}
-# 			trigger_event = {
-# 				id = usfp_a_house_divided.2
-# 				days = 1
-# 			}
-# 		}
-# 	}
-# }
-
 on_new_ruler = {
 	on_actions = {
 		usfp_elected_abolitionist
@@ -502,6 +475,234 @@ usfp_remove_party_system = {
 				}
 			 }
 			remove_modifier = usfp_fourth_party_system_modifier
+		}
+	}
+}
+
+on_revolution_start = { on_actions = { 
+	usfp_american_igs_action
+	usfp_fix_monarchy_revolt 
+} }
+on_secession_start = { on_actions = { 
+	usfp_american_igs_action
+	usfp_fix_monarchy_revolt  
+} }
+on_country_released_as_own_subject = { on_actions = { usfp_american_igs_action } }
+on_country_released_as_overlord_subject = { on_actions = { usfp_american_igs_action } }
+on_country_released_as_independent = { on_actions = { usfp_american_igs_action } }
+
+usfp_american_igs_action = {
+	effect = {
+		scope:target ?= { usfp_american_igs_effect = yes }
+	}
+}
+
+usfp_fix_monarchy_revolt = {
+	effect = { scope:target ?= { 
+		if = {
+			limit = {
+				OR = {
+					usfp_country_is_american = yes
+					country_has_primary_culture = cu:afro_american
+				}
+				OR = {
+					has_law = law_type:law_monarchy
+					has_law = law_type:law_theocracy
+				}
+			 }
+			 activate_law = law_type:law_presidential_republic
+		}
+	}
+	}
+}
+
+on_election_campaign_end = {
+	on_actions = {
+		USCWF_precedent_on_action #Doodlez Precedent
+	}
+}
+
+
+USCWF_precedent_on_action = {
+	effect = {
+		if = {
+			limit = {
+				c:USA ?= this
+				has_law = law_type:law_presidential_republic
+			}
+			ruler = {
+				save_scope_as = ruler_scope
+				if = {
+					limit = {
+						NOT = { has_variable = var_elected_once }
+					}
+					set_variable = var_elected_once
+				}
+				else = {
+					if = {
+						limit = {
+							usfp_president_might_go_for_third_term = no
+							NOT = {
+								has_variable = president_broke_precedent
+							}
+						 }
+						 usfp_washington_precedent_effect = yes 
+					}
+					else_if = {
+						limit = {
+							usfp_president_might_go_for_third_term = yes
+						}
+						set_variable = president_might_break_precedent
+					}	
+				}
+			}
+		}
+	}
+}
+
+
+# on_revolution_checkpoint_reached = {
+# 	on_actions = {
+# 		USCWF_opportunist_CSA_on_action
+# 	}
+# }
+
+# USCWF_opportunist_CSA_on_action = {
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				c:USA ?= this
+# 				OR = {
+# 					has_revolution_over_law_type = law_type:law_slave_trade
+# 					has_revolution_over_law_type = law_type:law_legacy_slavery
+# 					has_revolution_over_law_type = law_type:law_debt_slavery
+# 				}
+# 				any_civil_war = {
+# 					is_civil_war_type = revolution
+# 					civil_war_progress >= 0.75
+# 				}
+# 				ig:ig_landowners = {
+# 					is_insurrectionary = no
+# 				}
+# 			}
+# 			ig:ig_landowners = {
+# 				remove_ruling_interest_group = yes
+# 				join_revolution = yes
+# 			}
+# 		}
+# 		#if = {
+# 		#	limit = {
+# 		#		c:USA ?= this
+# 		#		has_revolution_over_law_type = law_type:law_slavery_banned
+# 		#		any_civil_war = {
+# 		#			is_civil_war_type = revolution
+# 		#			civil_war_progress >= 0.75
+# 		#		}
+# 		#	}
+# 		#	activate_law = law_type:law_slavery_banned
+# 		#}
+# 	}
+# }
+
+# on_revolution_start = {
+# 	on_actions = {
+# 		USCWF_opportunist_FSA_on_action
+# 	}
+# }
+
+# USCWF_opportunist_FSA_on_action = {
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				c:USA ?= this
+# 				OR = {
+# 					has_revolution_over_law_type = law_type:law_slavery_banned
+# 					AND = {
+# 						has_revolution_over_law_type = law_type:law_legacy_slavery
+# 						OR = {
+# 							is_enacting_law = law_type:law_slave_trade
+# 							is_enacting_law = law_type:law_debt_slavery
+# 							has_law = law_type:law_slave_trade
+# 							has_law = law_type:law_debt_slavery
+# 						}
+# 					}
+# 				}
+# 			}
+# 			ig:ig_landowners = {
+# 				add_ruling_interest_group = yes
+# 			}
+# 		}
+# 	}
+# }
+
+# Root = owner Country of the Law
+on_law_enactment_started = {
+	on_actions = {
+		USCWF_CSA_betrayed_on_action
+	}
+}
+
+USCWF_CSA_betrayed_on_action = {
+	effect = {
+		if = {
+			limit = {
+				c:USA ?= this
+				is_enacting_law = law_type:law_slavery_banned
+				any_interest_group = {
+					has_modifier = ig_slavers_happy
+				}
+			}
+			every_interest_group = {
+				limit = {
+					OR = {
+						has_ideology = ideology:ideology_pro_slavery
+						leader = { has_ideology = ideology:ideology_slaver }
+					}
+				}
+				remove_modifier = ig_slavers_happy
+				add_modifier = {
+					name = ig_slavers_mad
+					months = very_long_modifier_time
+					multiplier = 6
+				}
+			}
+		}
+	}
+}
+
+# Root = attacker or defender country
+# scope:enemy_country = enemy of root
+# scope:battle = battle
+# scope:attacker = attacking commander
+# scope:defender = defending commander
+# scope:state = location state
+on_battle_lost = {
+	on_actions = {
+		USCWF_fierce_defiance_on_action
+	}
+}
+
+USCWF_fierce_defiance_on_action = {
+	effect = {
+		if = {
+			limit = {
+				c:CSA ?= this
+				OR = {
+					has_journal_entry = je_acw_war
+					scope:enemy_country = {
+						has_journal_entry = je_acw_war
+					}
+				}
+				s:STATE_MISSISSIPPI.region_state:CSA = {
+					controller = c:CSA
+				}
+				c:USA = {
+					is_player = yes
+				}
+			}
+			every_scope_war = {
+				add_war_war_support = { target = ROOT value = 10 }
+			}
 		}
 	}
 }

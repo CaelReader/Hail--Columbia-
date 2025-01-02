@@ -1,7 +1,6 @@
 ﻿l_english:
 #from NFM
 state_trait_native_resistance:0 "Effective Native Resistance"
-state_trait_native_resistance_desc:0 "The native peoples of this land fight fiercely to protect their way of life."
 state_trait_comanche_domain:0 "Comanche Domain"
 
 ## From State Traits Expanded
