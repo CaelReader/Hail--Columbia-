@@ -217,3 +217,8 @@ usfp_settlers_gone_west_modifier = {
 	state_migration_pull_mult = -0.50
 	state_colony_growth_speed_mult = -0.50
 }
+
+usfp_treaty_of_detroit_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_colony_growth_speed_mult = 1.00
+}

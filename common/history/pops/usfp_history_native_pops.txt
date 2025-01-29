@@ -1,0 +1,105 @@
+﻿POPS = {
+	#Council of Three Fires
+	s:STATE_MICHIGAN = {
+		region_state:CTF = {
+			usfp_remove_starting_buildings_effect = yes
+			every_scope_pop = {
+				limit = {
+					OR = {
+						culture = cu:yankee
+						culture = cu:irish
+					}
+				}
+				move_pop = s:STATE_MICHIGAN.region_state:USA
+			}
+		}
+		region_state:USA = {
+			every_scope_pop = {
+				limit = {
+					OR = {
+						culture = cu:algonquian
+						culture = cu:siouan
+					}
+				}
+				move_pop = s:STATE_MICHIGAN.region_state:CTF
+			}
+		}
+	}
+	s:STATE_WISCONSIN = {
+		region_state:USA = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:algonquian
+				}
+				move_pop = s:STATE_WISCONSIN.region_state:CTF
+			}
+		}
+		region_state:CTF = {
+			every_scope_pop = {
+				limit = {
+					OR = {
+						culture = cu:yankee
+					}
+				}
+				move_pop = s:STATE_WISCONSIN.region_state:USA
+			}
+		}
+	}
+	s:STATE_MINNESOTA = {
+		region_state:CTF = {
+			every_scope_pop = {
+				limit = {
+					OR = {
+						culture = cu:yankee
+					}
+				}
+				move_pop = s:STATE_MINNESOTA.region_state:USA
+			}
+		}
+	}
+
+
+	#Ioway
+	s:STATE_MISSOURI = {
+		region_state:usfp_IWY = {
+			every_scope_pop = {
+				limit = {
+					NOT = {
+						culture = cu:algonquian
+					}
+				}
+				move_pop = s:STATE_MISSOURI.region_state:USA
+			}
+			create_pop = {
+				culture = siouan
+				size = 800 #post-smallpox decline
+				pop_type = peasants
+			}
+		}
+	}
+	s:STATE_IOWA = {
+		region_state:USA = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:dakota
+				}
+				move_pop = s:STATE_IOWA.region_state:usfp_IWY
+			}
+		}
+		region_state:usfp_IWY = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:yankee
+				}
+				move_pop = s:STATE_IOWA.region_state:USA
+			}
+			every_scope_pop = {
+				change_poptype = pop_type:peasants
+				change_pop_culture = {
+					target = cu:siouan
+					value = 1
+				}
+			}
+		}
+	}
+}

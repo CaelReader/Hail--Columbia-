@@ -133,8 +133,11 @@ je_alaska = {
 			region = sr:region_pacific_coast
 			is_homeland_of_country_cultures = ROOT
 		}
-		NOT = {
-			owns_entire_state_region = STATE_ALASKA
+		NOR = {
+			has_state_in_state_region = STATE_ALASKA
+			any_subject_or_below = {
+				has_state_in_state_region = STATE_ALASKA
+			}
 		}
 		country_rank >= rank_value:great_power
 	}

@@ -11,21 +11,23 @@
 usfp_native_startup = {
 	effect_starting_technology_tier_4_tech = yes
 	effect_native_conscription_10 = yes
-	
-	ig:ig_devout = {
-		set_interest_group_name = ig_evangelical_church
-	}
+	usfp_starting_native_laws_effect = yes
+}
+
+usfp_starting_native_laws_effect = {
+	effect_starting_politics_traditional = yes
 	activate_law = law_type:law_chiefdom
 	activate_law = law_type:law_elder_council
 	activate_law = law_type:law_traditionalism
 	activate_law = law_type:law_cultural_exclusion
 	activate_law = law_type:law_elected_bureaucrats
 	activate_law = law_type:law_freedom_of_conscience
-	activate_law = law_type:law_national_militia
+	activate_law = law_type:law_peasant_levies
 	activate_law = law_type:law_legacy_slavery
 	activate_law = law_type:law_women_own_property
 	activate_law = law_type:law_no_police
 	activate_law = law_type:law_no_colonial_affairs
+	activate_law = law_type:law_collectivized_agriculture
 }
 
 usfp_remove_starting_buildings_effect = {

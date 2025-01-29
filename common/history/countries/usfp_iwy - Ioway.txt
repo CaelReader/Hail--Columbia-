@@ -1,0 +1,9 @@
+﻿COUNTRIES = {
+	c:usfp_IWY ?= {
+		usfp_native_startup = yes
+		add_modifier = {
+			name = usfp_white_mans_diseases_modifier
+			years = 50
+		}
+	}
+}

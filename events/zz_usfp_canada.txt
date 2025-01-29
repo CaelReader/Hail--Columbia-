@@ -79,6 +79,10 @@ can_aus.5 = {
 					}
 				}
 			}
+			if = {
+				limit = { exists = c:TLT }
+				annex = c:TLT
+			}
 		}
 		if = {
 			limit = {
@@ -96,7 +100,73 @@ can_aus.5 = {
 					 }
 				 }
 			 }
-
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_QUEBEC
+				}
+			 }
+			 if = {
+				limit = {exists = c:INK }
+				annex = c:INK
+			 }
+		}
+		s:STATE_NUNAVUT = {
+			every_scope_state = {
+				limit = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+				set_state_owner = root
+			}
+		}
+		s:STATE_NORTHWEST_TERRITORIES = {
+			every_scope_state = {
+				limit = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+				set_state_owner = root
+			}
+		}
+		s:STATE_YUKON_TERRITORY = {
+			every_scope_state = {
+				limit = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+				set_state_owner = root
+			}
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_SASKATCHEWAN
+				}
+			 }
+			 if = {
+				limit = { exists = c:CPW }
+				annex = c:CPW
+			 }
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_ALBERTA
+				}
+			 }
+			 if = {
+				limit = {exists = c:DNZ }
+				annex = c:DNZ
+			 }
+			 if = {
+				limit = {exists = c:SVY }
+				annex = c:SVY
+			 }
 		}
 	}
 }

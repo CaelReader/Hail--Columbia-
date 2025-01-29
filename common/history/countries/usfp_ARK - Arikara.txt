@@ -1,0 +1,10 @@
+﻿COUNTRIES = {
+	c:usfp_ARK ?= {
+		usfp_native_startup = yes
+		activate_law = law_type:law_slavery_banned
+		add_modifier = {
+			name = usfp_white_mans_diseases_modifier
+			years = 50
+		}
+	}
+}

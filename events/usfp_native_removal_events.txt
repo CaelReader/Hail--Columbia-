@@ -1254,3 +1254,5 @@ usfp_native_removal.15 = {
 		usfp_assassinate_president_effect = yes
 	}
 }
+
+#Michigan Removal

@@ -10,6 +10,7 @@
 			is_subject = no
 			is_subject_of = c:USA
 		}
+		has_global_variable = had_walker_sonora
 	}
 
 	possible = {

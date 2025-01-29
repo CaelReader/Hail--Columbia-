@@ -1,7 +1,5 @@
 ﻿GLOBAL = {
 	c:SEQ = {
-			activate_law = law_type:law_chiefdom
-			activate_law = law_type:law_elder_council
 			create_character = {
 				template = usfp_chief_mushulatubbee_template
 			}
@@ -14,6 +12,11 @@
 			add_primary_culture = cu:caddoan #indigenous inhabitants the Wichita, as well as related Caddo proper removed to the north
 			add_primary_culture = cu:muskogean	#Creek, Seminole, Choctaw, Chickasaw removed to the west
 			add_primary_culture = cu:algonquian	 #Potowatomie, Shawnee, others removed to the west
+			set_relations = { country = c:USA value = 20 }
+			capital = {
+				usfp_remove_starting_buildings_effect = yes
+			}
+			usfp_native_igs_effect = yes
 	}
 	cu:yankee = {
 		add_cultural_obsession = liquor
@@ -28,9 +31,6 @@
 	cu:afro_american = {
 		add_cultural_obsession = liquor
 		add_cultural_obsession = tobacco
-	}
-	c:USA = {
-		add_declared_interest = region_great_plains
 	}
 	c:TEX = {
 		create_diplomatic_pact = {

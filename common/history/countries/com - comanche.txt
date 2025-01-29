@@ -1,0 +1,20 @@
+﻿COUNTRIES = {
+	c:COM ?= {
+		effect_starting_technology_tier_6_tech = yes
+		effect_starting_politics_traditional = yes
+		effect_native_conscription_11 = yes
+		activate_law = law_type:law_free_trade
+		activate_law = law_type:law_migration_controls
+		activate_law = law_type:law_multicultural
+		activate_law = law_type:law_no_womens_rights
+		activate_law = law_type:law_commercialized_agriculture
+		usfp_native_igs_effect = yes
+		add_modifier = {
+			name = usfp_white_mans_diseases_modifier
+			years = 50
+		}
+		create_character = {
+			template = usfp_chief_iron_jacket
+		}
+	}
+}

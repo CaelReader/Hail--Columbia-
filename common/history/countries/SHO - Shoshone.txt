@@ -1,0 +1,5 @@
+﻿COUNTRIES = {
+	c:SHO ?= {
+		usfp_native_startup = yes
+	}
+}

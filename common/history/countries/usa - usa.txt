@@ -154,16 +154,17 @@
 			country = c:SEQ
 			type = grant_own_market
 		}
-		change_relations = {
-			country = c:SEQ
-			value = 100
-		}
+
 		create_diplomatic_pact = {
 			country = c:SEQ
 			type = bankroll
 		}
 		create_unidirectional_truce = {
 			country = c:LIB
+			months = 240
+		}
+		create_unidirectional_truce = {
+			country = c:SEQ
 			months = 240
 		}
 		create_diplomatic_pact = {

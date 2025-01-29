@@ -1,0 +1,5 @@
+﻿COUNTRIES = {
+	c:usfp_MDC ?= {
+		usfp_native_startup = yes
+	}
+}

@@ -108,7 +108,7 @@ usfp_gilded_age = {
 	on_fail = {
 		add_radicals = {
 			value = large_radicals
-			strata = rich
+			strata = upper
 		}
 		set_variable = gilded_age_complete
 		hidden_effect = {

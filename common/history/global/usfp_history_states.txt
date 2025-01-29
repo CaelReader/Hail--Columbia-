@@ -46,6 +46,13 @@
 			religion = mormon
 		}
 	}
+
+	s:STATE_MICHIGAN.region_state:USA = {
+		add_modifier = {
+			name = usfp_treaty_of_detroit_modifier
+			years = 10
+		}
+	}
 	
 
 	##from NFM

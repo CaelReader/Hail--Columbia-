@@ -374,5 +374,11 @@ ai_strategy_manifest_destiny = {
 			}
 		}
 	}
+
+	institution_scores = {
+		institution_colonial_affairs = {	
+			value = 500			
+		}								
+	}
 	
 }

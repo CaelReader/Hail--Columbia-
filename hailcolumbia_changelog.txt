@@ -406,9 +406,18 @@ Added new IG traits for native american tags
 Backend support for Tecumseh's Legacy
 
 4.4 "Sitting Bull"
+Purchasing Alaska JE no longer appears if you already have a subject in Alaska
+Purchasing Alaska now annexes the entire state region
+Forming Canada now annexes the northern state regions
 Melting Pot modifier now allows for Full Acceptance assimilation
 If the Border Ruffians take Kansas due to the outbreak of the civil war, Missouri will go with them
 A Radical Abolitionist president or government can now gain a 1-time boost to war support in the ACW
 Reconstruction backlash events can now trigger at slightly lower levels of Reconstruction
 Internal script cleanup
 Editing pass on all localization
+Fixed starting Bankroll of Indian Territory breaking
+Refactored internal history setup for decentralized tags, some borders and populations have shifted
+All states that should start as colonies now properly do so, enabling the AI to colonize more organically
+Manifest Destiny AI Strategy should maximize Colonial Affairs institution
+Added +100% Colonization speed modifier to Michigan
+Fixed Sonora asking for statehood when liberated manually

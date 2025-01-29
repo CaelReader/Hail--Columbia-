@@ -1,0 +1,102 @@
+﻿#Have to handle overwriting the final province of existing states here to prevent errors
+
+GLOBAL = {
+	s:STATE_MINNESOTA = {
+		region_state:USA = {
+			set_state_owner = c:CTF
+		}
+	}
+	s:STATE_NORTH_DAKOTA = {
+		region_state:USA = {
+			set_state_owner = c:IRC
+		}
+	}
+	s:STATE_SOUTH_DAKOTA = {
+		region_state:USA = {
+			set_state_owner = c:LKT
+		}
+	}
+	s:STATE_NEBRASKA = {
+		region_state:USA = {
+			set_state_owner = c:PWN
+		}
+	}
+	s:STATE_MONTANA = {
+		region_state:USA = {
+			set_state_owner = c:GVT
+		}
+		region_state:SLS = {
+			set_state_owner = c:FLT
+		}
+	}
+	s:STATE_UTAH = {
+		region_state:MEX = {
+			set_state_owner = c:SPI
+		}
+	}
+	s:STATE_NEVADA = {
+		region_state:MEX = {
+			set_state_owner = c:PIU
+		}
+	}
+	s:STATE_WYOMING = {
+		region_state:BNN = {
+			set_state_owner = c:ABS
+		}
+	}
+	s:STATE_ARKANSAS = {
+		region_state:USA = {
+			kill_population_percent_in_state = { #never this many Old Settlers
+				percent = 0.95
+				culture = cu:cherokee
+			}
+		}
+	}
+	s:STATE_NUNAVUT = {
+		region_state:HBC = {
+			set_state_owner = c:INV
+		}
+		# #HBC Forts, but the area is impassable terrain and unusuable gameplay-wise
+		# set_owner_of_provinces = {
+		# 	country = c:HBC
+		# 	provinces = { xBD928D x7E2A07 }
+		# }
+	}
+	s:STATE_NORTHWEST_TERRITORIES = {
+		region_state:HBC = {
+			set_state_owner = c:INV
+		}
+	}
+	s:STATE_YUKON_TERRITORY = {
+		region_state:HBC = {
+			set_state_owner = c:IPQ
+		}
+		region_state:IPQ = {
+			add_culture_standard_of_living_modifier = {
+				culture = cu:athabaskan
+				multiplier = 7
+			}
+		}
+	}
+	s:STATE_ALASKA = {
+		region_state:ATB = {
+			set_state_owner = c:DXG
+		}
+	}
+	s:STATE_IOWA = {
+		region_state:USA = {
+			kill_population_percent_in_state = { #lot of Sauk & Fox here. Not 12k though
+				percent = 0.66
+				culture = cu:algonquian
+			}
+		}
+	}
+	s:STATE_MISSOURI = {
+		region_state:USA = {
+			create_pop = {
+				culture = algonquian
+				size = 2200  #Sauk & Fox before final removal, plus the Prairie Band of Potowatomie in transition west
+			}
+		}
+	}
+}

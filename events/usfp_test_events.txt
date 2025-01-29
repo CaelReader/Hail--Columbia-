@@ -58,10 +58,6 @@
 # 				country_is_in_north_america = yes
 # 				is_country_type = colonial
 # 			}
-# 			add_modifier = {
-# 				name = usfp_colony_ai_workaround
-# 				months = 2
-# 			}
 # 		}
 # 	}
 # }
