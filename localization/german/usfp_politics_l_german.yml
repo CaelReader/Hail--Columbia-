@@ -1,0 +1,24 @@
+﻿l_german:
+usfp_lobby_anti_imperial: "Anti-imperialistische Lobby" 
+usfp_lobby_anti_imperial_name: "[COUNTRY.GetAdjectiveNoFormatting] Anti-imperialistische Liga"
+usfp_lobby_anti_imperial_icon: "@usfp_lobby_anti_imperial!"
+
+lds_church: "Kirche Jesu Christi der Heiligen der Letzten Tage"
+lds_church_desc: "Die Mormonen-Kirche wurde während der Zweiten Großen Erweckung von Joseph Smith gegründet, der gesagt wird, neue Offenbarungen von Gott in Form von goldenen Tafeln empfangen zu haben. Die besonderen Überzeugungen und Praktiken der Kirche, einschließlich der Polygamie, bringen sie in Konflikt mit dem Großteil der übrigen christlichen Gesellschaft."
+ig_big_men: "Große Männer"
+ig_big_men_desc: "So genannte 'Große Männer' haben sich informelle Macht durch Kontrolle von Eigentum und Patronage angeeignet. Sie streben im Allgemeinen danach, ihren Einfluss auf eine Weise zu festigen, die an feudale Systeme erinnert."
+
+western_aristocrats: "Erfolgreiche Siedler"
+
+ai_strategy_manifest_destiny: "Manifest Destiny"
+ai_strategy_manifest_destiny_desc: "[COUNTRY.GetName] strebt danach, seine Kerngebiete zu erweitern und sein 'manifest destiny' in Nordamerika zu verfolgen."
+
+dismantle_jim_crow: "Jim Crow abschaffen"
+dismantle_jim_crow_desc: "Die Regierungen des Südens haben viel zu lange rassistischen Terror gegen ihre Bürger ausgeübt. Es ist an der Zeit, dass diese Jim-Crow-Gesetze aufgehoben werden."
+
+movement_usfp_progressive: "Progressive Bewegung"
+movement_usfp_progressive_name: "$movement_usfp_progressive$"
+STATE_POLITICAL_MACHINE: "[concept_state] wird von einer politischen Maschine geleitet"
+STATE_POLLUTED: "Hohe [concept_generated_pollution] in [concept_state]"
+movement_usfp_eugenics: "Eugenik-Bewegung"
+movement_usfp_eugenics_name: "$movement_usfp_eugenics$"

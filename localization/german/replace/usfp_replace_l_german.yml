@@ -1,0 +1,87 @@
+﻿l_german:
+COM:0 "Comancheria"
+APC: "Apacheria"
+
+je_acw_countdown:0 "Ein geteiltes Haus"
+je_acw_countdown_reason:0 "Die Frage der Sklaverei hat den Norden und den Süden des [ROOT.GetCountry.GetName] seit vor der Ausarbeitung der Unabhängigkeitserklärung gespalten. So wie damals, haben eine Reihe von Kompromissen in der Bundesregierung den offenen Konflikt hinausgezögert. Während die [SCOPE.sIdeology('abolitionist_scope').GetName] Bewegung im Norden weiter wächst, haben die [SCOPE.gsInterestGroup('landowners_scope').GetName] weiterhin mehr Zugeständnisse und Kompromisse gefordert, um ihre 'eigenartige Institution' vor Eingriffen zu schützen.\n\nAuf die eine oder andere Weise kann die Union nicht länger halb Sklave und halb frei bestehen."
+
+je_acw_war:0 "Der Amerikanische Bürgerkrieg"
+je_acw_war_reason:0 "Der Krieg zwischen den Staaten steht uns bevor. Jetzt ist die Zeit, die Union zu bewahren oder es zu versuchen und dabei zu sterben.\n\n"
+acw_war_tt_complete:0 "Die Abtrünnigen wurden besiegt und wieder eingegliedert."
+acw_war_support_tooltip: "Die [SCOPE.sCountry('csa_scope').GetName] glauben, dass sie unseren Willen zu kämpfen überdauern können. Sie in Schlachten zu besiegen wird #italic ihre [concept_war_support] erhöhen#!. Wir können [Concept('concept_occupation', 'Besetzen')] den Mississippi, um ihre Hoffnungen auf den Sieg zu brechen."
+
+acw_events.3.t:0 "Der [SCOPE.sCharacter('wilmot_proviso_ig_leader').GetLastName] Proviso"
+acw_events.3.d:0 "[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetFullName], Führer der [SCOPE.gsInterestGroup('wilmot_proviso_ig').GetName], hat vorgeschlagen, die Sklaverei in allen unseren neuen westlichen Territorien vollständig zu verbieten. Dieser Vorschlag ist für die [SCOPE.gsInterestGroup('planters_scope').GetName] inakzeptabel, aber sie haben nur wenige Alternativen vorgeschlagen."
+acw_events.3.f:0 ""Ich plädiere für die Rechte der weißen Freien. Ich möchte für die freie weiße Arbeit ein faires Land, ein reiches Erbe bewahren, wo die Söhne der Mühe, meiner eigenen Rasse und Farbe, leben können, ohne die Schande, die die Assoziation mit der Negersklaverei auf die freie Arbeit bringt.""
+acw_events.3.a:0 "Lehnen Sie den Proviso ab."
+acw_events.3.b:0 "Akzeptieren Sie den Proviso und abolieren Sie die Sklaverei im Westen."
+acw_events.3.c:0 "Warum ziehen wir nicht einfach die Kompromisslinie bis zum Pazifik?"
+
+acw_je_events.2.t:0 "Die Nation rekonstruieren"
+acw_je_events.2.d:0 "Während der militärische Kampf beendet ist, hat der Kampf um die Seele der Nation nicht aufgehört. [ROOT.GetCountry.GetName] muss sich nach der Spaltung in zwei wieder aufbauen."
+acw_je_events.2.f:0 ""Ich erwarte nicht, dass diese Nation fällt. Willkommen oder unwillkommen, ob sie ganz das eine oder das andere wird, diese Nation wird aufhören, in Körper und Seele geteilt zu sein.""
+unreconstructed_state:0 "Unrekonstruierter Staat"
+acw_je_events.2.a: "Der Süden muss wieder in den Schoß gebracht werden."
+acw_je_events.2.b: "Wir müssen mit dem Norden Frieden schließen."
+acw_je_events.2.c: "Der Süden muss das Ende der Sklaverei akzeptieren."
+acw_je_events.2.g: "Wir hatten nie die Absicht, in die Lebensweise des Südens einzugreifen."
+
+acw_je_events.3.t:0 "Die Nation, Rekonstruiert"
+acw_je_events.3.d:0 "Unsere Nation hat sich neu aufgebaut, etwas Distinktes, etwas Neues und vor allem etwas Vereintes geschaffen."
+acw_je_events.3.f:0 ""Für all unsere Fehler haben wir unsere Nation neu geschmiedet und eine Regierung aufgebaut, die nicht von dieser Erde verschwinden wird.""
+acw_je_events.3.a:0 "Wir stehen wieder vereint."
+
+je_indian_removal:1 "Indianerentfernung"
+je_indian_removal_reason:2 "Die fünf zivilisierten Stämme leben seit langem im amerikanischen Süden und waren Ziel von 'zivilisierenden' Missionen seit den Tagen der Unabhängigkeit. In den letzten Jahrzehnten haben [SCOPE.sCulture('yankee_culture').GetName] und [SCOPE.sCulture('dixie_culture').GetName] Siedler zunehmend in die Gebiete der fünf Stämme eingedrungen, was zu gewalttätigen Konflikten geführt hat.\n\nDie Jackson-Administration entschied sich, die einwandernden Siedler zu unterstützen und beschloss, alle Ureinwohner in das [SCOPE.sCountry('indian_territory_scope').GetName] zu entfernen, unabhängig von den Kosten."
+
+native_resettlement.2.t:1 "John Ross' Protestpetition"
+native_resettlement.2.d:1 "[SCOPE.sCountry('cherokee_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('cherokee_scope').GetRuler.GetFullName] hat dem Kongress eine Petition vorgelegt, in der er sie auffordert, den Vertrag zu annullieren, der die [SCOPE.sCulture('cherokee_culture').GetName] Nation zwingt, in das [SCOPE.sCountry('indian_territory_scope').GetName] umzuziehen. Seine Petition hat fast so viele Unterschriften wie die gesamte östliche Cherokee-Bevölkerung."
+native_resettlement.2.f:0 ""Durch die Bestimmungen dieses Vertrags sind wir aller Attribute der Freiheit beraubt. Unser Eigentum kann vor unseren Augen geplündert werden; Gewalt kann an unseren Personen verübt werden, sogar unser Leben kann genommen werden, und es gibt niemanden, der unsere Beschwerden beachtet. Wir sind denationalisiert; wir sind entrechtet. Wir sind der Mitgliedschaft in der menschlichen Familie beraubt!" ""
+native_resettlement.2.a:0 "Ein Vertrag ist ein Vertrag. Wir können nicht zurücknehmen, was wir unterschrieben haben."
+native_resettlement.2.b:0 "Unser Gewissen zwingt uns, den Entfernungvertrag zu annullieren."
+
+native_resettlement.3.t: "Cherokee-Entfernung"
+native_resettlement.3.d:1 "Gemäß dem Entfernungvertrag ist es an der Zeit, dass die [SCOPE.sCulture('cherokee_culture').GetName] von [SCOPE.sState('indian_removal_state').GetStateRegion.GetName] in das [SCOPE.sCountry('indian_territory_scope').GetName] umziehen. Einige Widerständler weigern sich, ihre Heimat zu verlassen, und viele sind schlecht für die Reise ausgestattet."
+
+native_resettlement.4.t:0 "Der Pfad der Tränen"
+native_resettlement.4.d:1 "Unsere Bemühungen, die [SCOPE.sCulture('cherokee_culture').GetName] aus den östlichen Gebieten zu entfernen, haben zu den Todesfällen vieler während ihres Überlandmarsches nach Westen geführt."
+native_resettlement.4.f:0 ""In der Dunkelheit stöhnen die hohen Kiefern\nWährend sie den trüben Pfad bewachen.\nDie Cherokees sagen, es sei das Stöhnen,\nJeder Schrei und das widerhallende Stöhnen\nIhrer Vorfahren, die fielen\nMit gebrochenen Hoffnungen und bitteren Ängsten\nAuf diesem müden Pfad der Tränen."" # Ruth Margaret Muskrat
+native_resettlement.4.a:2 "Wir haben getan, was wir konnten."
+native_resettlement.4.b:2 "Ihr Blut liegt an unseren Händen."
+
+native_resettlement.5.t:0 "Die Räumung des Ostens"
+native_resettlement.5.d:1 "Die Entfernung der fünf zivilisierten Stämme in das [SCOPE.sCountry('indian_territory_scope').GetName] ist abgeschlossen. Ob zum Guten oder zum Schlechten, die Angelegenheit ist geklärt."
+native_resettlement.5.f:0 "Ein Paar Europäer beobachtete die Amerikaner. In der ganzen Szene lag eine Atmosphäre von Ruin und Zerstörung, etwas, das einen endgültigen und unwiderruflichen Abschied verriet. Einer der Beobachter fragte einen vorbeigehenden Mann:\n\n\"Warum verlassen Sie Ihr Land?\"\n\nDer Amerikaner, ernst und wortkarg, antwortete einfach:\n\n\"Um frei zu sein.\"\n\nBevor die Weißen mehr fragen konnten, ging der Amerikaner weiter und setzte seine Reise nach Osten fort. Der Franzose wandte sich an seinen Landsmann:\n\n\"Wir beobachten die Vertreibung, die Auflösung eines der berühmtesten und ältesten amerikanischen Völker.\""
+native_resettlement.5.a:0 "Lass uns beten, dass dies niemals wieder geschieht."
+
+
+native_resettlement.6.t:0 "Die zivilisierten Stämme"
+native_resettlement.6.d:1 "Mit dem Inkrafttreten des [SCOPE.sLawType('pronativelaw').GetName] Gesetzes wird der Indian Removal Act aufgehoben und die verbleibenden fünf zivilisierten Stämme sind frei, auf ihren angestammten Ländereien zu leben."
+native_resettlement.6.f:0 "Einige Barden werden eine Stimme erheben, um dich zu loben,\nIn bewegenden Zahlen der Welt erzählen, wie Männer\nDich verspotteten, dich ausbuhnten, dich des Wahnsinns beschuldigten!\nUnd wer könnte nicht genug Ehre geben, wenn\nSchließlich, trotz Spott, Mangel und Not,\nDein Genie einen Traum in eine Tat verwandelte." # Alexander Posey
+native_resettlement.6.a:0 "Großes Leid wurde abgewendet."indian_removal_end: "The Five Civilized Tribes will be removed from their ancestral lands at great loss of life."
+
+acw_followup_events.5.t:0 "Supremacistische Gewalt in [SCOPE.sState('supremacist_violence_state').GetName]"
+acw_followup_events.5.d:0 "Gewalt zwischen weißen Randalierern und schwarzen Freigelassenen hat erhebliche Spannungen in [SCOPE.sState('supremacist_violence_state').GetName] verursacht."
+acw_followup_events.5.f:0 ""Die Randalierer traten, schlugen und prügelten andere gnadenlos. Die Straßen wurden rutschig vom Blut unschuldiger Männer. Leere Revolver klapperten auf dem Boden, als die Angriffe zu frenetisch wurden, um sich noch mit Nachladen zu beschäftigen. Es war erst, als das Kriegsrecht ausgerufen wurde und Truppen einmarschierten, dass auch nur der Anschein von Ordnung zurückkehren konnte.""
+acw_followup_events.5.a:0 "Nutze die volle Macht der Regierung, um die Freigelassenen zu schützen."
+acw_followup_events.5.b:0 "Wir können lokale Führer nicht durch den Einsatz von Truppen entfremden."
+
+acw_followup_events.6.t:0 "Schwarze Codes"
+acw_followup_events.6.d:0 "Eine Koalition von Sympathisanten der Konföderierten hat die Kontrolle über die Staatsregierung von [SCOPE.sState('redeemer_state').GetName] durch faire und unfaire Mittel gewonnen und begonnen, eine Reihe von Einschränkungen für die Aktivitäten der [SCOPE.sCulture('afro_american_culture').GetName] einzuführen."
+acw_followup_events.6.f:0 ""Ziehe eine Linie, auf der du Intelligenz, Tugend, Selbstachtung und Demokratie siehst; und auf der anderen Seite die absolute unkontrollierte politische Vorherrschaft von roher Gewalt und Terror, und dort wirst du nicht ein Attribut freier Regierung sehen, sondern die traurigste Tyrannei des alten Südens, die verzweifelt versucht, die Macht zurückzugewinnen, die diese Erde jemals verflucht hat."" # dies ist eine Umkehrung von Lucius Quintus Cincinnatus Lamar IIs schrecklicher rassistischer Tirade.
+acw_followup_events.6.a:0 "Wir müssen die Wahlergebnisse respektieren."
+acw_followup_events.6.b:0 "Die Wahl ist eindeutig betrügerisch und muss wiederholt werden."
+
+je_acw_reconstruction:0 "Rekonstruktion"
+je_acw_reconstruction_status:1 "Das Land nach dem spaltenden Bürgerkrieg wieder aufbauen."
+je_acw_reconstruction_goal:0 "Die ehemals rebellischen Staaten rekonstruieren."
+je_acw_reconstruction_reason:0 "Mit dem Bürgerkrieg vorbei und der Sklaverei abgeschafft, ist die gesamte Lebensweise des Südens auf den Kopf gestellt worden. Wir müssen nun versuchen, die rebellischen Staaten wieder in die Union zu reintegrieren und gleichzeitig die befreiten Sklaven in unsere Gesellschaft zu integrieren.\n\nDie #bold Fortschrittsanzeige#! verfolgt den Status der Rekonstruktion. Die Fortschritte bei der Rekonstruktion werden unser Versprechen an die #bold Freigelassenen#! aufrechterhalten und ihre Rechte und Freiheiten sichern. Leider werden die weißen #bold Erlöser#! des Südens nichts akzeptieren, was auch nur annähernd einer rassischen Gleichheit entspricht, und werden aktiv gegen die Rekonstruktion kämpfen.\n\nWir müssen wählen, was uns wichtiger ist: die Rechte und das Leben unserer [SCOPE.sCulture('afro_american_culture').GetName] Bürger oder eine schnelle Versöhnung mit den [SCOPE.sCulture('dixie_culture').GetName] Staaten."
+je_acw_reconstruction_status_radical: "Die #bold Freigelassenen#! behaupten ihre neuen Rechte und Positionen in der Gesellschaft."
+je_acw_reconstruction_status_mixed: "Die Rekonstruktion bleibt im gesamten Süden stark umstritten."
+je_acw_reconstruction_status_failure: "Die weiß supremacistischen #bold Erlöser#! ziehen ihren Griff über den Süden straffer."
+
+law_worker_protections:0 "Arbeiterrechte"
+
+je_oregon:0 "Der Oregon-Grenzkonflikt"
+je_oregon_reason:0 "Der genaue Standort der Oregon-Grenze ist seit langem eine unentschiedene Angelegenheit zwischen Großbritannien und den Vereinigten Staaten. Während unsere Siedler weiterhin nach Westen drängen, müssen wir eine endgültige Einigung mit den Briten erzielen.\n\nAlternativ, wenn wir uns im Krieg in Kalifornien befinden, wird ein Vertrag eine militärische Notwendigkeit werden."
+oregon_tt:1 "Habe den Oregon Trail entdeckt, indem ich die amerikanische Westgrenze kartiert habe."

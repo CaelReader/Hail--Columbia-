@@ -1,0 +1,12 @@
+﻿l_german:
+
+party_american_party: "Amerikanische Partei"
+party_free_soil_party: "Freie Bodenpartei"
+party_radical_democracy_party: "Radikale Demokratiepartei"
+party_socialist: "Sozialistische Arbeiterpartei"
+
+intelligentsia_missing: "$ig_intelligentsia$ fehlt in der Liberalen Partei"
+industrialists_missing: "$ig_industrialists$ fehlt in der Freihandelspartei"
+join_existing_party: "Wir sollten einer [concept_party] beitreten"
+usfp_bourbon_democrats: "Bourbon-Demokraten"
+from_progressive_leader: "Progressiver Führer"
