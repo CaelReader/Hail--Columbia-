@@ -45,6 +45,67 @@
 		add_homeland = cu:muskogean
 		add_homeland = cu:caddoan
 	}
+	
+
+	#Seminole
+	s:STATE_FLORIDA = {
+		set_owner_of_provinces = {
+			country = c:SML
+			provinces = { xFE627B x7FA347 x3CDD1A  x552AD8 }
+		}
+		set_owner_of_provinces = {
+			country = c:USA
+			provinces = { xE740E5 }
+		}
+		add_claim = c:SML
+		add_homeland = cu:muskogean
+		remove_homeland = cu:caddoan
+	}
+
+	#Chickasaw
+	s:STATE_MISSISSIPPI = {
+		set_owner_of_provinces = {
+			country = c:CSW
+			provinces = { x6D0DAC x14BCC5 x68986B x3B0B58 xF641D2 }
+		}
+		add_homeland = cu:muskogean
+		remove_homeland = cu:caddoan
+	}
+
+	#Cherokee
+	s:STATE_GEORGIA = {
+		set_owner_of_provinces = {
+			country = c:CHE
+			provinces = {x169E1F xB3D9D8 x407040 }
+		}
+		add_homeland = cu:cherokee
+		add_homeland = cu:muskogean
+	}
+	s:STATE_ALABAMA = {
+		set_owner_of_provinces = {
+			country = c:CHE
+			provinces = {xC8BB61 xBD9F23 x8E9218 }
+		}
+		add_homeland = cu:cherokee
+		add_homeland = cu:muskogean
+		remove_homeland = cu:caddoan
+	}
+	s:STATE_TENNESSEE = {
+		set_owner_of_provinces = {
+			country = c:CHE
+			provinces = {xA3CEBC x5BF189 xEE80A0 }
+		}
+		add_homeland = cu:cherokee
+	}
+	s:STATE_NORTH_CAROLINA = {
+		add_homeland = cu:cherokee
+	}
+	s:STATE_KENTUCKY = {
+		add_homeland = cu:cherokee
+	}
+	s:STATE_SOUTH_CAROLINA = {
+		add_homeland = cu:cherokee
+	}
 
 
 	##############################################
@@ -62,7 +123,7 @@
 		set_owner_of_provinces = {
 			country = c:IRC
 			provinces = { x8F0750 x8C905E xC1C5C5 xCDE122 x20A1FA xAB458E xA4C2F6 xFAD908 x2D7D62 xE24F6E x30BADD x5BED05 x184A57 xAF6E5B x9EA3FF xEE82BD x98A328 
-			xE5FDC3 xB5FEC3 x96B71E x9255F2 x9D100E x0EADCE x17235E xA5A929 x198845 x3EB1F2 x6B9ADF x3816BA xF3EC53 x746873  x329C17 x647FB6 x298347 x17983F x76F55B xAA3B6E } #xF3479B in global
+			xE5FDC3 xB5FEC3 x96B71E x9255F2 x9D100E x0EADCE x17235E xA5A929 x198845 x3EB1F2 x6B9ADF x3816BA xF3EC53 x746873  x329C17 x647FB6 x298347 x17983F xAA3B6E } #xF3479B x76F55B in global
 		}
 	}
 	s:STATE_ALBERTA = {
@@ -72,7 +133,7 @@
 			x186AF1 x02A092 xE154E6 x4E9B73 x40A0EA xC17DB9 xC286C9 xEF9AF6 xF7A1C4 x81ED91 xE6E5C3 xC45E08 x840A15 x402B2E x3628B1 x70370B x433BC6 x594542 xB12674 x673CA0 
 			x2F5B26 x285A4E x7340B5 x2A6D2A x107893 xE54214 x676674 xC94F32 x397F40 x1F8897 x5779A2 x8A6D99 x907360 x1197CD xF057A9 x3991AB x56971B x10BF0F x23BA24 xC07FC1 
 			xA9976F x92AD8F xC5A257 x92AABE xB2B31F xEFA433 xD1A1D9 xE99CD6 xFCA61C xDAAC5C x67CABB x00F631 x39E46C xDCC985 x52FCB4 xC4E828 xEDDF68 xF4EC2D x55F9AB x072DDC 
-			xC3D71F x7911BB x12AF70 x70370B x594542 x7F49E7 x6B0266 x583EAA x471B95 xB4ED84 x6241E5 x2FA24B x799CFA x51CEC5 x8F67DC xA75296 x518F22 }
+			xC3D71F x7911BB x12AF70 x70370B x594542 x7F49E7 x6B0266 x583EAA x471B95 xB4ED84 x6241E5 x2FA24B x799CFA x51CEC5 x8F67DC xA75296 x518F22 x0A84C8 x886E4A x043FC9 }
 		}
 	}
 	s:STATE_SASKATCHEWAN = {
@@ -99,13 +160,13 @@
 	s:STATE_IDAHO = {
 		set_owner_of_provinces = {
 			country = c:BLF
-			provinces = { x40339D x4690C2 x1E57E5 x0FB2AA  }
+			provinces = { x40339D x4690C2 x1E57E5 }  #x0FB2AA
 		}
 	}
 	s:STATE_WYOMING = {
 		set_owner_of_provinces = {
 			country = c:BLF
-			provinces = { x8B96F2 x65D786 }
+			provinces = { x65D786 } #x8B96F2
 		}
 	}
 	s:STATE_MONTANA = {
@@ -153,7 +214,7 @@
 	s:STATE_IDAHO = {
 		set_owner_of_provinces = {
 			country = c:NZP
-			provinces = { xFD9C12 x2C976D x017C34 x0682D7 x249E28 xED64F1 x9F2532 x83926D xC3178C xB5C710 x2CC6D7 x7D5812 xD06EF9 xE6E56D x9D7B0E xF11FC4 xCE1B4B x0062B6 
+			provinces = { x2C976D x017C34 x0682D7 x249E28 xED64F1 x9F2532 x83926D xC3178C xB5C710 x2CC6D7 x7D5812 xD06EF9 xE6E56D x9D7B0E xF11FC4 xCE1B4B x0062B6 
 			x01C975 x073B66 x96529F x0456B2 xCC869C x402080 x82AA18 x9D92A7 xD7B25C x4DAA8A x25F860 x8C707D xE6B7A4 xBFA9C4 xCFD016 xE6B7A4 x017C34 x774CEA }
 		}
 	}
@@ -256,7 +317,7 @@
 	s:STATE_WYOMING = {
 		set_owner_of_provinces = {
 			country = c:ABS
-			provinces = { x9F03E3 x21EE68 xAC6092 x533D44 x42A388  x52839A x977599 xB6CA16 xF89B9D x65DCDB x28CC5C x5FBCFF xD74652 xA55B0A x2CC9D7 xBE0B1C x1F5624 } #x22B520 in global
+			provinces = { x9F03E3 x21EE68 xAC6092 x533D44 x42A388  x52839A x977599 xB6CA16 xF89B9D  x28CC5C x5FBCFF xD74652 xA55B0A x2CC9D7 xBE0B1C x1F5624 x22B520 } #x65DCDB in global
 		}
 	}
 	s:STATE_MONTANA = {
@@ -453,13 +514,13 @@
 			country = c:PIU
 			provinces = { x1741A2 xE076DB x8B17C5 xB8C75E x374A87 xAF4B58 xCC1818 xA4D6D1 x10C000 x832FF7 xCCDB4C x7DE699 xEDCBF4 xE15291 x7D25E6 x3F791B xB6ED0A x187093 
 			x1BAC1A xEF5007 x80BCA8 xA7D253 x7C1958 xA72957 x8B11E1 x5CC000 x0DF43E x6D645C x2A9CAC xF0C923 x5AD9C0 x8F30EA xB2D968 xF13FC2 x4934EE  x48E8C5 x7C7251 xE3A018 
-			x455838 xEAB9B1 x8A5945 x60609D xBB8631 x80FCE4 x005C93 xDBA111 x6CF688 xF1B928 x992C09 x5BE036 x91EF0D xCA0467 x0D95C2 } #xB312C1 in global
+			x455838 xEAB9B1 x8A5945 x60609D xBB8631 x80FCE4 x005C93 xDBA111 x6CF688 x992C09 x5BE036 x91EF0D xCA0467 x0D95C2 } #xB312C1 xF1B928 in global
 		}
 	}
 	s:STATE_IDAHO = {
 		set_owner_of_provinces = {
 			country = c:PIU
-			provinces = { xD484FE x3BC3DC x87941A x156C47 x73354E}
+			provinces = { xD484FE x3BC3DC x87941A x156C47 x73354E xFD9C12 }
 		}
 	}
 	s:STATE_CALIFORNIA = {
@@ -550,8 +611,8 @@
 	s:STATE_WYOMING = {
 		set_owner_of_provinces = {
 			country = c:SHO
-			provinces = {x0EB61F xCF073F x7105F8 xD7B8D9 x952F3F x58C850 x319B3E x465DC8 x84DF43 x1AC89E x3DC80A x0DE2A6 x867348 x89656E x600D92 x81DB36 x36DEC9 xEC9D85 
-			x2403EF x93B583 xE387E7 x5F141F x5B70BB }
+			provinces = {x0EB61F xCF073F x7105F8 xD7B8D9 x952F3F x58C850 x319B3E x465DC8 x84DF43 x1AC89E x3DC80A x0DE2A6 x867348 x89656E x600D92 x81DB36 x36DEC9  
+			x2403EF x93B583 xE387E7 x5F141F x5B70BB } # xEC9D85 in global
 		}
 	}
 	s:STATE_UTAH = {
@@ -654,7 +715,20 @@
 			x907833 x32DFD2 x95E0DC x085D59 x92F132 xDDBFBD x7D7012 x76A99E x63918E x51CF24 x96B85F x0C6AE4 xD03CD5 x8A6937 xD5666E x062E92 xB6023C xAE1EF2 xDEEEDD x13C360 
 			xEC2CF8 xFF1907 x79E1C6 x46467A xC303BD x3ED2DB } #x9B5749 is an HBC outpost
 		}
+	#Algonquin
+		set_owner_of_provinces = {
+			country = c:usfp_ALG
+			provinces = { xD87585 x48E333 xB70A86 x912A4C xFF9824 x8D25E9 xD4F421 xA459B4 xAF45D7 x76C5CF x20F60D xC0960B x372676 xA34B9C x47430B xEC09D5 }
+		}
+
+	#Atikamekw
+		set_owner_of_provinces = {
+			country = c:usfp_ATK
+			provinces = { xE36DAC xE4EB3C x681A84 xFA2FD7 x7673F1 x26EF74 x93518A xCCB94B x4ACA5F x32A6F4 xD48872 xB0D24A xE55165 xEDA6BE x06E7AA x369B85 x35E144 }
+		}
 	}
+
+
 
 	#Inuit Nunangat
 	s:STATE_NUNAVUT = {
@@ -666,15 +740,6 @@
 		create_state = {
 			country = c:INV
 			owned_provinces = { x345296 }
-		}
-		region_state:INV = {
-			add_culture_standard_of_living_modifier = {
-				culture = cu:athabaskan
-				multiplier = 7
-			}
-			every_scope_pop = {
-				change_poptype = pop_type:peasants
-			}
 		}
 
 	#Chipewyan
@@ -700,6 +765,10 @@
 			country = c:CPW
 			provinces = { x7F3B2A x1E90CB x1C2526 x07CD51 x1C0E3A x1F88D4 xD205C1 x29AC5E x1BCEF6 xD6B890 x394E70 xAFB041 xEEEC84 x30737E x67BB39 x87B6F9 x97182B xC04080 
 			x98FEC3 xD1A412 x5BEA85 x4577E6 x7AA1BE xB37F05 x8A9401 x3FE8F9 x29EDE0 xAD0330 x8A9401 xA9B6BC xCD9A92 xB9F7C2 x9D053D xB85BA1 x048659 }
+		}
+		set_owner_of_provinces = {
+			country = c:INV
+			provinces = { x8C5744 } #rest handled in global
 		}
 	}
 	s:STATE_ALBERTA = {
@@ -959,12 +1028,6 @@
 			x408080 x618906 xFCBAB7 xF328B4 x535C58 xA43184 x89B421 x4C6008 x0CE1F2 x436C62 xBF0816 x4C018D xA4BEEB xF10F92 x242A0C x5D602D x578AC2 xD7FB82 xBD7571 
 			x4A2034 x41917B x58C57B xEEFECF x3D7276 xE9EF51 xA4DF89 xA06B72 xAC5697 x23B825 x19041A x208B8B }
 		}
-		region_state:STU = {
-			add_culture_standard_of_living_modifier = {
-				culture = cu:athabaskan
-				multiplier = 7
-			}
-		}
 	}
 
 	#Gwich'in
@@ -978,12 +1041,6 @@
 			xC666BD x2D2B9A x703870 x244229 x33A055 xDD8241 x4BF0E8 xB8405D xE0383C x24C2C1 x703870 x73210A x89A524 x93473A x30D4A3 xB9E827 x7C4BE7 x8C2B38 x9F9A64 xFB2B85 
 			xF2BAB1 x48EFD3 xF3CDF6 x8D0001 x2FB1A9 xD3D91D xFD9177 x69BF88 x793A86 xE280A6 x911E83 x57A279 xC83863  x05137C }
 		}
-		region_state:GWC = {
-			add_culture_standard_of_living_modifier = {
-				culture = cu:athabaskan
-				multiplier = 7
-			}
-		}
 	}
 	s:STATE_ALASKA = {
 		set_owner_of_provinces = {
@@ -994,16 +1051,6 @@
 			x0BDD2C x5D05D1 x57538A xF48040 xBD3E24 xC7C953 xAFE705 x2118D9 x7DD59E xF98C57 xD933E4 x2EF781 x2E34E5 x33F024 x7E7B8F xC98575 xAD005A x7E85A9 x31861A x568651 
 			x4F5E4C x94BEF4 x943D34 x4C6183 x3E347B x193407 x4CD34B x7B73F1 xBEF1F0 xD9F480 x8E0FC3 x28EC12 x756618 x78D3B9 x1E26E1 x2B301E x6BDCBC x991DD8 x68E22B x3C4807 
 			x29F3A6 xA6F50B x53D559 xEB22CE x89449F xE66133 x9CD17E xD5BE4A xB92E1C x01014E x4B17DB x483E8A xFAB0F8 xADC7CF x1711CF xE35510 x688A87 }
-		}
-		region_state:GWC = {
-			add_culture_standard_of_living_modifier = {
-				culture = cu:athabaskan
-				multiplier = 7
-			}
-			add_culture_standard_of_living_modifier = {
-				culture = cu:inuit
-				multiplier = 7
-			}
 		}
 	}
 
@@ -1027,15 +1074,11 @@
 			xB13372 xC77507 x831C37 x125F4D xF8A372 xBD4CC3 x881E54 x12DF58 x360420 x6BF8A0 xC97635 x9A0689 xEEA176 x40B2DE x7F4063 xE0AEE7 x9721EB x762DCA xCA14D8 x6153B9 
 			x96B4F6 xBAACF1 xAF6CAA x85F7FB x5CF8E8 x919129 xB16711 x7C56A7 x150B2F }
 		}
-		region_state:IPQ = {
-			add_culture_standard_of_living_modifier = {
-				culture = cu:athabaskan
-				multiplier = 7
-			}
-			add_culture_standard_of_living_modifier = {
-				culture = cu:inuit
-				multiplier = 7
-			}
+	}
+	s:STATE_YUKON_TERRITORY = {
+		set_owner_of_provinces = {
+			country = c:IPQ
+			provinces = { xE6C75B } #rest handled in global
 		}
 	}
 
@@ -1049,16 +1092,6 @@
 			x33E102 x55C7D7 x8471CE xB017EA xFD9F16 x426CC6 x07CE0C x2D9E6C xAC4581 xE83340 x0F51A3 x30B851 x33369E xC9343B x147817 xB2AFC0 x1D760A x449E10 x2C67FE x2251C7 
 			x2BB077 xE1A693 x4C153A x559FE2 x765687 xE88D0A x7D1BF9 x1E6BCF x47DAB9 xF20258 x9D7645 xE440F8 xA29A6E xA8B818 xB1928E xADC0BA x0975BC xC039B7 x41A3C7 xE37E1A 
 			x09D5DB xEAA023 x6F12FB x2F56C5 xD14AD9 xA16724 x176098 xEFA80C xF04A61 xD84651 xFE1835 x857C6C x657466 xEC0332 x0D0BF4 }
-		}
-		region_state:TNN = {
-			add_culture_standard_of_living_modifier = {
-				culture = cu:athabaskan
-				multiplier = 7
-			}
-			add_culture_standard_of_living_modifier = {
-				culture = cu:inuit
-				multiplier = 7
-			}
 		}
 	}
 
@@ -1075,16 +1108,6 @@
 			x98B340 x5C61D9 x62DCD3 x5FCC5F xCB054C x6B7277 x53ECD7 x4AA500 x41C4B1 x3F7A53 x4C7F1B xA9C595 x8FE5AB x1FC5DB x25A09F x3DCE92 xA2F971 x064764 xD91154 
 			x20427C x863BE3 x910EE4 xE3B9DD x4D40FB x543A2C xC5631B x645235 x134775 x7E592E xAB9CFD x021948 }
 		}
-		region_state:KYK = {
-			add_culture_standard_of_living_modifier = {
-				culture = cu:athabaskan
-				multiplier = 7
-			}
-			add_culture_standard_of_living_modifier = {
-				culture = cu:inuit
-				multiplier = 7
-			}
-		}
 	}
 
 	#Ahtna
@@ -1097,16 +1120,6 @@
 			xEAA023 x5252F1 x6D881E xBE50E0 x9B4806 xB85DF0 xF181C1 x10FB9E xC06675 xF55596 xB48393 x757B4E x4E2DE8 xF34270 xA97C02 x491F76 x4156EE x82A904 x1F8C10 
 			xA11D55 xCBAB01 xF86B0B x2CEF6D }
 		}
-		region_state:AHT = {
-			add_culture_standard_of_living_modifier = {
-				culture = cu:athabaskan
-				multiplier = 7
-			}
-			add_culture_standard_of_living_modifier = {
-				culture = cu:inuit
-				multiplier = 7
-			}
-		}
 	}
 
 	#Deg Xitan
@@ -1114,16 +1127,6 @@
 		set_owner_of_provinces = {
 			country = c:DXG
 			provinces = { x93145A xC7D063 x93459C x4FDC2B x1B8BE4 x2E8502 x0017A3 x2FA59B x718119 x8C1AF2 xCF3FED x191D87 x6B64B0 xCB79A9 }
-		}
-		region_state:DXG = {
-			add_culture_standard_of_living_modifier = {
-				culture = cu:athabaskan
-				multiplier = 7
-			}
-			add_culture_standard_of_living_modifier = {
-				culture = cu:inuit
-				multiplier = 7
-			}
 		}
 	}
 

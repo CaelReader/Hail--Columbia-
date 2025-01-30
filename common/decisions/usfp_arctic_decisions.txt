@@ -1,0 +1,162 @@
+annex_canadian_north = {
+	is_shown = {
+		s:STATE_NUNAVUT = {
+			any_scope_state = {
+				owner = {
+					is_country_type = decentralized
+				}
+			}
+		}
+		OR = {
+			has_state_in_state_region =  STATE_ONTARIO
+			has_state_in_state_region =  STATE_QUEBEC
+			has_state_in_state_region =  STATE_ALBERTA
+			has_state_in_state_region =  STATE_BRITISH_COLUMBIA
+			has_state_in_state_region =  STATE_SASKATCHEWAN
+			has_state_in_state_region =  STATE_MANITOBA
+		}
+	}
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		has_technology_researched = civilizing_mission
+		NOT = {
+			has_law = law_type:law_no_colonial_affairs
+		}
+		has_state_in_state_region =  STATE_ONTARIO
+		has_state_in_state_region =  STATE_QUEBEC
+		has_state_in_state_region =  STATE_ALBERTA
+		has_state_in_state_region =  STATE_BRITISH_COLUMBIA
+		has_state_in_state_region =  STATE_SASKATCHEWAN
+		has_state_in_state_region =  STATE_MANITOBA
+	}
+
+	when_taken = {
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_ONTARIO
+				}
+			 }
+			 s:STATE_ONTARIO = {
+				if = {
+					limit = {
+						exists = region_state:OJI
+					 }
+					 region_state:OJI = {
+						set_state_owner = root
+					 }
+				 }
+			 }
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_QUEBEC
+				}
+			 }
+			 if = {
+				limit = {exists = c:INK }
+				annex = c:INK
+			 }
+		}
+		s:STATE_NUNAVUT = {
+			every_scope_state = {
+				limit = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+				set_state_owner = root
+			}
+		}
+		s:STATE_NORTHWEST_TERRITORIES = {
+			every_scope_state = {
+				limit = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+				set_state_owner = root
+			}
+		}
+		s:STATE_YUKON_TERRITORY = {
+			every_scope_state = {
+				limit = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+				set_state_owner = root
+			}
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_SASKATCHEWAN
+				}
+			 }
+			 if = {
+				limit = { exists = c:CPW }
+				annex = c:CPW
+			 }
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_ALBERTA
+				}
+			 }
+			 if = {
+				limit = {exists = c:DNZ }
+				annex = c:DNZ
+			 }
+			 if = {
+				limit = {exists = c:SVY }
+				annex = c:SVY
+			 }
+		}
+	}
+
+	ai_chance = {
+		base = 1000
+	}
+}
+
+annex_alaskan_north = {
+	is_shown = {
+		s:STATE_ALASKA = {
+			any_scope_state = {
+				owner = {
+					is_country_type = decentralized
+				}
+			}
+		}
+		has_state_in_state_region =  STATE_ALASKA
+	}
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		has_technology_researched = civilizing_mission
+		NOT = {
+			has_law = law_type:law_no_colonial_affairs
+		}
+	}
+
+	when_taken = {
+		s:STATE_ALASKA = {
+			every_scope_state = {
+				limit = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+				set_state_owner = root
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 1000
+	}
+}

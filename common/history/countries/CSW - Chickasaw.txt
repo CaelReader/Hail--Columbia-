@@ -1,0 +1,10 @@
+﻿COUNTRIES = {
+	c:CSW ?= {
+		effect_starting_technology_tier_6_tech = yes
+		usfp_native_startup = yes
+		usfp_native_igs_effect = yes
+		create_character = {
+			template = usfp_chief_george_colbert
+		}
+	}
+}

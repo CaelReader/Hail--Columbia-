@@ -1,0 +1,25 @@
+﻿COUNTRIES = {
+	c:CHE ?= {
+		effect_starting_technology_tier_6_tech = yes
+		usfp_native_startup = yes
+		usfp_native_igs_effect = yes
+		create_character = {
+			template = usfp_chief_john_ross_template
+		}
+		#Cherokee syllabary
+		every_scope_pop = {
+			limit = {
+				culture = cu:cherokee
+			}
+			set_pop_literacy = {
+				literacy_rate = {
+					value = 0.61
+				}
+			}
+		}
+		add_modifier = {
+			name = usfp_cherokee_syllabary
+			years = 30
+		}
+	}
+}

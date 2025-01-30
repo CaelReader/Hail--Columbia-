@@ -222,3 +222,10 @@ usfp_treaty_of_detroit_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	state_colony_growth_speed_mult = 1.00
 }
+
+usfp_arctic_subsistence_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds
+	state_food_security_add = 1.5
+	state_athabaskan_standard_of_living_add = 5
+	state_inuit_standard_of_living_add = 5
+}

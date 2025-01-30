@@ -1,8 +1,121 @@
 ﻿POPS = {
+	#################################
+	### United States & Maritimes ###
+	#################################
+
+	#Chickasaw
+	s:STATE_MISSISSIPPI = {
+		region_state:CSW = {
+			create_pop = {
+				culture = muskogean # Chickasaw
+				size = 4906
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_american
+				size = 1131
+			}
+		}
+		region_state:USA = {
+			create_pop = {
+				culture = muskogean # Choctaw remainers (MBCI forefathers)
+				size = 5500
+			}
+		}
+	}
+
+	#Cherokee
+	s:STATE_GEORGIA = {
+		region_state:CHE = {
+			create_pop = {
+				culture = cherokee
+				size = 8946 # 1835 Cherokee Census "Henderson Roll"
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_american
+				size = 1008
+			}
+		}
+		region_state:USA = {
+			kill_population_percent_in_state = { #reduce redundancy with CHE state region
+				percent = 0.95
+				culture = cu:cherokee
+			}
+		}
+	}
+	s:STATE_ALABAMA = {
+		region_state:CHE = {
+			create_pop = {
+				culture = cherokee
+				size = 1424 # 1835 Cherokee Census "Henderson Roll"
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_american
+				size = 168
+			}
+		}
+		region_state:USA = {
+			kill_population_percent_in_state = { #reduce redundancy with CHE state region
+				percent = 0.95
+				culture = cu:cherokee
+			}
+		}
+	}
+	s:STATE_TENNESSEE = {
+		region_state:CHE = {
+			create_pop = {
+				culture = cherokee
+				size = 2528 # 1835 Cherokee Census "Henderson Roll"
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_american
+				size = 280
+			}
+		}
+		region_state:USA = {
+			kill_population_percent_in_state = { #reduce redundancy with CHE state region
+				percent = 0.95
+				culture = cu:cherokee
+			}
+		}
+	}
+	s:STATE_SOUTH_CAROLINA = {
+		region_state:USA = {
+			kill_population_percent_in_state = { #reduce redundancy
+				percent = 0.95
+				culture = cu:cherokee
+			}
+		}
+	}
+	s:STATE_ARKANSAS = {
+		region_state:USA = {
+			kill_population_percent_in_state = { #never this many Old Settlers
+				percent = 0.95
+				culture = cu:cherokee
+			}
+		}
+	}
+	s:STATE_MISSOURI = {
+		region_state:USA = {
+			create_pop = {
+				culture = algonquian
+				size = 2200  #Sauk & Fox before final removal, plus the Prairie Band of Potowatomie in transition west
+			}
+		}
+	}
+
+
+
+	##############################################
+	### Midwest, Great Lakes & Northern Plains ###
+	##############################################
+	
 	#Council of Three Fires
 	s:STATE_MICHIGAN = {
 		region_state:CTF = {
-			usfp_remove_starting_buildings_effect = yes
 			every_scope_pop = {
 				limit = {
 					OR = {
@@ -45,15 +158,29 @@
 			}
 		}
 	}
-	s:STATE_MINNESOTA = {
+	s:STATE_MANITOBA = {
 		region_state:CTF = {
+			create_pop = {
+				culture = algonquian
+				size = 1000 #filler
+			}
+		}
+	}
+	s:STATE_ONTARIO = {
+		region_state:HBC = {
 			every_scope_pop = {
 				limit = {
-					OR = {
-						culture = cu:yankee
-					}
+					culture = cu:siouan
 				}
-				move_pop = s:STATE_MINNESOTA.region_state:USA
+				move_pop = s:STATE_ONTARIO.region_state:CTF
+			}
+		}
+		region_state:ONT = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:algonquian
+				}
+				move_pop = s:STATE_ONTARIO.region_state:CTF
 			}
 		}
 	}
@@ -62,14 +189,6 @@
 	#Ioway
 	s:STATE_MISSOURI = {
 		region_state:usfp_IWY = {
-			every_scope_pop = {
-				limit = {
-					NOT = {
-						culture = cu:algonquian
-					}
-				}
-				move_pop = s:STATE_MISSOURI.region_state:USA
-			}
 			create_pop = {
 				culture = siouan
 				size = 800 #post-smallpox decline
@@ -83,18 +202,81 @@
 				limit = {
 					culture = cu:dakota
 				}
+				move_pop = s:STATE_IOWA.region_state:LKT
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:algonquian
+				}
 				move_pop = s:STATE_IOWA.region_state:usfp_IWY
 			}
 		}
 		region_state:usfp_IWY = {
-			every_scope_pop = {
-				limit = {
-					culture = cu:yankee
-				}
-				move_pop = s:STATE_IOWA.region_state:USA
+			kill_population_percent_in_state = { #lot of Sauk & Fox here. Not 12k though
+				percent = 0.66
+				culture = cu:algonquian
+			}
+		}
+	}
+
+	#Cheyenne-Arapaho
+	s:STATE_KANSAS = {
+		region_state:ARP = {
+			create_pop = {
+				culture = siouan
+				size = 500 #filler
+			}
+		}
+		region_state:USA = {
+			create_pop = {
+				culture = algonquian
+				size = 3976 #Lenape, Miami, Illini (Peoria etc), Kickapoo, Shawnee, etc. LOT of Midwestern tribes removed to Kansas, then part of Indian Territory prior to the Kansas/Nebraska Act, before final removal to Oklahoma. number estimated using 1825 McKenney and 1837 McCoy estimates and other sources.
+			}
+		}
+	}
+	s:STATE_NEBRASKA = {
+		region_state:ARP = {
+			create_pop = {
+				culture = siouan
+				size = 500 #filler
+			}
+		}
+	}
+
+	#Great Sioux Nation
+	s:STATE_MONTANA = {
+		region_state:LKT = {
+			kill_population_percent_in_state = {
+				percent = 0.5 #rebalancing
+			}
+		}
+	}
+	s:STATE_IOWA = {
+		region_state:LKT = {
+			create_pop = {
+				culture = dakota
+				size = 3000 #rebalanced from Montana
+			}
+		}
+	}
+
+	#Flathead
+	s:STATE_IDAHO = {
+		region_state:FLT = {
+			create_pop = {
+				culture = salish
+				size = 500 #filler
+			}
+		}
+	}
+
+	#Blackfoot
+	s:STATE_WYOMING = {
+		region_state:BLF = {
+			kill_population_percent_in_state = {
+				percent = 0.2 #rebalanced
 			}
 			every_scope_pop = {
-				change_poptype = pop_type:peasants
 				change_pop_culture = {
 					target = cu:siouan
 					value = 1
@@ -102,4 +284,635 @@
 			}
 		}
 	}
+	s:STATE_IDAHO = {
+		region_state:BLF = {
+			create_pop = {
+				culture = siouan
+				size = 1000
+			}
+		}
+	}
+
+	#Arikara-Mandan-Hidasta
+	s:STATE_MONTANA = {
+		region_state:usfp_ARK = {
+			create_pop = {
+				culture = siouan
+				size = 1500
+			}
+			create_pop = {
+				culture = caddoan
+				size = 1500
+			}
+		}
+	}
+	s:STATE_NORTH_DAKOTA = {
+		region_state:usfp_ARK = {
+			create_pop = {
+				culture = siouan
+				size = 1500
+			}
+			create_pop = {
+				culture = caddoan
+				size = 1500
+			}
+		}
+	}
+
+	#Iron Confederacy
+	s:STATE_MONTANA = {
+		region_state:IRC = {
+			create_pop = {
+				culture = siouan
+				size = 2000 #filler
+			}
+		}
+	}
+
+	#######################################
+	### Southwest + Mexico + California ###
+	#######################################
+
+	#Comanche
+	s:STATE_COLORADO = {
+		region_state:COM = {
+			create_pop = {
+				culture = siouan
+				size = 1000 #filler
+			}
+		}
+	}
+	s:STATE_OKLAHOMA = {
+		region_state:SEQ = {
+			create_pop = {
+				culture = muskogean
+				size = 11000
+			}
+			create_pop = {
+				culture = algonquian
+				size = 4235 #(Absentee) Shawnee, Lenape, Kickapoo. Texas was often more attractive than Oklahoma. Most were removed by Texas in 1839 following their war with the Cherokee & Delaware allies
+			}
+			create_pop = {
+				culture = iroquoian
+				size = 551 #Seneca portion of the Lewistown Band removed to Oklahoma, 1825 McKenney estimate figures from Ohio
+			}
+			kill_population_percent_in_state = { #too many Old Settlers portrayed
+				percent = 0.90
+				culture = cu:cherokee
+			}
+		}
+		# 	region_state:COM = {
+		# 		kill_population_percent_in_state = {
+		# 			percent = 1
+		# 		}
+		# 		create_pop = {
+		# 			culture = comanche
+		# 			size = 12000
+		# 		}
+		# 	}
+	}
+
+	# s:STATE_NEW_MEXICO = {
+	# 	region_state:COM = {
+	# 		kill_population_percent_in_state = {
+	# 			percent = 1
+	# 		}
+	# 		create_pop = {
+	# 			culture = comanche
+	# 			size = 3000
+	# 		}
+	# 	}
+	# }
+	# s:STATE_OKLAHOMA = {
+	# 	region_state:COM = {
+	# 		kill_population_percent_in_state = {
+	# 			percent = 1
+	# 		}
+	# 		create_pop = {
+	# 			culture = comanche
+	# 			size = 5000
+	# 		}
+	# 	}
+	# }
+	# s:STATE_KANSAS = {
+	# 	region_state:COM = {
+	# 		kill_population_percent_in_state = {
+	# 			percent = 1
+	# 		}
+	# 		create_pop = {
+	# 			culture = comanche
+	# 			size = 4250
+	# 		}
+	# 	}
+	# }
+	# s:STATE_COLORADO = {
+	# 	region_state:COM = {
+	# 		kill_population_percent_in_state = {
+	# 			percent = 1
+	# 		}
+	# 		create_pop = {
+	# 			culture = comanche
+	# 			size = 2750
+	# 		}
+	# 	}
+	# }
+
+	#Apache
+	s:STATE_TEXAS = {
+		region_state:APC = {
+			create_pop = {
+				culture = apache
+				size = 1000 #filler
+			}
+		}
+	}
+	s:STATE_CHIHUAHUA = {
+		region_state:MEX = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:apache
+				}
+				move_pop = s:STATE_CHIHUAHUA.region_state:APC
+			}
+		}
+	}
+
+	#Shoshone
+	s:STATE_IDAHO = {
+		region_state:SHO = {
+			kill_population_percent_in_state = {
+				percent = 0.5 #rebalancing to other states
+			}
+		}
+	}
+	s:STATE_COLORADO = {
+		region_state:SHO = {
+			create_pop = {
+				culture = paiute
+				size = 2000
+			}
+		}
+	}
+	s:STATE_UTAH = {
+		region_state:SHO = {
+			create_pop = {
+				culture = paiute
+				size = 8000
+			}
+		}
+	}
+
+	#Southern Paiute
+	s:STATE_ARIZONA = {
+		region_state:NVJ = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:paiute
+				}
+				move_pop = s:STATE_ARIZONA.region_state:SPI
+			}
+		}
+	}
+	s:STATE_NEVADA = {
+		region_state:SPI = {
+			create_pop = {
+				culture = paiute
+				size = 4000 #rebalanced from Northern Paiute
+			}
+		}
+	}
+	s:STATE_CALIFORNIA = {
+		region_state:SPI = {
+			create_pop = {
+				culture = paiute
+				size = 500 #filler
+			}
+		}
+	}
+
+	#Northern Paiute
+	s:STATE_NEVADA = {
+		region_state:PIU = {
+			kill_population_percent_in_state = {
+				percent = 0.2 #rebalanced to other states
+			}
+		}
+	}
+	s:STATE_CALIFORNIA = {
+		region_state:PIU = {
+			create_pop = {
+				culture = paiute
+				size = 1000
+			}
+		}
+	}
+	s:STATE_OREGON = {
+		region_state:ORG = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:paiute
+				}
+				move_pop = s:STATE_OREGON.region_state:PIU
+			}
+		}
+	}
+	s:STATE_IDAHO = {
+		region_state:ORG = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:paiute
+				}
+				move_pop = s:STATE_IDAHO.region_state:PIU
+			}
+		}
+	}
+
+	#California
+	#Arbitrarily Redistributing ~50k Hokans from the MEX state
+	s:STATE_CALIFORNIA = {
+		region_state:MEX = {
+			kill_population_percent_in_state = {
+				percent = 0.9
+				culture = cu:hokan
+			}
+		}
+		region_state:YOK = {
+			create_pop = {
+				culture = hokan
+				size = 30000
+			}
+		}
+		region_state:YUR = {
+			create_pop = {
+				culture = hokan
+				size = 5000
+			}
+		}
+		region_state:HOK = {
+			create_pop = {
+				culture = hokan
+				size = 5000
+			}
+		}
+		region_state:usfp_MDC = {
+			create_pop = {
+				culture = hokan
+				size = 1000
+			}
+		}
+		region_state:SRN = {
+			create_pop = {
+				culture = hokan
+				size = 9000
+			}
+		}
+
+	}
+
+	#############################
+	### PNW & Northern Canada ###
+	#############################
+
+	#Klamath
+	s:STATE_OREGON = {
+		region_state:ORG = {
+			kill_population_percent_in_state = {
+				percent = 0.5 #rebalanced to Klamath
+				culture = cu:salish 
+			}
+		}
+		region_state:KLA = {
+			create_pop = {
+				culture = salish
+				size = 4000
+			}
+		}
+	}
+
+	#Sahaptin
+	s:STATE_OREGON = {
+		region_state:ORG = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:nez_perce
+				}
+				move_pop = s:STATE_OREGON.region_state:SHP
+			}
+		}
+	}
+	s:STATE_WASHINGTON = {
+		region_state:ORG = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:nez_perce
+				}
+				move_pop = s:STATE_WASHINGTON.region_state:SHP
+			}
+		}
+	}
+
+	#Washington
+	s:STATE_WASHINGTON = {
+		region_state:ORG = {
+			kill_population_percent_in_state = {
+				percent = 0.8 #rebalanced to native tags
+				culture = cu:salish
+			}
+		}
+		region_state:YKM = {
+			create_pop = {
+				culture = salish
+				size = 1000
+			}
+		}
+		region_state:SAL = {
+			create_pop = {
+				culture = salish
+				size = 5000
+			}
+		}
+		region_state:SYX = {
+			create_pop = {
+				culture = salish
+				size = 2000
+			}
+		}
+	}
+
+	#British Columbia
+	s:STATE_BRITISH_COLUMBIA = {
+		region_state:ORG = {
+			kill_population_percent_in_state = {
+				percent = 0.8 #rebalanced to native tags
+				culture = cu:salish
+			}
+			kill_population_percent_in_state = {
+				percent = 1 #55k to native tags
+				culture = cu:athabaskan
+			}
+		}
+		region_state:HDA = {
+			create_pop = {
+				culture = salish
+				size = 5000
+			}
+		}
+		region_state:SAL = {
+			create_pop = {
+				culture = salish
+				size = 3000
+			}
+		}
+		region_state:SYX = {
+			create_pop = {
+				culture = salish
+				size = 2000
+			}
+		}
+		region_state:LLT = {
+			create_pop = {
+				culture = salish
+				size = 1000
+			}
+		}
+		region_state:WKS = {
+			create_pop = {
+				culture = salish
+				size = 5000
+			}
+		}
+		region_state:SWP = {
+			create_pop = {
+				culture = salish
+				size = 3000
+			}
+		}
+		region_state:DKL = {
+			create_pop = {
+				culture = athabaskan
+				size = 10000
+			}
+		}
+		region_state:DNZ = {
+			create_pop = {
+				culture = athabaskan
+				size = 10000
+			}
+		}
+		region_state:TLT = {
+			create_pop = {
+				culture = athabaskan
+				size = 20000
+			}
+		}
+		region_state:TSI = {
+			create_pop = {
+				culture = athabaskan
+				size = 5000
+			}
+		}
+		region_state:SVY = {
+			create_pop = {
+				culture = athabaskan
+				size = 2000
+			}
+		}
+		region_state:KTN = {
+			create_pop = {
+				culture = salish
+				size = 2000
+			}
+		}
+	}
+
+	#Alberta
+	s:STATE_ALBERTA = {
+		region_state:DNZ = {
+			create_pop = {
+				culture = athabaskan
+				size = 10000
+			}
+		}
+		region_state:SVY = {
+			create_pop = {
+				culture = athabaskan
+				size = 2000
+			}
+		}
+		region_state:GVT = {
+			create_pop = {
+				culture = siouan
+				size = 1000 #filler
+			}
+		}
+	}
+
+	#Ontario
+	s:STATE_ONTARIO = {
+		region_state:HBC = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:cree
+				}
+				move_pop = s:STATE_ONTARIO.region_state:SWC #rebalancing to Cree tags
+			}
+		}
+		region_state:SWC = {
+			kill_population_percent_in_state = {
+				percent = 0.5 #rebalancing 15k to other Cree states
+			}
+		}
+		region_state:OJI = {
+			create_pop = {
+				culture = cree
+				size = 10000
+			}
+		}
+	}
+
+	#Manitoba
+	s:STATE_MANITOBA = {
+		region_state:OJI = {
+			create_pop = {
+				culture = cree
+				size = 2000
+			}
+		}
+		region_state:SWC = {
+			create_pop = {
+				culture = cree
+				size = 3000
+			}
+		}
+		region_state:WCR = {
+			create_pop = {
+				culture = cree
+				size = 1000 #filler
+			}
+		}
+		region_state:HBC = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:athabaskan
+				}
+				move_pop = s:STATE_MANITOBA.region_state:CPW
+			}
+		}
+	}
+
+	#Chipewyan
+	s:STATE_MANITOBA = {
+		region_state:CPW = {
+			kill_population_percent_in_state = {
+				percent = 0.8 #redistribute 12k to other states
+			}
+		}
+	}
+	s:STATE_SASKATCHEWAN = {
+		region_state:CPW = {
+			create_pop = {
+				culture = athabaskan
+				size = 4000
+			}
+		}
+	}
+	s:STATE_NUNAVUT = {
+		region_state:CPW = {
+			create_pop = {
+				culture = athabaskan
+				size = 1000
+			}
+		}
+	}
+	s:STATE_NORTHWEST_TERRITORIES = {
+		region_state:CPW = {
+			create_pop = {
+				culture = athabaskan
+				size = 4000
+			}
+		}
+	}
+	s:STATE_ALBERTA = {
+		region_state:CPW = {
+			create_pop = {
+				culture = athabaskan
+				size = 3000
+			}
+		}
+	}
+
+
+	#Saskatchewan
+	s:STATE_SASKATCHEWAN = {
+		region_state:WCR = {
+			create_pop = {
+				culture = cree
+				size = 1000 #filler
+			}
+		}
+		region_state:HBC = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:siouan
+				}
+				move_pop = s:STATE_SASKATCHEWAN.region_state:GVT
+			}
+		}
+	}
+
+
+	#Quebec
+	s:STATE_QUEBEC = {
+		region_state:HBC = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:inuit
+				}
+				move_pop = s:STATE_QUEBEC.region_state:INK
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:cree
+				}
+				move_pop = s:STATE_QUEBEC.region_state:ECR
+			}
+		}
+		region_state:ECR = {
+			kill_population_percent_in_state = {
+				percent = 0.75 #redistribute to Innu
+			}
+		}
+		region_state:INN = {
+			create_pop = {
+				culture = cree
+				size = 4500
+			}
+		}
+		region_state:QUE = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:cree
+				}
+				move_pop = s:STATE_QUEBEC.region_state:usfp_ATK
+			}
+		}
+		region_state:usfp_ALG = {
+			create_pop = {
+				culture = algonquian
+				size = 2000 # Algonquin, Abitibi, etc. Placeholder estimate
+			}
+		}
+	}
+
+	#Nunavut
+	s:STATE_NUNAVUT = {
+		region_state:INV ={
+			kill_population_percent_in_state = {
+				percent = 0.5 #sent to NWT
+			}
+		}
+	}
+
+	
+
 }

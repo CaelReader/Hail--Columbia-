@@ -1,4 +1,4 @@
-﻿GLOBAL = {
+﻿STATES = {
 	s:STATE_BRITISH_COLUMBIA = {
 		add_claim = c:ORG
 	}
@@ -77,6 +77,7 @@
 	}
 	s:STATE_QUEBEC = {
 		add_claim = c:HBC
+		add_claim = c:QUE
 	}
 	s:STATE_COLORADO = {
 		add_claim = c:USA

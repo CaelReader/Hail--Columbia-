@@ -1,0 +1,29 @@
+﻿DIPLOMACY = {
+	c:CSW ?= {
+		create_bidirectional_truce = {
+			country = c:CHE
+			months = 60
+		}
+	}
+}
+
+DIPLOMACY = {
+	c:USA ?= {
+		create_unidirectional_truce = {
+			country = c:CHE
+			months = 60
+		}
+		create_unidirectional_truce = {
+			country = c:CSW
+			months = 60
+		}
+		create_unidirectional_truce = {
+			country = c:LIB
+			months = 240
+		}
+		create_unidirectional_truce = {
+			country = c:SEQ
+			months = 240
+		}
+	}
+}

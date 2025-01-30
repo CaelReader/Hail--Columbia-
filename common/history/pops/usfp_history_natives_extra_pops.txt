@@ -1,6 +1,6 @@
 ﻿#Population data gathered by Argendauss
 #separated these out in case they cause issues and need to be toggleable
-GLOBAL = {
+POPS = {
 	s:STATE_GEORGIA.region_state:USA = {
 		create_pop = {
 			culture = muskogean
@@ -87,14 +87,7 @@ GLOBAL = {
 			}
 		}
 	}
-	s:STATE_QUEBEC = {
-		region_state:QUE = {
-			create_pop = {
-				culture = algonquian
-				size = 2000 # Algonquin, Abitibi, etc. Placeholder estimate
-			}
-		}
-	}
+
 	#Mississippi River
 	s:STATE_LOUISIANA = {
 		region_state:USA = {

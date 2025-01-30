@@ -586,3 +586,29 @@ usfp_ARK = {
 	cultures = { siouan caddoan }
 	capital = STATE_MONTANA
 }
+
+#Algonquin
+usfp_ALG = {
+	color = { 114 73 25 }
+	
+	country_type = decentralized
+
+	tier = principality
+	
+	cultures = { algonquian }
+	
+	capital = STATE_QUEBEC
+}
+
+#Atikamekw
+usfp_ATK = {
+	color = { 114 100 25 }
+	
+	country_type = decentralized
+
+	tier = principality
+	
+	cultures = { cree }
+	
+	capital = STATE_QUEBEC
+}

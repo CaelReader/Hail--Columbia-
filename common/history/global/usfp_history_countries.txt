@@ -1,22 +1,9 @@
 ﻿GLOBAL = {
 	c:SEQ = {
-			create_character = {
-				template = usfp_chief_mushulatubbee_template
-			}
-			capital = {
-				create_pop = {
-					culture = muskogean
-					size = 11000
-				}
-			}
-			add_primary_culture = cu:caddoan #indigenous inhabitants the Wichita, as well as related Caddo proper removed to the north
-			add_primary_culture = cu:muskogean	#Creek, Seminole, Choctaw, Chickasaw removed to the west
-			add_primary_culture = cu:algonquian	 #Potowatomie, Shawnee, others removed to the west
 			set_relations = { country = c:USA value = 20 }
 			capital = {
 				usfp_remove_starting_buildings_effect = yes
-			}
-			usfp_native_igs_effect = yes
+			}	
 	}
 	cu:yankee = {
 		add_cultural_obsession = liquor
@@ -41,62 +28,6 @@
 	c:MEX = {
 		add_declared_interest = region_great_plains
 	}
-
-	#Newfoundland Colony
-	#Wasn't absorbed by Canada until the 1950s, so its set to be English rather than Anglo-Canadian
-	s:STATE_NEWFOUNDLAND = {
-		create_country = {
-			tag = NEW
-			state = region_state:GBR
-			origin = c:NVS
-			on_created = {
-				activate_law = law_type:law_parliamentary_republic
-				c:GBR = {
-					create_diplomatic_pact = {
-						country = c:NEW
-						type = colony
-					}
-				}
-				trigger_event = {
-					id = usfp_canada.1
-					days = 1
-				}
-			}
-		}
-	}
-	c:QUE = {
-		activate_law = law_type:law_frontier_colonization
-		add_modifier = {
-			name = usfp_canadian_colonization_modifier
-			years = 30
-		}
-	}
-	c:NBS = {
-		activate_law = law_type:law_frontier_colonization
-		add_modifier = {
-			name = usfp_canadian_colonization_modifier
-			years = 30
-		}
-	}
-	c:ONT = {
-		activate_law = law_type:law_frontier_colonization
-		add_modifier = {
-			name = usfp_canadian_colonization_modifier
-			years = 30
-		}
-	}
-	c:HBC = {
-		add_modifier = {
-			name = usfp_canadian_colonization_modifier
-			years = 30
-		}
-	}
-	c:ORG = {
-		add_modifier = {
-			name = usfp_canadian_colonization_modifier
-			years = 30
-		}
-	}
 	c:USA = {
 		ig:ig_petty_bourgeoisie = {
 			save_scope_as = pb_ig
@@ -107,6 +38,14 @@
 				target = c:GBR
 			}
 			add_lobby_member = scope:pb_ig		
+		}
+	}
+
+	#Newfoundland Colony
+	#Wasn't absorbed by Canada until the 1950s, so its set to be English rather than Anglo-Canadian
+	s:STATE_NEWFOUNDLAND = {
+		region_state:GBR = {
+			set_state_owner = c:NEW
 		}
 	}
 }

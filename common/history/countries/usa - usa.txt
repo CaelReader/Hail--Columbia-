@@ -159,18 +159,20 @@
 			country = c:SEQ
 			type = bankroll
 		}
-		create_unidirectional_truce = {
-			country = c:LIB
-			months = 240
-		}
-		create_unidirectional_truce = {
-			country = c:SEQ
-			months = 240
-		}
 		create_diplomatic_pact = {
 			country = c:TEX
 			type = increase_relations
 		}
+
+		create_diplomatic_pact = {
+			country = c:CSW
+			type = protectorate
+		}
+		create_diplomatic_pact = {
+			country = c:CHE
+			type = protectorate
+		}
+
 
 		set_variable = usfp_achievements_possible
 		set_variable = {

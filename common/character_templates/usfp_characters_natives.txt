@@ -255,3 +255,37 @@ usfp_wovoka = {
 	}
     #event spawned
 }
+
+usfp_osceola = {
+    first_name = Asiyahola
+    last_name = Osceola
+    historical = yes
+    birth_date = 1804.4.18 #random date
+    ig_leader = yes
+    is_general = yes
+    interest_group = ig_armed_forces
+    ideology = ideology_jingoist_leader
+    commander_rank = commander_rank_1
+    culture = cu:muskogean
+    traits = {
+        pillager
+        experienced_defensive_strategist
+        defense_in_depth_specialist
+    }
+}
+
+usfp_micanopy = {
+    first_name = Micanopy
+    last_name = usfp_EmptyMicanopy
+    historical = yes
+    culture = cu:muskogean
+    birth_date = 1780.8.21 #approx
+    interest_group = ig_landowners
+    ig_leader = yes
+    ideology = ideology_jingoist_leader
+    ruler = yes
+    traits = {
+        cautious
+        persistent
+    }
+}

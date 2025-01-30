@@ -170,17 +170,3 @@ can_aus.5 = {
 		}
 	}
 }
-
-namespace = usfp_canada
-
-#hidden event to do some setup
-usfp_canada.1 = {
-	type = country_event
-	hidden = yes
-	
-	immediate = {
-		c:NEW = {
-			activate_law = law_type:law_presidential_republic
-		}
-	}
-}
