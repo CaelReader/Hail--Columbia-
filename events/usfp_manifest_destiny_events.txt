@@ -423,6 +423,10 @@ usfp_manifest_destiny.5 = {
 		name = usfp_manifest_destiny.5.a
 		default_option = yes
 		usfp_manifest_less_destiny_effect = yes
+		create_bidirectional_truce = {
+			country = c:MEX
+			months = 120
+		}
 		add_modifier = {
 			name = usa_paying_for_mexico
 			years = 4
@@ -728,6 +732,10 @@ usfp_manifest_destiny.7 = {
 		}
 		ig:ig_petty_bourgeoisie = {
 			add_ideology = ideology_empire_of_liberty
+		}
+		add_loyalists = {
+			value = small_radicals
+			interest_group = ig:ig_petty_bourgeoisie
 		}
 	}
 
@@ -1343,6 +1351,9 @@ usfp_manifest_destiny.14 = {
 
 	immediate = {
 		set_variable = ostend_manifesto
+		ig:ig_landowners = {
+			save_scope_as = landowners_ig
+		}
 		s:STATE_CUBA = {
 			random_scope_state = {
 				limit = {
@@ -1736,6 +1747,10 @@ usfp_manifest_destiny.17 = {
 				set_state_owner = c:USA
 			}
 		}
+		create_bidirectional_truce = {
+			country = scope:cuba_owner_scope
+			months = 120
+		}
 	}
 }
 
@@ -1775,6 +1790,9 @@ usfp_manifest_destiny.18 = {
 					this = ROOT
 				}
 				is_revolutionary = no
+				NOT = {
+					has_war_with = root
+				}
 			}
 			initiator = {
 				country_is_in_north_america = no
@@ -1784,6 +1802,9 @@ usfp_manifest_destiny.18 = {
 					this = ROOT
 				}
 				is_revolutionary = no
+				NOT = {
+					has_war_with = root
+				}
 			}
 			NOR = {
 				is_diplomatic_play_type = dp_reduce_autonomy
@@ -1809,6 +1830,9 @@ usfp_manifest_destiny.18 = {
 						this = ROOT
 					}
 					is_revolutionary = no
+					NOT = {
+						has_war_with = root
+					}
 				}
 				initiator = {
 					country_is_in_north_america = no
@@ -1818,6 +1842,9 @@ usfp_manifest_destiny.18 = {
 						this = ROOT
 					}
 					is_revolutionary = no
+					NOT = {
+						has_war_with = root
+					}
 				}
 				NOR = {
 					is_diplomatic_play_type = dp_reduce_autonomy
@@ -1825,6 +1852,7 @@ usfp_manifest_destiny.18 = {
 					is_diplomatic_play_type = dp_secession
 					is_diplomatic_play_type = dp_independence
 				}
+				is_war = no
 			}
 			target = {
 				save_scope_as = target_scope
@@ -1850,6 +1878,10 @@ usfp_manifest_destiny.18 = {
 			 }
 			 set_variable = destiny_manifested_monroe_doctrine
 			 usfp_manifest_more_destiny_effect = yes
+		}
+		create_unidirectional_truce = {
+			country = scope:target_scope
+			months = 6
 		}
 		change_relations = {
 			country = scope:target_scope
@@ -1886,6 +1918,10 @@ usfp_manifest_destiny.18 = {
 				name = usfp_ignored_monroe
 				years = 2
 			}
+		}
+		create_unidirectional_truce = {
+			country = scope:initiator_scope
+			months = 6
 		}
 		change_relations = {
 			country = scope:target_scope

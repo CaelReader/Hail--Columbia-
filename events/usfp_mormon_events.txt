@@ -984,6 +984,9 @@ usfp_mormon.13 = {
 			save_scope_as = protestantism_scope
 		}
 		set_variable = lds_fate
+		ig:ig_devout = {
+			save_scope_as = ig_devout
+		}
 	}
 
 	#no
@@ -997,6 +1000,12 @@ usfp_mormon.13 = {
 		scope:utah_scope = {
 			add_modifier = {
 				name = usfp_lds_church_utah
+			}
+		}
+		ig:ig_devout = {
+			add_modifier = {
+				name = modifier_soft_on_blatant_heresy
+				years = 4
 			}
 		}
 	}

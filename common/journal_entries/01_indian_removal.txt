@@ -85,11 +85,12 @@
 	fail = {
 		OR = {
 			has_law = law_type:law_no_colonial_affairs
-			AND = {
-				cultural_acceptance_base = { target = cu:cherokee value >= acceptance_status_4 }
-				cultural_acceptance_base = { target = cu:caddoan value >= acceptance_status_4 }
-				cultural_acceptance_base = { target = cu:muskogean value >= acceptance_status_4 }
-			}
+			has_law = law_type:law_multicultural
+			# AND = {
+			# 	cultural_acceptance_base = { target = cu:cherokee value >= acceptance_status_4 }
+			# 	cultural_acceptance_base = { target = cu:caddoan value >= acceptance_status_4 }
+			# 	cultural_acceptance_base = { target = cu:muskogean value >= acceptance_status_4 }
+			# }
 
 		}
 	}
@@ -102,12 +103,117 @@
 		hidden_effect = {
 			usfp_cleanup_indian_removal_variables = yes
 		}
+		show_as_tooltip = {
+			if = {
+				limit = {
+					any_interest_group = {
+						is_marginal = no
+						leader = {
+							OR = {
+								has_trait = bigoted
+								has_ideology = ideology:ideology_jingoist_leader
+							}
+						}
+					}
+				}
+				random_interest_group = {
+					limit = {
+						leader = {
+							OR = {
+								has_trait = bigoted
+								has_ideology = ideology:ideology_jingoist_leader
+							}
+						}
+					}
+					add_modifier = {
+						name = indian_removal_approval
+						months = normal_modifier_time
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_interest_group = {
+						is_marginal = no
+						leader = {
+							has_ideology = ideology:ideology_pacifist
+						}
+					}
+				}
+				random_interest_group = {
+					limit = {
+						is_marginal = no
+						leader = {
+							has_ideology = ideology:ideology_pacifist
+						}
+					}
+					add_modifier = {
+						name = indian_removal_approval
+						months = normal_modifier_time
+						multiplier = -1
+					}
+				}
+			}
+			if = {
+				limit = { 
+					has_journal_entry = usfp_manifest_destiny_main
+				}
+				usfp_manifest_more_destiny_effect = yes
+				set_variable = destiny_manifested_indian_removal
+			}
+			set_variable = usfp_indians_removed_end
+		}
 	}
 
 	on_fail = {
 		trigger_event = { id = native_resettlement.6 }
 		hidden_effect = {
 			usfp_cleanup_indian_removal_variables = yes
+		}
+		show_as_tooltip = {
+			if = {
+				limit = {
+					has_law = law_type:law_multicultural
+					c:SEQ = {
+						is_player = no
+					}
+				}
+				annex = c:SEQ
+			}
+			if = {
+				limit = { 
+					has_law = law_type:law_multicultural
+					exists = c:CHE
+					c:CHE = {
+						is_player = no
+					}
+				}
+				annex = c:CHE
+			}
+			if = {
+				limit = { 
+					has_law = law_type:law_multicultural
+					exists = c:CSW
+					c:CSW = {
+						is_player = no
+					}
+				}
+				annex = c:CSW
+			}
+			else = {
+				add_modifier = {
+					name = native_american_rights
+					months = long_modifier_time
+				}
+			}
+			add_radicals = {
+				value = medium_radicals
+				culture = cu:yankee
+			}
+			add_radicals = {
+				value = large_radicals
+				culture = cu:dixie
+			}
 		}
 	}
 	

@@ -58,7 +58,7 @@ usfp_progressive_era.1 = {
 		update_party_support = yes
 		add_radicals = {
 			value = small_radicals
-			strata = poor
+			strata = lower
 		}
 		add_radicals = {
 			value = small_radicals
@@ -66,7 +66,7 @@ usfp_progressive_era.1 = {
 		}
 		add_loyalists = {
 			value = small_radicals
-			strata = rich
+			strata = upper
 		}
 	}
 }
@@ -253,7 +253,7 @@ usfp_progressive_era.3 = {
 		}
 		add_radicals = {
 			value = small_radicals
-			strata = poor
+			strata = lower
 		}
 		add_loyalists = {
 			value = medium_radicals
@@ -473,6 +473,12 @@ usfp_progressive_era.6 = {
 		scope:dc_sr_scope.region_state:USA = {
 			save_scope_as = dc_scope
 		}
+		random_scope_building = {
+			limit = {
+				is_building_type = building_urban_center
+			}
+			save_scope_as = urban_center_scope
+		}
 	}
 
 	#cool
@@ -609,6 +615,9 @@ usfp_progressive_era.8 = {
 				has_template = usfp_usa_jane_addams
 			}
 			save_scope_as = jane_addams_scope
+		}
+		law_type:law_womens_suffrage = {
+			save_scope_as = womens_suffrage_law
 		}
 	}
 
@@ -1368,7 +1377,7 @@ usfp_progressive_era.16 = {
 		default_option = yes
 		add_loyalists = {
 			value = large_radicals
-			strata = poor
+			strata = lower
 		}
 		add_loyalists = {
 			value = small_radicals
@@ -1376,7 +1385,7 @@ usfp_progressive_era.16 = {
 		}
 		add_radicals = {
 			value = large_radicals
-			strata = rich
+			strata = upper
 		}
 		every_interest_group = {
 			limit = {
@@ -1417,7 +1426,7 @@ usfp_progressive_era.16 = {
 		}
 		add_radicals = {
 			value = large_radicals
-			strata = rich
+			strata = upper
 		}
 		every_scope_state = {
 			limit = {

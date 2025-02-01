@@ -50,7 +50,7 @@ usfp_gilded_age.1 = {
 		default_option = yes
 		add_loyalists = {
 			value = small_radicals
-			strata = rich
+			strata = upper
 		}
 		add_loyalists = {
 			value = small_radicals
@@ -184,7 +184,7 @@ usfp_gilded_age.2 = {
 				}
 				add_radicals = {
 					value = medium_radicals
-					strata = poor
+					strata = lower
 				}
 			}
 			30 = {
@@ -618,6 +618,9 @@ usfp_gilded_age.7 = {
 		s:STATE_CALIFORNIA.region_state:USA = { 
 			save_scope_as = california_scope 
 		}
+		s:STATE_WASHINGTON = {
+			save_scope_as = washington_region_scope
+		}
 	}
 	
 	#cool
@@ -1031,7 +1034,7 @@ usfp_gilded_age.12 = {
 			}
 			add_radicals_in_state = {
 				value = medium_radicals
-				strata = poor
+				strata = lower
 			}
 		}
 	}
@@ -1343,7 +1346,7 @@ usfp_gilded_age.15 = {
 		scope:monopoly_state = {
 			add_radicals_in_state = {
 				value = small_radicals
-				strata = rich
+				strata = upper
 			}
 			add_radicals_in_state = {
 				value = small_radicals

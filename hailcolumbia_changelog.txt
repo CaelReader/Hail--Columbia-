@@ -421,8 +421,11 @@ Great Plains nations now suffer from a long lasting mortality modifier
 Refactored internal history setup for decentralized tags, some borders and populations have shifted
 Added Algonquin and Atikamekw tags to Quebec
 All states that should start as colonies now properly do so, enabling the AI to colonize more organically
+All native tags now have defined flags
 Manifest Destiny AI Strategy should maximize Colonial Affairs institution
 Added +100% Colonization speed modifier to Michigan
+Peacefully purchasing Cuba or the Mexican Cession now creates a 10 year Truce
 Fixed Sonora asking for statehood when liberated manually
 Fixed starving inuits
+Fixed all instances of incorrect strata targets
 Added German translation courtesy of KushGene

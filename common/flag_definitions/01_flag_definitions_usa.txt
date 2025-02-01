@@ -72,6 +72,7 @@ USA = {	# United States of America
 				OR = {
 					has_law = law_type:law_presidential_republic
 					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_corporate_state
 				}
 				has_law = law_type:law_technocracy
 			}
@@ -87,6 +88,7 @@ USA = {	# United States of America
 				OR = {
 					has_law = law_type:law_presidential_republic
 					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_corporate_state
 				}
 				has_law = law_type:law_technocracy
 				OR = {

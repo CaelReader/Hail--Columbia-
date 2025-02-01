@@ -574,6 +574,15 @@ usfp_je_indian_wars = {
 
 	on_complete = {
 		trigger_event = usfp_indian_wars.12 #Allotment
+		show_as_tooltip = {
+			cu:usfp_american_indian = {
+				save_temporary_scope_as = american_indian_culture
+			}
+			usfp_enable_american_indian_culture = yes
+			s:STATE_OKLAHOMA = {
+				add_claim = root
+			}
+		}
 	}
 
 	on_monthly_pulse = {

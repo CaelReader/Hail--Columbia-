@@ -90,3 +90,94 @@ usfp_GLC = {
 		}
 	}
 }
+
+TIS = { # Turtle Island
+	flag_definition = {
+		coa = TIS
+		subject_canton = TIS
+		priority = 1
+	}
+	flag_definition = {
+		coa = TIS_republic
+		subject_canton = TIS_republic
+		priority = 20
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = TIS_haudenosaunee
+		subject_canton = TIS_haudenosaunee
+		priority = 1000
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				was_formed_from = IRO
+			}
+		}
+	}
+	flag_definition = {
+		coa = TIS_council_republic
+		subject_canton = TIS_council_republic
+		priority = 2000
+		trigger = { 
+			exists = scope:actor
+			scope:actor ?= {
+				NOT = {
+					has_law = law_type:law_anarchy
+				}
+				has_law = law_type:law_council_republic
+			}
+		}
+	}
+	flag_definition = {
+		coa = TIS_anarchy
+		subject_canton = TIS_anarchy
+		priority = 3000
+		trigger = { 
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_anarchy
+				has_law = law_type:law_council_republic
+			}
+		}
+	}
+	flag_definition = {
+		coa = TIS_anarchy_multicultural
+		subject_canton = TIS_anarchy_multicultural
+		priority = 4000
+		trigger = { 
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_anarchy
+				has_law = law_type:law_council_republic
+				has_law = law_type:law_multicultural
+			}
+		}
+	}
+	flag_definition = {
+		coa = TIS_fascist
+		subject_canton = TIS_fascist
+		priority = 1500
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = TIS_technocracy
+		subject_canton = TIS_technocracy
+		priority = 1500
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_corporate_state
+				}
+				has_law = law_type:law_technocracy
+			} 
+
+		}
+	}		
+}

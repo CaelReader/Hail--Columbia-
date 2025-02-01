@@ -1,7 +1,7 @@
 ﻿# usfp_reservation_indians = {
 # 	texture = "gfx/interface/icons/pops_icons/peasants.dds"
 # 	color = rgb{ 127 20 21}
-# 	strata = poor
+# 	strata = lower
 # 	subsistence_income = yes
 # 	can_always_hire = yes
 # 	ignores_employment_proportionality = yes

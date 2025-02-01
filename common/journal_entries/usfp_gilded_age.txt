@@ -83,6 +83,10 @@ usfp_gilded_age = {
 	}
 	fail = {
 		OR = {
+			ig:ig_industrialists = {
+				is_marginal = yes
+			}
+			has_law = law_type:law_council_republic
 			AND = {
 				has_law = law_type:law_elected_bureaucrats
 				OR = {
@@ -97,12 +101,8 @@ usfp_gilded_age = {
 					institution = institution_social_security
 					value > 3
 				}
-				bureaucracy > 500
+				bureaucracy >= 1000
 			}
-			ig:ig_industrialists = {
-				is_marginal = yes
-			}
-			has_law = law_type:law_council_republic
 		}
 	}
 	on_fail = {

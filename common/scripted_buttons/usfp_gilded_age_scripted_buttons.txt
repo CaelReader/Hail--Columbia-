@@ -83,7 +83,7 @@
 				}
 				add_radicals = {
 					value = small_radicals
-					strata = poor
+					strata = lower
 				}
 			}
 		}

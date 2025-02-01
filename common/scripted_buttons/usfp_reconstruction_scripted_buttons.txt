@@ -85,7 +85,7 @@ usfp_reconstruction_confederate_amnesty_button = {
 		add_loyalists = {
 			value = medium_radicals
 			culture = cu:dixie
-			strata = rich
+			strata = upper
 		}
 		add_radicals = {
 			value = medium_radicals

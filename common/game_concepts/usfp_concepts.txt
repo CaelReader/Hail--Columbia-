@@ -54,3 +54,11 @@ concept_usfp_nullification_crisis = {
 concept_usfp_jim_crow = {
 	texture = "gfx/interface/icons/invention_icons/academia.dds"
 }
+
+concept_usfp_thirteen_colonies = {
+	texture = "gfx/interface/icons/invention_icons/academia.dds"
+}
+
+concept_usfp_monroe_doctrine = {
+	texture = "gfx/interface/icons/invention_icons/academia.dds"
+}
