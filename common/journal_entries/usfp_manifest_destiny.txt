@@ -175,26 +175,40 @@ usfp_manifest_destiny_main = {
 				set_variable = destiny_manifested_professional_army
 				post_notification = usfp_manifest_more_destiny_law
 			}
-			#Attacked by Mexico
-			# if = {
-			# 	limit = {
-			# 		exists = c:MEX 
-			# 		any_diplomatic_play = {
-			# 			target = ROOT
-			# 			initiator = c:MEX
-			# 		}
-			# 		NOT = {
-			# 			has_variable = destiny_manifested_mexican_aggression
-			# 		}
-			# 	}
-			# 	usfp_manifest_more_destiny_effect = yes
-			# 	set_variable = destiny_manifested_mexican_aggression
-			# 	c:MEX = {
-			# 		save_scope_as = mexico_scope
-			# 	}
-			# 	post_notification = usfp_manifest_more_destiny_mexico
-			# }
-			### Manifest Destiny Decreases
+			#National Supremacy/Ethnostate
+			if = {
+				limit = { 
+					OR = {
+						has_law = law_type:law_national_supremacy
+						has_law = law_type:law_ethnostate
+					}
+					NOT = {
+						has_variable = destiny_manifested_racism
+					}
+				}
+				if = {
+					limit = { 
+						has_law = law_type:law_national_supremacy
+					}
+					random_law = {
+						limit = {
+							type = law_type:law_national_supremacy
+						}
+						save_scope_as = manifest_destiny_law_scope
+					}
+				} else = {
+					random_law = {
+						limit = {
+							type = law_type:law_ethnostate
+						}
+						save_scope_as = manifest_destiny_law_scope
+					}
+				}
+				usfp_manifest_more_destiny_effect = yes
+				set_variable = destiny_manifested_racism
+				post_notification = usfp_manifest_more_destiny_law
+			}
+			### Manifest Destiny Decreases ###
 			#Anti-Expansion President
 			if = {
 				limit = { 
@@ -259,6 +273,68 @@ usfp_manifest_destiny_main = {
 				}
 				usfp_manifest_less_destiny_effect = yes
 				set_variable = destiny_manifested_no_colonial_affairs
+				post_notification = usfp_manifest_less_destiny_law
+			}
+			#Multiculturalism
+			if = {
+				limit = { 
+					has_law = law_type:law_multicultural
+					NOT = {
+						has_variable = destiny_manifested_multiculturalism
+					}
+				}
+				random_law = {
+					limit = {
+						type = law_type:law_multicultural
+					}
+					save_scope_as = manifest_destiny_law_scope
+				}
+				usfp_manifest_less_destiny_effect = yes
+				set_variable = destiny_manifested_multiculturalism
+				post_notification = usfp_manifest_less_destiny_law
+			}
+			#Lose point from Supremacy/Ethnostate if you move away from them
+			if = {
+				limit = {
+					has_variable = destiny_manifested_racism
+					NOR = {
+						has_law = law_type:law_ethnostate
+						has_law = law_type:law_national_supremacy	
+					} 
+					NOT = {
+						has_variable = destiny_manifested_racism_removed
+					}
+				}
+				if = {
+					limit = { 
+						has_law = law_type:law_racial_segregation
+					}
+					random_law = {
+						limit = {
+							type = law_type:law_racial_segregation
+						}
+						save_scope_as = manifest_destiny_law_scope
+					}
+				} else_if = {
+					limit = { 
+						has_law = law_type:law_cultural_exclusion
+					}
+					random_law = {
+						limit = {
+							type = law_type:law_cultural_exclusion
+						}
+						save_scope_as = manifest_destiny_law_scope
+					}
+				} else = {
+					random_law = {
+						limit = {
+							type = law_type:law_multicultural
+						}
+						save_scope_as = manifest_destiny_law_scope
+					}
+				}
+				usfp_manifest_less_destiny_effect = yes
+				set_variable = destiny_manifested_racism_removed
 				post_notification = usfp_manifest_less_destiny_law
 			}
 			# #Lose ACW

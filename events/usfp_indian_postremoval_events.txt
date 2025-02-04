@@ -118,6 +118,7 @@ usfp_indian_postremoval.1 = {
 				years = 1
 			}
 		}
+		usfp_manifest_less_destiny_high_effect = yes
 		ai_chance = {
 			base = 0
 		}
@@ -410,6 +411,7 @@ usfp_indian_postremoval.4 = {
 				}
 			}
 		}
+		usfp_manifest_less_destiny_effect = yes
 		ai_chance = {
 			base = 0
 		}
@@ -546,6 +548,7 @@ usfp_indian_postremoval.5 = {
 				}
 			}
 		}
+		usfp_manifest_less_destiny_high_effect = yes
 		ai_chance = {
 			base = 0
 		}

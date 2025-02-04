@@ -1244,6 +1244,7 @@ usfp_indian_wars.12 = {
 		s:STATE_OKLAHOMA = {
 			add_claim = root
 		}
+		usfp_manifest_less_destiny_high_effect = yes
 		ai_chance = {
 			base = 1000
 		}

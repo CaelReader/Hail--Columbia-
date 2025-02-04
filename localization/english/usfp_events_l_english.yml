@@ -619,7 +619,7 @@ usfp_usa.8.b: "The name Harper's Weekly belongs in the mud."
 usfp_usa.8.c: "Stop those presses."
 
 usfp_usa.9.t: "Constitutional Challenge"
-usfp_usa.9.d: "Opponents of [SCOPE.sLaw('current_law_scope').GetName] have challenged the proposal on grounds of violating the [ROOT.GetCountry.GetAdjective] Constitution. Unless the Supreme Court is swayed to read the constitution in our favor, the law would be instantly nullified even if passed by [concept_usfp_congress]."
+usfp_usa.9.d: "Opponents of [SCOPE.sLaw('current_law_scope').GetName] have challenged the proposal on grounds of violating the [ROOT.GetCountry.GetAdjective] Constitution. Unless the [concept_usfp_supreme_court] is swayed to read the constitution in our favor, the law would be instantly nullified even if passed by [concept_usfp_congress]."
 usfp_usa.9.f: ""The powers of the legislature are defined and limited; and that those limits may not be mistaken or forgotten. Certainly all those who have framed written constitutions contemplate them as forming the fundamental and paramount law of the nation, and consequently the theory of every such government must be, that an act of the legislature, repugnant to the constitution, is void.""
 usfp_usa.9.a: "The law cannot go forward."
 usfp_usa.9.b: "Under a certain interpretation, the law is perfectly constitutional!"
@@ -681,7 +681,7 @@ usfp_usa.22.f: "Crowds buzzed through the streets set aside for the exposition, 
 usfp_usa.22.a: "Here's to another 100 years!"
 
 usfp_usa.23.t: "The [ROOT.GetCountry.GetRuler.GetLastName] Presidency"
-usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of the office. After asserting the powers of the Federal government in the [concept_usfp_nullification_crisis], he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the Supreme Court rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of slavery continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
+usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of the office. After asserting the powers of the Federal government in the [concept_usfp_nullification_crisis], he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the [concept_usfp_supreme_court] rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of slavery continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
 usfp_usa.23.f: ""But you must remember, my fellow-citizens, that eternal vigilance by the people is the price of liberty, and that you must pay the price if you wish to secure the blessing."" #Andrew Jackson
 usfp_usa.23.a: "This is a time of opportunity."
 
