@@ -998,3 +998,5 @@
  usfp_indian_althist.5.f: "대 평의회의 군중들 사이에서 많은 얼굴들이 보였습니다. 키오와, 아파치, 위치타, 심지어는 받아들여진 스페인 녀석들과 테하노까지. 저명한 족장들이 사람들에게 자신의 의견을 개진했고, 코만체리아의 부족들은 동의로 화답했씁니다."
  usfp_indian_althist.5.a: "지평선에서의 국경 전쟁인가?"
  usfp_indian_althist.5.b: "우리는 남부 평원의 지배자로 되돌아올 것이다!"
+ usfp_a_house_divided.3.b: "잠깐! 헌법에 노예제를 기입하도록 하겠다!"
+ usfp_a_house_divided.3.b.tt: "노예제 법안은 더 이상 [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enacted$')]될 수 없게 될 것입니다."

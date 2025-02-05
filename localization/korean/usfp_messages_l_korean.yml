@@ -1,6 +1,6 @@
 ﻿l_korean:
- usfp_westward_expansion_group: "@america_icon!#yellow 하일, 컬럼비아!#! | 서부 확장"
- usfp_manifest_destiny_group: "@america_icon!#yellow 하일, 컬럼비아!#! | 명백한 운명"
+ usfp_westward_expansion_group: "@america_icon!#yellow 헤일, 컬럼비아!#! | 서부 확장"
+ usfp_manifest_destiny_group: "@america_icon!#yellow 헤일, 컬럼비아!#! | 명백한 운명"
  notification_usfp_new_american_homeland_name: "[concept_usfp_westward_expansion]"
  notification_usfp_new_american_homeland_desc: "[SCOPE.sState('new_homeland_state').GetName]은(는) 이제 [SCOPE.sCulture('new_homeland_culture').GetName] [concept_homeland]로 간주됩니다."
  notification_usfp_new_american_homeland_tooltip: "#header $notification_usfp_new_american_homeland_name$#!\n$notification_usfp_new_american_homeland_desc$"
