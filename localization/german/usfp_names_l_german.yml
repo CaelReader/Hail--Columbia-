@@ -1,10 +1,10 @@
 ﻿l_german: 
+dlc_usfp: "Hail, Columbia!"
+dlc_usfp_desc: "Dies ist das United States Flavor Pack-Mod. Viel Spaß! Bitte bewerten Sie das Mod im Steam Workshop und hinterlassen Sie gerne Feedback oder Vorschläge.\n\n#o (Das Mod ist#g  @green_checkmark!aktiv#!)#!"
 
- dlc_usfp: "Heil, Columbia!"
- dlc_usfp_desc: "Dies ist das United States Flavor Pack-Mod. Viel Spaß! Bitte bewerten Sie das Mod im Steam Workshop und hinterlassen Sie gerne Feedback oder Vorschläge.\n\n#o (Das Mod ist#g  @green_checkmark!aktiv#!)#!"
-
- Asiyahola:0 "Asi-yahola"
- Osceola:0 "Osceola"
+Asiyahola:0 "Asi-yahola"
+Osceola:0 "Osceola"
+osceola_warband: "Osceolas Kriegsbande"
 usfp_EmptyMicanopy:0 ""
 Biddle:0 "Biddle"
 usfp_Blank: ""
@@ -40,4 +40,3 @@ Canby: "Canby"
 Ranald: "Ranald"
 
 USS_Monitor: "USS Monitor"
-
