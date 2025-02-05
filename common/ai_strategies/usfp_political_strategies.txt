@@ -100,9 +100,17 @@ ai_strategy_anti_slavery_agenda = {
 		}				
 	}
 
+	conscript_battalion_ratio = {
+		value = 200.0
+	}
+
 	possible = {
 		c:USA ?= this
-		NOT = { has_law = law_type:law_slavery_banned }
+		OR = {
+			NOT = { has_law = law_type:law_slavery_banned }
+			has_journal_entry = je_acw_war
+			has_journal_entry = je_acw_countdown
+		}
 	}
 	
 	weight = {

@@ -259,6 +259,13 @@
 			}
 		}
 	}
+	c:LKT = {
+		every_scope_state = {
+			kill_population_percent_in_state = {
+				percent = 0.5 #vanilla gives the Sioux like 110k population, around 60k seems more correct
+			}
+		}
+	}
 
 	#Flathead
 	s:STATE_IDAHO = {

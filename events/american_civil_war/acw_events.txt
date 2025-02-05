@@ -992,6 +992,16 @@ acw_events.9 = {
 				save_scope_as = acw_victory_capital_scope
 			}
 		}
+		c:USA = {
+			every_scope_state = {
+				limit = {
+					is_homeland_of_country_cultures = root
+				}
+				state_region = {
+					add_claim = root
+				}
+			}
+		}
 	}
 
 	option = { # Default victory

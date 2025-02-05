@@ -328,13 +328,13 @@ usfp_reconstruction.14.b: "Maybe we should save our own skins."
 
 #### Manifest Destiny
 usfp_manifest_destiny.1.t: "From Sea to Shining Sea?"
-usfp_manifest_destiny.1.d: "Since the days of the [concept_usfp_thirteen_colonies], the settlers of the [ROOT.GetCountry.GetName] have looked upon the lands to the west with desire, and a complete disregard for their existing inhabitants. Now a lofty justification for expansion is beginning to emerge in our national consciousness — that of Manifest Destiny. Proponents of the idea claim that it is not only our right but our sacred duty to seize control of and populate the entirety of the great American continent."
+usfp_manifest_destiny.1.d: "Since the days of the [concept_usfp_thirteen_colonies], the settlers of the [ROOT.GetCountry.GetName] have looked upon the lands to the west with desire, and a complete disregard for their existing inhabitants. Now a lofty justification for expansion is beginning to emerge in our national consciousness — that of Manifest Destiny. Proponents of the idea claim that it is not only our right but our sacred duty to seize and populate the entirety of the great American continent."
 usfp_manifest_destiny.1.f: ""Our claim by the right of our manifest destiny is to overspread and to possess the whole of the continent which Providence has given us. It is for the development of the great experiment of liberty and federated self-government entrusted to us.""
 usfp_manifest_destiny.1.a: "The birthday of a new world is at hand!"
-usfp_manifest_destiny.1.b: "No 'sacred destiny' can hide the truth."
+usfp_manifest_destiny.1.b: "There's nothing sacred about conquest."
 
 usfp_manifest_destiny.2.t: "[SCOPE.sStateRegion('texas_scope').GetName] Calls for Aid!"
-usfp_manifest_destiny.2.d: "A delegation from the former Republic of [SCOPE.sStateRegion('texas_scope').GetName] has arrived in Washington. They claim that [SCOPE.sCulture('dixie_culture').GetName] settlers have been subjected to harsh punishments by the [SCOPE.sCountry('mexico_scope').GetAdjectiveNoFormatting] authorities in the wake of the failed Texas Rebellion. The delegation is beseeching us to intervene and free the Texians from the tyranny of [SCOPE.sCountry('mexico_scope').GetName]."
+usfp_manifest_destiny.2.d: "A delegation from the former Republic of [SCOPE.sStateRegion('texas_scope').GetName] has arrived in Washington, claiming that [SCOPE.sCulture('dixie_culture').GetName] settlers have been subjected to harsh punishments by the [SCOPE.sCountry('mexico_scope').GetAdjectiveNoFormatting] authorities in the wake of the failed Texas Rebellion. The delegation is beseeching us to intervene and free the Texians from the tyranny of [SCOPE.sCountry('mexico_scope').GetName]."
 usfp_manifest_destiny.2.f: ""The Mexican nation has acquiesced in the late changes made in the government by General Antonio Lopez de Santa Anna, who having overturned the constitution of his country, now offers us the cruel alternative, either to abandon our homes, acquired by so many privations, or submit to the most intolerable of all tyranny, the combined despotism of the sword and the priesthood."" #texas declaration of independence
 usfp_manifest_destiny.2.a: "Texas calls for aid, and the [ROOT.GetCountry.GetName] shall answer!"
 usfp_manifest_destiny.2.b: "We have no interest in antagonizing [SCOPE.sCountry('mexico_scope').GetName]."
@@ -367,6 +367,7 @@ usfp_manifest_destiny.6.b: "We have other plans for [SCOPE.sCountry('mexico_scop
 usfp_manifest_destiny.6.c: "By right of conquest, we'll take California, New Mexico, and then some!"
 usfp_manifest_destiny.6.e: "To secure the peace, [SCOPE.sCountry('mexico_scope').GetName] must submit."
 usfp_manifest_destiny.6.g: "#r After all, why not? Why shouldn't we take all of [SCOPE.sCountry('mexico_scope').GetName]?#!"
+controls_mexico_city: "[SCOPE.sCountry('mexico_scope').GetCapital.GetName] is occupied by [ROOT.GetCountry.GetName]"
 
 usfp_manifest_destiny.7.t: "[SCOPE.gsInterestGroup('pb_ig').GetName] Embrace Continentalism"
 usfp_manifest_destiny.7.d: "The [SCOPE.gsInterestGroup('pb_ig').GetName] have so far largely favored developing the urban centers of the [ROOT.GetCountry.GetName] in lieu of territorial expansion. With the growing influence of Manifest Destiny, many among the middle class have come to support a moderate amount of expansion, largely focused on securing ports on the Pacific."
@@ -375,7 +376,7 @@ usfp_manifest_destiny.7.a: "Expansion will be a boon to the economy."
 usfp_manifest_destiny.7.b: "We cannot let these imperialist dreams take root."
 
 usfp_manifest_destiny.8.t: "Gunboat Diplomacy"
-usfp_manifest_destiny.8.d: "The [SCOPE.gsInterestGroup('armed_forces_scope').GetName] have taken a leading role in advancing the status of the [ROOT.GetCountry.GetName] on the world stage. Our diplomatic efforts overseas are made that much more effective by the bold backdrop of modern warships flying our flag."
+usfp_manifest_destiny.8.d: "The [SCOPE.gsInterestGroup('armed_forces_scope').GetName] have taken a leading role in advancing the status of the [ROOT.GetCountry.GetName] on the world stage. A bold backdrop of shining warships can provide ample support for our diplomatic ventures overseas."
 usfp_manifest_destiny.8.f: ""The steamships loomed on the horizon with their glittering white hulls. The American diplomats came ashore under minimal guard, bearing gifts and offers of negotiation. The implications of refusal were not lost on us.""
 usfp_manifest_destiny.8.a: "With the navy at our back, we shall go far!"
 usfp_manifest_destiny.8.b: "The military should keep its focus at home."
@@ -628,7 +629,7 @@ usfp_usa.9.e: "We will need a new, People's Constitution!"
 usfp_usa.9.g: "The Constitution requires a proper royal protector!"
 
 usfp_usa.10.t: "Progress and Poverty"
-usfp_usa.10.d: "[SCOPE.sCharacter('george_scope').GetFullName] has published a treatise that purports to explain why rising economic development has failed to eliminate poverty and puts forth a radical proposal — a single tax on land value that would eliminate the harmful impact of rent-seeking landowners on the economy. The book has become an instant best-seller across the country and beyond, with many readers finding its arguments to be irrefutable."
+usfp_usa.10.d: "[SCOPE.sCharacter('george_scope').GetFullName] has published a treatise that purports to explain why rising economic development has failed to eliminate poverty. He puts forth a radical proposal — a single tax on land value that would eliminate the harmful impact of rent-seeking landowners on the economy. The book has become an instant best-seller across the country and beyond, with many readers finding its arguments to be irrefutable."
 usfp_usa.10.f: ""The great cause of inequality in the distribution of wealth is inequality in the ownership of land. The ownership of land is the great fundamental fact which ultimately determines the social, the political, and consequently the intellectual and moral condition of a people."" #Henry George
 usfp_usa.10.a: "A landmark text to be sure."
 usfp_usa.10.b: "George's ideas are pure fantasy."
@@ -681,7 +682,7 @@ usfp_usa.22.f: "Crowds buzzed through the streets set aside for the exposition, 
 usfp_usa.22.a: "Here's to another 100 years!"
 
 usfp_usa.23.t: "The [ROOT.GetCountry.GetRuler.GetLastName] Presidency"
-usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of the office. After asserting the powers of the Federal government in the [concept_usfp_nullification_crisis], he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the [concept_usfp_supreme_court] rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of slavery continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
+usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of his office. After asserting the powers of the Federal government in the [concept_usfp_nullification_crisis], he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the [concept_usfp_supreme_court] rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of slavery continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
 usfp_usa.23.f: ""But you must remember, my fellow-citizens, that eternal vigilance by the people is the price of liberty, and that you must pay the price if you wish to secure the blessing."" #Andrew Jackson
 usfp_usa.23.a: "This is a time of opportunity."
 
@@ -693,7 +694,7 @@ usfp_usa_labor.1.a: "An injury to one is an injury to all!"
 usfp_usa_labor.1.b: "These radicals are a threat to social order."
 
 usfp_usa_labor.2.t: "Bombing in Haymarket Square"
-usfp_usa_labor.2.d: "A labor rally in [SCOPE.sState('illinois_scope').GetCityHubName] erupted into a massacre when a bomb was thrown into the midst of advancing police officers, prompting them to open fire blindly into the demonstrators. In the aftermath, local authorities have pinned the blame on a local group of anarchists, and are seeking to set an example by sentencing them to death."
+usfp_usa_labor.2.d: "A labor rally in [SCOPE.sState('illinois_scope').GetCityHubName] erupted into a massacre when a bomb was thrown into the midst of advancing police officers, prompting them to open fire blindly into the demonstrators. In the aftermath, local authorities have pinned the blame on a group of anarchists, and are seeking to set an example by sentencing them to death."
 usfp_usa_labor.2.f: ""After the bomb exploded there was pistol shooting. The crowd was running in the same direction as me. I had to jump over a man lying down, and I saw another man fall in front of me about 100 to 200 feet west of Des Plaines Street. I took hold of his arm and wanted to help him, but the firing was so lively behind me that I just let go and ran."" #An Eyewitness Account by Barton Simonson
 usfp_usa_labor.2.a: "Hang them all!"
 usfp_usa_labor.2.b: "The police are out of line here."

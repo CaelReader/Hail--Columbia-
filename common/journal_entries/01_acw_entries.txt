@@ -262,6 +262,21 @@ je_acw_war = {
 				}
 			}
 		}
+		if = {
+			limit = { 
+				exists = c:PWN
+				has_state_in_state_region = STATE_NEBRASKA
+				NOT = {
+					owns_entire_state_region = STATE_NEBRASKA
+				}
+			}
+			s:STATE_NEBRASKA = {
+				set_owner_of_provinces = {
+					country = root
+					provinces = { x90C040 x924593 xD5A04C x394431 }
+				}
+			}
+		}
 	}
 
 	complete = {
@@ -359,6 +374,21 @@ je_acw_war = {
 			usfp_acw.6 #March to the Sea
 			# usfp_acw.11 #Rio Grande breaks away 
 			# usfp_acw.13 #Mexican revolt (subject)
+		}
+		effect = {
+			#Border States can swap sides permanently
+			s:STATE_KANSAS = {
+				usfp_acw_border_states_total_war_csa = yes
+			}
+			s:STATE_MISSOURI = {
+				usfp_acw_border_states_total_war_csa = yes
+			}
+			s:STATE_KENTUCKY = {
+				usfp_acw_border_states_total_war_csa = yes
+			}
+			s:STATE_WEST_VIRGINIA = {
+				usfp_acw_border_states_total_war_csa = yes
+			}
 		}
 	}
 

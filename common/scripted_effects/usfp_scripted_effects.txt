@@ -1548,3 +1548,51 @@ usfp_american_igs_effect = {
 		}
 	}
 }
+
+usfp_acw_border_states_total_war_csa = {
+	if = {
+		limit = { 
+			any_scope_state = {
+				c:CSA ?= owner
+				controller = {
+					has_war_with = c:CSA
+				}
+			}
+		}
+		region_state:CSA = {
+			set_state_owner = c:USA
+		}
+		c:USA = {
+			random_scope_war = {
+				limit = {
+					attacker_warleader = c:CSA
+				}
+				add_war_exhaustion = {
+					target = c:USA
+					value = -20
+				}
+			}
+		}
+	} else_if = {
+		limit = { 
+			any_scope_state = {
+				c:USA ?= owner
+				c:CSA ?= controller
+			}
+		}
+		region_state:USA = {
+			set_state_owner = c:CSA
+		}
+		c:CSA = {
+			random_scope_war = {
+				limit = {
+					attacker_warleader = c:CSA
+				}
+				add_war_exhaustion = {
+					target = c:CSA
+					value = -20
+				}
+			}
+		}
+	}
+}

@@ -13,18 +13,35 @@ common/decisions/west_america_expidition_decision.txt
 decree_greener_grass_campaign #to prevent stacking with the US's Homestead Acts decision
 
 define: NUM_GROWING_COLONIES_MAX
+define: NUM_GROWING_COLONIES_SCALED
 
 common/government_types/00_chiefdoms.txt
 
 common/history/characters/usa - america.txt
 common/history/characters/seq - indian territory.txt
+
+common/history/countries/abs - absaroka.txt
+common/history/countries/apc - apache.txt
+common/history/countries/arp - arapaho.txt
+common/history/countries/ASK - Alaska.txt
+common/history/countries/blf - blackfoot.txt
+common/history/countries/com - comanche.txt
+common/history/countries/hbc - hudson bay company.txt
+common/history/countries/lib - liberia.txt
+common/history/countries/lkt - lakota.txt
+common/history/countries/nbs - new brunswick.txt
+common/history/countries/NEW - Newfoundland.txt
+common/history/countries/nzp - nez perce.txt
+common/history/countries/ont - ontario.txt
+common/history/countries/org - oregon.txt
+common/history/countries/pwn - pawnee.txt
+common/history/countries/que - quebec.txt
+common/history/countries/seq - indian territory.txt
+common/history/countries/sml - seminole.txt
 common/history/countries/tex - texas.txt
 common/history/countries/usa - usa.txt
-common/history/countries/sml - seminole.txt
-common/history/countries/lib - liberia.txt
-common/history/governments/usa - usa.txt
-#Note: does NOT override 00_states.txt. All map changes are performed after-the-fact in a global history file for compatibility. May break if a mod changes the underlying state structure of North America.
 
+common/history/governments/usa - usa.txt
 
 ideology_republican_paternalistic
 ideology_jacksonian_democrat
@@ -44,16 +61,9 @@ common/journal_entries/06_seminole_wars.txt #disabled in favor of Indian Removal
 
 All slavery laws are overwritten
 
-common/parties/agrarian_party.txt
-common/parties/conservative_party.txt
-common/parties/fascist_party.txt
-common/parties/free_trade_party.txt
-common/parties/liberal_party.txt
-common/parties/communist_party.txt
-common/parties/radical_party.txt
+#Party definitions are handled in the Community Mod Framework
 
-movement_anti_slavery
-movement_pro_slavery
+#Political Movement changes are handled in the Community Mod Framework
 
 common/scripted_buttons/turtle_island_buttons.txt
 

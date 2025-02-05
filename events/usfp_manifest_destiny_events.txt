@@ -550,9 +550,12 @@ usfp_manifest_destiny.6 = {
 				text = enough_manifest_destiny
 				root.var:manifest_destiny_var >= 5
 			}
-			c:MEX = {
-				capital = {
-					controller = c:USA
+			custom_tooltip = {
+				text = controls_mexico_city
+				c:MEX = {
+					capital = {
+						controller = c:USA
+					}
 				}
 			}
 		}
@@ -602,9 +605,12 @@ usfp_manifest_destiny.6 = {
 				text = enough_manifest_destiny
 				root.var:manifest_destiny_var >= 6
 			}
-			c:MEX = {
-				capital = {
-					controller = c:USA
+			custom_tooltip = {
+				text = controls_mexico_city
+				c:MEX = {
+					capital = {
+						controller = c:USA
+					}
 				}
 			}
 		}
@@ -659,9 +665,12 @@ usfp_manifest_destiny.6 = {
 				text = enough_manifest_destiny
 				root.var:manifest_destiny_var >= 7
 			}
-			c:MEX = {
-				capital = {
-					controller = c:USA
+			custom_tooltip = {
+				text = controls_mexico_city
+				c:MEX = {
+					capital = {
+						controller = c:USA
+					}
 				}
 			}
 		}
@@ -1021,10 +1030,16 @@ usfp_manifest_destiny.10 = {
 				name = usfp_gold_rush_lawlessness
 				years = 3
 			}
-			create_pop = {
-				culture = yankee
-				size = 1000
-				pop_type = laborers
+			hidden_effect = {
+				create_pop = {
+					culture = yankee
+					size = 1000
+					pop_type = laborers
+				}
+			}
+			add_acceptance = {
+				target = cu:han
+				value = 5
 			}
 		}
 		custom_tooltip = {
@@ -1048,10 +1063,20 @@ usfp_manifest_destiny.10 = {
 				name = usfp_gold_rush_lawlessness
 				years = 3
 			}
-			create_pop = {
-				culture = yankee
-				size = 1000
-				pop_type = laborers
+			hidden_effect = {
+				create_pop = {
+					culture = yankee
+					size = 1000
+					pop_type = laborers
+				}
+			}
+			add_radicals_in_state = {
+				value = small_radicals
+				strata = lower
+			}
+			add_acceptance = {
+				target = cu:han
+				value = -5
 			}
 		}
 		custom_tooltip = {
@@ -1162,6 +1187,10 @@ usfp_manifest_destiny.12 = {
 					culture = cu:yankee
 				}
 			}
+			add_acceptance = {
+				target = cu:hokan
+				value = -50
+			}
 		}
 		s:STATE_CALIFORNIA = {
 			every_scope_state = {
@@ -1207,6 +1236,10 @@ usfp_manifest_destiny.12 = {
 					origin = ROOT
 					culture = cu:yankee
 				}
+			}
+			add_acceptance = {
+				target = cu:hokan
+				value = -25
 			}
 		}
 	}

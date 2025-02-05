@@ -424,6 +424,13 @@ Updates
 	Added historical Concepts explaining various aspects of american history
 	Overhauled the pro-expansion and anti-expasion tooltips on the Manifest Destiny JE
 	Multiculturalism now decreases MD, while National Supremacy or Ethnostate will increase it
+	Added temporary Acceptance modifiers to California events
+	Hurricane event now adds a Flood harvest condition
+	Doubled AI define NUM_GROWING_COLONIES_SCALED from 0.01 to 0.02
+	Adjusted Oregon Trail state modifiers
+	Emancipation Legislation AI agenda should now try and maximize conscripts
+	Added limited "total war" functionality to the ACW: certain Border States (Kansas, Missouri, Kentucky, West Virginia) will immediately flip sides when occupied
+	CSA gets claims on all US Dixie states upon winning the civil war
 	Added German translation courtesy of KushGene
 Fixes
 	Purchasing Alaska JE no longer appears if you already have a subject in Alaska
@@ -436,3 +443,5 @@ Fixes
 	Fixed Sonora asking for statehood when liberated manually
 	Fixed starving inuit pops
 	Fixed all instances of incorrect strata targets
+	Fixed broken tooltip on Treaty of G-H
+	USA now gains some provinces in Nebraska at the start of the ACW to ensure land access

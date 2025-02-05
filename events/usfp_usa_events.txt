@@ -118,6 +118,7 @@ usfp_usa.2 = {
 		default_option = yes
 		scope:hurricane_state.state_region = {
 			add_devastation = 20
+			start_harvest_condition = flood
 		}
 	}
 
@@ -130,6 +131,7 @@ usfp_usa.2 = {
 		}
 		scope:hurricane_state.state_region = {
 			add_devastation = 10
+			start_harvest_condition = flood
 		}
 	}
 }
