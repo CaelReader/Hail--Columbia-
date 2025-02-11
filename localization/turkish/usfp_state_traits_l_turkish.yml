@@ -1,0 +1,25 @@
+﻿l_turkish:
+ #from NFM 
+ state_trait_native_resistance: "Effective Native Resistance" #NT!
+ state_trait_comanche_domain: "Comanche Domain" #NT!
+  
+ ## From State Traits Expanded 
+ state_trait_sonoran_desert: "Sonoran Desert" #NT!
+ state_trait_canadian_boreal_forests: "Canadian Boreal Forests" #NT!
+ state_trait_tornado: "Seasonal Tornadoes" #NT!
+ state_trait_columbia_plateau: "Columbia Plateau" #NT!
+ state_trait_grand_river: "Rio Grande" #NT!
+ state_trait_sierra_madre_watershed: "Sierra Madre Watershed" #NT!
+ state_trait_alaska_range: "Alaska Range" #NT!
+ state_trait_puget_sound: "Puget Sound" #NT!
+ state_trait_tampa_bay: "Tampa Bay" #NT!
+ state_trait_hilo_soil: "Hilo" #NT!
+ state_trait_black_belt_soil: "Black Belt" #NT!
+ state_trait_burrard_inlet: "Burrard Inlet" #NT!
+ state_trait_texas_colorado_river: "Brazos River" #NT!
+ state_trait_big_thicket: "Big Thicket" #NT!
+ state_trait_mission_grapes: "Mission Grapes" #NT!
+ state_trait_san_fran_bay: "San Francisco Bay" #NT!
+ state_trait_san_juan_basin: "San Juan Basin" #NT!
+ state_trait_zihuatanejo_bay: "Zihuatanejo Bay" #NT!
+ state_trait_navel_oranges: "Navel Oranges" #NT!

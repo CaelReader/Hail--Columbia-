@@ -1,0 +1,63 @@
+﻿l_polish:
+  
+ usfp_westward_expansion_group: "@america_icon! #yellow Hail, Columbia!#! | Westward Expansion" #NT!
+ usfp_manifest_destiny_group: "@america_icon! #yellow Hail, Columbia!#! | Manifest Destiny" #NT!
+  
+ notification_usfp_new_american_homeland_name: "[concept_usfp_westward_expansion]" #NT!
+ notification_usfp_new_american_homeland_desc: "[SCOPE.sState('new_homeland_state').GetName] is now considered a [SCOPE.sCulture('new_homeland_culture').GetName] [concept_homeland]." #NT!
+ notification_usfp_new_american_homeland_tooltip: "#header $notification_usfp_new_american_homeland_name$#!\n$notification_usfp_new_american_homeland_desc$" #NT!
+  
+ notification_usfp_slavery_expands_name: "Slavery Spreads to [SCOPE.sState('slavery_expanded_state').GetName]" #NT!
+ notification_usfp_slavery_expands_desc: "[SCOPE.sState('slavery_expanded_state').GetName] is now a Slave State." #NT!
+ notification_usfp_slavery_expands_tooltip: "#header $notification_usfp_slavery_expands_name$#!\n$notification_usfp_slavery_expands_desc$" #NT!
+  
+ manifest_destiny_increase: "Manifest Destiny gains influence" #NT!
+ manifest_destiny_decrease: "Manifest Destiny loses influence" #NT!
+  
+ notification_usfp_manifest_more_destiny_president_name: "$manifest_destiny_increase$" #NT!
+ notification_usfp_manifest_more_destiny_president_desc: "[SCOPE.sCountry('usa_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('usa_scope').GetRuler.GetLastName] promotes the importance of Manifest Destiny." #NT!
+ notification_usfp_manifest_more_destiny_president_tooltip: "#header $notification_usfp_manifest_more_destiny_president_name$#!\n$notification_usfp_manifest_more_destiny_president_desc$" #NT!
+  
+ notification_usfp_manifest_less_destiny_president_name: "$manifest_destiny_decrease$" #NT!
+ notification_usfp_manifest_less_destiny_president_desc: "The anti-expansionist [SCOPE.sCountry('usa_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('usa_scope').GetRuler.GetLastName] dismisses the legitimacy of Manifest Destiny." #NT!
+ notification_usfp_manifest_less_destiny_president_tooltip: "#header $notification_usfp_manifest_less_destiny_president_name$#!\n$notification_usfp_manifest_less_destiny_president_desc$" #NT!
+  
+ notification_usfp_manifest_more_destiny_ig_name: "$manifest_destiny_increase$" #NT!
+ notification_usfp_manifest_more_destiny_ig_desc: "[SCOPE.gsInterestGroup('destiny_manifested_expansionist_ig').GetLeader.GetFullName] has advanced the cause of Manifest Destiny with the support of the [SCOPE.gsInterestGroup('destiny_manifested_expansionist_ig').GetName]." #NT!
+ notification_usfp_manifest_more_destiny_ig_tooltip: "#header $notification_usfp_manifest_more_destiny_ig_name$#!\n$notification_usfp_manifest_more_destiny_ig_desc$" #NT!
+  
+ notification_usfp_manifest_less_destiny_ig_name: "$manifest_destiny_decrease$" #NT!
+ notification_usfp_manifest_less_destiny_ig_desc: "[SCOPE.gsInterestGroup('destiny_manifested_antiexpansion_ig').GetLeader.GetFullName] and the [SCOPE.gsInterestGroup('destiny_manifested_antiexpansion_ig').GetName] have pushed back against the concept of Manifest Destiny." #NT!
+ notification_usfp_manifest_less_destiny_ig_tooltip: "#header $notification_usfp_manifest_less_destiny_ig_name$#!\n$notification_usfp_manifest_less_destiny_ig_desc$" #NT!
+  
+ notification_usfp_manifest_more_destiny_law_name: "$manifest_destiny_increase$" #NT!
+ notification_usfp_manifest_more_destiny_law_desc: "[SCOPE.sLaw('manifest_destiny_law_scope').GetName] has enshrined Manifest Destiny in our national agenda." #NT!
+ notification_usfp_manifest_more_destiny_law_tooltip: "#header $notification_usfp_manifest_more_destiny_law_name$#!\n$notification_usfp_manifest_more_destiny_law_desc$" #NT!
+  
+ notification_usfp_manifest_less_destiny_law_name: "$manifest_destiny_decrease$" #NT!
+ notification_usfp_manifest_less_destiny_law_desc: "The passing of [SCOPE.sLaw('manifest_destiny_law_scope').GetName] erodes the legitimacy of Manifest Destiny." #NT!
+ notification_usfp_manifest_less_destiny_law_tooltip: "#header $notification_usfp_manifest_less_destiny_law_name$#!\n$notification_usfp_manifest_less_destiny_law_desc$" #NT!
+  
+ notification_usfp_manifest_more_destiny_mexico_name: "$manifest_destiny_increase$" #NT!
+ notification_usfp_manifest_more_destiny_mexico_desc: "[SCOPE.sCountry('mexico_scope').GetAdjective] aggression proves the necessity of Manifest Destiny." #NT!
+ notification_usfp_manifest_more_destiny_mexico_tooltip: "#header $notification_usfp_manifest_more_destiny_mexico_name$#!\n$notification_usfp_manifest_more_destiny_mexico_desc$" #NT!
+  
+ notification_usfp_manifest_less_destiny_mexico_name: "$manifest_destiny_decrease$" #NT!
+ notification_usfp_manifest_less_destiny_mexico_desc: "Our defeat at the hands of [SCOPE.sCountry('mexico_scope').GetName] has shown the folly of Manifest Destiny." #NT!
+ notification_usfp_manifest_less_destiny_mexico_tooltip: "#header $notification_usfp_manifest_less_destiny_mexico_name$#!\n$notification_usfp_manifest_less_destiny_mexico_desc$" #NT!
+  
+ notification_usfp_washington_precedent_name: "[concept_usfp_washington_precedent]" #NT!
+ notification_usfp_washington_precedent_desc: "[SCOPE.sCharacter('ruler_scope').GetFullName] will not seek a third term in office. [SCOPE.sCharacter('ruler_interest_group_new_leader_scope').GetFullName] is the new [concept_leader] of the [SCOPE.sCharacter('ruler_scope').GetInterestGroup.GetName]." #NT!
+ notification_usfp_washington_precedent_tooltip: "#header $notification_usfp_washington_precedent_name$#!\n$notification_usfp_washington_precedent_desc$" #NT!
+  
+ notification_usfp_liberia_republic_name: "Republic Unrecognized" #NT!
+ notification_usfp_liberia_republic_desc: "The [SCOPE.sCountry("usa_scope").GetName] has declined to recognize our Republic, but will maintain its protectorate over our colony." #NT!
+ notification_usfp_liberia_republic_tooltip: "#header $notification_usfp_liberia_republic_name$#!\n$notification_usfp_liberia_republic_desc$" #NT!
+  
+ notification_usfp_liberia_independent_name: "Independence Granted" #NT!
+ notification_usfp_liberia_independent_desc: "The [SCOPE.sCountry("usa_scope").GetName] has declined to recognize our Republic, and has disavowed all protection over us." #NT!
+ notification_usfp_liberia_independent_tooltip: "#header $notification_usfp_liberia_independent_name$#!\n$notification_usfp_liberia_independent_desc$" #NT!
+  
+ notification_usfp_liberia_recognized_name: "Republic Recognized" #NT!
+ notification_usfp_liberia_recognized_desc: "The [SCOPE.sCountry("usa_scope").GetName] has formally recognized our Republic as a protectorate." #NT!
+ notification_usfp_liberia_recognized_tooltip: "#header $notification_usfp_liberia_recognized_name$#!\n$notification_usfp_liberia_recognized_desc$" #NT!
