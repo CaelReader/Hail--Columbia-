@@ -445,3 +445,9 @@ Fixes
 	Fixed all instances of incorrect strata targets
 	Fixed broken tooltip on Treaty of G-H
 	USA now gains some provinces in Nebraska at the start of the ACW to ensure land access
+
+Updated German translation courtesy of KushGene
+Updated Korean translation courtesy of 케말 파샤
+Added placeholder English text for all other languages
+
+4.5 "Sitting Bull"

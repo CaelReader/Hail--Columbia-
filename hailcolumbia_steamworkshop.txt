@@ -29,7 +29,7 @@ Hail, Columbia! is a United States Flavor Pack, including overhauled and expande
 [/list]
 
 [img]https://i.imgur.com/eD5BaRs.png[/img]
-Currently includes English, Korean, and German localizations. Feel free to create translations and upload them as seperate mods or send them my way. Check out the full list of Vanilla Overrides in the discussion section.
+Currently includes English, Korean, and German localizations. English text will be displayed for other languages. Feel free to create translations and upload them as seperate mods or send them my way. Check out the full list of Vanilla Overrides in the discussion section.
 [list]
 [*]Requires the [url=https://steamcommunity.com/workshop/filedetails/?id=3385002128]Community Mod Framework[/url]. Load this mod after the CMF in your load order.
 [*]Compatible with Australia & New Zealand Flavor Pack via the CMF.

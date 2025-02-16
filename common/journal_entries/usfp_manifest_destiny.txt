@@ -59,6 +59,7 @@ usfp_manifest_destiny_main = {
 			is_subject = yes
 		}
 		is_at_war = no
+		is_diplomatic_play_committed_participant = no
 	}
 
 	on_fail = {

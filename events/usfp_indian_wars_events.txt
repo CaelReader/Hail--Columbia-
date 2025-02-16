@@ -432,7 +432,10 @@ usfp_indian_wars.5 = {
 		c:LKT = {
 			is_adjacent_to_country = c:ABS
 		}
-		has_state_in_state_region = STATE_MINNESOTA
+		OR = {
+			has_state_in_state_region = STATE_MINNESOTA
+			has_state_in_state_region = STATE_SOUTH_DAKOTA
+		}
 		has_state_in_state_region = STATE_IOWA
 		is_at_war = no
 	}
