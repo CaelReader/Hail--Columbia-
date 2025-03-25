@@ -451,3 +451,8 @@ Updated Korean translation courtesy of 케말 파샤
 Added placeholder English text for all other languages
 
 4.5 "Sitting Bull"
+USA now starts with an Anti-Haiti lobby
+Fixed wrong tooltip for Spain-facing Cuban Purchase event
+Fixed broken state loc in Indian Removal event
+Fixed End Gag Rule button requiring a slaver president
+Added failsafe in case the CSA somehow takes DC as part of the secession

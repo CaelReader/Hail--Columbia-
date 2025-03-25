@@ -536,7 +536,7 @@ usfp_native_removal.9.a: "We just need more time to do this properly."
 usfp_native_removal.9.b: "Damn these land thieves!"
 
 usfp_native_removal.10.t: "Creek Removal"
-usfp_native_removal.10.d: "While many of the Creek nation accepted our terms of removal, several large bands refused to move. After a brief military expedition in [SCOPE.sState('alabama_scope').GetName], the last of the remaining Creeks have been forcibly escorted to [SCOPE.sState('oklahoma_scope').GetName]."
+usfp_native_removal.10.d: "While many of the Creek nation accepted our terms of removal, several large bands refused to move. After a brief military expedition in [SCOPE.sState('alabama_scope').GetName], the last of the remaining Creeks have been forcibly escorted to [SCOPE.sState('oklahoma_state').GetName]."
 usfp_native_removal.10.f: ""The men were handcuffed two together, and a long chain passing between the double file connected them all together. The stoical disposition of these forest philosophers was strongly displayed, for neither their physical nor mental sufferings could elicit from them the least indication of distress. The women followed drowned in tears, and giving utterance to most distressing cries; the children joined in from sympathy, for they were yet to young to participate in the unenviable feelings of their parents.""
 usfp_native_removal.10.a: "They should have taken the treaty we offered."
 usfp_native_removal.10.b: "What a miserable situation."

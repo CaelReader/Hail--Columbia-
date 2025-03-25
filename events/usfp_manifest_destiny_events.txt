@@ -1557,21 +1557,26 @@ usfp_manifest_destiny.15 = {
 			}
 		}
 		show_as_tooltip = {
-			add_modifier = {
-				name = usa_paying_for_cuba
-				years = 4
-			}
-			c:MEX = {
+			c:USA = {
 				add_modifier = {
-					name = spain_getting_paid_by_usa
+					name = usa_paying_for_cuba
 					years = 4
 				}
 			}
-			every_scope_state = {
-				limit = {
-					state_region = s:STATE_CUBA
+			add_modifier = {
+				name = spain_getting_paid_by_usa
+				years = 4
+			}
+			s:STATE_CUBA = {
+				every_scope_state = {
+					limit = {
+						OR = {
+							owner = root
+							owner = c:CUB
+						}
+					}
+					set_state_owner = c:USA
 				}
-				set_state_owner = c:USA
 			}
 		}
 		ai_chance = {

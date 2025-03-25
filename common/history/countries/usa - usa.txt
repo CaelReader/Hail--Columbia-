@@ -172,6 +172,11 @@
 			country = c:CHE
 			type = protectorate
 		}
+		create_political_lobby = {
+			type = lobby_anti_country
+			target = c:HAI
+			add_interest_group = ig:ig_landowners
+		}
 
 
 		set_variable = usfp_achievements_possible

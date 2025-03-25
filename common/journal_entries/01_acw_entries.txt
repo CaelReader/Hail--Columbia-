@@ -262,6 +262,7 @@ je_acw_war = {
 				}
 			}
 		}
+		#Prevent front splitting along Missouri
 		if = {
 			limit = { 
 				exists = c:PWN
@@ -275,6 +276,18 @@ je_acw_war = {
 					country = root
 					provinces = { x90C040 x924593 xD5A04C x394431 }
 				}
+			}
+		}
+		#Failsafe in case the CSA somehow (???) takes DC as part of the revolution
+		if = {
+			limit = { 
+				exists = c:CSA
+				c:CSA = {
+					has_state_in_state_region = STATE_DISTRICT_OF_COLUMBIA
+				}
+			}
+			s:STATE_DISTRICT_OF_COLUMBIA.region_state:CSA = {
+				set_state_owner = c:USA
 			}
 		}
 	}
