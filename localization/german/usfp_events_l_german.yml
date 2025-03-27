@@ -536,7 +536,7 @@ usfp_native_removal.9.a: "Wir brauchen nur mehr Zeit, um das ordentlich zu erled
 usfp_native_removal.9.b: "Verdammt diese Landdiebe!"
 
 usfp_native_removal.10.t: "Umsiedlung der Creek"
-usfp_native_removal.10.d: "Während ein Großteil der Creek-Nation unseren Umsiedlungsbedingungen zustimmte, weigerten sich mehrere große Gruppen. Nach einer kurzen Militärexpedition in [SCOPE.sState('alabama_scope').GetName] wurden die letzten verbliebenen Creek mit Gewalt nach [SCOPE.sState('oklahoma_scope').GetName] begleitet."
+usfp_native_removal.10.d: "Während ein Großteil der Creek-Nation unseren Umsiedlungsbedingungen zustimmte, weigerten sich mehrere große Gruppen. Nach einer kurzen Militärexpedition in [SCOPE.sState('alabama_scope').GetName] wurden die letzten verbliebenen Creek mit Gewalt nach [SCOPE.sState('oklahoma_state').GetName] begleitet."
 usfp_native_removal.10.f: "\"Die Männer wurden paarweise zusammengekniffen, und eine lange Kette verband sie in einer Doppelreihe. Ihre stoische Haltung wurde deutlich gezeigt, denn weder körperliches noch seelisches Leiden vermochte den geringsten Ausdruck von Schmerz zu entlocken. Die Frauen folgten, in Tränen versunken, und stimmten mit den Kindern ein, die noch zu jung waren, um an den unentrinnbaren Gefühlen ihrer Eltern teilzunehmen.\""
 usfp_native_removal.10.a: "Sie hätten den Vertrag akzeptieren sollen, den wir angeboten haben."
 usfp_native_removal.10.b: "Was für eine elende Situation."
