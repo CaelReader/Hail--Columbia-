@@ -64,7 +64,7 @@
 						NOT	= {
 							exists = c:NVS
 						}
-						c:NBS = root
+						c:NVS = root
 					}
 					OR = {
 						NOT	= {

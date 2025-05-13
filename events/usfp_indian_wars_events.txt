@@ -1200,7 +1200,7 @@ usfp_indian_wars.12 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	
 	title = usfp_indian_wars.12.t
 	desc = usfp_indian_wars.12.d
@@ -1216,6 +1216,22 @@ usfp_indian_wars.12 = {
 			save_scope_as = south_dakota_scope
 		}
 		set_global_variable = american_frontier_closed
+		every_state = {
+			limit = {
+				has_state_trait = state_trait_comanche_domain
+			}
+			state_region = {
+				remove_state_trait = state_trait_comanche_domain
+			}
+		}
+		every_state = {
+			limit = {
+				has_state_trait = state_trait_native_resistance
+			}
+			state_region = {
+				remove_state_trait = state_trait_native_resistance
+			}
+		}
 	}
 
 	#okay
@@ -1303,28 +1319,31 @@ usfp_indian_wars.13 = {
 				}
 			}
 		}
-		every_scope_state = {
-			limit = {
-				region = sr:region_great_plains
-				state_region = {
-					any_scope_state = {
-						owner = {
-							is_country_type = decentralized
+		custom_tooltip = {
+			text = usfp_indian_wars.13.btt
+			every_scope_state = {
+				limit = {
+					region = sr:region_great_plains
+					state_region = {
+						any_scope_state = {
+							owner = {
+								is_country_type = decentralized
+							}
 						}
 					}
 				}
-			}
-			state_region = {
-				every_scope_state = {
-					limit = {
-						owner = {
-							is_country_type = decentralized
+				state_region = {
+					every_scope_state = {
+						limit = {
+							owner = {
+								is_country_type = decentralized
+							}
 						}
-					}
-					owner = {
-						change_tension = {
-							country = root
-							value = 50
+						owner = {
+							change_tension = {
+								country = root
+								value = 50
+							}
 						}
 					}
 				}
@@ -1484,4 +1503,164 @@ usfp_indian_wars.14 = {
 		}
 	}
 
+}
+
+#Comanche Slave Raid
+usfp_indian_wars.15 = {
+	type = country_event
+	placement = scope:raid_state
+	cooldown = {
+		years = 5
+	}
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+	title = usfp_indian_wars.15.t
+	desc = usfp_indian_wars.15.d
+	flavor = usfp_indian_wars.15.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_comanche_domain
+			any_scope_pop = {
+				is_pop_type = peasants
+				culture = {
+					has_discrimination_trait = european_heritage
+				}
+			}
+		}
+		NOT = {
+			has_technology_researched = repeaters
+		}
+		exists = c:COM
+		NOT = {
+			has_truce_with = c:COM
+		}
+		NOT = {
+			has_global_variable = american_frontier_closed
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_state_trait = state_trait_comanche_domain
+				any_scope_pop = {
+					OR = {
+						is_pop_type = peasants
+						is_pop_type = farmers
+					}
+					culture = {
+						has_discrimination_trait = european_heritage
+					}
+				}
+			}
+			save_scope_as = raid_state
+		}
+		c:COM = {
+			save_scope_as = comanche_scope
+		}
+	}
+
+	#ransom
+	option = {
+		name = usfp_indian_wars.15.a
+		default_option = yes
+		add_treasury = -50000
+		scope:raid_state = {
+			state_region = {
+				add_devastation = 5
+			}
+			random_scope_pop = {
+				limit = {
+					OR = {
+						is_pop_type = peasants
+						is_pop_type = farmers
+					}
+					culture = {
+						has_discrimination_trait = european_heritage
+					}
+				}
+				move_partial_pop = {
+					state = c:COM.capital
+					population = 100
+				}
+			}
+			usfp_radicalize_settlers_in_state = {
+				RADICALS = small_radicals
+			}
+		}
+		c:COM.capital = {
+			every_scope_pop = {
+				limit = {
+					NOT = {
+						is_pop_type = slaves
+					}
+					culture = {
+						has_discrimination_trait = european_heritage
+					}
+				}
+				change_poptype = pop_type:slaves
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#punish
+	option = {
+		name = usfp_indian_wars.15.b
+		trigger = {
+			any_neighbouring_state = {
+				owner = c:COM
+			}
+		}
+		change_tension = {
+			country = c:COM
+			value = 30
+		}
+		scope:raid_state = {
+			state_region = {
+				add_devastation = 5
+			}
+			random_scope_pop = {
+				limit = {
+					OR = {
+						is_pop_type = peasants
+						is_pop_type = farmers
+					}
+					culture = {
+						has_discrimination_trait = european_heritage
+					}
+				}
+				move_partial_pop = {
+					state = c:COM.capital
+					population = 200
+				}
+			}
+		}
+		c:COM.capital = {
+			every_scope_pop = {
+				limit = {
+					NOT = {
+						is_pop_type = slaves
+					}
+					culture = {
+						has_discrimination_trait = european_heritage
+					}
+				}
+				change_poptype = pop_type:slaves
+			}
+		}
+		ai_chance = {
+			base = 200
+		}
+	}
 }

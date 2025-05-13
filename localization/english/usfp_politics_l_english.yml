@@ -18,6 +18,9 @@ ai_strategy_manifest_destiny_desc: "[COUNTRY.GetName] seeks to expand its core t
 dismantle_jim_crow: "Dismantle Jim Crow"
 dismantle_jim_crow_desc: "The governments of the South have enforced racial terror on their citizens for far too long. It is time that these Jim Crow laws be nullified."
 
+negotiate_mexican_border: "Negotiate Mexican Border"
+negotiate_mexican_border_desc: "Our previous border treaties with Mexico were ill-defined and ignorant of the geography of the west. It is clear now that the Rio Grande is the most natural boundary between our two nations."
+
 movement_usfp_progressive: "Progressive Movement"
 movement_usfp_progressive_name: "$movement_usfp_progressive$"
 STATE_POLITICAL_MACHINE: "[concept_state] run by Political Machine"

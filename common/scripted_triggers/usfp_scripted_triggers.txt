@@ -11,8 +11,10 @@
 	NOT = {
 		has_trait = usfp_trait_antiexpansionist
 	}
-	NOT = {
-		has_trait = trait_child
+	hidden_trigger = {
+		NOT = {
+			has_trait = trait_child
+		}
 	}
 }
 
@@ -27,8 +29,10 @@ usfp_manifest_destiny_anti_expansion_trigger = {
 	NOT = {
 		has_trait = usfp_trait_expansionist
 	}
-	NOT = {
-		has_trait = trait_child
+	hidden_trigger = {
+		NOT = {
+			has_trait = trait_child
+		}
 	}
 }
 

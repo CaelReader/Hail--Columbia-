@@ -226,6 +226,9 @@ usfp_a_house_divided.3 = {
 				}
 			}
 		}
+		ai_chance = {
+			base = 100
+		}
 		
 	}
 
@@ -239,7 +242,7 @@ usfp_a_house_divided.3 = {
 			NOT = {
 				any_political_movement = {
 					is_political_movement_type = movement_anti_slavery
-					political_movement_support > 0.20
+					political_movement_support > 0.15
 				}
 			}
 			NOT = {
@@ -254,6 +257,7 @@ usfp_a_house_divided.3 = {
 						has_ideology = ideology:ideology_slaver
 					}
 				}
+				is_marginal = no
 			}
 		}
 		if = {
@@ -273,6 +277,9 @@ usfp_a_house_divided.3 = {
 		custom_tooltip = {
 			text = usfp_a_house_divided.3.b.tt
 			set_variable = corwin_amendment
+		}
+		ai_chance = {
+			base = 0
 		}
 	}
 }

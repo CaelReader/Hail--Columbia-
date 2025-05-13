@@ -230,3 +230,15 @@ usfp_arctic_subsistence_modifier = {
 	state_athabaskan_standard_of_living_add = 5
 	state_inuit_standard_of_living_add = 5
 }
+
+usfp_rain_doesnt_follow_the_plow_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_negative.dds
+	state_colony_growth_speed_mult = -0.15
+	state_migration_pull_mult = -0.15
+}
+
+usfp_prairie_madness_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_peasant_negative.dds
+	state_lower_strata_standard_of_living_add = -1
+	state_peasants_mortality_mult = 0.01
+}

@@ -456,3 +456,19 @@ Fixed wrong tooltip for Spain-facing Cuban Purchase event
 Fixed broken state loc in Indian Removal event
 Fixed End Gag Rule button requiring a slaver president
 Added failsafe in case the CSA somehow takes DC as part of the secession
+
+4.6 "Sitting Bull"
+New Content
+	New Events: Chestnut Blight, Rain Doesn't Follow the Plow, Prairie Madness, Comanche Slave Raid, Northern Removal, Osage Oil Boom, Osage Reign of Terror
+	Added decision to negotiate the mexican border to the Rio Grande with a friendly or subject Mexico
+Updates
+	Cultural Majority/Minority Movements now increase/decrease Manifest Destiny at 30%/60% support
+	Annexing all of Mexico displeases IGs who would rather not share a country with Mexicans
+	Closing the Frontier now cleans up the Native Resistance/Comanche Domain state traits
+	Removed mod achievements (non-functional)
+Fixes
+	Fixed some localization errors
+	Fixed incorrect country tag in Canada je
+	AI should never enact the Corwin Amendment
+	Corwin Amendment is invalidated by Marginalized planters
+	Fixed War Policy option tooltip

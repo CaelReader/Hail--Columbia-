@@ -1255,4 +1255,113 @@ usfp_native_removal.15 = {
 	}
 }
 
-#Michigan Removal
+#Northern Removal
+usfp_native_removal.16 = {
+	type = country_event
+	cooldown = {
+		years = 100
+	}
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	event_image = {
+		video = "asia_poor_people_moving"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	placement = scope:michigan_scope
+
+	title = usfp_native_removal.16.t
+	desc = usfp_native_removal.16.d
+	flavor = usfp_native_removal.16.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		owns_entire_state_region = STATE_MICHIGAN
+		s:STATE_MICHIGAN.region_state:USA = {
+			any_scope_pop = {
+				culture = {
+					has_discrimination_trait = indigenous_american_heritage
+				}
+			}
+		}
+		exists = c:SEQ
+	}
+
+	immediate = {
+		s:STATE_MICHIGAN.region_state:USA = {
+			save_scope_as = michigan_scope
+		}
+		c:SEQ = {
+			capital = {
+				save_scope_as = indian_territory_scope
+			}
+		}
+	}
+
+	#so it goes
+	option = {
+		name = usfp_native_removal.16.a
+		default_option = yes
+		scope:michigan_scope = {
+			kill_population_percent_in_state = {
+				percent = 0.01
+				culture = cu:algonquian
+			}
+			kill_population_percent_in_state = {
+				percent = 0.01
+				culture = cu:siouan
+			}
+			every_scope_pop = {
+				limit = {
+					culture = {
+						has_discrimination_trait = indigenous_american_heritage
+					}
+				}
+				move_pop = scope:indian_territory_scope
+			}
+		}
+		s:STATE_INDIANA.region_state:USA = {
+			kill_population_percent_in_state = {
+				percent = 0.01
+				culture = cu:algonquian
+			}
+			every_scope_pop = {
+				limit = {
+					culture = {
+						has_discrimination_trait = indigenous_american_heritage
+					}
+				}
+				move_pop = scope:indian_territory_scope
+			}
+		}
+		s:STATE_ILLINOIS.region_state:USA = {
+			kill_population_percent_in_state = {
+				percent = 0.01
+				culture = cu:algonquian
+			}
+			every_scope_pop = {
+				limit = {
+					culture = {
+						has_discrimination_trait = indigenous_american_heritage
+					}
+				}
+				move_pop = scope:indian_territory_scope
+			}
+		}
+		s:STATE_OHIO.region_state:USA = {
+			kill_population_percent_in_state = {
+				percent = 0.01
+				culture = cu:algonquian
+			}
+			every_scope_pop = {
+				limit = {
+					culture = {
+						has_discrimination_trait = indigenous_american_heritage
+					}
+				}
+				move_pop = scope:indian_territory_scope
+			}
+		}
+	}
+}

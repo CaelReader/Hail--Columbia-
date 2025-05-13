@@ -1797,3 +1797,54 @@ usfp_usa.23 = {
 
 
 }
+
+#Chestnut Blight
+usfp_usa.24 = {
+	type = country_event
+	placement = scope:chestnut_state
+	cooldown = {
+		years = 5
+	}
+	event_image = {
+		video = "asia_dead_cattle_poor_harvest"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+	title = usfp_usa.24.t
+	desc = usfp_usa.24.d
+	flavor = usfp_usa.24.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_american_chestnuts
+		}
+		year > 1905
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_state_trait = state_trait_american_chestnuts
+			}
+			save_scope_as = chestnut_state
+		}
+	}
+
+	#Unfortunate
+	option = {
+		name = usfp_usa.24.a
+		every_scope_state = {
+			limit = {
+				has_state_trait = state_trait_american_chestnuts
+			}
+			state_region = {
+				remove_state_trait = state_trait_american_chestnuts
+			}
+		}
+	}
+}

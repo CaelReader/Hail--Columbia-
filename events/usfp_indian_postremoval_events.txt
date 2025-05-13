@@ -555,3 +555,184 @@ usfp_indian_postremoval.5 = {
 	}
 
 }
+
+#Osage Oil Money
+usfp_indian_postremoval.6 = {
+	type = country_event
+	placement = scope:oklahoma_scope
+	cooldown = { years = 300 } #once
+	event_image = {
+		video = "middleeast_oil_derricks"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/invention_icons/pumpjacks.dds"
+	
+	title = usfp_indian_postremoval.6.t
+	desc = usfp_indian_postremoval.6.d
+	flavor = usfp_indian_postremoval.6.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		year > 1919
+		owns_entire_state_region = STATE_OKLAHOMA
+		s:STATE_OKLAHOMA.region_state:USA = {
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				weekly_profit > 10
+				count >= 5
+			}
+			any_scope_pop = {
+				culture = cu:usfp_american_indian
+			}
+		}
+		NOT = {
+			has_variable = had_osage_oil_money
+		}
+	}
+
+	immediate = {
+		s:STATE_OKLAHOMA.region_state:USA = {
+			save_scope_as = oklahoma_scope
+			random_scope_building = {
+				limit = {
+					is_building_type = building_oil_rig
+				}
+				save_scope_as = oil_rig_building
+			}
+		}
+		set_variable = had_osage_oil_money
+	}
+
+	#good for them
+	option = {
+		name = usfp_indian_postremoval.6.a
+		scope:oklahoma_scope = {
+			add_culture_standard_of_living_modifier = {
+				culture = cu:usfp_american_indian
+				multiplier = 3
+				years = 10
+			}
+			usfp_radicalize_dixies_in_state = {
+				RADICALS = small_radicals
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	#hrm, we should take control of their money
+	option = {
+		name = usfp_indian_postremoval.6.b
+		default_option = yes
+			scope:oklahoma_scope = {
+			add_culture_standard_of_living_modifier = {
+				culture = cu:usfp_american_indian
+				multiplier = 2
+				years = 10
+			}
+			add_loyalists_in_state = {
+				value = small_radicals
+				culture = cu:dixie
+				strata = middle
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+#Osage Reign of Terror
+usfp_indian_postremoval.7 = {
+	type = country_event
+	placement = scope:oklahoma_scope
+	cooldown = { years = 300 } #once
+	event_image = {
+		video = "unspecific_vandalized_storefront"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	title = usfp_indian_postremoval.7.t
+	desc = usfp_indian_postremoval.7.d
+	flavor = usfp_indian_postremoval.7.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		has_variable = had_osage_oil_money
+		year > 1924
+		owns_entire_state_region = STATE_OKLAHOMA
+		s:STATE_OKLAHOMA.region_state:USA = {
+			any_scope_pop = {
+				culture = cu:usfp_american_indian
+			}
+		}
+
+	}
+
+	immediate = {
+		s:STATE_OKLAHOMA.region_state:USA = {
+			save_scope_as = oklahoma_scope
+		}
+	}
+
+	#send in the Bureau
+	option = {
+		name = usfp_indian_postremoval.7.a
+		show_as_unavailable = {
+			always = yes
+		}
+		highlighted_option = yes
+		default_option = yes
+		trigger = {
+			institution_investment_level = {
+				institution = institution_home_affairs
+				value >= 1
+			}
+		}
+		scope:oklahoma_scope = {
+			kill_population_percent_in_state = {
+				percent = 0.001
+				culture = cu:usfp_american_indian
+			}
+			add_loyalists_in_state = {
+				value = small_radicals
+				culture = cu:usfp_american_indian
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#this is a local matter
+	option = {
+		name = usfp_indian_postremoval.7.b
+		scope:oklahoma_scope = {
+			kill_population_percent_in_state = {
+				percent = 0.002
+				culture = cu:usfp_american_indian
+			}
+			add_radicals_in_state = {
+				value = small_radicals
+				culture = cu:usfp_american_indian
+			}
+			usfp_loyalize_dixies_in_state = {
+				LOYALISTS = small_radicals
+			}
+			add_culture_standard_of_living_modifier = {
+				culture = cu:usfp_american_indian
+				multiplier = -1
+				years = 5
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}

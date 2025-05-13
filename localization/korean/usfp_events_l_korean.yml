@@ -408,7 +408,7 @@
  usfp_native_removal.9.a: "이 작업을 수행하기 위해서는 시간이 더 필요하다."
  usfp_native_removal.9.b: "이 망할 땅도둑놈들!"
  usfp_native_removal.10.t: "크리크 제거"
- usfp_native_removal.10.d: "크리크 민족의 많은 이들이 우리가 제시한 이주 조건을 수용했지만, 일부 거대 부족이 이주를 거부했습니다. [SCOPE.sState('alabama_scope').GetName]에서 짧은 군사 작전이 진행된 이후, 남았던 마지막 크리크 부족민이 강제로 [SCOPE.sState('oklahoma_scope').GetName]로 이송되었습니다."
+ usfp_native_removal.10.d: "크리크 민족의 많은 이들이 우리가 제시한 이주 조건을 수용했지만, 일부 거대 부족이 이주를 거부했습니다. [SCOPE.sState('alabama_scope').GetName]에서 짧은 군사 작전이 진행된 이후, 남았던 마지막 크리크 부족민이 강제로 [SCOPE.sState('oklahoma_state').GetName]로 이송되었습니다."
  usfp_native_removal.10.f: "\"남자들은 두 명씩 수갑이 채워져 있었고, 두 개의 줄을 이루는 긴 쇠사슬이 그들을 모두 연결했다. 이 숲의 철학자들의 금욕적인 기질이 강하게 드러났다. 육체적 고통도 정신적 고통도 그들에게서 최소한의 괴로움의 감정도 끌어낼 수 없었다. 뒤따라오는 여인들은 눈물을 흘리며 고통 속에서 외쳐댔다. 아이들은 부모의 고통스러운 감정을 공유하기에는 아직 너무 어렸기 때문에 동정심만을 보냈다.\""
  usfp_native_removal.10.a: "저들은 우리가 제안한 조약을 받아들였어야 했다."
  usfp_native_removal.10.b: "참으로 비참한 상황이다."

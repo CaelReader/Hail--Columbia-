@@ -85,6 +85,22 @@ usfp_manifest_less_destiny_mexico = {
 	color = bad
 }
 
+usfp_manifest_more_destiny_movement = {
+	type = country
+	group = "usfp_manifest_destiny_group"
+	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
+	notification_type = toast
+	color = good
+}
+
+usfp_manifest_less_destiny_movement = {
+	type = country
+	group = "usfp_manifest_destiny_group"
+	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
+	notification_type = toast
+	color = bad
+}
+
 #Washington Precedent message
 usfp_washington_precedent = {
 	type = country

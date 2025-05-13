@@ -24,6 +24,7 @@ usfp_monthly_pulse = {
 		100 = usfp_usa.15 #Hidden event to kill off the Great Triumvirate
 		1 = usfp_usa.18 #Garfield-style Assassination
 		1000 = usfp_usa.20 #Reset Parliamentary Republic to Presidential
+		100 = usfp_indian_wars.15 #Comanche Slave Raid
 
 		##Labor events
 		100 = usfp_usa_labor.1 #founding of the IWW
@@ -36,7 +37,8 @@ usfp_monthly_pulse = {
 		##Disasters
 		1 = usfp_usa.2 #Atlantic Hurricane
 		3 = usfp_usa.3 #Major Tornado
-		2 = usfp_usa.5 #Wildfire 
+		2 = usfp_usa.5 #Wildfire
+		10 = usfp_usa.24 #Chestnut Blight
 
 		#Mormon events
 		20 = usfp_mormon.1 #Missouri Mormon War

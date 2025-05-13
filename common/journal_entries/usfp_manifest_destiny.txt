@@ -209,6 +209,49 @@ usfp_manifest_destiny_main = {
 				set_variable = destiny_manifested_racism
 				post_notification = usfp_manifest_more_destiny_law
 			}
+			#Cultural Majority Movement
+			if = {
+				limit = {
+					NOT = {
+						has_variable = destiny_manifested_cultural_majority_1
+					} 
+					any_political_movement = {
+						political_movement_support >= 0.30
+						is_political_movement_type = movement_cultural_majority
+					}
+				}
+				random_political_movement = {
+					limit = {
+						political_movement_support >= 0.30
+						is_political_movement_type = movement_cultural_majority
+					}
+					save_scope_as = majority_movement
+				}
+				usfp_manifest_more_destiny_effect = yes
+				set_variable = destiny_manifested_cultural_majority_1
+				post_notification = usfp_manifest_more_destiny_movement
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = destiny_manifested_cultural_majority_2
+					} 
+					any_political_movement = {
+						political_movement_support >= 0.60
+						is_political_movement_type = movement_cultural_majority
+					}
+				}
+				random_political_movement = {
+					limit = {
+						political_movement_support >= 0.60
+						is_political_movement_type = movement_cultural_majority
+					}
+					save_scope_as = majority_movement
+				}
+				usfp_manifest_more_destiny_effect = yes
+				set_variable = destiny_manifested_cultural_majority_2
+				post_notification = usfp_manifest_more_destiny_movement
+			}
 			### Manifest Destiny Decreases ###
 			#Anti-Expansion President
 			if = {
@@ -338,27 +381,50 @@ usfp_manifest_destiny_main = {
 				set_variable = destiny_manifested_racism_removed
 				post_notification = usfp_manifest_less_destiny_law
 			}
-			# #Lose ACW
-			# moved to the ACW JE itself
-			# if = {
-			# 	limit = { 
-			# 		OR = {
-			# 			AND = {
-			# 				exists = c:CSA
-			# 				has_truce_with = c:CSA
-			# 			}
-			# 			AND = {
-			# 				exists = c:FSA
-			# 				has_truce_with = c:FSA
-			# 			}
-			# 		}
-			# 		NOT = {
-			# 			has_variable = destiny_manifested_acw_lost
-			# 		}
-			# 	}
-			# 	usfp_manifest_less_destiny_effect = yes
-			# 	set_variable = destiny_manifested_acw_lost
-			# }
+			#Cultural Minority Movement
+			if = {
+				limit = {
+					NOT = {
+						has_variable = destiny_manifested_cultural_minority_1
+					} 
+					any_political_movement = {
+						political_movement_support >= 0.30
+						is_political_movement_type = movement_cultural_minority
+					}
+				}
+				random_political_movement = {
+					limit = {
+						political_movement_support >= 0.30
+						is_political_movement_type = movement_cultural_minority
+					}
+					save_scope_as = minority_movement
+				}
+				usfp_manifest_less_destiny_effect = yes
+				set_variable = destiny_manifested_cultural_minority_1
+				post_notification = usfp_manifest_less_destiny_movement
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = destiny_manifested_cultural_minority_2
+					} 
+					any_political_movement = {
+						political_movement_support >= 0.60
+						is_political_movement_type = movement_cultural_minority
+					}
+				}
+				random_political_movement = {
+					limit = {
+						political_movement_support >= 0.60
+						is_political_movement_type = movement_cultural_minority
+					}
+					save_scope_as = minority_movement
+				}
+				usfp_manifest_less_destiny_effect = yes
+				set_variable = destiny_manifested_cultural_minority_2
+				post_notification = usfp_manifest_less_destiny_movement
+			}
+			###
 			#Failsafe to add claims in case you acquire mexican states by other means
 			if = {
 				limit = { 
@@ -406,6 +472,10 @@ usfp_manifest_destiny_main = {
 			100 = usfp_manifest_destiny.26 #American Empire
 			1000 = usfp_indian_postremoval.1 #Ghost Dance
 			300 = usfp_indian_postremoval.5 #Oklahoma Land Runs
+			100 = usfp_manifest_destiny.27 #Rain Doesn't Follow the Plow
+			100 = usfp_manifest_destiny.28 #Prairie Madness
+			100 = usfp_indian_postremoval.6 #Osage Oil Wealth
+			100 = usfp_indian_postremoval.7 #Osage Reign of Terror
 		}
 		events = {
 			# usfp_manifest_destiny.6 #Treaty of GH

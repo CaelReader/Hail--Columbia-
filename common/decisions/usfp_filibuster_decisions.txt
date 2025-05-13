@@ -15,6 +15,9 @@
 
 	possible = {
 		is_diplomatic_play_committed_participant = no
+		c:USA = {
+			is_diplomatic_play_committed_participant = no
+		}
 	}
 
 	when_taken = {

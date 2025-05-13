@@ -49,6 +49,7 @@
 			10 = usfp_native_removal.13 # Ralph Waldo Emerson's Letter to the President
 			1 = usfp_native_removal.14 # Assassination of President by Indian
 			1 = usfp_native_removal.15 # Assassination of President by White Settler
+			50 = usfp_native_removal.16 #Northern Removal
 		}
 	}
 
