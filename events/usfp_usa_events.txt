@@ -1763,6 +1763,12 @@ usfp_usa.23 = {
 			add_journal_entry = {
 				type = je_acw_countdown
 			}
+			add_journal_entry = {
+				type = je_usfp_american_constitution
+			}
+			add_modifier = {
+				name = usfp_federal_government_modifier
+			}
 			add_modifier = {
 				name = usfp_missouri_compromise_decaying
 				years = 25

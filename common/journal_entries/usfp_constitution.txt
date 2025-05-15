@@ -1,0 +1,16 @@
+﻿je_usfp_american_constitution = {
+	icon = "gfx/interface/icons/war_goals/unused/force_recognition.dds"
+
+	group = je_group_historical_content
+
+	modifiers_while_active = {
+		usfp_federal_government_modifier
+	}
+
+	fail = {
+		NOT = {
+			has_law = law_type:law_presidential_republic
+		}
+	}
+
+}

@@ -143,6 +143,8 @@ usfp_enacting_unconstitutional_law = {
 		is_enacting_law = law_type:law_cooperative_ownership
 		is_enacting_law = law_type:law_religious_schools
 		is_enacting_law = law_type:law_single_party_state
+		is_enacting_law = law_type:law_isolationism
+		is_enacting_law = law_type:law_land_based_taxation
 	}
 }
 

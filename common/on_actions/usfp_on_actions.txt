@@ -123,12 +123,62 @@ on_election_campaign_start = {
 		usfp_acw_election_agitators
 		usfp_us_first_election_railroad
 		usfp_break_precedent
+		usfp_american_presidents_only
 	}
 }
 
 usfp_break_precedent = {
 	events = {
 		usfp_usa.19
+	}
+}
+
+usfp_american_presidents_only = {
+	effect = {
+		if = {
+			limit = { 
+				c:USA ?= this
+				has_law = law_type:law_presidential_republic
+			}
+			every_active_party = {
+				ordered_member = {
+					order_by = ig_clout
+					leader = {
+						if = {
+							limit = { 
+								NOR = {
+									culture = {
+										is_primary_culture_of = root
+									}
+									culture = {
+										AND = {
+											this = cu:usfp_american_indian
+											root = {
+												has_law = law_type:law_multicultural
+											}
+										}
+									}
+									culture = cu:yankee
+									culture = cu:dixie
+									culture = cu:cajun
+									culture = cu:usfp_american
+									culture = cu:afro_american
+								}
+							}
+							save_scope_as = candidate_scope
+							remove_as_interest_group_leader = yes
+							add_character_role = agitator
+							interest_group = {
+								save_scope_as = interest_group_new_leader_scope
+							}
+							owner = {
+								post_notification = usfp_president_ineligible
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 

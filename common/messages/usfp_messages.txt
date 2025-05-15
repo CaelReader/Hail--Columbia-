@@ -110,6 +110,14 @@ usfp_washington_precedent = {
 	color = neutral
 }
 
+usfp_president_ineligible = {
+	type = country
+	group = "new_ruler_notification_group"
+	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
+	notification_type = toast
+	color = neutral
+}
+
 usfp_liberia_republic = {
 	type = country
 	group = "diplomatic_pact_notification_group"

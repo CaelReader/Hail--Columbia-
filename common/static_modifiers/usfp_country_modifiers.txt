@@ -55,29 +55,17 @@ usfp_indian_removal_modifier = {
 
 usfp_second_party_system_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
-	country_legitimacy_govt_size_add = -1
-	country_legitimacy_headofstate_add = 10
-	country_party_whip_impact_mult = 0.10
-	country_agitator_slots_add = 3
 	country_institution_size_change_speed_mult = -0.25
 }
 
 usfp_third_party_system_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
 	state_pop_pol_str_mult = 0.15
-	country_legitimacy_govt_size_add = -1 
-	country_legitimacy_headofstate_add = 10
-	country_party_whip_impact_mult = 0.10
-	country_agitator_slots_add = 3
 }
 
 usfp_fourth_party_system_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
 	state_pop_pol_str_mult = 0.10
-	country_legitimacy_govt_size_add = -1 
-	country_legitimacy_headofstate_add = 10
-	country_party_whip_impact_mult = 0.10
-	country_agitator_slots_add = 3
 	country_institution_size_change_speed_mult = 0.10
 }
 
@@ -646,4 +634,17 @@ usfp_black_suffrage_denied_modifier = {
 	country_voting_power_open_prejudice_mult = -0.75
 	country_loyalism_increases_open_prejudice_mult = -0.50
 	country_acceptance_shared_cultural_trait_add = -10
+}
+
+usfp_american_system_tariff_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_trade_negative.dds
+	#hopefully I can do a tariff modifier in 1.9
+}
+
+usfp_federal_government_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
+	country_legitimacy_govt_size_add = -1
+	country_legitimacy_headofstate_add = 10
+	country_party_whip_impact_mult = 0.10
+	country_agitator_slots_add = 3
 }
