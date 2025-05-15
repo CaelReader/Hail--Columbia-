@@ -166,12 +166,17 @@ usfp_american_presidents_only = {
 								}
 							}
 							save_scope_as = candidate_scope
-							remove_as_interest_group_leader = yes
-							add_character_role = agitator
 							interest_group = {
-								save_scope_as = interest_group_new_leader_scope
+								save_scope_as = changing_leadership_ig
 							}
-							owner = {
+							add_character_role = agitator
+							remove_as_interest_group_leader = yes
+							scope:changing_leadership_ig = {
+								leader = {
+									save_scope_as = interest_group_new_leader_scope
+								}
+							}
+							root = {
 								post_notification = usfp_president_ineligible
 							}
 						}

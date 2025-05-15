@@ -28,3 +28,7 @@ STATE_POLLUTED: "High [concept_generated_pollution] in [concept_state]"
 movement_usfp_eugenics: "Eugenics Movement"
 movement_usfp_eugenics_name: "$movement_usfp_eugenics$"
 
+alert_usfp_ineligible_candidate_name: "Ineligible Presidential Candidate"
+alert_usfp_ineligible_candidate_desc: "The [concept_leader] of a [concept_powerful] [concept_interest_group] is not a #tooltippable;tooltip:[SCOPE.GetRootScope.GetCountry.GetTooltipTag],usfp_natural_born_citizens natural-born citizen#! and cannot run for [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')]."
+alert_usfp_ineligible_candidate_hint: "If they are the [concept_party_leader], a new [concept_character] will replace them at the start of the [Concept('concept_election', '$concept_election$')]."
+alert_usfp_ineligible_candidate_action: "Politics Panel"

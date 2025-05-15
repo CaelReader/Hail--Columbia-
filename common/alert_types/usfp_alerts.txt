@@ -1,0 +1,37 @@
+﻿usfp_ineligible_candidate = {
+	script_context = player_country
+	texture = "gfx/interface/icons/event_icons/event_election.dds"
+
+	valid = {
+		has_journal_entry = je_usfp_american_constitution
+		any_active_party = {
+				any_member = {
+					is_powerful = yes
+					leader = {
+						NOR = {
+								culture = {
+									is_primary_culture_of = root
+								}
+								culture = {
+									AND = {
+										this = cu:usfp_american_indian
+										root = {
+											has_law = law_type:law_multicultural
+										}
+									}
+								}
+								culture = cu:yankee
+								culture = cu:dixie
+								culture = cu:cajun
+								culture = cu:usfp_american
+								culture = cu:afro_american
+							}
+						}
+				}
+			}
+	}
+
+	open_panel = politics|interest_groups
+	type = alert
+	color = yellow
+}

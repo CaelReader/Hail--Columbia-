@@ -24,4 +24,3 @@
  STATE_POLLUTED: "High [concept_generated_pollution] in [concept_state]" #NT!
  movement_usfp_eugenics: "Eugenics Movement" #NT!
  movement_usfp_eugenics_name: "$movement_usfp_eugenics$" #NT!
-  
