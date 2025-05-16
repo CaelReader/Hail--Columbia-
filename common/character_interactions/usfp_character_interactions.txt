@@ -3,6 +3,7 @@
 
 	potential = {
 		has_dlc_feature = voice_of_the_people_content
+		exists = owner
 		owner = scope:actor
 		is_ruler = yes
 		owner = {

@@ -146,24 +146,7 @@ usfp_american_presidents_only = {
 					leader = {
 						if = {
 							limit = { 
-								NOR = {
-									culture = {
-										is_primary_culture_of = root
-									}
-									culture = {
-										AND = {
-											this = cu:usfp_american_indian
-											root = {
-												has_law = law_type:law_multicultural
-											}
-										}
-									}
-									culture = cu:yankee
-									culture = cu:dixie
-									culture = cu:cajun
-									culture = cu:usfp_american
-									culture = cu:afro_american
-								}
+								usfp_character_is_natural_born_citizen = no
 							}
 							save_scope_as = candidate_scope
 							interest_group = {

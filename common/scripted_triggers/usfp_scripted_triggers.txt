@@ -419,3 +419,36 @@ usfp_is_afro_american_discriminated = {
 		has_law = law_type:law_multicultural
 	}
 }
+
+usfp_character_is_natural_born_citizen = {
+	save_temporary_scope_as = check_character
+	OR = {
+		culture = {
+			is_primary_culture_of = root
+		}
+		root = {
+			any_scope_state = {
+				is_incorporated = yes
+				state_region = {
+					is_homeland = scope:check_character.culture
+				}
+			}
+			OR = {
+				scope:check_character.culture = {
+					NOT = {
+						has_discrimination_trait = indigenous_american_heritage
+					}
+					root = {
+						cultural_acceptance_base = { target = scope:check_character.culture value >= acceptance_status_3 }
+					}
+				}
+				scope:check_character.culture = {
+					has_discrimination_trait = indigenous_american_heritage
+					root = {
+						cultural_acceptance_base = { target = scope:check_character.culture value >= acceptance_status_4 }
+					}
+				}
+			}	
+		}
+	}
+}

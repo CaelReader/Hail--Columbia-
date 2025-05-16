@@ -1553,10 +1553,7 @@ usfp_indian_wars.15 = {
 			limit = {
 				has_state_trait = state_trait_comanche_domain
 				any_scope_pop = {
-					OR = {
-						is_pop_type = peasants
-						is_pop_type = farmers
-					}
+					is_pop_type = peasants
 					culture = {
 						has_discrimination_trait = european_heritage
 					}
@@ -1578,36 +1575,21 @@ usfp_indian_wars.15 = {
 			state_region = {
 				add_devastation = 5
 			}
-			random_scope_pop = {
+			ordered_scope_pop = {
+				order_by = total_size
 				limit = {
-					OR = {
-						is_pop_type = peasants
-						is_pop_type = farmers
-					}
+					is_pop_type = peasants
 					culture = {
 						has_discrimination_trait = european_heritage
 					}
 				}
 				move_partial_pop = {
 					state = c:COM.capital
-					population = 100
+					population_ratio = 0.001
 				}
 			}
 			usfp_radicalize_settlers_in_state = {
 				RADICALS = small_radicals
-			}
-		}
-		c:COM.capital = {
-			every_scope_pop = {
-				limit = {
-					NOT = {
-						is_pop_type = slaves
-					}
-					culture = {
-						has_discrimination_trait = european_heritage
-					}
-				}
-				change_poptype = pop_type:slaves
 			}
 		}
 		ai_chance = {
@@ -1630,22 +1612,26 @@ usfp_indian_wars.15 = {
 			state_region = {
 				add_devastation = 5
 			}
-			random_scope_pop = {
+			ordered_scope_pop = {
+				order_by = total_size
 				limit = {
-					OR = {
-						is_pop_type = peasants
-						is_pop_type = farmers
-					}
+					is_pop_type = peasants
 					culture = {
 						has_discrimination_trait = european_heritage
 					}
 				}
 				move_partial_pop = {
 					state = c:COM.capital
-					population = 200
+					population_ratio = 0.001
 				}
 			}
 		}
+		ai_chance = {
+			base = 200
+		}
+	}
+
+	after = {
 		c:COM.capital = {
 			every_scope_pop = {
 				limit = {
@@ -1658,9 +1644,6 @@ usfp_indian_wars.15 = {
 				}
 				change_poptype = pop_type:slaves
 			}
-		}
-		ai_chance = {
-			base = 200
 		}
 	}
 }

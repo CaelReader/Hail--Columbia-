@@ -1,10 +1,7 @@
 ﻿COUNTRIES = {
-	c:PWN ?= {
+	c:IRC ?= {
 		effect_starting_technology_tier_6_tech = yes
 		usfp_native_startup = yes
-		add_modifier = {
-			name = usfp_white_mans_diseases_modifier
-			years = 50
-		}
+		activate_law = law_type:law_slavery_banned
 	}
 }
