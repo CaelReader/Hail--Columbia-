@@ -281,103 +281,95 @@ usfp_planters_to_landowners_effect = {
 	}
 }
 
-usfp_calculate_bleeding_kansas_progress = {
-	set_variable = { name = bleeding_kansas_var_next value = 0 }
-	##Supports Free Kansas
-	#Yankee population
-	set_variable = { name = bleeding_kansas_yankee_percent value = 0 }
-	scope:kansas_scope = {
-		save_temporary_scope_value_as = {
-		  name = temp_kansas_yankee_percent
-		  value = usfp_bleeding_kansas_get_yankee_percent
-		}
-	}
-	change_variable = {
-	  name = bleeding_kansas_yankee_percent
-	  add = scope:temp_kansas_yankee_percent
-	}
-	#Yankee radicals
-	set_variable = { name = bleeding_kansas_yankee_radicals value = 0 }
-	scope:kansas_scope = {
-		save_temporary_scope_value_as = {
-		  name = temp_kansas_yankee_radicals
-		  value = usfp_bleeding_kansas_get_yankee_radicals
-		}
-	}
-	change_variable = {
-	  name = bleeding_kansas_yankee_radicals
-	  add = scope:temp_kansas_yankee_radicals
-	}
+# usfp_calculate_bleeding_kansas_progress = {
+# 	set_variable = { name = bleeding_kansas_var_next value = 0 }
+# 	##Supports Free Kansas
+# 	#Yankee population
+# 	set_variable = { name = bleeding_kansas_yankee_percent value = 0 }
+# 	scope:kansas_scope = {
+# 		save_temporary_scope_value_as = {
+# 		  name = temp_kansas_yankee_percent
+# 		  value = usfp_bleeding_kansas_get_yankee_percent
+# 		}
+# 	}
+# 	change_variable = {
+# 	  name = bleeding_kansas_yankee_percent
+# 	  add = scope:temp_kansas_yankee_percent
+# 	}
+# 	#Yankee radicals
+# 	set_variable = { name = bleeding_kansas_yankee_radicals value = 0 }
+# 	scope:kansas_scope = {
+# 		save_temporary_scope_value_as = {
+# 		  name = temp_kansas_yankee_radicals
+# 		  value = usfp_bleeding_kansas_get_yankee_radicals
+# 		}
+# 	}
+# 	change_variable = {
+# 	  name = bleeding_kansas_yankee_radicals
+# 	  add = scope:temp_kansas_yankee_radicals
+# 	}
 
-	#free Afro-americans
-	set_variable = { name = bleeding_kansas_freedmen value = 0 }
-	scope:kansas_scope = {
-		save_temporary_scope_value_as = {
-		  name = temp_kansas_freedmen
-		  value = usfp_bleeding_kansas_get_freedmen
-		}
-	}
-	change_variable = {
-	  name = bleeding_kansas_freedmen
-	  add = scope:temp_kansas_freedmen
-	}
+# 	#free Afro-americans
+# 	set_variable = { name = bleeding_kansas_freedmen value = 0 }
+# 	scope:kansas_scope = {
+# 		save_temporary_scope_value_as = {
+# 		  name = temp_kansas_freedmen
+# 		  value = usfp_bleeding_kansas_get_freedmen
+# 		}
+# 	}
+# 	change_variable = {
+# 	  name = bleeding_kansas_freedmen
+# 	  add = scope:temp_kansas_freedmen
+# 	}
 
-	##Supports Slave Kansas
-	#Dixie population
-	set_variable = { name = bleeding_kansas_dixie_percent value = 0 }
-	scope:kansas_scope = {
-		save_temporary_scope_value_as = {
-		  name = temp_kansas_dixie_percent
-		  value = usfp_bleeding_kansas_get_dixie_percent
-		}
-	}
-	change_variable = {
-	  name = bleeding_kansas_dixie_percent
-	  subtract = scope:temp_kansas_dixie_percent
-	}
-	#Dixie radicals
-	set_variable = { name = bleeding_kansas_dixie_radicals value = 0 }
-	scope:kansas_scope = {
-		save_temporary_scope_value_as = {
-		  name = temp_kansas_dixie_radicals
-		  value = usfp_bleeding_kansas_get_dixie_radicals
-		}
-	}
-	change_variable = {
-	  name = bleeding_kansas_dixie_radicals
-	  subtract = scope:temp_kansas_dixie_radicals
-	}
-	#Dixie aristocrats
-	set_variable = { name = bleeding_kansas_aristocrats value = 0 }
-	scope:kansas_scope = {
-		save_temporary_scope_value_as = {
-		  name = temp_kansas_aristocrats
-		  value = usfp_bleeding_kansas_get_dixie_aristocrats
-		}
-	}
-	change_variable = {
-	  name = bleeding_kansas_aristocrats
-	  subtract = scope:temp_kansas_aristocrats
-	}
+# 	##Supports Slave Kansas
+# 	#Dixie population
+# 	set_variable = { name = bleeding_kansas_dixie_percent value = 0 }
+# 	scope:kansas_scope = {
+# 		save_temporary_scope_value_as = {
+# 		  name = temp_kansas_dixie_percent
+# 		  value = usfp_bleeding_kansas_get_dixie_percent
+# 		}
+# 	}
+# 	change_variable = {
+# 	  name = bleeding_kansas_dixie_percent
+# 	  subtract = scope:temp_kansas_dixie_percent
+# 	}
+# 	#Dixie radicals
+# 	set_variable = { name = bleeding_kansas_dixie_radicals value = 0 }
+# 	scope:kansas_scope = {
+# 		save_temporary_scope_value_as = {
+# 		  name = temp_kansas_dixie_radicals
+# 		  value = usfp_bleeding_kansas_get_dixie_radicals
+# 		}
+# 	}
+# 	change_variable = {
+# 	  name = bleeding_kansas_dixie_radicals
+# 	  subtract = scope:temp_kansas_dixie_radicals
+# 	}
+# 	#Dixie aristocrats
+# 	set_variable = { name = bleeding_kansas_aristocrats value = 0 }
+# 	scope:kansas_scope = {
+# 		save_temporary_scope_value_as = {
+# 		  name = temp_kansas_aristocrats
+# 		  value = usfp_bleeding_kansas_get_dixie_aristocrats
+# 		}
+# 	}
+# 	change_variable = {
+# 	  name = bleeding_kansas_aristocrats
+# 	  subtract = scope:temp_kansas_aristocrats
+# 	}
 
-	#Compilation
-	change_variable = {name = bleeding_kansas_var_next add = var:bleeding_kansas_yankee_percent}
-	change_variable = {name = bleeding_kansas_var_next add = var:bleeding_kansas_yankee_radicals}
-	change_variable = {name = bleeding_kansas_var_next add = var:bleeding_kansas_freedmen}
-	change_variable = {name = bleeding_kansas_var_next add = var:bleeding_kansas_dixie_percent}
-	change_variable = {name = bleeding_kansas_var_next add = var:bleeding_kansas_dixie_radicals}
-	change_variable = {name = bleeding_kansas_var_next add = var:bleeding_kansas_aristocrats}
-}
+# 	#Compilation
+# 	change_variable = {name = bleeding_kansas_var_next add = var:bleeding_kansas_yankee_percent}
+# 	change_variable = {name = bleeding_kansas_var_next add = var:bleeding_kansas_yankee_radicals}
+# 	change_variable = {name = bleeding_kansas_var_next add = var:bleeding_kansas_freedmen}
+# 	change_variable = {name = bleeding_kansas_var_next add = var:bleeding_kansas_dixie_percent}
+# 	change_variable = {name = bleeding_kansas_var_next add = var:bleeding_kansas_dixie_radicals}
+# 	change_variable = {name = bleeding_kansas_var_next add = var:bleeding_kansas_aristocrats}
+# }
 
 usfp_cleanup_bleeding_kansas_variables = {
-	remove_variable = bleeding_kansas_yankee_percent
-	remove_variable = bleeding_kansas_yankee_radicals
-	remove_variable = bleeding_kansas_freedmen
-	remove_variable = bleeding_kansas_dixie_percent
-	remove_variable = bleeding_kansas_dixie_radicals
-	remove_variable = bleeding_kansas_aristocrats
-	remove_variable = bleeding_kansas_var_next
-	remove_variable = bleeding_kansas_var
 	remove_variable = new_england_emigrant_aid_society
 	remove_variable = had_border_ruffians
 	remove_variable = had_sacking_of_lawrence
@@ -387,6 +379,24 @@ usfp_cleanup_bleeding_kansas_variables = {
 	remove_variable = had_kansas_constitution
 	remove_variable = kansas_free_constitution
 	remove_variable = kansas_slave_constitution
+}
+
+usfp_bleeding_kansas_swing_border_ruffians = {
+	custom_tooltip = {
+		text = usfp_bleeding_kansas_swing_slave
+		je:je_usfp_a_house_divided_bleeding_kansas ?= {
+			add_progress = { value = $AMOUNT$ name = usfp_bleeding_kansas_progress_bar }
+		}
+	}
+}
+
+usfp_bleeding_kansas_swing_free_state = {
+	custom_tooltip = {
+		text = usfp_bleeding_kansas_swing_free
+		je:je_usfp_a_house_divided_bleeding_kansas ?= {
+			add_progress = { value = $AMOUNT$ name = usfp_bleeding_kansas_progress_bar }
+		}
+	}
 }
 
 usfp_anger_slavers_effect = {

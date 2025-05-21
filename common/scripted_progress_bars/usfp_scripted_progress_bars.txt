@@ -26,3 +26,66 @@
 	min_value = 0
 	max_value = 2000
  }
+
+ usfp_bleeding_kansas_progress_bar = {
+	name = "usfp_bleeding_kansas_progress_bar"
+	desc = "usfp_bleeding_kansas_progress_bar_free_kansas"
+	second_desc = "usfp_bleeding_kansas_progress_bar_slave_kansas"
+	double_sided_bad = yes
+
+	monthly_progress = {
+		add = {
+			desc = "usfp_bleeding_kansas_yankee_radicals"
+			value = {
+				s:STATE_KANSAS.region_state:USA = {
+					add = usfp_bleeding_kansas_get_yankee_radicals
+				}
+			}
+		}
+		add = {
+			desc = "usfp_bleeding_kansas_yankee_population"
+			value = {
+				s:STATE_KANSAS.region_state:USA = {
+					add = usfp_bleeding_kansas_get_yankee_percent
+				}
+			}
+		}
+		add = {
+			desc = "usfp_bleeding_kansas_freedmen"
+			value = {
+				s:STATE_KANSAS.region_state:USA = {
+					add = usfp_bleeding_kansas_get_freedmen
+				}
+			}
+		}
+		subtract = {
+			desc = "usfp_bleeding_kansas_dixie_radicals"
+			value = {
+				s:STATE_KANSAS.region_state:USA = {
+					add = usfp_bleeding_kansas_get_dixie_radicals
+				}
+			}
+		}
+		subtract = {
+			desc = "usfp_bleeding_kansas_dixie_population"
+			value = {
+				s:STATE_KANSAS.region_state:USA = {
+					add = usfp_bleeding_kansas_get_dixie_percent
+				}
+			}
+		}
+		subtract = {
+			desc = "usfp_bleeding_kansas_dixie_aristocrats"
+			value = {
+				s:STATE_KANSAS.region_state:USA = {
+					add = usfp_bleeding_kansas_get_dixie_aristocrats
+				}
+			}
+		}
+	}
+
+
+	start_value = 50
+	min_value = 0
+	max_value = 100
+ }

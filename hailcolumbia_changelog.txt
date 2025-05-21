@@ -461,11 +461,12 @@ Added failsafe in case the CSA somehow takes DC as part of the secession
 New Content
 	New Events: Chestnut Blight, Rain Doesn't Follow the Plow, Prairie Madness, Comanche Slave Raid, Northern Removal, Osage Oil Boom, Osage Reign of Terror
 	Added decision to negotiate the mexican border to the Rio Grande with a friendly or subject Mexico
-	US Constitution JE: contains permanent modifiers, explains Unconstitutional Laws mechanic, explains Natural Born President mechanic
+	US Constitution JE: contains permanent modifiers, explains Unconstitutional Laws mechanic, explains Natural-Born Citizen mechanic
 Updates
 	Party Leaders who aren't natural-born citizens will be ejected from IG Leadership at the start of an election
 	Cultural Majority/Minority Movements now increase/decrease Manifest Destiny at 30%/60% support
 	Annexing all of Mexico displeases IGs who would rather not share a country with Mexicans
+	Updated Bleeding Kansas JE to use a double-sided scripted progress bar
 	Closing the Frontier now cleans up the Native Resistance/Comanche Domain state traits
 	Removed mod achievements (non-functional)
 Fixes

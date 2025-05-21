@@ -2824,6 +2824,7 @@ usfp_manifest_destiny.27 = {
 	#Unfortunate
 	option = {
 		name = usfp_manifest_destiny.27.a
+		default_option = yes
 		scope:drought_state = {
 			add_modifier = {
 				name = usfp_rain_doesnt_follow_the_plow_modifier
@@ -2945,6 +2946,7 @@ usfp_manifest_destiny.28 = {
 	#Unfortunate
 	option = {
 		name = usfp_manifest_destiny.28.a
+		default_option = yes
 		scope:praire_state_1 = {
 			add_modifier = {
 				name = usfp_prairie_madness_modifier
