@@ -462,6 +462,7 @@ New Content
 	New Events: Chestnut Blight, Rain Doesn't Follow the Plow, Prairie Madness, Comanche Slave Raid, Northern Removal, Osage Oil Boom, Osage Reign of Terror
 	Added decision to negotiate the mexican border to the Rio Grande with a friendly or subject Mexico
 	US Constitution JE: contains permanent modifiers, explains Unconstitutional Laws mechanic, explains Natural-Born Citizen mechanic
+	New AI Strategies for the USA: Monroe Doctrine and Big Stick Diplomacy
 Updates
 	Party Leaders who aren't natural-born citizens will be ejected from IG Leadership at the start of an election
 	Cultural Majority/Minority Movements now increase/decrease Manifest Destiny at 30%/60% support

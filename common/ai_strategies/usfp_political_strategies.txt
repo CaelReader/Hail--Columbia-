@@ -191,17 +191,14 @@ ai_strategy_manifest_destiny = {
 		value = 50
 		
 		if = {
-			limit = { 
-				has_technology_researched = pan-nationalism
+			limit = {
+				has_variable = manifest_destiny_var
 			}
-			multiply = 1.5
-		}
-		else_if = {
-			limit = { 
-				has_technology_researched = nationalism
+			add = {
+				value = var:manifest_destiny_var
+				multiply = 3
 			}
-			multiply = 1.25
-		}		
+		}	
 	}
 	
 	unacceptable_infamy_level = {
@@ -216,8 +213,34 @@ ai_strategy_manifest_destiny = {
 		value = 0.15
 	}		
 	
+	#USA shouldn't interfere outside of Western Hemisphere
 	diplomatic_play_neutrality = {
-		value = 25
+		value = 50
+		if = {
+			limit = {
+				scope:diplomatic_play.initiator = {
+					country_is_in_north_america = no
+					country_is_in_south_america = no 
+				}	
+				scope:diplomatic_play.target = { 
+					OR = {
+						country_is_in_north_america = yes 
+						country_is_in_south_america = yes 
+					}
+				}
+			}
+			add = -50
+		}
+		if = {
+			limit = {
+				scope:diplomatic_play.target = { 
+					country_is_in_north_america = no
+					country_is_in_south_america = no 
+				}
+			}
+			add = 100
+		}
+
 	}
 	
 	diplomatic_play_boldness = {
@@ -318,7 +341,18 @@ ai_strategy_manifest_destiny = {
 	}
 
 	wargoal_weights = {
-		conquer_state = 0.5
+		#USA should never conquer outside the americas
+		conquer_state = {
+			if = {
+				limit = {
+					scope:target_state = {
+						state_is_in_americas = no
+					}			
+				}
+				
+				add = -100
+			}			
+		}
 		return_state = 3.0
 		force_nationalization = 0.25
 	}
@@ -387,6 +421,14 @@ ai_strategy_manifest_destiny = {
 		institution_colonial_affairs = {	
 			value = 500			
 		}								
+	}
+
+	#generally minds its own business
+	diplomatic_play_support = {
+			add = {
+				value = -100
+				desc = "ai_strategy_manifest_destiny"
+			}
 	}
 	
 }

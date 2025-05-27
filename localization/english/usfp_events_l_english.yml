@@ -1206,7 +1206,7 @@ usfp_indian_postremoval.5.b: "We need to ensure there is space enough left for t
 
 usfp_indian_postremoval.6.t: "The Underground Reservation"
 usfp_indian_postremoval.6.d: "After being relocated to [SCOPE.sState('oklahoma_scope').GetName], the Osage Nation negotiated full tribal ownership over the mineral rights on their alloted land. The discovery of rich $oil$ fields under their territory has brought immense wealth to the Osage, who recieve direct dividends from the proceeds. Sensational tales of fancy clothes, luxury cars, and newly-built mansions have provoked resentment among local Whites."
-usfp_indian_postremoval.6.f: ""The Osage have become the richest nation, clan, or social group of any race on Earth, including the whites, man for man. Osage county now sports more Pierce Arrows than any other county in the United States.""
+usfp_indian_postremoval.6.f: ""The Osage have become the richest nation, clan, or social group of any race on Earth, including the whites, man for man. Osage county now sports more Pierce Arrows than any other county in the United States."" #Killers of the Flower Moon
 usfp_indian_postremoval.6.a: "They are the chosen people of chance."
 usfp_indian_postremoval.6.b: "Clearly they require White guardians to hold their wealth in trust!"
 
