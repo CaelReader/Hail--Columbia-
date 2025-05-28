@@ -1514,8 +1514,10 @@ usfp_american_igs_effect = {
 			set_ig_trait = ig_trait:ig_trait_profitable_estates
 			if = {
 				limit = {
-					NOT = {
-						this = c:CSA
+					owner = {
+						NOT = {
+							this = c:CSA
+						}
 					}
 				 }
 				 set_interest_group_name = ig_landowners
@@ -1534,11 +1536,13 @@ usfp_american_igs_effect = {
 			add_ideology = ideology_usfp_accomodationist
 			set_ig_trait = ig_trait:usfp_ig_trait_democratic_experiment
 			if = {
-				limit = { 
-					OR = {
-						this = c:USA
-						was_formed_from = USA
-					}
+				limit = {
+					owner = {
+						OR = {
+							this = c:USA
+							was_formed_from = USA
+						}
+					} 
 				}
 				set_ig_trait = ig_trait:usfp_ig_trait_american_exceptionalism
 			}

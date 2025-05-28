@@ -1,4 +1,4 @@
-annex_canadian_north = {
+﻿annex_canadian_north = {
 	is_shown = {
 		s:STATE_NUNAVUT = {
 			any_scope_state = {
