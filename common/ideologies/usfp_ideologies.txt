@@ -149,7 +149,7 @@ ideology_american_school = { # USIT
 }
 
 ideology_empire_of_liberty = { # USIT + USPB
-	icon = "gfx/interface/icons/ideology_icons/sovereignist.dds"
+	icon = "gfx/interface/icons/ideology_icons/ideology_usfp_empire_of_liberty.dds"
 	
 	lawgroup_army_model = {
 		law_national_militia = approve
