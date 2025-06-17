@@ -2,7 +2,7 @@
 je_oregon = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
-	group = je_group_historical_content
+	group = je_group_usa_manifest_destiny
 
 	is_shown_when_inactive = {
 		exists = c:USA
@@ -47,21 +47,9 @@ je_oregon = {
 				text = oregon_tt
 				has_global_variable = oregon_trail_mapped
 			}
-			s:STATE_MONTANA = {
-				any_scope_state = {
-					owner = root
-				}
-			}
-			s:STATE_WYOMING = {
-				any_scope_state = {
-					owner = root
-				}
-			}
-			s:STATE_CALIFORNIA = {
-				any_scope_state = {
-					owner = root
-				}
-			}
+			has_state_in_state_region = STATE_MONTANA
+			has_state_in_state_region = STATE_WYOMING
+			has_state_in_state_region = STATE_CALIFORNIA
 		}
 	}
 
@@ -163,7 +151,7 @@ je_oregon = {
 			}
 			add_modifier = {
 				name = oregon_resolved
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		if = {
@@ -208,7 +196,7 @@ je_oregon = {
 je_conquer_oregon = {
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
-	group = je_group_historical_content
+	group = je_group_usa_manifest_destiny
 
 	scripted_button = usfp_demand_bc_button 
 

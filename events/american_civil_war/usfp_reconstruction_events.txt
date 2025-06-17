@@ -216,11 +216,11 @@ usfp_reconstruction.3 = {
 			add_culture_standard_of_living_modifier = {
 				culture = cu:afro_american
 				multiplier = 1
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			add_modifier = {
 				name = reconstruction_government
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		usfp_reconstruction_swing_freedmen = yes
@@ -706,7 +706,7 @@ usfp_reconstruction.10 = {
 		ig:ig_landowners = {
 			add_modifier = {
 				name = modifier_slavery_forgotten
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			usfp_planters_to_landowners_effect = yes
 		}
@@ -746,14 +746,14 @@ usfp_reconstruction.10 = {
 		ig:ig_landowners = {
 			add_modifier = {
 				name = modifier_slavery_forgotten
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			usfp_planters_to_landowners_effect = yes
 			remove_modifier = revolution_lost_ig
 		}
 		add_modifier = {
 			name = modifier_slavery_whitewashing
-			months = long_modifier_time
+			days = long_modifier_time
 		}
 	}
 
@@ -854,7 +854,7 @@ usfp_reconstruction.12 = {
 	dlc = dlc_usfp
 	placement = root
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 	trigger = {
 		var:reconstruction_var > 13
@@ -921,7 +921,7 @@ usfp_reconstruction.13 = {
 	dlc = dlc_usfp
 	placement = root
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 	immediate = {
 		usfp_find_republican_party_effect = yes
@@ -966,7 +966,7 @@ usfp_reconstruction.14 = {
 	dlc = dlc_usfp
 	placement = root
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 	trigger = {
 		any_interest_group = {

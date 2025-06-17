@@ -60,7 +60,7 @@
 	}
 
 	ai_chance = {
-		base = 1000
+		value = 1000
 	}
 }
 
@@ -134,6 +134,6 @@ deseret_western_claims_des = {
 	}
 
 	ai_chance = {
-		base = 100
+		value = 100
 	}
 }

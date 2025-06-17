@@ -11,6 +11,8 @@ ideology_empire_of_liberty_desc:0 "#lore The spirit of 1776 lives on in this gro
 
 ideology_usfp_progressive: "Progressive"
 ideology_usfp_progressive_desc: "#lore This leader advocates for a wide range of reforms aiming to combat monopolies, corruption, and societal decay.#!"
+ideology_usfp_progressive_movement: "Progressive"
+ideology_usfp_progressive_movement_desc: "#lore This movement advocates for a wide range of reforms aiming to combat monopolies, corruption, and societal decay.#!"
 ideology_usfp_social_gospel_leader: "Social Gospelist"
 ideology_usfp_social_gospel_leader_desc: "#lore This leader seeks to apply Protestant ethics to resolve social inequalities and uplift the citizenry.#!"
 ideology_usfp_strongman_populist: "Strongman Populist"

@@ -51,7 +51,7 @@ usfp_reconstruction_enforce_rights_button = {
 	}
 
 	ai_chance = {
-		base = 5
+		value = 5
 	}
 }
 
@@ -119,9 +119,9 @@ usfp_reconstruction_confederate_amnesty_button = {
 	}
 
 	ai_chance = {
-		base = 25
-		modifier = {
-			trigger = {
+		value = 25
+		if = {
+			limit = {
 				usfp_anti_abolitionist_government = yes
 			}
 			add = 100
@@ -155,9 +155,9 @@ usfp_reconstruction_cointelpro_freedmen_button = {
 	}
 
 	ai_chance = {
-		base = 25
-		modifier = {
-			trigger = {
+		value = 25
+		if = {
+			limit = {
 				usfp_anti_abolitionist_government = yes
 			}
 			add = -25
@@ -191,9 +191,9 @@ usfp_reconstruction_cointelpro_slaver_button = {
 	}
 
 	ai_chance = {
-		base = 0
-		modifier = {
-			trigger = {
+		value = 0
+		if = {
+			limit = {
 				usfp_anti_abolitionist_government = yes
 			}
 			add = 25

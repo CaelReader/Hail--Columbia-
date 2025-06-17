@@ -86,7 +86,7 @@ usfp_bleeding_kansas.1 = {
 		ig:ig_intelligentsia = {
 			add_modifier = {
 				name = ig_abolitionists_mad
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 		ai_chance = {

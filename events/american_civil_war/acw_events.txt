@@ -164,7 +164,7 @@ acw_events.1 = {
 # 		}
 # 		set_variable = {
 # 			name = fugitive_slave_var
-# 			months = short_modifier_time
+# 			days = short_modifier_time
 # 		}
 # 	}
 
@@ -185,7 +185,7 @@ acw_events.1 = {
 # 			}
 # 			add_modifier = {
 # 				name = ig_slavers_happy
-# 				months = short_modifier_time
+# 				days = short_modifier_time
 # 			}
 # 		}
 # 		every_interest_group = {
@@ -197,7 +197,7 @@ acw_events.1 = {
 # 			}
 # 			add_modifier = {
 # 				name = ig_abolitionists_mad
-# 				months = short_modifier_time
+# 				days = short_modifier_time
 # 			}
 # 		}
 # 	}
@@ -214,7 +214,7 @@ acw_events.1 = {
 # 			}
 # 			add_modifier = {
 # 				name = ig_slavers_mad
-# 				months = short_modifier_time
+# 				days = short_modifier_time
 # 			}
 # 		}
 # 		every_interest_group = {
@@ -229,7 +229,7 @@ acw_events.1 = {
 # 			}
 # 			add_modifier = {
 # 				name = ig_abolitionists_happy
-# 				months = short_modifier_time
+# 				days = short_modifier_time
 # 			}
 # 		}
 # 	}
@@ -321,7 +321,7 @@ acw_events.3 = {
 					}
 					add_modifier = {
 						name = disappointing_compromise
-						months = short_modifier_time
+						days = short_modifier_time
 					}
 				}
 				every_interest_group = {
@@ -334,7 +334,7 @@ acw_events.3 = {
 					}
 					add_modifier = {
 						name = disappointing_compromise
-						months = short_modifier_time
+						days = short_modifier_time
 					}
 		}
 		ai_chance = {
@@ -368,7 +368,7 @@ acw_events.3 = {
 			}
 			add_modifier = {
 				name = ig_slavers_mad
-				months = short_modifier_time
+				days = short_modifier_time
 				multiplier = 2
 			}
 		}
@@ -382,7 +382,7 @@ acw_events.3 = {
 			}
 			add_modifier = {
 				name = ig_abolitionists_happy
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 		every_interest_group = {
@@ -396,7 +396,7 @@ acw_events.3 = {
 			}
 			add_modifier = {
 				name = usfp_threatening_union
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 		ai_chance = {
@@ -638,7 +638,7 @@ acw_events.6 = {
 	 			add_modifier = modifier_political_martyr
 				add_modifier = {
 					name = modifier_health_treatments
-					months = normal_modifier_time
+					days = normal_modifier_time
 					}
 				}	
 			}
@@ -671,7 +671,7 @@ acw_events.6 = {
 	 			add_modifier = modifier_political_martyr
 				add_modifier = {
 					name = modifier_health_treatments
-					months = normal_modifier_time
+					days = normal_modifier_time
 					}
 				}	
 			}
@@ -702,7 +702,7 @@ acw_events.6 = {
 			}
 			add_modifier = {
 				name = ig_slavers_mad
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 		every_interest_group = {
@@ -715,7 +715,7 @@ acw_events.6 = {
 			}
 			add_modifier = {
 				name = ig_abolitionists_happy
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 
@@ -848,7 +848,7 @@ acw_events.8 = {
 
 		add_modifier = {
 			name = protected_trains
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		scope:great_locomotive_chase_state = {
 			state_region = {
@@ -1009,12 +1009,12 @@ acw_events.9 = {
         default_option = yes
         add_modifier = {
         	name = acw_victory_modifier
-        	months = long_modifier_time
+        	days = long_modifier_time
         }
         ig:ig_landowners = {
         	add_modifier = {
         		name = acw_victory_landowners_modifier
-        		months = long_modifier_time
+        		days = long_modifier_time
         	}
         }
 		usfp_entrench_slavery_effect = yes
@@ -1030,12 +1030,12 @@ acw_events.9 = {
 		activate_law = law_type:law_slave_trade
         add_modifier = {
         	name = acw_slave_trade_restarted_modifier
-        	months = very_long_modifier_time
+        	days = very_long_modifier_time
         }
         ig:ig_rural_folk = {
         	add_modifier = {
         		name = acw_slave_trade_rural_folk
-        		months = long_modifier_time
+        		days = long_modifier_time
         	}
         }
         every_country = {

@@ -267,7 +267,7 @@
 		adjective = dyn_c_united_states_of_earth_ADJ
 
 		is_main_tag_only = yes
-		priority = 1
+		priority = 2
 		
 		trigger = {
 			OR = {
@@ -317,6 +317,43 @@
 				any_scope_state = {
 					is_incorporated = yes
 					region = sr:region_oceania
+				}
+			}
+		}
+	}
+
+	#Easter Egg: United States of the Americas
+		dynamic_country_name = {
+		name = dyn_c_united_states_of_the_americas
+		adjective = USA_ADJ
+
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			OR = {
+				coa_def_republic_flag_trigger = yes
+				AND = {
+					coa_def_monarchy_flag_trigger = yes
+					scope:actor ?= {
+						country_has_voting_franchise = yes
+					}	
+				}
+			}
+			NOT = { coa_def_communist_flag_trigger = yes }
+			NOT = {	
+				scope:actor ?= {
+					has_law = law_type:law_technocracy
+				}
+			}
+			scope:actor = {
+				any_scope_state = {
+					is_incorporated = yes
+					state_is_in_north_america = yes
+				}
+				any_scope_state = {
+					is_incorporated = yes
+					state_is_in_south_america = yes
 				}
 			}
 		}

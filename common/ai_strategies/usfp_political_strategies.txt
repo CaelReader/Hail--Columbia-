@@ -178,13 +178,8 @@ ai_strategy_manifest_destiny = {
 	}
 	
 	will_form_power_bloc = {
-		OR = {
-			global_country_ranking <= 3
-			AND = {
-				country_rank >= rank_value:great_power
-				has_technology_researched = nationalism
-			}
-		}
+		has_technology_researched = nationalism
+		global_country_ranking >= 2
 	}
 	
 	undesirable_infamy_level = {
@@ -492,13 +487,8 @@ ai_strategy_monroe_doctrine = {
 	}
 
 	will_form_power_bloc = {
-		OR = {
-			global_country_ranking <= 3
-			AND = {
-				country_rank >= rank_value:great_power
-				has_technology_researched = nationalism
-			}
-		}
+		global_country_ranking = 1
+		has_technology_researched = nationalism
 	}
 
 	undesirable_infamy_level = {
@@ -626,13 +616,8 @@ ai_strategy_pacific_empire = {
 	type = diplomatic
 	
 	will_form_power_bloc = {
-		OR = {
-			global_country_ranking <= 3
-			AND = {
-				country_rank >= rank_value:great_power
-				has_technology_researched = nationalism
-			}
-		}
+		country_rank >= rank_value:great_power
+		has_technology_researched = nationalism
 	}	
 	
 	undesirable_infamy_level = {

@@ -105,9 +105,10 @@ state_trait_puget_sound = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_military_shipyards_throughput_add = 0.1
-		state_building_port_max_level_add = 2
-		building_port_throughput_add = 0.5
+		building_port_throughput_add = 0.1
+		state_trade_capacity_mult = 0.15
 		state_building_naval_base_max_level_add = 10
+		state_market_access_price_impact = 0.05
 	}
 }
 
@@ -117,9 +118,10 @@ state_trait_tampa_bay = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_military_shipyards_throughput_add = 0.1
-		state_building_port_max_level_add = 2
-		building_port_throughput_add = 0.5
+		building_port_throughput_add = 0.1
+		state_trade_capacity_mult = 0.15
 		state_building_naval_base_max_level_add = 10
+		state_market_access_price_impact = 0.05
 	}
 }
 
@@ -148,9 +150,10 @@ state_trait_burrard_inlet = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_military_shipyards_throughput_add = 0.1
-		state_building_port_max_level_add = 2
-		building_port_throughput_add = 0.5
+		building_port_throughput_add = 0.1
+		state_trade_capacity_mult = 0.15
 		state_building_naval_base_max_level_add = 10
+		state_market_access_price_impact = 0.05
 	}
 }
 
@@ -184,11 +187,12 @@ state_trait_san_fran_bay = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	
 	modifier = {
-		building_shipyards_throughput_add = 0.15
-		building_military_shipyards_throughput_add = 0.15
-		state_building_port_max_level_add = 3
-		building_port_throughput_add = 0.75
-		state_building_naval_base_max_level_add = 15
+		building_shipyards_throughput_add = 0.2
+		building_military_shipyards_throughput_add = 0.2
+		building_port_throughput_add = 0.2
+		state_trade_capacity_mult = 0.30
+		state_building_naval_base_max_level_add = 20
+		state_market_access_price_impact = 0.10
 	}
 }
 
@@ -208,9 +212,10 @@ state_trait_zihuatanejo_bay = {
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_military_shipyards_throughput_add = 0.1
-		state_building_port_max_level_add = 2
-		building_port_throughput_add = 0.5
+		building_port_throughput_add = 0.1
+		state_trade_capacity_mult = 0.15
 		state_building_naval_base_max_level_add = 10
+		state_market_access_price_impact = 0.05
 	}
 }
 

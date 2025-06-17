@@ -67,36 +67,40 @@ usfp_western_purchase_button = {
 	}
 
 	ai_chance = {
-		base = 0	
-		modifier = {
-			trigger = {
-				s:STATE_OREGON = {
-					root_has_state_here = yes
-				}
+		value = 0
+		if = {
+			limit = {
+				has_state_in_state_region = STATE_OREGON
 			}
 			add = 100
-		}	
-		modifier = {
-			trigger = { gold_reserves > 250000 }
+		}
+		if = {
+			limit = {
+				gold_reserves > 250000
+			}
 			add = 10
 		}
-		modifier = {
-			trigger = { gold_reserves > 500000 }
+		if = {
+			limit = {
+				gold_reserves > 500000
+			}
 			add = 50
 		}
-		modifier = {
-			trigger = { gold_reserves > 1000000 }
+		if = {
+			limit = {
+				gold_reserves > 1000000
+			}
 			add = 1000
-		}					
-		modifier = {
-			trigger = { 
+		}								
+		if = {
+			limit = { 
 				gold_reserves > 0
 				weekly_net_fixed_income > 50000
 			}
 			add = 10
 		}
-		modifier = {
-			trigger = {
+		if = {
+			limit =  {
 				OR = {
 					is_diplomatic_play_committed_participant = yes
 					is_at_war = yes
@@ -104,16 +108,16 @@ usfp_western_purchase_button = {
 			}
 			add = -1000
 		}
-		modifier = {
-			trigger = { 
+		if = {
+			limit =  { 
 				ruler = {
 					usfp_manifest_destiny_pro_expansion_trigger = yes
 				}
 			}
 			add = 1000
 		}
-		modifier = {
-			trigger = { 
+		if = {
+			limit =  { 
 				ruler = {
 					usfp_manifest_destiny_anti_expansion_trigger = yes
 				}
@@ -161,7 +165,7 @@ usfp_promote_manifest_destiny_button = {
 	}
 
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -199,7 +203,7 @@ usfp_suppress_manifest_destiny_button = {
 	}
 
 	ai_chance = {
-		base = 0
+		value = 0
 	}
 }
 
@@ -274,7 +278,7 @@ usfp_homestead_act_button = {
 	}
 
 	ai_chance = {
-		base = 1000
+		value = 1000
 	}
 
 }
@@ -356,9 +360,9 @@ usfp_cuban_purchase_button = {
 	}
 
 	ai_chance = {
-		base = 5
-		modifier = {
-			trigger = {
+		value = 5
+		if = {
+			limit =  {
 				ruler = {
 					usfp_manifest_destiny_pro_expansion_trigger = yes
 				}
@@ -459,9 +463,9 @@ usfp_claim_canada_button = {
 		}
 	}
 	ai_chance = {
-		base = 5
-		modifier = {
-			trigger = {
+		value = 5
+		if = {
+			limit =  {
 				ruler = {
 					usfp_manifest_destiny_pro_expansion_trigger = yes
 				}
@@ -527,7 +531,7 @@ usfp_secure_trail_button = {
 	}
 
 	ai_chance = {
-		base = 1000
+		value = 1000
 	}
 }
 
@@ -577,6 +581,6 @@ usfp_demand_bc_button = {
 	}
 
 	ai_chance = {
-		base = 25
+		value = 25
 	}
 }

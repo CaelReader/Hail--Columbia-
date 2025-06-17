@@ -8,7 +8,7 @@ slavery_law_events.7 = {
 
 	duration = 3
 
-	cooldown = { months = long_modifier_time }
+	cooldown = { days = long_modifier_time }
 
 	event_image = {
 		video = "southamerica_aristocrats"
@@ -48,12 +48,12 @@ slavery_law_events.7 = {
 		scope:slaver_ig = {
 			add_modifier = {
 				name = modifier_slavery_forgotten
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		add_modifier = {
 			name = modifier_slavery_whitewashing
-			months = long_modifier_time
+			days = long_modifier_time
 		}
 		every_interest_group = {
 			limit = {
@@ -67,7 +67,7 @@ slavery_law_events.7 = {
 		scope:slaver_ig = {
 			add_modifier = {
 				name = modifier_slavery_forgotten_bad
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		add_radicals = {

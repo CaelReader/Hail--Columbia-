@@ -4,7 +4,7 @@ usfp_manifest_destiny_main = {
 	
 	icon = gfx/interface/icons/event_icons/hail_columbia_icon.dds
 
-	group = je_group_historical_content
+	group = je_group_usa_manifest_destiny
 
 	is_shown_when_inactive = {
 		exists = c:USA
@@ -537,7 +537,7 @@ usfp_je_westward_expansion = {
 
 	icon = gfx/interface/icons/event_icons/event_map.dds
 
-	group = je_group_historical_content
+	group = je_group_usa_manifest_destiny
 
 	invalid = {
 		has_law = law_type:law_no_colonial_affairs
@@ -568,7 +568,7 @@ usfp_je_westward_expansion = {
 usfp_je_western_border = {
 	icon = gfx/interface/icons/event_icons/event_map.dds
 
-	group = je_group_historical_content
+	group = je_group_usa_manifest_destiny
 
 	modifiers_while_active = {
 		usfp_settler_westward_pressure
@@ -640,7 +640,7 @@ usfp_je_western_border = {
 usfp_je_indian_wars = {
 	icon = gfx/interface/icons/event_icons/event_military.dds
 
-	group = je_group_historical_content
+	group = je_group_usa_manifest_destiny
 
 	scripted_button = usfp_provoke_lakota_war_button
 	scripted_button = usfp_break_treaty_button

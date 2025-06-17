@@ -420,7 +420,7 @@ usfp_native_removal.6 = {
 			}
 			add_modifier = { # cherokee sol
 				name = usfp_trail_of_tears_modifier
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		if = {
@@ -481,7 +481,7 @@ usfp_native_removal.6 = {
 			}
 			add_modifier = { # cherokee sol
 				name = usfp_trail_of_tears_modifier
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = 2
 			}
 		}

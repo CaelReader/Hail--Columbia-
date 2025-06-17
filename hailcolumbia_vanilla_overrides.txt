@@ -60,6 +60,8 @@ common/journal_entries/05_turtle_island.txt
 common/journal_entries/06_seminole_wars.txt #disabled in favor of Indian Removal JE
 
 All slavery laws are overwritten
+law_protectionism #hidden with variant law
+law_freedom_of_conscience #hidden with variant law
 
 #Party definitions are handled in the Community Mod Framework
 
@@ -81,3 +83,6 @@ events/texan_war_of_independence_events.txt
 can_aus.5
 slavery_law_events.7
 
+pm_default_building_white_house #extra migration and MAPI to help DC
+pm_religious_bureaucrats #disabled under Nominal Separation
+pm_religious_academia #disabled under Nominal Separation

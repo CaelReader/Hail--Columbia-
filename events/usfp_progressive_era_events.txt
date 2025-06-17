@@ -190,7 +190,7 @@ usfp_progressive_era.3 = {
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 	trigger = {
 		OR = {
@@ -303,7 +303,7 @@ usfp_progressive_era.4 = {
 	icon = "gfx/interface/icons/invention_icons/unused/secularism.dds"
 
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 	trigger = {
 		has_dlc_feature = ip2_content
@@ -387,7 +387,7 @@ usfp_progressive_era.5 = {
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 	
 	immediate = {
 		ideology:ideology_usfp_eugenicist = {
@@ -466,7 +466,7 @@ usfp_progressive_era.6 = {
 	icon = "gfx/interface/icons/invention_icons/urban_planning.dds"
 
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 	immediate = {
 		usfp_find_dc_sr_scope = yes
@@ -530,7 +530,7 @@ usfp_progressive_era.7 = {
 	icon = "gfx/interface/icons/invention_icons/antibiotics.dds"
 
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 	#cool
 	option = {
@@ -758,7 +758,7 @@ usfp_progressive_era.10 = {
 	trigger = {
 		has_technology_researched = pharmaceuticals
 	}
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 	
 	#how terrible
 	option = {
@@ -824,7 +824,7 @@ usfp_progressive_era.11 = {
 	icon = "gfx/interface/icons/goods_icons/meat.dds"
 
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 	trigger = {
 		any_scope_building = {
@@ -863,7 +863,7 @@ usfp_progressive_era.11 = {
 				}
 				add_modifier = {
 					name = usfp_muckraker_movement_modifier
-					months = normal_modifier_time
+					days = normal_modifier_time
 				}
 			}
 		}
@@ -882,7 +882,7 @@ usfp_progressive_era.11 = {
 		}
 		add_modifier = {
 			name = usfp_meat_inspectors_modifier
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 	#Censor
@@ -919,7 +919,7 @@ usfp_progressive_era.12 = {
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 	trigger = {
 		NOT = {
@@ -946,7 +946,7 @@ usfp_progressive_era.12 = {
 			}
 			add_modifier = {
 				name = usfp_muckraker_movement_modifier
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -1011,7 +1011,7 @@ usfp_progressive_era.13 = {
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 	trigger = {
 		any_scope_state = {
@@ -1081,7 +1081,7 @@ usfp_progressive_era.14 = {
 
 	duration = 3
 
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 	trigger = {
 		any_company = {

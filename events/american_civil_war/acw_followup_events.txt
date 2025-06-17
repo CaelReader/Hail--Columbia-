@@ -56,7 +56,7 @@ acw_followup_events.1 = {
 		scope:lincoln_proxy_ig = {
 			add_modifier = {
 				name = lincoln_martyred
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -111,7 +111,7 @@ acw_followup_events.2 = {
 		scope:lincoln_proxy_ig = {
 			add_modifier = {
 				name = lincoln_survives
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -174,13 +174,13 @@ acw_followup_events.3 = {
 		scope:lincoln_proxy_ig = {
 			add_modifier = {
 				name = lincoln_aggressively_survives
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		scope:lincoln_proxy = {
 			add_modifier = {
 				name = lincoln_aggressively_survives_ruler
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -205,7 +205,7 @@ acw_followup_events.4 = {
 
 	duration = 3
 
-	cooldown = { months = short_modifier_time }
+	cooldown = { days = short_modifier_time }
 
 	trigger = { # JE pulse
 		any_scope_state = {
@@ -251,12 +251,12 @@ acw_followup_events.4 = {
 		scope:land_redistribution_state = {
 			add_culture_standard_of_living_modifier = {
 				culture = cu:afro_american
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = 1
 			}
 			add_modifier = {
 				name = usfp_land_redistribution
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			add_loyalists_in_state = {
 				culture = cu:afro_american
@@ -313,7 +313,7 @@ acw_followup_events.5 = {
 
 	duration = 3
 
-	cooldown = { months = short_modifier_time }
+	cooldown = { days = short_modifier_time }
 
 	trigger = { # JE pulse
 		any_scope_state = {
@@ -354,7 +354,7 @@ acw_followup_events.5 = {
 		scope:supremacist_violence_state = {
 			add_culture_standard_of_living_modifier = {
 				culture = cu:afro_american
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = 1
 			}
 			add_loyalists_in_state = {
@@ -378,7 +378,7 @@ acw_followup_events.5 = {
 		scope:supremacist_violence_state = {
 			add_culture_standard_of_living_modifier = {
 				culture = cu:afro_american
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = -1
 			}
 			add_radicals_in_state = {
@@ -422,7 +422,7 @@ acw_followup_events.6 = {
 
 	duration = 3
 
-	cooldown = { months = short_modifier_time }
+	cooldown = { days = short_modifier_time }
 
 	trigger = { # JE pulse
 		any_scope_state = {
@@ -459,11 +459,11 @@ acw_followup_events.6 = {
 		scope:redeemer_state = {
 			add_modifier = {
 				name = redeemer_government
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			add_culture_standard_of_living_modifier = {
 				culture = cu:afro_american
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = -1
 			}
 			add_radicals_in_state = {
@@ -503,7 +503,7 @@ acw_followup_events.6 = {
 		scope:redeemer_state = {
 			add_modifier = {
 				name = reconstruction_government
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			add_loyalists_in_state = {
 				culture = cu:afro_american
@@ -540,7 +540,7 @@ acw_followup_events.7 = {
 
 	duration = 3
 
-	cooldown = { months = short_modifier_time }
+	cooldown = { days = short_modifier_time }
 
 	trigger = { # JE pulse
 		any_scope_state = {
@@ -573,12 +573,12 @@ acw_followup_events.7 = {
 		scope:paramilitary_intimidation_state = {
 			add_culture_standard_of_living_modifier = {
 				culture = cu:afro_american
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = -1
 			}
 			add_modifier = {
 				name = paramilitary_threats
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			add_loyalists_in_state = {
 				value = 0.2
@@ -613,12 +613,12 @@ acw_followup_events.7 = {
 		scope:paramilitary_intimidation_state = {
 			add_culture_standard_of_living_modifier = {
 				culture = cu:afro_american
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = -1
 			}
 			add_modifier = {
 				name = paramilitaries_suppressed
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			add_radicals_in_state = {
 				value = 0.2
@@ -651,7 +651,7 @@ acw_followup_events.8 = {
 
 	duration = 3
 
-	cooldown = { months = short_modifier_time }
+	cooldown = { days = short_modifier_time }
 
 	trigger = { # JE pulse
 		any_scope_state = {

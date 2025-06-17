@@ -1,0 +1,158 @@
+﻿#usfp: Westinghouse Electric Corporation
+company_usfp_westinghouse = {
+	icon = "gfx/interface/icons/company_icons/usfp_company_westinghouse.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_PENNSYLVANIA STATE_MASSACHUSETTS }
+
+	building_types = {
+		building_electrics_industry
+		building_power_plant
+	}
+
+	extension_building_types = {
+		building_motor_industry
+		building_arms_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_new_england
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_MASSACHUSETTS
+					state_region = s:STATE_PENNSYLVANIA
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = electrical_generation
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_MASSACHUSETTS
+				state_region = s:STATE_PENNSYLVANIA
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_power_plant
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_power_plant_throughput_add = 0.10
+		country_weekly_innovation_mult = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = electrical_generation
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_MASSACHUSETTS
+				state_region = s:STATE_PENNSYLVANIA
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_power_plant = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_MASSACHUSETTS
+					state_region = s:STATE_PENNSYLVANIA
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 2 # no prestige good
+	}
+}
+
+#USFP: Coca-Cola Company
+company_usfp_coca_cola = {
+	icon = "gfx/interface/icons/company_icons/usfp_company_coca_cola.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_GEORGIA STATE_TENNESSEE }
+
+	building_types = {
+		building_food_industry
+	}
+
+	extension_building_types = {
+		building_sugar_plantation
+		building_arts_academy
+	}
+
+
+	potential = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_GEORGIA
+					state_region = s:STATE_TENNESSEE
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = automatic_bottle_blowers
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_GEORGIA
+				state_region = s:STATE_TENNESSEE
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.15
+		country_leverage_generation_mult = 0.10
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_GEORGIA
+				state_region = s:STATE_TENNESSEE
+			}
+		}
+	}
+
+	ai_construction_targets = {
+		building_food_industry = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_GEORGIA
+					state_region = s:STATE_TENNESSEE
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

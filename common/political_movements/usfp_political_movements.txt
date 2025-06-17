@@ -1,6 +1,6 @@
 ﻿movement_usfp_progressive = {
 	category = movement_category_ideological
-	ideology = ideology_usfp_progressive
+	ideology = ideology_usfp_progressive_movement
 	character_ideologies = {
 		ideology_usfp_progressive
 		ideology_usfp_social_gospel_leader

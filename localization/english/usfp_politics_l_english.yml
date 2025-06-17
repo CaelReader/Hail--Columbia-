@@ -37,3 +37,10 @@ alert_usfp_ineligible_candidate_desc: "The [concept_leader] of a [concept_powerf
 alert_usfp_ineligible_candidate_hint: "If they are the [concept_party_leader], a new [concept_character] will replace them at the start of the [Concept('concept_election', '$concept_election$')]."
 alert_usfp_ineligible_candidate_action: "Politics Panel"
 usfp_ineligible_candidate_setting_name: "Ineligible Presidential Candidate"
+
+law_usfp_nominal_separation: "Nominal Separation"
+law_usfp_nominal_separation_desc: "Church and state are officially separated, but Protestantism remains the de facto state religion. Exotic religions, especially Animist faiths, are discriminated against through a variety of legal and paralegal means."
+law_usfp_american_system: "American System"
+law_usfp_american_system_desc: "A variant of $law_protectionism$ allowing for even higher tariffs on imports. Export tariffs are disallowed under the Constitution."
+
+treaty_name_dancing_rabbit_creek: "Treaty of Dancing Rabbit Creek"

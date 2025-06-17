@@ -255,11 +255,11 @@ usfp_acw_election_agitators = {
 				limit = { is_political_movement_type = movement_pro_slavery }
 					add_modifier = {
 						name = modifier_uncommitted_government
-						months = very_long_modifier_time
+						days = very_long_modifier_time
 					}
 					add_modifier = {
 						name = modifier_movement_state_paramilitarism
-						months = very_long_modifier_time
+						days = very_long_modifier_time
 					}
 				}
 			}
@@ -702,7 +702,7 @@ USCWF_CSA_betrayed_on_action = {
 				remove_modifier = ig_slavers_happy
 				add_modifier = {
 					name = ig_slavers_mad
-					months = very_long_modifier_time
+					days = very_long_modifier_time
 					multiplier = 6
 				}
 			}
@@ -743,6 +743,42 @@ USCWF_fierce_defiance_on_action = {
 			every_scope_war = {
 				add_war_war_support = { target = ROOT value = 10 }
 			}
+		}
+	}
+}
+
+on_game_started = {
+	on_actions = {
+		usfp_map_startup
+	}
+}
+
+usfp_map_startup = {
+	effect = {
+		usfp_map_startup_effect = yes
+	}
+}
+
+on_character_creation = {
+	on_actions = {
+		usfp_american_culture_characters
+	}
+}
+
+usfp_american_culture_characters = {
+	effect = {
+		if = {
+			limit = { 
+				owner ?= {
+					country_has_primary_culture = cu:usfp_american
+				}
+				OR = {
+					culture = cu:yankee
+					culture = cu:dixie
+					culture = cu:anglo_canadian
+				}
+			}
+			change_character_culture = cu:usfp_american
 		}
 	}
 }

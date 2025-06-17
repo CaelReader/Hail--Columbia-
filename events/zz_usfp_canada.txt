@@ -31,7 +31,7 @@ can_aus.5 = {
 		name = can_aus.5.a
 		add_modifier = {
 			name = can_unified_canada
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		if = {
 			limit = {

@@ -107,6 +107,18 @@ acw_je_events.1 = {
 				}
 				add_declared_interest = region_england
 				add_declared_interest = region_france
+				activate_law = law_type:law_agrarianism
+				activate_law = law_type:law_free_trade
+				activate_law = law_type:law_national_supremacy
+				activate_law = law_type:law_tenant_farmers
+				activate_law = law_type:law_migration_controls
+				ig:ig_landowners = {
+					add_ruling_interest_group = yes
+				}
+				add_modifier = {
+					name = usfp_slave_power_modifier
+					years = 20
+				}
 			}
 		}
 		else = {
@@ -546,7 +558,7 @@ acw_je_events.2 = {
 # 			}
 # 			add_modifier = {
 # 				name = enacted_emancipation # +1 opinion
-# 				months = normal_modifier_time
+# 				days = normal_modifier_time
 # 			}
 # 		}
 # 	}
@@ -563,7 +575,7 @@ acw_je_events.2 = {
 # 			}
 # 			add_modifier = {
 # 				name = delayed_emancipation # -3 opinion [everybody hated that]
-# 				months = normal_modifier_time
+# 				days = normal_modifier_time
 # 			}
 # 		}
 # 	}

@@ -156,7 +156,7 @@
 		}
 	}
 
-	#Blackfoot
+	# #Blackfoot
 	s:STATE_IDAHO = {
 		set_owner_of_provinces = {
 			country = c:BLF
@@ -186,7 +186,7 @@
 		}
 	}
 
-	#Flathead
+	# #Flathead
 	s:STATE_MONTANA = {
 		set_owner_of_provinces = {
 			country = c:FLT
@@ -201,7 +201,7 @@
 		}
 	}
 
-	#Kutenai
+	# #Kutenai
 	s:STATE_BRITISH_COLUMBIA = {
 		set_owner_of_provinces = {
 			country = c:KTN
@@ -210,7 +210,7 @@
 		}
 	}
 
-	#Nez Perce
+	# #Nez Perce
 	s:STATE_IDAHO = {
 		set_owner_of_provinces = {
 			country = c:NZP
@@ -219,7 +219,7 @@
 		}
 	}
 	
-	#Council of Three Fires
+	# #Council of Three Fires
 	s:STATE_MICHIGAN = {
 		create_state = {
 			country = c:CTF
@@ -261,7 +261,7 @@
 		}
 	}
 
-	#Great Sioux Nation
+	# #Great Sioux Nation
 	s:STATE_WYOMING = {
 		set_owner_of_provinces = {
 			country = c:LKT
@@ -299,103 +299,103 @@
 		}
 	}
 
-	#Arikara
-	s:STATE_NORTH_DAKOTA = {
-		set_owner_of_provinces = {
-			country = c:usfp_ARK
-			provinces = { xF03169 xA5970F x002DE6 x198845 x746873 xF3479B x18D7A9 x3816BA x3EB1F2 xF3EC53 x6B9ADF x96D61E x9FB4C1 }
-		}
-	}
-	s:STATE_MONTANA = {
-		set_owner_of_provinces = {
-			country = c:usfp_ARK
-			provinces = { x60CAD8 x265A51 x0F89B6 x3E174B x7F3DF1 x3AC323 x11EFF8 x2BAD69 x90FB3B  }
-		}
-	}
+	# #Arikara
+	# s:STATE_NORTH_DAKOTA = {
+	# 	set_owner_of_provinces = {
+	# 		country = c:usfp_ARK
+	# 		provinces = { xF03169 xA5970F x002DE6 x198845 x746873 xF3479B x18D7A9 x3816BA x3EB1F2 xF3EC53 x6B9ADF x96D61E x9FB4C1 }
+	# 	}
+	# }
+	# s:STATE_MONTANA = {
+	# 	set_owner_of_provinces = {
+	# 		country = c:usfp_ARK
+	# 		provinces = { x60CAD8 x265A51 x0F89B6 x3E174B x7F3DF1 x3AC323 x11EFF8 x2BAD69 x90FB3B  }
+	# 	}
+	# }
 
-	#Absaroka
-	s:STATE_WYOMING = {
-		set_owner_of_provinces = {
-			country = c:ABS
-			provinces = { x9F03E3 x21EE68 xAC6092 x533D44 x42A388  x52839A x977599 xB6CA16 xF89B9D  x28CC5C x5FBCFF xD74652 xA55B0A x2CC9D7 xBE0B1C x1F5624 x22B520 } #x65DCDB in global
-		}
-	}
-	s:STATE_MONTANA = {
-		set_owner_of_provinces = {
-			country = c:ABS
-			provinces = { x796B16 x1508A0 xFE4B26 x5392DD xF78700 x0D3B73 xDAF79D xA56B00 x6BD915 x571800 x63252A x89BC19 xB2DF51 x3AAFA5 xE979D9 xD80B74 x51B9BC xB2AFD1 
-			x90FB3B xD51888 xF88E77 x68D8FB x5DA006 x743F41 x91670D x3ABADD x9A8A93 xA6F6FD x9A73C7 xFA2355 xC7106E xC6BBD4 x664C79 xF17880 xEC1DF2 }
-		}
-	}
+	# #Absaroka
+	# s:STATE_WYOMING = {
+	# 	set_owner_of_provinces = {
+	# 		country = c:ABS
+	# 		provinces = { x9F03E3 x21EE68 xAC6092 x533D44 x42A388  x52839A x977599 xB6CA16 xF89B9D  x28CC5C x5FBCFF xD74652 xA55B0A x2CC9D7 xBE0B1C x1F5624 x22B520 } #x65DCDB in global
+	# 	}
+	# }
+	# s:STATE_MONTANA = {
+	# 	set_owner_of_provinces = {
+	# 		country = c:ABS
+	# 		provinces = { x796B16 x1508A0 xFE4B26 x5392DD xF78700 x0D3B73 xDAF79D xA56B00 x6BD915 x571800 x63252A x89BC19 xB2DF51 x3AAFA5 xE979D9 xD80B74 x51B9BC xB2AFD1 
+	# 		x90FB3B xD51888 xF88E77 x68D8FB x5DA006 x743F41 x91670D x3ABADD x9A8A93 xA6F6FD x9A73C7 xFA2355 xC7106E xC6BBD4 x664C79 xF17880 xEC1DF2 }
+	# 	}
+	# }
 
-	#Gros Ventre
-	s:STATE_MONTANA = {
-		set_owner_of_provinces = {
-			country = c:GVT
-			provinces = { xEA36A6 xEB65F5 xE9D326 xEA0263 x771CB3 x299FC0 xCA5BE4 x1C7988 xACF621 xBE9808 xCA8E9D xAD3A6B } #x55C41A
-		}
-	}
-	s:STATE_ALBERTA = {
-		set_owner_of_provinces = {
-			country = c:GVT
-			provinces = { xA68F40 x0AD7A5 xCB25CA x518D4F x144E07   }
-		}
-	}
-	s:STATE_SASKATCHEWAN = {
-		set_owner_of_provinces = {
-			country = c:GVT
-			provinces = { x8015B3 xE74ADB x6A28CE x29BDC1 x1BA7C7 x1BD909 xE555E3 xE1C4D9 x2A2319 x7A8706 x1E1BE6 xBA20F5 x2CBF22 xAAC78F xCA657A xEE8586 }
-		}
-	}
+	# #Gros Ventre
+	# s:STATE_MONTANA = {
+	# 	set_owner_of_provinces = {
+	# 		country = c:GVT
+	# 		provinces = { xEA36A6 xEB65F5 xE9D326 xEA0263 x771CB3 x299FC0 xCA5BE4 x1C7988 xACF621 xBE9808 xCA8E9D xAD3A6B } #x55C41A
+	# 	}
+	# }
+	# s:STATE_ALBERTA = {
+	# 	set_owner_of_provinces = {
+	# 		country = c:GVT
+	# 		provinces = { xA68F40 x0AD7A5 xCB25CA x518D4F x144E07   }
+	# 	}
+	# }
+	# s:STATE_SASKATCHEWAN = {
+	# 	set_owner_of_provinces = {
+	# 		country = c:GVT
+	# 		provinces = { x8015B3 xE74ADB x6A28CE x29BDC1 x1BA7C7 x1BD909 xE555E3 xE1C4D9 x2A2319 x7A8706 x1E1BE6 xBA20F5 x2CBF22 xAAC78F xCA657A xEE8586 }
+	# 	}
+	# }
 
-	#Cheyenne-Arapaho
-	s:STATE_COLORADO = {
-		set_owner_of_provinces = {
-			country = c:ARP
-			provinces = { x704257 xE85180 x742D27 x61CB37 x05E33E xC97B5E x511F34 x88B597  }
-		}	
-	}
-	s:STATE_NEBRASKA = {
-		set_owner_of_provinces = {
-			country = c:ARP
-			provinces = { x5FA3C8 x0F6ED8 xD4B162 xF972E7 x4C746E  }
-		}
-		add_homeland = cu:caddoan
-	}
-	s:STATE_KANSAS = {
-		set_owner_of_provinces = {
-			country = c:ARP
-			provinces = { x0B51E5 }
-		}
-	}
-	#Pawnee
-	s:STATE_NEBRASKA = {
-		set_owner_of_provinces = {
-			country = c:PWN
-			provinces = { xC547CE x8E9E5A xA912ED xC0F9BB x76F2C5 x924593 xD5A04C  x939662 x3E62DB  } #x90C040 in global
-		}
-	}
-	s:STATE_KANSAS = {
-		set_owner_of_provinces = {
-			country = c:PWN
-			provinces = { x24CC25 x2D821B }
-		}
-	}
+	# #Cheyenne-Arapaho
+	# s:STATE_COLORADO = {
+	# 	set_owner_of_provinces = {
+	# 		country = c:ARP
+	# 		provinces = { x704257 xE85180 x742D27 x61CB37 x05E33E xC97B5E x511F34 x88B597  }
+	# 	}	
+	# }
+	# s:STATE_NEBRASKA = {
+	# 	set_owner_of_provinces = {
+	# 		country = c:ARP
+	# 		provinces = { x5FA3C8 x0F6ED8 xD4B162 xF972E7 x4C746E  }
+	# 	}
+	# 	add_homeland = cu:caddoan
+	# }
+	# s:STATE_KANSAS = {
+	# 	set_owner_of_provinces = {
+	# 		country = c:ARP
+	# 		provinces = { x0B51E5 }
+	# 	}
+	# }
+	# #Pawnee
+	# s:STATE_NEBRASKA = {
+	# 	set_owner_of_provinces = {
+	# 		country = c:PWN
+	# 		provinces = { xC547CE x8E9E5A xA912ED xC0F9BB x76F2C5 x924593 xD5A04C  x939662 x3E62DB  } #x90C040 in global
+	# 	}
+	# }
+	# s:STATE_KANSAS = {
+	# 	set_owner_of_provinces = {
+	# 		country = c:PWN
+	# 		provinces = { x24CC25 x2D821B }
+	# 	}
+	# }
 
-	#Ioway
-	s:STATE_IOWA = {
-		create_state = {
-			country = c:usfp_IWY
-			owned_provinces = { x606DBE x5832CE x71153F xAB3179 xC24F5B xE31CFC x63CD4F x9F7290 x6EE453 x356047 x6EE453 x9080C0 x9DE484 x91CECE x002D4B x9A3850 xC6264B 
-			xE8429C x2BB21D x764D7B x5BA80C xE08573}
-		}
-	}
-	s:STATE_MISSOURI = {
-		create_state = {
-			country = c:usfp_IWY
-			owned_provinces = {x7B0051 x0AC4E5 x4D6DEF xBF3FF3 x67104C }
-		}
-	}
+	# #Ioway
+	# s:STATE_IOWA = {
+	# 	create_state = {
+	# 		country = c:usfp_IWY
+	# 		owned_provinces = { x606DBE x5832CE x71153F xAB3179 xC24F5B xE31CFC x63CD4F x9F7290 x6EE453 x356047 x6EE453 x9080C0 x9DE484 x91CECE x002D4B x9A3850 xC6264B 
+	# 		xE8429C x2BB21D x764D7B x5BA80C xE08573}
+	# 	}
+	# }
+	# s:STATE_MISSOURI = {
+	# 	create_state = {
+	# 		country = c:usfp_IWY
+	# 		owned_provinces = {x7B0051 x0AC4E5 x4D6DEF xBF3FF3 x67104C }
+	# 	}
+	# }
 
 	#######################################
 	### Southwest + Mexico + California ###

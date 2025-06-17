@@ -40,7 +40,7 @@ usfp_indian_removal_seminole_button = {
 	}
 
 	ai_chance = {
-		base = 100
+		value = 100
 	}
 }
 
@@ -89,7 +89,7 @@ usfp_indian_removal_cherokee_button = {
 	}
 
 	ai_chance = {
-		base = 100
+		value = 100
 	}
 }
 
@@ -133,7 +133,7 @@ usfp_indian_removal_chickasaw_button = {
 	}
 
 	ai_chance = {
-		base = 100
+		value = 100
 	}
 }
 
@@ -188,7 +188,7 @@ usfp_indian_removal_creek_button = {
 # 	}
 
 # 	ai_chance = {
-# 		base = 100
+# 		value = 100
 # 	}
 # }
 

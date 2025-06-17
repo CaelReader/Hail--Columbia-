@@ -839,36 +839,6 @@ ecchi_usa_ford_character_template = {
     # }
 }
 
-ecchi_usa_astor_character_template = {
-    first_name = ecchi_John_Jacob
-    last_name = ecchi_Astor
-    historical = yes
-    culture = cu:yankee
-    female = no
-    religion = protestant
-    ideology = ideology_traditionalist
-    interest_group = ig_landowners
-    birth_date = 1763.7.17
-	dna = ecchi_dna_john_jacob_astor
-    traits = { expensive_tastes ambitious meticulous }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:USA
-            this = c:USA
-        }
-        interest_group_trigger = {
-            is_marginal = no
-			OR = {
-				is_interest_group_type = ig_industrialists
-				is_interest_group_type = ig_landowners
-			}
-            ig_hasnt_chosen_ideology_trigger = yes
-        }
-        earliest_usage_date = 1936.1.1
-        latest_usage_date = 1848.3.29
-        chance = 75
-    }
-}
 
 #JP Morgan is now in the base game
 ecchi_usa_morgan_character_template = {
@@ -923,46 +893,7 @@ ecchi_usa_rockefeller_character_template = {
 }
 
 
-ecchi_usa_hearst_character_template = {
-    first_name = ecchi_William_Randolph
-    last_name = ecchi_Hearst
-    historical = yes
-    culture = cu:yankee
-    female = no
-    religion = protestant
-    ideology = ideology_jingoist_leader
-    interest_group = ig_industrialists
-	dna = ecchi_dna_william_randolph_hearst
-    birth_date = 1863.4.29
-	traits = { cautious imperious romantic }
-    interest_group_leader_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:USA
-                    this = c:USA
-                    NOT = { exists = c:CAL }
-                }
-                AND = {
-                    exists = c:CAL
-                    this = c:CAL
-                }
-            }
-        }
-        interest_group_trigger = {
-            is_marginal = no
-			OR = {
-				is_interest_group_type = ig_industrialists
-				is_interest_group_type = ig_intelligentsia
-				is_interest_group_type = ig_petty_bourgeoisie
-			}
-            ig_hasnt_chosen_ideology_trigger = yes
-        }
-        earliest_usage_date = 1895.1.1
-        latest_usage_date = 1951.8.14
-        chance = 75
-    }
-}
+
 
 #Thomas Edison is now in the base game
 ecchi_usa_edison_character_template = {
@@ -1249,37 +1180,6 @@ ecchi_usa_putnam_character_template = {
     }
 }
 
-#USFP: agitator instead of IG Leader
-ecchi_usa_barnum_character_template = {
-    first_name = ecchi_P_T
-    last_name = Barnum
-    historical = yes
-    culture = cu:yankee
-    female = no
-    religion = protestant
-    ideology = ideology_moderate
-    interest_group = ig_intelligentsia
-    birth_date = 1810.7.5
-    is_agitator = yes
-	dna = ecchi_dna_p_t_barnum
-    traits = { innovative meticulous grifter } #USFP
-    agitator_usage = {
-        country_trigger = {
-            exists = c:USA
-            this = c:USA
-        }
-        interest_group_trigger = {
-            is_marginal = no
-            OR = {
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_industrialists
-            }
-        }
-		earliest_usage_date = 1865.1.1
-        latest_usage_date = 1891.4.7
-        chance = 30
-    }
-}
 
 ecchi_usa_patton_character_template = {
     first_name = ecchi_George_S
@@ -1315,33 +1215,7 @@ ecchi_usa_patton_character_template = {
     }
 }
 
-#USFP: agitator instead of IG Leader
-ecchi_usa_westinghouse_character_template = {
-    first_name = George
-    last_name = ecchi_Westinghouse
-    historical = yes
-    culture = cu:yankee
-    female = no
-    religion = protestant
-    ideology = ideology_market_liberal
-    interest_group = ig_industrialists
-	dna = ecchi_dna_george_westinghouse
-    birth_date = 1846.10.6
-    is_agitator = yes
-    traits = { persistent innovative }
-    agitator_usage = {
-        country_trigger = {
-            exists = c:USA
-            this = c:USA
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_industrialists
-        }
-        earliest_usage_date = 1880.1.1
-        latest_usage_date = 1914.3.12
-        chance = 75
-    }
-}
+
 
 #USFP: agitator instead of IG Leader
 ecchi_usa_keller_character_template = {
@@ -1466,32 +1340,6 @@ ecchi_usa_twain_character_template = {
     # }
 }
 
-#USFP: agitator instead of IG Leader
-ecchi_usa_chrysler_character_template = {
-    first_name = Walter
-    last_name = ecchi_Chrysler
-    culture = cu:yankee
-    female = no
-    religion = protestant
-    ideology = ideology_market_liberal
-    interest_group = ig_industrialists
-	dna = ecchi_dna_walter_chrysler
-    birth_date = 1875.4.2
-    is_agitator = yes
-    traits = { arrogant persistent expensive_tastes }
-    agitator_usage = {
-        country_trigger = {
-            exists = c:USA
-            this = c:USA
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_industrialists
-        }
-        earliest_usage_date = 1915.1.1
-        latest_usage_date = 1940.8.18
-        chance = 50
-    }
-}
 
 ecchi_usa_seward_character_template = {
     first_name = ecchi_William_H
@@ -1525,33 +1373,7 @@ ecchi_usa_seward_character_template = {
     }
 }
 
-#USFP: agitator instead of IG Leader
-ecchi_usa_colt_character_template = {
-    first_name = Samuel
-    last_name = ecchi_Colt
-    historical = yes
-    culture = cu:yankee
-    female = no
-    religion = protestant
-    ideology = ideology_jingoist_leader
-    interest_group = ig_industrialists
-	dna = ecchi_dna_samuel_colt
-    birth_date = 1814.7.19
-    is_agitator = yes
-    traits = { innovative persistent kidney_stones }
-    agitator_usage = {
-        country_trigger = {
-            exists = c:USA
-            this = c:USA
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_industrialists
-        }
-        earliest_usage_date = 1847.1.1
-        latest_usage_date = 1862.1.10
-        chance = 50
-    }
-}
+
 
 ecchi_usa_capone_character_template = {
     first_name = ecchi_Al
@@ -1637,74 +1459,9 @@ ecchi_cal_sutter_jr_character_template = {
     }
 }
 
-#USFP: agitator instead of IG Leader
-ecchi_cal_strauss_character_template = {
-    first_name = Levi
-    last_name = Strauss
-    historical = yes
-    culture = cu:south_german
-    female = no
-    religion = jewish
-    ideology = ideology_market_liberal
-    interest_group = ig_petty_bourgeoisie
-	dna = ecchi_dna_levi_strauss
-    birth_date = 1829.2.26
-    is_agitator = yes
-    traits = { innovative direct }
-    agitator_usage = {
-        country_trigger = {
-            exists = c:CAL
-            this = c:CAL
-        }
-        interest_group_trigger = {
-            is_marginal = no
-            OR = {
-                is_interest_group_type = ig_petty_bourgeoisie
-                is_interest_group_type = ig_industrialists
-            }
-        }
-        earliest_usage_date = 1870.1.1
-        latest_usage_date = 1902.9.26
-        chance = 75
-    }
-}
 
-#USFP: agitator instead of IG Leader
-ecchi_usa_browning_character_template = {
-    first_name = John
-    last_name = ecchi_Browning
-    historical = yes
-    culture = cu:yankee
-    female = no
-    religion = protestant
-    ideology = ideology_jingoist_leader
-    interest_group = ig_industrialists
-	dna = ecchi_dna_john_browning
-    birth_date = 1855.1.23
-    is_agitator = yes
-    traits = { innovative meticulous }
-    agitator_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:USA
-                    this = c:USA
-                    NOT = { exists = c:DES }
-                }
-                AND = {
-                    exists = c:DES
-                    this = c:DES
-                }
-            }
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_industrialists
-        }
-        earliest_usage_date = 1880.1.1
-        latest_usage_date = 1926.11.26
-        chance = 75
-    }
-}
+
+
 
 #USFP: agitator instead of IG Leader
 ecchi_usa_bates_character_template = {
@@ -2042,7 +1799,7 @@ ecchi_asa_delany_character_template = {
     culture = cu:afro_american
     female = no
     religion = protestant
-    ideology = ideology_abolitionist
+    ideology = ideology_usfp_abolitionist_radical
     interest_group = ig_petty_bourgeoisie
 	dna = ecchi_dna_martin_delany
     birth_date = 1812.5.6
@@ -2050,8 +1807,13 @@ ecchi_asa_delany_character_template = {
     traits = { innovative firebrand expensive_tastes }
     agitator_usage = {
         country_trigger = {
-			exists = c:ASA
-			this = c:ASA
+            OR = {
+                AND = {
+                    c:USA ?= this
+                    NOT = {exists = c:ASA}
+                }
+                c:ASA ?= this
+            }
 		}
         interest_group_trigger = {
             is_marginal = no
@@ -2075,7 +1837,7 @@ ecchi_asa_singleton_character_template = {
     culture = cu:afro_american
     female = no
     religion = protestant
-    ideology = ideology_abolitionist
+    ideology = ideology_usfp_abolitionist_radical
     interest_group = ig_industrialists
 	dna = ecchi_dna_benjamin_singleton
     birth_date = 1809.4.17
@@ -2083,8 +1845,13 @@ ecchi_asa_singleton_character_template = {
     traits = { charismatic tactful direct }
     agitator_usage = {
         country_trigger = {
-			exists = c:ASA
-			this = c:ASA
+            OR = {
+                AND = {
+                    c:USA ?= this
+                    NOT = {exists = c:ASA}
+                }
+                c:ASA ?= this
+            }
 		}
         interest_group_trigger = {
             is_marginal = no
@@ -2107,7 +1874,7 @@ ecchi_asa_turner_character_template = {
     culture = cu:afro_american
     female = no
     religion = protestant
-    ideology = ideology_moderate
+    ideology = ideology_usfp_abolitionist_radical
     interest_group = ig_devout
 	dna = ecchi_dna_henry_turner
     birth_date = 1834.2.1
@@ -2115,8 +1882,13 @@ ecchi_asa_turner_character_template = {
     traits = { pious tactful reserved }
     agitator_usage = {
         country_trigger = {
-			exists = c:ASA
-			this = c:ASA
+            OR = {
+                AND = {
+                    c:USA ?= this
+                    NOT = {exists = c:ASA}
+                }
+                c:ASA ?= this
+            }
 		}
         interest_group_trigger = {
             is_marginal = no
@@ -2136,7 +1908,7 @@ ecchi_asa_garnet_character_template = {
     culture = cu:afro_american
     female = no
     religion = protestant
-    ideology = ideology_abolitionist
+    ideology = ideology_usfp_abolitionist_radical
     interest_group = ig_devout
 	dna = ecchi_dna_henry_garnet
     birth_date = 1815.12.23
@@ -2144,8 +1916,13 @@ ecchi_asa_garnet_character_template = {
     traits = { inspirational_orator romantic }
     agitator_usage = {
         country_trigger = {
-			exists = c:ASA
-			this = c:ASA
+            OR = {
+                AND = {
+                    c:USA ?= this
+                    NOT = {exists = c:ASA}
+                }
+                c:ASA ?= this
+            }
 		}
         interest_group_trigger = {
             is_marginal = no

@@ -1091,7 +1091,7 @@ usfp_a_house_divided.12 = {
 
 	duration = 3
 
-	cooldown = { months = long_modifier_time }
+	cooldown = { days = long_modifier_time }
 
 	event_image = {
 		video = "southamerica_aristocrats"
@@ -1122,13 +1122,13 @@ usfp_a_house_divided.12 = {
 		scope:slaver_ig = {
 			add_modifier = {
 				name = modifier_slavery_forgotten
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			usfp_planters_to_landowners_effect = yes
 		}
 		add_modifier = {
 			name = modifier_slavery_whitewashing
-			months = long_modifier_time
+			days = long_modifier_time
 		}
 		# every_interest_group = {
 		# 	limit = {
@@ -1155,7 +1155,7 @@ usfp_a_house_divided.12 = {
 		scope:slaver_ig = {
 			add_modifier = {
 				name = modifier_slavery_forgotten_bad
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			usfp_planters_to_landowners_effect = yes
 		}

@@ -1,0 +1,294 @@
+﻿#USFP: executive instead of IG Leader
+ecchi_usa_chrysler_character_template = {
+    first_name = Walter
+    last_name = ecchi_Chrysler
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_market_liberal
+    interest_group = ig_industrialists
+	dna = ecchi_dna_walter_chrysler
+    birth_date = 1875.4.2
+    traits = { arrogant persistent expensive_tastes experienced_entrepreneur }
+    executive_usage = {
+        country_trigger = {
+            exists = c:USA
+            this = c:USA
+        }
+        company_trigger = {
+            is_company_type = company_type:company_basic_motors
+        }
+        earliest_usage_date = 1915.1.1
+        latest_usage_date = 1940.8.18
+        chance = 50
+    }
+}
+
+#USFP: executive instead of IG Leader
+ecchi_usa_colt_character_template = {
+    first_name = Samuel
+    last_name = ecchi_Colt
+    historical = yes
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_jingoist_leader
+    interest_group = ig_industrialists
+	dna = ecchi_dna_samuel_colt
+    birth_date = 1814.7.19
+    traits = { innovative persistent kidney_stones experienced_entrepreneur }
+    executive_usage = {
+        country_trigger = {
+            exists = c:USA
+            this = c:USA
+        }
+        company_trigger = {
+            is_company_type = company_type:company_colt_firearms
+        }
+        earliest_usage_date = 1847.1.1
+        latest_usage_date = 1862.1.10
+        chance = 50
+    }
+}
+
+#USFP: executive instead of IG Leader
+ecchi_cal_strauss_character_template = {
+    first_name = Levi
+    last_name = Strauss
+    historical = yes
+    culture = cu:south_german
+    female = no
+    religion = jewish
+    ideology = ideology_market_liberal
+    interest_group = ig_petty_bourgeoisie
+	dna = ecchi_dna_levi_strauss
+    birth_date = 1829.2.26
+    traits = { innovative direct experienced_entrepreneur }
+    executive_usage = {
+        country_trigger = {
+            exists = c:CAL
+            this = c:CAL
+        }
+        company_trigger = {
+            is_company_type = company_type:company_basic_textiles
+        }
+        earliest_usage_date = 1870.1.1
+        latest_usage_date = 1902.9.26
+        chance = 75
+    }
+}
+
+#USFP: executive instead of IG Leader
+ecchi_usa_browning_character_template = {
+    first_name = John
+    last_name = ecchi_Browning
+    historical = yes
+    culture = cu:yankee
+    female = no
+    religion = mormon
+    ideology = ideology_jingoist_leader
+    interest_group = ig_industrialists
+	dna = ecchi_dna_john_browning
+    birth_date = 1855.1.23
+    traits = { innovative meticulous experienced_entrepreneur }
+    executive_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:USA
+                    this = c:USA
+                    NOT = { exists = c:DES }
+                }
+                AND = {
+                    exists = c:DES
+                    this = c:DES
+                }
+            }
+        }
+        company_trigger = {
+            OR = {
+                is_company_type = company_type:company_colt_firearms
+                is_company_type = company_type:company_basic_metalworks
+            }
+        }
+        earliest_usage_date = 1880.1.1
+        latest_usage_date = 1926.11.26
+        chance = 75
+    }
+}
+
+#USFP: executive instead of IG Leader
+ecchi_usa_westinghouse_character_template = {
+    first_name = George
+    last_name = ecchi_Westinghouse
+    historical = yes
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_market_liberal
+    interest_group = ig_industrialists
+	dna = ecchi_dna_george_westinghouse
+    birth_date = 1846.10.6
+    traits = { persistent innovative experienced_entrepreneur }
+    executive_usage = {
+        country_trigger = {
+            exists = c:USA
+            this = c:USA
+        }
+        company_trigger = {
+            OR = {
+                is_company_type = company_type:company_usfp_westinghouse
+				is_company_type = company_type:company_basic_electrics
+            }
+        }
+        earliest_usage_date = 1880.1.1
+        latest_usage_date = 1914.3.12
+        chance = 75
+    }
+}
+
+#USFP: agitator instead of IG Leader
+ecchi_usa_barnum_character_template = {
+    first_name = ecchi_P_T
+    last_name = Barnum
+    historical = yes
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_abolitionist
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1810.7.5
+	dna = ecchi_dna_p_t_barnum
+    traits = { innovative meticulous grifter } #USFP
+    agitator_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+		earliest_usage_date = 1865.1.1
+        latest_usage_date = 1891.4.7
+        chance = 30
+    }
+    executive_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        company_trigger = {
+            always = no #no generic arts company?
+        }
+        earliest_usage_date = 1865.1.1
+        latest_usage_date = 1891.4.7
+        chance = 30
+    }
+}
+
+ecchi_usa_hearst_character_template = {
+    first_name = ecchi_William_Randolph
+    last_name = ecchi_Hearst
+    historical = yes
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_jingoist_leader
+    interest_group = ig_industrialists
+	dna = ecchi_dna_william_randolph_hearst
+    birth_date = 1863.4.29
+	traits = { cautious imperious romantic }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:USA
+                    this = c:USA
+                    NOT = { exists = c:CAL }
+                }
+                AND = {
+                    exists = c:CAL
+                    this = c:CAL
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_marginal = no
+			OR = {
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_petty_bourgeoisie
+			}
+            ig_hasnt_chosen_ideology_trigger = yes
+        }
+        earliest_usage_date = 1895.1.1
+        latest_usage_date = 1951.8.14
+        chance = 75
+    }
+	executive_usage = {
+		country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:USA
+                    this = c:USA
+                    NOT = { exists = c:CAL }
+                }
+                AND = {
+                    exists = c:CAL
+                    this = c:CAL
+                }
+            }
+        }
+		company_trigger = {
+            OR = {
+                is_company_type = company_type:company_basic_paper
+            }
+        }
+		earliest_usage_date = 1895.1.1
+        latest_usage_date = 1951.8.14
+        chance = 75
+	}
+}
+
+ecchi_usa_astor_character_template = {
+    first_name = ecchi_John_Jacob
+    last_name = ecchi_Astor
+    historical = yes
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_jingoist_leader
+    interest_group = ig_landowners
+    birth_date = 1763.7.17
+	dna = ecchi_dna_john_jacob_astor
+    traits = { expensive_tastes ambitious meticulous }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:USA
+            this = c:USA
+        }
+        interest_group_trigger = {
+            is_marginal = no
+			OR = {
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_landowners
+			}
+            ig_hasnt_chosen_ideology_trigger = yes
+        }
+        earliest_usage_date = 1936.1.1
+        latest_usage_date = 1848.3.29
+        chance = 75
+    }
+	executive_usage = {
+		country_trigger = {
+			c:USA ?= this
+		}
+		company_trigger = {
+            OR = {
+                is_company_type = company_type:company_basic_shipyards
+            }
+		}
+        earliest_usage_date = 1936.1.1
+        latest_usage_date = 1848.3.29
+        chance = 75
+	}
+}

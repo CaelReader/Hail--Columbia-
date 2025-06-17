@@ -228,7 +228,7 @@ usfp_emancipation_proclamation_button = {
 	}
 
 	ai_chance = {
-		base = 1000
+		value = 1000
 	}
 }
 
@@ -316,7 +316,7 @@ usfp_break_gag_rule_button = {
 	}
 
 	ai_chance = {
-		base = 1000
+		value = 1000
 	}
 }
 
@@ -377,6 +377,6 @@ usfp_acw_support_button = {
 	}
 
 	ai_chance = {
-		base = 1000
+		value = 1000
 	}
 }

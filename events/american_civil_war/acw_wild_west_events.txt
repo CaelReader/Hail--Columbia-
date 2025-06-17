@@ -57,7 +57,7 @@ wild_west.1 = {
 		default_option = yes
 		add_modifier = {
 			name = bank_robberies
-			months = normal_modifier_time
+			days = normal_modifier_time
 			multiplier = 2
 		}
 		scope:bank_robbery_state = {
@@ -70,7 +70,7 @@ wild_west.1 = {
 		name = wild_west.1.b
 		add_modifier = {
 			name = bank_robberies
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		scope:bank_robbery_state = {
 			add_radicals_in_state = {
@@ -93,7 +93,7 @@ wild_west.1 = {
 		}
 		add_modifier = {
 			name = bank_robberies
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 }
@@ -155,7 +155,7 @@ wild_west.2 = {
 		add_modifier = { 
 			name = frontier_military_aid
 			multiplier = money_amount_multiplier_very_small
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 		scope:raided_railroad = {
 			state_region = {
@@ -163,7 +163,7 @@ wild_west.2 = {
 			}
 			add_modifier = {
 				name = iron_horse_raids
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			add_radicals_in_state = {
 				value = 0.25
@@ -181,7 +181,7 @@ wild_west.2 = {
 			}
 			add_modifier = {
 				name = iron_horse_raids
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = 2
 			}
 			add_radicals_in_state = { # They're still angry, but they're also not facing the army
@@ -252,7 +252,7 @@ wild_west.3 = {
 		
 		add_modifier = {
 			name = backing_the_law
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 		scope:OK_corral_state = { # Locals hate the marshals
 			add_radicals_in_state = {

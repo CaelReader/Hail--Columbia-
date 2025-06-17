@@ -250,7 +250,7 @@ usfp_gilded_age.3 = {
 	icon = "gfx/interface/icons/invention_icons/postal_savings.dds"
 
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 	#shut this down at once!
 	option = {
@@ -325,7 +325,7 @@ usfp_gilded_age.4 = {
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 
 	trigger = {
@@ -422,7 +422,7 @@ usfp_gilded_age.5 = {
 	icon = "gfx/interface/icons/event_icons/boss_tweed_icon.dds"
 
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 	trigger = {
 		owns_entire_state_region = STATE_NEW_YORK
@@ -487,7 +487,7 @@ usfp_gilded_age.6 = {
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 	trigger = {
 		any_scope_character = {
@@ -685,7 +685,7 @@ usfp_gilded_age.8 = {
 	icon = "gfx/interface/icons/invention_icons/intensive_agriculture.dds"
 
 	duration = 3
-	cooldown = {months = very_long_modifier_time } #once
+	cooldown = {days = very_long_modifier_time } #once
 
 	immediate = {
 		ig:ig_rural_folk = {
@@ -730,7 +730,7 @@ usfp_gilded_age.8 = {
 		ig:ig_trade_unions = {
 			add_modifier = {
 				name = the_cooperative_movement
-				months = normal_modifier_time
+				days = normal_modifier_time
 				multiplier = 0.5
 			}
 		}
@@ -1171,7 +1171,7 @@ usfp_gilded_age.14 = {
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
 	duration = 3
-	cooldown = { months = very_long_modifier_time } #once
+	cooldown = { days = very_long_modifier_time } #once
 
 	trigger = {
 		s:STATE_NEW_YORK = {
@@ -1201,7 +1201,7 @@ usfp_gilded_age.14 = {
 		scope:new_york_scope = {
 			add_modifier = {
 				name = modifier_noveaux_riches
-				months = long_modifier_time
+				days = long_modifier_time
 			}
 		}
 	}
@@ -1211,7 +1211,7 @@ usfp_gilded_age.14 = {
 		scope:new_york_scope = {
 			add_modifier = {
 				name = modifier_noveaux_riches
-				months = long_modifier_time
+				days = long_modifier_time
 			}
 		}
 		ig:ig_industrialists = {

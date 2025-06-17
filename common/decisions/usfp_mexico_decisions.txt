@@ -47,6 +47,6 @@ usfp_offer_treaty_of_gh_mex = {
 	}
 
 	ai_chance = {
-		base = 1000
+		value = 1000
 	}
 }

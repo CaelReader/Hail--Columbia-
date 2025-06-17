@@ -1,0 +1,23 @@
+﻿TREATIES = {
+	create_treaty = {
+		#USA bankroll of SEQ
+		name = treaty_name_dancing_rabbit_creek
+		first_country = c:USA
+		second_country = c:SEQ
+
+		is_draft = no
+		entered_into_force_on = 1831.2.25
+		binding_period = { years = 20 } 
+		articles_to_create = {
+			{
+				article = money_transfer
+				source_country = c:USA
+				target_country = c:SEQ
+				inputs = {
+					{ quantity = 500 } #Annuities to removed Indians
+				}
+			}
+		}
+	}
+
+}

@@ -10,10 +10,11 @@ agitator_henry_ford = {
 	interest_group = ig_industrialists
 	ideology = ideology_ethno_nationalist
 	birth_date = 1863.7.30
+	dna = dna_henry_ford
 	traits = {
 		bigoted
 		ambitious
-		direct
+		experienced_entrepreneur
 	}
 	agitator_usage = {
 		country_trigger = {
@@ -27,11 +28,22 @@ agitator_henry_ford = {
         interest_group_trigger = {
             is_marginal = no
             is_interest_group_type = ig_industrialists
-        }   
+        }
 		earliest_usage_date = 1908.8.12 # first production Model T
 		latest_usage_date = 1935.12.31
 		chance = 50
 	}
+    executive_usage = {
+        country_trigger = {
+            has_dlc_feature = mp1_content
+        }
+        company_trigger = {
+            is_company_type = company_type:company_ford_motor
+        }
+        earliest_usage_date = 1908.8.12 # first production Model T
+		latest_usage_date = 1935.12.31
+        chance = 100
+    }
 }
 
 agitator_frederick_douglass = {
@@ -273,16 +285,6 @@ usa_mark_twain_character_template = { #Mark Twain
         else_if = {
             limit = {
                 owner = {
-                    any_country = {
-                        is_subject_of = prev
-                    }
-                }
-            }
-            set_ideology = ideology:ideology_pacifist
-        }
-        else_if = {
-            limit = {
-                owner = {
                     has_technology_researched = feminism
                     NOT = {
                         has_law = law_type:law_womens_suffrage
@@ -290,6 +292,16 @@ usa_mark_twain_character_template = { #Mark Twain
                 }
             }
             set_ideology = ideology:ideology_feminist
+        }
+		 else_if = {
+            limit = {
+                owner = {
+                    any_country = {
+                        is_subject_of = prev
+                    }
+                }
+            }
+            set_ideology = ideology:ideology_pacifist
         }
         else = {
             set_ideology = ideology:ideology_jingoist

@@ -1,7 +1,7 @@
 ﻿je_indian_removal = {
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
-	group = je_group_historical_content
+	group = je_group_usa_manifest_destiny
 
 	immediate = {
 		# set_variable = indian_removal_var
@@ -128,7 +128,7 @@
 					}
 					add_modifier = {
 						name = indian_removal_approval
-						months = normal_modifier_time
+						days = normal_modifier_time
 					}
 				}
 			}
@@ -150,7 +150,7 @@
 					}
 					add_modifier = {
 						name = indian_removal_approval
-						months = normal_modifier_time
+						days = normal_modifier_time
 						multiplier = -1
 					}
 				}
@@ -204,7 +204,7 @@
 			else = {
 				add_modifier = {
 					name = native_american_rights
-					months = long_modifier_time
+					days = long_modifier_time
 				}
 			}
 			add_radicals = {
@@ -221,11 +221,7 @@
 	invalid = {
 		OR = {
 			NOT = { 
-				s:STATE_GEORGIA = {
-					any_scope_state = {
-						owner = c:USA
-					}
-				}
+				has_state_in_state_region = STATE_GEORGIA
 			}
 			NOT = {
 				AND = {

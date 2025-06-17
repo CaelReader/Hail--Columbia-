@@ -1502,7 +1502,7 @@ usfp_manifest_destiny.14 = {
 		ig:ig_landowners = {
 			add_modifier = {
 				name = usfp_abandoned_cuba
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 		every_interest_group = {
@@ -1516,7 +1516,7 @@ usfp_manifest_destiny.14 = {
 			}
 			add_modifier = {
 				name = usfp_abandoned_cuba
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 	}
@@ -1680,7 +1680,7 @@ usfp_manifest_destiny.16 = {
 		ig:ig_landowners = {
 			add_modifier = {
 				name = usfp_abandoned_cuba
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 		ai_chance = {

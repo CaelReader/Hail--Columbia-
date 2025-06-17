@@ -47,9 +47,9 @@ usfp_support_free_kansas_button = {
 	}
 
 	ai_chance = {
-		base = 0
-		modifier = {
-			trigger = {
+		value = 0
+		if = {
+			limit = {
 				ruler = {
 					usfp_anti_slavery_leader_trigger = yes
 				}
@@ -108,9 +108,9 @@ usfp_support_slave_kansas_button = {
 	}
 
 	ai_chance = {
-		base = 0
-		modifier = {
-			trigger = {
+		value = 0
+		if = {
+			limit = {
 				usfp_anti_abolitionist_government = yes
 			}
 			add = 1000
@@ -179,7 +179,7 @@ usfp_enforce_kansas_constitution_button = {
 		}
 	}
 	ai_chance = {
-		base = 100
+		value = 100
 	}
 
 }

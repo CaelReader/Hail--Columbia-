@@ -31,6 +31,9 @@ usfp_filibuster.1 = {
 		}
 		exists = c:MEX
 		c:MEX = {
+			NOT = {
+				is_subject_of = c:USA
+			}
 			owns_entire_state_region = STATE_BAJA_CALIFORNIA
 			owns_entire_state_region = STATE_SONORA
 		}

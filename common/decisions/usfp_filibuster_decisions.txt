@@ -28,7 +28,7 @@
 	}
 
 	ai_chance = {
-		base = 1000
+		value = 1000
 	}
 }
 
@@ -90,6 +90,6 @@ nicaragua_revolt_walker = {
 	}
 
 	ai_chance = {
-		base = 1000
+		value = 1000
 	}
 }

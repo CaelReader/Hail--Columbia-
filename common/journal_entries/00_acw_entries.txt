@@ -2,7 +2,7 @@
 je_acw_countdown = {
 	icon = "gfx/interface/icons/event_icons/abolition_slave.dds"
 
-	group = je_group_historical_content
+	group = je_group_usa_american_civil_war
 
 	should_be_pinned_by_default = yes
 
@@ -78,9 +78,7 @@ je_acw_countdown = {
 		}
 		custom_tooltip = {
 			text = acw_will_happen_tt
-			trigger_event = { 
-				id = acw_je_events.1
-			}
+			trigger_event = { id = acw_je_events.1 }
 		}
 	}
 
@@ -138,6 +136,8 @@ je_acw_countdown = {
 
 	is_progressing = {
 		has_law = law_type:law_slavery_banned
+		any_revolution_ongoing = no
+		government_legitimacy > 20
 	}
 	progressbar = yes
 	weight = 100
@@ -146,7 +146,7 @@ je_acw_countdown = {
 je_acw_war = {
 	icon = "gfx/interface/icons/event_icons/waving_flag_usa_distress.dds"
 
-	group = je_group_historical_content
+	group = je_group_usa_american_civil_war
 
 	scripted_button = usfp_emancipation_proclamation_button
 	scripted_button = usfp_acw_support_button
@@ -310,9 +310,6 @@ je_acw_war = {
 			}
 		}
 		hidden_effect = {
-			remove_modifier = usfp_acw_union_modifier
-		}
-		hidden_effect = {
 			usfp_cleanup_a_house_divided_variables = yes
 		}
 		usfp_cleanup_acw_agitators = yes
@@ -441,7 +438,7 @@ je_acw_reconstruction = {
 	}
 	icon = "gfx/interface/icons/invention_icons/egalitarianism.dds"
 
-	group = je_group_historical_content
+	group = je_group_usa_american_civil_war
 
 	modifiers_while_active = {
 		usfp_reconstruction_army_duties_modifier
@@ -526,6 +523,13 @@ je_acw_reconstruction = {
 			}
 			NOT = {
 				has_law = law_type:law_slavery_banned
+			}
+			NOT = {
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:afro_american
+					}
+				}
 			}
 		}
 	}
@@ -656,7 +660,7 @@ je_acw_reconstruction = {
 je_acw_wild_wild_west = {
 	icon = "gfx/interface/icons/war_goals/take_colony.dds"
 
-	group = je_group_historical_content
+	group = je_group_usa_american_civil_war
 
 	complete = {
 		scope:journal_entry = {
@@ -691,7 +695,6 @@ je_acw_wild_wild_west = {
 			10 = wild_west.1 # bank robberies
 			10 = wild_west.2 # Raids on the Iron Horse
 			10 = wild_west.3 # Gunfight at the Corral
-			# 10 = manifest_destiny.3 #Bison Hunting
 		}
 		effect = {
 			if = {

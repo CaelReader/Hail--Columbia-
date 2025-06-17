@@ -409,7 +409,7 @@ usfp_anger_slavers_effect = {
 		}
 		add_modifier = {
 			name = ig_slavers_mad
-			months = short_modifier_time
+			days = short_modifier_time
 			multiplier = $MULT$
 		}
 	}
@@ -425,7 +425,7 @@ usfp_appease_slavers_effect = {
 		}
 		add_modifier = {
 			name = ig_slavers_happy
-			months = short_modifier_time
+			days = short_modifier_time
 			multiplier = $MULT$
 		}
 	}
@@ -442,7 +442,7 @@ usfp_anger_abolitionists_effect = {
 		}
 		add_modifier = {
 			name = ig_abolitionists_mad
-			months = short_modifier_time
+			days = short_modifier_time
 			multiplier = $MULT$
 		}
 	}
@@ -459,7 +459,7 @@ usfp_appease_abolitionists_effect = {
 		}
 		add_modifier = {
 			name = ig_abolitionists_happy
-			months = short_modifier_time
+			days = short_modifier_time
 			multiplier = $MULT$
 		}
 	}
@@ -477,7 +477,7 @@ usfp_destabilize_union_effect = {
 		}
 		add_modifier = {
 			name = usfp_threatening_union
-			months = short_modifier_time
+			days = short_modifier_time
 			multiplier = $MULT$
 		}
 	}
