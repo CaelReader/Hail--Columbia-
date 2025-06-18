@@ -203,10 +203,7 @@ ai_strategy_manifest_destiny = {
 	ideological_opinion_effect_mult = {
 		value = 0.75
 	}
-	
-	wargoal_maneuvers_fraction = {
-		value = 0.15
-	}		
+		
 	
 	#USA shouldn't interfere outside of Western Hemisphere
 	diplomatic_play_neutrality = {

@@ -122,7 +122,7 @@ usfp_liberia_republic = {
 	type = country
 	group = "diplomatic_pact_notification_group"
 	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
-
+	notification_type = toast
 	color = neutral
 }
 
@@ -130,7 +130,7 @@ usfp_liberia_independent = {
 	type = country
 	group = "diplomatic_pact_notification_group"
 	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
-
+	notification_type = toast
 	color = neutral
 }
 
@@ -138,6 +138,6 @@ usfp_liberia_recognized = {
 	type = country
 	group = "diplomatic_pact_notification_group"
 	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
-
+	notification_type = toast
 	color = neutral
 }

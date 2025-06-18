@@ -390,19 +390,15 @@ usfp_claim_canada_button = {
 			usfp_manifest_destiny_pro_expansion_trigger = yes
 		}
 		OR = {
-			AND = {
-				c:GBR ?= {
-					any_subject_or_below = {
-						country_is_in_north_america = yes
-					}
-					relations:root <= relations_threshold:poor
+			c:GBR ?= {
+				any_subject_or_below = {
+					country_is_in_north_america = yes
 				}
+				relations:root <= relations_threshold:poor
 			}
-			AND = {
-				c:CAN ?= {
-					is_subject = no
-					relations:root <= relations_threshold:poor
-				}
+			c:CAN ?= {
+				is_subject = no
+				relations:root <= relations_threshold:poor
 			}
 		}
 		is_diplomatic_play_committed_participant = no

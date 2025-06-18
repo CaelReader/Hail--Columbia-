@@ -63,14 +63,12 @@ usfp_indian_removal_cherokee_button = {
 			c:CHE ?= {
 				is_country_alive = yes
 			}
-			AND = {
-				root = {
-					owns_entire_state_region = STATE_ALABAMA
-					owns_entire_state_region = STATE_TENNESSEE
-					owns_entire_state_region = STATE_GEORGIA
-					any_scope_pop = {
-						culture = cu:cherokee
-					}
+			root = {
+				owns_entire_state_region = STATE_ALABAMA
+				owns_entire_state_region = STATE_TENNESSEE
+				owns_entire_state_region = STATE_GEORGIA
+				any_scope_pop = {
+					culture = cu:cherokee
 				}
 			}
 		}

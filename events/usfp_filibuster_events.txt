@@ -53,6 +53,9 @@ usfp_filibuster.1 = {
 		s:STATE_SONORA.region_state:MEX = {
 			save_scope_as = sonora_state_scope
 		}
+		s:STATE_BAJA_CALIFORNIA.region_state:SON = {
+			save_scope_as = baja_scope
+		}
 		c:MEX = {
 			save_scope_as = mexico_scope
 			trigger_event = {
@@ -110,9 +113,7 @@ usfp_filibuster.1 = {
 				}
 			}
 		}
-		s:STATE_BAJA_CALIFORNIA.region_state:SON = {
-			save_scope_as = baja_scope
-		}
+
 	}
 
 	#bad!
@@ -203,6 +204,9 @@ usfp_filibuster.2 = {
 	immediate = {
 		c:USA = {
 			save_scope_as = usa_scope
+		}
+		s:STATE_BAJA_CALIFORNIA.region_state:SON = {
+			save_scope_as = baja_scope
 		}
 	}
 

@@ -330,7 +330,7 @@ usfp_progressive_era.4 = {
 			}
 			save_scope_as = vivekananda_scope
 		}
-		s:STATE_SOUTH_BENGAL = {
+		s:STATE_WEST_BENGAL = {
 			random_scope_state = {
 				owner = {
 					save_scope_as = bengal_scope
