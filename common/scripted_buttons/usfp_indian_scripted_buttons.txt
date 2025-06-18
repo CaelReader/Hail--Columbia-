@@ -249,12 +249,14 @@ usfp_break_treaty_button = {
 	desc = "usfp_break_treaties_button_desc"
 
 	visible = {
-		any_country = {
+		any_decentralized_country = {
 			has_truce_with = root
-			is_country_type = decentralized
+			country_is_in_north_america = yes
 		}
 		has_technology_researched = civilizing_mission
 	}
+
+	cooldown = { years = 2 }
 
 	possible = {
 		ruler = {
@@ -263,37 +265,22 @@ usfp_break_treaty_button = {
 	}
 
 	effect = {
-		every_neighbouring_state = {
+		every_decentralized_country = {
 			limit = {
-				owner = {
-					is_country_type = decentralized
-					has_truce_with = root
+				has_truce_with = root
+				country_is_in_north_america = yes
+			}
+			end_truce = root
+			root = {
+				remove_diplomatic_pact = {
+					country = prev
+					type = colonization_rights
 				}
 			}
-			owner = {
-				end_truce = root
-				root = {
-					remove_diplomatic_pact = {
-						country = prev
-						type = colonization_rights
-					}
-				 }
-				change_tension = {
-					country = root
-					value = 20
-				}
+			change_tension = {
+				country = root
+				value = 20
 			}
 		}
-		# every_country = {
-		# 	limit = {
-		# 		has_truce_with = root
-		# 		is_country_type = decentralized
-		# 	}
-		# 	end_truce = root
-		# 	change_tension = {
-		# 		country = root
-		# 		value = 20
-		# 	}
-		# }
 	}
 }

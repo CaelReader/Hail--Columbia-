@@ -1,5 +1,5 @@
 ﻿COUNTRIES = {
-	c:SHO ?= {
+	c:BNN ?= {
 		usfp_native_startup = yes
 	}
 }

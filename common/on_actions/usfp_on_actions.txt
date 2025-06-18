@@ -58,62 +58,62 @@ usfp_monthly_pulse = {
 #this tries to prevent native uprisings in the far north where the impassable terrain would cause problems
 usfp_arctic_isolation = {
 	effect = {
-		if = {
-			limit = {
-				OR = {
-					s:STATE_ALASKA = {
-						root_has_state_here = yes
-					}
-					s:STATE_YUKON_TERRITORY = {
-						root_has_state_here = yes
-					}
-					s:STATE_NORTHWEST_TERRITORIES = {
-						root_has_state_here = yes
-					}
-					s:STATE_NUNAVUT = {
-						root_has_state_here = yes
-					}
-					s:STATE_QUEBEC = {
-						root_has_state_here = yes
-					}
-				} 
-			}
-			every_scope_state = {
-				limit = {
-					OR = {
-						state_region = s:STATE_ALASKA
-						state_region = s:STATE_YUKON_TERRITORY
-						state_region = s:STATE_NORTHWEST_TERRITORIES
-						state_region = s:STATE_NUNAVUT
-						state_region = s:STATE_QUEBEC
-					}
-				}
-				every_neighbouring_state = {
-					limit = {
-						owner = {
-							is_country_type = decentralized
-							OR = {
-								country_has_primary_culture = cu:athabaskan
-								country_has_primary_culture = cu:inuit
-							}
-						}
-						OR = {
-							state_region = s:STATE_ALASKA
-							state_region = s:STATE_YUKON_TERRITORY
-							state_region = s:STATE_NORTHWEST_TERRITORIES
-							state_region = s:STATE_NUNAVUT
-							state_region = s:STATE_QUEBEC
-						}
-					}
-					owner = {
-						set_tension = {
-							country = root
-							value = 0
-						}
-					}
-				}
-			}
-		}
+		# if = {
+		# 	limit = {
+		# 		OR = {
+		# 			s:STATE_ALASKA = {
+		# 				root_has_state_here = yes
+		# 			}
+		# 			s:STATE_YUKON_TERRITORY = {
+		# 				root_has_state_here = yes
+		# 			}
+		# 			s:STATE_NORTHWEST_TERRITORIES = {
+		# 				root_has_state_here = yes
+		# 			}
+		# 			s:STATE_NUNAVUT = {
+		# 				root_has_state_here = yes
+		# 			}
+		# 			s:STATE_QUEBEC = {
+		# 				root_has_state_here = yes
+		# 			}
+		# 		} 
+		# 	}
+		# 	every_scope_state = {
+		# 		limit = {
+		# 			OR = {
+		# 				state_region = s:STATE_ALASKA
+		# 				state_region = s:STATE_YUKON_TERRITORY
+		# 				state_region = s:STATE_NORTHWEST_TERRITORIES
+		# 				state_region = s:STATE_NUNAVUT
+		# 				state_region = s:STATE_QUEBEC
+		# 			}
+		# 		}
+		# 		every_neighbouring_state = {
+		# 			limit = {
+		# 				owner = {
+		# 					is_country_type = decentralized
+		# 					OR = {
+		# 						country_has_primary_culture = cu:athabaskan
+		# 						country_has_primary_culture = cu:inuit
+		# 					}
+		# 				}
+		# 				OR = {
+		# 					state_region = s:STATE_ALASKA
+		# 					state_region = s:STATE_YUKON_TERRITORY
+		# 					state_region = s:STATE_NORTHWEST_TERRITORIES
+		# 					state_region = s:STATE_NUNAVUT
+		# 					state_region = s:STATE_QUEBEC
+		# 				}
+		# 			}
+		# 			owner = {
+		# 				set_tension = {
+		# 					country = root
+		# 					value = 0
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# }
 	}
 }
 
@@ -558,7 +558,7 @@ usfp_fix_monarchy_revolt = {
 
 on_election_campaign_end = {
 	on_actions = {
-		USCWF_precedent_on_action #Doodlez Precedent
+		USCWF_precedent_on_action
 	}
 }
 
@@ -759,26 +759,26 @@ usfp_map_startup = {
 	}
 }
 
-on_character_creation = {
-	on_actions = {
-		usfp_american_culture_characters
-	}
-}
+# on_character_creation = {
+# 	on_actions = {
+# 		usfp_american_culture_characters
+# 	}
+# }
 
-usfp_american_culture_characters = {
-	effect = {
-		if = {
-			limit = { 
-				owner ?= {
-					country_has_primary_culture = cu:usfp_american
-				}
-				OR = {
-					culture = cu:yankee
-					culture = cu:dixie
-					culture = cu:anglo_canadian
-				}
-			}
-			change_character_culture = cu:usfp_american
-		}
-	}
-}
+# usfp_american_culture_characters = {
+# 	effect = {
+# 		if = {
+# 			limit = { 
+# 				owner ?= {
+# 					country_has_primary_culture = cu:usfp_american
+# 				}
+# 				OR = {
+# 					culture = cu:yankee
+# 					culture = cu:dixie
+# 					culture = cu:anglo_canadian
+# 				}
+# 			}
+# 			change_character_culture = cu:usfp_american
+# 		}
+# 	}
+# }

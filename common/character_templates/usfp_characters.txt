@@ -1,5 +1,5 @@
 ﻿usa_roosevelt_character_template = {
-    first_name = Theodore_2
+    first_name = Theodore
     last_name = Roosevelt
     historical = yes
     culture = cu:yankee

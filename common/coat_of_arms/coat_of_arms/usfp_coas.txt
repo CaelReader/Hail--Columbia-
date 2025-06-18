@@ -615,7 +615,7 @@ INN = {
 	color3 = "teal"
 }
 
-SHO = {
+BNN = {
 	pattern = "pattern_border_of_4.dds"
 	color1 = "yellow"
 	color2 = "red"
@@ -1244,7 +1244,7 @@ AHT = {
 	}
 }
 
-DXG = {
+ATB = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"	
 

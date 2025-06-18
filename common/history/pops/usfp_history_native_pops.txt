@@ -192,7 +192,6 @@
 			create_pop = {
 				culture = siouan
 				size = 800 #post-smallpox decline
-				pop_type = peasants
 			}
 		}
 	}
@@ -446,14 +445,14 @@
 
 	#Shoshone
 	s:STATE_IDAHO = {
-		region_state:SHO = {
+		region_state:BNN = {
 			kill_population_percent_in_state = {
 				percent = 0.5 #rebalancing to other states
 			}
 		}
 	}
 	s:STATE_COLORADO = {
-		region_state:SHO = {
+		region_state:BNN = {
 			create_pop = {
 				culture = paiute
 				size = 2000
@@ -461,7 +460,7 @@
 		}
 	}
 	s:STATE_UTAH = {
-		region_state:SHO = {
+		region_state:BNN = {
 			create_pop = {
 				culture = paiute
 				size = 8000

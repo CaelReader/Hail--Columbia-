@@ -41,14 +41,14 @@
 		region_state:MEX = {
 			set_state_owner = c:PIU
 		}
-		region_state:BNN = {
-			set_state_owner = c:SHO
-		}
+		# region_state:BNN = {
+		# 	set_state_owner = c:SHO
+		# }
 	}
 	s:STATE_WYOMING = {
-		region_state:BNN = {
-			set_state_owner = c:SHO
-		}
+		# region_state:BNN = {
+		# 	set_state_owner = c:SHO
+		# }
 		region_state:USA = {
 			set_state_owner = c:ABS
 		}
@@ -56,11 +56,11 @@
 			set_state_owner = c:BLF
 		}
 	}
-	s:STATE_IDAHO = {
-		region_state:BNN = {
-			set_state_owner = c:SHO
-		}
-	}
+	# s:STATE_IDAHO = {
+	# 	region_state:BNN = {
+	# 		set_state_owner = c:SHO
+	# 	}
+	# }
 
 
 	############################
@@ -82,11 +82,11 @@
 			}
 		}
 	}
-	s:STATE_ALASKA = {
-		region_state:ATB = {
-			set_state_owner = c:DXG
-		}
-	}
+	# s:STATE_ALASKA = {
+	# 	region_state:ATB = {
+	# 		set_state_owner = c:DXG
+	# 	}
+	# }
 	s:STATE_NUNAVUT = {
 		region_state:HBC = {
 			set_state_owner = c:INV
@@ -167,7 +167,7 @@
 
 	#Alaska
 	s:STATE_ALASKA = {
-		region_state:DXG = {
+		region_state:ATB = {
 			kill_population_percent_in_state = {
 				culture = cu:athabaskan
 				percent = 0.75 #redistribute 20k Athabaskans to other tags

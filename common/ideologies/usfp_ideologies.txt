@@ -430,7 +430,7 @@ ideology_usfp_tribal_government = {
 }
 
 ideology_usfp_progressive_movement = {
-	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_usfp_progressive_movement.dds"
+	icon = "gfx/interface/icons/ideology_icons/ideology_usfp_progressive_movement.dds"
 	
 	character_ideology = yes
 	

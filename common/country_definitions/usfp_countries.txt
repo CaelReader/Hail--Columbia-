@@ -64,7 +64,7 @@ PIU = {
 	cultures = { paiute }
 }
 
-SHO = {
+BNN = {
 	color = { 184 149 200 }
 	
 	country_type = decentralized
@@ -528,7 +528,7 @@ AHT = {
 	capital = STATE_ALASKA
 }
 
-DXG = {
+ATB = {
 	color = { 97 73 102 }
 	
 	country_type = decentralized
