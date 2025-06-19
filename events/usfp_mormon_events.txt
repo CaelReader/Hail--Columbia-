@@ -303,7 +303,6 @@ usfp_mormon.4 = {
 								culture = yankee
 								size = 80000
 								religion = mormon
-								pop_type = peasants
 							}
 							create_pop = {
 								culture = yankee
