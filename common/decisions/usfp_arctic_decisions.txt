@@ -34,30 +34,40 @@
 	when_taken = {
 		if = {
 			limit = {
-				any_scope_state = {
-					state_region = s:STATE_ONTARIO
-				}
+				has_state_in_state_region =  STATE_ONTARIO
 			 }
 			 s:STATE_ONTARIO = {
-				if = {
+				every_scope_state = {
 					limit = {
-						exists = region_state:OJI
-					 }
-					 region_state:OJI = {
-						set_state_owner = root
-					 }
-				 }
+						owner = {
+							is_country_type = decentralized
+							OR = {
+								country_has_primary_culture = cu:athabaskan
+								country_has_primary_culture = cu:inuit
+							}
+						}
+					}
+					set_state_owner = root
+				}
 			 }
 		}
 		if = {
 			limit = {
-				any_scope_state = {
-					state_region = s:STATE_QUEBEC
-				}
+				has_state_in_state_region =  STATE_QUEBEC
 			 }
-			 if = {
-				limit = {exists = c:INK }
-				annex = c:INK
+			 s:STATE_QUEBEC = {
+				every_scope_state = {
+					limit = {
+						owner = {
+							is_country_type = decentralized
+							OR = {
+								country_has_primary_culture = cu:athabaskan
+								country_has_primary_culture = cu:inuit
+							}
+						}
+					}
+					set_state_owner = root
+				}
 			 }
 		}
 		s:STATE_NUNAVUT = {
@@ -65,6 +75,10 @@
 				limit = {
 					owner = {
 						is_country_type = decentralized
+						OR = {
+							country_has_primary_culture = cu:athabaskan
+							country_has_primary_culture = cu:inuit
+						}
 					}
 				}
 				set_state_owner = root
@@ -75,6 +89,10 @@
 				limit = {
 					owner = {
 						is_country_type = decentralized
+						OR = {
+							country_has_primary_culture = cu:athabaskan
+							country_has_primary_culture = cu:inuit
+						}
 					}
 				}
 				set_state_owner = root
@@ -85,6 +103,10 @@
 				limit = {
 					owner = {
 						is_country_type = decentralized
+						OR = {
+							country_has_primary_culture = cu:athabaskan
+							country_has_primary_culture = cu:inuit
+						}
 					}
 				}
 				set_state_owner = root
@@ -92,28 +114,78 @@
 		}
 		if = {
 			limit = {
-				any_scope_state = {
-					state_region = s:STATE_SASKATCHEWAN
-				}
+				has_state_in_state_region =  STATE_SASKATCHEWAN
 			 }
-			 if = {
-				limit = { exists = c:CPW }
-				annex = c:CPW
+			 s:STATE_SASKATCHEWAN = {
+				every_scope_state = {
+					limit = {
+						owner = {
+							is_country_type = decentralized
+							OR = {
+								country_has_primary_culture = cu:athabaskan
+								country_has_primary_culture = cu:inuit
+							}
+						}
+					}
+					set_state_owner = root
+				}
 			 }
 		}
 		if = {
 			limit = {
-				any_scope_state = {
-					state_region = s:STATE_ALBERTA
+				has_state_in_state_region =  STATE_ALBERTA
+			 }
+			 s:STATE_ALBERTA = {
+				every_scope_state = {
+					limit = {
+						owner = {
+							is_country_type = decentralized
+							OR = {
+								country_has_primary_culture = cu:athabaskan
+								country_has_primary_culture = cu:inuit
+							}
+						}
+					}
+					set_state_owner = root
 				}
 			 }
-			 if = {
-				limit = {exists = c:DNZ }
-				annex = c:DNZ
+		}
+		if = {
+			limit = {
+				has_state_in_state_region =  STATE_MANITOBA
 			 }
-			 if = {
-				limit = {exists = c:SVY }
-				annex = c:SVY
+			 s:STATE_MANITOBA = {
+				every_scope_state = {
+					limit = {
+						owner = {
+							is_country_type = decentralized
+							OR = {
+								country_has_primary_culture = cu:athabaskan
+								country_has_primary_culture = cu:inuit
+							}
+						}
+					}
+					set_state_owner = root
+				}
+			 }
+		}
+		if = {
+			limit = {
+				has_state_in_state_region =  STATE_BRITISH_COLUMBIA
+			 }
+			 s:STATE_BRITISH_COLUMBIA = {
+				every_scope_state = {
+					limit = {
+						owner = {
+							is_country_type = decentralized
+							OR = {
+								country_has_primary_culture = cu:athabaskan
+								country_has_primary_culture = cu:inuit
+							}
+						}
+					}
+					set_state_owner = root
+				}
 			 }
 		}
 	}

@@ -115,9 +115,9 @@ usfp_progressive_era = {
 	}
 	on_complete = {
 		trigger_event = usfp_progressive_era.16
-		hidden_effect = {
-            set_variable = usfp_square_deal_achievement
-        }
+		# hidden_effect = {
+        #     set_variable = usfp_square_deal_achievement
+        # }
 		show_as_tooltip = {
 			add_loyalists = {
 				value = small_radicals

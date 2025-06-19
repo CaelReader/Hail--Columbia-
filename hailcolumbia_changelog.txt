@@ -478,9 +478,14 @@ Updates
 	PT Barnum is now a PB Abolitionist
 	Newly-created characters will now adopt the American Superculture
 	CSA now spawns with more appropriate laws
+	Congress of Trusts now gives Free Company Charters rather than Max Companies
+	Moved the Manifest Destiny modifier into the JE itself
 1.9 Compatibility
 	Moved several Industrialist characters into being Executives
 	Harmonized with vanilla content changes	
+	Reworked Gilded Age event "Local Monopoly" into a "Company Towns" event
+	Consolidated some Arctic and PNW tags for performance reasons (it appears that having more than 420 tags on the map causes problems now)
+	Updated harbor state traits
 Fixes
 	Fixed some localization errors
 	Fixed incorrect country tag in Canada je
@@ -490,3 +495,4 @@ Fixes
 	Fixed up some native starting laws
 	Fixed script error from character interaction
 	William Walker won't invade a Mexico that is subject to the USA
+	North Star event can occur even if Douglass spawns early

@@ -120,7 +120,7 @@ AIA = {
 
 }
 
-FLT = {
+SLS = {
 	color = { 216 30 4 }
 	
 	country_type = decentralized
@@ -410,7 +410,7 @@ TTC = {
 	
 	capital = STATE_YUKON_TERRITORY
 }
-IPQ = {
+usfp_IPQ = {
 	color = { 10 15 60 }
 	
 	country_type = decentralized

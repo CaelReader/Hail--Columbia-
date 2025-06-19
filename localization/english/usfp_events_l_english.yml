@@ -954,11 +954,11 @@ usfp_gilded_age.14.f: ""She’s got an indiscreet voice," I remarked. "It’s fu
 usfp_gilded_age.14.a: "Old Money will have to make room for the New."
 usfp_gilded_age.14.b: "A toast to our rising captains of industry!"
 
-usfp_gilded_age.15.t: "The [SCOPE.sState('monopoly_state').GetName] [SCOPE.sBuilding('monopoly_building_scope').GetName] Monopoly"
-usfp_gilded_age.15.d: "The [SCOPE.sBuilding('monopoly_building_scope').GetName] industry in [SCOPE.sState('monopoly_state').GetName] has come under the control of a congolomerate that has pushed out all competition. Using their dominant position they have begun to enforce higher prices, lower wages, and worse working conditions, causing a negative ripple effect on the entire local economy."
-usfp_gilded_age.15.f: "You couldn't walk two blocks in the city without seeing one of the company's advertisements or its logo stamped on something. A whole group of workers was fired yesterday, and now many were packing up to move to another state. The company was the only game in town."
-usfp_gilded_age.15.a: "The market is always right."
-usfp_gilded_age.15.b: "We should promote competition in [SCOPE.sState('monopoly_state').GetName]."
+usfp_gilded_age.15.t: "Company Towns"
+usfp_gilded_age.15.d: "The concentration of [SCOPE.sBuilding('company_town_building_scope').GetName] industries in [SCOPE.sState('company_town_state').GetName] has fueled the construction of whole towns owned entirely by the companies. Workers are 'encouraged' to move into housing controlled by their employer, send their kids to company schools, and even go to company-built churches."
+usfp_gilded_age.15.f: "You couldn't go a single block without seeing one of the company's advertisements or its logo stamped on something. A whole group of workers was fired yesterday, and now many were packing up to move to another state. The company was the only game in town."
+usfp_gilded_age.15.a: "How efficient."
+usfp_gilded_age.15.b: "These companies are exerting too much influence."
 
 usfp_progressive_era.1.t: "Rise of the Progressives"
 usfp_progressive_era.1.d: "The social and economic conditions of the [ROOT.GetCountry.GetName] have prompted calls for reform from all levels of society, which have now begun to coalesce into a greater [SCOPE.sIdeology('progressive_ideology').GetName] cause. Local, state, and even federal officials are now winning elections on a platform of ending corruption and uplifting the general welfare."
@@ -1158,7 +1158,7 @@ usfp_indian_wars.13.d: "Gold, Land, and Manifest Destiny continue to propel our 
 usfp_indian_wars.13.f: ""My heart is a stone: heavy with sadness for my people; cold with the knowledge that no treaty will keep whites out of our lands; hard with the determination to resist as long as I live and breathe."" #Tecumseh
 usfp_indian_wars.13.a: "Settlement and negotiation will bring these lands into civilization."
 usfp_indian_wars.13.b: "The only good Indian is a dead Indian."
-usfp_indian_wars.13.btt: "[Concept('concept_tension', '$concept_tensions$')] with all plains nations increases by #r 50#!"
+usfp_indian_wars.13.btt: "[Concept('concept_tension', '$concept_tensions$')] with all Plains Nations increase by #r 50#!"
 
 usfp_indian_wars.14.t: "Empty Promises"
 usfp_indian_wars.14.d: "[SCOPE.sCulture('reservation_culture').GetName] Indians living on their reservation in [SCOPE.sState('reservation_state').GetName] have lodged complaints against the conditions we have forced them into, citing lack of promised food rations, medical care, and services."

@@ -189,14 +189,14 @@
 	# #Flathead
 	s:STATE_MONTANA = {
 		set_owner_of_provinces = {
-			country = c:FLT
+			country = c:SLS
 			provinces = { x946CC7 x575CCC x41AC27 xEDD51C x99CB13 xF29AB7 x4AA6B6 x358AB3 xB3A111 x9025C8 x7F5540 xC02080 x4F5A4D x9EA705  x6BDFF3 xC0696D x1A505E xB963F3 
 			xCAC122 xC964E5 x5EC3DB xA4DCB6 xDAEDDD xE3FA4D } #x6C53BA
 		}
 	}
 	s:STATE_IDAHO = {
 		set_owner_of_provinces = {
-			country = c:FLT
+			country = c:SLS
 			provinces = { x4B49F2 x0667C7 }
 		}
 	}
@@ -652,7 +652,7 @@
 			provinces = { xEE0358 xDA702A xD1EAE5 xCF67BB xC40501 x95DD40 xC9A9AB xE9AC75 x38DFFE x4D3ACE xE06C22 xE3380D x4EBD49 x4C08A9 xE52F87 }
 		}
 	}
-	#Klamath
+	# Klamath
 	s:STATE_OREGON = {
 		set_owner_of_provinces = {
 			country = c:KLA
@@ -1057,7 +1057,7 @@
 	#Inupiaq
 	s:STATE_ALASKA = {
 		set_owner_of_provinces = {
-			country = c:IPQ
+			country = c:usfp_IPQ
 			provinces = {  x2A1C97 x790E2B x461F1E x4E223C x781474 xCF080C x253F33 x6023B2 x164737 xA01E46 xC31379 x2C4A4D xD11D05 xF504B3 x175438 xB71F67 x5A3AC0 x614A0B 
 			x5B4881 xBF2C65 x8C3A89 xE22284 xC127C3 x196F16 x335E8E x1B7C13 x6B643E x177B79 x6A6A6A xEC3DB7 x8E6A1D x648923 x977569 x239E2F xB37342 x0AAB61 xE665B2 x6A8F99 
 			xA38174 xB97CB3 x5C9E7F x8394A1 x16BF3F xEB7797 xC887C5 xDB87B7 xC39386 x08D187 xF9970B xD997BA xFEA40C xF49BDC x2BEA43 x37E27D xAAC817 x3DEC00 x52D2F1 xA6C859 
@@ -1077,12 +1077,12 @@
 	}
 	s:STATE_YUKON_TERRITORY = {
 		set_owner_of_provinces = {
-			country = c:IPQ
+			country = c:usfp_IPQ
 			provinces = { xE6C75B } #rest handled in global
 		}
 	}
 
-	#Tanana
+	# #Tanana
 	s:STATE_ALASKA = {
 		set_owner_of_provinces = {
 			country = c:TNN

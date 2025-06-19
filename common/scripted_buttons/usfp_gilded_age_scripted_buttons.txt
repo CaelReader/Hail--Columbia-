@@ -108,10 +108,12 @@ usfp_consolidate_trust_button = {
 
 	effect = {
 		set_variable = consolidated_trust
-		add_modifier = {
-			name = usfp_trust_dominance_modifier
-			years = 10
+		je:usfp_gilded_age = {
+			add_modifier = {
+				name = usfp_trust_dominance_modifier
+			}
 		}
+
 		add_radicals = {
 			value = small_radicals
 			pop_type = shopkeepers

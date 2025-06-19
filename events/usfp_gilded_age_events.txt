@@ -1240,10 +1240,10 @@ usfp_gilded_age.14 = {
 		}
 	}
 }
-#Monopoly in state
+#Company Town
 usfp_gilded_age.15 = {
 	type = country_event
-	placement = scope:monopoly_state
+	placement = scope:company_town_state
 
 	title = usfp_gilded_age.15.t
 	desc = usfp_gilded_age.15.d
@@ -1280,6 +1280,12 @@ usfp_gilded_age.15 = {
 			}
 			state_has_building_levels > 20
 		}
+		NOT = {
+			institution_investment_level = {
+				institution = institution_workplace_safety
+				value > 1
+			}
+		}
 	}
 
 	immediate = {
@@ -1300,7 +1306,7 @@ usfp_gilded_age.15 = {
 				}
 				state_has_building_levels > 20
 			}
-			save_scope_as = monopoly_state
+			save_scope_as = company_town_state
 			random_scope_building = {
 				limit = {
 					level > 0
@@ -1314,7 +1320,7 @@ usfp_gilded_age.15 = {
 						is_building_group = bg_subsistence_ranching
 					}
 				}
-				save_scope_as = monopoly_building_scope
+				save_scope_as = company_town_building_scope
 			}
 		}
 	}
@@ -1323,10 +1329,10 @@ usfp_gilded_age.15 = {
 	option = {
 		name = usfp_gilded_age.15.a
 		default_option = yes
-		scope:monopoly_state = {
+		scope:company_town_state = {
 			add_modifier = {
-				name = usfp_monopolistic_business
-				years = 2
+				name = usfp_company_town_state_modifier
+				years = 5
 			}
 		}
 	}
@@ -1343,7 +1349,7 @@ usfp_gilded_age.15 = {
 		show_as_unavailable = {
 			always = yes
 		}
-		scope:monopoly_state = {
+		scope:company_town_state = {
 			add_radicals_in_state = {
 				value = small_radicals
 				strata = upper

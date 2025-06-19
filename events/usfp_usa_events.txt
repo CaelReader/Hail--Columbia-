@@ -1767,9 +1767,6 @@ usfp_usa.23 = {
 				type = je_usfp_american_constitution
 			}
 			add_modifier = {
-				name = usfp_federal_government_modifier
-			}
-			add_modifier = {
 				name = usfp_missouri_compromise_decaying
 				years = 25
 				is_decaying = yes
@@ -1779,17 +1776,17 @@ usfp_usa.23 = {
 				months = 50
 			}
 			add_modifier = {
+				name = usfp_victory_over_nullification_crisis_modifier
+				is_decaying = yes
+				years = 2	
+			}
+			add_modifier = {
 				name = usfp_second_great_awakening
 				is_decaying = yes
 				years = 5
 			}
 			add_modifier = {
 				name = usfp_second_party_system_modifier
-			}
-			add_modifier = {
-				name = usfp_victory_over_nullification_crisis_modifier
-				is_decaying = yes
-				years = 2	
 			}
 			start_enactment = law_type:law_universal_suffrage
 		}

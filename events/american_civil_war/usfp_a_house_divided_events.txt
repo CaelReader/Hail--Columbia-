@@ -1784,7 +1784,12 @@ usfp_a_house_divided.19 = {
 		}
 		usfp_is_afro_american_discriminated = yes
 		game_date > 1847.12.3 #The North Star founded
-		NOT = {
+		OR = {
+			NOT = {
+				any_character = {
+					has_template = agitator_frederick_douglass
+				}
+			}
 			any_scope_character = {
 				has_template = agitator_frederick_douglass
 			}
@@ -1792,18 +1797,28 @@ usfp_a_house_divided.19 = {
 	}
 
 	immediate = {
-		create_character = {
-			template = agitator_frederick_douglass
-			is_agitator = yes
-			on_created = {
-				set_variable = douglass_var
-				set_variable = { name = temp_event_target_in_use years = 4 }
+		if = {
+			limit = { 
+				NOT = {
+					any_character = {
+						has_template = agitator_frederick_douglass
+					}
+				}
+			}
+			create_character = {
+				template = agitator_frederick_douglass
+				is_agitator = yes
+				on_created = {
+					set_variable = { name = temp_event_target_in_use years = 4 }
+				}
 			}
 		}
+
 		random_scope_character = {
 			limit = {
-				has_variable = douglass_var
+				has_template = agitator_frederick_douglass
 			}
+			set_variable = { name = temp_event_target_in_use years = 4 }
 			save_scope_as = douglass_scope
 		}
 		cu:afro_american = {

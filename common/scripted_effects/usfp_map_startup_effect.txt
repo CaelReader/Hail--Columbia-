@@ -28,9 +28,9 @@
 		region_state:USA = {
 			set_state_owner = c:GVT
 		}
-		region_state:SLS = {
-			set_state_owner = c:FLT
-		}
+		# region_state:SLS = {
+		# 	set_state_owner = c:FLT
+		# }
 	}
 	s:STATE_UTAH = {
 		region_state:MEX = {
@@ -73,9 +73,9 @@
 	}
 	s:STATE_YUKON_TERRITORY = {
 		region_state:HBC = {
-			set_state_owner = c:IPQ
+			set_state_owner = c:usfp_IPQ
 		}
-		region_state:IPQ = {
+		region_state:usfp_IPQ = {
 			add_culture_standard_of_living_modifier = {
 				culture = cu:athabaskan
 				multiplier = 7
@@ -136,7 +136,7 @@
 
 	#Yukon
 	s:STATE_YUKON_TERRITORY = {
-		region_state:IPQ = {
+		region_state:usfp_IPQ = {
 			kill_population_percent_in_state = {
 				percent = 1 #redistribute 12k Athabaskans to other tags
 			}
@@ -176,7 +176,7 @@
 				limit = {
 					culture = cu:inuit
 				}
-				move_pop = s:STATE_ALASKA.region_state:IPQ
+				move_pop = s:STATE_ALASKA.region_state:usfp_IPQ
 			}
 		}
 		region_state:KYK = {
@@ -250,5 +250,28 @@
 		region_state:INK = {
 			add_modifier = usfp_arctic_subsistence_modifier
 		}
+	}
+
+	### I've run into a 420 country limit, so I'm consolidating some less important tags
+	c:ATB = {
+		annex = c:TNN
+		annex = c:KYK
+		annex = c:AHT
+		annex = c:TTC
+	}
+
+	c:SAL = {
+		annex = c:LLT
+		annex = c:YKM
+	}
+
+	c:INV = {
+		annex = c:usfp_IPQ
+	}
+
+	c:SVY = {
+		annex = c:DGB
+		annex = c:STU
+		annex = c:GWC
 	}
 }

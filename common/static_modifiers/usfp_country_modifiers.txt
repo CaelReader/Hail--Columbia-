@@ -484,7 +484,7 @@ usfp_federal_corruption_modifier = {
 
 usfp_trust_dominance_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
-	country_max_companies_add = 1
+	country_free_charters_add = 2
 	country_company_construction_efficiency_bonus_add = 0.10
 	state_construction_mult = -0.05
 	country_bureaucracy_mult = -0.10

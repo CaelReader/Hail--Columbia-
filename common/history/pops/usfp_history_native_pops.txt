@@ -268,7 +268,7 @@
 
 	#Flathead
 	s:STATE_IDAHO = {
-		region_state:FLT = {
+		region_state:SLS = {
 			create_pop = {
 				culture = salish
 				size = 500 #filler

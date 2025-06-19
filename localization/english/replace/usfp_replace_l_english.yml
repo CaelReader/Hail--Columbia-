@@ -88,5 +88,7 @@ je_acw_reconstruction_status_failure: "The white supremacist #bold Redeemers#! t
 
 BNN:0 "Shoshone"
 BNN_ADJ:0 "Shoshoni"
-ATB: "Deg Xit'an"
-ATB_ADJ: "Deg Xit'an"
+# ATB: "Deg Xit'an"
+# ATB_ADJ: "Deg Xit'an"
+SLS: "Flathead"
+SLS_ADJ: "Flathead"

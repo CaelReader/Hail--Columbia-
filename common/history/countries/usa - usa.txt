@@ -90,11 +90,14 @@
 			is_decaying = yes
 			years = 5
 		}
-		je:je_usfp_american_constitution = {
-			add_modifier = {
-				name = usfp_second_party_system_modifier
-			}
+		add_modifier = {
+			name = usfp_second_party_system_modifier
 		}
+		# je:je_usfp_american_constitution = {
+		# 	add_modifier = {
+		# 		name = usfp_second_party_system_modifier
+		# 	}
+		# }
 		add_modifier = {
 			name = usfp_victory_over_nullification_crisis_modifier
 			is_decaying = yes
@@ -178,7 +181,7 @@
 		}
 
 
-		set_variable = usfp_achievements_possible
+		# set_variable = usfp_achievements_possible
 		set_variable = {
 			name = usfp_dead_presidents_var
 			value = 0

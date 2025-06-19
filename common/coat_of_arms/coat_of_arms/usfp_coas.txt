@@ -675,7 +675,7 @@ BNN = {
 # 	}
 # }
 
-IPQ = {
+usfp_IPQ = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -1605,7 +1605,7 @@ KTN = {
 	}
 }
 
-FLT = {
+SLS = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	

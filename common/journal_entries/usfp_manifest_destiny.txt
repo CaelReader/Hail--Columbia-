@@ -68,6 +68,12 @@ usfp_manifest_destiny_main = {
 			popup = yes
 		}
 		remove_modifier = usfp_manifest_destiny_modifier
+		show_as_tooltip = {
+			add_radicals = {
+				value = very_large_radicals
+			}
+			usfp_remove_manifest_destiny_claims_effect = yes
+		}
 	}
 
 	invalid = {
@@ -476,6 +482,7 @@ usfp_manifest_destiny_main = {
 			100 = usfp_manifest_destiny.28 #Prairie Madness
 			100 = usfp_indian_postremoval.6 #Osage Oil Wealth
 			100 = usfp_indian_postremoval.7 #Osage Reign of Terror
+			50 = usfp_native_removal.16 #Northern Removal in case Michigan is slow to colonize
 		}
 		events = {
 			# usfp_manifest_destiny.6 #Treaty of GH

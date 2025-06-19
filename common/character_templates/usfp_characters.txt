@@ -926,3 +926,22 @@ usfp_usa_winfield_hancock = {
         brave arrogant experienced_defensive_strategist
     }
 }
+
+USA_winfield_scott = {
+	first_name = Winfield
+	last_name = Scott
+	historical = yes
+	culture = cu:dixie
+	birth_date = 1786.6.13
+	dna = dna_winfield_scott
+	is_general = yes
+	ig_leader = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_abolitionist
+	hq = region_new_england
+	traits = {
+		traditionalist_commander
+		basic_diplomat
+		cautious
+	}
+}

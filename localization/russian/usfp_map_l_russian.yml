@@ -75,8 +75,8 @@
  TLT_ADJ: "Tahltan" #NT!
  TTC: "Tutchone" #NT!
  TTC_ADJ: "Tutchone" #NT!
- IPQ: "Iñupiat Nunaat" #NT!
- IPQ_ADJ: "Iñupiat" #NT!
+ usfp_IPQ: "Iñupiat Nunaat" #NT!
+ usfp_IPQ_ADJ: "Iñupiat" #NT!
  KYK: "Koyukon" #NT!
  KYK_ADJ: "Koyukon" #NT!
  TNN: "Tanana" #NT!

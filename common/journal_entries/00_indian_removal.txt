@@ -95,6 +95,11 @@
 
 		}
 	}
+
+	custom_completion_header = je_indian_removal_complete_header
+	custom_on_completion_header = je_indian_removal_on_complete_header
+	custom_failure_header = je_indian_removal_failure_header
+	custom_on_failure_header = je_indian_removal_on_failure_header
 	
 	on_complete = {
 		custom_tooltip = {

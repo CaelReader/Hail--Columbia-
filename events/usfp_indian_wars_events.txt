@@ -1321,31 +1321,18 @@ usfp_indian_wars.13 = {
 		}
 		custom_tooltip = {
 			text = usfp_indian_wars.13.btt
-			every_scope_state = {
+			every_decentralized_country = {
 				limit = {
-					region = sr:region_great_plains
-					state_region = {
-						any_scope_state = {
-							owner = {
-								is_country_type = decentralized
-							}
-						}
+					capital = {
+						region = sr:region_great_plains
+					}
+					any_neighbouring_state = {
+						owner = root
 					}
 				}
-				state_region = {
-					every_scope_state = {
-						limit = {
-							owner = {
-								is_country_type = decentralized
-							}
-						}
-						owner = {
-							change_tension = {
-								country = root
-								value = 50
-							}
-						}
-					}
+				change_tension = {
+					country = root
+					value = 50
 				}
 			}
 		}
