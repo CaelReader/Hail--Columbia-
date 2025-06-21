@@ -875,6 +875,25 @@ usfp_bleeding_kansas.10 = {
 					exists = c:CSA
 				}
 				set_state_owner = c:CSA
+				s:STATE_KANSAS = {
+					add_claim = c:USA
+				}
+				random_diplomatic_play = {
+					limit = {
+						any_scope_play_involved = {
+							this = c:CSA
+						}
+						any_scope_play_involved = {
+							this = c:USA
+						}
+					}
+					add_war_goal = {
+						holder = c:USA
+						type = return_state
+						target_state = s:STATE_KANSAS.region_state:CSA
+						primary_demand = yes
+					}
+				}
 			}
 		}
 		if = {
@@ -885,6 +904,25 @@ usfp_bleeding_kansas.10 = {
 			 s:STATE_MISSOURI.region_state:USA = {
 				set_state_owner = c:CSA
 			 }
+			 s:STATE_MISSOURI = {
+				add_claim = c:USA
+			}
+			random_diplomatic_play = {
+				limit = {
+					any_scope_play_involved = {
+						this = c:CSA
+					}
+					any_scope_play_involved = {
+						this = c:USA
+					}
+				}
+				add_war_goal = {
+					holder = c:USA
+					type = return_state
+					target_state = s:STATE_MISSOURI.region_state:CSA
+					primary_demand = yes
+				}
+			}
 		}
 		hidden_effect = {
 			usfp_cleanup_bleeding_kansas_variables = yes
