@@ -433,7 +433,7 @@ usfp_character_is_natural_born_citizen = {
 		}
 		root = {
 			OR = {
-				culture = cu:afro_american
+				scope:check_character.culture = cu:afro_american
 				any_scope_state = {
 					is_incorporated = yes
 						state_region = {
