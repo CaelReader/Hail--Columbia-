@@ -4,4 +4,7 @@
 		christian
 	}
 	color = { 0.2 0.35 0.45 }
+	taboos = {
+		liquor tea coffee
+	}
 }

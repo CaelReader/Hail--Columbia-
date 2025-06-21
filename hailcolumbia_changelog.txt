@@ -496,3 +496,11 @@ Fixes
 	Fixed script error from character interaction
 	William Walker won't invade a Mexico that is subject to the USA
 	North Star event can occur even if Douglass spawns early
+
+4.7 "Sitting Bull"
+Electing an Abolitionist or trying to enact Slavery Banned will remove the modifier from the Missouri Compromise JE
+Added Liquor, Tea, and Coffee taboos to Mormon religion
+Yankees and Dixies now always count as natural-born citizens
+Afro-Americans under CE now count as natural-born citizens even if their homelands are unincorporated (ie, after the civil war)
+(Tecumseh's Legacy) updated conscription effect on Bones of Our Fathers IG Trait
+(Hopefully) fixed some cases where the CSA would somehow survive losing the civil war

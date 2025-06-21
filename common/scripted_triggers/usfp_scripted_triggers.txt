@@ -423,14 +423,22 @@ usfp_is_afro_american_discriminated = {
 usfp_character_is_natural_born_citizen = {
 	save_temporary_scope_as = check_character
 	OR = {
-		culture = {
-			is_primary_culture_of = root
+		OR = {
+			culture = {
+				is_primary_culture_of = root
+			}
+			culture = cu:yankee
+			culture = cu:dixie
+			culture = cu:usfp_american
 		}
 		root = {
-			any_scope_state = {
-				is_incorporated = yes
-				state_region = {
-					is_homeland = scope:check_character.culture
+			OR = {
+				culture = cu:afro_american
+				any_scope_state = {
+					is_incorporated = yes
+						state_region = {
+							is_homeland = scope:check_character.culture
+						}
 				}
 			}
 			OR = {

@@ -91,7 +91,7 @@ company_usfp_coca_cola = {
 	preferred_headquarters = { STATE_GEORGIA STATE_TENNESSEE }
 
 	building_types = {
-		building_food_industry
+		building_food_industry #COCA COLA! COCA COLA DON'T FORGET THE ICE!
 	}
 
 	extension_building_types = {

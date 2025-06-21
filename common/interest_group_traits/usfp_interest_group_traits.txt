@@ -171,7 +171,7 @@ usfp_ig_trait_native_defenders = {
 	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
 	min_approval = loyal
 	modifier = {
-		state_conscription_rate_mult = 0.10
+		state_conscription_rate_add = 0.10
 		unit_army_defense_mult = 0.10
 	}
 }
