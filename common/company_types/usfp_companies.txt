@@ -1017,3 +1017,73 @@ company_usfp_us_rubber = {
 		value = 1
 	}
 }
+
+#USFP: Warner Bros
+company_usfp_us_warner_bros = {
+	icon = "gfx/interface/icons/company_icons/usfp_company_warner_bros.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_CALIFORNIA }
+
+	building_types = {
+		building_arts_academy
+	}
+
+	extension_building_types = {
+		building_synthetics_plants
+	}
+
+	possible_prestige_goods = {
+		prestige_good_usfp_hollywood_movies
+	}
+
+	potential = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = mass_propaganda
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_arts_academy
+				level >= 5
+				has_active_production_method = pm_film_art
+			}
+			state_region = s:STATE_CALIFORNIA
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.15
+		state_loyalism_increases_full_acceptance_mult = 0.10
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_arts_academy
+				level >= 5
+			}
+			state_region = s:STATE_CALIFORNIA
+		}
+	}
+
+	ai_construction_targets = {
+		building_rubber_plantation = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}

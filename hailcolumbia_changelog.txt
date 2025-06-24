@@ -506,11 +506,13 @@ Afro-Americans under CE now count as natural-born citizens even if their homelan
 (Hopefully) fixed some cases where the CSA would somehow survive losing the civil war
 
 4.8 "Sitting Bull"
-New Companies: DuPont de Nemours, American Sugar Refining Company, Anaconda Mining Company, American Tobacco Company, American Woolen Company, Armour and Company, Colorado Fuel & Iron, Sears, Roebuck and Co., Singer Manufacturing Company, Union Pacific Railroad, United States Rubber Company
-New Prestige Goods: Coca-Cola, Durham Tobacco
+New Companies: DuPont de Nemours, American Sugar Refining Company, Anaconda Mining Company, American Tobacco Company, American Woolen Company, Armour and Company, Colorado Fuel & Iron, Sears, Roebuck and Co., Singer Manufacturing Company, Union Pacific Railroad, United States Rubber Company, WArner Bros Pictures
+New Prestige Goods: Coca-Cola, Durham Tobacco, Hollywood Movies
 Executives can now spawn up to 10 years earlier than OTL and for the generic versions of their companies
 AI USA should prioritize Colonial Affairs
 Added 1 year cooldown to the Homestead Acts button
 Updated pro and anti-expansion tooltips
 Fixed some errors related to adding homelands to states
+Positivist Movement should no longer spawn in the USA
+Radical Abolitionists now join the Afro-American National Movement even if they're white
 Updated Korean localization (thanks to 케말 파샤)

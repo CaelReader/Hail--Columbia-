@@ -17,6 +17,7 @@ Hail, Columbia! is a United States Flavor Pack, including overhauled and expande
 [*][b]New flavor events[/b] for the US, such as the Seneca Falls Convention and the Great Chicago Fire, as well as various american natural disasters like wildfires and tornadoes. The mod includes [b]over 100 new events[/b] in total.
 [*]Overhauled Ideologies and Traits for American IGs, including [b]new alternate IG Traits[/b] unlocked during a playthrough.
 [*]Historical agitators, commanders, and politicians for America, including every historical president from Martin Van Buren to FDR.
+[*]New flavored companies for the USA including DuPont, Sears, and Coca-Cola.
 [*]Tweaks to the american political system, including a Term Limit for presidents, dynamic party names, and Constitutional precedents.
 [/list]
 

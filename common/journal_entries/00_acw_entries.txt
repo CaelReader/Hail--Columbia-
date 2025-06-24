@@ -660,7 +660,7 @@ je_acw_reconstruction = {
 je_acw_wild_wild_west = {
 	icon = "gfx/interface/icons/war_goals/take_colony.dds"
 
-	group = je_group_usa_american_civil_war
+	group = je_group_usa_manifest_destiny
 
 	complete = {
 		scope:journal_entry = {

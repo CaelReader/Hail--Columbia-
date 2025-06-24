@@ -1440,18 +1440,28 @@ usfp_a_house_divided.15 = {
                 civil_war_progress > 0.50
             }
 		}
-		has_modifier = usfp_second_party_system_modifier
+		has_variable = whigs_party
 		in_election_campaign = no
+		has_journal_entry = je_usfp_american_constitution
 	}
 
 
 	option = {
 		name = usfp_a_house_divided.15.a
 		default_option = yes
-		remove_modifier = usfp_second_party_system_modifier
+		if = {
+			limit = { has_modifier = usfp_second_party_system_modifier }
+			remove_modifier = usfp_second_party_system_modifier
+		}
+		je:je_usfp_american_constitution = {
+			remove_modifier = usfp_second_party_system_modifier
+		}
 		custom_tooltip = usfp_a_house_divided.15.a.tt
-		add_modifier = {
-			name = usfp_third_party_system_modifier
+		remove_variable = whigs_party
+		je:je_usfp_american_constitution = {
+			add_modifier = {
+				name = usfp_third_party_system_modifier
+			}
 		}
 		ig:ig_landowners = {
 			add_modifier = {
