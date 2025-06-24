@@ -605,6 +605,12 @@ ai_strategy_monroe_doctrine = {
 		dominate = 0.5
 		protect = 0.0
 	}
+
+	institution_scores = {
+		institution_colonial_affairs = {	
+			value = 500			
+		}								
+	}
 }
 
 ai_strategy_pacific_empire = {
@@ -1081,5 +1087,11 @@ ai_strategy_pacific_empire = {
 			}
 		}
 
+	}
+	
+	institution_scores = {
+		institution_colonial_affairs = {	
+			value = 500			
+		}								
 	}
 }

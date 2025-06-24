@@ -28,17 +28,19 @@ usfp_western_purchase_button = {
 		}
 	}
 
+	cooldown = { years = 3 }
+
 	possible = {
 		custom_tooltip = {
 			text = enough_manifest_destiny
 			var:manifest_destiny_var > 2
 		}
-		custom_tooltip = {
-			text = usa_western_purchase_var
-			NOT = {
-				has_variable = usa_western_purchase_var
-			}
-		}
+		# custom_tooltip = {
+		# 	text = usa_western_purchase_var
+		# 	NOT = {
+		# 		has_variable = usa_western_purchase_var
+		# 	}
+		# }
 
 		in_default = no
 		taking_loans = no
@@ -54,10 +56,10 @@ usfp_western_purchase_button = {
 		custom_tooltip = {
 			text = mexican_payment_cost
 		}
-		set_variable = {
-			name = usa_western_purchase_var
-			years = 3
-		}
+		# set_variable = {
+		# 	name = usa_western_purchase_var
+		# 	years = 3
+		# }
 		c:MEX = {
 			trigger_event = {
 				id = usfp_manifest_destiny.3
@@ -222,6 +224,8 @@ usfp_homestead_act_button = {
 		has_variable = manifest_destiny_var
 		game_date < 1910.1.1
 	}
+
+	cooldown = { days = 365 }
 
 	possible = {
 		has_law = law_type:law_homesteading

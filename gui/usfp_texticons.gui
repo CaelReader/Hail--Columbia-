@@ -6,3 +6,23 @@ texticon = {
 	  fontsize = 30
 	}
   }
+
+texticon = {
+	icon = prestige_good_usfp_coca_cola
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/usfp_coca_cola_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_usfp_durham_tobacco
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/usfp_durham_tobacco_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}

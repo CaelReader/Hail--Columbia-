@@ -563,7 +563,9 @@ usfp_a_house_divided.7 = {
 				}
 				liberate_slaves = yes
 			}
-			add_homeland = cu:yankee
+			state_region = {
+				add_homeland = cu:yankee
+			}
 			if = {
 				limit = { 
 					state_is_eligible_as_mass_migration_target = yes
@@ -710,7 +712,9 @@ usfp_a_house_divided.8 = {
 				}
 				set_state_type = incorporated
 			}
-			add_homeland = cu:yankee
+			state_region = {
+				add_homeland = cu:yankee
+			}
 			if = {
 				limit = { 
 					state_is_eligible_as_mass_migration_target = yes

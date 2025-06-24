@@ -504,3 +504,12 @@ Yankees and Dixies now always count as natural-born citizens
 Afro-Americans under CE now count as natural-born citizens even if their homelands are unincorporated (ie, after the civil war)
 (Tecumseh's Legacy) updated conscription effect on Bones of Our Fathers IG Trait
 (Hopefully) fixed some cases where the CSA would somehow survive losing the civil war
+
+4.8 "Sitting Bull"
+New Companies: DuPont de Nemours, American Sugar Refining Company, Anaconda Mining Company, American Tobacco Company, American Woolen Company, Armour and Company, Colorado Fuel & Iron, Sears, Roebuck and Co., Singer Manufacturing Company, Union Pacific Railroad, United States Rubber Company
+New Prestige Goods: Coca-Cola, Durham Tobacco
+Executives can now spawn up to 10 years earlier than OTL and for the generic versions of their companies
+AI USA should prioritize Colonial Affairs
+Added 1 year cooldown to the Homestead Acts button
+Fixed some errors related to adding homelands to states
+Updated Korean localization (thanks to 케말 파샤)

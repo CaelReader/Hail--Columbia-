@@ -721,6 +721,12 @@ usfp_mormon.9 = {
 		scope:republican_party_scope = {
 			add_momentum = momentum_small
 		}
+		c:DES ?= {
+			change_relations = {
+				country = root
+				value = -10
+			}
+		}
 	}
 	#these aren't real issues
 	option = {
@@ -728,6 +734,12 @@ usfp_mormon.9 = {
 		add_radicals = {
 			value = small_radicals
 			religion = rel:protestant
+		}
+		c:DES ?= {
+			change_relations = {
+				country = root
+				value = -10
+			}
 		}
 	}
 }
@@ -918,10 +930,7 @@ usfp_mormon.12 = {
 		s:STATE_UTAH = {
 			every_scope_state = {
 				limit = {
-					OR = {
-						owner = c:DES
-						owner = root
-					}
+					owner = root
 				}
 				add_modifier = {
 					name = usfp_lds_church_utah

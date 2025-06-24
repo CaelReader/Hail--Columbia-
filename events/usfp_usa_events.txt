@@ -655,7 +655,7 @@ usfp_usa.8 = {
 				is_in_government = no
 				is_marginal = no
 				has_party = yes
-				party = scope:republican_party_scope
+				party ?= scope:republican_party_scope
 			}
 			OR = {
 				has_law = law_type:law_censorship

@@ -1,4 +1,6 @@
-overrides all vanilla US characters, including votp agitators
+common/character_templates/country_usa.txt
+USA agitator templates from VOTP
+BIC_swami_vivkananda
 
 resign_from_office #to prevent cheesing Slavery Banned
 

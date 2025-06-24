@@ -45,7 +45,7 @@ ecchi_usa_colt_character_template = {
         company_trigger = {
             is_company_type = company_type:company_colt_firearms
         }
-        earliest_usage_date = 1847.1.1
+        earliest_usage_date = 1837.1.1 #USFP: up to 10 years early
         latest_usage_date = 1862.1.10
         chance = 50
     }
@@ -72,7 +72,7 @@ ecchi_cal_strauss_character_template = {
         company_trigger = {
             is_company_type = company_type:company_basic_textiles
         }
-        earliest_usage_date = 1870.1.1
+        earliest_usage_date = 1860.1.1 #USFP: up to 10 years early
         latest_usage_date = 1902.9.26
         chance = 75
     }
@@ -111,7 +111,7 @@ ecchi_usa_browning_character_template = {
                 is_company_type = company_type:company_basic_metalworks
             }
         }
-        earliest_usage_date = 1880.1.1
+        earliest_usage_date = 1870.1.1 #USFP: up to 10 years early
         latest_usage_date = 1926.11.26
         chance = 75
     }
@@ -141,7 +141,7 @@ ecchi_usa_westinghouse_character_template = {
 				is_company_type = company_type:company_basic_electrics
             }
         }
-        earliest_usage_date = 1880.1.1
+        earliest_usage_date = 1870.1.1 #USFP: up to 10 years early
         latest_usage_date = 1914.3.12
         chance = 75
     }
@@ -177,9 +177,9 @@ ecchi_usa_barnum_character_template = {
             c:USA ?= this
         }
         company_trigger = {
-            always = no #no generic arts company?
+            is_company_type = company_type:company_basic_paper
         }
-        earliest_usage_date = 1865.1.1
+        earliest_usage_date = 1865.1.1 
         latest_usage_date = 1891.4.7
         chance = 30
     }
@@ -243,7 +243,7 @@ ecchi_usa_hearst_character_template = {
                 is_company_type = company_type:company_basic_paper
             }
         }
-		earliest_usage_date = 1895.1.1
+		earliest_usage_date = 1895.1.1 
         latest_usage_date = 1951.8.14
         chance = 75
 	}
@@ -258,7 +258,7 @@ ecchi_usa_astor_character_template = {
     religion = protestant
     ideology = ideology_jingoist_leader
     interest_group = ig_landowners
-    birth_date = 1763.7.17
+    birth_date = 1864.7.13
 	dna = ecchi_dna_john_jacob_astor
     traits = { expensive_tastes ambitious meticulous }
     interest_group_leader_usage = {
@@ -274,8 +274,8 @@ ecchi_usa_astor_character_template = {
 			}
             ig_hasnt_chosen_ideology_trigger = yes
         }
-        earliest_usage_date = 1936.1.1
-        latest_usage_date = 1848.3.29
+        earliest_usage_date = 1894.1.1
+        latest_usage_date = 1912.4.15 #titanic rip
         chance = 75
     }
 	executive_usage = {
@@ -287,8 +287,8 @@ ecchi_usa_astor_character_template = {
                 is_company_type = company_type:company_basic_shipyards
             }
 		}
-        earliest_usage_date = 1936.1.1
-        latest_usage_date = 1848.3.29
+        earliest_usage_date = 1894.1.1
+        latest_usage_date = 1912.4.15 #titanic rip
         chance = 75
 	}
 }
