@@ -511,5 +511,6 @@ New Prestige Goods: Coca-Cola, Durham Tobacco
 Executives can now spawn up to 10 years earlier than OTL and for the generic versions of their companies
 AI USA should prioritize Colonial Affairs
 Added 1 year cooldown to the Homestead Acts button
+Updated pro and anti-expansion tooltips
 Fixed some errors related to adding homelands to states
 Updated Korean localization (thanks to 케말 파샤)

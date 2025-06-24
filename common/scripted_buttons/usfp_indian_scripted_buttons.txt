@@ -258,7 +258,7 @@ usfp_break_treaty_button = {
 
 	possible = {
 		ruler = {
-			usfp_manifest_destiny_anti_expansion_trigger = no
+			usfp_manifest_destiny_not_anti_expansion_trigger = yes
 		}
 	}
 

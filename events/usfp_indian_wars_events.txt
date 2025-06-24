@@ -1071,7 +1071,7 @@ usfp_indian_wars.10 = {
 		name = usfp_indian_wars.10.b
 		trigger = {
 			ruler = {
-				usfp_manifest_destiny_pro_expansion_trigger = no
+				usfp_manifest_destiny_not_pro_expansion_trigger = yes
 			}
 		}
 		highlighted_option = yes
@@ -1238,7 +1238,6 @@ usfp_indian_wars.12 = {
 	option = {
 		name = usfp_indian_wars.12.a
 		default_option = yes
-		remove_modifier = usfp_indian_agencies_modifier
 		add_modifier = {
 			name = usfp_indian_boarding_schools_modifier
 			years = 100
@@ -1258,7 +1257,6 @@ usfp_indian_wars.12 = {
 			has_law = law_type:law_multicultural
 		}
 		highlighted_option = yes
-		remove_modifier = usfp_indian_agencies_modifier
 		usfp_enable_american_indian_culture = yes
 		s:STATE_OKLAHOMA = {
 			add_claim = root
@@ -1298,9 +1296,10 @@ usfp_indian_wars.13 = {
 		name = usfp_indian_wars.13.a
 		default_option = yes
 		usfp_manifest_more_destiny_low_effect = yes
-		add_modifier = {
-			name = usfp_indian_agencies_modifier
-			years = 20
+		je:usfp_je_indian_wars = {
+			add_modifier = {
+				name = usfp_indian_agencies_modifier
+			}
 		}
 		ai_chance = {
 			base = 100
@@ -1313,10 +1312,7 @@ usfp_indian_wars.13 = {
 		show_as_unavailable = {always = yes}
 		trigger = {
 			ruler = {
-				OR = {
-					usfp_manifest_destiny_pro_expansion_trigger = yes
-					has_trait = bigoted
-				}
+				usfp_manifest_destiny_pro_expansion_or_bigoted_trigger = yes
 			}
 		}
 		custom_tooltip = {
@@ -1366,7 +1362,9 @@ usfp_indian_wars.14 = {
 	duration = 3
 
 	trigger = {
-		has_modifier = usfp_indian_agencies_modifier
+		je:usfp_je_indian_wars = {
+			has_modifier = usfp_indian_agencies_modifier
+		}
 		any_scope_state = {
 			any_scope_pop = {
 				culture = {
@@ -1380,7 +1378,6 @@ usfp_indian_wars.14 = {
 
 	cancellation_trigger = {
 		NOT = {
-			has_modifier = usfp_indian_agencies_modifier
 			has_journal_entry = usfp_je_indian_wars
 		}
 	}

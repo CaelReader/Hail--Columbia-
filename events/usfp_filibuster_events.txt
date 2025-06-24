@@ -293,7 +293,7 @@ usfp_filibuster.3 = {
 		set_global_variable = walker_imprisoned
 		trigger = {
 			ruler = {
-				usfp_manifest_destiny_pro_expansion_trigger = no
+				usfp_manifest_destiny_not_pro_expansion_trigger = yes
 			}
 		}
 		every_interest_group = {

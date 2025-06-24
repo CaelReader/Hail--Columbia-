@@ -1,38 +1,73 @@
 ﻿usfp_manifest_destiny_pro_expansion_trigger = {
-	OR = {
-		has_ideology = ideology:ideology_jacksonian_democrat
-		has_ideology = ideology:ideology_jingoist_leader
-		has_ideology = ideology:ideology_authoritarian
-		has_ideology = ideology:ideology_fascist
-		has_ideology = ideology:ideology_slaver
-		has_ideology = ideology:ideology_usfp_social_darwinist_leader
-		has_trait = usfp_trait_expansionist
-	}
-	NOT = {
-		has_trait = usfp_trait_antiexpansionist
-	}
-	hidden_trigger = {
+	custom_description = {
+		text = usfp_manifest_destiny_pro_expansion_trigger
+		subject = this
+		OR = {
+			has_ideology = ideology:ideology_jacksonian_democrat
+			has_ideology = ideology:ideology_jingoist_leader
+			has_ideology = ideology:ideology_authoritarian
+			has_ideology = ideology:ideology_fascist
+			has_ideology = ideology:ideology_slaver
+			has_ideology = ideology:ideology_usfp_social_darwinist_leader
+			has_trait = usfp_trait_expansionist
+		}
 		NOT = {
-			has_trait = trait_child
+			has_trait = usfp_trait_antiexpansionist
+		}
+		hidden_trigger = {
+			NOT = {
+				has_trait = trait_child
+			}
 		}
 	}
 }
 
-usfp_manifest_destiny_anti_expansion_trigger = {
-	OR = {
-		has_ideology = ideology:ideology_pacifist
-		has_ideology = ideology:ideology_anarchist
-		has_ideology = ideology:ideology_humanitarian
-		has_ideology = ideology:ideology_humanitarian_royalist
-		has_trait = usfp_trait_antiexpansionist
-	}
-	NOT = {
-		has_trait = usfp_trait_expansionist
-	}
-	hidden_trigger = {
-		NOT = {
-			has_trait = trait_child
+usfp_manifest_destiny_pro_expansion_or_bigoted_trigger = {
+	custom_description = {
+		text = usfp_manifest_destiny_pro_expansion_or_bigoted_trigger
+		subject = this
+		OR = {
+			usfp_manifest_destiny_pro_expansion_trigger = yes
+			has_trait = bigoted
 		}
+	}
+}
+
+usfp_manifest_destiny_not_pro_expansion_trigger = {
+	custom_description = {
+		text = usfp_manifest_destiny_not_pro_expansion_trigger
+		subject = this
+		usfp_manifest_destiny_pro_expansion_trigger = no
+	}
+}
+
+usfp_manifest_destiny_anti_expansion_trigger = {
+	custom_description = {
+		text = usfp_manifest_destiny_anti_expansion_trigger
+		subject = this
+		OR = {
+			has_ideology = ideology:ideology_pacifist
+			has_ideology = ideology:ideology_anarchist
+			has_ideology = ideology:ideology_humanitarian
+			has_ideology = ideology:ideology_humanitarian_royalist
+			has_trait = usfp_trait_antiexpansionist
+		}
+		NOT = {
+			has_trait = usfp_trait_expansionist
+		}
+		hidden_trigger = {
+			NOT = {
+				has_trait = trait_child
+			}
+		}
+	}
+}
+
+usfp_manifest_destiny_not_anti_expansion_trigger = {
+	custom_description = {
+		text = usfp_manifest_destiny_not_anti_expansion_trigger
+		subject = this
+		usfp_manifest_destiny_anti_expansion_trigger = no
 	}
 }
 
