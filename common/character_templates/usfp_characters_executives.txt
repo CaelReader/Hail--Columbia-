@@ -24,31 +24,31 @@ ecchi_usa_chrysler_character_template = {
     }
 }
 
-#USFP: executive instead of IG Leader
+#samuel colt is now a Characters of Commerce character
 ecchi_usa_colt_character_template = {
-    first_name = Samuel
-    last_name = ecchi_Colt
-    historical = yes
-    culture = cu:yankee
-    female = no
-    religion = protestant
-    ideology = ideology_jingoist_leader
-    interest_group = ig_industrialists
-	dna = ecchi_dna_samuel_colt
-    birth_date = 1814.7.19
-    traits = { innovative persistent kidney_stones experienced_entrepreneur }
-    executive_usage = {
-        country_trigger = {
-            exists = c:USA
-            this = c:USA
-        }
-        company_trigger = {
-            is_company_type = company_type:company_colt_firearms
-        }
-        earliest_usage_date = 1837.1.1 #USFP: up to 10 years early
-        latest_usage_date = 1862.1.10
-        chance = 50
-    }
+    # first_name = Samuel
+    # last_name = ecchi_Colt
+    # historical = yes
+    # culture = cu:yankee
+    # female = no
+    # religion = protestant
+    # ideology = ideology_jingoist_leader
+    # interest_group = ig_industrialists
+	# dna = ecchi_dna_samuel_colt
+    # birth_date = 1814.7.19
+    # traits = { innovative persistent kidney_stones experienced_entrepreneur }
+    # executive_usage = {
+    #     country_trigger = {
+    #         exists = c:USA
+    #         this = c:USA
+    #     }
+    #     company_trigger = {
+    #         is_company_type = company_type:company_colt_firearms
+    #     }
+    #     earliest_usage_date = 1837.1.1 #USFP: up to 10 years early
+    #     latest_usage_date = 1862.1.10
+    #     chance = 50
+    # }
 }
 
 #USFP: executive instead of IG Leader
@@ -298,6 +298,7 @@ usfp_usa_jay_gould = {
     first_name = Jason
     last_name = Gould
     historical = yes
+    dna = usfp_jay_gould
     culture = cu:yankee
     female = no
     religion = protestant
@@ -338,6 +339,7 @@ usfp_usa_thomas_fortune_ryan = {
     first_name = Thomas
     last_name = Ryan
     historical = yes
+    dna = usfp_thomas_fortune_ryan
     culture = cu:dixie
     female = no
     religion = catholic
@@ -370,6 +372,7 @@ usfp_usa_william_a_clark = {
     first_name = William
     last_name = Clark
     historical = yes
+    dna = usfp_william_a_clark
     culture = cu:yankee
     female = no
     religion = protestant
@@ -401,6 +404,7 @@ usfp_usa_john_d_ryan = {
     first_name = John
     last_name = Ryan
     historical = yes
+    dna = usfp_john_d_ryan
     culture = cu:yankee
     female = no
     religion = protestant
@@ -431,6 +435,7 @@ usfp_usa_henry_du_pont = {
     first_name = Henry
     last_name = du_Pont
     historical = yes
+    dna = usfp_henry_du_pont
     culture = cu:yankee
     female = no
     religion = protestant
@@ -460,6 +465,7 @@ usfp_usa_jack_warner = {
     first_name = Jack
     last_name = Warner
     historical = yes
+    dna = usfp_jack_warner
     culture = cu:ashkenazi
     female = no
     religion = jewish
@@ -478,7 +484,7 @@ usfp_usa_jack_warner = {
                 is_company_type = company_type:company_usfp_us_warner_bros
             }
         }
-        earliest_usage_date = 1902.1.1 #up to 8 years earlier
+        earliest_usage_date = 1910.1.1
         latest_usage_date = 1978.1.1
         chance = 100
 	}
@@ -489,6 +495,7 @@ usfp_usa_isaac_singer = {
     first_name = Isaac
     last_name = Singer
     historical = yes
+    dna = usfp_isaac_singer
     culture = cu:yankee
     female = no
     religion = protestant
@@ -519,6 +526,7 @@ usfp_usa_richard_sears = {
     first_name = Richard
     last_name = Sears
     historical = yes
+    dna = usfp_richard_sears
     culture = cu:yankee
     female = no
     religion = protestant

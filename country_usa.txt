@@ -98,7 +98,7 @@ USA_winfield_scott = {
 	is_general = yes
 	ig_leader = yes
 	interest_group = ig_armed_forces
-	ideology = ideology_abolitionist #USFP
+	ideology = ideology_jingoist_leader
 	hq = region_new_england
 	traits = {
 		traditionalist_commander
@@ -189,46 +189,32 @@ usa_lincoln_character_template = {
     birth_date = 1809.2.12
     dna = dna_abraham_lincoln
     traits = {
-        charismatic
-        tactful
-        firebrand
         experienced_political_operator
-    }   
+        inspirational_orator
+        tactful
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:USA
             this = c:USA
-            NOT = {
-                has_global_variable = lincoln_spawned #USFP
-            }
         }
         interest_group_trigger = {
             is_marginal = no
-            is_interest_group_type = ig_petty_bourgeoisie
+            OR = {
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_intelligentsia
+            }
             NOR = {
-                has_variable = communist_ig_var
-                has_variable = chose_vanguardism
-                has_variable = chose_fascism
-                has_variable = chose_conservatism
-                has_variable = chose_ethno_nationalism
-            }
-        }   
-        earliest_usage_date = 1852.1.1
-        latest_usage_date = 1890.1.1
-        chance = 100
-    }
-    on_created = {
-        set_variable = memento_mori_immunity
-        if = {
-            limit = {
-                owner = {
-                    has_law = law_type:law_slavery_banned
-                }
-            }
-            set_ideology = ideology:ideology_radical
-        } else = {
-            set_ideology = ideology:ideology_abolitionist
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
         }
+        earliest_usage_date = 1844.2.12
+        latest_usage_date = 1890.1.1
+        chance = 75
     }
 }
 usa_andrew_jackson_template = {
@@ -246,18 +232,11 @@ usa_andrew_jackson_template = {
         bigoted
         demagogue
         expert_political_operator
-        usfp_trait_expansionist
     }
     on_created = {
         set_variable = {
             name = is_andrew_jackson
         }
-        set_variable = {
-            name = memento_mori_immunity
-        }
-        set_variable = {
-            name = var_elected_once
-        }               
     }
 }
 usa_roosevelt_character_template = {
@@ -267,19 +246,16 @@ usa_roosevelt_character_template = {
     culture = cu:yankee
     female = no
     religion = rel:protestant
-    ideology = ideology_usfp_progressive #USFP
+    ig_leader = yes
+    ideology = ideology_reformer
     interest_group = ig_industrialists
     birth_date = 1858.8.28
     dna = dna_roosevelt
-	ig_leader = yes
     traits = {
-        charismatic
-        firebrand
         celebrity_commander
         explorer
         brave
-        usfp_trait_expansionist
-    }   
+    }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:USA
@@ -288,24 +264,21 @@ usa_roosevelt_character_template = {
         interest_group_trigger = {
             is_marginal = no
             OR = {
+                is_interest_group_type = ig_intelligentsia
                 is_interest_group_type = ig_industrialists
-                is_interest_group_type = ig_petty_bourgeoisie
-            } 
-            NOR = {
-                has_variable = communist_ig_var
-                has_variable = chose_vanguardism
-                has_variable = chose_fascism
-                has_variable = chose_conservatism
-                has_variable = chose_ethno_nationalism
+                is_interest_group_type = ig_rural_folk
             }
-        }   
-        earliest_usage_date = 1896.1.1
+            NOR = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+        }
+        earliest_usage_date = 1882.1.1
         latest_usage_date = 1919.1.1
-        chance = 100
-    }
-    on_created = { 
-        set_variable = memento_mori_immunity 
-        set_variable = is_theodore_roosevelt
+        chance = 75
     }
 }
 usa_jp_morgan_character_template = {
@@ -364,7 +337,7 @@ usa_thomas_edison_character_template = {
 		company_trigger = {
 			is_company_type = company_type:company_general_electric
 		}
-        earliest_usage_date = 1868.1.1 #USFP: up to 10 years early
+        earliest_usage_date = 1878.1.1
         latest_usage_date = 1930.1.1
 		chance = 100
     }
@@ -694,7 +667,6 @@ usa_admiral_buchanan = {
 		chance = 50
 	}
 }
-
 usa_general_lee = {
 	first_name = Robert
 	last_name = Lee
@@ -710,7 +682,7 @@ usa_general_lee = {
 	traits = {
 		experienced_defensive_strategist
 		innovative
-		celebrity_commander #USFP
+		direct
 	}
 	commander_usage = {
 		country_trigger = {
@@ -728,7 +700,7 @@ usa_general_lee = {
 		}
 		role = general
 		earliest_usage_date = 1846.1.1
-		latest_usage_date = 1870.1.1	
+		latest_usage_date = 1870.1.1
 		chance = 50
 	}
 }
@@ -870,15 +842,15 @@ usa_general_grant = {
 	culture = cu:dixie
 	female = no
 	religion = rel:protestant
-	ideology = ideology_usfp_abolitionist_radical #USFP
+	ideology = ideology_radical
 	commander_rank = default
-	interest_group = ig_armed_forces #USFP
+	interest_group = ig_petty_bourgeoisie
 	birth_date = 1822.1.21
 	dna = dna_ulysses_s_grant
 	traits = {
-		expert_offensive_planner
+		experienced_offensive_planner
 		persistent
-		meticulous
+		alcoholic
 	}
 	commander_usage = {
 		country_trigger = {
@@ -887,8 +859,8 @@ usa_general_grant = {
 		}
 		role = general
 		earliest_usage_date = 1846.1.1
-		latest_usage_date = 1874.1.1	
-		chance = 100
+		latest_usage_date = 1874.1.1
+		chance = 50
 	}
 }
 
@@ -1001,16 +973,14 @@ usa_rockefeller_character_template = {
             has_dlc_feature = mp1_content
 		}
 		company_trigger = {
-			OR = {
-				is_company_type = company_type:company_standard_oil
-				is_company_type = company_type:company_basic_oil
-			}
+			is_company_type = company_type:company_standard_oil
 		}
-        earliest_usage_date = 1865.1.1 #USFP: available up to 10 years early
+        earliest_usage_date = 1875.1.1
         latest_usage_date = 1915.1.1
 		chance = 100
     }
 }
+
 usa_carnegie_character_template = {
     first_name = Andrew
     last_name = Carnegie
@@ -1031,14 +1001,12 @@ usa_carnegie_character_template = {
     	country_trigger = {
             exists = c:USA
             this = c:USA
+            has_dlc_feature = mp1_content
 		}
 		company_trigger = {
-			OR = {
-				is_company_type = company_type:company_us_steel
-				is_company_type = company_type:company_basic_steel
-			}
+			is_company_type = company_type:company_us_steel
 		}
-        earliest_usage_date = 1860.1.1 #USFP: available up to 10 years early
+        earliest_usage_date = 1870.1.1
         latest_usage_date = 1908.1.1
 		chance = 100
     }
@@ -1100,7 +1068,7 @@ usa_robert_e_lee_wilson = {
 		company_trigger = {
 			is_company_type = company_type:company_lee_wilson
 		}
-        earliest_usage_date = 1872.1.1 #USFP: up to 10 years early
+        earliest_usage_date = 1882.1.1
         latest_usage_date = 1933.09.27
 		chance = 100
     }

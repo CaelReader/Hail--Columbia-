@@ -32,6 +32,10 @@
 			name = usfp_trust_busting_authority_modifier
 			years = 4
 		}
+		add_modifier = {
+			name = usfp_trust_busting_company_modifier
+			years = 10
+		}
 		add_radicals = {
 			value = small_radicals
 			pop_type = capitalists

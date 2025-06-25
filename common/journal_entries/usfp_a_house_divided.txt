@@ -111,12 +111,7 @@ je_usfp_a_house_divided_missouri_compromise = {
 	}
 
 	on_fail = {
-		if = {
-			limit = { 
-				has_modifier = usfp_missouri_compromise_decaying
-			}
-			remove_modifier = usfp_missouri_compromise_decaying
-		}
+		usfp_break_compromises_effect = yes
 	}
 
 	invalid = {
@@ -126,12 +121,7 @@ je_usfp_a_house_divided_missouri_compromise = {
 	}
 
 	on_invalid = {
-		if = {
-			limit = { 
-				has_modifier = usfp_missouri_compromise_decaying
-			}
-			remove_modifier = usfp_missouri_compromise_decaying
-		}
+		usfp_break_compromises_effect = yes
 	}
 }
 

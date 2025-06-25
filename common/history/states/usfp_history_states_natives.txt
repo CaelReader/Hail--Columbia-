@@ -909,7 +909,7 @@
 	#Tsimshian
 	s:STATE_BRITISH_COLUMBIA = {
 		set_owner_of_provinces = {
-			country = c:TSI
+			country = c:usfp_TSI
 			provinces = { x5E0CD6 x462445 x353F41 xBB5D4E xD46521 x9B707D xBC873D xE9756F x83A2F7 x75CE92 x3EF318 x89CEC2 x26FE6E xC4F8BE x5DC4E3 xCEC8BC xA5C52C x3F0544 
 			xD3E426 x32E810 xE040C0 }
 		}

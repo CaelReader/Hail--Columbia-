@@ -203,20 +203,7 @@ usfp_a_house_divided.3 = {
 				years = 5
 			}
 		}
-		if = {
-			limit = { 
-				has_modifier = usfp_missouri_compromise_decaying
-			}
-			remove_modifier = usfp_missouri_compromise_decaying
-		}
-		if = {
-			limit = {
-				has_journal_entry = je_usfp_a_house_divided_missouri_compromise
-			}
-			je:je_usfp_a_house_divided_missouri_compromise = {
-				remove_modifier = usfp_missouri_compromise_modifier
-			}
-		}
+		usfp_break_compromises_effect = yes
 		if = {
 			limit = {
 				game_date > 1850.1.1
@@ -1345,20 +1332,7 @@ usfp_a_house_divided.14 = {
 				is_enacting_law = law_type:law_slave_trade
 			}
 		}
-		if = {
-			limit = { 
-				has_modifier = usfp_1850_compromise_decaying
-			}
-			remove_modifier = usfp_1850_compromise_decaying
-		}
-		if = {
-			limit = {
-				has_journal_entry = je_usfp_a_house_divided_missouri_compromise
-			}
-			je:je_usfp_a_house_divided_missouri_compromise = {
-				remove_modifier = usfp_missouri_compromise_modifier
-			}
-		}
+		usfp_break_compromises_effect = yes
 		add_enactment_modifier = {
 			name = usfp_breaking_compromise
 		}
@@ -1373,20 +1347,7 @@ usfp_a_house_divided.14 = {
 		trigger = {
 			is_enacting_law = law_type:law_slavery_banned
 		}
-		if = {
-			limit = { 
-				has_modifier = usfp_1850_compromise_decaying
-			}
-			remove_modifier = usfp_1850_compromise_decaying
-		}
-		if = {
-			limit = {
-				has_journal_entry = je_usfp_a_house_divided_missouri_compromise
-			}
-			je:je_usfp_a_house_divided_missouri_compromise = {
-				remove_modifier = usfp_missouri_compromise_modifier
-			}
-		}
+		usfp_break_compromises_effect = yes
 		add_enactment_modifier = {
 			name = usfp_breaking_compromise
 		}

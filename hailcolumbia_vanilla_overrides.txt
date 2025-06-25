@@ -44,7 +44,7 @@ common/history/countries/tex - texas.txt
 common/history/countries/usa - usa.txt
 
 common/history/governments/usa - usa.txt
-
+common/history/military_deployments/00_military_deployments.txt #fixes starting Texas front
 ideology_republican_paternalistic
 ideology_jacksonian_democrat
 

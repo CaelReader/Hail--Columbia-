@@ -711,7 +711,7 @@
 				size = 20000
 			}
 		}
-		region_state:TSI = {
+		region_state:usfp_TSI = {
 			create_pop = {
 				culture = athabaskan
 				size = 5000

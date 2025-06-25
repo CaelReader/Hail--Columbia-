@@ -520,6 +520,9 @@ Updates
 	Radical Abolitionists now join the Afro-American National Movement even if they're white
 	Added temporary Acceptance modifiers to various Reconstruction events
 	Moved Party System modifiers into the Constitution JE
+	Rebalanced some House Divided modifiers
+	Congress of Trusts now adds +1 company maximum again
+	Trust Busting now adds -1 company maximum
 	Updated Korean localization (thanks to 케말 파샤)
 Fixes
 	Updated pro and anti-expansion tooltips
@@ -527,4 +530,8 @@ Fixes
 	Fixed some errors related to adding homelands to states
 	Script error cleanup
 	Positivist Movement should no longer spawn in the USA
+	Made sure that breaking the missouri compromise / compromise of 1850 reliably removes all related modifiers
+	Texas shouldn't call for aid after being admitted to the union
+	Fixed country tag clash with ANZFP
+	Fixed game-start front in Texas
 	

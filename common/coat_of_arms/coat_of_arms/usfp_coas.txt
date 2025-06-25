@@ -1263,7 +1263,7 @@ ATB = {
 
 
 
-TSI = {
+usfp_TSI = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"	
 

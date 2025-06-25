@@ -76,7 +76,8 @@ usfp_manifest_destiny.2 = {
 
 	trigger = {
 		exists = c:MEX
-		NOT = {
+		NOR = {
+			has_state_in_state_region = STATE_TEXAS
 			exists = c:TEX
 			has_war_with = c:MEX
 		}

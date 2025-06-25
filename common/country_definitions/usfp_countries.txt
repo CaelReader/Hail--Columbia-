@@ -344,7 +344,18 @@ LLT = {
 	
 	capital = STATE_BRITISH_COLUMBIA
 }
-TSI = {
+usfp_TSI = {
+	color = { 165 240 34 }
+	
+	country_type = decentralized
+
+	tier = principality
+	
+	cultures = { athabaskan }
+	
+	capital = STATE_BRITISH_COLUMBIA
+}
+TSI = { #deprecated, remove in next breaking patch
 	color = { 165 240 34 }
 	
 	country_type = decentralized
