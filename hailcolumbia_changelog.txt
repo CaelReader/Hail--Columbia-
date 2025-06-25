@@ -507,8 +507,9 @@ Afro-Americans under CE now count as natural-born citizens even if their homelan
 
 5.0 "Rockefeller"
 New Content
-	New Companies: DuPont de Nemours, American Sugar Refining Company, Anaconda Mining Company, American Tobacco Company, American Woolen Company, Armour and Company, Colorado Fuel & Iron, Sears, Roebuck and Co., Singer Manufacturing Company, Union Pacific Railroad, United States Rubber Company, WArner Bros Pictures
+	New Companies: DuPont de Nemours, American Sugar Refining Company, Anaconda Mining Company, American Tobacco Company, American Woolen Company, Armour and Company, Colorado Fuel & Iron, Sears, Roebuck and Co., Singer Manufacturing Company, Union Pacific Railroad, United States Rubber Company, Warner Bros Pictures
 	New Prestige Goods: Coca-Cola, Durham Tobacco, Hollywood Movies
+	8 new historical Executive characters
 Updates
 	Executives can now spawn up to 10 years earlier than OTL and for the generic versions of their companies
 	AI USA should prioritize Colonial Affairs
@@ -519,6 +520,7 @@ Updates
 	Updated Korean localization (thanks to 케말 파샤)
 Fixes
 	Updated pro and anti-expansion tooltips
+	Failsafe mexican claims only apply when someone else holds a state there
 	Fixed some errors related to adding homelands to states
 	Script error cleanup
 	Positivist Movement should no longer spawn in the USA
