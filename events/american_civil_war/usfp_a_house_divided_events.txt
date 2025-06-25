@@ -1455,14 +1455,12 @@ usfp_a_house_divided.15 = {
 		}
 		je:je_usfp_american_constitution = {
 			remove_modifier = usfp_second_party_system_modifier
-		}
-		custom_tooltip = usfp_a_house_divided.15.a.tt
-		remove_variable = whigs_party
-		je:je_usfp_american_constitution = {
 			add_modifier = {
 				name = usfp_third_party_system_modifier
 			}
 		}
+		custom_tooltip = usfp_a_house_divided.15.a.tt
+		remove_variable = whigs_party
 		ig:ig_landowners = {
 			add_modifier = {
 				name = usfp_ig_sectional_realignment
@@ -1665,7 +1663,7 @@ usfp_a_house_divided.17 = {
 		}
 		in_election_campaign = yes
 		NOT = {
-			has_modifier = usfp_second_party_system_modifier
+			has_variable = whigs_party
 		}
 		ig:ig_petty_bourgeoisie = {
 			is_marginal = no

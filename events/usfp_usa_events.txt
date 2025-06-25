@@ -1785,9 +1785,9 @@ usfp_usa.23 = {
 				is_decaying = yes
 				years = 5
 			}
-			add_modifier = {
-				name = usfp_second_party_system_modifier
-			}
+			# add_modifier = {
+			# 	name = usfp_second_party_system_modifier
+			# }
 			start_enactment = law_type:law_universal_suffrage
 		}
 		hidden_effect = {

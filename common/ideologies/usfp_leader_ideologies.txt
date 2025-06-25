@@ -50,7 +50,7 @@ ideology_jacksonian_democrat = { #replacing basegame
 	
 	country_trigger = {
 		usfp_country_is_american = yes
-		has_modifier = usfp_second_party_system_modifier
+		has_variable = whigs_party
 	}
 
 	interest_group_leader_weight = {

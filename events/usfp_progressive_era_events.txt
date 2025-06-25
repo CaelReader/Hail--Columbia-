@@ -30,9 +30,15 @@ usfp_progressive_era.1 = {
 	option = {
 		name = usfp_progressive_era.1.a
 		default_option = yes
-		remove_modifier = usfp_third_party_system_modifier
-		add_modifier = {
-			name = usfp_fourth_party_system_modifier
+		if = {
+			limit = { has_modifier = usfp_third_party_system_modifier }
+			remove_modifier = usfp_third_party_system_modifier
+		}
+		je:je_usfp_american_constitution = {
+			remove_modifier = usfp_third_party_system_modifier
+			add_modifier = {
+				name = usfp_fourth_party_system_modifier
+			}
 		}
 		custom_tooltip = {
 			text = progressives_can_spawn
@@ -45,9 +51,15 @@ usfp_progressive_era.1 = {
 	#bad
 	option = {
 		name = usfp_progressive_era.1.b
-		remove_modifier = usfp_third_party_system_modifier
-		add_modifier = {
-			name = usfp_fourth_party_system_modifier
+		if = {
+			limit = { has_modifier = usfp_third_party_system_modifier }
+			remove_modifier = usfp_third_party_system_modifier
+		}
+		je:je_usfp_american_constitution = {
+			remove_modifier = usfp_third_party_system_modifier
+			add_modifier = {
+				name = usfp_fourth_party_system_modifier
+			}
 		}
 		custom_tooltip = {
 			text = progressives_can_spawn

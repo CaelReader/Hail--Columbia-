@@ -939,6 +939,7 @@ usfp_manifest_destiny.9 = {
 			count > 15
 			level > 0
 			is_building_type = building_railway
+			is_under_construction = no
 			private_ownership_fraction > 0
 		}
 		ig:ig_industrialists = {

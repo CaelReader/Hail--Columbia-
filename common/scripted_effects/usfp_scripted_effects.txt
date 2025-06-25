@@ -537,9 +537,6 @@ usfp_american_superculture_effect = {
 				value = 0.25
 			}
 		}
-		cu:usfp_american = {
-			add_cultural_obsession = small_arms
-		}
 	}
 	custom_tooltip = {
 		text = american_superculture_homelands

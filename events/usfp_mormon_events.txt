@@ -703,7 +703,10 @@ usfp_mormon.9 = {
 		NOT = {
 			has_law = law_type:law_slavery_banned
 		}
-		has_modifier = usfp_third_party_system_modifier
+		has_journal_entry = je_usfp_american_constitution
+		je:je_usfp_american_constitution = {
+			has_modifier = usfp_third_party_system_modifier
+		}
 	}
 
 	immediate = {

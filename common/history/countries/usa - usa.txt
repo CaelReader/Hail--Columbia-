@@ -90,14 +90,14 @@
 			is_decaying = yes
 			years = 5
 		}
-		add_modifier = {
-			name = usfp_second_party_system_modifier
-		}
-		# je:je_usfp_american_constitution = {
-		# 	add_modifier = {
-		# 		name = usfp_second_party_system_modifier
-		# 	}
+		# add_modifier = {
+		# 	name = usfp_second_party_system_modifier
 		# }
+		je:je_usfp_american_constitution = {
+			add_modifier = {
+				name = usfp_second_party_system_modifier
+			}
+		}
 		add_modifier = {
 			name = usfp_victory_over_nullification_crisis_modifier
 			is_decaying = yes

@@ -442,6 +442,11 @@ usfp_manifest_destiny_main = {
 									has_claim = prev
 								}
 							}
+							any_scope_state = {
+								NOT = {
+									owner = root
+								}
+							}
 						}
 					}
 				}
@@ -452,6 +457,11 @@ usfp_manifest_destiny_main = {
 							NOT = {
 								root = {
 									has_claim = prev
+								}
+							}
+							any_scope_state = {
+								NOT = {
+									owner = root
 								}
 							}
 						}
@@ -697,7 +707,7 @@ usfp_je_indian_wars = {
 	immediate = {
 		trigger_event = usfp_indian_wars.13 #Peace Policy or War Policy
 		hidden_effect = {
-			c:LKT = {
+			c:LKT ?= {
 				create_character = {
 					template = ecchi_lkt_sitting_bull_character_template
 					ruler = yes
@@ -707,13 +717,13 @@ usfp_je_indian_wars = {
 					is_general = yes
 				}
 			}
-			c:usfp_MDC = {
+			c:usfp_MDC ?= {
 				create_character = {
 					template = usfp_kintpuash
 					ruler = yes
 				}
 			}
-			c:NZP = {
+			c:NZP ?= {
 				create_character = {
 					template = ecchi_nzp_chief_joseph_character_template
 					heir = yes

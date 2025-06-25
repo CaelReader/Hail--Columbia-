@@ -213,6 +213,10 @@ usfp_reconstruction.3 = {
 				value = small_radicals
 				culture = cu:dixie
 			}
+			add_acceptance = {
+				target = cu:afro_american
+				value = 10
+			}
 			add_culture_standard_of_living_modifier = {
 				culture = cu:afro_american
 				multiplier = 1

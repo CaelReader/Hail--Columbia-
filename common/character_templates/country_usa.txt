@@ -988,7 +988,7 @@ usa_rockefeller_character_template = {
 		company_trigger = {
 			OR = {
 				is_company_type = company_type:company_standard_oil
-				is_company_type = company:type:company_basic_oil
+				is_company_type = company_type:company_basic_oil
 			}
 		}
         earliest_usage_date = 1865.1.1 #USFP: available up to 10 years early

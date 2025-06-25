@@ -221,7 +221,7 @@ usfp_liberia_declare_independence_desc: "The time has come to form a proper Repu
 usfp_je_indian_wars: "Indian Wars"
 usfp_je_indian_wars_reason: "In the past we have considered the [GetStrategicRegion('region_great_plains').GetName] to be a vast desert best left to the Indians. Now, as White settlers continue to pour west, it is our duty to pacify these lands and bring the Indian to heel - through force if necessary."
 usfp_provoke_lakota_war_button: "Provoke Lakota War"
-usfp_provoke_lakota_war_button_desc: "The Sioux are the greatest obstalce to our westward expansion. If we could provoke them into attacking our settlers, it would give us the pretext to crush them."
+usfp_provoke_lakota_war_button_desc: "The Sioux are the greatest obstacle to our westward expansion. If we could provoke them into attacking our settlers, it would give us the pretext to crush them."
 usfp_break_treaties_button: "Break Treaties"
 usfp_break_treaties_button_desc: "The Indians lack the strength to enforce the treaties we have signed, so there is no need for us to abide by them."
 

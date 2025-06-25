@@ -254,6 +254,10 @@ acw_followup_events.4 = {
 				days = normal_modifier_time
 				multiplier = 1
 			}
+			add_acceptance = {
+				target = cu:afro_american
+				value = 10
+			}
 			add_modifier = {
 				name = usfp_land_redistribution
 				days = normal_modifier_time
@@ -381,6 +385,10 @@ acw_followup_events.5 = {
 				days = normal_modifier_time
 				multiplier = -1
 			}
+			add_acceptance = {
+				target = cu:afro_american
+				value = -15
+			}
 			add_radicals_in_state = {
 				culture = cu:afro_american
 				value = 0.05
@@ -465,6 +473,10 @@ acw_followup_events.6 = {
 				culture = cu:afro_american
 				days = normal_modifier_time
 				multiplier = -1
+			}
+			add_acceptance = {
+				target = cu:afro_american
+				value = -10
 			}
 			add_radicals_in_state = {
 				culture = cu:afro_american
@@ -575,6 +587,10 @@ acw_followup_events.7 = {
 				culture = cu:afro_american
 				days = normal_modifier_time
 				multiplier = -1
+			}
+			add_acceptance = {
+				target = cu:afro_american
+				value = -10
 			}
 			add_modifier = {
 				name = paramilitary_threats
@@ -697,6 +713,10 @@ acw_followup_events.8 = {
 			add_loyalists_in_state = {
 				value = 0.2
 				culture = cu:dixie
+			}
+			add_acceptance = {
+				target = cu:yankee
+				value = -10
 			}
 		}
 		scope:carpetbagger_home = {
