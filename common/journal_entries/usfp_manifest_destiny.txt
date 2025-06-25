@@ -18,7 +18,7 @@ usfp_manifest_destiny_main = {
 	immediate = {
 		set_variable = {
 			name = manifest_destiny_var
-			value = 1
+			value = 0
 		}
 		trigger_event = {
 			id = usfp_manifest_destiny.1
@@ -222,13 +222,13 @@ usfp_manifest_destiny_main = {
 						has_variable = destiny_manifested_cultural_majority_1
 					} 
 					any_political_movement = {
-						political_movement_support >= 0.30
+						political_movement_support >= 0.20
 						is_political_movement_type = movement_cultural_majority
 					}
 				}
 				random_political_movement = {
 					limit = {
-						political_movement_support >= 0.30
+						political_movement_support >= 0.20
 						is_political_movement_type = movement_cultural_majority
 					}
 					save_scope_as = majority_movement
@@ -243,13 +243,13 @@ usfp_manifest_destiny_main = {
 						has_variable = destiny_manifested_cultural_majority_2
 					} 
 					any_political_movement = {
-						political_movement_support >= 0.60
+						political_movement_support >= 0.50
 						is_political_movement_type = movement_cultural_majority
 					}
 				}
 				random_political_movement = {
 					limit = {
-						political_movement_support >= 0.60
+						political_movement_support >= 0.50
 						is_political_movement_type = movement_cultural_majority
 					}
 					save_scope_as = majority_movement
@@ -394,13 +394,13 @@ usfp_manifest_destiny_main = {
 						has_variable = destiny_manifested_cultural_minority_1
 					} 
 					any_political_movement = {
-						political_movement_support >= 0.30
+						political_movement_support >= 0.20
 						is_political_movement_type = movement_cultural_minority
 					}
 				}
 				random_political_movement = {
 					limit = {
-						political_movement_support >= 0.30
+						political_movement_support >= 0.20
 						is_political_movement_type = movement_cultural_minority
 					}
 					save_scope_as = minority_movement
@@ -415,13 +415,13 @@ usfp_manifest_destiny_main = {
 						has_variable = destiny_manifested_cultural_minority_2
 					} 
 					any_political_movement = {
-						political_movement_support >= 0.60
+						political_movement_support >= 0.50
 						is_political_movement_type = movement_cultural_minority
 					}
 				}
 				random_political_movement = {
 					limit = {
-						political_movement_support >= 0.60
+						political_movement_support >= 0.50
 						is_political_movement_type = movement_cultural_minority
 					}
 					save_scope_as = minority_movement

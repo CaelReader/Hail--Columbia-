@@ -108,7 +108,7 @@ usfp_ATK_ADJ: "Atikamekw"
  SON_ADJ:0 "Sonoran"
 
 usfp_GLC: "Great Lakes"
-usfp_GLC_ADJ: "Great Lakes"
+usfp_GLC_ADJ: "United Indian"
 
 rule_usfp_usa_names:0 "@america_icon! #yellow Hail, Columbia!#! | USA Names"
  setting_usa_initial_names:1 "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_usa_initial_names_desc #high Vanilla #!#!#!"

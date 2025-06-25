@@ -511,6 +511,9 @@ New Content
 	New Prestige Goods: Coca-Cola, Durham Tobacco, Hollywood Movies
 	8 new historical Executive characters
 Updates
+	Manifest Destiny now starts 1 point lower
+	Movements now influence MD at 20/50 support instead of 30/60
+	Progressive Era is now slightly easier to trigger
 	Executives can now spawn up to 10 years earlier than OTL and for the generic versions of their companies
 	AI USA should prioritize Colonial Affairs
 	Added 1 year cooldown to the Homestead Acts button
