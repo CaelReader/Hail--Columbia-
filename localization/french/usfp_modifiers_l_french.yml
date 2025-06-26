@@ -159,7 +159,7 @@
  usfp_gospel_of_wealth_modifier: "Gospel of Wealth" #NT!
  usfp_grange_movement_modifier: "Grange Movement" #NT!
  usfp_captive_state_government: "Machine Politics" #NT!
- usfp_monopolistic_business: "Monopolistic Business Practices" #NT!
+ usfp_company_town_state_modifier: "Company Towns" #NT!
  usfp_trust_busting_authority_modifier: "Trust Busting" #NT!
  usfp_industrialists_corruption_modifier: "Friends in High Places" #NT!
  usfp_federal_corruption_modifier: "Federal Corruption" #NT!
@@ -224,3 +224,9 @@
  usfp_settlers_gone_west_modifier: "Settlers Gone West" #NT!
  usfp_treaty_of_detroit_modifier: "Treaty of Detroit" #NT!
  usfp_arctic_subsistence_modifier: "Arctic Subsistence" #NT!
+ usfp_rain_doesnt_follow_the_plow_modifier: "Rain Doesn’t Follow the Plow" #NT!
+ usfp_mexicans_arent_white_modifier: "Mexicans aren’t White" #NT!
+ usfp_prairie_madness_modifier: "Prairie Madness" #NT!
+ usfp_constitutional_tariff_modifier: "No Export Tariffs" #NT!
+ usfp_federal_government_modifier: "Federal Government" #NT!
+ usfp_trust_busting_company_modifier: "Forced Breakups" #NT!

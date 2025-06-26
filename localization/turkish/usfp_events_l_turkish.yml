@@ -17,6 +17,7 @@
  usfp_a_house_divided.3.a: "You can have no conflict without being yourselves the aggressors." #NT!
  usfp_a_house_divided.3.b: "Wait! We shall enshrine slavery in the constitution!" #NT!
  usfp_a_house_divided.3.b.tt: "Slavery Laws will no longer be able to be [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enacted$')]" #NT!
+ not_has_corwin_amendment: "Slavery has not been Constitutionally protected" #NT!
   
  missouri_compromise_break: "This will #red break#! the Missouri Compromise!" #NT!
   
@@ -488,6 +489,18 @@
  usfp_manifest_destiny.26.f: ""It is yet another Civilized Power, with its banner of the Prince of Peace in one hand and its loot-basket and its butcher-knife in the other. Is there no salvation for a conquered people, but to adopt Civilization and lift themselves down to its level?"" #NT!
  usfp_manifest_destiny.26.a: "It is our burden to spread the light of self-government." #NT!
   
+ usfp_manifest_destiny.27.t: "Rain Doesn't Follow The Plow" #NT!
+ usfp_manifest_destiny.27.d: "The [SCOPE.sState('drought_state').GetStateRegion.GetStrategicRegion.GetName] have long been considered the 'Great American Desert', unsuited to intensive agriculture. More and more settlers have begun to cultivate the praire expecting their activities to actually alter the local climate in their favor. The widespread [GetHarvestConditionType('drought').GetName] in [SCOPE.sState('drought_state').GetName] is making it hard to believe that 'rain follows the plow'." #NT!
+ usfp_manifest_destiny.27.f: ""God speed the plow. By this wonderful provision, which is only man's mastery over nature, the clouds are dispensing copious rains. The plow is the instrument which separates civilization from savagery; and converts a desert into a farm or garden."" #NT!
+ usfp_manifest_destiny.27.a: "Nature is capricious." #NT!
+ usfp_manifest_destiny.27.b: "Make sure everyone knows that the [SCOPE.sState('drought_state').GetStateRegion.GetStrategicRegion.GetName] are still a desert." #NT!
+  
+ usfp_manifest_destiny.28.t: "Prairie Madness" #NT!
+ usfp_manifest_destiny.28.d: "Many settlers have been lured to the [SCOPE.sState('praire_state_1').GetStateRegion.GetStrategicRegion.GetName] by the promise of free land and a new life. What the pioneers have found is a vast and hostile environment, where their ramshackle farmhouses stand alone against the howling winds of the prairie, and where they suffer from illness, depression, and insanity." #NT!
+ usfp_manifest_destiny.28.f: ""In no civilized country have the cultivators of the soil adapted their home life so badly to the conditions of nature as have the people of our great Northwestern prairies. The European farmer lives in a village, where considerable social enjoyment is possible. On the prairie the treeless plain stretches away to the horizon line, where each family must live mainly to itself, and life, shut up in the little wooden farmhouses, can not well be very cheerful. "" #NT!
+ usfp_manifest_destiny.28.a: "The frontier is not for the faint of heart." #NT!
+ usfp_manifest_destiny.28.b: "Modern therapy could help them cope." #NT!
+  
  ### Native Removal 
  usfp_native_removal.1.t: "The Seminole Removal" #NT!
  usfp_native_removal.1.d: "With the Second Seminole War finally winding down, the Army can begin the slow process of removing the remainder of the [SCOPE.sCulture('muskogean_scope').GetName] population onto reservation land across the Mississippi." #NT!
@@ -568,6 +581,11 @@
  usfp_native_removal.15.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] has been shot in the streets of [ROOT.GetCountry.GetCapital.GetCityHubName]! A White man was witnessed shouting at the President, calling him an 'Indian lover' before opening fire. In the ensuing scuffle, the assassin was themselves shot dead, while the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] was rushed to the hospital in critical condition." #NT!
  usfp_native_removal.15.f: ""Make way! Make way! The President has been shot! The President has been shot, my God!"" #NT!
  usfp_native_removal.15.a: "This is an outrage!" #NT!
+  
+ usfp_native_removal.16.t: "Northern Removal" #NT!
+ usfp_native_removal.16.d: "With settlers pressing into every corner of the Old Northwest, most of the remaining Indian nations have been forced to agree to treaties of removal. Many were led on a forced march west by local militia, who cared little if the Indians survived the journey." #NT!
+ usfp_native_removal.16.f: ""On the flanks of the line at equal distance from each other were the dragoons and volunteers, hastening the stragglers, often with severe gestures and bitter words. After this cavalry came a file of forty baggage wagons filled with luggage and Indians. The sick were lying in them, rudely jolted, under a canvas which, far from protecting them from the dust and heat, only deprived them of air, for they were as if buried under this burning canopy—several died thus."" #NT!
+ usfp_native_removal.16.a: "May they find peace away from the settlers." #NT!
   
  ##USA Flavor Events 
  usfp_usa.1.t: "The Declaration of Sentiments" #NT!
@@ -685,6 +703,11 @@
  usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of his office. After asserting the powers of the Federal government in the [concept_usfp_nullification_crisis], he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the [concept_usfp_supreme_court] rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of slavery continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic." #NT!
  usfp_usa.23.f: ""But you must remember, my fellow-citizens, that eternal vigilance by the people is the price of liberty, and that you must pay the price if you wish to secure the blessing."" #NT!
  usfp_usa.23.a: "This is a time of opportunity." #NT!
+  
+ usfp_usa.24.t: "Chestnut Blight" #NT!
+ usfp_usa.24.d: "A blight has spread through the great American Chestnut Forests, devastating billions of trees up and down the eastern seaboard. It won't be long before the trees are entirely wiped out, save for a few specimens preserved by researchers attempting to fight the outbreak." #NT!
+ usfp_usa.24.f: ""Will eating chestnuts by crackling log fires become one of the lost arts preserved by a devoted people only in poetry and romance?"" #NT!
+ usfp_usa.24.a: "We will mourn the loss of these perfect trees." #NT!
   
  ### Labor Events 
  usfp_usa_labor.1.t: "The Industrial Workers of the World" #NT!
@@ -889,7 +912,7 @@
   
  usfp_gilded_age.8.t: "A Gift for the Grangers" #NT!
  usfp_gilded_age.8.d: "A network of farmers' advocacy groups known as The Grange has spread rapidly across the vast rural regions of the [ROOT.GetCountry.GetName]. While most chapters are focused on local legislation and establishing consumer cooperatives, the organization also serves to advance the cause of the [SCOPE.gsInterestGroup('rural_folk_ig').GetName] nationally." #NT!
- usfp_gilded_age.8.f: ""The Grange is the foe to selfishness. It is too much the habit of the farmer to regard himself and his own family only, and to be carless of the welfare or interests of others. The Grange teaches him that he is only a single member of the vast community of men who till the ground, and that this interests are identical with theirs, and that he must consider others as well as himself."" #NT!
+ usfp_gilded_age.8.f: ""The Grange is the foe to selfishness. It is too much the habit of the farmer to regard himself and his own family only, and to be careless of the welfare or interests of others. The Grange teaches him that he is only a single member of the vast community of men who till the ground, and that this interests are identical with theirs, and that he must consider others as well as himself."" #NT!
  usfp_gilded_age.8.a: "Prosperous farmers are good for the nation." #NT!
  usfp_gilded_age.8.b: "This is a network of radical agitators!" #NT!
  usfp_gilded_age.8.c: "Perhaps the farmers can be awakened to their class interests." #NT!
@@ -931,11 +954,11 @@
  usfp_gilded_age.14.a: "Old Money will have to make room for the New." #NT!
  usfp_gilded_age.14.b: "A toast to our rising captains of industry!" #NT!
   
- usfp_gilded_age.15.t: "The [SCOPE.sState('monopoly_state').GetName] [SCOPE.sBuilding('monopoly_building_scope').GetName] Monopoly" #NT!
- usfp_gilded_age.15.d: "The [SCOPE.sBuilding('monopoly_building_scope').GetName] industry in [SCOPE.sState('monopoly_state').GetName] has come under the control of a congolomerate that has pushed out all competition. Using their dominant position they have begun to enforce higher prices, lower wages, and worse working conditions, causing a negative ripple effect on the entire local economy." #NT!
- usfp_gilded_age.15.f: "You couldn't walk two blocks in the city without seeing one of the company's advertisements or its logo stamped on something. A whole group of workers was fired yesterday, and now many were packing up to move to another state. The company was the only game in town." #NT!
- usfp_gilded_age.15.a: "The market is always right." #NT!
- usfp_gilded_age.15.b: "We should promote competition in [SCOPE.sState('monopoly_state').GetName]." #NT!
+ usfp_gilded_age.15.t: "Company Towns" #NT!
+ usfp_gilded_age.15.d: "The concentration of [SCOPE.sBuilding('company_town_building_scope').GetName] industries in [SCOPE.sState('company_town_state').GetName] has fueled the construction of whole towns owned entirely by the companies. Workers are 'encouraged' to move into housing controlled by their employer, send their kids to company schools, and even go to company-built churches." #NT!
+ usfp_gilded_age.15.f: "You couldn't go a single block without seeing one of the company's advertisements or its logo stamped on something. A whole group of workers was fired yesterday, and now many were packing up to move to another state. The company was the only game in town." #NT!
+ usfp_gilded_age.15.a: "How efficient." #NT!
+ usfp_gilded_age.15.b: "These companies are exerting too much influence." #NT!
   
  usfp_progressive_era.1.t: "Rise of the Progressives" #NT!
  usfp_progressive_era.1.d: "The social and economic conditions of the [ROOT.GetCountry.GetName] have prompted calls for reform from all levels of society, which have now begun to coalesce into a greater [SCOPE.sIdeology('progressive_ideology').GetName] cause. Local, state, and even federal officials are now winning elections on a platform of ending corruption and uplifting the general welfare." #NT!
@@ -1135,6 +1158,7 @@
  usfp_indian_wars.13.f: ""My heart is a stone: heavy with sadness for my people; cold with the knowledge that no treaty will keep whites out of our lands; hard with the determination to resist as long as I live and breathe."" #NT!
  usfp_indian_wars.13.a: "Settlement and negotiation will bring these lands into civilization." #NT!
  usfp_indian_wars.13.b: "The only good Indian is a dead Indian." #NT!
+ usfp_indian_wars.13.btt: "[Concept('concept_tension', '$concept_tensions$')] with all Plains Nations increase by #r 50#!" #NT!
   
  usfp_indian_wars.14.t: "Empty Promises" #NT!
  usfp_indian_wars.14.d: "[SCOPE.sCulture('reservation_culture').GetName] Indians living on their reservation in [SCOPE.sState('reservation_state').GetName] have lodged complaints against the conditions we have forced them into, citing lack of promised food rations, medical care, and services." #NT!
@@ -1142,6 +1166,12 @@
  usfp_indian_wars.14.a: "Ensure that we uphold our end of the agreement." #NT!
  usfp_indian_wars.14.b: "The Indian Agents must handle their own affairs." #NT!
  usfp_indian_wars.14.c: "Starving the Indians will encourage them to become good Christian farmers." #NT!
+  
+ usfp_indian_wars.15.t: "[SCOPE.sCountry('comanche_scope').GetAdjective] Raid in [SCOPE.sState('raid_state').GetName]!" #NT!
+ usfp_indian_wars.15.d: "[SCOPE.sCountry('comanche_scope').GetAdjective] warriors have struck outlying settlements in [SCOPE.sState('raid_state').GetName] in a lightning raid, burning several dozen farmsteads. Although local militia attempted to fend them off, the raiders were able to quickly escape back to [SCOPE.sCountry('comanche_scope').GetCapital.GetName] with many captives in tow." #NT!
+ usfp_indian_wars.15.f: ""We were startled by the apparitions presented by the sudden appearance of six hundred mounted Comanches in the immediate outskirts of the village. We hid inside and shot at anything we saw out the windows. For a whole day the warriors plundered and burned, before retreating."" #NT!
+ usfp_indian_wars.15.a: "Ransom back as many of the captives as we can." #NT!
+ usfp_indian_wars.15.b: "A punitive expedition is in order." #NT!
   
  usfp_indian_postremoval.1.t: "The Ghost Dance" #NT!
  usfp_indian_postremoval.1.d: "A millenarian spiritual movement known as the Ghost Dance has swept across the Indian tribes of the west, promising a return of the buffalo and the wiping away of White settlers. While the movement promotes peaceful behavior from its adherents, the sometimes wild and ecstatic dance rituals have provoked terror in White settlers, who claim the Indians are preparing themselves for apocalyptic war upon their homesteads." #NT!
@@ -1173,6 +1203,18 @@
  usfp_indian_postremoval.5.f: "Horsemen and wagons crowded forth to positions on the line, readying themselves for the race. The great dramatic moment came when at the stroke of noon the starting signal was given - at the blast of rifles and cannons a tumultuous avalanche of wagons and horses surged forth amidst a cloud of dust. Families that remained behind at the line cheered for their husbands and fathers as they made their wild dash to claim their 160 acres." #NT!
  usfp_indian_postremoval.5.a: "It won't be long before the whole territory is settled." #NT!
  usfp_indian_postremoval.5.b: "We need to ensure there is space enough left for the tribes." #NT!
+  
+ usfp_indian_postremoval.6.t: "The Underground Reservation" #NT!
+ usfp_indian_postremoval.6.d: "After being relocated to [SCOPE.sState('oklahoma_scope').GetName], the Osage Nation negotiated full tribal ownership over the mineral rights on their alloted land. The discovery of rich $oil$ fields under their territory has brought immense wealth to the Osage, who recieve direct dividends from the proceeds. Sensational tales of fancy clothes, luxury cars, and newly-built mansions have provoked resentment among local Whites." #NT!
+ usfp_indian_postremoval.6.f: ""The Osage have become the richest nation, clan, or social group of any race on Earth, including the whites, man for man. Osage county now sports more Pierce Arrows than any other county in the United States."" #NT!
+ usfp_indian_postremoval.6.a: "They are the chosen people of chance." #NT!
+ usfp_indian_postremoval.6.b: "Clearly they require White guardians to hold their wealth in trust!" #NT!
+  
+ usfp_indian_postremoval.7.t: "The Reign of Terror" #NT!
+ usfp_indian_postremoval.7.d: "The oil wealth of the Osage Nation has brought with it a dark spectre of conspiracy. Over the past 5 years, over a hundred wealthy Osages have been found dead under suspicious circumstances, with their oil rights often being passed to White guardians. Leaders of the Osage community are certain that their people are being murdered for their wealth, and are pleading for a federal intervention." #NT!
+ usfp_indian_postremoval.7.f: ""It is a question in my mind whether this jury is considering a murder case or not. The question for them to decide is whether a white man killing an Osage is murder—or merely cruelty to animals."" #NT!
+ usfp_indian_postremoval.7.a: "Send in the Bureau, and block any more Whites from inheriting Osage rights." #NT!
+ usfp_indian_postremoval.7.b: "This is a local matter for the local authorities to handle." #NT!
   
  usfp_indian_althist.1.t: "The Great [SCOPE.sCountry('sioux_scope').GetAdjective] Council" #NT!
  usfp_indian_althist.1.d: "Decades of holding a dominant position on the northern plains has done well for the [SCOPE.sCountry('sioux_scope').GetName]. As their trade links with [ROOT.GetCountry.GetAdjective] border towns have flourished, so too have new ideas flowed into the plains. Now, a council of all the [SCOPE.sCountry('sioux_scope').GetAdjectiveNoFormatting] bands has seemingly agreed to establish a formal government structure under the leadership of [SCOPE.sCountry('sioux_scope').GetRuler.GetFullName]." #NT!

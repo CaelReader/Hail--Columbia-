@@ -1282,7 +1282,11 @@ usfp_usa.16 = {
 	}
 
 	immediate = {
-		random_interest_group = {
+		if = {
+			limit = { 
+				in_election_campaign = yes
+			}
+			random_interest_group = {
 			limit = {
 				is_marginal = no
 				has_party = yes
@@ -1345,6 +1349,7 @@ usfp_usa.16 = {
 		trigger_event = {
 			id = usfp_usa.17
 			days = 15
+		}
 		}
 	}
 	cancellation_trigger = {

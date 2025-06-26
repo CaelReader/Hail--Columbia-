@@ -18,7 +18,7 @@
  acw_events.3.c: "Why don't we just draw the Compromise Line all the way to the Pacific?" #NT!
   
  acw_je_events.2.t: "Реконструкция государства"
- acw_je_events.2.d: "Столкновения на полях сражений закончились, но они продолжаются в душах народа. В ближайшем будущем [ROOT.GetCountry.GetName] буд[ROOT.GetCountry.GetCustom('RU_CL_END_UT')] собирать себя воедино после чудовищного раскола."
+ acw_je_events.2.d: "Столкновения на полях сражений закончились, но они продолжаются в душах народа. В ближайшем будущем [ROOT.GetCountry.GetName] буд[ROOT.GetCountry.GetAltNameNoFormatting('RU_CL_END_UT')] собирать себя воедино после чудовищного раскола."
  acw_je_events.2.f: "«Я не жду, что нация рухнет. Чем бы ни стало это государство, по какую сторону черты оно бы ни оказалось, его душа и тело неделимы»."
  unreconstructed_state: "Невосстановленная область"
  acw_je_events.2.a: "The South must be brought back into the fold." #NT!
@@ -85,3 +85,10 @@
  je_oregon: "Спор о границе Орегона"
  je_oregon_reason: "The proper location of the Oregon border has long been an undecided matter between Great Britain and the United States. As our settlers continue to push west, we will need to reach a final settlement with the British.\n\nAlternatively, if we find ourselves at war in California, a treaty will become a military necessity." #NT!
  oregon_tt: "Орегонский путь найден после составления карты американского западного фронтира"
+  
+ BNN: "Shoshone" #NT!
+ BNN_ADJ: "Shoshoni" #NT!
+ # ATB: "Deg Xit'an" #NT!
+ # ATB_ADJ: "Deg Xit'an" #NT!
+ SLS: "Flathead" #NT!
+ SLS_ADJ: "Flathead" #NT!

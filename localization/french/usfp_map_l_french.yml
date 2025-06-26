@@ -8,8 +8,7 @@
  HOK_ADJ: "Hokan" #NT!
  PIU: "Northern Paiute" #NT!
  PIU_ADJ: "North Paiute" #NT!
- BNN: "Shoshone" #NT!
- BNN_ADJ: "Shoshoni" #NT!
+  
  YUR: "Yurok" #NT!
  YUR_ADJ: "Yurok" #NT!
  SRN: "Taaqtam" #NT!
@@ -41,7 +40,7 @@
  INN_ADJ: "Innu" #NT!
  INK: "Nunavik" #NT!
  INK_ADJ: "Nunavik" #NT!
- INV: "Inuit Nunangat" #NT!
+ INV: "Inuit" #NT!
  INV_ADJ: "Inuit" #NT!
  CPW: "Chipewyan" #NT!
  CPW_ADJ: "Chipewyan" #NT!
@@ -89,8 +88,7 @@
  HDA_ADJ: "Haida" #NT!
  AHT: "Atna Nenn'" #NT!
  AHT_ADJ: "Ahtna" #NT!
- ATB: "Deg Xit'an" #NT!
- ATB_ADJ: "Deg Xit'an" #NT!
+  
  usfp_IWY: "Ioway" #NT!
  usfp_IWY_ADJ: "Ioway" #NT!
  usfp_MDC: "Modoc" #NT!
@@ -110,7 +108,7 @@
  SON_ADJ: "Sonoran" #NT!
   
  usfp_GLC: "Great Lakes" #NT!
- usfp_GLC_ADJ: "Great Lakes" #NT!
+ usfp_GLC_ADJ: "United Indian" #NT!
   
  rule_usfp_usa_names: "@america_icon! #yellow Hail, Columbia!#! | USA Names" #NT!
  setting_usa_initial_names: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_usa_initial_names_desc #high Vanilla #!#!#!" #NT!
@@ -129,6 +127,7 @@
  dyn_c_usfp_north_american_technate_adj: "North American" #NT!
  dyn_c_united_states_of_earth: "United States of Earth" #NT!
  dyn_c_united_states_of_earth_ADJ: "Earthican" #NT!
+ dyn_c_united_states_of_the_americas: "United States of the Americas" #NT!
  dyn_c_utah_territory: "Utah Territory" #NT!
  dyn_c_utah_territory_ADJ: "Utah" #NT!
  dync_c_alaska_territory: "Alaska Territory" #NT!

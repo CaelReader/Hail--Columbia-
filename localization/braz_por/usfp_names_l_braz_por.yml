@@ -38,6 +38,24 @@
  Terry: "Terry" #NT!
  Canby: "Canby" #NT!
  Ranald: "Ranald" #NT!
+ Singer: "Singer" #NT!
   
  USS_Monitor: "USS Monitor" #NT!
   
+ company_usfp_westinghouse: "Westinghouse Electric & Manufacturing Company" #NT!
+ company_usfp_coca_cola: "Coca-Cola" #NT!
+ prestige_good_usfp_coca_cola: "Coca-Cola" #NT!
+ company_usfp_dupont: "DuPont de Nemours" #NT!
+ company_usfp_american_sugar: "American Sugar Refining Company" #NT!
+ company_usfp_anaconda: "Anaconda Mining Company" #NT!
+ company_usfp_american_tobacco: "American Tobacco Company" #NT!
+ prestige_good_usfp_durham_tobacco: "Durham Tobacco" #NT!
+ company_usfp_american_woolen: "American Woolen Company" #NT!
+ company_usfp_armours: "Armour and Company" #NT!
+ company_usfp_cfi: "Colorado Fuel & Iron" #NT!
+ company_usfp_sears: "Sears, Roebuck and Co." #NT!
+ company_usfp_singer: "Singer Manufacturing Company" #NT!
+ company_usfp_union_pacific: "Union Pacific Railroad" #NT!
+ company_usfp_us_rubber: "United States Rubber Company" #NT!
+ company_usfp_us_warner_bros: "Warner Bros. Pictures" #NT!
+ prestige_good_usfp_hollywood_movies: "Hollywood Movies" #NT!

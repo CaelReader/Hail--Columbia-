@@ -534,4 +534,3 @@ Fixes
 	Texas shouldn't call for aid after being admitted to the union
 	Fixed country tag clash with ANZFP
 	Fixed game-start front in Texas
-	

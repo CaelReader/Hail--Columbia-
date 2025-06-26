@@ -85,3 +85,10 @@
  je_oregon: "Le conflit sur la frontière de l’Oregon"
  je_oregon_reason: "The proper location of the Oregon border has long been an undecided matter between Great Britain and the United States. As our settlers continue to push west, we will need to reach a final settlement with the British.\n\nAlternatively, if we find ourselves at war in California, a treaty will become a military necessity." #NT!
  oregon_tt: "Avoir découvert la piste de l’Oregon en cartographiant la frontière de l’Ouest américain"
+  
+ BNN: "Shoshone" #NT!
+ BNN_ADJ: "Shoshoni" #NT!
+ # ATB: "Deg Xit'an" #NT!
+ # ATB_ADJ: "Deg Xit'an" #NT!
+ SLS: "Flathead" #NT!
+ SLS_ADJ: "Flathead" #NT!

@@ -11,6 +11,8 @@
   
  ideology_usfp_progressive: "Progressive" #NT!
  ideology_usfp_progressive_desc: "#lore This leader advocates for a wide range of reforms aiming to combat monopolies, corruption, and societal decay.#!" #NT!
+ ideology_usfp_progressive_movement: "Progressive" #NT!
+ ideology_usfp_progressive_movement_desc: "#lore This movement advocates for a wide range of reforms aiming to combat monopolies, corruption, and societal decay.#!" #NT!
  ideology_usfp_social_gospel_leader: "Social Gospelist" #NT!
  ideology_usfp_social_gospel_leader_desc: "#lore This leader seeks to apply Protestant ethics to resolve social inequalities and uplift the citizenry.#!" #NT!
  ideology_usfp_strongman_populist: "Strongman Populist" #NT!

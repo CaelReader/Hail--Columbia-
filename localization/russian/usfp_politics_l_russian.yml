@@ -14,9 +14,16 @@
  ai_strategy_anti_slavery_agenda_desc: "[COUNTRY.GetName] is ready to begin the process of legislatively abolishing slavery. The house will cease to be divided - one way or another." #NT!
  ai_strategy_manifest_destiny: "Manifest Destiny" #NT!
  ai_strategy_manifest_destiny_desc: "[COUNTRY.GetName] seeks to expand its core territories and pursue its "manifest destiny" across North America." #NT!
+ ai_strategy_monroe_doctrine: "Monroe Doctrine" #NT!
+ ai_strategy_monroe_doctrine_desc: "[COUNTRY.GetName] wants to stay out of foreign entanglements and defend the western hemisphere from European intervention." #NT!
+ ai_strategy_pacific_empire: "Big Stick Diplomacy" #NT!
+ ai_strategy_pacific_empire_desc: "[COUNTRY.GetName] wants to assert its hegemony over the Americas and the Pacific, while avoiding direct conflicts with other powers." #NT!
   
  dismantle_jim_crow: "Dismantle Jim Crow" #NT!
  dismantle_jim_crow_desc: "The governments of the South have enforced racial terror on their citizens for far too long. It is time that these Jim Crow laws be nullified." #NT!
+  
+ negotiate_mexican_border: "Negotiate Mexican Border" #NT!
+ negotiate_mexican_border_desc: "Our previous border treaties with Mexico were ill-defined and ignorant of the geography of the west. It is clear now that the Rio Grande is the most natural boundary between our two nations." #NT!
   
  movement_usfp_progressive: "Progressive Movement" #NT!
  movement_usfp_progressive_name: "$movement_usfp_progressive$" #NT!
@@ -25,3 +32,15 @@
  movement_usfp_eugenics: "Eugenics Movement" #NT!
  movement_usfp_eugenics_name: "$movement_usfp_eugenics$" #NT!
   
+ alert_usfp_ineligible_candidate_name: "Ineligible Presidential Candidate" #NT!
+ alert_usfp_ineligible_candidate_desc: "The [concept_leader] of a [concept_powerful] [concept_interest_group] is not a #tooltippable;tooltip:[SCOPE.GetRootScope.GetCountry.GetTooltipTag],usfp_natural_born_citizens natural-born citizen#! and cannot run for [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')]." #NT!
+ alert_usfp_ineligible_candidate_hint: "If they are the [concept_party_leader], a new [concept_character] will replace them at the start of the [Concept('concept_election', '$concept_election$')]." #NT!
+ alert_usfp_ineligible_candidate_action: "Politics Panel" #NT!
+ usfp_ineligible_candidate_setting_name: "Ineligible Presidential Candidate" #NT!
+  
+ law_usfp_nominal_separation: "Nominal Separation" #NT!
+ law_usfp_nominal_separation_desc: "Church and state are officially separated, but exotic faiths are still discriminated against through a variety of legal and paralegal means." #NT!
+ law_usfp_american_system: "American System" #NT!
+ law_usfp_american_system_desc: "A variant of $law_protectionism$ allowing for even higher tariffs on imports. Export tariffs are disallowed under the Constitution." #NT!
+  
+ treaty_name_dancing_rabbit_creek: "Treaty of Dancing Rabbit Creek" #NT!
