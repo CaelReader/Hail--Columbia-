@@ -2808,6 +2808,7 @@ usfp_manifest_destiny.27 = {
 				is_homeland = cu:yankee
 			}
 		}
+		has_journal_entry = usfp_je_westward_expansion
 	}
 
 	immediate = {

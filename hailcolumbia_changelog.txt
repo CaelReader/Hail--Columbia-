@@ -534,3 +534,10 @@ Fixes
 	Texas shouldn't call for aid after being admitted to the union
 	Fixed country tag clash with ANZFP
 	Fixed game-start front in Texas
+
+5.1 "Rockefeller"
+USA: Intelligentsia shouldn't join the Conservative party
+USA: PB are more inclined to the Liberal party
+USA: Liberal Party can exist without the Intelligentsia
+Fixed starting character templates
+Rain Doesn't Follow the Plow won't trigger after Westward Expansion is already complete
