@@ -154,6 +154,28 @@ alaska.2 = {
 				annex = c:ALK
 			}
 		}
+		else = {
+			random_state = {
+				limit = {
+				state_region = s:STATE_ALASKA
+					owner = {
+						OR = {
+							this = scope:alaska_seller
+							is_subject_of = scope:alaska_seller
+					}
+					}
+				}
+			state_region = {
+				remove_claim = scope:alaska_seller
+				add_claim = scope:alaska_buyer
+			}
+				set_state_owner = scope:alaska_buyer
+			}
+		}
+		change_relations = {
+			country = scope:alaska_seller
+			value = 10
+		}
 		s:STATE_ALASKA = {
 			every_scope_state = {
 				limit = {
@@ -165,28 +187,6 @@ alaska.2 = {
 			}
 			remove_claim = scope:alaska_seller
 			add_claim = scope:alaska_buyer
-		}
-		# else = {
-		# 	random_state = {
-		# 		limit = {
-		# 		state_region = s:STATE_ALASKA
-		# 			owner = {
-		# 				OR = {
-		# 					this = scope:alaska_seller
-		# 					is_subject_of = scope:alaska_seller
-		# 			}
-		# 			}
-		# 		}
-		# 	state_region = {
-		# 		remove_claim = scope:alaska_seller
-		# 		add_claim = scope:alaska_buyer
-		# 	}
-		# 		set_state_owner = scope:alaska_buyer
-		# 	}
-		# }
-		change_relations = {
-			country = scope:alaska_seller
-			value = 10
 		}
 	}
 }
