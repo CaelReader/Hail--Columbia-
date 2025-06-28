@@ -41,3 +41,5 @@
  ideology_american_school_desc:0 "#lore 이 집단은 보호주의와 개입주의의 결합을 지지합니다.#!"
  ideology_empire_of_liberty:0 "자유의 제국"
  ideology_empire_of_liberty_desc:0 "#lore 1776년의 정신이 이 집단에 살아있습니다. 그들은 대륙 확장주의와 충분히 규제된 민병대를 지지합니다.#!"
+ ideology_usfp_progressive_movement: "혁신주의"
+ ideology_usfp_progressive_movement_desc: "#lore 이 운동은 독점, 부패, 그리고 사회적 타락에 맞서 싸우는 것을 목표로 하는 광범위한 개혁을 옹호합니다.#!"
