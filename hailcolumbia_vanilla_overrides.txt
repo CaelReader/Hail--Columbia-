@@ -15,7 +15,6 @@ common/decisions/west_america_expidition_decision.txt
 decree_greener_grass_campaign #to prevent stacking with the US's Homestead Acts decision
 
 define: NUM_GROWING_COLONIES_MAX
-define: NUM_GROWING_COLONIES_SCALED
 
 common/government_types/00_chiefdoms.txt
 
