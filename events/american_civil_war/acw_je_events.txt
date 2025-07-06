@@ -378,6 +378,21 @@ acw_je_events.2 = {
 			years = 25
 			is_decaying = yes
 		}
+		if = {
+			limit = { 
+				any_scope_character = {
+					has_template = usa_lincoln_character_template
+					has_ideology = ideology:ideology_abolitionist
+				}
+			}
+			random_scope_character = {
+				limit = {
+					has_template = usa_lincoln_character_template
+					has_ideology = ideology:ideology_abolitionist
+				}
+				set_ideology = ideology:ideology_usfp_abolitionist_radical
+			}
+		}
 	}
 
 	#Reconstruction of the North
@@ -452,6 +467,21 @@ acw_je_events.2 = {
 			name = usfp_post_acw_demobilization_modifier
 			years = 25
 			is_decaying = yes
+		}
+		if = {
+			limit = { 
+				any_scope_character = {
+					has_template = usa_lincoln_character_template
+					has_ideology = ideology:ideology_abolitionist
+				}
+			}
+			random_scope_character = {
+				limit = {
+					has_template = usa_lincoln_character_template
+					has_ideology = ideology:ideology_abolitionist
+				}
+				set_ideology = ideology:ideology_usfp_abolitionist_radical
+			}
 		}
 	}
 }

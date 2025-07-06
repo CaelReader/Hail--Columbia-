@@ -541,3 +541,10 @@ USA: PB are more inclined to the Liberal party
 USA: Liberal Party can exist without the Intelligentsia
 Fixed starting character templates
 Rain Doesn't Follow the Plow won't trigger after Westward Expansion is already complete
+
+5.2 "Rockefeller"
+Added some extra Power Bloc names for the USA
+American Superculture is harder to get: requires <30% canadian/dixie radicals, >15% yankee/dixie/canadian loyalists, american frontier must be closed
+Lincoln now becomes a Radical Abolitionist when Reconstruction starts, or if he spawns during it
+Utopian is now considered an abolitionist ideology
+Added Horace Greeley as a Utopian agitator

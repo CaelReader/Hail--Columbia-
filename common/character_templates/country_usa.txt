@@ -230,11 +230,20 @@ usa_lincoln_character_template = {
         if = {
             limit = {
                 owner = {
-                    has_law = law_type:law_slavery_banned
+					has_journal_entry = je_acw_reconstruction
                 }
             }
-            set_ideology = ideology:ideology_radical
-        } else = {
+            set_ideology = ideology:ideology_usfp_abolitionist_radical
+        } 
+		else_if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_slavery_banned
+				}
+			}
+			set_ideology = ideology:ideology_reformer
+		}
+		else = {
             set_ideology = ideology:ideology_abolitionist
         }
     }

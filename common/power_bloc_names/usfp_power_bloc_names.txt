@@ -1,0 +1,56 @@
+﻿usfp_pb_philadelphia_treaty = {
+	trigger = {
+		scope:selected_identity = identity:identity_trade_league
+	    OR = {
+	    	any_scope_state = { state_region = s:STATE_PENNSYLVANIA }
+	    	c:USA ?= this
+	    }
+	}
+}
+
+usfp_pb_american_free_trade_area = {
+	trigger = {
+		scope:selected_identity = identity:identity_trade_league
+	    OR = {
+	    	any_scope_state = { state_region = s:STATE_PENNSYLVANIA }
+	    	c:USA ?= this
+	    }
+		has_law_or_variant = law_type:law_free_trade
+	}
+}
+
+usfp_pb_monroe_doctrine = {
+	trigger = {
+		OR = {
+			scope:selected_identity = identity:identity_ideological_union
+			scope:selected_identity = identity:identity_military_treaty_organization
+		}
+		c:USA ?= this
+	}
+}
+
+usfp_pb_free_world = {
+	trigger = {
+		scope:selected_identity = identity:identity_ideological_union
+		c:USA ?= this
+		coa_republic_trigger = yes
+		country_has_voting_franchise = yes
+		any_rival_country = {
+			OR = {
+				coa_fascist_trigger = yes
+				coa_anarchy_trigger = yes
+				coa_communist_trigger = yes
+			}
+		}
+	}
+}
+
+usfp_pb_syndicalist_international = {
+	trigger = {
+		OR = {
+			coa_anarchy_trigger = yes
+			coa_communist_trigger = yes
+		}
+		c:USA ?= this
+	}
+}

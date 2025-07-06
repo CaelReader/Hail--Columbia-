@@ -728,3 +728,29 @@ usfp_usa_winfield_hancock = {
     }
 }
 
+#USFP: Horace Greeley, editor of the New York Tribune
+usfp_usa_horace_greeley = {
+	first_name = Horace
+	last_name = Greeley
+    dna = usfp_usa_horace_greeley
+	historical = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_utopian
+	culture = cu:yankee
+    religion = rel:protestant
+	female = no
+	birth_date = 1811.2.3
+    traits = {
+        literary inept innovative usfp_trait_expansionist
+    }
+    agitator_usage = {
+        country_trigger = { c:USA ?= this }
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_intelligentsia
+         }
+        earliest_usage_date = 1841.1.1
+        latest_usage_date = 1865.1.1
+        chance = 50
+    }
+}

@@ -44,3 +44,9 @@ law_usfp_american_system: "American System"
 law_usfp_american_system_desc: "A variant of $law_protectionism$ allowing for even higher tariffs on imports. Export tariffs are disallowed under the Constitution."
 
 treaty_name_dancing_rabbit_creek: "Treaty of Dancing Rabbit Creek"
+
+usfp_pb_philadelphia_treaty: "Philadelphia Treaty"
+usfp_pb_american_free_trade_area: "American Free Trade Area"
+usfp_pb_monroe_doctrine: "Monroe Doctrine"
+usfp_pb_free_world: "Free World"
+usfp_pb_syndicalist_international: "Syndicalist International"

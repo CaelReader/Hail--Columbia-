@@ -2032,7 +2032,7 @@ usfp_manifest_destiny.19 = {
 		}
 		var:manifest_destiny_var >= 13
 		radical_fraction = {
-			value < 0.2
+			value < 0.3
 			culture = cu:dixie
 		}
 		radical_fraction = {
@@ -2040,7 +2040,19 @@ usfp_manifest_destiny.19 = {
 			culture = cu:yankee
 		}
 		radical_fraction = {
-			value < 0.2
+			value < 0.3
+			culture = cu:anglo_canadian
+		}
+		loyalist_fraction = {
+			value > 0.15
+			culture = cu:yankee
+		}
+		loyalist_fraction = {
+			value > 0.15
+			culture = cu:dixie
+		}
+		loyalist_fraction = {
+			value > 0.15
 			culture = cu:anglo_canadian
 		}
 		ig:ig_landowners = {
@@ -2051,6 +2063,7 @@ usfp_manifest_destiny.19 = {
 		is_at_war = no
 		is_diplomatic_play_committed_participant = no
 		has_technology_researched = pan-nationalism
+		has_global_variable = american_frontier_closed
 	}
 
 	immediate = {
