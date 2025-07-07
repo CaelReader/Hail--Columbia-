@@ -285,7 +285,7 @@ usa_roosevelt_character_template = {
     female = no
     religion = rel:protestant
     ideology = ideology_usfp_progressive #USFP
-    interest_group = ig_industrialists
+    interest_group = ig_petty_bourgeoisie
     birth_date = 1858.8.28
     dna = dna_roosevelt
 	ig_leader = yes
@@ -304,10 +304,7 @@ usa_roosevelt_character_template = {
         }
         interest_group_trigger = {
             is_marginal = no
-            OR = {
-                is_interest_group_type = ig_industrialists
-                is_interest_group_type = ig_petty_bourgeoisie
-            } 
+			is_interest_group_type = ig_petty_bourgeoisie
             NOR = {
                 has_variable = communist_ig_var
                 has_variable = chose_vanguardism
