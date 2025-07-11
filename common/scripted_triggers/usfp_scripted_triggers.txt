@@ -192,6 +192,7 @@ usfp_enacting_super_unconstitutional_law = {
 		is_enacting_law = law_type:law_monarchy
 		is_enacting_law = law_type:law_theocracy
 		is_enacting_law = law_type:law_council_republic
+		is_enacting_law = law_type:law_corporate_state
 		is_enacting_law = law_type:law_hereditary_bureaucrats
 		is_enacting_law = law_type:law_autocracy
 		is_enacting_law = law_type:law_oligarchy

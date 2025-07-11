@@ -53,7 +53,7 @@ usfp_progressive_era = {
 					has_ideology = ideology:ideology_usfp_progressive
 				}
 			}
-			game_date > 1896.1.1
+			year >= 1896
 		}
 	}
 	immediate = {
@@ -116,6 +116,28 @@ usfp_progressive_era = {
 					has_modifier = usfp_captive_state_government
 				}
 				remove_modifier = usfp_captive_state_government
+			}
+		}
+	}
+	on_timeout = {
+		if = {
+			limit = { usfp_progressive_era_square_deal_conditions = yes  }
+			trigger_event = usfp_progressive_era.16
+			show_as_tooltip = {
+				add_loyalists = {
+					value = small_radicals
+					strata = middle
+				}
+				add_radicals = {
+					value = large_radicals
+					strata = upper
+				}
+				every_scope_state = {
+					limit = {
+						has_modifier = usfp_captive_state_government
+					}
+					remove_modifier = usfp_captive_state_government
+				}
 			}
 		}
 	}

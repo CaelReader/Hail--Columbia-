@@ -1,26 +1,8 @@
 ﻿l_german:
-  albany_regency_uscwf:0 "Albany Regency"
-  missouri_compromise_uscwf:0 "Der Missouri-Kompromiss..."
-  a_house_divided_uscwf:0 "Ein Haus geteilt"
-  civil_war_reshuffle_uscwf:0 "Drittes Parteiensystem"
- 
-
-  ideology_republican_moralist:0 "Nicht-Monarchist"
-  ideology_republican_moralist_desc:0 "#lore Diese Gruppe unterstützt, obwohl sie moralistisch ist, immer noch eine republikanische Regierungsform.#!"
-  ideology_reactionary_segregationist:0 "Segregationist"
-  ideology_reactionary_segregationist_desc:0 "#lore Diese Gruppe glaubt, dass rassistische Gesetze notwendig sind, um ihre Interessen zu schützen.#!"
-  ideology_reactionary_exclusionist:0 "Ausschließend"
-  ideology_reactionary_exclusionist_desc:0 "#lore Diese Gruppe ist misstrauisch gegenüber Kulturen, die sie als 'zu fremd' erachtet, und glaubt, dass der Staat deren Rechte einschränken sollte.#!"
-  ideology_anti_tariff:0 "Anti-Zoll"
-  ideology_anti_tariff_desc:0 "#lore Diese Gruppe möchte alle Zölle auf Importe und Exporte abschaffen.#!"
-  ideology_pro_tariff:0 "Pro-Zoll"
-  ideology_pro_tariff_desc:0 "#lore Diese Gruppe glaubt, dass inländische Industrien sorgfältig vor ausländischen Importen geschützt werden sollten.#!"
-  ideology_american_school:0 "Amerikanische Schule"
-  ideology_american_school_desc:0 "#lore Diese Gruppe unterstützt eine Mischung aus Protektionismus und Interventionismus.#!"
-  ideology_empire_of_liberty:0 "Imperium der Freiheit"
-  ideology_empire_of_liberty_desc:0 "#lore Der Geist von 1776 lebt in dieser Gruppe weiter. Sie unterstützen die kontinentale Expansion und eine gut regulierte Miliz.#!"
-  #ideology_SRA:0 "Befürworter der Staatenrechte"
-  #ideology_SRA_desc:0 "#lore Diese Figur setzt sich für das Recht der Staaten ein, die Sklaverei aufrechtzuerhalten.#!"
-
-  ai_strategy_anti_slavery_agenda:0 "Gesetzgebung zur Emanzipation"
-  ai_strategy_anti_slavery_agenda_desc:0 "[COUNTRY.GetName] ist bereit, den Prozess der legislativen Abschaffung der Sklaverei zu beginnen. Das Haus wird nicht mehr geteilt sein - auf die eine oder andere Weise."
+ ideology_reactionary_segregationist: "Segregationist"
+ ideology_reactionary_segregationist_desc: "#lore Diese Gruppe glaubt, dass rassistische Gesetze notwendig sind, um ihre Interessen zu schützen.#!"
+ ideology_reactionary_exclusionist: "Ausschließend"
+ ideology_reactionary_exclusionist_desc: "#lore Diese Gruppe ist misstrauisch gegenüber Kulturen, die sie als 'zu fremd' erachtet, und glaubt, dass der Staat deren Rechte einschränken sollte.#!"
+  
+  
+  

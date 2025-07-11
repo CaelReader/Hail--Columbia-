@@ -1,42 +1,61 @@
-﻿l_german: 
-dlc_usfp: "Hail, Columbia!"
-dlc_usfp_desc: "Dies ist das United States Flavor Pack-Mod. Viel Spaß! Bitte bewerten Sie das Mod im Steam Workshop und hinterlassen Sie gerne Feedback oder Vorschläge.\n\n#o (Das Mod ist#g  @green_checkmark!aktiv#!)#!"
-
-Asiyahola:0 "Asi-yahola"
-Osceola:0 "Osceola"
-osceola_warband: "Osceolas Kriegsbande"
-usfp_EmptyMicanopy:0 ""
-Biddle:0 "Biddle"
-usfp_Blank: ""
-Puhihwikwasuu: "Puhihwikwasu'u"
-Puhtocnocony: "Puhtocnocony"
-Sota: "Šóta"
-Nast: "Nast"
-Haywood: "Haywood"
-Robert_M: "Robert M."
-La_Follette: "La Follette"
-William_Jennings: "William Jennings"
-Northup: "Northup"
-Gladden: "Gladden"
-Elizabeth_Gurley: "Elizabeth Gurley"
-John_Ambrose: "John Ambrose"
-Fauntroy: "Fauntroy"
-ecchi_Franklin_D: "Franklin D."
-Rhett: "Rhett"
-William_Lloyd: "William Lloyd"
-Terrence: "Terrence"
-Powderly: "Powderly"
-Gompers: "Gompers"
-William_Graham: "William Graham"
-Addams: "Addams"
-Kintpuash: "Kintpuash"
-Biawacheeitchish: "Bíawacheeitchish"
-Plenty_Coups: "Plenty Coups"
-Wovoka: "Wovoka"
-Crook: "Crook"
-Gibbon: "Gibbon"
-Terry: "Terry"
-Canby: "Canby"
-Ranald: "Ranald"
-
-USS_Monitor: "USS Monitor"
+﻿l_german:
+ dlc_usfp: "Hail, Columbia!"
+ dlc_usfp_desc: "Dies ist das United States Flavor Pack-Mod. Viel Spaß! Bitte bewerten Sie das Mod im Steam Workshop und hinterlassen Sie gerne Feedback oder Vorschläge.\n\n#o (Das Mod ist#g  @green_checkmark!aktiv#!)#!"
+  
+ Asiyahola: "Asi-yahola"
+ Osceola: "Osceola"
+ osceola_warband: "Osceolas Kriegsbande"
+ usfp_EmptyMicanopy: ""
+ Biddle: "Biddle"
+ usfp_Blank: ""
+ Puhihwikwasuu: "Puhihwikwasu'u"
+ Puhtocnocony: "Puhtocnocony"
+ Sota: "Šóta"
+ Nast: "Nast"
+ Haywood: "Haywood"
+ Robert_M: "Robert M."
+ La_Follette: "La Follette"
+ William_Jennings: "William Jennings"
+ Northup: "Northup"
+ Gladden: "Gladden"
+ Elizabeth_Gurley: "Elizabeth Gurley"
+ John_Ambrose: "John Ambrose"
+ Fauntroy: "Fauntroy"
+ ecchi_Franklin_D: "Franklin D."
+ Rhett: "Rhett"
+ William_Lloyd: "William Lloyd"
+ Terrence: "Terrence"
+ Powderly: "Powderly"
+ Gompers: "Gompers"
+ William_Graham: "William Graham"
+ Addams: "Addams"
+ Kintpuash: "Kintpuash"
+ Biawacheeitchish: "Bíawacheeitchish"
+ Plenty_Coups: "Plenty Coups"
+ Wovoka: "Wovoka"
+ Crook: "Crook"
+ Gibbon: "Gibbon"
+ Terry: "Terry"
+ Canby: "Canby"
+ Ranald: "Ranald"
+ Singer: "Singer" #NT!
+  
+ USS_Monitor: "USS Monitor"
+  
+ company_usfp_westinghouse: "Westinghouse Electric & Manufacturing Company" #NT!
+ company_usfp_coca_cola: "Coca-Cola" #NT!
+ prestige_good_usfp_coca_cola: "Coca-Cola" #NT!
+ company_usfp_dupont: "DuPont de Nemours" #NT!
+ company_usfp_american_sugar: "American Sugar Refining Company" #NT!
+ company_usfp_anaconda: "Anaconda Mining Company" #NT!
+ company_usfp_american_tobacco: "American Tobacco Company" #NT!
+ prestige_good_usfp_durham_tobacco: "Durham Tobacco" #NT!
+ company_usfp_american_woolen: "American Woolen Company" #NT!
+ company_usfp_armours: "Armour and Company" #NT!
+ company_usfp_cfi: "Colorado Fuel & Iron" #NT!
+ company_usfp_sears: "Sears, Roebuck and Co." #NT!
+ company_usfp_singer: "Singer Manufacturing Company" #NT!
+ company_usfp_union_pacific: "Union Pacific Railroad" #NT!
+ company_usfp_us_rubber: "United States Rubber Company" #NT!
+ company_usfp_us_warner_bros: "Warner Bros. Pictures" #NT!
+ prestige_good_usfp_hollywood_movies: "Hollywood Movies" #NT!
