@@ -61,6 +61,10 @@ usfp_progressive_era = {
 			save_scope_as = progressive_ideology
 		}
 		trigger_event = usfp_progressive_era.1
+		set_variable = {
+			name = je_progressive_era_var
+			value = 0
+		}
 	}
 	invalid = {
 		NOT = {
@@ -88,31 +92,10 @@ usfp_progressive_era = {
 		}
 	}
 	complete = {
-		has_law = law_type:law_universal_suffrage
-		has_law = law_type:law_interventionism
-		has_law = law_type:law_graduated_taxation
-		has_law = law_type:law_womens_suffrage
-		has_law = law_type:law_compulsory_primary_school
-		has_law = law_type:law_elected_bureaucrats
-		has_law = law_type:law_public_health_insurance
-		institution_investment_level = {
-			institution = institution_health_system
-			value >= 3
+		scope:journal_entry = {
+			is_goal_complete = yes
 		}
-		institution_investment_level = {
-			institution = institution_social_security
-			value >= 3
-		}
-		institution_investment_level = {
-			institution = institution_workplace_safety
-			value >= 3
-		}
-		institution_investment_level = {
-			institution = institution_schools
-			value >= 4
-		}
-		bureaucracy > 300
-		root.average_sol > 15
+		usfp_progressive_era_square_deal_conditions = yes
 	}
 	on_complete = {
 		trigger_event = usfp_progressive_era.16
@@ -156,6 +139,27 @@ usfp_progressive_era = {
 		events = {
 			usfp_progressive_era.15 #Cross of Gold, Bryan spawn
 		}
+		effect = {
+			if = {
+				limit = { 
+					usfp_progressive_era_square_deal_conditions = yes
+				}
+				change_variable = {
+					name = je_progressive_era_var
+					add = 1
+				}
+			}
+		}
+
+	}
+	current_value = {
+		value = var:je_progressive_era_var
+	}
+	goal_add_value = {
+		add = 60
+	}
+	is_progressing = {
+		usfp_progressive_era_square_deal_conditions = yes
 	}
 }
 

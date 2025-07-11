@@ -31,13 +31,21 @@ usfp_gilded_age = {
 			has_law = law_type:law_laissez_faire
 			game_date > 1873.1.1
 		}
-		ig:ig_industrialists = {
-			is_powerful = yes
+		OR = {
+			ig:ig_industrialists = {
+				is_powerful = yes
+			}
+			AND = {
+				has_law = law_type:law_laissez_faire
+				ig:ig_industrialists = {
+					is_in_government = yes
+				}
+			}
 		}
 		any_scope_state = {
 			is_incorporated = yes
 			has_building = building_railway
-			count >= 15
+			count >= 10
 		}
 		NOR = {
 			has_journal_entry = je_acw_countdown

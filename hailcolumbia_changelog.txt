@@ -549,3 +549,15 @@ Lincoln now becomes a Radical Abolitionist when Reconstruction starts, or if he 
 Utopian is now considered an abolitionist ideology
 Added Horace Greeley as a Utopian agitator
 Teddy Roosevelt can now only spawn as PB
+
+5.3 "Rockefeller"
+Enacting Laissez Faire lowers the Industrialist Clout needed to start the Gilded Age
+Lowered number of Railroads required to start the Gilded Age and for the Railroad Tycoons event
+The Square Deal must now be in place for 5 years to finish the Progressive Cause JE
+Bumped up the SoL requirement for the Square Deal by 1
+Disabled "total war" effect in ACW due to changes in how War Goals are contested
+Eugenics movement can now always spawn Social Darwinists
+Updated political movements to use new suppression/bolstering values
+Afro-American President event now bolsters racist Movements and accounts for the American Superculture
+Ironclad Concept no longer spawns an Ironclad (unfortunately it was buggy)
+Imminent Secession modifier is now properly imminent, and gets removed when the ACW begins

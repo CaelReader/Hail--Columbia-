@@ -937,7 +937,7 @@ usfp_manifest_destiny.9 = {
 		}
 		#need trains to build trains
 		any_scope_building = {
-			count > 15
+			count > 10
 			level > 0
 			is_building_type = building_railway
 			is_under_construction = no
@@ -2896,6 +2896,7 @@ usfp_manifest_destiny.28 = {
 	duration = 3
 
 	trigger = {
+		is_diplomatic_play_committed_participant = no
 		any_scope_state = {
 			any_scope_pop = {
 				is_pop_type = peasants

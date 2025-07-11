@@ -496,3 +496,31 @@ usfp_character_is_natural_born_citizen = {
 		}
 	}
 }
+
+usfp_progressive_era_square_deal_conditions = {
+	has_law = law_type:law_universal_suffrage
+	has_law = law_type:law_interventionism
+	has_law = law_type:law_graduated_taxation
+	has_law = law_type:law_womens_suffrage
+	has_law = law_type:law_compulsory_primary_school
+	has_law = law_type:law_elected_bureaucrats
+	has_law = law_type:law_public_health_insurance
+	institution_investment_level = {
+		institution = institution_health_system
+		value >= 3
+	}
+	institution_investment_level = {
+		institution = institution_social_security
+		value >= 3
+	}
+	institution_investment_level = {
+		institution = institution_workplace_safety
+		value >= 3
+	}
+	institution_investment_level = {
+		institution = institution_schools
+		value >= 4
+	}
+	bureaucracy > 300
+	root.average_sol > 16
+}

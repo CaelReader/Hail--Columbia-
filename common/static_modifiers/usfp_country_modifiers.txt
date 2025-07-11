@@ -220,8 +220,8 @@ usfp_congressional_uproar = {
 
 usfp_imminent_secession = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
-	country_secession_progress_mult = 1.00
-	political_movement_radicalism_from_enactment_approval_mult = 1.00
+	country_secession_clock_time_add = 0.50
+	political_movement_radicalism_from_enactment_disapproval_mult = 1.00
 }
 
 usfp_modifier_supreme_court_bribery = {

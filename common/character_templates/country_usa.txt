@@ -422,7 +422,7 @@ uom_mkc = {
     interest_group = ig_rural_folk
     birth_date = 1890.7.14
     traits = {
-    	charistmatic
+    	charismatic
         cautious
         erudite
     }

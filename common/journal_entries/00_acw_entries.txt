@@ -158,12 +158,7 @@ je_acw_war = {
 	
 	immediate = {
 		usfp_manifest_less_destiny_effect = yes
-		if = {
-			limit = { 
-				has_modifier = usfp_1850_compromise_decaying
-			}
-			remove_modifier = usfp_1850_compromise_decaying
-		}
+		usfp_break_compromises_effect = yes
 		if = {
 			limit = { 
 				has_modifier = usfp_second_party_system_modifier
@@ -177,6 +172,10 @@ je_acw_war = {
 				has_modifier = usfp_fugitive_slave_law
 			 }
 			 remove_modifier = usfp_fugitive_slave_law
+		}
+		if = {
+			limit = { has_modifier = usfp_imminent_secession }
+			remove_modifier = usfp_imminent_secession
 		}
 		# if Sonora exists, they declare for the Confederacy
 			if = {
@@ -387,18 +386,18 @@ je_acw_war = {
 		}
 		effect = {
 			#Border States can swap sides permanently
-			s:STATE_KANSAS = {
-				usfp_acw_border_states_total_war_csa = yes
-			}
-			s:STATE_MISSOURI = {
-				usfp_acw_border_states_total_war_csa = yes
-			}
-			s:STATE_KENTUCKY = {
-				usfp_acw_border_states_total_war_csa = yes
-			}
-			s:STATE_WEST_VIRGINIA = {
-				usfp_acw_border_states_total_war_csa = yes
-			}
+			# s:STATE_KANSAS = {
+			# 	usfp_acw_border_states_total_war_csa = yes
+			# }
+			# s:STATE_MISSOURI = {
+			# 	usfp_acw_border_states_total_war_csa = yes
+			# }
+			# s:STATE_KENTUCKY = {
+			# 	usfp_acw_border_states_total_war_csa = yes
+			# }
+			# s:STATE_WEST_VIRGINIA = {
+			# 	usfp_acw_border_states_total_war_csa = yes
+			# }
 		}
 	}
 

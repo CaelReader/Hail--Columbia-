@@ -26,13 +26,13 @@ ai_strategy_anti_slavery_agenda = {
 		}
 		if = {
 			limit = {
-				NOT = { scope:law.type = law_type:law_slavery_banned }
+				NOT = { scope:law.type ?= law_type:law_slavery_banned }
 			}
 			multiply = 4
 		}
 		if = {
 			limit = {
-				scope:law.type = law_type:law_slavery_banned
+				scope:law.type ?= law_type:law_slavery_banned
 			}
 			multiply = 0
 		}
@@ -158,6 +158,15 @@ ai_strategy_manifest_destiny = {
 				}
 			}
 			add = 100
+		}
+
+		if = {
+			limit = {
+				ruler = {
+					has_ideology = ideology:ideology_jingoist_leader
+				}
+			}
+			add = 1000
 		}
 
 		if = {
@@ -1095,3 +1104,182 @@ ai_strategy_pacific_empire = {
 		}								
 	}
 }
+
+# ai_strategy_reunify_america = {
+# 	icon = "gfx/interface/icons/ai_strategy_icons/usfp_reunify_america_strategy.dds"
+	
+# 	type = diplomatic
+
+# 	possible = {
+# 		is_subject = no
+# 		usfp_country_is_american = yes
+# 		OR = {
+# 			NOT = {
+# 				exists = c:USA
+# 			}
+# 			AND = {
+# 				this = c:USA
+# 				exists = c:CSA
+# 			}
+# 		}
+# 	}
+	
+# 	weight = {
+# 		value = 10
+# 		if = {
+# 			limit = {
+# 				ruler = {
+# 					has_ideology = ideology:ideology_pacifist
+# 				}
+# 			}
+# 			add = -1000
+# 		}
+# 		if = {
+# 			limit = {
+# 				ruler = {
+# 					has_ideology = ideology:ideology_jingoist_leader
+# 				}
+# 			}
+# 			add = 1000
+# 		}
+# 		if = {
+# 			limit = {
+# 				exists = c:CSA
+# 				ruler = {
+# 					usfp_anti_slavery_leader_trigger = yes
+# 				}
+# 			}
+# 			add = 1000
+# 		}
+# 	}
+	
+# 	will_form_power_bloc = {
+# 		has_technology_researched = nationalism
+# 		global_country_ranking >= 3
+# 	}
+	
+# 	undesirable_infamy_level = {
+# 		value = 75
+# 	}
+	
+# 	unacceptable_infamy_level = {
+# 		value = 100
+# 	}
+	
+# 	ideological_opinion_effect_mult = {
+# 		value = 0.75
+# 	}
+		
+	
+# 	#USA shouldn't interfere outside of Western Hemisphere
+# 	diplomatic_play_neutrality = {
+# 		value = 50
+# 	}
+	
+# 	diplomatic_play_boldness = {
+# 		value = 50
+# 	}
+	
+# 	recklessness = {
+# 		value = 0.25
+# 		# Confident against unification targets 
+# 		if = {
+# 			limit = {
+# 				scope:target_country = {
+# 					usfp_country_is_american = yes
+# 				}
+# 			}
+# 			add = 1
+# 		}
+# 	}
+	
+# 	aggression = {
+# 		value = 1
+		
+# 		if = {
+# 			limit = { 
+# 				NOT = { is_country_type = unrecognized }
+# 				scope:target_country = { is_country_type = unrecognized } 
+# 			}
+# 			add = 1
+# 		}	
+
+# 		# Less aggressive against countries we're just antagonistic against, rather than belligerent/domineering
+# 		if = {
+# 			limit = {
+# 				has_attitude = {
+# 					who = scope:target_country
+# 					attitude = antagonistic
+# 				}					
+# 			}
+# 			multiply = 0.25
+# 		}	
+
+# 		# More aggressive against ideological enemies, a bit less aggressive against ideological allies
+# 		if = {
+# 			limit = {
+# 				"ai_ideological_opinion(scope:target_country)" < 0
+# 			}
+			
+# 			multiply = {
+# 				value = "ai_ideological_opinion(scope:target_country)"
+# 				multiply = -0.2
+# 				add = 1
+# 				max = 4.0
+# 			}				
+# 		}	
+# 		else = {
+# 			multiply = {
+# 				value = "ai_ideological_opinion(scope:target_country)"
+# 				multiply = -0.05
+# 				add = 1
+# 				min = 0.5
+# 			}			
+# 		}
+		
+# 		# extremely aggressive against unification targets s
+# 		if = {
+# 			limit = {
+# 				scope:target_country = {
+# 					usfp_country_is_american = yes
+# 					NOT = {
+# 						is_subject_of = root
+# 					}
+# 				}
+# 			}
+# 			add = 10
+# 		}
+# s
+# 	}
+
+# 	building_group_weights = {
+# 		bg_army = 1.5
+# 	}
+
+# 	wargoal_weights = {
+# 		conquer_state = 1.0
+# 		return_state = 3.0
+# 	}
+
+# 	wargoal_maneuvers_fraction = {
+# 		value = 0.5
+# 	}
+
+# 	state_value = {
+# 		if = {
+# 			limit = {
+# 				scope:target_state = {
+# 					state_is_in_americas = yes
+# 				}					
+# 			}
+# 			add = 50 
+			
+# 			if = {
+# 				limit = { is_adjacent_to_state = scope:target_state }
+# 				multiply = 2
+# 			}
+# 		}
+# 	}
+
+	
+# }

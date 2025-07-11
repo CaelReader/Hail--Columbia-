@@ -243,7 +243,7 @@ usfp_acw.4 = {
 		NOT = {
 			has_variable = had_ironclad_innovation
 		}
-		has_technology_researched = paddle_steamer
+		can_research = ironclad_tech
 		NOT = {
 			has_technology_researched = ironclad_tech
 		}
@@ -262,23 +262,20 @@ usfp_acw.4 = {
 	option = {
 		name = usfp_acw.4.a
 		default_option = yes
-		add_technology_progress = {
-			technology = ironclad_tech
-			progress = 3500
-		}
-		custom_tooltip = {
-			text = usfp_acw.4.a.tt
-			create_military_formation = {
-				type = fleet
-				hq_region = sr:region_new_england
-				name = USS_Monitor
-				combat_unit = {
-					type = unit_type:combat_unit_type_ironclad
-					state_region = s:STATE_NEW_YORK
-					count = 1
-				}
-			}
-		}
+		add_technology_researched = ironclad_tech
+		# custom_tooltip = {
+		# 	text = usfp_acw.4.a.tt
+		# 	create_military_formation = {
+		# 		type = fleet
+		# 		hq_region = sr:region_new_england
+		# 		name = USS_Monitor
+		# 		combat_unit = {
+		# 			type = unit_type:combat_unit_type_ironclad
+		# 			state_region = s:STATE_NEW_YORK
+		# 			count = 1
+		# 		}
+		# 	}
+		# }
 		add_treasury = -275000
 	}
 	#too much of a gamble

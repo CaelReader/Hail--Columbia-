@@ -1669,13 +1669,26 @@ usfp_usa.21 = {
 			value = very_large_radicals
 			culture = cu:afro_american
 		}
-		add_radicals = {
-			value = medium_radicals
-			culture = cu:dixie
+		usfp_radicalize_dixies_in_country = {
+			RADICALS = medium_radicals
 		}
-		add_radicals = {
-			value = small_radicals
-			culture = cu:yankee
+		usfp_radicalize_yankees_in_country = {
+			RADICALS = small_radicals
+		}
+		every_political_movement = {
+			limit = {
+				OR = {
+					culture ?= cu:dixie
+					culture ?= cu:yankee
+					is_political_movement_type = movement_fascist
+					is_political_movement_type = movement_reactionary
+					is_political_movement_type = movement_usfp_eugenics
+				}
+			}
+			add_modifier = {
+				name = usfp_white_mans_country_modifier
+				years = 10
+			}
 		}
 	}
 

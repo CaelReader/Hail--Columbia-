@@ -63,13 +63,13 @@ notification_usfp_president_ineligible_name: "[SCOPE.sCharacter('interest_group_
  notification_usfp_president_ineligible_tooltip: "#header $notification_usfp_president_ineligible_name$#!\n$notification_usfp_president_ineligible_desc$"
 
 notification_usfp_liberia_republic_name: "Republic Unrecognized"
- notification_usfp_liberia_republic_desc: "The [SCOPE.sCountry("usa_scope").GetName] has declined to recognize our Republic, but will maintain its protectorate over our colony."
+ notification_usfp_liberia_republic_desc: "The [SCOPE.sCountry('usa_scope').GetName] has declined to recognize our Republic, but will maintain its protectorate over our colony."
  notification_usfp_liberia_republic_tooltip: "#header $notification_usfp_liberia_republic_name$#!\n$notification_usfp_liberia_republic_desc$"
 
 notification_usfp_liberia_independent_name: "Independence Granted"
- notification_usfp_liberia_independent_desc: "The [SCOPE.sCountry("usa_scope").GetName] has declined to recognize our Republic, and has disavowed all protection over us."
+ notification_usfp_liberia_independent_desc: "The [SCOPE.sCountry('usa_scope').GetName] has declined to recognize our Republic, and has disavowed all protection over us."
  notification_usfp_liberia_independent_tooltip: "#header $notification_usfp_liberia_independent_name$#!\n$notification_usfp_liberia_independent_desc$"
 
 notification_usfp_liberia_recognized_name: "Republic Recognized"
- notification_usfp_liberia_recognized_desc: "The [SCOPE.sCountry("usa_scope").GetName] has formally recognized our Republic as a protectorate."
+ notification_usfp_liberia_recognized_desc: "The [SCOPE.sCountry('usa_scope').GetName] has formally recognized our Republic as a protectorate."
  notification_usfp_liberia_recognized_tooltip: "#header $notification_usfp_liberia_recognized_name$#!\n$notification_usfp_liberia_recognized_desc$"
