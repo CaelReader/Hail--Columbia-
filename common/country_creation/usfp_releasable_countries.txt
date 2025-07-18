@@ -46,3 +46,19 @@ usfp_GLC = {
 		always = no
 	}
 }
+
+usfp_PSA = {
+	states = {
+		STATE_CALIFORNIA
+		STATE_WASHINGTON
+		STATE_OREGON
+		STATE_NEVADA
+	}
+	possible = {
+		NOT = {
+			c:USA ?= root
+		}
+	}
+	required_num_states = 3
+	ai_will_do = { always = no }
+}

@@ -320,6 +320,43 @@ usfp_new_president = {
 		owner = {
 			trigger_event = usfp_usa.21
 		}
+		if = {
+			limit = {
+				usfp_manifest_destiny_pro_expansion_trigger = yes
+				owner = {
+					is_ai = yes
+					has_journal_entry = usfp_manifest_destiny_main
+					NOT = {
+						has_global_variable = american_frontier_closed
+					}
+				} 
+			}
+			owner = {
+				set_strategy = ai_strategy_manifest_destiny
+			}
+		} else_if = {
+			limit = {
+				usfp_manifest_destiny_pro_expansion_trigger = yes
+				owner = {
+					is_ai = yes
+					has_journal_entry = usfp_manifest_destiny_main
+					has_global_variable = american_frontier_closed
+				} 
+			}
+			owner = {
+				set_strategy = ai_strategy_pacific_empire
+			}
+		} else_if = {
+			limit = {
+				usfp_manifest_destiny_anti_expansion_trigger = yes
+				owner = {
+					is_ai = yes
+				} 
+			}
+			owner = {
+				set_strategy = ai_strategy_monroe_doctrine
+			}
+		}
 	}
 }
 

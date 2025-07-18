@@ -140,3 +140,18 @@ mormon:"Mormon"
 STATE_OKLAHOMA_sequoyah: "Sequoyah"
 STATE_UTAH_deseret: "Deseret"
 STATE_WEST_VIRGINIA_antebellum: "Western Virginia"
+
+#is that a kaiserreich reference?!?
+usfp_PSA: "Pacific States of America"
+usfp_PSA_ADJ: "Pacific American"
+dyn_c_pacific_states: "Pacific States"
+dyn_c_pacific_states_ADJ: "Pacific"
+dyn_c_pacific_commonwealth: "Pacific Commonwealth"
+dyn_c_pacific_commonwealth_ADJ: "Pacific"
+
+usfp_WCA: "Workers’ Congress of America"
+usfp_WCA_ADJ: "Socialist American"
+usfp_APG: "American People's Government"
+usfp_APG_ADJ: "Nationalist American"
+usfp_ACC: "American Constitutional Coalition"
+usfp_ACC_ADJ: "Constitutional American"

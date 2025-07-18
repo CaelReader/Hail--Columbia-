@@ -492,3 +492,35 @@ ALK = {
 		}
 	}
 }
+
+usfp_PSA = {
+	dynamic_country_name = {
+		name = dyn_c_pacific_states
+		adjective = dyn_c_pacific_states
+		use_overlord_prefix = yes
+
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			scope:actor = {
+				is_subject = yes
+				OR = {
+					is_subject_type = subject_type_colony
+					is_subject_type = subject_type_puppet
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_pacific_commonwealth
+		adjective = dyn_c_pacific_commonwealth_ADJ
+		
+		is_main_tag_only = yes
+		priority = 2000
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}

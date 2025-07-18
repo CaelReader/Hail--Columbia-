@@ -623,3 +623,15 @@ usfp_ATK = {
 	
 	capital = STATE_QUEBEC
 }
+
+#Pacific States of America
+usfp_PSA = {
+	color = { 219  216  143 }
+
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { yankee mexican }
+	capital = STATE_CALIFORNIA
+}

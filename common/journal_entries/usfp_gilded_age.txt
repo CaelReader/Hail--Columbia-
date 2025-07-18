@@ -48,7 +48,14 @@ usfp_gilded_age = {
 			count >= 10
 		}
 		NOR = {
-			has_journal_entry = je_acw_countdown
+			# has_journal_entry = je_acw_countdown
+			any_political_movement = {
+				OR = {
+					is_political_movement_type = movement_anti_slavery
+					is_political_movement_type = movement_pro_slavery
+				}
+				political_movement_radicalism >= 0.30
+			}
 			has_journal_entry = je_acw_war
 			has_journal_entry = je_acw_reconstruction
 		}

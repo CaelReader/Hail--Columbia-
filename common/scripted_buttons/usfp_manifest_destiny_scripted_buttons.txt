@@ -278,6 +278,51 @@ usfp_homestead_act_button = {
 				name = usfp_homestead_act_modifier
 				years = 50
 			}
+			if = {
+				limit = {
+					owner = {
+						country_has_primary_culture = cu:usfp_american
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_cultural_community = cu:usfp_american
+						}
+					 }
+					 add_cultural_community = cu:usfp_american
+				}
+			}
+			else_if = {
+				limit = { 
+					OR = {
+						state_region = s:STATE_ARIZONA
+						state_region = s:STATE_CHIHUAHUA
+						state_region = s:STATE_RIO_GRANDE
+						state_region = s:STATE_SONORA
+						state_region = s:STATE_OKLAHOMA
+						state_region = s:STATE_NEW_MEXICO
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_cultural_community = cu:dixie
+						}
+					 }
+					 add_cultural_community = cu:dixie
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						NOT = {
+							has_cultural_community = cu:yankee
+						}
+					 }
+					 add_cultural_community = cu:yankee
+				}
+			}
 		}
 	}
 

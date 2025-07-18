@@ -561,3 +561,9 @@ Updated political movements to use new suppression/bolstering values
 Afro-American President event now bolsters racist Movements and accounts for the American Superculture
 Ironclad Concept no longer spawns an Ironclad (unfortunately it was buggy)
 Imminent Secession modifier is now properly imminent, and gets removed when the ACW begins
+
+5.4 "Rockefeller"
+Homestead Acts now directly spawn Cultural Communities to encourage migration
+AI USA should immediately adopt a relevant AI Strategy when electing a new president
+Gilded Age can now spawn in a slaver USA if the relevant movements are low-activism
+Added Pacific States of America formable tag for an independent California
