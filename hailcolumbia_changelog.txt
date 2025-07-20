@@ -565,5 +565,8 @@ Imminent Secession modifier is now properly imminent, and gets removed when the 
 5.4 "Rockefeller"
 Homestead Acts now directly spawn Cultural Communities to encourage migration
 AI USA should immediately adopt a relevant AI Strategy when electing a new president
+AI USA will adopt Emancipation Legislation if the Planters are marginalized
 Gilded Age can now spawn in a slaver USA if the relevant movements are low-activism
 Added Pacific States of America formable tag for an independent California
+(CMF) Human Rights technology now doubles pop attraction to the Abolitionist movement and increases its activism
+(CMF) Any Powerful IG having an Abolitionist leader now gives +30% activism to the Pro-Slavery movement
