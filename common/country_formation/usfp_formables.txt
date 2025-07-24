@@ -13,7 +13,8 @@
 	possible = {
 		has_technology_researched = nationalism
 		NOT = {
-			country_has_primary_culture = cu:anglo_canadian
+			exists = c:GBR
+			is_subject_of = c:GBR
 		}
 	}
 }
