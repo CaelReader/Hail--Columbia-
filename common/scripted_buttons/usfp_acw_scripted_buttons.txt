@@ -244,49 +244,33 @@ usfp_end_gag_rule_button = {
 	}
 
 	possible = {
-		AND = {
-			ig:ig_landowners = {
-				ig_clout > 0.40
-				is_in_government = yes
-			}
-			ig:ig_intelligentsia = {
-				is_marginal = yes
-			}
+		ig:ig_intelligentsia = {
+			is_marginal = yes
 		}
 		OR = {
 			any_interest_group = {
-				is_in_government = yes
-				leader = {
-					has_ideology = ideology:ideology_slaver
+				is_powerful = yes
+				OR = {
+					has_ideology = ideology:ideology_pro_slavery
+					leader = {
+						has_ideology = ideology:ideology_slaver
+					}
 				}
 			}
 			ruler = {
 				has_ideology = ideology:ideology_slaver
 			}
 		}
-
-		# OR = {
-		# 	custom_tooltip = {
-		# 		text = usfp_end_gag_rule_button_no_abolitionists
-		# 		NOT = {
-		# 			any_political_movement = {
-		# 				desired_law = law_type:law_slavery_banned
-		# 			}
-		# 		}
-		# 	}
-		# 	custom_tooltip = {
-		# 		text = usfp_end_gag_rule_button_slave_trade
-		# 		any_political_movement = {
-		# 			desired_law = law_type:law_slave_trade
-		# 		}
-		# 	}
-		# }
 	}
 
 	effect = {
 		custom_tooltip = {
 			text = usfp_end_gag_rule
 			set_variable = removed_gag_rule
+		}
+		add_loyalists = {
+			value = small_radicals
+			interest_group = ig:ig_landowners
 		}
 	}
 }

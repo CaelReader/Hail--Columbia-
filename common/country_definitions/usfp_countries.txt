@@ -632,6 +632,6 @@ usfp_PSA = {
 
 	tier = kingdom
 
-	cultures = { yankee mexican }
+	cultures = { yankee }
 	capital = STATE_CALIFORNIA
 }

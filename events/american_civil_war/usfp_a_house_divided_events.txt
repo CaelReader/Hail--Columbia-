@@ -1528,7 +1528,7 @@ usfp_a_house_divided.16 = {
 			}
 			add_modifier = {
 				name = usfp_dred_scott_fallout
-				years = 3
+				years = 6
 			}
 		}
 		add_radicals = {
@@ -1572,7 +1572,7 @@ usfp_a_house_divided.16 = {
 			}
 			add_modifier = {
 				name = usfp_dred_scott_fallout
-				years = 3
+				years = 6
 			}
 		}
 		add_radicals = {

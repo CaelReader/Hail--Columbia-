@@ -281,4 +281,21 @@ usfp_break_treaty_button = {
 			}
 		}
 	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				exists = c:LKT
+				has_truce_with = c:LKT
+				NOT = {
+					has_diplomatic_pact = {
+						who = c:LKT
+						type = colonization_rights
+					}
+				}
+			}
+			add = 100
+		}
+	}
 }

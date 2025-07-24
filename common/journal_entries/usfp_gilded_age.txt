@@ -21,7 +21,7 @@ usfp_gilded_age = {
 	possible = {
 		has_technology_researched = mutual_funds
 		calc_true_if = {
-			amount >= 2
+			amount >= 3
 			has_technology_researched = investment_banks
 			has_technology_researched = shift_work
 			has_technology_researched = steel_frame_buildings
@@ -49,15 +49,19 @@ usfp_gilded_age = {
 		}
 		NOR = {
 			# has_journal_entry = je_acw_countdown
-			any_political_movement = {
-				OR = {
-					is_political_movement_type = movement_anti_slavery
-					is_political_movement_type = movement_pro_slavery
-				}
-				political_movement_radicalism >= 0.30
-			}
 			has_journal_entry = je_acw_war
-			has_journal_entry = je_acw_reconstruction
+			# has_journal_entry = je_acw_reconstruction
+			custom_tooltip = {
+				text = no_angry_slavers_or_abolitionists
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_anti_slavery
+						is_political_movement_type = movement_pro_slavery
+					}
+					political_movement_radicalism >= 0.30
+				}
+			}
+
 		}
 	}
 	immediate = {

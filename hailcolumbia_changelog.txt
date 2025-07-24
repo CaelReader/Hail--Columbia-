@@ -564,9 +564,16 @@ Imminent Secession modifier is now properly imminent, and gets removed when the 
 
 5.4 "Rockefeller"
 Homestead Acts now directly spawn Cultural Communities to encourage migration
+California Genocide now increases colonization speed
+Lawless Gold Rushes now increase colonization speed slightly more
+Updated conditions for End Gag Rule button to be more lenient
+Dred Scott modifier now lasts twice as long
+The Gilded Age can now start during Reconstruction, but now requires 3 tech/timing conditions instead of 2
+Gilded Age can now spawn in a slaver USA if the relevant movements are low-activism
+Constitution JE now also explains the Washington Precedent
 AI USA should immediately adopt a relevant AI Strategy when electing a new president
 AI USA will adopt Emancipation Legislation if the Planters are marginalized
-Gilded Age can now spawn in a slaver USA if the relevant movements are low-activism
+AI shouldn't press the Break Treaties button and erroneously slow down their own colonization
 Added Pacific States of America formable tag for an independent California
 (CMF) Human Rights technology now doubles pop attraction to the Abolitionist movement and increases its activism
 (CMF) Any Powerful IG having an Abolitionist leader now gives +30% activism to the Pro-Slavery movement

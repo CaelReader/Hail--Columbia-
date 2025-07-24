@@ -384,12 +384,6 @@ movement_usfp_eugenics = {
 			value = literacy_rate
 			add = 0.10
 		}
-
-		subtract = { #Radicalism pushes people out of Progressive Movement into other spheres
-			desc = "POP_RADICALS"
-			value = pop_radical_fraction
-			multiply = 20
-		}
 	}
 
 	revolution = {

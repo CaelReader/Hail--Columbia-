@@ -128,12 +128,16 @@ dyn_c_usfp_north_american_technate_adj: "North American"
 dyn_c_united_states_of_earth: "United States of Earth"
 dyn_c_united_states_of_earth_ADJ: "Earthican"
 dyn_c_united_states_of_the_americas: "United States of the Americas"
+dyn_c_american_reich: "American Reich"
+
 dyn_c_utah_territory: "Utah Territory"
 dyn_c_utah_territory_ADJ: "Utah"
 dync_c_alaska_territory: "Alaska Territory"
 dync_c_alaska_territory_ADJ: "Alaskan"
 dync_c_michigan_territory: "Michigan Territory"
 dync_c_michigan_territory_ADJ: "Michigan"
+dyn_c_las_californias: "Las Californias"
+dyn_c_alta_california: "Alta California"
 
 mormon:"Mormon"
 

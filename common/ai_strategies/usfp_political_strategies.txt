@@ -266,6 +266,7 @@ ai_strategy_manifest_destiny = {
 						has_claim_by = root
 						state_is_in_americas = yes
 					}
+					NOT = { is_subject_of = root }
 				}
 			}
 			add = 1
@@ -377,6 +378,11 @@ ai_strategy_manifest_destiny = {
 				scope:target_state = {
 					has_claim_by = root
 					state_is_in_americas = yes
+					NOT = {
+						owner = {
+							is_subject_of = root
+						}
+					}
 				}					
 			}
 			add = 50 

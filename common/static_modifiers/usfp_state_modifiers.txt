@@ -39,7 +39,7 @@ usfp_gold_rush_lawlessness = {
 	state_migration_pull_add = 20
 	state_migration_quota_mult = 1.00
 	state_tax_waste_add = 0.10
-	state_colony_growth_speed_mult = 0.20
+	state_colony_growth_speed_mult = 0.25
 	state_standard_of_living_add = -1
 	state_mortality_mult = 0.10
 	state_birth_rate_mult = -0.20
@@ -242,4 +242,10 @@ usfp_prairie_madness_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_peasant_negative.dds
 	state_lower_strata_standard_of_living_add = -1
 	state_peasants_mortality_mult = 0.01
+}
+
+usfp_california_genocide_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
+	state_colony_growth_speed_mult = 0.20
+	state_hokan_standard_of_living_add = -8
 }

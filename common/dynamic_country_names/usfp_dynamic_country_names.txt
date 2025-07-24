@@ -323,7 +323,7 @@
 	}
 
 	#Easter Egg: United States of the Americas
-		dynamic_country_name = {
+	dynamic_country_name = {
 		name = dyn_c_united_states_of_the_americas
 		adjective = USA_ADJ
 
@@ -356,6 +356,35 @@
 					state_is_in_south_america = yes
 				}
 			}
+		}
+	}
+
+	#Easter Egg: American Reich under Fascist Germany
+	dynamic_country_name = {
+		name = dyn_c_american_reich
+		adjective = USA_ADJ
+
+		is_main_tag_only = yes
+		priority = 2000
+		
+		trigger = {
+			scope:actor ?= {
+				coa_fascist_trigger = yes
+				OR = {
+					is_subject_of = c:GER
+					is_subject_of = c:HRE
+					power_bloc ?= { power_bloc_leader = c:GER }
+					power_bloc ?= { power_bloc_leader = c:HRE }
+				}
+				OR = {
+					overlord ?= { coa_fascist_trigger = yes }
+					power_bloc ?= { 
+						power_bloc_leader = {
+							coa_fascist_trigger = yes
+						} 
+					}
+				}
+			} 
 		}
 	}
 }
@@ -523,4 +552,70 @@ usfp_PSA = {
 			coa_def_communist_flag_trigger = yes
 		}
 	}
+}
+
+CAL = {
+	dynamic_country_name = {
+		name = dyn_c_two_californias
+		adjective = dyn_c_two_californias_adj
+
+		is_main_tag_only = yes
+		priority = 0
+
+		trigger = {
+			scope:actor ?= {
+				owns_entire_state_region = STATE_CALIFORNIA
+				owns_entire_state_region = STATE_BAJA_CALIFORNIA
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_ussr_californias
+		adjective = dyn_c_ussr_californias_adj
+
+		is_main_tag_only = yes
+		priority = 10000
+
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+
+	#Mexican Subject
+	dynamic_country_name = {
+		name = dyn_c_las_californias
+		adjective = dyn_c_two_californias_adj
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			scope:actor ?= {
+				exists = c:MEX
+				is_subject_of = c:MEX
+				has_state_in_state_region = STATE_CALIFORNIA
+				has_state_in_state_region = STATE_BAJA_CALIFORNIA
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_alta_california
+		adjective = dyn_c_two_californias_adj
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			scope:actor ?= {
+				exists = c:MEX
+				is_subject_of = c:MEX
+				has_state_in_state_region = STATE_CALIFORNIA
+				NOT = {
+					has_state_in_state_region = STATE_BAJA_CALIFORNIA
+				}
+			}
+		}
+	}
+
 }
