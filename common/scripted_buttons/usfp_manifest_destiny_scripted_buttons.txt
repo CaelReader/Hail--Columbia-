@@ -239,7 +239,7 @@ usfp_homestead_act_button = {
 			NOT = {
 				has_modifier = usfp_homestead_act_modifier
 			}
-			free_arable_land >= 45
+			free_arable_land >= 40
 			OR = {
 				free_arable_land >= 100
 				is_split_state = no
@@ -278,19 +278,25 @@ usfp_homestead_act_button = {
 				name = usfp_homestead_act_modifier
 				years = 50
 			}
+			save_scope_as = homestead_state_scope
 			if = {
 				limit = {
 					owner = {
 						country_has_primary_culture = cu:usfp_american
 					}
 				}
-				if = {
-					limit = {
-						NOT = {
-							has_cultural_community = cu:usfp_american
+				root = {
+					ordered_scope_pop = {
+						limit = {
+							is_pop_type = peasants
+							culture = cu:usfp_american
 						}
-					 }
-					 add_cultural_community = cu:usfp_american
+						order_by = total_size
+						move_partial_pop = {
+							state = scope:homestead_state_scope
+							population_ratio = 0.002
+						}
+					}
 				}
 			}
 			else_if = {
@@ -304,23 +310,33 @@ usfp_homestead_act_button = {
 						state_region = s:STATE_NEW_MEXICO
 					}
 				}
-				if = {
-					limit = {
-						NOT = {
-							has_cultural_community = cu:dixie
+				root = {
+					ordered_scope_pop = {
+						limit = {
+							is_pop_type = peasants
+							culture = cu:dixie
 						}
-					 }
-					 add_cultural_community = cu:dixie
+						order_by = total_size
+						move_partial_pop = {
+							state = scope:homestead_state_scope
+							population_ratio = 0.002
+						}
+					}
 				}
 			}
 			else = {
-				if = {
-					limit = {
-						NOT = {
-							has_cultural_community = cu:yankee
+				root = {
+					ordered_scope_pop = {
+						limit = {
+							is_pop_type = peasants
+							culture = cu:yankee
 						}
-					 }
-					 add_cultural_community = cu:yankee
+						order_by = total_size
+						move_partial_pop = {
+							state = scope:homestead_state_scope
+							population_ratio = 0.002
+						}
+					}
 				}
 			}
 		}

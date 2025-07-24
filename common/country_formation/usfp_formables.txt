@@ -12,7 +12,7 @@
 
 	possible = {
 		has_technology_researched = nationalism
-		NOT = {
+		NAND = {
 			exists = c:GBR
 			is_subject_of = c:GBR
 		}

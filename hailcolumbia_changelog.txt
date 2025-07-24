@@ -563,7 +563,7 @@ Ironclad Concept no longer spawns an Ironclad (unfortunately it was buggy)
 Imminent Secession modifier is now properly imminent, and gets removed when the ACW begins
 
 5.4 "Rockefeller"
-Homestead Acts now directly spawn Cultural Communities to encourage migration
+Homestead Acts now cause a few Peasant settlers to immediately move to the target states
 California Genocide now increases colonization speed
 Lawless Gold Rushes now increase colonization speed slightly more
 Updated conditions for End Gag Rule button to be more lenient
