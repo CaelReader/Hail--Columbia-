@@ -1,4 +1,4 @@
-﻿l_korean:
+﻿l_english:
  party_american_party: "아메리카당"
  party_free_soil_party: "자유토지당"
  party_radical_democracy_party: "급진민주당"
@@ -8,3 +8,4 @@
  join_existing_party: "우리는 [concept_party]에 가담해야 합니다"
  usfp_bourbon_democrats: "버번 민주당"
  from_progressive_leader: "혁신주의 지도자"
+ powerful_abolitionist: "[concept_powerful] [GetIdeology('ideology_abolitionist').GetName] [concept_leader]"
