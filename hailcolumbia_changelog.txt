@@ -577,3 +577,8 @@ AI shouldn't press the Break Treaties button and erroneously slow down their own
 Added Pacific States of America formable tag for an independent California
 (CMF) Human Rights technology now doubles pop attraction to the Abolitionist movement and increases its activism
 (CMF) Any Powerful IG having an Abolitionist leader now gives +30% activism to the Pro-Slavery movement
+(CMF) Radical Abolitionists only join the Afro-American movement after slavery is abolished
+(CMF) Abolitionists no longer erroneously avoid the Agrarian Party once slavery is banned
+
+5.5 "Rockefeller"
+Updated Third/Forth Party System Modifiers
