@@ -1,4 +1,4 @@
-﻿l_korean:
+﻿l_english:
  usfp_lobby_anti_imperial: "반제국주의 로비"
  usfp_lobby_anti_imperial_name: "[COUNTRY.GetAdjectiveNoFormatting] 반제국주의 연맹"
  usfp_lobby_anti_imperial_icon: "@usfp_lobby_anti_imperial!"
@@ -35,3 +35,8 @@
  law_usfp_american_system: "아메리칸 시스템"
  law_usfp_american_system_desc: "$law_protectionism$의 변종인 이 사상은 수입에 더욱 높은 관세를 허용합니다. 수출 관세는 헌법에서 불허합니다."
  treaty_name_dancing_rabbit_creek: "댄싱 래빗 크리크 조약"
+ usfp_pb_philadelphia_treaty: "필라델피아 조약"
+ usfp_pb_american_free_trade_area: "아메리카 자유무역지대"
+ usfp_pb_monroe_doctrine: "먼로 독트린"
+ usfp_pb_free_world: "자유 세계"
+ usfp_pb_syndicalist_international: "생디칼리슴 인터내셔널"
