@@ -443,8 +443,7 @@ ai_strategy_monroe_doctrine = {
 	type = diplomatic
 
 	possible = {
-		exists = c:USA
-		this = c:USA
+		c:USA ?= this
 	}
 	
 	#should be default strategy for USA
