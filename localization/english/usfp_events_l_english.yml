@@ -407,7 +407,7 @@ usfp_manifest_destiny.14.f: ""The Union can never enjoy repose, nor possess reli
 usfp_manifest_destiny.14.a: "We are not in the business of crass imperalism."
 usfp_manifest_destiny.14.b: "[SCOPE.sStateRegion('cuba_scope').GetName] is critical to our national security."
 usfp_manifest_destiny.14.c: "Oh, we won't be #italic purchasing#! anything from [SCOPE.sCountry('cuba_owner_scope').GetName]"
-cuba_offer_available: "An $usfp_expansionist_tooltip$ administration can make an offer to purchase [SCOPE.sStateRegion('cuba_scope').GetName] from [SCOPE.sCountry('cuba_owner_scope').GetName]."
+cuba_offer_available: "An expansionist administration can make an offer to purchase [SCOPE.sStateRegion('cuba_scope').GetName] from [SCOPE.sCountry('cuba_owner_scope').GetName]."
 usfp_manifest_destiny.14.e: "Recall and reprimand these diplomats at once."
 
 usfp_manifest_destiny.15.t: "The Cuban Purchase"

@@ -103,3 +103,5 @@ BNN_ADJ:0 "Shoshoni"
 # ATB_ADJ: "Deg Xit'an"
 SLS: "Flathead"
 SLS_ADJ: "Flathead"
+
+ country_voting_power_from_literacy_add:1 "[concept_political_strength] from Literate Pops’ Votes"

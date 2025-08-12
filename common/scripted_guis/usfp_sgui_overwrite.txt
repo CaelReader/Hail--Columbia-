@@ -1,0 +1,17 @@
+﻿je_acw_reincoprorate_states_sgui = {
+    scope = country
+
+    effect = {
+        # if = {
+        #     limit = {
+        #         has_variable_list = acw_dixie_states
+        #     }
+        #     every_in_list = {
+        #         variable = acw_dixie_states
+
+        #         custom_tooltip = "ACW_DIXIE_STATES_LIST_ENTRY" # for each print a line
+        #     }
+        # }
+        # no empty state here
+    }
+}

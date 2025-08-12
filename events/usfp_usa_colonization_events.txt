@@ -1,4 +1,4 @@
-namespace = usfp_usa_colonization
+﻿namespace = usfp_usa_colonization
 #American Colonization Society introduction
 #Haiti Opportunity
 #HAI: Allow afro-americans?

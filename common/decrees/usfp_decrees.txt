@@ -48,6 +48,42 @@
 		}
 		if = {
 			limit = {
+				scope:country = {
+					has_journal_entry = je_the_algerian_departements
+				}
+				state_region = {
+					OR = {
+						this = s:STATE_ORAN
+						this = s:STATE_ALGIERS
+						this = s:STATE_CONSTANTINE
+					}
+				}
+				culture_percent_state = {
+					target = cu:french
+					value <= 0.25 # Bit of a buffer since we need 20%
+				}
+			}
+			add = 500
+		}
+		if = {
+			limit = {
+				is_incorporated = yes
+				any_scope_building = {
+					is_subsistence_building = yes
+					occupancy < 0.9
+				}
+				scope:country = {
+					OR = {
+						has_journal_entry = je_south_america_migration
+						has_journal_entry = je_central_america_migration
+						has_journal_entry = je_american_west_migration
+					}
+				}
+			}
+			add = 500
+		}
+		if = {
+			limit = {
 				is_incorporated = no
 				scope:country = { NOT = { has_law = law_type:law_colonial_resettlement } } # Already gives a hefty migration bonus
 			}

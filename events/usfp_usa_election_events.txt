@@ -1,330 +1,330 @@
 ﻿namespace = usfp_usa_election
 
 #Woman candidate
-usfp_usa_election.1 = {
-	type = country_event
-	placement = root
-	cooldown = { years = 5 }
-	title = usfp_usa_election.1.t
-	desc = usfp_usa_election.1.d
-	flavor = usfp_usa_election.1.f
-	dlc = dlc_usfp
-	event_image = {
-		video = "southamerica_election"
-	}
+# usfp_usa_election.1 = {
+# 	type = country_event
+# 	placement = root
+# 	cooldown = { years = 5 }
+# 	title = usfp_usa_election.1.t
+# 	desc = usfp_usa_election.1.d
+# 	flavor = usfp_usa_election.1.f
+# 	dlc = dlc_usfp
+# 	event_image = {
+# 		video = "southamerica_election"
+# 	}
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/invention_icons/feminism.dds"
+# 	icon = "gfx/interface/icons/invention_icons/feminism.dds"
 
-	duration = 3
+# 	duration = 3
 
-	trigger = {
-		usfp_country_is_american = yes
-		in_election_campaign = yes
-		any_active_party = {
-			any_member = {
-				is_powerful = yes
-				leader = {
-					is_female = yes
-				}
-				save_temporary_scope_as = check_ig
-			}
-		}
-		#trying to filter for only the party leader having a female candidate
-		any_interest_group = {
-			party = scope:check_ig.party
-			NOT = { this = scope:check_ig }
-			ig_clout > scope:check_ig.ig_clout
-			count = 0
-		}
-	}
+# 	trigger = {
+# 		usfp_country_is_american = yes
+# 		in_election_campaign = yes
+# 		any_active_party = {
+# 			any_member = {
+# 				is_powerful = yes
+# 				leader = {
+# 					is_female = yes
+# 				}
+# 				save_temporary_scope_as = check_ig
+# 			}
+# 		}
+# 		#trying to filter for only the party leader having a female candidate
+# 		any_interest_group = {
+# 			party = scope:check_ig.party
+# 			NOT = { this = scope:check_ig }
+# 			ig_clout > scope:check_ig.ig_clout
+# 			count = 0
+# 		}
+# 	}
 
-	immediate = {
-		random_active_party = {
-			limit = {
-				any_member = {
-					is_powerful = yes
-					leader = {
-						is_female = yes
-					}
-				}
-			}
-			random_member = {
-				limit = {
-					leader = {
-						is_female = yes
-					}
-				}
-				save_scope_as = female_ig
-			}
-		}
-	}
+# 	immediate = {
+# 		random_active_party = {
+# 			limit = {
+# 				any_member = {
+# 					is_powerful = yes
+# 					leader = {
+# 						is_female = yes
+# 					}
+# 				}
+# 			}
+# 			random_member = {
+# 				limit = {
+# 					leader = {
+# 						is_female = yes
+# 					}
+# 				}
+# 				save_scope_as = female_ig
+# 			}
+# 		}
+# 	}
 
-	#lose momentum
-	option = {
-		name = usfp_usa_election.1.a
-		scope:female_ig.party = {
-			add_momentum = momentum_medium_decrease
-		}
-		default_option = yes
-	}
-	#lose less momentum
-	option = {
-		name = usfp_usa_election.1.b
-		scope:female_ig.party = {
-			add_momentum = momentum_small_decrease
-		}
-		if = {
-			limit = { 
-				any_political_movement = {
-					OR = {
-						is_political_movement_type = movement_religious_majority
-						is_political_movement_type = movement_fascist
-					}
-				}
-			}
-			ordered_political_movement = {
-				limit = {
-					OR = {
-						is_political_movement_type = movement_religious_majority
-						is_political_movement_type = movement_fascist
-					}
-				}
-				order_by = political_movement_support
-				add_modifier = {
-					name = usfp_a_womans_place_negative_modifier
-					years = 4
-					is_decaying = yes
-				}
-			}
-		}
-		if = {
-			limit = { 
-				any_political_movement = {
-					OR = {
-						is_political_movement_type = movement_feminist
-						is_political_movement_type = movement_anarchist
-						is_political_movement_type = movement_usfp_progressive
-					}
-				}
-			}
-			ordered_political_movement = {
-				limit = {
-					OR = {
-						is_political_movement_type = movement_feminist
-						is_political_movement_type = movement_anarchist
-						is_political_movement_type = movement_usfp_progressive
-					}
-				}
-				order_by = political_movement_support
-				add_modifier = {
-					name = usfp_a_womans_place_positive_modifier
-					years = 4
-					is_decaying = yes
-				}
-			}
-		}
-	}
-}
-#Non-white Candidate
-usfp_usa_election.2 = {
-	type = country_event
-	placement = root
-	cooldown = { years = 5 }
-	title = usfp_usa_election.2.t
-	desc = usfp_usa_election.2.d
-	flavor = usfp_usa_election.2.f
-	dlc = dlc_usfp
-	event_image = {
-		video = "southamerica_election"
-	}
+# 	#lose momentum
+# 	option = {
+# 		name = usfp_usa_election.1.a
+# 		scope:female_ig.party = {
+# 			add_momentum = momentum_medium_decrease
+# 		}
+# 		default_option = yes
+# 	}
+# 	#lose less momentum
+# 	option = {
+# 		name = usfp_usa_election.1.b
+# 		scope:female_ig.party = {
+# 			add_momentum = momentum_small_decrease
+# 		}
+# 		if = {
+# 			limit = { 
+# 				any_political_movement = {
+# 					OR = {
+# 						is_political_movement_type = movement_religious_majority
+# 						is_political_movement_type = movement_fascist
+# 					}
+# 				}
+# 			}
+# 			ordered_political_movement = {
+# 				limit = {
+# 					OR = {
+# 						is_political_movement_type = movement_religious_majority
+# 						is_political_movement_type = movement_fascist
+# 					}
+# 				}
+# 				order_by = political_movement_support
+# 				add_modifier = {
+# 					name = usfp_a_womans_place_negative_modifier
+# 					years = 4
+# 					is_decaying = yes
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				any_political_movement = {
+# 					OR = {
+# 						is_political_movement_type = movement_feminist
+# 						is_political_movement_type = movement_anarchist
+# 						is_political_movement_type = movement_usfp_progressive
+# 					}
+# 				}
+# 			}
+# 			ordered_political_movement = {
+# 				limit = {
+# 					OR = {
+# 						is_political_movement_type = movement_feminist
+# 						is_political_movement_type = movement_anarchist
+# 						is_political_movement_type = movement_usfp_progressive
+# 					}
+# 				}
+# 				order_by = political_movement_support
+# 				add_modifier = {
+# 					name = usfp_a_womans_place_positive_modifier
+# 					years = 4
+# 					is_decaying = yes
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# #Non-white Candidate
+# usfp_usa_election.2 = {
+# 	type = country_event
+# 	placement = root
+# 	cooldown = { years = 5 }
+# 	title = usfp_usa_election.2.t
+# 	desc = usfp_usa_election.2.d
+# 	flavor = usfp_usa_election.2.f
+# 	dlc = dlc_usfp
+# 	event_image = {
+# 		video = "southamerica_election"
+# 	}
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_election.dds"
+# 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
-	duration = 3
+# 	duration = 3
 
-	trigger = {
-		usfp_country_is_american = yes
-		in_election_campaign = yes
-		any_active_party = {
-			any_member = {
-				is_powerful = yes
-				leader = {
-					culture = {
-						NOT = {
-							has_discrimination_trait = european_heritage
-							has_discrimination_trait = anglophone
-						}
-					}
-				}
-				save_temporary_scope_as = check_ig
-			}
-		}
-		#trying to filter for only the party leader having a female candidate
-		any_interest_group = {
-			party = scope:check_ig.party
-			NOT = { this = scope:check_ig }
-			ig_clout > scope:check_ig.ig_clout
-			count = 0
-		}
-	}
+# 	trigger = {
+# 		usfp_country_is_american = yes
+# 		in_election_campaign = yes
+# 		any_active_party = {
+# 			any_member = {
+# 				is_powerful = yes
+# 				leader = {
+# 					culture = {
+# 						NOT = {
+# 							has_discrimination_trait = european_heritage
+# 							has_discrimination_trait = anglophone
+# 						}
+# 					}
+# 				}
+# 				save_temporary_scope_as = check_ig
+# 			}
+# 		}
+# 		#trying to filter for only the party leader having a female candidate
+# 		any_interest_group = {
+# 			party = scope:check_ig.party
+# 			NOT = { this = scope:check_ig }
+# 			ig_clout > scope:check_ig.ig_clout
+# 			count = 0
+# 		}
+# 	}
 
-	immediate = {
-		random_active_party = {
-			limit = {
-				any_member = {
-					is_powerful = yes
-					leader = {
-						culture = {
-							NOT = {
-								has_discrimination_trait = european_heritage
-								has_discrimination_trait = anglophone
-							}
-						}
-					}
-				}
-			}
-			random_member = {
-				limit = {
-					leader = {
-						culture = {
-							NOT = {
-								has_discrimination_trait = european_heritage
-								has_discrimination_trait = anglophone
-							}
-						}
-					}
-				}
-				save_scope_as = nonwhite_ig
-			}
-		}
-	}
+# 	immediate = {
+# 		random_active_party = {
+# 			limit = {
+# 				any_member = {
+# 					is_powerful = yes
+# 					leader = {
+# 						culture = {
+# 							NOT = {
+# 								has_discrimination_trait = european_heritage
+# 								has_discrimination_trait = anglophone
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 			random_member = {
+# 				limit = {
+# 					leader = {
+# 						culture = {
+# 							NOT = {
+# 								has_discrimination_trait = european_heritage
+# 								has_discrimination_trait = anglophone
+# 							}
+# 						}
+# 					}
+# 				}
+# 				save_scope_as = nonwhite_ig
+# 			}
+# 		}
+# 	}
 
-	#lose momentum
-	option = {
-		name = usfp_usa_election.2.a
-		trigger = {
-			scope:nonwhite_ig.leader.culture = {
-				has_discrimination_trait = european_heritage
-			}
-		}
-		scope:nonwhite_ig.party = {
-			add_momentum = momentum_medium_decrease
-		}
-		default_option = yes
-	}
-	#lose less momentum
-	option = {
-		name = usfp_usa_election.2.b
-		trigger = {
-			scope:nonwhite_ig.leader.culture = {
-				has_discrimination_trait = european_heritage
-			}
-		}
-		scope:nonwhite_ig.party = {
-			add_momentum = momentum_small_decrease
-		}
-		if = {
-			limit = {
-				any_political_movement = {
-					OR = {
-						is_political_movement_type = movement_cultural_majority
-						is_political_movement_type = movement_fascist
-					}
-				}
-			 }
-			 ordered_political_movement = {
-				limit = {
-					OR = {
-						is_political_movement_type = movement_cultural_majority
-						is_political_movement_type = movement_fascist
-					}
-				}
-				order_by = political_movement_support
-				add_modifier = {
-					name = usfp_white_mans_country_modifier
-					multiplier = 0.5
-					years = 4
-					is_decaying = yes
-				}
-			}
-		}
-		if = {
-			limit = { 
-				any_political_movement = {
-					culture ?= scope:nonwhite_ig.leader.culture
-				}
-			}
-			ordered_political_movement = {
-				limit = {
-					culture ?= scope:nonwhite_ig.leader.culture
-				}
-				order_by = political_movement_support
-				add_modifier = {
-					name = usfp_peoples_house_positive_modifier
-					years = 4
-				}
-			}
-		}
-	}
-	#non-european
-	option = {
-		name = usfp_usa_election.2.c
-		trigger = {
-			scope:nonwhite_ig.leader.culture = {
-				NOT = {
-					has_discrimination_trait = european_heritage
-				}
-			}
-		}
-		scope:nonwhite_ig.party = {
-			add_momentum = momentum_large_decrease
-		}
-		if = {
-			limit = { 
-				any_political_movement = {
-					OR = {
-						is_political_movement_type = movement_cultural_majority
-						is_political_movement_type = movement_fascist
-					}
-				}
-			}
-			ordered_political_movement = {
-				limit = {
-					OR = {
-						is_political_movement_type = movement_cultural_majority
-						is_political_movement_type = movement_fascist
-					}
-				}
-				order_by = political_movement_support
-				add_modifier = {
-					name = usfp_white_mans_country_modifier
-					multiplier = 0.5
-					years = 4
-					is_decaying = yes
-				}
-			}
-		}
-		if = {
-			limit = { 
-				any_political_movement = {
-					culture ?= scope:nonwhite_ig.leader.culture
-				}
-			}
-			ordered_political_movement = {
-				limit = {
-					culture ?= scope:nonwhite_ig.leader.culture
-				}
-				order_by = political_movement_support
-				add_modifier = {
-					name = usfp_peoples_house_positive_modifier
-					years = 4
-				}
-			}
-		}
-	}
-}
+# 	#lose momentum
+# 	option = {
+# 		name = usfp_usa_election.2.a
+# 		trigger = {
+# 			scope:nonwhite_ig.leader.culture = {
+# 				has_discrimination_trait = european_heritage
+# 			}
+# 		}
+# 		scope:nonwhite_ig.party = {
+# 			add_momentum = momentum_medium_decrease
+# 		}
+# 		default_option = yes
+# 	}
+# 	#lose less momentum
+# 	option = {
+# 		name = usfp_usa_election.2.b
+# 		trigger = {
+# 			scope:nonwhite_ig.leader.culture = {
+# 				has_discrimination_trait = european_heritage
+# 			}
+# 		}
+# 		scope:nonwhite_ig.party = {
+# 			add_momentum = momentum_small_decrease
+# 		}
+# 		if = {
+# 			limit = {
+# 				any_political_movement = {
+# 					OR = {
+# 						is_political_movement_type = movement_cultural_majority
+# 						is_political_movement_type = movement_fascist
+# 					}
+# 				}
+# 			 }
+# 			 ordered_political_movement = {
+# 				limit = {
+# 					OR = {
+# 						is_political_movement_type = movement_cultural_majority
+# 						is_political_movement_type = movement_fascist
+# 					}
+# 				}
+# 				order_by = political_movement_support
+# 				add_modifier = {
+# 					name = usfp_white_mans_country_modifier
+# 					multiplier = 0.5
+# 					years = 4
+# 					is_decaying = yes
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				any_political_movement = {
+# 					culture ?= scope:nonwhite_ig.leader.culture
+# 				}
+# 			}
+# 			ordered_political_movement = {
+# 				limit = {
+# 					culture ?= scope:nonwhite_ig.leader.culture
+# 				}
+# 				order_by = political_movement_support
+# 				add_modifier = {
+# 					name = usfp_peoples_house_positive_modifier
+# 					years = 4
+# 				}
+# 			}
+# 		}
+# 	}
+# 	#non-european
+# 	option = {
+# 		name = usfp_usa_election.2.c
+# 		trigger = {
+# 			scope:nonwhite_ig.leader.culture = {
+# 				NOT = {
+# 					has_discrimination_trait = european_heritage
+# 				}
+# 			}
+# 		}
+# 		scope:nonwhite_ig.party = {
+# 			add_momentum = momentum_large_decrease
+# 		}
+# 		if = {
+# 			limit = { 
+# 				any_political_movement = {
+# 					OR = {
+# 						is_political_movement_type = movement_cultural_majority
+# 						is_political_movement_type = movement_fascist
+# 					}
+# 				}
+# 			}
+# 			ordered_political_movement = {
+# 				limit = {
+# 					OR = {
+# 						is_political_movement_type = movement_cultural_majority
+# 						is_political_movement_type = movement_fascist
+# 					}
+# 				}
+# 				order_by = political_movement_support
+# 				add_modifier = {
+# 					name = usfp_white_mans_country_modifier
+# 					multiplier = 0.5
+# 					years = 4
+# 					is_decaying = yes
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				any_political_movement = {
+# 					culture ?= scope:nonwhite_ig.leader.culture
+# 				}
+# 			}
+# 			ordered_political_movement = {
+# 				limit = {
+# 					culture ?= scope:nonwhite_ig.leader.culture
+# 				}
+# 				order_by = political_movement_support
+# 				add_modifier = {
+# 					name = usfp_peoples_house_positive_modifier
+# 					years = 4
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 #Incumbency Fatigue
