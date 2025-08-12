@@ -1858,3 +1858,79 @@ usfp_a_house_divided.19 = {
 	}
 
 }
+
+#Disunionism
+usfp_a_house_divided.20 = {
+	type = country_event
+	placement = root
+	cooldown = { years = 300 }
+	title = usfp_a_house_divided.20.t
+	desc = usfp_a_house_divided.20.d
+	flavor = usfp_a_house_divided.20.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "southamerica_election"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	duration = 3
+
+	trigger = {
+		in_election_campaign = yes
+		has_variable = whigs_party
+		any_scope_character = {
+			has_template = usfp_usa_william_lloyd_garrison
+		}
+		ig:ig_intelligentsia = {
+			has_party = yes
+		}
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_template = usfp_usa_william_lloyd_garrison
+			}
+			save_scope_as = garrison_scope
+		}
+		ig:ig_intelligentsia = {
+			party = {
+				save_scope_as = whig_scope
+			}
+		}
+	}
+
+	#lose momentum
+	option = {
+		name = usfp_a_house_divided.20.a
+		scope:whig_scope = {
+			add_momentum = momentum_medium_decrease
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			add_modifier = {
+				name = usfp_moral_suasion_modifier
+				years = 10
+			}
+		}
+		default_option = yes
+	}
+
+	option = {
+		name = usfp_a_house_divided.20.b
+		scope:whig_scope = {
+			add_momentum = momentum_small_decrease
+		}
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+	}
+}
+#Wide Awakes
+#Cross-Atlantic Abolitionism

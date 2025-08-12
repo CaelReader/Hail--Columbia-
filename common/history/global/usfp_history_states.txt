@@ -39,14 +39,6 @@
 		}
 	}
 
-	s:STATE_MISSOURI.region_state:USA = {
-		create_pop = {
-			culture = yankee
-			size = 18000
-			religion = mormon
-		}
-	}
-
 	s:STATE_MICHIGAN.region_state:USA = {
 		add_modifier = {
 			name = usfp_treaty_of_detroit_modifier

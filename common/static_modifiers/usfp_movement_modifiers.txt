@@ -40,3 +40,24 @@ usfp_white_mans_country_modifier = {
 	political_movement_pop_attraction_mult = 0.20
 	political_movement_radicalism_add = 0.20
 }
+
+usfp_a_womans_place_negative_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_pop_attraction_mult = 0.15
+	political_movement_radicalism_add = 0.10
+}
+
+usfp_a_womans_place_positive_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_pop_attraction_mult = 0.10
+}
+
+usfp_peoples_house_positive_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
+	political_movement_pop_attraction_mult = 0.10
+}
+
+usfp_moral_suasion_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	political_movement_pop_attraction_mult = 0.10
+}

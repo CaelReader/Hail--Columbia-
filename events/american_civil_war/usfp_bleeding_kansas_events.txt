@@ -424,11 +424,21 @@ usfp_bleeding_kansas.6 = {
 		any_scope_character = {
 			has_variable = john_brown_var
 		}
-		has_variable = had_sacking_of_lawrence
-		has_variable = slave_power_speech
-		has_variable = had_pottawatomie_massacre
+		OR = {
+			AND = {
+				has_variable = had_sacking_of_lawrence
+				has_variable = slave_power_speech
+				has_variable = had_pottawatomie_massacre
+			}
+			NOT = {
+				has_journal_entry = je_usfp_a_house_divided_bleeding_kansas
+			}
+		}
 		NOT = {
 			has_variable = had_harpers_ferry
+		}
+		NOT = {
+			has_law = law_type:law_slavery_banned
 		}
 	}
 
@@ -517,11 +527,21 @@ usfp_bleeding_kansas.7 = {
 		any_scope_character = {
 			has_variable = john_brown_var
 		}
-		has_variable = had_sacking_of_lawrence
-		has_variable = slave_power_speech
-		has_variable = had_pottawatomie_massacre
+		OR = {
+			AND = {
+				has_variable = had_sacking_of_lawrence
+				has_variable = slave_power_speech
+				has_variable = had_pottawatomie_massacre
+			}
+			NOT = {
+				has_journal_entry = je_usfp_a_house_divided_bleeding_kansas
+			}
+		}
 		NOT = {
 			has_variable = had_harpers_ferry
+		}
+		NOT = {
+			has_law = law_type:law_slavery_banned
 		}
 	}
 
@@ -850,6 +870,13 @@ usfp_bleeding_kansas.10 = {
 			add_loyalists_in_state = {
 				value = large_radicals
 				culture = cu:dixie
+			}
+			hidden_effect = {
+				create_pop = {
+					culture = afro_american
+					size = 500
+					pop_type = slaves
+				}
 			}
 			enslave_discriminated_farm_workers = yes
 			if = {

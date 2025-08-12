@@ -47,22 +47,22 @@ usfp_gilded_age = {
 			has_building = building_railway
 			count >= 10
 		}
-		NOR = {
-			# has_journal_entry = je_acw_countdown
-			has_journal_entry = je_acw_war
-			# has_journal_entry = je_acw_reconstruction
-			custom_tooltip = {
-				text = no_angry_slavers_or_abolitionists
-				any_political_movement = {
-					OR = {
-						is_political_movement_type = movement_anti_slavery
-						is_political_movement_type = movement_pro_slavery
-					}
-					political_movement_radicalism >= 0.30
-				}
-			}
-
-		}
+		any_revolution_ongoing = no
+		# NOR = {
+		# 	# has_journal_entry = je_acw_countdown
+		# 	has_journal_entry = je_acw_war
+		# 	# has_journal_entry = je_acw_reconstruction
+		# 	custom_tooltip = {
+		# 		text = no_angry_slavers_or_abolitionists
+		# 		any_political_movement = {
+		# 			OR = {
+		# 				is_political_movement_type = movement_anti_slavery
+		# 				is_political_movement_type = movement_pro_slavery
+		# 			}
+		# 			political_movement_radicalism >= 0.30
+		# 		}
+		# 	}
+		# }
 	}
 	immediate = {
 		trigger_event = usfp_gilded_age.1

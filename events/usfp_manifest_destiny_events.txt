@@ -262,6 +262,15 @@ usfp_manifest_destiny.3 = {
 	#refuse
 	option = {
 		name = usfp_manifest_destiny.3.b
+		highlighted_option = yes
+		trigger = {
+			NOT = {
+				is_subject_of = c:USA
+			}
+		}
+		show_as_unavailable = {
+			always = yes
+		}
 		default_option = yes
 		ai_chance = {
 			base = 95
@@ -423,7 +432,16 @@ usfp_manifest_destiny.5 = {
 	option = {
 		name = usfp_manifest_destiny.5.a
 		default_option = yes
-		usfp_manifest_less_destiny_effect = yes
+		if = {
+			limit = {
+				NOT = {
+					c:MEX = {
+						is_subject_of = root
+					}
+				}
+			 }
+			usfp_manifest_less_destiny_effect = yes
+		}
 		create_bidirectional_truce = {
 			country = c:MEX
 			months = 120
@@ -1441,6 +1459,21 @@ usfp_manifest_destiny.14 = {
 			value = 3
 		}
 		usfp_anger_abolitionists_effect = { MULT = 0.5 }
+		every_interest_group = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_landowners
+					leader = {
+						usfp_manifest_destiny_pro_expansion_trigger = yes
+					}
+				}
+			}
+			add_modifier = {
+				name = usfp_abandoned_cuba
+				days = short_modifier_time
+				multiplier = 0.5
+			}
+		}
 	}
 	#Good idea
 	option = {
@@ -1456,9 +1489,11 @@ usfp_manifest_destiny.14 = {
 				usfp_manifest_destiny_pro_expansion_trigger = yes
 			}
 		}
+		show_as_unavailable = {
+			always = yes
+		}
 		highlighted_option = yes
 		custom_tooltip = cuba_offer_available
-		usfp_manifest_more_destiny_effect = yes
 		create_incident = {
 			country = scope:cuba_owner_scope
 			value = 5
@@ -1502,19 +1537,13 @@ usfp_manifest_destiny.14 = {
 		highlighted_option = yes
 		custom_tooltip = cuba_offer_available
 		usfp_manifest_less_destiny_effect = yes
-		ig:ig_landowners = {
-			add_modifier = {
-				name = usfp_abandoned_cuba
-				days = short_modifier_time
-			}
-		}
 		every_interest_group = {
 			limit = {
-				NOT = {
+				OR = {
 					is_interest_group_type = ig_landowners
-				}
-				leader = {
-					usfp_manifest_destiny_pro_expansion_trigger = yes
+					leader = {
+						usfp_manifest_destiny_pro_expansion_trigger = yes
+					}
 				}
 			}
 			add_modifier = {
@@ -1697,6 +1726,7 @@ usfp_manifest_destiny.16 = {
 		s:STATE_CUBA = {
 			add_claim = c:USA
 		}
+		usfp_manifest_more_destiny_effect = yes
 		create_incident = {
 			country = scope:cuba_owner_scope
 			value = 5

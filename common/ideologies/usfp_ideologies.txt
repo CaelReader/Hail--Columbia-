@@ -511,7 +511,7 @@ ideology_usfp_progressive_movement = {
 }
 
 ideology_usfp_afro_american_movement = {
-	icon = "gfx/interface/icons/ideology_icons/reformer.dds"
+	icon = "gfx/interface/icons/ideology_icons/ideology_usfp_abolitionist_radical_movement.dds"
 
 	lawgroup_citizenship = {
 		law_ethnostate = strongly_disapprove
@@ -560,7 +560,7 @@ ideology_usfp_afro_american_movement = {
 }
 
 ideology_usfp_american_indian_movement = {
-	icon = "gfx/interface/icons/ideology_icons/sovereignist.dds"
+	icon = "gfx/interface/icons/ideology_icons/ideology_usfp_pan_indianist_group.dds"
 
 	lawgroup_citizenship = {
 		law_ethnostate = strongly_disapprove
@@ -596,6 +596,48 @@ ideology_usfp_american_indian_movement = {
 		law_colonial_resettlement = disapprove
 		law_colonial_exploitation = disapprove
 		law_frontier_colonization = disapprove
+	}
+
+}
+
+ideology_usfp_southern_rights_movement = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_usfp_southern_rights_movement.dds"
+
+	lawgroup_citizenship = {
+		law_ethnostate = strongly_approve
+		law_national_supremacy = approve
+		law_racial_segregation = neutral
+		law_cultural_exclusion = disapprove
+		law_multicultural = strongly_disapprove
+	}
+
+	lawgroup_migration = {
+		law_no_migration_controls = strongly_disapprove
+		law_migration_controls = neutral
+		law_closed_borders = approve
+	}
+
+	lawgroup_policing = {
+		law_militarized_police = approve
+		law_local_police = approve
+		law_dedicated_police = neutral
+		law_no_police = neutral
+	}
+	
+	lawgroup_church_and_state = {
+		law_state_atheism = strongly_disapprove
+		law_total_separation = strongly_disapprove
+		law_freedom_of_conscience = disapprove
+		law_state_religion = approve
+	}
+
+	lawgroup_governance_principles = {
+		law_monarchy = disapprove
+		law_theocracy = disapprove
+		law_presidential_republic = neutral
+		law_parliamentary_republic = disapprove
+		law_council_republic = strongly_disapprove
+		law_corporate_state = neutral
 	}
 
 }

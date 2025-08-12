@@ -581,4 +581,13 @@ Added Pacific States of America formable tag for an independent California
 (CMF) Abolitionists no longer erroneously avoid the Agrarian Party once slavery is banned
 
 5.5 "Rockefeller"
+Moved MD Point from pursuing Cuba to the event options that actually give you a claim on the island
+The Cuban Purchase can only be offered by an expansionist government
 Updated Third/Forth Party System Modifiers
+Subject Mexico is now compelled to accept the Mexican Purchase
+Added new FSA flag
+John Brown can now launch his Harper's Ferry raid even if Bleeding Kansas has concluded
+Increased the spawn weights of important historical Bleeding Kansas events
+Gilded Age no longer requires low-activism movements, instead merely requires no ongoing revolution
+Fixed the Border Ruffians not properly making Kansas a Slave State if they win
+Fixed Mormons spawning as unemployed pops

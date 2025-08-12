@@ -1,0 +1,11 @@
+namespace = usfp_usa_colonization
+#American Colonization Society introduction
+#Haiti Opportunity
+#HAI: Allow afro-americans?
+#Haiti Accepts
+#Haiti colony failure
+#Linconia Opportunity
+#Central American Countries: Linconia proposal
+#Linconia Rejected
+#Linconia settlement within Panama
+#Linconia founded as independent 

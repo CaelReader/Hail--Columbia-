@@ -66,6 +66,14 @@ usfp_western_purchase_button = {
 				days = 7
 			}
 		}
+		if = {
+			limit = { 
+				c:MEX = {
+					is_subject_of = root
+				}
+			}
+			custom_tooltip = mexican_subject_forced_purchase_tt
+		}
 	}
 
 	ai_chance = {
@@ -366,6 +374,15 @@ usfp_cuban_purchase_button = {
 		custom_tooltip = {
 			text = enough_manifest_destiny
 			var:manifest_destiny_var >= 5
+		}
+		any_scope_politician = {
+			OR = {
+				interest_group = {
+					is_in_government = yes
+				}
+				is_ruler = yes
+			}
+			usfp_manifest_destiny_pro_expansion_trigger = yes
 		}
 		in_default = no
 		taking_loans = no
