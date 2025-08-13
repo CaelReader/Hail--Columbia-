@@ -253,25 +253,59 @@
 	}
 
 	### I've run into a 420 country limit, so I'm consolidating some less important tags
-	c:ATB = {
-		annex = c:TNN
-		annex = c:KYK
-		annex = c:AHT
-		annex = c:TTC
+	if = {
+		limit = {
+			OR = {
+				has_game_rule = some_native_consolidation
+				has_game_rule = more_native_consolidation
+			} 
+		}
+		c:ATB = {
+			annex = c:TNN
+			annex = c:KYK
+			annex = c:AHT
+			annex = c:TTC
+		}
+
+		c:SAL = {
+			annex = c:LLT
+			annex = c:YKM
+		}
+
+		c:INV = {
+			annex = c:usfp_IPQ
+		}
+
+		c:SVY = {
+			annex = c:DGB
+			annex = c:STU
+			annex = c:GWC
+		}
 	}
 
-	c:SAL = {
-		annex = c:LLT
-		annex = c:YKM
+	if = {
+		limit = { 
+			has_game_rule = more_native_consolidation
+		}
+		c:SAL = {
+			annex = c:SYX
+			annex = c:WKS
+			annex = c:SWP
+		}
+		c:HOK = {
+			annex = c:YOK
+			annex = c:SRN
+		}
+		c:SVY = {
+			annex = c:TLT
+			annex = c:DNZ
+			annex = c:DKL
+		}
+		s:STATE_ALASKA = {
+			region_state:SVY = {
+				set_state_owner = c:ATB
+			}
+		}
 	}
 
-	c:INV = {
-		annex = c:usfp_IPQ
-	}
-
-	c:SVY = {
-		annex = c:DGB
-		annex = c:STU
-		annex = c:GWC
-	}
 }

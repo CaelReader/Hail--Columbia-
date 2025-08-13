@@ -1638,3 +1638,140 @@ usfp_break_compromises_effect = {
 			}
 		}
 }
+
+usfp_underground_railroad_escapes_to_canada_effect = {
+	random_state = {
+		limit = {
+			OR = {
+				state_region = s:STATE_ONTARIO
+				state_region = s:STATE_QUEBEC
+			}
+			is_slave_state = no
+			owner = {
+				has_law = law_type:law_slavery_banned
+				NOT = {
+					has_law = law_type:law_closed_borders
+				}
+				NOT = {
+					is_country_type = decentralized
+				}
+			}
+			culture_percent_state = {
+				target = cu:afro_american
+				value < 0.25
+			}
+		}
+		save_scope_as = escapee_target_state
+	}
+	usfp_underground_railroad_slave_escape_effect = {
+		VARIABLE = je_underground_railroad_canada_escapees
+	}
+}
+
+usfp_underground_railroad_escapes_to_north_effect = {
+	random_scope_state = {
+		limit = {
+			state_region = {
+				is_homeland = cu:yankee
+			}
+			is_slave_state = no
+		}
+		save_scope_as = escapee_target_state
+	}
+	usfp_underground_railroad_slave_escape_effect = {
+		VARIABLE = je_underground_railroad_northern_escapees
+	}
+}
+
+usfp_underground_railroad_escapes_southern_effect = {
+	random_state = {
+		limit = {
+			OR = {
+				region = sr:region_caribbean
+				state_region = s:STATE_TEXAS
+				state_region = s:STATE_RIO_GRANDE
+			}
+			owner = {
+				has_law = law_type:law_slavery_banned
+				NOT = {
+					has_law = law_type:law_closed_borders
+				}
+				NOT = {
+					is_country_type = decentralized
+				}
+			}
+			culture_percent_state = {
+				target = cu:afro_american
+				value < 0.25
+			}
+		}
+		save_scope_as = escapee_target_state
+	}
+	usfp_underground_railroad_slave_escape_effect = {
+		VARIABLE = je_underground_railroad_southern_escapees
+	}
+}
+
+usfp_underground_railroad_slave_escape_effect = {
+	usfp_underground_railroad_choose_escapee_pop_effect = yes
+	change_variable = {
+		name = $VARIABLE$
+		add = {
+			add = 1000
+			divide = scope:escapee_target_state.state_population
+			max = {
+				add = 1000
+				divide = scope:escapee_pop.total_size
+			}
+			multiply = scope:escapee_pop.total_size
+			round = 1
+		}
+	}
+	scope:escapee_pop = {
+		move_partial_pop = {
+			state = scope:escapee_target_state
+			population_ratio = {
+				add = 1000
+				divide = scope:escapee_target_state.state_population
+				max = {
+					add = 1000
+					divide = scope:escapee_pop.total_size
+				}
+			}
+		}
+	}
+	scope:escapee_target_state = {
+		liberate_slaves = yes
+		add_loyalists_in_state = {
+			value = medium_radicals
+			culture = cu:afro_american
+		}
+	}
+}
+
+usfp_underground_railroad_choose_escapee_pop_effect = {
+	if = {
+		limit = {
+			exists = c:CSA
+		 }
+		 c:CSA = {
+			random_scope_pop = {
+				limit = {
+					is_pop_type = slaves
+					culture = cu:afro_american
+					total_size >= 1000
+				}
+				save_scope_as = escapee_pop
+			}
+		 }
+	} else = {
+		random_scope_pop = {
+			limit = {
+				is_pop_type = slaves
+				culture = cu:afro_american
+				total_size >= 1000
+			}
+			save_scope_as = escapee_pop
+		}
+	}
+}

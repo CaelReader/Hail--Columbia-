@@ -8,3 +8,10 @@
 	usa_dynamic_names = {
 	}
 }
+
+usfp_native_consolidation = {
+	default = some_native_consolidation
+	some_native_consolidation = {}
+	more_native_consolidation = {}
+	no_native_consolidation = {}
+}

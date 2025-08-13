@@ -1770,6 +1770,9 @@ usfp_usa.23 = {
 		s:STATE_FLORIDA = {
 			save_scope_as = florida_region_scope
 		}
+		fix_variable_error = {
+			variable = acw_dixie_states
+		}
 	}
 
 	option = {

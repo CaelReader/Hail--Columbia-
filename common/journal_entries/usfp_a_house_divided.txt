@@ -655,3 +655,65 @@ je_usfp_a_house_divided_voting_rights = {
 	}
 
 }
+
+je_usfp_underground_railroad = {
+	icon = "gfx/interface/icons/invention_icons/railways.dds"
+
+	group = je_group_usa_american_civil_war
+
+	should_be_pinned_by_default = yes
+
+	immediate = {
+		cu:afro_american = {
+			save_scope_as = afro_american_culture
+		}
+		set_variable = {
+			name = je_underground_railroad_northern_escapees
+			value = 0
+		}
+		set_variable = {
+			name = je_underground_railroad_canada_escapees
+			value = 0
+		}
+		set_variable = {
+			name = je_underground_railroad_southern_escapees
+			value = 0
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			random_list = {
+				#between 100k and 500k slaves escaped historically, so this is targeting 500k as an upper bound. Actual amount of escapees will vary widely due to the different sizes of pops targeted
+				50 = {}
+				400 = {usfp_underground_railroad_escapes_to_north_effect = yes}
+				100 = { usfp_underground_railroad_escapes_to_canada_effect = yes }
+				10 = { usfp_underground_railroad_escapes_southern_effect = yes }
+			}
+		}
+	}
+
+	complete = {
+		has_law = law_type:law_slavery_banned
+		NOT = {
+			has_journal_entry = je_acw_countdown
+		}
+		custom_tooltip = {
+			text = csa_doesnt_exist
+			OR = {
+				NOT = { exists = c:CSA }
+				c:CSA ?= {
+					has_law = law_type:law_slavery_banned
+				}
+			}
+
+		}
+	}
+
+	invalid = {
+		OR = {
+			country_has_voting_franchise = no
+			has_law = law_type:law_council_republic
+		}
+	}
+}
