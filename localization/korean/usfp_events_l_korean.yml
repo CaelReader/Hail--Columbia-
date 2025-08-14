@@ -304,7 +304,7 @@
  usfp_manifest_destiny.14.a: "천박한 제국주의는 우리의 사업이 아니다."
  usfp_manifest_destiny.14.b: "[SCOPE.sStateRegion('cuba_scope').GetName]는 우리의 국가 안보에 대단히 중요하다."
  usfp_manifest_destiny.14.c: "오, 우리는 [SCOPE.sCountry('cuba_owner_scope').GetName]로부터 무엇도 #italic 구매#!하지 않을 것이다"
- cuba_offer_available: "[SCOPE.sCountry('cuba_owner_scope').GetName]로부터 [SCOPE.sStateRegion('cuba_scope').GetName]를 구매하겠다는 제안을 보낼 수 있습니다."
+ cuba_offer_available: "팽창주의 행정부는 [SCOPE.sCountry('cuba_owner_scope').GetName]로부터 [SCOPE.sStateRegion('cuba_scope').GetName]를 구매하겠다는 제안을 보낼 수 있습니다."
  usfp_manifest_destiny.14.e: "해당 외교관들을 즉시 소환하고 문책하라."
  usfp_manifest_destiny.15.t: "쿠바 구매"
  usfp_manifest_destiny.15.d: "[SCOPE.sCountry('usa_scope').GetName]이(가) [SCOPE.sStateRegion('cuba_scope').GetName]의 통제권 확보가 국가 안보에 필수적이라고 주장하며 해당 섬을 구매하겠다고 제안했습니다. 그들은 30년동안 @money! #yellow 1,300만#!을 지불하겠다고 제안했습니다."
