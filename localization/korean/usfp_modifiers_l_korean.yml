@@ -232,3 +232,7 @@
  usfp_trust_busting_company_modifier: "강제 분할"
  usfp_white_mans_country_modifier: "백인의 나라"
  usfp_california_genocide_modifier: "광범위한 학살"
+ usfp_a_womans_place_negative_modifier: "여성의 위치"
+ usfp_a_womans_place_positive_modifier: "여성의 위치"
+ usfp_peoples_house_positive_modifier: "인민의 집"
+ usfp_moral_suasion_modifier: "도덕적 권고"
