@@ -1,0 +1,34 @@
+﻿#USFP: Anthony D Williams, American Colonization Society agent
+usfp_lib_anthony_d_williams = {
+	first_name = Anthony
+	last_name = Williams
+    #no picture reference
+	historical = yes
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	culture = cu:afro_american
+    religion = rel:protestant
+	female = no
+	birth_date = 1810.6.6 #uknown
+    traits = {
+        pious basic_colonial_administrator
+    }
+	#starting ruler
+}
+
+#USFP: Joseph Jenkins Roberts, first president of Liberia
+usfp_lib_joseph_roberts = {
+	first_name = Joseph
+	last_name = Roberts
+    
+	historical = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_traditionalist
+	culture = cu:afro_american
+    religion = rel:protestant
+	female = no
+	birth_date = 1809.3.15
+    traits = {
+        experienced_diplomat pious basic_colonial_administrator
+    }
+}

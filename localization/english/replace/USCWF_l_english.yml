@@ -1,8 +1,9 @@
 ﻿l_english:
  ideology_reactionary_segregationist:0 "Segregationist"
- ideology_reactionary_segregationist_desc:0 "#lore This group believes that racial laws are needed to safeguard their interests.#!"
+ ideology_reactionary_segregationist_desc:0 "#lore This group considers other races to be distinct and inferior types of human undeserving of equal citizenship.#!"
  ideology_reactionary_exclusionist:0 "Exclusionary"
- ideology_reactionary_exclusionist_desc:0 "#lore This group is suspicious of cultures they consider to be "too foreign", and believes that the state should curtail their rights.#!"
-
+ ideology_reactionary_exclusionist_desc:0 "#lore This group is suspicious of foreign customs and prefers to uphold the mainstream national culture.#!"
+ ideology_reactionary_supremacist:0 "Supremacist"
+ ideology_reactionary_supremacist_desc:0 "#lore This group considers people of their own particular heritage to be naturally superior and deserving of a dominant position in society.#!"
 
  

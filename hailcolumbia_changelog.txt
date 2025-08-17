@@ -593,3 +593,19 @@ Fixed the Border Ruffians not properly making Kansas a Slave State if they win
 Fixed Mormons spawning as unemployed pops
 Merged 1.9.8 changes to Greener Grass Campaign
 Vanilla bugfix: intro event sets the initial USA election date properly
+
+6.0 "Douglass"
+New Content
+	Underground Railroad JE that moves small numbers of slaves out of the South every month
+	New USA election events responding to various types of candidates
+Updates
+	The Southern Planters are now even more racist
+	Missouri Compromise now suppresses the abolitionist movement more
+	USA now starts with an Afro American national movement with unique ideology
+	Indigenous American cultural minority movements now have a unique ideology
+	Liberia now has a properly american set of IG ideologies and starting laws
+	Decolonized the Liberian interior at game start
+	Liberian population reduced to much more historical numbers (less than 5k Afro-Americans)
+	Removed Afro-American homeland from Liberia (causing high Afro-american mortality as was historical)
+Fixes
+	Hopefully prevented non-USA countries from picking the USA-specific AI strategies, again

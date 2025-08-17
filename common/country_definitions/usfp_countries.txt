@@ -635,3 +635,16 @@ usfp_PSA = {
 	cultures = { yankee }
 	capital = STATE_CALIFORNIA
 }
+
+#Linconia
+usfp_LNC = {
+	color = { 20 17 83 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { afro_american }
+	
+	capital = STATE_PANAMA
+}

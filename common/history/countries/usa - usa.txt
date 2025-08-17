@@ -115,7 +115,7 @@
 			set_ig_trait = ig_trait:usfp_ig_trait_revivalism
 		}
 		ig:ig_landowners = {
-			add_ideology = ideology_reactionary_segregationist
+			add_ideology = ideology_reactionary_supremacist
 			add_ideology = ideology_anti_tariff
 			set_ig_trait = ig_trait:usfp_ig_trait_king_cotton
 			set_ig_trait = ig_trait:ig_trait_profitable_estates

@@ -3,10 +3,18 @@
 		effect_starting_technology_tier_3_tech = yes
 		activate_law = law_type:law_presidential_republic # Liberia did not declare independence until 1847; until then, the American Colonization Society ran the show
 		activate_law = law_type:law_mercantilism
-		activate_law = law_type:law_censorship
+		activate_law = law_type:law_right_of_assembly
 		activate_law = law_type:law_land_based_taxation
-		activate_law = law_type:law_slave_trade
+		activate_law = law_type:law_slavery_banned
 		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_agrarianism
+		activate_law = law_type:law_usfp_nominal_separation
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_frontier_colonization
 		set_variable = american_colonization_society
 		create_political_lobby = {
 			type = lobby_pro_overlord
@@ -17,5 +25,42 @@
 			country = c:USA
 			value = 100
 		}
+		ig:ig_armed_forces = { 
+			add_ideology = ideology_republican
+		}
+		ig:ig_devout = {
+			remove_ideology = ideology_moralist
+			add_ideology = ideology_usfp_evangelical_moralist
+			set_ig_trait = ig_trait:usfp_ig_trait_postmillennialism
+			set_ig_trait = ig_trait:usfp_ig_trait_revivalism
+		}
+		ig:ig_landowners = {
+			remove_ideology = ideology_paternalistic
+			add_ideology = ideology_republican_paternalistic
+			add_ideology = ideology_reactionary_supremacist
+			set_ig_trait = ig_trait:ig_trait_profitable_estates
+		}
+		ig:ig_industrialists = {
+			set_ig_trait = ig_trait:ig_trait_patrician_philanthropy
+		}
+		ig:ig_intelligentsia = {
+			add_ideology = ideology_american_school
+			remove_ideology = ideology_anti_clerical
+			add_ideology = ideology_usfp_accomodationist
+		}
+		ig:ig_petty_bourgeoisie = {
+			remove_ideology = ideology_reactionary
+			remove_ideology = ideology_republican_reactionary
+			add_ideology = ideology_republican
+			add_ideology = ideology_reactionary_supremacist
+		}
+		ig:ig_rural_folk = {
+			remove_ideology = ideology_particularist
+			add_ideology = ideology_usfp_localist
+		}
+		set_ruling_interest_groups = {
+			ig_landowners ig_devout ig_petty_bourgeoisie
+		}
+		set_tax_level = very_low
 	}
 }

@@ -1,0 +1,13 @@
+﻿CHARACTERS = {
+	c:LIB ?= {
+		create_character = {
+			template = usfp_lib_anthony_d_williams
+			ruler = yes
+			ig_leader = yes
+		}
+		create_character = {
+			template = usfp_lib_joseph_roberts
+			ig_leader = yes
+		}
+	}
+}

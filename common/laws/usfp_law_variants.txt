@@ -52,11 +52,17 @@ law_usfp_nominal_separation = {
 	}
 
 	is_visible = {
-		usfp_country_is_american = yes
+		OR = {
+			usfp_country_is_american = yes
+			country_has_primary_culture = cu:afro_american
+		}
 	}
 
 	can_enact = {
-		usfp_country_is_american = yes
+		OR = {
+			usfp_country_is_american = yes
+			country_has_primary_culture = cu:afro_american
+		}
 	}
 
 	on_enact = {

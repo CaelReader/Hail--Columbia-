@@ -510,7 +510,6 @@ usfp_cleanup_a_house_divided_variables = {
 	remove_variable = missouri_compromise_broken_var
 	remove_variable = compromise_of_1850
 	remove_variable = popular_sovereignty_enabled
-	remove_variable = fugitive_slave_var
 	remove_variable = kansas_nebraska_act
 	remove_variable = kansas_nebraska_act_passed
 	remove_variable = dred_scott
@@ -839,6 +838,12 @@ usfp_become_eugenicist_effect = {
 			has_ideology = ideology:ideology_reactionary_exclusionist
 		}
 		remove_ideology = ideology_reactionary_exclusionist
+	}
+	if = {
+		limit = { 
+			has_ideology = ideology:ideology_reactionary_supremacist
+		}
+		remove_ideology = ideology_reactionary_supremacist
 	}
 	add_ideology = ideology_usfp_eugenicist
 }
@@ -1717,7 +1722,7 @@ usfp_underground_railroad_slave_escape_effect = {
 	change_variable = {
 		name = $VARIABLE$
 		add = {
-			add = 1000
+			add = 2000
 			divide = scope:escapee_target_state.state_population
 			max = {
 				add = 1000
@@ -1731,7 +1736,7 @@ usfp_underground_railroad_slave_escape_effect = {
 		move_partial_pop = {
 			state = scope:escapee_target_state
 			population_ratio = {
-				add = 1000
+				add = 2000
 				divide = scope:escapee_target_state.state_population
 				max = {
 					add = 1000
@@ -1760,6 +1765,12 @@ usfp_underground_railroad_choose_escapee_pop_effect = {
 					is_pop_type = slaves
 					culture = cu:afro_american
 					total_size >= 1000
+					state = {
+						culture_percent_state = {
+							target = cu:afro_american
+							value > 0.15
+						}
+					}
 				}
 				save_scope_as = escapee_pop
 			}
@@ -1770,8 +1781,33 @@ usfp_underground_railroad_choose_escapee_pop_effect = {
 				is_pop_type = slaves
 				culture = cu:afro_american
 				total_size >= 1000
+				state = {
+					culture_percent_state = {
+						target = cu:afro_american
+						value > 0.15
+					}
+				}
 			}
 			save_scope_as = escapee_pop
 		}
 	}
+}
+
+usfp_fugitive_slave_act_effect = {
+		je:je_acw_countdown = {
+			add_modifier = {
+				name = usfp_fugitive_slave_law
+			}
+		}
+		je:je_usfp_underground_railroad = {
+			if = {
+				limit = { 
+					has_modifier = usfp_underground_railroad_supporting_modifier
+				}
+				remove_modifier = usfp_underground_railroad_supporting_modifier
+			}
+		}
+		custom_tooltip = {
+			text = underground_railroad_more_to_canada
+		}
 }

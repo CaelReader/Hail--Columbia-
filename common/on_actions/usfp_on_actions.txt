@@ -819,3 +819,36 @@ usfp_map_startup = {
 # 		}
 # 	}
 # }
+
+on_political_movement_formed = {
+	on_actions = {
+		usfp_political_movement_ideologies
+	}
+}
+
+usfp_political_movement_ideologies = {
+	effect = {
+		if = {
+			limit = {
+				is_political_movement_type = movement_cultural_minority 
+				culture = cu:afro_american
+				owner = {
+					usfp_country_is_american = yes
+				}
+			}
+			set_core_ideology = ideology_usfp_afro_american_movement
+		}
+		if = {
+			limit = {
+				is_political_movement_type = movement_cultural_minority 
+				culture = {
+					has_discrimination_trait = indigenous_american_heritage
+				}
+				owner = {
+					country_is_in_north_america = yes
+				}
+			}
+			set_core_ideology = ideology_usfp_american_indian_movement
+		}
+	}
+}

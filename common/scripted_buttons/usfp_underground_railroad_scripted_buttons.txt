@@ -1,0 +1,311 @@
+﻿usfp_underground_railroad_support_button = {
+	name = "usfp_underground_railroad_support_button"
+	desc = "usfp_underground_railroad_support_button_desc"
+
+	visible = {
+		NOR = {
+			je:je_usfp_underground_railroad = {
+				has_modifier = usfp_underground_railroad_supporting_modifier
+			}
+			je:je_usfp_underground_railroad = {
+				has_modifier = usfp_underground_railroad_suppressing_modifier
+			}
+		}
+	}
+
+	possible = {
+		ig:ig_landowners = {
+			is_in_government = no
+		}
+		any_scope_politician = {
+			usfp_anti_slavery_leader_trigger = yes
+			OR = {
+				interest_group = { is_in_government = yes }
+				is_ruler = yes
+			}
+		}
+		authority >= 75
+		NOT = {
+			je:je_acw_countdown ?= {
+				has_modifier = usfp_fugitive_slave_law
+			}
+		}
+	}
+
+	effect = {
+		je:je_usfp_underground_railroad = {
+			add_modifier = usfp_underground_railroad_supporting_modifier
+		}
+		custom_tooltip = {
+			text = je_usfp_underground_railroad_enhanced_effect
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				any_scope_politician = {
+					ideology = ideology:ideology_usfp_abolitionist_radical
+					OR = {
+						interest_group = { is_in_government = yes }
+						is_ruler = yes
+					}
+				}	
+			}
+			add = 25
+		}
+	}
+	
+}
+
+usfp_underground_railroad_suppress_button = {
+	name = "usfp_underground_railroad_suppress_button"
+	desc = "usfp_underground_railroad_suppress_button_desc"
+
+	visible = {
+		NOR = {
+			je:je_usfp_underground_railroad = {
+				has_modifier = usfp_underground_railroad_supporting_modifier
+			}
+			je:je_usfp_underground_railroad = {
+				has_modifier = usfp_underground_railroad_suppressing_modifier
+			}
+		}
+	}
+
+	possible = {
+		any_scope_politician = {
+			has_ideology = ideology:ideology_slaver
+			OR = {
+				interest_group = { is_in_government = yes }
+				is_ruler = yes
+			}
+		}
+		authority >= 75
+		OR = {
+			institution_investment_level = {
+				institution = institution_home_affairs
+				value >= 2
+			}
+			institution_investment_level = {
+				institution = institution_police
+				value >= 3
+			}
+		}
+	}
+
+	effect = {
+		je:je_usfp_underground_railroad = {
+			add_modifier = usfp_underground_railroad_suppressing_modifier
+		}
+		custom_tooltip = {
+			text = je_usfp_underground_railroad_lowered_effect
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				any_scope_politician = {
+					ideology = ideology:ideology_slaver
+					OR = {
+						interest_group = { is_in_government = yes }
+						is_ruler = yes
+					}
+				}	
+			}
+			add = 25
+		}
+	}
+	
+}
+
+usfp_underground_railroad_end_interference_button = {
+	name = "usfp_underground_railroad_end_interference_button"
+	desc = "usfp_underground_railroad_end_interference_button_desc"
+
+	visible = {
+		OR = {
+			je:je_usfp_underground_railroad = {
+				has_modifier = usfp_underground_railroad_supporting_modifier
+			}
+			je:je_usfp_underground_railroad = {
+				has_modifier = usfp_underground_railroad_suppressing_modifier
+			}
+		}
+	}
+
+	possible = {
+		hidden_trigger = {
+			always = yes
+		}
+	}
+
+	effect = {
+		je:je_usfp_underground_railroad = {
+			if = {
+				limit = { has_modifier = usfp_underground_railroad_supporting_modifier }
+				remove_modifier = usfp_underground_railroad_supporting_modifier
+			}
+			if = {
+				limit = { has_modifier = usfp_underground_railroad_suppressing_modifier }
+				remove_modifier = usfp_underground_railroad_suppressing_modifier
+			}
+		}
+		custom_tooltip = {
+			text = je_usfp_underground_railroad_regular_effect
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				je:je_usfp_underground_railroad = {
+					has_modifier = usfp_underground_railroad_supporting_modifier
+				}
+				NOT = {
+					any_scope_politician = {
+						ideology = ideology:ideology_usfp_abolitionist_radical
+						OR = {
+							interest_group = { is_in_government = yes }
+							is_ruler = yes
+						}
+					}
+				}
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				je:je_usfp_underground_railroad = {
+					has_modifier = usfp_underground_railroad_suppressing_modifier
+				}
+				NOT = {
+					any_scope_politician = {
+						ideology = ideology:ideology_slaver
+						OR = {
+							interest_group = { is_in_government = yes }
+							is_ruler = yes
+						}
+					}
+				}
+			}
+			add = 25
+		}
+	}
+	
+}
+
+usfp_underground_railroad_arm_slaves_button = {
+	name = "usfp_underground_railroad_arm_slaves_button"
+	desc = "usfp_underground_railroad_arm_slaves_desc"
+
+	visible = {
+		exists = c:CSA
+	}
+
+	possible = {
+		any_scope_politician = {
+			OR = {
+				has_ideology = ideology:ideology_usfp_abolitionist_radical
+				has_ideology = ideology:ideology_jingoist_leader
+				has_ideology = ideology:ideology_anarchist
+				has_ideology = ideology:ideology_communist
+				has_ideology = ideology:ideology_vanguardist
+				culture = cu:afro_american
+			}
+			OR = {
+				interest_group = { is_in_government = yes }
+				is_ruler = yes
+			}
+		}
+	}
+
+	cooldown = {
+		years = 5
+	}
+
+	effect = {
+		change_relations = {
+			country = c:CSA
+			value = -30
+		}
+		add_treasury = -20000
+		random_list = {
+			60 = {
+				c:CSA = {
+					random_scope_state = {
+						limit = {
+							is_slave_state = yes
+							any_neighbouring_state = {
+								owner = c:USA
+							}
+						}
+						add_radicals_in_state = {
+							value = medium_radicals
+							pop_type = slaves
+						}
+					}
+				}
+			}
+			30 = {
+				c:CSA = {
+					random_scope_state = {
+						limit = {
+							is_slave_state = yes
+							any_neighbouring_state = {
+								owner = c:USA
+							}
+						}
+						add_radicals_in_state = {
+							value = medium_radicals
+							pop_type = slaves
+						}
+					}
+				}
+				c:CSA = {
+					random_scope_state = {
+						limit = {
+							is_slave_state = yes
+							any_neighbouring_state = {
+								owner = c:USA
+							}
+						}
+						add_radicals_in_state = {
+							value = medium_radicals
+							pop_type = slaves
+						}
+					}
+				}
+			}
+			10 = {
+				c:CSA = {
+					add_radicals = {
+						value = medium_radicals
+						pop_type = slaves
+					}
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				any_scope_politician = {
+					ideology = ideology:ideology_usfp_abolitionist_radical
+					OR = {
+						interest_group = { is_in_government = yes }
+						is_ruler = yes
+					}
+				}	
+			}
+			add = 25
+		}
+	}
+	
+}

@@ -1,0 +1,32 @@
+﻿BUILDINGS = {
+		s:STATE_LIBERIA={
+		region_state:LIB={
+			create_building={
+				building="building_trade_center"
+				activate_production_methods={ "pm_trade_center_trade_quantity_limited" }
+				add_ownership={
+					country={
+						country="c:LIB"
+						levels=1
+					}
+				}
+				reserves=1
+			}
+			remove_building = building_coffee_plantation
+			remove_building = building_millet_farm
+			# create_building={
+			# 	building="building_coffee_plantation"
+			# 	add_ownership={
+			# 		building={
+			# 			type="building_manor_house"
+			# 			country="c:LIB"
+			# 			levels=1
+			# 			region="STATE_LIBERIA"
+			# 		}
+			# 	}
+			# 	reserves=1
+			# 	activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
+			# }
+		}
+	}
+}

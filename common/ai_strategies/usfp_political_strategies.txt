@@ -131,6 +131,12 @@ ai_strategy_anti_slavery_agenda = {
 				}
 			}
 			add = 10000
+		}
+		if = {
+			limit = {
+				usfp_country_is_american = no #why do I need to even do this?
+			}
+			add = -1000
 		}		
 	}
 }
@@ -189,6 +195,12 @@ ai_strategy_manifest_destiny = {
 				ruler = {
 					usfp_manifest_destiny_anti_expansion_trigger = yes
 				}
+			}
+			add = -1000
+		}
+		if = {
+			limit = {
+				usfp_country_is_american = no #why do I need to even do this?
 			}
 			add = -1000
 		}
@@ -444,11 +456,18 @@ ai_strategy_monroe_doctrine = {
 
 	possible = {
 		c:USA ?= this
+		has_journal_entry = je_usfp_american_constitution
 	}
 	
 	#should be default strategy for USA
 	weight = {
 		value = 500
+		if = {
+			limit = {
+				usfp_country_is_american = no #why do I need to even do this?
+			}
+			add = -1000
+		}
 	}
 
 	aggression = {
@@ -1030,8 +1049,7 @@ ai_strategy_pacific_empire = {
 	}
 		
 	possible = {
-		exists = c:USA
-		this = c:USA
+		c:USA ?= this
 		navy_size >= 75
 		any_scope_state = {
 			region = sr:region_pacific_coast
@@ -1074,7 +1092,12 @@ ai_strategy_pacific_empire = {
 			}
 			add = 5000
 		}
-
+		if = {
+			limit = {
+				usfp_country_is_american = no #why do I need to even do this?
+			}
+			add = -1000
+		}
 
 	}
 
@@ -1100,7 +1123,10 @@ ai_strategy_pacific_empire = {
 			limit = {
 				scope:country = {
 						country_is_in_north_america = no
-						country_is_in_south_america = no 
+						country_is_in_south_america = no
+						NOT = {
+							capital.region = sr:region_oceania
+						} 
 					}
 			}
 			add = {

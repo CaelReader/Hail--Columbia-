@@ -723,10 +723,7 @@ usfp_a_house_divided.8 = {
 			years = 10
 			is_decaying = yes
 		}
-		add_modifier = {
-			name = usfp_fugitive_slave_law
-		}
-		set_variable = fugitive_slave_var
+		usfp_fugitive_slave_act_effect = yes
 		usfp_appease_slavers_effect = {MULT = 1}
 		# usfp_anger_abolitionists_effect = {MULT = 2}
 		if = {
@@ -806,10 +803,7 @@ usfp_a_house_divided.8 = {
 	#Offer Fugitive Slave Law as a token
 	option = {
 		name = usfp_a_house_divided.8.c
-		add_modifier = {
-			name = usfp_fugitive_slave_law
-		}
-		set_variable = fugitive_slave_var
+		usfp_fugitive_slave_act_effect = yes
 		scope:california_scope = {
 			if = {
 				limit = { 
@@ -1860,77 +1854,137 @@ usfp_a_house_divided.19 = {
 }
 
 #Disunionism
-# usfp_a_house_divided.20 = {
-# 	type = country_event
-# 	placement = root
-# 	cooldown = { years = 300 }
-# 	title = usfp_a_house_divided.20.t
-# 	desc = usfp_a_house_divided.20.d
-# 	flavor = usfp_a_house_divided.20.f
-# 	dlc = dlc_usfp
-# 	event_image = {
-# 		video = "southamerica_election"
-# 	}
+usfp_a_house_divided.20 = {
+	type = country_event
+	placement = root
+	cooldown = { years = 300 }
+	title = usfp_a_house_divided.20.t
+	desc = usfp_a_house_divided.20.d
+	flavor = usfp_a_house_divided.20.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "southamerica_election"
+	}
 
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-# 	icon = "gfx/interface/icons/event_icons/event_election.dds"
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
-# 	duration = 3
+	duration = 3
 
-# 	trigger = {
-# 		in_election_campaign = yes
-# 		has_variable = whigs_party
-# 		any_scope_character = {
-# 			has_template = usfp_usa_william_lloyd_garrison
-# 		}
-# 		ig:ig_intelligentsia = {
-# 			has_party = yes
-# 		}
-# 	}
+	trigger = {
+		in_election_campaign = yes
+		has_variable = whigs_party
+		any_scope_character = {
+			has_template = usfp_usa_william_lloyd_garrison
+		}
+		ig:ig_intelligentsia = {
+			has_party = yes
+		}
+	}
 
-# 	immediate = {
-# 		random_scope_character = {
-# 			limit = {
-# 				has_template = usfp_usa_william_lloyd_garrison
-# 			}
-# 			save_scope_as = garrison_scope
-# 		}
-# 		ig:ig_intelligentsia = {
-# 			party = {
-# 				save_scope_as = whig_scope
-# 			}
-# 		}
-# 	}
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_template = usfp_usa_william_lloyd_garrison
+			}
+			save_scope_as = garrison_scope
+		}
+		ig:ig_intelligentsia = {
+			party = {
+				save_scope_as = whig_scope
+			}
+		}
+	}
 
-# 	#lose momentum
-# 	option = {
-# 		name = usfp_a_house_divided.20.a
-# 		scope:whig_scope = {
-# 			add_momentum = momentum_medium_decrease
-# 		}
-# 		random_political_movement = {
-# 			limit = {
-# 				is_political_movement_type = movement_anti_slavery
-# 			}
-# 			add_modifier = {
-# 				name = usfp_moral_suasion_modifier
-# 				years = 10
-# 			}
-# 		}
-# 		default_option = yes
-# 	}
+	#lose momentum
+	option = {
+		name = usfp_a_house_divided.20.a
+		scope:whig_scope = {
+			add_momentum = momentum_medium_decrease
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			add_modifier = {
+				name = usfp_moral_suasion_modifier
+				years = 10
+			}
+		}
+		default_option = yes
+	}
 
-# 	option = {
-# 		name = usfp_a_house_divided.20.b
-# 		scope:whig_scope = {
-# 			add_momentum = momentum_small_decrease
-# 		}
-# 		add_radicals = {
-# 			value = small_radicals
-# 			interest_group = ig:ig_intelligentsia
-# 		}
-# 	}
-# }
+	option = {
+		name = usfp_a_house_divided.20.b
+		scope:whig_scope = {
+			add_momentum = momentum_small_decrease
+		}
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+	}
+}
+#Underground Railroad notification for other countries
+usfp_a_house_divided.21 = {
+	type = country_event
+	placement = scope:underground_railroad_state
+
+	title = usfp_a_house_divided.21.t
+	desc = usfp_a_house_divided.21.d
+	flavor = usfp_a_house_divided.21.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "southamerica_slaves_night"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/invention_icons/railways.dds"
+
+	duration = 3
+
+	immediate = {
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_RIO_GRANDE
+					state_region = s:STATE_ONTARIO
+					state_region = s:STATE_QUEBEC
+					region = sr:region_caribbean
+				}
+			}
+			save_scope_as = underground_railroad_state
+		}
+	}
+
+	option = {
+		name = usfp_a_house_divided.21.a
+		default_option = yes
+		if = {
+			limit = { 
+				any_scope_state = {
+					OR = {
+						region = sr:region_caribbean
+						region = sr:region_mexico
+					}
+
+				}
+			}
+			custom_tooltip = {
+				text = usfp_a_house_divided.21.a.tt
+			}
+		} else = {
+			custom_tooltip = {
+				text = usfp_a_house_divided.21.a.tt2
+			}
+		}
+
+	}
+}
 #Wide Awakes
 #Cross-Atlantic Abolitionism

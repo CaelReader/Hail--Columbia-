@@ -60,6 +60,10 @@
 		}
 	}
 
+	ai_chance = {
+		value = 0
+	}
+
 	
 }
 
@@ -105,5 +109,9 @@ usfp_remove_machine_button = {
 			name = usfp_fighting_corruption_modifier
 			years = 2
 		}
+	}
+
+	ai_chance = {
+		value = 100
 	}
 }

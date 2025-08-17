@@ -246,4 +246,10 @@
 	
 	#333
 	s:STATE_GUERRERO = { add_state_trait = state_trait_zihuatanejo_bay }
+
+
+	s:STATE_LIBERIA = {
+		remove_homeland = cu:afro_american #american settlers died in droves from disease
+	}
+
 }

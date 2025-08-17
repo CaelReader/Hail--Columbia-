@@ -679,16 +679,78 @@ je_usfp_underground_railroad = {
 			name = je_underground_railroad_southern_escapees
 			value = 0
 		}
+		c:MEX = {
+			trigger_event = usfp_a_house_divided.21
+		}
+		c:QUE = {
+			trigger_event = usfp_a_house_divided.21
+		}
+		c:GBR = {
+			trigger_event = usfp_a_house_divided.21
+		}
+		c:HBC = {
+			trigger_event = usfp_a_house_divided.21
+		}
+		c:ONT = {
+			trigger_event = usfp_a_house_divided.21
+		}
+		c:HAI = {
+			trigger_event = usfp_a_house_divided.21
+		}
 	}
+
+	scripted_button = usfp_underground_railroad_support_button
+	scripted_button = usfp_underground_railroad_suppress_button
+	scripted_button = usfp_underground_railroad_end_interference_button
+	scripted_button = usfp_underground_railroad_arm_slaves_button
 
 	on_monthly_pulse = {
 		effect = {
+			#between 100k and 500k slaves escaped historically, so this is targeting 500k as an upper bound. Actual amount of escapees will vary widely due to the different sizes of pops targeted
 			random_list = {
-				#between 100k and 500k slaves escaped historically, so this is targeting 500k as an upper bound. Actual amount of escapees will vary widely due to the different sizes of pops targeted
-				50 = {}
-				400 = {usfp_underground_railroad_escapes_to_north_effect = yes}
-				100 = { usfp_underground_railroad_escapes_to_canada_effect = yes }
-				10 = { usfp_underground_railroad_escapes_southern_effect = yes }
+				400 = {
+					trigger = {
+						NOR = {
+							je:je_usfp_underground_railroad = {
+								has_modifier = usfp_underground_railroad_suppressing_modifier
+							}
+							je:je_acw_countdown ?= {
+								has_modifier = usfp_fugitive_slave_law
+							}
+						}
+					}
+					usfp_underground_railroad_escapes_to_north_effect = yes #escapees from three different states
+					usfp_underground_railroad_escapes_to_north_effect = yes
+					usfp_underground_railroad_escapes_to_north_effect = yes
+				}
+				100 = { 
+					usfp_underground_railroad_escapes_to_canada_effect = yes #escapees from two different states
+					usfp_underground_railroad_escapes_to_canada_effect = yes  
+				}
+				10 = { 
+					usfp_underground_railroad_escapes_southern_effect = yes 
+				}
+				600 = {
+					trigger = {
+						je:je_usfp_underground_railroad = {
+							has_modifier = usfp_underground_railroad_supporting_modifier
+						}
+					}
+					usfp_underground_railroad_escapes_to_north_effect = yes
+					usfp_underground_railroad_escapes_to_north_effect = yes
+					usfp_underground_railroad_escapes_to_north_effect = yes
+					usfp_underground_railroad_escapes_to_north_effect = yes
+				}
+				400 = {
+					trigger = {
+						je:je_acw_countdown ?= {
+							has_modifier = usfp_fugitive_slave_law
+						}
+					}
+					usfp_underground_railroad_escapes_to_north_effect = yes
+					usfp_underground_railroad_escapes_to_canada_effect = yes
+					usfp_underground_railroad_escapes_to_canada_effect = yes  
+				}
 			}
 		}
 	}
