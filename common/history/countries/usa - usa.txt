@@ -145,10 +145,10 @@
 			set_ig_trait = ig_trait:usfp_ig_trait_go_west
 			set_ig_trait = ig_trait:usfp_ig_trait_republican_virtue
 		}
-		create_diplomatic_pact = {
-			country = c:LIB
-			type = grant_own_market
-		}
+		# create_diplomatic_pact = {
+		# 	country = c:LIB
+		# 	type = grant_own_market
+		# }
 		create_diplomatic_pact = {
 			country = c:SEQ
 			type = decrease_payments

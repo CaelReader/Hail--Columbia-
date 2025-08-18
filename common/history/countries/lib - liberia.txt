@@ -20,6 +20,9 @@
 			type = lobby_pro_overlord
 			target = c:USA
 			add_interest_group = ig:ig_landowners
+			add_interest_group = ig:ig_devout
+			add_interest_group = ig:ig_petty_bourgeoisie
+			add_interest_group = ig:ig_intelligentsia
 		}
 		change_relations = {
 			country = c:USA

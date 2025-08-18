@@ -1,5 +1,5 @@
 ﻿BUILDINGS = {
-		s:STATE_LIBERIA={
+	s:STATE_LIBERIA={
 		region_state:LIB={
 			create_building={
 				building="building_trade_center"
@@ -12,8 +12,8 @@
 				}
 				reserves=1
 			}
-			remove_building = building_coffee_plantation
-			remove_building = building_millet_farm
+			# remove_building = building_coffee_plantation
+			# remove_building = building_millet_farm
 			# create_building={
 			# 	building="building_coffee_plantation"
 			# 	add_ownership={

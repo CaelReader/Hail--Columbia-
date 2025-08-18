@@ -607,5 +607,6 @@ Updates
 	Decolonized the Liberian interior at game start
 	Liberian population reduced to much more historical numbers (less than 5k Afro-Americans)
 	Removed Afro-American homeland from Liberia (causing high Afro-american mortality as was historical)
+	Liberia no longer starts in their own market
 Fixes
 	Hopefully prevented non-USA countries from picking the USA-specific AI strategies, again
