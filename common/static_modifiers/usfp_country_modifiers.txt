@@ -18,7 +18,7 @@ usfp_cherokee_syllabary = {
 }
 usfp_missouri_compromise_decaying = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
-	country_revolution_progress_mult = -1.00
+	# country_revolution_progress_mult = -1.00
 	# state_pop_support_movement_anti_slavery_mult = -2.0
 	interest_group_ig_landowners_approval_add = 15
 	interest_group_ig_intelligentsia_approval_add = 5
@@ -27,7 +27,7 @@ usfp_missouri_compromise_decaying = {
 usfp_missouri_compromise_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_positive.dds
 	interest_group_ig_landowners_approval_add = 10
-	political_movement_radicalism_add = -0.50
+	# political_movement_radicalism_add = -0.50
 	state_pop_support_movement_pro_slavery_mult = -0.20
 	state_pop_support_movement_anti_slavery_mult = -0.50
 }
@@ -92,22 +92,22 @@ usfp_acw_union_modifier = {
 	building_training_rate_mult = 0.5
 	state_conscription_rate_mult = 0.5
 	# country_legitimacy_base_add = 50
-	# unit_kill_rate_add = 0.20
+	unit_kill_rate_add = 0.05
 	# unit_devastation_mult = 0.15
 	# country_military_goods_cost_mult = -0.20
 }
 
 usfp_acw_csa_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	country_war_exhaustion_casualties_mult = -0.50
 	# unit_morale_loss_mult = -0.50
 	# military_formation_organization_gain_mult = 1.0
 	building_training_rate_mult = 0.5
 	state_conscription_rate_mult = 0.5
-	country_legitimacy_base_add = 50
-	unit_kill_rate_add = 0.20
-	unit_devastation_mult = 0.15
-	country_military_goods_cost_mult = -0.20
+	# country_legitimacy_base_add = 50
+	unit_kill_rate_add = 0.05
+	# unit_devastation_mult = 0.15
+	# country_military_goods_cost_mult = -0.20
 }
 
 usfp_acw_fsa_modifier = {
@@ -117,10 +117,10 @@ usfp_acw_fsa_modifier = {
 	# military_formation_organization_gain_mult = 1.0
 	building_training_rate_mult = 0.5
 	state_conscription_rate_mult = 0.5
-	country_legitimacy_base_add = 50
-	unit_kill_rate_add = 0.20
-	unit_devastation_mult = 0.15
-	country_military_goods_cost_mult = -0.20
+	# country_legitimacy_base_add = 50
+	unit_kill_rate_add = 0.05
+	# unit_devastation_mult = 0.15
+	# country_military_goods_cost_mult = -0.20
 }
 
 usfp_a_house_divided_modifier = {
@@ -672,4 +672,16 @@ usfp_underground_railroad_suppressing_modifier = {
 	country_authority_add = -75
 	interest_group_ig_landowners_approval_add = 2
 	state_pop_support_movement_pro_slavery_mult = 0.10
+}
+
+usfp_csa_cotton_diplomacy_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	building_cotton_plantation_throughput_add = -0.90
+	state_trade_advantage_mult = -0.75
+}
+
+usfp_csa_states_rights_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_bureaucracy_negative.dds
+	country_legitimacy_base_add = -25
+	state_tax_collection_mult = -0.25
 }

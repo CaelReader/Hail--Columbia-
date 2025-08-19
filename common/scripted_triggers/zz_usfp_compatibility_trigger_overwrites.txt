@@ -13,3 +13,7 @@ usfp_has_american_primary_culture = {
 is_usfp_active = {
 	always = yes
 }
+
+usfp_has_missouri_compromise_trigger = {
+	has_journal_entry = je_usfp_a_house_divided_missouri_compromise
+}

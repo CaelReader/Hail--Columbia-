@@ -753,36 +753,36 @@ USCWF_CSA_betrayed_on_action = {
 # scope:attacker = attacking commander
 # scope:defender = defending commander
 # scope:state = location state
-on_battle_lost = {
-	on_actions = {
-		USCWF_fierce_defiance_on_action
-	}
-}
+# on_battle_lost = {
+# 	on_actions = {
+# 		USCWF_fierce_defiance_on_action
+# 	}
+# }
 
-USCWF_fierce_defiance_on_action = {
-	effect = {
-		if = {
-			limit = {
-				c:CSA ?= this
-				OR = {
-					has_journal_entry = je_acw_war
-					scope:enemy_country = {
-						has_journal_entry = je_acw_war
-					}
-				}
-				s:STATE_MISSISSIPPI.region_state:CSA = {
-					controller = c:CSA
-				}
-				c:USA = {
-					is_player = yes
-				}
-			}
-			every_scope_war = {
-				add_war_war_support = { target = ROOT value = 10 }
-			}
-		}
-	}
-}
+# USCWF_fierce_defiance_on_action = {
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				c:CSA ?= this
+# 				OR = {
+# 					has_journal_entry = je_acw_war
+# 					scope:enemy_country = {
+# 						has_journal_entry = je_acw_war
+# 					}
+# 				}
+# 				s:STATE_MISSISSIPPI.region_state:CSA = {
+# 					controller = c:CSA
+# 				}
+# 				c:USA = {
+# 					is_player = yes
+# 				}
+# 			}
+# 			every_scope_war = {
+# 				add_war_war_support = { target = ROOT value = 10 }
+# 			}
+# 		}
+# 	}
+# }
 
 on_game_started = {
 	on_actions = {

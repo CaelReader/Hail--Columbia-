@@ -162,8 +162,10 @@ je_acw_war = {
 		usfp_manifest_less_destiny_effect = yes
 		usfp_break_compromises_effect = yes
 		if = {
-			limit = { 
-				has_modifier = usfp_second_party_system_modifier
+			limit = {
+				je:je_usfp_american_constitution = {
+					has_modifier = usfp_second_party_system_modifier
+				} 
 			}
 			trigger_event = {
 				id = usfp_a_house_divided.15
@@ -240,6 +242,9 @@ je_acw_war = {
 				country = c:MEX
 				value = -100
 			}
+			c:MEX = {
+				add_liberty_desire = 100
+			}
 		}
 		every_scope_state = {
 			limit = {
@@ -289,6 +294,11 @@ je_acw_war = {
 			}
 			s:STATE_DISTRICT_OF_COLUMBIA.region_state:CSA = {
 				set_state_owner = c:USA
+			}
+		}
+		c:CSA ?= {
+			add_journal_entry = {
+				type = je_acw_war_csa
 			}
 		}
 	}
@@ -735,4 +745,24 @@ je_acw_wild_wild_west = {
 	progressbar = yes
 
 	timeout = 4380
+}
+
+je_acw_war_csa = {
+	icon = "gfx/interface/icons/event_icons/waving_flag_usa_distress.dds"
+	group = je_group_usa_american_civil_war
+	should_be_pinned_by_default = yes
+	on_monthly_pulse = {
+		random_events = {
+			chance_of_no_event = 33
+			100 = usfp_acw.14 #Cotton Diplomacy
+			100 = usfp_acw.15 #Slave Revolt
+			100 = usfp_acw.16 #State's Rights
+		}
+	}
+
+	complete = {
+		is_at_war = no
+		has_truce_with = c:USA
+		is_subject = no
+	}
 }

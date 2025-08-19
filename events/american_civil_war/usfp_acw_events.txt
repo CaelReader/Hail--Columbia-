@@ -1466,6 +1466,250 @@ usfp_acw.10 = {
 # }
 
 #CSA: King Cotton
+usfp_acw.14 = {
+	type = country_event
+	placement = scope:cotton_state
+
+	title = usfp_acw.14.t
+	desc = usfp_acw.14.d
+	flavor = usfp_acw.14.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_factory_closed"
+	}
+	cooldown = {
+		years = 10
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_building = {
+			is_building_type = building_cotton_plantation
+		}
+		je:je_acw_war_csa = {
+			NOT = {
+				has_modifier = usfp_csa_cotton_diplomacy_modifier
+			}
+		}
+	}
+
+	immediate = {
+		ordered_scope_building = {
+			limit = {
+				is_building_type = building_cotton_plantation
+			}
+			order_by = level
+			state = {
+				save_scope_as = cotton_state
+			}
+		}
+	}
+
+	#Brilliant Idea!
+	option = {
+		name = usfp_acw.14.a
+		default_option = yes
+		add_loyalists = {
+			value = small_radicals
+			pop_type = aristocrats
+			culture = cu:dixie
+		}
+		je:je_acw_war_csa = {
+			add_modifier = {
+				name = usfp_csa_cotton_diplomacy_modifier
+			}
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
+	#The economy, you fools!
+	option = {
+		name = usfp_acw.14.b
+		add_radicals = {
+			value = medium_radicals
+			pop_type = aristocrats
+			culture = cu:dixie
+		}
+		je:je_acw_war_csa = {
+			add_modifier = {
+				name = usfp_csa_cotton_diplomacy_modifier
+				multiplier = 0.5
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
 #CSA: Slave Revolt
+usfp_acw.15 = {
+	type = country_event
+	placement = scope:slave_state
+
+	title = usfp_acw.15.t
+	desc = usfp_acw.15.d
+	flavor = usfp_acw.15.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "southamerica_slave_chains"
+	}
+	cooldown = {
+		years = 10
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+		c:USA = {
+			has_law = law_type:law_slavery_banned
+		}
+	}
+
+	immediate = {
+		ordered_scope_pop = {
+			limit = {
+				is_pop_type = slaves
+			}
+			order_by = total_size
+			state = {
+				save_scope_as = slave_state
+			}
+		}
+	}
+
+	#oh no
+	option = {
+		name = usfp_acw.15.a
+		default_option = yes
+		add_radicals = {
+			value = 0.6
+			pop_type = slaves
+		}
+		scope:slave_state = {
+			state_region = {
+				add_devastation = 5
+			}
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
+	#crack down!
+	option = {
+		name = usfp_acw.15.b
+		trigger = {
+			OR = {
+				institution_investment_level = {
+					institution = institution_police
+					value >= 4
+				}
+				institution_investment_level = {
+					institution = institution_home_affairs
+					value >= 4
+				}
+			}
+		}
+		show_as_unavailable = {
+			always = yes
+		}
+		highlighted_option = yes
+		add_radicals = {
+			value = 0.4
+			pop_type = slaves
+		}
+		every_scope_state = {
+			limit = {
+				any_neighbouring_state = {
+					owner = c:USA
+				}
+			}
+			kill_population_percent_in_state = {
+				percent = 0.01
+				pop_type = slaves
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
 #CSA: State's Rights
+usfp_acw.16 = {
+	type = country_event
+	placement = root
+
+	title = usfp_acw.16.t
+	desc = usfp_acw.16.d
+	flavor = usfp_acw.16.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+	cooldown = {
+		years = 10
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			controller = c:USA
+		}
+		NOT = {
+			je:je_acw_war_csa = {
+				has_modifier = usfp_csa_states_rights_modifier
+			}
+		}
+	}
+
+	immediate = {
+
+	}
+
+	#just hold on
+	option = {
+		name = usfp_acw.16.a
+		default_option = yes
+		je:je_acw_war_csa = {
+			add_modifier = usfp_csa_states_rights_modifier
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#can we not
+	option = {
+		name = usfp_acw.16.b
+		je:je_acw_war_csa = {
+			add_modifier = {
+				name = usfp_csa_states_rights_modifier
+				multiplier = 0.5
+			}
+		}
+		ruler = {
+			add_modifier = {
+				name = corrupted_by_power
+				years = 6
+			}
+		}
+		add_radicals = {
+			value = medium_radicals
+			culture = cu:dixie
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
 #The Long War

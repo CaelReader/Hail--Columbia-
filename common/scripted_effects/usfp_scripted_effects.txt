@@ -1504,8 +1504,8 @@ usfp_american_igs_effect = {
 			NOR = {
 				was_formed_from = TEX
 				was_formed_from = LIB
-				this = c:TEX
-				this = c:LIB
+				c:TEX ?= this
+				c:LIB ?= this
 			}
 		}
 		ig:ig_armed_forces = { 

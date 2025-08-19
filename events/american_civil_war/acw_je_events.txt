@@ -215,11 +215,14 @@ acw_je_events.1 = {
 	option = {
 		name = acw_je_events.1.a
 		default_option = yes
-		if = {
-			limit = {
-				exists = c:CSA
-			 }
-			 custom_tooltip = acw_war_support_tooltip
+		# if = {
+		# 	limit = {
+		# 		exists = c:CSA
+		# 	 }
+		# 	 custom_tooltip = acw_war_support_tooltip
+		# }
+		custom_tooltip = {
+			text = je_usfp_underground_railroad_enhanced_effect
 		}
 	}
 	option = {
@@ -228,11 +231,15 @@ acw_je_events.1 = {
 		if = {
 			limit = { exists = c:CSA }
 			play_as = c:CSA
+			custom_tooltip = {
+				text = je_usfp_underground_railroad_enhanced_effect
+			}
 		}
 		else_if = {
 			limit = { exists = c:FSA }
 			play_as = c:FSA
 		}
+		
 	}
 }
 

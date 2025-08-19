@@ -598,11 +598,14 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 New Content
 	Underground Railroad JE that moves small numbers of slaves out of the South every month
 	New USA election events responding to various types of candidates
+	New CSA events during the ACW
 Updates
 	The Southern Planters are now even more racist
 	Missouri Compromise now suppresses the abolitionist movement more
 	USA now starts with an Afro American national movement with unique ideology
 	Indigenous American cultural minority movements now have a unique ideology
+	Removed CSA's war support on battle defeats (replaced by Long War event)
+	The Missouri Compromise now only suppresses the activism of the Abolitionist and Pro-Slavery movements, rather than all movements
 	Liberia now has a properly american set of IG ideologies and starting laws
 	Decolonized the Liberian interior at game start
 	Liberian population reduced to much more historical numbers (less than 5k Afro-Americans)

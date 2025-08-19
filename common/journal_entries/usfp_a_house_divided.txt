@@ -741,6 +741,15 @@ je_usfp_underground_railroad = {
 					usfp_underground_railroad_escapes_to_north_effect = yes
 					usfp_underground_railroad_escapes_to_north_effect = yes
 				}
+				600 = {
+					trigger = {
+						exists = c:CSA
+					}
+					usfp_underground_railroad_escapes_to_north_effect = yes
+					usfp_underground_railroad_escapes_to_north_effect = yes
+					usfp_underground_railroad_escapes_to_north_effect = yes
+					usfp_underground_railroad_escapes_to_north_effect = yes
+				}
 				400 = {
 					trigger = {
 						je:je_acw_countdown ?= {
