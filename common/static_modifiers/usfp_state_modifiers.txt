@@ -69,13 +69,16 @@ usfp_deep_south_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_positive.dds
 	interest_group_ig_landowners_pol_str_mult = 0.20
 	building_group_bg_agriculture_allowed_collectivization_add = -0.35
-	
+	building_nationalization_radicals_mult = 1.00
+	building_nationalization_cost_mult = 0.25
 }
 
 usfp_upper_south_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_positive.dds
 	interest_group_ig_landowners_pol_str_mult = 0.10
 	building_group_bg_agriculture_allowed_collectivization_add = -0.15
+	building_nationalization_radicals_mult = 2.00
+	building_nationalization_cost_mult = 0.50
 }
 
 usfp_emigrant_aid_company = {

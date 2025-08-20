@@ -179,6 +179,16 @@ company_usfp_dupont = {
 		building_chemical_plants
 	}
 
+	possible_prestige_goods = {
+		prestige_good_generic_explosives
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_explosives_complete_tt
+			has_variable = prestige_good_generic_explosives_var
+		}
+	}
 
 	potential = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible

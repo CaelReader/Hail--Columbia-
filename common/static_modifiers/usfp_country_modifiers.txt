@@ -236,7 +236,8 @@ usfp_fugitive_slave_law = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
 	state_afro_american_standard_of_living_add = -1
 	interest_group_ig_landowners_pol_str_mult = 0.10
-	state_pop_support_movement_pro_slavery_add = 0.05
+	state_pop_support_movement_pro_slavery_mult = 0.10
+	state_pop_support_movement_anti_slavery_mult = 0.10
 }
 
 usfp_1850_compromise_decaying = {

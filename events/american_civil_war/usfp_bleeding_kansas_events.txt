@@ -402,7 +402,7 @@ usfp_bleeding_kansas.5 = {
 		}
 	}
 }
-#Harper's Ferry (historical)
+#Harpers Ferry (historical)
 usfp_bleeding_kansas.6 = {
 	type = country_event
 
@@ -430,9 +430,23 @@ usfp_bleeding_kansas.6 = {
 				has_variable = slave_power_speech
 				has_variable = had_pottawatomie_massacre
 			}
-			NOT = {
-				has_journal_entry = je_usfp_a_house_divided_bleeding_kansas
+			AND = {
+				NOT = {
+					has_journal_entry = je_usfp_a_house_divided_bleeding_kansas
+				}
+				OR = {
+					year >= 1859
+					any_civil_war = {
+						political_movement ?= {
+							OR = {
+								is_political_movement_type = movement_anti_slavery
+								is_political_movement_type = movement_pro_slavery
+							}
+						}
+					}
+				}
 			}
+
 		}
 		NOT = {
 			has_variable = had_harpers_ferry
@@ -505,7 +519,7 @@ usfp_bleeding_kansas.6 = {
 		}
 	}
 }
-#Harper's Ferry (successful)
+#Harpers Ferry (successful)
 usfp_bleeding_kansas.7 = {
 	type = country_event
 
@@ -533,8 +547,21 @@ usfp_bleeding_kansas.7 = {
 				has_variable = slave_power_speech
 				has_variable = had_pottawatomie_massacre
 			}
-			NOT = {
-				has_journal_entry = je_usfp_a_house_divided_bleeding_kansas
+			AND = {
+				NOT = {
+					has_journal_entry = je_usfp_a_house_divided_bleeding_kansas
+				}
+				OR = {
+					year >= 1859
+					any_civil_war = {
+						political_movement ?= {
+							OR = {
+								is_political_movement_type = movement_anti_slavery
+								is_political_movement_type = movement_pro_slavery
+							}
+						}
+					}
+				}
 			}
 		}
 		NOT = {

@@ -32,7 +32,7 @@ usfp_radical_reconstruction_demand = {
 
 usfp_imminent_secession_movement = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
-	political_movement_radicalism_add = 1.00
+	political_movement_radicalism_add = 2.00
 }
 
 usfp_white_mans_country_modifier = {

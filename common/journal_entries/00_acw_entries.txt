@@ -26,6 +26,111 @@ je_acw_countdown = {
 		value = root.var:acw_progress_var
 	}
 
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						has_modifier = usfp_imminent_secession
+						any_civil_war = {
+							political_movement ?= {
+								is_political_movement_type = movement_pro_slavery
+							}
+							civil_war_progress > 0.50
+						}
+					}
+				} 
+				desc = je_acw_countdown_status_secession_iminent
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						has_modifier = usfp_imminent_secession
+						any_civil_war = {
+							political_movement ?= {
+								is_political_movement_type = movement_anti_slavery
+							}
+							civil_war_progress > 0.50
+						}
+					}
+				} 
+				desc = je_acw_countdown_status_abolitionist_revolt_imminent
+			}
+			triggered_desc = {
+				trigger = {
+					any_interest_group = {
+						is_powerful = yes
+						leader = {
+							usfp_anti_slavery_leader_trigger = yes
+						}
+					}
+				}
+				desc = je_acw_countdown_status_powerful_abolitionist
+			}
+			triggered_desc = {
+				trigger = {
+					has_journal_entry = je_usfp_a_house_divided_bleeding_kansas
+				}
+				desc = je_acw_countdown_status_bleeding_kansas
+			}
+			triggered_desc = {
+				trigger = {
+					je:je_acw_countdown = {
+						has_modifier = usfp_fugitive_slave_law
+					}
+				}
+				desc = je_acw_countdown_status_fugitive_slave_law
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						AND = {
+							exists = c:MEX
+							has_war_with = c:MEX
+						}
+						AND = {
+							exists = c:CUB
+							has_war_with = c:CUB
+						}
+					}
+				}
+				desc = je_acw_countdown_status_war_to_expand_slavery
+			}
+			triggered_desc = {
+				trigger = {
+					has_modifier = usfp_1850_compromise_decaying
+				}
+				desc = je_acw_countdown_status_uncertain_compromise
+			}
+			triggered_desc = {
+				trigger = {
+					has_variable = USA_wilmot_proviso
+					has_journal_entry = je_usfp_a_house_divided_missouri_compromise
+				}
+				desc = je_acw_countdown_status_uncertain_expansion
+			}
+			triggered_desc = {
+				trigger = {
+					has_journal_entry = je_usfp_a_house_divided_missouri_compromise
+				}
+				desc = je_acw_countdown_status_missouri_compromise
+			}
+			triggered_desc = {
+				trigger = {
+					has_technology_researched = human_rights
+				}
+				desc = je_acw_countdown_status_human_rights
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = {
+						has_law = law_type:law_slavery_banned
+					}
+				}
+				desc = je_acw_countdown_status_slave_power
+			}
+		}
+	}
 
 	complete = {
 		scope:journal_entry = {
@@ -395,6 +500,7 @@ je_acw_war = {
 			usfp_acw.6 #March to the Sea
 			# usfp_acw.11 #Rio Grande breaks away 
 			# usfp_acw.13 #Mexican revolt (subject)
+			usfp_acw.17 #Long War
 		}
 		effect = {
 			#Border States can swap sides permanently
@@ -757,6 +863,9 @@ je_acw_war_csa = {
 			100 = usfp_acw.14 #Cotton Diplomacy
 			100 = usfp_acw.15 #Slave Revolt
 			100 = usfp_acw.16 #State's Rights
+		}
+		events = {
+			usfp_acw.18 #Long War
 		}
 	}
 

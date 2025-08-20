@@ -1713,3 +1713,151 @@ usfp_acw.16 = {
 	}
 }
 #The Long War
+usfp_acw.17 = {
+	type = country_event
+	placement = root
+
+	title = usfp_acw.17.t
+	desc = usfp_acw.17.d
+
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					root = c:USA
+				}
+				desc = usfp_acw.17.fusa
+			}
+			triggered_desc = {
+				trigger = {
+					root = c:CSA
+				}
+				desc = usfp_acw.17.fcsa
+			}
+		}
+	}
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_american_civil_war"
+	}
+	cooldown = {
+		years = 100
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+
+	trigger = {
+		je:je_acw_war ?= {
+			journal_entry_age > 365
+			NOT = {
+				has_modifier = usfp_acw_union_modifier
+			} 
+		}
+		exists = c:CSA
+		capital = {
+			controller = root
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { 
+				root = c:USA
+			}
+			c:CSA = {
+				trigger_event = usfp_acw.17
+			}
+		}
+	}
+
+	#to the death
+	option = {
+		name = usfp_acw.17.a
+		default_option = yes
+		je:je_acw_war = {
+			add_modifier = usfp_acw_union_modifier
+		}
+		random_scope_war = {
+			limit = {
+				attacker_warleader = c:CSA
+			}
+			add_war_war_support = {
+				target = root
+				value = 40
+			}
+		}
+		show_as_tooltip = {
+			c:CSA = {
+				add_modifier = usfp_acw_csa_modifier
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+#CSA: The Long War
+usfp_acw.18 = {
+	type = country_event
+	placement = root
+
+	title = usfp_acw.18.t
+	desc = usfp_acw.18.d
+	flavor = usfp_acw.18.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_american_civil_war"
+	}
+	cooldown = {
+		years = 100
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+
+	trigger = {
+		je:je_acw_war_csa ?= {
+			journal_entry_age > 365
+			NOT = {
+				has_modifier = usfp_acw_csa_modifier
+			} 
+		}
+		exists = c:USA
+		capital = {
+			controller = root
+		}
+	}
+
+
+	#to the death
+	option = {
+		name = usfp_acw.18.a
+		default_option = yes
+		je:je_acw_war_csa = {
+			add_modifier = usfp_acw_csa_modifier
+		}
+		random_scope_war = {
+			limit = {
+				attacker_warleader = c:CSA
+			}
+			add_war_war_support = {
+				target = root
+				value = 40
+			}
+		}
+		show_as_tooltip = {
+			c:USA = {
+				add_modifier = usfp_acw_union_modifier
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}

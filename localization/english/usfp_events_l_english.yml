@@ -248,6 +248,12 @@ usfp_acw.13.f: ""The Mexican Nation, which has had its will strangled and its vo
 usfp_acw.13.a: "We cannot stop them."
 usfp_acw.13.b: "Stop them!"
 
+usfp_acw.17.t: "Brother Against Brother"
+usfp_acw.17.d: "While many in the [ROOT.GetCountry.GetName] had hoped for the Civil War to come to a swift and negotiated conclusion, it is clear now that those hopes were mere fancy. A year of brutal fighting has hardened the hearts of [GetCulture('yankee').GetName] and [GetCulture('dixie').GetName] alike, and instilled a determination in both sides to fight it out to the bitter end."
+usfp_acw.17.fusa: ""We can never end this war till we make common cause with the negro, arm him, and by a combination of terror and extermination, destroy the race of slaveholders on this continent. I know this will be a terrible course — bloody and horrible. But by what sort of cataclysm can anyone expect the two hundred years of torture and wrong to be closed? To the hands of the North have been committed the sword and flame of avenging justice. With knife and cautery must we pursue this cancer to all its ramifications, unmindful of the writhing and groans of the victim. Our National Life and the hopes of the ages are tied to the thoroughness of our work."" #Rutland Herald, 1862
+usfp_acw.17.fcsa: ""Already has the hatred of one of their great leaders attempted to make the negro your equal by declaring his freedom. They care not for the blood of babes nor carnage of innocent women which servile insurrection thus stirred up may bring upon their heads."" #James Longstreet
+usfp_acw.17.a: "For cause and comrades!"
+
 #Reconstruction Events
 usfp_reconstruction.1.t: "The Freedmen's Bureau"
 usfp_reconstruction.1.d: "A commission on the conditions in the South has suggested the creation of a new government agency: the Freedmen's Bureau. This agency would give direct aid to refugees and those recently liberated from slavery, in order to help transition them into free society."
