@@ -608,13 +608,18 @@ Updates
 	Indigenous American cultural minority movements now have a unique ideology
 	Added Status messages to A House Divided giving updates on the current status of the debate
 	Removed CSA's war support on battle defeats (replaced by Brother Against Brother event)
+	CSA now spawns with Legacy Slavery instead of Slave Trade
 	The Missouri Compromise now only suppresses the activism of the Abolitionist and Pro-Slavery movements, rather than all movements
+	Mixed Reconstruction now only requires 40% Afro-americans to avoid Jim Crow rather than 60%
+	Long Reconstruction is now available to all outcomes (and peacefully banning slavery) but has huge penalties unless Radical Reconstruction was completed
 	Liberia now has a properly american set of IG ideologies and starting laws
 	Decolonized the Liberian interior at game start
 	Liberian population reduced to much more historical numbers (less than 5k Afro-Americans)
 	Removed Afro-American homeland from Liberia (causing high Afro-american mortality as was historical)
 	Liberia no longer starts in their own market
 	DuPont can now produce High-grade Explosives
+	The Columbia River now adds +30% logging throughput
 Fixes
 	Hopefully prevented non-USA countries from picking the USA-specific AI strategies, again
 	Added extra check to make sure John Brown doesn't launch Harpers Ferry immediately  after spawning
+	Fixed Jim Crow not applying to enough states in Failed Reconstruction

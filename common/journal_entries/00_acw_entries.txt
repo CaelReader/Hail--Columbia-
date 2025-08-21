@@ -492,6 +492,7 @@ je_acw_war = {
 			100 = usfp_acw.2 #Trent Affair
 			25 = usfp_acw.4 #Ironclads
 			25 = usfp_acw.7 #Draft Riot
+			100 = usfp_acw.19 #Colored Troops
 		}
 		events = {
 			usfp_acw.3 #West Virginian secession

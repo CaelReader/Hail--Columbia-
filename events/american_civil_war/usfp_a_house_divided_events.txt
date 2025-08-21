@@ -1107,6 +1107,7 @@ usfp_a_house_divided.12 = {
 			save_scope_as = slavery_banned_scope
 		}
 		usfp_cleanup_acw_agitators = yes
+		set_global_variable = usfp_peculiar_reconciliation
 	}
 
 	option = {

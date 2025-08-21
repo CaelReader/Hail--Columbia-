@@ -75,9 +75,9 @@ acw_je_events.1 = {
 				save_scope_as = csa_scope	
 				if = {
 					limit = {
-						NOT = { has_law = law_type:law_slave_trade }
+						NOT = { has_law = law_type:law_legacy_slavery }
 					}
-					activate_law = law_type:law_slave_trade
+					activate_law = law_type:law_legacy_slavery
 				}	
 
 				# Re-enslave pops if the ACW happens after slavery has been abolished

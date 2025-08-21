@@ -4,7 +4,7 @@ usfp_lib_anthony_d_williams = {
 	last_name = Williams
     #no picture reference
 	historical = yes
-	interest_group = ig_landowners
+	interest_group = ig_devout
 	ideology = ideology_moderate
 	culture = cu:afro_american
     religion = rel:protestant

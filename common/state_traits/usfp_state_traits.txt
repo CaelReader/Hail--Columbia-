@@ -225,3 +225,13 @@ state_trait_navel_oranges = {
 		goods_output_fruit_mult = 0.05
 	}
 }
+
+#vanilla override
+state_trait_columbia_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+
+	modifier = {
+		state_infrastructure_add = 20
+		building_group_bg_logging_throughput_add = 0.30
+	}
+}

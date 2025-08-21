@@ -539,38 +539,7 @@ usfp_reconstruction.8 = {
 		trigger = {
 			usfp_is_afro_american_discriminated = no
 		}
-		remove_primary_culture = cu:dixie
-		add_journal_entry = {
-			type = usfp_reconstruction_long
-		}
-		add_loyalists = {
-			value = very_large_radicals
-			culture = cu:afro_american
-		}
-		add_radicals = {
-			value = very_large_radicals
-			culture = cu:dixie
-		}
-		add_radicals = {
-			value = small_radicals
-			culture = cu:yankee
-		}
-		ig:ig_landowners = {
-			usfp_planters_to_landowners_effect = yes
-		}
-		if = {
-			limit = { 
-				any_scope_character = {
-					has_template = agitator_frederick_douglass
-				}
-			}
-			random_scope_character = {
-				limit = {
-					has_template = agitator_frederick_douglass
-				}
-				set_ideology = ideology:ideology_humanitarian
-			}
-		}
+		usfp_reconstruction_outcome_radical_effect = yes
 	}
 	#we demand rights!
 	option = {
@@ -578,6 +547,10 @@ usfp_reconstruction.8 = {
 		highlighted_option = yes
 		trigger = {
 			usfp_is_afro_american_discriminated = yes
+		}
+		set_global_variable = reconstruction_outcome_radical
+		add_journal_entry = {
+			type = usfp_reconstruction_long
 		}
 		add_radicals = {
 			value = medium_radicals
@@ -622,48 +595,7 @@ usfp_reconstruction.9 = {
 	option = {
 		name = usfp_reconstruction.9.a
 		default_option = yes
-		custom_tooltip = {
-			text = usfp_reconstruction_partial_jim_crow 
-			every_scope_state = {
-				limit = {
-					OR = {
-						has_modifier = usfp_deep_south_modifier
-						has_modifier = usfp_upper_south_modifier
-						state_region = { 
-							is_homeland = cu:dixie
-							NOT = { is_homeland = cu:yankee }
-						}
-					}
-					is_state_region_dc = no
-					culture_percent_state = {
-						target = cu:afro_american
-						value < 0.60
-					}
-				}
-				add_modifier = {
-					name = usfp_jim_crow
-				}
-			}
-		}
-		every_scope_state = {
-			limit = {
-				state_region = { 
-					is_homeland = cu:dixie
-					NOT = { is_homeland = cu:yankee }
-				}
-				culture_percent_state = {
-					target = cu:afro_american
-					value >= 0.60
-				}
-			}
-			add_loyalists_in_state = {
-				value = large_radicals
-				culture = cu:afro_american
-			}
-		}
-		ig:ig_landowners = {
-			usfp_planters_to_landowners_effect = yes
-		}
+		usfp_reconstruction_outcome_mixed_effect = yes
 	}
 }
 #Failed Reconstruction
@@ -688,21 +620,7 @@ usfp_reconstruction.10 = {
 	#damn
 	option = {
 		name = usfp_reconstruction.10.a
-		custom_tooltip = {
-			text = usfp_reconstruction_full_jim_crow
-			every_scope_state = {
-				limit = {
-					state_region = { 
-						is_homeland = cu:dixie
-						NOT = { is_homeland = cu:yankee }
-					}
-					is_state_region_dc = no
-				}
-				add_modifier = {
-					name = usfp_jim_crow
-				}
-			}
-		}
+		usfp_reconstruction_outcome_failure_effect = yes
 		add_radicals = {
 			value = medium_radicals
 			culture = cu:afro_american
@@ -712,7 +630,6 @@ usfp_reconstruction.10 = {
 				name = modifier_slavery_forgotten
 				days = normal_modifier_time
 			}
-			usfp_planters_to_landowners_effect = yes
 		}
 	}
 
@@ -720,21 +637,7 @@ usfp_reconstruction.10 = {
 	option = {
 		name = usfp_reconstruction.10.b
 		default_option = yes
-		custom_tooltip = {
-			text = usfp_reconstruction_full_jim_crow
-			every_scope_state = {
-				limit = {
-					state_region = { 
-						is_homeland = cu:dixie
-						NOT = { is_homeland = cu:yankee }
-					}
-					is_state_region_dc = no
-				}
-				add_modifier = {
-					name = usfp_jim_crow
-				}
-			}
-		}
+		usfp_reconstruction_outcome_failure_effect = yes
 		add_radicals = {
 			value = large_radicals
 			culture = cu:afro_american
@@ -752,7 +655,6 @@ usfp_reconstruction.10 = {
 				name = modifier_slavery_forgotten
 				days = normal_modifier_time
 			}
-			usfp_planters_to_landowners_effect = yes
 			remove_modifier = revolution_lost_ig
 		}
 		add_modifier = {

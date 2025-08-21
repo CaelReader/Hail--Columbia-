@@ -1861,3 +1861,93 @@ usfp_acw.18 = {
 		}
 	}
 }
+
+#Colored Troops
+usfp_acw.19 = {
+	type = country_event
+	placement = scope:colored_troops_state
+
+	title = usfp_acw.19.t
+	desc = usfp_acw.19.d
+	flavor = usfp_acw.19.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+	cooldown = {
+		years = 100
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_pop = {
+			culture = cu:afro_american
+			is_pop_type = soldiers
+		}
+	}
+
+	immediate = {
+		ordered_scope_pop = {
+			limit = {
+				culture = cu:afro_american
+				is_pop_type = soldiers
+			}
+			order_by = total_size
+			state = {
+				save_scope_as = colored_troops_state
+			}
+		}
+	}
+
+
+	#nice
+	option = {
+		name = usfp_acw.19.a
+		default_option = yes
+		add_loyalists = {
+			value = medium_radicals
+			culture = cu:afro_american
+			pop_type = soldiers
+		}
+		scope:colored_troops_state = {
+			add_modifier = {
+				name = usfp_colored_troop_recruitment_modifier
+				years = 4
+			}
+		}
+		random_political_movement = {
+			limit = {
+				culture ?= cu:afro_american
+			}
+			add_modifier = {
+				name = usfp_colored_troops_movement_modifier
+				years = 4
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#lets not get hasty
+	option = {
+		name = usfp_acw.19.b
+		add_loyalists = {
+			value = small_radicals
+			culture = cu:yankee
+			pop_type = soldiers
+		}
+		scope:colored_troops_state = {
+			add_radicals_in_state = {
+				value = small_radicals
+				culture = cu:afro_american
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}

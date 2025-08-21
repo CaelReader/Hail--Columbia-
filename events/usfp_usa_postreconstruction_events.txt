@@ -1,4 +1,5 @@
 ﻿namespace = usfp_usa_postreconstruction
+###### Hail, Columbia! by CaelReader ######
 #The South Will Rise Again - neoconfederate movement spawns
 #Plessy v Ferguson
 #Wilmington massacre
@@ -7,6 +8,7 @@
 #Johnson–Jeffries riots
 #Red Summer
 #Harlem Renaissance
-#Southern Renaissace - Radical Reconstruction
 #Tulsa massacre
 #Birth of a Nation
+#Radical Reconstruction: Southern Renaissance
+#Radical Reconstruction: Great Return

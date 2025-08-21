@@ -13,6 +13,10 @@
 			desc = "afro_american_character_popularity"
 			value = usfp_long_reconstruction_get_afro_american_popularity
 		}
+		add = {
+			desc = "afro_american_movement_support"
+			value = usfp_long_reconstruction_get_afro_american_movement_support
+		}
 		subtract = {
 			desc = "dixie_radicalism"
 			value = usfp_long_reconstruction_get_dixie_radicals
@@ -20,6 +24,46 @@
 		subtract = {
 			desc = "supremacist_movement_support"
 			value = usfp_long_reconstruction_get_supremacist_movement_support 
+		}
+		if = {
+			limit = {
+				NOT = {has_global_variable = usfp_peculiar_reconciliation}
+				has_global_variable = usfp_reconstruction_outcome_mixed
+			}
+			subtract = {
+				desc = "usfp_reconstruction_outcome_mixed"
+				add = 15
+			}
+		}
+		if = {
+			limit = {
+				NOT = {has_global_variable = usfp_peculiar_reconciliation}
+				has_global_variable = usfp_reconstruction_outcome_failure
+			}
+			subtract = {
+				desc = "usfp_reconstruction_outcome_failure"
+				add = 30
+			}
+		}
+		if = {
+			limit = {
+				has_global_variable = usfp_peculiar_reconciliation
+			}
+			subtract = {
+				desc = "usfp_peculiar_reconciliation"
+				add = 20
+			}
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					has_modifier = usfp_jim_crow
+				}
+			}
+			subtract = {
+				desc = "afro_americans_under_jim_crow"
+				add = usfp_long_reconstruction_get_afro_american_percent_under_jim_crow
+			}
 		}
 	}
 	start_value = 0

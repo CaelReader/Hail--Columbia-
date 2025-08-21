@@ -302,12 +302,12 @@ usfp_reconstruction.9.f: ""All I ask is, give the black man a chance to stand on
 usfp_reconstruction.9.a: "Time will heal all wounds."
 
 usfp_reconstruction.10.t: "The Redemption of the South"
-usfp_reconstruction.10.d: "Reconstruction is finally coming to a close as the southern states are reincorporated fully into the [ROOT.GetCountry.GetName]. In the face of violent opposition and weak government support, Reconstruction has failed, leaving the Redeemers in full control of the former Confederacy. While this has allowed a reconciliation with the rebels on the national level, it entails the destruction of [SCOPE.sCulture('afro_american_culture').GetName] rights under the heel of racist '[concept_usfp_jim_crow]' laws that have been implemented across the South."
+usfp_reconstruction.10.d: "Reconstruction is finally coming to a close as the southern states are reincorporated fully into the [ROOT.GetCountry.GetName]. In the face of violent opposition and weak government support, Reconstruction has failed, leaving the Redeemers in full control of the former Confederacy. While this has allowed a reconciliation with the rebels on the national level, it entails the destruction of [GetCulture('afro_american').GetName] rights under the heel of racist '[concept_usfp_jim_crow]' laws that have been implemented across the South."
 usfp_reconstruction.10.f: ""Where justice is denied, where poverty is enforced, where ignorance prevails, and where any one class is made to feel that society is an organized conspiracy to oppress, rob and degrade them, neither persons nor property will be safe."" #Frederick Douglass
 usfp_reconstruction.10.a: "This will haunt our country for centuries to come."
 usfp_reconstruction.10.b: "Reconciliation with the South is all that matters."
-usfp_reconstruction_full_jim_crow: "[concept_usfp_jim_crow] laws will be enacted in all southern states."
-usfp_reconstruction_partial_jim_crow: "[concept_usfp_jim_crow] laws will be enacted in southern states that lack a large Afro-American population."
+usfp_reconstruction_full_jim_crow: "[concept_usfp_jim_crow] laws will be enacted in all southern [Concept('concept_state', '$concept_states$')]."
+usfp_reconstruction_partial_jim_crow: "[concept_usfp_jim_crow] laws will be enacted in southern [Concept('concept_state', '$concept_states$')] that lack a large [GetCulture('afro_american').GetName] [Concept('concept_pop', '$concept_population$')]."
 
 usfp_reconstruction.11.t: "A Devil's Bargain"
 usfp_reconstruction.11.d: "A conspiracy of southern states has concocted a plan to contest the upcoming election results and prevent the ascension of the lawfully elected president. Through backroom channels, the South is attempting to blackmail the federal government: either end Reconstruction now, or the election will be cast into jeopardy."

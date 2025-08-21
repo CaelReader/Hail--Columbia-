@@ -800,6 +800,7 @@ usfp_booker_t_washington = {
 usfp_marcus_garvey = {
     first_name = Marcus
     last_name = Garvey
+    dna = usfp_usa_marcus_garvey
     historical = yes
     birth_date = 1887.10.17
     culture = cu:afro_caribbean
@@ -810,9 +811,9 @@ usfp_marcus_garvey = {
     traits = {
         grifter
         bigoted
-        basic_entrepreneur
         demagogue
         imperious
+        arrogant
     } 
     agitator_usage = {
         country_trigger = {

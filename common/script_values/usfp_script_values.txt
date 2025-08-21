@@ -372,6 +372,18 @@ usfp_long_reconstruction_get_afro_american_popularity = {
 	divide = 10
 }
 
+usfp_long_reconstruction_get_afro_american_movement_support = {
+	value = {
+		every_political_movement = {
+			limit = {
+				culture ?= cu:afro_american
+			}
+			add = this.political_movement_support
+		}
+	}
+	multiply = 100
+}
+
 usfp_long_reconstruction_get_supremacist_movement_support = {
 	value = {
 		every_political_movement = {
@@ -382,4 +394,42 @@ usfp_long_reconstruction_get_supremacist_movement_support = {
 		}
 	}
 	multiply = 100
+}
+
+usfp_long_reconstruction_get_neoconfederate_movement_support = {
+	value = {
+		every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_cultural_majority #movement_usfp_neoconfederate
+			}
+			add = this.political_movement_support
+		}
+	}
+	multiply = 100
+}
+
+usfp_long_reconstruction_get_afro_american_percent_under_jim_crow = {
+	value = {
+		every_scope_state = {
+			limit = {
+				has_modifier = usfp_jim_crow
+			}
+			every_scope_pop = {
+				limit = {
+					culture	= cu:afro_american
+				}
+				add = total_size
+			}
+		}
+	}
+	divide = {
+		every_scope_pop = {
+            limit = {
+                culture = cu:afro_american
+            }
+            add = total_size
+        }
+	}
+	multiply = 100
+
 }

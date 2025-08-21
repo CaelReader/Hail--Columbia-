@@ -61,3 +61,9 @@ usfp_moral_suasion_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 	political_movement_pop_attraction_mult = 0.10
 }
+
+usfp_colored_troops_movement_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_soldier_positive.dds
+	political_movement_pop_attraction_mult = 0.10
+	political_movement_radicalism_add = -0.15
+}

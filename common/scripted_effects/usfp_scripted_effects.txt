@@ -900,8 +900,7 @@ usfp_reconstruction_conclusion_effect = {
 		 }
 		 custom_tooltip = usfp_reconstruction_full_jim_crow
 	}
-	
-	
+
 	hidden_effect = { # sanity check just in case something somehow falls through the cracks
 		every_scope_state = {
 			limit = { has_modifier = unreconstructed_state }
@@ -909,6 +908,114 @@ usfp_reconstruction_conclusion_effect = {
 		}
 		remove_modifier = usfp_enforcing_reconstruction
 		remove_modifier = usfp_freedmens_bureau
+	}
+}
+
+usfp_reconstruction_outcome_radical_effect = {
+	set_global_variable = usfp_reconstruction_outcome_radical
+	remove_primary_culture = cu:dixie
+	add_journal_entry = {type = usfp_reconstruction_long}
+	add_loyalists = {
+		value = very_large_radicals
+		culture = cu:afro_american
+	}
+	add_radicals = {
+		value = very_large_radicals
+		culture = cu:dixie
+	}
+	add_radicals = {
+		value = small_radicals
+		culture = cu:yankee
+	}
+	ig:ig_landowners = {
+		usfp_planters_to_landowners_effect = yes
+	}
+	if = {
+		limit = { 
+			any_scope_character = {
+				has_template = agitator_frederick_douglass
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_template = agitator_frederick_douglass
+			}
+			set_ideology = ideology:ideology_humanitarian
+		}
+	}
+}
+
+usfp_reconstruction_outcome_mixed_effect = {
+	set_global_variable = usfp_reconstruction_outcome_mixed
+	add_journal_entry = {type = usfp_reconstruction_long}
+	custom_tooltip = {
+		text = usfp_reconstruction_partial_jim_crow 
+		every_scope_state = {
+			limit = {
+				OR = {
+					has_modifier = usfp_deep_south_modifier
+					has_modifier = usfp_upper_south_modifier
+					state_region = { 
+						is_homeland = cu:dixie
+						NOT = { is_homeland = cu:yankee }
+					}
+				}
+				is_state_region_dc = no
+				culture_percent_state = {
+					target = cu:afro_american
+					value < 0.40
+				}
+			}
+			add_modifier = {
+				name = usfp_jim_crow
+			}
+		}
+	}
+	every_scope_state = {
+		limit = {
+			state_region = { 
+				is_homeland = cu:dixie
+				NOT = { is_homeland = cu:yankee }
+			}
+			culture_percent_state = {
+				target = cu:afro_american
+				value >= 0.40
+			}
+		}
+		add_loyalists_in_state = {
+			value = large_radicals
+			culture = cu:afro_american
+		}
+	}
+	ig:ig_landowners = {
+		usfp_planters_to_landowners_effect = yes
+	}
+}
+
+usfp_reconstruction_outcome_failure_effect = {
+	set_global_variable = usfp_reconstruction_outcome_failure
+	add_journal_entry = {type = usfp_reconstruction_long}
+	custom_tooltip = {
+		text = usfp_reconstruction_full_jim_crow
+		every_scope_state = {
+			limit = {
+				OR = {
+					has_modifier = usfp_deep_south_modifier
+					has_modifier = usfp_upper_south_modifier
+					state_region = { 
+						is_homeland = cu:dixie
+						NOT = { is_homeland = cu:yankee }
+					}
+				}
+				is_state_region_dc = no
+			}
+			add_modifier = {
+				name = usfp_jim_crow
+			}
+		}
+	}
+	ig:ig_landowners = {
+		usfp_planters_to_landowners_effect = yes
 	}
 }
 
@@ -1810,4 +1917,111 @@ usfp_fugitive_slave_act_effect = {
 		custom_tooltip = {
 			text = underground_railroad_more_to_canada
 		}
+}
+
+usfp_afro_american_colonization_effect = {
+			random_scope_state = {
+			limit = {
+				state_is_in_north_america = yes
+				culture_percent_state = {
+					target = cu:afro_american
+					value > 0.15
+				}
+				any_scope_pop = {
+					culture = cu:afro_american
+					OR = {
+						is_pop_type = laborers
+						is_pop_type = peasants
+					}
+					total_size >= 2000
+				}
+			}
+			custom_tooltip = usfp_colonization_better_with_colonial_resettlement
+			if = {
+				limit = {
+					root = {
+						has_law = law_type:law_colonial_resettlement
+					}
+				 }
+				random_list = {
+					60 = {
+						usfp_afro_american_pop_emigrate_effect = {
+							MAX_EMIGRES = 1000
+						}
+					}
+					35 = {
+						usfp_afro_american_pop_emigrate_effect = {
+							MAX_EMIGRES = 2000
+						}
+					}
+					5 = {
+						if = {
+							limit = {
+								scope:afro_american_colonization_target_state = {
+									state_is_eligible_as_mass_migration_target = yes
+								}
+							}
+						}
+						scope:afro_american_colonization_target_state = {
+							create_mass_migration = {
+								origin = root
+								culture = cu:afro_american
+							}
+						}
+					}
+				}
+			}
+			else = {
+				random_list = {
+					90 = {
+						usfp_afro_american_pop_emigrate_effect = {
+							MAX_EMIGRES = 500
+						}
+					}
+					9 = {
+						usfp_afro_american_pop_emigrate_effect = {
+							MAX_EMIGRES = 1000
+						}
+					}
+					1 = {
+						if = {
+							limit = {
+								scope:afro_american_colonization_target_state = {
+									state_is_eligible_as_mass_migration_target = yes
+								}
+							}
+						}
+						scope:afro_american_colonization_target_state = {
+							create_mass_migration = {
+								origin = root
+								culture = cu:afro_american
+							}
+						}
+					}
+				}
+			}
+		}
+}
+
+usfp_afro_american_pop_emigrate_effect = {
+	ordered_scope_pop = {
+		limit = {
+			OR = {
+				is_pop_type = laborers
+				is_pop_type = peasants
+			}
+			culture = cu:afro_american
+			total_size >= 2000
+		}
+		save_scope_as = colonization_pop
+	}
+	scope:colonization_pop = {
+		move_partial_pop = {
+			state = scope:afro_american_colonization_target_state
+			population_ratio = {
+				add = $MAX_EMIGRES$
+				divide = scope:colonization_pop.total_size
+			}
+		}
+	}
 }
