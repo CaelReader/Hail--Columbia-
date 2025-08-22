@@ -852,3 +852,32 @@ usfp_political_movement_ideologies = {
 		}
 	}
 }
+
+on_diplomatic_play_started = {
+	on_actions = {
+		usfp_manifest_destiny_decay_reset
+	}
+}
+
+usfp_manifest_destiny_decay_reset = {
+	effect = {
+		scope:initiator = {
+			if = {
+				limit = {
+					has_journal_entry = usfp_manifest_destiny_main
+					has_variable = manifest_destiny_decaying_warpath
+				}
+				if = {
+					limit = { 
+						has_variable = manifest_destiny_decay_clock
+					}
+					remove_variable = manifest_destiny_decay_clock
+				}
+				set_variable = {
+					name = manifest_destiny_decay_clock
+					years = 3
+				}
+			}
+		}
+	}
+}

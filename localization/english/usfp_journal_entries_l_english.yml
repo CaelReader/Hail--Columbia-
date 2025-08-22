@@ -113,6 +113,7 @@ usfp_manifest_destiny_special_tooltip_pro_expansion: "• has the [GetIdeology('
 usfp_manifest_destiny_special_tooltip_anti_expansion: "• has the [GetIdeology('ideology_pacifist').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_anarchist').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_humanitarian').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_humanitarian_royalist').GetName] [concept_ideology]\n• has the [GetCharacterTrait('usfp_trait_antiexpansionist').GetName] [concept_character_trait]"
 usfp_manifest_more_destiny: "#bold Manifest Destiny#! will gain influence."
 usfp_manifest_less_destiny: "#bold Manifest Destiny#! will lose influence."
+0_progress: "The #bold progress bar#! reaches 0"
 
 usfp_western_purchase_button: "Make an Offer to Mexico"
 usfp_western_purchase_button_desc: "Mexico's grasp on its northern territories is tenuous. If we wish to expand westward, we might be able to purchase these lands diplomatically."
@@ -164,6 +165,7 @@ usfp_reconstruction_outcome_mixed: "Mixed Reconstruction Outcome"
 usfp_reconstruction_outcome_failure: "Failed Reconstruction"
 usfp_peculiar_reconciliation: "Peacefully Banned Slavery"
 afro_americans_under_jim_crow: "Percent of [GetCulture('afro_american').GetName]s living in [concept_usfp_jim_crow] [Concept('concept_state', '$concept_states$')]"
+afro_american_movement_support: "[concept_political_movement_support] of the [GetCulture('afro_american').GetName] $movement_cultural_minority$"
 usfp_long_reconstruction_complete_tt: "The #bold Progress Bar#! has reached #bold 2000#!"
 
 usfp_canadian_highlander: "We are the only Canadian colony remaining"

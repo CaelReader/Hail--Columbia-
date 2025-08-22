@@ -53,6 +53,24 @@ usfp_manifest_destiny_main = {
 	scripted_button = usfp_secure_trail_button
 
 
+	complete = {
+		trigger_if = {
+			limit = {
+				has_variable = manifest_destiny_decaying
+			}
+			is_diplomatic_play_committed_participant = no
+			custom_tooltip = {
+				text = 0_progress
+				root.var:manifest_destiny_var <= 0
+			}
+		}
+		trigger_else = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+	}
+
 	fail = {
 		OR = {
 			country_rank < rank_value:major_power
@@ -430,6 +448,21 @@ usfp_manifest_destiny_main = {
 				set_variable = destiny_manifested_cultural_minority_2
 				post_notification = usfp_manifest_less_destiny_movement
 			}
+			#Manifest Destiny Decay after 1900
+			if = {
+				limit = { 
+					has_variable = manifest_destiny_decaying
+					NOT = {
+						has_variable = manifest_destiny_decay_clock
+					}
+				}
+				usfp_manifest_less_destiny_effect = yes
+				set_variable = {
+					name = manifest_destiny_decay_clock
+					years = 3
+				}
+				post_notification = usfp_manifest_less_destiny_decay
+			}
 			###
 			#Failsafe to add claims in case you acquire mexican states by other means
 			if = {
@@ -502,6 +535,7 @@ usfp_manifest_destiny_main = {
 			usfp_manifest_destiny.24 #Revolutionary Destiny
 			usfp_manifest_destiny.25 #Monarchy Destiny
 			usfp_indian_postremoval.4 #Sequoyah Constitution
+			usfp_manifest_destiny.29 #Manifest Destiny decay begins
 		}
 	}
 	on_yearly_pulse = {

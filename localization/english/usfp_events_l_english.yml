@@ -505,7 +505,16 @@ usfp_manifest_destiny.28.t: "Prairie Madness"
 usfp_manifest_destiny.28.d: "Many settlers have been lured to the [SCOPE.sState('praire_state_1').GetStateRegion.GetStrategicRegion.GetName] by the promise of free land and a new life. What the pioneers have found is a vast and hostile environment, where their ramshackle farmhouses stand alone against the howling winds of the prairie, and where they suffer from illness, depression, and insanity."
 usfp_manifest_destiny.28.f: ""In no civilized country have the cultivators of the soil adapted their home life so badly to the conditions of nature as have the people of our great Northwestern prairies. The European farmer lives in a village, where considerable social enjoyment is possible. On the prairie the treeless plain stretches away to the horizon line, where each family must live mainly to itself, and life, shut up in the little wooden farmhouses, can not well be very cheerful. "" #E. V. Smalley, The Atlantic
 usfp_manifest_destiny.28.a: "The frontier is not for the faint of heart."
-usfp_manifest_destiny.28.b: "Modern therapy could help them cope." 
+usfp_manifest_destiny.28.b: "Modern therapy could help them cope."
+
+usfp_manifest_destiny.29.t: "A Destiny Fulfilled"
+usfp_manifest_destiny.29.d: "With the turn of the century and the frontier long closed, new generations of Americans can now scarcely imagine a time when the [ROOT.GetCountry.GetName] was not already a [concept_great_power] stretching across the continent. The project of Manifest Destiny seems to have run its course, and has begun to fade into memory as the American people set their sights on new dreams of their own."
+usfp_manifest_destiny.29.f: ""You, the sons of the pioneers, if you are true to your ancestry, must make your lives as worthy as they made theirs. They sought for true success, and therefore they did not seek ease. They knew that success comes only to those who lead the life of endeavor."" #Theodore Roosevelt
+usfp_manifest_destiny.29.a: "We will make this the American Century."
+usfp_manifest_destiny.29.b: "Alexander wept."
+usfp_manifest_destiny.29.c: "#r No! We shall expand so as to include the whole world! #!"
+usfp_manifest_destiny_will_now_decay: "#bold Manifest Destiny#! will now lose influence every 3 years, closing out the Journal Entry when the #bold progress bar#! reaches 0."
+usfp_manifest_destiny_war_resets_clock: "Declaring an offensive [concept_diplomatic_play] will reset the #bold Manifest Destiny#! decay timer. Manifest Destiny losing influence will now also generate [Concept('concept_radical', '$concept_radicals$')] among our [concept_primary_cultures]."
 
 ### Native Removal
 usfp_native_removal.1.t: "The Seminole Removal"

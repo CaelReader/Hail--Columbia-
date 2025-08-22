@@ -3040,9 +3040,100 @@ usfp_manifest_destiny.28 = {
 			}
 		}
 	}
-
-
 }
+#Manifest Destiny begins to decay
+usfp_manifest_destiny.29 = {
+	type = country_event
+	placement = root
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/hail_columbia_icon.dds"
+	
+	title = usfp_manifest_destiny.29.t
+	desc = usfp_manifest_destiny.29.d
+	flavor = usfp_manifest_destiny.29.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		year >= 1900
+		NOT = {
+			has_variable = manifest_destiny_decaying
+		}
+		has_global_variable = american_frontier_closed
+		country_rank >= rank_value:great_power
+	}
+
+
+	#This will be the American Century
+	option = {
+		name = usfp_manifest_destiny.29.a
+		default_option = yes
+		trigger = {
+			var:manifest_destiny_var < 10
+		}
+		usfp_manifest_destiny_begin_decay_effect = yes
+		usfp_manifest_less_destiny_effect = yes
+		every_primary_culture = {
+			root = {
+				add_loyalists = {
+					value = small_radicals
+					culture = prev
+				}
+			}
+		}
+	}
+	#Alexander Wept
+	option = {
+		name = usfp_manifest_destiny.29.b
+		trigger = {
+			var:manifest_destiny_var >= 10
+		}
+		usfp_manifest_destiny_begin_decay_effect = yes
+		usfp_manifest_less_destiny_effect = yes
+		every_primary_culture = {
+			root = {
+				add_loyalists = {
+					value = small_radicals
+					culture = prev
+					pop_type = officers
+				}
+			}
+		}
+	}
+	#Endless War
+	option = {
+		name = usfp_manifest_destiny.29.c
+		highlighted_option = yes
+		trigger = {
+			custom_tooltip = {
+				text = enough_manifest_destiny
+				root.var:manifest_destiny_var >= 10
+			}
+		}
+		usfp_manifest_destiny_begin_decay_effect = yes
+		usfp_manifest_less_destiny_effect = yes
+		custom_tooltip = {
+			text = usfp_manifest_destiny_war_resets_clock
+			set_variable = manifest_destiny_decaying_warpath
+		}
+		every_primary_culture = {
+			root = {
+				add_loyalists = {
+					value = small_radicals
+					culture = prev
+					pop_type = officers
+				}
+			}
+		}
+		change_infamy = 10
+	}
+}
+
 #Mexican discrimination
 
 #Californian Revolt

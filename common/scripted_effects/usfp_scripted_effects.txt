@@ -82,7 +82,8 @@ usfp_manifest_more_destiny_effect = {
 	custom_tooltip = {
 		text = usfp_manifest_more_destiny
 		if = {
-			limit = { 
+			limit = {
+				has_variable = manifest_destiny_var 
 				var:manifest_destiny_var < 13
 			}
 			change_variable = {
@@ -108,6 +109,7 @@ usfp_manifest_less_destiny_effect = {
 		text = usfp_manifest_less_destiny
 		if = {
 			limit = {
+				has_variable = manifest_destiny_var 
 				var:manifest_destiny_var > 0
 			 }
 			 change_variable = {
@@ -115,6 +117,19 @@ usfp_manifest_less_destiny_effect = {
 				subtract = 1
 			}
 		}	
+	}
+	if = {
+		limit = {
+			has_variable = manifest_destiny_decaying_warpath
+		 }
+		every_primary_culture = {
+			root = {
+				add_radicals = {
+					value = small_radicals
+					culture = prev
+				}
+			}
+		}
 	}
 	hidden_effect = {
 		je:usfp_manifest_destiny_main = {
@@ -130,6 +145,7 @@ usfp_manifest_less_destiny_effect = {
 usfp_manifest_more_destiny_low_effect = {
 	if = {
 		limit = {
+			has_variable = manifest_destiny_var 
 			var:manifest_destiny_var <= 5
 		}
 		usfp_manifest_more_destiny_effect = yes
@@ -138,7 +154,8 @@ usfp_manifest_more_destiny_low_effect = {
 
 usfp_manifest_less_destiny_high_effect = {
 	if = {
-		limit = { 
+		limit = {
+			has_variable = manifest_destiny_var  
 			var:manifest_destiny_var >= 6
 		}
 		usfp_manifest_less_destiny_effect = yes
@@ -2022,6 +2039,17 @@ usfp_afro_american_pop_emigrate_effect = {
 				add = $MAX_EMIGRES$
 				divide = scope:colonization_pop.total_size
 			}
+		}
+	}
+}
+
+usfp_manifest_destiny_begin_decay_effect = {
+	custom_tooltip = {
+		text = usfp_manifest_destiny_will_now_decay
+		set_variable = manifest_destiny_decaying
+		set_variable = {
+			name = manifest_destiny_decay_clock
+			years = 3
 		}
 	}
 }
