@@ -1,4 +1,4 @@
-usfp_usa_marcus_garvey={
+﻿usfp_usa_marcus_garvey={
 portrait_info = {
 	genes={ 		hair_color={ 0 255 107 251 }
  		skin_color={ 176 212 176 212 }

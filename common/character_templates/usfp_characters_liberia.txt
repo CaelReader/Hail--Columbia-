@@ -20,7 +20,7 @@ usfp_lib_anthony_d_williams = {
 usfp_lib_joseph_roberts = {
 	first_name = Joseph
 	last_name = Roberts
-    
+    dna = usfp_lib_joseph_jenkins_roberts
 	historical = yes
 	interest_group = ig_petty_bourgeoisie
 	ideology = ideology_traditionalist

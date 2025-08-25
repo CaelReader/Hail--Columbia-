@@ -759,6 +759,7 @@ usfp_usa_horace_greeley = {
 usfp_booker_t_washington = {
     first_name = Booker
     last_name = Washington
+    dna = usfp_usa_booker_t_washington
     historical = yes
     birth_date = 1856.4.5
     culture = cu:afro_american
@@ -796,7 +797,7 @@ usfp_booker_t_washington = {
     }
 }
 
-#USFP: Marcus Garvey, Black Seperatist
+#USFP: Marcus Garvey, Black Nationalist
 usfp_marcus_garvey = {
     first_name = Marcus
     last_name = Garvey
@@ -848,6 +849,7 @@ usfp_marcus_garvey = {
 usfp_a_philip_randolph = {
     first_name = A_Philip
     last_name = Randolph
+    dna = usfp_usa_a_philip_randolph
     historical = yes
     birth_date = 1889.4.15
     culture = cu:afro_american
@@ -888,6 +890,7 @@ usfp_a_philip_randolph = {
 usfp_hubert_harrison = {
     first_name = Hubert
     last_name = Harrison
+    dna = usfp_usa_hubert_harry_harrison
     historical = yes
     birth_date = 1883.4.27
     culture = cu:afro_caribbean
