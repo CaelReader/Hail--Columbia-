@@ -1,6 +1,7 @@
 ﻿movement_usfp_progressive = {
 	category = movement_category_ideological
 	ideology = ideology_usfp_progressive_movement
+	active_law_radicalism_multiplier = 0.75 #they care a about a lot of laws
 	character_ideologies = {
 		ideology_usfp_progressive
 		ideology_usfp_social_gospel_leader
@@ -45,7 +46,7 @@
 		movement_support_political_machine
 		movement_support_pollution
 	}
-
+	
 	pop_support_weight = {
 		if = {
 			limit = {
@@ -403,6 +404,302 @@ movement_usfp_eugenics = {
 	secession = {
 		possible = {
 			political_movement_support >= 0.33
+			scope:clout <= 0
+		}
+		
+		weight = {
+			value = 100
+		}		
+	}
+}
+
+movement_usfp_neoconfederate = {
+	category = movement_category_ideological
+	ideology = ideology_usfp_neoconfederate_movement
+	character_ideologies = {
+		ideology_ethno_nationalist
+		ideology_usfp_social_darwinist_leader
+		ideology_fascist
+		ideology_traditionalist
+		ideology_usfp_strongman_populist
+	}
+	creation_trigger = {
+		c:USA ?= this
+		OR = {
+			has_global_variable = usfp_reconstruction_outcome_radical
+			has_global_variable = usfp_reconstruction_outcome_mixed
+			has_global_variable = usfp_reconstruction_outcome_failure
+		}
+	}
+	creation_weight = {
+		value = 0 #event-spawned
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_ethno_nationalist
+			has_ideology = ideology:ideology_usfp_social_darwinist_leader
+			has_ideology = ideology:ideology_fascist
+			has_ideology = ideology:ideology_traditionalist
+			has_ideology = ideology:ideology_usfp_strongman_populist
+		}
+		culture = {
+			has_discrimination_trait = european_heritage
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_usfp_strongman_populist
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_usfp_social_darwinist_leader
+					has_ideology = ideology:ideology_fascist
+					interest_group = {
+						is_interest_group_type = ig_intelligentsia
+					}
+				}
+				owner = {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_usfp_eugenics
+							is_political_movement_type = movement_fascist
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 0.25
+			}
+		}
+		if = {
+			limit = {
+				interest_group = {
+					is_interest_group_type = ig_trade_unions
+				}
+			}
+			multiply = {
+				value = 0.5
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		culture = {
+			has_discrimination_trait = european_heritage
+		}
+		pop_acceptance >= acceptance_status_4
+	}
+
+	pop_support_factors = {
+		movement_support_low_literacy
+		movement_support_low_urbanization
+		movement_support_radicalization
+		movement_support_peasants
+		movement_support_farmers
+		movement_support_aristocrats
+		movement_support_shopkeepers
+		movement_support_below_expected_sol
+		movement_support_dixie_culture
+		movement_support_black_sol_difference
+		movement_support_mixed_reconstruction
+		movement_support_radical_reconstruction
+		movement_support_jim_crow_state
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+					OR = {
+						is_being_suppressed = yes
+						is_being_bolstered = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}	
+		add = {
+			desc = "URBAN_STATE" # Increases support in rural states, decreases in urban
+			value = 0.5
+			subtract = state.state_urbanization_rate
+			multiply = 10
+		}
+
+		if = {
+			limit = {
+				is_pop_type = aristocrats
+			}
+			add = {
+				value = 45
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = farmers
+			}
+			add = {
+				value = 15
+				desc = "POP_FARMERS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = peasants
+			}
+			add = {
+				value = 20
+				desc = "POP_PEASANTS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = shopkeepers
+			}
+			add = {
+				value = 10
+				desc = "POP_SHOPKEEPERS"
+			}
+		}
+		if = {
+			limit = {
+				has_global_variable = usfp_reconstruction_outcome_radical
+			}
+			add = {
+				desc = "POP_SUPPORT_RADICAL_RECONSTRUCTION"
+				value = 10
+			}
+		} else_if = {
+			limit = {
+				has_global_variable = usfp_reconstruction_outcome_mixed
+			}
+			add = {
+				desc = "POP_SUPPORT_MIXED_RECONSTRUCTION"
+				value = 5
+			}
+		}
+
+		if = {
+			limit = {
+				state = {
+					has_modifier = usfp_jim_crow
+				}
+			}
+			add = {
+				desc = "POP_SUPPORT_JIM_CROW_STATE"
+				value = 10
+			}
+		}
+
+		if = {
+			limit = {
+				state = {
+					any_scope_pop = {
+						culture	= {
+							has_discrimination_trait = african_heritage
+						}
+					}
+				}
+			}
+			add = {
+				desc = "POP_SUPPORT_BLACK_SOL_DIFFERENCE"
+				value = {
+					state = {
+						ordered_scope_pop = {
+							limit = {
+								culture = {
+									has_discrimination_trait = african_heritage
+								}
+							}
+							order_by = standard_of_living
+							add = standard_of_living
+						}
+					}
+					subtract = standard_of_living
+				}
+			}
+		}
+
+
+		if = {
+			limit = {
+				standard_of_living < state.average_expected_sol
+			}
+			add = { # Increases likelihood of support if impoverished
+				desc = "IS_BELOW_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				max = 10
+			}
+		}
+
+		add = { # Weakened by increasing literacy rates
+			desc = "POP_LITERACY"
+			this = {
+				value = literacy_rate
+				multiply = -2
+			}
+		}
+
+		multiply = { # Multiplied by 2x max
+			desc = "POP_RADICALS"
+			value = pop_radical_fraction
+			add = 1
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+		
+		weight = {
+			value = 1000
+		}	
+	
+		state_weight = {
+			value = 1		
+		}
+	}
+		
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
 			scope:clout <= 0
 		}
 		

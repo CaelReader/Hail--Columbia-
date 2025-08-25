@@ -133,3 +133,14 @@
 	min_value = 0
 	max_value = 100
  }
+
+ usfp_reconstruction_progress_bar = {
+	name = "usfp_reconstruction_progress_bar"
+	desc = "usfp_reconstruction_progress_bar_freedmen"
+	second_desc = "usfp_reconstruction_progress_bar_redeemers"
+	double_sided_bad = yes
+
+	start_value = 5
+	min_value = 0
+	max_value = 20
+ }

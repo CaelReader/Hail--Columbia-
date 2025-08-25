@@ -291,13 +291,13 @@ usfp_reconstruction.7.f: ""The official authorities have manifested great readin
 usfp_reconstruction.7.a: "They are free to leave, and good riddance to them!"
 
 usfp_reconstruction.8.t: "The Second Founding"
-usfp_reconstruction.8.d: "Reconstruction is finally coming to a close as the southern states are reincorporated fully into the [ROOT.GetCountry.GetName]. Our efforts to uphold the promise of [SCOPE.sCulture('afro_american_culture').GetName] liberty have borne fruit through great effort. What were once down-trodden slaves are now free citizens, homeowners, and even elected officials. [SCOPE.sCulture('dixie_culture').GetName] rage will doubtlessly persist for generations, but the Redeemers' attempts to return to the Antebellum have been thwarted, hopefully for good."
+usfp_reconstruction.8.d: "Reconstruction is finally coming to a close as the southern states are reincorporated fully into the [ROOT.GetCountry.GetName]. Our efforts to uphold the promise of [GetCulture('afro_american').GetName] liberty have borne fruit through great effort. What were once down-trodden slaves are now free citizens, homeowners, and even elected officials. [GetCulture('dixie').GetName] rage will doubtlessly persist for generations, but the Redeemers' attempts to return to the Antebellum have been thwarted, hopefully for good."
 usfp_reconstruction.8.f: ""It is not light that we need, but fire; it is not the gentle shower, but thunder. We need the storm, the whirlwind, and the earthquake."" #Frederick Douglass
 usfp_reconstruction.8.a: "There is no progress without struggle."
 usfp_reconstruction.8.b: "Our promise is only half-fulfilled."
 
 usfp_reconstruction.9.t: "Divided Dixie"
-usfp_reconstruction.9.d: "Reconstruction is finally coming to a close as the southern states are reincorporated fully into the [ROOT.GetCountry.GetName]. States with large [SCOPE.sCulture('afro_american_culture').GetName] populations have been able to secure the fruits of Reconstruction, while those with [SCOPE.sCulture('dixie_culture').GetName] majorities have succumbed to Redeemer control. The wounds of the war have scarred over, but the South now stands divided between free states and racist '[concept_usfp_jim_crow]' regimes."
+usfp_reconstruction.9.d: "Reconstruction is finally coming to a close as the southern states are reincorporated fully into the [ROOT.GetCountry.GetName]. States with large [GetCulture('afro_american').GetName] populations have been able to secure the fruits of Reconstruction, while those with [GetCulture('dixie').GetName] majorities have succumbed to Redeemer control. The wounds of the war have scarred over, but the South now stands divided between free states and racist '[concept_usfp_jim_crow]' regimes."
 usfp_reconstruction.9.f: ""All I ask is, give the black man a chance to stand on his own legs! Let him alone! If you see him on his way to school, let him alone, -- don't disturb him! If you see him going to the dinner-table at a hotel, let him go! If you see him going to the ballot-box, let him alone, -- don't disturb him!"" #Frederick Douglass
 usfp_reconstruction.9.a: "Time will heal all wounds."
 
@@ -306,8 +306,8 @@ usfp_reconstruction.10.d: "Reconstruction is finally coming to a close as the so
 usfp_reconstruction.10.f: ""Where justice is denied, where poverty is enforced, where ignorance prevails, and where any one class is made to feel that society is an organized conspiracy to oppress, rob and degrade them, neither persons nor property will be safe."" #Frederick Douglass
 usfp_reconstruction.10.a: "This will haunt our country for centuries to come."
 usfp_reconstruction.10.b: "Reconciliation with the South is all that matters."
-usfp_reconstruction_full_jim_crow: "[concept_usfp_jim_crow] laws will be enacted in all southern [Concept('concept_state', '$concept_states$')]."
-usfp_reconstruction_partial_jim_crow: "[concept_usfp_jim_crow] laws will be enacted in southern [Concept('concept_state', '$concept_states$')] that lack a large [GetCulture('afro_american').GetName] [Concept('concept_pop', '$concept_population$')]."
+usfp_reconstruction_full_jim_crow: "[concept_usfp_jim_crow] laws will be enacted in all southern [Concept('concept_state', '$concept_states$')]"
+usfp_reconstruction_partial_jim_crow: "[concept_usfp_jim_crow] laws will be enacted in southern [Concept('concept_state', '$concept_states$')] that lack a large [GetCulture('afro_american').GetName] [Concept('concept_pop', '$concept_population$')]"
 
 usfp_reconstruction.11.t: "A Devil's Bargain"
 usfp_reconstruction.11.d: "A conspiracy of southern states has concocted a plan to contest the upcoming election results and prevent the ascension of the lawfully elected president. Through backroom channels, the South is attempting to blackmail the federal government: either end Reconstruction now, or the election will be cast into jeopardy."
@@ -332,6 +332,11 @@ usfp_reconstruction.14.d: "[SCOPE.sCharacter('assassination_target').GetFullName
 usfp_reconstruction.14.f: ""A man in a coat came through the door. I heard him shout "Bastards!", then shots rang out and everything was chaos. The smell of blood and powder filled the air. Some of us scrambled into cover, others tackled the shooter. Several men were left groaning on the floor with bloody jackets.""
 usfp_reconstruction.14.a: "Violence cannot stop righteousness!"
 usfp_reconstruction.14.b: "Maybe we should save our own skins."
+
+usfp_usa_postreconstruction.1.t: "The South Will Rise Again"
+usfp_usa_postreconstruction.1.d: "REPLACE_ME"
+usfp_usa_postreconstruction.1.f: """"
+usfp_usa_postreconstruction.1.a: "Can we ever be rid of these traitors?"
 
 #### Manifest Destiny
 usfp_manifest_destiny.1.t: "From Sea to Shining Sea?"

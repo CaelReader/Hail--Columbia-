@@ -619,20 +619,6 @@ je_acw_reconstruction = {
 		usfp_reconstruction_conclusion_effect = yes
 	}
 
-	current_value = {
-		if = {
-			limit = {
-				scope:journal_entry = {
-					goal_value = 0
-				}
-			}
-			value = 0
-		}
-		else = {
-			value = root.var:reconstruction_var
-		}
-	}
-
 	invalid = {
 		OR = {
 			custom_tooltip = {
@@ -652,15 +638,9 @@ je_acw_reconstruction = {
 		}
 	}
 
-	goal_add_value = {
-		add = 20
-	}
-
-
-	progressbar = yes
+	scripted_progress_bar =  usfp_reconstruction_progress_bar
 
 	timeout = 4380
-
 	should_be_pinned_by_default = yes
 }
 

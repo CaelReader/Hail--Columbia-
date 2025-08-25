@@ -13,3 +13,49 @@
 movement_support_pollution = {
 	name = STATE_POLLUTED
 }
+
+movement_support_dixie_culture = {
+	name = POP_SUPPORT_DIXIE_CULTURE
+	visible = {
+		owner ?= {
+			any_scope_state = {
+				state_region = {
+					is_homeland = cu:dixie
+				}
+			}
+		}
+	}
+}
+
+movement_support_black_sol_difference = {
+	name = POP_SUPPORT_BLACK_SOL_DIFFERENCE
+}
+
+movement_support_mixed_reconstruction = {
+	name = POP_SUPPORT_MIXED_RECONSTRUCTION
+	visible = {
+		owner ?= {
+			has_global_variable = usfp_reconstruction_outcome_mixed
+		}
+	}
+}
+
+movement_support_radical_reconstruction = {
+	name = POP_SUPPORT_RADICAL_RECONSTRUCTION
+	visible = {
+		owner ?= {
+			has_global_variable = usfp_reconstruction_outcome_radical
+		}
+	}
+}
+
+movement_support_jim_crow_state = {
+	name = POP_SUPPORT_JIM_CROW_STATE
+	visible = {
+		owner ?= {
+			any_scope_state = { 
+				has_modifier = usfp_jim_crow
+			 }
+		}
+	}
+}

@@ -614,6 +614,7 @@ Updates
 		The Missouri Compromise now only suppresses the activism of the Abolitionist and Pro-Slavery movements, rather than all movements
 	Reconstruction Updates	
 		Mixed Reconstruction now only requires 40% Afro-americans to avoid Jim Crow rather than 60%
+		Reconstruction JE now uses a double-sided scripted progress bar
 		Long Reconstruction is now available to all outcomes (and peacefully banning slavery) but has huge penalties unless Radical Reconstruction was completed
 	Liberia Overhaul
 		Liberia now has a properly american set of IG ideologies and starting laws

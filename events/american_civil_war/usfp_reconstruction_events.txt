@@ -540,6 +540,10 @@ usfp_reconstruction.8 = {
 			usfp_is_afro_american_discriminated = no
 		}
 		usfp_reconstruction_outcome_radical_effect = yes
+		trigger_event = {
+			id = usfp_usa_postreconstruction.1
+			years = 15
+		}
 	}
 	#we demand rights!
 	option = {
@@ -548,7 +552,7 @@ usfp_reconstruction.8 = {
 		trigger = {
 			usfp_is_afro_american_discriminated = yes
 		}
-		set_global_variable = reconstruction_outcome_radical
+		set_global_variable = usfp_reconstruction_outcome_radical
 		add_journal_entry = {
 			type = usfp_reconstruction_long
 		}
@@ -569,6 +573,10 @@ usfp_reconstruction.8 = {
 		remove_primary_culture = cu:dixie
 		ig:ig_landowners = {
 			usfp_planters_to_landowners_effect = yes
+		}
+		trigger_event = {
+			id = usfp_usa_postreconstruction.1
+			years = 15
 		}
 	}
 }
@@ -596,6 +604,10 @@ usfp_reconstruction.9 = {
 		name = usfp_reconstruction.9.a
 		default_option = yes
 		usfp_reconstruction_outcome_mixed_effect = yes
+		trigger_event = {
+			id = usfp_usa_postreconstruction.1
+			years = 20
+		}
 	}
 }
 #Failed Reconstruction
@@ -631,6 +643,10 @@ usfp_reconstruction.10 = {
 				days = normal_modifier_time
 			}
 		}
+		trigger_event = {
+			id = usfp_usa_postreconstruction.1
+			years = 25
+		}
 	}
 
 	#this was necessary
@@ -660,6 +676,10 @@ usfp_reconstruction.10 = {
 		add_modifier = {
 			name = modifier_slavery_whitewashing
 			days = long_modifier_time
+		}
+		trigger_event = {
+			id = usfp_usa_postreconstruction.1
+			years = 25
 		}
 	}
 

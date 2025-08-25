@@ -1,6 +1,50 @@
 ﻿namespace = usfp_usa_postreconstruction
 ###### Hail, Columbia! by CaelReader ######
 #The South Will Rise Again - neoconfederate movement spawns
+usfp_usa_postreconstruction.1 = {
+	type = country_event
+	placement = scope:dixie_state
+
+	title = usfp_usa_postreconstruction.1.t
+	desc = usfp_usa_postreconstruction.1.d
+	flavor = usfp_usa_postreconstruction.1.f
+	dlc = dlc_usfp
+
+	event_image = {
+		video = "europenorthamerica_american_civil_war"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_csa.dds"
+
+	immediate = {
+		sr:region_dixie = {
+			random_scope_state = {
+				save_scope_as = dixie_state
+			}
+		}
+	}
+
+	duration = 3
+
+	trigger = {
+		#event-spawned
+	}
+
+	#uh oh
+	option = {
+		name = usfp_usa_postreconstruction.1.a
+		default_option = yes
+		create_political_movement = {
+			type = movement_usfp_neoconfederate
+		}
+		usfp_radicalize_dixies_in_country = {
+			RADICALS = small_radicals
+		}
+	}
+}
+
 #Plessy v Ferguson
 #Wilmington massacre
 #NAACP Founded

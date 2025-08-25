@@ -592,7 +592,12 @@ usfp_reconstruction_swing_freedmen = {
 				add = 1
 			}
 		}
-
+		je:je_acw_reconstruction = {
+			set_bar_progress = {
+				value = owner.var:reconstruction_var
+				name = usfp_reconstruction_progress_bar
+			}
+		}
 	}
 }
 
@@ -608,7 +613,12 @@ usfp_reconstruction_swing_south = {
 				subtract = 1
 			}
 		}
-
+		je:je_acw_reconstruction = {
+			set_bar_progress = {
+				value = owner.var:reconstruction_var
+				name = usfp_reconstruction_progress_bar
+			}
+		}
 	}
 }
 
