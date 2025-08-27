@@ -525,3 +525,12 @@ usfp_progressive_era_square_deal_conditions = {
 	bureaucracy > 300
 	root.average_sol > 16
 }
+
+usfp_movement_is_racist = {
+	OR = {
+		is_political_movement_type = movement_cultural_majority
+		is_political_movement_type = movement_usfp_neoconfederate
+		is_political_movement_type = movement_usfp_eugenics
+		is_political_movement_type = movement_fascist
+	}
+}

@@ -2,7 +2,7 @@
 	name = "usfp_long_reconstruction_progress_bar"
 	desc = "usfp_long_reconstruction_progress_bar_desc"
 
-	default = yes
+	default_green = yes
 
 	yearly_progress = {
 		add = {
@@ -25,6 +25,29 @@
 			desc = "supremacist_movement_support"
 			value = usfp_long_reconstruction_get_supremacist_movement_support 
 		}
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_usfp_neoconfederate
+				}
+			}
+			subtract = {
+				desc = "neoconfederate_movement_support"
+				value = usfp_long_reconstruction_get_neoconfederate_movement_support
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_fascist
+				}
+			}
+			subtract = {
+				desc = "fascist_movement_support"
+				value = usfp_long_reconstruction_get_fascist_movement_support
+			}
+		}
+
 		if = {
 			limit = {
 				NOT = {has_global_variable = usfp_peculiar_reconciliation}
@@ -68,7 +91,7 @@
 	}
 	start_value = 0
 	min_value = 0
-	max_value = 2000
+	max_value = 2200
  }
 
  usfp_bleeding_kansas_progress_bar = {

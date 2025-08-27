@@ -58,6 +58,12 @@
 				culture = cu:afro_american
 			}
 		}
+		every_scope_state = {
+			limit = {
+				has_modifier = usfp_white_state_government_modifier
+			}
+			remove_modifier = usfp_white_state_government_modifier
+		}
 	}
 
 	ai_chance = {

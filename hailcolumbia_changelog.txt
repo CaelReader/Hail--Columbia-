@@ -616,6 +616,7 @@ Updates
 		Mixed Reconstruction now only requires 40% Afro-americans to avoid Jim Crow rather than 60%
 		Reconstruction JE now uses a double-sided scripted progress bar
 		Long Reconstruction is now available to all outcomes (and peacefully banning slavery) but has huge penalties unless Radical Reconstruction was completed
+		Long Reconstruction now takes slightly more progress to complete
 	Liberia Overhaul
 		Liberia now has a properly american set of IG ideologies and starting laws
 		Decolonized the Liberian interior at game start
@@ -626,6 +627,7 @@ Updates
 	The Columbia River now adds +30% logging throughput
 	Manifest Destiny now begins to decay over time starting in 1900
 	Indigenous American cultural minority movements now have a unique ideology
+	Oklahoma now enacts Jim Crow upon becoming a state
 Fixes
 	Hopefully prevented non-USA countries from picking the USA-specific AI strategies, again
 	Added extra check to make sure John Brown doesn't launch Harpers Ferry immediately  after spawning

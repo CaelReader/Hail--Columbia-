@@ -2,10 +2,11 @@
 #Long Reconstruction, must maintain afro-american acceptance for 40 years
 usfp_reconstruction_long = {
 	icon = "gfx/interface/icons/invention_icons/international_diplomacy.dds"
-
+	should_be_pinned_by_default = yes
 	group = je_group_usa_american_civil_war
 
 	scripted_progress_bar = usfp_long_reconstruction_progress_bar
+
 	immediate = {
 		cu:afro_american = {
 			save_scope_as = afro_american_culture
@@ -22,7 +23,7 @@ usfp_reconstruction_long = {
 		custom_tooltip = {
 			text = usfp_long_reconstruction_complete_tt
 			scope:journal_entry = {
-				"scripted_bar_progress(usfp_long_reconstruction_progress_bar)" >= 2000
+				"scripted_bar_progress(usfp_long_reconstruction_progress_bar)" >= 2200
 			}
 		}
 	}
@@ -36,6 +37,10 @@ usfp_reconstruction_long = {
 				remove_ideology = ideology_reactionary_segregationist
 				add_ideology = ideology_reactionary_exclusionist
 			}
+		}
+		add_loyalists = {
+			value = medium_radicals
+			culture = cu:afro_american
 		}
 	}
 

@@ -38,21 +38,540 @@ usfp_usa_postreconstruction.1 = {
 		default_option = yes
 		create_political_movement = {
 			type = movement_usfp_neoconfederate
+			
 		}
 		usfp_radicalize_dixies_in_country = {
 			RADICALS = small_radicals
+		}
+		if = {
+			limit = {
+				has_variable = usfp_embraced_lost_cause
+			 }
+			 random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_usfp_neoconfederate
+				}
+				add_modifier = {
+					name = usfp_lost_cause_movement_legacy_modifier
+					years = 20
+				}
+			 }
 		}
 	}
 }
 
 #Plessy v Ferguson
+usfp_usa_postreconstruction.2 = {
+	type = country_event
+	placement = scope:jim_crow_state
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_usa_postreconstruction.2.t
+	desc = usfp_usa_postreconstruction.2.d
+	flavor = usfp_usa_postreconstruction.2.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "votp_hostile_court"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	trigger = {
+		has_law = law_type:law_cultural_exclusion
+		any_scope_state = {
+			has_modifier = usfp_jim_crow
+			any_scope_pop = {
+				culture = cu:afro_american
+			}
+			any_scope_building = {
+				OR = {
+					has_active_production_method = pm_wooden_passenger_carriages
+					has_active_production_method = pm_steel_passenger_carriages
+				}
+			}
+		}
+		has_technology_researched = steel_railway_cars
+		has_technology_researched = identification_documents
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_modifier = usfp_jim_crow
+				any_scope_pop = {
+					culture = cu:afro_american
+				}
+				any_scope_building = {
+					OR = {
+						has_active_production_method = pm_wooden_passenger_carriages
+						has_active_production_method = pm_steel_passenger_carriages
+					}
+				}
+			}
+			save_scope_as = jim_crow_state
+		}
+	}
+
+	#this is the court's decision
+	option = {
+		name = usfp_usa_postreconstruction.2.a
+		default_option = yes
+		add_radicals = {
+			value = medium_radicals
+			culture = cu:afro_american
+		}
+		je:usfp_reconstruction_long = {
+			add_modifier = {
+				name = usfp_separate_but_equal_modifier
+			}
+		}
+		usfp_long_reconstruction_lose_progress = {
+			VALUE = -100
+		}
+		scope:jim_crow_state = {
+			usfp_loyalize_dixies_in_state = {
+				LOYALISTS = medium_radicals
+			}
+		}
+		add_radicals = {
+			value = medium_radicals
+			culture = cu:afro_american
+		}
+		every_political_movement = {
+			limit = {
+				usfp_movement_is_racist = yes
+			}
+			add_modifier = {
+				name = usfp_movement_mollified_by_racism_modifier
+				years = 5
+			}
+		}
+	}
+
+	#we need to work to overturn this
+	option = {
+		name = usfp_usa_postreconstruction.2.b
+		default_option = yes
+		add_radicals = {
+			value = medium_radicals
+			culture = cu:afro_american
+		}
+		je:usfp_reconstruction_long = {
+			add_modifier = {
+				name = usfp_separate_but_equal_modifier
+			}
+		}
+		usfp_long_reconstruction_lose_progress = {
+			VALUE = -100
+		}
+		scope:jim_crow_state = {
+			usfp_loyalize_dixies_in_state = {
+				LOYALISTS = small_radicals
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			culture = cu:afro_american
+		}
+		every_political_movement = {
+			limit = {
+				culture ?= cu:afro_american
+			}
+			add_modifier = {
+				name = usfp_movement_agitated_by_racism_modifier
+				years = 5
+			}
+		}
+	}
+}
 #Wilmington massacre
+usfp_usa_postreconstruction.3 = {
+	type = country_event
+	placement = scope:wilmington_state
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_usa_postreconstruction.3.t
+	desc = usfp_usa_postreconstruction.3.d
+	flavor = usfp_usa_postreconstruction.3.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_vandalized_storefront"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {
+		usfp_is_afro_american_discriminated = no
+		any_scope_state = {
+			region = sr:region_dixie
+			OR = {
+				radical_fraction = {
+					value > 0.15
+					culture = cu:dixie
+				}
+				radical_fraction = {
+					value > 0.15
+					culture = cu:usfp_american
+				}
+			}
+			culture_percent_state = {
+				target = cu:afro_american
+				value > 0.10
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_NORTH_CAROLINA
+					OR = {
+						radical_fraction = {
+							value > 0.15
+							culture = cu:dixie
+						}
+						radical_fraction = {
+							value > 0.15
+							culture = cu:usfp_american
+						}
+					}
+				}
+			 }
+			s:STATE_NORTH_CAROLINA.region_state:USA = {
+				save_scope_as = wilmington_state
+			}
+		} else = {
+			ordered_scope_state = {
+				limit = {
+					region = sr:region_dixie
+					OR = {
+						radical_fraction = {
+							value > 0.15
+							culture = cu:dixie
+						}
+						radical_fraction = {
+							value > 0.15
+							culture = cu:usfp_american
+						}
+					}
+					culture_percent_state = {
+						target = cu:afro_american
+						value > 0.10
+					}
+				}
+				order_by = radical_population_fraction
+				save_scope_as = wilmington_state
+			}
+		}
+
+	}
+
+	#this is the state's issue
+	option = {
+		name = usfp_usa_postreconstruction.3.a
+		default_option = yes
+		scope:wilmington_state = {
+			kill_population_percent_in_state = {
+				percent = 0.0005
+				culture = cu:afro_american
+			}
+			add_radicals = {
+				value = medium_radicals
+				culture = cu:afro_american
+			}
+			usfp_loyalize_dixies_in_state = {
+				LOYALISTS = small_radicals
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = usfp_jim_crow
+					}
+				 }
+				 add_modifier = usfp_jim_crow
+			}
+			add_modifier = {
+				name = usfp_white_state_government_modifier
+				years = 40
+			}
+		}
+	}
+
+	#intervene
+	option = {
+		name = usfp_usa_postreconstruction.3.b
+		scope:wilmington_state = {
+			kill_population_percent_in_state = {
+				percent = 0.0005
+				culture = cu:afro_american
+			}
+			add_radicals = {
+				value = small_radicals
+				culture = cu:afro_american
+			}
+			usfp_radicalize_dixies_in_state = {
+				LOYALISTS = large_radicals
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					usfp_movement_is_racist = yes
+				}
+			 }
+			 ordered_political_movement = {
+				limit = {
+					usfp_movement_is_racist = yes
+				}
+				order_by = political_movement_support
+				add_modifier = {
+					name = usfp_movement_agitated_by_antiracism_modifier
+					years = 5
+				}
+			 }
+		}
+	}
+
+	#Radical Reconstruction
+	option = {
+		name = usfp_usa_postreconstruction.3.b
+		highlighted_option = yes
+		trigger = {
+			custom_tooltip = {
+				text = usfp_reconstruction_outcome_radical
+				has_global_variable = usfp_reconstruction_outcome_radical
+			}
+		}
+		scope:wilmington_state = {
+			kill_population_percent_in_state = {
+				percent = 0.0005
+				culture = cu:afro_american
+			}
+			usfp_radicalize_dixies_in_state = {
+				LOYALISTS = large_radicals
+			}
+		}
+		if = {
+			limit = { 
+				any_political_movement = {
+					culture ?= cu:afro_american
+				}
+			}
+			random_political_movement = {
+				limit = {
+					culture ?= cu:afro_american
+				}
+				add_modifier = {
+					name = usfp_mollified_by_antiracism_modifier
+					years = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					usfp_movement_is_racist = yes
+				}
+			 }
+			 ordered_political_movement = {
+				limit = {
+					usfp_movement_is_racist = yes
+				}
+				order_by = political_movement_support
+				add_modifier = {
+					name = usfp_movement_agitated_by_antiracism_modifier
+					years = 5
+				}
+			 }
+		}
+	}
+}
 #NAACP Founded
+usfp_usa_postreconstruction.4 = {
+	type = country_event
+	placement = scope:maryland_scope
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_usa_postreconstruction.4.t
+	desc = usfp_usa_postreconstruction.4.d
+	flavor = usfp_usa_postreconstruction.4.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "southamerica_election"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/invention_icons/international_diplomacy.dds"
+
+	trigger = {
+		OR = {
+			year >= 1909
+			je:usfp_reconstruction_long ?= {
+				"scripted_bar_progress(usfp_long_reconstruction_progress_bar)" >= 1500
+			}
+		}
+		any_political_movement = {
+			culture ?= cu:afro_american
+		}
+	}
+
+	immediate = {
+		s:STATE_MARYLAND.region_state:USA = {
+			save_scope_as = maryland_scope
+		}
+	}
+
+	#a positive development
+	option = {
+		name = usfp_usa_postreconstruction.4.a
+		default_option = yes
+		random_political_movement = {
+			limit = {
+				culture ?= cu:afro_american
+			}
+			add_modifier = usfp_naacp_movement_modifier
+		}
+		usfp_long_reconstruction_add_progress = {
+			VALUE = 50
+		}
+		#1.10: increase afro-american fervor
+	}
+
+	#socialists!
+	option = {
+		name = usfp_usa_postreconstruction.4.b
+		random_political_movement = {
+			limit = {
+				culture ?= cu:afro_american
+			}
+			add_modifier = {
+				name = usfp_naacp_movement_modifier
+				multiplier = 0.5
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			culture = cu:afro_american
+		}
+		add_loyalists = {
+			value = small_radicals
+			interest_group = ig:ig_petty_bourgeoisie
+		}
+	}
+}
 #Great Migration
+usfp_usa_postreconstruction.5 = {
+	type = country_event
+	placement = scope:wilmington_state
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_usa_postreconstruction.5.t
+	desc = usfp_usa_postreconstruction.5.d
+	flavor = usfp_usa_postreconstruction.5.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_vandalized_storefront"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {
+
+	}
+
+	immediate = {
+
+
+	}
+
+	#
+	option = {
+		name = usfp_usa_postreconstruction.5.a
+		default_option = yes
+
+	}
+}
 #Johnson–Jeffries riots
+usfp_usa_postreconstruction.6 = {
+	type = country_event
+	placement = scope:wilmington_state
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_usa_postreconstruction.6.t
+	desc = usfp_usa_postreconstruction.6.d
+	flavor = usfp_usa_postreconstruction.6.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_vandalized_storefront"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {
+
+	}
+
+	immediate = {
+
+
+	}
+
+	#
+	option = {
+		name = usfp_usa_postreconstruction.6.a
+		default_option = yes
+
+	}
+}
 #Red Summer
+usfp_usa_postreconstruction.7 = {
+	type = country_event
+	placement = scope:wilmington_state
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_usa_postreconstruction.7.t
+	desc = usfp_usa_postreconstruction.7.d
+	flavor = usfp_usa_postreconstruction.7.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_vandalized_storefront"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {
+
+	}
+
+	immediate = {
+
+
+	}
+
+	#
+	option = {
+		name = usfp_usa_postreconstruction.7.a
+		default_option = yes
+
+	}
+}
+#Generic Race Riot
 #Harlem Renaissance
+#Black Wall Street spawns
 #Tulsa massacre
 #Birth of a Nation
 #Radical Reconstruction: Southern Renaissance
 #Radical Reconstruction: Great Return
+#Radical Reconstruction: Neoconfederate Assassination

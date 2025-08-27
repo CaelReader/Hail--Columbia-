@@ -565,7 +565,7 @@ movement_usfp_neoconfederate = {
 				is_pop_type = aristocrats
 			}
 			add = {
-				value = 45
+				value = 30
 				desc = "POP_ARISTOCRATS"
 			}
 		}
@@ -574,7 +574,7 @@ movement_usfp_neoconfederate = {
 				is_pop_type = farmers
 			}
 			add = {
-				value = 15
+				value = 10
 				desc = "POP_FARMERS"
 			}
 		}
@@ -583,7 +583,7 @@ movement_usfp_neoconfederate = {
 				is_pop_type = peasants
 			}
 			add = {
-				value = 20
+				value = 10
 				desc = "POP_PEASANTS"
 			}
 		}
@@ -592,7 +592,7 @@ movement_usfp_neoconfederate = {
 				is_pop_type = shopkeepers
 			}
 			add = {
-				value = 10
+				value = 5
 				desc = "POP_SHOPKEEPERS"
 			}
 		}

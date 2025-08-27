@@ -230,18 +230,12 @@ usfp_usa_election.2 = {
 		if = {
 			limit = {
 				any_political_movement = {
-					OR = {
-						is_political_movement_type = movement_cultural_majority
-						is_political_movement_type = movement_fascist
-					}
+					usfp_movement_is_racist = yes
 				}
 			 }
 			 ordered_political_movement = {
 				limit = {
-					OR = {
-						is_political_movement_type = movement_cultural_majority
-						is_political_movement_type = movement_fascist
-					}
+					usfp_movement_is_racist = yes
 				}
 				order_by = political_movement_support
 				add_modifier = {
@@ -286,18 +280,12 @@ usfp_usa_election.2 = {
 		if = {
 			limit = { 
 				any_political_movement = {
-					OR = {
-						is_political_movement_type = movement_cultural_majority
-						is_political_movement_type = movement_fascist
-					}
+					usfp_movement_is_racist = yes
 				}
 			}
 			ordered_political_movement = {
 				limit = {
-					OR = {
-						is_political_movement_type = movement_cultural_majority
-						is_political_movement_type = movement_fascist
-					}
+					usfp_movement_is_racist = yes
 				}
 				order_by = political_movement_support
 				add_modifier = {

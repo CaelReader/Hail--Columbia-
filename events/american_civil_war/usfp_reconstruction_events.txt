@@ -307,6 +307,7 @@ usfp_reconstruction.4 = {
 			set_ig_trait = ig_trait:usfp_ig_trait_lost_cause
 		}
 		set_global_variable = usfp_lost_cause_of_the_confederacy
+		set_variable = usfp_embraced_lost_cause
 		ai_chance = {
 			base = 100
 		}

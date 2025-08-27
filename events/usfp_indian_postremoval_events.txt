@@ -427,6 +427,23 @@ usfp_indian_postremoval.4 = {
 			set_state_type = incorporated
 		}
 		if = {
+			limit = {
+				any_scope_state = {
+					has_modifier = usfp_jim_crow
+				}
+			 }
+			 scope:oklahoma_scope = {
+				if = {
+					limit = {
+						NOT = {
+							has_modifier = usfp_jim_crow
+						}
+					}
+					add_modifier = usfp_jim_crow
+				}
+			 }
+		}
+		if = {
 			limit = { 
 				exists = c:SEQ
 				c:SEQ = {

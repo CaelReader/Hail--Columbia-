@@ -1197,6 +1197,30 @@ usfp_loyalize_dixies_in_state = {
 	}
 }
 
+usfp_loyalize_dixies_in_country = {
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:dixie
+			}
+		 }
+		 add_loyalists = {
+			value = $LOYALISTS$
+			culture = cu:dixie
+		}
+	}
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:usfp_american
+			}
+		 }
+		 add_loyalists = {
+			value = $LOYALISTS$
+			culture = cu:usfp_american
+		} 
+	}
+}
 
 
 
@@ -2060,6 +2084,28 @@ usfp_manifest_destiny_begin_decay_effect = {
 		set_variable = {
 			name = manifest_destiny_decay_clock
 			years = 3
+		}
+	}
+}
+
+usfp_long_reconstruction_add_progress = {
+	custom_tooltip = {
+		text = usfp_long_reconstruction_gain_progress
+		je:usfp_reconstruction_long ?= {
+			add_progress = {
+				name = usfp_long_reconstruction_progress_bar
+				value = $VALUE$
+			}
+		}
+	}
+}
+
+usfp_long_reconstruction_lose_progress = {
+	custom_tooltip = {
+		text = usfp_long_reconstruction_lose_progress
+		add_progress = {
+			name = usfp_long_reconstruction_progress_bar
+			value = $VALUE$
 		}
 	}
 }
