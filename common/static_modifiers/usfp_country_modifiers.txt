@@ -525,7 +525,8 @@ usfp_fighting_corruption_modifier = {
 
 usfp_social_hygiene_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_positive.dds
-	state_mortality_mult = -0.02
+	state_lower_strata_standard_of_living_add = 0.5
+	country_institution_cost_institution_health_system_mult = 0.05
 	country_loyalism_increases_full_acceptance_mult = 0.05
 }
 
@@ -537,8 +538,8 @@ usfp_meat_inspectors_modifier = {
 
 usfp_pure_drugs_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_positive.dds
-	state_mortality_mult = -0.02
-	country_bureaucracy_add = -100
+	country_institution_impact_institution_health_system_mult = 0.10
+	country_institution_cost_institution_health_system_mult = 0.10
 }
 
 usfp_hundred_years_of_america_modifier = {
@@ -693,4 +694,13 @@ usfp_separate_but_equal_modifier = {
 	country_qualification_growth_cultural_erasure_mult = -0.15
 	country_qualification_growth_open_prejudice_mult = -0.10
 	country_qualification_growth_second_rate_citizen_mult = -0.05
+}
+
+usfp_countrywide_anti_black_violence_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	# country_acceptance_no_shared_heritage
+	state_loyalism_increases_cultural_erasure_mult = -0.50
+	state_loyalism_increases_open_prejudice_mult = -0.50
+	state_loyalism_increases_second_rate_citizen_mult = -0.50
+	state_afro_american_standard_of_living_add = -2
 }

@@ -468,7 +468,7 @@ usfp_usa_postreconstruction.4 = {
 #Great Migration
 usfp_usa_postreconstruction.5 = {
 	type = country_event
-	placement = scope:wilmington_state
+	placement = scope:great_migration_exit_state
 	duration = 3
 	cooldown = { days = never_fire_again_modifier_time } #Once
 
@@ -478,31 +478,104 @@ usfp_usa_postreconstruction.5 = {
 
 	dlc = dlc_usfp
 	event_image = {
-		video = "unspecific_vandalized_storefront"
+		video = "asia_poor_people_moving"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
 	trigger = {
-
+		any_scope_state = {
+			has_modifier = usfp_jim_crow
+			culture_percent_state = {
+				target = cu:afro_american
+				value > 10
+			}
+		}
+		year >= 1910
+		NOT = {
+			has_global_variable = usfp_reconstruction_outcome_radical
+		}
 	}
 
 	immediate = {
-
-
+		random_scope_state = {
+			limit = {
+				has_modifier = usfp_jim_crow
+				culture_percent_state = {
+					target = cu:afro_american
+					value > 10
+				}
+			}
+			save_scope_as = great_migration_exit_state
+		}
+		random_scope_state = {
+			limit = {
+				state_is_eligible_as_mass_migration_target = yes
+				OR = {
+					state_region = s:STATE_NEW_YORK
+					state_region = s:STATE_MARYLAND
+					state_region = s:STATE_PENNSYLVANIA
+				}
+			}
+			save_scope_as = great_migration_state_1
+		}
+		random_scope_state = {
+			limit = {
+				state_is_eligible_as_mass_migration_target = yes
+				OR = {
+					state_region = s:STATE_MICHIGAN
+					state_region = s:STATE_ILLINOIS
+					state_region = s:STATE_OHIO
+				}
+			}
+			save_scope_as = great_migration_state_2
+		}
 	}
 
-	#
+	#it's only fair
 	option = {
 		name = usfp_usa_postreconstruction.5.a
 		default_option = yes
-
+		scope:great_migration_exit_state = {
+			ordered_scope_pop = {
+				limit = {
+					culture = cu:afro_american
+				}
+				order_by = total_size
+				move_partial_pop = {
+					state = scope:great_migration_state_1
+					population_ratio = 0.01
+				}
+			}
+			ordered_scope_pop = {
+				limit = {
+					culture = cu:afro_american
+				}
+				order_by = total_size
+				move_partial_pop = {
+					state = scope:great_migration_state_2
+					population_ratio = 0.01
+				}
+			}
+		}
+		scope:great_migration_state_1 = {
+			create_mass_migration = {
+				origin = root
+				culture = cu:afro_american
+			}
+		}
+		scope:great_migration_state_2 = {
+			create_mass_migration = {
+				origin = root
+				culture = cu:afro_american
+			}
+		}
 	}
 }
 #Johnson–Jeffries riots
 usfp_usa_postreconstruction.6 = {
 	type = country_event
-	placement = scope:wilmington_state
+	placement = scope:boxing_state
 	duration = 3
 	cooldown = { days = never_fire_again_modifier_time } #Once
 
@@ -518,19 +591,90 @@ usfp_usa_postreconstruction.6 = {
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
 	trigger = {
-
+		game_date >= 1910.7.1
+		has_technology_researched = film
+		has_technology_researched = mass_communication
 	}
 
 	immediate = {
-
-
+		s:STATE_NEVADA.region_state:USA = {
+			save_scope_as = boxing_state
+		}
+		ordered_scope_state = {
+			order_by = total_urbanization
+			position = 7
+			save_scope_as = urbanization_state
+		}
 	}
 
-	#
+	#what the fuck
 	option = {
 		name = usfp_usa_postreconstruction.6.a
 		default_option = yes
+		every_scope_state = {
+			limit = {
+				total_urbanization >= scope:urbanization_state.total_urbanization
+			}
+			state_region = {
+				add_devastation = 5
+			}
+		}
+		every_political_movement = {
+			limit = {
+				usfp_movement_is_racist = yes
+			}
+			add_modifier = {
+				name = usfp_great_white_hope_movement_modifier
+				years = 2
+			}
+		}
+		add_modifier = {
+			name = usfp_countrywide_anti_black_violence_modifier
+			years = 1
+		}
+	}
 
+	#restore order
+	option = {
+		name = usfp_usa_postreconstruction.6.b
+		trigger = {
+			OR = {
+				has_law = law_type:law_dedicated_police
+				has_law = law_type:law_militarized_police
+				has_law = law_type:law_national_guard
+			}
+			OR = {
+				institution_investment_level = {
+					institution = institution_home_affairs
+					value >= 4
+				}
+				institution_investment_level = {
+					institution = institution_police
+					value >= 5
+				}
+			}
+		}
+		highlighted_option = yes
+		every_scope_state = {
+			limit = {
+				total_urbanization >= scope:urbanization_state.total_urbanization
+			}
+			state_region = {
+				add_devastation = 2
+			}
+			usfp_radicalize_whites_in_state = {
+				RADICALS = small_radicals
+			}
+		}
+		usfp_radicalize_whites_in_country = {
+			RADICALS = small_radicals
+		}
+		every_scope_state = {
+			limit = {
+				has_variable = fight_of_the_century_riot
+			}
+			remove_variable = fight_of_the_century_riot
+		}
 	}
 }
 #Red Summer
@@ -549,7 +693,7 @@ usfp_usa_postreconstruction.7 = {
 		video = "unspecific_vandalized_storefront"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	trigger = {
 
@@ -575,3 +719,5 @@ usfp_usa_postreconstruction.7 = {
 #Radical Reconstruction: Southern Renaissance
 #Radical Reconstruction: Great Return
 #Radical Reconstruction: Neoconfederate Assassination
+#Exodusters
+#Silent Parade

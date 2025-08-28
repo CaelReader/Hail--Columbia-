@@ -3048,7 +3048,7 @@ usfp_manifest_destiny.29 = {
 	event_image = {
 		video = "europenorthamerica_london_center"
 	}
-
+	cooldown = { days = never_fire_again_modifier_time } #Once
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/hail_columbia_icon.dds"

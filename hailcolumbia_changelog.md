@@ -594,41 +594,42 @@ Fixed Mormons spawning as unemployed pops
 Merged 1.9.8 changes to Greener Grass Campaign
 Vanilla bugfix: intro event sets the initial USA election date properly
 
-6.0 "Douglass"
-New Content
+# 6.0 "Douglass"
+## New Content
 	Underground Railroad JE that moves small numbers of slaves out of the South every month
 	New USA election events responding to various types of candidates
 	New CSA events during the ACW
 	New Characters: Booker T Washington, Marcus Garvey, A Philip Randolph, Hubert Harrison, Anthony D Williams, Joseph Jenkins Roberts
 	USA can try to coax Afro-Americans to settle in africa/central america by decision
-Updates
-	A House Divided Updates
-		The Southern Planters are now even more racist
-		Missouri Compromise now suppresses the abolitionist movement more
-		Doubled the activism impact of Imminent Secession
-		Upper South and Deep South modifiers now increase cost and radicals from nationalizing buildings
-		USA now starts with an Afro American national movement with unique ideology
-		Added Status messages to A House Divided giving updates on the current status of the debate
-		Removed CSA's war support on battle defeats (replaced by Brother Against Brother event)
-		CSA now spawns with Legacy Slavery instead of Slave Trade
-		The Missouri Compromise now only suppresses the activism of the Abolitionist and Pro-Slavery movements, rather than all movements
-	Reconstruction Updates	
-		Mixed Reconstruction now only requires 40% Afro-americans to avoid Jim Crow rather than 60%
-		Reconstruction JE now uses a double-sided scripted progress bar
-		Long Reconstruction is now available to all outcomes (and peacefully banning slavery) but has huge penalties unless Radical Reconstruction was completed
-		Long Reconstruction now takes slightly more progress to complete
-	Liberia Overhaul
-		Liberia now has a properly american set of IG ideologies and starting laws
-		Decolonized the Liberian interior at game start
-		Liberian population reduced to much more historical numbers (less than 5k Afro-Americans)
-		Removed Afro-American homeland from Liberia (causing high Afro-american mortality as was historical)
-		Liberia no longer starts in their own market
+## Updates
+### A House Divided Updates
+	The Southern Planters are now even more racist
+	Missouri Compromise now suppresses the abolitionist movement more
+	Doubled the activism impact of Imminent Secession
+	Upper South and Deep South modifiers now increase cost and radicals from nationalizing buildings
+	USA now starts with an Afro American national movement with unique ideology
+	Added Status messages to A House Divided giving updates on the current status of the debate
+	Removed CSA's war support on battle defeats (replaced by Brother Against Brother event)
+	CSA now spawns with Legacy Slavery instead of Slave Trade
+	The Missouri Compromise now only suppresses the activism of the Abolitionist and Pro-Slavery movements, rather than all movements
+### Reconstruction Updates	
+	Mixed Reconstruction now only requires 40% Afro-americans to avoid Jim Crow rather than 60%
+	Reconstruction JE now uses a double-sided scripted progress bar
+	Long Reconstruction is now available to all outcomes (and peacefully banning slavery) but has huge penalties unless Radical Reconstruction was completed
+	Long Reconstruction now takes slightly more progress to complete
+### Liberia Overhaul
+	Liberia now has a properly american set of IG ideologies and starting laws
+	Decolonized the Liberian interior at game start
+	Liberian population reduced to much more historical numbers (less than 5k Afro-Americans)
+	Removed Afro-American homeland from Liberia (causing high Afro-american mortality as was historical)
+	Liberia no longer starts in their own market
+### Other Updates
 	DuPont can now produce High-grade Explosives
 	The Columbia River now adds +30% logging throughput
 	Manifest Destiny now begins to decay over time starting in 1900
 	Indigenous American cultural minority movements now have a unique ideology
 	Oklahoma now enacts Jim Crow upon becoming a state
-Fixes
+## Fixes
 	Hopefully prevented non-USA countries from picking the USA-specific AI strategies, again
 	Added extra check to make sure John Brown doesn't launch Harpers Ferry immediately  after spawning
 	Fixed Jim Crow not applying to enough states in Failed Reconstruction
