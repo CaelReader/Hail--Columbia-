@@ -504,6 +504,26 @@ usfp_manifest_destiny_main = {
 					}
 				}
 			}
+			###Bugfix: remove claims on states that you take control of fully, to prevent the Fascist movement from being anomalously strong
+			if = {
+				limit = { 
+					any_scope_state = {
+						has_claim_by = root
+						is_split_state = no
+						state_is_in_north_america = yes
+					}
+				}
+				random_scope_state = {
+					limit = {
+						has_claim_by = root
+						is_split_state = no
+						state_is_in_north_america = yes
+					}
+					state_region = {
+						remove_claim = root
+					}
+				}
+			}
 		}
 		random_events = {
 			200 = 0

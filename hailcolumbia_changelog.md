@@ -629,7 +629,10 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	Manifest Destiny now begins to decay over time starting in 1900
 	Indigenous American cultural minority movements now have a unique ideology
 	Oklahoma now enacts Jim Crow upon becoming a state
+	Updated some Progressive Era event modifiers
+	(CMF) Reactionary Movement can't spawn in american countries
 ## Fixes
 	Hopefully prevented non-USA countries from picking the USA-specific AI strategies, again
 	Added extra check to make sure John Brown doesn't launch Harpers Ferry immediately  after spawning
 	Fixed Jim Crow not applying to enough states in Failed Reconstruction
+	Manifest Destiny JE will now remove "ghost" claims on fully controlled states so that the Fascist movement doesn't gain an erroneous revanchist boost for already-conquered territory

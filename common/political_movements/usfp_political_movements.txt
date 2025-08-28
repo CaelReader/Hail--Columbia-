@@ -681,6 +681,21 @@ movement_usfp_neoconfederate = {
 			value = pop_radical_fraction
 			add = 1
 		}
+
+		if = { # If a more radical movement exists, it'll poach radicals from this one.
+			limit = {
+				owner ?= {
+					any_political_movement = {
+						is_political_movement_type = movement_fascist
+					}
+				}
+			}
+			multiply = {
+				desc = "POP_RADICAL_MOVEMENT_LOSSES"
+				value = 1
+				subtract = pop_radical_fraction
+			}
+		}	
 	}
 
 	revolution = {
