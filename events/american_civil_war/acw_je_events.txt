@@ -397,7 +397,7 @@ acw_je_events.2 = {
 					has_template = usa_lincoln_character_template
 					has_ideology = ideology:ideology_abolitionist
 				}
-				set_ideology = ideology:ideology_usfp_abolitionist_radical
+				set_ideology = ideology:ideology_reformer
 			}
 		}
 	}
@@ -487,7 +487,7 @@ acw_je_events.2 = {
 					has_template = usa_lincoln_character_template
 					has_ideology = ideology:ideology_abolitionist
 				}
-				set_ideology = ideology:ideology_usfp_abolitionist_radical
+				set_ideology = ideology:ideology_reformer
 			}
 		}
 	}

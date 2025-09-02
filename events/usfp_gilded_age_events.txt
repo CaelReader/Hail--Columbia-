@@ -349,23 +349,11 @@ usfp_gilded_age.4 = {
 			text = social_darwinism_unlocked
 			set_global_variable = social_darwinism_appeared
 		}
-		custom_tooltip = {
-			text = social_darwinist_appears
-			create_character = {
-				template = usfp_usa_william_sumner
-				is_agitator = yes
-			}
+		add_radicals = {
+			value = small_radicals
+			culture = cu:yankee
+			pop_type = academics
 		}
-		# every_political_movement = {
-		# 	limit = {
-		# 		OR = {
-		# 			is_political_movement_type = movement_reactionary
-		# 			is_political_movement_type = movement_cultural_majority
-		# 			is_political_movement_type = movement_fascist
-		# 		}
-		# 	}
-		# 	add_character_ideology = ideology_usfp_social_darwinist_leader
-		# }
 		ai_chance = {
 			base = 100
 		}
@@ -384,20 +372,6 @@ usfp_gilded_age.4 = {
 				template = usfp_usa_william_sumner
 				is_agitator = yes
 			}
-		}
-		# every_political_movement = {
-		# 	limit = {
-		# 		OR = {
-		# 			is_political_movement_type = movement_reactionary
-		# 			is_political_movement_type = movement_cultural_majority
-		# 			is_political_movement_type = movement_fascist
-		# 		}
-		# 	}
-		# 	add_character_ideology = ideology_usfp_social_darwinist_leader
-		# }
-		add_radicals = {
-			value = small_radicals
-			pop_type = academics
 		}
 		ai_chance = {
 			base = 0

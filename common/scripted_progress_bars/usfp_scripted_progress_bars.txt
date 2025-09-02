@@ -167,3 +167,86 @@
 	min_value = 0
 	max_value = 20
  }
+
+ usfp_reconstruction_northern_will_progress_bar = {
+	name = "usfp_reconstruction_northern_will_progress_bar"
+	desc = "usfp_reconstruction_northern_will_progress_bar_desc"
+	default = yes
+
+	start_value = 100
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		subtract = {
+			desc = "usfp_reconstruction_northern_will_base_decay"
+			value = 0.5
+		}
+		add = {
+			desc = "usfp_reconstruction_northern_will_radical_abolitionist_clout"
+			value = {
+				every_interest_group = {
+					limit = {
+						leader = {
+							OR = {
+								has_ideology = ideology:ideology_usfp_abolitionist_radical
+								has_ideology = ideology:ideology_humanitarian
+							}
+						}
+					}
+					add = ig_clout
+				}
+			}
+			
+		}
+		subtract = {
+			desc = "supremacist_movement_support"
+			value = {
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_cultural_majority
+					}
+					add = this.political_movement_support
+				}
+			}
+		}
+		if = {
+			limit = {
+				taking_loans = yes
+			}
+			subtract = {
+				desc = "size_of_loans"
+				value = scaled_debt
+			}
+		}
+		subtract = {
+			desc = "[concept_turmoil]"
+			value = country_turmoil
+		}
+		if = {
+			limit = {
+				authority < 0
+			}
+			add = {
+				desc = "authority_deficit"
+				value = relative_authority
+			}
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					has_decree = decree_usfp_radical_land_distribution
+				}
+			}
+			subtract = {
+				desc = "decree_usfp_radical_land_distribution"
+				every_scope_state = {
+					limit = {
+						has_decree = decree_usfp_radical_land_distribution
+					}
+					add = 0.2
+				}
+			}
+		}
+	}
+ }

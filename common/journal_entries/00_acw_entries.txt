@@ -581,6 +581,16 @@ je_acw_reconstruction = {
 			name = reconstruction_slow
 			years = 10
 		}
+		je:je_acw_reconstruction ?= {
+			add_modifier = {
+				name = usfp_reconstruction_white_fatigue_modifier
+				multiplier = var:reconstruction_var
+			}
+			add_modifier = {
+				name = usfp_reconstruction_occupation_authority_modifier
+				multiplier = 100
+			}
+		}
 	}
 
 	# complete = {
@@ -611,6 +621,113 @@ je_acw_reconstruction = {
 			20 = usfp_reconstruction.12 #PB backlash to Radical Reconstruction
 			20 = usfp_reconstruction.13 #Electoral backlash to Reconstruction
 			5 = usfp_reconstruction.14 #Radical Reconstruction assassination
+			20 = usfp_reconstruction.15 #Rural Folk support Reconstruction
+		}
+		effect = {
+			je:je_acw_reconstruction = {
+				remove_modifier = usfp_reconstruction_white_fatigue_modifier
+				add_modifier = {
+					name = usfp_reconstruction_white_fatigue_modifier
+					multiplier = var:reconstruction_var
+				}
+				remove_modifier = usfp_reconstruction_occupation_authority_modifier
+				if = {
+					limit = { 
+						"scripted_bar_progress(usfp_reconstruction_northern_will_progress_bar)" > 0
+					}
+					add_modifier = {
+						name = usfp_reconstruction_occupation_authority_modifier
+						multiplier = "scope:journal_entry.scripted_bar_progress(usfp_reconstruction_northern_will_progress_bar)"
+					}
+				}
+
+			}
+		}
+	}
+
+	on_yearly_pulse = {
+		effect = {
+			every_scope_state = {
+				limit = {
+					has_decree = decree_usfp_radical_land_distribution
+					OR = {
+						has_modifier = usfp_deep_south_modifier
+						has_modifier = usfp_upper_south_modifier
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = radical_land_distribution
+						}
+					 }
+					 set_variable = {
+						name = radical_land_distribution
+						value = 1
+					 }
+				}
+				if = {
+					limit = {
+						has_variable = radical_land_distribution
+						var:radical_land_distribution < 4
+					 }
+					if = {
+						limit = {
+							has_modifier = usfp_deep_south_modifier
+						 }
+						 remove_modifier = usfp_deep_south_modifier
+						 add_modifier = {
+							name = usfp_deep_south_modifier
+							multiplier = {
+								value = 1
+								divide = var:radical_land_distribution
+							}
+						 }
+					}
+					if = {
+						limit = {
+							has_modifier = usfp_upper_south_modifier
+						 }
+						 remove_modifier = usfp_upper_south_modifier
+						 add_modifier = {
+							name = usfp_upper_south_modifier
+							multiplier = {
+								value = 1
+								divide = var:radical_land_distribution
+							}
+						 }
+					}
+					change_variable = {
+						name = radical_land_distribution
+						add = 1
+					} 
+				}
+				if = {
+					limit = {
+						has_variable = radical_land_distribution
+						var:radical_land_distribution = 4
+						NOT = {
+							has_modifier = usfp_freedmens_holdings
+						}
+					 }
+					if = {
+						limit = {
+							has_modifier = usfp_deep_south_modifier
+						 }
+						 remove_modifier = usfp_deep_south_modifier
+					}
+					if = {
+						limit = {
+							has_modifier = usfp_upper_south_modifier
+						 }
+						 remove_modifier = usfp_upper_south_modifier
+					}
+					add_modifier = usfp_freedmens_holdings
+					usfp_reconstruction_swing_freedmen = yes
+					save_scope_as = radical_land_distribution_state
+					post_notification = usfp_radical_land_redistribution_complete
+				}
+			}
 		}
 	}
 
@@ -639,6 +756,7 @@ je_acw_reconstruction = {
 	}
 
 	scripted_progress_bar =  usfp_reconstruction_progress_bar
+	scripted_progress_bar =  usfp_reconstruction_northern_will_progress_bar
 
 	timeout = 4380
 	should_be_pinned_by_default = yes

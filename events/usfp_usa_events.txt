@@ -1680,9 +1680,7 @@ usfp_usa.21 = {
 				OR = {
 					culture ?= cu:dixie
 					culture ?= cu:yankee
-					is_political_movement_type = movement_fascist
-					is_political_movement_type = movement_reactionary
-					is_political_movement_type = movement_usfp_eugenics
+					usfp_movement_is_racist = yes
 				}
 			}
 			add_modifier = {

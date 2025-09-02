@@ -614,6 +614,9 @@ usfp_usa_postreconstruction.6 = {
 		every_scope_state = {
 			limit = {
 				total_urbanization >= scope:urbanization_state.total_urbanization
+				any_scope_culture = {
+					has_discrimination_trait = african_heritage
+				}
 			}
 			state_region = {
 				add_devastation = 5
@@ -631,6 +634,9 @@ usfp_usa_postreconstruction.6 = {
 		add_modifier = {
 			name = usfp_countrywide_anti_black_violence_modifier
 			years = 1
+		}
+		usfp_long_reconstruction_lose_progress = {
+			VALUE = 50
 		}
 	}
 
@@ -669,12 +675,6 @@ usfp_usa_postreconstruction.6 = {
 		usfp_radicalize_whites_in_country = {
 			RADICALS = small_radicals
 		}
-		every_scope_state = {
-			limit = {
-				has_variable = fight_of_the_century_riot
-			}
-			remove_variable = fight_of_the_century_riot
-		}
 	}
 }
 #Red Summer
@@ -696,12 +696,37 @@ usfp_usa_postreconstruction.7 = {
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	trigger = {
-
+		month >= 6
+		month <= 8
+		year >= 1919
+		any_political_movement = {
+			OR = {
+				is_political_movement_type = movement_anarchist
+				is_political_movement_type = movement_labor
+				is_political_movement_type = movement_socialist
+				is_political_movement_type = movement_communist
+			}
+		}
+		any_scope_pop = {
+			is_pop_type = soldiers
+			culture = cu:afro_american
+		}
+		has_variable = recently_had_war
 	}
 
 	immediate = {
-
-
+		ordered_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_anarchist
+					is_political_movement_type = movement_labor
+					is_political_movement_type = movement_socialist
+					is_political_movement_type = movement_communist
+				}
+			}
+			order_by = political_movement_support
+			save_scope_as = scapegoat_movement
+		}
 	}
 
 	#
@@ -721,3 +746,4 @@ usfp_usa_postreconstruction.7 = {
 #Radical Reconstruction: Neoconfederate Assassination
 #Exodusters
 #Silent Parade
+#Radical Reconstruction: Dixie Redoubt

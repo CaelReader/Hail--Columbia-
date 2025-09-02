@@ -969,4 +969,119 @@ usfp_reconstruction.14 = {
 		}
 	}
 }
+#Dixie Rural Folk support Reconstruction
+usfp_reconstruction.15 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/invention_icons/intensive_agriculture.dds"
+	event_image = {
+		video = "africa_prosperous_farm"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	title = usfp_reconstruction.15.t
+	desc = usfp_reconstruction.15.d
+	flavor = usfp_reconstruction.15.f
+	dlc = dlc_usfp
+	placement = scope:farm_state
+	duration = 3
+	cooldown = {days = never_fire_again_modifier_time } #once
+
+	trigger = {
+		any_scope_state = {
+			has_modifier = unreconstructed_state
+			any_scope_pop = {
+				culture = cu:dixie
+				is_pop_type = farmers
+			}
+			any_scope_pop = {
+				culture = cu:afro_american
+				is_pop_type = farmers
+			}
+			turmoil < 0.20
+		}
+		var:reconstruction_var < 12
+	}
+
+	
+	immediate = {
+		ig:ig_rural_folk = {
+			save_scope_as = rural_folk_ig
+		}
+		random_scope_state = {
+			limit = {
+				has_modifier = unreconstructed_state
+				any_scope_pop = {
+					culture = cu:dixie
+					is_pop_type = farmers
+				}
+				any_scope_pop = {
+					culture = cu:afro_american
+					is_pop_type = farmers
+				}
+				turmoil < 0.20
+			}
+			save_scope_as = farm_state
+		}
+	}
+
+	#cool
+	option = {
+		name = usfp_reconstruction.15.a
+		default_option = yes
+		scope:farm_state = {
+			add_loyalists_in_state = {
+				value = medium_radicals
+				pop_type = farmers
+				culture = cu:dixie
+			}
+			add_loyalists_in_state = {
+				value = medium_radicals
+				culture = cu:afro_american
+			}
+			add_radicals_in_state = {
+				value = large_radicals
+				culture = cu:dixie
+				pop_type = aristocrats
+			}
+		}
+	}
+	#can we push this across the South?
+	option = {
+		name = usfp_reconstruction.15.b
+		usfp_reconstruction_swing_freedmen = yes
+		add_loyalists = {
+			value = small_radicals
+			pop_type = farmers
+			culture = cu:dixie
+		}
+		add_loyalists = {
+			value = small_radicals
+			pop_type = farmers
+			culture = cu:afro_american
+		}
+		add_radicals = {
+			value = large_radicals
+			culture = cu:dixie
+			pop_type = aristocrats
+		}
+		ig:ig_rural_folk = {
+			if = {
+				limit = {
+					has_modifier = revolution_lost_ig
+				}
+				remove_modifier = revolution_lost_ig
+			}
+			add_modifier = {
+				name = ig_gaining_support
+				years = 4
+			}
+		}
+		add_modifier = {
+			name = usfp_enforcing_reconstruction
+			years = 2
+			multiplier = 2
+		}
+	}
+}
 #Radical Republicans

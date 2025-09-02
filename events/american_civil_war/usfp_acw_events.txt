@@ -585,7 +585,11 @@ usfp_acw.7 = {
 			any_scope_pop = {
 				culture = cu:afro_american
 			}
+			any_scope_building = {
+				is_building_type = building_conscription_center
+			}
 		}
+		is_at_war = yes
 	}
 
 	immediate = {
@@ -1760,6 +1764,22 @@ usfp_acw.17 = {
 		capital = {
 			controller = root
 		}
+		any_scope_war = {
+			attacker_warleader = c:CSA
+			has_war_support = {
+				target = root
+				value > -50
+			}
+		}
+		c:CSA = {
+			any_scope_war = {
+				attacker_warleader = c:CSA
+				has_war_support = {
+					target = root
+					value > -50
+				}
+			}
+		}
 	}
 
 	immediate = {
@@ -1832,6 +1852,22 @@ usfp_acw.18 = {
 		capital = {
 			controller = root
 		}
+		any_scope_war = {
+			attacker_warleader = c:CSA
+			has_war_support = {
+				target = root
+				value > -50
+			}
+		}
+		c:USA = {
+			any_scope_war = {
+				attacker_warleader = c:CSA
+				has_war_support = {
+					target = root
+					value > -50
+				}
+			}
+		}
 	}
 
 
@@ -1888,6 +1924,7 @@ usfp_acw.19 = {
 			culture = cu:afro_american
 			is_pop_type = soldiers
 		}
+		is_at_war = yes
 	}
 
 	immediate = {

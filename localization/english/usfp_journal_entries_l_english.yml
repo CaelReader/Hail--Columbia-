@@ -152,6 +152,15 @@ usfp_reconstruction_cointelpro_freedmen_button_desc: "These white supremacists a
 usfp_reconstruction_cointelpro_slaver_button: "Disrupt Black Organizations"
 usfp_reconstruction_cointelpro_slaver_button_desc: "Radicalism is spreading among the freedmen. The Bureau will hamper their efforts to coordinate."
 made_devils_bargain: "We have made the Devil's Bargain with the South"
+usfp_reconstruction_northern_will_progress_bar: "Northern Political Will"
+usfp_reconstruction_northern_will_progress_bar_desc: "$usfp_reconstruction_northern_will_progress_bar$ #italic ([JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%0])#!"
+usfp_reconstruction_northern_will_base_decay: "Baseline Decay"
+usfp_reconstruction_northern_will_radical_abolitionist_clout: "[concept_clout] of [GetIdeology('ideology_usfp_abolitionist_radical').GetName] [Concept('concept_interest_group', '$concept_interest_groups$')]"
+size_of_loans: "Size of [ROOT.GetCountry.GetAdjectiveNoFormatting] [concept_loans]"
+authority_deficit: "[concept_authority] Deficit"
+
+decree_usfp_radical_land_distribution: "Confiscate Slaveholder Lands"
+decree_usfp_radical_land_distribution_desc: "Seize the land of former slave plantations and distribute them to the Freedmen who once worked them."
 
 usfp_reconstruction_long: "Long Reconstruction"
 usfp_reconstruction_long_reason: "Despite the emancipation of the Freedmen, racial prejudice remains deeply engrained at all levels of the [ROOT.GetCountry.GetName]. It will take at least a generation, if not longer, before [GetCulture('afro_american').GetName] citizens are truly accepted as a core element of the [ROOT.GetCountry.GetAdjectiveNoFormatting] nation."

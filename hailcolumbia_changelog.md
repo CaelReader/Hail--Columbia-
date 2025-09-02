@@ -601,6 +601,7 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	New CSA events during the ACW
 	New Characters: Booker T Washington, Marcus Garvey, A Philip Randolph, Hubert Harrison, Anthony D Williams, Joseph Jenkins Roberts
 	USA can try to coax Afro-Americans to settle in africa/central america by decision
+	A Radical Abolitionist government can now unlock a special decree to seize and redistribute former slave plantations, permanently breaking the plantation economy of the South
 ## Updates
 ### A House Divided Updates
 	The Southern Planters are now even more racist
@@ -613,10 +614,15 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	CSA now spawns with Legacy Slavery instead of Slave Trade
 	The Missouri Compromise now only suppresses the activism of the Abolitionist and Pro-Slavery movements, rather than all movements
 ### Reconstruction Updates	
+	Updated Reconstruction Progress Bar into a double-sided scripted bar
+	New Northern Political Will bar for Reconstruction that decays over time
+	Added Northern Reticence modifier to Reconstruction that increases the more you progress in favor of the Freedmen
 	Mixed Reconstruction now only requires 40% Afro-americans to avoid Jim Crow rather than 60%
 	Reconstruction JE now uses a double-sided scripted progress bar
 	Long Reconstruction is now available to all outcomes (and peacefully banning slavery) but has huge penalties unless Radical Reconstruction was completed
 	Long Reconstruction now takes slightly more progress to complete
+	Abraham Lincoln now becomes a Reformer upon completing the civil war
+	Jim Crow now reduces migration attraction
 ### Liberia Overhaul
 	Liberia now has a properly american set of IG ideologies and starting laws
 	Decolonized the Liberian interior at game start
@@ -630,7 +636,9 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	Indigenous American cultural minority movements now have a unique ideology
 	Oklahoma now enacts Jim Crow upon becoming a state
 	Updated some Progressive Era event modifiers
+	William Sumner now only spawns automatically if you embrace Social Darwinism
 	(CMF) Reactionary Movement can't spawn in american countries
+	(CMF) Doubled baseline PB attraction to the Liberal party
 ## Fixes
 	Hopefully prevented non-USA countries from picking the USA-specific AI strategies, again
 	Added extra check to make sure John Brown doesn't launch Harpers Ferry immediately  after spawning

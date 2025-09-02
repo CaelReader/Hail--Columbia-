@@ -454,7 +454,19 @@ usfp_usa_william_sumner = {
     birth_date = 1840.11.30
     dna = usfp_usa_william_sumner
     traits = { literary arrogant direct usfp_trait_antiexpansionist }
-    #event-spawned
+    agitator_usage = {
+        country_trigger = { 
+            usfp_country_is_american = yes
+            has_global_variable = social_darwinism_appeared
+        }
+        interest_group_trigger = { 
+            is_marginal = no
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1872.1.1
+        latest_usage_date = 1890.1.1
+        chance = 50
+    }
 }
 
 #USFP: Jane Addams, social work reformer and suffragist

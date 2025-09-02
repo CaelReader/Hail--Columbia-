@@ -96,8 +96,14 @@ usfp_slave_revolt = {
 usfp_land_redistribution = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds
 	tax_land_add = -0.2
-	building_group_bg_agriculture_allowed_collectivization_add = 0.25
-	building_group_bg_ranching_allowed_collectivization_add = 0.25
+	building_group_bg_agriculture_allowed_collectivization_add = 0.15
+	building_group_bg_ranching_allowed_collectivization_add = 0.15
+}
+
+usfp_freedmens_holdings = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds
+	building_group_bg_agriculture_allowed_collectivization_add = 0.20
+	building_group_bg_ranching_allowed_collectivization_add = 0.20
 }
 
 usfp_jim_crow = {
@@ -105,6 +111,7 @@ usfp_jim_crow = {
 	state_pop_pol_str_mult = -0.20
 	interest_group_ig_landowners_pol_str_mult = 0.20
 	state_afro_american_standard_of_living_add = -2
+	state_migration_pull_mult = -0.20
 }
 
 usfp_oregon_migration = {

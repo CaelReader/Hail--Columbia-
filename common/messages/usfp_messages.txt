@@ -109,7 +109,6 @@ usfp_manifest_less_destiny_decay = {
 	color = bad
 }
 
-#Washington Precedent message
 usfp_washington_precedent = {
 	type = country
 	group = "new_ruler_notification_group"
@@ -148,4 +147,19 @@ usfp_liberia_recognized = {
 	texture = "gfx/interface/icons/notification_icons/icon_america.dds"
 	notification_type = toast
 	color = neutral
+}
+
+usfp_radical_land_redistribution_complete = {
+	type = country
+	group = "usfp_reconstruction_group"
+	texture = "gfx/interface/icons/notification_icons/pops.dds"
+	notification_type = toast
+	color = good
+}
+
+usfp_afro_american_migration_notification = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/pops.dds"
+	notification_type = feed
+	color = good
 }

@@ -493,6 +493,38 @@ movement_usfp_neoconfederate = {
 		}
 	}
 
+	additional_radicalism_factors = {
+		add = {
+			value = "owner.average_sol_for_culture(cu:afro_american)"
+			subtract = "owner.average_sol_for_primary_cultures"
+			multiply = 0.01
+			max = 0.5
+			desc = "POP_SUPPORT_BLACK_SOL_DIFFERENCE"
+		}
+		add = {
+			value = "owner.average_sol"
+			subtract = "owner.average_sol_for_primary_cultures"
+			multiply = 0.05
+			max = 0.5
+			min = 0
+			desc = "STANDARD_OF_LIVING_FOR_PRIMARY_CULTURES"
+		}
+		if = {
+			limit = {
+				owner.ruler ?= {
+					NOT = { culture = { is_primary_culture_of = root.owner } }
+				}
+			}
+
+			add = {
+				value = 0.1
+				desc = "RULER_NOT_PRIMARY_CULTURE"
+			}
+		}
+
+
+	}
+
 	pop_support_trigger = {
 		culture = {
 			has_discrimination_trait = european_heritage
@@ -629,10 +661,8 @@ movement_usfp_neoconfederate = {
 		if = {
 			limit = {
 				state = {
-					any_scope_pop = {
-						culture	= {
-							has_discrimination_trait = african_heritage
-						}
+					any_scope_culture = {
+						has_discrimination_trait = african_heritage
 					}
 				}
 			}
@@ -647,11 +677,13 @@ movement_usfp_neoconfederate = {
 								}
 							}
 							order_by = standard_of_living
-							add = standard_of_living
+							position = 0
+							value = standard_of_living
 						}
 					}
-					subtract = standard_of_living
 				}
+				subtract = standard_of_living
+				max = 50
 			}
 		}
 

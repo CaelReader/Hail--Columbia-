@@ -22,21 +22,19 @@ usfp_usa_election.1 = {
 	trigger = {
 		usfp_country_is_american = yes
 		in_election_campaign = yes
+		#trying to filter for only the party leader having a female candidate
 		any_active_party = {
 			any_member = {
-				is_powerful = yes
 				leader = {
 					is_female = yes
 				}
 				save_temporary_scope_as = check_ig
 			}
-		}
-		#trying to filter for only the party leader having a female candidate
-		any_interest_group = {
-			party = scope:check_ig.party
-			NOT = { this = scope:check_ig }
-			ig_clout > scope:check_ig.ig_clout
-			count = 0
+			any_member = {
+				NOT = { this = scope:check_ig }
+				ig_clout > scope:check_ig.ig_clout
+				count = 0
+			}
 		}
 	}
 
@@ -44,18 +42,18 @@ usfp_usa_election.1 = {
 		random_active_party = {
 			limit = {
 				any_member = {
-					is_powerful = yes
 					leader = {
 						is_female = yes
 					}
 				}
 			}
-			random_member = {
+			ordered_member = {
 				limit = {
 					leader = {
 						is_female = yes
 					}
 				}
+				order_by = ig_clout
 				save_scope_as = female_ig
 			}
 		}
@@ -151,24 +149,25 @@ usfp_usa_election.2 = {
 		in_election_campaign = yes
 		any_active_party = {
 			any_member = {
-				is_powerful = yes
 				leader = {
 					culture = {
-						NOT = {
-							has_discrimination_trait = european_heritage
-							has_discrimination_trait = anglophone
+						OR = {
+							NOT = {
+								has_discrimination_trait = european_heritage
+							}
+							NOT = {
+								has_discrimination_trait = anglophone
+							}
 						}
 					}
 				}
 				save_temporary_scope_as = check_ig
 			}
-		}
-		#trying to filter for only the party leader having a female candidate
-		any_interest_group = {
-			party = scope:check_ig.party
-			NOT = { this = scope:check_ig }
-			ig_clout > scope:check_ig.ig_clout
-			count = 0
+			any_member = {
+				NOT = { this = scope:check_ig }
+				ig_clout > scope:check_ig.ig_clout
+				count = 0
+			}
 		}
 	}
 
@@ -176,30 +175,41 @@ usfp_usa_election.2 = {
 		random_active_party = {
 			limit = {
 				any_member = {
-					is_powerful = yes
 					leader = {
 						culture = {
-							NOT = {
-								has_discrimination_trait = european_heritage
-								has_discrimination_trait = anglophone
+							OR = {
+								NOT = {
+									has_discrimination_trait = european_heritage
+								}
+								NOT = {
+									has_discrimination_trait = anglophone
+								}
 							}
 						}
 					}
 				}
 			}
-			random_member = {
+			ordered_member = {
 				limit = {
 					leader = {
 						culture = {
-							NOT = {
-								has_discrimination_trait = european_heritage
-								has_discrimination_trait = anglophone
+							OR = {
+								NOT = {
+									has_discrimination_trait = european_heritage
+								}
+								NOT = {
+									has_discrimination_trait = anglophone
+								}
 							}
 						}
 					}
 				}
+				order_by = ig_clout
 				save_scope_as = nonwhite_ig
 			}
+		}
+		scope:nonwhite_ig = {
+			add_modifier = ig_gaining_support
 		}
 	}
 

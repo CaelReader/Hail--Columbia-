@@ -217,6 +217,11 @@ acw_followup_events.4 = {
 				has_modifier = usfp_land_redistribution
 			}
 		}
+		NOT = {
+			any_scope_state = {
+				has_decree = decree_usfp_radical_land_distribution
+			}
+		}
 	}
 
 	immediate = {
@@ -295,6 +300,36 @@ acw_followup_events.4 = {
 			}
 		}
 		usfp_reconstruction_swing_south = yes
+	}
+
+	#radical land distribution
+	option = {
+		name = acw_followup_events.4.c
+		trigger = {
+			usfp_has_dixie_occupation_trigger = yes
+			any_interest_group = {
+				is_in_government = yes
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_usfp_abolitionist_radical
+						has_ideology = ideology:ideology_humanitarian
+					}
+				}
+			}
+			custom_tooltip = {
+				text = acw_followup_events.4.c_trigger
+				NOT = {
+					has_variable = reconstruction_radical_land_distribution
+				}
+			}
+
+		}
+		highlighted_option = yes
+		custom_tooltip = {
+			text = acw_followup_events.4.ctt
+			set_variable = reconstruction_radical_land_distribution
+		}
+		
 	}
 }
 
