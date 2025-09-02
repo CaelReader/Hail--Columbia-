@@ -1602,6 +1602,11 @@ usfp_acw.15 = {
 				add_devastation = 5
 			}
 		}
+		add_modifier = {
+			name = usfp_slave_market_collapse_modifier
+			years = 12
+			is_decaying = yes
+		}
 		ai_chance = {
 			base = 25
 		}
@@ -1639,6 +1644,11 @@ usfp_acw.15 = {
 				percent = 0.01
 				pop_type = slaves
 			}
+		}
+		add_modifier = {
+			name = usfp_slave_market_collapse_modifier
+			years = 8
+			multiplier = 0.5
 		}
 		ai_chance = {
 			base = 0

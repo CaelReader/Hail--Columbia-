@@ -229,7 +229,10 @@
 			}
 			add = {
 				desc = "authority_deficit"
-				value = relative_authority
+				value = {
+					add = authority
+					divide = 200
+				}
 			}
 		}
 		if = {
@@ -246,6 +249,24 @@
 					}
 					add = 0.2
 				}
+			}
+		}
+		if = {
+			limit = {
+				any_interest_group = {
+					has_party = yes
+					is_in_government = yes
+					party = {
+						OR = {
+							is_party_type = agrarian_party
+							is_party_type = conservative_party
+						}
+					}
+				}
+			}
+			subtract = {
+				desc = "democratic_party_in_government"
+				value = 1
 			}
 		}
 	}

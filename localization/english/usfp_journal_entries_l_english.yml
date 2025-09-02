@@ -158,6 +158,7 @@ usfp_reconstruction_northern_will_base_decay: "Baseline Decay"
 usfp_reconstruction_northern_will_radical_abolitionist_clout: "[concept_clout] of [GetIdeology('ideology_usfp_abolitionist_radical').GetName] [Concept('concept_interest_group', '$concept_interest_groups$')]"
 size_of_loans: "Size of [ROOT.GetCountry.GetAdjectiveNoFormatting] [concept_loans]"
 authority_deficit: "[concept_authority] Deficit"
+democratic_party_in_government: "Democratic [concept_party] [concept_in_government]"
 
 decree_usfp_radical_land_distribution: "Confiscate Slaveholder Lands"
 decree_usfp_radical_land_distribution_desc: "Seize the land of former slave plantations and distribute them to the Freedmen who once worked them."
