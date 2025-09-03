@@ -599,6 +599,7 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	Underground Railroad JE that moves small numbers of slaves out of the South every month
 	New USA election events responding to various types of candidates
 	New CSA events during the ACW
+	New Events: Colored Troops, Scalawags
 	New Characters: Booker T Washington, Marcus Garvey, A Philip Randolph, Hubert Harrison, Anthony D Williams, Joseph Jenkins Roberts
 	USA can try to coax Afro-Americans to settle in africa/central america by decision
 	A Radical Abolitionist government can now unlock a special decree to seize and redistribute former slave plantations, permanently breaking the plantation economy of the South
@@ -644,3 +645,4 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	Added extra check to make sure John Brown doesn't launch Harpers Ferry immediately  after spawning
 	Fixed Jim Crow not applying to enough states in Failed Reconstruction
 	Manifest Destiny JE will now remove "ghost" claims on fully controlled states so that the Fascist movement doesn't gain an erroneous revanchist boost for already-conquered territory
+	Constitution JE fails if you pass a non-voting Distribution of Power law

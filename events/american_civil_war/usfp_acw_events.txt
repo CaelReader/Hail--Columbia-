@@ -1935,6 +1935,7 @@ usfp_acw.19 = {
 			is_pop_type = soldiers
 		}
 		is_at_war = yes
+		has_law = law_type:law_slavery_banned
 	}
 
 	immediate = {
@@ -1991,6 +1992,13 @@ usfp_acw.19 = {
 			add_radicals_in_state = {
 				value = small_radicals
 				culture = cu:afro_american
+			}
+		}
+		scope:colored_troops_state = {
+			add_modifier = {
+				name = usfp_colored_troop_recruitment_modifier
+				years = 4
+				multiplier = 0.5
 			}
 		}
 		ai_chance = {

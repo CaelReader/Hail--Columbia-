@@ -11,7 +11,10 @@
 	}
 	country_trigger = {
 		usfp_has_dixie_occupation_trigger = yes
-		has_variable = reconstruction_radical_land_distribution
+		custom_tooltip = {
+			text = unlocked_radical_land_distribution
+			has_variable = reconstruction_radical_land_distribution
+		}
 		any_interest_group = {
 			is_in_government = yes
 			leader = {

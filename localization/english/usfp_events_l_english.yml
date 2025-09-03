@@ -254,6 +254,12 @@ usfp_acw.17.fusa: ""We can never end this war till we make common cause with the
 usfp_acw.17.fcsa: ""Already has the hatred of one of their great leaders attempted to make the negro your equal by declaring his freedom. They care not for the blood of babes nor carnage of innocent women which servile insurrection thus stirred up may bring upon their heads."" #James Longstreet
 usfp_acw.17.a: "For cause and comrades!"
 
+usfp_acw.19.t: "For Their Own Cause"
+usfp_acw.19.d: "With the Civil War now a war of emancipation, scores of [GetCulture('afro_american').GetName] volunteers have flocked to enlist in the Army as part of newly inaugurated United States Colored Troops regiments. Many seek not only to aid in the destruction of slavery, but also to prove that [GetCulture('afro_american').GetName]s are patriotic members of the American nation."
+usfp_acw.19.f: ""Once let the black man get upon his person the brass letters U.S.; let him get an eagle on his button, and a musket on his shoulder, and bullets in his pocket, and there is no power on the earth or under the earth which can deny that he has earned the right of citizenship in the United States."" #Frederick Douglass
+usfp_acw.19.a: "For Liberty and Union!"
+usfp_acw.19.b: "Keep a close eye on the [GetCulture('afro_american').GetName] troops."
+
 #Reconstruction Events
 usfp_reconstruction.1.t: "The Freedmen's Bureau"
 usfp_reconstruction.1.d: "A commission on the conditions in the South has suggested the creation of a new government agency: the Freedmen's Bureau. This agency would give direct aid to refugees and those recently liberated from slavery, in order to help transition them into free society."
@@ -332,6 +338,12 @@ usfp_reconstruction.14.d: "[SCOPE.sCharacter('assassination_target').GetFullName
 usfp_reconstruction.14.f: ""A man in a coat came through the door. I heard him shout "Bastards!", then shots rang out and everything was chaos. The smell of blood and powder filled the air. Some of us scrambled into cover, others tackled the shooter. Several men were left groaning on the floor with bloody jackets.""
 usfp_reconstruction.14.a: "Violence cannot stop righteousness!"
 usfp_reconstruction.14.b: "Maybe we should save our own skins."
+
+usfp_reconstruction.15.t: "Scalawags"
+usfp_reconstruction.15.d: "Some [GetCulture('dixie').GetName] $Farmers$ in [SCOPE.sState('farm_state').GetName], many of them Unionists, have begun to rally in favor of Reconstruction, finding common cause with [GetCulture('afro_american').GetName] Freedmen against the economic domination of the [GetInterestGroupVariant('ig_landowners',GetPlayer).GetName]."
+usfp_reconstruction.15.f: "[SCOPE.sState('farm_state').GetNameNoFormatting] had hosted small meetings of Unionists during the war, but now they were able to air their grievances in the open. The most radical among them joined the Republican Party and supported the enfrachisement of the Freedmen. Most were simply happy to see the haughty plantation owners knocked down a peg."
+usfp_reconstruction.15.a: "Let's hope they don't suffer too much backlash."
+usfp_reconstruction.15.b: "Could this work across the rest of the South?"
 
 usfp_usa_postreconstruction.1.t: "The South Will Rise Again"
 usfp_usa_postreconstruction.1.d: "REPLACE_ME"

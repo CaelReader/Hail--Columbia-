@@ -272,7 +272,7 @@ acw_followup_events.4 = {
 				value = large_radicals
 			}
 			add_radicals_in_state = {
-				value = 0.25
+				value = very_large_radicals
 				culture = cu:dixie
 				strata = upper
 			}
@@ -325,6 +325,16 @@ acw_followup_events.4 = {
 
 		}
 		highlighted_option = yes
+		show_as_unavailable = {
+			NOT = {
+				has_variable = reconstruction_radical_land_distribution
+			}
+		}
+		add_radicals = {
+			value = very_large_radicals
+			culture = cu:dixie
+			strata = upper
+		}
 		custom_tooltip = {
 			text = acw_followup_events.4.ctt
 			set_variable = reconstruction_radical_land_distribution

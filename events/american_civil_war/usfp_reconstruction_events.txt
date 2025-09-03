@@ -975,7 +975,7 @@ usfp_reconstruction.15 = {
 
 	icon = "gfx/interface/icons/invention_icons/intensive_agriculture.dds"
 	event_image = {
-		video = "africa_prosperous_farm"
+		video = "southamerica_factory_opening"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -1072,15 +1072,16 @@ usfp_reconstruction.15 = {
 				}
 				remove_modifier = revolution_lost_ig
 			}
+			if = {
+				limit = {
+					has_modifier = ig_slavers_mad
+				}
+				remove_modifier = ig_slavers_mad
+			}
 			add_modifier = {
 				name = ig_gaining_support
 				years = 4
 			}
-		}
-		add_modifier = {
-			name = usfp_enforcing_reconstruction
-			years = 2
-			multiplier = 2
 		}
 	}
 }

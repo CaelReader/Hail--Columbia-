@@ -162,6 +162,7 @@ democratic_party_in_government: "Democratic [concept_party] [concept_in_governme
 
 decree_usfp_radical_land_distribution: "Confiscate Slaveholder Lands"
 decree_usfp_radical_land_distribution_desc: "Seize the land of former slave plantations and distribute them to the Freedmen who once worked them."
+unlocked_radical_land_distribution: "Has unlocked Confiscate Slaveholder Lands in the event Forty Acres and a Mule"
 
 usfp_reconstruction_long: "Long Reconstruction"
 usfp_reconstruction_long_reason: "Despite the emancipation of the Freedmen, racial prejudice remains deeply engrained at all levels of the [ROOT.GetCountry.GetName]. It will take at least a generation, if not longer, before [GetCulture('afro_american').GetName] citizens are truly accepted as a core element of the [ROOT.GetCountry.GetAdjectiveNoFormatting] nation."
