@@ -1305,6 +1305,42 @@ usfp_radicalize_whites_in_state = {
 	}
 }
 
+usfp_loyalize_whites_in_state = {
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:yankee
+			}
+		 }
+		 add_loyalists_in_state = {
+			value = $LOYALISTS$
+			culture = cu:yankee
+		}
+	}
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:dixie
+			}
+		 }
+		 add_loyalists_in_state = {
+			value = $LOYALISTS$
+			culture = cu:dixie
+		}
+	}
+	if = {
+		limit = {
+			any_scope_pop = {
+				culture = cu:usfp_american
+			}
+		 }
+		 add_loyalists_in_state = {
+			value = $LOYALISTS$
+			culture = cu:usfp_american
+		} 
+	}
+}
+
 usfp_enable_american_indian_culture = {
 	custom_tooltip = {
 		text = usfp_enable_american_indian_culture_tt

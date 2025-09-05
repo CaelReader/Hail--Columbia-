@@ -534,3 +534,18 @@ usfp_movement_is_racist = {
 		is_political_movement_type = movement_fascist
 	}
 }
+
+usfp_is_valid_antiblack_riot_state = {
+	any_scope_pop = {
+		culture = cu:afro_american
+	}
+	any_scope_pop = {
+		OR = {
+			culture = cu:yankee
+			culture = cu:dixie
+			culture = cu:usfp_american
+		}
+	}
+	is_incorporated = yes
+	has_building = building_urban_center
+}

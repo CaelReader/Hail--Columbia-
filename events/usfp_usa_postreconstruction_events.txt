@@ -633,7 +633,7 @@ usfp_usa_postreconstruction.6 = {
 		}
 		add_modifier = {
 			name = usfp_countrywide_anti_black_violence_modifier
-			years = 1
+			months = 6
 		}
 		usfp_long_reconstruction_lose_progress = {
 			VALUE = 50
@@ -661,6 +661,9 @@ usfp_usa_postreconstruction.6 = {
 			}
 		}
 		highlighted_option = yes
+		show_as_unavailable = {
+			always = yes
+		}
 		every_scope_state = {
 			limit = {
 				total_urbanization >= scope:urbanization_state.total_urbanization
@@ -680,7 +683,7 @@ usfp_usa_postreconstruction.6 = {
 #Red Summer
 usfp_usa_postreconstruction.7 = {
 	type = country_event
-	placement = scope:wilmington_state
+	placement = scope:red_summer_start_state
 	duration = 3
 	cooldown = { days = never_fire_again_modifier_time } #Once
 
@@ -693,7 +696,7 @@ usfp_usa_postreconstruction.7 = {
 		video = "unspecific_vandalized_storefront"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
 	trigger = {
 		month >= 6
@@ -727,16 +730,250 @@ usfp_usa_postreconstruction.7 = {
 			order_by = political_movement_support
 			save_scope_as = scapegoat_movement
 		}
+		random_scope_state = {
+			limit = {
+				any_scope_pop = {
+					is_pop_type = soldiers
+					culture = cu:afro_american	
+				}
+				is_incorporated = yes
+			}
+			save_scope_as = red_summer_start_state
+			add_to_list = red_summer_states
+		}
+		s:STATE_ILLINOIS = {
+			region_state:USA = {
+				add_to_list = red_summer_states
+			}
+		}
+		while = {
+			count = 7
+			random_scope_state = {
+				limit = {
+					NOT = {
+						is_in_list = red_summer_states
+					}
+					usfp_is_valid_antiblack_riot_state = yes
+				}
+				add_to_list = red_summer_states
+			}
+		}
 	}
 
-	#
+	#socialists!!
 	option = {
 		name = usfp_usa_postreconstruction.7.a
 		default_option = yes
+		every_scope_state = {
+			limit = {
+				is_in_list = red_summer_states
+			}
+			add_radicals_in_state = {
+				value = medium_radicals
+				culture = cu:afro_american
+			}
+			usfp_loyalize_whites_in_state = {
+				LOYALISTS = small_radicals
+			}
+			state_region = {
+				add_devastation = 4
+			}
+		}
+		scope:scapegoat_movement = {
+			add_modifier = {
+				name = usfp_racist_scapegoating_movement_modifier
+				years = 3
+			}
+		}
+		random_political_movement = {
+			limit = {
+				culture ?= cu:afro_american
+			}
+			add_modifier = {
+				name = usfp_racist_scapegoating_movement_modifier
+				years = 3
+			}
+		}
+		add_modifier = {
+			name = usfp_countrywide_anti_black_violence_modifier
+			months = 6
+		}
+		usfp_long_reconstruction_lose_progress = {
+			VALUE = -50
+		}
+	}
 
+	#restore order
+	option = {
+		name = usfp_usa_postreconstruction.7.b
+		trigger = {
+			OR = {
+				has_law = law_type:law_dedicated_police
+				has_law = law_type:law_militarized_police
+				has_law = law_type:law_national_guard
+			}
+			OR = {
+				institution_investment_level = {
+					institution = institution_home_affairs
+					value >= 4
+				}
+				institution_investment_level = {
+					institution = institution_police
+					value >= 5
+				}
+			}
+		}
+		highlighted_option = yes
+		show_as_unavailable = {
+			always = yes
+		}
+		every_scope_state = {
+			limit = {
+				is_in_list = red_summer_states
+			}
+			state_region = {
+				add_devastation = 2
+			}
+			usfp_radicalize_whites_in_state = {
+				RADICALS = small_radicals
+			}
+		}
+		usfp_radicalize_whites_in_country = {
+			RADICALS = small_radicals
+		}
+		ordered_political_movement = {
+			limit = {
+				usfp_movement_is_racist = yes
+			}
+			order_by = political_movement_support
+			add_modifier = {
+				name = usfp_movement_agitated_by_antiracism_modifier
+				years = 3
+			}
+		}
+		usfp_long_reconstruction_lose_progress = {
+			VALUE = -50
+		}
 	}
 }
 #Generic Race Riot
+usfp_usa_postreconstruction.8 = {
+	type = country_event
+	placement = scope:riot_state
+	duration = 3
+	cooldown = { years = 10 }
+
+	title = usfp_usa_postreconstruction.8.t
+	desc = usfp_usa_postreconstruction.8.d
+	flavor = usfp_usa_postreconstruction.8.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_vandalized_storefront"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {
+		is_at_war = no
+		any_scope_state = {
+			usfp_is_valid_antiblack_riot_state = yes
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				usfp_is_valid_antiblack_riot_state = yes
+			}
+			save_scope_as = riot_state
+		}
+	}
+
+	#this is the state's problem
+	option = {
+		name = usfp_usa_postreconstruction.8.a
+		default_option = yes
+		scope:riot_state = {
+			add_radicals_in_state = {
+				value = small_radicals
+				culture = cu:afro_american
+			}
+			usfp_loyalize_whites_in_state = {
+				LOYALISTS = small_radicals
+			}
+			add_modifier = {
+				name = usfp_state_race_riot_aftermath_modifier
+				years = 2
+			}
+		}
+		random_political_movement = {
+			limit = {
+				culture ?= cu:afro_american
+			}
+			add_modifier = {
+				name = usfp_safety_in_numbers_movement_modifier
+				years = 2
+			}
+		}
+	}
+
+	#federalize the guard!
+	option = {
+		name = usfp_usa_postreconstruction.8.b
+		trigger = {
+			OR = {
+				has_law = law_type:law_dedicated_police
+				has_law = law_type:law_militarized_police
+				has_law = law_type:law_national_guard
+			}
+			OR = {
+				institution_investment_level = {
+					institution = institution_home_affairs
+					value >= 3
+				}
+				institution_investment_level = {
+					institution = institution_police
+					value >= 4
+				}
+			}
+		}
+		highlighted_option = yes
+		show_as_unavailable = {
+			always = yes
+		}
+		scope:riot_state = {
+			usfp_radicalize_whites_in_state = {
+				RADICALS = small_radicals
+			}
+			add_loyalists_in_state = {
+				value = medium_radicals
+				culture = cu:afro_american
+			}
+		}
+		usfp_radicalize_whites_in_country = {
+			RADICALS = small_radicals
+		}
+		if = {
+			limit = { 
+				any_political_movement = {
+					usfp_movement_is_racist = yes
+					political_movement_radicalism >= 50
+				}
+			}
+			ordered_political_movement = {
+				limit = {
+					usfp_movement_is_racist = yes
+				}
+				order_by = political_movement_radicalism
+				add_modifier = {
+					name = usfp_movement_agitated_by_antiracism_modifier
+					years = 2
+				}
+			}
+		}
+	}
+}
 #Harlem Renaissance
 #Black Wall Street spawns
 #Tulsa massacre
@@ -747,3 +984,4 @@ usfp_usa_postreconstruction.7 = {
 #Exodusters
 #Silent Parade
 #Radical Reconstruction: Dixie Redoubt
+#Back to Africa?

@@ -703,6 +703,7 @@ usfp_countrywide_anti_black_violence_modifier = {
 	state_loyalism_increases_open_prejudice_mult = -0.50
 	state_loyalism_increases_second_rate_citizen_mult = -0.50
 	state_afro_american_standard_of_living_add = -2
+	building_urban_center_throughput_add = -0.10
 }
 
 usfp_reconstruction_white_fatigue_modifier = {
