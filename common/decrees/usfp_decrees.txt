@@ -3,7 +3,7 @@
 	modifier = {
 		state_afro_american_standard_of_living_add = 1
 		building_group_bg_agriculture_allowed_collectivization_add = 0.20
-		building_group_bg_ranching_allowed_collectivization_add = 0.20
+		building_group_bg_plantations_allowed_collectivization_add = 0.20
 		state_loyalism_increases_full_acceptance_mult = -0.90
 		state_radicalism_increases_full_acceptance_mult = 0.90
 		building_group_bg_agriculture_throughput_add = -0.10

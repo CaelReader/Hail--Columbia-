@@ -181,6 +181,9 @@ usfp_peculiar_reconciliation: "Peacefully Banned Slavery"
 afro_americans_under_jim_crow: "Percent of [GetCulture('afro_american').GetName]s living in [concept_usfp_jim_crow] [Concept('concept_state', '$concept_states$')]"
 afro_american_movement_support: "[Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] of the [GetCulture('afro_american').GetName] $movement_cultural_minority$"
 usfp_long_reconstruction_complete_tt: "The #bold Progress Bar#! has reached #bold 2200#!"
+usfp_long_reconstruction_lose_progress: "#bold Long Reconstruction#! loses progress"
+usfp_long_reconstruction_gain_progress: "#bold Long Reconstruction#! gains progress"
+
 
 usfp_canadian_highlander: "We are the only Canadian colony remaining"
 

@@ -117,3 +117,14 @@ usfp_safety_in_numbers_movement_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	political_movement_pop_attraction_mult = 0.10
 }
+
+usfp_enduring_renaissance_movement_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue2_positive.dds
+	political_movement_pop_attraction_mult = 0.15
+}
+
+usfp_new_klan_movement_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_positive.dds
+	political_movement_pop_attraction_mult = 0.30
+	political_movement_radicalism_add = 0.10
+}

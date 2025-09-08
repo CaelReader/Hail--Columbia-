@@ -135,10 +135,6 @@ usfp_usa_postreconstruction.2 = {
 				LOYALISTS = medium_radicals
 			}
 		}
-		add_radicals = {
-			value = medium_radicals
-			culture = cu:afro_american
-		}
 		every_political_movement = {
 			limit = {
 				usfp_movement_is_racist = yes
@@ -170,10 +166,6 @@ usfp_usa_postreconstruction.2 = {
 			usfp_loyalize_dixies_in_state = {
 				LOYALISTS = small_radicals
 			}
-		}
-		add_radicals = {
-			value = small_radicals
-			culture = cu:afro_american
 		}
 		every_political_movement = {
 			limit = {
@@ -527,12 +519,36 @@ usfp_usa_postreconstruction.5 = {
 					state_region = s:STATE_ILLINOIS
 					state_region = s:STATE_OHIO
 				}
+				NOT = {
+					this = scope:great_migration_state_1
+				}
 			}
 			save_scope_as = great_migration_state_2
 		}
+		ordered_scope_state = {
+			limit = {
+				state_is_eligible_as_mass_migration_target = yes
+				NOR = {
+					state_region = s:STATE_NEW_YORK
+					state_region = s:STATE_MARYLAND
+					state_region = s:STATE_PENNSYLVANIA
+					state_region = s:STATE_MICHIGAN
+					state_region = s:STATE_ILLINOIS
+					state_region = s:STATE_OHIO
+				}
+				NOT = {
+					this = scope:great_migration_state_1
+				}
+				NOT = {
+					this = scope:great_migration_state_2
+				}
+			}
+			order_by = total_urbanization
+			save_scope_as = great_migration_state_3
+		}
 	}
 
-	#it's only fair
+	#default destinations
 	option = {
 		name = usfp_usa_postreconstruction.5.a
 		default_option = yes
@@ -565,6 +581,45 @@ usfp_usa_postreconstruction.5 = {
 			}
 		}
 		scope:great_migration_state_2 = {
+			create_mass_migration = {
+				origin = root
+				culture = cu:afro_american
+			}
+		}
+	}
+
+	#alternate destination
+	option = {
+		name = usfp_usa_postreconstruction.5.b
+		scope:great_migration_exit_state = {
+			ordered_scope_pop = {
+				limit = {
+					culture = cu:afro_american
+				}
+				order_by = total_size
+				move_partial_pop = {
+					state = scope:great_migration_state_1
+					population_ratio = 0.01
+				}
+			}
+			ordered_scope_pop = {
+				limit = {
+					culture = cu:afro_american
+				}
+				order_by = total_size
+				move_partial_pop = {
+					state = scope:great_migration_state_3
+					population_ratio = 0.01
+				}
+			}
+		}
+		scope:great_migration_state_1 = {
+			create_mass_migration = {
+				origin = root
+				culture = cu:afro_american
+			}
+		}
+		scope:great_migration_state_3 = {
 			create_mass_migration = {
 				origin = root
 				culture = cu:afro_american
@@ -636,7 +691,7 @@ usfp_usa_postreconstruction.6 = {
 			months = 6
 		}
 		usfp_long_reconstruction_lose_progress = {
-			VALUE = 50
+			VALUE = -50
 		}
 	}
 
@@ -975,13 +1030,783 @@ usfp_usa_postreconstruction.8 = {
 	}
 }
 #Harlem Renaissance
+usfp_usa_postreconstruction.9 = {
+	type = country_event
+	placement = scope:harlem_renaissance_state
+	duration = 3
+
+	title = usfp_usa_postreconstruction.9.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_global_variable = usfp_reconstruction_outcome_radical
+				}
+				desc = usfp_usa_postreconstruction.9.d_radical
+			 }
+			triggered_desc = {
+				trigger = {
+					NOT = {
+						has_global_variable = usfp_reconstruction_outcome_radical
+					}
+				}
+				desc = usfp_usa_postreconstruction.9.d
+			}
+		}
+	}
+	flavor = usfp_usa_postreconstruction.9.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_art_gallery"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	trigger = {
+		NOT = {
+			has_global_variable = had_harlem_renaissance
+		}
+		has_technology_researched = mass_propaganda
+		has_technology_researched = radio
+		OR = {
+			#regular harlem renaissance state
+			AND = {
+				NOT = {
+					has_global_variable = usfp_reconstruction_outcome_radical
+				}
+				any_scope_state = {
+					total_urbanization > 500
+					any_scope_building = {
+						is_building_type = building_arts_academy
+					}
+					any_scope_pop = {
+						culture = cu:afro_american
+					}
+					state_region = {
+						NOR = {
+							is_homeland = cu:afro_american
+							is_homeland = cu:dixie
+						}
+					}
+				}
+			}
+			#radical renaissance spawns in the south instead
+			AND = {
+				has_global_variable = usfp_reconstruction_outcome_radical
+				any_scope_state = {
+					total_urbanization > 500
+					any_scope_building = {
+						is_building_type = building_arts_academy
+					}
+					any_scope_pop = {
+						culture = cu:afro_american
+					}
+					state_region = {
+						is_homeland = cu:afro_american
+					}
+				}
+			}
+		}
+		any_political_movement = {
+			culture = cu:afro_american
+		}
+	}
+
+	immediate = {
+		set_global_variable = had_harlem_renaissance
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = usfp_reconstruction_outcome_radical
+				} 
+				s:STATE_NEW_YORK.region_state:USA = {
+					total_urbanization > 500
+					any_scope_building = {
+						is_building_type = building_arts_academy
+					}
+					any_scope_pop = {
+						culture = cu:afro_american
+					}
+				}
+			}
+			s:STATE_NEW_YORK.region_state:USA = {
+				save_scope_as = harlem_renaissance_state
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_global_variable = usfp_reconstruction_outcome_radical
+				} 
+			}
+			ordered_scope_state = {
+				limit = {
+					total_urbanization > 500
+					any_scope_building = {
+						is_building_type = building_arts_academy
+					}
+					any_scope_pop = {
+						culture = cu:afro_american
+					}
+					state_region = {
+						NOR = {
+							is_homeland = cu:afro_american
+							is_homeland = cu:dixie
+						}
+					}
+				}
+				order_by = total_urbanization
+				save_scope_as = harlem_renaissance_state
+			}
+		} else = {
+			ordered_scope_state = {
+				limit = {
+					total_urbanization > 500
+					any_scope_building = {
+						is_building_type = building_arts_academy
+					}
+					any_scope_pop = {
+						culture = cu:afro_american
+					}
+					state_region = {
+						is_homeland = cu:afro_american
+					}
+				}
+				order_by = total_urbanization
+				save_scope_as = harlem_renaissance_state
+			}
+		}
+	}
+
+	#socialist
+	option = {
+		name = usfp_usa_postreconstruction.9.a
+		default_option = yes
+		#add afro american fervor
+		custom_tooltip = {
+			text = afro_americans_socialist_movement_attraction
+			set_variable = harlem_renaissance_socialism
+		}
+		scope:harlem_renaissance_state = {
+			add_modifier = {
+				name = usfp_harlem_renaissance_modifier
+				years = 10
+			}
+
+		}
+		if = {
+			limit = {
+				has_global_variable = usfp_reconstruction_outcome_radical
+				any_scope_pop = {
+					culture = cu:afro_american
+					is_pop_type = academics
+				}
+			}
+			add_loyalists = {
+				value = medium_radicals
+				culture = cu:afro_american
+				pop_type = academics
+			}
+		}
+	}
+
+	#black pride
+	option = {
+		name = usfp_usa_postreconstruction.9.b
+		#add more afro american fervor
+		random_political_movement = {
+			limit = {
+				culture ?= cu:afro_american
+			}
+			add_modifier = {
+				name = usfp_enduring_renaissance_movement_modifier
+				years = 20
+			}
+		}
+		scope:harlem_renaissance_state = {
+			add_modifier = {
+				name = usfp_harlem_renaissance_modifier
+				years = 10
+			}
+		}
+		if = {
+			limit = {
+				has_global_variable = usfp_reconstruction_outcome_radical
+				any_scope_pop = {
+					culture = cu:afro_american
+					is_pop_type = academics
+				}
+			}
+			add_loyalists = {
+				value = medium_radicals
+				culture = cu:afro_american
+				pop_type = academics
+			}
+		}
+	}
+
+	#conservative
+	option = {
+		name = usfp_usa_postreconstruction.9.c
+		#add afro american fervor
+		custom_tooltip = {
+			text = afro_americans_religious_movement_attraction
+			set_variable = harlem_renaissance_religious
+		}
+		scope:harlem_renaissance_state = {
+			add_modifier = {
+				name = usfp_harlem_renaissance_modifier
+				years = 10
+			}
+		}
+		if = {
+			limit = {
+				has_global_variable = usfp_reconstruction_outcome_radical
+				any_scope_pop = {
+					culture = cu:afro_american
+					is_pop_type = academics
+				}
+			}
+			add_loyalists = {
+				value = large_radicals
+				culture = cu:afro_american
+				pop_type = academics
+			}
+		}
+	}
+}
 #Black Wall Street spawns
+usfp_usa_postreconstruction.10 = {
+	type = country_event
+	placement = scope:black_wall_street_state
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_usa_postreconstruction.10.t
+	desc = usfp_usa_postreconstruction.10.d
+	flavor = usfp_usa_postreconstruction.10.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_rich_and_poor"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/invention_icons/banking.dds"
+
+	trigger = {
+		any_scope_state = {
+			has_modifier = usfp_jim_crow
+			any_scope_pop = {
+				culture = cu:afro_american
+				is_pop_type = shopkeepers
+			}
+			any_scope_building = {
+				OR = {
+					is_building_group = bg_oil_extraction
+					is_building_group = bg_mining
+				}
+			}
+		}
+		has_technology_researched = corporate_management
+	}
+
+	immediate = {
+		if = {
+			limit = { 
+				s:STATE_OKLAHOMA.region_state:USA = {
+					has_modifier = usfp_jim_crow
+					any_scope_pop = {
+						culture = cu:afro_american
+						is_pop_type = shopkeepers
+					}
+					any_scope_building = {
+						OR = {
+							is_building_group = bg_oil_extraction
+							is_building_group = bg_mining
+						}
+					}
+				}
+			}
+			save_scope_as = black_wall_street_state
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					has_modifier = usfp_jim_crow
+					any_scope_pop = {
+						culture = cu:afro_american
+						is_pop_type = shopkeepers
+					}
+					any_scope_building = {
+						OR = {
+							is_building_group = bg_oil_extraction
+							is_building_group = bg_mining
+						}
+					}
+				}
+				save_scope_as = black_wall_street_state
+			}
+		}	
+	}
+
+	#cool
+	option = {
+		name = usfp_usa_postreconstruction.10.a
+		default_option = yes
+		scope:black_wall_street_state = {
+			add_modifier = {
+				name = usfp_black_wall_street_modifier
+				years = 30
+			}
+			usfp_radicalize_whites_in_state = {
+				RADICALS = small_radicals
+			}
+			set_variable = {
+				name = black_wall_street_timeout
+				years = 10
+			}
+		}
+	}
+
+	#promote
+	option = {
+		name = usfp_usa_postreconstruction.10.b
+		scope:black_wall_street_state = {
+			add_modifier = {
+				name = usfp_black_wall_street_modifier
+				years = 30
+			}
+			usfp_radicalize_whites_in_state = {
+				RADICALS = medium_radicals
+			}
+			create_mass_migration = {
+				origin = root
+				culture = cu:afro_american
+			}
+			set_variable = {
+				name = black_wall_street_timeout
+				years = 10
+			}
+		}
+	}
+}
 #Tulsa massacre
+usfp_usa_postreconstruction.11 = {
+	type = country_event
+	placement = scope:black_wall_street_state
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_usa_postreconstruction.11.t
+	desc = usfp_usa_postreconstruction.11.d
+	flavor = usfp_usa_postreconstruction.11.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_vandalized_storefront"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {
+		any_scope_state = {
+			has_modifier = usfp_black_wall_street_modifier
+			NOT = {
+				has_variable = black_wall_street_timeout
+			}
+		}
+		has_technology_researched = military_aviation
+		has_technology_researched = elevator
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_modifier = usfp_black_wall_street_modifier
+			}
+			save_scope_as = black_wall_street_state
+		}	
+	}
+
+	#this is bad
+	option = {
+		name = usfp_usa_postreconstruction.11.a
+		default_option = yes
+		scope:black_wall_street_state = {
+			remove_modifier = usfp_black_wall_street_modifier
+			state_region = {
+				add_devastation = 7
+			}
+			add_radicals_in_state = {
+				value = medium_radicals
+				culture = cu:afro_american
+			}
+			usfp_loyalize_whites_in_state = {
+				LOYALISTS = large_radicals
+			}
+			add_modifier = {
+				name = usfp_state_race_riot_aftermath_modifier
+				years = 1
+			}
+		}
+		every_political_movement = {
+			limit = {
+				usfp_movement_is_racist = yes
+			}
+			add_modifier = {
+				name = usfp_movement_mollified_by_racism_modifier
+				years = 2
+			}
+		}
+		usfp_long_reconstruction_lose_progress = {
+			VALUE = -50
+		}
+	}
+
+	#prosecute the perps!
+	option = {
+		name = usfp_usa_postreconstruction.11.b
+		scope:black_wall_street_state = {
+			remove_modifier = usfp_black_wall_street_modifier
+			state_region = {
+				add_devastation = 7
+			}
+			add_radicals_in_state = {
+				value = small_radicals
+				culture = cu:afro_american
+			}
+			usfp_loyalize_whites_in_state = {
+				LOYALISTS = medium_radicals
+			}
+			add_modifier = {
+				name = usfp_state_race_riot_aftermath_modifier
+				years = 1
+			}
+		}
+		every_political_movement = {
+			limit = {
+				usfp_movement_is_racist = yes
+			}
+			add_modifier = {
+				name = usfp_movement_agitated_by_antiracism_modifier
+				years = 2
+			}
+		}
+	}
+}
 #Birth of a Nation
-#Radical Reconstruction: Southern Renaissance
+usfp_usa_postreconstruction.12 = {
+	type = country_event
+	placement = scope:film_state
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_usa_postreconstruction.12.t
+	desc = usfp_usa_postreconstruction.12.d
+	flavor = usfp_usa_postreconstruction.12.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_american_civil_war"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/invention_icons/film.dds"
+
+	trigger = {
+		has_technology_researched = mass_propaganda
+		any_political_movement = {
+			is_political_movement_type = movement_usfp_neoconfederate
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { 
+				owns_entire_state_region = STATE_CALIFORNIA
+			}
+			s:STATE_CALIFORNIA.region_state:USA = {
+				save_scope_as = film_state
+			}
+		}
+		else = {
+			ordered_scope_state = {
+				order_by = total_urbanization
+				save_scope_as = film_state
+			}
+		}
+	}
+
+	#uh oh
+	option = {
+		name = usfp_usa_postreconstruction.12.a
+		default_option = yes
+		add_modifier = {
+			name = usfp_countrywide_anti_black_violence_modifier
+			months = 6
+		}
+		#increase dixie fervor
+		usfp_long_reconstruction_lose_progress = {
+			VALUE = -100
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_usfp_neoconfederate
+			}
+			add_modifier = {
+				name = usfp_new_klan_movement_modifier
+				years = 20
+			}
+		}
+	}
+
+	#censor
+	option = {
+		name = usfp_usa_postreconstruction.12.b
+		trigger = {
+			OR = {
+				has_law = law_type:law_censorship
+				has_law = law_type:law_outlawed_dissent
+			}
+		}
+		highlighted_option = yes
+		usfp_radicalize_whites_in_country = {
+			RADICALS = large_radicals
+		}
+	}
+}
+#Exodusters
+usfp_usa_postreconstruction.13 = {
+	type = country_event
+	placement = scope:kansas_scope
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_usa_postreconstruction.13.t
+	desc = usfp_usa_postreconstruction.13.d
+	flavor = usfp_usa_postreconstruction.13.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "asia_poor_people_moving"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	trigger = {
+		any_scope_state = {
+			region = sr:region_great_plains
+			NOT = {
+				state_region = {
+					is_homeland = cu:dixie
+				}
+			}
+			state_is_eligible_as_mass_migration_target = yes
+		}
+		any_scope_state = {
+			has_modifier = usfp_jim_crow
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_KANSAS
+					NOT = {
+						state_region = {
+							is_homeland = cu:dixie
+						}
+					}
+					state_is_eligible_as_mass_migration_target = yes
+				}
+			 }
+			s:STATE_KANSAS.region_state:USA = {
+				save_scope_as = kansas_scope
+			}
+		}
+		else = {
+			ordered_scope_state = {
+				limit = {
+					region = sr:region_great_plains
+					NOT = {
+						state_region = {
+							is_homeland = cu:dixie
+						}
+					}
+					state_is_eligible_as_mass_migration_target = yes
+				}
+				order_by = free_arable_land
+				save_scope_as = kansas_scope
+			}
+		}
+		ordered_scope_pop = {
+			limit = {
+				culture = cu:afro_american
+				state = {
+					has_modifier = usfp_jim_crow
+				}
+			}
+			order_by = total_size
+			save_scope_as = exoduster_pop
+		}
+	}
+
+	#fair enough
+	option = {
+		name = usfp_usa_postreconstruction.13.a
+		default_option = yes
+		scope:exoduster_pop = {
+			move_partial_pop = {
+				state = scope:kansas_scope
+				population_ratio = {
+					add = 5000
+					divide = scope:exoduster_pop.total_size
+				}
+			}
+		}
+		scope:kansas_scope = {
+			create_mass_migration = {
+				origin = root
+				culture = cu:afro_american
+			}
+		}
+	}
+
+	#we need workers in the south!
+	option = {
+		name = usfp_usa_postreconstruction.13.b
+		scope:exoduster_pop = {
+			move_partial_pop = {
+				state = scope:kansas_scope
+				population_ratio = {
+					add = 3000
+					divide = scope:exoduster_pop.total_size
+				}
+			}
+		}
+		add_radicals = {
+			value = medium_radicals
+			culture = cu:afro_american
+		}
+	}
+
+	#lincoln's gold fields
+	option = {
+		name = usfp_usa_postreconstruction.13.c
+		trigger = {
+			ruler = {
+				has_template = usa_lincoln_character_template
+			}
+			any_scope_state = {
+				region = sr:region_great_plains
+				NOT = {
+					state_region = {
+						is_homeland = cu:dixie
+					}
+				}
+				state_is_eligible_as_mass_migration_target = yes
+				any_scope_building = {
+					OR = {
+						is_building_type = building_gold_fields
+						is_building_type = building_gold_mine
+					}
+				}
+			}
+		}
+		ordered_scope_state = {
+			limit = {
+				region = sr:region_great_plains
+				NOT = {
+					state_region = {
+						is_homeland = cu:dixie
+					}
+				}
+				state_is_eligible_as_mass_migration_target = yes
+				any_scope_building = {
+					OR = {
+						is_building_type = building_gold_fields
+						is_building_type = building_gold_mine
+					}
+				}
+			}
+			order_by = free_arable_land
+			save_scope_as = kansas_scope
+		}
+		scope:exoduster_pop = {
+			move_partial_pop = {
+				state = scope:kansas_scope
+				population_ratio = {
+					add = 5000
+					divide = scope:exoduster_pop.total_size
+				}
+			}
+		}
+		scope:kansas_scope = {
+			add_modifier = {
+				name = state_gold_rush_exploitation
+				years = 5
+			}
+			add_loyalists_in_state = {
+				value = medium_radicals
+				culture = cu:afro_american
+			}
+		}
+		scope:kansas_scope = {
+			create_mass_migration = {
+				origin = root
+				culture = cu:afro_american
+			}
+		}
+	}
+
+	#why not Liberia?
+	option = {
+		name = usfp_usa_postreconstruction.13.e
+		trigger = {
+			usfp_is_afro_american_discriminated = yes
+			exists = c:LIB
+			c:LIB = {
+				is_subject_of = root
+			}
+		}
+		scope:exoduster_pop = {
+			move_partial_pop = {
+				state = scope:kansas_scope
+				population_ratio = {
+					add = 3000
+					divide = scope:exoduster_pop.total_size
+				}
+			}
+		}
+		scope:kansas_scope = {
+			create_mass_migration = {
+				origin = root
+				culture = cu:afro_american
+			}
+		}
+		add_treasury = -50000
+		scope:exoduster_pop = {
+			move_partial_pop = {
+				state = c:LIB.capital
+				population_ratio = {
+					add = 2000
+					divide = scope:exoduster_pop.total_size
+				}
+			}
+		}
+		add_loyalists = {
+			value = small_radicals
+			interest_group = ig:ig_petty_bourgeoisie
+		}
+		c:LIB = {
+			post_notification = usfp_afro_american_migration_notification
+		}
+	}
+
+}
+#Silent Parade
+#Back to Africa?
 #Radical Reconstruction: Great Return
 #Radical Reconstruction: Neoconfederate Assassination
-#Exodusters
-#Silent Parade
 #Radical Reconstruction: Dixie Redoubt
-#Back to Africa?

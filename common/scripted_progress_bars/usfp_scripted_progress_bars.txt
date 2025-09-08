@@ -219,6 +219,15 @@
 				value = scaled_debt
 			}
 		}
+		if = {
+			limit = {
+				has_modifier = declared_bankruptcy
+			}
+			subtract = {
+				desc = "declared_bankruptcy"
+				value = 2
+			}
+		}
 		subtract = {
 			desc = "[concept_turmoil]"
 			value = country_turmoil

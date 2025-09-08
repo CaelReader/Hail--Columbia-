@@ -723,9 +723,11 @@ je_acw_reconstruction = {
 						 remove_modifier = usfp_upper_south_modifier
 					}
 					add_modifier = usfp_freedmens_holdings
-					usfp_reconstruction_swing_freedmen = yes
 					save_scope_as = radical_land_distribution_state
-					post_notification = usfp_radical_land_redistribution_complete
+					root = {
+						usfp_reconstruction_swing_freedmen = yes
+						post_notification = usfp_radical_land_redistribution_complete
+					}
 				}
 			}
 		}
