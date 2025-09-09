@@ -83,3 +83,9 @@ usfp_native_auxiliaries = {
 	character_battle_condition_lost_mult = -1.00
 	unit_offense_flat_mult = 0.10
 }
+
+usfp_provisional_president_of_africa = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	character_popularity_add = -15
+	political_movement_pop_attraction_mult = 0.10
+}

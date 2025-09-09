@@ -128,3 +128,13 @@ usfp_new_klan_movement_modifier = {
 	political_movement_pop_attraction_mult = 0.30
 	political_movement_radicalism_add = 0.10
 }
+
+usfp_effective_organizing_movement_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	political_movement_pop_attraction_mult = 0.15
+}
+
+usfp_colonization_over_revolution_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_map_positive.dds
+	political_movement_radicalism_add = -0.20
+}

@@ -1803,10 +1803,596 @@ usfp_usa_postreconstruction.13 = {
 			post_notification = usfp_afro_american_migration_notification
 		}
 	}
-
 }
 #Silent Parade
+usfp_usa_postreconstruction.13 = {
+	type = country_event
+	placement = scope:new_york_scope
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_usa_postreconstruction.13.t
+	desc = usfp_usa_postreconstruction.13.d
+	flavor = usfp_usa_postreconstruction.13.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "africa_public_protest"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	trigger = {
+		has_technology_researched = political_agitation
+		any_political_movement = {
+			culture ?= cu:afro_american
+			has_modifier = usfp_naacp_movement_modifier
+		}
+		has_modifier = usfp_countrywide_anti_black_violence_modifier
+		
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_state_in_state_region = STATE_NEW_YORK
+			 }
+			s:STATE_NEW_YORK.region_state:USA = {
+				save_scope_as = new_york_scope
+			}
+		}
+		else = {
+			capital = {
+				save_scope_as = new_york_scope
+			}
+		}
+	}
+
+	#no anti-lynching
+	option = {
+		name = usfp_usa_postreconstruction.13.a
+		default_option = yes
+		random_political_movement = {
+			limit = {
+				culture ?= cu:afro_american
+			}
+			add_modifier = {
+				name = usfp_effective_organizing_movement_modifier
+				years = 4
+			}
+		}
+	}
+
+	#anti-lynching crackdown
+	option = {
+		name = usfp_usa_postreconstruction.13.b
+		trigger = {
+			institution_investment_level = {
+				institution = institution_police
+				value >= 4
+			}
+		}
+		highlighted_option = yes
+		show_as_unavailable = {
+			always = yes
+		}
+		random_political_movement = {
+			limit = {
+				culture ?= cu:afro_american
+			}
+			add_modifier = {
+				name = usfp_effective_organizing_movement_modifier
+				years = 4
+			}
+		}
+		every_political_movement = {
+			limit = {
+				usfp_movement_is_racist = yes
+			}
+			add_modifier = {
+				name = usfp_movement_agitated_by_antiracism_modifier
+				years = 4
+			}
+		}
+		add_loyalists = {
+			value = medium_radicals
+			culture = cu:afro_american
+		}
+		usfp_long_reconstruction_add_progress = {
+			VALUE = 20
+		}
+	}
+}
 #Back to Africa?
+usfp_usa_postreconstruction.14 = {
+	type = country_event
+	placement = scope:new_york_scope
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_usa_postreconstruction.14.t
+	desc = usfp_usa_postreconstruction.14.d
+	flavor = usfp_usa_postreconstruction.14.f
+
+	dlc = dlc_usfp
+	gui_window = event_window_1char_propaganda
+	left_icon = scope:garvey_scope
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	trigger = {
+		any_scope_character = {
+			has_template = usfp_marcus_garvey
+		}
+		OR = {
+			exists = c:LIB
+			any_scope_state = {
+				state_is_in_africa = yes
+				NOT = {
+					state_region = s:STATE_SINAI
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_state_in_state_region = STATE_NEW_YORK
+			 }
+			s:STATE_NEW_YORK.region_state:USA = {
+				save_scope_as = new_york_scope
+			}
+		}
+		else = {
+			capital = {
+				save_scope_as = new_york_scope
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_template = usfp_marcus_garvey
+			}
+			save_scope_as = garvey_scope
+		}
+	}
+
+	#encourage
+	option = {
+		name = usfp_usa_postreconstruction.14.a
+		set_variable = {
+			name = usfp_afro_american_colonization_promoted
+			years = 5
+		}
+		if = {
+			limit = { 
+				any_scope_state = {
+					state_is_in_africa = yes
+					NOT = {
+						state_region = s:STATE_SINAI
+					}
+				}
+			}
+			ordered_scope_state = {
+				limit = {
+					state_is_in_africa = yes
+					NOT = {
+						state_region = s:STATE_SINAI
+					}
+				}
+				order_by = free_arable_land
+				save_scope_as = afro_american_colonization_target_state
+			}
+		}
+		else = {
+			c:LIB ?= {
+				capital = {
+					save_scope_as = afro_american_colonization_target_state
+				}
+			}
+		}
+		usfp_afro_american_colonization_effect = yes
+		add_loyalists = {
+			value = small_radicals
+			interest_group = ig:ig_petty_bourgeoisie
+		}
+		scope:garvey_scope = {
+			add_modifier = usfp_provisional_president_of_africa
+		}
+		if = {
+			limit = { 
+				any_political_movement = {
+					culture ?= cu:afro_american
+				}
+			}
+			random_political_movement = {
+				limit = {
+					culture ?= cu:afro_american
+				}
+				add_modifier = {
+					name = usfp_colonization_over_revolution_modifier
+					years = 4
+				}
+			}
+		}
+	}
+
+	#dismiss
+	option = {
+		name = usfp_usa_postreconstruction.14.b
+		if = {
+			limit = { 
+				any_political_movement = {
+					culture ?= cu:afro_american
+				}
+			}
+			random_political_movement = {
+				limit = {
+					culture ?= cu:afro_american
+				}
+				add_modifier = {
+					name = usfp_effective_organizing_movement_modifier
+					years = 4
+				}
+			}
+		}
+		scope:garvey_scope = {
+			add_modifier = usfp_provisional_president_of_africa
+		}
+		add_radicals = {
+			value = small_radicals
+			culture = cu:afro_american
+		}
+	}
+
+	#investigate this guy
+	option = {
+		name = usfp_usa_postreconstruction.14.c
+		default_option = yes
+		scope:garvey_scope = {
+			exile_character = yes
+		}
+		add_radicals = {
+			value = small_radicals
+			culture = cu:afro_american
+		}
+	}
+
+	#radical reconstruction: huh?
+	option = {
+		name = usfp_usa_postreconstruction.14.e
+		trigger = {
+			OR = {
+				custom_tooltip = {
+					text = usfp_reconstruction_outcome_radical
+					has_global_variable = usfp_reconstruction_outcome_radical
+				}
+				country_has_primary_culture = cu:afro_american
+			}
+		}
+		highlighted_option = yes
+		scope:garvey_scope = {
+			exile_character = yes
+		}
+		add_loyalists = {
+			value = medium_radicals
+			culture = cu:afro_american
+		}
+	}
+}
 #Radical Reconstruction: Great Return
+usfp_usa_postreconstruction.15 = {
+	type = country_event
+	placement = scope:great_return_target_1
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_usa_postreconstruction.15.t
+	desc = usfp_usa_postreconstruction.15.d
+	flavor = usfp_usa_postreconstruction.15.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "southamerica_factory_opening"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	trigger = {
+		has_global_variable = usfp_reconstruction_outcome_radical
+		OR = {
+			s:STATE_ONTARIO = {
+				any_scope_state = {
+					any_scope_pop = {
+						culture = cu:afro_american
+					}
+				}
+			}
+			s:STATE_QUEBEC = {
+				any_scope_state = {
+					any_scope_pop = {
+						culture = cu:afro_american
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		s:STATE_ONTARIO = {
+			if = {
+				limit = { 
+					any_scope_state = {
+						any_scope_pop = {
+							culture = cu:afro_american
+						}
+					}
+				}
+				random_scope_state = {
+					limit = {
+						any_scope_pop = {
+							culture = cu:afro_american
+						}
+					}
+					save_scope_as = great_return_source_1
+				}
+			}
+		}
+		s:STATE_QUEBEC = {
+			if = {
+				limit = { 
+					any_scope_state = {
+						any_scope_pop = {
+							culture = cu:afro_american
+						}
+					}
+				}
+				random_scope_state = {
+					limit = {
+						any_scope_pop = {
+							culture = cu:afro_american
+						}
+					}
+					save_scope_as = great_return_source_2
+				}
+			}
+		}
+		ordered_scope_state = {
+			limit = {
+				state_region = {
+					is_homeland = cu:afro_american
+				}
+				state_is_eligible_as_mass_migration_target = yes
+			}
+			order_by = total_urbanization
+			position = 1
+			save_scope_as = great_return_target_1
+		}
+		ordered_scope_state = {
+			limit = {
+				state_region = {
+					is_homeland = cu:afro_american
+				}
+				state_is_eligible_as_mass_migration_target = yes
+			}
+			order_by = total_urbanization
+			position = 2
+			save_scope_as = great_return_target_2
+		}
+		random_scope_state = {
+			limit = {
+				state_region = {
+					is_homeland = cu:afro_american
+				}
+				state_is_eligible_as_mass_migration_target = yes
+				NOR = {
+					this = scope:great_return_target_1
+					this = scope:great_return_target_2
+				}	
+			}
+			save_scope_as = great_return_target_3
+		}
+	}
+
+	#default destinations
+	option = {
+		name = usfp_usa_postreconstruction.15.a
+		default_option = yes
+		scope:great_return_target_1 = {
+			create_mass_migration = {
+				origin = scope:great_return_source_1.owner
+				culture = cu:afro_american
+			}
+			add_loyalists_in_state = {
+				value = medium_radicals
+				culture = cu:afro_american
+			}
+		}
+		scope:great_return_target_2 = {
+			create_mass_migration = {
+				origin = scope:great_return_source_2.owner
+				culture = cu:afro_american
+			}
+			add_loyalists_in_state = {
+				value = medium_radicals
+				culture = cu:afro_american
+			}
+		}
+	}
+
+	#alternate destination
+	option = {
+		name = usfp_usa_postreconstruction.15.b
+		scope:great_return_target_1 = {
+			create_mass_migration = {
+				origin = scope:great_return_source_1.owner
+				culture = cu:afro_american
+			}
+			add_loyalists_in_state = {
+				value = medium_radicals
+				culture = cu:afro_american
+			}
+		}
+		scope:great_return_target_3 = {
+			create_mass_migration = {
+				origin = scope:great_return_source_2.owner
+				culture = cu:afro_american
+			}
+			add_loyalists_in_state = {
+				value = medium_radicals
+				culture = cu:afro_american
+			}
+		}
+	}
+}
 #Radical Reconstruction: Neoconfederate Assassination
+usfp_usa_postreconstruction.16 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/invention_icons/triage.dds"
+	event_image = {
+		video = "southamerica_public_figure_assassination"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	title = usfp_usa_postreconstruction.16.t
+	desc = usfp_usa_postreconstruction.16.d
+	flavor = usfp_usa_postreconstruction.16.f
+	dlc = dlc_usfp
+	placement = root
+	duration = 3
+	cooldown = {days = very_long_modifier_time }
+
+	trigger = {
+		has_global_variable = usfp_reconstruction_outcome_radical
+		any_political_movement = {
+			is_political_movement_type = movement_usfp_neoconfederate
+		}
+	}
+
+	immediate = {
+		ordered_scope_character = {
+			limit = {
+				NOT = {
+					culture = cu:dixie
+				}
+				NOT = {
+					political_movement ?= {
+						is_political_movement_type = movement_usfp_neoconfederate
+					} 
+				}
+			}
+			order_by = popularity
+			save_scope_as = assassination_target
+		}
+	}
+
+	#we will not be cowed
+	option = {
+		name = usfp_usa_postreconstruction.16.a
+		default_option = yes
+		scope:assassination_target = {
+			random_list = {
+				20 = {
+					add_trait = wounded
+				}
+				80 = {
+					kill_character = yes
+				}
+			}
+		}
+	}
+	#we will be cowed
+	option = {
+		name = usfp_usa_postreconstruction.16.b
+		scope:assassination_target = {
+			random_list = {
+				20 = {
+					add_trait = wounded
+				}
+				80 = {
+					kill_character = yes
+				}
+			}
+		}
+	}
+}
 #Radical Reconstruction: Dixie Redoubt
+usfp_usa_postreconstruction.17 = {
+	type = country_event
+	placement = scope:dixie_redoubt_target
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_usa_postreconstruction.17.t
+	desc = usfp_usa_postreconstruction.17.d
+	flavor = usfp_usa_postreconstruction.17.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "asia_poor_people_moving"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	trigger = {
+		has_global_variable = usfp_reconstruction_outcome_radical
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_IDAHO
+				state_region = s:STATE_MINNESOTA
+			}
+			state_is_eligible_as_mass_migration_target = yes
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_IDAHO
+					state_region = s:STATE_MINNESOTA
+				}
+				state_is_eligible_as_mass_migration_target = yes
+			}
+			save_scope_as = dixie_redoubt_target
+		}
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_WASHINGTON
+					state_region = s:STATE_OREGON
+				}
+				state_is_eligible_as_mass_migration_target = yes
+			}
+			save_scope_as = dixie_redoubt_target_2
+		}
+	}
+
+	#default destinations
+	option = {
+		name = usfp_usa_postreconstruction.17.a
+		default_option = yes
+		scope:dixie_redoubt_target = {
+			create_mass_migration = {
+				origin = root
+				culture = cu:dixie
+			}
+		}
+	}
+
+	#alternate destination
+	option = {
+		name = usfp_usa_postreconstruction.17.b
+		trigger = {
+			exists = scope:dixie_redoubt_target_2
+		}
+		scope:dixie_redoubt_target_2 = {
+			create_mass_migration = {
+				origin = root
+				culture = cu:dixie
+			}
+		}
+	}
+}

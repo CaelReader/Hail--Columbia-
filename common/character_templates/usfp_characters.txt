@@ -841,7 +841,7 @@ usfp_marcus_garvey = {
          }
         earliest_usage_date = 1918.6.1 #UNIA incorporated
         latest_usage_date = 1926.1.1 #Deported
-        chance = 50
+        chance = 95
     }
     interest_group_leader_usage = {
         country_trigger = {
@@ -940,6 +940,54 @@ usfp_hubert_harrison = {
          }
         earliest_usage_date = 1917.1.1
         latest_usage_date = 1927.1.1
+        chance = 50
+    }
+}
+
+
+#USFP: James Weldon Johnson, NAACP secretary
+usfp_james_weldon_johnson = {
+    first_name = James
+    last_name = Johnson
+    #dna
+    historical = yes
+    birth_date = 1871.6.17
+    culture = cu:afro_american
+    religion = rel:protestant #agnostic, culturally christian
+    female = no
+    interest_group = ig_intelligentsia
+    ideology = ideology_reformer
+    traits = {
+        erudite
+        experienced_diplomat
+        aesthete
+        basic_political_operator
+    } 
+    agitator_usage = {
+        country_trigger = { 
+            OR = {
+                c:USA ?= this
+                c:ASA ?= this 
+            } 
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_intelligentsia
+         }
+        earliest_usage_date = 1917.1.1 #NAACP field secretary
+        latest_usage_date = 1938.1.1
+        chance = 75
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:ASA ?= this
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+            has_variable = chose_communism
+         }
+        earliest_usage_date = 1917.1.1 #NAACP field secretary
+        latest_usage_date = 1938.1.1
         chance = 50
     }
 }
