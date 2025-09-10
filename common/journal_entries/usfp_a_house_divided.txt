@@ -780,11 +780,6 @@ je_usfp_underground_railroad = {
 
 		}
 	}
+	custom_completion_header = je_usfp_underground_railroad_complete
 
-	invalid = {
-		OR = {
-			country_has_voting_franchise = no
-			has_law = law_type:law_council_republic
-		}
-	}
 }

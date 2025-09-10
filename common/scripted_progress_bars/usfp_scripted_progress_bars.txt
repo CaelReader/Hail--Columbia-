@@ -54,7 +54,7 @@
 				has_global_variable = usfp_reconstruction_outcome_mixed
 			}
 			subtract = {
-				desc = "usfp_reconstruction_outcome_mixed"
+				desc = "usfp_had_reconstruction_outcome_mixed"
 				add = 15
 			}
 		}
@@ -64,7 +64,7 @@
 				has_global_variable = usfp_reconstruction_outcome_failure
 			}
 			subtract = {
-				desc = "usfp_reconstruction_outcome_failure"
+				desc = "usfp_had_reconstruction_outcome_failure"
 				add = 30
 			}
 		}

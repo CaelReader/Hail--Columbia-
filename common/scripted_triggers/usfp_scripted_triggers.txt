@@ -549,3 +549,24 @@ usfp_is_valid_antiblack_riot_state = {
 	is_incorporated = yes
 	has_building = building_urban_center
 }
+
+usfp_had_reconstruction_outcome_radical = {
+	custom_tooltip = {
+		text = usfp_had_reconstruction_outcome_radical
+		has_global_variable = usfp_reconstruction_outcome_radical
+	}
+}
+
+usfp_had_reconstruction_outcome_mixed = {
+	custom_tooltip = {
+		text = usfp_had_reconstruction_outcome_mixed
+		has_global_variable = usfp_reconstruction_outcome_mixed
+	}
+}
+
+usfp_had_reconstruction_outcome_failure = {
+	custom_tooltip = {
+		text = usfp_had_reconstruction_outcome_failure
+		has_global_variable = usfp_reconstruction_outcome_failure
+	}
+}

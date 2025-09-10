@@ -1124,23 +1124,24 @@ usfp_a_house_divided.12 = {
 			name = modifier_slavery_whitewashing
 			days = long_modifier_time
 		}
-		# every_interest_group = {
-		# 	limit = {
-		# 		has_ideology = ideology:ideology_pro_slavery
-		# 	}
-		# 	remove_ideology = ideology_pro_slavery
-		# }
-		if = {
-			limit = { 
-				any_scope_character = {
-					has_template = agitator_frederick_douglass
-				}
-			}
-			random_scope_character = {
+		add_journal_entry = {type = usfp_reconstruction_long}
+		custom_tooltip = {
+			text = usfp_reconstruction_full_jim_crow
+			every_scope_state = {
 				limit = {
-					has_template = agitator_frederick_douglass
+					OR = {
+						has_modifier = usfp_deep_south_modifier
+						has_modifier = usfp_upper_south_modifier
+						state_region = { 
+							is_homeland = cu:dixie
+							NOT = { is_homeland = cu:yankee }
+						}
+					}
+					is_state_region_dc = no
 				}
-				set_ideology = ideology:ideology_humanitarian
+				add_modifier = {
+					name = usfp_jim_crow
+				}
 			}
 		}
 	}

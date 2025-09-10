@@ -52,6 +52,11 @@ usfp_monthly_pulse = {
 		#Eugenics events
 		100 = usfp_progressive_era.17
 		100 = usfp_progressive_era.18
+
+		#Post-Reconstruction Events, can spawn even after the completion of Long Reconstruction
+		400 = usfp_usa_postreconstruction.12 #Birth of a Nation
+		500 = usfp_usa_postreconstruction.14 #Back to Africa?
+		1000 = usfp_usa_postreconstruction.9 #Harlem Renaissance
 	}
 }
 

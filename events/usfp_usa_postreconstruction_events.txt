@@ -149,7 +149,6 @@ usfp_usa_postreconstruction.2 = {
 	#we need to work to overturn this
 	option = {
 		name = usfp_usa_postreconstruction.2.b
-		default_option = yes
 		add_radicals = {
 			value = medium_radicals
 			culture = cu:afro_american
@@ -334,10 +333,7 @@ usfp_usa_postreconstruction.3 = {
 		name = usfp_usa_postreconstruction.3.b
 		highlighted_option = yes
 		trigger = {
-			custom_tooltip = {
-				text = usfp_reconstruction_outcome_radical
-				has_global_variable = usfp_reconstruction_outcome_radical
-			}
+			usfp_had_reconstruction_outcome_radical = yes
 		}
 		scope:wilmington_state = {
 			kill_population_percent_in_state = {
@@ -405,7 +401,7 @@ usfp_usa_postreconstruction.4 = {
 		OR = {
 			year >= 1909
 			je:usfp_reconstruction_long ?= {
-				"scripted_bar_progress(usfp_long_reconstruction_progress_bar)" >= 1500
+				"scripted_bar_progress(usfp_long_reconstruction_progress_bar)" <= 2000
 			}
 		}
 		any_political_movement = {
@@ -480,7 +476,7 @@ usfp_usa_postreconstruction.5 = {
 			has_modifier = usfp_jim_crow
 			culture_percent_state = {
 				target = cu:afro_american
-				value > 10
+				value > 0.10
 			}
 		}
 		year >= 1910
@@ -495,7 +491,7 @@ usfp_usa_postreconstruction.5 = {
 				has_modifier = usfp_jim_crow
 				culture_percent_state = {
 					target = cu:afro_american
-					value > 10
+					value > 0.10
 				}
 			}
 			save_scope_as = great_migration_exit_state
@@ -1064,6 +1060,7 @@ usfp_usa_postreconstruction.9 = {
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
 	trigger = {
+		c:USA ?= root
 		NOT = {
 			has_global_variable = had_harlem_renaissance
 		}
@@ -1076,7 +1073,7 @@ usfp_usa_postreconstruction.9 = {
 					has_global_variable = usfp_reconstruction_outcome_radical
 				}
 				any_scope_state = {
-					total_urbanization > 500
+					total_urbanization > 1000
 					any_scope_building = {
 						is_building_type = building_arts_academy
 					}
@@ -1121,7 +1118,7 @@ usfp_usa_postreconstruction.9 = {
 					has_global_variable = usfp_reconstruction_outcome_radical
 				} 
 				s:STATE_NEW_YORK.region_state:USA = {
-					total_urbanization > 500
+					total_urbanization > 1000
 					any_scope_building = {
 						is_building_type = building_arts_academy
 					}
@@ -1142,7 +1139,7 @@ usfp_usa_postreconstruction.9 = {
 			}
 			ordered_scope_state = {
 				limit = {
-					total_urbanization > 500
+					total_urbanization > 1000
 					any_scope_building = {
 						is_building_type = building_arts_academy
 					}
@@ -1162,7 +1159,7 @@ usfp_usa_postreconstruction.9 = {
 		} else = {
 			ordered_scope_state = {
 				limit = {
-					total_urbanization > 500
+					total_urbanization > 1000
 					any_scope_building = {
 						is_building_type = building_arts_academy
 					}
@@ -1203,6 +1200,7 @@ usfp_usa_postreconstruction.9 = {
 					is_pop_type = academics
 				}
 			}
+			custom_tooltip = usfp_because_reconstruction_outcome_radical
 			add_loyalists = {
 				value = medium_radicals
 				culture = cu:afro_american
@@ -1238,6 +1236,7 @@ usfp_usa_postreconstruction.9 = {
 					is_pop_type = academics
 				}
 			}
+			custom_tooltip = usfp_because_reconstruction_outcome_radical
 			add_loyalists = {
 				value = medium_radicals
 				culture = cu:afro_american
@@ -1268,6 +1267,7 @@ usfp_usa_postreconstruction.9 = {
 					is_pop_type = academics
 				}
 			}
+			custom_tooltip = usfp_because_reconstruction_outcome_radical
 			add_loyalists = {
 				value = large_radicals
 				culture = cu:afro_american
@@ -1299,7 +1299,11 @@ usfp_usa_postreconstruction.10 = {
 			has_modifier = usfp_jim_crow
 			any_scope_pop = {
 				culture = cu:afro_american
-				is_pop_type = shopkeepers
+				OR = {
+					is_pop_type = shopkeepers
+					is_pop_type = engineers
+					is_pop_type = capitalists
+				}
 			}
 			any_scope_building = {
 				OR = {
@@ -1309,6 +1313,7 @@ usfp_usa_postreconstruction.10 = {
 			}
 		}
 		has_technology_researched = corporate_management
+		year >= 1905
 	}
 
 	immediate = {
@@ -1318,7 +1323,11 @@ usfp_usa_postreconstruction.10 = {
 					has_modifier = usfp_jim_crow
 					any_scope_pop = {
 						culture = cu:afro_american
-						is_pop_type = shopkeepers
+						OR = {
+							is_pop_type = shopkeepers
+							is_pop_type = engineers
+							is_pop_type = capitalists
+						}
 					}
 					any_scope_building = {
 						OR = {
@@ -1336,7 +1345,11 @@ usfp_usa_postreconstruction.10 = {
 					has_modifier = usfp_jim_crow
 					any_scope_pop = {
 						culture = cu:afro_american
-						is_pop_type = shopkeepers
+						OR = {
+							is_pop_type = shopkeepers
+							is_pop_type = engineers
+							is_pop_type = capitalists
+						}
 					}
 					any_scope_building = {
 						OR = {
@@ -1514,6 +1527,7 @@ usfp_usa_postreconstruction.12 = {
 	icon = "gfx/interface/icons/invention_icons/film.dds"
 
 	trigger = {
+		c:USA ?= root
 		has_technology_researched = mass_propaganda
 		any_political_movement = {
 			is_political_movement_type = movement_usfp_neoconfederate
@@ -1714,6 +1728,7 @@ usfp_usa_postreconstruction.13 = {
 				}
 			}
 		}
+		highlighted_option = yes
 		ordered_scope_state = {
 			limit = {
 				region = sr:region_great_plains
@@ -1770,6 +1785,7 @@ usfp_usa_postreconstruction.13 = {
 				is_subject_of = root
 			}
 		}
+		highlighted_option = yes
 		scope:exoduster_pop = {
 			move_partial_pop = {
 				state = scope:kansas_scope
@@ -1804,105 +1820,7 @@ usfp_usa_postreconstruction.13 = {
 		}
 	}
 }
-#Silent Parade
-usfp_usa_postreconstruction.13 = {
-	type = country_event
-	placement = scope:new_york_scope
-	duration = 3
-	cooldown = { days = never_fire_again_modifier_time } #Once
 
-	title = usfp_usa_postreconstruction.13.t
-	desc = usfp_usa_postreconstruction.13.d
-	flavor = usfp_usa_postreconstruction.13.f
-
-	dlc = dlc_usfp
-	event_image = {
-		video = "africa_public_protest"
-	}
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	icon = "gfx/interface/icons/event_icons/event_protest.dds"
-
-	trigger = {
-		has_technology_researched = political_agitation
-		any_political_movement = {
-			culture ?= cu:afro_american
-			has_modifier = usfp_naacp_movement_modifier
-		}
-		has_modifier = usfp_countrywide_anti_black_violence_modifier
-		
-	}
-
-	immediate = {
-		if = {
-			limit = {
-				has_state_in_state_region = STATE_NEW_YORK
-			 }
-			s:STATE_NEW_YORK.region_state:USA = {
-				save_scope_as = new_york_scope
-			}
-		}
-		else = {
-			capital = {
-				save_scope_as = new_york_scope
-			}
-		}
-	}
-
-	#no anti-lynching
-	option = {
-		name = usfp_usa_postreconstruction.13.a
-		default_option = yes
-		random_political_movement = {
-			limit = {
-				culture ?= cu:afro_american
-			}
-			add_modifier = {
-				name = usfp_effective_organizing_movement_modifier
-				years = 4
-			}
-		}
-	}
-
-	#anti-lynching crackdown
-	option = {
-		name = usfp_usa_postreconstruction.13.b
-		trigger = {
-			institution_investment_level = {
-				institution = institution_police
-				value >= 4
-			}
-		}
-		highlighted_option = yes
-		show_as_unavailable = {
-			always = yes
-		}
-		random_political_movement = {
-			limit = {
-				culture ?= cu:afro_american
-			}
-			add_modifier = {
-				name = usfp_effective_organizing_movement_modifier
-				years = 4
-			}
-		}
-		every_political_movement = {
-			limit = {
-				usfp_movement_is_racist = yes
-			}
-			add_modifier = {
-				name = usfp_movement_agitated_by_antiracism_modifier
-				years = 4
-			}
-		}
-		add_loyalists = {
-			value = medium_radicals
-			culture = cu:afro_american
-		}
-		usfp_long_reconstruction_add_progress = {
-			VALUE = 20
-		}
-	}
-}
 #Back to Africa?
 usfp_usa_postreconstruction.14 = {
 	type = country_event
@@ -1922,6 +1840,7 @@ usfp_usa_postreconstruction.14 = {
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
 	trigger = {
+		c:USA ?= root
 		any_scope_character = {
 			has_template = usfp_marcus_garvey
 		}
@@ -2064,10 +1983,7 @@ usfp_usa_postreconstruction.14 = {
 		name = usfp_usa_postreconstruction.14.e
 		trigger = {
 			OR = {
-				custom_tooltip = {
-					text = usfp_reconstruction_outcome_radical
-					has_global_variable = usfp_reconstruction_outcome_radical
-				}
+				usfp_had_reconstruction_outcome_radical = yes
 				country_has_primary_culture = cu:afro_american
 			}
 		}
@@ -2294,12 +2210,21 @@ usfp_usa_postreconstruction.16 = {
 		default_option = yes
 		scope:assassination_target = {
 			random_list = {
-				20 = {
+				10 = {
 					add_trait = wounded
 				}
-				80 = {
+				90 = {
 					kill_character = yes
 				}
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_usfp_neoconfederate
+			}
+			add_modifier = {
+				name = usfp_movement_agitated_by_antiracism_modifier
+				years = 2
 			}
 		}
 	}
@@ -2308,12 +2233,21 @@ usfp_usa_postreconstruction.16 = {
 		name = usfp_usa_postreconstruction.16.b
 		scope:assassination_target = {
 			random_list = {
-				20 = {
+				10 = {
 					add_trait = wounded
 				}
-				80 = {
+				90 = {
 					kill_character = yes
 				}
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_usfp_neoconfederate
+			}
+			add_modifier = {
+				name = usfp_movement_mollified_by_racism_modifier
+				years = 2
 			}
 		}
 	}
@@ -2338,33 +2272,57 @@ usfp_usa_postreconstruction.17 = {
 
 	trigger = {
 		has_global_variable = usfp_reconstruction_outcome_radical
-		any_scope_state = {
-			OR = {
-				state_region = s:STATE_IDAHO
-				state_region = s:STATE_MINNESOTA
+		s:STATE_IDAHO = {
+			any_scope_state = {
+				state_is_eligible_as_mass_migration_target = yes
+				owner = {
+					NOT = {
+						is_country_type = decentralized
+					}
+				}
 			}
-			state_is_eligible_as_mass_migration_target = yes
 		}
+		s:STATE_MONTANA = {
+			any_scope_state = {
+				state_is_eligible_as_mass_migration_target = yes
+				owner = {
+					NOT = {
+						is_country_type = decentralized
+					}
+				}
+			}
+		}
+		has_global_variable = oregon_trail_mapped
 	}
 
 	immediate = {
-		random_scope_state = {
+		random_state = {
 			limit = {
 				OR = {
 					state_region = s:STATE_IDAHO
 					state_region = s:STATE_MINNESOTA
 				}
 				state_is_eligible_as_mass_migration_target = yes
+				owner = {
+					NOT = {
+						is_country_type = decentralized
+					}
+				}
 			}
 			save_scope_as = dixie_redoubt_target
 		}
-		random_scope_state = {
+		random_state = {
 			limit = {
 				OR = {
 					state_region = s:STATE_WASHINGTON
 					state_region = s:STATE_OREGON
 				}
 				state_is_eligible_as_mass_migration_target = yes
+				owner = {
+					NOT = {
+						is_country_type = decentralized
+					}
+				}
 			}
 			save_scope_as = dixie_redoubt_target_2
 		}
@@ -2378,6 +2336,9 @@ usfp_usa_postreconstruction.17 = {
 			create_mass_migration = {
 				origin = root
 				culture = cu:dixie
+			}
+			state_region = {
+				add_homeland = cu:dixie
 			}
 		}
 	}
@@ -2393,6 +2354,112 @@ usfp_usa_postreconstruction.17 = {
 				origin = root
 				culture = cu:dixie
 			}
+			state_region = {
+				add_homeland = cu:dixie
+			}
+		}
+	}
+}
+#Silent Parade
+usfp_usa_postreconstruction.18 = {
+	type = country_event
+	placement = scope:new_york_scope
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_usa_postreconstruction.18.t
+	desc = usfp_usa_postreconstruction.18.d
+	flavor = usfp_usa_postreconstruction.18.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "africa_public_protest"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	trigger = {
+		has_technology_researched = political_agitation
+		any_political_movement = {
+			culture ?= cu:afro_american
+			has_modifier = usfp_naacp_movement_modifier
+		}
+		has_modifier = usfp_countrywide_anti_black_violence_modifier
+		
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_state_in_state_region = STATE_NEW_YORK
+			 }
+			s:STATE_NEW_YORK.region_state:USA = {
+				save_scope_as = new_york_scope
+			}
+		}
+		else = {
+			capital = {
+				save_scope_as = new_york_scope
+			}
+		}
+	}
+
+	#no anti-lynching
+	option = {
+		name = usfp_usa_postreconstruction.18.a
+		default_option = yes
+		random_political_movement = {
+			limit = {
+				culture ?= cu:afro_american
+			}
+			add_modifier = {
+				name = usfp_effective_organizing_movement_modifier
+				years = 4
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			culture = cu:afro_american
+		}
+	}
+
+	#anti-lynching crackdown
+	option = {
+		name = usfp_usa_postreconstruction.18.b
+		trigger = {
+			institution_investment_level = {
+				institution = institution_police
+				value >= 4
+			}
+		}
+		highlighted_option = yes
+		show_as_unavailable = {
+			always = yes
+		}
+		random_political_movement = {
+			limit = {
+				culture ?= cu:afro_american
+			}
+			add_modifier = {
+				name = usfp_effective_organizing_movement_modifier
+				years = 4
+			}
+		}
+		every_political_movement = {
+			limit = {
+				usfp_movement_is_racist = yes
+			}
+			add_modifier = {
+				name = usfp_movement_agitated_by_antiracism_modifier
+				years = 4
+			}
+		}
+		add_loyalists = {
+			value = medium_radicals
+			culture = cu:afro_american
+		}
+		usfp_long_reconstruction_add_progress = {
+			VALUE = 20
 		}
 	}
 }

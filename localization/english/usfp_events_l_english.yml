@@ -345,11 +345,6 @@ usfp_reconstruction.15.f: "[SCOPE.sState('farm_state').GetNameNoFormatting] had 
 usfp_reconstruction.15.a: "Let's hope they don't suffer too much backlash."
 usfp_reconstruction.15.b: "Could this work across the rest of the South?"
 
-usfp_usa_postreconstruction.1.t: "The South Will Rise Again"
-usfp_usa_postreconstruction.1.d: "REPLACE_ME"
-usfp_usa_postreconstruction.1.f: """"
-usfp_usa_postreconstruction.1.a: "Can we ever be rid of these traitors?"
-
 #### Manifest Destiny
 usfp_manifest_destiny.1.t: "From Sea to Shining Sea?"
 usfp_manifest_destiny.1.d: "Since the days of the [concept_usfp_thirteen_colonies], the settlers of the [ROOT.GetCountry.GetName] have looked upon the lands to the west with desire, and a complete disregard for their existing inhabitants. Now a lofty justification for expansion is beginning to emerge in our national consciousness — that of Manifest Destiny. Proponents of the idea claim that it is not only our right but our sacred duty to seize and populate the entirety of the great American continent."
@@ -1278,6 +1273,122 @@ usfp_indian_althist.5.d: "With their borders on all sides now fixed by treaty, p
 usfp_indian_althist.5.f: "Many faces could be seen amongst the crowds of the great council. Kiowas, Apaches, Wichitas, even some adopted Spaniards and Tejanos. The prominent chiefs made their case to the people, and the bands of Comancheria responded with their assent."
 usfp_indian_althist.5.a: "Is a frontier war on the horizon?"
 usfp_indian_althist.5.b: "We shall be lords of the southern plains once more!"
+
+usfp_afro_american_culture: "[GetCulture('afro_american').GetName]"
+usfp_dixie_culture: "[GetCulture('dixie').GetName]"
+
+usfp_usa_postreconstruction.1.t: "The South Will Rise Again"
+usfp_usa_postreconstruction.1.d: ""
+usfp_usa_postreconstruction.1.f: """"
+usfp_usa_postreconstruction.1.a: "Can we ever be rid of these traitors?"
+
+usfp_usa_postreconstruction.2.t: "Plessy v Ferguson"
+usfp_usa_postreconstruction.2.d: ""
+usfp_usa_postreconstruction.2.f: """"
+usfp_usa_postreconstruction.2.a: ""
+usfp_usa_postreconstruction.2.b: ""
+
+usfp_usa_postreconstruction.3.t: "The [SCOPE.sState('wilmington_state').GetPortHubName] Coup"
+usfp_usa_postreconstruction.3.d: ""
+usfp_usa_postreconstruction.3.f: """"
+usfp_usa_postreconstruction.3.a: ""
+usfp_usa_postreconstruction.3.b: ""
+
+usfp_usa_postreconstruction.4.t: "For the Advancement of Colored People"
+usfp_usa_postreconstruction.4.d: ""
+usfp_usa_postreconstruction.4.f: """"
+usfp_usa_postreconstruction.4.a: ""
+usfp_usa_postreconstruction.4.b: ""
+
+usfp_usa_postreconstruction.5.t: "The Great Migration"
+usfp_usa_postreconstruction.5.d: ""
+usfp_usa_postreconstruction.5.f: """"
+usfp_usa_postreconstruction.5.a: ""
+usfp_usa_postreconstruction.5.b: ""
+
+usfp_usa_postreconstruction.6.t: "The Fight of the Century"
+usfp_usa_postreconstruction.6.d: ""
+usfp_usa_postreconstruction.6.f: """"
+usfp_usa_postreconstruction.6.a: ""
+usfp_usa_postreconstruction.6.b: ""
+
+usfp_usa_postreconstruction.7.t: "Red Summer"
+usfp_usa_postreconstruction.7.d: ""
+usfp_usa_postreconstruction.7.f: """"
+usfp_usa_postreconstruction.7.a: ""
+usfp_usa_postreconstruction.7.b: ""
+
+usfp_usa_postreconstruction.8.t: "[SCOPE.sState('riot_state').GetCityHubName] Wracked by Riots"
+usfp_usa_postreconstruction.8.d: ""
+usfp_usa_postreconstruction.8.f: """"
+usfp_usa_postreconstruction.8.a: ""
+usfp_usa_postreconstruction.8.b: ""
+
+usfp_usa_postreconstruction.9.t: "The $usfp_afro_american_culture$ Renaissance"
+usfp_usa_postreconstruction.9.d: "[SCOPE.sState('harlem_renaissance_state').GetCityHubName] has become a creative hotbed of $usfp_afro_american_culture$ culture, giving rise to new and exciting forms of music, art, and literature. Radical ideas of political and social equality flow freely amidst jazz poetry and fashionable dance parties."
+usfp_usa_postreconstruction.9.f: ""If we must die, O let us nobly die,\nSo that our precious blood may not be shed\nIn vain; then even the monsters we defy\nShall be constrained to honor us though dead!\nO kinsmen! we must meet the common foe!""
+usfp_usa_postreconstruction.9.a: "To see a new world under labor's law!"
+usfp_usa_postreconstruction.9.b: "$usfp_afro_american_culture$ culture is the envy of the nation!"
+usfp_usa_postreconstruction.9.c: "Let us lift every voice and sing!"
+afro_americans_socialist_movement_attraction: "$usfp_afro_american_culture$ [Concept('concept_pop', '$concept_pops$')] will be more attracted to Socialist [Concept('concept_political_movement','$concept_political_movements$')]"
+afro_americans_religious_movement_attraction: "$usfp_afro_american_culture$ [Concept('concept_pop', '$concept_pops$')] will be more attracted to Religious [Concept('concept_political_movement','$concept_political_movements$')]"
+
+usfp_usa_postreconstruction.10.t: "Black Wall Street"
+usfp_usa_postreconstruction.10.d: ""
+usfp_usa_postreconstruction.10.f: """"
+usfp_usa_postreconstruction.10.a: ""
+usfp_usa_postreconstruction.10.b: ""
+
+usfp_usa_postreconstruction.11.t: "Black Wall Street in Flames"
+usfp_usa_postreconstruction.11.d: ""
+usfp_usa_postreconstruction.11.f: """"
+usfp_usa_postreconstruction.11.a: ""
+usfp_usa_postreconstruction.11.b: ""
+
+usfp_usa_postreconstruction.12.t: "Birth of a Nation"
+usfp_usa_postreconstruction.12.d: ""
+usfp_usa_postreconstruction.12.f: """"
+usfp_usa_postreconstruction.12.a: ""
+usfp_usa_postreconstruction.12.b: ""
+
+usfp_usa_postreconstruction.13.t: "The Exodusters"
+usfp_usa_postreconstruction.13.d: ""
+usfp_usa_postreconstruction.13.f: """"
+usfp_usa_postreconstruction.13.a: ""
+usfp_usa_postreconstruction.13.b: ""
+
+usfp_usa_postreconstruction.14.t: "Back to Africa?"
+usfp_usa_postreconstruction.14.d: ""
+usfp_usa_postreconstruction.14.f: """"
+usfp_usa_postreconstruction.14.a: ""
+usfp_usa_postreconstruction.14.b: ""
+
+usfp_usa_postreconstruction.15.t: "The Great Return"
+usfp_usa_postreconstruction.15.d: ""
+usfp_usa_postreconstruction.15.f: """"
+usfp_usa_postreconstruction.15.a: ""
+usfp_usa_postreconstruction.15.b: ""
+
+usfp_usa_postreconstruction.16.t: "[SCOPE.sCharacter('assassination_target').GetFullName] Attacked!"
+usfp_usa_postreconstruction.16.d: ""
+usfp_usa_postreconstruction.16.f: """"
+usfp_usa_postreconstruction.16.a: ""
+usfp_usa_postreconstruction.16.b: ""
+
+usfp_usa_postreconstruction.17.t: "$usfp_dixie_culture$ Redoubt"
+usfp_usa_postreconstruction.17.d: ""
+usfp_usa_postreconstruction.17.f: """"
+usfp_usa_postreconstruction.17.a: ""
+usfp_usa_postreconstruction.17.b: ""
+
+usfp_usa_postreconstruction.18.t: "A Silent Parade"
+usfp_usa_postreconstruction.18.d: ""
+usfp_usa_postreconstruction.18.f: """"
+usfp_usa_postreconstruction.18.a: ""
+usfp_usa_postreconstruction.18.b: ""
+
+
+
 
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"

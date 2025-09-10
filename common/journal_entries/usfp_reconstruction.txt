@@ -16,6 +16,29 @@ usfp_reconstruction_long = {
 		}	
 	}
 
+	on_monthly_pulse = {
+		random_events = {
+			chance_to_happen = 10
+			100 = usfp_usa_postreconstruction.2 #Plessy v Ferguson
+			100 = usfp_usa_postreconstruction.3 #Wilmington Coup
+			500 = usfp_usa_postreconstruction.5 #Great Migration
+			100 = usfp_usa_postreconstruction.6 #Johnson-Jeffries Riots
+			50 = usfp_usa_postreconstruction.8 #Generic Race Riot
+			100 = usfp_usa_postreconstruction.10 #Black Wall Street spawns
+			200 = usfp_usa_postreconstruction.11 #Tusla Massacre
+			500 = usfp_usa_postreconstruction.13 #Silent Parade
+			50 = usfp_usa_postreconstruction.16 #Radical Reconstruction: Neoconfederate Assassination
+			50 = usfp_usa_postreconstruction.17 #Radical Reconstruction: Dixie Redoubt
+			50 = 0
+		}
+		events = {
+			usfp_usa_postreconstruction.4 #NAACP Founded
+			usfp_usa_postreconstruction.7 #Red Summer
+			usfp_usa_postreconstruction.13 #Exodusters
+			usfp_usa_postreconstruction.15 #Radical Reconstruction: the Great Return
+		}
+	}
+
 	fail = {
 		usfp_is_afro_american_discriminated = yes
 	}
@@ -41,6 +64,12 @@ usfp_reconstruction_long = {
 		add_loyalists = {
 			value = medium_radicals
 			culture = cu:afro_american
+		}
+		every_scope_state = {
+			limit = {
+				has_modifier = usfp_jim_crow
+			}
+			remove_modifier = usfp_jim_crow
 		}
 	}
 
