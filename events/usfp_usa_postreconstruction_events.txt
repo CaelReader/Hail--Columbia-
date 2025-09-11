@@ -6,7 +6,25 @@ usfp_usa_postreconstruction.1 = {
 	placement = scope:dixie_state
 
 	title = usfp_usa_postreconstruction.1.t
-	desc = usfp_usa_postreconstruction.1.d
+	desc = {
+		first_valid = {
+			triggered_desc = { 
+				trigger = {
+					has_global_variable = usfp_reconstruction_outcome_radical
+				}
+				desc = usfp_usa_postreconstruction.1.d_radical
+			}
+			triggered_desc = { 
+				trigger = {
+					has_global_variable = usfp_reconstruction_outcome_mixed
+				}
+				desc = usfp_usa_postreconstruction.1.d_mixed
+			}
+			triggered_desc = { 
+				desc = usfp_usa_postreconstruction.1.d
+			}
+		}
+	}
 	flavor = usfp_usa_postreconstruction.1.f
 	dlc = dlc_usfp
 
@@ -56,6 +74,18 @@ usfp_usa_postreconstruction.1 = {
 					years = 20
 				}
 			 }
+		}
+		if = {
+			limit = {
+				usfp_had_reconstruction_outcome_radical = yes
+			 }
+			 custom_tooltip = neoconfederate_radical_support
+		}
+		if = {
+			limit = {
+				usfp_had_reconstruction_outcome_mixed = yes
+			 }
+			 custom_tooltip = neoconfederate_mixed_support
 		}
 	}
 }
@@ -118,10 +148,6 @@ usfp_usa_postreconstruction.2 = {
 	option = {
 		name = usfp_usa_postreconstruction.2.a
 		default_option = yes
-		add_radicals = {
-			value = medium_radicals
-			culture = cu:afro_american
-		}
 		je:usfp_reconstruction_long = {
 			add_modifier = {
 				name = usfp_separate_but_equal_modifier
@@ -135,6 +161,10 @@ usfp_usa_postreconstruction.2 = {
 				LOYALISTS = medium_radicals
 			}
 		}
+		add_radicals = {
+			value = medium_radicals
+			culture = cu:afro_american
+		}
 		every_political_movement = {
 			limit = {
 				usfp_movement_is_racist = yes
@@ -144,15 +174,20 @@ usfp_usa_postreconstruction.2 = {
 				years = 5
 			}
 		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					usfp_has_pro_racist_government = yes
+				}
+				add = 50
+			}
+		}
 	}
 
 	#we need to work to overturn this
 	option = {
 		name = usfp_usa_postreconstruction.2.b
-		add_radicals = {
-			value = medium_radicals
-			culture = cu:afro_american
-		}
 		je:usfp_reconstruction_long = {
 			add_modifier = {
 				name = usfp_separate_but_equal_modifier
@@ -166,6 +201,10 @@ usfp_usa_postreconstruction.2 = {
 				LOYALISTS = small_radicals
 			}
 		}
+		add_radicals = {
+			value = small_radicals
+			culture = cu:afro_american
+		}
 		every_political_movement = {
 			limit = {
 				culture ?= cu:afro_american
@@ -174,6 +213,48 @@ usfp_usa_postreconstruction.2 = {
 				name = usfp_movement_agitated_by_racism_modifier
 				years = 5
 			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					usfp_has_anti_racist_government = yes
+				}
+				add = 50
+			}
+		}
+	}
+
+	
+	#lets just go back to Racial Segegration
+	option = {
+		name = usfp_usa_postreconstruction.2.c
+		activate_law = law_type:law_racial_segregation
+		trigger = {
+			usfp_has_pro_racist_government = yes
+		}
+		highlighted_option = yes
+		add_radicals = {
+			value = very_large_radicals
+			culture = cu:afro_american
+		}
+		scope:jim_crow_state = {
+			usfp_loyalize_dixies_in_state = {
+				LOYALISTS = large_radicals
+			}
+		}
+		every_political_movement = {
+			limit = {
+				usfp_movement_is_racist = yes
+			}
+			add_modifier = {
+				name = usfp_movement_mollified_by_racism_modifier
+				years = 5
+				multiplier = 2
+			}
+		}
+		ai_chance = {
+			base = -500
 		}
 	}
 }
@@ -268,10 +349,10 @@ usfp_usa_postreconstruction.3 = {
 		default_option = yes
 		scope:wilmington_state = {
 			kill_population_percent_in_state = {
-				percent = 0.0005
+				percent = 0.001
 				culture = cu:afro_american
 			}
-			add_radicals = {
+			add_radicals_in_state = {
 				value = medium_radicals
 				culture = cu:afro_american
 			}
@@ -289,6 +370,16 @@ usfp_usa_postreconstruction.3 = {
 			add_modifier = {
 				name = usfp_white_state_government_modifier
 				years = 40
+				is_decaying = yes
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					usfp_has_pro_racist_government = yes
+				}
+				add = 50
 			}
 		}
 	}
@@ -301,7 +392,7 @@ usfp_usa_postreconstruction.3 = {
 				percent = 0.0005
 				culture = cu:afro_american
 			}
-			add_radicals = {
+			add_radicals_in_state = {
 				value = small_radicals
 				culture = cu:afro_american
 			}
@@ -326,6 +417,15 @@ usfp_usa_postreconstruction.3 = {
 				}
 			 }
 		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					usfp_has_anti_racist_government = yes
+				}
+				add = 50
+			}
+		}
 	}
 
 	#Radical Reconstruction
@@ -333,7 +433,10 @@ usfp_usa_postreconstruction.3 = {
 		name = usfp_usa_postreconstruction.3.b
 		highlighted_option = yes
 		trigger = {
-			usfp_had_reconstruction_outcome_radical = yes
+			OR = {
+				usfp_had_reconstruction_outcome_radical = yes
+				has_law = law_type:law_multicultural
+			}
 		}
 		scope:wilmington_state = {
 			kill_population_percent_in_state = {
@@ -425,10 +528,16 @@ usfp_usa_postreconstruction.4 = {
 			}
 			add_modifier = usfp_naacp_movement_modifier
 		}
+		je:usfp_reconstruction_long = {
+			add_modifier = usfp_naacp_country_modifier
+		}
 		usfp_long_reconstruction_add_progress = {
 			VALUE = 50
 		}
 		#1.10: increase afro-american fervor
+		ai_chance = {
+			base = 50
+		}
 	}
 
 	#socialists!
@@ -443,6 +552,12 @@ usfp_usa_postreconstruction.4 = {
 				multiplier = 0.5
 			}
 		}
+		je:usfp_reconstruction_long = {
+			add_modifier = {
+				name = usfp_naacp_country_modifier
+				multiplier = 0.5
+			}
+		}
 		add_radicals = {
 			value = small_radicals
 			culture = cu:afro_american
@@ -450,6 +565,15 @@ usfp_usa_postreconstruction.4 = {
 		add_loyalists = {
 			value = small_radicals
 			interest_group = ig:ig_petty_bourgeoisie
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					usfp_has_pro_racist_government = yes
+				}
+				add = 50
+			}
 		}
 	}
 }
@@ -479,7 +603,9 @@ usfp_usa_postreconstruction.5 = {
 				value > 0.10
 			}
 		}
-		year >= 1910
+		has_technology_researched = combustion_engine
+		has_technology_researched = steel_railway_cars
+		has_technology_researched = shift_work
 		NOT = {
 			has_global_variable = usfp_reconstruction_outcome_radical
 		}
@@ -582,6 +708,9 @@ usfp_usa_postreconstruction.5 = {
 				culture = cu:afro_american
 			}
 		}
+		ai_chance = {
+			base = 25
+		}
 	}
 
 	#alternate destination
@@ -620,6 +749,39 @@ usfp_usa_postreconstruction.5 = {
 				origin = root
 				culture = cu:afro_american
 			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	#stop them!
+		option = {
+		name = usfp_usa_postreconstruction.5.c
+		scope:great_migration_exit_state = {
+			ordered_scope_pop = {
+				limit = {
+					culture = cu:afro_american
+				}
+				order_by = total_size
+				move_partial_pop = {
+					state = scope:great_migration_state_1
+					population_ratio = 0.01
+				}
+			}
+		}
+		scope:great_migration_state_1 = {
+			create_mass_migration = {
+				origin = root
+				culture = cu:afro_american
+			}
+		}
+		add_radicals = {
+			value = large_radicals
+			culture = cu:afro_american
+		}
+		ai_chance = {
+			base = 0
 		}
 	}
 }
@@ -957,6 +1119,10 @@ usfp_usa_postreconstruction.8 = {
 				name = usfp_state_race_riot_aftermath_modifier
 				years = 2
 			}
+			kill_population_percent_in_state = {
+				percent = 0.001
+				culture = cu:afro_american
+			}
 		}
 		random_political_movement = {
 			limit = {
@@ -999,6 +1165,10 @@ usfp_usa_postreconstruction.8 = {
 			}
 			add_loyalists_in_state = {
 				value = medium_radicals
+				culture = cu:afro_american
+			}
+			kill_population_percent_in_state = {
+				percent = 0.0005
 				culture = cu:afro_american
 			}
 		}
@@ -1106,7 +1276,7 @@ usfp_usa_postreconstruction.9 = {
 			}
 		}
 		any_political_movement = {
-			culture = cu:afro_american
+			culture ?= cu:afro_american
 		}
 	}
 
@@ -1528,7 +1698,8 @@ usfp_usa_postreconstruction.12 = {
 
 	trigger = {
 		c:USA ?= root
-		has_technology_researched = mass_propaganda
+		has_technology_researched = political_agitation
+		has_technology_researched = film
 		any_political_movement = {
 			is_political_movement_type = movement_usfp_neoconfederate
 		}
@@ -1619,6 +1790,9 @@ usfp_usa_postreconstruction.13 = {
 		}
 		any_scope_state = {
 			has_modifier = usfp_jim_crow
+		}
+		NOT = {
+			has_global_variable = usfp_reconstruction_outcome_radical
 		}
 	}
 

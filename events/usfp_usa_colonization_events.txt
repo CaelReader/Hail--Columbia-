@@ -1,6 +1,7 @@
 ﻿namespace = usfp_usa_colonization
 ###### Hail, Columbia! by CaelReader ######
 #American Colonization Society introduction
+#Santo Domingo asks for annexation
 #Haiti Opportunity
 #HAI: Allow afro-americans?
 #Haiti Accepts
@@ -10,4 +11,3 @@
 #Linconia Rejected
 #Linconia settlement within Panama
 #Linconia founded as independent
-#Back to Africa? 

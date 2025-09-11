@@ -726,3 +726,9 @@ usfp_slave_market_collapse_modifier = {
 	building_throughput_add = -0.15
 	building_cash_reserves_mult = -0.75
 }
+
+usfp_naacp_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_newspaper_positive.dds
+	country_qualification_growth_second_rate_citizen_mult = 0.10
+	country_qualification_growth_open_prejudice_mult = 0.10
+}

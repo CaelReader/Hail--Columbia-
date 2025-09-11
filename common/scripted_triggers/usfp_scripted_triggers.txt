@@ -570,3 +570,53 @@ usfp_had_reconstruction_outcome_failure = {
 		has_global_variable = usfp_reconstruction_outcome_failure
 	}
 }
+
+usfp_character_is_anti_racist = {
+	NOT = {
+		has_trait = bigoted
+	}
+	OR = {
+		culture = {
+			has_discrimination_trait = african_heritage
+		}
+		has_ideology = ideology:ideology_radical_movement
+		has_ideology = ideology:ideology_anarchist
+		has_ideology = ideology:ideology_reformer
+		has_ideology = ideology:ideology_humanitarian
+		has_ideology = ideology:ideology_humanitarian_royalist
+		has_ideology = ideology:ideology_usfp_social_gospel_leader
+		has_ideology = ideology:ideology_communist
+	}
+}
+
+usfp_character_is_pro_racism = {
+	usfp_character_is_anti_racist = no
+	OR = {
+		has_trait = bigoted
+		has_ideology = ideology:ideology_ethno_nationalist
+		has_ideology = ideology:ideology_usfp_social_darwinist_leader
+		has_ideology = ideology:ideology_fascist
+		interest_group = {
+			is_interest_group_type = ig_rural_folk
+			is_interest_group_type = ig_landowners
+		}
+	}
+}
+
+usfp_has_anti_racist_government = {
+	any_scope_politician = {
+		usfp_character_is_anti_racist = yes
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+}
+
+usfp_has_pro_racist_government = {
+	any_scope_politician = {
+		usfp_character_is_pro_racism = yes
+		interest_group = {
+			is_in_government = yes
+		}
+	}
+}

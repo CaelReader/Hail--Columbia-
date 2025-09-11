@@ -445,3 +445,89 @@ usfp_long_reconstruction_get_afro_american_percent_under_jim_crow = {
 	multiply = 100
 
 }
+
+usfp_ai_weight_tally_pro_racism_government = {
+	value = {
+		value = 0
+		every_scope_politician = {
+			limit = {
+				interest_group = {
+					is_in_government = yes
+				}
+				usfp_character_is_pro_racism = yes
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				ruler = {
+					usfp_character_is_pro_racism = yes
+				}
+			}
+			add = 100
+		}
+	}
+}
+
+usfp_ai_weight_tally_anti_racism_government = {
+	value = {
+		value = 0
+		every_scope_politician = {
+			limit = {
+				interest_group = {
+					is_in_government = yes
+				}
+				usfp_character_is_anti_racist = yes
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				ruler = {
+					usfp_character_is_anti_racist = yes
+				}
+			}
+			add = 100
+		}
+	}
+}
+
+usfp_ai_weight_racist_antiracist_balance_of_movements = {
+	value = {
+		value = 0
+		every_political_movement = {
+			limit = {
+				usfp_movement_is_racist = yes
+			}
+			add = political_movement_support
+			add = political_movement_radicalism
+		}
+		every_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_anarchist
+					is_political_movement_type = movement_cultural_minority
+				}
+			}
+			subtract = political_movement_support
+			subtract = political_movement_radicalism
+		}
+		multiply = 20
+	}
+}
+
+usfp_ai_weight_pro_racism_option = {
+	value = {
+		value = 0
+		add = usfp_ai_weight_tally_pro_racism_government
+		add = usfp_ai_weight_racist_antiracist_balance_of_movements
+	}
+}
+
+usfp_ai_weight_anti_racism_option = {
+	value = {
+		value = -25
+		add = usfp_ai_weight_tally_anti_racism_government
+		subtract = usfp_ai_weight_racist_antiracist_balance_of_movements
+	}
+}

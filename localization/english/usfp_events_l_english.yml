@@ -1278,33 +1278,40 @@ usfp_afro_american_culture: "[GetCulture('afro_american').GetName]"
 usfp_dixie_culture: "[GetCulture('dixie').GetName]"
 
 usfp_usa_postreconstruction.1.t: "The South Will Rise Again"
-usfp_usa_postreconstruction.1.d: ""
-usfp_usa_postreconstruction.1.f: """"
+usfp_usa_postreconstruction.1.d: "Even decades after the end of Reconstruction, the Civil War and the abolition of [GetLawType('law_slave_trade').GetGroup.GetName] continue to loom large in $usfp_dixie_culture$ culture. Driven by a generational resentment over their defeat, a loose $ideology_usfp_neoconfederate_movement$ [Concept('concept_political_movement', '$concept_political_movement_short$')] has taken their cause nation-wide, erecting monuments to Confederate "heroes" across the [ROOT.GetCountry.GetName]."
+usfp_usa_postreconstruction.1.d_mixed: "Discontent with the outcome of Reconstruction among southern $usfp_dixie_culture$s has driven the growth of a new $ideology_usfp_neoconfederate_movement$ [Concept('concept_political_movement', '$concept_political_movement_short$')]. Supremacists across the [ROOT.GetCountry.GetName] have begun to adopt the trappings of the rebellion, erecting monuments to Confederate "heroes" even in states that were not yet settled at the time of the war."
+usfp_usa_postreconstruction.1.d_radical: "Simmering resentment over the completion of Reconstruction has finally exploded into a nation-wide $ideology_usfp_neoconfederate_movement$ [Concept('concept_political_movement', '$concept_political_movement_short$')], with racial supremacists of all backgrounds adopting the trappings of the rebellion. Its supporters have quickly moved to erect public monuments of Confederate "heroes" and are intent on violently rejecting racial integration."
+usfp_usa_postreconstruction.1.f: ""Adjustment by negotiation the United States Government had rejected, and had chosen to attempt our subjugation. This course, adopted without provocation, was pursued with a ferocity that disregarded all the laws of civilized warfare, and must permanently remain a stain upon the escutcheon of a Government once bright among the nations."" #Jefferson Davis, The Rise and Fall of the Confederate Government
 usfp_usa_postreconstruction.1.a: "Can we ever be rid of these traitors?"
+neoconfederate_radical_support: "Because we completed #bold Reconstruction#! in favor of the Freedmen, more European-heritage [Concept('concept_pop', '$concept_pops$')] will [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] the $ideology_usfp_neoconfederate_movement$ [Concept('concept_political_movement', '$concept_political_movement_short$')]"
+neoconfederate_mixed_support: "Because we completed #bold Reconstruction#! with a mixed outcome, more European-heritage [Concept('concept_pop', '$concept_pops$')] will [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] the $ideology_usfp_neoconfederate_movement$ [Concept('concept_political_movement', '$concept_political_movement_short$')]"
 
-usfp_usa_postreconstruction.2.t: "Plessy v Ferguson"
-usfp_usa_postreconstruction.2.d: ""
-usfp_usa_postreconstruction.2.f: """"
-usfp_usa_postreconstruction.2.a: ""
-usfp_usa_postreconstruction.2.b: ""
+usfp_usa_postreconstruction.2.t: "Plessy v. Ferguson"
+usfp_usa_postreconstruction.2.d: "The [concept_usfp_supreme_court] has made a landmark ruling against an $usfp_afro_american_culture$ man attempting to use a Whites-only train car in [SCOPE.sState('jim_crow_state').GetName]. According to the court, [concept_usfp_jim_crow] laws do not contradict the national [GetLawType('law_cultural_exclusion').GetName] law as long as the facilities provided for each race are "separate but equal". The decision has been taken as carte blanche by segregrationists to impose similar laws in towns and cities across the [ROOT.GetCountry.GetName]."
+usfp_usa_postreconstruction.2.f: ""We consider the underlying fallacy of the plaintiff's argument to consist in the assumption that the enforced separation of the two races stamps the colored race with a badge of inferiority. If this be so, it is not by reason of anything found in the act, but solely because the colored race chooses to put that construction on it."" #SCOTUS
+usfp_usa_postreconstruction.2.a: "We must respect the Court's decision."
+usfp_usa_postreconstruction.2.b: "This is utterly unacceptable."
+
 
 usfp_usa_postreconstruction.3.t: "The [SCOPE.sState('wilmington_state').GetPortHubName] Coup"
-usfp_usa_postreconstruction.3.d: ""
-usfp_usa_postreconstruction.3.f: """"
-usfp_usa_postreconstruction.3.a: ""
-usfp_usa_postreconstruction.3.b: ""
+usfp_usa_postreconstruction.3.d: "A cadre of white supremacists has overthrown the duly elected municipal government of [SCOPE.sState('wilmington_state').GetPortHubName] and carried out a massacre of $usfp_afro_american_culture$ citizens. With the support of local business elites, they intend to use their position to drive out opposition and enshrine segegration across the state."
+usfp_usa_postreconstruction.3.f: ""This condition we have in part endured because we felt that the consequences of the war of secession were such as to deprive us of the fair consideration of many of our countrymen. While we recognize the authority of the United States and will yield to it if exerted, we would not for a moment believe that it is the purpose of 60 million of our own race to subject us permanently to a fate to which no Anglo-Saxon has ever been forced to submit."" #Declaration of White Independence
+usfp_usa_postreconstruction.3.a: "This is a matter for the [SCOPE.sState('wilmington_state').GetName] governor."
+usfp_usa_postreconstruction.3.b: "We must intervene at once!"
 
 usfp_usa_postreconstruction.4.t: "For the Advancement of Colored People"
-usfp_usa_postreconstruction.4.d: ""
-usfp_usa_postreconstruction.4.f: """"
-usfp_usa_postreconstruction.4.a: ""
-usfp_usa_postreconstruction.4.b: ""
+usfp_usa_postreconstruction.4.d: "A conference of $usfp_afro_american_culture$ leaders has assembled in [SCOPE.sState('maryland_scope').GetName] to form the National Association for the Advancement of Colored People. The organization has already opened branch offices in several states and begun printing newspapers in support of $usfp_afro_american_culture$ equality."
+usfp_usa_postreconstruction.4.f: ""To promote equality of rights and eradicate caste or race prejudice among citizens of the United States; to advance the interest of colored citizens; to secure for them impartial suffrage; and to increase their opportunities for securing justice in the courts, education for their children, employment according to their ability, and complete equality before the law."" #NAACP Charter
+usfp_usa_postreconstruction.4.a: "A positive development."
+usfp_usa_postreconstruction.4.b: "This sounds like a cabal of subversives."
 
 usfp_usa_postreconstruction.5.t: "The Great Migration"
-usfp_usa_postreconstruction.5.d: ""
-usfp_usa_postreconstruction.5.f: """"
-usfp_usa_postreconstruction.5.a: ""
-usfp_usa_postreconstruction.5.b: ""
+usfp_usa_postreconstruction.5.d: "$usfp_afro_american_culture$ citizens have begun to flee the [concept_usfp_jim_crow] [Concept('concept_state', '$concept_states$')] en-masse, seeking greater freedoms and opportunities in the ever-expanding cities of the North."
+usfp_usa_postreconstruction.5.f: ""Now, why should I remain longer south,\nTo be kicked and dogged around?\n“Crackers” to knock me in the mouth\nAnd shoot my brother down.\nNo, I won’t. I’m leaving today,\nNo longer can I wait.\nIf the recruiters fail to take me ‘way,\nI’m bound to catch a freight."" # “Bound for the Promised Land”* by Mr. Ward originally published in the Chicago Defender
+usfp_usa_postreconstruction.5.a: "They are willing their own American Dream into reality."
+usfp_usa_postreconstruction.5.b: "[SCOPE.sState('great_migration_state_3').GetName] needs more workers!"
+usfp_usa_postreconstruction.5.c: "They can't leave, they're needed on the plantations!"
+
 
 usfp_usa_postreconstruction.6.t: "The Fight of the Century"
 usfp_usa_postreconstruction.6.d: ""
@@ -1369,7 +1376,7 @@ usfp_usa_postreconstruction.15.f: """"
 usfp_usa_postreconstruction.15.a: ""
 usfp_usa_postreconstruction.15.b: ""
 
-usfp_usa_postreconstruction.16.t: "[SCOPE.sCharacter('assassination_target').GetFullName] Attacked!"
+usfp_usa_postreconstruction.16.t: "[SCOPE.sCharacter('assassination_target').GetFullName] Attacked by Klansmen!"
 usfp_usa_postreconstruction.16.d: ""
 usfp_usa_postreconstruction.16.f: """"
 usfp_usa_postreconstruction.16.a: ""
