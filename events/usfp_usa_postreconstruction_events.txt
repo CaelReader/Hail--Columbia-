@@ -810,8 +810,19 @@ usfp_usa_postreconstruction.6 = {
 	}
 
 	immediate = {
-		s:STATE_NEVADA.region_state:USA = {
-			save_scope_as = boxing_state
+		if = {
+			limit = {
+				has_state_in_state_region = STATE_NEVADA
+			 }
+			s:STATE_NEVADA.region_state:USA = {
+				save_scope_as = boxing_state
+			}
+		}
+		else = {
+			ordered_scope_state = {
+				order_by = total_urbanization
+				save_scope_as = boxing_state
+			}
 		}
 		ordered_scope_state = {
 			order_by = total_urbanization
@@ -846,10 +857,13 @@ usfp_usa_postreconstruction.6 = {
 		}
 		add_modifier = {
 			name = usfp_countrywide_anti_black_violence_modifier
-			months = 6
+			months = 3
 		}
 		usfp_long_reconstruction_lose_progress = {
 			VALUE = -50
+		}
+		ai_chance = {
+			base = 50
 		}
 	}
 
@@ -877,12 +891,21 @@ usfp_usa_postreconstruction.6 = {
 		show_as_unavailable = {
 			always = yes
 		}
+		every_political_movement = {
+			limit = {
+				usfp_movement_is_racist = yes
+			}
+			add_modifier = {
+				name = usfp_great_white_hope_movement_modifier
+				years = 2
+			}
+		}
 		every_scope_state = {
 			limit = {
 				total_urbanization >= scope:urbanization_state.total_urbanization
 			}
 			state_region = {
-				add_devastation = 2
+				add_devastation = 5
 			}
 			usfp_radicalize_whites_in_state = {
 				RADICALS = small_radicals
@@ -890,6 +913,54 @@ usfp_usa_postreconstruction.6 = {
 		}
 		usfp_radicalize_whites_in_country = {
 			RADICALS = small_radicals
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					usfp_has_anti_racist_government = yes
+				}
+				add = 75
+			}
+		}
+	}
+
+	#censorship
+	option = {
+		name = usfp_usa_postreconstruction.6.c
+		trigger = {
+			OR = {
+				has_law = law_type:law_censorship
+				has_law = law_type:law_outlawed_dissent
+			}
+		}
+		highlighted_option = yes
+		show_as_unavailable = {
+			always = yes
+		}
+		every_political_movement = {
+			limit = {
+				usfp_movement_is_racist = yes
+			}
+			add_modifier = {
+				name = usfp_great_white_hope_movement_modifier
+				years = 2
+				multiplier = 0.5
+			}
+		}
+		every_scope_state = {
+			limit = {
+				total_urbanization >= scope:urbanization_state.total_urbanization
+			}
+			state_region = {
+				add_devastation = 5
+			}
+			usfp_radicalize_whites_in_state = {
+				RADICALS = small_radicals
+			}
+		}
+		ai_chance = {
+			base = 100
 		}
 	}
 }
@@ -927,7 +998,7 @@ usfp_usa_postreconstruction.7 = {
 			is_pop_type = soldiers
 			culture = cu:afro_american
 		}
-		has_variable = recently_had_war
+		has_variable = red_summer_possible
 	}
 
 	immediate = {
@@ -1014,6 +1085,9 @@ usfp_usa_postreconstruction.7 = {
 		usfp_long_reconstruction_lose_progress = {
 			VALUE = -50
 		}
+		ai_chance = {
+			base = 50
+		}
 	}
 
 	#restore order
@@ -1067,6 +1141,59 @@ usfp_usa_postreconstruction.7 = {
 		usfp_long_reconstruction_lose_progress = {
 			VALUE = -50
 		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					usfp_has_anti_racist_government = yes
+				}
+				add = 75
+			}
+		}
+	}
+
+	#let them cook
+	option = {
+		name = usfp_usa_postreconstruction.7.c
+		every_scope_state = {
+			limit = {
+				is_in_list = red_summer_states
+			}
+			state_region = {
+				add_devastation = 2
+			}
+			usfp_radicalize_whites_in_state = {
+				RADICALS = small_radicals
+			}
+		}
+		usfp_radicalize_whites_in_country = {
+			RADICALS = small_radicals
+		}
+		add_radicals = {
+			value = medium_radicals
+			culture = cu:afro_american
+		}
+		scope:scapegoat_movement = {
+			add_modifier = {
+				name = usfp_movement_agitated_by_racism_modifier
+				years = 2
+			}
+		}
+		random_political_movement = {
+			limit = {
+				culture ?= cu:afro_american
+			}
+			add_modifier = {
+				name = usfp_movement_agitated_by_racism_modifier
+				years = 2
+			}
+		}
+		usfp_long_reconstruction_lose_progress = {
+			VALUE = -50
+		}
+		ai_chance = {
+			base = 0
+		}
 	}
 }
 #Generic Race Riot
@@ -1113,15 +1240,11 @@ usfp_usa_postreconstruction.8 = {
 				culture = cu:afro_american
 			}
 			usfp_loyalize_whites_in_state = {
-				LOYALISTS = small_radicals
+				LOYALISTS = medium_radicals
 			}
 			add_modifier = {
 				name = usfp_state_race_riot_aftermath_modifier
 				years = 2
-			}
-			kill_population_percent_in_state = {
-				percent = 0.001
-				culture = cu:afro_american
 			}
 		}
 		random_political_movement = {
@@ -1131,6 +1254,15 @@ usfp_usa_postreconstruction.8 = {
 			add_modifier = {
 				name = usfp_safety_in_numbers_movement_modifier
 				years = 2
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					usfp_has_pro_racist_government = yes
+				}
+				add = 75
 			}
 		}
 	}
@@ -1167,10 +1299,6 @@ usfp_usa_postreconstruction.8 = {
 				value = medium_radicals
 				culture = cu:afro_american
 			}
-			kill_population_percent_in_state = {
-				percent = 0.0005
-				culture = cu:afro_american
-			}
 		}
 		usfp_radicalize_whites_in_country = {
 			RADICALS = small_radicals
@@ -1191,6 +1319,15 @@ usfp_usa_postreconstruction.8 = {
 					name = usfp_movement_agitated_by_antiracism_modifier
 					years = 2
 				}
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				trigger = {
+					usfp_has_anti_racist_government = yes
+				}
+				add = 75
 			}
 		}
 	}
@@ -1377,6 +1514,9 @@ usfp_usa_postreconstruction.9 = {
 				pop_type = academics
 			}
 		}
+		ai_chance = {
+			base = 100
+		}
 	}
 
 	#black pride
@@ -1413,6 +1553,9 @@ usfp_usa_postreconstruction.9 = {
 				pop_type = academics
 			}
 		}
+		ai_chance = {
+			base = 50
+		}
 	}
 
 	#conservative
@@ -1443,6 +1586,9 @@ usfp_usa_postreconstruction.9 = {
 				culture = cu:afro_american
 				pop_type = academics
 			}
+		}
+		ai_chance = {
+			base = 25
 		}
 	}
 }

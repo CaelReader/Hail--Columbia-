@@ -722,8 +722,8 @@ usa_general_lee = {
 	birth_date = 1807.1.19
 	dna = dna_robert_e_lee
 	traits = {
-		experienced_defensive_strategist
-		innovative
+		basic_defensive_strategist
+		direct #USFP
 		celebrity_commander #USFP
 	}
 	commander_usage = {
@@ -892,7 +892,8 @@ usa_general_grant = {
 	traits = {
 		expert_offensive_planner
 		persistent
-		meticulous
+		honorable #USFP
+		innovative #USFP
 	}
 	commander_usage = {
 		country_trigger = {

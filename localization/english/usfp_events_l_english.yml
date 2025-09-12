@@ -1291,7 +1291,7 @@ usfp_usa_postreconstruction.2.d: "The [concept_usfp_supreme_court] has made a la
 usfp_usa_postreconstruction.2.f: ""We consider the underlying fallacy of the plaintiff's argument to consist in the assumption that the enforced separation of the two races stamps the colored race with a badge of inferiority. If this be so, it is not by reason of anything found in the act, but solely because the colored race chooses to put that construction on it."" #SCOTUS
 usfp_usa_postreconstruction.2.a: "We must respect the Court's decision."
 usfp_usa_postreconstruction.2.b: "This is utterly unacceptable."
-
+usfp_usa_postreconstruction.2.c: "[GetLawType('law_cultural_exclusion').GetName] is a dead letter."
 
 usfp_usa_postreconstruction.3.t: "The [SCOPE.sState('wilmington_state').GetPortHubName] Coup"
 usfp_usa_postreconstruction.3.d: "A cadre of white supremacists has overthrown the duly elected municipal government of [SCOPE.sState('wilmington_state').GetPortHubName] and carried out a massacre of $usfp_afro_american_culture$ citizens. With the support of local business elites, they intend to use their position to drive out opposition and enshrine segegration across the state."
@@ -1314,22 +1314,24 @@ usfp_usa_postreconstruction.5.c: "They can't leave, they're needed on the planta
 
 
 usfp_usa_postreconstruction.6.t: "The Fight of the Century"
-usfp_usa_postreconstruction.6.d: ""
-usfp_usa_postreconstruction.6.f: """"
-usfp_usa_postreconstruction.6.a: ""
-usfp_usa_postreconstruction.6.b: ""
+usfp_usa_postreconstruction.6.d: "Jack Johnson, the first $usfp_afro_american_culture$ heavyweight boxing champion, has handily beat his white opponent in the most widely reported match of all time. In response to this defeat, lynch-mobs of white racists have unleashed a day of violence against $usfp_afro_american_culture$ communities across the [ROOT.GetCountry.GetName]."
+usfp_usa_postreconstruction.6.f: ""All last night the police were busy making arrests. Henry Anderson, colored, was shot to death in a pool hall following an argument over the fight. Thoma Green, negro, was smothered to death in a barber chair, as a result of a prize fight joke."" #The Daily Gate City
+usfp_usa_postreconstruction.6.a: "All this over a boxing match?"
+usfp_usa_postreconstruction.6.b: "Arrest and prosecute every member of those mobs!"
+usfp_usa_postreconstruction.6.c: "Shut down news of the fight, don't let this continue."
 
 usfp_usa_postreconstruction.7.t: "Red Summer"
-usfp_usa_postreconstruction.7.d: ""
-usfp_usa_postreconstruction.7.f: """"
-usfp_usa_postreconstruction.7.a: ""
-usfp_usa_postreconstruction.7.b: ""
+usfp_usa_postreconstruction.7.d: "The return of $usfp_afro_american_culture$ $soldiers$ from the recent war has sparked a wave of racist riots and violence in a dozen [ROOT.GetCountry.GetAdjective] cities. The white press has been quick to blame the [SCOPE.sPoliticalMovement('scapegoat_movement').GetName], decrying armed $usfp_afro_american_culture$s as agents of a radical socialist revolution."
+usfp_usa_postreconstruction.7.f: ""No race ever gave Passive Resistance and Submission to Evil longer, more piteous trial. Today we raise the terrible weapon of Self-Defense. When the murderer comes, he shall not longer strike us in the back. When the armed lynchers gather, we too must gather armed. When the mob moves, we propose to meet it with bricks and clubs and guns."" #W. E. B. Du Bois
+usfp_usa_postreconstruction.7.a: "We must guard against radical agitation!"
+usfp_usa_postreconstruction.7.b: "Deploy all available resources to containing the violence."
+usfp_usa_postreconstruction.7.c: "The cause of the [SCOPE.sPoliticalMovement('scapegoat_movement').GetName] is the cause of the $usfp_afro_american_culture$!"
 
 usfp_usa_postreconstruction.8.t: "[SCOPE.sState('riot_state').GetCityHubName] Wracked by Riots"
-usfp_usa_postreconstruction.8.d: ""
-usfp_usa_postreconstruction.8.f: """"
-usfp_usa_postreconstruction.8.a: ""
-usfp_usa_postreconstruction.8.b: ""
+usfp_usa_postreconstruction.8.d: "A violent racist riot has broken out in [SCOPE.sState('riot_state').GetCityHubName]. Mobs of white men march through the streets beating any $usfp_afro_american_culture$ they find, and destroying $usfp_afro_american_culture$ homes and business."
+usfp_usa_postreconstruction.8.f: ""Free [SCOPE.sState('riot_state').GetCityHubName] stands today humble before the world. She has shown that with all her resources, her splendid police force, her military reserve, her culture, and her civilization, she is weak and helpless before the mob. Notwithstanding our boasted democracy, lynch law is king."" #Chicago Daily Journal
+usfp_usa_postreconstruction.8.a: "[SCOPE.sState('riot_state').GetName] must clean up its own mess."
+usfp_usa_postreconstruction.8.b: "Stop the riots by any means available!"
 
 usfp_usa_postreconstruction.9.t: "The $usfp_afro_american_culture$ Renaissance"
 usfp_usa_postreconstruction.9.d: "[SCOPE.sState('harlem_renaissance_state').GetCityHubName] has become a creative hotbed of $usfp_afro_american_culture$ culture, giving rise to new and exciting forms of music, art, and literature. Radical ideas of political and social equality flow freely amidst jazz poetry and fashionable dance parties."
@@ -1342,19 +1344,19 @@ afro_americans_religious_movement_attraction: "$usfp_afro_american_culture$ [Con
 
 usfp_usa_postreconstruction.10.t: "Black Wall Street"
 usfp_usa_postreconstruction.10.d: ""
-usfp_usa_postreconstruction.10.f: """"
+usfp_usa_postreconstruction.10.f: ""We went into slavery without a language; we came out speaking the proud Anglo-Saxon tongue. We went into slavery with slave chains clanking about our wrists; we came out with the American ballot in our hands. Progress, progress is the law of nature; under God it shall be our eternal guiding star."" #Booker T. Washington
 usfp_usa_postreconstruction.10.a: ""
 usfp_usa_postreconstruction.10.b: ""
 
 usfp_usa_postreconstruction.11.t: "Black Wall Street in Flames"
 usfp_usa_postreconstruction.11.d: ""
-usfp_usa_postreconstruction.11.f: """"
+usfp_usa_postreconstruction.11.f: ""Planes circling in midair: They grew in number and hummed, darted, and dipped low. I could hear something like hail falling upon the top of my office building. Down East Archer, I saw the old Mid-Way hotel on fire, burning from its top, and then another and another and another building began to burn from their tops."" #Buck Colbert Franklin, My Life and an Era
 usfp_usa_postreconstruction.11.a: ""
 usfp_usa_postreconstruction.11.b: ""
 
-usfp_usa_postreconstruction.12.t: "Birth of a Nation"
+usfp_usa_postreconstruction.12.t: "The Birth of a Nation"
 usfp_usa_postreconstruction.12.d: ""
-usfp_usa_postreconstruction.12.f: """"
+usfp_usa_postreconstruction.12.f: ""The white men were roused by a mere instinct of self-preservation... until at last there had sprung into existence a great Ku Klux Klan, a veritable empire of the South, to protect the southern country.""
 usfp_usa_postreconstruction.12.a: ""
 usfp_usa_postreconstruction.12.b: ""
 
@@ -1366,7 +1368,7 @@ usfp_usa_postreconstruction.13.b: ""
 
 usfp_usa_postreconstruction.14.t: "Back to Africa?"
 usfp_usa_postreconstruction.14.d: ""
-usfp_usa_postreconstruction.14.f: """"
+usfp_usa_postreconstruction.14.f: ""We want to unite the Negro race in this country. We want every Negro to work for one common object, that of building a nation of his own on the great continent of Africa. That all Negroes all over the world are working for the establishment of a government in Africa means that it will be realized in another few years."" #Marcus Garvey
 usfp_usa_postreconstruction.14.a: ""
 usfp_usa_postreconstruction.14.b: ""
 

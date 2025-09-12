@@ -596,11 +596,12 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 
 # 6.0 "Douglass"
 ## New Content
+	17 new Post-Reconstruction events including the Great Migration, Red Summer, and the Harlem Renaissance
 	Underground Railroad JE that moves small numbers of slaves out of the South every month
-	New USA election events responding to various types of candidates
-	New CSA events during the ACW
-	New Events: Colored Troops, Scalawags
-	New Characters: Booker T Washington, Marcus Garvey, A Philip Randolph, Hubert Harrison, Anthony D Williams, Joseph Jenkins Roberts
+	4 new USA election events responding to various types of candidates
+	3 new CSA events during the ACW
+	Other New Events: Colored Troops, Scalawags
+	New Characters: Booker T Washington, Marcus Garvey, A Philip Randolph, Hubert Harrison, Anthony D Williams, Joseph Jenkins Roberts, James Weldon Johnson
 	USA can try to coax Afro-Americans to settle in africa/central america by decision
 	A Radical Abolitionist government can now unlock a special decree to seize and redistribute former slave plantations, permanently breaking the plantation economy of the South
 ## Updates
@@ -638,6 +639,8 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	Oklahoma now enacts Jim Crow upon becoming a state
 	Updated some Progressive Era event modifiers
 	William Sumner now only spawns automatically if you embrace Social Darwinism
+	Ulysses Grant is now Expert Offensive Planner, Persistent, Honorable, Innovative
+	Robert E Lee is now Defensive Strategist, Celebrity Commander, Direct
 	(CMF) Reactionary Movement can't spawn in american countries
 	(CMF) Doubled baseline PB attraction to the Liberal party
 ## Fixes

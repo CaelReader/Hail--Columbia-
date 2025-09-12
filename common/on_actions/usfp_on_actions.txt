@@ -15,6 +15,7 @@ usfp_monthly_pulse = {
 		usfp_usa.22 #American Centennial
 	}
 	random_events = {
+		chance_to_happen = 80
 		200 = 0
 		100 = usfp_usa.7 #Thomas Nast spawn event
 		100 = usfp_usa.8 #Thomas Nast weighs in on Election
@@ -881,6 +882,39 @@ usfp_manifest_destiny_decay_reset = {
 				set_variable = {
 					name = manifest_destiny_decay_clock
 					years = 3
+				}
+			}
+		}
+	}
+}
+
+on_war_end = {
+	on_actions = {
+		usfp_on_war_end_action
+	}
+}
+
+usfp_on_war_end_action = {
+	effect = {
+		scope:actor = {
+			if = {
+				limit = { 
+					c:USA ?= this
+				}
+				set_variable = {
+					name = red_summer_possible
+					years = 1
+				}
+			}
+		}
+		scope:target ?= {
+			if = {
+				limit = { 
+					c:USA ?= this
+				}
+				set_variable = {
+					name = red_summer_possible
+					years = 1
 				}
 			}
 		}
