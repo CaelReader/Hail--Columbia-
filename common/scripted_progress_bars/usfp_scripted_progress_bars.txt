@@ -5,6 +5,34 @@
 	default_green = yes
 
 	yearly_progress = {
+		#the JE doesn't fail anymore because its now a container for Post-Reconstruction events
+		if = {
+			limit = {
+				has_law = law_type:law_racial_segregation
+			}
+			subtract = {
+				desc = "law_racial_segregation"
+				value = 200
+			}
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_national_supremacy
+			}
+			subtract = {
+				desc = "law_national_supremacy"
+				value = 500
+			}
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_ethnostate
+			}
+			subtract = {
+				desc = "law_ethnostate"
+				value = 800
+			}
+		}
 		add = {
 			desc = "afro_american_average_acceptance"
 			value = usfp_long_reconstruction_get_average_afro_american_acceptance 

@@ -255,7 +255,7 @@ usfp_acw.17.fcsa: ""Already has the hatred of one of their great leaders attempt
 usfp_acw.17.a: "For cause and comrades!"
 
 usfp_acw.19.t: "For Their Own Cause"
-usfp_acw.19.d: "With the Civil War now a war of emancipation, scores of [GetCulture('afro_american').GetName] volunteers have flocked to enlist in the Army as part of newly inaugurated United States Colored Troops regiments. Many seek not only to aid in the destruction of slavery, but also to prove that [GetCulture('afro_american').GetName]s are patriotic members of the American nation."
+usfp_acw.19.d: "With the Civil War now a war of emancipation, scores of [GetCulture('afro_american').GetName] volunteers have flocked to enlist in the Army as part of newly inaugurated United States Colored Troops regiments. Many seek not only to aid in the destruction of slavery, but also to prove that $usfp_afro_american_culture_plural$ are patriotic members of the American nation."
 usfp_acw.19.f: ""Once let the black man get upon his person the brass letters U.S.; let him get an eagle on his button, and a musket on his shoulder, and bullets in his pocket, and there is no power on the earth or under the earth which can deny that he has earned the right of citizenship in the United States."" #Frederick Douglass
 usfp_acw.19.a: "For Liberty and Union!"
 usfp_acw.19.b: "Keep a close eye on the [GetCulture('afro_american').GetName] troops."
@@ -328,7 +328,7 @@ usfp_reconstruction.12.a: "Reconstruction must be thorough and complete."
 usfp_reconstruction.12.b: "We can't alienate our base."
 
 usfp_reconstruction.13.t: "The White Man's Platform"
-usfp_reconstruction.13.d: "Opponents of Reconstruction have launched a concerted propaganda campaign against the [SCOPE.sParty('republican_party_scope').GetName], appealing to racial animosities among the White electorate. If the leaflets are to be believed, then the [SCOPE.sParty('republican_party_scope').GetName] is a government entirely by and for [SCOPE.sCulture('afro_american_culture').GetName]s, a message that has unfortunately resonated with the voting public."
+usfp_reconstruction.13.d: "Opponents of Reconstruction have launched a concerted propaganda campaign against the [SCOPE.sParty('republican_party_scope').GetName], appealing to racial animosities among the White electorate. If the leaflets are to be believed, then the [SCOPE.sParty('republican_party_scope').GetName] is a government entirely by and for $usfp_afro_american_culture_plural$, a message that has unfortunately resonated with the voting public."
 usfp_reconstruction.13.f: "OUR MOTTO:\n\nThis is a White Man's Country; Let White Men Rule!" #Seymour/Blair Campaign Badge
 usfp_reconstruction.13.a: "Some leaflets aren't going to change our tune."
 usfp_reconstruction.13.b: "We need some new messaging."
@@ -1275,6 +1275,7 @@ usfp_indian_althist.5.a: "Is a frontier war on the horizon?"
 usfp_indian_althist.5.b: "We shall be lords of the southern plains once more!"
 
 usfp_afro_american_culture: "[GetCulture('afro_american').GetName]"
+usfp_afro_american_culture_plural: "#yellow [GetCulture('afro_american').GetName]s#!"
 usfp_dixie_culture: "[GetCulture('dixie').GetName]"
 
 usfp_usa_postreconstruction.1.t: "The South Will Rise Again"
@@ -1321,14 +1322,14 @@ usfp_usa_postreconstruction.6.b: "Arrest and prosecute every member of those mob
 usfp_usa_postreconstruction.6.c: "Shut down news of the fight, don't let this continue."
 
 usfp_usa_postreconstruction.7.t: "Red Summer"
-usfp_usa_postreconstruction.7.d: "The return of $usfp_afro_american_culture$ $soldiers$ from the recent war has sparked a wave of racist riots and violence in a dozen [ROOT.GetCountry.GetAdjective] cities. The white press has been quick to blame the [SCOPE.sPoliticalMovement('scapegoat_movement').GetName], decrying armed $usfp_afro_american_culture$s as agents of a radical socialist revolution."
+usfp_usa_postreconstruction.7.d: "The return of $usfp_afro_american_culture$ $soldiers$ from the recent war has sparked a wave of racist riots and violence in a dozen [ROOT.GetCountry.GetAdjective] cities. The white press has been quick to blame the [SCOPE.sPoliticalMovement('scapegoat_movement').GetName], decrying armed $usfp_afro_american_culture_plural$ as agents of a radical socialist revolution."
 usfp_usa_postreconstruction.7.f: ""No race ever gave Passive Resistance and Submission to Evil longer, more piteous trial. Today we raise the terrible weapon of Self-Defense. When the murderer comes, he shall not longer strike us in the back. When the armed lynchers gather, we too must gather armed. When the mob moves, we propose to meet it with bricks and clubs and guns."" #W. E. B. Du Bois
 usfp_usa_postreconstruction.7.a: "We must guard against radical agitation!"
 usfp_usa_postreconstruction.7.b: "Deploy all available resources to containing the violence."
 usfp_usa_postreconstruction.7.c: "The cause of the [SCOPE.sPoliticalMovement('scapegoat_movement').GetName] is the cause of the $usfp_afro_american_culture$!"
 
 usfp_usa_postreconstruction.8.t: "[SCOPE.sState('riot_state').GetCityHubName] Wracked by Riots"
-usfp_usa_postreconstruction.8.d: "A violent racist riot has broken out in [SCOPE.sState('riot_state').GetCityHubName]. Mobs of white men march through the streets beating any $usfp_afro_american_culture$ they find, and destroying $usfp_afro_american_culture$ homes and business."
+usfp_usa_postreconstruction.8.d: "A violent racist riot has broken out in [SCOPE.sState('riot_state').GetCityHubName]. Mobs of white men march through the streets beating any $usfp_afro_american_culture$ they find, and destroying $usfp_afro_american_culture$ homes and business. The mobs have already publicly lynched several $usfp_afro_american_culture$ citizens, leaving their corpses on display as a threat to the rest of the city."
 usfp_usa_postreconstruction.8.f: ""Free [SCOPE.sState('riot_state').GetCityHubName] stands today humble before the world. She has shown that with all her resources, her splendid police force, her military reserve, her culture, and her civilization, she is weak and helpless before the mob. Notwithstanding our boasted democracy, lynch law is king."" #Chicago Daily Journal
 usfp_usa_postreconstruction.8.a: "[SCOPE.sState('riot_state').GetName] must clean up its own mess."
 usfp_usa_postreconstruction.8.b: "Stop the riots by any means available!"
@@ -1343,58 +1344,63 @@ afro_americans_socialist_movement_attraction: "$usfp_afro_american_culture$ [Con
 afro_americans_religious_movement_attraction: "$usfp_afro_american_culture$ [Concept('concept_pop', '$concept_pops$')] will be more attracted to Religious [Concept('concept_political_movement','$concept_political_movements$')]"
 
 usfp_usa_postreconstruction.10.t: "Black Wall Street"
-usfp_usa_postreconstruction.10.d: ""
+usfp_usa_postreconstruction.10.d: "A prosperous $usfp_afro_american_culture$ neighborhood in [SCOPE.sState('black_wall_street_state').GetCityHubName] has attracted acclaim as the 'Black Wall Street' in honor of its prosperity in the face of [concept_usfp_jim_crow] discrimination."
 usfp_usa_postreconstruction.10.f: ""We went into slavery without a language; we came out speaking the proud Anglo-Saxon tongue. We went into slavery with slave chains clanking about our wrists; we came out with the American ballot in our hands. Progress, progress is the law of nature; under God it shall be our eternal guiding star."" #Booker T. Washington
-usfp_usa_postreconstruction.10.a: ""
-usfp_usa_postreconstruction.10.b: ""
+usfp_usa_postreconstruction.10.a: "A testament to $usfp_afro_american_culture$ industry."
+usfp_usa_postreconstruction.10.b: "Black Wall Street should grow and become a beacon of prosperity!"
 
 usfp_usa_postreconstruction.11.t: "Black Wall Street in Flames"
-usfp_usa_postreconstruction.11.d: ""
+usfp_usa_postreconstruction.11.d: "Smoke darkens the sky over [SCOPE.sState('black_wall_street_state').GetCityHubName] as Black Wall Street lies in ruin. White mobs have descended upon the neighborhood in an all-out assault on its denizens: gunning people down in the street, indiscriminately setting buildings aflame, and even dropping bombs from private aircraft. With nothing left of their property, many survivors will be forced to leave the city permanently."
 usfp_usa_postreconstruction.11.f: ""Planes circling in midair: They grew in number and hummed, darted, and dipped low. I could hear something like hail falling upon the top of my office building. Down East Archer, I saw the old Mid-Way hotel on fire, burning from its top, and then another and another and another building began to burn from their tops."" #Buck Colbert Franklin, My Life and an Era
-usfp_usa_postreconstruction.11.a: ""
-usfp_usa_postreconstruction.11.b: ""
+usfp_usa_postreconstruction.11.a: "[SCOPE.sState('black_wall_street_state').GetCityHubName] will never be the same."
+usfp_usa_postreconstruction.11.b: "These terrorists will not get away with this!"
 
 usfp_usa_postreconstruction.12.t: "The Birth of a Nation"
-usfp_usa_postreconstruction.12.d: ""
-usfp_usa_postreconstruction.12.f: ""The white men were roused by a mere instinct of self-preservation... until at last there had sprung into existence a great Ku Klux Klan, a veritable empire of the South, to protect the southern country.""
-usfp_usa_postreconstruction.12.a: ""
-usfp_usa_postreconstruction.12.b: ""
+usfp_usa_postreconstruction.12.d: "A newly relased silent film epic has taken the nation by storm, selling out theatres from coast to coast. The film's demonization of $usfp_afro_american_culture_plural$ and romantic depiction of the Ku Klux Klan has inspired a new wave of white supremacist fervor, setting off a fresh round of riots across the country."
+usfp_usa_postreconstruction.12.f: ""The white men were roused by a mere instinct of self-preservation... until at last there had sprung into existence a great Ku Klux Klan, a veritable empire of the South, to protect the southern country."" #The Birth of a Nation
+usfp_usa_postreconstruction.12.a: "This certainly won't help ease tensions."
+usfp_usa_postreconstruction.12.b: "Shut down distribution of the film."
 
-usfp_usa_postreconstruction.13.t: "The Exodusters"
-usfp_usa_postreconstruction.13.d: ""
-usfp_usa_postreconstruction.13.f: """"
-usfp_usa_postreconstruction.13.a: ""
-usfp_usa_postreconstruction.13.b: ""
+usfp_usa_postreconstruction.13.t: "The New Exodus"
+usfp_usa_postreconstruction.13.d: "Faced with destitution in the [concept_usfp_jim_crow] [Concept('concept_state', '$concept_states$')], $usfp_afro_american_culture$ associations have begun to organize an exodus to [SCOPE.sState('kansas_scope').GetName], seeking a new life on the frontier."
+usfp_usa_postreconstruction.13.f: ""Extending Our Voices to Heaven.\nFarewell, dear friends, farewell.\nWe are on our rapid march to Kansas, the land that gives\nBirth to freedom.\nMay God Almighty bless you all.\nFarewell, dear friends, farewell."" #The Land That Gives Birth to Freedom, Words by Hester Hickman.
+usfp_usa_postreconstruction.13.a: "The west promises freedom for all."
+usfp_usa_postreconstruction.13.b: "We need those workers in the South!"
+usfp_usa_postreconstruction.13.c: "Direct them to the gold fields, so that all may prosper."
+usfp_usa_postreconstruction.13.e: "Why not make for [SCOPE.sCountry('liberia_scope').GetName]?"
 
 usfp_usa_postreconstruction.14.t: "Back to Africa?"
-usfp_usa_postreconstruction.14.d: ""
+usfp_usa_postreconstruction.14.d: "[SCOPE.sCharacter('garvey_scope').GetFullName] has quickly attracted a large audience for his radical Pan-African platform. His movement supports the wholesale 'return' of $usfp_afro_american_culture_plural$ to Africa, with [SCOPE.sCharacter('garvey_scope').GetLastName] calling for a vanguard of colonists to aid in the creation of a [GetLawType('law_single_party_state').GetName] across all of Africa, with himself as the supreme leader."
 usfp_usa_postreconstruction.14.f: ""We want to unite the Negro race in this country. We want every Negro to work for one common object, that of building a nation of his own on the great continent of Africa. That all Negroes all over the world are working for the establishment of a government in Africa means that it will be realized in another few years."" #Marcus Garvey
-usfp_usa_postreconstruction.14.a: ""
-usfp_usa_postreconstruction.14.b: ""
+usfp_usa_postreconstruction.14.a: "The Mother Continent calls."
+usfp_usa_postreconstruction.14.b: "[SCOPE.sCharacter('garvey_scope').GetLastName] is nothing but a blowhard."
+usfp_usa_postreconstruction.14.c: "[SCOPE.sCharacter('garvey_scope').GetFullName]'s business dealings are quite suspect..."
+usfp_usa_postreconstruction.14.e: "[SCOPE.sCharacter('garvey_scope').GetLastName] May leave if he wishes, but America is our home."
+
 
 usfp_usa_postreconstruction.15.t: "The Great Return"
-usfp_usa_postreconstruction.15.d: ""
-usfp_usa_postreconstruction.15.f: """"
-usfp_usa_postreconstruction.15.a: ""
-usfp_usa_postreconstruction.15.b: ""
+usfp_usa_postreconstruction.15.d: "With the triumph of Reconstruction, many $usfp_afro_american_culture_plural$ who had previously fled slavery in the South are now choosing to return to their former homes."
+usfp_usa_postreconstruction.15.f: "After a long and anxious journey from Canada, the man could only hope that the stories of the new [SCOPE.sState('great_return_target_1').GetCityHubName] were true. He found himself in a changed city, one where men and women of both races held their heads high in the street, where new black-owned businesses were opening up on every corner. When he escaped [SCOPE.sState('great_return_target_1').GetNameNoFormatting], he thought he'd never return, but now he could make a life here."
+usfp_usa_postreconstruction.15.a: "[SCOPE.sState('great_return_target_3').GetStateRegion.GetStrategicRegion.GetName] is finally a true $usfp_afro_american_culture$ homeland."
+usfp_usa_postreconstruction.15.b: "[SCOPE.sState('great_return_target_3').GetName] has great prospects."
 
 usfp_usa_postreconstruction.16.t: "[SCOPE.sCharacter('assassination_target').GetFullName] Attacked by Klansmen!"
-usfp_usa_postreconstruction.16.d: ""
-usfp_usa_postreconstruction.16.f: """"
-usfp_usa_postreconstruction.16.a: ""
-usfp_usa_postreconstruction.16.b: ""
+usfp_usa_postreconstruction.16.d: "A gang of disguised Klansmen has viciously attacked the home of [SCOPE.sCharacter('assassination_target').GetFullName], shooting [SCOPE.sCharacter('assassination_target').GetHerHim] and several members of [SCOPE.sCharacter('assassination_target').GetHerHis] family! The attackers set [SCOPE.sCharacter('assassination_target').GetHerHis] house alight and left behind a warning to anyone else who dares oppose the $movement_usfp_neoconfederate$."
+usfp_usa_postreconstruction.16.f: ""The Anglo Saxon planted civilization on this continent and wherever this race has been in conflict with another race, it has asserted its supremacy and either conquered or exterminated the foe. This great race has carried the Bible in one hand and the sword in the other. Resist our march of progress and civilization and we will wipe you off the face of the earth."" #William A Guthrie
+usfp_usa_postreconstruction.16.a: "We will not be cowed by supremacist threats."
+usfp_usa_postreconstruction.16.b: "They make a compelling argument..."
 
 usfp_usa_postreconstruction.17.t: "$usfp_dixie_culture$ Redoubt"
-usfp_usa_postreconstruction.17.d: ""
-usfp_usa_postreconstruction.17.f: """"
-usfp_usa_postreconstruction.17.a: ""
-usfp_usa_postreconstruction.17.b: ""
+usfp_usa_postreconstruction.17.d: "Groups of former Redeemers, disillusioned by their failures in the South, have organized an exodus to the far West. They have chosen [SCOPE.sState('dixie_redoubt_target').GetName] to be the site of a new, more racially pure $usfp_dixie_culture$ [concept_homeland]."
+usfp_usa_postreconstruction.17.f: "Belle didn't quite understand why her family had to leave. She liked Georgia, she liked the other kids she would play with, but her father was always angry these days. Said he couldn't stand to raise his family here any more. So Belle got up on the back of her family's wagon and waved goodbye to her friends, as she watched her home recede into the distance."
+usfp_usa_postreconstruction.17.a: "They'll have to carry their hatred with them."
+usfp_usa_postreconstruction.17.b: "They'd best not stop until they hit the Pacific."
 
 usfp_usa_postreconstruction.18.t: "A Silent Parade"
-usfp_usa_postreconstruction.18.d: ""
-usfp_usa_postreconstruction.18.f: """"
-usfp_usa_postreconstruction.18.a: ""
-usfp_usa_postreconstruction.18.b: ""
+usfp_usa_postreconstruction.18.d: "Supporters of the [SCOPE.sPoliticalMovement('afro_american_movement').GetName] have organized a march through [SCOPE.sState('new_york_scope').GetCityHubName] in response to the persistent and ongoing violence against $usfp_afro_american_culture_plural$. Over ten thousand marchers walk in complete silence through the streets, bearing signs and fliers demanding federal action against lynching."
+usfp_usa_postreconstruction.18.f: ""We march because we want to bring the murderers of our brothers, sisters and innocent children to justice. We march because we are thoroughly opposed to Jim Crow cars, segregation, discrimination, disfranchisement, lynching, and the host of evils that are forced on us. We march because we want our children to live in a better land and enjoy fairer conditions than have fallen to our lot."" #Why We March leaflet
+usfp_usa_postreconstruction.18.a: "This is not for the federal government to decide."
+usfp_usa_postreconstruction.18.b: "We must have a nationwide anti-lynching law."
 
 
 

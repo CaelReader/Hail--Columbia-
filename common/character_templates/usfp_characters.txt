@@ -991,3 +991,49 @@ usfp_james_weldon_johnson = {
         chance = 50
     }
 }
+
+#USFP: Ida B Wells, Afro-American Journalist and NAACP leader
+usfp_ida_b_wells = {
+    first_name = Ida
+    last_name = Wells
+    #dna
+    historical = yes
+    birth_date = 1862.7.16
+    culture = cu:afro_american
+    religion = rel:protestant
+    female = yes
+    interest_group = ig_intelligentsia
+    ideology = ideology_humanitarian #anti-racist and feminist
+    traits = {
+        persistent
+        literary
+        inspirational_orator
+        direct
+    } 
+    agitator_usage = {
+        country_trigger = { 
+            OR = {
+                c:USA ?= this
+                c:ASA ?= this 
+            } 
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_intelligentsia
+         }
+        earliest_usage_date = 1892.1.1
+        latest_usage_date = 1930.1.1
+        chance = 75
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:ASA ?= this
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+         }
+        earliest_usage_date = 1892.1.1
+        latest_usage_date = 1930.1.1
+        chance = 50
+    }
+}

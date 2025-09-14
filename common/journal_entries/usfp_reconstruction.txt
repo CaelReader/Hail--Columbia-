@@ -39,9 +39,6 @@ usfp_reconstruction_long = {
 		}
 	}
 
-	fail = {
-		usfp_is_afro_american_discriminated = yes
-	}
 	complete = {
 		custom_tooltip = {
 			text = usfp_long_reconstruction_complete_tt
@@ -73,4 +70,10 @@ usfp_reconstruction_long = {
 		}
 	}
 
+	invalid = {
+		culture_percent_country = {
+			target = cu:afro_american
+			value = 0
+		}
+	}
 }

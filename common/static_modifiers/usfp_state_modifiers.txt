@@ -71,6 +71,7 @@ usfp_deep_south_modifier = {
 	building_group_bg_agriculture_allowed_collectivization_add = -0.35
 	building_nationalization_radicals_mult = 2.00
 	building_nationalization_cost_mult = 0.50
+	state_assimilation_mult = -0.50
 }
 
 usfp_upper_south_modifier = {
@@ -79,6 +80,7 @@ usfp_upper_south_modifier = {
 	building_group_bg_agriculture_allowed_collectivization_add = -0.15
 	building_nationalization_radicals_mult = 1.00
 	building_nationalization_cost_mult = 0.25
+	state_assimilation_mult = -0.25
 }
 
 usfp_emigrant_aid_company = {
@@ -112,6 +114,7 @@ usfp_jim_crow = {
 	interest_group_ig_landowners_pol_str_mult = 0.20
 	state_afro_american_standard_of_living_add = -2
 	state_migration_pull_mult = -0.20
+	state_assimilation_mult = -0.90
 }
 
 usfp_oregon_migration = {
@@ -283,6 +286,7 @@ usfp_state_race_riot_aftermath_modifier = {
 	state_loyalism_increases_second_rate_citizen_mult = -0.20
 	state_migration_pull_mult = -0.10
 	building_urban_center_throughput_add = -0.10
+	state_assimilation_mult = -0.50
 }
 
 usfp_harlem_renaissance_modifier = {

@@ -655,6 +655,7 @@ je_acw_reconstruction = {
 						has_modifier = usfp_upper_south_modifier
 					}
 				}
+				save_scope_as = radical_land_distribution_state
 				if = {
 					limit = {
 						NOT = {
@@ -680,7 +681,7 @@ je_acw_reconstruction = {
 							name = usfp_deep_south_modifier
 							multiplier = {
 								value = 1
-								divide = var:radical_land_distribution
+								divide = scope:radical_land_distribution_state.var:radical_land_distribution
 							}
 						 }
 					}
@@ -693,7 +694,7 @@ je_acw_reconstruction = {
 							name = usfp_upper_south_modifier
 							multiplier = {
 								value = 1
-								divide = var:radical_land_distribution
+								divide = scope:radical_land_distribution_state.var:radical_land_distribution
 							}
 						 }
 					}
@@ -723,7 +724,6 @@ je_acw_reconstruction = {
 						 remove_modifier = usfp_upper_south_modifier
 					}
 					add_modifier = usfp_freedmens_holdings
-					save_scope_as = radical_land_distribution_state
 					root = {
 						usfp_reconstruction_swing_freedmen = yes
 						post_notification = usfp_radical_land_redistribution_complete

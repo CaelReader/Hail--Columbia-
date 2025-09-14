@@ -151,7 +151,7 @@
  made_devils_bargain: "We have made the Devil's Bargain with the South" #NT!
   
  usfp_reconstruction_long: "Long Reconstruction" #NT!
- usfp_reconstruction_long_reason: "While Reconstruction has largely been a success for the Freedmen, racial prejudice remains deeply engrained at all levels of the [ROOT.GetCountry.GetName]. It will take at least a generation before [SCOPE.sCulture('afro_american_culture').GetName] citizens are truly accepted as a core element of the [ROOT.GetCountry.GetAdjectiveNoFormatting] nation." #NT!
+ usfp__reason: "While Reconstruction has largely been a success for the Freedmen, racial prejudice remains deeply engrained at all levels of the [ROOT.GetCountry.GetName]. It will take at least a generation before [SCOPE.sCulture('afro_american_culture').GetName] citizens are truly accepted as a core element of the [ROOT.GetCountry.GetAdjectiveNoFormatting] nation." #NT!
  usfp_long_reconstruction_progress_bar: "Afro-American Integration" #NT!
  usfp_long_reconstruction_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/2000)" #NT!
  afro_american_average_acceptance: "Average [concept_acceptance] of Afro-American [Concept('concept_pop', '$concept_pops$')]" #NT!
