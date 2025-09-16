@@ -558,8 +558,6 @@ usfp_secure_trail_button = {
 	desc = "usfp_secure_trail_button_desc"
 
 	visible = {
-		game_date > 1850.1.1
-		has_global_variable = oregon_trail_mapped
 		NOT = {
 			has_variable = horse_creek_treaty
 		}
@@ -588,6 +586,11 @@ usfp_secure_trail_button = {
 	}
 
 	possible = {
+		custom_tooltip = {
+			text = oregon_tt
+			has_global_variable = oregon_trail_mapped
+		}
+		has_technology_researched = logistics
 		NOT = {
 			has_law = law_type:law_no_colonial_affairs
 		}
@@ -597,7 +600,6 @@ usfp_secure_trail_button = {
 	}
 
 	effect = {
-		set_variable = horse_creek_treaty
 		add_modifier = {
 			name = usfp_frontier_agents_modifier
 			years = 1
@@ -605,6 +607,10 @@ usfp_secure_trail_button = {
 		trigger_event = {
 			id = usfp_manifest_destiny.21
 			years = 1
+		}
+		custom_tooltip = {
+			text = horse_creek_treaty_tt
+			set_variable = horse_creek_treaty
 		}
 	}
 

@@ -596,13 +596,13 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 
 # 6.0 "Douglass"
 ## New Content
-	17 new Post-Reconstruction events including the Great Migration, Red Summer, and the Harlem Renaissance
+	18 new Post-Reconstruction events including the Great Migration, Red Summer, the Harlem Renaissance, and special alt-history events in the wake of a Radical Reconstruction
 	Underground Railroad JE that moves small numbers of slaves out of the South every month
 	4 new USA election events responding to various types of candidates
-	3 new CSA events during the ACW
+	3 new internal CSA events during the ACW
 	Other New Events: Colored Troops, Scalawags
-	New Characters: Booker T Washington, Marcus Garvey, A Philip Randolph, Hubert Harrison, Anthony D Williams, Joseph Jenkins Roberts, James Weldon Johnson
-	USA can try to coax Afro-Americans to settle in africa/central america by decision
+	New Characters: Booker T Washington, Marcus Garvey, A Philip Randolph, Hubert Harrison, Anthony D Williams, Joseph Jenkins Roberts, James Weldon Johnson, James Weldon Johnson, Ida B Wells
+	New African Colonization JE containing some efforts to resettle Afro-Americans to Africa and Central America
 	A Radical Abolitionist government can now unlock a special decree to seize and redistribute former slave plantations, permanently breaking the plantation economy of the South
 ## Updates
 ### A House Divided Updates
@@ -632,6 +632,8 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	Removed Afro-American homeland from Liberia (causing high Afro-american mortality as was historical)
 	Liberia no longer starts in their own market
 ### Other Updates
+	Secure the Oregon Trail button is now visible from the start to indicate to the player that it's a goal to progress towards. It also now only requires the Logistics tech rather than year 1850+.
+	Added tooltip explaining the relationship between Manifest Destiny and the Treaty of G-H
 	DuPont can now produce High-grade Explosives
 	The Columbia River now adds +30% logging throughput
 	Manifest Destiny now begins to decay over time starting in 1900

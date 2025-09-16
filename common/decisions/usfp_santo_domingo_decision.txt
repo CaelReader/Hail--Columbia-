@@ -1,0 +1,51 @@
+﻿usfp_santo_domingo_annexation_ask = {
+	is_shown = {
+		exists = c:USA
+		c:DOM ?= root
+		OR = {
+			is_subject = no
+			is_subject_of = c:USA
+		}
+		c:USA = {
+			has_law = law_type:law_slavery_banned
+			usfp_is_afro_american_discriminated = no
+			has_journal_entry = usfp_manifest_destiny_main
+		}
+		country_rank < rank_value:major_power
+		NOT = {
+			c:USA = {
+				has_variable = santo_domingo_ask
+			}
+		}
+	}
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		c:USA = {
+			is_diplomatic_play_committed_participant = no
+		}
+		OR = {
+			c:HAI ?= {
+				has_diplomatic_pact = {
+					who = root
+					type = rivalry
+				}
+			}
+			any_political_movement = {
+				political_movement_radicalism > 0.70 
+			}
+			has_modifier = declared_bankruptcy
+		}
+	}
+
+	when_taken = {
+		c:USA = {
+			set_variable = santo_domingo_ask
+			trigger_event = usfp_usa_colonization.1
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+}

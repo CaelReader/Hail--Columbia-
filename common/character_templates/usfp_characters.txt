@@ -949,7 +949,7 @@ usfp_hubert_harrison = {
 usfp_james_weldon_johnson = {
     first_name = James
     last_name = Johnson
-    #dna
+    dna = usfp_james_weldon_johnson
     historical = yes
     birth_date = 1871.6.17
     culture = cu:afro_american
@@ -996,7 +996,7 @@ usfp_james_weldon_johnson = {
 usfp_ida_b_wells = {
     first_name = Ida
     last_name = Wells
-    #dna
+    dna = usfp_ida_b_wells
     historical = yes
     birth_date = 1862.7.16
     culture = cu:afro_american
@@ -1022,7 +1022,7 @@ usfp_ida_b_wells = {
             is_interest_group_type = ig_intelligentsia
          }
         earliest_usage_date = 1892.1.1
-        latest_usage_date = 1930.1.1
+        latest_usage_date = 1928.1.1
         chance = 75
     }
     interest_group_leader_usage = {
@@ -1033,7 +1033,7 @@ usfp_ida_b_wells = {
             is_interest_group_type = ig_intelligentsia
          }
         earliest_usage_date = 1892.1.1
-        latest_usage_date = 1930.1.1
+        latest_usage_date = 1928.1.1
         chance = 50
     }
 }

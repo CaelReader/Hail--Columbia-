@@ -248,6 +248,24 @@ usfp_acw.13.f: ""The Mexican Nation, which has had its will strangled and its vo
 usfp_acw.13.a: "We cannot stop them."
 usfp_acw.13.b: "Stop them!"
 
+usfp_acw.14.t: "King Cotton"
+usfp_acw.14.d: "In an attempt to coerce the European powers into supporting our cause, exporters across the [ROOT.GetCountry.GetName] have almost completely shut down the cotton trade, some even going so far as to burn cotton bales to prevent their sale."
+usfp_acw.14.f: ""What would happen if no cotton were furnished for three years? Old England would topple headlong and carry the whole civilized world with her. No, you dare not make war on cotton. No power on earth dares to make war upon it. Cotton is king."" #James Hammond
+usfp_acw.14.a: "Surely Europe will not find alternative sources of cotton."
+usfp_acw.14.b: "The economy, you fools!"
+
+usfp_acw.15.t: "Servile Insurrection"
+usfp_acw.15.d: "With the [SCOPE.sCountry('usa_scope').GetName] declaring a general emancipation of the slaves, our economy has been plunged into chaos. Scores of enslaved plantation workers have begun to make for Union lines, while others have taken the opportunity to revolt and occupy the homes of their masters who are off fighting the war."
+usfp_acw.15.f: ""I do order and declare that all persons held as slaves within said designated States, and parts of States, are, and henceforward shall be free... And I further declare and make known, that such persons of suitable condition, will be received into the armed service of the United States... And upon this act, sincerely believed to be an act of justice, warranted by the Constitution, upon military necessity, I invoke the considerate judgment of mankind, and the gracious favor of Almighty God."" #Emancipation Proclamation
+usfp_acw.15.a: "We need to win this war, and fast!"
+usfp_acw.15.b: "Unleash the slave patrols!"
+
+usfp_acw.16.t: "State's Rights"
+usfp_acw.16.d: "Seemingly ignorant of the looming Union threat to our way of life, the government of the [ROOT.GetCountry.GetName] has become mired in petty factionalism and parochialism, with individual state governments frustrating our efforts to collect the taxes we need to finance the war."
+usfp_acw.16.f: ""Our Government, born of the spirit of freedom and of the equality and independence of the States, could not have survived a selfish or jealous disposition, making each only careful of its own interest or safety. The fate of the Confederacy, under the blessing of Divine Providence, depends upon the harmony, energy, and unity of the States."" #Jefferson Davis
+usfp_acw.16.a: "We just need to hold things together until peace."
+usfp_acw.16.b: "Whip the states into line!"
+
 usfp_acw.17.t: "Brother Against Brother"
 usfp_acw.17.d: "While many in the [ROOT.GetCountry.GetName] had hoped for the Civil War to come to a swift and negotiated conclusion, it is clear now that those hopes were mere fancy. A year of brutal fighting has hardened the hearts of [GetCulture('yankee').GetName] and [GetCulture('dixie').GetName] alike, and instilled a determination in both sides to fight it out to the bitter end."
 usfp_acw.17.fusa: ""We can never end this war till we make common cause with the negro, arm him, and by a combination of terror and extermination, destroy the race of slaveholders on this continent. I know this will be a terrible course — bloody and horrible. But by what sort of cataclysm can anyone expect the two hundred years of torture and wrong to be closed? To the hands of the North have been committed the sword and flame of avenging justice. With knife and cautery must we pursue this cancer to all its ramifications, unmindful of the writhing and groans of the victim. Our National Life and the hopes of the ages are tied to the thoroughness of our work."" #Rutland Herald, 1862

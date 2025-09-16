@@ -783,3 +783,27 @@ je_usfp_underground_railroad = {
 	custom_completion_header = je_usfp_underground_railroad_complete
 
 }
+
+je_usfp_afro_american_colonization = {
+	icon = "gfx/interface/icons/law_icons/colonial_resettlement.dds"
+
+	group = je_group_usa_american_civil_war
+
+	should_be_pinned_by_default = yes
+
+	immediate = {
+		c:LIB = {
+			save_scope_as = liberia_scope
+		}
+	}
+	
+	scripted_button = usfp_promote_afro_american_migration_africa
+	scripted_button = usfp_promote_afro_american_migration_south_america
+
+	fail = {
+		has_law = law_type:law_slavery_banned
+		usfp_is_afro_american_discriminated = no
+	}
+	custom_failure_header = je_usfp_afro_american_colonization_fail
+
+}

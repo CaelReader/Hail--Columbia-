@@ -1,13 +1,138 @@
 ﻿namespace = usfp_usa_colonization
 ###### Hail, Columbia! by CaelReader ######
-#American Colonization Society introduction
 #Santo Domingo asks for annexation
+usfp_usa_colonization.1 = {
+	type = country_event
+	placement = scope:santo_domingo_scope.capital
+	duration = 3
+
+	title = usfp_usa_colonization.1.t
+	desc = usfp_usa_colonization.1.d
+	flavor = usfp_usa_colonization.1.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "africa_construction_colony"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/invention_icons/colonization.dds"
+
+	trigger = {
+		#decision-spawned
+	}
+
+	immediate = {
+		c:DOM = {
+			save_scope_as = santo_domingo_scope
+		}
+	}
+
+	#annex
+	option = {
+		name = usfp_usa_colonization.1.a
+		trigger = {
+			custom_tooltip = {
+				text = enough_manifest_destiny
+				var:manifest_destiny_var >= 4
+			}
+		}
+		usfp_manifest_more_destiny_low_effect = yes
+		annex = c:DOM
+		every_interest_group = {
+			limit = {
+				OR = {
+					law_stance = {
+						law = law_type:law_migration_controls
+						value > neutral
+					}
+				}
+			}
+			add_modifier = {
+				name = usfp_dominicans_arent_white_modifier
+				years = 5
+			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_powerful = yes
+						is_in_government = yes
+						leader = {
+							has_ideology = ideology:ideology_usfp_abolitionist_radical
+						}
+					}
+				}
+				add = 50
+			}
+		}
+	}
+
+	#puppet
+	option = {
+		name = usfp_usa_colonization.1.b
+		trigger = {
+			custom_tooltip = {
+				text = enough_manifest_destiny
+				var:manifest_destiny_var >= 3
+			}
+		}
+		create_diplomatic_pact = {
+			country = c:DOM
+			type = puppet
+		}
+		c:DOM = {
+			create_political_lobby = {
+				type = lobby_pro_overlord
+				target = c:USA
+				add_interest_group = c:DOM.ruler.interest_group
+			}
+		}
+		change_relations = {
+			country = c:DOM
+			value = 50
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					law_stance = {
+						law = law_type:law_migration_controls
+						value > neutral
+					}
+				}
+			}
+			add_modifier = {
+				name = usfp_dominicans_arent_white_modifier
+				years = 5
+				multiplier = 0.5
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	#reject
+	option = {
+		name = usfp_usa_colonization.1.c
+		default_option = yes
+		create_political_lobby = {
+			type = lobby_pro_country
+			target = c:DOM
+			add_interest_group = ig:ig_intelligentsia
+		}
+		change_relations = {
+			country = c:DOM
+			value = -15
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
 #Haiti Opportunity
 #HAI: Allow afro-americans?
 #Haiti Accepts
 #Haiti colony failure
 #Linconia Opportunity
-#Central American Countries: Linconia proposal
-#Linconia Rejected
-#Linconia settlement within Panama
-#Linconia founded as independent

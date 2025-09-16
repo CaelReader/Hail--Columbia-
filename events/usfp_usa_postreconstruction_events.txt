@@ -1246,6 +1246,9 @@ usfp_usa_postreconstruction.8 = {
 			usfp_is_valid_antiblack_riot_state = yes
 		}
 		usfp_any_racist_movement_has_some_support = yes
+		NOT = {
+			has_variable = anti_lynching
+		}
 	}
 
 	immediate = {
@@ -3008,6 +3011,7 @@ usfp_usa_postreconstruction.18 = {
 		usfp_long_reconstruction_add_progress = {
 			VALUE = 20
 		}
+		set_variable = anti_lynching
 		ai_chance = {
 			base = 0
 			modifier = {

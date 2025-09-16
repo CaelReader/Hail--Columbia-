@@ -374,3 +374,8 @@ usfp_mexicans_arent_white_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	interest_group_approval_add = -3
 }
+
+usfp_dominicans_arent_white_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	interest_group_approval_add = -4
+}
