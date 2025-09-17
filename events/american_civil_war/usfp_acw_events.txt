@@ -1328,17 +1328,21 @@ usfp_acw.10 = {
 
 # 	immediate = {
 # 		set_variable = had_mexican_rebellion
-# 		remove_diplomatic_pact = {
-# 			country = c:MEX
-# 			type = dominion
-# 		}
-# 		remove_diplomatic_pact = {
-# 			country = c:MEX
-# 			type = puppet
-# 		}
+# 		# remove_diplomatic_pact = {
+# 		# 	country = c:MEX
+# 		# 	type = dominion
+# 		# }
+# 		# remove_diplomatic_pact = {
+# 		# 	country = c:MEX
+# 		# 	type = puppet
+# 		# }
+# 		# create_diplomatic_pact = {
+# 		# 	country = c:MEX
+# 		# 	type = protectorate
+# 		# }
 # 		create_diplomatic_pact = {
 # 			country = c:MEX
-# 			type = protectorate
+# 			type = exempt_from_service
 # 		}
 # 		c:MEX = {
 # 			save_scope_as = mexico_scope
@@ -1797,17 +1801,6 @@ usfp_acw.17 = {
 		}
 	}
 
-	immediate = {
-		if = {
-			limit = { 
-				root = c:USA
-			}
-			c:CSA = {
-				trigger_event = usfp_acw.17
-			}
-		}
-	}
-
 	#to the death
 	option = {
 		name = usfp_acw.17.a
@@ -1840,9 +1833,9 @@ usfp_acw.18 = {
 	type = country_event
 	placement = root
 
-	title = usfp_acw.18.t
-	desc = usfp_acw.18.d
-	flavor = usfp_acw.18.f
+	title =usfp_acw.17.t
+	desc = usfp_acw.17.d
+	flavor = usfp_acw.17.fcsa
 	dlc = dlc_usfp
 	event_image = {
 		video = "europenorthamerica_american_civil_war"
@@ -1888,7 +1881,7 @@ usfp_acw.18 = {
 
 	#to the death
 	option = {
-		name = usfp_acw.18.a
+		name = usfp_acw.17.a
 		default_option = yes
 		je:je_acw_war_csa = {
 			add_modifier = usfp_acw_csa_modifier

@@ -600,7 +600,7 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	Underground Railroad JE that moves small numbers of slaves out of the South every month
 	4 new USA election events responding to various types of candidates
 	3 new internal CSA events during the ACW
-	Other New Events: Colored Troops, Scalawags
+	Other New Events: Colored Troops, Scalawags, Disunionism, Wide Awake, Cross-Atlantic Endorsements,
 	New Characters: Booker T Washington, Marcus Garvey, A Philip Randolph, Hubert Harrison, Anthony D Williams, Joseph Jenkins Roberts, James Weldon Johnson, James Weldon Johnson, Ida B Wells
 	New African Colonization JE containing some efforts to resettle Afro-Americans to Africa and Central America
 	A Radical Abolitionist government can now unlock a special decree to seize and redistribute former slave plantations, permanently breaking the plantation economy of the South
@@ -615,6 +615,7 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	Removed CSA's war support on battle defeats (replaced by Brother Against Brother event)
 	CSA now spawns with Legacy Slavery instead of Slave Trade
 	The Missouri Compromise now only suppresses the activism of the Abolitionist and Pro-Slavery movements, rather than all movements
+	Annexing Texas now upsets Abolitionists
 ### Reconstruction Updates	
 	Updated Reconstruction Progress Bar into a double-sided scripted bar
 	New Northern Political Will bar for Reconstruction that decays over time

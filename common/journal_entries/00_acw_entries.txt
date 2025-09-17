@@ -223,7 +223,8 @@ je_acw_countdown = {
 			1000 = usfp_a_house_divided.19 #Frederick Douglass spawn event
 			200 = usfp_bleeding_kansas.6 #Harper's Ferry
 			1 = usfp_bleeding_kansas.7 #Harper's Ferry (successful)
-
+			300 = usfp_a_house_divided.20 #Disunionism
+			300 = usfp_a_house_divided.22 #Wide Awake
 		}
 		events = {
 			acw_events.3 # The Wilmot Proviso

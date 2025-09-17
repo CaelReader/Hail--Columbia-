@@ -1859,16 +1859,16 @@ usfp_a_house_divided.19 = {
 usfp_a_house_divided.20 = {
 	type = country_event
 	placement = root
-	cooldown = { years = 300 }
+	cooldown = { days = never_fire_again_modifier_time } #Once
 	title = usfp_a_house_divided.20.t
 	desc = usfp_a_house_divided.20.d
 	flavor = usfp_a_house_divided.20.f
 	dlc = dlc_usfp
-	event_image = {
-		video = "southamerica_election"
-	}
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:garrison_scope
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
@@ -1902,6 +1902,7 @@ usfp_a_house_divided.20 = {
 	#lose momentum
 	option = {
 		name = usfp_a_house_divided.20.a
+		default_option = yes
 		scope:whig_scope = {
 			add_momentum = momentum_medium_decrease
 		}
@@ -1914,7 +1915,13 @@ usfp_a_house_divided.20 = {
 				years = 10
 			}
 		}
-		default_option = yes
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+		ai_chance = {
+			base = 100
+		}
 	}
 
 	option = {
@@ -1923,8 +1930,11 @@ usfp_a_house_divided.20 = {
 			add_momentum = momentum_small_decrease
 		}
 		add_radicals = {
-			value = small_radicals
+			value = medium_radicals
 			interest_group = ig:ig_intelligentsia
+		}
+		ai_chance = {
+			base = 0
 		}
 	}
 }
@@ -1978,15 +1988,278 @@ usfp_a_house_divided.21 = {
 				}
 			}
 			custom_tooltip = {
-				text = usfp_a_house_divided.21.a.tt
+				text = usfp_a_house_divided.21.a.tt2
 			}
 		} else = {
 			custom_tooltip = {
-				text = usfp_a_house_divided.21.a.tt2
+				text = usfp_a_house_divided.21.a.tt
 			}
 		}
 
 	}
 }
 #Wide Awakes
+usfp_a_house_divided.22 = {
+	type = country_event
+	placement = root
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	title = usfp_a_house_divided.22.t
+	desc = usfp_a_house_divided.22.d
+	flavor = usfp_a_house_divided.22.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "europenorthamerica_political_extremism"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+
+	trigger = {
+		any_interest_group = {
+			leader = {
+				has_template = usa_lincoln_character_template
+			}
+			has_party = yes
+		}
+		in_election_campaign = yes
+		any_political_movement = {
+			is_political_movement_type = movement_pro_slavery
+		}
+		any_political_movement = {
+			is_political_movement_type = movement_anti_slavery
+		}	
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_template = usa_lincoln_character_template
+			}
+			save_scope_as = real_abraham_lincoln_scope
+			interest_group.party = {
+				save_scope_as = lincoln_party
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_pro_slavery
+			}
+			save_scope_as = pro_slavery_movement
+		}
+	}
+
+	#woke
+	option = {
+		name = usfp_a_house_divided.22.a
+		default_option = yes
+		scope:lincoln_party = {
+			add_momentum = momentum_medium
+		}
+		add_modifier = {
+			name = usfp_wide_awake_volunteers_modifier
+			years = 2
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			add_modifier = {
+				name = usfp_wide_awake_abolitionist_modifier
+				years = 2
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_pro_slavery
+			}
+			add_modifier = {
+				name = usfp_wide_awake_pro_slavery_modifier
+				years = 2
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#broke
+	option = {
+		name = usfp_a_house_divided.22.b
+		add_radicals = {
+			value = medium_radicals
+			interest_group = scope:real_abraham_lincoln_scope.interest_group
+		}
+		every_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_anti_slavery
+					is_political_movement_type = movement_pro_slavery
+				}
+			}
+			add_modifier = {
+				name = usfp_wide_awake_pro_slavery_modifier
+				years = 2
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
 #Cross-Atlantic Abolitionism
+usfp_a_house_divided.23 = {
+	type = country_event
+	placement = root
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	title = usfp_a_house_divided.23.t
+	desc = usfp_a_house_divided.23.d
+	flavor = usfp_a_house_divided.23.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 3
+
+	trigger = {
+		c:GBR ?= {
+			relations:root >= relations_threshold:cordial
+			any_political_movement = {
+				is_political_movement_type = movement_labor
+			}
+		}
+		has_technology_researched = labor_movement
+	}
+
+	immediate = {
+		c:GBR = {
+			save_scope_as = britain_scope
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_labor
+				}
+				save_scope_as = british_labor_movement
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			save_scope_as = abolitionist_movement
+		}
+	}
+
+	#cool
+	option = {
+		name = usfp_a_house_divided.23.a
+		default_option = yes
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			add_modifier = {
+				name = usfp_cross_atlantic_correspondence_movement_modifier
+				years = 5
+			}
+		}
+		c:GBR = {
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_labor
+				}
+				add_modifier = {
+					name = usfp_cross_atlantic_correspondence_movement_modifier
+					years = 5
+				}
+			}
+		}
+		ig:ig_intelligentsia = {
+			save_scope_as = intelligentsia_ig
+		}
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_pro_country
+				target = c:GBR
+			}
+			add_lobby_member = scope:intelligentsia_ig
+			change_appeasement = {
+				amount = 2
+				factor = appeasement_lobby_gain
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#foreigners!?
+	option = {
+		name = usfp_a_house_divided.23.b
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_pro_country
+				target = c:GBR
+			}
+			change_appeasement = {
+				amount = -2
+				factor = appeasement_lobby_loss
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	#why not our own labor movement?
+	option = {
+		name = usfp_a_house_divided.23.c
+		trigger = {
+			any_political_movement = {
+				is_political_movement_type = movement_labor
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			add_modifier = {
+				name = usfp_cross_atlantic_correspondence_movement_modifier
+				years = 5
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_labor
+			}
+			add_modifier = {
+				name = usfp_cross_atlantic_correspondence_movement_modifier
+				years = 5
+			}
+		}
+		c:GBR = {
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_labor
+				}
+				add_modifier = {
+					name = usfp_cross_atlantic_correspondence_movement_modifier
+					years = 5
+				}
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}

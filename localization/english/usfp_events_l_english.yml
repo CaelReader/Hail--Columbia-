@@ -105,6 +105,32 @@ usfp_a_house_divided.19.f: ""In thinking of America, I sometimes find myself adm
 usfp_a_house_divided.19.a: "His agitation is a guiding light to liberty."
 usfp_a_house_divided.19.b: "His agitation is a threat to the Union!"
 
+usfp_a_house_divided.20.t: "Disunionism"
+usfp_a_house_divided.20.d: "[SCOPE.sCharacter('garrison_scope').GetFullName] and his followers have publicly denounced the Constitution as an inherently pro-slavery document. They reject a political path to abolition and instead call for a secession of the free states."
+usfp_a_house_divided.20.f: ""The strongest political influence which the Northern voters can wield for the overthrow of slavery is to cease sustaining the existing compact, by withdrawing from the polls, and calmly waiting for the time when a righteous government shall supersede the institutions of tyranny."" #William Lloyd Garrison
+usfp_a_house_divided.20.a: "The [SCOPE.sParty('whig_scope').GetName] won't be happy."
+usfp_a_house_divided.20.b: "We need abolitionists at the polls!"
+
+usfp_a_house_divided.21.t: "The Underground Railroad"
+usfp_a_house_divided.21.d: "As the [SCOPE.sCountry('usa_scope').GetName] remains divided over the issue of [GetLawType('law_slave_trade').GetGroup.GetName], the [GetIdeology('ideology_abolitionist').GetName] network known as the Underground Railroad continues to transport $slaves$ to freedom, including across the border into [ROOT.GetCountry.GetName]."
+usfp_a_house_divided.21.f: ""You see those trees," said the noble hearted captain next morning, pointing to a group in the distance; "they grow on free soil, and as soon as your feet touch that, you're a man. I want to see you go and be a freeman."" #Josiah Henson
+usfp_a_house_divided.21.a: "Freedom is the common cause of all mankind."
+usfp_a_house_divided.21.a.tt: "Until the [SCOPE.sCountry('usa_scope').GetName] abolishes [GetLawType('law_slave_trade').GetGroup.GetName], $usfp_afro_american_culture$ $slaves$ will regularly arrive in our [Concept('concept_state', '$concept_states$')] as [concept_loyalist] $laborers$."
+usfp_a_house_divided.21.a.tt2: "Until the [SCOPE.sCountry('usa_scope').GetName] abolishes [GetLawType('law_slave_trade').GetGroup.GetName], $usfp_afro_american_culture$ $slaves$ will occasionally arrive in our [Concept('concept_state', '$concept_states$')] in [GetStrategicRegion('region_mexico').GetName] or the [GetStrategicRegion('region_caribbean').GetName] as [concept_loyalist] $laborers$."
+
+usfp_a_house_divided.22.t: "Wide Awake"
+usfp_a_house_divided.22.d: "An [GetIdeology('ideology_abolitionist').GetName] youth movement has begun organizing young voters up and down [GetStrategicRegion('region_new_england').GetName] in support of the candidacy of [SCOPE.sCharacter('real_abraham_lincoln_scope').GetFullName]. Adopting military dress and performing grand night marches by torchlight, these 'Wide Awakes' are committed to defending the [SCOPE.sParty('lincoln_party').GetName] against the [SCOPE.sPoliticalMovement('pro_slavery_movement').GetName]."
+usfp_a_house_divided.22.f: ""We the undersigned, do hereby explicitly declare our entire devotion to the Constitution and the Union, our opposition to interference with slavery in the States where it now legally exists, and our unqualified and unalterable determination to resist by all constitutional means its further extension, and pledge ourselves to use all honorable means for the success and triumph of the [SCOPE.sParty('lincoln_party').GetNameNoFormatting] and of the election of its candidates to office."" #The Glorious Wide Awakes,” June 2, 1860
+usfp_a_house_divided.22.a: "God never made a tyrant or a slave."
+usfp_a_house_divided.22.b: "Nothing but a pack of lawless rioters."
+
+usfp_a_house_divided.23.t: "Cross-Atlantic Endorsements"
+usfp_a_house_divided.23.d: "The firebrand rhetoric of the [ROOT.GetCountry.GetAdjective] [SCOPE.sPoliticalMovement('abolitionist_movement').GetName] has begun to inspire the [SCOPE.sCountry('britain_scope').GetAdjective][SCOPE.sPoliticalMovement('british_labor_movement').GetName] to greater action. [SCOPE.sCountry('britain_scope').GetAdjectiveNoFormatting] abolitionists, having banished slavery from their own country, now likewise champion the cause of ending slavery in the [ROOT.GetCountry.GetNameNoFormatting]."
+usfp_a_house_divided.23.f: ""Great God! Is this the Patriot's doom?\nShall they who dare defend the slave,\nBe hurl'd within a prison's gloom?\nTo fit them for an early grave?"" #Chartist Hymn
+usfp_a_house_divided.23.a: "[SCOPE.sCountry('britain_scope').GetAdjective] abolitionists are true champions of freedom."
+usfp_a_house_divided.23.b: "Why should we listen to stodgy Europeans?"
+usfp_a_house_divided.23.c: "We could use some Chartism here at home..."
+
 usfp_bleeding_kansas.1.t: "The New England Emigrant Aid Company"
 usfp_bleeding_kansas.1.d: "An enterprising [SCOPE.sIdeology('abolitionist_scope').GetName] from [SCOPE.sState('massachusetts_scope').GetCityHubName] has established a transportation company with the goal of sending anti-slavery immigrants into [SCOPE.sState('kansas_scope').GetName]. Hundreds of migrants have already signed on, eager to turn [SCOPE.sState('kansas_scope').GetName] into a free state."
 usfp_bleeding_kansas.1.f: ""WANTED: Homesteaders eager to do their patriotic duty in the Kansas Territory. Monetary aid, transportation, information provided to those who wish to see Kansas a properly free and white state.""

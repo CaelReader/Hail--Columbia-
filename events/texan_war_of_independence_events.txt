@@ -162,6 +162,14 @@ texan_war_of_independence.2 = {
 				value = -40
 			}
 		}
+		if = {
+			limit = {
+				NOT = {
+					has_law = law_type:law_slavery_banned
+				}
+			 }
+			usfp_anger_abolitionists_effect = { MULT = 1 }
+		}
 	}
 	option = {
 		name = texan_war_of_independence.2.b
@@ -178,6 +186,14 @@ texan_war_of_independence.2 = {
 				country = ROOT
 				value = -40
 			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_law = law_type:law_slavery_banned
+				}
+			 }
+			usfp_anger_abolitionists_effect = { MULT = 0.5 }
 		}
 	}
 	option = {
