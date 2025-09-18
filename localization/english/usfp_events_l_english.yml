@@ -69,6 +69,8 @@ usfp_a_house_divided.11.a: "[SCOPE.sState('kansas_scope').GetName] will be free 
 usfp_a_house_divided.11.b: "Yankees should mind their own business."
 usfp_a_house_divided.11.c: "This will be decided at the ballot box."
 
+usfp_a_house_divided.12.d: "With years having passed since the passage of [SCOPE.sLaw('slavery_banned_scope').GetName], the [SCOPE.gsInterestGroup('slaver_ig').GetName] have been forced to accept the new economic order. They have instead enacted a regime of racist '[concept_usfp_jim_crow]' laws across the South in an effort to curtail the rights of the now free $usfp_afro_american_culture_plural$."
+
 usfp_a_house_divided.14.t: "Breaking the Compromise"
 usfp_a_house_divided.14.d: "Representatives from across the sectional divide have opposed [SCOPE.sLaw('current_law_scope').GetName] as a breach of the accord between North and South, denouncing it as a danger to national unity."
 usfp_a_house_divided.14.f: ""Maintain the compromise! Stir not up agitation! Give us peace!"" #Same Houston
@@ -820,6 +822,34 @@ usfp_usa_labor.6.d: "A newly published utopian novel by Edward Bellamy portrays 
 usfp_usa_labor.6.f: ""Their misery came, with all your other miseries, from that incapacity for cooperation which followed from the individualism on which your social system was founded, from your inability to perceive that you could make ten times more profit out of your fellow men by uniting with them than by contending with them."" #Edward Bellamy, Looking Backward
 usfp_usa_labor.6.a: "An inspiring vision of utopia."
 usfp_usa_labor.6.b: "A deranged socialist fantasy."
+
+### Election Events ###
+usfp_usa_election.1.t: "Madame [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]?"
+usfp_usa_election.1.d: "Many men and even some women are skeptical that [SCOPE.gsInterestGroup('female_ig').GetLeader.GetFullName] is suitable for the office of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle], on account of her sex."
+usfp_usa_election.1.f: ""The presidency is no place for a woman, it's just common sense. Leadership takes a strong will and a clear head, imagine the catastrophe if [SCOPE.gsInterestGroup('female_ig').GetLeader.GetFullNameNoFormatting] becomes hysterical in the face of a crisis, or worse yet, a war! Would the army even follow her orders? No, women may have gotten the vote, but they should remember their place.""
+usfp_usa_election.1.a: "The electorate just isn't ready for this yet."
+usfp_usa_election.1.b: "[SCOPE.gsInterestGroup('female_ig').GetLeader.GetFullName] would make as fine a [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] as any man!"
+usfp_usa_election.1.c: "Perhaps [SCOPE.gsInterestGroup('female_ig').GetLeader.GetFullName] should step aside."
+
+usfp_usa_election.2.t: "A [SCOPE.gsInterestGroup('nonwhite_ig').GetLeader.GetCulture.GetName] in the White House?"
+usfp_usa_election.2.d: "The [ROOT.GetCountry.GetAdjective] public has balked at the [SCOPE.sParty('nonwhite_party').GetName]'s decision to run a [SCOPE.gsInterestGroup('nonwhite_ig').GetLeader.GetCulture.GetName] candidate for election."
+usfp_usa_election.2.f: ""The [SCOPE.sParty('nonwhite_party').GetNameNoFormatting] must take us for fools. They would place a [SCOPE.gsInterestGroup('nonwhite_ig').GetLeader.GetCulture.GetNameNoFormatting] in the highest office of our white christian country? It's an insult to all American decency.""
+usfp_usa_election.2.a: "The president should reflect the majority."
+usfp_usa_election.2.b: "A [SCOPE.gsInterestGroup('nonwhite_ig').GetLeader.GetCulture.GetName] is an American just like any other citizen!"
+usfp_usa_election.2.c: "Judge not by the color of one's skin!"
+usfp_usa_election.2.e: "Perhaps [SCOPE.gsInterestGroup('nonwhite_ig').GetLeader.GetFullName] should step aside."
+
+usfp_usa_election.3.t: "An Issue of Faith"
+usfp_usa_election.3.d: "Regardless of our official policy of [SCOPE.sLaw('religion_law').GetName], the open [SCOPE.sReligion('nonchristian_religion').GetName] faith of [SCOPE.gsInterestGroup('nonchristian_ig').GetLeader.GetFullName] has provoked outrage from [GetReligion('protestant').GetName] voters."
+usfp_usa_election.3.f: ""This country was founded by providence and guided to its great destiny by the grace of the almighty God! We cannot allow such a wicked heathen as [SCOPE.gsInterestGroup('nonchristian_ig').GetLeader.GetFullNameNoFormatting] to pollute our government with their heretical beliefs!""
+usfp_usa_election.3.a: "The voters must choose with their conscience."
+usfp_usa_election.3.b: "The [ROOT.GetCountry.GetName] is not, in any sense, a Christian nation."
+usfp_usa_election.3.c: "A [SCOPE.sReligion('nonchristian_religion').GetName] is a good Christian like any [GetReligion('protestant').GetName]!"
+usfp_usa_election.3.e: "Perhaps [SCOPE.gsInterestGroup('nonchristian_ig').GetLeader.GetFullName] should step aside."
+usfp_usa_election.3.h: "A public confession is in order."
+usfp_usa_election.3.j: "The [SCOPE.sReligion('nonchristian_religion').GetName] church must be accepted as a legitimate form of Christianity."
+
+### Mormon Events ###
 
 usfp_mormon.1.t: "The [SCOPE.sState('missouri_scope').GetName] [SCOPE.sReligion('mormonism_scope').GetName] War"
 usfp_mormon.1.d: "Tensions in [SCOPE.sState('missouri_scope').GetName] between mainstream Protestants and an eccentric sect calling themselves the Latter Day Saints have boiled over into open violence. Protestant vigilantes have committed massacres and clashed with [SCOPE.sReligion('mormonism_scope').GetName] militias. After running afoul of state troopers, the entire sect has now been forced out of their homes by the local government, fleeing north to [SCOPE.sState('illinois_scope').GetName]."

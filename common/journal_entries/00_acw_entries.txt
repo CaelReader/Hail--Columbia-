@@ -225,6 +225,7 @@ je_acw_countdown = {
 			1 = usfp_bleeding_kansas.7 #Harper's Ferry (successful)
 			300 = usfp_a_house_divided.20 #Disunionism
 			300 = usfp_a_house_divided.22 #Wide Awake
+			100 = usfp_a_house_divided.23 #Cross-Atlantic Abolitionism
 		}
 		events = {
 			acw_events.3 # The Wilmot Proviso
@@ -673,32 +674,32 @@ je_acw_reconstruction = {
 						has_variable = radical_land_distribution
 						var:radical_land_distribution < 4
 					 }
-					if = {
-						limit = {
-							has_modifier = usfp_deep_south_modifier
-						 }
-						 remove_modifier = usfp_deep_south_modifier
-						 add_modifier = {
-							name = usfp_deep_south_modifier
-							multiplier = {
-								value = 1
-								divide = scope:radical_land_distribution_state.var:radical_land_distribution
-							}
-						 }
-					}
-					if = {
-						limit = {
-							has_modifier = usfp_upper_south_modifier
-						 }
-						 remove_modifier = usfp_upper_south_modifier
-						 add_modifier = {
-							name = usfp_upper_south_modifier
-							multiplier = {
-								value = 1
-								divide = scope:radical_land_distribution_state.var:radical_land_distribution
-							}
-						 }
-					}
+					# if = {
+					# 	limit = {
+					# 		has_modifier = usfp_deep_south_modifier
+					# 	 }
+					# 	 remove_modifier = usfp_deep_south_modifier
+					# 	 add_modifier = {
+					# 		name = usfp_deep_south_modifier
+					# 		multiplier = {
+					# 			value = 1
+					# 			divide = scope:radical_land_distribution_state.var:radical_land_distribution
+					# 		}
+					# 	 }
+					# }
+					# if = {
+					# 	limit = {
+					# 		has_modifier = usfp_upper_south_modifier
+					# 	 }
+					# 	 remove_modifier = usfp_upper_south_modifier
+					# 	 add_modifier = {
+					# 		name = usfp_upper_south_modifier
+					# 		multiplier = {
+					# 			value = 1
+					# 			divide = scope:radical_land_distribution_state.var:radical_land_distribution
+					# 		}
+					# 	 }
+					# }
 					change_variable = {
 						name = radical_land_distribution
 						add = 1

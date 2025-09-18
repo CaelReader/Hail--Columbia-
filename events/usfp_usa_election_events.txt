@@ -10,7 +10,7 @@ usfp_usa_election.1 = {
 	flavor = usfp_usa_election.1.f
 	dlc = dlc_usfp
 	event_image = {
-		video = "southamerica_election"
+		video = "europenorthamerica_sufferage"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -66,6 +66,9 @@ usfp_usa_election.1 = {
 			add_momentum = momentum_medium_decrease
 		}
 		default_option = yes
+		ai_chance = {
+			base = 25
+		}
 	}
 	#lose less momentum
 	option = {
@@ -120,6 +123,50 @@ usfp_usa_election.1 = {
 					name = usfp_a_womans_place_positive_modifier
 					years = 4
 					is_decaying = yes
+				}
+			}
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
+	#reconsider candidate
+	option = {
+		name = usfp_usa_election.1.c
+		scope:female_ig = {
+			party = {
+				add_momentum = momentum_small_decrease
+			}
+			leader = {
+				remove_as_interest_group_leader = yes
+				add_character_role = agitator
+			}
+			add_modifier = {
+				name = usfp_changing_nominee_ig_modifier
+				years = 2
+			}
+		}
+		if = {
+			limit = { 
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_feminist
+						is_political_movement_type = movement_anarchist
+						is_political_movement_type = movement_usfp_progressive
+					}
+				}
+			}
+			every_political_movement = {
+				limit = {
+					OR = {
+						is_political_movement_type = movement_feminist
+						is_political_movement_type = movement_anarchist
+						is_political_movement_type = movement_usfp_progressive
+					}
+				}
+				add_modifier = {
+					name = usfp_feminist_movement_angered_modifier
+					years = 4
 				}
 			}
 		}
@@ -207,9 +254,7 @@ usfp_usa_election.2 = {
 				order_by = ig_clout
 				save_scope_as = nonwhite_ig
 			}
-		}
-		scope:nonwhite_ig = {
-			add_modifier = ig_gaining_support
+			save_scope_as = nonwhite_party
 		}
 	}
 
@@ -284,6 +329,7 @@ usfp_usa_election.2 = {
 				}
 			}
 		}
+		highlighted_option = yes
 		scope:nonwhite_ig.party = {
 			add_momentum = momentum_large_decrease
 		}
@@ -315,6 +361,369 @@ usfp_usa_election.2 = {
 			ordered_political_movement = {
 				limit = {
 					culture ?= scope:nonwhite_ig.leader.culture
+				}
+				order_by = political_movement_support
+				add_modifier = {
+					name = usfp_peoples_house_positive_modifier
+					years = 4
+				}
+			}
+		}
+	}
+	#reconsider candidate
+	option = {
+		name = usfp_usa_election.2.e
+		scope:nonwhite_ig = {
+			party = {
+				add_momentum = momentum_small_decrease
+			}
+			leader = {
+				remove_as_interest_group_leader = yes
+				add_character_role = agitator
+			}
+			add_modifier = {
+				name = usfp_changing_nominee_ig_modifier
+				years = 2
+			}
+		}
+		if = {
+			limit = { 
+				any_political_movement = {
+					culture ?= scope:nonwhite_ig.leader.culture
+				}
+			}
+			ordered_political_movement = {
+				limit = {
+					culture ?= scope:nonwhite_ig.leader.culture
+				}
+				order_by = political_movement_support
+				add_modifier = {
+					name = usfp_movement_agitated_by_racism_modifier
+					years = 4
+				}
+			}
+		}
+	}
+
+}
+
+#Non-Protestant Candidate
+usfp_usa_election.3 = {
+	type = country_event
+	placement = root
+	cooldown = { years = 5 }
+	title = usfp_usa_election.3.t
+	desc = usfp_usa_election.3.d
+	flavor = usfp_usa_election.3.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "southamerica_christianity"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	duration = 3
+
+	trigger = {
+		usfp_country_is_american = yes
+		in_election_campaign = yes
+		NOT = {
+			has_law = law_type:law_state_atheism
+		}
+		any_active_party = {
+			any_member = {
+				leader = {
+					NOT = {
+						religion = rel:protestant
+					}
+				}
+				save_temporary_scope_as = check_ig
+			}
+			any_member = {
+				NOT = { this = scope:check_ig }
+				ig_clout > scope:check_ig.ig_clout
+				count = 0
+			}
+		}
+	}
+
+	immediate = {
+		random_active_party = {
+			limit = {
+				any_member = {
+					leader = {
+						NOT = {
+							religion = rel:protestant
+						}
+					}
+				}
+			}
+			ordered_member = {
+				limit = {
+						leader = {
+						NOT = {
+							religion = rel:protestant
+						}
+					}
+				}
+				order_by = ig_clout
+				save_scope_as = nonchristian_ig
+			}
+		}
+		scope:nonchristian_ig = {
+			leader = {
+				religion = {
+					save_scope_as = nonchristian_religion
+				}
+			}
+		}
+		if = {
+			limit = { 
+				has_law = law_type:law_usfp_nominal_separation
+			}
+			random_law = {
+				limit = {
+					type = law_type:law_usfp_nominal_separation
+				}
+				save_scope_as = religion_law
+			}
+		}
+		if = {
+			limit = { 
+				has_law = law_type:law_total_separation
+			}
+			random_law = {
+				limit = {
+					type = law_type:law_total_separation
+				}
+				save_scope_as = religion_law
+			}
+		}
+		if = {
+			limit = { 
+				has_law = law_type:law_freedom_of_conscience
+			}
+			random_law = {
+				limit = {
+					type = law_type:law_freedom_of_conscience
+				}
+				save_scope_as = religion_law
+			}
+		}
+	}
+
+	#lose momentum
+	option = {
+		name = usfp_usa_election.3.a
+		trigger = {
+			NOT = {
+				has_law = law_type:law_state_religion
+			}
+			NOT = {
+				scope:nonchristian_religion = rel:catholic
+			}
+		}
+		scope:nonchristian_ig.party = {
+			add_momentum = momentum_medium_decrease
+		}
+		default_option = yes
+	}
+	#lose less momentum
+	option = {
+		name = usfp_usa_election.3.b
+		trigger = {
+			NOT = {
+				has_law = law_type:law_state_religion
+			}
+			NOT = {
+				scope:nonchristian_religion = rel:catholic
+			}
+		}
+		scope:nonchristian_ig.party = {
+			add_momentum = momentum_small_decrease
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_religious_majority
+				}
+			 }
+			 ordered_political_movement = {
+				limit = {
+					is_political_movement_type = movement_religious_majority
+				}
+				order_by = political_movement_support
+				add_modifier = {
+					name = usfp_christian_nation_movement_modifier
+					years = 4
+					is_decaying = yes
+				}
+			}
+		}
+		if = {
+			limit = { 
+				any_political_movement = {
+					religion ?= scope:nonchristian_ig.leader.religion
+				}
+			}
+			ordered_political_movement = {
+				limit = {
+					religion ?= scope:nonchristian_ig.leader.religion
+				}
+				order_by = political_movement_support
+				add_modifier = {
+					name = usfp_peoples_house_positive_modifier
+					years = 4
+				}
+			}
+		}
+	}
+	#catholic
+	option = {
+		name = usfp_usa_election.3.c
+		trigger = {
+			NOT = {
+				has_law = law_type:law_state_religion
+			}
+			scope:nonchristian_religion = rel:catholic
+		}
+		highlighted_option = yes
+		scope:nonchristian_ig.party = {
+			add_momentum = momentum_large_decrease
+		}
+		add_radicals = {
+			value = small_radicals
+			religion = rel:protestant
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_religious_majority
+				}
+			 }
+			 ordered_political_movement = {
+				limit = {
+					is_political_movement_type = movement_religious_majority
+				}
+				order_by = political_movement_support
+				add_modifier = {
+					name = usfp_anti_romanism_movement_modifier
+					years = 4
+					is_decaying = yes
+				}
+			}
+		}
+		if = {
+			limit = { 
+				any_political_movement = {
+					religion ?= scope:nonchristian_religion
+				}
+			}
+			ordered_political_movement = {
+				limit = {
+					religion ?= scope:nonchristian_religion
+				}
+				order_by = political_movement_support
+				add_modifier = {
+					name = usfp_peoples_house_positive_modifier
+					years = 4
+				}
+			}
+		}
+	}
+	#reconsider candidate
+	option = {
+		name = usfp_usa_election.3.e
+		scope:nonchristian_ig = {
+			party = {
+				add_momentum = momentum_small_decrease
+			}
+			leader = {
+				remove_as_interest_group_leader = yes
+				add_character_role = agitator
+			}
+			add_modifier = {
+				name = usfp_changing_nominee_ig_modifier
+				years = 2
+			}
+		}
+		add_radicals = {
+			value = medium_radicals
+			religion = scope:nonchristian_religion
+		}
+	}
+	#convert!
+	option = {
+		name = usfp_usa_election.3.h
+		trigger = {
+			scope:nonchristian_ig.leader = {
+				is_historical = no
+			}
+		}
+		scope:nonchristian_ig = {
+			party = {
+				add_momentum = momentum_small_decrease
+			}
+			leader = {
+				change_character_religion = rel:protestant
+			}
+		}
+		add_radicals = {
+			value = medium_radicals
+			religion = scope:nonchristian_religion
+		}
+	}
+	#mormon???
+	option = {
+		name = usfp_usa_election.3.j
+		trigger = {
+			NOT = {
+				has_law = law_type:law_state_religion
+			}
+			scope:nonchristian_religion = rel:mormon
+		}
+		highlighted_option = yes
+		scope:nonchristian_ig.party = {
+			add_momentum = momentum_large_decrease
+		}
+		add_radicals = {
+			value = large_radicals
+			religion = rel:protestant
+		}
+		add_loyalists = {
+			value = large_radicals
+			religion = rel:mormon
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_religious_majority
+				}
+			 }
+			 ordered_political_movement = {
+				limit = {
+					is_political_movement_type = movement_religious_majority
+				}
+				order_by = political_movement_support
+				add_modifier = {
+					name = usfp_christian_nation_movement_modifier
+					years = 4
+					multiplier = 2
+					is_decaying = yes
+				}
+			}
+		}
+		if = {
+			limit = { 
+				any_political_movement = {
+					religion ?= scope:nonchristian_religion
+				}
+			}
+			ordered_political_movement = {
+				limit = {
+					religion ?= scope:nonchristian_religion
 				}
 				order_by = political_movement_support
 				add_modifier = {

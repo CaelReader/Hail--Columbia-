@@ -1079,7 +1079,7 @@ usfp_a_house_divided.12 = {
 	type = country_event
 	placement = root
 	title = slavery_law_events.7.t
-	desc = slavery_law_events.7.d
+	desc = usfp_a_house_divided.12.d
 	flavor = slavery_law_events.7.f
 
 	duration = 3
@@ -1158,31 +1158,24 @@ usfp_a_house_divided.12 = {
 			value = small_radicals
 			strata = upper
 		}
-		# every_interest_group = {
-		# 	limit = {
-		# 		has_ideology = ideology:ideology_pro_slavery
-		# 	}
-		# 	remove_ideology = ideology_pro_slavery
-		# }
-		if = {
-			limit = { 
-				usfp_is_afro_american_discriminated = no
-			}
-			add_journal_entry = {
-				type = usfp_reconstruction_long
-			}
-		}
-		if = {
-			limit = { 
-				any_scope_character = {
-					has_template = agitator_frederick_douglass
-				}
-			}
-			random_scope_character = {
+		add_journal_entry = {type = usfp_reconstruction_long}
+		custom_tooltip = {
+			text = usfp_reconstruction_full_jim_crow
+			every_scope_state = {
 				limit = {
-					has_template = agitator_frederick_douglass
+					OR = {
+						has_modifier = usfp_deep_south_modifier
+						has_modifier = usfp_upper_south_modifier
+						state_region = { 
+							is_homeland = cu:dixie
+							NOT = { is_homeland = cu:yankee }
+						}
+					}
+					is_state_region_dc = no
 				}
-				set_ideology = ideology:ideology_humanitarian
+				add_modifier = {
+					name = usfp_jim_crow
+				}
 			}
 		}
 	}
@@ -2058,9 +2051,15 @@ usfp_a_house_divided.22 = {
 		scope:lincoln_party = {
 			add_momentum = momentum_medium
 		}
-		add_modifier = {
-			name = usfp_wide_awake_volunteers_modifier
-			years = 2
+		ordered_scope_state = {
+			limit = {
+				state_region = sr:region_new_england
+			}
+			order_by = total_urbanization
+			add_modifier = {
+				name = usfp_wide_awake_volunteers_modifier
+				years = 2
+			}
 		}
 		random_political_movement = {
 			limit = {

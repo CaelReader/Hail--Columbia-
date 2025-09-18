@@ -252,4 +252,13 @@
 		remove_homeland = cu:afro_american #american settlers died in droves from disease
 	}
 
+	s:STATE_VIRGINIA = { add_state_trait = state_trait_usfp_hookworm }
+	s:STATE_NORTH_CAROLINA = { add_state_trait = state_trait_usfp_hookworm }
+	s:STATE_SOUTH_CAROLINA = { add_state_trait = state_trait_usfp_hookworm }
+	s:STATE_GEORGIA = { add_state_trait = state_trait_usfp_hookworm }
+	s:STATE_ALABAMA = { add_state_trait = state_trait_usfp_hookworm }
+	s:STATE_MISSISSIPPI = { add_state_trait = state_trait_usfp_hookworm }
+	s:STATE_LOUISIANA = { add_state_trait = state_trait_usfp_hookworm }
+	s:STATE_FLORIDA = { add_state_trait = state_trait_usfp_hookworm }
+
 }

@@ -303,3 +303,9 @@ usfp_black_wall_street_modifier = {
 	state_afro_american_standard_of_living_add = 1
 	state_shopkeepers_investment_pool_efficiency_mult = 0.10
 }
+
+usfp_wide_awake_volunteers_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_election_positive.dds
+	building_training_rate_mult = 0.10
+	state_conscription_rate_mult = 0.10
+}

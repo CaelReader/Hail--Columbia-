@@ -58,6 +58,11 @@ usfp_monthly_pulse = {
 		400 = usfp_usa_postreconstruction.12 #Birth of a Nation
 		500 = usfp_usa_postreconstruction.14 #Back to Africa?
 		1000 = usfp_usa_postreconstruction.9 #Harlem Renaissance
+
+		#Election events
+		500 = usfp_usa_election.1 #Woman Candidate
+		500 = usfp_usa_election.2 #Non-White Candidate
+		500 = usfp_usa_election.3 #Non-Protestant Candidate
 	}
 }
 

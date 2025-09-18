@@ -226,6 +226,15 @@ state_trait_navel_oranges = {
 	}
 }
 
+state_trait_usfp_hookworm = {
+	icon = "gfx/interface/icons/state_trait_icons/hookworm.dds"
+	disabling_technologies = { "malaria_prevention" }
+	modifier = {
+		state_peasants_education_access_add = -0.10
+		state_farmers_education_access_add = -0.05
+	}
+}
+
 #vanilla override
 state_trait_columbia_river = {
 	icon = "gfx/interface/icons/state_trait_icons/river.dds"
