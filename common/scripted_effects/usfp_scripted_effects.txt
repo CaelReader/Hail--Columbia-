@@ -2175,6 +2175,16 @@ usfp_afro_american_colonization_effect = {
 				post_notification = usfp_afro_american_migration_notification
 			}
 		}
+		if = {
+			limit = { 
+				scope:afro_american_colonization_target_state = {
+					NOT = {
+						owner = root
+					}
+				}
+			}
+			post_notification = usfp_afro_americans_depart_notification
+		}
 }
 
 usfp_afro_american_pop_emigrate_effect = {
@@ -2244,4 +2254,51 @@ usfp_long_reconstruction_lose_progress = {
 			}
 		}
 	}
+}
+
+usfp_create_linconia_effect = {
+	custom_tooltip = {
+				text = linconia_created_tooltip
+				create_country = {
+					origin = root
+					tag = usfp_LNC
+					province = p:x8537FE
+					on_created = {
+						capital = {
+							save_scope_as = afro_american_colonization_target_state
+						}
+						c:USA = {
+							usfp_afro_american_colonization_effect = yes
+						}
+						set_ruling_interest_groups = {
+							ig_rural_folk
+						}
+						change_relations = {
+							country = c:USA
+							value = 100
+						}
+					}
+				}
+				create_diplomatic_pact = {
+					country = c:usfp_LNC
+					type = colony
+				}
+				c:usfp_LNC = {
+					add_liberty_desire = -100
+					capital = {
+						if = {
+							limit = {
+								NOT = {
+									any_scope_building = {
+										is_building_type = building_port
+									}
+								}
+							 }
+							 create_building = {
+								building = building_port
+							 }
+						}
+					}
+				}
+		}
 }

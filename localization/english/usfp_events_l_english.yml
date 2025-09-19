@@ -170,14 +170,14 @@ usfp_bleeding_kansas.5.f: ""The killings had the effect of a clap of thunder fro
 usfp_bleeding_kansas.5.a: "Such barbarity!"
 usfp_bleeding_kansas.5.b: "The ruffians had it coming."
 
-usfp_bleeding_kansas.6.t: "Insurrection at Harper's Ferry"
-usfp_bleeding_kansas.6.d: "In an attempt to spark a general slave uprising, [SCOPE.sCharacter('john_brown_scope').GetFullName] attacked and seized the federal arsenal at Harper's Ferry, Virginia. Unfortunately for Brown, support for his rebellion failed to materialize, leading to his capture after a brief siege of the arsenal. He has been pronounced guilty of murder and insurrection, and sentenced to death."
+usfp_bleeding_kansas.6.t: "Insurrection at Harpers Ferry"
+usfp_bleeding_kansas.6.d: "In an attempt to spark a general slave uprising, [SCOPE.sCharacter('john_brown_scope').GetFullName] attacked and seized the federal arsenal at Harpers Ferry, Virginia. Unfortunately for Brown, support for his rebellion failed to materialize, leading to his capture after a brief siege of the arsenal. He has been pronounced guilty of murder and insurrection, and sentenced to death."
 usfp_bleeding_kansas.6.f: ""If it is deemed necessary that I should forfeit my life for the furtherance of the ends of justice, and mingle my blood further with the blood of my children and with the blood of millions in this slave country whose rights are disregarded by wicked, cruel, and unjust enactments - I submit; so let it be done."" #John Brown
 usfp_bleeding_kansas.6.a: "He chose his own fate."
 usfp_bleeding_kansas.6.b: "We must ensure [SCOPE.sCharacter('john_brown_scope').GetFullName] survives."
 
 usfp_bleeding_kansas.7.t: "The Virginia Slave Uprising"
-usfp_bleeding_kansas.7.d: "Militant abolitionist [SCOPE.sCharacter('john_brown_scope').GetFullName] has attacked the federal arsenal at Harper's Ferry, Virginia! The weapons within were seized by a band of escaped slaves, who have now fanned out across [SCOPE.sState('virginia_scope').GetName], inciting terror and slave revolts across the plantations."
+usfp_bleeding_kansas.7.d: "Militant abolitionist [SCOPE.sCharacter('john_brown_scope').GetFullName] has attacked the federal arsenal at Harpers Ferry, Virginia! The weapons within were seized by a band of escaped slaves, who have now fanned out across [SCOPE.sState('virginia_scope').GetName], inciting terror and slave revolts across the plantations."
 usfp_bleeding_kansas.7.f: ""I have only a short time to live, only one death to die, and I will die fighting for this cause. There will be no peace in this land until slavery is done for."" #John Brown
 usfp_bleeding_kansas.7.a: "By God, the madman's done it!"
 usfp_bleeding_kansas.7.b: "We must crush these uppity slaves at once!"
@@ -1476,7 +1476,42 @@ usfp_usa_postreconstruction.18.f: ""We march because we want to bring the murder
 usfp_usa_postreconstruction.18.a: "This is not for the federal government to decide."
 usfp_usa_postreconstruction.18.b: "We must have a nationwide anti-lynching law."
 
+usfp_usa_colonization.1.t: "[SCOPE.sCountry('santo_domingo_scope').GetName] Seeks Annexation"
+usfp_usa_colonization.1.d: ""
+usfp_usa_colonization.1.f: """"
+usfp_usa_colonization.1.a: "[SCOPE.sCountry('santo_domingo_scope').GetName] will become an [ROOT.GetCountry.GetAdjective] territory."
+usfp_usa_colonization.1.b: "We will bring [SCOPE.sCountry('santo_domingo_scope').GetName] under our wing."
+usfp_usa_colonization.1.c: "This is not in the national interest."
 
+usfp_usa_colonization.2.t: "Linconia"
+usfp_usa_colonization.2.d: ""
+usfp_usa_colonization.2.f: """"
+usfp_usa_colonization.2.a: "An intriguing proposal."
+usfp_usa_colonization.2.a.tt: "With high enough [concept_relations] with the [GetCulture('central_american').GetName] [Concept('concept_country', '$concept_countries$')], we can propose the creation of Linconia through the #bold African Colonization#! Journal Entry."
+usfp_usa_colonization.2.a.tt2: "Alternatively, if we or our [concept_subject] owns [GetStateRegion('STATE_PANAMA').GetName], we can simply create the [concept_colony_subject] ourselves."
+
+usfp_usa_colonization.3.t: "An [SCOPE.sCountry('usa_scope').GetAdjective] Colony in [GetStateRegion('STATE_PANAMA').GetName]?"
+usfp_usa_colonization.3.d: ""
+usfp_usa_colonization.3.f: """"
+usfp_usa_colonization.3.a: "We are not about to sell any of our land to the Americans."
+usfp_usa_colonization.3.b: "The $usfp_afro_american_culture_plural$ can have Chiriquí, for a price."
+
+usfp_usa_colonization.4.t: "[SCOPE.sState('haiti_scope').GetName] Calling"
+usfp_usa_colonization.4.d: ""
+usfp_usa_colonization.4.f: """"
+usfp_usa_colonization.4.a: "Pursue this opportunity."
+usfp_usa_colonization.4.b: "This is not a worthwhile venture."
+
+usfp_usa_colonization.5.t: "An $usfp_afro_american_culture$ Settlement in [SCOPE.sState('haiti_scope').GetName]?"
+usfp_usa_colonization.5.d: ""
+usfp_usa_colonization.5.f: """"
+usfp_usa_colonization.5.a: "We welcome our $usfp_afro_american_culture$ brothers."
+usfp_usa_colonization.5.b: "This proposal seems suspect."
+
+usfp_usa_colonization.6.t: "A Failed Venture"
+usfp_usa_colonization.6.d: ""
+usfp_usa_colonization.6.f: """"
+usfp_usa_colonization.6.a: "Send a ship to collect anyone who's still left."
 
 
 usfp_test.1.t: "DEBUG EVENT"

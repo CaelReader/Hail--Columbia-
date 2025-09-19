@@ -640,7 +640,7 @@ usfp_PSA = {
 usfp_LNC = {
 	color = { 20 17 83 }
 	
-	country_type = recognized
+	country_type = colonial
 
 	tier = principality
 	

@@ -597,7 +597,7 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 # 6.0 "Douglass"
 ## New Content
 	18 new Post-Reconstruction events including the Great Migration, Red Summer, the Harlem Renaissance, and special alt-history events in the wake of a Radical Reconstruction
-	Underground Railroad JE that moves small numbers of slaves out of the South every month
+	New Underground Railroad JE that moves small numbers of slaves out of the South every month
 	3 new USA election events responding to various types of candidates
 	3 new internal CSA events during the ACW
 	Other New Events: Colored Troops, Scalawags, Disunionism, Wide Awake, Cross-Atlantic Endorsements,
@@ -611,7 +611,7 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	Missouri Compromise now suppresses the abolitionist movement more
 	Doubled the activism impact of Imminent Secession
 	Upper South and Deep South modifiers now increase cost and radicals from nationalizing buildings
-	USA now starts with an Afro American national movement with unique ideology
+	USA now starts with an Afro American national movement with a unique ideology
 	Added Status messages to A House Divided giving updates on the current status of the debate
 	Removed CSA's war support on battle defeats (replaced by Brother Against Brother event)
 	CSA now spawns with Legacy Slavery instead of Slave Trade
@@ -622,7 +622,6 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	New Northern Political Will bar for Reconstruction that decays over time
 	Added Northern Reticence modifier to Reconstruction that increases the more you progress in favor of the Freedmen
 	Mixed Reconstruction now only requires 40% Afro-americans to avoid Jim Crow rather than 60%
-	Reconstruction JE now uses a double-sided scripted progress bar
 	Long Reconstruction is now available to all outcomes (and peacefully banning slavery) but has huge penalties unless Radical Reconstruction was completed
 	Long Reconstruction now takes slightly more progress to complete
 	Abraham Lincoln now becomes a Reformer upon completing the civil war
@@ -640,11 +639,12 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	The Columbia River now adds +30% logging throughput
 	Manifest Destiny now begins to decay over time starting in 1900
 	Indigenous American cultural minority movements now have a unique ideology
-	Oklahoma now enacts Jim Crow upon becoming a state
+	Oklahoma now enacts Jim Crow upon becoming a state under the white constitution
 	Updated some Progressive Era event modifiers
 	William Sumner now only spawns automatically if you embrace Social Darwinism
 	Ulysses Grant is now Expert Offensive Planner, Persistent, Honorable, Innovative
 	Robert E Lee is now Defensive Strategist, Celebrity Commander, Direct
+	Increased infamy costs for annexing/puppeting Mexico
 	(CMF) Reactionary Movement can't spawn in american countries
 	(CMF) Doubled baseline PB attraction to the Liberal party
 ## Fixes

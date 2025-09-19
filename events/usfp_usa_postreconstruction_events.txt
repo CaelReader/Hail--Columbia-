@@ -2313,10 +2313,6 @@ usfp_usa_postreconstruction.14 = {
 	#encourage
 	option = {
 		name = usfp_usa_postreconstruction.14.a
-		set_variable = {
-			name = usfp_afro_american_colonization_promoted
-			years = 5
-		}
 		if = {
 			limit = { 
 				any_scope_state = {

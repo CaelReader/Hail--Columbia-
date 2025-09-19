@@ -298,3 +298,6 @@ usfp_santo_domingo_annexation_ask_desc: "The future of Santo Domingo is under th
 usfp_promote_afro_american_migration_south_america: "Sponsor Tropical Colonization"
 usfp_promote_afro_american_migration_south_america_desc: "We should find suitable places for [GetCulture('afro_american').GetName] settlements where they can prosper in their natural climate."
 usfp_colonization_better_with_colonial_resettlement: "These effects are improved if we have [GetLawType('law_colonial_resettlement').GetName] [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enacted$')]:"
+usfp_linconia_button: "Found the Colony of Linconia"
+usfp_linconia_button_desc: "We will fund the construction of an $usfp_afro_american_culture$ [concept_colony_subject] on the west coast of [GetStateRegion('STATE_PANAMA').GetName], named in the honor of the great Abraham Lincoln."
+linconia_created_tooltip: "Linconia will be created as an [SCOPE.sCountry('usa_scope').GetAdjective] [concept_subject] controlling a single [concept_province] on the western coast of [GetStateRegion('STATE_PANAMA').GetName], and 500 $usfp_afro_american_culture_plural$ will move there."

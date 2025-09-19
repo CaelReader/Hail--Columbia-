@@ -52,6 +52,12 @@ usfp_usa_colonization.1 = {
 				years = 5
 			}
 		}
+		c:HAI ?= {
+			change_relations = {
+				country = root
+				value = -100
+			}
+		}
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -93,6 +99,12 @@ usfp_usa_colonization.1 = {
 			country = c:DOM
 			value = 50
 		}
+		c:HAI ?= {
+			change_relations = {
+				country = root
+				value = -100
+			}
+		}
 		every_interest_group = {
 			limit = {
 				OR = {
@@ -131,8 +143,376 @@ usfp_usa_colonization.1 = {
 		}
 	}
 }
-#Haiti Opportunity
-#HAI: Allow afro-americans?
-#Haiti Accepts
-#Haiti colony failure
 #Linconia Opportunity
+usfp_usa_colonization.2 = {
+	type = country_event
+	placement = scope:panama_state
+	duration = 3
+
+	title = usfp_usa_colonization.2.t
+	desc = usfp_usa_colonization.2.d
+	flavor = usfp_usa_colonization.2.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "africa_construction_colony"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/invention_icons/colonization.dds"
+
+	trigger = {
+		NOT = {
+			has_variable = linconia_opportunity
+		}
+		ruler = {
+			has_template = usa_lincoln_character_template
+		}
+	}
+
+	immediate = {
+		set_variable = linconia_opportunity
+		s:STATE_PANAMA = {
+			ordered_scope_state = {
+				order_by = state_population
+				save_scope_as = panama_state
+				owner = {
+					save_scope_as = panama_owner
+				}
+			}
+		}
+	}
+
+	#okay
+	option = {
+		name = usfp_usa_colonization.2.a
+		default_option = yes
+		custom_tooltip = usfp_usa_colonization.2.a.tt
+		custom_tooltip = usfp_usa_colonization.2.a.tt2
+	}
+
+	cancellation_trigger = {
+		NOT = {
+			has_journal_entry = je_usfp_afro_american_colonization
+		}
+	}
+}
+#Panama owner: Linconia ask
+usfp_usa_colonization.3 = {
+	type = country_event
+	placement = scope:panama_state
+	duration = 3
+
+	title = usfp_usa_colonization.3.t
+	desc = usfp_usa_colonization.3.d
+	flavor = usfp_usa_colonization.3.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "africa_construction_colony"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/invention_icons/colonization.dds"
+
+	immediate = {
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+	}
+
+	#no
+	option = {
+		name = usfp_usa_colonization.3.a
+		default_option = yes
+		save_scope_as = usa_colony_target_scope
+		c:USA = {
+			post_notification = usfp_colony_rejected
+		}
+		change_relations = {
+			country = c:USA
+			value = -10
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	#yes
+	option = {
+		name = usfp_usa_colonization.3.b
+		save_scope_as = usa_colony_target_scope
+		usfp_create_linconia_effect = yes
+		c:USA = {
+			post_notification = usfp_colony_accepted
+		}
+		change_relations = {
+			country = c:USA
+			value = 10
+		}
+		c:USA = {
+			add_treasury = -150000
+		}
+		add_treasury = 100000
+		add_radicals = {
+			value = small_radicals
+		}
+		ai_chance = {
+			base = 0 #lmao
+			modifier = {
+				trigger = {
+					any_scope_treaty = {
+						binds = c:USA
+						any_scope_article = {
+							has_type = alliance
+						}
+					}
+				}
+				value = 60
+			}
+			modifier = {
+				trigger = {
+					market.owner = c:USA
+				}
+				value = 60
+			}
+		}
+
+	}
+
+	cancellation_trigger = {
+		c:USA = {
+			NOT = {
+				has_journal_entry = je_usfp_afro_american_colonization
+			}
+		}
+	}
+}
+#Haiti Opportunity
+usfp_usa_colonization.4 = {
+	type = country_event
+	placement = scope:haiti_scope
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	title = usfp_usa_colonization.4.t
+	desc = usfp_usa_colonization.4.d
+	flavor = usfp_usa_colonization.4.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "africa_construction_colony"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/invention_icons/colonization.dds"
+
+	trigger = {
+		exists = c:HAI
+		c:HAI = {
+			is_diplomatic_play_committed_participant = no
+			relations:root >= relations_threshold:cordial
+			has_state_in_state_region = STATE_HAITI
+		}
+		is_diplomatic_play_committed_participant = no
+		OR = {
+			ruler = {
+				has_template = usa_lincoln_character_template
+			}
+			AND = {
+				has_technology_researched = civilizing_mission
+				ruler = {
+					has_ideology = ideology:ideology_abolitionist
+				}
+			}
+		}
+	}
+
+	immediate = {
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+		s:STATE_HAITI = {
+			region_state:HAI = {
+				save_scope_as = haiti_scope
+			}
+		}
+	}
+
+	#ask
+	option = {
+		name = usfp_usa_colonization.4.a
+		default_option = yes
+		c:HAI = {
+			trigger_event = {
+				id = usfp_usa_colonization.5
+				days = 7
+			}
+		}
+		add_loyalists = {
+			value = small_radicals
+			interest_group = ig:ig_petty_bourgeoisie
+		}
+	}
+
+	#don't
+	option = {
+		name = usfp_usa_colonization.4.b
+	}
+
+	cancellation_trigger = {
+		OR = {
+			c:USA = {
+				NOT = {
+					has_journal_entry = je_usfp_afro_american_colonization
+				}
+			}
+			NOT = {
+				exists = c:HAI
+			}
+		}
+	}
+}
+#HAI: Allow afro-americans?
+usfp_usa_colonization.5 = {
+	type = country_event
+	placement = scope:haiti_scope
+	duration = 3
+
+	title = usfp_usa_colonization.5.t
+	desc = usfp_usa_colonization.5.d
+	flavor = usfp_usa_colonization.5.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "africa_construction_colony"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/invention_icons/colonization.dds"
+
+
+	immediate = {
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+		s:STATE_HAITI = {
+			region_state:HAI = {
+				save_scope_as = haiti_scope
+			}
+		}
+	}
+
+	#yes
+	option = {
+		name = usfp_usa_colonization.5.a
+		default_option = yes
+		scope:haiti_scope = {
+			save_scope_as = afro_american_colonization_target_state
+		}
+		save_scope_as = usa_colony_target_scope
+		c:USA = {
+			usfp_afro_american_pop_emigrate_effect = {
+				MAX_EMIGRES = 500
+			}
+			post_notification = usfp_colony_accepted
+		}
+		hidden_effect = {
+			random_list = {
+				20 = {}
+				80 = {
+					c:USA = {
+						trigger_event = {
+							id = usfp_usa_colonization.6
+							months = 6
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#no
+	option = {
+		name = usfp_usa_colonization.5.b
+		save_scope_as = usa_colony_target_scope
+		c:USA = {
+			post_notification = usfp_colony_rejected
+		}
+		change_relations = {
+			country = c:USA
+			value = -10
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	cancellation_trigger = {
+		OR = {
+			c:USA = {
+				NOT = {
+					has_journal_entry = je_usfp_afro_american_colonization
+				}
+			}
+			NOT = {
+				exists = c:HAI
+			}
+		}
+	}
+}
+#Haiti colony failure
+usfp_usa_colonization.6 = {
+	type = country_event
+	placement = scope:haiti_scope
+	duration = 3
+	title = usfp_usa_colonization.6.t
+	desc = usfp_usa_colonization.6.d
+	flavor = usfp_usa_colonization.6.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_factory_closed"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/invention_icons/colonization.dds"
+
+	#welp
+	option = {
+		name = usfp_usa_colonization.6.a
+		default_option = yes
+		scope:haiti_scope = {
+			ordered_scope_pop = {
+				limit = {
+					culture = cu:afro_american
+					OR = {
+						is_pop_type = peasants
+						is_pop_type = laborers
+					}
+				}
+				move_partial_pop = {
+					state = root.capital
+					population_ratio = {
+						add = 500
+						divide = total_size
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	cancellation_trigger = {
+		NOT = {
+			scope:haiti_scope = {
+				any_scope_pop = {
+					culture = cu:afro_american
+					OR = {
+						is_pop_type = peasants
+						is_pop_type = laborers
+					}
+				}
+			}
+		}
+	}
+}

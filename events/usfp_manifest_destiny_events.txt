@@ -664,7 +664,7 @@ usfp_manifest_destiny.6 = {
 		}
 		create_incident = {
 			country = c:MEX
-			value = 40
+			value = 60
 		}
 		add_radicals = {
 			value = large_radicals
@@ -695,7 +695,7 @@ usfp_manifest_destiny.6 = {
 		}
 		create_incident = {
 			country = c:MEX
-			value = 60
+			value = 90
 		}
 		usfp_manifest_more_destiny_effect = yes
 		hidden_effect = {

@@ -159,7 +159,32 @@ usfp_radical_land_redistribution_complete = {
 
 usfp_afro_american_migration_notification = {
 	type = country
+	group = "usfp_colonization_group"
 	texture = "gfx/interface/icons/notification_icons/pops.dds"
-	notification_type = feed
+	notification_type = toast
+	color = good
+}
+
+usfp_afro_americans_depart_notification = {
+	type = country
+	group = "usfp_colonization_group"
+	texture = "gfx/interface/icons/notification_icons/pops.dds"
+	notification_type = toast
+	color = good
+}
+
+usfp_colony_rejected = {
+	type = country
+	group = "usfp_colonization_group"
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_colony_accepted = {
+	type = country
+	group = "usfp_colonization_group"
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+	notification_type = toast
 	color = good
 }
