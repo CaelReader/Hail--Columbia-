@@ -2269,6 +2269,7 @@ usfp_create_linconia_effect = {
 						}
 						c:USA = {
 							usfp_afro_american_colonization_effect = yes
+							usfp_afro_american_colonization_effect = yes
 						}
 						set_ruling_interest_groups = {
 							ig_rural_folk
@@ -2283,7 +2284,7 @@ usfp_create_linconia_effect = {
 					country = c:usfp_LNC
 					type = colony
 				}
-				c:usfp_LNC = {
+				c:usfp_LNC ?= {
 					add_liberty_desire = -100
 					capital = {
 						if = {
@@ -2294,9 +2295,11 @@ usfp_create_linconia_effect = {
 									}
 								}
 							 }
-							 create_building = {
-								building = building_port
-							 }
+								create_building={
+									building="building_port"
+									level=1
+									reserves=1
+								}
 						}
 					}
 				}

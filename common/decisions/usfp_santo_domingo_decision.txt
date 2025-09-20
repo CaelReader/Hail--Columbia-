@@ -41,7 +41,10 @@
 	when_taken = {
 		c:USA = {
 			set_variable = santo_domingo_ask
-			trigger_event = usfp_usa_colonization.1
+			trigger_event = {
+				id = usfp_usa_colonization.1
+				days = 7
+			}
 		}
 	}
 

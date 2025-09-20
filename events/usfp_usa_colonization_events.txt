@@ -36,6 +36,10 @@ usfp_usa_colonization.1 = {
 				var:manifest_destiny_var >= 4
 			}
 		}
+		highlighted_option = yes
+		show_as_unavailable = {
+			always = yes
+		}
 		usfp_manifest_more_destiny_low_effect = yes
 		annex = c:DOM
 		every_interest_group = {
@@ -83,6 +87,10 @@ usfp_usa_colonization.1 = {
 				text = enough_manifest_destiny
 				var:manifest_destiny_var >= 3
 			}
+		}
+		highlighted_option = yes
+		show_as_unavailable = {
+			always = yes
 		}
 		create_diplomatic_pact = {
 			country = c:DOM
@@ -217,6 +225,15 @@ usfp_usa_colonization.3 = {
 		c:USA = {
 			save_scope_as = usa_scope
 		}
+		s:STATE_PANAMA = {
+			ordered_scope_state = {
+				order_by = state_population
+				save_scope_as = panama_state
+				owner = {
+					save_scope_as = panama_owner
+				}
+			}
+		}
 	}
 
 	#no
@@ -240,8 +257,8 @@ usfp_usa_colonization.3 = {
 	option = {
 		name = usfp_usa_colonization.3.b
 		save_scope_as = usa_colony_target_scope
-		usfp_create_linconia_effect = yes
 		c:USA = {
+			usfp_create_linconia_effect = yes
 			post_notification = usfp_colony_accepted
 		}
 		change_relations = {
@@ -266,13 +283,13 @@ usfp_usa_colonization.3 = {
 						}
 					}
 				}
-				value = 60
+				add = 60
 			}
 			modifier = {
 				trigger = {
 					market.owner = c:USA
 				}
-				value = 60
+				add = 60
 			}
 		}
 
@@ -470,7 +487,7 @@ usfp_usa_colonization.6 = {
 
 	dlc = dlc_usfp
 	event_image = {
-		video = "unspecific_factory_closed"
+		video = "asia_dead_cattle_poor_harvest"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	icon = "gfx/interface/icons/invention_icons/colonization.dds"
