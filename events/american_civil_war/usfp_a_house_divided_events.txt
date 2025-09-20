@@ -2262,3 +2262,78 @@ usfp_a_house_divided.23 = {
 		}
 	}
 }
+
+#Abolitionists against the Mexican War
+usfp_a_house_divided.24 = {
+	type = country_event
+	placement = root
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	title = usfp_a_house_divided.24.t
+	desc = usfp_a_house_divided.24.d
+	flavor = usfp_a_house_divided.24.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	duration = 3
+
+	trigger = {
+		has_war_with = c:MEX
+		has_claim = s:STATE_CALIFORNIA
+		any_political_movement = {
+			is_political_movement_type = movement_anti_slavery
+		}
+		c:MEX = {
+			has_state_in_state_region = STATE_CALIFORNIA
+		}
+		NOT = {
+			has_global_variable = g_h_treaty_var
+		}
+	}
+
+	immediate = {
+		c:MEX = {
+			save_scope_as = mexico_scope
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			save_scope_as = abolitionist_movement
+		}
+	}
+
+	#wait and see
+	option = {
+		name = usfp_a_house_divided.24.a
+		default_option = yes
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			add_modifier = {
+				years = 3
+				name = usfp_anti_war_agitation_modifier
+			}
+		}
+		random_scope_war = {
+			limit = {
+				defender_warleader = c:MEX
+			}
+			add_war_war_support = {
+				target = root
+				value = -10
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+	}
+
+}

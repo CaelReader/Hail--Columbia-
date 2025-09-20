@@ -235,6 +235,13 @@ state_trait_usfp_hookworm = {
 	}
 }
 
+state_trait_usfp_boll_weevil = {
+	icon = "gfx/interface/icons/state_trait_icons/boll_weevil.dds"
+	modifier = {
+		building_cotton_plantation_throughput_add = -0.60
+	}
+}
+
 #vanilla override
 state_trait_columbia_river = {
 	icon = "gfx/interface/icons/state_trait_icons/river.dds"

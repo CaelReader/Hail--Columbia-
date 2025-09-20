@@ -133,6 +133,11 @@ usfp_a_house_divided.23.a: "[SCOPE.sCountry('britain_scope').GetAdjective] aboli
 usfp_a_house_divided.23.b: "Why should we listen to stodgy Europeans?"
 usfp_a_house_divided.23.c: "We could use some Chartism here at home..."
 
+usfp_a_house_divided.24.t: "Abolitionists Against the War"
+usfp_a_house_divided.24.d: "Supporters of the [SCOPE.sPoliticalMovement('abolitionist_movement').GetName] are voicing opposition to our [concept_war] with [SCOPE.sCountry('mexico_scope').GetName], denouncing it as an act of naked aggression that would greatly expand the slave-holding territory of the [ROOT.GetCountry.GetName]."
+usfp_a_house_divided.24.f: ""The United States will conquer Mexico, but it will be as a man who swallowed the arsenic which brings him down in turn. Mexico will poison us."" #Ralph Waldo Emerson
+usfp_a_house_divided.24.a: "We'll have to settle this matter once the war is won."
+
 usfp_bleeding_kansas.1.t: "The New England Emigrant Aid Company"
 usfp_bleeding_kansas.1.d: "An enterprising [SCOPE.sIdeology('abolitionist_scope').GetName] from [SCOPE.sState('massachusetts_scope').GetCityHubName] has established a transportation company with the goal of sending anti-slavery immigrants into [SCOPE.sState('kansas_scope').GetName]. Hundreds of migrants have already signed on, eager to turn [SCOPE.sState('kansas_scope').GetName] into a free state."
 usfp_bleeding_kansas.1.f: ""WANTED: Homesteaders eager to do their patriotic duty in the Kansas Territory. Monetary aid, transportation, information provided to those who wish to see Kansas a properly free and white state.""
@@ -362,10 +367,10 @@ usfp_reconstruction_full_jim_crow: "[concept_usfp_jim_crow] laws will be enacted
 usfp_reconstruction_partial_jim_crow: "[concept_usfp_jim_crow] laws will be enacted in southern [Concept('concept_state', '$concept_states$')] that lack a large [GetCulture('afro_american').GetName] [Concept('concept_pop', '$concept_population$')]"
 
 usfp_reconstruction.11.t: "A Devil's Bargain"
-usfp_reconstruction.11.d: "A conspiracy of southern states has concocted a plan to contest the upcoming election results and prevent the ascension of the lawfully elected president. Through backroom channels, the South is attempting to blackmail the federal government: either end Reconstruction now, or the election will be cast into jeopardy."
-usfp_reconstruction.11.f: "The plan was simple and totally legal. The state legislatures of a few key, southern states would be blocked from certifying their state's electors to the presidency. Without their presence, the federal government would be forced to find some alternative way of proceeding with the election, or face the entire system grinding to a halt. Unless of course, the demands of the South were met."
-usfp_reconstruction.11.a: "The election must be secured."
-usfp_reconstruction.11.b: "We will not be swayed by the slavers' threats."
+usfp_reconstruction.11.d: "The recent election of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] is being contested by several Southern states. We could possibly reach an accord by fast-tracking the end of Reconstruction in exchange for the states accepting the election results."
+usfp_reconstruction.11.f: ""For the first time in the history of our country, under the Constitution as it now is, a dispute exists with regard to the result of the election of the Chief Magistrate of the nation. The country is agitated. It needs and it desires peace and quiet and harmony between all parties and all sections. It wants to be assured that the result of the election will be accepted without resistance from the supporters of the disappointed candidate, and that its highest officer shall not hold his place with a questioned title of right."" #Ulysses S. Grant
+usfp_reconstruction.11.a: "We must avoid a crisis at any cost."
+usfp_reconstruction.11.b: "The election has been decided fairly, regardless of what the South says."
 
 usfp_reconstruction.12.t: "[SCOPE.gsInterestGroup('pb_ig').GetName] Reject Reconstruction!"
 usfp_reconstruction.12.d: "While largely a solid support base of the [SCOPE.sParty('republican_party_scope').GetName], many members of the [SCOPE.gsInterestGroup('pb_ig').GetName] have been alarmed by the government's aggressive policy of Reconstruction. Full racial integration is unpopular among the middle class, and they have begun to vocally oppose what they see as undeserved government support of the southern freedmen."
@@ -574,6 +579,12 @@ usfp_manifest_destiny.29.c: "#r No! We shall expand so as to include the whole w
 usfp_manifest_destiny_will_now_decay: "#bold Manifest Destiny#! will now lose influence every 3 years, closing out the Journal Entry when the #bold progress bar#! reaches 0."
 usfp_manifest_destiny_war_resets_clock: "Declaring an offensive [concept_diplomatic_play] will reset the #bold Manifest Destiny#! decay timer. Manifest Destiny losing influence will now also generate [Concept('concept_radical', '$concept_radicals$')] among our [concept_primary_cultures]."
 
+usfp_manifest_destiny.30.t: "Foreigners in their Native Land"
+usfp_manifest_destiny.30.d: "As [ROOT.GetCountry.GetAdjective] settlers have poured into our newly acquired territories, they have become increasingly violent against the local [GetCulture('mexican').GetName] inhabitants. The treaty we signed guarantees [GetCulture('mexican').GetName] rights on paper, but in practice they are now being disenfranchised and driven off of their own properties."
+usfp_manifest_destiny.30.f: ""Mexican have no business in this country. I don't believe in them. The men were made to be shot at, and the women were made for our purposes. I'm a white man - I am! A Meixcan is pretty near black. I hate all Mexicans."" #Stockton Times
+usfp_manifest_destiny.30.a: "This is our land now."
+usfp_manifest_destiny.30.b: "We must uphold our end of the treaty."
+
 ### Native Removal
 usfp_native_removal.1.t: "The Seminole Removal"
 usfp_native_removal.1.d: "With the Second Seminole War finally winding down, the Army can begin the slow process of removing the remainder of the [SCOPE.sCulture('muskogean_scope').GetName] population onto reservation land across the Mississippi."
@@ -781,6 +792,11 @@ usfp_usa.24.t: "Chestnut Blight"
 usfp_usa.24.d: "A blight has spread through the great American Chestnut Forests, devastating billions of trees up and down the eastern seaboard. It won't be long before the trees are entirely wiped out, save for a few specimens preserved by researchers attempting to fight the outbreak."
 usfp_usa.24.f: ""Will eating chestnuts by crackling log fires become one of the lost arts preserved by a devoted people only in poetry and romance?"" #LA Times
 usfp_usa.24.a: "We will mourn the loss of these perfect trees."
+
+usfp_usa.25.t: "Boll Weevil Infestation"
+usfp_usa.25.d: "A plague of cotton-eating beetles has swept through [GetStrategicRegion('region_dixie').GetName], destroying the harvest of $building_cotton_plantation$ across the entire region. Desperate plantation owners have deployed all sorts of pesticides to try and save their crops, to no avail."
+usfp_usa.25.f: ""The cotton came up and started to growin’, but before the middle of May I looks down one day and see the boll weevil settin’ up in the top of those little cotton stalks, waitin’ for the squares to form. So all that guano we hauled and put down made nothing but a crop of boll weevils."" #Always Agin It. John L. Dove, interviewer; J. Thomas Metz, interviewee, Chapin, South Carolina, January 24, 1939. American Life Histories: Manuscripts from the Federal Writers’ Project, 1936 to 1940. Manuscript Division
+usfp_usa.25.a: "Will the cotton industry ever recover?"
 
 ### Labor Events
 usfp_usa_labor.1.t: "The Industrial Workers of the World"

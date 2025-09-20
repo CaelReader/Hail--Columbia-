@@ -550,7 +550,8 @@ usfp_hundred_years_of_america_modifier = {
 
 usfp_contested_election_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_election_negative.dds
-	country_legitimacy_base_add = -10
+	country_legitimacy_base_add = -15
+	state_radicals_from_political_movements_mult = 0.20
 }
 
 usfp_frontier_agents_modifier = {

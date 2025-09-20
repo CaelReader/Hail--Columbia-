@@ -600,11 +600,11 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	New Underground Railroad JE that moves small numbers of slaves out of the South every month
 	3 new USA election events responding to various types of candidates
 	3 new internal CSA events during the ACW
-	Other New Events: Colored Troops, Scalawags, Disunionism, Wide Awake, Cross-Atlantic Endorsements,
+	Other New Events: Colored Troops, Scalawags, Disunionism, Wide Awake, Cross-Atlantic Endorsements, Mexican Discrimination, Boll Weevil Infestation,
 	New Characters: Booker T Washington, Marcus Garvey, A Philip Randolph, Hubert Harrison, Anthony D Williams, Joseph Jenkins Roberts, James Weldon Johnson, James Weldon Johnson, Ida B Wells
 	New African Colonization JE containing some efforts to resettle Afro-Americans to Africa and Central America
 	A Radical Abolitionist government can now unlock a special decree to seize and redistribute former slave plantations, permanently breaking the plantation economy of the South
-	Added Endemic Hookworm to the Deep South
+	Added Endemic Hookworm to the Deep South, removed with Malaria Prevention tech
 ## Updates
 ### A House Divided Updates
 	The Southern Planters are now even more racist

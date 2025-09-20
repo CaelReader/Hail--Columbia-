@@ -226,6 +226,7 @@ je_acw_countdown = {
 			300 = usfp_a_house_divided.20 #Disunionism
 			300 = usfp_a_house_divided.22 #Wide Awake
 			100 = usfp_a_house_divided.23 #Cross-Atlantic Abolitionism
+			300 = usfp_a_house_divided.24 #Abolitionists Against the War
 		}
 		events = {
 			acw_events.3 # The Wilmot Proviso
@@ -563,8 +564,8 @@ je_acw_reconstruction = {
 	modifiers_while_active = {
 		usfp_reconstruction_army_duties_modifier
 	}
-	#clean up election-spawned agitators
 	immediate = {
+		#clean up election-spawned agitators
 		usfp_cleanup_acw_agitators = yes
 		set_variable = {
 			name = reconstruction_var
@@ -579,10 +580,6 @@ je_acw_reconstruction = {
 		cu:yankee = {
 			save_scope_as = yankee_culture
 		}
-		set_variable = {
-			name = reconstruction_slow
-			years = 10
-		}
 		je:je_acw_reconstruction ?= {
 			add_modifier = {
 				name = usfp_reconstruction_white_fatigue_modifier
@@ -594,12 +591,6 @@ je_acw_reconstruction = {
 			}
 		}
 	}
-
-	# complete = {
-	# 	scope:journal_entry = {
-	# 		is_goal_complete = yes
-	# 	}
-	# }
 
 	scripted_button = usfp_reconstruction_enforce_rights_button
 	scripted_button = usfp_reconstruction_confederate_amnesty_button
@@ -619,7 +610,6 @@ je_acw_reconstruction = {
 			20 = usfp_reconstruction.3 #Black Legislature
 			20 = usfp_reconstruction.4 #The Lost Cause
 			20 = usfp_reconstruction.5 #Confederados
-			100 = usfp_reconstruction.11 #Election held hostage
 			20 = usfp_reconstruction.12 #PB backlash to Radical Reconstruction
 			20 = usfp_reconstruction.13 #Electoral backlash to Reconstruction
 			5 = usfp_reconstruction.14 #Radical Reconstruction assassination

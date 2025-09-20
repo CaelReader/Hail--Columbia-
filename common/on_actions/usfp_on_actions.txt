@@ -1,6 +1,6 @@
 ﻿on_monthly_pulse_country = {
 	on_actions = {
-		delay = { days = 2 }
+		delay = { days = 10 }
 		usfp_monthly_pulse
 		usfp_arctic_isolation
 	}
@@ -40,6 +40,7 @@ usfp_monthly_pulse = {
 		3 = usfp_usa.3 #Major Tornado
 		2 = usfp_usa.5 #Wildfire
 		10 = usfp_usa.24 #Chestnut Blight
+		10 = usfp_usa.25 #Boll Weevil Infestation
 
 		#Mormon events
 		20 = usfp_mormon.1 #Missouri Mormon War
@@ -607,6 +608,7 @@ usfp_fix_monarchy_revolt = {
 on_election_campaign_end = {
 	on_actions = {
 		USCWF_precedent_on_action
+		usfp_devils_bargain_action
 	}
 }
 
@@ -645,6 +647,12 @@ USCWF_precedent_on_action = {
 				}
 			}
 		}
+	}
+}
+
+usfp_devils_bargain_action = {
+	events = {
+		usfp_reconstruction.11 #Devil's Bargain opportuniy during Reconstruction
 	}
 }
 

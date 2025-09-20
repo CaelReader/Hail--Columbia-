@@ -694,7 +694,7 @@ usfp_reconstruction.11 = {
 		video = "ep1_clandestine_meeting"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
+	cooldown = { days = never_fire_again_modifier_time } #Once
 	title = usfp_reconstruction.11.t
 	desc = usfp_reconstruction.11.d
 	flavor = usfp_reconstruction.11.f
@@ -703,10 +703,11 @@ usfp_reconstruction.11 = {
 	duration = 3
 
 	trigger = {
-		NOT = {
-			has_variable = reconstruction_slow
+		has_journal_entry = je_acw_reconstruction
+		je:je_acw_reconstruction = {
+			journal_entry_age > 3650 # days
 		}
-		in_election_campaign = yes
+		has_variable = reconstruction_var
 		NOT = {
 			has_variable = reconstruction_devils_bargain
 		}
@@ -718,6 +719,16 @@ usfp_reconstruction.11 = {
 		}
 		var:reconstruction_var > 5
 		has_law = law_type:law_presidential_republic
+		ruler = {
+			interest_group = {
+				party = {
+					NOR = {
+						is_party_type = agrarian_party
+						is_party_type = conservative_party
+					}
+				}
+			}
+		}
 	}
 
 	immediate = {
@@ -734,9 +745,6 @@ usfp_reconstruction.11 = {
 			text = usfp_reconstruction_end_early
 			set_variable = reconstruction_ended_early
 			usfp_reconstruction_conclusion_effect = yes
-		}
-		scope:republican_party_scope = {
-			add_momentum = momentum_very_large
 		}
 		add_loyalists = {
 			value = medium_radicals
@@ -762,6 +770,19 @@ usfp_reconstruction.11 = {
 		add_radicals = {
 			value = large_radicals
 			culture = cu:dixie
+		}
+	}
+
+	cancellation_trigger = {
+		ruler = {
+			interest_group = {
+				party = {
+					OR = {
+						is_party_type = agrarian_party
+						is_party_type = conservative_party
+					}
+				}
+			}
 		}
 	}
 }

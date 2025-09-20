@@ -3135,5 +3135,143 @@ usfp_manifest_destiny.29 = {
 }
 
 #Mexican discrimination
+usfp_manifest_destiny.30 = {
+	type = country_event
+	placement = scope:mexican_homeland_state
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_mexico.dds"
+	
+	title = usfp_manifest_destiny.30.t
+	desc = usfp_manifest_destiny.30.d
+	flavor = usfp_manifest_destiny.30.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:mexican
+			}
+		}
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:mexican
+			}
+			any_scope_pop = {
+				culture = cu:mexican
+			}
+			OR = {
+				culture_percent_state = {
+					target = cu:dixie
+					value >= 0.10
+				}
+				culture_percent_state = {
+					target = cu:yankee
+					value >= 0.10
+				}
+			}
+			count >= 3
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = {
+					is_homeland = cu:mexican
+				}
+			}
+			save_scope_as = mexican_homeland_state
+		}
+	}
+
+
+	#let them
+	option = {
+		name = usfp_manifest_destiny.30.a
+		default_option = yes
+		#reduce mexican acceptance
+		add_radicals = {
+			value = medium_radicals
+			culture = cu:mexican
+		}
+		every_political_movement = {
+			limit = {
+				culture ?= cu:mexican
+			}
+			add_modifier = {
+				name = usfp_racist_intimidation_modifier
+				years = 10
+			}
+		}
+		c:MEX ?= {
+			change_relations = {
+				country = root
+				value = -30
+			}
+			if = {
+				limit = { 
+					is_subject_of = root
+				}
+				add_liberty_desire = 30
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#stop them
+	option = {
+		name = usfp_manifest_destiny.30.b
+		add_modifier = {
+			name = modifier_minority_members_defended
+			days = normal_modifier_time
+		}
+		every_scope_state = {
+			limit = {
+				state_region = {
+					is_homeland = cu:mexican
+				}
+			}
+			usfp_radicalize_whites_in_state = {
+				RADICALS = medium_radicals
+			}
+		}
+		if = {
+			limit = { 
+				NOT = {
+					any_political_movement = {
+						culture ?= cu:mexican
+					}
+				}
+			}
+			create_political_movement = {
+				type = movement_cultural_minority
+				culture = cu:mexican
+			}
+		}
+		else = {
+			every_political_movement = {
+				limit = {
+					culture ?= cu:mexican
+				}
+				add_modifier = {
+					name = usfp_safety_in_numbers_movement_modifier
+					years = 10
+				}
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+}
 
 #Californian Revolt
