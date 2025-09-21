@@ -257,7 +257,7 @@
 			}
 		}
 		subtract = {
-			desc = "[concept_turmoil]"
+			desc = "concept_turmoil"
 			value = country_turmoil
 		}
 		if = {

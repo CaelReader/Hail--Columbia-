@@ -1,4 +1,4 @@
-usfp_ida_b_wells ={
+﻿usfp_ida_b_wells ={
 		portrait_info = {
 	genes={ 		hair_color={ 0 255 30 232 }
  		skin_color={ 101 197 131 218 }

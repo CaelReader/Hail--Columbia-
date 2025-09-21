@@ -339,7 +339,7 @@ usfp_usa_postreconstruction.3 = {
 						value > 0.10
 					}
 				}
-				order_by = radical_population_fraction
+				order_by = turmoil
 				save_scope_as = wilmington_state
 			}
 		}
@@ -400,7 +400,7 @@ usfp_usa_postreconstruction.3 = {
 				culture = cu:afro_american
 			}
 			usfp_radicalize_dixies_in_state = {
-				LOYALISTS = large_radicals
+				RADICALS = large_radicals
 			}
 		}
 		if = {
@@ -447,7 +447,7 @@ usfp_usa_postreconstruction.3 = {
 				culture = cu:afro_american
 			}
 			usfp_radicalize_dixies_in_state = {
-				LOYALISTS = large_radicals
+				RADICALS = large_radicals
 			}
 		}
 		if = {
@@ -1373,24 +1373,7 @@ usfp_usa_postreconstruction.9 = {
 	duration = 3
 
 	title = usfp_usa_postreconstruction.9.t
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					has_global_variable = usfp_reconstruction_outcome_radical
-				}
-				desc = usfp_usa_postreconstruction.9.d_radical
-			 }
-			triggered_desc = {
-				trigger = {
-					NOT = {
-						has_global_variable = usfp_reconstruction_outcome_radical
-					}
-				}
-				desc = usfp_usa_postreconstruction.9.d
-			}
-		}
-	}
+	desc = usfp_usa_postreconstruction.9.d
 	flavor = usfp_usa_postreconstruction.9.f
 
 	dlc = dlc_usfp

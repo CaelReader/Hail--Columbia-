@@ -760,7 +760,9 @@ usfp_a_house_divided.8 = {
 				}
 				set_state_type = incorporated
 			}
-			add_homeland = cu:yankee
+			state_region = {
+				add_homeland = cu:yankee
+			}
 			if = {
 				limit = { 
 					state_is_eligible_as_mass_migration_target = yes
@@ -819,7 +821,9 @@ usfp_a_house_divided.8 = {
 				}
 				set_state_type = incorporated
 			}
-			add_homeland = cu:yankee
+			state_region = {
+				add_homeland = cu:yankee
+			}
 			if = {
 				limit = { 
 					state_is_eligible_as_mass_migration_target = yes
@@ -2053,7 +2057,7 @@ usfp_a_house_divided.22 = {
 		}
 		ordered_scope_state = {
 			limit = {
-				state_region = sr:region_new_england
+				region = sr:region_new_england
 			}
 			order_by = total_urbanization
 			add_modifier = {

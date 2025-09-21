@@ -18,7 +18,7 @@
   
  je_usfp_a_house_divided_bleeding_kansas: "Ein geteiltes Haus: Blutendes Kansas"
  je_usfp_a_house_divided_bleeding_kansas_reason: "[SCOPE.sState('kansas_scope').GetName] ist zum Schlachtfeld über die Frage der Sklaverei geworden. Die #bold Fortschrittsanzeige#! verfolgt den Einfluss jeder Seite im Staat. Fortschritt nach rechts zeigt den Einfluss der #bold Freistaater#! an, während Fortschritt nach links den Vormarsch der pro-sklaverei #bold Grenzruffianer#! anzeigt. Wenn die Fortschrittsanzeige 0 oder 100 erreicht, wird das Schicksal von [SCOPE.sState('kansas_scope').GetName] zugunsten dieser Fraktion entschieden.\n\nDas Machtgleichgewicht wird voraussichtlich durch #tooltippable;tooltip:[Country.GetTooltipTag],je_usfp_a_house_divided_bleeding_kansas_special_tooltip [Country.MakeScope.Var('bleeding_kansas_var_next').GetValue|+=]#! nächsten Monat verschoben"
- je_usfp_a_house_divided_bleeding_kansas_special_tooltip: "Diese Rate wird durch Folgendes bestimmt:\n#variable [Country.MakeScope.Var('bleeding_kansas_yankee_percent').GetValue|+=]#! von den Yankee [Concept('concept_pop', '$concept_population')] \n#variable [Country.MakeScope.Var('bleeding_kansas_yankee_radicals').GetValue|+=]#! von Yankee [Concept('concept_radical', '$concept_radicals')] \n#variable [Country.MakeScope.Var('bleeding_kansas_freedmen').GetValue|+=]#! von freien Afro-Amerikanern [Concept('concept_pop', '$concept_pops')] \n#variable [Country.MakeScope.Var('bleeding_kansas_dixie_percent').GetValue|+=]#! von den Dixie [Concept('concept_pop', '$concept_population')] \n#variable [Country.MakeScope.Var('bleeding_kansas_dixie_radicals').GetValue|+=]#! von Dixie [Concept('concept_radical', '$concept_radicals')] \n#variable [Country.MakeScope.Var('bleeding_kansas_aristocrats').GetValue|+=]#! von Dixie $aristocrats$"
+ je_usfp_a_house_divided_bleeding_kansas_special_tooltip: "Diese Rate wird durch Folgendes bestimmt:\n#variable [Country.MakeScope.Var('bleeding_kansas_yankee_percent').GetValue|+=]#! von den Yankee [Concept('concept_pop', '$concept_population')] \n#variable [Country.MakeScope.Var('bleeding_kansas_yankee_radicals').GetValue|+=]#! von Yankee [Concept('concept_radical', '$concept_radicals$')] \n#variable [Country.MakeScope.Var('bleeding_kansas_freedmen').GetValue|+=]#! von freien Afro-Amerikanern [Concept('concept_pop', '$concept_pops$')] \n#variable [Country.MakeScope.Var('bleeding_kansas_dixie_percent').GetValue|+=]#! von den Dixie [Concept('concept_pop', '$concept_population')] \n#variable [Country.MakeScope.Var('bleeding_kansas_dixie_radicals').GetValue|+=]#! von Dixie [Concept('concept_radical', '$concept_radicals$')] \n#variable [Country.MakeScope.Var('bleeding_kansas_aristocrats').GetValue|+=]#! von Dixie $aristocrats$"
  bleeding_kansas_0_progress: "Die #bold Fortschrittsanzeige#! erreicht 0"
  bleeding_kansas_100_progress: "Die #bold Fortschrittsanzeige#! erreicht 100"
  usfp_support_free_kansas_button: "Freistaater unterstützen"
@@ -140,8 +140,8 @@
  usfp_reconstruction_end_early: "#r #b Die Reconstruction wird sofort enden!#!"
  usfp_reconstruction_enforce_rights_button: "Wahlrechte durchsetzen"
  usfp_reconstruction_enforce_rights_button_desc: "Freedmen werden weiterhin ihrer rechtmäßigen Rechte im Süden beraubt. Durch den Einsatz zusätzlicher Bundeskräfte können wir sicherstellen, dass Freiheit allen unseren Bürgern zuteilwird."
- dixie_formation_tt: "Jede [concept_army] in der [SCOPE.sStrategicRegion('dixie_region').GetName] [concept_hq] hat mindestens #variable 20#! [Concept('concept_unit','$concept_units')] und einen [concept_general]"
- dixie_indian_formation_tt: "Jede [concept_army] in der [SCOPE.sStrategicRegion('dixie_region').GetName] [concept_hq] hat mindestens #variable 2#! [Concept('concept_unit','$concept_units')] und einen [concept_general]"
+ dixie_formation_tt: "Jede [concept_army] in der [SCOPE.sStrategicRegion('dixie_region').GetName] [concept_hq] hat mindestens #variable 20#! [Concept('concept_unit','$concept_units$')] und einen [concept_general]"
+ dixie_indian_formation_tt: "Jede [concept_army] in der [SCOPE.sStrategicRegion('dixie_region').GetName] [concept_hq] hat mindestens #variable 2#! [Concept('concept_unit','$concept_units$')] und einen [concept_general]"
  usfp_reconstruction_confederate_amnesty_button: "Amnestie für Konföderierte gewähren"
  usfp_reconstruction_confederate_amnesty_button_desc: "Ein wahrer Frieden kann zwischen den Herren des Nordens und des Südens erreicht werden. Durch die Begnadigung ehemaliger Rebellen und deren Rückkehr in die Regierung wird die Unruhe im Süden beruhigt."
  usfp_reconstruction_cointelpro_freedmen_button: "Redeemer-Gruppen infiltrieren"
@@ -154,9 +154,9 @@
  usfp_reconstruction_long_reason: "Während die Reconstruction für die Freedmen weitgehend ein Erfolg war, bleibt Rassenvorurteil auf allen Ebenen des [ROOT.GetCountry.GetName] tief verwurzelt. Es wird mindestens eine Generation dauern, bis die Bürger der [SCOPE.sCulture('afro_american_culture').GetName] wirklich als ein Kernelement der [ROOT.GetCountry.GetAdjectiveNoFormatting] Nation akzeptiert werden."
  usfp_long_reconstruction_progress_bar: "Afro-Amerikanische Integration"
  usfp_long_reconstruction_progress_bar_desc: "Fortschritt: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/2000)"
- afro_american_average_acceptance: "Durchschnittliche [concept_acceptance] der afro-amerikanischen [Concept('concept_pop', '$concept_pops')]"
- afro_american_character_popularity: "[concept_popularity] der afro-amerikanischen [Concept('concept_character', '$concept_characters')]"
- dixie_radicalism: "Dixie [Concept('concept_radical', '$concept_radicals')]"
+ afro_american_average_acceptance: "Durchschnittliche [concept_acceptance] der afro-amerikanischen [Concept('concept_pop', '$concept_pops$')]"
+ afro_american_character_popularity: "[concept_popularity] der afro-amerikanischen [Concept('concept_character', '$concept_characters$')]"
+ dixie_radicalism: "Dixie [Concept('concept_radical', '$concept_radicals$')]"
  supremacist_movement_support: "$movement_cultural_majority$ [concept_political_movement_support]"
  usfp_long_reconstruction_complete_tt: "Die #bold Fortschrittsleiste#! hat #bold 2000# erreicht!"
   
@@ -175,7 +175,7 @@
   
  usfp_je_westward_expansion: "Westliche Expansion"
  usfp_je_westward_expansion_reason: "$concept_usfp_westward_expansion_desc$"
- usfp_je_westward_expansion_complete: "Neue [Concept('concept_homeland','$concept_homelands')] werden weiterhin zu Ihren [Concept('concept_state', '$concept_states')] für den Rest des Spiels hinzugefügt."
+ usfp_je_westward_expansion_complete: "Neue [Concept('concept_homeland','$concept_homelands$')] werden weiterhin zu Ihren [Concept('concept_state', '$concept_states')] für den Rest des Spiels hinzugefügt."
   
  texan_statehood_tex: "Appell um Staatsbürgerschaft"
  texan_statehood_tex_desc: "Unsere Republik wurde von Siedlern aus den Vereinigten Staaten gegründet. Wir wären stärker als Teil der Union, wenn sie uns haben wollen."
@@ -202,7 +202,7 @@
  usfp_offer_treaty_of_gh_mex: "Den Norden aufgeben"
  usfp_offer_treaty_of_gh_mex_desc: "Unser Krieg mit den Vereinigten Staaten ist nicht zu gewinnen. Wir müssen um Frieden bitten, zu welchen Bedingungen auch immer, um den Konflikt zu beenden."
   
- plains_formation_tt: "Jede [concept_army] in der [SCOPE.sStrategicRegion('great_plains_region').GetName] [concept_hq] hat mindestens #variable 3#! [Concept('concept_unit','$concept_units')] und einen [concept_general]"
+ plains_formation_tt: "Jede [concept_army] in der [SCOPE.sStrategicRegion('great_plains_region').GetName] [concept_hq] hat mindestens #variable 3#! [Concept('concept_unit','$concept_units$')] und einen [concept_general]"
   
  usfp_je_western_border: "Das Indianerreservat"
  usfp_je_western_border_reason: "So wie König George vor der Revolution, haben wir nun eine Linie über unsere Westgrenze gezogen, die von weißen Siedlern nicht überschritten werden darf. Wir haben uns verpflichtet, eine friedliche Grenze zu den Nationen der Great Plains aufrechtzuerhalten, sehr zum Missfallen der potenziellen Siedler."
@@ -211,7 +211,7 @@
  usfp_indian_appropiations_button_desc: "Unsere bisherigen Versuche, Verträge mit Indianerstämmen zu schließen, haben sich als zu umständlich für unsere Zwecke erwiesen. Mit dem Indian Appropriation Act können wir den Erwerb von einheimischen Land vereinfachen, indem wir mit den Indianern als Individuen verhandeln."
  usfp_indian_appropiations_button_tt: "Der [ROOT.GetCountry.GetName] hört auf, irgendeinen Indianerstamm als unabhängige Nation anzuerkennen, mit der neue Verträge geschlossen werden können."
  usfp_indian_appropiations_button_tt2: "Alle Indianer innerhalb des [ROOT.GetCountry.GetName] werden rechtlich als Waisen der Bundesregierung bezeichnet."
- usfp_enable_american_indian_culture_tt: "Indigene Nordamerikaner [Concept('concept_pop', '$concept_pops')] in unserem [Concept('concept_incorporated_state', '$concept_incorporated_states')] werden im Laufe der Zeit in eine kombinierte [SCOPE.sCulture('american_indian_culture').GetName] [concept_culture] integriert."
+ usfp_enable_american_indian_culture_tt: "Indigene Nordamerikaner [Concept('concept_pop', '$concept_pops$')] in unserem [Concept('concept_incorporated_state', '$concept_incorporated_states')] werden im Laufe der Zeit in eine kombinierte [SCOPE.sCulture('american_indian_culture').GetName] [concept_culture] integriert."
   
  usfp_demand_bc_button: "Britisch-Kolumbien fordern"
  usfp_demand_bc_button_desc: "Die verfluchten Briten sollten ihre schmutzigen Hände von dem gesamten Oregon-Territorium lassen! Fünfundfünfzig Vierzig oder kämpfen!"

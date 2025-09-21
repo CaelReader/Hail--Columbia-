@@ -764,16 +764,15 @@ usfp_acw.9 = {
 			 c:CSA = {
 				save_scope_as = acw_secession_country
 			 }
-			 usfp_planters_to_landowners_effect = yes
+			ig:ig_landowners = {
+				usfp_planters_to_landowners_effect = yes	
+			}
 		}
 		create_political_lobby = {
 			type = lobby_anti_country
 			target = scope:acw_secession_country
 			add_interest_group = ig:ig_armed_forces
 			add_interest_group = ig:ig_intelligentsia
-		}
-		ig:ig_landowners = {
-			usfp_planters_to_landowners_effect = yes	
 		}
 	}
 
@@ -1814,7 +1813,7 @@ usfp_acw.17 = {
 			}
 			add_war_war_support = {
 				target = root
-				value = 40
+				value = 100
 			}
 		}
 		show_as_tooltip = {
@@ -1892,7 +1891,7 @@ usfp_acw.18 = {
 			}
 			add_war_war_support = {
 				target = root
-				value = 40
+				value = 100
 			}
 		}
 		show_as_tooltip = {

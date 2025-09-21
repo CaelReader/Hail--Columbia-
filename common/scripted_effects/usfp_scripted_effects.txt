@@ -2004,7 +2004,7 @@ usfp_underground_railroad_slave_escape_effect = {
 				divide = scope:escapee_pop.total_size
 			}
 			multiply = scope:escapee_pop.total_size
-			round = 1
+			round = yes
 		}
 	}
 	scope:escapee_pop = {

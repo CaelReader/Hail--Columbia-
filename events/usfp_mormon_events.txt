@@ -1028,7 +1028,7 @@ usfp_mormon.13 = {
 				percent = 0.1
 				religion = rel:mormon
 			}
-			add_loyalists = {
+			add_loyalists_in_state = {
 				value = medium_radicals
 				religion = rel:protestant
 			}

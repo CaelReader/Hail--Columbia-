@@ -1,6 +1,6 @@
 ﻿l_german:
  gov_usfp_federal_republic_presidential: "Bundesrepublik"
- gov_usfp_federal_republic_presidential_desc: "Dies ist eine [concept_government_type], in der der [concept_head_of_state] ein [Concept('concept_election','$concept_elected')] [Concept('concept_ruler','$RULER_TITLE_PRESIDENT')] ist, mit erheblichen Befugnissen, die an einen [Concept('concept_election','$concept_elected')] Kongress und die einzelnen Landesregierungen delegiert werden. \n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_usfp_federal_republic_presidential_desc: "Dies ist eine [concept_government_type], in der der [concept_head_of_state] ein [Concept('concept_election','$concept_elected$')] [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')] ist, mit erheblichen Befugnissen, die an einen [Concept('concept_election','$concept_elected$')] Kongress und die einzelnen Landesregierungen delegiert werden. \n\n$TRANSFER_OF_POWER_NAME_DESC$"
   
  # gov_usfp_indian_territory: "Indian Territory"
  # gov_usfp_indian_territory_desc: "Dies ist eine [concept_government_type], die aus verschiedenen indigenen Stämmen besteht, die gewaltsam in dieses Gebiet umgesiedelt wurden. Der [Concept('concept_ruler','$RULER_TITLE_PRINCIPAL_CHIEF')] fungiert als der #italic de facto#! [concept_head_of_state].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
@@ -10,23 +10,23 @@
  gov_usfp_principal_chiefdom_desc: "Dies ist eine [concept_government_type], in der das [concept_country] von einem [Concept('concept_ruler','$RULER_TITLE_PRINCIPAL_CHIEF')] geleitet wird.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
   
  gov_usfp_tribal_confederation: "Stammeskonföderation"
- gov_usfp_tribal_confederation_desc: "Dies ist eine [concept_government_type], die aus mehreren Nationen in einer Allianz besteht. Jede Mitgliedsnation ist weitgehend autonom, aber ein Stammesrat von Führern wird einberufen, wenn Entscheidungen die gesamte Konföderation betreffen. Ein [Concept('concept_ruler','$RULER_CHIEFTAIN')] kann als der #italic de facto#! [concept_head_of_state] fungieren, wenn erforderlich.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_usfp_tribal_confederation_desc: "Dies ist eine [concept_government_type], die aus mehreren Nationen in einer Allianz besteht. Jede Mitgliedsnation ist weitgehend autonom, aber ein Stammesrat von Führern wird einberufen, wenn Entscheidungen die gesamte Konföderation betreffen. Ein [Concept('concept_ruler','$RULER_CHIEFTAIN$')] kann als der #italic de facto#! [concept_head_of_state] fungieren, wenn erforderlich.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
   
  gov_usfp_tribal_confederation_centralized: "Konföderation"
  gov_usfp_tribal_confederation_centralized_desc: "Dies ist eine [concept_government_type], die aus mehreren Nationen besteht, die sich unter der Führung eines [Concept('concept_ruler','$RULER_TITLE_PRINCIPAL_CHIEF')] in einer Allianz zusammengeschlossen haben.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
   
  gov_usfp_theodemocracy: "Theodemokratie"
- gov_usfp_theodemocracy_desc: "Eine [concept_government_type], die demokratische Traditionen mit der Hierarchie der Kirche Jesu Christi der Heiligen der Letzten Tage kombiniert. Das Quorum der Präsidentschaft wird von einem [Concept('concept_ruler','$RULER_TITLE_PRESIDENT')] geleitet, der als [concept_head_of_state] fungiert.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_usfp_theodemocracy_desc: "Eine [concept_government_type], die demokratische Traditionen mit der Hierarchie der Kirche Jesu Christi der Heiligen der Letzten Tage kombiniert. Das Quorum der Präsidentschaft wird von einem [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')] geleitet, der als [concept_head_of_state] fungiert.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
   
  gov_usfp_federal_territory: "Bundesgebiet"
- gov_usfp_federal_territory_desc: "Dies ist ein Gebiet, das von der Bundesregierung der Vereinigten Staaten kontrolliert und von einem ernannten [Concept('concept_ruler','$RULER_TITLE_GOVERNOR')] verwaltet wird.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_usfp_federal_territory_desc: "Dies ist ein Gebiet, das von der Bundesregierung der Vereinigten Staaten kontrolliert und von einem ernannten [Concept('concept_ruler','$RULER_TITLE_GOVERNOR$')] verwaltet wird.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
   
  gov_usfp_congressional_republic: "Kongressrepublik"
- gov_usfp_congressional_republic_desc: "Dies ist eine [concept_government_type], die von einem [Concept('concept_election','$concept_elected')] Kongress geleitet wird, der vom [Concept('concept_ruler','$RULER_TITLE_SPEAKER_OF_THE_HOUSE')] geleitet wird. Obwohl es nominal einen [Concept('concept_election','$concept_elected')] [Concept('concept_ruler','$RULER_TITLE_PRESIDENT')] gibt, haben sie keine wirkliche Macht in der Regierung.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_usfp_congressional_republic_desc: "Dies ist eine [concept_government_type], die von einem [Concept('concept_election','$concept_elected$')] Kongress geleitet wird, der vom [Concept('concept_ruler','$RULER_TITLE_SPEAKER_OF_THE_HOUSE')] geleitet wird. Obwohl es nominal einen [Concept('concept_election','$concept_elected$')] [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')] gibt, haben sie keine wirkliche Macht in der Regierung.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  RULER_TITLE_SPEAKER_OF_THE_HOUSE: "Sprecher des Hauses"
   
  gov_usfp_syndicalist_federation: "Syndikalistische Föderation"
- gov_usfp_syndicalist_federation_desc: "Dies ist eine [concept_government_type], in der das [concept_country] von dem [Concept('concept_election','$concept_elected')] Komitee einer Föderation von Gewerkschaften regiert wird.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_usfp_syndicalist_federation_desc: "Dies ist eine [concept_government_type], in der das [concept_country] von dem [Concept('concept_election','$concept_elected$')] Komitee einer Föderation von Gewerkschaften regiert wird.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
   
  gov_usfp_syndicalist_federation_anarchist: "Syndikalistische Föderation"
  gov_usfp_syndicalist_federation_anarchist_desc: "Dies ist eine [concept_government_type], in der das [concept_country] von einer dezentralen Föderation von Gewerkschaften verwaltet wird.\n\n$TRANSFER_OF_POWER_NAME_DESC$"

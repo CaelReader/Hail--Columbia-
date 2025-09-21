@@ -142,7 +142,7 @@ wild_west.2 = {
 				limit = {
 					culture = { has_discrimination_trait = indigenous_american_heritage } 
 				}
-				culture = {	save_scope_as = native_people_infringed }
+				save_scope_as = native_people_infringed #vanilla bugfix
 			}
 			save_scope_as = raided_railroad
 		}

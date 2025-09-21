@@ -391,7 +391,7 @@ usfp_reconstruction.14.a: "Violence cannot stop righteousness!"
 usfp_reconstruction.14.b: "Maybe we should save our own skins."
 
 usfp_reconstruction.15.t: "Scalawags"
-usfp_reconstruction.15.d: "Some [GetCulture('dixie').GetName] $Farmers$ in [SCOPE.sState('farm_state').GetName], many of them Unionists, have begun to rally in favor of Reconstruction, finding common cause with [GetCulture('afro_american').GetName] Freedmen against the economic domination of the [GetInterestGroupVariant('ig_landowners',GetPlayer).GetName]."
+usfp_reconstruction.15.d: "Some [GetCulture('dixie').GetName] $farmers$ in [SCOPE.sState('farm_state').GetName], many of them Unionists, have begun to rally in favor of Reconstruction, finding common cause with [GetCulture('afro_american').GetName] Freedmen against the economic domination of the [GetInterestGroupVariant('ig_landowners',GetPlayer).GetName]."
 usfp_reconstruction.15.f: "[SCOPE.sState('farm_state').GetNameNoFormatting] had hosted small meetings of Unionists during the war, but now they were able to air their grievances in the open. The most radical among them joined the Republican Party and supported the enfrachisement of the Freedmen. Most were simply happy to see the haughty plantation owners knocked down a peg."
 usfp_reconstruction.15.a: "Let's hope they don't suffer too much backlash."
 usfp_reconstruction.15.b: "Could this work across the rest of the South?"

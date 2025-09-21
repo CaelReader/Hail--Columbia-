@@ -474,17 +474,19 @@ usa_mark_twain_character_template = { #Mark Twain
     historical = yes
     culture = cu:dixie
     female = no
-    religion = rel:protestant
-    ideology = ideology_jingoist_leader
+    religion = protestant
+    ideology = ideology_jingoist
     interest_group = ig_intelligentsia
     birth_date = 1835.11.30
+	is_agitator = yes
     traits = {
         literary
         erudite
         reckless
-    }
-    interest_group_leader_usage = {
+    }   
+    agitator_usage = { #USFP: changed to Agitator instead of IG Leader
         country_trigger = {
+			has_dlc_feature = voice_of_the_people_content
             country_has_primary_culture = cu:dixie
             any_scope_state = {
                 state_region = s:STATE_MISSOURI
@@ -493,11 +495,11 @@ usa_mark_twain_character_template = { #Mark Twain
         interest_group_trigger = {
             is_marginal = no
             is_interest_group_type = ig_intelligentsia
-        }
+        }   
         earliest_usage_date = 1865.11.18
         latest_usage_date = 1910.1.1
         chance = 25
-    }
+    }   
     on_created = {
         if = {
             limit = {
@@ -512,16 +514,6 @@ usa_mark_twain_character_template = { #Mark Twain
         else_if = {
             limit = {
                 owner = {
-                    any_country = {
-                        is_subject_of = prev
-                    }
-                }
-            }
-            set_ideology = ideology:ideology_pacifist
-        }
-        else_if = {
-            limit = {
-                owner = {
                     has_technology_researched = feminism
                     NOT = {
                         has_law = law_type:law_womens_suffrage
@@ -530,8 +522,18 @@ usa_mark_twain_character_template = { #Mark Twain
             }
             set_ideology = ideology:ideology_feminist
         }
+		 else_if = {
+            limit = {
+                owner = {
+                    any_country = {
+                        is_subject_of = prev
+                    }
+                }
+            }
+            set_ideology = ideology:ideology_pacifist
+        }
         else = {
-            set_ideology = ideology:ideology_jingoist_leader
+            set_ideology = ideology:ideology_jingoist
         }
     }
 }

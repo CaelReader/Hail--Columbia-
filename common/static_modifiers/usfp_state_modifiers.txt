@@ -1,10 +1,10 @@
 ﻿usfp_burnt_over_district = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_theocracy_positive.dds
-	interest_group_ig_devout_pol_str_mult = 0.25
+	state_conversion_mult = 0.25
 }
 usfp_red_river_revival = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_theocracy_positive.dds
-	interest_group_ig_devout_pol_str_mult = 0.25
+	state_conversion_mult = 0.25
 }
 
 #from NFM
