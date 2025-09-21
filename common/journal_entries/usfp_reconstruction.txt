@@ -6,6 +6,7 @@ usfp_reconstruction_long = {
 	group = je_group_usa_american_civil_war
 
 	scripted_progress_bar = usfp_long_reconstruction_progress_bar
+	scripted_button = usfp_overturn_plessy_button
 
 	immediate = {
 		cu:afro_american = {

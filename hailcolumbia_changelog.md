@@ -648,6 +648,7 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	Increased infamy costs for annexing/puppeting Mexico
 	(CMF) Reactionary Movement can't spawn in american countries
 	(CMF) Doubled baseline PB attraction to the Liberal party
+	(CMF) African-heritage characters can always join the Afro-American National Movement
 ## Fixes
 	Hopefully prevented non-USA countries from picking the USA-specific AI strategies, again
 	Added extra check to make sure John Brown doesn't launch Harpers Ferry immediately  after spawning

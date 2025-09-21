@@ -200,3 +200,34 @@ usfp_reconstruction_cointelpro_slaver_button = {
 		}
 	}
 }
+
+usfp_overturn_plessy_button = {
+	name = "usfp_overturn_plessy_button"
+	desc = "usfp_overturn_plessy_button_desc"
+
+	visible = {
+		je:usfp_reconstruction_long ={
+			has_modifier = usfp_separate_but_equal_modifier
+		}
+	}
+
+	possible = {
+		OR = {
+			has_law = law_type:law_multicultural
+			NOT = {
+				has_journal_entry = je_usfp_american_constitution
+			}
+		}
+		government_legitimacy >= 51
+	}
+
+	effect = {
+		je:usfp_reconstruction_long ={
+			remove_modifier = usfp_separate_but_equal_modifier
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+}

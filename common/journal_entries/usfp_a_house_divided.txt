@@ -801,6 +801,14 @@ je_usfp_afro_american_colonization = {
 	scripted_button = usfp_promote_afro_american_migration_south_america
 	scripted_button = usfp_linconia_button
 
+	on_monthly_pulse = {
+		random_events = {
+			chance_to_happen = 20
+			100 = usfp_usa_colonization.2 #Linconia
+			100 = usfp_usa_colonization.4 #Haiti
+		}
+	}
+
 	fail = {
 		OR = {
 			AND = {

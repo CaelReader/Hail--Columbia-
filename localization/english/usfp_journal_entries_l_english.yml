@@ -188,6 +188,8 @@ usfp_long_reconstruction_complete_tt: "The #bold Progress Bar#! has reached #bol
 usfp_long_reconstruction_lose_progress: "#bold Long Reconstruction#! loses progress"
 usfp_long_reconstruction_gain_progress: "#bold Long Reconstruction#! gains progress"
 
+usfp_overturn_plessy_button: "Overturn Plessy"
+usfp_overturn_plessy_button_desc: "The doctrine of 'seperate but equal' cannot survive the new legal reality."
 
 usfp_canadian_highlander: "We are the only Canadian colony remaining"
 
