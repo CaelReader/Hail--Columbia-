@@ -77,7 +77,7 @@ nicaragua_revolt_walker = {
 				limit = { 
 					c:USA = {
 						NOT = {
-							has_law = law_type:law_slavery_banned
+							has_law_or_variant = law_type:law_slavery_banned
 						}
 					}
 				}

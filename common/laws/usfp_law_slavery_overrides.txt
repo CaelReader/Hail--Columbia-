@@ -51,7 +51,7 @@ law_slavery_banned = {
 			ig:ig_landowners = {
 				is_marginal = no
 			}
-			has_law = law_type:law_presidential_republic
+			has_law_or_variant = law_type:law_presidential_republic
 		}
 	}
 	
@@ -68,7 +68,7 @@ law_slavery_banned = {
 		if = {
 			limit = { 
 				c:BRZ ?= this
-				has_law = law_type:law_slave_trade
+				has_law_or_variant = law_type:law_slave_trade
 				NOR = {
 					any_interest_group = {
 						is_in_government = yes
@@ -87,7 +87,7 @@ law_slavery_banned = {
 			limit = { 
 				c:USA ?= this
 				scope:law.type = law_type:law_slavery_banned
-				NOT = { has_law = law_type:law_slavery_banned }
+				NOT = { has_law_or_variant = law_type:law_slavery_banned }
 				OR = {
 					any_interest_group = {
 						is_in_government = yes
@@ -118,7 +118,7 @@ law_slavery_banned = {
 		# This was funny while it lasted.
 		if = {
 			limit = { 
-				has_law = law_type:law_council_republic
+				has_law_or_variant = law_type:law_council_republic
 			}
 			add = 750
 		}
@@ -148,7 +148,7 @@ law_slavery_banned = {
 		
 		if = {
 			limit = {
-				has_law = law_type:law_slavery_banned
+				has_law_or_variant = law_type:law_slavery_banned
 				NOT = { has_strategy = ai_strategy_reactionary_agenda }
 				has_technology_researched = civilizing_mission				
 			}
@@ -206,7 +206,7 @@ law_debt_slavery = {
 			ig:ig_landowners = {
 				is_marginal = no
 			}
-			has_law = law_type:law_presidential_republic
+			has_law_or_variant = law_type:law_presidential_republic
 		}
 	}
 
@@ -285,7 +285,7 @@ law_slave_trade = {
 			ig:ig_landowners = {
 				is_marginal = no
 			}
-			has_law = law_type:law_presidential_republic
+			has_law_or_variant = law_type:law_presidential_republic
 		}
 	}
 	
@@ -407,7 +407,7 @@ law_legacy_slavery = {
 		if = {
 			limit = { 
 				c:BRZ ?= this
-				has_law = law_type:law_slave_trade
+				has_law_or_variant = law_type:law_slave_trade
 				NOR = {
 					any_interest_group = {
 						is_in_government = yes
@@ -426,7 +426,7 @@ law_legacy_slavery = {
 		if = {
 			limit = { 
 				c:BRZ ?= this
-				has_law = law_type:law_slave_trade
+				has_law_or_variant = law_type:law_slave_trade
 				has_modifier = aberdeen_act_enforced_brz
 				scope:law = law_type:law_legacy_slavery
 			}

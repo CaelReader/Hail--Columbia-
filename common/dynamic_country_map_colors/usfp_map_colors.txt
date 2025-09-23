@@ -4,9 +4,9 @@
 	possible = {
 		exists = c:USA
 		THIS = c:USA
-		has_law = law_type:law_council_republic
+		has_law_or_variant = law_type:law_council_republic
 		NOT = {
-			has_law = law_type:law_anarchy
+			has_law_or_variant = law_type:law_anarchy
 		}
 	}
 }
@@ -17,8 +17,8 @@ usa_anarchist = {
 		possible = {
 		exists = c:USA
 		THIS = c:USA
-		has_law = law_type:law_council_republic
-		has_law = law_type:law_anarchy
+		has_law_or_variant = law_type:law_council_republic
+		has_law_or_variant = law_type:law_anarchy
 	}
 }
 
@@ -28,9 +28,9 @@ usa_technate = {
 	possible = {
 		exists = c:USA
 		THIS = c:USA
-		has_law = law_type:law_technocracy
+		has_law_or_variant = law_type:law_technocracy
 		NOT = {
-			has_law = law_type:law_council_republic
+			has_law_or_variant = law_type:law_council_republic
 		}
 	}
 }

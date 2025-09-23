@@ -691,15 +691,12 @@ usfp_csa_states_rights_modifier = {
 
 usfp_separate_but_equal_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
-	# country_acceptance_no_shared_heritage
-	country_qualification_growth_cultural_erasure_mult = -0.20
-	country_qualification_growth_open_prejudice_mult = -0.15
-	country_qualification_growth_second_rate_citizen_mult = -0.10
+	country_acceptance_no_shared_heritage_trait_add = -10
 }
 
 usfp_countrywide_anti_black_violence_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-	# country_acceptance_no_shared_heritage
+	country_acceptance_no_shared_heritage_trait_add = -10
 	state_loyalism_increases_cultural_erasure_mult = -0.50
 	state_loyalism_increases_open_prejudice_mult = -0.50
 	state_loyalism_increases_second_rate_citizen_mult = -0.50

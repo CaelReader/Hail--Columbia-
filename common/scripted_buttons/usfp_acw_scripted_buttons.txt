@@ -111,7 +111,7 @@
 # 			limit = { 
 # 				authority >= 100
 # 				NOT = {
-# 					has_law = law_type:law_slavery_banned
+# 					has_law_or_variant = law_type:law_slavery_banned
 # 				}
 # 			}
 # 		}
@@ -134,7 +134,7 @@
 # 			limit = { 
 # 				authority >= 100
 # 				NOT = {
-# 					has_law = law_type:law_slavery_banned
+# 					has_law_or_variant = law_type:law_slavery_banned
 # 				}
 # 			}
 # 		}
@@ -177,7 +177,7 @@
 # 			limit = { 
 # 				authority >= 100
 # 				NOT = {
-# 					has_law = law_type:law_slavery_banned
+# 					has_law_or_variant = law_type:law_slavery_banned
 # 				}
 # 			}
 # 		}
@@ -196,7 +196,7 @@ usfp_emancipation_proclamation_button = {
 
 	visible = {
 		NOT = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 		exists = c:CSA
 	}
@@ -328,7 +328,7 @@ usfp_acw_support_button = {
 				}
 			}
 		}
-		has_law = law_type:law_slavery_banned
+		has_law_or_variant = law_type:law_slavery_banned
 		custom_tooltip = {
 			text = usfp_acw_support_button.tt
 			any_scope_war = {

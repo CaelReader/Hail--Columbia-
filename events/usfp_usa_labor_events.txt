@@ -36,7 +36,7 @@ usfp_usa_labor.1 = {
 			state_region = s:STATE_ILLINOIS
 		}
 		NOT = {
-			has_law = law_type:law_cooperative_ownership
+			has_law_or_variant = law_type:law_cooperative_ownership
 		}
 	}
 
@@ -140,10 +140,10 @@ usfp_usa_labor.2 = {
 		}
 		has_technology_researched = anarchism
 		NOR = {
-			has_law = law_type:law_no_police
-			has_law = law_type:law_old_age_pension
-			has_law = law_type:law_council_republic
-			has_law = law_type:law_cooperative_ownership
+			has_law_or_variant = law_type:law_no_police
+			has_law_or_variant = law_type:law_old_age_pension
+			has_law_or_variant = law_type:law_council_republic
+			has_law_or_variant = law_type:law_cooperative_ownership
 		}
 	}
 
@@ -247,10 +247,10 @@ usfp_usa_labor.3 = {
 		game_date > 1879.1.1
 		has_technology_researched = labor_movement
 		NOT = {
-			has_law = law_type:law_council_republic
+			has_law_or_variant = law_type:law_council_republic
 		}
 		NOT = {
-			has_law = law_type:law_cooperative_ownership
+			has_law_or_variant = law_type:law_cooperative_ownership
 		}
 		NOT = {
 			has_variable = kol_founded
@@ -388,9 +388,9 @@ usfp_usa_labor.4 = {
 		}
 		game_date > 1877.6.1
 		NOR = {
-			has_law = law_type:law_worker_protections
-			has_law = law_type:law_old_age_pension
-			has_law = law_type:law_cooperative_ownership
+			has_law_or_variant = law_type:law_worker_protections
+			has_law_or_variant = law_type:law_old_age_pension
+			has_law_or_variant = law_type:law_cooperative_ownership
 		}
 		any_scope_state = {
 			OR = {
@@ -502,8 +502,8 @@ usfp_usa_labor.4 = {
 		highlighted_option = yes
 		trigger = {
 			OR = {
-				has_law = law_type:law_national_guard
-				has_law = law_type:law_secret_police
+				has_law_or_variant = law_type:law_national_guard
+				has_law_or_variant = law_type:law_secret_police
 			}
 		}
 		every_scope_state = {
@@ -544,7 +544,7 @@ usfp_usa_labor.4 = {
 		name = usfp_usa_labor.4.e
 		highlighted_option = yes
 		trigger = {
-			has_law = law_type:law_guaranteed_liberties
+			has_law_or_variant = law_type:law_guaranteed_liberties
 		}
 		ig:ig_industrialists = {
 			add_modifier = {
@@ -617,9 +617,9 @@ usfp_usa_labor.5 = {
 		game_date > 1886.12.1
 		has_technology_researched = labor_movement
 		NOR = {
-			has_law = law_type:law_council_republic
-			has_law = law_type:law_cooperative_ownership
-			has_law = law_type:law_command_economy
+			has_law_or_variant = law_type:law_council_republic
+			has_law_or_variant = law_type:law_cooperative_ownership
+			has_law_or_variant = law_type:law_command_economy
 		}
 		has_variable = kol_founded
 	}
@@ -727,9 +727,9 @@ usfp_usa_labor.6 = {
 			has_variable = looking_backward_published
 		}
 		NOR = {
-			has_law = law_type:law_command_economy
-			has_law = law_type:law_cooperative_ownership
-			has_law = law_type:law_council_republic
+			has_law_or_variant = law_type:law_command_economy
+			has_law_or_variant = law_type:law_cooperative_ownership
+			has_law_or_variant = law_type:law_council_republic
 		}
 		game_date > 1888.1.1
 	}

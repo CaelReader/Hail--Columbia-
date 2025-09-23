@@ -165,7 +165,7 @@ texan_war_of_independence.2 = {
 		if = {
 			limit = {
 				NOT = {
-					has_law = law_type:law_slavery_banned
+					has_law_or_variant = law_type:law_slavery_banned
 				}
 			 }
 			usfp_anger_abolitionists_effect = { MULT = 1 }
@@ -190,7 +190,7 @@ texan_war_of_independence.2 = {
 		if = {
 			limit = {
 				NOT = {
-					has_law = law_type:law_slavery_banned
+					has_law_or_variant = law_type:law_slavery_banned
 				}
 			 }
 			usfp_anger_abolitionists_effect = { MULT = 0.5 }

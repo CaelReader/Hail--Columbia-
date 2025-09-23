@@ -233,7 +233,7 @@ usfp_a_house_divided.3 = {
 		highlighted_option = yes
 		show_as_unavailable = { always = yes }
 		trigger = {
-			has_law = law_type:law_legacy_slavery
+			has_law_or_variant = law_type:law_legacy_slavery
 			NOT = {
 				any_political_movement = {
 					is_political_movement_type = movement_anti_slavery
@@ -301,7 +301,7 @@ usfp_a_house_divided.4 = {
 
 	trigger = {
 		NOT = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 		game_date > 1853.2.1
 		NOT = {
@@ -384,7 +384,7 @@ usfp_a_house_divided.5 = {
 
 	trigger = {
 		NOT = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 		game_date > 1852.1.1
 		NOT = {
@@ -454,7 +454,7 @@ usfp_a_house_divided.6 = {
 
 	trigger = {
 		NOT = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 		game_date > 1857.1.1
 		NOT = {
@@ -880,7 +880,7 @@ usfp_a_house_divided.9 = {
 
 	trigger = {
 		NOT = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 		any_scope_state = {
 			AND = {
@@ -922,7 +922,7 @@ usfp_a_house_divided.10 = {
 
 	trigger = {
 		NOT = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 		NOT = {
 			has_variable = kansas_nebraska_act
@@ -1004,7 +1004,7 @@ usfp_a_house_divided.11 = {
 	#triggered by Kansas-Nebraska Act or Dred Scott decision
 	trigger = {
 		NOT = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 		OR = {
 			has_variable = kansas_nebraska_act_passed
@@ -1192,7 +1192,7 @@ usfp_a_house_divided.13 = {
 
 	trigger = {
 		NOT = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 		NOT = {
 			has_variable = accepted_wilmot_proviso
@@ -1382,7 +1382,7 @@ usfp_a_house_divided.15 = {
 			has_variable = accepted_wilmot_proviso
 			has_variable = dred_scott
 			has_modifier = usfp_breaking_compromise
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 			has_journal_entry = je_acw_war
             any_civil_war = {
 				political_movement ?= {
@@ -1484,7 +1484,7 @@ usfp_a_house_divided.16 = {
 	trigger = {
 		NOR = {
 			has_variable = dred_scott
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 		game_date > 1857.1.1
 	}
@@ -1702,7 +1702,7 @@ usfp_a_house_divided.18 = {
 			is_enacting_law = law_type:law_slavery_banned
 		}
 		NOT = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 		ruler = {
 			usfp_anti_slavery_leader_trigger = no
@@ -1770,7 +1770,7 @@ usfp_a_house_divided.19 = {
 	trigger = {
 		has_dlc_feature = voice_of_the_people_content
 		NOT = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 		usfp_is_afro_american_discriminated = yes
 		game_date > 1847.12.3 #The North Star founded

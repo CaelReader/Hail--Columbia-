@@ -193,12 +193,7 @@
 	s:STATE_WASHINGTON = { add_state_trait = state_trait_columbia_plateau }
 	s:STATE_OREGON = { add_state_trait = state_trait_columbia_plateau }
 	s:STATE_IDAHO = { add_state_trait = state_trait_columbia_plateau }
-	
-	## Grand River
-	s:STATE_NEW_MEXICO = { add_state_trait = state_trait_grand_river }
-	s:STATE_CHIHUAHUA = { add_state_trait = state_trait_grand_river }
-	s:STATE_RIO_GRANDE = { add_state_trait = state_trait_grand_river }
-	s:STATE_TEXAS = { add_state_trait = state_trait_grand_river }
+
 	
 	## Sierra Madre Watershed
 	s:STATE_CHIHUAHUA = { add_state_trait = state_trait_sierra_madre_watershed }

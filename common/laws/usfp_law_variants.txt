@@ -69,7 +69,7 @@ law_usfp_nominal_separation = {
 		recalculate_pop_ig_support = yes
 		if = {
 			limit = {
-				has_law = law_type:law_state_atheism
+				has_law_or_variant = law_type:law_state_atheism
 			}
 			set_state_religion = root.country_definition.religion
 		}
@@ -102,7 +102,7 @@ law_usfp_nominal_separation = {
 				is_in_same_power_bloc = scope:target_country
 				AND = {
 					modifier:country_can_impose_same_lawgroup_church_and_state_in_power_bloc_bool = yes
-					has_law = scope:law
+					has_law_or_variant = scope:law
 				}
 			}
 			can_impose_law_default = yes

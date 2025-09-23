@@ -446,7 +446,7 @@ movement_usfp_neoconfederate = {
 			has_ideology = ideology:ideology_usfp_strongman_populist
 		}
 		culture = {
-			has_discrimination_trait = european_heritage
+			has_discrimination_trait_group = heritage_group_european
 		}
 	}
 	character_support_weight = {
@@ -527,7 +527,7 @@ movement_usfp_neoconfederate = {
 
 	pop_support_trigger = {
 		culture = {
-			has_discrimination_trait = european_heritage
+			has_discrimination_trait_group = heritage_group_european
 		}
 		pop_acceptance >= acceptance_status_4
 	}
@@ -662,7 +662,7 @@ movement_usfp_neoconfederate = {
 			limit = {
 				state = {
 					any_scope_culture = {
-						has_discrimination_trait = african_heritage
+						has_discrimination_trait_group = heritage_group_african
 					}
 				}
 			}
@@ -673,7 +673,7 @@ movement_usfp_neoconfederate = {
 						ordered_scope_pop = {
 							limit = {
 								culture = {
-									has_discrimination_trait = african_heritage
+									has_discrimination_trait_group = heritage_group_african
 								}
 							}
 							order_by = standard_of_living

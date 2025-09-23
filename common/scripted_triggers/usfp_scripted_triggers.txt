@@ -452,8 +452,8 @@ usfp_has_plains_occupation_trigger = {
 
 usfp_is_afro_american_discriminated = {
 	NOR = {
-		has_law = law_type:law_cultural_exclusion
-		has_law = law_type:law_multicultural
+		has_law_or_variant = law_type:law_cultural_exclusion
+		has_law_or_variant = law_type:law_multicultural
 	}
 }
 
@@ -481,14 +481,14 @@ usfp_character_is_natural_born_citizen = {
 			OR = {
 				scope:check_character.culture = {
 					NOT = {
-						has_discrimination_trait = indigenous_american_heritage
+						has_discrimination_trait_group = heritage_group_indigenous_american
 					}
 					root = {
 						cultural_acceptance_base = { target = scope:check_character.culture value >= acceptance_status_3 }
 					}
 				}
 				scope:check_character.culture = {
-					has_discrimination_trait = indigenous_american_heritage
+					has_discrimination_trait_group = heritage_group_indigenous_american
 					root = {
 						cultural_acceptance_base = { target = scope:check_character.culture value >= acceptance_status_4 }
 					}
@@ -499,13 +499,13 @@ usfp_character_is_natural_born_citizen = {
 }
 
 usfp_progressive_era_square_deal_conditions = {
-	has_law = law_type:law_universal_suffrage
-	has_law = law_type:law_interventionism
-	has_law = law_type:law_graduated_taxation
-	has_law = law_type:law_womens_suffrage
-	has_law = law_type:law_compulsory_primary_school
-	has_law = law_type:law_elected_bureaucrats
-	has_law = law_type:law_public_health_insurance
+	has_law_or_variant = law_type:law_universal_suffrage
+	has_law_or_variant = law_type:law_interventionism
+	has_law_or_variant = law_type:law_graduated_taxation
+	has_law_or_variant = law_type:law_womens_suffrage
+	has_law_or_variant = law_type:law_compulsory_primary_school
+	has_law_or_variant = law_type:law_elected_bureaucrats
+	has_law_or_variant = law_type:law_public_health_insurance
 	institution_investment_level = {
 		institution = institution_health_system
 		value >= 3
@@ -577,7 +577,7 @@ usfp_character_is_anti_racist = {
 	}
 	OR = {
 		culture = {
-			has_discrimination_trait = african_heritage
+			has_discrimination_trait_group = heritage_group_african
 		}
 		has_ideology = ideology:ideology_usfp_abolitionist_radical
 		has_ideology = ideology:ideology_anarchist

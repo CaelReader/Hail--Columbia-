@@ -2,7 +2,9 @@
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	group = je_group_usa_manifest_destiny
-
+	is_shown_in_lobby = {
+		c:USA = THIS
+	}
 	immediate = {
 		# set_variable = indian_removal_var
 		# ruler = {
@@ -85,8 +87,8 @@
 
 	fail = {
 		OR = {
-			has_law = law_type:law_no_colonial_affairs
-			has_law = law_type:law_multicultural
+			has_law_or_variant = law_type:law_no_colonial_affairs
+			has_law_or_variant = law_type:law_multicultural
 			# AND = {
 			# 	cultural_acceptance_base = { target = cu:cherokee value >= acceptance_status_4 }
 			# 	cultural_acceptance_base = { target = cu:caddoan value >= acceptance_status_4 }
@@ -179,7 +181,7 @@
 		show_as_tooltip = {
 			if = {
 				limit = {
-					has_law = law_type:law_multicultural
+					has_law_or_variant = law_type:law_multicultural
 					c:SEQ = {
 						is_player = no
 					}
@@ -188,7 +190,7 @@
 			}
 			if = {
 				limit = { 
-					has_law = law_type:law_multicultural
+					has_law_or_variant = law_type:law_multicultural
 					exists = c:CHE
 					c:CHE = {
 						is_player = no
@@ -198,7 +200,7 @@
 			}
 			if = {
 				limit = { 
-					has_law = law_type:law_multicultural
+					has_law_or_variant = law_type:law_multicultural
 					exists = c:CSW
 					c:CSW = {
 						is_player = no

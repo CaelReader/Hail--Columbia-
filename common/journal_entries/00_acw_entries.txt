@@ -6,6 +6,10 @@ je_acw_countdown = {
 
 	should_be_pinned_by_default = yes
 
+	is_shown_in_lobby = {
+		c:USA = THIS
+	}
+
 	immediate = {
 		set_variable = {
 			name = acw_progress_var
@@ -124,7 +128,7 @@ je_acw_countdown = {
 			triggered_desc = {
 				trigger = {
 					NOT = {
-						has_law = law_type:law_slavery_banned
+						has_law_or_variant = law_type:law_slavery_banned
 					}
 				}
 				desc = je_acw_countdown_status_slave_power
@@ -136,7 +140,7 @@ je_acw_countdown = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-		has_law = law_type:law_slavery_banned
+		has_law_or_variant = law_type:law_slavery_banned
 		any_revolution_ongoing = no
 		government_legitimacy > 20
 	}
@@ -144,6 +148,8 @@ je_acw_countdown = {
 	on_complete = {
 		trigger_event = {
 			id = usfp_a_house_divided.12
+			days = 0
+			popup = yes
 		}
 		show_as_tooltip = {
 			ig:ig_landowners = {
@@ -191,7 +197,7 @@ je_acw_countdown = {
 		effect = {
 			if = {
 				limit = {
-					has_law = law_type:law_slavery_banned
+					has_law_or_variant = law_type:law_slavery_banned
 					any_revolution_ongoing = no
 					government_legitimacy > 20
 				}
@@ -245,7 +251,7 @@ je_acw_countdown = {
 	}
 
 	is_progressing = {
-		has_law = law_type:law_slavery_banned
+		has_law_or_variant = law_type:law_slavery_banned
 		any_revolution_ongoing = no
 		government_legitimacy > 20
 	}
@@ -737,7 +743,7 @@ je_acw_reconstruction = {
 				has_variable = reconstruction_ended_early
 			}
 			NOT = {
-				has_law = law_type:law_slavery_banned
+				has_law_or_variant = law_type:law_slavery_banned
 			}
 			NOT = {
 				any_scope_state = {

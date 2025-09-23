@@ -6,7 +6,7 @@ usfp_progressive_era = {
 	is_shown_when_inactive = {
 		exists = c:USA
 		c:USA = ROOT
-		has_law = law_type:law_presidential_republic
+		has_law_or_variant = law_type:law_presidential_republic
 	}
 	timeout = 7300 #20 years
 	scripted_button = usfp_bust_trust_button
@@ -36,7 +36,7 @@ usfp_progressive_era = {
 			root.average_sol < 13
 		}
 		NOT = {
-			has_law = law_type:law_outlawed_dissent
+			has_law_or_variant = law_type:law_outlawed_dissent
 		}
 		calc_true_if = {
 			amount >= 2
@@ -68,13 +68,13 @@ usfp_progressive_era = {
 	}
 	invalid = {
 		NOT = {
-			has_law = law_type:law_presidential_republic
+			has_law_or_variant = law_type:law_presidential_republic
 		}
 	}
 	fail = {
 		OR = {
-			has_law = law_type:law_outlawed_dissent
-			has_law = law_type:law_single_party_state
+			has_law_or_variant = law_type:law_outlawed_dissent
+			has_law_or_variant = law_type:law_single_party_state
 		}
 	}
 	on_fail = {
@@ -191,10 +191,10 @@ usfp_progressive_era = {
 # 	#added by event
 # 	timeout = 18000 #50 years, lol
 # 	complete = {
-# 		has_law = law_type:law_ethnostate
+# 		has_law_or_variant = law_type:law_ethnostate
 # 		OR = {
-# 			has_law = law_type:law_migration_controls
-# 			has_law = law_type:law_closed_borders
+# 			has_law_or_variant = law_type:law_migration_controls
+# 			has_law_or_variant = law_type:law_closed_borders
 # 		}
 # 		institution_investment_level = {
 # 			institution = institution_health_system

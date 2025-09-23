@@ -63,7 +63,7 @@
 
 		add_journal_entry = {type = je_acw_countdown}
 		add_journal_entry = {type = je_usfp_a_house_divided_missouri_compromise}
-		add_journal_entry = {type = je_usfp_a_house_divided_voting_rights}
+		# add_journal_entry = {type = je_usfp_a_house_divided_voting_rights}
 		add_journal_entry = {type = je_usfp_underground_railroad }
 		add_journal_entry = {type = je_usfp_afro_american_colonization}
 		add_journal_entry = {type = je_indian_removal}

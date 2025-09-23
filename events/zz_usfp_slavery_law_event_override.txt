@@ -19,7 +19,7 @@ slavery_law_events.7 = {
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
 	trigger = {
-		has_law = law_type:law_slavery_banned
+		has_law_or_variant = law_type:law_slavery_banned
 		any_interest_group = {
 			has_ideology = ideology:ideology_pro_slavery
 		}

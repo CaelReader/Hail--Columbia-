@@ -134,7 +134,7 @@ usfp_reconstruction_cointelpro_freedmen_button = {
 	desc = "usfp_reconstruction_cointelpro_freedmen_button_desc"
 
 	visible = {
-		has_law = law_type:law_secret_police
+		has_law_or_variant = law_type:law_secret_police
 		NOT = {
 			has_variable = reconstruction_secret_police
 		}
@@ -170,7 +170,7 @@ usfp_reconstruction_cointelpro_slaver_button = {
 	desc = "usfp_reconstruction_cointelpro_slaver_button_desc"
 
 	visible = {
-		has_law = law_type:law_secret_police
+		has_law_or_variant = law_type:law_secret_police
 		NOT = {
 			has_variable = reconstruction_secret_police
 		}
@@ -213,7 +213,7 @@ usfp_overturn_plessy_button = {
 
 	possible = {
 		OR = {
-			has_law = law_type:law_multicultural
+			has_law_or_variant = law_type:law_multicultural
 			NOT = {
 				has_journal_entry = je_usfp_american_constitution
 			}

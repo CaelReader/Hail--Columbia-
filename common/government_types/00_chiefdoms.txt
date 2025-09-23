@@ -5,8 +5,8 @@
 	female_ruler = "RULER_CHIEFTESS"
 	
 	possible = {
-		# has_law = law_type:law_chiefdom
-		# has_law = law_type:law_elder_council
+		# has_law_or_variant = law_type:law_chiefdom
+		# has_law_or_variant = law_type:law_elder_council
 		OR = {
 			AND = { exists = c:CTF c:CTF = ROOT }
 			AND = { exists = c:LKT c:LKT = ROOT }
@@ -30,8 +30,8 @@ gov_usfp_tribal_confederation_centralized = {
 	female_ruler = "RULER_TITLE_PRINCIPAL_CHIEF"
 	
 	possible = {
-		has_law = law_type:law_chiefdom
-		has_law = law_type:law_elder_council
+		has_law_or_variant = law_type:law_chiefdom
+		has_law_or_variant = law_type:law_elder_council
 		c:usfp_GLC ?= root
 		NOT = {
 			is_country_type = decentralized
@@ -53,7 +53,7 @@ gov_decentralized_sultanate = {
 	female_ruler = "RULER_TITLE_PRINCE"
 	
 	possible = {
-		has_law = law_type:law_chiefdom
+		has_law_or_variant = law_type:law_chiefdom
 		AND = { exists = c:SLW c:SLW = ROOT }
 	}
 
@@ -71,7 +71,7 @@ gov_chiefdom = {
 	female_ruler = "RULER_CHIEFTESS"
 	
 	possible = {
-		has_law = law_type:law_chiefdom
+		has_law_or_variant = law_type:law_chiefdom
 		NOT = {
 			c:SEQ ?= ROOT
 		}
@@ -99,8 +99,8 @@ gov_chiefdom = {
 # 		is_subject_of = c:USA
 
 # 		OR = {
-# 			has_law = law_type:law_presidential_republic
-# 			has_law = law_type:law_chiefdom
+# 			has_law_or_variant = law_type:law_presidential_republic
+# 			has_law_or_variant = law_type:law_chiefdom
 # 		}
 # 		country_has_voting_franchise = no
 # 	}
@@ -127,8 +127,8 @@ gov_chiefdom = {
 # 		is_subject_of = c:USA
 
 # 		OR = {
-# 			has_law = law_type:law_presidential_republic
-# 			has_law = law_type:law_chiefdom
+# 			has_law_or_variant = law_type:law_presidential_republic
+# 			has_law_or_variant = law_type:law_chiefdom
 # 		}
 		
 # 		country_has_voting_franchise = yes

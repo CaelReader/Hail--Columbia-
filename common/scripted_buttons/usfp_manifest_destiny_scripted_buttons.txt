@@ -236,7 +236,7 @@ usfp_homestead_act_button = {
 	cooldown = { days = 365 }
 
 	possible = {
-		has_law = law_type:law_homesteading
+		has_law_or_variant = law_type:law_homesteading
 		custom_tooltip = {
 			text = enough_manifest_destiny
 			var:manifest_destiny_var > 2
@@ -592,7 +592,7 @@ usfp_secure_trail_button = {
 		}
 		has_technology_researched = logistics
 		NOT = {
-			has_law = law_type:law_no_colonial_affairs
+			has_law_or_variant = law_type:law_no_colonial_affairs
 		}
 		is_at_war = no
 		influence >= 50

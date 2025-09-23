@@ -799,7 +799,7 @@ usfp_deseret_into_utah_effect = {
 		if = {
 			limit = { 
 				c:USA = {
-					has_law = law_type:law_slavery_banned
+					has_law_or_variant = law_type:law_slavery_banned
 				}
 			}
 			activate_law = law_type:law_slavery_banned
@@ -1368,7 +1368,7 @@ usfp_american_indian_consolidate = {
 			is_incorporated = yes
 			any_scope_pop = {
 				culture = {
-					has_discrimination_trait = north_american_group
+					has_discrimination_trait_group = heritage_group_indigenous_american
 					NOT = {
 						this = cu:usfp_american_indian
 					}
@@ -1378,7 +1378,7 @@ usfp_american_indian_consolidate = {
 		random_scope_pop = {
 			limit = {
 				culture = {
-					has_discrimination_trait = indigenous_american_heritage
+					has_discrimination_trait_group = heritage_group_indigenous_american
 					NOT = {
 						this = cu:usfp_american_indian
 					}
@@ -1928,9 +1928,9 @@ usfp_underground_railroad_escapes_to_canada_effect = {
 			}
 			is_slave_state = no
 			owner = {
-				has_law = law_type:law_slavery_banned
+				has_law_or_variant = law_type:law_slavery_banned
 				NOT = {
-					has_law = law_type:law_closed_borders
+					has_law_or_variant = law_type:law_closed_borders
 				}
 				NOT = {
 					is_country_type = decentralized
@@ -1972,9 +1972,9 @@ usfp_underground_railroad_escapes_southern_effect = {
 				state_region = s:STATE_RIO_GRANDE
 			}
 			owner = {
-				has_law = law_type:law_slavery_banned
+				has_law_or_variant = law_type:law_slavery_banned
 				NOT = {
-					has_law = law_type:law_closed_borders
+					has_law_or_variant = law_type:law_closed_borders
 				}
 				NOT = {
 					is_country_type = decentralized
@@ -2109,7 +2109,7 @@ usfp_afro_american_colonization_effect = {
 			if = {
 				limit = {
 					root = {
-						has_law = law_type:law_colonial_resettlement
+						has_law_or_variant = law_type:law_colonial_resettlement
 					}
 				 }
 				random_list = {

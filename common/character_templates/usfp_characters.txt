@@ -129,7 +129,7 @@ usfp_agitator_elizabeth_gurley_flynn = {
             limit = {
                 owner = {
                     has_technology_researched = feminism
-                    has_law = law_type:law_council_republic
+                    has_law_or_variant = law_type:law_council_republic
                 }
             }
             set_ideology = ideology:ideology_feminist
@@ -488,7 +488,7 @@ usfp_usa_jane_addams = {
         if = {
             limit = {
                 owner = {
-                    has_law = law_type:law_womens_suffrage
+                    has_law_or_variant = law_type:law_womens_suffrage
                 }
             }
             set_ideology = ideology:ideology_pacifist

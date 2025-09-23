@@ -452,7 +452,7 @@ usfp_bleeding_kansas.6 = {
 			has_variable = had_harpers_ferry
 		}
 		NOT = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 	}
 
@@ -568,7 +568,7 @@ usfp_bleeding_kansas.7 = {
 			has_variable = had_harpers_ferry
 		}
 		NOT = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 	}
 

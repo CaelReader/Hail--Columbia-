@@ -99,8 +99,8 @@ je_usfp_a_house_divided_missouri_compromise = {
 					has_state_in_state_region = STATE_MISSOURI
 				}
 			}
-			has_law = law_type:law_slavery_banned
-			has_law = law_type:law_slave_trade
+			has_law_or_variant = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slave_trade
 			custom_tooltip = {
 				text = usfp_missouri_compromise_broken
 				has_variable = missouri_compromise_broken_var
@@ -435,7 +435,7 @@ je_usfp_a_house_divided_bleeding_kansas = {
 			}
 		}
 		NOT = {
-			has_law = law_type:law_legacy_slavery
+			has_law_or_variant = law_type:law_legacy_slavery
 		}
 	}
 	on_invalid = {
@@ -632,8 +632,8 @@ je_usfp_a_house_divided_voting_rights = {
 
 	complete = {
 		OR = {
-			has_law = law_type:law_cultural_exclusion
-			has_law = law_type:law_multicultural
+			has_law_or_variant = law_type:law_cultural_exclusion
+			has_law_or_variant = law_type:law_multicultural
 		}
 	}
 
@@ -650,7 +650,7 @@ je_usfp_a_house_divided_voting_rights = {
 	invalid = {
 		OR = {
 			country_has_voting_franchise = no
-			has_law = law_type:law_council_republic
+			has_law_or_variant = law_type:law_council_republic
 		}
 	}
 
@@ -765,7 +765,7 @@ je_usfp_underground_railroad = {
 	}
 
 	complete = {
-		has_law = law_type:law_slavery_banned
+		has_law_or_variant = law_type:law_slavery_banned
 		NOT = {
 			has_journal_entry = je_acw_countdown
 		}
@@ -774,7 +774,7 @@ je_usfp_underground_railroad = {
 			OR = {
 				NOT = { exists = c:CSA }
 				c:CSA ?= {
-					has_law = law_type:law_slavery_banned
+					has_law_or_variant = law_type:law_slavery_banned
 				}
 			}
 
@@ -812,10 +812,10 @@ je_usfp_afro_american_colonization = {
 	fail = {
 		OR = {
 			AND = {
-				has_law = law_type:law_slavery_banned
+				has_law_or_variant = law_type:law_slavery_banned
 				usfp_is_afro_american_discriminated = no
 			}
-			has_law = law_type:law_no_colonial_affairs
+			has_law_or_variant = law_type:law_no_colonial_affairs
 		}
 	}
 	custom_failure_header = je_usfp_afro_american_colonization_fail

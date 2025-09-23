@@ -7,7 +7,7 @@
 			is_subject_of = c:USA
 		}
 		c:USA = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 			usfp_is_afro_american_discriminated = no
 			has_journal_entry = usfp_manifest_destiny_main
 		}

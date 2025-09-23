@@ -222,9 +222,9 @@ usfp_usa.4 = {
 		}
 		game_date > 1892.1.1 
 		NOR = {
-			has_law = law_type:law_closed_borders
-			has_law = law_type:law_national_supremacy
-			has_law = law_type:law_ethnostate
+			has_law_or_variant = law_type:law_closed_borders
+			has_law_or_variant = law_type:law_national_supremacy
+			has_law_or_variant = law_type:law_ethnostate
 			has_variable = ellis_island_var
 		}
 	}
@@ -541,7 +541,7 @@ usfp_usa.8 = {
 			exists = py:liberal_party
 			exists = py:free_trade_party
 		}
-		NOT = { has_law = law_type:law_single_party_state }
+		NOT = { has_law_or_variant = law_type:law_single_party_state }
 		in_election_campaign = yes
 	}
 
@@ -658,8 +658,8 @@ usfp_usa.8 = {
 				party ?= scope:republican_party_scope
 			}
 			OR = {
-				has_law = law_type:law_censorship
-				has_law = law_type:law_outlawed_dissent
+				has_law_or_variant = law_type:law_censorship
+				has_law_or_variant = law_type:law_outlawed_dissent
 			}
 		}
 		ai_chance = {
@@ -712,12 +712,12 @@ usfp_usa.9 = {
 			usfp_enacting_super_unconstitutional_law = yes
 			usfp_enacting_unconstitutional_law = yes
 		}
-		has_law = law_type:law_presidential_republic
+		has_law_or_variant = law_type:law_presidential_republic
 		NOR = {
-			has_law = law_type:law_autocracy
-			has_law = law_type:law_oligarchy
-			has_law = law_type:law_technocracy
-			has_law = law_type:law_single_party_state
+			has_law_or_variant = law_type:law_autocracy
+			has_law_or_variant = law_type:law_oligarchy
+			has_law_or_variant = law_type:law_technocracy
+			has_law_or_variant = law_type:law_single_party_state
 		}
 	}
 
@@ -926,8 +926,8 @@ usfp_usa.10 = {
 		}
 		game_date > 1879.1.1
 		NOR = {
-			has_law = law_type:law_cooperative_ownership
-			has_law = law_type:law_command_economy
+			has_law_or_variant = law_type:law_cooperative_ownership
+			has_law_or_variant = law_type:law_command_economy
 		}
 	}
 
@@ -1273,8 +1273,8 @@ usfp_usa.16 = {
 	trigger = {
 		in_election_campaign = yes
 		OR = {
-			has_law = law_type:law_census_voting
-			has_law = law_type:law_universal_suffrage
+			has_law_or_variant = law_type:law_census_voting
+			has_law_or_variant = law_type:law_universal_suffrage
 		}
 		any_interest_group = {
 			has_party = yes
@@ -1469,7 +1469,7 @@ usfp_usa.19 = {
 
 	trigger = {
 		c:USA ?= root
-		has_law = law_type:law_presidential_republic
+		has_law_or_variant = law_type:law_presidential_republic
 		ruler = {
 			has_variable = president_might_break_precedent
 			NOT = {
@@ -1583,7 +1583,7 @@ usfp_usa.20 = {
 
 	trigger = {
 		c:USA ?= root
-		has_law = law_type:law_parliamentary_republic
+		has_law_or_variant = law_type:law_parliamentary_republic
 		NOT = {
 			has_variable = had_congressional_republic
 		}
@@ -1717,7 +1717,7 @@ usfp_usa.22 = {
 		}
 		game_date > 1876.5.1
 		game_date < 1877.1.1
-		has_law = law_type:law_presidential_republic
+		has_law_or_variant = law_type:law_presidential_republic
 	}
 
 	immediate = {

@@ -150,7 +150,7 @@ usfp_american_presidents_only = {
 		if = {
 			limit = { 
 				c:USA ?= this
-				has_law = law_type:law_presidential_republic
+				has_law_or_variant = law_type:law_presidential_republic
 			}
 			every_active_party = {
 				ordered_member = {
@@ -246,7 +246,7 @@ usfp_acw_election_agitators = {
 				limit = {
 					OR = {
 						is_enacting_law = law_type:law_slavery_banned
-						has_law = law_type:law_slavery_banned
+						has_law_or_variant = law_type:law_slavery_banned
 					}
 				 }
 				 create_character = {
@@ -542,7 +542,7 @@ usfp_remove_party_system = {
 			limit = {
 				has_modifier = usfp_second_party_system_modifier
 				NOT = {
-					has_law = law_type:law_presidential_republic
+					has_law_or_variant = law_type:law_presidential_republic
 				}
 			 }
 			remove_modifier = usfp_second_party_system_modifier
@@ -551,7 +551,7 @@ usfp_remove_party_system = {
 			limit = {
 				has_modifier = usfp_third_party_system_modifier
 				NOT = {
-					has_law = law_type:law_presidential_republic
+					has_law_or_variant = law_type:law_presidential_republic
 				}
 			 }
 			remove_modifier = usfp_third_party_system_modifier
@@ -560,7 +560,7 @@ usfp_remove_party_system = {
 			limit = {
 				has_modifier = usfp_fourth_party_system_modifier
 				NOT = {
-					has_law = law_type:law_presidential_republic
+					has_law_or_variant = law_type:law_presidential_republic
 				}
 			 }
 			remove_modifier = usfp_fourth_party_system_modifier
@@ -595,8 +595,8 @@ usfp_fix_monarchy_revolt = {
 					country_has_primary_culture = cu:afro_american
 				}
 				OR = {
-					has_law = law_type:law_monarchy
-					has_law = law_type:law_theocracy
+					has_law_or_variant = law_type:law_monarchy
+					has_law_or_variant = law_type:law_theocracy
 				}
 			 }
 			 activate_law = law_type:law_presidential_republic
@@ -618,7 +618,7 @@ USCWF_precedent_on_action = {
 		if = {
 			limit = {
 				c:USA ?= this
-				has_law = law_type:law_presidential_republic
+				has_law_or_variant = law_type:law_presidential_republic
 			}
 			ruler = {
 				save_scope_as = ruler_scope
@@ -718,8 +718,8 @@ usfp_devils_bargain_action = {
 # 						OR = {
 # 							is_enacting_law = law_type:law_slave_trade
 # 							is_enacting_law = law_type:law_debt_slavery
-# 							has_law = law_type:law_slave_trade
-# 							has_law = law_type:law_debt_slavery
+# 							has_law_or_variant = law_type:law_slave_trade
+# 							has_law_or_variant = law_type:law_debt_slavery
 # 						}
 # 					}
 # 				}
@@ -861,7 +861,7 @@ usfp_political_movement_ideologies = {
 			limit = {
 				is_political_movement_type = movement_cultural_minority 
 				culture = {
-					has_discrimination_trait = indigenous_american_heritage
+					has_discrimination_trait_group = heritage_group_indigenous_american
 				}
 				owner = {
 					country_is_in_north_america = yes

@@ -198,10 +198,10 @@ ideology_usfp_progressive = {
 		NAND = {
 			has_role = agitator
 			owner = {
-				has_law = law_type:law_compulsory_primary_school
-				has_law = law_type:law_graduated_taxation
-				has_law = law_type:law_old_age_pension
-				has_law = law_type:law_public_health_insurance
+				has_law_or_variant = law_type:law_compulsory_primary_school
+				has_law_or_variant = law_type:law_graduated_taxation
+				has_law_or_variant = law_type:law_old_age_pension
+				has_law_or_variant = law_type:law_public_health_insurance
 			}
 		}
 		interest_group = {
@@ -313,10 +313,10 @@ ideology_usfp_social_gospel_leader = {
 		NAND = {
 			has_role = agitator
 			owner = {
-				has_law = law_type:law_multicultural
-				has_law = law_type:law_old_age_pension
-				has_law = law_type:law_compulsory_primary_school
-				has_law = law_type:law_freedom_of_conscience
+				has_law_or_variant = law_type:law_multicultural
+				has_law_or_variant = law_type:law_old_age_pension
+				has_law_or_variant = law_type:law_compulsory_primary_school
+				has_law_or_variant = law_type:law_freedom_of_conscience
 			}
 		}
 		interest_group = {
@@ -515,8 +515,8 @@ ideology_usfp_strongman_populist = {
 # 		NAND = {
 # 			has_role = agitator
 # 			owner = {
-# 				has_law = law_type:law_protectionism
-# 				has_law = law_type:law_interventionism
+# 				has_law_or_variant = law_type:law_protectionism
+# 				has_law_or_variant = law_type:law_interventionism
 # 			}
 # 		}
 # 		OR = {
@@ -565,10 +565,10 @@ ideology_usfp_abolitionist_radical = {
 
 	country_trigger = {
 		usfp_country_is_american = yes
-		NOT = { has_law = law_type:law_slavery_banned } 
+		NOT = { has_law_or_variant = law_type:law_slavery_banned } 
 		NOR = {
-			has_law = law_type:law_multicultural
-			has_law = law_type:law_cultural_exclusion
+			has_law_or_variant = law_type:law_multicultural
+			has_law_or_variant = law_type:law_cultural_exclusion
 		}
 	}
 
@@ -715,8 +715,8 @@ ideology_usfp_georgist_leader = {
 			anz_country_is_pakeha = yes
 		}
 		NOR = {
-			has_law = law_type:law_command_economy
-			has_law = law_type:law_cooperative_ownership
+			has_law_or_variant = law_type:law_command_economy
+			has_law_or_variant = law_type:law_cooperative_ownership
 		}
 	}
 
@@ -755,8 +755,8 @@ ideology_usfp_georgist_leader = {
 			limit = {
 				owner = {
 					OR = {
-						has_law = law_type:law_tenant_farmers
-						has_law = law_type:law_serfdom
+						has_law_or_variant = law_type:law_tenant_farmers
+						has_law_or_variant = law_type:law_serfdom
 					}
 				}
 			}
@@ -767,8 +767,8 @@ ideology_usfp_georgist_leader = {
 			limit = {
 				owner = {
 					OR = {
-						has_law = law_type:law_per_capita_based_taxation
-						has_law = law_type:law_land_based_taxation
+						has_law_or_variant = law_type:law_per_capita_based_taxation
+						has_law_or_variant = law_type:law_land_based_taxation
 					}
 				}
 			}
@@ -806,8 +806,8 @@ ideology_usfp_georgist_leader = {
 			limit = {
 				owner = {
 					OR = {
-						has_law = law_type:law_tenant_farmers
-						has_law = law_type:law_serfdom
+						has_law_or_variant = law_type:law_tenant_farmers
+						has_law_or_variant = law_type:law_serfdom
 					}
 				}
 			}
@@ -818,8 +818,8 @@ ideology_usfp_georgist_leader = {
 			limit = {
 				owner = {
 					OR = {
-						has_law = law_type:law_per_capita_based_taxation
-						has_law = law_type:law_land_based_taxation
+						has_law_or_variant = law_type:law_per_capita_based_taxation
+						has_law_or_variant = law_type:law_land_based_taxation
 					}
 				}
 			}
@@ -1065,9 +1065,9 @@ ideology_usfp_universalist = {
 		NAND = {
 			has_role = agitator
 			owner = {
-				has_law = law_type:law_no_colonial_affairs
-				has_law = law_type:law_total_separation
-				has_law = law_type:law_multicultural
+				has_law_or_variant = law_type:law_no_colonial_affairs
+				has_law_or_variant = law_type:law_total_separation
+				has_law_or_variant = law_type:law_multicultural
 			}
 		}
 		interest_group = {
@@ -1083,10 +1083,10 @@ ideology_usfp_universalist = {
 			limit = {
 				owner = {
 					OR = {
-						has_law = law_type:law_protected_speech
-						has_law = law_type:law_freedom_of_conscience
-						has_law = law_type:law_right_of_assembly
-						has_law = law_type:law_total_separation
+						has_law_or_variant = law_type:law_protected_speech
+						has_law_or_variant = law_type:law_freedom_of_conscience
+						has_law_or_variant = law_type:law_right_of_assembly
+						has_law_or_variant = law_type:law_total_separation
 					}
 				}
 			}
@@ -1096,7 +1096,7 @@ ideology_usfp_universalist = {
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_state_atheism
+					has_law_or_variant = law_type:law_state_atheism
 				}
 			}
 			add = 100
@@ -1116,10 +1116,10 @@ ideology_usfp_universalist = {
 			limit = {
 				owner = {
 					OR = {
-						has_law = law_type:law_protected_speech
-						has_law = law_type:law_freedom_of_conscience
-						has_law = law_type:law_right_of_assembly
-						has_law = law_type:law_total_separation
+						has_law_or_variant = law_type:law_protected_speech
+						has_law_or_variant = law_type:law_freedom_of_conscience
+						has_law_or_variant = law_type:law_right_of_assembly
+						has_law_or_variant = law_type:law_total_separation
 					}
 				}
 			}
@@ -1129,7 +1129,7 @@ ideology_usfp_universalist = {
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_state_atheism
+					has_law_or_variant = law_type:law_state_atheism
 				}
 			}
 			add = 100
@@ -1138,7 +1138,7 @@ ideology_usfp_universalist = {
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_state_religion
+					has_law_or_variant = law_type:law_state_religion
 				}
 				NOT = {
 					religion = owner.religion
@@ -1210,7 +1210,7 @@ ideology_usfp_pan_indianist = {
 	
 	country_trigger = {
 		any_primary_culture = {
-			has_discrimination_trait = north_american_group
+			has_discrimination_trait_group = north_american_group
 		}
 		OR = {
 			has_technology_researched = pan-nationalism
@@ -1229,12 +1229,12 @@ ideology_usfp_pan_indianist = {
 
 	non_interest_group_leader_trigger = {
 		culture = {
-			has_discrimination_trait = north_american_group
+			has_discrimination_trait_group = north_american_group
 		}
 		NAND = {
 			has_role = agitator
 			owner = {
-				has_law = law_type:law_no_colonial_affairs
+				has_law_or_variant = law_type:law_no_colonial_affairs
 			}
 		}
 		interest_group = {

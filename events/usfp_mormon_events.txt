@@ -380,7 +380,7 @@ usfp_mormon.4 = {
 		name = usfp_mormon.4.a
 		trigger = {
 			NOT = {
-				has_law = law_type:law_no_colonial_affairs
+				has_law_or_variant = law_type:law_no_colonial_affairs
 			}
 		}
 		default_option = yes
@@ -451,7 +451,7 @@ usfp_mormon.5 = {
 				desc = usfp_mormon.5.d_noslavery
 				trigger = {
 					c:USA = {
-						has_law = law_type:law_slavery_banned
+						has_law_or_variant = law_type:law_slavery_banned
 					}
 				}
 			}
@@ -699,9 +699,9 @@ usfp_mormon.9 = {
 			exists = py:liberal_party
 			exists = py:free_trade_party
 		}
-		NOT = { has_law = law_type:law_single_party_state }
+		NOT = { has_law_or_variant = law_type:law_single_party_state }
 		NOT = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 		has_journal_entry = je_usfp_american_constitution
 		je:je_usfp_american_constitution = {

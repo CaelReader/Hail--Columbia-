@@ -1,5 +1,8 @@
 ﻿l_english:
-#ACW
+### Hail, Columbia! by CaelReader ###
+
+### A House Divided Events ###
+
 acw_events.1.a.t: "An [SCOPE.sIdeology('abolitionist_scope').GetName] [concept_agitator] will appear in [SCOPE.sCountry('usa_scope').GetName]."
 acw_events.1.b.t: "A [SCOPE.sIdeology('slaver_scope').GetName] [concept_agitator] will appear in [SCOPE.sCountry('usa_scope').GetName]."
 acw_events.3.a.t: "The status of the Missouri Compromise will remain uncertain."
@@ -138,6 +141,8 @@ usfp_a_house_divided.24.d: "Supporters of the [SCOPE.sPoliticalMovement('aboliti
 usfp_a_house_divided.24.f: ""The United States will conquer Mexico, but it will be as a man who swallowed the arsenic which brings him down in turn. Mexico will poison us."" #Ralph Waldo Emerson
 usfp_a_house_divided.24.a: "We'll have to settle this matter once the war is won."
 
+### Bleeding Kansas Events ###
+
 usfp_bleeding_kansas.1.t: "The New England Emigrant Aid Company"
 usfp_bleeding_kansas.1.d: "An enterprising [SCOPE.sIdeology('abolitionist_scope').GetName] from [SCOPE.sState('massachusetts_scope').GetCityHubName] has established a transportation company with the goal of sending anti-slavery immigrants into [SCOPE.sState('kansas_scope').GetName]. Hundreds of migrants have already signed on, eager to turn [SCOPE.sState('kansas_scope').GetName] into a free state."
 usfp_bleeding_kansas.1.f: ""WANTED: Homesteaders eager to do their patriotic duty in the Kansas Territory. Monetary aid, transportation, information provided to those who wish to see Kansas a properly free and white state.""
@@ -206,6 +211,8 @@ usfp_bleeding_kansas.10.d_acw: "With the outbreak of civil war, the Border Ruffi
 usfp_bleeding_kansas.10.d: "After much violence and conflict, the Border Ruffians have emerged victorious from Bleeding [SCOPE.sState('kansas_scope').GetName], securing the territory as a slave state."
 usfp_bleeding_kansas.10.f: ""Listen! hear ye not the sighing,\nOf the Goddess, Freedom, dying,\nOn the fields of Kansas lying, Weltering in her gore!\nHear ye not her mournful pleading?\nSee ye not her votaries bleeding?\nLo! their souls from earth receding,\nCall for vengeance sore.""
 usfp_bleeding_kansas.10.a: "Finally, this tragic chapter might close."
+
+### American Civil War Events ###
 
 usfp_acw.1.t: "A Traitor's Peace"
 usfp_acw.1.d: "[SCOPE.sCharacter('nast_scope').GetFullName] has published a scathing criticism of [SCOPE.sCountry('csa_scope').GetAdjective] peace demands, depicting them as dishonoring the Union and self-destructive to the North. The [SCOPE.sParty('republican_party_scope').GetName] has ran with it to bolster public support for continuing the war, denouncing the notion of what they're calling a Traitor's Peace."
@@ -311,7 +318,8 @@ usfp_acw.19.f: ""Once let the black man get upon his person the brass letters U.
 usfp_acw.19.a: "For Liberty and Union!"
 usfp_acw.19.b: "Keep a close eye on the [GetCulture('afro_american').GetName] troops."
 
-#Reconstruction Events
+### Reconstruction Events ###
+
 usfp_reconstruction.1.t: "The Freedmen's Bureau"
 usfp_reconstruction.1.d: "A commission on the conditions in the South has suggested the creation of a new government agency: the Freedmen's Bureau. This agency would give direct aid to refugees and those recently liberated from slavery, in order to help transition them into free society."
 usfp_reconstruction.1.f: ""Offer the freedmen temporary aid and counsel until they become accustomed to their new sphere of life; secure to them, by law, their just rights of person and property; relieve them, by a fair and equal administration of justice, from the depressing influence of disgraceful prejudice. Above all, guard them against the virtual restoration of slavery in any form, under any pretext, and then let them take care of themselves. If we allow this, the future of the African race in this country will be conducive to its prosperity and associated with its well-being."" #Freedmen's Inquiry Commission
@@ -396,7 +404,8 @@ usfp_reconstruction.15.f: "[SCOPE.sState('farm_state').GetNameNoFormatting] had 
 usfp_reconstruction.15.a: "Let's hope they don't suffer too much backlash."
 usfp_reconstruction.15.b: "Could this work across the rest of the South?"
 
-#### Manifest Destiny
+#### Manifest Destiny Events ###
+
 usfp_manifest_destiny.1.t: "From Sea to Shining Sea?"
 usfp_manifest_destiny.1.d: "Since the days of the [concept_usfp_thirteen_colonies], the settlers of the [ROOT.GetCountry.GetName] have looked upon the lands to the west with desire, and a complete disregard for their existing inhabitants. Now a lofty justification for expansion is beginning to emerge in our national consciousness — that of Manifest Destiny. Proponents of the idea claim that it is not only our right but our sacred duty to seize and populate the entirety of the great American continent."
 usfp_manifest_destiny.1.f: ""Our claim by the right of our manifest destiny is to overspread and to possess the whole of the continent which Providence has given us. It is for the development of the great experiment of liberty and federated self-government entrusted to us.""
@@ -585,7 +594,8 @@ usfp_manifest_destiny.30.f: ""Mexican have no business in this country. I don't 
 usfp_manifest_destiny.30.a: "This is our land now."
 usfp_manifest_destiny.30.b: "We must uphold our end of the treaty."
 
-### Native Removal
+### Native Removal Events ###
+
 usfp_native_removal.1.t: "The Seminole Removal"
 usfp_native_removal.1.d: "With the Second Seminole War finally winding down, the Army can begin the slow process of removing the remainder of the [SCOPE.sCulture('muskogean_scope').GetName] population onto reservation land across the Mississippi."
 usfp_native_removal.1.f: ""Am I a negro, a slave? I am an Indian. The white man shall not make me black. I will make the white man red with blood, and then blacken him in the sun and rain, where the wolf shall smell his bones and the vulture live upon his flesh!"" #Osceola
@@ -671,7 +681,8 @@ usfp_native_removal.16.d: "With settlers pressing into every corner of the Old N
 usfp_native_removal.16.f: ""On the flanks of the line at equal distance from each other were the dragoons and volunteers, hastening the stragglers, often with severe gestures and bitter words. After this cavalry came a file of forty baggage wagons filled with luggage and Indians. The sick were lying in them, rudely jolted, under a canvas which, far from protecting them from the dust and heat, only deprived them of air, for they were as if buried under this burning canopy—several died thus."" #Father Benjamin Marie Petit
 usfp_native_removal.16.a: "May they find peace away from the settlers."
 
-##USA Flavor Events
+### USA Flavor Events ###
+
 usfp_usa.1.t: "The Declaration of Sentiments"
 usfp_usa.1.d: "The first ever American conference for women's rights has convened in Seneca Falls, [SCOPE.sState('new_york_scope').GetName]. Drawing inspiration from the original Declaration of Independence, the attendees have released what they call a Declaration of Sentiments, outlining womens' grievances against male oppression."
 usfp_usa.1.f: ""Such has been the patient sufferance of the women under this government, and such is now the necessity which constrains them to demand the equal station to which they are entitled. The history of mankind is a history of repeated injuries and usurpation on the part of man toward woman, having in direct object the establishment of an absolute tyranny over her.""
@@ -798,7 +809,8 @@ usfp_usa.25.d: "A plague of cotton-eating beetles has swept through [GetStrategi
 usfp_usa.25.f: ""The cotton came up and started to growin’, but before the middle of May I looks down one day and see the boll weevil settin’ up in the top of those little cotton stalks, waitin’ for the squares to form. So all that guano we hauled and put down made nothing but a crop of boll weevils."" #Always Agin It. John L. Dove, interviewer; J. Thomas Metz, interviewee, Chapin, South Carolina, January 24, 1939. American Life Histories: Manuscripts from the Federal Writers’ Project, 1936 to 1940. Manuscript Division
 usfp_usa.25.a: "Will the cotton industry ever recover?"
 
-### Labor Events
+### USA Labor Events ###
+
 usfp_usa_labor.1.t: "The Industrial Workers of the World"
 usfp_usa_labor.1.d: "A convention of radical trade unionists has met in [SCOPE.sState('illinois_scope').GetCityHubName] and founded an organization they call the Industrial Workers of the World, which seeks to unite workers of all trades into 'one big union'. Adopting a much more militant stance than traditional labor organizations, the IWW's stated objective is the total abolition of the wage system, and their platform calls for this to be accomplished through direct action, general strikes, and sabotage."
 usfp_usa_labor.1.f: ""It is the historic mission of the working class to do away with capitalism. The army of production must be organized, not only for everyday struggle with capitalists, but also to carry on production when capitalism shall have been overthrown. By organizing industrially we are forming the structure of the new society within the shell of the old."" #IWW Constitution Preamble
@@ -839,7 +851,8 @@ usfp_usa_labor.6.f: ""Their misery came, with all your other miseries, from that
 usfp_usa_labor.6.a: "An inspiring vision of utopia."
 usfp_usa_labor.6.b: "A deranged socialist fantasy."
 
-### Election Events ###
+### USA Election Events ###
+
 usfp_usa_election.1.t: "Madame [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]?"
 usfp_usa_election.1.d: "Many men and even some women are skeptical that [SCOPE.gsInterestGroup('female_ig').GetLeader.GetFullName] is suitable for the office of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle], on account of her sex."
 usfp_usa_election.1.f: ""The presidency is no place for a woman, it's just common sense. Leadership takes a strong will and a clear head, imagine the catastrophe if [SCOPE.gsInterestGroup('female_ig').GetLeader.GetFullNameNoFormatting] becomes hysterical in the face of a crisis, or worse yet, a war! Would the army even follow her orders? No, women may have gotten the vote, but they should remember their place.""
@@ -951,7 +964,8 @@ usfp_mormon.14.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCount
 usfp_mormon.14.f: ""Make way! Make way! The President has been shot! The President has been shot, my God!""
 usfp_mormon.14.a: "This is an outrage!"
 
-#Filibuster events
+### Filibuster events ###
+
 usfp_filibuster.1.t: "The [SCOPE.sCharacter('william_walker_scope').GetLastName] Expedition"
 usfp_filibuster.1.d: "A band of [ROOT.GetCountry.GetAdjective] adventurers under the command of [SCOPE.sCharacter('william_walker_scope').GetFullName] have apparently embarked on an invasion of [SCOPE.sState('baja_scope').GetName]. They have declared the Republic of [SCOPE.sCountry('sonora_scope').GetName] and seek our recognition."
 usfp_filibuster.1.f: ""The territory under Mexican rule would forever remain wild, half savage and uncultivated, covered with an indolent and half civilized people. When the people of a territory fail almost entirely to develop the resources nature has placed at their command, the interests of civilization require others to go in and possess the land."" #William Walker
@@ -978,7 +992,8 @@ usfp_filibuster.4.a: "We will annex the territory."
 usfp_filibuster.4.b: "[SCOPE.sCharacter('william_walker_scope').GetFullName] will granted governorship of the territory."
 usfp_filibuster.4.c: "We will not associate with these filibusters."
 
-#Gilded Age events
+### Gilded Age events ###
+
 usfp_gilded_age.1.t: "A Story Of Today"
 usfp_gilded_age.1.d: "New railroads, new industries, and new companies have roared to life across the [ROOT.GetCountry.GetName], precipitating a meteoric rise in the station of the [SCOPE.gsInterestGroup('industrialists_scope').GetName]. The ever-growing fortunes of the [concept_upper_strata] have propelled them into lifestyles of lavish excess, but have also heralded an era of widespread political corruption across all levels of government."
 usfp_gilded_age.1.f: ""To the young American, here or elsewhere, the paths to fortune are innumerable and all open; There is invitation in the air and success in all his wide horizon."" #Mark Twain
@@ -1006,7 +1021,6 @@ usfp_gilded_age.4.b: "All life is struggle!"
 social_darwinism_unlocked: "[SCOPE.sIdeology('social_darwinism_scope').GetName] characters can now appear."
 social_darwinism_promoted: "[SCOPE.sIdeology('social_darwinism_scope').GetName] characters are more likely to appear in our country."
 social_darwinist_appears: "A [SCOPE.sIdeology('social_darwinism_scope').GetName] [concept_agitator] will appear in [SCOPE.sCountry('usa_scope').GetName]."
-
 
 usfp_gilded_age.5.t: "The Tweed Regime"
 usfp_gilded_age.5.d: "As [concept_usfp_political_machines] have taken root across the country, [SCOPE.sState('new_york_scope').GetName] has been effectively taken over by one William 'Boss' Tweed and his Tammany Hall club. With political offices packed with cronies, purchased votes, and bribed judges, the entire apparatus of the state government is now at his beck and call. Details of Tweed's corruption and fraud have begun to leak to the press, driving public calls for his removal."
@@ -1076,6 +1090,8 @@ usfp_gilded_age.15.d: "The concentration of [SCOPE.sBuilding('company_town_build
 usfp_gilded_age.15.f: "You couldn't go a single block without seeing one of the company's advertisements or its logo stamped on something. A whole group of workers was fired yesterday, and now many were packing up to move to another state. The company was the only game in town."
 usfp_gilded_age.15.a: "How efficient."
 usfp_gilded_age.15.b: "These companies are exerting too much influence."
+
+### Progressive Era Events ###
 
 usfp_progressive_era.1.t: "Rise of the Progressives"
 usfp_progressive_era.1.d: "The social and economic conditions of the [ROOT.GetCountry.GetName] have prompted calls for reform from all levels of society, which have now begun to coalesce into a greater [SCOPE.sIdeology('progressive_ideology').GetName] cause. Local, state, and even federal officials are now winning elections on a platform of ending corruption and uplifting the general welfare."
@@ -1193,12 +1209,16 @@ usfp_progressive_era.18.f: ""When this new science makes clear to the public tha
 usfp_progressive_era.18.a: "Eugenics is not feminist."
 usfp_progressive_era.18.b: "Clean genes makes a clean home."
 
+### Liberia Events ###
+
 usfp_liberia.1.t: "The [SCOPE.sCountry('liberia_scope').GetAdjective] Declaration of Independence"
 usfp_liberia.1.d: "The American Colonization Society has seen fit to establish a proper government for their colonial venture in [SCOPE.sCountry('liberia_scope').GetName]. The new republic has ratified a constitution based on the American model, and seeks recognition by our government."
 usfp_liberia.1.f: ""In view of these facts, this institution, the American Colonization Society, with that good faith which has uniformly marked all its dealings with us did by a set of resolutions, dissolve all political connections with the people of this Republic, returned the power with which it was delegated, and left the people to the government of themselves.\n\nThe people of the Republic of Liberia, they, are of right, and in fact, a free, sovereign, and independent state, possessed of all the rights, powers, and functions of government."" #Liberian Declaration of Independence
 usfp_liberia.1.a: "Politely table their request for now."
 usfp_liberia.1.b: "They want to be independent? Let them survive on their own then."
 usfp_liberia.1.c: "Extend formal recognition of the new [SCOPE.sCountry('liberia_scope').GetAdjective] government."
+
+### Indian Wars Events ###
 
 usfp_indian_wars.1.t: "[SCOPE.sCharacter('red_cloud_scope').GetFullName]'s War"
 usfp_indian_wars.1.d: "In response to our encroachment into [SCOPE.sState('montana_scope').GetStateRegion.GetName], the chief [SCOPE.sCharacter('red_cloud_scope').GetFullName] has led an aggressive raiding campaign, cutting off supply lines to our forts and generally embarassing frontier Army garrisons. He is demanding our withdrawal from [SCOPE.sCountry('sioux_scope').GetAdjective] hunting grounds and a recognition of the nation's territorial integrity."
@@ -1290,6 +1310,8 @@ usfp_indian_wars.15.f: ""We were startled by the apparitions presented by the su
 usfp_indian_wars.15.a: "Ransom back as many of the captives as we can."
 usfp_indian_wars.15.b: "A punitive expedition is in order."
 
+### Indian Post-Removal Events ###
+
 usfp_indian_postremoval.1.t: "The Ghost Dance"
 usfp_indian_postremoval.1.d: "A millenarian spiritual movement known as the Ghost Dance has swept across the Indian tribes of the west, promising a return of the buffalo and the wiping away of White settlers. While the movement promotes peaceful behavior from its adherents, the sometimes wild and ecstatic dance rituals have provoked terror in White settlers, who claim the Indians are preparing themselves for apocalyptic war upon their homesteads."
 usfp_indian_postremoval.1.f: ""They told the people they could dance a new world into being. There would be landslides, earthquakes, and big winds. Hills would pile up on each other. The earth would roll up like a carpet with all the white man's ugly things - the stinking new animals, sheep and pigs, the fences, the telegraph poles, the mines and factories. Underneath would be the wonderful old-new world as it had been before the white fat-takers came. The white men will be rolled up, disappear, go back to their own continent."" #Lame Deer
@@ -1333,6 +1355,8 @@ usfp_indian_postremoval.7.f: ""It is a question in my mind whether this jury is 
 usfp_indian_postremoval.7.a: "Send in the Bureau, and block any more Whites from inheriting Osage rights."
 usfp_indian_postremoval.7.b: "This is a local matter for the local authorities to handle."
 
+### Indian Alt-Historical Events ###
+
 usfp_indian_althist.1.t: "The Great [SCOPE.sCountry('sioux_scope').GetAdjective] Council"
 usfp_indian_althist.1.d: "Decades of holding a dominant position on the northern plains has done well for the [SCOPE.sCountry('sioux_scope').GetName]. As their trade links with [ROOT.GetCountry.GetAdjective] border towns have flourished, so too have new ideas flowed into the plains. Now, a council of all the [SCOPE.sCountry('sioux_scope').GetAdjectiveNoFormatting] bands has seemingly agreed to establish a formal government structure under the leadership of [SCOPE.sCountry('sioux_scope').GetRuler.GetFullName]."
 usfp_indian_althist.1.f: "The Seven Council Fires had met for generations, but this meeting was different. The words of [SCOPE.sCountry('sioux_scope').GetRuler.GetFullNameNoFormatting] already held such sway that the naming of a permanent sitting council was a formality. The [SCOPE.sCountry('sioux_scope').GetNameNoFormatting] was united behind [SCOPE.sCountry('sioux_scope').GetRuler.GetHerHis] vision for the future."
@@ -1363,6 +1387,8 @@ usfp_indian_althist.5.d: "With their borders on all sides now fixed by treaty, p
 usfp_indian_althist.5.f: "Many faces could be seen amongst the crowds of the great council. Kiowas, Apaches, Wichitas, even some adopted Spaniards and Tejanos. The prominent chiefs made their case to the people, and the bands of Comancheria responded with their assent."
 usfp_indian_althist.5.a: "Is a frontier war on the horizon?"
 usfp_indian_althist.5.b: "We shall be lords of the southern plains once more!"
+
+### USA Post-Reconstruction Events ###
 
 usfp_afro_american_culture: "[GetCulture('afro_american').GetName]"
 usfp_afro_american_culture_plural: "#yellow [GetCulture('afro_american').GetName]s#!"
@@ -1491,6 +1517,8 @@ usfp_usa_postreconstruction.18.d: "Supporters of the [SCOPE.sPoliticalMovement('
 usfp_usa_postreconstruction.18.f: ""We march because we want to bring the murderers of our brothers, sisters and innocent children to justice. We march because we are thoroughly opposed to Jim Crow cars, segregation, discrimination, disfranchisement, lynching, and the host of evils that are forced on us. We march because we want our children to live in a better land and enjoy fairer conditions than have fallen to our lot."" #Why We March leaflet
 usfp_usa_postreconstruction.18.a: "This is not for the federal government to decide."
 usfp_usa_postreconstruction.18.b: "We must have a nationwide anti-lynching law."
+
+### USA (afro-american) Colonization Events ###
 
 usfp_usa_colonization.1.t: "[SCOPE.sCountry('santo_domingo_scope').GetName] Seeks Annexation"
 usfp_usa_colonization.1.d: "With their national security under serious threat, the government of [SCOPE.sCountry('santo_domingo_scope').GetName] has requested annexation by the [ROOT.GetCountry.GetName]. Proponents in [concept_usfp_congress] say that the island could become a haven from discrimination for $usfp_afro_american_culture_plural$, while opponents balk at the notion of adding an [GetCulture('afro_caribeno').GetName] population to the union."

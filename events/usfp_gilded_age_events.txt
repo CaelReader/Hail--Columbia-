@@ -219,8 +219,8 @@ usfp_gilded_age.2 = {
 		add_treasury = -1000000
 		trigger = {
 			OR = {
-				has_law = law_type:law_censorship
-				has_law = law_type:law_outlawed_dissent
+				has_law_or_variant = law_type:law_censorship
+				has_law_or_variant = law_type:law_outlawed_dissent
 			}
 		}
 		highlighted_option = yes
@@ -762,7 +762,7 @@ usfp_gilded_age.9 = {
 		name = usfp_gilded_age.9.b
 		trigger = {
 			NOT = {
-				has_law = law_type:law_no_police
+				has_law_or_variant = law_type:law_no_police
 			}
 		}
 		scope:minnesota_scope = {
@@ -1316,7 +1316,7 @@ usfp_gilded_age.15 = {
 		highlighted_option = yes
 		trigger = {
 			NOR = {
-				has_law = law_type:law_laissez_faire
+				has_law_or_variant = law_type:law_laissez_faire
 				authority < 100
 			}
 		}
@@ -1349,4 +1349,3 @@ usfp_gilded_age.15 = {
 		}
 	}
 }
-#Confederate Monuments

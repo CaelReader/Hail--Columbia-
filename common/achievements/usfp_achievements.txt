@@ -34,7 +34,7 @@
 #             exists = c:USA
 #             this = c:USA
 # 			has_variable = usfp_square_deal_achievement
-# 			has_law = law_type:law_council_republic
+# 			has_law_or_variant = law_type:law_council_republic
 #         }
 #     }
 # }
@@ -61,9 +61,9 @@
 #         exists = c:USA
 #         this = c:USA
 #         NOT = {
-#             has_law = law_type:law_council_republic
+#             has_law_or_variant = law_type:law_council_republic
 #         }
-#         has_law = law_type:law_technocracy
+#         has_law_or_variant = law_type:law_technocracy
 #         OR = {
 #             AND = {
 #                 exists = c:CAN

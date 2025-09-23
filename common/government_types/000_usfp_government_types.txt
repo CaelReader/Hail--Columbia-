@@ -12,10 +12,10 @@
 			c:ORG ?= this
 		}
 		NOT = {
-			has_law = law_type:law_technocracy
+			has_law_or_variant = law_type:law_technocracy
 		}
 		country_has_voting_franchise = yes
-		has_law = law_type:law_presidential_republic
+		has_law_or_variant = law_type:law_presidential_republic
 		OR = {
 			country_tier = empire
 			country_tier = kingdom
@@ -45,10 +45,10 @@ gov_usfp_congressional_republic = {
 			c:ORG ?= this
 		}
 		NOT = {
-			has_law = law_type:law_technocracy
+			has_law_or_variant = law_type:law_technocracy
 		}
 		country_has_voting_franchise = yes
-		has_law = law_type:law_parliamentary_republic
+		has_law_or_variant = law_type:law_parliamentary_republic
 		OR = {
 			country_tier = empire
 			country_tier = kingdom
@@ -90,10 +90,10 @@ gov_usfp_theodemocracy = {
 	female_ruler = "RULER_TITLE_PRESIDENT"
 	
 	possible = {
-		has_law = law_type:law_theocracy
+		has_law_or_variant = law_type:law_theocracy
 		country_has_state_religion = rel:mormon
 		NOT = {
-			has_law = law_type:law_technocracy
+			has_law_or_variant = law_type:law_technocracy
 		}
 		country_has_voting_franchise = yes
 	}
@@ -117,12 +117,12 @@ gov_usfp_federal_territory = {
 		exists = c:USA
 		is_subject_of = c:USA
 		is_subject_type = subject_type_puppet
-		has_law = law_type:law_presidential_republic
+		has_law_or_variant = law_type:law_presidential_republic
 		NOT = {
-			has_law = law_type:law_technocracy
+			has_law_or_variant = law_type:law_technocracy
 		}
 		c:USA = {
-			has_law = law_type:law_presidential_republic
+			has_law_or_variant = law_type:law_presidential_republic
 		}
 		NOT = {
 			c:SEQ ?= this
@@ -144,8 +144,8 @@ gov_usfp_federal_territory = {
 # 	female_ruler = "RULER_CHIEFTESS"
 	
 # 	possible = {
-# 		has_law = law_type:law_chiefdom
-# 		has_law = law_type:law_elder_council
+# 		has_law_or_variant = law_type:law_chiefdom
+# 		has_law_or_variant = law_type:law_elder_council
 # 		OR = {
 # 			AND = { exists = c:CTF c:CTF = ROOT }
 # 			AND = { exists = c:LKT c:LKT = ROOT }
@@ -171,11 +171,11 @@ gov_usfp_syndicalist_federation = {
 	female_ruler = "RULER_CHAIRWOMAN"
 	
 	possible = {
-		has_law = law_type:law_council_republic
+		has_law_or_variant = law_type:law_council_republic
 		country_has_voting_franchise = yes
 		NOR = { 
-			has_law = law_type:law_single_party_state
-			has_law = law_type:law_anarchy
+			has_law_or_variant = law_type:law_single_party_state
+			has_law_or_variant = law_type:law_anarchy
 		}
 		OR = {
 			country_has_primary_culture = cu:yankee
@@ -200,8 +200,8 @@ gov_usfp_syndicalist_federation_anarchist = {
 	female_ruler = "RULER_TITLE_DELEGATE"
 	
 	possible = {
-		has_law = law_type:law_council_republic
-		has_law = law_type:law_anarchy
+		has_law_or_variant = law_type:law_council_republic
+		has_law_or_variant = law_type:law_anarchy
 		OR = {
 			country_has_primary_culture = cu:yankee
 			country_has_primary_culture = cu:usfp_american
@@ -224,7 +224,7 @@ gov_usfp_private_colony = {
 	female_ruler = "RULER_TITLE_GOVERNOR"
 	
 	possible = {
-		has_law = law_type:law_presidential_republic
+		has_law_or_variant = law_type:law_presidential_republic
 		country_has_voting_franchise = no
 		c:LIB ?= this
 		has_variable = american_colonization_society

@@ -8,7 +8,7 @@
 		#the JE doesn't fail anymore because its now a container for Post-Reconstruction events
 		if = {
 			limit = {
-				has_law = law_type:law_racial_segregation
+				has_law_or_variant = law_type:law_racial_segregation
 			}
 			subtract = {
 				desc = "law_racial_segregation"
@@ -17,7 +17,7 @@
 		}
 		if = {
 			limit = {
-				has_law = law_type:law_national_supremacy
+				has_law_or_variant = law_type:law_national_supremacy
 			}
 			subtract = {
 				desc = "law_national_supremacy"
@@ -26,7 +26,7 @@
 		}
 		if = {
 			limit = {
-				has_law = law_type:law_ethnostate
+				has_law_or_variant = law_type:law_ethnostate
 			}
 			subtract = {
 				desc = "law_ethnostate"

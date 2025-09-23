@@ -1036,7 +1036,7 @@ usfp_manifest_destiny.10 = {
 				is_building_type = building_gold_fields
 			}
 		}
-		has_law = law_type:law_no_migration_controls
+		has_law_or_variant = law_type:law_no_migration_controls
 		NOT = {
 			has_global_variable = usfp_gold_mountain
 		}
@@ -2118,8 +2118,8 @@ usfp_manifest_destiny.19 = {
 		name = usfp_manifest_destiny.19.a
 		trigger = {
 			OR = {
-				has_law = law_type:law_national_supremacy
-				has_law = law_type:law_ethnostate
+				has_law_or_variant = law_type:law_national_supremacy
+				has_law_or_variant = law_type:law_ethnostate
 			}
 		}
 		highlighted_option = yes
@@ -2137,8 +2137,8 @@ usfp_manifest_destiny.19 = {
 		name = usfp_manifest_destiny.19.b
 		trigger = {
 			OR = {
-				has_law = law_type:law_national_supremacy
-				has_law = law_type:law_ethnostate
+				has_law_or_variant = law_type:law_national_supremacy
+				has_law_or_variant = law_type:law_ethnostate
 			}
 		}
 		highlighted_option = yes
@@ -2156,8 +2156,8 @@ usfp_manifest_destiny.19 = {
 		show_as_unavailable = { always = yes }
 		trigger = {
 			NOR = {
-				has_law = law_type:law_ethnostate
-				has_law = law_type:law_multicultural
+				has_law_or_variant = law_type:law_ethnostate
+				has_law_or_variant = law_type:law_multicultural
 			}
 		}
 		add_modifier = {
@@ -2173,7 +2173,7 @@ usfp_manifest_destiny.19 = {
 		}
 		trigger = {
 			NOT = {
-				has_law = law_type:law_ethnostate
+				has_law_or_variant = law_type:law_ethnostate
 			}
 		}
 		add_loyalists = {
@@ -2185,9 +2185,9 @@ usfp_manifest_destiny.19 = {
 		name = usfp_manifest_destiny.19.h
 		trigger = {
 			NOT = {
-				has_law = law_type:law_state_religion
+				has_law_or_variant = law_type:law_state_religion
 			}
-			has_law = law_type:law_multicultural
+			has_law_or_variant = law_type:law_multicultural
 		}
 		highlighted_option = yes
 		add_modifier = {
@@ -2610,7 +2610,7 @@ usfp_manifest_destiny.24 = {
 	duration = 3
 
 	trigger = {
-		has_law = law_type:law_council_republic
+		has_law_or_variant = law_type:law_council_republic
 		NOT = {
 			has_variable = had_revolutionary_destiny
 		}
@@ -2732,7 +2732,7 @@ usfp_manifest_destiny.25 = {
 	}
 
 	trigger = {
-		has_law = law_type:law_monarchy
+		has_law_or_variant = law_type:law_monarchy
 		NOT = {
 			has_variable = had_monarchy_destiny
 		}
@@ -2932,7 +2932,7 @@ usfp_manifest_destiny.28 = {
 			any_scope_pop = {
 				is_pop_type = peasants
 				culture = {
-					has_discrimination_trait = european_heritage
+					has_discrimination_trait_group = heritage_group_european
 				}
 			}
 			region = sr:region_great_plains
@@ -2948,7 +2948,7 @@ usfp_manifest_destiny.28 = {
 				any_scope_pop = {
 					is_pop_type = peasants
 					culture = {
-						has_discrimination_trait = european_heritage
+						has_discrimination_trait_group = heritage_group_european
 					}
 				}	
 			region = sr:region_great_plains
@@ -2961,7 +2961,7 @@ usfp_manifest_destiny.28 = {
 				any_scope_pop = {
 					is_pop_type = peasants
 					culture = {
-						has_discrimination_trait = european_heritage
+						has_discrimination_trait_group = heritage_group_european
 					}
 				}	
 				region = sr:region_great_plains
@@ -2977,7 +2977,7 @@ usfp_manifest_destiny.28 = {
 				any_scope_pop = {
 					is_pop_type = peasants
 					culture = {
-						has_discrimination_trait = european_heritage
+						has_discrimination_trait_group = heritage_group_european
 					}
 				}	
 				region = sr:region_great_plains

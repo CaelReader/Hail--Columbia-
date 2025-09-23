@@ -1576,7 +1576,7 @@ usfp_acw.15 = {
 
 	trigger = {
 		c:USA = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 		is_at_war = yes
 	}
@@ -1932,7 +1932,7 @@ usfp_acw.19 = {
 			is_pop_type = soldiers
 		}
 		is_at_war = yes
-		has_law = law_type:law_slavery_banned
+		has_law_or_variant = law_type:law_slavery_banned
 	}
 
 	immediate = {

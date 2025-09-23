@@ -40,7 +40,7 @@ law_protectionism = {
 		if = {
 			limit = {
 				has_journal_entry = je_meiji_diplomacy
-				has_law = law_type:law_isolationism
+				has_law_or_variant = law_type:law_isolationism
 			}
 			add = 1000
 		}
@@ -77,7 +77,7 @@ law_freedom_of_conscience = {
 		recalculate_pop_ig_support = yes
 		if = {
 			limit = {
-				has_law = law_type:law_state_atheism
+				has_law_or_variant = law_type:law_state_atheism
 			}
 			set_state_religion = root.country_definition.religion
 		}
@@ -112,7 +112,7 @@ law_freedom_of_conscience = {
 				is_in_same_power_bloc = scope:target_country
 				AND = {
 					modifier:country_can_impose_same_lawgroup_church_and_state_in_power_bloc_bool = yes
-					has_law = scope:law
+					has_law_or_variant = scope:law
 				}
 			}
 			can_impose_law_default = yes
@@ -130,7 +130,7 @@ law_freedom_of_conscience = {
 		if = {
 			limit = {
 				has_journal_entry = je_sick_man_education
-				has_law = law_type:law_state_religion
+				has_law_or_variant = law_type:law_state_religion
 			}
 			add = 1000
 		}

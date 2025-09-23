@@ -368,7 +368,7 @@ usfp_indian_postremoval.4 = {
 				every_scope_pop = {
 					limit = {
 						culture = {
-							has_discrimination_trait = indigenous_american_heritage
+							has_discrimination_trait_group = heritage_group_indigenous_american
 							NOT = {
 								this = cu:usfp_american_indian
 							}

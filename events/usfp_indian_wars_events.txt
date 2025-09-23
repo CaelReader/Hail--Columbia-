@@ -542,7 +542,7 @@ usfp_indian_wars.6 = {
 			}
 			any_scope_pop = {
 				culture = {
-					has_discrimination_trait = north_american_group
+					has_discrimination_trait_group = heritage_group_indigenous_american
 				}
 			}
 			any_scope_pop = {
@@ -568,7 +568,7 @@ usfp_indian_wars.6 = {
 				}
 				any_scope_pop = {
 					culture = {
-						has_discrimination_trait = north_american_group
+						has_discrimination_trait_group = heritage_group_indigenous_american
 					}
 				}
 			}
@@ -576,7 +576,7 @@ usfp_indian_wars.6 = {
 			random_scope_pop = {
 				limit = {
 					culture = {
-						has_discrimination_trait = north_american_group
+						has_discrimination_trait_group = heritage_group_indigenous_american
 					}
 				}
 				culture = {
@@ -1254,7 +1254,7 @@ usfp_indian_wars.12 = {
 	option = {
 		name = usfp_indian_wars.12.b
 		trigger = {
-			has_law = law_type:law_multicultural
+			has_law_or_variant = law_type:law_multicultural
 		}
 		highlighted_option = yes
 		usfp_enable_american_indian_culture = yes
@@ -1368,7 +1368,7 @@ usfp_indian_wars.14 = {
 		any_scope_state = {
 			any_scope_pop = {
 				culture = {
-					has_discrimination_trait = north_american_group
+					has_discrimination_trait_group = heritage_group_indigenous_american
 				}
 				is_pop_type = peasants
 			}
@@ -1388,7 +1388,7 @@ usfp_indian_wars.14 = {
 				region = sr:region_great_plains
 				any_scope_pop = {
 					culture = {
-						has_discrimination_trait = north_american_group
+						has_discrimination_trait_group = heritage_group_indigenous_american
 					}
 					is_pop_type = peasants
 				}
@@ -1397,7 +1397,7 @@ usfp_indian_wars.14 = {
 			random_scope_pop = {
 				limit = {
 					culture = {
-						has_discrimination_trait = north_american_group
+						has_discrimination_trait_group = heritage_group_indigenous_american
 					}
 					is_pop_type = peasants
 				}
@@ -1516,7 +1516,7 @@ usfp_indian_wars.15 = {
 			any_scope_pop = {
 				is_pop_type = peasants
 				culture = {
-					has_discrimination_trait = european_heritage
+					has_discrimination_trait_group = heritage_group_european
 				}
 			}
 		}
@@ -1539,7 +1539,7 @@ usfp_indian_wars.15 = {
 				any_scope_pop = {
 					is_pop_type = peasants
 					culture = {
-						has_discrimination_trait = european_heritage
+						has_discrimination_trait_group = heritage_group_european
 					}
 				}
 			}
@@ -1564,7 +1564,7 @@ usfp_indian_wars.15 = {
 				limit = {
 					is_pop_type = peasants
 					culture = {
-						has_discrimination_trait = european_heritage
+						has_discrimination_trait_group = heritage_group_european
 					}
 				}
 				move_partial_pop = {
@@ -1601,7 +1601,7 @@ usfp_indian_wars.15 = {
 				limit = {
 					is_pop_type = peasants
 					culture = {
-						has_discrimination_trait = european_heritage
+						has_discrimination_trait_group = heritage_group_european
 					}
 				}
 				move_partial_pop = {
@@ -1623,7 +1623,7 @@ usfp_indian_wars.15 = {
 						is_pop_type = slaves
 					}
 					culture = {
-						has_discrimination_trait = european_heritage
+						has_discrimination_trait_group = heritage_group_european
 					}
 				}
 				change_poptype = pop_type:slaves

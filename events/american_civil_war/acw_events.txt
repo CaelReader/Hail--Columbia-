@@ -22,7 +22,7 @@ acw_events.1 = {
 	trigger = {
 		exists = c:USA
 		c:USA = ROOT
-		NOT = { has_law = law_type:law_slavery_banned }
+		NOT = { has_law_or_variant = law_type:law_slavery_banned }
 		NOT = { has_variable = abolitionist_martydom }
 		any_interest_group = {
 			OR = { 
@@ -128,7 +128,7 @@ acw_events.1 = {
 # 	duration = 3
 
 # 	trigger = {
-# 		NOT = { has_law = law_type:law_slavery_banned }
+# 		NOT = { has_law_or_variant = law_type:law_slavery_banned }
 # 		NOT = { has_variable = american_civil_war }
 # 		any_interest_group = {
 # 			is_revolutionary = no
@@ -256,7 +256,7 @@ acw_events.3 = {
 	trigger = {
 		exists = c:USA
 		c:USA = ROOT
-		NOT = { has_law = law_type:law_slavery_banned }
+		NOT = { has_law_or_variant = law_type:law_slavery_banned }
 		NOT = { has_global_variable = american_civil_war }
 		NOT = { has_variable = USA_wilmot_proviso }
 		any_scope_state = {
@@ -315,6 +315,7 @@ acw_events.3 = {
 					limit = {
 						OR = {
 							has_ideology = ideology:ideology_pro_slavery
+							has_ideology = ideology:ideology_pro_slavery_colonial
 							leader = { has_ideology = ideology:ideology_slaver }
 						}
 						NOT = { has_modifier = disappointing_compromise }
@@ -449,7 +450,7 @@ acw_events.3 = {
 # 	trigger = {
 # 		exists = c:USA
 # 		c:USA = ROOT
-# 		NOT = { has_law = law_type:law_slavery_banned }
+# 		NOT = { has_law_or_variant = law_type:law_slavery_banned }
 # 		has_variable = USA_wilmot_proviso # More historical
 # 		NOT = { has_variable = bleeding_kansas_happened }
 # 		any_scope_state = {
@@ -535,12 +536,13 @@ acw_events.6 = {
 	trigger = {
 		exists = c:USA
 		c:USA = ROOT
-		NOT = { has_law = law_type:law_slavery_banned }
+		NOT = { has_law_or_variant = law_type:law_slavery_banned }
 		# has_variable = bleeding_kansas_happened # More historical
 		NOT = { has_variable = slave_power_speech }
 		any_interest_group = {
 			is_revolutionary = no
 			is_insurrectionary = no
+			is_marginal = no
 			any_scope_character = {
 				has_ideology = ideology:ideology_slaver
 				is_ruler = no
@@ -739,6 +741,8 @@ acw_events.7 = { # Free State of [x]
 
 	duration = 3
 
+	cooldown = { days = short_modifier_time }
+
 	trigger = {
 		exists = c:USA
 		c:USA = {
@@ -807,6 +811,8 @@ acw_events.8 = {
 
 	duration = 3
 
+	cooldown = { days = stupidly_long_modifier_time }
+
 	trigger = {
 		c:USA ?= {
 			has_journal_entry = je_acw_war
@@ -860,7 +866,7 @@ acw_events.8 = {
 	option = { # You know what would have prevented this? A competent police force.
 		name = acw_events.8.c
 		trigger = {
-			has_law = law_type:law_no_police
+			has_law_or_variant = law_type:law_no_police
 			OR = {
 				is_enacting_law = law_type:law_local_police
 				is_enacting_law = law_type:law_dedicated_police
@@ -884,7 +890,7 @@ acw_events.9 = {
 	placement = root
 
 	event_image = {
-		video = "europenorthamerica_american_civil_war"
+		video = "votp_hostile_court"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -947,7 +953,7 @@ acw_events.9 = {
 			has_global_variable = csa_victory_event_var
 		}
 		NOT = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 		has_variable = acw_slave_nation_var
 		is_at_war = no
@@ -1011,7 +1017,7 @@ acw_events.9 = {
         	name = acw_victory_modifier
         	days = long_modifier_time
         }
-        ig:ig_landowners = {
+        ig:ig_landowners ?= {
         	add_modifier = {
         		name = acw_victory_landowners_modifier
         		days = long_modifier_time
@@ -1024,7 +1030,7 @@ acw_events.9 = {
 		name = acw_events.9.b
 		trigger = {
 			NOT = {
-				has_law = law_type:law_slave_trade
+				has_law_or_variant = law_type:law_slave_trade
 			}
 		}
 		activate_law = law_type:law_slave_trade
@@ -1032,7 +1038,7 @@ acw_events.9 = {
         	name = acw_slave_trade_restarted_modifier
         	days = very_long_modifier_time
         }
-        ig:ig_rural_folk = {
+        ig:ig_rural_folk ?= {
         	add_modifier = {
         		name = acw_slave_trade_rural_folk
         		days = long_modifier_time
@@ -1041,7 +1047,7 @@ acw_events.9 = {
         every_country = {
         	limit = {
         		country_rank = rank_value:great_power
-        		has_law = law_type:law_slavery_banned
+        		has_law_or_variant = law_type:law_slavery_banned
         		has_diplomatic_relevance = root
         	}
 			change_relations = {

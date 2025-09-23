@@ -19,7 +19,7 @@
 			NOT = { coa_def_communist_flag_trigger = yes }
 			NOT = {	
 				scope:actor ?= {
-					has_law = law_type:law_technocracy
+					has_law_or_variant = law_type:law_technocracy
 				}
 			}
 		}
@@ -113,7 +113,7 @@
 			has_game_rule = usa_initial_names
 			coa_def_republic_flag_trigger = yes
 			scope:actor ?= {
-				has_law = law_type:law_technocracy
+				has_law_or_variant = law_type:law_technocracy
 			}
 		}
 	}
@@ -146,11 +146,11 @@
 			coa_def_communist_flag_trigger = yes
 			scope:actor ?= {
 				OR = {
-					has_law = law_type:law_universal_suffrage
-					has_law = law_type:law_technocracy
+					has_law_or_variant = law_type:law_universal_suffrage
+					has_law_or_variant = law_type:law_technocracy
 				}
 				NOT = {
-					has_law = law_type:law_anarchy
+					has_law_or_variant = law_type:law_anarchy
 				}
 			}
 		}
@@ -169,9 +169,9 @@
 			coa_def_communist_flag_trigger = yes
 			scope:actor ?= {
 				NOR = {
-					has_law = law_type:law_universal_suffrage
-					has_law = law_type:law_technocracy
-					has_law = law_type:law_anarchy
+					has_law_or_variant = law_type:law_universal_suffrage
+					has_law_or_variant = law_type:law_technocracy
+					has_law_or_variant = law_type:law_anarchy
 				}
 			}
 		}
@@ -218,9 +218,9 @@
 			coa_def_republic_flag_trigger = yes
 			scope:actor ?= {
 				NOT = {
-					has_law = law_type:law_council_republic
+					has_law_or_variant = law_type:law_council_republic
 				}
-				has_law = law_type:law_technocracy
+				has_law_or_variant = law_type:law_technocracy
 			}
 		}
 	}
@@ -238,9 +238,9 @@
 			coa_def_republic_flag_trigger = yes
 			scope:actor ?= {
 				NOT = {
-					has_law = law_type:law_council_republic
+					has_law_or_variant = law_type:law_council_republic
 				}
-				has_law = law_type:law_technocracy
+				has_law_or_variant = law_type:law_technocracy
 			}
 			OR = {
 				AND = {
@@ -282,7 +282,7 @@
 			NOT = { coa_def_communist_flag_trigger = yes }
 			NOT = {	
 				scope:actor ?= {
-					has_law = law_type:law_technocracy
+					has_law_or_variant = law_type:law_technocracy
 				}
 			}
 			scope:actor = {
@@ -343,7 +343,7 @@
 			NOT = { coa_def_communist_flag_trigger = yes }
 			NOT = {	
 				scope:actor ?= {
-					has_law = law_type:law_technocracy
+					has_law_or_variant = law_type:law_technocracy
 				}
 			}
 			scope:actor = {

@@ -62,6 +62,8 @@ acw_je_events.1 = {
 
 	duration = 3
 
+	cooldown = { days = never_fire_again_modifier_time }
+
 	trigger = {
 		# triggered by je_acw_countdown completion
 	}
@@ -75,7 +77,7 @@ acw_je_events.1 = {
 				save_scope_as = csa_scope	
 				if = {
 					limit = {
-						NOT = { has_law = law_type:law_legacy_slavery }
+						NOT = { has_law_or_variant = law_type:law_legacy_slavery }
 					}
 					activate_law = law_type:law_legacy_slavery
 				}	
@@ -100,7 +102,7 @@ acw_je_events.1 = {
 				if = {
 					limit = { 
 						NOT = {
-							has_law = law_type:law_presidential_republic
+							has_law_or_variant = law_type:law_presidential_republic
 						}
 					}
 					activate_law = law_type:law_presidential_republic
@@ -112,8 +114,8 @@ acw_je_events.1 = {
 				activate_law = law_type:law_national_supremacy
 				activate_law = law_type:law_tenant_farmers
 				activate_law = law_type:law_migration_controls
-				ig:ig_landowners = {
-					add_ruling_interest_group = yes
+				set_ruling_interest_groups = {
+					ig_landowners
 				}
 				add_modifier = {
 					name = usfp_slave_power_modifier
@@ -134,14 +136,14 @@ acw_je_events.1 = {
 				if = {
 					limit = { 
 						NOT = {
-							has_law = law_type:law_presidential_republic
+							has_law_or_variant = law_type:law_presidential_republic
 						}
 					}
 					activate_law = law_type:law_presidential_republic
 				}
 				if = {
 					limit = {
-						NOT = { has_law = law_type:law_slavery_banned }
+						NOT = { has_law_or_variant = law_type:law_slavery_banned }
 					}
 					activate_law = law_type:law_slavery_banned
 				}
@@ -199,6 +201,18 @@ acw_je_events.1 = {
 			}
 			c:CSA = {
 				set_variable = acw_slave_nation_var
+			}
+
+			# historical Confederates move to CSA
+			every_scope_character = {
+				limit = {
+					has_variable = historical_csa
+					NOR = {
+						is_ruler = yes
+						is_heir = yes
+					}
+				}
+				transfer_character = c:CSA
 			}
 		}
 		else_if = {
@@ -260,6 +274,8 @@ acw_je_events.2 = {
 
 	duration = 3
 
+	cooldown = { days = never_fire_again_modifier_time }
+
 	trigger = {
 		# triggered by je_acw_war completion
 	}
@@ -289,6 +305,7 @@ acw_je_events.2 = {
 			every_scope_state = {
 				limit = {
 					is_incorporated = yes
+					is_capital = no
 					state_region = {
 						is_homeland = cu:dixie
 						NOT = { is_homeland = cu:yankee }
@@ -319,9 +336,16 @@ acw_je_events.2 = {
 			every_scope_state = {
 				limit = {
 					is_incorporated = yes
+					is_capital = no
 					state_region = {
 						is_homeland = cu:yankee
 						NOT = { is_homeland = cu:dixie }
+						NOR = {
+							is_state_region_dc = yes
+							state_region = s:STATE_WEST_VIRGINIA
+							is_state_region_maryland = yes
+							is_state_region_delaware = yes
+						}
 					}
 				}
 				set_state_type = unincorporated
@@ -339,9 +363,6 @@ acw_je_events.2 = {
 				}
 			}
 		}
-		remove_modifier = usfp_acw_fsa_modifier
-		remove_modifier = usfp_acw_csa_modifier
-		remove_modifier = usfp_acw_union_modifier
 	}
 
 	#Historical Reconstruction
@@ -352,7 +373,7 @@ acw_je_events.2 = {
 				has_variable = fsa_annex_var
 				has_variable = csa_will_spawn_var
 			}
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 		default_option = yes
 		add_journal_entry = {
@@ -361,7 +382,7 @@ acw_je_events.2 = {
 		# add_journal_entry = { type = je_acw_reincorporate }		
 		# if = {
 		# 	limit = {
-		# 		has_law = law_type:law_slavery_banned
+		# 		has_law_or_variant = law_type:law_slavery_banned
 		# 	}
 		# 	add_journal_entry = {
 		# 		type = je_acw_equality
@@ -438,7 +459,7 @@ acw_je_events.2 = {
 		trigger = {
 			has_variable = csa_will_spawn_var
 			NOT = {
-				has_law = law_type:law_slavery_banned
+				has_law_or_variant = law_type:law_slavery_banned
 			}
 		}
 		activate_law = law_type:law_slavery_banned
@@ -473,7 +494,7 @@ acw_je_events.2 = {
 		trigger = {
 			has_variable = csa_will_spawn_var
 			NOT = {
-				has_law = law_type:law_slavery_banned
+				has_law_or_variant = law_type:law_slavery_banned
 			}
 		}
 		add_journal_entry = {
@@ -579,7 +600,7 @@ acw_je_events.2 = {
 # 		# triggered on je_acw_war pulse
 # 		exists = c:CSA
 # 		exists = c:USA
-# 		NOT = { has_law = law_type:law_slavery_banned }
+# 		NOT = { has_law_or_variant = law_type:law_slavery_banned }
 # 		any_diplomatic_play = {
 # 			AND = {
 # 				any_scope_play_involved = { this = c:CSA }

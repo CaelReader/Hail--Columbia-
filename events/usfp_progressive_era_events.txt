@@ -614,7 +614,7 @@ usfp_progressive_era.8 = {
 			}
 		}
 		NOT = {
-			has_law = law_type:law_womens_suffrage
+			has_law_or_variant = law_type:law_womens_suffrage
 		}
 	}
 
@@ -778,7 +778,7 @@ usfp_progressive_era.10 = {
 		default_option = yes
 		trigger = {
 			NOT = {
-				has_law = law_type:law_laissez_faire
+				has_law_or_variant = law_type:law_laissez_faire
 			}
 		}
 		show_as_unavailable = {
@@ -806,8 +806,8 @@ usfp_progressive_era.10 = {
 		name = usfp_progressive_era_censor_muckraker
 		trigger = {
 			OR = {
-				has_law = law_type:law_censorship
-				has_law = law_type:law_outlawed_dissent
+				has_law_or_variant = law_type:law_censorship
+				has_law_or_variant = law_type:law_outlawed_dissent
 			}
 		}
 		highlighted_option = yes
@@ -886,7 +886,7 @@ usfp_progressive_era.11 = {
 		default_option = yes
 		trigger = {
 			NOT = {
-				has_law = law_type:law_laissez_faire
+				has_law_or_variant = law_type:law_laissez_faire
 			}
 		}
 		show_as_unavailable = {
@@ -902,8 +902,8 @@ usfp_progressive_era.11 = {
 		name = usfp_progressive_era_censor_muckraker
 		trigger = {
 			OR = {
-				has_law = law_type:law_censorship
-				has_law = law_type:law_outlawed_dissent
+				has_law_or_variant = law_type:law_censorship
+				has_law_or_variant = law_type:law_outlawed_dissent
 			}
 		}
 		highlighted_option = yes
@@ -935,7 +935,7 @@ usfp_progressive_era.12 = {
 
 	trigger = {
 		NOT = {
-			has_law = law_type:law_compulsory_primary_school
+			has_law_or_variant = law_type:law_compulsory_primary_school
 		}
 	}
 
@@ -994,8 +994,8 @@ usfp_progressive_era.12 = {
 		name = usfp_progressive_era_censor_muckraker
 		trigger = {
 			OR = {
-				has_law = law_type:law_censorship
-				has_law = law_type:law_outlawed_dissent
+				has_law_or_variant = law_type:law_censorship
+				has_law_or_variant = law_type:law_outlawed_dissent
 			}
 		}
 		highlighted_option = yes
@@ -1063,8 +1063,8 @@ usfp_progressive_era.13 = {
 		name = usfp_progressive_era_censor_muckraker
 		trigger = {
 			OR = {
-				has_law = law_type:law_censorship
-				has_law = law_type:law_outlawed_dissent
+				has_law_or_variant = law_type:law_censorship
+				has_law_or_variant = law_type:law_outlawed_dissent
 			}
 		}
 		highlighted_option = yes
@@ -1125,7 +1125,7 @@ usfp_progressive_era.14 = {
 		highlighted_option = yes
 		trigger = {
 			NOR = {
-				has_law = law_type:law_laissez_faire
+				has_law_or_variant = law_type:law_laissez_faire
 				authority < 100
 			}
 		}
@@ -1173,7 +1173,7 @@ usfp_progressive_era.14 = {
 		name = usfp_progressive_era.14.b
 		trigger = {
 			NOT = {
-				has_law = law_type:law_laissez_faire
+				has_law_or_variant = law_type:law_laissez_faire
 			}
 		}
 		add_loyalists = {
@@ -1205,7 +1205,7 @@ usfp_progressive_era.14 = {
 	option = {
 		name = usfp_progressive_era.14.c
 		trigger = {
-			has_law = law_type:law_laissez_faire
+			has_law_or_variant = law_type:law_laissez_faire
 		}
 		highlighted_option = yes
 		add_modifier = {
@@ -1222,8 +1222,8 @@ usfp_progressive_era.14 = {
 		name = usfp_progressive_era_censor_muckraker
 		trigger = {
 			OR = {
-				has_law = law_type:law_censorship
-				has_law = law_type:law_outlawed_dissent
+				has_law_or_variant = law_type:law_censorship
+				has_law_or_variant = law_type:law_outlawed_dissent
 			}
 		}
 		highlighted_option = yes
@@ -1255,7 +1255,7 @@ usfp_progressive_era.15 = {
 	duration = 3
 
 	trigger = {
-		NOT = { has_law = law_type:law_single_party_state }
+		NOT = { has_law_or_variant = law_type:law_single_party_state }
 		in_election_campaign = yes
 		NOT = {
 			has_global_variable = cross_of_gold

@@ -54,7 +54,7 @@ texan_csa = {
 		}
 		exists = c:CSA
 		NOT = {
-			has_law = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_slavery_banned
 		}
 	}
 

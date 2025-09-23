@@ -1262,7 +1262,7 @@ ecchi_usa_keller_character_template = {
             limit = {
                 owner = {
                     has_technology_researched = feminism
-                    has_law = law_type:law_council_republic
+                    has_law_or_variant = law_type:law_council_republic
                 }
             }
             set_ideology = ideology:ideology_feminist
@@ -1530,53 +1530,54 @@ ecchi_usa_baum_character_template = {
 
 # United States - USA - CSA LEADERS
 
+#added to vanilla
 ecchi_usa_jefferson_davis_character_template = {
-    first_name = Jefferson
-    last_name = Davis
-    historical = yes
-    culture = cu:dixie
-    female = no
-    religion = protestant
-    ideology = ideology_slaver
-    interest_group = ig_landowners
-    birth_date = 1808.6.3
-	dna = ecchi_dna_jefferson_davis
-    traits = { meticulous arrogant persistent }
-    interest_group_leader_usage = {
-        country_trigger = {
-            OR = {
-                AND = {
-                    exists = c:USA
-                    this = c:USA
-                    NOT = { exists = c:CSA }
-                }
-                AND = {
-                    exists = c:CSA
-                    this = c:CSA
-                }
-            }
-        }
-        interest_group_trigger = {
-            is_marginal = no
-			OR = {
-				is_interest_group_type = ig_rural_folk
-				is_interest_group_type = ig_landowners
-				is_interest_group_type = ig_armed_forces
-			}
-            ig_hasnt_chosen_ideology_trigger = yes
-        }
-        earliest_usage_date = 1850.1.1
-        latest_usage_date = 1889.12.6
-        chance = 100
-    }
-    on_created = {
-        if = {
-            limit = {
-                has_global_variable = american_civil_war
-            }
-            set_ideology = ideology:ideology_moderate
-        }
-    }
+    # first_name = Jefferson
+    # last_name = Davis
+    # historical = yes
+    # culture = cu:dixie
+    # female = no
+    # religion = protestant
+    # ideology = ideology_slaver
+    # interest_group = ig_landowners
+    # birth_date = 1808.6.3
+	# dna = ecchi_dna_jefferson_davis
+    # traits = { meticulous arrogant persistent }
+    # interest_group_leader_usage = {
+    #     country_trigger = {
+    #         OR = {
+    #             AND = {
+    #                 exists = c:USA
+    #                 this = c:USA
+    #                 NOT = { exists = c:CSA }
+    #             }
+    #             AND = {
+    #                 exists = c:CSA
+    #                 this = c:CSA
+    #             }
+    #         }
+    #     }
+    #     interest_group_trigger = {
+    #         is_marginal = no
+	# 		OR = {
+	# 			is_interest_group_type = ig_rural_folk
+	# 			is_interest_group_type = ig_landowners
+	# 			is_interest_group_type = ig_armed_forces
+	# 		}
+    #         ig_hasnt_chosen_ideology_trigger = yes
+    #     }
+    #     earliest_usage_date = 1850.1.1
+    #     latest_usage_date = 1889.12.6
+    #     chance = 100
+    # }
+    # on_created = {
+    #     if = {
+    #         limit = {
+    #             has_global_variable = american_civil_war
+    #         }
+    #         set_ideology = ideology:ideology_moderate
+    #     }
+    # }
 }
 
 ecchi_usa_stephens_character_template = {
@@ -1623,6 +1624,9 @@ ecchi_usa_stephens_character_template = {
             }
             set_ideology = ideology:ideology_ethno_nationalist
         }
+        set_variable = {
+            name = historical_csa
+		}
     }
 }
 

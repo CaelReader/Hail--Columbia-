@@ -124,9 +124,9 @@ TIS = { # Turtle Island
 			exists = scope:actor
 			scope:actor ?= {
 				NOT = {
-					has_law = law_type:law_anarchy
+					has_law_or_variant = law_type:law_anarchy
 				}
-				has_law = law_type:law_council_republic
+				has_law_or_variant = law_type:law_council_republic
 			}
 		}
 	}
@@ -137,8 +137,8 @@ TIS = { # Turtle Island
 		trigger = { 
 			exists = scope:actor
 			scope:actor ?= {
-				has_law = law_type:law_anarchy
-				has_law = law_type:law_council_republic
+				has_law_or_variant = law_type:law_anarchy
+				has_law_or_variant = law_type:law_council_republic
 			}
 		}
 	}
@@ -149,9 +149,9 @@ TIS = { # Turtle Island
 		trigger = { 
 			exists = scope:actor
 			scope:actor ?= {
-				has_law = law_type:law_anarchy
-				has_law = law_type:law_council_republic
-				has_law = law_type:law_multicultural
+				has_law_or_variant = law_type:law_anarchy
+				has_law_or_variant = law_type:law_council_republic
+				has_law_or_variant = law_type:law_multicultural
 			}
 		}
 	}
@@ -171,11 +171,11 @@ TIS = { # Turtle Island
 			exists = scope:actor
 			scope:actor ?= {
 				OR = {
-					has_law = law_type:law_presidential_republic
-					has_law = law_type:law_parliamentary_republic
-					has_law = law_type:law_corporate_state
+					has_law_or_variant = law_type:law_presidential_republic
+					has_law_or_variant = law_type:law_parliamentary_republic
+					has_law_or_variant = law_type:law_corporate_state
 				}
-				has_law = law_type:law_technocracy
+				has_law_or_variant = law_type:law_technocracy
 			} 
 
 		}
@@ -194,7 +194,7 @@ usfp_PSA = {
 						is_subject_of = c:USA
 					}
 					AND = {
-						has_law = law_type:law_presidential_republic
+						has_law_or_variant = law_type:law_presidential_republic
 						country_has_voting_franchise = yes
 					}
 
@@ -212,7 +212,7 @@ usfp_PSA = {
 				OR = {
 					is_subject = yes
 					NOR = {
-						has_law = law_type:law_presidential_republic
+						has_law_or_variant = law_type:law_presidential_republic
 						country_has_voting_franchise = yes
 					}
 				}
@@ -236,7 +236,7 @@ usfp_PSA = {
 		trigger = { 
 			exists = scope:actor
 			scope:actor ?= {
-				has_law = law_type:law_council_republic
+				has_law_or_variant = law_type:law_council_republic
 			}
 		}
 	}

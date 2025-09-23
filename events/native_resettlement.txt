@@ -542,7 +542,7 @@ native_resettlement.6 = {
 	immediate = {
 		if = {
 			limit = {
-				has_law = law_type:law_no_colonial_affairs
+				has_law_or_variant = law_type:law_no_colonial_affairs
 			}
 			law_type:law_no_colonial_affairs = {
 				save_scope_as = pronativelaw
@@ -563,7 +563,7 @@ native_resettlement.6 = {
 		default_option = yes
 		if = {
 			limit = {
-				has_law = law_type:law_multicultural
+				has_law_or_variant = law_type:law_multicultural
 				c:SEQ = {
 					is_player = no
 				}
@@ -572,7 +572,7 @@ native_resettlement.6 = {
 		}
 		if = {
 			limit = { 
-				has_law = law_type:law_multicultural
+				has_law_or_variant = law_type:law_multicultural
 				exists = c:CHE
 				c:CHE = {
 					is_player = no
@@ -582,7 +582,7 @@ native_resettlement.6 = {
 		}
 		if = {
 			limit = { 
-				has_law = law_type:law_multicultural
+				has_law_or_variant = law_type:law_multicultural
 				exists = c:CSW
 				c:CSW = {
 					is_player = no

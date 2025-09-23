@@ -602,7 +602,7 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	3 new USA election events responding to various types of candidates
 	3 new internal CSA events during the ACW
 	Other New Events: Colored Troops, Scalawags, Disunionism, Wide Awake, Cross-Atlantic Endorsements, Mexican Discrimination, Boll Weevil Infestation, Abolitionists Against the War
-	New Characters: Booker T Washington, Marcus Garvey, A Philip Randolph, Hubert Harrison, Anthony D Williams, Joseph Jenkins Roberts, James Weldon Johnson, James Weldon Johnson, Ida B Wells
+	New Characters: Booker T Washington, Marcus Garvey, A Philip Randolph, Hubert Harrison, Anthony D Williams, James Weldon Johnson, James Weldon Johnson, Ida B Wells
 	A Radical Abolitionist government can now unlock a special decree to seize and redistribute former slave plantations, permanently breaking the plantation economy of the South
 	Added Endemic Hookworm to the Deep South, removed with Malaria Prevention tech
 ## Updates
@@ -633,6 +633,10 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	Liberian population reduced to much more historical numbers (less than 5k Afro-Americans)
 	Removed Afro-American homeland from Liberia (causing high Afro-american mortality as was historical)
 	Liberia no longer starts in their own market
+### 1.10 Compatibility
+	Removed mod changed to White House (vanilla now adds migration)
+	Removed mod-added Rio Grande state trait in favor of vanilla one
+	Removed Black Suffrage JE (redundant with vanilla acceptance changes)
 ### Other Updates
 	Secure the Oregon Trail button is now visible from the start to indicate to the player that it's a goal to progress towards. It also now only requires the Logistics tech rather than year 1850+.
 	Added tooltip explaining the relationship between Manifest Destiny and the Treaty of G-H
@@ -646,6 +650,7 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	Ulysses Grant is now Expert Offensive Planner, Persistent, Honorable, Innovative
 	Robert E Lee is now Defensive Strategist, Celebrity Commander, Direct
 	Increased infamy costs for annexing/puppeting Mexico
+	Removed extra Infrastructure from Rio Bravo trait
 	(CMF) Reactionary Movement can't spawn in american countries
 	(CMF) Doubled baseline PB attraction to the Liberal party
 	(CMF) African-heritage characters can always join the Afro-American National Movement

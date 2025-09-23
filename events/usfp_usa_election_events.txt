@@ -200,10 +200,10 @@ usfp_usa_election.2 = {
 					culture = {
 						OR = {
 							NOT = {
-								has_discrimination_trait = european_heritage
+								has_discrimination_trait_group = heritage_group_european
 							}
 							NOT = {
-								has_discrimination_trait = anglophone
+								has_discrimination_trait = language_anglophone
 							}
 						}
 					}
@@ -226,10 +226,10 @@ usfp_usa_election.2 = {
 						culture = {
 							OR = {
 								NOT = {
-									has_discrimination_trait = european_heritage
+									has_discrimination_trait_group = heritage_group_european
 								}
 								NOT = {
-									has_discrimination_trait = anglophone
+									has_discrimination_trait = language_anglophone
 								}
 							}
 						}
@@ -242,10 +242,10 @@ usfp_usa_election.2 = {
 						culture = {
 							OR = {
 								NOT = {
-									has_discrimination_trait = european_heritage
+									has_discrimination_trait_group = heritage_group_european
 								}
 								NOT = {
-									has_discrimination_trait = anglophone
+									has_discrimination_trait = language_anglophone
 								}
 							}
 						}
@@ -263,7 +263,7 @@ usfp_usa_election.2 = {
 		name = usfp_usa_election.2.a
 		trigger = {
 			scope:nonwhite_ig.leader.culture = {
-				has_discrimination_trait = european_heritage
+				has_discrimination_trait_group = heritage_group_european
 			}
 		}
 		scope:nonwhite_ig.party = {
@@ -276,7 +276,7 @@ usfp_usa_election.2 = {
 		name = usfp_usa_election.2.b
 		trigger = {
 			scope:nonwhite_ig.leader.culture = {
-				has_discrimination_trait = european_heritage
+				has_discrimination_trait_group = heritage_group_european
 			}
 		}
 		scope:nonwhite_ig.party = {
@@ -325,7 +325,7 @@ usfp_usa_election.2 = {
 		trigger = {
 			scope:nonwhite_ig.leader.culture = {
 				NOT = {
-					has_discrimination_trait = european_heritage
+					has_discrimination_trait_group = heritage_group_european
 				}
 			}
 		}
@@ -430,7 +430,7 @@ usfp_usa_election.3 = {
 		usfp_country_is_american = yes
 		in_election_campaign = yes
 		NOT = {
-			has_law = law_type:law_state_atheism
+			has_law_or_variant = law_type:law_state_atheism
 		}
 		any_active_party = {
 			any_member = {
@@ -481,7 +481,7 @@ usfp_usa_election.3 = {
 		}
 		if = {
 			limit = { 
-				has_law = law_type:law_usfp_nominal_separation
+				has_law_or_variant = law_type:law_usfp_nominal_separation
 			}
 			random_law = {
 				limit = {
@@ -492,7 +492,7 @@ usfp_usa_election.3 = {
 		}
 		if = {
 			limit = { 
-				has_law = law_type:law_total_separation
+				has_law_or_variant = law_type:law_total_separation
 			}
 			random_law = {
 				limit = {
@@ -503,7 +503,7 @@ usfp_usa_election.3 = {
 		}
 		if = {
 			limit = { 
-				has_law = law_type:law_freedom_of_conscience
+				has_law_or_variant = law_type:law_freedom_of_conscience
 			}
 			random_law = {
 				limit = {
@@ -519,7 +519,7 @@ usfp_usa_election.3 = {
 		name = usfp_usa_election.3.a
 		trigger = {
 			NOT = {
-				has_law = law_type:law_state_religion
+				has_law_or_variant = law_type:law_state_religion
 			}
 			NOT = {
 				scope:nonchristian_religion = rel:catholic
@@ -535,7 +535,7 @@ usfp_usa_election.3 = {
 		name = usfp_usa_election.3.b
 		trigger = {
 			NOT = {
-				has_law = law_type:law_state_religion
+				has_law_or_variant = law_type:law_state_religion
 			}
 			NOT = {
 				scope:nonchristian_religion = rel:catholic
@@ -585,7 +585,7 @@ usfp_usa_election.3 = {
 		name = usfp_usa_election.3.c
 		trigger = {
 			NOT = {
-				has_law = law_type:law_state_religion
+				has_law_or_variant = law_type:law_state_religion
 			}
 			scope:nonchristian_religion = rel:catholic
 		}
@@ -680,7 +680,7 @@ usfp_usa_election.3 = {
 		name = usfp_usa_election.3.j
 		trigger = {
 			NOT = {
-				has_law = law_type:law_state_religion
+				has_law_or_variant = law_type:law_state_religion
 			}
 			scope:nonchristian_religion = rel:mormon
 		}

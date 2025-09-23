@@ -342,8 +342,8 @@ usfp_reconstruction.5 = {
 	trigger = {
 		c:BRZ = {
 			NOR = {
-				has_law = law_type:law_slavery_banned
-				has_law = law_type:law_closed_borders
+				has_law_or_variant = law_type:law_slavery_banned
+				has_law_or_variant = law_type:law_closed_borders
 			}
 			any_scope_state = {
 				OR = {
@@ -360,7 +360,7 @@ usfp_reconstruction.5 = {
 			has_variable = confederados_spawned
 		}
 		NOT = {
-			has_law = law_type:law_closed_borders
+			has_law_or_variant = law_type:law_closed_borders
 		}
 	}
 
@@ -718,7 +718,7 @@ usfp_reconstruction.11 = {
 			is_in_government = no
 		}
 		var:reconstruction_var > 5
-		has_law = law_type:law_presidential_republic
+		has_law_or_variant = law_type:law_presidential_republic
 		ruler = {
 			interest_group = {
 				party = {

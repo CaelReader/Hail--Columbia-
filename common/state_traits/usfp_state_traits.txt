@@ -74,13 +74,6 @@ state_trait_columbia_plateau = {
 	}
 }
 
-state_trait_grand_river = {
-	icon = "gfx/interface/icons/state_trait_icons/river.dds"
-	
-	modifier = {
-		state_infrastructure_add = 15
-	}
-}
 
 state_trait_sierra_madre_watershed = {
 	icon = "gfx/interface/icons/state_trait_icons/river.dds"
@@ -161,7 +154,6 @@ state_trait_texas_colorado_river = {
 	icon = "gfx/interface/icons/state_trait_icons/river.dds"
 	
 	modifier = {
-		state_infrastructure_add = 10
 		building_group_bg_agriculture_throughput_add = 0.1
 		building_group_bg_plantations_throughput_add = 0.1
 	}

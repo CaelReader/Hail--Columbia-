@@ -1,10 +1,11 @@
 ﻿###### Hail, Columbia! by CaelReader ######
 #Manifest Destiny JE tracks the influence of the concept in american politics
 usfp_manifest_destiny_main = {
-	
 	icon = gfx/interface/icons/event_icons/hail_columbia_icon.dds
-
 	group = je_group_usa_manifest_destiny
+	is_shown_in_lobby = {
+		c:USA = THIS
+	}
 
 	is_shown_when_inactive = {
 		exists = c:USA
@@ -167,7 +168,7 @@ usfp_manifest_destiny_main = {
 			#Colonial Exploitation
 			if = {
 				limit = { 
-					has_law = law_type:law_colonial_exploitation
+					has_law_or_variant = law_type:law_colonial_exploitation
 					NOT = {
 						has_variable = destiny_manifested_colonial_exploitation
 					}
@@ -185,7 +186,7 @@ usfp_manifest_destiny_main = {
 			#Professional Army
 			if = {
 				limit = { 
-					has_law = law_type:law_professional_army
+					has_law_or_variant = law_type:law_professional_army
 					NOT = {
 						has_variable = destiny_manifested_professional_army
 					}
@@ -204,8 +205,8 @@ usfp_manifest_destiny_main = {
 			if = {
 				limit = { 
 					OR = {
-						has_law = law_type:law_national_supremacy
-						has_law = law_type:law_ethnostate
+						has_law_or_variant = law_type:law_national_supremacy
+						has_law_or_variant = law_type:law_ethnostate
 					}
 					NOT = {
 						has_variable = destiny_manifested_racism
@@ -213,7 +214,7 @@ usfp_manifest_destiny_main = {
 				}
 				if = {
 					limit = { 
-						has_law = law_type:law_national_supremacy
+						has_law_or_variant = law_type:law_national_supremacy
 					}
 					random_law = {
 						limit = {
@@ -328,7 +329,7 @@ usfp_manifest_destiny_main = {
 			#No Colonial Affairs
 			if = {
 				limit = { 
-					has_law = law_type:law_no_colonial_affairs
+					has_law_or_variant = law_type:law_no_colonial_affairs
 					NOT = {
 						has_variable = destiny_manifested_no_colonial_affairs
 					}
@@ -346,7 +347,7 @@ usfp_manifest_destiny_main = {
 			#Multiculturalism
 			if = {
 				limit = { 
-					has_law = law_type:law_multicultural
+					has_law_or_variant = law_type:law_multicultural
 					NOT = {
 						has_variable = destiny_manifested_multiculturalism
 					}
@@ -366,8 +367,8 @@ usfp_manifest_destiny_main = {
 				limit = {
 					has_variable = destiny_manifested_racism
 					NOR = {
-						has_law = law_type:law_ethnostate
-						has_law = law_type:law_national_supremacy	
+						has_law_or_variant = law_type:law_ethnostate
+						has_law_or_variant = law_type:law_national_supremacy	
 					} 
 					NOT = {
 						has_variable = destiny_manifested_racism_removed
@@ -375,7 +376,7 @@ usfp_manifest_destiny_main = {
 				}
 				if = {
 					limit = { 
-						has_law = law_type:law_racial_segregation
+						has_law_or_variant = law_type:law_racial_segregation
 					}
 					random_law = {
 						limit = {
@@ -385,7 +386,7 @@ usfp_manifest_destiny_main = {
 					}
 				} else_if = {
 					limit = { 
-						has_law = law_type:law_cultural_exclusion
+						has_law_or_variant = law_type:law_cultural_exclusion
 					}
 					random_law = {
 						limit = {
@@ -612,7 +613,7 @@ usfp_je_westward_expansion = {
 	group = je_group_usa_manifest_destiny
 
 	invalid = {
-		has_law = law_type:law_no_colonial_affairs
+		has_law_or_variant = law_type:law_no_colonial_affairs
 	}
 
 	complete = {
@@ -649,7 +650,7 @@ usfp_je_western_border = {
 	is_shown_when_inactive = {
 		exists = c:USA
 		c:USA = ROOT
-		has_law = law_type:law_no_colonial_affairs
+		has_law_or_variant = law_type:law_no_colonial_affairs
 	}
 
 	possible = {
@@ -683,7 +684,7 @@ usfp_je_western_border = {
 	fail = {
 		OR = {
 			NOT = {
-				has_law = law_type:law_no_colonial_affairs
+				has_law_or_variant = law_type:law_no_colonial_affairs
 			}
 			OR = {
 				has_state_in_state_region = STATE_SOUTH_DAKOTA
@@ -725,7 +726,7 @@ usfp_je_indian_wars = {
 		exists = c:USA
 		c:USA = ROOT
 		NOT = {
-			has_law = law_type:law_no_colonial_affairs
+			has_law_or_variant = law_type:law_no_colonial_affairs
 		}
 	}
 
@@ -738,7 +739,7 @@ usfp_je_indian_wars = {
 	}
 
 	invalid = {
-		has_law = law_type:law_no_colonial_affairs
+		has_law_or_variant = law_type:law_no_colonial_affairs
 	}
 
 	complete = {

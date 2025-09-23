@@ -10,9 +10,9 @@ usfp_gilded_age = {
 			has_global_variable = had_progressive_era
 		}
 		NOR = {
-			has_law = law_type:law_council_republic
-			has_law = law_type:law_command_economy
-			has_law = law_type:law_cooperative_ownership
+			has_law_or_variant = law_type:law_council_republic
+			has_law_or_variant = law_type:law_command_economy
+			has_law_or_variant = law_type:law_cooperative_ownership
 		}
 	}
 	timeout = 7300 #20 years
@@ -28,7 +28,7 @@ usfp_gilded_age = {
 			has_technology_researched = camera
 			has_technology_researched = steam_donkey
 			has_technology_researched = steel_railway_cars
-			has_law = law_type:law_laissez_faire
+			has_law_or_variant = law_type:law_laissez_faire
 			year >= 1873
 		}
 		OR = {
@@ -36,7 +36,7 @@ usfp_gilded_age = {
 				is_powerful = yes
 			}
 			AND = {
-				has_law = law_type:law_laissez_faire
+				has_law_or_variant = law_type:law_laissez_faire
 				ig:ig_industrialists = {
 					is_in_government = yes
 				}
@@ -105,12 +105,12 @@ usfp_gilded_age = {
 			ig:ig_industrialists = {
 				is_marginal = yes
 			}
-			has_law = law_type:law_council_republic
+			has_law_or_variant = law_type:law_council_republic
 			AND = {
-				has_law = law_type:law_elected_bureaucrats
+				has_law_or_variant = law_type:law_elected_bureaucrats
 				OR = {
-					has_law = law_type:law_proportional_taxation
-					has_law = law_type:law_graduated_taxation
+					has_law_or_variant = law_type:law_proportional_taxation
+					has_law_or_variant = law_type:law_graduated_taxation
 				}
 				institution_investment_level = {
 					institution = institution_workplace_safety
@@ -150,8 +150,8 @@ usfp_gilded_age = {
 	}
 	invalid = {
 		OR = {
-			has_law = law_type:law_command_economy
-			has_law = law_type:law_cooperative_ownership
+			has_law_or_variant = law_type:law_command_economy
+			has_law_or_variant = law_type:law_cooperative_ownership
 		}
 	}
 	on_invalid = {

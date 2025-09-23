@@ -442,7 +442,7 @@ usfp_indian_althist.4 = {
 		exists = c:DES
 		c:DES = {
 			NOT = {
-				has_law = law_type:law_no_colonial_affairs
+				has_law_or_variant = law_type:law_no_colonial_affairs
 			}
 		}
 	}
@@ -576,7 +576,7 @@ usfp_indian_althist.5 = {
 		has_technology_researched = repeaters
 		c:MEX = {
 			OR = {
-				has_law = law_type:law_no_colonial_affairs
+				has_law_or_variant = law_type:law_no_colonial_affairs
 				NOR = {
 					has_state_in_state_region = STATE_TEXAS
 					has_state_in_state_region = STATE_NEW_MEXICO

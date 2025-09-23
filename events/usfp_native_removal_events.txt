@@ -723,7 +723,7 @@ usfp_native_removal.8 = {
 		name = usfp_native_removal.8.b
 		trigger = {
 			NOT = {
-				has_law = law_type:law_no_police
+				has_law_or_variant = law_type:law_no_police
 			}
 		}
 		scope:massacre_state_scope = {
@@ -823,7 +823,7 @@ usfp_native_removal.9 = {
 	}
 
 	cancellation_trigger = {
-		has_law = law_type:law_no_colonial_affairs
+		has_law_or_variant = law_type:law_no_colonial_affairs
 	}
 
 	immediate = {
@@ -1281,7 +1281,7 @@ usfp_native_removal.16 = {
 		s:STATE_MICHIGAN.region_state:USA = {
 			any_scope_pop = {
 				culture = {
-					has_discrimination_trait = indigenous_american_heritage
+					has_discrimination_trait_group = heritage_group_indigenous_american
 				}
 			}
 		}
@@ -1315,7 +1315,7 @@ usfp_native_removal.16 = {
 			every_scope_pop = {
 				limit = {
 					culture = {
-						has_discrimination_trait = indigenous_american_heritage
+						has_discrimination_trait_group = heritage_group_indigenous_american
 					}
 				}
 				move_pop = scope:indian_territory_scope
@@ -1329,7 +1329,7 @@ usfp_native_removal.16 = {
 			every_scope_pop = {
 				limit = {
 					culture = {
-						has_discrimination_trait = indigenous_american_heritage
+						has_discrimination_trait_group = heritage_group_indigenous_american
 					}
 				}
 				move_pop = scope:indian_territory_scope
@@ -1343,7 +1343,7 @@ usfp_native_removal.16 = {
 			every_scope_pop = {
 				limit = {
 					culture = {
-						has_discrimination_trait = indigenous_american_heritage
+						has_discrimination_trait_group = heritage_group_indigenous_american
 					}
 				}
 				move_pop = scope:indian_territory_scope
@@ -1357,7 +1357,7 @@ usfp_native_removal.16 = {
 			every_scope_pop = {
 				limit = {
 					culture = {
-						has_discrimination_trait = indigenous_american_heritage
+						has_discrimination_trait_group = heritage_group_indigenous_american
 					}
 				}
 				move_pop = scope:indian_territory_scope
