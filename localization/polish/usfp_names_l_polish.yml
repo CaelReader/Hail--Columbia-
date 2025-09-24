@@ -1,61 +1,63 @@
 ﻿l_polish:
- dlc_usfp: "Hail, Columbia!" #NT!
- dlc_usfp_desc: "Hail Columbia, happy land! In 1836 the American experiment stands as a beacon of liberal democracy, but internal divisions over the questions of slavery and citizenship are growing. As it begins its conquest of the continent and the march into industrial prosperity, the United States has the potential to become the greatest power the world has ever seen. Lead the republic through the domestic tumult of the Civil War, Reconstruction, the Gilded Age, and the Progressive Era. Pursue your territorial claims from sea to shining sea, and carve out a manifest destiny of your own making." #NT!
+ dlc_usfp: "Hail, Columbia!"
+ dlc_usfp_desc: "Hail Columbia, happy land! In 1836 the American experiment stands as a beacon of liberal democracy, but internal divisions over the questions of slavery and citizenship are growing. As it begins its conquest of the continent and the march into industrial prosperity, the United States has the potential to become the greatest power the world has ever seen. Lead the republic through the domestic tumult of the Civil War, Reconstruction, the Gilded Age, and the Progressive Era. Pursue your territorial claims from sea to shining sea, and carve out a manifest destiny of your own making."
   
- Asiyahola: "Asi-yahola" #NT!
- Osceola: "Osceola" #NT!
- osceola_warband: "Osceola’s Warband" #NT!
- usfp_EmptyMicanopy: "" #NT!
- Biddle: "Biddle" #NT!
- usfp_Blank: "" #NT!
- Puhihwikwasuu: "Puhihwikwasu'u" #NT!
- Puhtocnocony: "Puhtocnocony" #NT!
- Sota: "Šóta" #NT!
- Nast: "Nast" #NT!
- Haywood: "Haywood" #NT!
- Robert_M: "Robert M." #NT!
- La_Follette: "La Follette" #NT!
- William_Jennings: "William Jennings" #NT!
- Northup: "Northup" #NT!
- Gladden: "Gladden" #NT!
- Elizabeth_Gurley: "Elizabeth Gurley" #NT!
- John_Ambrose: "John Ambrose" #NT!
- Fauntroy: "Fauntroy" #NT!
- ecchi_Franklin_D: "Franklin D." #NT!
- Rhett: "Rhett" #NT!
- William_Lloyd: "William Lloyd" #NT!
- Terrence: "Terrence" #NT!
- Powderly: "Powderly" #NT!
- Gompers: "Gompers" #NT!
- William_Graham: "William Graham" #NT!
- Addams: "Addams" #NT!
- Kintpuash: "Kintpuash" #NT!
- Biawacheeitchish: "Bíawacheeitchish" #NT!
- Plenty_Coups: "Plenty Coups" #NT!
- Wovoka: "Wovoka" #NT!
- Crook: "Crook" #NT!
- Gibbon: "Gibbon" #NT!
- Terry: "Terry" #NT!
- Canby: "Canby" #NT!
- Ranald: "Ranald" #NT!
- Singer: "Singer" #NT!
+ Asiyahola: "Asi-yahola"
+ Osceola: "Osceola"
+ osceola_warband: "Osceola’s Warband"
+ usfp_EmptyMicanopy: ""
+ Biddle: "Biddle"
+ usfp_Blank: ""
+ Puhihwikwasuu: "Puhihwikwasu'u"
+ Puhtocnocony: "Puhtocnocony"
+ Sota: "Šóta"
+ Nast: "Nast"
+ Haywood: "Haywood"
+ Robert_M: "Robert M."
+ La_Follette: "La Follette"
+ William_Jennings: "William Jennings"
+ Northup: "Northup"
+ Gladden: "Gladden"
+ Elizabeth_Gurley: "Elizabeth Gurley"
+ John_Ambrose: "John Ambrose"
+ Fauntroy: "Fauntroy"
+ ecchi_Franklin_D: "Franklin D."
+ Rhett: "Rhett"
+ William_Lloyd: "William Lloyd"
+ Terrence: "Terrence"
+ Powderly: "Powderly"
+ Gompers: "Gompers"
+ William_Graham: "William Graham"
+ Addams: "Addams"
+ Kintpuash: "Kintpuash"
+ Biawacheeitchish: "Bíawacheeitchish"
+ Plenty_Coups: "Plenty Coups"
+ Wovoka: "Wovoka"
+ Crook: "Crook"
+ Gibbon: "Gibbon"
+ Terry: "Terry"
+ Canby: "Canby"
+ Ranald: "Ranald"
+ Singer: "Singer"
+ Garvey: "Garvey" #NT!
+ A_Philip: "A. Philip" #NT!
   
- USS_Monitor: "USS Monitor" #NT!
+ USS_Monitor: "USS Monitor"
   
- company_usfp_westinghouse: "Westinghouse Electric & Manufacturing Company" #NT!
- company_usfp_coca_cola: "Coca-Cola" #NT!
- prestige_good_usfp_coca_cola: "Coca-Cola" #NT!
- company_usfp_dupont: "DuPont de Nemours" #NT!
- company_usfp_american_sugar: "American Sugar Refining Company" #NT!
- company_usfp_anaconda: "Anaconda Mining Company" #NT!
- company_usfp_american_tobacco: "American Tobacco Company" #NT!
- prestige_good_usfp_durham_tobacco: "Durham Tobacco" #NT!
- company_usfp_american_woolen: "American Woolen Company" #NT!
- company_usfp_armours: "Armour and Company" #NT!
- company_usfp_cfi: "Colorado Fuel & Iron" #NT!
- company_usfp_sears: "Sears, Roebuck and Co." #NT!
- company_usfp_singer: "Singer Manufacturing Company" #NT!
- company_usfp_union_pacific: "Union Pacific Railroad" #NT!
- company_usfp_us_rubber: "United States Rubber Company" #NT!
- company_usfp_us_warner_bros: "Warner Bros. Pictures" #NT!
- prestige_good_usfp_hollywood_movies: "Hollywood Movies" #NT!
+ company_usfp_westinghouse: "Westinghouse Electric & Manufacturing Company"
+ company_usfp_coca_cola: "Coca-Cola"
+ prestige_good_usfp_coca_cola: "Coca-Cola"
+ company_usfp_dupont: "DuPont de Nemours"
+ company_usfp_american_sugar: "American Sugar Refining Company"
+ company_usfp_anaconda: "Anaconda Mining Company"
+ company_usfp_american_tobacco: "American Tobacco Company"
+ prestige_good_usfp_durham_tobacco: "Durham Tobacco"
+ company_usfp_american_woolen: "American Woolen Company"
+ company_usfp_armours: "Armour and Company"
+ company_usfp_cfi: "Colorado Fuel & Iron"
+ company_usfp_sears: "Sears, Roebuck and Co."
+ company_usfp_singer: "Singer Manufacturing Company"
+ company_usfp_union_pacific: "Union Pacific Railroad"
+ company_usfp_us_rubber: "United States Rubber Company"
+ company_usfp_us_warner_bros: "Warner Bros. Pictures"
+ prestige_good_usfp_hollywood_movies: "Hollywood Movies"

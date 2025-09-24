@@ -63,7 +63,7 @@
  SYX: "Syilx"
  SYX_ADJ: "Syilx"
  usfp_TSI: "Tsimshian"
- TSI_ADJ: "Tsimshian"
+ usfp_TSI_ADJ: "Tsimshian" #NT!
  SVY: "Dene"
  SVY_ADJ: "Dene"
  STU: "Sahtu"
@@ -116,6 +116,21 @@
  setting_usa_dynamic_names: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_usa_dynamic_names_desc #high Dynamisch #!#!#!"
  setting_usa_dynamic_names_desc: "Der Name des Landes der Vereinigten Staaten wird sich je nach Regierungsform ändern."
   
+ rule_usfp_native_consolidation: "@america_icon! #yellow Hail, Columbia!#! | Decentralized Consolidation" #NT!
+ setting_some_native_consolidation: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_some_native_consolidation_desc #high Some #!#!#!" #NT!
+ setting_some_native_consolidation_desc: "Some [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] in North America will be consolidated on game start. #lore Having more than 420 countries on the map currently causes major performance loss on some hardware.#!" #NT!
+ setting_more_native_consolidation: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_more_native_consolidation_desc #high More #!#!#!" #NT!
+ setting_more_native_consolidation_desc: "Even more [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] in North America will be consolidated on game start. #lore Having more than 420 countries on the map currently causes major performance loss on some hardware.#!" #NT!
+ setting_no_native_consolidation: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_no_native_consolidation_desc #high None #!#!#!" #NT!
+ setting_no_native_consolidation_desc: "None of the Mod-Added [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] in North America will be consolidated on game start. #lore WARNING: Having more than 420 countries on the map currently causes major performance loss on some hardware!#!" #NT!
+  
+ rule_usfp_african_consolidation: "@america_icon! #yellow Hail, Columbia!#! | African Consolidation" #NT!
+ setting_african_consolidation: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_african_consolidation_desc #high Yes #!#!#!" #NT!
+ setting_african_consolidation_desc: "Consolidates some [Concept('concept_country', '$concept_countries$')] in Central Africa at game start to reduce the starting number of tags below 420." #NT!
+ setting_no_african_consolidation: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_african_consolidation_desc #high No #!#!#!" #NT!
+ setting_no_african_consolidation_desc: "African [Concept('concept_country', '$concept_countries$')] are unchanged." #NT!
+  
+  
  dyn_c_usfp_grand_columbia: "Großkolumbien"
  dyn_c_usfp_grand_columbia_adj: "Kolumbianisch"
  dyn_c_usp_united_american_syndicates: "Vereinigte Amerikanische Syndikate"
@@ -127,16 +142,42 @@
  dyn_c_usfp_north_american_technate_adj: "Nordamerikanisch"
  dyn_c_united_states_of_earth: "Vereinigte Staaten der Erde"
  dyn_c_united_states_of_earth_ADJ: "Erdianisch"
- dyn_c_united_states_of_the_americas: "United States of the Americas" #NT!
+ dyn_c_united_states_of_the_americas: "United States of the Americas"
+ dyn_c_american_reich: "American Reich" #NT!
+  
  dyn_c_utah_territory: "Utah-Territorium"
  dyn_c_utah_territory_ADJ: "Utah"
  dync_c_alaska_territory: "Alaska-Territorium"
  dync_c_alaska_territory_ADJ: "Alaskanisch"
  dync_c_michigan_territory: "Michigan-Territorium"
  dync_c_michigan_territory_ADJ: "Michiganisch"
+ dyn_c_las_californias: "Las Californias" #NT!
+ dyn_c_alta_california: "Alta California" #NT!
+ dyn_c_west_alaska: "West Alaska" #NT!
+ dyn_c_west_alaska_ADJ: "West Alaskan" #NT!
   
  mormon: "Mormon"
   
  STATE_OKLAHOMA_sequoyah: "Sequoyah"
  STATE_UTAH_deseret: "Deseret"
  STATE_WEST_VIRGINIA_antebellum: "Westvirginia"
+  
+ #is that a kaiserreich reference?!? 
+ usfp_PSA: "Pacific States of America" #NT!
+ usfp_PSA_ADJ: "Pacific American" #NT!
+ dyn_c_pacific_states: "Pacific States" #NT!
+ dyn_c_pacific_states_ADJ: "Pacific" #NT!
+ dyn_c_pacific_commonwealth: "Pacific Commonwealth" #NT!
+ dyn_c_pacific_commonwealth_ADJ: "Pacific" #NT!
+  
+ usfp_WCA: "Workers’ Congress of America" #NT!
+ usfp_WCA_ADJ: "Socialist American" #NT!
+ usfp_APG: "American People's Government" #NT!
+ usfp_APG_ADJ: "Nationalist American" #NT!
+ usfp_ACC: "American Constitutional Coalition" #NT!
+ usfp_ACC_ADJ: "Constitutional American" #NT!
+  
+ usfp_LNC: "Linconia" #NT!
+ usfp_LNC_ADJ: "Linconian" #NT!
+  
+ LIB_FLAVOR_TEXT: "Founded by the American Colonization Society as a home for freed slaves from the United States, the Liberian settlers seek to colonize the region and convert the indigenous population to Christianity. Will Liberia survive and build a freedman's republic?" #NT!

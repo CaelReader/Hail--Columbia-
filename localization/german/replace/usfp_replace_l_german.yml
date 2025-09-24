@@ -4,6 +4,20 @@
   
  je_acw_countdown: "Ein geteiltes Haus"
  je_acw_countdown_reason: "Die Frage der Sklaverei hat den Norden und den Süden des [ROOT.GetCountry.GetName] seit vor der Ausarbeitung der Unabhängigkeitserklärung gespalten. So wie damals, haben eine Reihe von Kompromissen in der Bundesregierung den offenen Konflikt hinausgezögert. Während die [SCOPE.sIdeology('abolitionist_scope').GetName] Bewegung im Norden weiter wächst, haben die [SCOPE.gsInterestGroup('landowners_scope').GetName] weiterhin mehr Zugeständnisse und Kompromisse gefordert, um ihre 'eigenartige Institution' vor Eingriffen zu schützen.\n\nAuf die eine oder andere Weise kann die Union nicht länger halb Sklave und halb frei bestehen."
+ je_acw_countdown_status_missouri_compromise: "The Missouri Compromise is largely accepted." #NT!
+ je_acw_countdown_status_bleeding_kansas: "Bleeding Kansas has torn open a wound in the Union." #NT!
+ je_acw_countdown_status_secession_iminent: "War between the states appears inevitable." #NT!
+ je_acw_countdown_status_uncertain_expansion: "Westward expansion is straining the Missouri Compromise." #NT!
+ je_acw_countdown_status_uncertain_compromise: "The compromise between North and South is on shaky ground." #NT!
+ je_acw_countdown_status_fugitive_slave_law: "The Fugitive Slave Law enflames the North." #NT!
+ je_acw_countdown_status_human_rights: "The spread of Human Rights doctrine drives support for abolition." #NT!
+ je_acw_countdown_status_slave_power: "The Slave Power reigns supreme." #NT!
+ je_acw_countdown_status_powerful_abolitionist: "The South is scared of a powerful Abolitionist running for President." #NT!
+ je_acw_countdown_status_abolitionist_revolt_imminent: "Militant Abolitionists call for the immediate destruction of the Slave Power." #NT!
+ je_acw_countdown_status_war_to_expand_slavery: "Abolitionists decry the war as an expansion of the Slave Power." #NT!
+ je_acw_countdown_lobby: "@america_icon! #yellow Hail, Columbia!#!\nThe United States is divided between the abolitionist North and the slave-holding South. Compromise between the two is becoming increasingly impossible." #NT!
+  
+ je_group_usa_american_civil_war: "A House Divided" #NT!
   
  je_acw_war: "Der Amerikanische Bürgerkrieg"
  je_acw_war_reason: "Der Krieg zwischen den Staaten steht uns bevor. Jetzt ist die Zeit, die Union zu bewahren oder es zu versuchen und dabei zu sterben.\n\n"
@@ -60,8 +74,11 @@
  native_resettlement.6.f: "Einige Barden werden eine Stimme erheben, um dich zu loben,\nIn bewegenden Zahlen der Welt erzählen, wie Männer\nDich verspotteten, dich ausbuhnten, dich des Wahnsinns beschuldigten!\nUnd wer könnte nicht genug Ehre geben, wenn\nSchließlich, trotz Spott, Mangel und Not,\nDein Genie einen Traum in eine Tat verwandelte."
  native_resettlement.6.a: "Großes Leid wurde abgewendet."
   
- indian_removal_end: "The Five Civilized Tribes will be removed from their ancestral lands at great loss of life." #NT!
+ indian_removal_end: "The Five Civilized Tribes will be removed from their ancestral lands at great loss of life."
   
+ acw_followup_events.4.c: "We shall build up a land of free men and free women and freedom!" #NT!
+ acw_followup_events.4.ctt: "Enables the $decree_usfp_radical_land_distribution$ [concept_decree], allowing the wholesale redistribution of plantations to the Freedmen. If the decree is kept on a state for 4 years, its plantation economy will be permanently broken, removing the #yellow Deep South#! or #yellow Upper South#! state modifiers and progressing Reconstruction in favor of the #bold Freedmen#!. #red Using this decree will radicalize the South and cost significant Northern Political Will!" #NT!
+ acw_followup_events.4.c_trigger: "Has not already unlocked the $decree_usfp_radical_land_distribution$ [concept_decree]" #NT!
  acw_followup_events.5.t: "Supremacistische Gewalt in [SCOPE.sState('supremacist_violence_state').GetName]"
  acw_followup_events.5.d: "Gewalt zwischen weißen Randalierern und schwarzen Freigelassenen hat erhebliche Spannungen in [SCOPE.sState('supremacist_violence_state').GetName] verursacht."
  acw_followup_events.5.f: ""Die Randalierer traten, schlugen und prügelten andere gnadenlos. Die Straßen wurden rutschig vom Blut unschuldiger Männer. Leere Revolver klapperten auf dem Boden, als die Angriffe zu frenetisch wurden, um sich noch mit Nachladen zu beschäftigen. Es war erst, als das Kriegsrecht ausgerufen wurde und Truppen einmarschierten, dass auch nur der Anschein von Ordnung zurückkehren konnte.""
@@ -81,6 +98,9 @@
  je_acw_reconstruction_status_radical: "Die #bold Freigelassenen#! behaupten ihre neuen Rechte und Positionen in der Gesellschaft."
  je_acw_reconstruction_status_mixed: "Die Rekonstruktion bleibt im gesamten Süden stark umstritten."
  je_acw_reconstruction_status_failure: "Die weiß supremacistischen #bold Erlöser#! ziehen ihren Griff über den Süden straffer."
+ usfp_reconstruction_progress_bar: "Reconstruction" #NT!
+ usfp_reconstruction_progress_bar_freedmen: "#bold Freedmen#!" #NT!
+ usfp_reconstruction_progress_bar_redeemers: "#bold Redeemers#!" #NT!
   
  je_oregon: "Der Oregon-Grenzkonflikt"
  je_oregon_reason: "Der genaue Standort der Oregon-Grenze ist seit langem eine unentschiedene Angelegenheit zwischen Großbritannien und den Vereinigten Staaten. Während unsere Siedler weiterhin nach Westen drängen, müssen wir eine endgültige Einigung mit den Briten erzielen.\n\nAlternativ, wenn wir uns im Krieg in Kalifornien befinden, wird ein Vertrag eine militärische Notwendigkeit werden."
@@ -88,7 +108,9 @@
   
  BNN: "Shoshone"
  BNN_ADJ: "Shoshoni"
- # ATB: "Deg Xit'an" #NT!
- # ATB_ADJ: "Deg Xit'an" #NT!
- SLS: "Flathead" #NT!
- SLS_ADJ: "Flathead" #NT!
+ # ATB: "Deg Xit'an"
+ # ATB_ADJ: "Deg Xit'an"
+ SLS: "Flathead"
+ SLS_ADJ: "Flathead"
+  
+ country_voting_power_from_literacy_add: "[concept_political_strength] from Literate Pops’ Votes" #NT!

@@ -1,5 +1,8 @@
 ﻿l_german:
- #ACW 
+ ### Hail, Columbia! by CaelReader ### 
+  
+ ### A House Divided Events ### 
+  
  acw_events.1.a.t: "Ein [SCOPE.sIdeology('abolitionist_scope').GetName] [concept_agitator] wird in [SCOPE.sCountry('usa_scope').GetName] erscheinen."
  acw_events.1.b.t: "Ein [SCOPE.sIdeology('slaver_scope').GetName] [concept_agitator] wird in [SCOPE.sCountry('usa_scope').GetName] erscheinen."
  acw_events.3.a.t: "Der Status des Missouri-Kompromisses bleibt ungewiss."
@@ -17,7 +20,7 @@
  usfp_a_house_divided.3.a: "Es kann kein Konflikt entstehen, ohne dass ihr selbst die Angreifer seid."
  usfp_a_house_divided.3.b: "Wartet! Wir werden die Sklaverei in der Verfassung verankern!"
  usfp_a_house_divided.3.b.tt: "Sklavereigesetze können nicht länger [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enacted$')] werden."
- not_has_corwin_amendment: "Slavery has not been Constitutionally protected" #NT!
+ not_has_corwin_amendment: "Slavery has not been Constitutionally protected"
   
  missouri_compromise_break: "Das wird den Missouri-Kompromiss #red break#!."
   
@@ -69,6 +72,8 @@
  usfp_a_house_divided.11.b: "Yankees sollten sich um ihre eigenen Angelegenheiten kümmern."
  usfp_a_house_divided.11.c: "Das wird an der Wahlurne entschieden."
   
+ usfp_a_house_divided.12.d: "With years having passed since the passage of [SCOPE.sLaw('slavery_banned_scope').GetName], the [SCOPE.gsInterestGroup('slaver_ig').GetName] have been forced to accept the new economic order. They have instead enacted a regime of racist '[concept_usfp_jim_crow]' laws across the South in an effort to curtail the rights of the now free $usfp_afro_american_culture_plural$." #NT!
+  
  usfp_a_house_divided.14.t: "Den Kompromiss brechen"
  usfp_a_house_divided.14.d: "Vertreter aus beiden Lagern haben [SCOPE.sLaw('current_law_scope').GetName] als Bruch des Abkommens zwischen Nord und Süd abgelehnt und als Gefahr für die nationale Einheit verurteilt."
  usfp_a_house_divided.14.f: "\"Erhaltet den Kompromiss! Schürt keine Aufregung! Gebt uns Frieden!\" #Same Houston"
@@ -104,6 +109,39 @@
  usfp_a_house_divided.19.f: "\"Wenn ich an Amerika denke, bewundere ich manchmal ihren strahlend blauen Himmel – ihre ehrwürdigen Wälder – ihre fruchtbaren Felder – ihre schönen Flüsse – ihre mächtigen Seen und sternenkrönte Berge. Aber mein Entzücken wird bald getrübt, meine Freude wandelt sich rasch in Trauer. Wenn ich daran denke, dass alles verflucht ist durch die höllischen Taten des Sklavenhaltens, Raubes und Unrechts, – wenn ich daran denke, dass mit den Wassern ihrer edelsten Flüsse die Tränen meiner Brüder zum Ozean getragen werden, unbeachtet und vergessen, und dass ihre fruchtbarsten Felder täglich vom warmen Blut meiner empörten Schwestern zehren, erfüllt mich das mit unbeschreiblichem Abscheu.\" #Frederick Douglass"
  usfp_a_house_divided.19.a: "Seine Aufwiegelung ist ein Leitstern zur Freiheit."
  usfp_a_house_divided.19.b: "Seine Aufwiegelung ist eine Bedrohung für die Union!"
+  
+ usfp_a_house_divided.20.t: "Disunionism" #NT!
+ usfp_a_house_divided.20.d: "[SCOPE.sCharacter('garrison_scope').GetFullName] and his followers have publicly denounced the Constitution as an inherently pro-slavery document. They reject a political path to abolition and instead call for a secession of the free states." #NT!
+ usfp_a_house_divided.20.f: ""The strongest political influence which the Northern voters can wield for the overthrow of slavery is to cease sustaining the existing compact, by withdrawing from the polls, and calmly waiting for the time when a righteous government shall supersede the institutions of tyranny."" #NT!
+ usfp_a_house_divided.20.a: "The [SCOPE.sParty('whig_scope').GetName] won't be happy." #NT!
+ usfp_a_house_divided.20.b: "We need abolitionists at the polls!" #NT!
+  
+ usfp_a_house_divided.21.t: "The Underground Railroad" #NT!
+ usfp_a_house_divided.21.d: "As the [SCOPE.sCountry('usa_scope').GetName] remains divided over the issue of [GetLawType('law_slave_trade').GetGroup.GetName], the [GetIdeology('ideology_abolitionist').GetName] network known as the Underground Railroad continues to transport $slaves$ to freedom, including across the border into [ROOT.GetCountry.GetName]." #NT!
+ usfp_a_house_divided.21.f: ""You see those trees," said the noble hearted captain next morning, pointing to a group in the distance; "they grow on free soil, and as soon as your feet touch that, you're a man. I want to see you go and be a freeman."" #NT!
+ usfp_a_house_divided.21.a: "Freedom is the common cause of all mankind." #NT!
+ usfp_a_house_divided.21.a.tt: "Until the [SCOPE.sCountry('usa_scope').GetName] abolishes [GetLawType('law_slave_trade').GetGroup.GetName], $usfp_afro_american_culture$ $slaves$ will regularly arrive in our [Concept('concept_state', '$concept_states$')] as [concept_loyalist] $laborers$." #NT!
+ usfp_a_house_divided.21.a.tt2: "Until the [SCOPE.sCountry('usa_scope').GetName] abolishes [GetLawType('law_slave_trade').GetGroup.GetName], $usfp_afro_american_culture$ $slaves$ will occasionally arrive in our [Concept('concept_state', '$concept_states$')] in [GetStrategicRegion('region_mexico').GetName] or the [GetStrategicRegion('region_caribbean').GetName] as [concept_loyalist] $laborers$." #NT!
+  
+ usfp_a_house_divided.22.t: "Wide Awake" #NT!
+ usfp_a_house_divided.22.d: "An [GetIdeology('ideology_abolitionist').GetName] youth movement has begun organizing young voters up and down [GetStrategicRegion('region_new_england').GetName] in support of the candidacy of [SCOPE.sCharacter('real_abraham_lincoln_scope').GetFullName]. Adopting military dress and performing grand night marches by torchlight, these 'Wide Awakes' are committed to defending the [SCOPE.sParty('lincoln_party').GetName] against the [SCOPE.sPoliticalMovement('pro_slavery_movement').GetName]." #NT!
+ usfp_a_house_divided.22.f: ""We the undersigned, do hereby explicitly declare our entire devotion to the Constitution and the Union, our opposition to interference with slavery in the States where it now legally exists, and our unqualified and unalterable determination to resist by all constitutional means its further extension, and pledge ourselves to use all honorable means for the success and triumph of the [SCOPE.sParty('lincoln_party').GetNameNoFormatting] and of the election of its candidates to office."" #NT!
+ usfp_a_house_divided.22.a: "God never made a tyrant or a slave." #NT!
+ usfp_a_house_divided.22.b: "Nothing but a pack of lawless rioters." #NT!
+  
+ usfp_a_house_divided.23.t: "Cross-Atlantic Endorsements" #NT!
+ usfp_a_house_divided.23.d: "The firebrand rhetoric of the [ROOT.GetCountry.GetAdjective] [SCOPE.sPoliticalMovement('abolitionist_movement').GetName] has begun to inspire the [SCOPE.sCountry('britain_scope').GetAdjective][SCOPE.sPoliticalMovement('british_labor_movement').GetName] to greater action. [SCOPE.sCountry('britain_scope').GetAdjectiveNoFormatting] abolitionists, having banished slavery from their own country, now likewise champion the cause of ending slavery in the [ROOT.GetCountry.GetNameNoFormatting]." #NT!
+ usfp_a_house_divided.23.f: ""Great God! Is this the Patriot's doom?\nShall they who dare defend the slave,\nBe hurl'd within a prison's gloom?\nTo fit them for an early grave?"" #NT!
+ usfp_a_house_divided.23.a: "[SCOPE.sCountry('britain_scope').GetAdjective] abolitionists are true champions of freedom." #NT!
+ usfp_a_house_divided.23.b: "Why should we listen to stodgy Europeans?" #NT!
+ usfp_a_house_divided.23.c: "We could use some Chartism here at home..." #NT!
+  
+ usfp_a_house_divided.24.t: "Abolitionists Against the War" #NT!
+ usfp_a_house_divided.24.d: "Supporters of the [SCOPE.sPoliticalMovement('abolitionist_movement').GetName] are voicing opposition to our [concept_war] with [SCOPE.sCountry('mexico_scope').GetName], denouncing it as an act of naked aggression that would greatly expand the slave-holding territory of the [ROOT.GetCountry.GetName]." #NT!
+ usfp_a_house_divided.24.f: ""The United States will conquer Mexico, but it will be as a man who swallowed the arsenic which brings him down in turn. Mexico will poison us."" #NT!
+ usfp_a_house_divided.24.a: "We'll have to settle this matter once the war is won." #NT!
+  
+ ### Bleeding Kansas Events ### 
   
  usfp_bleeding_kansas.1.t: "Die New England Auswandererhilfsgesellschaft"
  usfp_bleeding_kansas.1.d: "Ein unternehmungslustiger [SCOPE.sIdeology('abolitionist_scope').GetName] aus [SCOPE.sState('massachusetts_scope').GetCityHubName] hat ein Transportunternehmen gegründet, mit dem Ziel, antisklavereirische Einwanderer nach [SCOPE.sState('kansas_scope').GetName] zu schicken. Hunderte von Migranten haben sich bereits angemeldet, in der Hoffnung, [SCOPE.sState('kansas_scope').GetName] in einen Freistaat zu verwandeln."
@@ -173,6 +211,8 @@
  usfp_bleeding_kansas.10.d: "Nach viel Gewalt und Konflikten haben sich die Grenz-Ruffians in Bleeding [SCOPE.sState('kansas_scope').GetName] als Sieger hervorgetan und das Gebiet zu einem sklavenhaltenden Staat gemacht."
  usfp_bleeding_kansas.10.f: "\"Hört! Vernehmt ihr nicht das Seufzen\nDer Göttin Freiheit, die stirbt,\nAuf den Feldern Kansas', dahinschwindend,\nErtränkt in ihrem Blut?\nHört ihr nicht ihr klagendes Flehen?\nSeht ihr nicht, wie ihre Anhänger bluten?\nSieh! Ihre Seelen weichen der Erde,\nRufen nach blutiger Rache.\""
  usfp_bleeding_kansas.10.a: "Endlich könnte sich dieses tragische Kapitel schließen."
+  
+ ### American Civil War Events ### 
   
  usfp_acw.1.t: "Der Frieden eines Verräters"
  usfp_acw.1.d: "[SCOPE.sCharacter('nast_scope').GetFullName] hat eine beißende Kritik an den [SCOPE.sCountry('csa_scope').GetAdjective] Friedensforderungen veröffentlicht, in der er diese als entehrend für die Union und selbstzerstörerisch für den Norden darstellt. Die [SCOPE.sParty('republican_party_scope').GetName] haben dies aufgegriffen, um die öffentliche Unterstützung für die Fortsetzung des Krieges zu stärken und den Begriff des Verräterfriedens zu verurteilen."
@@ -248,7 +288,38 @@
  usfp_acw.13.a: "Wir können sie nicht aufhalten."
  usfp_acw.13.b: "Haltet sie auf!"
   
- #Reconstruction Events 
+ usfp_acw.14.t: "King Cotton" #NT!
+ usfp_acw.14.d: "In an attempt to coerce the European powers into supporting our cause, exporters across the [ROOT.GetCountry.GetName] have almost completely shut down the cotton trade, some even going so far as to burn cotton bales to prevent their sale." #NT!
+ usfp_acw.14.f: ""What would happen if no cotton were furnished for three years? Old England would topple headlong and carry the whole civilized world with her. No, you dare not make war on cotton. No power on earth dares to make war upon it. Cotton is king."" #NT!
+ usfp_acw.14.a: "Surely Europe will not find alternative sources of cotton." #NT!
+ usfp_acw.14.b: "The economy, you fools!" #NT!
+  
+ usfp_acw.15.t: "Servile Insurrection" #NT!
+ usfp_acw.15.d: "With the [SCOPE.sCountry('usa_scope').GetName] declaring a general emancipation of the slaves, our economy has been plunged into chaos. Scores of enslaved plantation workers have begun to make for Union lines, while others have taken the opportunity to revolt and occupy the homes of their masters who are off fighting the war." #NT!
+ usfp_acw.15.f: ""I do order and declare that all persons held as slaves within said designated States, and parts of States, are, and henceforward shall be free... And I further declare and make known, that such persons of suitable condition, will be received into the armed service of the United States... And upon this act, sincerely believed to be an act of justice, warranted by the Constitution, upon military necessity, I invoke the considerate judgment of mankind, and the gracious favor of Almighty God."" #NT!
+ usfp_acw.15.a: "We need to win this war, and fast!" #NT!
+ usfp_acw.15.b: "Unleash the slave patrols!" #NT!
+  
+ usfp_acw.16.t: "State's Rights" #NT!
+ usfp_acw.16.d: "Seemingly ignorant of the looming Union threat to our way of life, the government of the [ROOT.GetCountry.GetName] has become mired in petty factionalism and parochialism, with individual state governments frustrating our efforts to collect the taxes we need to finance the war." #NT!
+ usfp_acw.16.f: ""Our Government, born of the spirit of freedom and of the equality and independence of the States, could not have survived a selfish or jealous disposition, making each only careful of its own interest or safety. The fate of the Confederacy, under the blessing of Divine Providence, depends upon the harmony, energy, and unity of the States."" #NT!
+ usfp_acw.16.a: "We just need to hold things together until peace." #NT!
+ usfp_acw.16.b: "Whip the states into line!" #NT!
+  
+ usfp_acw.17.t: "Brother Against Brother" #NT!
+ usfp_acw.17.d: "While many in the [ROOT.GetCountry.GetName] had hoped for the Civil War to come to a swift and negotiated conclusion, it is clear now that those hopes were mere fancy. A year of brutal fighting has hardened the hearts of [GetCulture('yankee').GetName] and [GetCulture('dixie').GetName] alike, and instilled a determination in both sides to fight it out to the bitter end." #NT!
+ usfp_acw.17.fusa: ""We can never end this war till we make common cause with the negro, arm him, and by a combination of terror and extermination, destroy the race of slaveholders on this continent. I know this will be a terrible course — bloody and horrible. But by what sort of cataclysm can anyone expect the two hundred years of torture and wrong to be closed? To the hands of the North have been committed the sword and flame of avenging justice. With knife and cautery must we pursue this cancer to all its ramifications, unmindful of the writhing and groans of the victim. Our National Life and the hopes of the ages are tied to the thoroughness of our work."" #NT!
+ usfp_acw.17.fcsa: ""Already has the hatred of one of their great leaders attempted to make the negro your equal by declaring his freedom. They care not for the blood of babes nor carnage of innocent women which servile insurrection thus stirred up may bring upon their heads."" #NT!
+ usfp_acw.17.a: "For cause and comrades!" #NT!
+  
+ usfp_acw.19.t: "For Their Own Cause" #NT!
+ usfp_acw.19.d: "With the Civil War now a war of emancipation, scores of [GetCulture('afro_american').GetName] volunteers have flocked to enlist in the Army as part of newly inaugurated United States Colored Troops regiments. Many seek not only to aid in the destruction of slavery, but also to prove that $usfp_afro_american_culture_plural$ are patriotic members of the American nation." #NT!
+ usfp_acw.19.f: ""Once let the black man get upon his person the brass letters U.S.; let him get an eagle on his button, and a musket on his shoulder, and bullets in his pocket, and there is no power on the earth or under the earth which can deny that he has earned the right of citizenship in the United States."" #NT!
+ usfp_acw.19.a: "For Liberty and Union!" #NT!
+ usfp_acw.19.b: "Keep a close eye on the [GetCulture('afro_american').GetName] troops." #NT!
+  
+ ### Reconstruction Events ### 
+  
  usfp_reconstruction.1.t: "Das Freedmen's Bureau"
  usfp_reconstruction.1.d: "Eine Kommission über die Zustände im Süden hat die Gründung einer neuen Regierungsbehörde vorgeschlagen: das Freedmen's Bureau. Diese Behörde soll direkten Beistand für Flüchtlinge und jene, die kürzlich aus der Sklaverei befreit wurden, leisten, um ihnen den Übergang in eine freie Gesellschaft zu erleichtern."
  usfp_reconstruction.1.f: "\"Bietet den befreiten Menschen vorübergehend Hilfe und Beratung, bis sie sich an ihre neue Lebenssphäre gewöhnt haben; sichert ihnen gesetzlich ihre gerechten Rechte auf Person und Eigentum zu; befreit sie durch eine faire und gleiche Rechtspflege von dem niederschmetternden Einfluss ehrloser Vorurteile. Vor allem aber schützt sie vor der quasi-wiederhergestellten Sklaverei in jedweder Form und unter jedwedem Vorwand, und lasst sie sich dann selbst überlassen. Wenn wir dies zulassen, wird die Zukunft der afrikanischen Rasse in diesem Land zu ihrem Wohlstand beitragen und mit ihrem Wohlergehen verknüpft sein."\"
@@ -327,7 +398,14 @@
  usfp_reconstruction.14.a: "Gewalt kann die Rechtschaffenheit nicht aufhalten!"
  usfp_reconstruction.14.b: "Vielleicht sollten wir an erster Stelle unsere eigenen Häupter retten."
   
- #### Manifest Destiny 
+ usfp_reconstruction.15.t: "Scalawags" #NT!
+ usfp_reconstruction.15.d: "Some [GetCulture('dixie').GetName] $farmers$ in [SCOPE.sState('farm_state').GetName], many of them Unionists, have begun to rally in favor of Reconstruction, finding common cause with [GetCulture('afro_american').GetName] Freedmen against the economic domination of the [GetInterestGroupVariant('ig_landowners',GetPlayer).GetName]." #NT!
+ usfp_reconstruction.15.f: "[SCOPE.sState('farm_state').GetNameNoFormatting] had hosted small meetings of Unionists during the war, but now they were able to air their grievances in the open. The most radical among them joined the Republican Party and supported the enfrachisement of the Freedmen. Most were simply happy to see the haughty plantation owners knocked down a peg." #NT!
+ usfp_reconstruction.15.a: "Let's hope they don't suffer too much backlash." #NT!
+ usfp_reconstruction.15.b: "Could this work across the rest of the South?" #NT!
+  
+ #### Manifest Destiny Events ### 
+  
  usfp_manifest_destiny.1.t: "Von Meer zu strahlendem Meer?"
  usfp_manifest_destiny.1.d: "Seit den Tagen der [concept_usfp_thirteen_colonies] blicken die Siedler von [ROOT.GetCountry.GetName] sehnsüchtig auf die Länder im Westen, ohne Rücksicht auf die dort lebenden Ureinwohner. Nun beginnt in unserem nationalen Bewusstsein eine erhabene Rechtfertigung für den Expansionismus zu entstehen – die Idee des Manifest Destiny. Befürworter dieser Idee behaupten, dass es nicht nur unser Recht, sondern unsere heilige Pflicht ist, den gesamten amerikanischen Kontinent zu erobern und zu besiedeln."
  usfp_manifest_destiny.1.f: "\"Unser Anspruch aufgrund unseres manifesten Schicksals besteht darin, den ganzen Kontinent zu überspannen und in Besitz zu nehmen, den die Vorsehung uns gegeben hat. Es dient der Entwicklung des großen Experiments der Freiheit und der föderierten Selbstregierung, das uns anvertraut wurde.\""
@@ -489,19 +567,35 @@
  usfp_manifest_destiny.26.f: "\"Es ist erneut eine zivilisierte Macht, die mit ihrer Fahne des Friedenskönigs in der einen und ihrem Beutesack und ihrem Schlachtermesser in der anderen auftritt. Gibt es für ein erobertes Volk keine Erlösung, als die Zivilisation anzunehmen und sich auf ihr Niveau herabzulassen?\"
  usfp_manifest_destiny.26.a: "Es ist unsere Bürde, das Licht der Selbstregierung zu verbreiten."
   
- usfp_manifest_destiny.27.t: "Rain Doesn't Follow The Plow" #NT!
- usfp_manifest_destiny.27.d: "The [SCOPE.sState('drought_state').GetStateRegion.GetStrategicRegion.GetName] have long been considered the 'Great American Desert', unsuited to intensive agriculture. More and more settlers have begun to cultivate the praire expecting their activities to actually alter the local climate in their favor. The widespread [GetHarvestConditionType('drought').GetName] in [SCOPE.sState('drought_state').GetName] is making it hard to believe that 'rain follows the plow'." #NT!
- usfp_manifest_destiny.27.f: ""God speed the plow. By this wonderful provision, which is only man's mastery over nature, the clouds are dispensing copious rains. The plow is the instrument which separates civilization from savagery; and converts a desert into a farm or garden."" #NT!
- usfp_manifest_destiny.27.a: "Nature is capricious." #NT!
- usfp_manifest_destiny.27.b: "Make sure everyone knows that the [SCOPE.sState('drought_state').GetStateRegion.GetStrategicRegion.GetName] are still a desert." #NT!
+ usfp_manifest_destiny.27.t: "Rain Doesn't Follow The Plow"
+ usfp_manifest_destiny.27.d: "The [SCOPE.sState('drought_state').GetStateRegion.GetStrategicRegion.GetName] have long been considered the 'Great American Desert', unsuited to intensive agriculture. More and more settlers have begun to cultivate the praire expecting their activities to actually alter the local climate in their favor. The widespread [GetHarvestConditionType('drought').GetName] in [SCOPE.sState('drought_state').GetName] is making it hard to believe that 'rain follows the plow'."
+ usfp_manifest_destiny.27.f: ""God speed the plow. By this wonderful provision, which is only man's mastery over nature, the clouds are dispensing copious rains. The plow is the instrument which separates civilization from savagery; and converts a desert into a farm or garden.""
+ usfp_manifest_destiny.27.a: "Nature is capricious."
+ usfp_manifest_destiny.27.b: "Make sure everyone knows that the [SCOPE.sState('drought_state').GetStateRegion.GetStrategicRegion.GetName] are still a desert."
   
- usfp_manifest_destiny.28.t: "Prairie Madness" #NT!
- usfp_manifest_destiny.28.d: "Many settlers have been lured to the [SCOPE.sState('praire_state_1').GetStateRegion.GetStrategicRegion.GetName] by the promise of free land and a new life. What the pioneers have found is a vast and hostile environment, where their ramshackle farmhouses stand alone against the howling winds of the prairie, and where they suffer from illness, depression, and insanity." #NT!
- usfp_manifest_destiny.28.f: ""In no civilized country have the cultivators of the soil adapted their home life so badly to the conditions of nature as have the people of our great Northwestern prairies. The European farmer lives in a village, where considerable social enjoyment is possible. On the prairie the treeless plain stretches away to the horizon line, where each family must live mainly to itself, and life, shut up in the little wooden farmhouses, can not well be very cheerful. "" #NT!
- usfp_manifest_destiny.28.a: "The frontier is not for the faint of heart." #NT!
- usfp_manifest_destiny.28.b: "Modern therapy could help them cope." #NT!
+ usfp_manifest_destiny.28.t: "Prairie Madness"
+ usfp_manifest_destiny.28.d: "Many settlers have been lured to the [SCOPE.sState('praire_state_1').GetStateRegion.GetStrategicRegion.GetName] by the promise of free land and a new life. What the pioneers have found is a vast and hostile environment, where their ramshackle farmhouses stand alone against the howling winds of the prairie, and where they suffer from illness, depression, and insanity."
+ usfp_manifest_destiny.28.f: ""In no civilized country have the cultivators of the soil adapted their home life so badly to the conditions of nature as have the people of our great Northwestern prairies. The European farmer lives in a village, where considerable social enjoyment is possible. On the prairie the treeless plain stretches away to the horizon line, where each family must live mainly to itself, and life, shut up in the little wooden farmhouses, can not well be very cheerful. ""
+ usfp_manifest_destiny.28.a: "The frontier is not for the faint of heart."
+ usfp_manifest_destiny.28.b: "Modern therapy could help them cope."
   
- ### Native Removal 
+ usfp_manifest_destiny.29.t: "A Destiny Fulfilled" #NT!
+ usfp_manifest_destiny.29.d: "With the turn of the century and the frontier long closed, new generations of Americans can now scarcely imagine a time when the [ROOT.GetCountry.GetName] was not already a [concept_great_power] stretching across the continent. The project of Manifest Destiny seems to have run its course, and has begun to fade into memory as the American people set their sights on new dreams of their own." #NT!
+ usfp_manifest_destiny.29.f: ""You, the sons of the pioneers, if you are true to your ancestry, must make your lives as worthy as they made theirs. They sought for true success, and therefore they did not seek ease. They knew that success comes only to those who lead the life of endeavor."" #NT!
+ usfp_manifest_destiny.29.a: "We will make this the American Century." #NT!
+ usfp_manifest_destiny.29.b: "Alexander wept." #NT!
+ usfp_manifest_destiny.29.c: "#r No! We shall expand so as to include the whole world! #!" #NT!
+ usfp_manifest_destiny_will_now_decay: "#bold Manifest Destiny#! will now lose influence every 3 years, closing out the Journal Entry when the #bold progress bar#! reaches 0." #NT!
+ usfp_manifest_destiny_war_resets_clock: "Declaring an offensive [concept_diplomatic_play] will reset the #bold Manifest Destiny#! decay timer. Manifest Destiny losing influence will now also generate [Concept('concept_radical', '$concept_radicals$')] among our [concept_primary_cultures]." #NT!
+  
+ usfp_manifest_destiny.30.t: "Foreigners in their Native Land" #NT!
+ usfp_manifest_destiny.30.d: "As [ROOT.GetCountry.GetAdjective] settlers have poured into our newly acquired territories, they have become increasingly violent against the local [GetCulture('mexican').GetName] inhabitants. The treaty we signed guarantees [GetCulture('mexican').GetName] rights on paper, but in practice they are now being disenfranchised and driven off of their own properties." #NT!
+ usfp_manifest_destiny.30.f: ""Mexican have no business in this country. I don't believe in them. The men were made to be shot at, and the women were made for our purposes. I'm a white man - I am! A Meixcan is pretty near black. I hate all Mexicans."" #NT!
+ usfp_manifest_destiny.30.a: "This is our land now." #NT!
+ usfp_manifest_destiny.30.b: "We must uphold our end of the treaty." #NT!
+  
+ ### Native Removal Events ### 
+  
  usfp_native_removal.1.t: "Die Umsiedlung der Seminolen"
  usfp_native_removal.1.d: "Nachdem der Zweite Seminolenkrieg endlich zu Ende geht, kann die Armee damit beginnen, den langsamen Prozess der Umsiedlung des verbliebenen [SCOPE.sCulture('muskogean_scope').GetName] Volkes auf Reservatsland jenseits des Mississippi einzuleiten."
  usfp_native_removal.1.f: "\"Bin ich ein Neger, ein Sklave? Ich bin ein Indianer. Der Weiße soll mich nicht schwarz machen. Ich werde den Weißen mit Blut rot machen, und ihn dann in Sonne und Regen schwarz werden lassen, wo der Wolf an seinen Knochen riecht und der Geier von seinem Fleisch lebt!\"
@@ -582,12 +676,13 @@
  usfp_native_removal.15.f: "\"Macht Platz! Macht Platz! Der Präsident wurde angeschossen! Der Präsident wurde angeschossen, mein Gott!\""
  usfp_native_removal.15.a: "Das ist eine Empörung!"
   
- usfp_native_removal.16.t: "Northern Removal" #NT!
- usfp_native_removal.16.d: "With settlers pressing into every corner of the Old Northwest, most of the remaining Indian nations have been forced to agree to treaties of removal. Many were led on a forced march west by local militia, who cared little if the Indians survived the journey." #NT!
- usfp_native_removal.16.f: ""On the flanks of the line at equal distance from each other were the dragoons and volunteers, hastening the stragglers, often with severe gestures and bitter words. After this cavalry came a file of forty baggage wagons filled with luggage and Indians. The sick were lying in them, rudely jolted, under a canvas which, far from protecting them from the dust and heat, only deprived them of air, for they were as if buried under this burning canopy—several died thus."" #NT!
- usfp_native_removal.16.a: "May they find peace away from the settlers." #NT!
+ usfp_native_removal.16.t: "Northern Removal"
+ usfp_native_removal.16.d: "With settlers pressing into every corner of the Old Northwest, most of the remaining Indian nations have been forced to agree to treaties of removal. Many were led on a forced march west by local militia, who cared little if the Indians survived the journey."
+ usfp_native_removal.16.f: ""On the flanks of the line at equal distance from each other were the dragoons and volunteers, hastening the stragglers, often with severe gestures and bitter words. After this cavalry came a file of forty baggage wagons filled with luggage and Indians. The sick were lying in them, rudely jolted, under a canvas which, far from protecting them from the dust and heat, only deprived them of air, for they were as if buried under this burning canopy—several died thus.""
+ usfp_native_removal.16.a: "May they find peace away from the settlers."
   
- ##USA Flavor Events 
+ ### USA Flavor Events ### 
+  
  usfp_usa.1.t: "Die Erklärung der Empfindungen"
  usfp_usa.1.d: "Die erste amerikanische Konferenz für Frauenrechte hat in Seneca Falls, [SCOPE.sState('new_york_scope').GetName] stattgefunden. Inspiriert von der ursprünglichen Unabhängigkeitserklärung haben die Teilnehmer, was sie als Erklärung der Empfindungen bezeichnen, die Beschwerden der Frauen gegen die männliche Unterdrückung dargelegt."
  usfp_usa.1.f: "\"So groß ist das geduldige Leid der Frauen unter dieser Regierung, und so sehr sind sie nun gezwungen, den gleichberechtigten Stand einzufordern, auf den sie Anspruch haben. Die Geschichte der Menschheit ist eine Geschichte wiederholter Verletzungen und Machtmissbräuche seitens der Männer gegenüber den Frauen, mit dem Ziel, eine absolute Tyrannei über sie zu errichten.\""
@@ -704,12 +799,18 @@
  usfp_usa.23.f: "\"Doch ihr müsst daran denken, meine Mitbürger, dass ewige Wachsamkeit durch das Volk der Preis der Freiheit ist, und dass ihr diesen Preis zahlen müsst, wenn ihr den Segen sichern wollt.\"
  usfp_usa.23.a: "Dies ist eine Zeit der Chancen."
   
- usfp_usa.24.t: "Chestnut Blight" #NT!
- usfp_usa.24.d: "A blight has spread through the great American Chestnut Forests, devastating billions of trees up and down the eastern seaboard. It won't be long before the trees are entirely wiped out, save for a few specimens preserved by researchers attempting to fight the outbreak." #NT!
- usfp_usa.24.f: ""Will eating chestnuts by crackling log fires become one of the lost arts preserved by a devoted people only in poetry and romance?"" #NT!
- usfp_usa.24.a: "We will mourn the loss of these perfect trees." #NT!
+ usfp_usa.24.t: "Chestnut Blight"
+ usfp_usa.24.d: "A blight has spread through the great American Chestnut Forests, devastating billions of trees up and down the eastern seaboard. It won't be long before the trees are entirely wiped out, save for a few specimens preserved by researchers attempting to fight the outbreak."
+ usfp_usa.24.f: ""Will eating chestnuts by crackling log fires become one of the lost arts preserved by a devoted people only in poetry and romance?""
+ usfp_usa.24.a: "We will mourn the loss of these perfect trees."
   
- ### Labor Events 
+ usfp_usa.25.t: "Boll Weevil Infestation" #NT!
+ usfp_usa.25.d: "A plague of cotton-eating beetles has swept through [GetStrategicRegion('region_dixie').GetName], destroying the harvest of $building_cotton_plantation$ across the entire region. Desperate plantation owners have deployed all sorts of pesticides to try and save their crops, to no avail." #NT!
+ usfp_usa.25.f: ""The cotton came up and started to growin’, but before the middle of May I looks down one day and see the boll weevil settin’ up in the top of those little cotton stalks, waitin’ for the squares to form. So all that guano we hauled and put down made nothing but a crop of boll weevils."" #NT!
+ usfp_usa.25.a: "Will the cotton industry ever recover?" #NT!
+  
+ ### USA Labor Events ### 
+  
  usfp_usa_labor.1.t: "Die Industrial Workers of the World"
  usfp_usa_labor.1.d: "Eine Konferenz radikaler Gewerkschafter hat sich in [SCOPE.sState('illinois_scope').GetCityHubName] getroffen und eine Organisation gegründet, die sie die Industrial Workers of the World nennen. Ihr Ziel ist es, Arbeiter aller Gewerke zu einer 'großen Gewerkschaft' zu vereinen. Mit einer viel militanten Haltung als traditionelle Arbeitsorganisationen verfolgt die IWW das erklärte Ziel, das Lohnsystem vollständig abzuschaffen – und ihre Plattform ruft zu direktem Aktionismus, Generalstreiks und Sabotage auf."
  usfp_usa_labor.1.f: "\"Es ist die historische Mission der Arbeiterklasse, den Kapitalismus abzuschaffen. Die Produktionsarmee muss organisiert werden, nicht nur für den alltäglichen Kampf gegen die Kapitalisten, sondern auch um die Produktion fortzusetzen, wenn der Kapitalismus gestürzt worden sein sollte. Durch industrielle Organisation formen wir die Struktur der neuen Gesellschaft im Rahmen der alten.\"
@@ -749,6 +850,35 @@
  usfp_usa_labor.6.f: "\"Ihr Elend rührt, wie all euer Elend, von jener Unfähigkeit zur Kooperation her, die aus dem Individualismus resultiert, auf dem euer soziales System gegründet ist – aus eurer Unfähigkeit zu erkennen, dass ihr durch Vereinigung mit euren Mitmenschen den zehnfachen Gewinn erzielen könnt, als wenn ihr gegeneinander ankämpft.\"
  usfp_usa_labor.6.a: "Eine inspirierende Vision einer Utopie."
  usfp_usa_labor.6.b: "Eine wahnsinnige sozialistische Fantasie."
+  
+ ### USA Election Events ### 
+  
+ usfp_usa_election.1.t: "Madame [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]?" #NT!
+ usfp_usa_election.1.d: "Many men and even some women are skeptical that [SCOPE.gsInterestGroup('female_ig').GetLeader.GetFullName] is suitable for the office of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle], on account of her sex." #NT!
+ usfp_usa_election.1.f: ""The presidency is no place for a woman, it's just common sense. Leadership takes a strong will and a clear head, imagine the catastrophe if [SCOPE.gsInterestGroup('female_ig').GetLeader.GetFullNameNoFormatting] becomes hysterical in the face of a crisis, or worse yet, a war! Would the army even follow her orders? No, women may have gotten the vote, but they should remember their place."" #NT!
+ usfp_usa_election.1.a: "The electorate just isn't ready for this yet." #NT!
+ usfp_usa_election.1.b: "[SCOPE.gsInterestGroup('female_ig').GetLeader.GetFullName] would make as fine a [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] as any man!" #NT!
+ usfp_usa_election.1.c: "Perhaps [SCOPE.gsInterestGroup('female_ig').GetLeader.GetFullName] should step aside." #NT!
+  
+ usfp_usa_election.2.t: "A [SCOPE.gsInterestGroup('nonwhite_ig').GetLeader.GetCulture.GetName] in the White House?" #NT!
+ usfp_usa_election.2.d: "The [ROOT.GetCountry.GetAdjective] public has balked at the [SCOPE.sParty('nonwhite_party').GetName]'s decision to run a [SCOPE.gsInterestGroup('nonwhite_ig').GetLeader.GetCulture.GetName] candidate for election." #NT!
+ usfp_usa_election.2.f: ""The [SCOPE.sParty('nonwhite_party').GetNameNoFormatting] must take us for fools. They would place a [SCOPE.gsInterestGroup('nonwhite_ig').GetLeader.GetCulture.GetNameNoFormatting] in the highest office of our white christian country? It's an insult to all American decency."" #NT!
+ usfp_usa_election.2.a: "The president should reflect the majority." #NT!
+ usfp_usa_election.2.b: "A [SCOPE.gsInterestGroup('nonwhite_ig').GetLeader.GetCulture.GetName] is an American just like any other citizen!" #NT!
+ usfp_usa_election.2.c: "Judge not by the color of one's skin!" #NT!
+ usfp_usa_election.2.e: "Perhaps [SCOPE.gsInterestGroup('nonwhite_ig').GetLeader.GetFullName] should step aside." #NT!
+  
+ usfp_usa_election.3.t: "An Issue of Faith" #NT!
+ usfp_usa_election.3.d: "Regardless of our official policy of [SCOPE.sLaw('religion_law').GetName], the open [SCOPE.sReligion('nonchristian_religion').GetName] faith of [SCOPE.gsInterestGroup('nonchristian_ig').GetLeader.GetFullName] has provoked outrage from [GetReligion('protestant').GetName] voters." #NT!
+ usfp_usa_election.3.f: ""This country was founded by providence and guided to its great destiny by the grace of the almighty God! We cannot allow such a wicked heathen as [SCOPE.gsInterestGroup('nonchristian_ig').GetLeader.GetFullNameNoFormatting] to pollute our government with their heretical beliefs!"" #NT!
+ usfp_usa_election.3.a: "The voters must choose with their conscience." #NT!
+ usfp_usa_election.3.b: "The [ROOT.GetCountry.GetName] is not, in any sense, a Christian nation." #NT!
+ usfp_usa_election.3.c: "A [SCOPE.sReligion('nonchristian_religion').GetName] is a good Christian like any [GetReligion('protestant').GetName]!" #NT!
+ usfp_usa_election.3.e: "Perhaps [SCOPE.gsInterestGroup('nonchristian_ig').GetLeader.GetFullName] should step aside." #NT!
+ usfp_usa_election.3.h: "A public confession is in order." #NT!
+ usfp_usa_election.3.j: "The [SCOPE.sReligion('nonchristian_religion').GetName] church must be accepted as a legitimate form of Christianity." #NT!
+  
+ ### Mormon Events ### 
   
  usfp_mormon.1.t: "Der [SCOPE.sState('missouri_scope').GetName] [SCOPE.sReligion('mormonism_scope').GetName]-Krieg"
  usfp_mormon.1.d: "Die Spannungen in [SCOPE.sState('missouri_scope').GetName] zwischen den Mainstream-Protestanten und einer exzentrischen Sekte, die sich die Latter Day Saints nennt, sind in offene Gewalt umgeschlagen. Protestantische Selbstjustizler haben Massaker verübt und sind mit [SCOPE.sReligion('mormonism_scope').GetName] Milizen aneinandergeraten. Nachdem sie mit Staatstreibern in Konflikt geraten waren, wurde die gesamte Sekte nun von der örtlichen Regierung aus ihren Häusern vertrieben und flieht nordwärts nach [SCOPE.sState('illinois_scope').GetName]."
@@ -834,7 +964,8 @@
  usfp_mormon.14.f: "\"Macht Platz! Macht Platz! Der Präsident wurde angeschossen! Der Präsident wurde angeschossen, mein Gott!\""
  usfp_mormon.14.a: "Das ist eine Empörung!"
   
- #Filibuster events 
+ ### Filibuster events ### 
+  
  usfp_filibuster.1.t: "Die [SCOPE.sCharacter('william_walker_scope').GetLastName] Expedition"
  usfp_filibuster.1.d: "Eine Bande [ROOT.GetCountry.GetAdjective] Abenteurer unter dem Kommando von [SCOPE.sCharacter('william_walker_scope').GetFullName] hat offenbar eine Invasion in [SCOPE.sState('baja_scope').GetName] gestartet. Sie haben die Republik [SCOPE.sCountry('sonora_scope').GetName] ausgerufen und streben unsere Anerkennung an."
  usfp_filibuster.1.f: "\"Das Gebiet unter mexikanischer Herrschaft würde für immer wild, halb wild und unerschlossen bleiben, bevölkert von einem trägen und halb zivilisierten Volk. Wenn die Menschen eines Gebietes es fast vollständig versäumen, die von der Natur ihnen zur Verfügung gestellten Ressourcen zu entwickeln, erfordern die Interessen der Zivilisation, dass andere hinübergehen und das Land in Besitz nehmen.\"
@@ -861,7 +992,8 @@
  usfp_filibuster.4.b: "[SCOPE.sCharacter('william_walker_scope').GetFullName] wird die Gouverneursgewalt über das Gebiet erhalten."
  usfp_filibuster.4.c: "Wir werden uns nicht mit diesen Filibustern abgeben."
   
- #Gilded Age events 
+ ### Gilded Age events ### 
+  
  usfp_gilded_age.1.t: "Eine Geschichte von heute"
  usfp_gilded_age.1.d: "Neue Eisenbahnen, neue Industrien und neue Unternehmen haben im ganzen [ROOT.GetCountry.GetName] zum Leben erwacht, was zu einem meteoreichen Aufstieg der [SCOPE.gsInterestGroup('industrialists_scope').GetName] geführt hat. Die immer größer werdenden Vermögen der [concept_upper_strata] haben sie in einen Lebensstil überführt, der von verschwenderischem Überfluss geprägt ist, aber auch eine Ära weit verbreiteter politischer Korruption auf allen Regierungsebenen eingeläutet."
  usfp_gilded_age.1.f: "\"Für den jungen Amerikaner sind die Wege zum Reichtum unzählig und alle offen; in der Luft liegt eine Einladung und der Erfolg an jedem weiten Horizont.\"
@@ -889,7 +1021,6 @@
  social_darwinism_unlocked: "[SCOPE.sIdeology('social_darwinism_scope').GetName] Charaktere können nun erscheinen."
  social_darwinism_promoted: "[SCOPE.sIdeology('social_darwinism_scope').GetName] Charaktere erscheinen nun häufiger in unserem Land."
  social_darwinist_appears: "Ein [SCOPE.sIdeology('social_darwinism_scope').GetName] [concept_agitator] wird in [SCOPE.sCountry('usa_scope').GetName] erscheinen."
-  
   
  usfp_gilded_age.5.t: "Das Tweed-Regime"
  usfp_gilded_age.5.d: "Während sich [concept_usfp_political_machines] im ganzen Land etabliert haben, ist [SCOPE.sState('new_york_scope').GetName] praktisch von einem Mann, William 'Boss' Tweed, und seinem Tammany Hall-Kreis übernommen worden. Mit mit einem mit Kumpanen gefüllten politischen Amt, gekauften Stimmen und bestochenen Richtern steht nun der gesamte Apparat der Landesregierung zu seinen Diensten. Details von Tweeds Korruption und Betrug beginnen an die Presse zu gelangen, was öffentliche Rufe nach seiner Entfernung auslöst."
@@ -959,6 +1090,8 @@
  usfp_gilded_age.15.f: "Man konnte nicht zwei Blocks in der Stadt gehen, ohne eine ihrer Anzeigen oder ihr Logo zu sehen. Eine ganze Gruppe von Arbeitern wurde gestern entlassen, und nun packen viele ihre Sachen, um in einen anderen Staat zu ziehen. Das Unternehmen war das einzige im Ort."
  usfp_gilded_age.15.a: "Der Markt hat immer Recht."
  usfp_gilded_age.15.b: "Wir sollten den Wettbewerb in [SCOPE.sState('monopoly_state').GetName] fördern."
+  
+ ### Progressive Era Events ### 
   
  usfp_progressive_era.1.t: "Aufstieg der Progressiven"
  usfp_progressive_era.1.d: "Die sozialen und wirtschaftlichen Zustände in [ROOT.GetCountry.GetName] haben Forderungen nach Reformen aus allen Gesellschaftsschichten hervorgerufen, die sich nun zu einer umfassenderen [SCOPE.sIdeology('progressive_ideology').GetName] Bewegung zusammenschließen. Lokale, staatliche und sogar bundesstaatliche Beamte gewinnen nun Wahlen auf einer Plattform zur Beendigung der Korruption und zur Verbesserung des Gemeinwohls."
@@ -1076,12 +1209,16 @@
  usfp_progressive_era.18.a: "Eugenik ist nicht feministisch."
  usfp_progressive_era.18.b: "Saubere Gene schaffen ein sauberes Zuhause."
   
+ ### Liberia Events ### 
+  
  usfp_liberia.1.t: "Die [SCOPE.sCountry('liberia_scope').GetAdjective] Unabhängigkeitserklärung"
  usfp_liberia.1.d: "Die American Colonization Society hat es für angebracht gehalten, eine ordnungsgemäße Regierung für ihr koloniales Unterfangen in [SCOPE.sCountry('liberia_scope').GetName] zu etablieren. Die neue Republik hat eine nach amerikanischem Vorbild entworfene Verfassung ratifiziert und strebt die Anerkennung durch unsere Regierung an."
  usfp_liberia.1.f: "\"Angesichts dieser Tatsachen löst die American Colonization Society, getragen von dem stets guten Glauben, der all ihren Geschäften mit uns zugrunde liegt, durch eine Reihe von Beschlüssen alle politischen Verbindungen mit dem Volk dieser Republik auf, überträgt die ihr zugeteilte Macht und überlässt das Volk der Regierung seiner selbst.\n\nDas Volk der Republik Liberia ist ein freier, souveräner und unabhängiger Staat, ausgestattet mit allen Rechten, Befugnissen und Funktionen einer Regierung.\" #Liberian Declaration of Independence"
  usfp_liberia.1.a: "Lehnt vorerst höflich ihre Anfrage ab."
  usfp_liberia.1.b: "Wollen sie unabhängig sein? Lassen wir sie dann auf sich allein gestellt überleben."
  usfp_liberia.1.c: "Gewährt der neuen [SCOPE.sCountry('liberia_scope').GetAdjective] Regierung formelle Anerkennung."
+  
+ ### Indian Wars Events ### 
   
  usfp_indian_wars.1.t: "[SCOPE.sCharacter('red_cloud_scope').GetFullName]'s Krieg"
  usfp_indian_wars.1.d: "Als Reaktion auf unser Vordringen in [SCOPE.sState('montana_scope').GetStateRegion.GetName] hat der Häuptling [SCOPE.sCharacter('red_cloud_scope').GetFullName] einen aggressiven Raubzugskrieg geführt, der die Versorgungslinien unserer Forts kappen und unsere Grenzgarnisonen in Verlegenheit bringen soll. Er fordert unseren Rückzug aus den [SCOPE.sCountry('sioux_scope').GetAdjective] Jagdgebieten und die Anerkennung der territorialen Integrität seiner Nation."
@@ -1158,7 +1295,7 @@
  usfp_indian_wars.13.f: "Mein Herz ist ein Stein: schwer vor Trauer um mein Volk; kalt vor dem Wissen, dass kein Vertrag die Weißen von unserem Land fernhalten wird; hart in dem Entschluss, so lange zu widerstehen, wie ich lebe und atme."
  usfp_indian_wars.13.a: "Durch Besiedlung und Verhandlungen werden diese Ländereien in die Zivilisation überführt."
  usfp_indian_wars.13.b: "Der einzige gute Indianer ist ein toter Indianer."
- usfp_indian_wars.13.btt: "[Concept('concept_tension', '$concept_tensions$')] with all Plains Nations increase by #r 50#!" #NT!
+ usfp_indian_wars.13.btt: "[Concept('concept_tension', '$concept_tensions$')] with all Plains Nations increase by #r 50#!"
   
  usfp_indian_wars.14.t: "Leere Versprechen"
  usfp_indian_wars.14.d: "[SCOPE.sCulture('reservation_culture').GetName] Indianer, die auf ihrem Reservat in [SCOPE.sState('reservation_state').GetName] leben, haben Beschwerden über die Bedingungen eingereicht, zu denen wir sie gezwungen haben, und beklagen den Mangel an versprochenen Nahrungsmittelrationen, medizinischer Versorgung und Dienstleistungen."
@@ -1167,11 +1304,13 @@
  usfp_indian_wars.14.b: "Die Indianeragenten müssen ihre Angelegenheiten selbst regeln."
  usfp_indian_wars.14.c: "Den Indianern den Hunger anzulasten, wird sie dazu anspornen, gute christliche Bauern zu werden."
   
- usfp_indian_wars.15.t: "[SCOPE.sCountry('comanche_scope').GetAdjective] Raid in [SCOPE.sState('raid_state').GetName]!" #NT!
- usfp_indian_wars.15.d: "[SCOPE.sCountry('comanche_scope').GetAdjective] warriors have struck outlying settlements in [SCOPE.sState('raid_state').GetName] in a lightning raid, burning several dozen farmsteads. Although local militia attempted to fend them off, the raiders were able to quickly escape back to [SCOPE.sCountry('comanche_scope').GetCapital.GetName] with many captives in tow." #NT!
- usfp_indian_wars.15.f: ""We were startled by the apparitions presented by the sudden appearance of six hundred mounted Comanches in the immediate outskirts of the village. We hid inside and shot at anything we saw out the windows. For a whole day the warriors plundered and burned, before retreating."" #NT!
- usfp_indian_wars.15.a: "Ransom back as many of the captives as we can." #NT!
- usfp_indian_wars.15.b: "A punitive expedition is in order." #NT!
+ usfp_indian_wars.15.t: "[SCOPE.sCountry('comanche_scope').GetAdjective] Raid in [SCOPE.sState('raid_state').GetName]!"
+ usfp_indian_wars.15.d: "[SCOPE.sCountry('comanche_scope').GetAdjective] warriors have struck outlying settlements in [SCOPE.sState('raid_state').GetName] in a lightning raid, burning several dozen farmsteads. Although local militia attempted to fend them off, the raiders were able to quickly escape back to [SCOPE.sCountry('comanche_scope').GetCapital.GetName] with many captives in tow."
+ usfp_indian_wars.15.f: ""We were startled by the apparitions presented by the sudden appearance of six hundred mounted Comanches in the immediate outskirts of the village. We hid inside and shot at anything we saw out the windows. For a whole day the warriors plundered and burned, before retreating.""
+ usfp_indian_wars.15.a: "Ransom back as many of the captives as we can."
+ usfp_indian_wars.15.b: "A punitive expedition is in order."
+  
+ ### Indian Post-Removal Events ### 
   
  usfp_indian_postremoval.1.t: "Der Geistertanz"
  usfp_indian_postremoval.1.d: "Eine millenaristische spirituelle Bewegung, bekannt als der Geistertanz, hat die Indianerstämme des Westens erfasst und verspricht die Rückkehr der Büffel und das Auslöschen der weißen Siedler. Obwohl die Bewegung friedliches Verhalten ihrer Anhänger fördert, haben die manchmal wilden und ekstatischen Tanzrituale bei weißen Siedlern Schrecken ausgelöst, die behaupten, die Indianer bereiten sich auf einen apokalyptischen Krieg um ihre Siedlungen vor."
@@ -1204,17 +1343,19 @@
  usfp_indian_postremoval.5.a: "Es wird nicht mehr lange dauern, bis das ganze Gebiet besiedelt ist."
  usfp_indian_postremoval.5.b: "Wir müssen sicherstellen, dass noch genügend Raum für die Stämme bleibt."
   
- usfp_indian_postremoval.6.t: "The Underground Reservation" #NT!
- usfp_indian_postremoval.6.d: "After being relocated to [SCOPE.sState('oklahoma_scope').GetName], the Osage Nation negotiated full tribal ownership over the mineral rights on their alloted land. The discovery of rich $oil$ fields under their territory has brought immense wealth to the Osage, who recieve direct dividends from the proceeds. Sensational tales of fancy clothes, luxury cars, and newly-built mansions have provoked resentment among local Whites." #NT!
- usfp_indian_postremoval.6.f: ""The Osage have become the richest nation, clan, or social group of any race on Earth, including the whites, man for man. Osage county now sports more Pierce Arrows than any other county in the United States."" #NT!
- usfp_indian_postremoval.6.a: "They are the chosen people of chance." #NT!
- usfp_indian_postremoval.6.b: "Clearly they require White guardians to hold their wealth in trust!" #NT!
+ usfp_indian_postremoval.6.t: "The Underground Reservation"
+ usfp_indian_postremoval.6.d: "After being relocated to [SCOPE.sState('oklahoma_scope').GetName], the Osage Nation negotiated full tribal ownership over the mineral rights on their alloted land. The discovery of rich $oil$ fields under their territory has brought immense wealth to the Osage, who recieve direct dividends from the proceeds. Sensational tales of fancy clothes, luxury cars, and newly-built mansions have provoked resentment among local Whites."
+ usfp_indian_postremoval.6.f: ""The Osage have become the richest nation, clan, or social group of any race on Earth, including the whites, man for man. Osage county now sports more Pierce Arrows than any other county in the United States.""
+ usfp_indian_postremoval.6.a: "They are the chosen people of chance."
+ usfp_indian_postremoval.6.b: "Clearly they require White guardians to hold their wealth in trust!"
   
- usfp_indian_postremoval.7.t: "The Reign of Terror" #NT!
- usfp_indian_postremoval.7.d: "The oil wealth of the Osage Nation has brought with it a dark spectre of conspiracy. Over the past 5 years, over a hundred wealthy Osages have been found dead under suspicious circumstances, with their oil rights often being passed to White guardians. Leaders of the Osage community are certain that their people are being murdered for their wealth, and are pleading for a federal intervention." #NT!
- usfp_indian_postremoval.7.f: ""It is a question in my mind whether this jury is considering a murder case or not. The question for them to decide is whether a white man killing an Osage is murder—or merely cruelty to animals."" #NT!
- usfp_indian_postremoval.7.a: "Send in the Bureau, and block any more Whites from inheriting Osage rights." #NT!
- usfp_indian_postremoval.7.b: "This is a local matter for the local authorities to handle." #NT!
+ usfp_indian_postremoval.7.t: "The Reign of Terror"
+ usfp_indian_postremoval.7.d: "The oil wealth of the Osage Nation has brought with it a dark spectre of conspiracy. Over the past 5 years, over a hundred wealthy Osages have been found dead under suspicious circumstances, with their oil rights often being passed to White guardians. Leaders of the Osage community are certain that their people are being murdered for their wealth, and are pleading for a federal intervention."
+ usfp_indian_postremoval.7.f: ""It is a question in my mind whether this jury is considering a murder case or not. The question for them to decide is whether a white man killing an Osage is murder—or merely cruelty to animals.""
+ usfp_indian_postremoval.7.a: "Send in the Bureau, and block any more Whites from inheriting Osage rights."
+ usfp_indian_postremoval.7.b: "This is a local matter for the local authorities to handle."
+  
+ ### Indian Alt-Historical Events ### 
   
  usfp_indian_althist.1.t: "Der große [SCOPE.sCountry('sioux_scope').GetAdjective] Rat"
  usfp_indian_althist.1.d: "Jahrzehntelange Dominanz auf den nördlichen Prärien hat dem [SCOPE.sCountry('sioux_scope').GetName] gutgetan. Während ihre Handelsbeziehungen zu den [ROOT.GetCountry.GetAdjective] Grenzstädten florierten, strömten auch neue Ideen in die Prärie. Nun hat sich scheinbar ein Rat aller [SCOPE.sCountry('sioux_scope').GetAdjectiveNoFormatting] Stämme darauf geeinigt, unter der Führung von [SCOPE.sCountry('sioux_scope').GetRuler.GetFullName] eine formelle Regierungsstruktur zu etablieren."
@@ -1246,6 +1387,176 @@
  usfp_indian_althist.5.f: "Unter den Menschenmengen des großen Rates waren viele Gesichter zu sehen – Kiowas, Apaches, Wichitas, sogar einige adoptierte Spanier und Tejanos. Die prominenten Häuptlinge brachten ihr Anliegen vor, und die Stämme der Comancheria stimmten zu."
  usfp_indian_althist.5.a: "Steht ein Grenzkrieg bevor?"
  usfp_indian_althist.5.b: "Wir werden erneut Herren der südlichen Prärien sein!"
+  
+ ### USA Post-Reconstruction Events ### 
+  
+ usfp_afro_american_culture: "[GetCulture('afro_american').GetName]" #NT!
+ usfp_afro_american_culture_plural: "#yellow [GetCulture('afro_american').GetName]s#!" #NT!
+ usfp_dixie_culture: "[GetCulture('dixie').GetName]" #NT!
+  
+ usfp_usa_postreconstruction.1.t: "The South Will Rise Again" #NT!
+ usfp_usa_postreconstruction.1.d: "Even decades after the end of Reconstruction, the Civil War and the abolition of [GetLawType('law_slave_trade').GetGroup.GetName] continue to loom large in $usfp_dixie_culture$ culture. Driven by a generational resentment over their defeat, a loose $ideology_usfp_neoconfederate_movement$ [Concept('concept_political_movement', '$concept_political_movement_short$')] has taken their cause nation-wide, erecting monuments to Confederate "heroes" across the [ROOT.GetCountry.GetName]." #NT!
+ usfp_usa_postreconstruction.1.d_mixed: "Discontent with the outcome of Reconstruction among southern $usfp_dixie_culture$s has driven the growth of a new $ideology_usfp_neoconfederate_movement$ [Concept('concept_political_movement', '$concept_political_movement_short$')]. Supremacists across the [ROOT.GetCountry.GetName] have begun to adopt the trappings of the rebellion, erecting monuments to Confederate "heroes" even in states that were not yet settled at the time of the war." #NT!
+ usfp_usa_postreconstruction.1.d_radical: "Simmering resentment over the completion of Reconstruction has finally exploded into a nation-wide $ideology_usfp_neoconfederate_movement$ [Concept('concept_political_movement', '$concept_political_movement_short$')], with racial supremacists of all backgrounds adopting the trappings of the rebellion. Its supporters have quickly moved to erect public monuments of Confederate "heroes" and are intent on violently rejecting racial integration." #NT!
+ usfp_usa_postreconstruction.1.f: ""Adjustment by negotiation the United States Government had rejected, and had chosen to attempt our subjugation. This course, adopted without provocation, was pursued with a ferocity that disregarded all the laws of civilized warfare, and must permanently remain a stain upon the escutcheon of a Government once bright among the nations."" #NT!
+ usfp_usa_postreconstruction.1.a: "Can we ever be rid of these traitors?" #NT!
+ neoconfederate_radical_support: "Because we completed #bold Reconstruction#! in favor of the Freedmen, more European-heritage [Concept('concept_pop', '$concept_pops$')] will [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] the $ideology_usfp_neoconfederate_movement$ [Concept('concept_political_movement', '$concept_political_movement_short$')]" #NT!
+ neoconfederate_mixed_support: "Because we completed #bold Reconstruction#! with a mixed outcome, more European-heritage [Concept('concept_pop', '$concept_pops$')] will [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] the $ideology_usfp_neoconfederate_movement$ [Concept('concept_political_movement', '$concept_political_movement_short$')]" #NT!
+  
+ usfp_usa_postreconstruction.2.t: "Plessy v. Ferguson" #NT!
+ usfp_usa_postreconstruction.2.d: "The [concept_usfp_supreme_court] has made a landmark ruling against an $usfp_afro_american_culture$ man attempting to use a Whites-only train car in [SCOPE.sState('jim_crow_state').GetName]. According to the court, [concept_usfp_jim_crow] laws do not contradict the national [GetLawType('law_cultural_exclusion').GetName] law as long as the facilities provided for each race are "separate but equal". The decision has been taken as carte blanche by segregrationists to impose similar laws in towns and cities across the [ROOT.GetCountry.GetName]." #NT!
+ usfp_usa_postreconstruction.2.f: ""We consider the underlying fallacy of the plaintiff's argument to consist in the assumption that the enforced separation of the two races stamps the colored race with a badge of inferiority. If this be so, it is not by reason of anything found in the act, but solely because the colored race chooses to put that construction on it."" #NT!
+ usfp_usa_postreconstruction.2.a: "We must respect the Court's decision." #NT!
+ usfp_usa_postreconstruction.2.b: "This is utterly unacceptable." #NT!
+ usfp_usa_postreconstruction.2.c: "[GetLawType('law_cultural_exclusion').GetName] is a dead letter." #NT!
+  
+ usfp_usa_postreconstruction.3.t: "The [SCOPE.sState('wilmington_state').GetPortHubName] Coup" #NT!
+ usfp_usa_postreconstruction.3.d: "A cadre of white supremacists has overthrown the duly elected municipal government of [SCOPE.sState('wilmington_state').GetPortHubName] and carried out a massacre of $usfp_afro_american_culture$ citizens. With the support of local business elites, they intend to use their position to drive out opposition and enshrine segegration across the state." #NT!
+ usfp_usa_postreconstruction.3.f: ""This condition we have in part endured because we felt that the consequences of the war of secession were such as to deprive us of the fair consideration of many of our countrymen. While we recognize the authority of the United States and will yield to it if exerted, we would not for a moment believe that it is the purpose of 60 million of our own race to subject us permanently to a fate to which no Anglo-Saxon has ever been forced to submit."" #NT!
+ usfp_usa_postreconstruction.3.a: "This is a matter for the [SCOPE.sState('wilmington_state').GetName] governor." #NT!
+ usfp_usa_postreconstruction.3.b: "We must intervene at once!" #NT!
+  
+ usfp_usa_postreconstruction.4.t: "For the Advancement of Colored People" #NT!
+ usfp_usa_postreconstruction.4.d: "A conference of $usfp_afro_american_culture$ leaders has assembled in [SCOPE.sState('maryland_scope').GetName] to form the National Association for the Advancement of Colored People. The organization has already opened branch offices in several states and begun printing newspapers in support of $usfp_afro_american_culture$ equality." #NT!
+ usfp_usa_postreconstruction.4.f: ""To promote equality of rights and eradicate caste or race prejudice among citizens of the United States; to advance the interest of colored citizens; to secure for them impartial suffrage; and to increase their opportunities for securing justice in the courts, education for their children, employment according to their ability, and complete equality before the law."" #NT!
+ usfp_usa_postreconstruction.4.a: "A positive development." #NT!
+ usfp_usa_postreconstruction.4.b: "This sounds like a cabal of subversives." #NT!
+  
+ usfp_usa_postreconstruction.5.t: "The Great Migration" #NT!
+ usfp_usa_postreconstruction.5.d: "$usfp_afro_american_culture$ citizens have begun to flee the [concept_usfp_jim_crow] [Concept('concept_state', '$concept_states$')] en-masse, seeking greater freedoms and opportunities in the ever-expanding cities of the North." #NT!
+ usfp_usa_postreconstruction.5.f: ""Now, why should I remain longer south,\nTo be kicked and dogged around?\n“Crackers” to knock me in the mouth\nAnd shoot my brother down.\nNo, I won’t. I’m leaving today,\nNo longer can I wait.\nIf the recruiters fail to take me ‘way,\nI’m bound to catch a freight."" #NT!
+ usfp_usa_postreconstruction.5.a: "They are willing their own American Dream into reality." #NT!
+ usfp_usa_postreconstruction.5.b: "[SCOPE.sState('great_migration_state_3').GetName] needs more workers!" #NT!
+ usfp_usa_postreconstruction.5.c: "They can't leave, they're needed on the plantations!" #NT!
+  
+  
+ usfp_usa_postreconstruction.6.t: "The Fight of the Century" #NT!
+ usfp_usa_postreconstruction.6.d: "Jack Johnson, the first $usfp_afro_american_culture$ heavyweight boxing champion, has handily beat his white opponent in the most widely reported match of all time. In response to this defeat, lynch-mobs of white racists have unleashed a day of violence against $usfp_afro_american_culture$ communities across the [ROOT.GetCountry.GetName]." #NT!
+ usfp_usa_postreconstruction.6.f: ""All last night the police were busy making arrests. Henry Anderson, colored, was shot to death in a pool hall following an argument over the fight. Thoma Green, negro, was smothered to death in a barber chair, as a result of a prize fight joke."" #NT!
+ usfp_usa_postreconstruction.6.a: "All this over a boxing match?" #NT!
+ usfp_usa_postreconstruction.6.b: "Arrest and prosecute every member of those mobs!" #NT!
+ usfp_usa_postreconstruction.6.c: "Shut down news of the fight, don't let this continue." #NT!
+  
+ usfp_usa_postreconstruction.7.t: "Red Summer" #NT!
+ usfp_usa_postreconstruction.7.d: "The return of $usfp_afro_american_culture$ $soldiers$ from the recent war has sparked a wave of racist riots and violence in a dozen [ROOT.GetCountry.GetAdjective] cities. The white press has been quick to blame the [SCOPE.sPoliticalMovement('scapegoat_movement').GetName], decrying armed $usfp_afro_american_culture_plural$ as agents of a radical socialist revolution." #NT!
+ usfp_usa_postreconstruction.7.f: ""No race ever gave Passive Resistance and Submission to Evil longer, more piteous trial. Today we raise the terrible weapon of Self-Defense. When the murderer comes, he shall not longer strike us in the back. When the armed lynchers gather, we too must gather armed. When the mob moves, we propose to meet it with bricks and clubs and guns."" #NT!
+ usfp_usa_postreconstruction.7.a: "We must guard against radical agitation!" #NT!
+ usfp_usa_postreconstruction.7.b: "Deploy all available resources to containing the violence." #NT!
+ usfp_usa_postreconstruction.7.c: "The cause of the [SCOPE.sPoliticalMovement('scapegoat_movement').GetName] is the cause of the $usfp_afro_american_culture$!" #NT!
+  
+ usfp_usa_postreconstruction.8.t: "[SCOPE.sState('riot_state').GetCityHubName] Wracked by Riots" #NT!
+ usfp_usa_postreconstruction.8.d: "A violent racist riot has broken out in [SCOPE.sState('riot_state').GetCityHubName]. Mobs of white men march through the streets beating any $usfp_afro_american_culture$ they find, and destroying $usfp_afro_american_culture$ homes and business. The mobs have already publicly lynched several $usfp_afro_american_culture$ citizens, leaving their corpses on display as a threat to the rest of the city." #NT!
+ usfp_usa_postreconstruction.8.f: ""Free [SCOPE.sState('riot_state').GetCityHubName] stands today humble before the world. She has shown that with all her resources, her splendid police force, her military reserve, her culture, and her civilization, she is weak and helpless before the mob. Notwithstanding our boasted democracy, lynch law is king."" #NT!
+ usfp_usa_postreconstruction.8.a: "[SCOPE.sState('riot_state').GetName] must clean up its own mess." #NT!
+ usfp_usa_postreconstruction.8.b: "Stop the riots by any means available!" #NT!
+  
+ usfp_usa_postreconstruction.9.t: "The $usfp_afro_american_culture$ Renaissance" #NT!
+ usfp_usa_postreconstruction.9.d: "[SCOPE.sState('harlem_renaissance_state').GetCityHubName] has become a creative hotbed of $usfp_afro_american_culture$ culture, giving rise to new and exciting forms of music, art, and literature. Radical ideas of political and social equality flow freely amidst jazz poetry and fashionable dance parties." #NT!
+ usfp_usa_postreconstruction.9.f: ""If we must die, O let us nobly die,\nSo that our precious blood may not be shed\nIn vain; then even the monsters we defy\nShall be constrained to honor us though dead!\nO kinsmen! we must meet the common foe!"" #NT!
+ usfp_usa_postreconstruction.9.a: "To see a new world under labor's law!" #NT!
+ usfp_usa_postreconstruction.9.b: "$usfp_afro_american_culture$ culture is the envy of the nation!" #NT!
+ usfp_usa_postreconstruction.9.c: "Let us lift every voice and sing!" #NT!
+ afro_americans_socialist_movement_attraction: "$usfp_afro_american_culture$ [Concept('concept_pop', '$concept_pops$')] will be more attracted to Socialist [Concept('concept_political_movement','$concept_political_movements$')]" #NT!
+ afro_americans_religious_movement_attraction: "$usfp_afro_american_culture$ [Concept('concept_pop', '$concept_pops$')] will be more attracted to Religious [Concept('concept_political_movement','$concept_political_movements$')]" #NT!
+  
+ usfp_usa_postreconstruction.10.t: "Black Wall Street" #NT!
+ usfp_usa_postreconstruction.10.d: "A prosperous $usfp_afro_american_culture$ neighborhood in [SCOPE.sState('black_wall_street_state').GetCityHubName] has attracted acclaim as the 'Black Wall Street' in honor of its prosperity in the face of [concept_usfp_jim_crow] discrimination." #NT!
+ usfp_usa_postreconstruction.10.f: ""We went into slavery without a language; we came out speaking the proud Anglo-Saxon tongue. We went into slavery with slave chains clanking about our wrists; we came out with the American ballot in our hands. Progress, progress is the law of nature; under God it shall be our eternal guiding star."" #NT!
+ usfp_usa_postreconstruction.10.a: "A testament to $usfp_afro_american_culture$ industry." #NT!
+ usfp_usa_postreconstruction.10.b: "Black Wall Street should grow and become a beacon of prosperity!" #NT!
+  
+ usfp_usa_postreconstruction.11.t: "Black Wall Street in Flames" #NT!
+ usfp_usa_postreconstruction.11.d: "Smoke darkens the sky over [SCOPE.sState('black_wall_street_state').GetCityHubName] as Black Wall Street lies in ruin. White mobs have descended upon the neighborhood in an all-out assault on its denizens: gunning people down in the street, indiscriminately setting buildings aflame, and even dropping bombs from private aircraft. With nothing left of their property, many survivors will be forced to leave the city permanently." #NT!
+ usfp_usa_postreconstruction.11.f: ""Planes circling in midair: They grew in number and hummed, darted, and dipped low. I could hear something like hail falling upon the top of my office building. Down East Archer, I saw the old Mid-Way hotel on fire, burning from its top, and then another and another and another building began to burn from their tops."" #NT!
+ usfp_usa_postreconstruction.11.a: "[SCOPE.sState('black_wall_street_state').GetCityHubName] will never be the same." #NT!
+ usfp_usa_postreconstruction.11.b: "These terrorists will not get away with this!" #NT!
+  
+ usfp_usa_postreconstruction.12.t: "The Birth of a Nation" #NT!
+ usfp_usa_postreconstruction.12.d: "A newly relased silent film epic has taken the nation by storm, selling out theatres from coast to coast. The film's demonization of $usfp_afro_american_culture_plural$ and romantic depiction of the Ku Klux Klan has inspired a new wave of white supremacist fervor, setting off a fresh round of riots across the country." #NT!
+ usfp_usa_postreconstruction.12.f: ""The white men were roused by a mere instinct of self-preservation... until at last there had sprung into existence a great Ku Klux Klan, a veritable empire of the South, to protect the southern country."" #NT!
+ usfp_usa_postreconstruction.12.a: "This certainly won't help ease tensions." #NT!
+ usfp_usa_postreconstruction.12.b: "Shut down distribution of the film." #NT!
+  
+ usfp_usa_postreconstruction.13.t: "The New Exodus" #NT!
+ usfp_usa_postreconstruction.13.d: "Faced with destitution in the [concept_usfp_jim_crow] [Concept('concept_state', '$concept_states$')], $usfp_afro_american_culture$ associations have begun to organize an exodus to [SCOPE.sState('kansas_scope').GetName], seeking a new life on the frontier." #NT!
+ usfp_usa_postreconstruction.13.f: ""Extending Our Voices to Heaven.\nFarewell, dear friends, farewell.\nWe are on our rapid march to Kansas, the land that gives\nBirth to freedom.\nMay God Almighty bless you all.\nFarewell, dear friends, farewell."" #NT!
+ usfp_usa_postreconstruction.13.a: "The west promises freedom for all." #NT!
+ usfp_usa_postreconstruction.13.b: "We need those workers in the South!" #NT!
+ usfp_usa_postreconstruction.13.c: "Direct them to the gold fields, so that all may prosper." #NT!
+ usfp_usa_postreconstruction.13.e: "Why not make for [SCOPE.sCountry('liberia_scope').GetName]?" #NT!
+  
+ usfp_usa_postreconstruction.14.t: "Back to Africa?" #NT!
+ usfp_usa_postreconstruction.14.d: "[SCOPE.sCharacter('garvey_scope').GetFullName] has quickly attracted a large audience for his radical Pan-African platform. His movement supports the wholesale 'return' of $usfp_afro_american_culture_plural$ to Africa, with [SCOPE.sCharacter('garvey_scope').GetLastName] calling for a vanguard of colonists to aid in the creation of a [GetLawType('law_single_party_state').GetName] across all of Africa, with himself as the supreme leader." #NT!
+ usfp_usa_postreconstruction.14.f: ""We want to unite the Negro race in this country. We want every Negro to work for one common object, that of building a nation of his own on the great continent of Africa. That all Negroes all over the world are working for the establishment of a government in Africa means that it will be realized in another few years."" #NT!
+ usfp_usa_postreconstruction.14.a: "The Mother Continent calls." #NT!
+ usfp_usa_postreconstruction.14.b: "[SCOPE.sCharacter('garvey_scope').GetLastName] is nothing but a blowhard." #NT!
+ usfp_usa_postreconstruction.14.c: "[SCOPE.sCharacter('garvey_scope').GetFullName]'s business dealings are quite suspect..." #NT!
+ usfp_usa_postreconstruction.14.e: "[SCOPE.sCharacter('garvey_scope').GetLastName] May leave if he wishes, but America is our home." #NT!
+  
+  
+ usfp_usa_postreconstruction.15.t: "The Great Return" #NT!
+ usfp_usa_postreconstruction.15.d: "With the triumph of Reconstruction, many $usfp_afro_american_culture_plural$ who had previously fled slavery in the South are now choosing to return to their former homes." #NT!
+ usfp_usa_postreconstruction.15.f: "After a long and anxious journey from Canada, the man could only hope that the stories of the new [SCOPE.sState('great_return_target_1').GetCityHubName] were true. He found himself in a changed city, one where men and women of both races held their heads high in the street, where new black-owned businesses were opening up on every corner. When he escaped [SCOPE.sState('great_return_target_1').GetNameNoFormatting], he thought he'd never return, but now he could make a life here." #NT!
+ usfp_usa_postreconstruction.15.a: "[SCOPE.sState('great_return_target_3').GetStateRegion.GetStrategicRegion.GetName] is finally a true $usfp_afro_american_culture$ homeland." #NT!
+ usfp_usa_postreconstruction.15.b: "[SCOPE.sState('great_return_target_3').GetName] has great prospects." #NT!
+  
+ usfp_usa_postreconstruction.16.t: "[SCOPE.sCharacter('assassination_target').GetFullName] Attacked by Klansmen!" #NT!
+ usfp_usa_postreconstruction.16.d: "A gang of disguised Klansmen has viciously attacked the home of [SCOPE.sCharacter('assassination_target').GetFullName], shooting [SCOPE.sCharacter('assassination_target').GetHerHim] and several members of [SCOPE.sCharacter('assassination_target').GetHerHis] family! The attackers set [SCOPE.sCharacter('assassination_target').GetHerHis] house alight and left behind a warning to anyone else who dares oppose the $movement_usfp_neoconfederate$." #NT!
+ usfp_usa_postreconstruction.16.f: ""The Anglo Saxon planted civilization on this continent and wherever this race has been in conflict with another race, it has asserted its supremacy and either conquered or exterminated the foe. This great race has carried the Bible in one hand and the sword in the other. Resist our march of progress and civilization and we will wipe you off the face of the earth."" #NT!
+ usfp_usa_postreconstruction.16.a: "We will not be cowed by supremacist threats." #NT!
+ usfp_usa_postreconstruction.16.b: "They make a compelling argument..." #NT!
+  
+ usfp_usa_postreconstruction.17.t: "$usfp_dixie_culture$ Redoubt" #NT!
+ usfp_usa_postreconstruction.17.d: "Groups of former Redeemers, disillusioned by their failures in the South, have organized an exodus to the far West. They have chosen [SCOPE.sState('dixie_redoubt_target').GetName] to be the site of a new, more racially pure $usfp_dixie_culture$ [concept_homeland]." #NT!
+ usfp_usa_postreconstruction.17.f: "Belle didn't quite understand why her family had to leave. She liked Georgia, she liked the other kids she would play with, but her father was always angry these days. Said he couldn't stand to raise his family here any more. So Belle got up on the back of her family's wagon and waved goodbye to her friends, as she watched her home recede into the distance." #NT!
+ usfp_usa_postreconstruction.17.a: "They'll have to carry their hatred with them." #NT!
+ usfp_usa_postreconstruction.17.b: "They'd best not stop until they hit the Pacific." #NT!
+  
+ usfp_usa_postreconstruction.18.t: "A Silent Parade" #NT!
+ usfp_usa_postreconstruction.18.d: "Supporters of the [SCOPE.sPoliticalMovement('afro_american_movement').GetName] have organized a march through [SCOPE.sState('new_york_scope').GetCityHubName] in response to the persistent and ongoing violence against $usfp_afro_american_culture_plural$. Over ten thousand marchers walk in complete silence through the streets, bearing signs and fliers demanding federal action against lynching." #NT!
+ usfp_usa_postreconstruction.18.f: ""We march because we want to bring the murderers of our brothers, sisters and innocent children to justice. We march because we are thoroughly opposed to Jim Crow cars, segregation, discrimination, disfranchisement, lynching, and the host of evils that are forced on us. We march because we want our children to live in a better land and enjoy fairer conditions than have fallen to our lot."" #NT!
+ usfp_usa_postreconstruction.18.a: "This is not for the federal government to decide." #NT!
+ usfp_usa_postreconstruction.18.b: "We must have a nationwide anti-lynching law." #NT!
+  
+ ### USA (afro-american) Colonization Events ### 
+  
+ usfp_usa_colonization.1.t: "[SCOPE.sCountry('santo_domingo_scope').GetName] Seeks Annexation" #NT!
+ usfp_usa_colonization.1.d: "With their national security under serious threat, the government of [SCOPE.sCountry('santo_domingo_scope').GetName] has requested annexation by the [ROOT.GetCountry.GetName]. Proponents in [concept_usfp_congress] say that the island could become a haven from discrimination for $usfp_afro_american_culture_plural$, while opponents balk at the notion of adding an [GetCulture('afro_caribeno').GetName] population to the union." #NT!
+ usfp_usa_colonization.1.f: ""The colored man cannot be spared until his place is supplied, but with a refuge like Santo Domingo his worth here would soon be discovered and he would soon receive such recognition as to induce him to stay: or if Providence designed that the two races should not live together he would find a home in the Antilles."" #NT!
+ usfp_usa_colonization.1.a: "[SCOPE.sCountry('santo_domingo_scope').GetName] will become an [ROOT.GetCountry.GetAdjective] territory." #NT!
+ usfp_usa_colonization.1.b: "We will bring [SCOPE.sCountry('santo_domingo_scope').GetName] under our wing." #NT!
+ usfp_usa_colonization.1.c: "This is not in the national interest." #NT!
+  
+ usfp_usa_colonization.2.t: "The Linconia Plan" #NT!
+ usfp_usa_colonization.2.d: "In [ROOT.GetCountry.GetRuler.GetHerHis] search for suitable $usfp_afro_american_culture$ colonization sites, [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] has determined [GetStateRegion('STATE_PANAMA').GetName] to be a promising location. The Northern press has already dubbed the planned colony 'Linconia' in the President's honor, but it's unlikely the [GetCulture('central_american').GetName] [Concept('concept_country', '$concept_countries$')] will approve of any settlement absent significant diplomatic overtures." #NT!
+ usfp_usa_colonization.2.f: ""The aspiration of men is to enjoy equality with the best when free, but on this broad continent, not a single man of your race is made the equal of a single man of ours. It is better for us both, therefore, to be separated."" #NT!
+ usfp_usa_colonization.2.a: "An intriguing proposal." #NT!
+ usfp_usa_colonization.2.a.tt: "With high enough [concept_relations] with the [GetCulture('central_american').GetName] [Concept('concept_country', '$concept_countries$')], we can propose the creation of Linconia through the #bold African Colonization#! Journal Entry." #NT!
+ usfp_usa_colonization.2.a.tt2: "Alternatively, if [GetStateRegion('STATE_PANAMA').GetName] is owned by us or our [concept_subject], we can simply create the [concept_colony_subject] ourselves." #NT!
+  
+ usfp_usa_colonization.3.t: "An [SCOPE.sCountry('usa_scope').GetAdjective] Colony in [GetStateRegion('STATE_PANAMA').GetName]?" #NT!
+ usfp_usa_colonization.3.d: "The [SCOPE.sCountry('usa_scope').GetName] is seeking to acquire Chiriquí [concept_province] on the coast of [GetStateRegion('STATE_PANAMA').GetName] in order to establish an $usfp_afro_american_culture$ [concept_colony_subject] there." #NT!
+ usfp_usa_colonization.3.f: ""The Americans seem to think it's prime coal country."\n\n"Why not sell? They'll discover it's a wasteland soon enough, but we'll have gotten paid all the same."" #NT!
+ usfp_usa_colonization.3.a: "We are not about to sell any of our land to the Americans." #NT!
+ usfp_usa_colonization.3.b: "The $usfp_afro_american_culture_plural$ can have Chiriquí, for a price." #NT!
+  
+ usfp_usa_colonization.4.t: "[SCOPE.sState('haiti_scope').GetName] Calling" #NT!
+ usfp_usa_colonization.4.d: "An [ROOT.GetCountry.GetAdjective] businessman has put forth a proposal to found an $usfp_afro_american_culture$ settlement in [SCOPE.sState('haiti_scope').GetName], and is requesting government support for the project." #NT!
+ usfp_usa_colonization.4.f: ""The Government of [SCOPE.sState('haiti_scope').GetNameNoFormatting], by special law, will give each family sixteen acres of good land, and to each single man eight acres, so that, with this grant, and the money earned during the four years of service, they may enter upon a life of freedom and independence, conscious that he has earned the means of his livelihood, and at the same time disciplined himself to the duties, the pleasures, and the wants of free labor."" #NT!
+ usfp_usa_colonization.4.a: "Pursue this opportunity." #NT!
+ usfp_usa_colonization.4.b: "This is not a worthwhile venture." #NT!
+  
+ usfp_usa_colonization.5.t: "An $usfp_afro_american_culture$ Settlement in [SCOPE.sState('haiti_scope').GetName]?" #NT!
+ usfp_usa_colonization.5.d: "An [SCOPE.sCountry('usa_scope').GetAdjective] businessman has put forth a proposal to found an $usfp_afro_american_culture$ settlement in [SCOPE.sState('haiti_scope').GetName], and is requesting our approval for the project." #NT!
+ usfp_usa_colonization.5.f: "The plan was simple enough: the settlers would be naturalized as citizens upon their arrival, and the government would provide protection and assistance while the settlement was in development. Once the American's lease on the land expired, the settlers would be free to become landowners in their own right." #NT!
+ usfp_usa_colonization.5.a: "We welcome our $usfp_afro_american_culture$ brothers." #NT!
+ usfp_usa_colonization.5.b: "This proposal seems suspect." #NT!
+  
+ usfp_usa_colonization.6.t: "A Failed Venture" #NT!
+ usfp_usa_colonization.6.d: "It seems that funds and supplies intended for the $usfp_afro_american_culture$ settlement in [SCOPE.sState('haiti_scope').GetName] have been embezzled or otherwise redirected, leaving the colony defunct and its inhabitants stranded in a foreign land." #NT!
+ usfp_usa_colonization.6.f: ""I found that the enterprise had been abandoned, and that the workers had all become more or less demoralized in the absence of proper control. Many of them had gone actually mad, under the influence of some religious excitement, to which they had surrendered themselves."" #NT!
+ usfp_usa_colonization.6.a: "Send a ship to collect anyone who'd like to return." #NT!
+  
   
  usfp_test.1.t: "DEBUG-EVENT"
  usfp_test.1.d: "Erzwinge das Spawnen eines Charakters"

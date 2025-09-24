@@ -3,6 +3,7 @@
  ideology_reactionary_segregationist_desc: "#lore Diese Gruppe glaubt, dass rassistische Gesetze notwendig sind, um ihre Interessen zu schützen.#!"
  ideology_reactionary_exclusionist: "Ausschließend"
  ideology_reactionary_exclusionist_desc: "#lore Diese Gruppe ist misstrauisch gegenüber Kulturen, die sie als 'zu fremd' erachtet, und glaubt, dass der Staat deren Rechte einschränken sollte.#!"
-  
+ ideology_reactionary_supremacist: "Supremacist" #NT!
+ ideology_reactionary_supremacist_desc: "#lore This group considers people of their own particular heritage to be naturally superior and deserving of a dominant position in society.#!" #NT!
   
   

@@ -8,7 +8,6 @@
  state_trait_canadian_boreal_forests: "Kanadische boreale Wälder"
  state_trait_tornado: "Saisonale Tornados"
  state_trait_columbia_plateau: "Columbia-Plateau"
- state_trait_grand_river: "Rio Grande"
  state_trait_sierra_madre_watershed: "Sierra Madre Einzugsgebiet"
  state_trait_alaska_range: "Alaska-Gebirge"
  state_trait_puget_sound: "Puget Sound"
@@ -23,3 +22,5 @@
  state_trait_san_juan_basin: "San Juan-Becken"
  state_trait_zihuatanejo_bay: "Zihuatanejo-Bucht"
  state_trait_navel_oranges: "Navel-Orangen"
+ state_trait_usfp_hookworm: "Endemic Hookworm" #NT!
+ state_trait_usfp_boll_weevil: "Boll Weevil Infestation" #NT!

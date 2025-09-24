@@ -2,6 +2,8 @@
   
  usfp_westward_expansion_group: "@america_icon! #yellow Heil, Columbia!#! | Westward Expansion"
  usfp_manifest_destiny_group: "@america_icon! #yellow Heil, Columbia!#! | Manifest Destiny"
+ usfp_reconstruction_group: "@america_icon! #yellow Hail, Columbia!#! | Reconstruction" #NT!
+ usfp_colonization_group: "@america_icon! #yellow Hail, Columbia!#! | Colonization" #NT!
   
  notification_usfp_new_american_homeland_name: "[concept_usfp_westward_expansion]"
  notification_usfp_new_american_homeland_desc: "[SCOPE.sState('new_homeland_state').GetName] wird jetzt als [SCOPE.sCulture('new_homeland_culture').GetName] [concept_homeland] betrachtet."
@@ -46,21 +48,25 @@
  notification_usfp_manifest_less_destiny_mexico_desc: "Unsere Niederlage gegen [SCOPE.sCountry('mexico_scope').GetName] hat die Torheit von Manifest Destiny gezeigt."
  notification_usfp_manifest_less_destiny_mexico_tooltip: "#header $notification_usfp_manifest_less_destiny_mexico_name$#!\n$notification_usfp_manifest_less_destiny_mexico_desc$"
   
- notification_usfp_manifest_more_destiny_movement_name: "$manifest_destiny_increase$" #NT!
- notification_usfp_manifest_more_destiny_movement_desc: "The [SCOPE.sPoliticalMovement('majority_movement').GetName] promotes the righteousness of Manifest Destiny." #NT!
- notification_usfp_manifest_more_destiny_movement_tooltip: "#header $notification_usfp_manifest_more_destiny_movement_name$#!\n$notification_usfp_manifest_more_destiny_movement_desc$" #NT!
+ notification_usfp_manifest_more_destiny_movement_name: "$manifest_destiny_increase$"
+ notification_usfp_manifest_more_destiny_movement_desc: "The [SCOPE.sPoliticalMovement('majority_movement').GetName] promotes the righteousness of Manifest Destiny."
+ notification_usfp_manifest_more_destiny_movement_tooltip: "#header $notification_usfp_manifest_more_destiny_movement_name$#!\n$notification_usfp_manifest_more_destiny_movement_desc$"
   
- notification_usfp_manifest_less_destiny_movement_name: "$manifest_destiny_decrease$" #NT!
- notification_usfp_manifest_less_destiny_movement_desc: "The [SCOPE.sPoliticalMovement('minority_movement').GetName] pushes back against the idea of Manifest Destiny." #NT!
- notification_usfp_manifest_less_destiny_movement_tooltip: "#header $notification_usfp_manifest_less_destiny_movement_name$#!\n$notification_usfp_manifest_less_destiny_movement_desc$" #NT!
+ notification_usfp_manifest_less_destiny_movement_name: "$manifest_destiny_decrease$"
+ notification_usfp_manifest_less_destiny_movement_desc: "The [SCOPE.sPoliticalMovement('minority_movement').GetName] pushes back against the idea of Manifest Destiny."
+ notification_usfp_manifest_less_destiny_movement_tooltip: "#header $notification_usfp_manifest_less_destiny_movement_name$#!\n$notification_usfp_manifest_less_destiny_movement_desc$"
+  
+ notification_usfp_manifest_less_destiny_decay_name: "$manifest_destiny_decrease$" #NT!
+ notification_usfp_manifest_less_destiny_decay_desc: "The ideals of Manifest Destiny fade into memory." #NT!
+ notification_usfp_manifest_less_destiny_decay_tooltip: "#header $notification_usfp_manifest_less_destiny_decay_name$#!\n$notification_usfp_manifest_less_destiny_decay_desc$" #NT!
   
  notification_usfp_washington_precedent_name: "[concept_usfp_washington_precedent]"
  notification_usfp_washington_precedent_desc: "[SCOPE.sCharacter('ruler_scope').GetFullName] wird nicht nach einer dritten Amtszeit streben. [SCOPE.sCharacter('ruler_interest_group_new_leader_scope').GetFullName] ist der neue [concept_leader] der [SCOPE.sCharacter('ruler_scope').GetInterestGroup.GetName]."
  notification_usfp_washington_precedent_tooltip: "#header $notification_usfp_washington_precedent_name$#!\n$notification_usfp_washington_precedent_desc$"
   
- notification_usfp_president_ineligible_name: "[SCOPE.sCharacter('interest_group_new_leader_scope').GetFullName] Nominated" #NT!
- notification_usfp_president_ineligible_desc: "[SCOPE.sCharacter('candidate_scope').GetFullName] is ineligible for the Presidency. [SCOPE.sCharacter('interest_group_new_leader_scope').GetFullName] is the new [concept_leader] of the [SCOPE.sCharacter('interest_group_new_leader_scope').GetInterestGroup.GetName]." #NT!
- notification_usfp_president_ineligible_tooltip: "#header $notification_usfp_president_ineligible_name$#!\n$notification_usfp_president_ineligible_desc$" #NT!
+ notification_usfp_president_ineligible_name: "[SCOPE.sCharacter('interest_group_new_leader_scope').GetFullName] Nominated"
+ notification_usfp_president_ineligible_desc: "[SCOPE.sCharacter('candidate_scope').GetFullName] is ineligible for the Presidency. [SCOPE.sCharacter('interest_group_new_leader_scope').GetFullName] is the new [concept_leader] of the [SCOPE.sCharacter('interest_group_new_leader_scope').GetInterestGroup.GetName]."
+ notification_usfp_president_ineligible_tooltip: "#header $notification_usfp_president_ineligible_name$#!\n$notification_usfp_president_ineligible_desc$"
   
  notification_usfp_liberia_republic_name: "Republik nicht anerkannt"
  notification_usfp_liberia_republic_desc: "Die [SCOPE.sCountry('usa_scope').GetName] hat unsere Republik nicht anerkannt, wird jedoch ihr Protektorat über unsere Kolonie aufrechterhalten."
@@ -72,4 +78,24 @@
   
  notification_usfp_liberia_recognized_name: "Republik anerkannt"
  notification_usfp_liberia_recognized_desc: "Die [SCOPE.sCountry('usa_scope').GetName] hat unsere Republik offiziell als Protektorat anerkannt."
- notification_usfp_liberia_recognized_tooltip: "#header $notification_usfp_liberia_recognized_name$#!\n$notification_usfp_liberia_recognized_desc$" #NT!
+ notification_usfp_liberia_recognized_tooltip: "#header $notification_usfp_liberia_recognized_name$#!\n$notification_usfp_liberia_recognized_desc$"
+  
+ notification_usfp_radical_land_redistribution_complete_name: "Slaver Land Redistributed" #NT!
+ notification_usfp_radical_land_redistribution_complete_desc: "The Plantation economy of [SCOPE.sState('radical_land_distribution_state').GetName] has been broken up. Reconstruction has progressed in favor of the #bold Freedmen#!." #NT!
+ notification_usfp_radical_land_redistribution_complete_tooltip: "#header $notification_usfp_radical_land_redistribution_complete_name$#!\n$notification_usfp_radical_land_redistribution_complete_desc$" #NT!
+  
+ notification_usfp_afro_american_migration_notification_name: "[GetCulture('afro_american').GetName] Settlers Arrive" #NT!
+ notification_usfp_afro_american_migration_notification_desc: "A small number of [GetCulture('afro_american').GetName] settlers have arrived in [SCOPE.sState('afro_american_colonization_target_state').GetName]." #NT!
+ notification_usfp_afro_american_migration_notification_tooltip: "#header $notification_usfp_afro_american_migration_notification_name$#!\n$notification_usfp_afro_american_migration_notification_desc$" #NT!
+  
+ notification_usfp_afro_americans_depart_notification_name: "[GetCulture('afro_american').GetName] Settlers Depart" #NT!
+ notification_usfp_afro_americans_depart_notification_desc: "A small number of [GetCulture('afro_american').GetName] settlers have departed for [SCOPE.sState('afro_american_colonization_target_state').GetName]." #NT!
+ notification_usfp_afro_americans_depart_notification_tooltip: "#header $notification_usfp_afro_americans_depart_notification_name$#!\n$notification_usfp_afro_americans_depart_notification_desc$" #NT!
+  
+ notification_usfp_colony_rejected_name: "Colony Proposal Rejected" #NT!
+ notification_usfp_colony_rejected_desc: "[SCOPE.sCountry('usa_colony_target_scope').GetName] has rejected our proposal for an $usfp_afro_american_culture$ colony in their territory." #NT!
+ notification_usfp_colony_rejected_tooltip: "#header $notification_usfp_colony_rejected_name$#!\n$notification_usfp_colony_rejected_desc$" #NT!
+  
+ notification_usfp_colony_accepted_name: "Colony Proposal Accepted" #NT!
+ notification_usfp_colony_accepted_desc: "[SCOPE.sCountry('usa_colony_target_scope').GetName] has accepted our proposal for an $usfp_afro_american_culture$ colony in their territory." #NT!
+ notification_usfp_colony_accepted_tooltip: "#header $notification_usfp_colony_accepted_name$#!\n$notification_usfp_colony_accepted_desc$" #NT!

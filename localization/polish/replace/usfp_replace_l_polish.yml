@@ -1,94 +1,116 @@
 ﻿l_polish:
- COM: "Comancheria" #NT!
- APC: "Apacheria" #NT!
+ COM: "Comancheria"
+ APC: "Apacheria"
   
- je_acw_countdown: "A House Divided" #NT!
- je_acw_countdown_reason: "The issue of slavery has divided the North and South of the [ROOT.GetCountry.GetName] since before the drafting of the Declaration of Independence. Then as now, a series of compromises in the Federal government have forestalled open conflict. As the [SCOPE.sIdeology('abolitionist_scope').GetName] cause continues to grow in the North, the [SCOPE.gsInterestGroup('landowners_scope').GetName] have continued to demand more concessions and compromises to protect their 'peculiar institution' from interference.\n\nOne way or another, the Union cannot endure half slave and half free for much longer." #NT!
+ je_acw_countdown: "A House Divided"
+ je_acw_countdown_reason: "The issue of slavery has divided the North and South of the [ROOT.GetCountry.GetName] since before the drafting of the Declaration of Independence. Then as now, a series of compromises in the Federal government have forestalled open conflict. As the [SCOPE.sIdeology('abolitionist_scope').GetName] cause continues to grow in the North, the [SCOPE.gsInterestGroup('landowners_scope').GetName] have continued to demand more concessions and compromises to protect their 'peculiar institution' from interference.\n\nOne way or another, the Union cannot endure half slave and half free for much longer."
+ je_acw_countdown_status_missouri_compromise: "The Missouri Compromise is largely accepted." #NT!
+ je_acw_countdown_status_bleeding_kansas: "Bleeding Kansas has torn open a wound in the Union." #NT!
+ je_acw_countdown_status_secession_iminent: "War between the states appears inevitable." #NT!
+ je_acw_countdown_status_uncertain_expansion: "Westward expansion is straining the Missouri Compromise." #NT!
+ je_acw_countdown_status_uncertain_compromise: "The compromise between North and South is on shaky ground." #NT!
+ je_acw_countdown_status_fugitive_slave_law: "The Fugitive Slave Law enflames the North." #NT!
+ je_acw_countdown_status_human_rights: "The spread of Human Rights doctrine drives support for abolition." #NT!
+ je_acw_countdown_status_slave_power: "The Slave Power reigns supreme." #NT!
+ je_acw_countdown_status_powerful_abolitionist: "The South is scared of a powerful Abolitionist running for President." #NT!
+ je_acw_countdown_status_abolitionist_revolt_imminent: "Militant Abolitionists call for the immediate destruction of the Slave Power." #NT!
+ je_acw_countdown_status_war_to_expand_slavery: "Abolitionists decry the war as an expansion of the Slave Power." #NT!
+ je_acw_countdown_lobby: "@america_icon! #yellow Hail, Columbia!#!\nThe United States is divided between the abolitionist North and the slave-holding South. Compromise between the two is becoming increasingly impossible." #NT!
+  
+ je_group_usa_american_civil_war: "A House Divided" #NT!
   
  je_acw_war: "Amerykańska wojna secesyjna"
  je_acw_war_reason: "Wisi nad nami widmo wojny między stanami. Za nic w świecie nie możemy dopuścić do rozpadu Unii. Jeśli będzie trzeba, oddamy za nią życie."
- acw_war_tt_complete: "The secessionists have been defeated and reannexed." #NT!
- acw_war_support_tooltip: "The [SCOPE.sCountry('csa_scope').GetName] believe that they can outlast our will to fight. Defeating them in battles will #italic increase#! their [concept_war_support]. We can [Concept('concept_occupation', 'Occupy')] the Mississippi river to break their hopes of victory." #NT!
+ acw_war_tt_complete: "The secessionists have been defeated and reannexed."
+ acw_war_support_tooltip: "The [SCOPE.sCountry('csa_scope').GetName] believe that they can outlast our will to fight. Defeating them in battles will #italic increase#! their [concept_war_support]. We can [Concept('concept_occupation', 'Occupy')] the Mississippi river to break their hopes of victory."
   
  acw_events.3.t: "[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetLastName] – klauzula"
- acw_events.3.d: "[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetFullName], leader of the [SCOPE.gsInterestGroup('wilmot_proviso_ig').GetName], has proposed outright prohibiting slavery in all our new western territories. This proposal is unacceptable to the [SCOPE.gsInterestGroup('planters_scope').GetName], but they have put forth few alternatives." #NT!
- acw_events.3.f: ""I plead the cause of the rights of white freemen. I would preserve for free white labor a fair country, a rich inheritance, where the sons of toil, of my own race and own color, can live without the disgrace which association with negro slavery brings upon free labor."" #NT!
- acw_events.3.a: "Reject the proviso." #NT!
- acw_events.3.b: "Accept the proviso, abolishing slavery in the West." #NT!
- acw_events.3.c: "Why don't we just draw the Compromise Line all the way to the Pacific?" #NT!
+ acw_events.3.d: "[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetFullName], leader of the [SCOPE.gsInterestGroup('wilmot_proviso_ig').GetName], has proposed outright prohibiting slavery in all our new western territories. This proposal is unacceptable to the [SCOPE.gsInterestGroup('planters_scope').GetName], but they have put forth few alternatives."
+ acw_events.3.f: ""I plead the cause of the rights of white freemen. I would preserve for free white labor a fair country, a rich inheritance, where the sons of toil, of my own race and own color, can live without the disgrace which association with negro slavery brings upon free labor.""
+ acw_events.3.a: "Reject the proviso."
+ acw_events.3.b: "Accept the proviso, abolishing slavery in the West."
+ acw_events.3.c: "Why don't we just draw the Compromise Line all the way to the Pacific?"
   
  acw_je_events.2.t: "Odbudowa państwa"
  acw_je_events.2.d: "Chociaż walki zbrojne ustały, bój o duszę naszego narodu nadal trwa. Nasze państwo, [ROOT.GetCountry.GetName], nie może już dłużej być podzielone. Musi się odbudować."
  acw_je_events.2.f: "– Nie sądzę, abyśmy upadli. Czy będzie to pożądane czy nie, niezależnie od tego, czym się stanie nasze państwo – jego dusza i ciało nie mogą już dłużej być podzielone."
  unreconstructed_state: "Państwo niezrekonstruowane"
- acw_je_events.2.a: "The South must be brought back into the fold." #NT!
- acw_je_events.2.b: "We will need to make amends with the North." #NT!
- acw_je_events.2.c: "The South must accept the end of slavery." #NT!
- acw_je_events.2.g: "We never intended to intrude upon the South's way of life." #NT!
+ acw_je_events.2.a: "The South must be brought back into the fold."
+ acw_je_events.2.b: "We will need to make amends with the North."
+ acw_je_events.2.c: "The South must accept the end of slavery."
+ acw_je_events.2.g: "We never intended to intrude upon the South's way of life."
   
  acw_je_events.3.t: "Odbudowane państwo"
  acw_je_events.3.d: "Zakończyła się odbudowa naszego państwa. Jej efektem jest coś wyjątkowego, coś nowego i – co najważniejsze – coś, co można nazwać jednością."
  acw_je_events.3.f: "– Odkupiliśmy wszystkie nasze winy i odbudowaliśmy państwo. Stworzyliśmy rząd, który będzie trwać wiecznie."
  acw_je_events.3.a: "Znów jesteśmy jednością."
   
- je_indian_removal: "Indian Removal" #NT!
- je_indian_removal_reason: "The Five Civilized Tribes have long lived in the American south, and have been the target of 'civilizing' missions since the days of independence. In recent decades, [SCOPE.sCulture('yankee_culture').GetName] and [SCOPE.sCulture('dixie_culture').GetName] settlers have increasingly encroached on the lands of the Five Tribes, sparking violent conflicts.\n\nThe Jackson administration chose to support the incoming settlers, and resolved to see all natives removed to the [SCOPE.sCountry('indian_territory_scope').GetName], regardless of the cost." #NT!
+ je_indian_removal: "Indian Removal"
+ je_indian_removal_reason: "The Five Civilized Tribes have long lived in the American south, and have been the target of 'civilizing' missions since the days of independence. In recent decades, [SCOPE.sCulture('yankee_culture').GetName] and [SCOPE.sCulture('dixie_culture').GetName] settlers have increasingly encroached on the lands of the Five Tribes, sparking violent conflicts.\n\nThe Jackson administration chose to support the incoming settlers, and resolved to see all natives removed to the [SCOPE.sCountry('indian_territory_scope').GetName], regardless of the cost."
   
  native_resettlement.2.t: "Petycja protestacyjna Johna Rossa"
- native_resettlement.2.d: "[SCOPE.sCountry('cherokee_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('cherokee_scope').GetRuler.GetFullName] has presented a petition to [concept_usfp_congress] asking them to void the treaty which will compel the [SCOPE.sCulture('cherokee_culture').GetName] nation to relocate to the [SCOPE.sCountry('indian_territory_scope').GetName]. His petition has almost as many signatures as the entire eastern Cherokee population." #NT!
+ native_resettlement.2.d: "[SCOPE.sCountry('cherokee_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('cherokee_scope').GetRuler.GetFullName] has presented a petition to [concept_usfp_congress] asking them to void the treaty which will compel the [SCOPE.sCulture('cherokee_culture').GetName] nation to relocate to the [SCOPE.sCountry('indian_territory_scope').GetName]. His petition has almost as many signatures as the entire eastern Cherokee population."
  native_resettlement.2.f: "– Postanowienia tego traktatu odbierają nam każdy aspekt wolności. Nasza własność zostanie splądrowana na naszych oczach, nasi ludzie padną ofiarami przemocy, a nasze życia zostaną nam odebrane. I nie ma nikogo, kto uszanowałby nasze apele. Wynarodowiono nas. Pozbawiono praw obywatelskich. Wydziedziczono nas z rodziny, którą jest ludzkość!"
  native_resettlement.2.a: "Traktat to traktat. Nie możemy anulować decyzji, pod którą się podpisaliśmy."
  native_resettlement.2.b: "Nasze sumienie zmusza nas do unieważnienia traktatu dotyczącego wysiedlenia."
   
- native_resettlement.3.t: "Cherokee Removal" #NT!
- native_resettlement.3.d: "In accordance with the removal treaty, it is time for the [SCOPE.sCulture('cherokee_culture').GetName] of [SCOPE.sState('indian_removal_state').GetStateRegion.GetName] to relocate to the [SCOPE.sCountry('indian_territory_scope').GetName]. Some holdouts refuse to leave their homes, and many are poorly equipped for the journey." #NT!
+ native_resettlement.3.t: "Cherokee Removal"
+ native_resettlement.3.d: "In accordance with the removal treaty, it is time for the [SCOPE.sCulture('cherokee_culture').GetName] of [SCOPE.sState('indian_removal_state').GetStateRegion.GetName] to relocate to the [SCOPE.sCountry('indian_territory_scope').GetName]. Some holdouts refuse to leave their homes, and many are poorly equipped for the journey."
   
  native_resettlement.4.t: "Szlak Łez"
  native_resettlement.4.d: "Nasze prawa dotyczące wysiedlenia, którym podlega ludność [SCOPE.sCulture('cherokee_culture').GetName|l], doprowadziły do śmierci wielu osób podczas ich wędrówki na zachód."
- native_resettlement.4.f: ""In the dark the tall pines moan\nAs they guard the dismal trail.\nThe Cherokees say it is the groan,\nEvery shriek and echoed groan\nOf their forefathers that fell\nWith broken hopes and bitter fears\nOn that weary trail of tears."" #NT!
+ native_resettlement.4.f: ""In the dark the tall pines moan\nAs they guard the dismal trail.\nThe Cherokees say it is the groan,\nEvery shriek and echoed groan\nOf their forefathers that fell\nWith broken hopes and bitter fears\nOn that weary trail of tears.""
  native_resettlement.4.a: "Zrobiliśmy, co mogliśmy."
  native_resettlement.4.b: "Mamy ich krew na rękach."
   
  native_resettlement.5.t: "Oczyszczanie wschodu"
- native_resettlement.5.d: "The removal of the Five Civilized Tribes to the [SCOPE.sCountry('indian_territory_scope').GetName] is complete. For good or ill, the matter is settled." #NT!
- native_resettlement.5.f: "A pair of Europeans watched the Americans go. In the whole scene there was an air of ruin and destruction, something which betrayed a final and irrevocable adieu. One of the observers asked a passing man:\n\n"Why are you leaving your country?"\n\nThe American, sombre and taciturn, replied simply:\n\n"To be free."\n\nBefore the White men could inquire more, the American walked on, continuing his journey east. The Frenchman turned to his compatriot:\n\n"We watch the expulsion, the dissolution, of one of the most celebrated and ancient American peoples."" #NT!
+ native_resettlement.5.d: "The removal of the Five Civilized Tribes to the [SCOPE.sCountry('indian_territory_scope').GetName] is complete. For good or ill, the matter is settled."
+ native_resettlement.5.f: "A pair of Europeans watched the Americans go. In the whole scene there was an air of ruin and destruction, something which betrayed a final and irrevocable adieu. One of the observers asked a passing man:\n\n"Why are you leaving your country?"\n\nThe American, sombre and taciturn, replied simply:\n\n"To be free."\n\nBefore the White men could inquire more, the American walked on, continuing his journey east. The Frenchman turned to his compatriot:\n\n"We watch the expulsion, the dissolution, of one of the most celebrated and ancient American peoples.""
  native_resettlement.5.a: "Módlmy się, aby coś takiego już nigdy się nie wydarzyło."
   
   
- native_resettlement.6.t: "The Civilized Tribes" #NT!
- native_resettlement.6.d: "With the passing of the [SCOPE.sLawType('pronativelaw').GetName] Law, the Indian Removal Act is annulled and the remainder of the Five Civilized Tribes are free to live on their ancestral lands." #NT!
+ native_resettlement.6.t: "The Civilized Tribes"
+ native_resettlement.6.d: "With the passing of the [SCOPE.sLawType('pronativelaw').GetName] Law, the Indian Removal Act is annulled and the remainder of the Five Civilized Tribes are free to live on their ancestral lands."
  native_resettlement.6.f: "Niech wieszcze w pieśniach Cię wychwalają\nI światu głoszą, jak Cię wyszydzano,\nJak syczano, oskarżano i za wariata uważano!\nAż w końcu, na wszystkim przekór,\nMimo drwin, a z chęci i przyczyny,\nGeniusz Twój przekuł marzenia w czyny."
  native_resettlement.6.a: "Uniknięto wielkiego cierpienia."
   
- indian_removal_end: "The Five Civilized Tribes will be removed from their ancestral lands at great loss of life." #NT!
+ indian_removal_end: "The Five Civilized Tribes will be removed from their ancestral lands at great loss of life."
   
- acw_followup_events.5.t: "Supremacist Violence in [SCOPE.sState('supremacist_violence_state').GetName]" #NT!
+ acw_followup_events.4.c: "We shall build up a land of free men and free women and freedom!" #NT!
+ acw_followup_events.4.ctt: "Enables the $decree_usfp_radical_land_distribution$ [concept_decree], allowing the wholesale redistribution of plantations to the Freedmen. If the decree is kept on a state for 4 years, its plantation economy will be permanently broken, removing the #yellow Deep South#! or #yellow Upper South#! state modifiers and progressing Reconstruction in favor of the #bold Freedmen#!. #red Using this decree will radicalize the South and cost significant Northern Political Will!" #NT!
+ acw_followup_events.4.c_trigger: "Has not already unlocked the $decree_usfp_radical_land_distribution$ [concept_decree]" #NT!
+ acw_followup_events.5.t: "Supremacist Violence in [SCOPE.sState('supremacist_violence_state').GetName]"
  acw_followup_events.5.d: "Przemoc między białymi buntownikami i czarnymi wyzwoleńcami jest źródłem znacznych napięć w obszarze administracyjnym [SCOPE.sState('supremacist_violence_state').GetName]."
  acw_followup_events.5.f: "– Buntownicy bezlitośnie tratowali, kopali i bili innych ludzi. Ulicami popłynęła krew niewinnych. Gdy ataki stały się tak zajadłe, że nie było już czasu na przeładowywanie broni, na ziemię zaczęły upadać rewolwery z opróżnionymi magazynkami. Dopiero gdy ogłoszono stan wojenny i zjawili się żołnierze, zrobiło się względnie spokojnie."
  acw_followup_events.5.a: "Wykorzystaj pełną siłę rządu, aby bronić wyzwoleńców."
  acw_followup_events.5.b: "Nie możemy zrazić do siebie miejscowych przywódców, wysyłając tam żołnierzy."
   
- acw_followup_events.6.t: "Black Codes" #NT!
- acw_followup_events.6.d: "A coalition of Confederate sympathizers have won control of [SCOPE.sState('redeemer_state').GetName]'s state government through means fair and foul, and begun to implement a raft of restrictions on [SCOPE.sCulture('afro_american_culture').GetName] activities." #NT!
+ acw_followup_events.6.t: "Black Codes"
+ acw_followup_events.6.d: "A coalition of Confederate sympathizers have won control of [SCOPE.sState('redeemer_state').GetName]'s state government through means fair and foul, and begun to implement a raft of restrictions on [SCOPE.sCulture('afro_american_culture').GetName] activities."
  acw_followup_events.6.f: "– Wyobraźmy sobie, że rysujemy linię. Co widzimy? Po jednej stronie: inteligencję, cnotę, wzajemny szacunek i demokrację. A po drugiej? Absolutną, niepowstrzymaną polityczną supremację, brutalną siłę i terror. Nie uświadczy się tam ani jednej cechy wolnego rządu, a jedynie najsmutniejszą tyranię starego Południa desperacko starającą się z powrotem dojść do władzy, która od zawsze stanowi plagę tej ziemi."
- acw_followup_events.6.a: "We must respect the election results." #NT!
- acw_followup_events.6.b: "The election is clearly fraudelent and must be redone." #NT!
+ acw_followup_events.6.a: "We must respect the election results."
+ acw_followup_events.6.b: "The election is clearly fraudelent and must be redone."
   
  je_acw_reconstruction: "Rekonstrukcja"
  je_acw_reconstruction_status: "Odbuduj państwo po wojnie domowej, która stworzyła podziały."
  je_acw_reconstruction_goal: "Dokonaj rekonstrukcji buntowniczych stanów."
- je_acw_reconstruction_reason: "With the Civil War over and slavery abolished, the South's entire way of life has been upended. We must now attempt to reintegrate the rebellious states into the Union, while also incorporating the liberated slaves into our society.\n\nThe #bold Progress Bar#! tracks the status of Reconstruction. Advancing Reconstruction will uphold our promise to the #bold Freedmen#! and ensure their rights and liberties. Unfortunately, the White #bold Redeemers#! of the South will not accept anything even approaching racial equality, and will actively fight to reverse Reconstruction.\n\nWe must choose which is more important to us: the rights and lives of our [SCOPE.sCulture('afro_american_culture').GetName] citizens, or a swift reconciliation with the [SCOPE.sCulture('dixie_culture').GetName] states." #NT!
- je_acw_reconstruction_status_radical: "The #bold Freedmen#! are asserting their new rights and positions in society." #NT!
- je_acw_reconstruction_status_mixed: "Reconstruction remains highly contested across the South." #NT!
- je_acw_reconstruction_status_failure: "The white supremacist #bold Redeemers#! tighten their grip on the South." #NT!
+ je_acw_reconstruction_reason: "With the Civil War over and slavery abolished, the South's entire way of life has been upended. We must now attempt to reintegrate the rebellious states into the Union, while also incorporating the liberated slaves into our society.\n\nThe #bold Progress Bar#! tracks the status of Reconstruction. Advancing Reconstruction will uphold our promise to the #bold Freedmen#! and ensure their rights and liberties. Unfortunately, the White #bold Redeemers#! of the South will not accept anything even approaching racial equality, and will actively fight to reverse Reconstruction.\n\nWe must choose which is more important to us: the rights and lives of our [SCOPE.sCulture('afro_american_culture').GetName] citizens, or a swift reconciliation with the [SCOPE.sCulture('dixie_culture').GetName] states."
+ je_acw_reconstruction_status_radical: "The #bold Freedmen#! are asserting their new rights and positions in society."
+ je_acw_reconstruction_status_mixed: "Reconstruction remains highly contested across the South."
+ je_acw_reconstruction_status_failure: "The white supremacist #bold Redeemers#! tighten their grip on the South."
+ usfp_reconstruction_progress_bar: "Reconstruction" #NT!
+ usfp_reconstruction_progress_bar_freedmen: "#bold Freedmen#!" #NT!
+ usfp_reconstruction_progress_bar_redeemers: "#bold Redeemers#!" #NT!
   
  je_oregon: "Spór o granice Oregonu"
- je_oregon_reason: "The proper location of the Oregon border has long been an undecided matter between Great Britain and the United States. As our settlers continue to push west, we will need to reach a final settlement with the British.\n\nAlternatively, if we find ourselves at war in California, a treaty will become a military necessity." #NT!
+ je_oregon_reason: "The proper location of the Oregon border has long been an undecided matter between Great Britain and the United States. As our settlers continue to push west, we will need to reach a final settlement with the British.\n\nAlternatively, if we find ourselves at war in California, a treaty will become a military necessity."
  oregon_tt: "Odkryto szlak oregoński, nanosząc na mapę zachodni obszar Ameryki Północnej"
   
- BNN: "Shoshone" #NT!
- BNN_ADJ: "Shoshoni" #NT!
- # ATB: "Deg Xit'an" #NT!
- # ATB_ADJ: "Deg Xit'an" #NT!
- SLS: "Flathead" #NT!
- SLS_ADJ: "Flathead" #NT!
+ BNN: "Shoshone"
+ BNN_ADJ: "Shoshoni"
+ # ATB: "Deg Xit'an"
+ # ATB_ADJ: "Deg Xit'an"
+ SLS: "Flathead"
+ SLS_ADJ: "Flathead"
+  
+ country_voting_power_from_literacy_add: "[concept_political_strength] from Literate Pops’ Votes" #NT!

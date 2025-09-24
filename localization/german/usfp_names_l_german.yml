@@ -38,24 +38,26 @@
  Terry: "Terry"
  Canby: "Canby"
  Ranald: "Ranald"
- Singer: "Singer" #NT!
+ Singer: "Singer"
+ Garvey: "Garvey" #NT!
+ A_Philip: "A. Philip" #NT!
   
  USS_Monitor: "USS Monitor"
   
- company_usfp_westinghouse: "Westinghouse Electric & Manufacturing Company" #NT!
- company_usfp_coca_cola: "Coca-Cola" #NT!
- prestige_good_usfp_coca_cola: "Coca-Cola" #NT!
- company_usfp_dupont: "DuPont de Nemours" #NT!
- company_usfp_american_sugar: "American Sugar Refining Company" #NT!
- company_usfp_anaconda: "Anaconda Mining Company" #NT!
- company_usfp_american_tobacco: "American Tobacco Company" #NT!
- prestige_good_usfp_durham_tobacco: "Durham Tobacco" #NT!
- company_usfp_american_woolen: "American Woolen Company" #NT!
- company_usfp_armours: "Armour and Company" #NT!
- company_usfp_cfi: "Colorado Fuel & Iron" #NT!
- company_usfp_sears: "Sears, Roebuck and Co." #NT!
- company_usfp_singer: "Singer Manufacturing Company" #NT!
- company_usfp_union_pacific: "Union Pacific Railroad" #NT!
- company_usfp_us_rubber: "United States Rubber Company" #NT!
- company_usfp_us_warner_bros: "Warner Bros. Pictures" #NT!
- prestige_good_usfp_hollywood_movies: "Hollywood Movies" #NT!
+ company_usfp_westinghouse: "Westinghouse Electric & Manufacturing Company"
+ company_usfp_coca_cola: "Coca-Cola"
+ prestige_good_usfp_coca_cola: "Coca-Cola"
+ company_usfp_dupont: "DuPont de Nemours"
+ company_usfp_american_sugar: "American Sugar Refining Company"
+ company_usfp_anaconda: "Anaconda Mining Company"
+ company_usfp_american_tobacco: "American Tobacco Company"
+ prestige_good_usfp_durham_tobacco: "Durham Tobacco"
+ company_usfp_american_woolen: "American Woolen Company"
+ company_usfp_armours: "Armour and Company"
+ company_usfp_cfi: "Colorado Fuel & Iron"
+ company_usfp_sears: "Sears, Roebuck and Co."
+ company_usfp_singer: "Singer Manufacturing Company"
+ company_usfp_union_pacific: "Union Pacific Railroad"
+ company_usfp_us_rubber: "United States Rubber Company"
+ company_usfp_us_warner_bros: "Warner Bros. Pictures"
+ prestige_good_usfp_hollywood_movies: "Hollywood Movies"

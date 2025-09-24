@@ -11,8 +11,8 @@
   
  ideology_usfp_progressive: "Progressiv"
  ideology_usfp_progressive_desc: "#lore Dieser Führer setzt sich für umfassende Reformen ein, um Monopole, Korruption und gesellschaftlichen Verfall zu bekämpfen.#!"
- ideology_usfp_progressive_movement: "Progressive" #NT!
- ideology_usfp_progressive_movement_desc: "#lore This movement advocates for a wide range of reforms aiming to combat monopolies, corruption, and societal decay.#!" #NT!
+ ideology_usfp_progressive_movement: "Progressive"
+ ideology_usfp_progressive_movement_desc: "#lore This movement advocates for a wide range of reforms aiming to combat monopolies, corruption, and societal decay.#!"
  ideology_usfp_social_gospel_leader: "Sozialgospelist"
  ideology_usfp_social_gospel_leader_desc: "#lore Dieser Führer versucht, protestantische Ethik anzuwenden, um soziale Ungleichheiten zu bekämpfen.#!"
  ideology_usfp_strongman_populist: "Starker Populist"
@@ -45,3 +45,9 @@
  ideology_usfp_native_american_agrarian_desc: "Diese Gruppe unterstützt traditionelle Formen der Landbewirtschaftung und lehnt das Konzept des individuellen Eigentums an der Erde ab."
  ideology_usfp_tribal_government: "Dezentralist"
  ideology_usfp_tribal_government_desc: "Diese Gruppe bevorzugt eine dezentralisierte politische Struktur, die ihre traditionelle Lebensweise nicht stört."
+ ideology_usfp_afro_american_movement: "Afro-American Liberation" #NT!
+ ideology_usfp_afro_american_movement_desc: "This movement seeks the full equality of Afro-Americans and resents the legal structures used to oppress them." #NT!
+ ideology_usfp_american_indian_movement: "Native Sovereignist" #NT!
+ ideology_usfp_american_indian_movement_desc: "This movement opposes oppressive measures imposed upon their people and seeks to protect and uphold their cultural traditions." #NT!
+ ideology_usfp_neoconfederate_movement: "Neo-Confederate" #NT!
+ ideology_usfp_neoconfederate_movement_desc: "This movement resents the gains made by immigrants and other racial groups and seeks to put them 'back in their place'. They idolize the Confederate rebellion as a glorious cause fought for the benefit of the White man." #NT!

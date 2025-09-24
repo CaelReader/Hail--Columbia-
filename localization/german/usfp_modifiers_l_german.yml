@@ -159,7 +159,7 @@
  usfp_gospel_of_wealth_modifier: "Evangelium des Reichtums"
  usfp_grange_movement_modifier: "Grange-Bewegung"
  usfp_captive_state_government: "Maschinenpolitik"
- usfp_company_town_state_modifier: "Company Towns" #NT!
+ usfp_company_town_state_modifier: "Company Towns"
  usfp_trust_busting_authority_modifier: "Trust-Zerschlagung"
  usfp_industrialists_corruption_modifier: "Freunde in hohen Positionen"
  usfp_federal_corruption_modifier: "Bundeskorruption"
@@ -218,16 +218,67 @@
  usfp_native_auxiliaries: "Einheimische Hilfstruppen"
  state_farmers_education_access_add: "Bildungszugang für [GetPopType('farmers').GetName]"
  state_farmers_education_access_add_desc: "Ein Bonus oder Malus für den Bildungszugang von [GetPopType('farmers').GetName]"
+ state_laborers_education_access_add: "Education Access for [GetPopType('laborers').GetName]" #NT!
+ state_laborers_education_access_add_desc: "A bonus or penalty to education access for [GetPopType('laborers').GetName]" #NT!
  usfp_reservation_spending_modifier: "Reservatsbudget"
  usfp_anti_indian_policy_positive_ig_modifier: "Anti-Indianer-Politik"
  usfp_black_suffrage_denied_modifier: "Wahlrecht verweigert"
  usfp_settlers_gone_west_modifier: "Siedler sind nach Westen gezogen"
  usfp_treaty_of_detroit_modifier: "Vertrag von Detroit"
  usfp_arctic_subsistence_modifier: "Arktische Subsistenz"
- usfp_rain_doesnt_follow_the_plow_modifier: "Rain Doesn’t Follow the Plow" #NT!
- usfp_mexicans_arent_white_modifier: "Mexicans aren’t White" #NT!
- usfp_prairie_madness_modifier: "Prairie Madness" #NT!
- usfp_constitutional_tariff_modifier: "No Export Tariffs" #NT!
- usfp_federal_government_modifier: "Federal Government" #NT!
- usfp_trust_busting_company_modifier: "Forced Breakups" #NT!
- usfp_white_mans_country_modifier: "White Man’s Country" #NT!
+ usfp_rain_doesnt_follow_the_plow_modifier: "Rain Doesn’t Follow the Plow"
+ usfp_mexicans_arent_white_modifier: "Mexicans aren’t White"
+ usfp_prairie_madness_modifier: "Prairie Madness"
+ usfp_constitutional_tariff_modifier: "No Export Tariffs"
+ usfp_federal_government_modifier: "Federal Government"
+ usfp_trust_busting_company_modifier: "Forced Breakups"
+ usfp_white_mans_country_modifier: "White Man’s Country"
+ usfp_california_genocide_modifier: "Widespread Massacres" #NT!
+ usfp_a_womans_place_negative_modifier: "A Woman’s Place" #NT!
+ usfp_a_womans_place_positive_modifier: "A Woman’s Place" #NT!
+ usfp_peoples_house_positive_modifier: "The People’s House" #NT!
+ usfp_moral_suasion_modifier: "Moral Suasion" #NT!
+ usfp_underground_railroad_supporting_modifier: "Supporting Underground Railroad" #NT!
+ usfp_underground_railroad_suppressing_modifier: "Suppressing Underground Railroad" #NT!
+ usfp_csa_cotton_diplomacy_modifier: "Cotton Diplomacy" #NT!
+ usfp_csa_states_rights_modifier: "Internal Divides" #NT!
+ usfp_colored_troop_recruitment_modifier: "Colored Troop Recruitment" #NT!
+ usfp_colored_troops_movement_modifier: "War of Liberation" #NT!
+ usfp_lost_cause_movement_legacy_modifier: "Lost Cause Lives On" #NT!
+ usfp_movement_mollified_by_racism_modifier: "Supremacy Affirmed" #NT!
+ usfp_movement_agitated_by_racism_modifier: "Justice Denied" #NT!
+ usfp_seperate_but_equal_modifier: "Separate But Equal" #NT!
+ usfp_white_state_government_modifier: "Supremacist Government" #NT!
+ usfp_mollified_by_antiracism_modifier: "Affirmative Action" #NT!
+ usfp_movement_agitated_by_antiracism_modifier: "Race Treason" #NT!
+ usfp_naacp_movement_modifier: "NAACP" #NT!
+ usfp_naacp_country_modifier: "NAACP" #NT!
+ usfp_great_white_hope_movement_modifier: "Great White Hopes Dashed" #NT!
+ usfp_countrywide_anti_black_violence_modifier: "Nationwide Racist Violence" #NT!
+ usfp_reconstruction_white_fatigue_modifier: "Northern Reticence" #NT!
+ usfp_reconstruction_occupation_authority_modifier: "Expanded Federal Authority" #NT!
+ usfp_freedmens_holdings: "Freedmen’s Holdings" #NT!
+ usfp_slave_market_collapse_modifier: "Collapse of the Slave Economy" #NT!
+ usfp_racist_scapegoating_movement_modifier: "Racist Scapegoating" #NT!
+ usfp_safety_in_numbers_movement_modifier: "Safety in Numbers" #NT!
+ usfp_state_race_riot_aftermath_modifier: "Racist Violence" #NT!
+ usfp_harlem_renaissance_modifier: "Cultural Innovations" #NT!
+ usfp_enduring_renaissance_movement_modifier: "Enduring Renaissance" #NT!
+ usfp_black_wall_street_modifier: "Black Wall Street" #NT!
+ usfp_new_klan_movement_modifier: "The Second Klan" #NT!
+ usfp_separate_but_equal_modifier: "“Separate But Equal”" #NT!
+ usfp_effective_organizing_movement_modifier: "Effective Organizing" #NT!
+ usfp_colonization_over_revolution_modifier: "Colonization, not Revolution" #NT!
+ usfp_provisional_president_of_africa: "Provisional President of Africa" #NT!
+ usfp_dominicans_arent_white_modifier: "Dominicans aren’t White" #NT!
+ usfp_wide_awake_volunteers_modifier: "Youth Volunteers" #NT!
+ usfp_wide_awake_abolitionist_modifier: "Wide Awake" #NT!
+ usfp_wide_awake_pro_slavery_modifier: "Paramilitary Brawls" #NT!
+ usfp_cross_atlantic_correspondence_movement_modifier: "Cross-Atlantic Correspondence" #NT!
+ usfp_feminist_movement_angered_modifier: "Against Misogyny" #NT!
+ usfp_changing_nominee_ig_modifier: "Leadership Shakeup" #NT!
+ usfp_christian_nation_movement_modifier: "Christian Nation" #NT!
+ usfp_anti_romanism_movement_modifier: "Anti-Romanism" #NT!
+ usfp_racist_intimidation_modifier: "Racist Suppression" #NT!
+ usfp_anti_war_agitation_modifier: "War Opposition" #NT!
+ usfp_promoted_afro_american_colonization: "Promoted Afro-American Colonization" #NT!

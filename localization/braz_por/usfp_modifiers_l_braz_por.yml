@@ -1,232 +1,284 @@
 ﻿l_braz_por:
- usfp_albany_regency: "Albany Regency" #NT!
- usfp_burnt_over_district: "Burned-Over District" #NT!
- usfp_red_river_revival: "Red River Revival" #NT!
- usfp_second_great_awakening: "Second Great Awakening" #NT!
- usfp_seminole_modifier: "Seminole Warbands" #NT!
- usfp_gag_rule_modifier: "Gag Rule" #NT!
- usfp_missouri_compromise_decaying: "Compromise of 1820" #NT!
- usfp_second_party_system_modifier: "Second Party System" #NT!
- usfp_slave_power_modifier: "Slave Power" #NT!
- usfp_a_house_divided_modifier: "A House Divided" #NT!
- usfp_slavers_reject_abolition: "Abolitionism Rejected" #NT!
- usfp_seminole_war_modifier: "Seminole Wars" #NT!
- usfp_trail_of_tears_modifier: "Trail of Tears" #NT!
- usfp_manifest_destiny_modifier: "Manifest Destiny" #NT!
- usfp_promoted_native_removal_negative: "Promoted Indian Removal" #NT!
- usfp_promoted_native_removal_positive: "Promoted Indian Removal" #NT!
- usfp_resisted_native_removal_positive: "Opposed Indian Removal" #NT!
- usfp_resisted_native_removal_negative: "Opposed Indian Removal" #NT!
- usfp_manifest_destiny_refused_texas: "Abandoned Texians" #NT!
- usa_paying_for_mexico: "Mexican Purchase" #NT!
- mexico_getting_paid_by_usa: "Mexican Purchase" #NT!
- usfp_vanishing_indian_modifier: "Myth of the Vanishing Indian" #NT!
- indian_removal_oppose: "Indian Removal" #NT!
- usfp_opposing_indian_removal: "Opposition to Indian Removal" #NT!
- usfp_removal_martyr: "Martyred Leader" #NT!
- usfp_rejected_feminism_positive: "Rejected Feminism" #NT!
- usfp_modifier_hurricane_relief: "Hurricane Relief" #NT!
- usfp_modifier_tornado_relief: "Tornado Relief" #NT!
- usfp_ellis_island_modifier: "Ellis Island" #NT!
- usfp_modifier_wildfire_relief: "Wildfire Relief" #NT!
- usfp_wildfire_recovery_modifier: "Recovering from Wildfire" #NT!
- usfp_great_urban_fire_modifier: "Great Urban Fire" #NT!
- usfp_harpers_weekly: "Harper’s Weekly" #NT!
- usfp_abolitionist_literature_ig: "Abolitionist Literature" #NT!
- usfp_abolitionist_literature_movement_modifier: "Abolitionist Literature" #NT!
- usfp_abolitionist_literature_ig_negative: "Abolitionist Literature" #NT!
- usfp_congressional_uproar: "Congressional Uproar" #NT!
- usfp_crisis_of_the_south_ig: "Crisis of the South" #NT!
- usfp_flattering_political_cartoon: "Flattering Political Cartoon" #NT!
- usfp_mocking_political_cartoon: "Mocking Political Cartoon" #NT!
- usfp_media_disfavor: "Media Disfavor" #NT!
- usfp_harpers_weekly_character: "Harpers Weekly" #NT!
- usfp_ig_constitutional_challenge: "Constitutional Challenge" #NT!
- usfp_ig_constitutional_protector: "Constitutional Outrage" #NT!
- usfp_ig_breaking_constitution: "Flaunting the Constitution" #NT!
- usfp_creative_constitutionalism: "Creative Constitutional Interpretation" #NT!
- usfp_breaking_constitution: "Flaunting the Constitution" #NT!
- usfp_ig_rejected_scientific_management_positive: "Rejected Scientific Management" #NT!
- usfp_ig_embraced_scientific_management_negative: "Embraced Scientific Management" #NT!
- usfp_ig_embraced_scientific_management_positive: "Embraced Scientific Management" #NT!
- usfp_modifier_supreme_court_bribery: "Judicial Donations" #NT!
- usfp_cross_of_gold_ig: "Cross of Gold" #NT!
- usfp_free_silver_ig: "Free Silver" #NT!
- usfp_iww_ig: "Industrial Workers of the World" #NT!
- usfp_gold_rush_lawlessness: "Lawless Gold Rush" #NT!
- usfp_loose_hippos: "Wild Hippopotamuses" #NT!
- usfp_threatening_union: "Destabilizing the Union" #NT!
- usfp_cherokee_syllabary: "Cherokee Syllabary" #NT!
- usfp_fugitive_slave_law: "Fugitive Slave Act" #NT!
- usfp_1850_compromise_decaying: "Compromise with the South" #NT!
- usfp_homestead_act_modifier: "Homestead Acts" #NT!
- usfp_acw_union_modifier: "The Union Forever" #NT!
- usfp_acw_csa_modifier: "Rebel Yell" #NT!
- usfp_acw_fsa_modifier: "The Flag That Makes You Free" #NT!
- usfp_fighting_in_congress: "Brawling Representatives" #NT!
- usfp_breaking_compromise: "Breaking Compromise" #NT!
- usa_paying_for_cuba: "Paying for Cuba" #NT!
- spain_getting_paid_by_usa: "Cuban Purchase" #NT!
- usfp_abandoned_cuba: "Abandoned Cuba" #NT!
- usfp_homestead_administration: "Homestead Bureaucracy" #NT!
- usfp_indian_removal_modifier: "Indian Removal" #NT!
- usfp_third_party_system_modifier: "Third Party System" #NT!
- usfp_ig_sectional_realignment: "Sectional Realignment" #NT!
- usfp_dred_scott_fallout: "Dred Scott Decision" #NT!
- usfp_ignored_monroe: "Ignored Monroe Doctrine" #NT!
- usfp_ignored_monroe_modifier: "Ignored Monroe Doctrine" #NT!
- usfp_prosecuted_anarchists_positive: "Prosecuted Anarchists" #NT!
- usfp_prosecuted_anarchists_negative: "Prosecuted Anarchists" #NT!
- usfp_international_workers_day: "International Workers Day" #NT!
- usfp_deep_south_modifier: "Deep South" #NT!
- usfp_upper_south_modifier: "Upper South" #NT!
- usfp_emigrant_aid_company: "Emigrant Aid Company" #NT!
- usfp_intervening_in_kansas: "Kansas Intervention" #NT!
- usfp_john_browns_body: "His Soul Goes Marching On" #NT!
- usfp_slave_revolt: "Slave Revolt" #NT!
- usfp_the_melting_pot_modifier: "The Melting Pot" #NT!
- usfp_e_pluribus_unum_modifier: "E Pluribus Unum" #NT!
- usfp_great_triumvirate: "Great Triumvirate" #NT!
- usfp_diplomats_intercepted: "Intercepted Diplomats" #NT!
- usfp_restrained_looting: "Restrained Pillaging" #NT!
- usfp_draft_exemptions: "Draft Exemptions" #NT!
- usfp_land_redistribution: "Land Redistribution" #NT!
- usfp_enforcing_reconstruction: "Enforcing Reconstruction" #NT!
- usfp_freedmens_bureau: "Freedmens Bureau" #NT!
- usfp_lost_cause: "Lost Cause" #NT!
- usfp_confederados_ig: "Confederados" #NT!
- usfp_jim_crow: "Jim Crow" #NT!
- usfp_radical_reconstruction_demand: "Promise of Reconstruction" #NT!
- usfp_election_underdog: "Electoral Outreach" #NT!
- usfp_party_nominee_ig: "Party Nomination" #NT!
- usfp_labor_agitation: "Labor Agitation" #NT!
- usfp_arctic_isolation: "Arctic Isolation" #NT!
- usfp_secession_legimitized: "Secession Legitimized" #NT!
- usfp_lost_civil_war: "Civil War Loser" #NT!
- usfp_oregon_migration: "Oregon Trail" #NT!
- usfp_oregon_gouging: "Oregon Trail Price Gouging" #NT!
- usfp_horse_creek_treaty: "Horse Creek Treaty" #NT!
- usfp_lds_church_des: "Theodemocracy" #NT!
- usfp_lds_farms: "United Orders" #NT!
- usfp_american_moses: "American Moses" #NT!
- usfp_lds_church_utah: "Church of Jesus Christ of Latter-Day Saints" #NT!
- usfp_post_civil_war_army: "Heroes of the Civil War" #NT!
- usfp_civil_war_hero: "Civil War Hero" #NT!
- usfp_imminent_secession: "Imminent Secession" #NT!
- usfp_imminent_secession_movement: "Imminent Secession" #NT!
- usfp_public_sympathy: "Public Sympathies" #NT!
- usfp_sea_to_shining_sea_modifier: "Sea to Shining Sea" #NT!
- usfp_federal_territory_colony: "Federal Territory" #NT!
- usfp_rejected_filibustering: "Rejected Filibustering" #NT!
- usfp_filibusters_modifier: "Filibusters" #NT!
- usfp_caesarism: "Caesarism" #NT!
- usfp_kingfish: "Kingfish" #NT!
- usfp_imperial_ambitions: "Imperial Ambitions" #NT!
- usfp_constitutional_chaos: "Constitutional Chaos" #NT!
- usfp_gilded_age_modifier: "Gilded Age" #NT!
- usfp_gilded_age_corruption_modifier: "Robber Barons" #NT!
- usfp_canadian_colonization_modifier: "Canadian Frontier" #NT!
- usfp_knights_of_labor: "Knights of Labor" #NT!
- usfp_progress_and_poverty_modifier: "Progress and Poverty" #NT!
- usfp_negotiated_with_strike_positive_modifier: "Negotiated with Strike" #NT!
- usfp_negotiated_with_strike_negative_modifier: "Negotiated with Strike" #NT!
- usfp_railway_strike: "Railway Strike" #NT!
- usfp_failed_to_react_to_strike_modifier: "Failed Strike Response" #NT!
- usfp_labor_promises: "Labor Reform Promises" #NT!
- usfp_afl_modifier: "American Federation of Labor" #NT!
- usfp_nationalist_clubs_modifier: "Nationalist Clubs" #NT!
- usfp_octopus_garden: "Octopus’s Garden" #NT!
- usfp_supported_new_rich_positive_modifier: "New Money Favors" #NT!
- usfp_supported_new_rich_negative_modifier: "New Money Favors" #NT!
- usfp_railroad_boom: "Railroad Boom" #NT!
- usfp_railroad_bust: "Railroad Bust" #NT!
- usfp_scandal_outrage_modifier: "Government Scandal" #NT!
- usfp_investigated_scandal_modifier: "Investigated Corruption" #NT!
- usfp_eugenics_movement_rising_modifier: "Eugenics Movement" #NT!
- usfp_trust_busting_positive_modifier: "Trust Busting" #NT!
- usfp_trust_busting_negative_modifier: "Trust Busting" #NT!
- usfp_pro_monopoly_negative_modifier: "Monopolist" #NT!
- usfp_anti_trust_agitation: "Antitrust Agitation" #NT!
- usfp_tammany_hall_modifier: "Tammany Hall Machine" #NT!
- usfp_post_office_undermined_modifier: "Post Office Chaos" #NT!
- usfp_corruption_lure_modifier: "Good Stealings" #NT!
- usfp_getting_things_done_modifier: "Getting Things Done" #NT!
- usfp_peoples_petitions_modifier: "Will Not Be Silenced" #NT!
- usfp_healing_the_nation_modifier: "Healing the Nation" #NT!
- usfp_socialist_press_for_more_modifier: "There’s a Better World That’s a Comin’" #NT!
- usfp_progressive_victory_modifier: "Progress Triumphant" #NT!
- usfp_philanthropist: "Philanthropist" #NT!
- usfp_gospel_of_wealth_modifier: "Gospel of Wealth" #NT!
- usfp_grange_movement_modifier: "Grange Movement" #NT!
- usfp_captive_state_government: "Machine Politics" #NT!
- usfp_company_town_state_modifier: "Company Towns" #NT!
- usfp_trust_busting_authority_modifier: "Trust Busting" #NT!
- usfp_industrialists_corruption_modifier: "Friends in High Places" #NT!
- usfp_federal_corruption_modifier: "Federal Corruption" #NT!
- usfp_trust_dominance_modifier: "Congress of Trusts" #NT!
- usfp_anti_imperialist_league_modifier: "Anti-Imperialist League" #NT!
- usfp_anti_imperialist_league_ig_modifier: "Anti-Imperialist League" #NT!
- usfp_true_faith_ig_modifier: "True Faith" #NT!
- usfp_fourth_party_system_modifier: "Fourth Party System" #NT!
- usfp_state_ballot_initiatives_modifier: "Initiative and Referendum" #NT!
- usfp_raja_yoga: "Raja Yoga" #NT!
- usfp_city_beautiful_modifier: "City Beautiful" #NT!
- usfp_national_mall: "National Mall" #NT!
- usfp_fighting_corruption_modifier: "Anti-Corruption Measures" #NT!
- usfp_social_hygiene_modifier: "Social Hygiene" #NT!
- usfp_victorian_modesty_modifier: "Modesty" #NT!
- usfp_pro_child_labor_modifier: "Supported Child Labor" #NT!
- usfp_muckraker_movement_modifier: "Muckraker Exposé" #NT!
- usfp_the_jungle_modifier: "The Jungle" #NT!
- usfp_bitter_cry_of_children_modifier: "The Bitter Cry of Children" #NT!
- usfp_meat_inspectors_modifier: "Meat Inspections" #NT!
- usfp_pure_drugs_modifier: "Pure Drugs" #NT!
- usfp_censored_muckraker_modifier: "Censored Muckraker" #NT!
- usfp_national_mall_modifier: "National Mall" #NT!
- usfp_victory_over_nullification_crisis_modifier: "Victory in the Nullification Crisis" #NT!
- usfp_hundred_years_of_america_modifier: "One Hundred Years of Liberty" #NT!
- usfp_contested_election_modifier: "Contested Election" #NT!
- usfp_caved_to_assassin_modifier: "Cowed by Assassination" #NT!
- usfp_frontier_agents_modifier: "Frontier Agents" #NT!
- usfp_gag_rule_movement_modifier: "Petitions Tabled" #NT!
- usfp_missouri_compromise_modifier: "Missouri Compromise" #NT!
- usfp_secession_defused_modifier: "Secession Defused" #NT!
- usfp_war_caucus_modifier: "War Caucus" #NT!
- usfp_post_acw_demobilization_modifier: "Post-Civil War Demobilization" #NT!
- usfp_reconstruction_army_duties_modifier: "Army Reconstruction Duties" #NT!
- usfp_nez_perce_warriors_modifier: "Expert Warriors" #NT!
- usfp_settler_westward_pressure: "Settler Pressure" #NT!
- usfp_white_mans_diseases_modifier: "White Man’s Diseases" #NT!
- usfp_plains_tech_trade_modifier: "Plains Trade" #NT!
- usfp_plains_master: "Lord of the Plains" #NT!
- usfp_indian_agencies_modifier: "Indian Agencies" #NT!
- usfp_comancheization_modifier: "Comancheization" #NT!
- usfp_lava_beds_modifier: "Lava Bed Redoubts" #NT!
- usfp_indian_boarding_schools_modifier: "Indian Boarding Schools" #NT!
- usfp_accomodating_indians_modifier: "Accomodating Indians" #NT!
- usfp_land_runs_modifier: "Land Runs" #NT!
- usfp_manifest_destiny_ig_positive_modifier: "Manifest Destiny" #NT!
- usfp_medals_awarded_modifier: "Medals Awarded" #NT!
- usfp_court_martials_modifier: "Courts-Martial" #NT!
- usfp_ghost_dance_state_modifier: "Ghost Dance" #NT!
- usfp_ghost_dance_state_legacy_modifier: "Legacy of the Ghost Dance" #NT!
- usfp_denied_gold_miners_modifier: "Denied Goldseekers" #NT!
- usfp_lawless_frontier_ig_modifier: "Lawless Frontier" #NT!
- usfp_frontier_army_duties_modifier: "Frontier Logistics" #NT!
- usfp_sacred_warpath: "Sacred Warpath" #NT!
- usfp_indian_defender: "Indian Defender" #NT!
- usfp_native_auxiliaries: "Native Auxiliaries" #NT!
- state_farmers_education_access_add: "Education Access for [GetPopType('farmers').GetName]" #NT!
- state_farmers_education_access_add_desc: "A bonus or penalty to education access for [GetPopType('farmers').GetName]" #NT!
- usfp_reservation_spending_modifier: "Reservation Budget" #NT!
- usfp_anti_indian_policy_positive_ig_modifier: "Anti-Indian Policy" #NT!
- usfp_black_suffrage_denied_modifier: "Suffrage Denied" #NT!
- usfp_settlers_gone_west_modifier: "Settlers Gone West" #NT!
- usfp_treaty_of_detroit_modifier: "Treaty of Detroit" #NT!
- usfp_arctic_subsistence_modifier: "Arctic Subsistence" #NT!
- usfp_rain_doesnt_follow_the_plow_modifier: "Rain Doesn’t Follow the Plow" #NT!
- usfp_mexicans_arent_white_modifier: "Mexicans aren’t White" #NT!
- usfp_prairie_madness_modifier: "Prairie Madness" #NT!
- usfp_constitutional_tariff_modifier: "No Export Tariffs" #NT!
- usfp_federal_government_modifier: "Federal Government" #NT!
- usfp_trust_busting_company_modifier: "Forced Breakups" #NT!
+ usfp_albany_regency: "Albany Regency"
+ usfp_burnt_over_district: "Burned-Over District"
+ usfp_red_river_revival: "Red River Revival"
+ usfp_second_great_awakening: "Second Great Awakening"
+ usfp_seminole_modifier: "Seminole Warbands"
+ usfp_gag_rule_modifier: "Gag Rule"
+ usfp_missouri_compromise_decaying: "Compromise of 1820"
+ usfp_second_party_system_modifier: "Second Party System"
+ usfp_slave_power_modifier: "Slave Power"
+ usfp_a_house_divided_modifier: "A House Divided"
+ usfp_slavers_reject_abolition: "Abolitionism Rejected"
+ usfp_seminole_war_modifier: "Seminole Wars"
+ usfp_trail_of_tears_modifier: "Trail of Tears"
+ usfp_manifest_destiny_modifier: "Manifest Destiny"
+ usfp_promoted_native_removal_negative: "Promoted Indian Removal"
+ usfp_promoted_native_removal_positive: "Promoted Indian Removal"
+ usfp_resisted_native_removal_positive: "Opposed Indian Removal"
+ usfp_resisted_native_removal_negative: "Opposed Indian Removal"
+ usfp_manifest_destiny_refused_texas: "Abandoned Texians"
+ usa_paying_for_mexico: "Mexican Purchase"
+ mexico_getting_paid_by_usa: "Mexican Purchase"
+ usfp_vanishing_indian_modifier: "Myth of the Vanishing Indian"
+ indian_removal_oppose: "Indian Removal"
+ usfp_opposing_indian_removal: "Opposition to Indian Removal"
+ usfp_removal_martyr: "Martyred Leader"
+ usfp_rejected_feminism_positive: "Rejected Feminism"
+ usfp_modifier_hurricane_relief: "Hurricane Relief"
+ usfp_modifier_tornado_relief: "Tornado Relief"
+ usfp_ellis_island_modifier: "Ellis Island"
+ usfp_modifier_wildfire_relief: "Wildfire Relief"
+ usfp_wildfire_recovery_modifier: "Recovering from Wildfire"
+ usfp_great_urban_fire_modifier: "Great Urban Fire"
+ usfp_harpers_weekly: "Harper’s Weekly"
+ usfp_abolitionist_literature_ig: "Abolitionist Literature"
+ usfp_abolitionist_literature_movement_modifier: "Abolitionist Literature"
+ usfp_abolitionist_literature_ig_negative: "Abolitionist Literature"
+ usfp_congressional_uproar: "Congressional Uproar"
+ usfp_crisis_of_the_south_ig: "Crisis of the South"
+ usfp_flattering_political_cartoon: "Flattering Political Cartoon"
+ usfp_mocking_political_cartoon: "Mocking Political Cartoon"
+ usfp_media_disfavor: "Media Disfavor"
+ usfp_harpers_weekly_character: "Harpers Weekly"
+ usfp_ig_constitutional_challenge: "Constitutional Challenge"
+ usfp_ig_constitutional_protector: "Constitutional Outrage"
+ usfp_ig_breaking_constitution: "Flaunting the Constitution"
+ usfp_creative_constitutionalism: "Creative Constitutional Interpretation"
+ usfp_breaking_constitution: "Flaunting the Constitution"
+ usfp_ig_rejected_scientific_management_positive: "Rejected Scientific Management"
+ usfp_ig_embraced_scientific_management_negative: "Embraced Scientific Management"
+ usfp_ig_embraced_scientific_management_positive: "Embraced Scientific Management"
+ usfp_modifier_supreme_court_bribery: "Judicial Donations"
+ usfp_cross_of_gold_ig: "Cross of Gold"
+ usfp_free_silver_ig: "Free Silver"
+ usfp_iww_ig: "Industrial Workers of the World"
+ usfp_gold_rush_lawlessness: "Lawless Gold Rush"
+ usfp_loose_hippos: "Wild Hippopotamuses"
+ usfp_threatening_union: "Destabilizing the Union"
+ usfp_cherokee_syllabary: "Cherokee Syllabary"
+ usfp_fugitive_slave_law: "Fugitive Slave Act"
+ usfp_1850_compromise_decaying: "Compromise with the South"
+ usfp_homestead_act_modifier: "Homestead Acts"
+ usfp_acw_union_modifier: "The Union Forever"
+ usfp_acw_csa_modifier: "Rebel Yell"
+ usfp_acw_fsa_modifier: "The Flag That Makes You Free"
+ usfp_fighting_in_congress: "Brawling Representatives"
+ usfp_breaking_compromise: "Breaking Compromise"
+ usa_paying_for_cuba: "Paying for Cuba"
+ spain_getting_paid_by_usa: "Cuban Purchase"
+ usfp_abandoned_cuba: "Abandoned Cuba"
+ usfp_homestead_administration: "Homestead Bureaucracy"
+ usfp_indian_removal_modifier: "Indian Removal"
+ usfp_third_party_system_modifier: "Third Party System"
+ usfp_ig_sectional_realignment: "Sectional Realignment"
+ usfp_dred_scott_fallout: "Dred Scott Decision"
+ usfp_ignored_monroe: "Ignored Monroe Doctrine"
+ usfp_ignored_monroe_modifier: "Ignored Monroe Doctrine"
+ usfp_prosecuted_anarchists_positive: "Prosecuted Anarchists"
+ usfp_prosecuted_anarchists_negative: "Prosecuted Anarchists"
+ usfp_international_workers_day: "International Workers Day"
+ usfp_deep_south_modifier: "Deep South"
+ usfp_upper_south_modifier: "Upper South"
+ usfp_emigrant_aid_company: "Emigrant Aid Company"
+ usfp_intervening_in_kansas: "Kansas Intervention"
+ usfp_john_browns_body: "His Soul Goes Marching On"
+ usfp_slave_revolt: "Slave Revolt"
+ usfp_the_melting_pot_modifier: "The Melting Pot"
+ usfp_e_pluribus_unum_modifier: "E Pluribus Unum"
+ usfp_great_triumvirate: "Great Triumvirate"
+ usfp_diplomats_intercepted: "Intercepted Diplomats"
+ usfp_restrained_looting: "Restrained Pillaging"
+ usfp_draft_exemptions: "Draft Exemptions"
+ usfp_land_redistribution: "Land Redistribution"
+ usfp_enforcing_reconstruction: "Enforcing Reconstruction"
+ usfp_freedmens_bureau: "Freedmens Bureau"
+ usfp_lost_cause: "Lost Cause"
+ usfp_confederados_ig: "Confederados"
+ usfp_jim_crow: "Jim Crow"
+ usfp_radical_reconstruction_demand: "Promise of Reconstruction"
+ usfp_election_underdog: "Electoral Outreach"
+ usfp_party_nominee_ig: "Party Nomination"
+ usfp_labor_agitation: "Labor Agitation"
+ usfp_arctic_isolation: "Arctic Isolation"
+ usfp_secession_legimitized: "Secession Legitimized"
+ usfp_lost_civil_war: "Civil War Loser"
+ usfp_oregon_migration: "Oregon Trail"
+ usfp_oregon_gouging: "Oregon Trail Price Gouging"
+ usfp_horse_creek_treaty: "Horse Creek Treaty"
+ usfp_lds_church_des: "Theodemocracy"
+ usfp_lds_farms: "United Orders"
+ usfp_american_moses: "American Moses"
+ usfp_lds_church_utah: "Church of Jesus Christ of Latter-Day Saints"
+ usfp_post_civil_war_army: "Heroes of the Civil War"
+ usfp_civil_war_hero: "Civil War Hero"
+ usfp_imminent_secession: "Imminent Secession"
+ usfp_imminent_secession_movement: "Imminent Secession"
+ usfp_public_sympathy: "Public Sympathies"
+ usfp_sea_to_shining_sea_modifier: "Sea to Shining Sea"
+ usfp_federal_territory_colony: "Federal Territory"
+ usfp_rejected_filibustering: "Rejected Filibustering"
+ usfp_filibusters_modifier: "Filibusters"
+ usfp_caesarism: "Caesarism"
+ usfp_kingfish: "Kingfish"
+ usfp_imperial_ambitions: "Imperial Ambitions"
+ usfp_constitutional_chaos: "Constitutional Chaos"
+ usfp_gilded_age_modifier: "Gilded Age"
+ usfp_gilded_age_corruption_modifier: "Robber Barons"
+ usfp_canadian_colonization_modifier: "Canadian Frontier"
+ usfp_knights_of_labor: "Knights of Labor"
+ usfp_progress_and_poverty_modifier: "Progress and Poverty"
+ usfp_negotiated_with_strike_positive_modifier: "Negotiated with Strike"
+ usfp_negotiated_with_strike_negative_modifier: "Negotiated with Strike"
+ usfp_railway_strike: "Railway Strike"
+ usfp_failed_to_react_to_strike_modifier: "Failed Strike Response"
+ usfp_labor_promises: "Labor Reform Promises"
+ usfp_afl_modifier: "American Federation of Labor"
+ usfp_nationalist_clubs_modifier: "Nationalist Clubs"
+ usfp_octopus_garden: "Octopus’s Garden"
+ usfp_supported_new_rich_positive_modifier: "New Money Favors"
+ usfp_supported_new_rich_negative_modifier: "New Money Favors"
+ usfp_railroad_boom: "Railroad Boom"
+ usfp_railroad_bust: "Railroad Bust"
+ usfp_scandal_outrage_modifier: "Government Scandal"
+ usfp_investigated_scandal_modifier: "Investigated Corruption"
+ usfp_eugenics_movement_rising_modifier: "Eugenics Movement"
+ usfp_trust_busting_positive_modifier: "Trust Busting"
+ usfp_trust_busting_negative_modifier: "Trust Busting"
+ usfp_pro_monopoly_negative_modifier: "Monopolist"
+ usfp_anti_trust_agitation: "Antitrust Agitation"
+ usfp_tammany_hall_modifier: "Tammany Hall Machine"
+ usfp_post_office_undermined_modifier: "Post Office Chaos"
+ usfp_corruption_lure_modifier: "Good Stealings"
+ usfp_getting_things_done_modifier: "Getting Things Done"
+ usfp_peoples_petitions_modifier: "Will Not Be Silenced"
+ usfp_healing_the_nation_modifier: "Healing the Nation"
+ usfp_socialist_press_for_more_modifier: "There’s a Better World That’s a Comin’"
+ usfp_progressive_victory_modifier: "Progress Triumphant"
+ usfp_philanthropist: "Philanthropist"
+ usfp_gospel_of_wealth_modifier: "Gospel of Wealth"
+ usfp_grange_movement_modifier: "Grange Movement"
+ usfp_captive_state_government: "Machine Politics"
+ usfp_company_town_state_modifier: "Company Towns"
+ usfp_trust_busting_authority_modifier: "Trust Busting"
+ usfp_industrialists_corruption_modifier: "Friends in High Places"
+ usfp_federal_corruption_modifier: "Federal Corruption"
+ usfp_trust_dominance_modifier: "Congress of Trusts"
+ usfp_anti_imperialist_league_modifier: "Anti-Imperialist League"
+ usfp_anti_imperialist_league_ig_modifier: "Anti-Imperialist League"
+ usfp_true_faith_ig_modifier: "True Faith"
+ usfp_fourth_party_system_modifier: "Fourth Party System"
+ usfp_state_ballot_initiatives_modifier: "Initiative and Referendum"
+ usfp_raja_yoga: "Raja Yoga"
+ usfp_city_beautiful_modifier: "City Beautiful"
+ usfp_national_mall: "National Mall"
+ usfp_fighting_corruption_modifier: "Anti-Corruption Measures"
+ usfp_social_hygiene_modifier: "Social Hygiene"
+ usfp_victorian_modesty_modifier: "Modesty"
+ usfp_pro_child_labor_modifier: "Supported Child Labor"
+ usfp_muckraker_movement_modifier: "Muckraker Exposé"
+ usfp_the_jungle_modifier: "The Jungle"
+ usfp_bitter_cry_of_children_modifier: "The Bitter Cry of Children"
+ usfp_meat_inspectors_modifier: "Meat Inspections"
+ usfp_pure_drugs_modifier: "Pure Drugs"
+ usfp_censored_muckraker_modifier: "Censored Muckraker"
+ usfp_national_mall_modifier: "National Mall"
+ usfp_victory_over_nullification_crisis_modifier: "Victory in the Nullification Crisis"
+ usfp_hundred_years_of_america_modifier: "One Hundred Years of Liberty"
+ usfp_contested_election_modifier: "Contested Election"
+ usfp_caved_to_assassin_modifier: "Cowed by Assassination"
+ usfp_frontier_agents_modifier: "Frontier Agents"
+ usfp_gag_rule_movement_modifier: "Petitions Tabled"
+ usfp_missouri_compromise_modifier: "Missouri Compromise"
+ usfp_secession_defused_modifier: "Secession Defused"
+ usfp_war_caucus_modifier: "War Caucus"
+ usfp_post_acw_demobilization_modifier: "Post-Civil War Demobilization"
+ usfp_reconstruction_army_duties_modifier: "Army Reconstruction Duties"
+ usfp_nez_perce_warriors_modifier: "Expert Warriors"
+ usfp_settler_westward_pressure: "Settler Pressure"
+ usfp_white_mans_diseases_modifier: "White Man’s Diseases"
+ usfp_plains_tech_trade_modifier: "Plains Trade"
+ usfp_plains_master: "Lord of the Plains"
+ usfp_indian_agencies_modifier: "Indian Agencies"
+ usfp_comancheization_modifier: "Comancheization"
+ usfp_lava_beds_modifier: "Lava Bed Redoubts"
+ usfp_indian_boarding_schools_modifier: "Indian Boarding Schools"
+ usfp_accomodating_indians_modifier: "Accomodating Indians"
+ usfp_land_runs_modifier: "Land Runs"
+ usfp_manifest_destiny_ig_positive_modifier: "Manifest Destiny"
+ usfp_medals_awarded_modifier: "Medals Awarded"
+ usfp_court_martials_modifier: "Courts-Martial"
+ usfp_ghost_dance_state_modifier: "Ghost Dance"
+ usfp_ghost_dance_state_legacy_modifier: "Legacy of the Ghost Dance"
+ usfp_denied_gold_miners_modifier: "Denied Goldseekers"
+ usfp_lawless_frontier_ig_modifier: "Lawless Frontier"
+ usfp_frontier_army_duties_modifier: "Frontier Logistics"
+ usfp_sacred_warpath: "Sacred Warpath"
+ usfp_indian_defender: "Indian Defender"
+ usfp_native_auxiliaries: "Native Auxiliaries"
+ state_farmers_education_access_add: "Education Access for [GetPopType('farmers').GetName]"
+ state_farmers_education_access_add_desc: "A bonus or penalty to education access for [GetPopType('farmers').GetName]"
+ state_laborers_education_access_add: "Education Access for [GetPopType('laborers').GetName]" #NT!
+ state_laborers_education_access_add_desc: "A bonus or penalty to education access for [GetPopType('laborers').GetName]" #NT!
+ usfp_reservation_spending_modifier: "Reservation Budget"
+ usfp_anti_indian_policy_positive_ig_modifier: "Anti-Indian Policy"
+ usfp_black_suffrage_denied_modifier: "Suffrage Denied"
+ usfp_settlers_gone_west_modifier: "Settlers Gone West"
+ usfp_treaty_of_detroit_modifier: "Treaty of Detroit"
+ usfp_arctic_subsistence_modifier: "Arctic Subsistence"
+ usfp_rain_doesnt_follow_the_plow_modifier: "Rain Doesn’t Follow the Plow"
+ usfp_mexicans_arent_white_modifier: "Mexicans aren’t White"
+ usfp_prairie_madness_modifier: "Prairie Madness"
+ usfp_constitutional_tariff_modifier: "No Export Tariffs"
+ usfp_federal_government_modifier: "Federal Government"
+ usfp_trust_busting_company_modifier: "Forced Breakups"
+ usfp_white_mans_country_modifier: "White Man’s Country" #NT!
+ usfp_california_genocide_modifier: "Widespread Massacres" #NT!
+ usfp_a_womans_place_negative_modifier: "A Woman’s Place" #NT!
+ usfp_a_womans_place_positive_modifier: "A Woman’s Place" #NT!
+ usfp_peoples_house_positive_modifier: "The People’s House" #NT!
+ usfp_moral_suasion_modifier: "Moral Suasion" #NT!
+ usfp_underground_railroad_supporting_modifier: "Supporting Underground Railroad" #NT!
+ usfp_underground_railroad_suppressing_modifier: "Suppressing Underground Railroad" #NT!
+ usfp_csa_cotton_diplomacy_modifier: "Cotton Diplomacy" #NT!
+ usfp_csa_states_rights_modifier: "Internal Divides" #NT!
+ usfp_colored_troop_recruitment_modifier: "Colored Troop Recruitment" #NT!
+ usfp_colored_troops_movement_modifier: "War of Liberation" #NT!
+ usfp_lost_cause_movement_legacy_modifier: "Lost Cause Lives On" #NT!
+ usfp_movement_mollified_by_racism_modifier: "Supremacy Affirmed" #NT!
+ usfp_movement_agitated_by_racism_modifier: "Justice Denied" #NT!
+ usfp_seperate_but_equal_modifier: "Separate But Equal" #NT!
+ usfp_white_state_government_modifier: "Supremacist Government" #NT!
+ usfp_mollified_by_antiracism_modifier: "Affirmative Action" #NT!
+ usfp_movement_agitated_by_antiracism_modifier: "Race Treason" #NT!
+ usfp_naacp_movement_modifier: "NAACP" #NT!
+ usfp_naacp_country_modifier: "NAACP" #NT!
+ usfp_great_white_hope_movement_modifier: "Great White Hopes Dashed" #NT!
+ usfp_countrywide_anti_black_violence_modifier: "Nationwide Racist Violence" #NT!
+ usfp_reconstruction_white_fatigue_modifier: "Northern Reticence" #NT!
+ usfp_reconstruction_occupation_authority_modifier: "Expanded Federal Authority" #NT!
+ usfp_freedmens_holdings: "Freedmen’s Holdings" #NT!
+ usfp_slave_market_collapse_modifier: "Collapse of the Slave Economy" #NT!
+ usfp_racist_scapegoating_movement_modifier: "Racist Scapegoating" #NT!
+ usfp_safety_in_numbers_movement_modifier: "Safety in Numbers" #NT!
+ usfp_state_race_riot_aftermath_modifier: "Racist Violence" #NT!
+ usfp_harlem_renaissance_modifier: "Cultural Innovations" #NT!
+ usfp_enduring_renaissance_movement_modifier: "Enduring Renaissance" #NT!
+ usfp_black_wall_street_modifier: "Black Wall Street" #NT!
+ usfp_new_klan_movement_modifier: "The Second Klan" #NT!
+ usfp_separate_but_equal_modifier: "“Separate But Equal”" #NT!
+ usfp_effective_organizing_movement_modifier: "Effective Organizing" #NT!
+ usfp_colonization_over_revolution_modifier: "Colonization, not Revolution" #NT!
+ usfp_provisional_president_of_africa: "Provisional President of Africa" #NT!
+ usfp_dominicans_arent_white_modifier: "Dominicans aren’t White" #NT!
+ usfp_wide_awake_volunteers_modifier: "Youth Volunteers" #NT!
+ usfp_wide_awake_abolitionist_modifier: "Wide Awake" #NT!
+ usfp_wide_awake_pro_slavery_modifier: "Paramilitary Brawls" #NT!
+ usfp_cross_atlantic_correspondence_movement_modifier: "Cross-Atlantic Correspondence" #NT!
+ usfp_feminist_movement_angered_modifier: "Against Misogyny" #NT!
+ usfp_changing_nominee_ig_modifier: "Leadership Shakeup" #NT!
+ usfp_christian_nation_movement_modifier: "Christian Nation" #NT!
+ usfp_anti_romanism_movement_modifier: "Anti-Romanism" #NT!
+ usfp_racist_intimidation_modifier: "Racist Suppression" #NT!
+ usfp_anti_war_agitation_modifier: "War Opposition" #NT!
+ usfp_promoted_afro_american_colonization: "Promoted Afro-American Colonization" #NT!

@@ -10,3 +10,5 @@
  join_existing_party: "Wir sollten einer [concept_party] beitreten"
  usfp_bourbon_democrats: "Bourbon-Demokraten"
  from_progressive_leader: "Progressiver Führer"
+ powerful_abolitionist: "[concept_powerful] [GetIdeology('ideology_abolitionist').GetName] [concept_leader]" #NT!
+ harlem_renaissance_movement_attraction: "[GetCulture('afro_american').GetName] Renaissance" #NT!
