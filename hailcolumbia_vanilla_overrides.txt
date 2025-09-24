@@ -3,6 +3,7 @@ USA agitator templates from VOTP
 BIC_swami_vivkananda
 
 resign_from_office #to prevent cheesing Slavery Banned
+grant_leadership_to_agitator
 
 common/flag_definitions/01_flag_definitions_usa.txt
 common/coat_of_arms/coat_of_arms/01_subs_usa.txt
@@ -84,6 +85,7 @@ events/texan_war_of_independence_events.txt
 can_aus.5
 slavery_law_events.7
 
-pm_default_building_white_house #extra migration and MAPI to help DC
 pm_religious_bureaucrats #disabled under Nominal Separation
 pm_religious_academia #disabled under Nominal Separation
+
+scripted trigger country_can_have_cultural_minority_movement_of_culture #to prevent Dixie National Movements

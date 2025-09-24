@@ -674,11 +674,38 @@ usfp_manifest_destiny.6 = {
 		show_as_unavailable = {
 			always = yes
 		}
+		if = {
+			limit = { 
+				NOT = {
+					any_political_movement = {
+						culture ?= cu:mexican
+					}
+				}
+			}
+			create_political_movement = {
+				type = movement_cultural_minority
+				culture = cu:mexican
+			}
+		}
+		random_political_movement = {
+			limit = {
+				culture ?= cu:mexican
+			}
+			add_modifier = {
+				name = usfp_legacy_of_mexican_conquest_modifier
+				years = 30
+				is_decaying = yes
+			}
+		}
 	}
 
 	#ALL OF MEXICO
 	option = {
 		name = usfp_manifest_destiny.6.g
+		highlighted_option = yes
+		show_as_unavailable = {
+			always = yes
+		}
 		trigger = {
 			custom_tooltip = {
 				text = enough_manifest_destiny
@@ -724,9 +751,29 @@ usfp_manifest_destiny.6 = {
 				years = 5
 			}
 		}
-		highlighted_option = yes
-		show_as_unavailable = {
-			always = yes
+		if = {
+			limit = { 
+				NOT = {
+					any_political_movement = {
+						culture ?= cu:mexican
+					}
+				}
+			}
+			create_political_movement = {
+				type = movement_cultural_minority
+				culture = cu:mexican
+			}
+		}
+		random_political_movement = {
+			limit = {
+				culture ?= cu:mexican
+			}
+			add_modifier = {
+				name = usfp_legacy_of_mexican_conquest_modifier
+				years = 30
+				multiplier = 2
+				is_decaying = yes
+			}
 		}
 	}
 
@@ -3265,15 +3312,13 @@ usfp_manifest_destiny.30 = {
 				culture = cu:mexican
 			}
 		}
-		else = {
-			every_political_movement = {
-				limit = {
-					culture ?= cu:mexican
-				}
-				add_modifier = {
-					name = usfp_safety_in_numbers_movement_modifier
-					years = 10
-				}
+		every_political_movement = {
+			limit = {
+				culture ?= cu:mexican
+			}
+			add_modifier = {
+				name = usfp_safety_in_numbers_movement_modifier
+				years = 10
 			}
 		}
 		ai_chance = {

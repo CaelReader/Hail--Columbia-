@@ -183,3 +183,9 @@ usfp_anti_war_agitation_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	political_movement_pop_attraction_mult = 0.10
 }
+
+usfp_legacy_of_mexican_conquest_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitulate_negative.dds
+	political_movement_pop_attraction_mult = 0.15
+	political_movement_radicalism_add = 0.10
+}

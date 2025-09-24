@@ -591,6 +591,19 @@ je_acw_reconstruction = {
 				multiplier = 100
 			}
 		}
+		if = {
+			limit = { 
+				NOT = {
+					any_political_movement = {
+						culture ?= cu:afro_american
+					}
+				}
+			}
+			create_political_movement = {
+				type = movement_cultural_minority
+				culture = cu:afro_american
+			}
+		}
 	}
 
 	scripted_button = usfp_reconstruction_enforce_rights_button

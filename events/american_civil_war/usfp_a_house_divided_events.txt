@@ -1837,6 +1837,9 @@ usfp_a_house_divided.19 = {
 				years = 4
 			}
 		}
+		scope:douglass_scope = {
+			add_trait = usfp_special_character_frederick_douglass
+		}
 	}
 
 	option = {
@@ -1844,6 +1847,9 @@ usfp_a_house_divided.19 = {
 		add_radicals = {
 			value = small_radicals
 			interest_group = ig:ig_intelligentsia
+		}
+		scope:douglass_scope = {
+			add_trait = usfp_special_character_frederick_douglass
 		}
 		ai_chance = {
 			base = 0

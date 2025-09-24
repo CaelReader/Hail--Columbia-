@@ -667,3 +667,13 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	Constitution JE fails if you pass a non-voting Distribution of Power law
 	Fixed California yankee homeland not being correctly applied
 	Fixed some loc errors
+
+# 6.1 "Douglass"
+Mexico no longer counts as "tropical" for the purposes of afro-american colonization
+Brother Against Brother event now increases both cultures' fervor
+Afro-American settlers can now only be sent to states with >0 free arable land
+Comanche can now centralize without needing AI Mexico to pass No Colonial Affairs
+Added special character trait for Frederick Douglass
+Increased the frequency of Long Reconstruction events
+Added effects at various points to ensure Mexican/Afro-American movements are created if they don't already exist
+You can no longer grant IG leadership to an agitator during an election

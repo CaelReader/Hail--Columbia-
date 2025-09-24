@@ -13,12 +13,25 @@ usfp_reconstruction_long = {
 		}
 		cu:dixie = {
 			save_scope_as = dixie_culture
+		}
+		if = {
+			limit = { 
+				NOT = {
+					any_political_movement = {
+						culture ?= cu:afro_american
+					}
+				}
+			}
+			create_political_movement = {
+				type = movement_cultural_minority
+				culture = cu:afro_american
+			}
 		}	
 	}
 
 	on_monthly_pulse = {
 		random_events = {
-			chance_to_happen = 10
+			chance_to_happen = 15
 			100 = usfp_usa_postreconstruction.2 #Plessy v Ferguson
 			100 = usfp_usa_postreconstruction.3 #Wilmington Coup
 			500 = usfp_usa_postreconstruction.5 #Great Migration

@@ -1,20 +1,21 @@
 [img]https://i.imgur.com/PsN4QiL.png[/img]
-[i]for Victoria 3 1.8.*[/i]
+[i]for Victoria 3 1.10.*[/i]
 
-Hail, Columbia! is a United States Flavor Pack, including overhauled and expanded journal entries, interest groups, and characters, as well as tons of new events unique to the USA and North America.
+Hail, Columbia! is a DLC-Sized Flavor Pack for the United States, including overhauled and expanded journal entries, interest groups, and characters, as well as tons of new events unique to the USA and North America.
 
-[b]Requires the [url=https://steamcommunity.com/workshop/filedetails/?id=3385002128]Community Mod Framework[/url]. Load this mod after the CMF in your load order.[/b]
+[b]Requires the [url=https://steamcommunity.com/workshop/filedetails/?id=3385002128]Community Mod Framework[/url]. Load this mod [i]after[/i] (below) the CMF in your load order.[/b]
 
 [img]https://i.imgur.com/xuNvuA3.png[/img]
 [list]
 [*]Overhauled map of [b]Native North America[/b], including many more indigenous nations than vanilla, as well as new state traits. Claims are assigned appropriately to prevent weird colonization. The American west will take much longer to be fully colonized by the United States than in vanilla.
 [*]Overhauled [b]Indian Removal[/b] and [b]Indian Wars[/b] content, with custom Journal Entries, expanded events, and new characters extending Indian history up to the 1900s: Seminole Wars, Oregon Trail, Red Cloud's War, the Ghost Dance, the Sequoyah Constitution.
-[*]Overhauled [b]Slavery Debate[/b] JE, including the full historical lead-up to the civil war: Missouri Compromise, Wilmot Proviso, Compromise of 1850, Kansas-Nebraska Act, Bleeding Kansas, Scott v Sandford. The civil war can be triggered at different times or be split along different borders based on the results.
+[*]Overhauled [b]Slavery Debate[/b] JE, including the full historical lead-up to the civil war: Missouri Compromise, Wilmot Proviso, Compromise of 1850, Kansas-Nebraska Act, Bleeding Kansas, and the Dred Scott decision. The civil war can be triggered at different times or be split along different borders based on the results.
 [*]Overhauled [b]Reconstruction[/b] content with new events and several final outcomes. Station federal troops in the south to enforce equality for the Freedmen, or make a deal with the devil and give the Redeemers free reign to impose Jim Crow.
+[*][b]Post-Reconstruction[/b] backlash and Afro-American content including the rise of the Neo-Confederate Movement, the Great Migration, Red Summer, the Harlem Renaissance, and additional alt-historical repercussions of a successful Radical Reconstruction.
 [*][b]Gilded Age[/b] JE showing the rise of corruption and Trusts in the United States, followed by the [b]Progressive Era[/b] of reform and new ideologies.
-[*]New permanent journal entry for the US tracking the influence of [b]Manifest Destiny[/b]. You can choose to avoid expansion and entanglements, stick to the historical borders, or promote Manifest Destiny to new heights and incorporate the entire continent into your great republic.
+[*]New long-term JE for the US tracking the influence of [b]Manifest Destiny[/b]. You can choose to avoid expansion and entanglements, stick to the historical borders, or promote Manifest Destiny to new heights and incorporate the entire continent into your great republic.
 [*][b]Mormon[/b] content, including the exodus to Deseret and the Utah War.
-[*][b]New flavor events[/b] for the US, such as the Seneca Falls Convention and the Great Chicago Fire, as well as various american natural disasters like wildfires and tornadoes. The mod includes [b]over 100 new events[/b] in total.
+[*][b]New flavor events[/b] for the US, including the Seneca Falls Convention, the Great Chicago Fire, and the American Hippo Bill, as well as various american natural disasters like wildfires and tornadoes. The mod includes [b]over 200 new events[/b] in total.
 [*]Overhauled Ideologies and Traits for American IGs, including [b]new alternate IG Traits[/b] unlocked during a playthrough.
 [*]Historical agitators, commanders, and politicians for America, including every historical president from Martin Van Buren to FDR.
 [*]New flavored companies for the USA including DuPont, Sears, and Coca-Cola, along with some new Prestige Goods and Executives.
@@ -26,22 +27,26 @@ Hail, Columbia! is a United States Flavor Pack, including overhauled and expande
 [*]More Social & Political Movements (Third Great Awakening, Social Gospel)
 [*]More Economic & Labor Events (Coal Wars, Roaring 20s, Panics)
 [*]More Foreign Policy Events (Great White Fleet, Panama Rebellion)
-[*]Post-Reconstruction Black History (NAACP, Great Migration, Harlem Renaissance)
 [*]Alternate History Content (CSA Victory, FSA, United Syndicates, Turtle Island) 
 [/list]
 
 [img]https://i.imgur.com/eD5BaRs.png[/img]
-Currently includes English, Korean, and German localizations. English text will be displayed for other languages. Feel free to create translations and upload them as seperate mods or send them my way. Check out the full list of Vanilla Overrides in the discussion section.
+Currently includes English, Korean, and German localizations. English text will be displayed for other languages. Feel free to create translations and upload them as seperate mods or send them my way. 
+Chinese localization available [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2880069248]here.[/url]
+Spanish localization available [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3498862406]here.[/url]
+Russian localization available [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3199730217]here.[/url]
+
+Check out the full list of Vanilla Overrides in the discussion section.
 [list]
 [*]Requires the [url=https://steamcommunity.com/workshop/filedetails/?id=3385002128]Community Mod Framework[/url]. Load this mod after the CMF in your load order.
-[*]Compatible with Australia & New Zealand Flavor Pack via the CMF.
+[*]Compatible with Australia & New Zealand Flavor Pack via the CMF. (WARNING: As of 1.9 there's a new problem on certain hardware where if you go above 420 countries on the map the game performance will tank. ANZFP and HC both add lots of decentralized countries to the map and combining the two will immediately exceed this limit.)
 [*]Compatible with Greece, Byzantium, & the Balkans Flavor Pack via the CMF.
 [*]Compatible with Morgenrote.
 [*]Compatible with VTM. Load this mod after that mod.
 [*]Compatible with ECCHI Redux. Load this mod after that mod.
 [*]Probably incompatible with any mod that changes the US or the state structure of North America.
-[*]Incompatible with Better Politics Mod (duplicate events, conflicting ACW handling)
-[*]Incompatible with Gilded Age and other large flavor mods (duplicate events & characters)
+[*]Incompatible with BPM.
+[*]Incompatible with Gilded Age, Victorian Century, and other large flavor mods (duplicate events & characters)
 [*]Compatible with VFM via [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3383870402]compatibility patch[/url].
 [/list]
 
@@ -61,3 +66,5 @@ Currently includes English, Korean, and German localizations. English text will 
 [/list]
 
 Thanks to the people of the [url=https://discord.gg/JFxS9vmaT7]Victoria 3 Mod Co-Op[/url] for being very helpful in general. Check out the #hail-columbia channel!
+
+Like the mod? Support my work by [url=https://ko-fi.com/caelreader]buying me a coffee![/url]

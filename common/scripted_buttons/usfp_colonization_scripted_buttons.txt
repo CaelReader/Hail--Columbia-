@@ -26,6 +26,7 @@
 				NOT = {
 					state_region = s:STATE_SINAI
 				}
+				free_arable_land > 0
 			}
 		}
 		any_scope_state = {
@@ -55,6 +56,7 @@
 					NOT = {
 						state_region = s:STATE_SINAI
 					}
+					free_arable_land > 0
 				}
 			}
 			ordered_scope_state = {
@@ -63,6 +65,7 @@
 					NOT = {
 						state_region = s:STATE_SINAI
 					}
+					free_arable_land > 0
 				}
 				order_by = free_arable_land
 				save_scope_as = afro_american_colonization_target_state
@@ -109,18 +112,22 @@ usfp_promote_afro_american_migration_south_america = {
 		OR = {
 			any_scope_state = {
 				OR = {
-					state_is_in_central_america = yes
+					region = sr:region_central_america
+					region = sr:region_caribbean
 					state_is_in_south_america = yes
 				}
+				free_arable_land > 0
 			}
 			market = {
 				any_scope_country = {
 					relations:root >= relations_threshold:cordial
 					any_scope_state = {
 						OR = {
-							state_is_in_central_america = yes
+							region = sr:region_central_america
+							region = sr:region_caribbean
 							state_is_in_south_america = yes
 						}
+						free_arable_land > 0
 					}
 				}
 			}
@@ -131,20 +138,26 @@ usfp_promote_afro_american_migration_south_america = {
 		OR = {
 			any_scope_state = {
 				OR = {
-					state_is_in_central_america = yes
+					region = sr:region_central_america
+					region = sr:region_caribbean
 					state_is_in_south_america = yes
 				}
+				free_arable_land > 0
 			}
 			market = {
 				any_scope_country = {
+					custom_tooltip = country_in_root_market
 					relations:root >= relations_threshold:cordial
 					any_scope_state = {
 						OR = {
-							state_is_in_central_america = yes
+							region = sr:region_central_america
+							region = sr:region_caribbean
 							state_is_in_south_america = yes
 						}
+						free_arable_land > 0
 					}
 				}
+				
 			}
 		}
 		any_scope_state = {
@@ -183,17 +196,21 @@ usfp_promote_afro_american_migration_south_america = {
 			limit = { 
 				any_scope_state = {
 					OR = {
-						state_is_in_central_america = yes
+						region = sr:region_central_america
+						region = sr:region_caribbean
 						state_is_in_south_america = yes
 					}
+					free_arable_land > 0
 				}
 			}
 			ordered_scope_state = {
 				limit = {
 					OR = {
-						state_is_in_central_america = yes
+						region = sr:region_central_america
+						region = sr:region_caribbean
 						state_is_in_south_america = yes
 					}
+					free_arable_land > 0
 				}
 				order_by = free_arable_land
 				save_scope_as = afro_american_colonization_target_state
@@ -206,17 +223,21 @@ usfp_promote_afro_american_migration_south_america = {
 						relations:root >= relations_threshold:cordial
 						any_scope_state = {
 							OR = {
-								state_is_in_central_america = yes
+								region = sr:region_central_america
+								region = sr:region_caribbean
 								state_is_in_south_america = yes
 							}
+							free_arable_land > 0
 						}
 					}
 					ordered_scope_state = {
 						limit = {
 							OR = {
-								state_is_in_central_america = yes
+								region = sr:region_central_america
+								region = sr:region_caribbean
 								state_is_in_south_america = yes
 							}
+							free_arable_land > 0
 						}
 						order_by = free_arable_land
 						save_scope_as = afro_american_colonization_target_state

@@ -34,7 +34,7 @@
  movement_usfp_neoconfederate: "Neo-Confederate Movement" #NT!
  movement_usfp_neoconfederate_name: "$movement_usfp_neoconfederate$" #NT!
  POP_SUPPORT_DIXIE_CULTURE: "[GetCulture('dixie').GetName] [concept_culture]" #NT!
- POP_SUPPORT_BLACK_SOL_DIFFERENCE: "[concept_sol] difference with $african_heritage$ [Concept('concept_pop', '$concept_pops$')]" #NT!
+ POP_SUPPORT_BLACK_SOL_DIFFERENCE: "[concept_sol] difference with $heritage_group_african$ [Concept('concept_pop', '$concept_pops$')]" #NT!
  POP_SUPPORT_MIXED_RECONSTRUCTION: "Divided Dixie" #NT!
  POP_SUPPORT_RADICAL_RECONSTRUCTION: "Radical Reconstruction" #NT!
  POP_SUPPORT_JIM_CROW_STATE: "[concept_usfp_jim_crow] [concept_state]" #NT!

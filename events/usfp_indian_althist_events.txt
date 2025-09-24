@@ -581,6 +581,7 @@ usfp_indian_althist.5 = {
 					has_state_in_state_region = STATE_TEXAS
 					has_state_in_state_region = STATE_NEW_MEXICO
 				}
+				is_ai = yes
 			}
 		}
 	}

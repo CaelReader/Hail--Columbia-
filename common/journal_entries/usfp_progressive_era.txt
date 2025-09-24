@@ -104,12 +104,33 @@ usfp_progressive_era = {
 	event_outcome_completed_effect_desc = {
 		effect = {
 			add_loyalists = {
+				value = large_radicals
+				strata = lower
+			}
+			add_loyalists = {
 				value = small_radicals
 				strata = middle
 			}
 			add_radicals = {
 				value = large_radicals
 				strata = upper
+			}
+			every_interest_group = {
+				limit = {
+					leader = {
+						has_ideology = ideology:ideology_usfp_progressive
+					}
+				}
+				add_modifier = {
+					name = usfp_progressive_victory_modifier
+					years = 20
+				}
+			}
+			ig:ig_trade_unions = {
+				if = {
+					limit = { has_ideology = ideology:ideology_socialist }
+					remove_ideology = ideology_socialist
+				}
 			}
 			every_scope_state = {
 				limit = {
@@ -147,20 +168,41 @@ usfp_progressive_era = {
 		effect = {
 			if = {
 				limit = { usfp_progressive_era_square_deal_conditions = yes  }
-				add_loyalists = {
-					value = small_radicals
-					strata = middle
-				}
-				add_radicals = {
-					value = large_radicals
-					strata = upper
-				}
-				every_scope_state = {
-					limit = {
-						has_modifier = usfp_captive_state_government
+			add_loyalists = {
+				value = large_radicals
+				strata = lower
+			}
+			add_loyalists = {
+				value = small_radicals
+				strata = middle
+			}
+			add_radicals = {
+				value = large_radicals
+				strata = upper
+			}
+			every_interest_group = {
+				limit = {
+					leader = {
+						has_ideology = ideology:ideology_usfp_progressive
 					}
-					remove_modifier = usfp_captive_state_government
 				}
+				add_modifier = {
+					name = usfp_progressive_victory_modifier
+					years = 20
+				}
+			}
+			ig:ig_trade_unions = {
+				if = {
+					limit = { has_ideology = ideology:ideology_socialist }
+					remove_ideology = ideology_socialist
+				}
+			}
+			every_scope_state = {
+				limit = {
+					has_modifier = usfp_captive_state_government
+				}
+				remove_modifier = usfp_captive_state_government
+			}
 			}
 		}
 	}

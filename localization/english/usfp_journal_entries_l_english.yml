@@ -304,3 +304,4 @@ usfp_colonization_better_with_colonial_resettlement: "These effects are improved
 usfp_linconia_button: "Found the Colony of Linconia"
 usfp_linconia_button_desc: "We will fund the construction of an $usfp_afro_american_culture$ [concept_colony_subject] on the west coast of [GetStateRegion('STATE_PANAMA').GetName], named in the honor of the great Abraham Lincoln."
 linconia_created_tooltip: "Linconia will be created as an [SCOPE.sCountry('usa_scope').GetAdjective] [concept_subject] controlling a single [concept_province] on the western coast of [GetStateRegion('STATE_PANAMA').GetName], and 1000 $usfp_afro_american_culture_plural$ will move there."
+country_in_root_market: "Is in the [ROOT.GetCountry.GetAdjective] [concept_market]"
