@@ -1034,7 +1034,7 @@ company_usfp_us_warner_bros = {
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = yes
-
+	category = academic_owned
 	preferred_headquarters = { STATE_CALIFORNIA }
 
 	building_types = {

@@ -1,7 +1,9 @@
 ﻿usfp_american = {
 	color= rgb{ 0 33 71 }  # Old Glory Blue 
 	religion = protestant
-	traits = { anglophone european_heritage }
+	heritage = heritage_north_american_settler
+	language = language_anglophone
+	traditions = { }
 	obsessions = {
 		liquor coffee small_arms
 	}
@@ -397,7 +399,9 @@
 usfp_american_indian = {
 	color= rgb{ 127 20 21}
 	religion = protestant
-	traits = { indigenous_american_heritage north_american_group anglophone }
+	language = language_anglophone
+	heritage = heritage_usfp_consolidated_native_north_american
+	traditions = { }
 	obsessions = {
 		liquor
 	}

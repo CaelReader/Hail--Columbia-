@@ -99,10 +99,10 @@ usfp_progressive_era = {
 	}
 	on_complete = {
 		trigger_event = usfp_progressive_era.16
-		# hidden_effect = {
-        #     set_variable = usfp_square_deal_achievement
-        # }
-		show_as_tooltip = {
+	}
+
+	event_outcome_completed_effect_desc = {
+		effect = {
 			add_loyalists = {
 				value = small_radicals
 				strata = middle
@@ -119,6 +119,7 @@ usfp_progressive_era = {
 			}
 		}
 	}
+
 	on_timeout = {
 		if = {
 			limit = { usfp_progressive_era_square_deal_conditions = yes  }
@@ -141,6 +142,29 @@ usfp_progressive_era = {
 			}
 		}
 	}
+
+	event_outcome_timeout_effect_desc = {
+		effect = {
+			if = {
+				limit = { usfp_progressive_era_square_deal_conditions = yes  }
+				add_loyalists = {
+					value = small_radicals
+					strata = middle
+				}
+				add_radicals = {
+					value = large_radicals
+					strata = upper
+				}
+				every_scope_state = {
+					limit = {
+						has_modifier = usfp_captive_state_government
+					}
+					remove_modifier = usfp_captive_state_government
+				}
+			}
+		}
+	}
+	
 	on_monthly_pulse = {
 		random_events = {
 			chance_of_no_event = 85

@@ -1,5 +1,5 @@
 ﻿COUNTRIES = {
-	c:USA = {
+	c:USA ?= {
 		set_next_election_date = 1836.12.7
 
 		set_tax_level = low
@@ -25,7 +25,8 @@
 		activate_law = law_type:law_no_womens_rights # Women couldn't hold property until ~1839
 		start_enactment = law_type:law_universal_suffrage #states are in the middle of piecemeal removing tax obligations at the start date
 		activate_law = law_type:law_usfp_nominal_separation #de jure total separation, but de facto anti-catholicism, oppression of animists
-		
+	
+		add_modifier = usa_capital_intact
 		set_institution_investment_level = {
 			institution = institution_colonial_affairs
 			level = 2
@@ -41,7 +42,7 @@
 			level = 2
 		}
 
-		ig:ig_rural_folk = { # Andrew Jackson, Jacksonian Democracy & Populism
+		ig:ig_rural_folk ?= { # Andrew Jackson, Jacksonian Democracy & Populism
 			add_ruling_interest_group = yes
 		}
 

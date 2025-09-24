@@ -1078,7 +1078,8 @@
 	s:STATE_YUKON_TERRITORY = {
 		set_owner_of_provinces = {
 			country = c:usfp_IPQ
-			provinces = { xE6C75B } #rest handled in global
+			provinces = { xE6C75B x3D5DCB x3482E0 x714A14 x2ECDC8 x980AB5 x87C331 x1DF568 x15FC1A x14B03B x2EB016 xD31F1A x919662 x6368B4 x57B8A2 x0BEA6E xB11131 
+		xDE167C x07684F xC97FEC xDEF7F2 }
 		}
 	}
 

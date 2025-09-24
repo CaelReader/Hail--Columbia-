@@ -1117,7 +1117,7 @@ usfp_a_house_divided.12 = {
 	option = {
 		name = slavery_law_events.7.a
 		default_option = yes
-		scope:slaver_ig = {
+		ig:ig_landowners = {
 			add_modifier = {
 				name = modifier_slavery_forgotten
 				days = normal_modifier_time
@@ -1151,7 +1151,7 @@ usfp_a_house_divided.12 = {
 	}
 	option = { 
 		name = slavery_law_events.7.b
-		scope:slaver_ig = {
+		ig:ig_landowners = {
 			add_modifier = {
 				name = modifier_slavery_forgotten_bad
 				days = normal_modifier_time

@@ -1,0 +1,69 @@
+﻿mormon_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_mormon_standard_of_living_add = 1
+}
+
+mormon_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_mormon_standard_of_living_add = 1
+}
+
+usfp_american_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_usfp_american_standard_of_living_add = 1
+}
+
+usfp_american_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_usfp_american_standard_of_living_add = 1
+}
+
+usfp_american_indian_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_usfp_american_indian_standard_of_living_add = 1
+}
+
+usfp_american_indian_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_usfp_american_indian_standard_of_living_add = 1
+}
+
+usfp_american_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_usfp_american_add = 1
+}
+
+usfp_american_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_usfp_american_add = 1
+}
+
+usfp_american_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_usfp_american_cultural_acceptance_add = 1
+}
+
+usfp_american_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_usfp_american_cultural_acceptance_add = 1
+}
+
+usfp_american_indian_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_usfp_american_indian_add = 1
+}
+
+usfp_american_indian_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_usfp_american_indian_add = 1
+}
+
+usfp_american_indian_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_usfp_american_indian_cultural_acceptance_add = 1
+}
+
+usfp_american_indian_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_usfp_american_indian_cultural_acceptance_add = 1
+}

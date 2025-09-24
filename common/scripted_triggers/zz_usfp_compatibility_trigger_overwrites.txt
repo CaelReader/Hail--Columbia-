@@ -17,3 +17,33 @@ is_usfp_active = {
 usfp_has_missouri_compromise_trigger = {
 	has_journal_entry = je_usfp_a_house_divided_missouri_compromise
 }
+
+country_can_have_cultural_minority_movement_of_culture = { # Fired from the on_national_awakening_started on_action, has all of its scopes
+	NOT = {
+		any_political_movement = {
+			culture ?= scope:culture
+		}
+	}
+	OR = {
+		any_scope_state = {
+			state_region = {
+				is_homeland = scope:culture
+			}
+			culture_percent_state = {
+				target = scope:culture
+				value >= 0.2
+			}
+		}
+		AND = {
+			culture_percent_country = {
+				target = scope:culture
+				value >= 0.1
+			}
+			cultural_acceptance_base = { target = scope:culture value <= acceptance_status_2 }
+		}
+	}
+	NOT = {
+		exists = c:USA
+		scope:culture = cu:dixie
+	}
+}

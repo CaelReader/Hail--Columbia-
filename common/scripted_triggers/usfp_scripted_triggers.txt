@@ -162,7 +162,7 @@ usfp_westward_expansion_criteria = {
 	}
 	any_scope_pop = {
 		culture = {
-			shares_trait_with_any_primary_culture = root
+			shares_heritage_trait_group_with_any_primary_culture =  root
 		}
 	}
 }

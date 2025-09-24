@@ -3195,7 +3195,11 @@ usfp_manifest_destiny.30 = {
 	option = {
 		name = usfp_manifest_destiny.30.a
 		default_option = yes
-		#reduce mexican acceptance
+		add_culture_acceptance_modifier = {
+			culture = cu:mexican
+			years = 30
+			multiplier = -10
+		}
 		add_radicals = {
 			value = medium_radicals
 			culture = cu:mexican
@@ -3232,6 +3236,11 @@ usfp_manifest_destiny.30 = {
 		add_modifier = {
 			name = modifier_minority_members_defended
 			days = normal_modifier_time
+		}
+		add_culture_acceptance_modifier = {
+			culture = cu:mexican
+			years = 30
+			multiplier = -5
 		}
 		every_scope_state = {
 			limit = {

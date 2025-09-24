@@ -54,6 +54,33 @@ usfp_usa_postreconstruction.1 = {
 	option = {
 		name = usfp_usa_postreconstruction.1.a
 		default_option = yes
+		if = {
+			limit = {
+				cu:dixie ?= {
+					culture_national_awakening_occurred = no
+				}
+			}
+			ordered_scope_state = {
+				limit = {
+					state_region = {
+						is_homeland = cu:dixie
+					}
+				}
+				order_by = total_urbanization
+				save_scope_as = dixie_center_scope
+			}
+			start_national_awakening = {
+				culture = cu:dixie
+				months = 120
+				state_region = scope:dixie_center_scope.state_region
+			}
+		} else = {
+			add_fervor_target_modifier = {
+				culture = cu:dixie
+				multiplier = 5
+				days = long_modifier_time
+			}
+		}
 		create_political_movement = {
 			type = movement_usfp_neoconfederate
 			
@@ -1517,7 +1544,24 @@ usfp_usa_postreconstruction.9 = {
 	option = {
 		name = usfp_usa_postreconstruction.9.a
 		default_option = yes
-		#add afro american fervor
+		if = {
+			limit = {
+				cu:afro_american ?= {
+					culture_national_awakening_occurred = no
+				}
+			}
+			start_national_awakening = {
+				culture = cu:afro_american
+				months = 120
+				state_region = scope:harlem_renaissance_state.state_region
+			}
+		} else = {
+			add_fervor_target_modifier = {
+				culture = cu:afro_american
+				multiplier = 5
+				days = long_modifier_time
+			}
+		}
 		custom_tooltip = {
 			text = afro_americans_socialist_movement_attraction
 			set_variable = harlem_renaissance_socialism
@@ -1552,7 +1596,24 @@ usfp_usa_postreconstruction.9 = {
 	#black pride
 	option = {
 		name = usfp_usa_postreconstruction.9.b
-		#add more afro american fervor
+		if = {
+			limit = {
+				cu:afro_american ?= {
+					culture_national_awakening_occurred = no
+				}
+			}
+			start_national_awakening = {
+				culture = cu:afro_american
+				months = 120
+				state_region = scope:harlem_renaissance_state.state_region
+			}
+		} else = {
+			add_fervor_target_modifier = {
+				culture = cu:afro_american
+				multiplier = 5
+				days = long_modifier_time
+			}
+		}
 		random_political_movement = {
 			limit = {
 				culture ?= cu:afro_american
@@ -1591,7 +1652,24 @@ usfp_usa_postreconstruction.9 = {
 	#conservative
 	option = {
 		name = usfp_usa_postreconstruction.9.c
-		#add afro american fervor
+		if = {
+			limit = {
+				cu:afro_american ?= {
+					culture_national_awakening_occurred = no
+				}
+			}
+			start_national_awakening = {
+				culture = cu:afro_american
+				months = 120
+				state_region = scope:harlem_renaissance_state.state_region
+			}
+		} else = {
+			add_fervor_target_modifier = {
+				culture = cu:afro_american
+				multiplier = 5
+				days = long_modifier_time
+			}
+		}
 		custom_tooltip = {
 			text = afro_americans_religious_movement_attraction
 			set_variable = harlem_renaissance_religious
@@ -1952,7 +2030,9 @@ usfp_usa_postreconstruction.12 = {
 			name = usfp_countrywide_anti_black_violence_modifier
 			months = 6
 		}
-		#increase dixie fervor
+		cu:dixie = {
+			add_fervor = 10
+		}
 		usfp_long_reconstruction_lose_progress = {
 			VALUE = -100
 		}
@@ -2338,7 +2418,7 @@ usfp_usa_postreconstruction.14 = {
 			interest_group = ig:ig_petty_bourgeoisie
 		}
 		scope:garvey_scope = {
-			add_modifier = usfp_provisional_president_of_africa
+			add_trait = usfp_special_character_provisional_president_of_africa
 		}
 		if = {
 			limit = { 
@@ -2381,7 +2461,7 @@ usfp_usa_postreconstruction.14 = {
 			}
 		}
 		scope:garvey_scope = {
-			add_modifier = usfp_provisional_president_of_africa
+			add_trait = usfp_special_character_provisional_president_of_africa
 		}
 		add_radicals = {
 			value = small_radicals
@@ -2397,6 +2477,7 @@ usfp_usa_postreconstruction.14 = {
 		name = usfp_usa_postreconstruction.14.c
 		default_option = yes
 		scope:garvey_scope = {
+			add_trait = usfp_special_character_provisional_president_of_africa
 			exile_character = yes
 		}
 		add_radicals = {
@@ -2425,6 +2506,7 @@ usfp_usa_postreconstruction.14 = {
 		}
 		highlighted_option = yes
 		scope:garvey_scope = {
+			add_trait = usfp_special_character_provisional_president_of_africa
 			exile_character = yes
 		}
 		add_loyalists = {

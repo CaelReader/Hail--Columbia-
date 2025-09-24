@@ -87,7 +87,10 @@ usfp_manifest_destiny_main = {
 			popup = yes
 		}
 		remove_modifier = usfp_manifest_destiny_modifier
-		show_as_tooltip = {
+	}
+
+	event_outcome_failed_effect_desc = {
+		effect = {
 			add_radicals = {
 				value = very_large_radicals
 			}
@@ -794,7 +797,10 @@ usfp_je_indian_wars = {
 
 	on_complete = {
 		trigger_event = usfp_indian_wars.12 #Allotment
-		show_as_tooltip = {
+	}
+
+	event_outcome_completed_effect_desc = {
+		effect = {
 			cu:usfp_american_indian = {
 				save_temporary_scope_as = american_indian_culture
 			}

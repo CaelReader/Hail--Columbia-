@@ -71,3 +71,71 @@ usfp_trait_antiexpansionist = {
 
 	value = 1
 }
+
+usfp_special_character_great_triumvirate = { 
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/special_character_great_triumvirate.dds"
+
+	character_modifier = {
+		character_popularity_add = 10
+	}
+
+	command_modifier = {
+
+	}
+
+	country_modifier = {
+	}
+
+	agitator_modifier = {
+		
+	}
+
+	executive_modifier = {
+		
+	}
+
+	possible = {
+		
+	}
+
+	interest_group_modifier = {
+		interest_group_pop_attraction_mult = 0.10
+		interest_group_pol_str_mult = 0.10
+	}
+
+	weight = 0
+}
+
+usfp_special_character_provisional_president_of_africa = { 
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/special_character_provisional_president_of_africa.dds"
+
+	character_modifier = {
+		character_popularity_add = -15
+	}
+
+	command_modifier = {
+
+	}
+
+	country_modifier = {
+	}
+
+	agitator_modifier = {
+		political_movement_pop_attraction_mult = 0.10
+	}
+
+	executive_modifier = {
+		
+	}
+
+	possible = {
+		
+	}
+
+	interest_group_modifier = {
+	}
+
+	weight = 0
+}

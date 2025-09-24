@@ -41,6 +41,9 @@ usfp_indian_postremoval.1 = {
 			usfp_has_plains_occupation_trigger = yes
 		}
 		show_as_unavailable = {always = yes}
+		cu:usfp_american_indian = {
+			add_fervor = 5
+		}
 		every_scope_state = {
 			limit = {
 				OR = {
@@ -88,6 +91,9 @@ usfp_indian_postremoval.1 = {
 	#leave them be
 	option = {
 		name = usfp_indian_postremoval.1.b
+		cu:usfp_american_indian = {
+			add_fervor = 5
+		}
 		every_scope_state = {
 			limit = {
 				OR = {
@@ -273,6 +279,24 @@ usfp_indian_postremoval.3 = {
 	option = {
 		name = usfp_indian_postremoval.3.a
 		default_option = yes
+		if = {
+			limit = {
+				cu:usfp_american_indian ?= {
+					culture_national_awakening_occurred = no
+				}
+			}
+			start_national_awakening = {
+				culture = cu:usfp_american_indian
+				months = 120
+				state_region = scope:nevada_scope.state_region
+			}
+		} else = {
+			add_fervor_target_modifier = {
+				culture = cu:usfp_american_indian
+				multiplier = 5
+				days = long_modifier_time
+			}
+		}
 		every_scope_state = {
 			limit = {
 				OR = {
@@ -362,6 +386,24 @@ usfp_indian_postremoval.4 = {
 				}
 			}
 			annex = c:SEQ
+		}
+		if = {
+			limit = {
+				cu:usfp_american_indian ?= {
+					culture_national_awakening_occurred = no
+				}
+			}
+			start_national_awakening = {
+				culture = cu:usfp_american_indian
+				months = 120
+				state_region = scope:oklahoma_scope.state_region
+			}
+		} else = {
+			add_fervor_target_modifier = {
+				culture = cu:usfp_american_indian
+				multiplier = 5
+				days = long_modifier_time
+			}
 		}
 		scope:oklahoma_scope = {
 			hidden_effect = {

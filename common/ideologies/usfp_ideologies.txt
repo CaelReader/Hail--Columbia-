@@ -69,6 +69,7 @@ ideology_reactionary_segregationist  = { #IPB Compatibility
 	priority = 100
 	
 	lawgroup_citizenship = {
+		law_subjecthood = strongly_disapprove
 		law_ethnostate = strongly_disapprove	
 		law_national_supremacy = disapprove
 		law_racial_segregation = strongly_approve
@@ -89,6 +90,7 @@ ideology_reactionary_exclusionist  = { #IPB Compatibility
 	priority = 100
 	
 	lawgroup_citizenship = {
+		law_subjecthood = disapprove
 		law_ethnostate = disapprove
 		law_national_supremacy = disapprove
 		law_racial_segregation = disapprove
@@ -110,6 +112,7 @@ ideology_reactionary_supremacist  = {
 	priority = 100
 	
 	lawgroup_citizenship = {
+		law_subjecthood = strongly_disapprove
 		law_ethnostate = approve
 		law_national_supremacy = strongly_approve
 		law_racial_segregation = neutral
@@ -225,6 +228,7 @@ ideology_usfp_eugenicist = {
 	}
 
 	lawgroup_citizenship = {
+		law_subjecthood = disapprove
 		law_ethnostate = strongly_approve
 		law_national_supremacy = approve
 		law_racial_segregation = neutral
@@ -262,6 +266,7 @@ ideology_usfp_localist = {
 		law_legacy_slavery = neutral
 		law_debt_slavery = strongly_disapprove
 		law_slave_trade = neutral
+		law_colonial_slavery = neutral
 	}
 
 	lawgroup_bureaucracy = {
@@ -327,6 +332,7 @@ ideology_usfp_pan_indianist_group = {
 	}
 
 	lawgroup_citizenship = {
+		law_subjecthood = neutral
 		law_ethnostate = strongly_disapprove
 		law_national_supremacy = disapprove
 		law_racial_segregation = strongly_approve
@@ -528,6 +534,7 @@ ideology_usfp_progressive_movement = {
 		law_legacy_slavery = strongly_disapprove
 		law_debt_slavery = strongly_disapprove
 		law_slave_trade = strongly_disapprove
+		law_colonial_slavery = strongly_disapprove
 	}
 }
 
@@ -535,6 +542,7 @@ ideology_usfp_afro_american_movement = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_usfp_abolitionist_radical_movement.dds"
 
 	lawgroup_citizenship = {
+		law_subjecthood = strongly_disapprove
 		law_ethnostate = strongly_disapprove
 		law_national_supremacy = strongly_disapprove
 		law_racial_segregation = disapprove
@@ -547,6 +555,7 @@ ideology_usfp_afro_american_movement = {
 		law_legacy_slavery = strongly_disapprove
 		law_debt_slavery = strongly_disapprove
 		law_slave_trade = strongly_disapprove
+		law_colonial_slavery = strongly_disapprove
 	}
 
 	lawgroup_policing = {
@@ -584,6 +593,7 @@ ideology_usfp_american_indian_movement = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_usfp_pan_indianist_group.dds"
 
 	lawgroup_citizenship = {
+		law_subjecthood = neutral
 		law_ethnostate = strongly_disapprove
 		law_national_supremacy = strongly_disapprove
 		law_racial_segregation = disapprove
@@ -632,6 +642,7 @@ ideology_usfp_neoconfederate_movement = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_usfp_neoconfederate.dds"
 
 	lawgroup_citizenship = {
+		law_subjecthood = disapprove
 		law_ethnostate = strongly_approve
 		law_national_supremacy = approve
 		law_racial_segregation = neutral

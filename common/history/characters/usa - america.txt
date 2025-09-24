@@ -12,7 +12,6 @@
 			template = USA_john_calhoun
 			on_created = {
 				set_variable = memento_mori_immunity
-				add_modifier = usfp_great_triumvirate
 			}
 		}
 
@@ -20,7 +19,6 @@
 			template = USA_henry_clay
 			on_created = {
 				set_variable = memento_mori_immunity
-				add_modifier = usfp_great_triumvirate
 			}
 		}
 
@@ -28,7 +26,6 @@
 			template = USA_daniel_webster
 			on_created = {
 				set_variable = memento_mori_immunity
-				add_modifier = usfp_great_triumvirate
 			}
 		}
 
@@ -38,7 +35,7 @@
 		}
 
 		create_character = {
-			template = USA_robert_rantoul
+			template = usa_robert_rantoul_character_template
 		}
 
 

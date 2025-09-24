@@ -53,6 +53,26 @@ ideology_jacksonian_democrat = { #replacing basegame
 		has_variable = whigs_party
 	}
 
+	interest_group_leader_trigger = {
+		ideology_jacksonian_democrat_valid_trigger = yes
+	}
+
+	non_interest_group_leader_trigger = {
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law_or_variant = law_type:law_racial_segregation
+				has_law_or_variant = law_type:law_legacy_slavery
+				has_law_or_variant = law_type:law_elected_bureaucrats
+				has_law_or_variant = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_presidential_republic
+			}
+		}
+		interest_group = {
+			ideology_jacksonian_democrat_valid_trigger = yes
+		}
+	}
+
 	interest_group_leader_weight = {
 		value = 300
 		if = {
@@ -172,6 +192,7 @@ ideology_usfp_progressive = {
 		law_legacy_slavery = strongly_disapprove
 		law_debt_slavery = strongly_disapprove
 		law_slave_trade = strongly_disapprove
+		law_colonial_slavery = strongly_disapprove
 	}
 	
 	country_trigger = {
@@ -286,6 +307,7 @@ ideology_usfp_social_gospel_leader = {
 	}
 
 	lawgroup_citizenship = {
+		law_subjecthood = disapprove
 		law_ethnostate = strongly_disapprove
 		law_national_supremacy = disapprove
 		law_racial_segregation = disapprove
@@ -298,6 +320,7 @@ ideology_usfp_social_gospel_leader = {
 		law_legacy_slavery = strongly_disapprove
 		law_debt_slavery = strongly_disapprove
 		law_slave_trade = strongly_disapprove
+		law_colonial_slavery = strongly_disapprove
 	}
 
 	country_trigger = {
@@ -545,6 +568,7 @@ ideology_usfp_abolitionist_radical = {
 		law_legacy_slavery = strongly_disapprove
 		law_debt_slavery = strongly_disapprove
 		law_slave_trade = strongly_disapprove
+		law_colonial_slavery = strongly_disapprove
 	}
 
 	lawgroup_land_reform = {
@@ -556,6 +580,7 @@ ideology_usfp_abolitionist_radical = {
 	}
 
 	lawgroup_citizenship = {
+		law_subjecthood = disapprove
 		law_ethnostate = strongly_disapprove
 		law_national_supremacy = disapprove
 		law_racial_segregation = disapprove
@@ -903,6 +928,7 @@ ideology_usfp_social_darwinist_leader = {
 	}
 
 	lawgroup_citizenship = {
+		law_subjecthood = disapprove
 		law_ethnostate = strongly_approve
 		law_national_supremacy = approve
 		law_racial_segregation = neutral
@@ -915,6 +941,14 @@ ideology_usfp_social_darwinist_leader = {
 		law_colonial_resettlement = approve
 		law_colonial_exploitation = strongly_approve
 		law_frontier_colonization = neutral
+	}
+
+	lawgroup_labour_associations = {
+		law_combination_acts = approve
+		law_guild_system = strongly_disapprove
+		law_anti_strike_laws = neutral
+		law_corporatized_unions = neutral
+		law_right_to_associate = disapprove
 	}
 
 	country_trigger = {
@@ -1039,6 +1073,7 @@ ideology_usfp_universalist = {
 	}
 
 	lawgroup_citizenship = {
+		law_subjecthood = disapprove
 		law_ethnostate = strongly_disapprove
 		law_national_supremacy = disapprove
 		law_racial_segregation = neutral
@@ -1167,6 +1202,7 @@ ideology_usfp_pan_indianist = {
 	}
 
 	lawgroup_citizenship = {
+		law_subjecthood = neutral
 		law_ethnostate = strongly_disapprove
 		law_national_supremacy = disapprove
 		law_racial_segregation = strongly_approve
@@ -1210,7 +1246,7 @@ ideology_usfp_pan_indianist = {
 	
 	country_trigger = {
 		any_primary_culture = {
-			has_discrimination_trait_group = north_american_group
+			has_discrimination_trait_group = heritage_group_indigenous_american
 		}
 		OR = {
 			has_technology_researched = pan-nationalism
@@ -1229,7 +1265,7 @@ ideology_usfp_pan_indianist = {
 
 	non_interest_group_leader_trigger = {
 		culture = {
-			has_discrimination_trait_group = north_american_group
+			has_discrimination_trait_group = heritage_group_indigenous_american
 		}
 		NAND = {
 			has_role = agitator

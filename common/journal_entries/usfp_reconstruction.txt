@@ -29,7 +29,7 @@ usfp_reconstruction_long = {
 			500 = usfp_usa_postreconstruction.13 #Silent Parade
 			50 = usfp_usa_postreconstruction.16 #Radical Reconstruction: Neoconfederate Assassination
 			50 = usfp_usa_postreconstruction.17 #Radical Reconstruction: Dixie Redoubt
-			50 = 0
+			50 = usfp_usa_postreconstruction.18 #Silent Parade
 		}
 		events = {
 			usfp_usa_postreconstruction.4 #NAACP Founded

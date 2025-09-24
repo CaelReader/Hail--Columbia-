@@ -826,7 +826,6 @@ usfp_marcus_garvey = {
         bigoted
         demagogue
         imperious
-        arrogant
     } 
     agitator_usage = {
         country_trigger = {

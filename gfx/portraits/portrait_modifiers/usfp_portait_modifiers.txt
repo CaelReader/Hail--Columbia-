@@ -100,4 +100,161 @@
             }
         }
     }
+
+    usfp_marcus_garvey_outfit = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 }
+            }
+            accessory = {
+               mode = add
+               gene = waistcoats
+               template = no_waistcoat
+               range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = shirt
+                template = no_shirts
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = no_civilian_coat
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = props
+                template = no_prop
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = coats
+                template = american_coats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = all_epaulettes
+                range = { 0.8 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear_colors
+                accessory = male_legwear_european_01_blue
+            }
+             accessory = {
+                mode = add
+                gene = aiguillettes
+                template = all_aiguillettes
+                range = { 0 0 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = belts
+                template = all_belts
+                accessory = male_belt_generic_01 # HE'S GOT A SWORD
+            }
+             accessory = {
+                mode = add
+                gene = headgear
+                template = european_admiral_headgear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+         weight = {
+            base = 0
+            modifier = {
+                add = 100000
+                scope:character ?= {
+                    has_template = usfp_marcus_garvey
+                }
+            }
+        }
+    }
+
+    usfp_afro_american_agitators = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = no_top_layer
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = shirt
+            #     template = no_shirts
+            #     range = { 0 1 } # For the randomness to work correctly
+            # }
+           accessory = {
+               mode = add
+               gene = civilian_coats
+               template = all_civilian_coats
+               range = { 0 0.1 }
+            }
+           accessory = {
+               mode = add
+               gene = waistcoats
+               template = european_waistcoats
+               range = { 0 1 }
+            }
+           accessory = {
+               mode = add
+               gene = shirt
+               template = no_shirts
+               range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear_colors
+                accessory = male_legwear_european_01_black
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                scope:character ?= {
+                    culture = {
+                        has_discrimination_trait = heritage_african_diaspora
+                    }
+                    NOR = {
+                        has_role = general
+                        has_role = admiral
+                    }
+                    NOT = {
+                        has_template = usfp_marcus_garvey
+                    }
+                }
+            }
+        }
+    }
 }

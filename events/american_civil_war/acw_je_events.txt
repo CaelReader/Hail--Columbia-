@@ -340,12 +340,12 @@ acw_je_events.2 = {
 					state_region = {
 						is_homeland = cu:yankee
 						NOT = { is_homeland = cu:dixie }
-						NOR = {
-							is_state_region_dc = yes
-							state_region = s:STATE_WEST_VIRGINIA
-							is_state_region_maryland = yes
-							is_state_region_delaware = yes
-						}
+					}
+					NOR = {
+						is_state_region_dc = yes
+						state_region = s:STATE_WEST_VIRGINIA
+						is_state_region_maryland = yes
+						is_state_region_delaware = yes
 					}
 				}
 				set_state_type = unincorporated

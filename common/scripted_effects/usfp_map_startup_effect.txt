@@ -97,6 +97,12 @@
 		# 	provinces = { xBD928D x7E2A07 }
 		# }
 	}
+	s:STATE_BRITISH_COLUMBIA = {
+		set_owner_of_provinces = {
+			country = c:usfp_TSI
+			provinces = { xA6B63F }
+		}
+	}
 
 	##################################
 	### Post-facto Pop Adjustments ###
@@ -161,6 +167,17 @@
 			create_pop = {
 				culture = athabaskan
 				size = 6000
+			}
+		}
+	}
+
+	s:STATE_BRITISH_COLUMBIA = {
+		region_state:usfp_TSI = {
+			every_scope_pop = {
+				move_partial_pop = {
+					state = s:STATE_BRITISH_COLUMBIA.region_state:TLT
+					population_ratio = 0.66
+				}
 			}
 		}
 	}
@@ -305,6 +322,42 @@
 			region_state:SVY = {
 				set_state_owner = c:ATB
 			}
+		}
+	}
+
+	if = {
+		limit = { has_game_rule = african_consolidation }
+		c:BUG = {
+			annex = c:BNY
+			annex = c:ANK
+			annex = c:RWD
+			annex = c:KRG
+			annex = c:BRD
+		}
+		c:SKY = {
+			annex = c:ORM
+		}
+		c:AJR = {
+			annex = c:AUL
+		}
+		c:LBA = {
+			annex = c:HMB
+		}
+		c:WLT = {
+			annex = c:SDM
+		}
+		c:WLG = {
+			annex = c:KFA
+		}
+		c:MSI = {
+			annex = c:LUO
+		}
+		c:HHE = {
+			annex = c:GGO
+			annex = c:SNG
+		}
+		c:MNB = {
+			annex = c:LGA
 		}
 	}
 

@@ -14,6 +14,22 @@ state_usfp_american_standard_of_living_add={
 	}
 }
 
+country_usfp_american_cultural_acceptance_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+country_fervor_target_usfp_american_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
 state_usfp_american_indian_standard_of_living_add={
 	decimals=1
 	color=good
@@ -22,7 +38,32 @@ state_usfp_american_indian_standard_of_living_add={
 	}
 }
 
+country_usfp_american_indian_cultural_acceptance_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+country_fervor_target_usfp_american_indian_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
 state_farmers_education_access_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_laborers_education_access_add={
 	decimals=0
 	color=good
 	percent=yes

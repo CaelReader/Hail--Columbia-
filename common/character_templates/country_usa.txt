@@ -20,6 +20,7 @@ USA_john_calhoun = {
 		expert_political_operator
 		wrathful
 		inspirational_orator
+		usfp_special_character_great_triumvirate
 	}
 }
 
@@ -36,6 +37,7 @@ USA_henry_clay = {
 	traits = {
 		meticulous
 		experienced_political_operator
+		usfp_special_character_great_triumvirate
 	}
 }
 
@@ -56,6 +58,7 @@ USA_daniel_webster = {
 		imposing
 		expensive_tastes
 		usfp_trait_antiexpansionist
+		usfp_special_character_great_triumvirate
 	}
 }
 
@@ -79,7 +82,7 @@ USA_charles_finney = {
 	}
 }
 
-USA_robert_rantoul = {
+usa_robert_rantoul_character_template = {
 	first_name = Robert
 	last_name = Rantoul
 	historical = yes

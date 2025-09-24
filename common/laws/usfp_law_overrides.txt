@@ -15,11 +15,11 @@ law_protectionism = {
 		}
 	}
 
-	can_enact = {
-		NOT = {
-			has_journal_entry = je_usfp_american_constitution
-		}
-	}
+	# can_enact = {
+	# 	NOT = {
+	# 		has_journal_entry = je_usfp_american_constitution
+	# 	}
+	# }
 
 	modifier = {
 		state_tariff_import_add = 0.50
@@ -67,11 +67,11 @@ law_freedom_of_conscience = {
 		}
 	}
 
-	can_enact = {
-		NOT = {
-			has_journal_entry = je_usfp_american_constitution
-		}
-	}
+	# can_enact = {
+	# 	NOT = {
+	# 		has_journal_entry = je_usfp_american_constitution
+	# 	}
+	# }
 
 	on_enact = {
 		recalculate_pop_ig_support = yes
@@ -97,7 +97,8 @@ law_freedom_of_conscience = {
 
 		country_acceptance_state_religion_add = 20
 		country_acceptance_shared_religious_trait_add = 15
-		country_acceptance_religion_base_add = 0
+		country_acceptance_shared_religious_trait_group_add = 5
+		country_acceptance_no_shared_religious_trait_add = 0
 
 		country_allow_conversion_violent_hostility_bool = yes
 		country_allow_conversion_cultural_erasure_bool = yes

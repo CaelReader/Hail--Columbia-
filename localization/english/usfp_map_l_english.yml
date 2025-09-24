@@ -124,6 +124,13 @@ setting_more_native_consolidation_desc:0 "Even more [Concept('concept_decentrali
 setting_no_native_consolidation:1 "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_no_native_consolidation_desc #high None #!#!#!"
 setting_no_native_consolidation_desc:0 "None of the Mod-Added [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] in North America will be consolidated on game start. #lore WARNING: Having more than 420 countries on the map currently causes major performance loss on some hardware!#!"
 
+rule_usfp_african_consolidation: "@america_icon! #yellow Hail, Columbia!#! | African Consolidation"
+setting_african_consolidation: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_african_consolidation_desc #high Yes #!#!#!"
+setting_african_consolidation_desc: "Consolidates some [Concept('concept_country', '$concept_countries$')] in Central Africa at game start to reduce the starting number of tags below 420."
+setting_no_african_consolidation: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_african_consolidation_desc #high No #!#!#!"
+setting_no_african_consolidation_desc: "African [Concept('concept_country', '$concept_countries$')] are unchanged."
+
+
 dyn_c_usfp_grand_columbia: "Grand Columbia"
 dyn_c_usfp_grand_columbia_adj: "Columbian"
 dyn_c_usp_united_american_syndicates: "United American Syndicates"

@@ -1,4 +1,4 @@
-## ANTI-SLAVERY
+﻿## ANTI-SLAVERY
 #Human Rights tech doubles abolition support
 usfp_movement_anti_slavery_pop_support_mult = {
 	if = {

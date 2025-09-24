@@ -201,7 +201,7 @@ usfp_underground_railroad_end_interference_button = {
 
 usfp_underground_railroad_arm_slaves_button = {
 	name = "usfp_underground_railroad_arm_slaves_button"
-	desc = "usfp_underground_railroad_arm_slaves_desc"
+	desc = "usfp_underground_railroad_arm_slaves_button_desc"
 
 	visible = {
 		exists = c:CSA

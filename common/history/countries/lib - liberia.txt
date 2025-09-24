@@ -62,7 +62,7 @@
 			add_ideology = ideology_usfp_localist
 		}
 		set_ruling_interest_groups = {
-			ig_landowners ig_devout ig_petty_bourgeoisie
+			ig_landowners ig_devout ig_petty_bourgeoisie ig_intelligentsia
 		}
 		set_tax_level = very_low
 	}

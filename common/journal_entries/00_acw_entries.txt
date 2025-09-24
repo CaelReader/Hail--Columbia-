@@ -151,23 +151,18 @@ je_acw_countdown = {
 			days = 0
 			popup = yes
 		}
-		show_as_tooltip = {
-			ig:ig_landowners = {
-				set_interest_group_name = ig_landowners
-				remove_ideology = ideology_pro_slavery
-				if = {
-					limit = { 
-						NOT = {
-							has_global_variable = usfp_lost_cause_of_the_confederacy
-						}
-					}
-					set_ig_trait = ig_trait:ig_trait_noble_privileges
-				}
-				set_ig_trait = ig_trait:usfp_ig_trait_lawmen
-			}
-		}
 		set_variable = je_acw_countdown_complete
 	}
+
+	event_outcome_completed_effect_desc = {
+		effect = {
+			execute_event_option = {
+				event = usfp_a_house_divided.12
+				option = 0
+			}
+		}
+	}
+
 
 	modifiers_while_active = {
 		usfp_a_house_divided_modifier

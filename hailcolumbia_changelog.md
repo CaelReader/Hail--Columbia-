@@ -637,6 +637,10 @@ Vanilla bugfix: intro event sets the initial USA election date properly
 	Removed mod changed to White House (vanilla now adds migration)
 	Removed mod-added Rio Grande state trait in favor of vanilla one
 	Removed Black Suffrage JE (redundant with vanilla acceptance changes)
+	Warner Bros is now an Academic-Owned Company
+	Replaced Great Triumvirate modifier with a special character trait
+	Added African Consolidation game-rule that merges a bunch of central african countries in order to reduce the starting tag count below 420
+	Merged in various vanilla changes to events and JEs
 ### Other Updates
 	Secure the Oregon Trail button is now visible from the start to indicate to the player that it's a goal to progress towards. It also now only requires the Logistics tech rather than year 1850+.
 	Added tooltip explaining the relationship between Manifest Destiny and the Treaty of G-H

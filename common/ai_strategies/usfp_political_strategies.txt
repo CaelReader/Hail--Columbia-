@@ -408,24 +408,23 @@ ai_strategy_manifest_destiny = {
 
 	secret_goal_scores = {
 		conquer = {
-			if = {
-				limit = {
-					NOT = { scope:target_country = { is_subject_of = root } }
-					can_reach_target_country = yes
-					has_strategic_adjacency = scope:target_country
-					scope:target_country.country_rank <= root.country_rank
-				}
-				
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				has_strategic_adjacency = scope:target_country
+				scope:target_country.country_rank <= root.country_rank
+			}
+			score = {
 				if = {
 					limit = {
 						NOT = { is_country_type = unrecognized }
 						scope:target_country = { NOT = { is_country_type = unrecognized } }
 					}
 					add = 25
-				}		
+				}
 				else_if = {
-					limit = {				
-						scope:target_country = { is_country_type = unrecognized }						
+					limit = {
+						scope:target_country = { is_country_type = unrecognized }
 					}
 					add = 50
 				}
@@ -868,87 +867,92 @@ ai_strategy_pacific_empire = {
 		}
 	}
 	
-	secret_goal_scores = {
+secret_goal_scores = {
 		dominate = {
-			if = {
-				limit = {
-					NOT = { scope:target_country = { is_subject_of = root } }
-					has_technology_researched = nationalism  # Just to make sure it doesn't happen immediately in 1836
-					country_rank = rank_value:great_power
-					navy_size >= 25
-					scope:target_country = { 
-						has_law_or_variant = law_type:law_isolationism 
-						gdp >= 2000000
-						capital.region = sr:region_japan												
-					} 
-				}
-				add = 500
-			}		
-			else_if = {
-				limit = {
-					NOT = { scope:target_country = { is_subject_of = root } }
-					has_strategic_adjacency = scope:target_country
-					scope:target_country = { 
-						has_law_or_variant = law_type:law_isolationism
-						gdp >= 2000000
-						NOT = { capital.region = sr:region_japan }	
-					}
-				}
-				add = 100
-			}
-			
-			if = {
-				limit = {
-					NOT = { scope:target_country = { is_subject_of = root } }
-					has_strategic_adjacency = scope:target_country
-					root.country_rank > scope:target_country.country_rank
-					scope:target_country.country_rank < rank_value:major_power
-					scope:target_country = {
-						NOR = { 
-							has_law_or_variant = law_type:law_free_trade 
-							has_law_or_variant = law_type:law_isolationism
-						}
-					}
-				}
-				add = 50
-				
+			score = {
 				if = {
 					limit = {
 						NOT = { scope:target_country = { is_subject_of = root } }
+						has_technology_researched = nationalism  # Just to make sure it doesn't happen immediately in 1836
+						country_rank = rank_value:great_power
+						navy_size >= 25
+						scope:target_country = {
+							has_law_or_variant = law_type:law_isolationism
+							gdp >= 2000000
+							capital.region = sr:region_japan
+						}
+					}
+					add = 500
+				}
+				else_if = {
+					limit = {
+						NOT = { scope:target_country = { is_subject_of = root } }
+						has_strategic_adjacency = scope:target_country
+						scope:target_country = {
+							has_law_or_variant = law_type:law_isolationism
+							gdp >= 2000000
+							NOT = { capital.region = sr:region_japan }
+						}
+					}
+					add = 100
+				}
+
+				if = {
+					limit = {
+						NOT = { scope:target_country = { is_subject_of = root } }
+						has_strategic_adjacency = scope:target_country
+						root.country_rank > scope:target_country.country_rank
+						scope:target_country.country_rank < rank_value:major_power
+						scope:target_country = {
+							NOR = {
+								has_law_or_variant = law_type:law_free_trade
+								has_law_or_variant = law_type:law_isolationism
+							}
+						}
+					}
+					add = 50
+
+					if = {
+						limit = {
+							NOT = { scope:target_country = { is_subject_of = root } }
+							scope:target_country = { is_country_type = unrecognized }
+						}
+						add = 50
+					}
+				}
+			}
+		}
+		conquer = {
+			score = {
+				if = {
+					limit = {
+						has_strategic_adjacency = scope:target_country
 						scope:target_country = { is_country_type = unrecognized }
 					}
 					add = 50
 				}
-			}		
-		}		
-		conquer = {		
-			if = {
-				limit = {
-					has_strategic_adjacency = scope:target_country
-					scope:target_country = { is_country_type = unrecognized }
+				if = {
+					limit = {
+						scope:target_country = { NOT = { is_country_type = unrecognized } }
+					}
+					add = -50
 				}
-				add = 50
+
+				# Don't attack Japan outright, open them instead
+				if = {
+					limit = {
+						scope:target_country = {
+							has_law_or_variant = law_type:law_isolationism
+							gdp >= 2000000
+							capital.region = sr:region_japan
+						}
+					}
+					add = -1000
+				}
 			}
-			if = {
-				limit = {
-					scope:target_country = { NOT = { is_country_type = unrecognized } }
-				}
-				add = -50
-			}
-			
-			# Don't attack Japan outright, open them instead
-			if = {
-				limit = {
-					scope:target_country = { 
-						has_law_or_variant = law_type:law_isolationism 
-						gdp >= 2000000
-						capital.region = sr:region_japan												
-					} 
-				}
-				add = -1000
-			}			
-		}		
+		}
 	}
+
 
 	wargoal_weights = {
 		make_protectorate = 1.5	
