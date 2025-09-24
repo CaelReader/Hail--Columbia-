@@ -385,3 +385,8 @@ usfp_changing_nominee_ig_modifier = {
 	interest_group_pop_attraction_mult = -0.10
 	interest_group_pol_str_mult = -0.10
 }
+
+usfp_promoted_afro_american_colonization = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 2
+}
