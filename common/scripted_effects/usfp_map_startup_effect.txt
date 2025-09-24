@@ -171,12 +171,34 @@
 		}
 	}
 
+	s:STATE_YUKON_TERRITORY = {
+		set_owner_of_provinces = {
+			country = c:TLT
+			provinces = { xB3CC99 }
+		}
+	}
+
 	s:STATE_BRITISH_COLUMBIA = {
 		region_state:usfp_TSI = {
 			every_scope_pop = {
 				move_partial_pop = {
 					state = s:STATE_BRITISH_COLUMBIA.region_state:TLT
 					population_ratio = 0.66
+				}
+			}
+		}
+	}
+
+	s:STATE_BRITISH_COLUMBIA = {
+		set_owner_of_provinces = {
+			country = c:DNZ
+			provinces = { x99E6CC }
+		}
+		region_state:DNZ = {
+			every_scope_pop = {
+				move_partial_pop = {
+					state = s:STATE_ALBERTA.region_state:DNZ
+					population_ratio = 0.5
 				}
 			}
 		}
