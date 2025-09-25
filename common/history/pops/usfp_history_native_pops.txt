@@ -115,46 +115,61 @@
 	
 	#Council of Three Fires
 	s:STATE_MICHIGAN = {
-		region_state:CTF = {
-			every_scope_pop = {
-				limit = {
-					OR = {
-						culture = cu:yankee
-						culture = cu:irish
-					}
+		if = {
+			limit = { 
+				NOT = {
+					exists = c:usfp_GLC
 				}
-				move_pop = s:STATE_MICHIGAN.region_state:USA
 			}
-		}
-		region_state:USA = {
-			every_scope_pop = {
-				limit = {
-					OR = {
-						culture = cu:algonquian
-						culture = cu:siouan
+			region_state:CTF = {
+				every_scope_pop = {
+					limit = {
+						OR = {
+							culture = cu:yankee
+							culture = cu:irish
+						}
 					}
+					move_pop = s:STATE_MICHIGAN.region_state:USA
 				}
-				move_pop = s:STATE_MICHIGAN.region_state:CTF
+			}
+			region_state:USA = {
+				every_scope_pop = {
+					limit = {
+						OR = {
+							culture = cu:algonquian
+							culture = cu:siouan
+						}
+					}
+					move_pop = s:STATE_MICHIGAN.region_state:CTF
+				}
 			}
 		}
 	}
 	s:STATE_WISCONSIN = {
-		region_state:USA = {
-			every_scope_pop = {
-				limit = {
-					culture = cu:algonquian
+		if = {
+			limit = {
+				c:USA = {
+					has_state_in_state_region = STATE_WISCONSIN
 				}
-				move_pop = s:STATE_WISCONSIN.region_state:CTF
-			}
-		}
-		region_state:CTF = {
-			every_scope_pop = {
-				limit = {
-					OR = {
-						culture = cu:yankee
+				exists = c:CTF
+			 }
+			region_state:USA = {
+				every_scope_pop = {
+					limit = {
+						culture = cu:algonquian
 					}
+					move_pop = s:STATE_WISCONSIN.region_state:CTF
 				}
-				move_pop = s:STATE_WISCONSIN.region_state:USA
+			}
+			region_state:CTF = {
+				every_scope_pop = {
+					limit = {
+						OR = {
+							culture = cu:yankee
+						}
+					}
+					move_pop = s:STATE_WISCONSIN.region_state:USA
+				}
 			}
 		}
 	}
@@ -167,20 +182,25 @@
 		}
 	}
 	s:STATE_ONTARIO = {
-		region_state:HBC = {
-			every_scope_pop = {
-				limit = {
-					culture = cu:siouan
-				}
-				move_pop = s:STATE_ONTARIO.region_state:CTF
+		if = {
+			limit = { 
+				exists = c:CTF
 			}
-		}
-		region_state:ONT = {
-			every_scope_pop = {
-				limit = {
-					culture = cu:algonquian
+			region_state:HBC = {
+				every_scope_pop = {
+					limit = {
+						culture = cu:siouan
+					}
+					move_pop = s:STATE_ONTARIO.region_state:CTF
 				}
-				move_pop = s:STATE_ONTARIO.region_state:CTF
+			}
+			region_state:ONT = {
+				every_scope_pop = {
+					limit = {
+						culture = cu:algonquian
+					}
+					move_pop = s:STATE_ONTARIO.region_state:CTF
+				}
 			}
 		}
 	}
@@ -188,10 +208,17 @@
 
 	#Ioway
 	s:STATE_MISSOURI = {
-		region_state:usfp_IWY = {
-			create_pop = {
-				culture = siouan
-				size = 800 #post-smallpox decline
+		if = {
+			limit = {
+				c:usfp_IWY = {
+					has_state_in_state_region = STATE_MISSOURI
+				}
+			 }
+			region_state:usfp_IWY = {
+				create_pop = {
+					culture = siouan
+					size = 800 #post-smallpox decline
+				}
 			}
 		}
 	}

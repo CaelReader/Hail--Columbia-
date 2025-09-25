@@ -49,6 +49,10 @@ law_usfp_nominal_separation: "Nominal Separation"
 law_usfp_nominal_separation_desc: "Church and state are officially separated, but exotic faiths are still discriminated against through a variety of legal and paralegal means."
 law_usfp_american_system: "American System"
 law_usfp_american_system_desc: "A variant of $law_protectionism$ allowing for even higher tariffs on imports. Export tariffs are disallowed under the Constitution."
+law_usfp_fraternities: "Fraternal Societies"
+law_usfp_fraternities_desc: "Local administration is handled through a system of fraternities which elevate their members to a mixture of elected and hereditary positions."
+law_usfp_tribal_land_ownership: "Land Stewardship"
+law_usfp_tribal_land_ownership_desc: "Land usage rights are held in common, with the community organizing cultivation as needed to feed its members."
 
 treaty_name_dancing_rabbit_creek: "Treaty of Dancing Rabbit Creek"
 

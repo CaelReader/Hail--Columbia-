@@ -5,8 +5,16 @@
 	#Have to handle overwriting the final province of existing states here to prevent errors
 
 	s:STATE_MINNESOTA = {
-		region_state:USA = {
-			set_state_owner = c:CTF
+		if = {
+			limit = {
+				c:USA = {
+					has_state_in_state_region = STATE_MINNESOTA
+				}
+				exists = c:CTF
+			 }
+			region_state:USA = {
+				set_state_owner = c:CTF
+			}
 		}
 	}
 	s:STATE_NORTH_DAKOTA = {

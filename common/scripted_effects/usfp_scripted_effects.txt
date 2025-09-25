@@ -20,14 +20,14 @@ usfp_starting_native_laws_effect = {
 	activate_law = law_type:law_elder_council
 	activate_law = law_type:law_traditionalism
 	activate_law = law_type:law_cultural_exclusion
-	activate_law = law_type:law_elected_bureaucrats
+	activate_law = law_type:law_usfp_fraternities
 	activate_law = law_type:law_freedom_of_conscience
 	activate_law = law_type:law_peasant_levies
 	activate_law = law_type:law_legacy_slavery
 	activate_law = law_type:law_women_own_property
 	activate_law = law_type:law_no_police
 	activate_law = law_type:law_no_colonial_affairs
-	activate_law = law_type:law_collectivized_agriculture
+	activate_law = law_type:law_usfp_tribal_land_ownership
 }
 
 usfp_remove_starting_buildings_effect = {
