@@ -1810,9 +1810,9 @@ usfp_usa.23 = {
 			start_enactment = law_type:law_universal_suffrage
 		}
 		hidden_effect = {
-			# ruler = {
-			# 	remove_as_interest_group_leader = yes
-			# }
+			ruler = {
+				usfp_washington_precedent_effect = yes 
+			}
 			add_declared_interest = region_great_plains
 			set_strategy = ai_strategy_monroe_doctrine
 			set_next_election_date = 1836.12.7 #vanilla bugfix?

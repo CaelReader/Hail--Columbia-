@@ -677,3 +677,6 @@ Added special character trait for Frederick Douglass
 Increased the frequency of Long Reconstruction events
 Added effects at various points to ensure Mexican/Afro-American movements are created if they don't already exist
 You can no longer grant IG leadership to an agitator during an election
+
+some Tecumseh's Legacy support updates
+Added variant Bureaucracy and Land Reform laws for native tags

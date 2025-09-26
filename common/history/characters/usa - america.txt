@@ -4,7 +4,6 @@
 			template = usa_andrew_jackson_template
 			on_created = {
 				set_variable = memento_mori_immunity
-				set_variable = var_elected_once
 			}
 		}
 

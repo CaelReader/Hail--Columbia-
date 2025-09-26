@@ -274,10 +274,7 @@ usa_andrew_jackson_template = {
         }
         set_variable = {
             name = memento_mori_immunity
-        }
-        set_variable = {
-            name = var_elected_once
-        }               
+        }             
     }
 }
 usa_roosevelt_character_template = {

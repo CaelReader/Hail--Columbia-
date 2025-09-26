@@ -605,8 +605,10 @@ usfp_fix_monarchy_revolt = {
 	}
 }
 
-on_election_campaign_end = {
+#this should be election_campaign_ended but it broke
+on_election_campaign_start = {
 	on_actions = {
+		delay = { days = 188 }
 		USCWF_precedent_on_action
 		usfp_devils_bargain_action
 	}
@@ -618,7 +620,7 @@ USCWF_precedent_on_action = {
 		if = {
 			limit = {
 				c:USA ?= this
-				has_law_or_variant = law_type:law_presidential_republic
+				has_journal_entry = je_usfp_american_constitution
 			}
 			ruler = {
 				save_scope_as = ruler_scope

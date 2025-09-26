@@ -1246,6 +1246,30 @@ usfp_indian_wars.12 = {
 		s:STATE_OKLAHOMA = {
 			add_claim = root
 		}
+		#Tecumseh's Legacy support
+		if = {
+			limit = { 
+				exists = c:usfp_GLC
+			}
+			every_scope_culture = {
+				limit = {
+					OR = {
+						has_discrimination_trait = heritage_subarctic_indian
+						has_discrimination_trait = heritage_plains_indian
+						has_discrimination_trait = heritage_great_basin_indian
+						has_discrimination_trait = heritage_eastern_woodlands_indian
+
+					}
+				}
+				save_scope_as = refugee_culture
+				c:usfp_GLC.capital = {
+					create_mass_migration = {
+						origin = root
+						culture = scope:refugee_culture
+					}
+				}
+			}
+		}
 		ai_chance = {
 			base = 10
 		}

@@ -64,6 +64,8 @@ law_usfp_tribal_land_ownership = {
 		building_group_bg_plantations_construction_efficiency_add = -0.50
 		building_group_bg_ranching_construction_efficiency_add = -0.25
 		building_group_bg_agriculture_construction_efficiency_add = -0.25
+		building_group_bg_extraction_allowed_collectivization_add = 1.0
+		building_group_bg_extraction_throughput_add = -0.30
 	}
 
 	# on_enact = {
