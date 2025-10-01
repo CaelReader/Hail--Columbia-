@@ -10,14 +10,14 @@
 }
 
 usfp_native_consolidation = {
-	default = more_native_consolidation
+	default = no_native_consolidation
 	some_native_consolidation = {}
 	more_native_consolidation = {}
 	no_native_consolidation = {}
 }
 
-usfp_african_consolidation = {
-	default = african_consolidation
-	african_consolidation = {}
-	no_african_consolidation = {}
-}
+# usfp_african_consolidation = {
+# 	default = african_consolidation
+# 	african_consolidation = {}
+# 	no_african_consolidation = {}
+# }

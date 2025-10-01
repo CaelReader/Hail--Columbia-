@@ -184,6 +184,10 @@
 			country = c:TLT
 			provinces = { xB3CC99 }
 		}
+		set_owner_of_provinces = {
+			country = c:TTC
+			provinces = { x788E5F }
+		}
 	}
 
 	s:STATE_BRITISH_COLUMBIA = {
@@ -299,7 +303,7 @@
 		}
 	}
 
-	### I've run into a 420 country limit, so I'm consolidating some less important tags
+	### from when there was a 420 country limit
 	if = {
 		limit = {
 			OR = {
@@ -355,40 +359,40 @@
 		}
 	}
 
-	if = {
-		limit = { has_game_rule = african_consolidation }
-		c:BUG = {
-			annex = c:BNY
-			annex = c:ANK
-			annex = c:RWD
-			annex = c:KRG
-			annex = c:BRD
-		}
-		c:SKY = {
-			annex = c:ORM
-		}
-		c:AJR = {
-			annex = c:AUL
-		}
-		c:LBA = {
-			annex = c:HMB
-		}
-		c:WLT = {
-			annex = c:SDM
-		}
-		c:WLG = {
-			annex = c:KFA
-		}
-		c:MSI = {
-			annex = c:LUO
-		}
-		c:HHE = {
-			annex = c:GGO
-			annex = c:SNG
-		}
-		c:MNB = {
-			annex = c:LGA
-		}
-	}
+	# if = {
+	# 	limit = { has_game_rule = african_consolidation }
+	# 	c:BUG = {
+	# 		annex = c:BNY
+	# 		annex = c:ANK
+	# 		annex = c:RWD
+	# 		annex = c:KRG
+	# 		annex = c:BRD
+	# 	}
+	# 	c:SKY = {
+	# 		annex = c:ORM
+	# 	}
+	# 	c:AJR = {
+	# 		annex = c:AUL
+	# 	}
+	# 	c:LBA = {
+	# 		annex = c:HMB
+	# 	}
+	# 	c:WLT = {
+	# 		annex = c:SDM
+	# 	}
+	# 	c:WLG = {
+	# 		annex = c:KFA
+	# 	}
+	# 	c:MSI = {
+	# 		annex = c:LUO
+	# 	}
+	# 	c:HHE = {
+	# 		annex = c:GGO
+	# 		annex = c:SNG
+	# 	}
+	# 	c:MNB = {
+	# 		annex = c:LGA
+	# 	}
+	# }
 
 }

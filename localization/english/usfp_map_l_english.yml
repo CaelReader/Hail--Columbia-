@@ -40,7 +40,7 @@ SPI_ADJ: "South Paiute"
  INN_ADJ: "Innu"
  INK: "Nunavik"
  INK_ADJ: "Nunavik"
- INV: "Inuit" #Nunangat
+ INV: "Inuit Nunangat" #Nunangat
  INV_ADJ: "Inuit"
  CPW: "Chipewyan"
  CPW_ADJ: "Chipewyan"
@@ -118,11 +118,11 @@ rule_usfp_usa_names:0 "@america_icon! #yellow Hail, Columbia!#! | USA Names"
 
 rule_usfp_native_consolidation:0 "@america_icon! #yellow Hail, Columbia!#! | Decentralized Consolidation"
 setting_some_native_consolidation:1 "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_some_native_consolidation_desc #high Some #!#!#!"
-setting_some_native_consolidation_desc:0 "Some [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] in North America will be consolidated on game start. #lore Having more than 420 countries on the map currently causes major performance loss on some hardware.#!"
+setting_some_native_consolidation_desc:0 "Some [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] in North America will be consolidated on game start. #lore For use in case of potential performance issues.#!"
 setting_more_native_consolidation:1 "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_more_native_consolidation_desc #high More #!#!#!"
-setting_more_native_consolidation_desc:0 "Even more [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] in North America will be consolidated on game start. #lore Having more than 420 countries on the map currently causes major performance loss on some hardware.#!"
+setting_more_native_consolidation_desc:0 "Even more [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] in North America will be consolidated on game start. #lore For use in case of potential performance issues.#!"
 setting_no_native_consolidation:1 "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_no_native_consolidation_desc #high None #!#!#!"
-setting_no_native_consolidation_desc:0 "None of the Mod-Added [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] in North America will be consolidated on game start. #lore WARNING: Having more than 420 countries on the map currently causes major performance loss on some hardware!#!"
+setting_no_native_consolidation_desc:0 "None of the Mod-Added [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] in North America will be consolidated on game start."
 
 rule_usfp_african_consolidation: "@america_icon! #yellow Hail, Columbia!#! | African Consolidation"
 setting_african_consolidation: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_african_consolidation_desc #high Yes #!#!#!"
