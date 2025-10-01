@@ -658,8 +658,8 @@ usfp_constitutional_tariff_modifier = {
 usfp_federal_government_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
 	country_legitimacy_govt_size_add = -1
-	country_legitimacy_headofstate_add = 10
-	country_party_whip_impact_mult = 0.10
+	# country_legitimacy_headofstate_add = 10
+	country_party_whip_impact_add = 0.10
 	country_agitator_slots_add = 3
 }
 
