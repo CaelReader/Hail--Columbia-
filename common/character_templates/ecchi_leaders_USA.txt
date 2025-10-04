@@ -1937,7 +1937,7 @@ ecchi_asa_garnet_character_template = {
         }
         earliest_usage_date = 1842.1.1
         latest_usage_date = 1882.2.13
-        chance = 75
+        chance = 50
     }
 }
 

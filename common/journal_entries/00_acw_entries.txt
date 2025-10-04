@@ -976,6 +976,10 @@ je_acw_war_csa = {
 		}
 	}
 
+	modifiers_while_active = {
+		usfp_csa_civil_war_no_colonies_modifier
+	}
+
 	complete = {
 		is_at_war = no
 		has_truce_with = c:USA

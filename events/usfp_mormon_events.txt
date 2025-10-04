@@ -216,17 +216,21 @@ usfp_mormon.3 = {
 			}
 		}
 		has_global_variable = joseph_smith_killed
-		s:STATE_UTAH = {
-			NOT = {
-				any_scope_state = {
-					owner = {
-						NOT = {
-							is_country_type = decentralized
+		OR = {
+			s:STATE_UTAH = {
+				NOT = {
+					any_scope_state = {
+						owner = {
+							NOT = {
+								is_country_type = decentralized
+							}
 						}
 					}
 				}
 			}
+			has_state_in_state_region = STATE_UTAH
 		}
+
 		has_global_variable = oregon_trail_mapped
 		NOT = {
 			has_global_variable = deseret_spawned

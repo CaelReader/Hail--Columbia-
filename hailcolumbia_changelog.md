@@ -680,3 +680,6 @@ You can no longer grant IG leadership to an agitator during an election
 
 some Tecumseh's Legacy support updates
 Added variant Bureaucracy and Land Reform laws for native tags
+
+Deseret can spawn if you place a colony in Utah
+CSA should no longer colonize new provinces during the civil war
