@@ -606,9 +606,9 @@ usfp_fix_monarchy_revolt = {
 }
 
 #this should be election_campaign_ended but it broke
-on_election_campaign_start = {
+on_election_campaign_ended = {
 	on_actions = {
-		delay = { days = 188 }
+		# delay = { days = 188 }
 		USCWF_precedent_on_action
 		usfp_devils_bargain_action
 	}

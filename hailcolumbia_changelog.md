@@ -683,3 +683,17 @@ Added variant Bureaucracy and Land Reform laws for native tags
 
 Deseret can spawn if you place a colony in Utah
 CSA should no longer colonize new provinces during the civil war
+
+# 6.2 "Douglass"
+Increased attraction of Dixie pops to the pro-slavery movement, especially Aristocrats, Farmers, Soldiers, and Officers
+Adjusted attraction modifiers to the abolitionist and pro-slavery movements
+Added addition starting Trade Centers to the south exporting Fabric
+Abolitionist Movements now add their Support directly to their Activism above 33% Support
+The Slave Power now crushes Afro-American Fervor
+Breaking Indian Treaties now adds some loyalists
+Annexation more of Mexico now angers Abolitionists
+Cleaned up annexation tooltips in the Treaty of G-H
+AI USA stops taking pro-freedmen options when Northern Political Will has exhausted
+Cheyenne-Arapaho is now Algonquian
+Updated logo of Union Pacific Railroad
+Added some custom tooltips and descriptions to fix tooltips for unavailable event options

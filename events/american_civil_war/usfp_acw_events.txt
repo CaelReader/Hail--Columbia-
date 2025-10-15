@@ -1622,14 +1622,17 @@ usfp_acw.15 = {
 	option = {
 		name = usfp_acw.15.b
 		trigger = {
-			OR = {
-				institution_investment_level = {
-					institution = institution_police
-					value >= 4
-				}
-				institution_investment_level = {
-					institution = institution_home_affairs
-					value >= 4
+			custom_tooltip = {
+				text = has_anti_riot_institution
+				OR = {
+					institution_investment_level = {
+						institution = institution_home_affairs
+						value >= 3
+					}
+					institution_investment_level = {
+						institution = institution_police
+						value >= 4
+					}
 				}
 			}
 		}

@@ -234,25 +234,34 @@ usfp_a_house_divided.3 = {
 		show_as_unavailable = { always = yes }
 		trigger = {
 			has_law_or_variant = law_type:law_legacy_slavery
-			NOT = {
-				any_political_movement = {
-					is_political_movement_type = movement_anti_slavery
-					political_movement_support > 0.15
-				}
-			}
-			NOT = {
-				any_political_movement = {
-					is_political_movement_type = movement_pro_slavery
-					political_movement_radicalism > 0.20
-				}
-			}
-			ig:ig_landowners = {
-				leader = {
-					NOT = {
-						has_ideology = ideology:ideology_slaver
+			custom_tooltip = {
+				text = anti_slavery_movement_under_15
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_anti_slavery
+						political_movement_support > 0.15
 					}
 				}
-				is_marginal = no
+			}
+			custom_tooltip = {
+				text = pro_slavery_movement_under_20
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_pro_slavery
+						political_movement_radicalism > 0.20
+					}
+				}
+			}
+			custom_tooltip = {
+				text = landowners_not_slaver
+				ig:ig_landowners = {
+					leader = {
+						NOT = {
+							has_ideology = ideology:ideology_slaver
+						}
+					}
+					is_marginal = no
+				}
 			}
 		}
 		if = {

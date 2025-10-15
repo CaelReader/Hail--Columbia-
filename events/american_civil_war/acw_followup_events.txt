@@ -282,6 +282,15 @@ acw_followup_events.4 = {
 			}
 		}
 		usfp_reconstruction_swing_freedmen = yes
+		ai_chance = {
+			base = 5
+			modifier = {
+				trigger = {
+					usfp_northern_political_will_zero = yes
+				}
+				add = -100
+			}
+		}
 	}
 
 
@@ -300,6 +309,9 @@ acw_followup_events.4 = {
 			}
 		}
 		usfp_reconstruction_swing_south = yes
+		ai_chance = {
+			base = 30
+		}
 	}
 
 	#radical land distribution
@@ -339,7 +351,9 @@ acw_followup_events.4 = {
 			text = acw_followup_events.4.ctt
 			set_variable = reconstruction_radical_land_distribution
 		}
-		
+		ai_chance = {
+			base = 50
+		}
 	}
 }
 
@@ -418,6 +432,12 @@ acw_followup_events.5 = {
 		usfp_reconstruction_swing_freedmen = yes
 		ai_chance = {
 			base = 25
+			modifier = {
+				trigger = {
+					usfp_northern_political_will_zero = yes
+				}
+				add = -100
+			}
 		}
 	}
 
@@ -574,6 +594,12 @@ acw_followup_events.6 = {
 		usfp_reconstruction_swing_freedmen = yes
 		ai_chance = {
 			base = 25
+			modifier = {
+				trigger = {
+					usfp_northern_political_will_zero = yes
+				}
+				add = -100
+			}
 		}
 	}
 }
@@ -689,6 +715,12 @@ acw_followup_events.7 = {
 		usfp_reconstruction_swing_freedmen = yes
 		ai_chance = {
 			base = 75
+			modifier = {
+				trigger = {
+					usfp_northern_political_will_zero = yes
+				}
+				add = -100
+			}
 		}
 	}
 }

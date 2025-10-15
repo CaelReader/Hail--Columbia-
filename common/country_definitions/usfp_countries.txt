@@ -142,6 +142,17 @@ KTN = {
 	cultures = { salish }
 }
 
+ARP = {
+	color = { 223 204 125 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { algonquian } #vanilla fix
+	capital = STATE_COLORADO
+}
+
 #Sahaptin
 SHP = {
 	color = { 133 182 231 }

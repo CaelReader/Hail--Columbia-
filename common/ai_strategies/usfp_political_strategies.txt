@@ -454,18 +454,24 @@ ai_strategy_monroe_doctrine = {
 	type = diplomatic
 
 	possible = {
-		c:USA ?= this
 		has_journal_entry = je_usfp_american_constitution
+		c:USA ?= this
 	}
 	
 	#should be default strategy for USA
 	weight = {
-		value = 500
+		value = 0
+		if = {
+			limit = {
+				c:USA ?= this
+			}
+			add = 500
+		}
 		if = {
 			limit = {
 				usfp_country_is_american = no #why do I need to even do this?
 			}
-			add = -1000
+			add = -100000
 		}
 	}
 

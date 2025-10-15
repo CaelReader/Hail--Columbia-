@@ -39,6 +39,12 @@ usfp_reconstruction.1 = {
 		usfp_reconstruction_swing_freedmen = yes
 		ai_chance = {
 			base = 100
+			modifier = {
+				trigger = {
+					usfp_northern_political_will_zero = yes
+				}
+				add = -100
+			}
 		}
 	}
 	#no
@@ -230,6 +236,12 @@ usfp_reconstruction.3 = {
 		usfp_reconstruction_swing_freedmen = yes
 		ai_chance = {
 			base = 5
+			modifier = {
+				trigger = {
+					usfp_northern_political_will_zero = yes
+				}
+				add = -100
+			}
 		}
 	}
 	#they must fend for themselves
@@ -331,6 +343,12 @@ usfp_reconstruction.4 = {
 		set_global_variable = usfp_lost_cause_of_the_confederacy
 		ai_chance = {
 			base = 5
+			modifier = {
+				trigger = {
+					usfp_northern_political_will_zero = yes
+				}
+				add = -100
+			}
 		}
 	}
 }
@@ -1066,6 +1084,9 @@ usfp_reconstruction.15 = {
 				pop_type = aristocrats
 			}
 		}
+		ai_chance = {
+			base = 50
+		}
 	}
 	#can we push this across the South?
 	option = {
@@ -1102,6 +1123,15 @@ usfp_reconstruction.15 = {
 			add_modifier = {
 				name = ig_gaining_support
 				years = 4
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					usfp_northern_political_will_zero = yes
+				}
+				add = -100
 			}
 		}
 	}

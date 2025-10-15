@@ -543,6 +543,7 @@ usfp_manifest_destiny.6 = {
 			}
 			end_play = yes
 		}
+		usfp_anger_abolitionists_effect = { MULT = 0.5 }
 		usfp_mexican_north_purchase_effect = yes
 		change_infamy = {
 			add = -5
@@ -586,22 +587,26 @@ usfp_manifest_destiny.6 = {
 			end_play = yes
 		}
 		usfp_mexican_north_purchase_effect = yes
-		s:STATE_BAJA_CALIFORNIA.region_state:MEX = {
-			set_state_owner = root
+		custom_tooltip = {
+			text = usfp_mexican_north_more_states
+			s:STATE_BAJA_CALIFORNIA.region_state:MEX = {
+				set_state_owner = root
+			}
+			s:STATE_SONORA.region_state:MEX = {
+				set_state_owner = root
+			}
+			s:STATE_CHIHUAHUA = {
+				add_claim = root
+				remove_claim = c:MEX
+			}
+			s:STATE_CHIHUAHUA.region_state:MEX = {
+				set_state_owner = root
+			}
+			s:STATE_RIO_GRANDE.region_state:MEX = {
+				set_state_owner = root
+			}
 		}
-		s:STATE_SONORA.region_state:MEX = {
-			set_state_owner = root
-		}
-		s:STATE_CHIHUAHUA = {
-			add_claim = root
-			remove_claim = c:MEX
-		}
-		s:STATE_CHIHUAHUA.region_state:MEX = {
-			set_state_owner = root
-		}
-		s:STATE_RIO_GRANDE.region_state:MEX = {
-			set_state_owner = root
-		}
+
 		create_incident = {
 			country = c:MEX
 			value = 30
@@ -610,6 +615,7 @@ usfp_manifest_destiny.6 = {
 			value = medium_radicals
 			culture = cu:mexican
 		}
+		usfp_anger_abolitionists_effect = { MULT = 1 }
 		highlighted_option = yes
 		show_as_unavailable = {
 			always = yes
@@ -642,21 +648,24 @@ usfp_manifest_destiny.6 = {
 			end_play = yes
 		}
 		usfp_mexican_north_purchase_effect = yes
-		s:STATE_BAJA_CALIFORNIA.region_state:MEX = {
-			set_state_owner = root
-		}
-		s:STATE_SONORA.region_state:MEX = {
-			set_state_owner = root
-		}
-		s:STATE_CHIHUAHUA = {
-			add_claim = root
-			remove_claim = c:MEX
-		}
-		s:STATE_CHIHUAHUA.region_state:MEX = {
-			set_state_owner = root
-		}
-		s:STATE_RIO_GRANDE.region_state:MEX = {
-			set_state_owner = root
+		custom_tooltip = {
+			text = usfp_mexican_north_more_states
+			s:STATE_BAJA_CALIFORNIA.region_state:MEX = {
+				set_state_owner = root
+			}
+			s:STATE_SONORA.region_state:MEX = {
+				set_state_owner = root
+			}
+			s:STATE_CHIHUAHUA = {
+				add_claim = root
+				remove_claim = c:MEX
+			}
+			s:STATE_CHIHUAHUA.region_state:MEX = {
+				set_state_owner = root
+			}
+			s:STATE_RIO_GRANDE.region_state:MEX = {
+				set_state_owner = root
+			}
 		}
 		create_diplomatic_pact = {
 			country = c:MEX
@@ -666,6 +675,7 @@ usfp_manifest_destiny.6 = {
 			country = c:MEX
 			value = 60
 		}
+		usfp_anger_abolitionists_effect = { MULT = 1.5 }
 		add_radicals = {
 			value = large_radicals
 			culture = cu:mexican
@@ -737,6 +747,7 @@ usfp_manifest_destiny.6 = {
 			value = very_large_radicals
 			culture = cu:mexican
 		}
+		usfp_anger_abolitionists_effect = { MULT = 2 }
 		every_interest_group = {
 			limit = {
 				OR = {

@@ -163,116 +163,124 @@ usfp_manifest_less_destiny_high_effect = {
 }
 
 usfp_mexican_north_purchase_effect = {
-	s:STATE_CALIFORNIA = {
-		add_claim = c:USA
-		remove_claim = c:MEX
-		if = {
-			limit = { 
-				any_scope_state = {
-					owner = c:MEX
+	custom_tooltip = {
+		text = usfp_mexican_north_purchase_effect
+		s:STATE_CALIFORNIA = {
+				add_claim = c:USA
+				remove_claim = c:MEX
+				if = {
+					limit = { 
+						any_scope_state = {
+							owner = c:MEX
+						}
+					}
+					region_state:MEX = {
+						set_state_owner = c:USA
+					}
 				}
 			}
-			region_state:MEX = {
-				set_state_owner = c:USA
+			hidden_effect = {
+				annex = c:YUR
 			}
-		}
-	}
-	hidden_effect = {
-		annex = c:YUR
-	}
-	s:STATE_NEVADA = {
-		add_claim = c:USA
-		remove_claim = c:MEX
-		if = {
-			limit = { 
-				any_scope_state = {
-					owner = c:MEX
+			s:STATE_NEVADA = {
+				add_claim = c:USA
+				remove_claim = c:MEX
+				if = {
+					limit = { 
+						any_scope_state = {
+							owner = c:MEX
+						}
+					}
+					region_state:MEX = {
+						set_state_owner = c:USA
+					}
 				}
 			}
-			region_state:MEX = {
-				set_state_owner = c:USA
-			}
-		}
-	}
-	s:STATE_UTAH = {
-		add_claim = c:USA
-		remove_claim = c:MEX
-		if = {
-			limit = { 
-				any_scope_state = {
-					owner = c:MEX
+			s:STATE_UTAH = {
+				add_claim = c:USA
+				remove_claim = c:MEX
+				if = {
+					limit = { 
+						any_scope_state = {
+							owner = c:MEX
+						}
+					}
+					region_state:MEX = {
+						set_state_owner = c:USA
+					}
 				}
 			}
-			region_state:MEX = {
-				set_state_owner = c:USA
-			}
-		}
-	}
-	s:STATE_ARIZONA = {
-		add_claim = c:USA
-		remove_claim = c:MEX
-		if = {
-			limit = { 
-				any_scope_state = {
-					owner = c:MEX
+			s:STATE_ARIZONA = {
+				add_claim = c:USA
+				remove_claim = c:MEX
+				if = {
+					limit = { 
+						any_scope_state = {
+							owner = c:MEX
+						}
+					}
+					region_state:MEX = {
+						set_state_owner = c:USA
+					}
+					hidden_effect = {
+						set_owner_of_provinces = {
+							country = root
+							provinces = { xd08000  }
+						}
+					}
 				}
 			}
-			region_state:MEX = {
-				set_state_owner = c:USA
-			}
-			set_owner_of_provinces = {
-				country = root
-				provinces = { xd08000  }
-			}
-		}
-	}
-	s:STATE_NEW_MEXICO = {
-		add_claim = c:USA
-		remove_claim = c:MEX
-		if = {
-			limit = { 
-				any_scope_state = {
-					owner = c:MEX
+			s:STATE_NEW_MEXICO = {
+				add_claim = c:USA
+				remove_claim = c:MEX
+				if = {
+					limit = { 
+						any_scope_state = {
+							owner = c:MEX
+						}
+					}
+					region_state:MEX = {
+						set_state_owner = c:USA
+					}
+					hidden_effect = {
+						set_owner_of_provinces = {
+							country = root
+							provinces = { xc03080 xB566BA xB6EC9A }
+						}
+					}
 				}
 			}
-			region_state:MEX = {
-				set_state_owner = c:USA
-			}
-			set_owner_of_provinces = {
-				country = root
-				provinces = { xc03080 xB566BA xB6EC9A }
-			}
-		}
-	}
-	s:STATE_TEXAS = {
-		add_claim = c:USA
-		remove_claim = c:MEX
-		if = {
-			limit = {
-				exists = c:MEX 
-				any_scope_state = {
-					owner = c:MEX
+			s:STATE_TEXAS = {
+				add_claim = c:USA
+				remove_claim = c:MEX
+				if = {
+					limit = {
+						exists = c:MEX 
+						any_scope_state = {
+							owner = c:MEX
+						}
+					}
+					region_state:MEX = {
+						set_state_owner = c:USA
+					}
 				}
 			}
-			region_state:MEX = {
-				set_state_owner = c:USA
-			}
-		}
-	}
-	s:STATE_COLORADO = {
-		add_claim = c:USA
-		remove_claim = c:MEX
-		if = {
-			limit = { 
-				any_scope_state = {
-					owner = c:MEX
+			s:STATE_COLORADO = {
+				add_claim = c:USA
+				remove_claim = c:MEX
+				if = {
+					limit = { 
+						any_scope_state = {
+							owner = c:MEX
+						}
+					}
+					region_state:MEX = {
+						set_state_owner = c:USA
+					}
 				}
 			}
-			region_state:MEX = {
-				set_state_owner = c:USA
-			}
-		}
 	}
+	
 }
 
 usfp_planters_to_landowners_effect = {

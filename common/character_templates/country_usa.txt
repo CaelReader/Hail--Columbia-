@@ -600,6 +600,7 @@ csa_jefferson_davis_template = {
     first_name = Jefferson
     last_name = Davis
     historical = yes
+	dna = ecchi_dna_jefferson_davis
     culture = cu:dixie
     female = no
     religion = protestant

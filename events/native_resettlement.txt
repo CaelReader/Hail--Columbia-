@@ -432,7 +432,7 @@ native_resettlement.4 = {
 # The Clearing of the East
 native_resettlement.5 = {
 	type = country_event
-
+	placement = scope:cherokee_state
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	event_image = {
 		video = "southamerica_war_civilians"
@@ -452,6 +452,14 @@ native_resettlement.5 = {
 		}
 		cu:cherokee = { 
 			save_scope_as = cherokee_culture 
+		}
+		random_scope_state = {
+			limit = {
+				state_region = {
+					is_homeland = cu:cherokee
+				}
+			}
+			save_scope_as = cherokee_state
 		}
 	}
 

@@ -914,19 +914,25 @@ usfp_usa_postreconstruction.6 = {
 	option = {
 		name = usfp_usa_postreconstruction.6.b
 		trigger = {
-			OR = {
-				has_law_or_variant = law_type:law_dedicated_police
-				has_law_or_variant = law_type:law_militarized_police
-				has_law_or_variant = law_type:law_national_guard
-			}
-			OR = {
-				institution_investment_level = {
-					institution = institution_home_affairs
-					value >= 4
+			custom_tooltip = {
+				text = has_anti_riot_police_law
+				OR = {
+					has_law_or_variant = law_type:law_dedicated_police
+					has_law_or_variant = law_type:law_militarized_police
+					has_law_or_variant = law_type:law_national_guard
 				}
-				institution_investment_level = {
-					institution = institution_police
-					value >= 5
+			}
+			custom_tooltip = {
+				text = has_anti_riot_institution_4_5
+				OR = {
+					institution_investment_level = {
+						institution = institution_home_affairs
+						value >= 4
+					}
+					institution_investment_level = {
+						institution = institution_police
+						value >= 5
+					}
 				}
 			}
 		}
@@ -1148,19 +1154,25 @@ usfp_usa_postreconstruction.7 = {
 	option = {
 		name = usfp_usa_postreconstruction.7.b
 		trigger = {
-			OR = {
-				has_law_or_variant = law_type:law_dedicated_police
-				has_law_or_variant = law_type:law_militarized_police
-				has_law_or_variant = law_type:law_national_guard
-			}
-			OR = {
-				institution_investment_level = {
-					institution = institution_home_affairs
-					value >= 4
+			custom_tooltip = {
+				text = has_anti_riot_police_law
+				OR = {
+					has_law_or_variant = law_type:law_dedicated_police
+					has_law_or_variant = law_type:law_militarized_police
+					has_law_or_variant = law_type:law_national_guard
 				}
-				institution_investment_level = {
-					institution = institution_police
-					value >= 5
+			}
+			custom_tooltip = {
+				text = has_anti_riot_institution_4_5
+				OR = {
+					institution_investment_level = {
+						institution = institution_home_affairs
+						value >= 4
+					}
+					institution_investment_level = {
+						institution = institution_police
+						value >= 5
+					}
 				}
 			}
 		}
@@ -1341,19 +1353,25 @@ usfp_usa_postreconstruction.8 = {
 	option = {
 		name = usfp_usa_postreconstruction.8.b
 		trigger = {
-			OR = {
-				has_law_or_variant = law_type:law_dedicated_police
-				has_law_or_variant = law_type:law_militarized_police
-				has_law_or_variant = law_type:law_national_guard
-			}
-			OR = {
-				institution_investment_level = {
-					institution = institution_home_affairs
-					value >= 3
+			custom_tooltip = {
+				text = has_anti_riot_police_law
+				OR = {
+					has_law_or_variant = law_type:law_dedicated_police
+					has_law_or_variant = law_type:law_militarized_police
+					has_law_or_variant = law_type:law_national_guard
 				}
-				institution_investment_level = {
-					institution = institution_police
-					value >= 4
+			}
+			custom_tooltip = {
+				text = has_anti_riot_institution
+				OR = {
+					institution_investment_level = {
+						institution = institution_home_affairs
+						value >= 3
+					}
+					institution_investment_level = {
+						institution = institution_police
+						value >= 4
+					}
 				}
 			}
 		}
@@ -3051,10 +3069,7 @@ usfp_usa_postreconstruction.18 = {
 				institution = institution_police
 				value >= 3
 			}
-			OR = {
-				has_law_or_variant = law_type:law_cultural_exclusion
-				has_law_or_variant = law_type:law_multicultural
-			}
+			usfp_is_afro_american_discriminated = no
 		}
 		highlighted_option = yes
 		show_as_unavailable = {

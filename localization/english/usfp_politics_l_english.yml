@@ -38,6 +38,10 @@ POP_SUPPORT_BLACK_SOL_DIFFERENCE: "[concept_sol] difference with $heritage_group
 POP_SUPPORT_MIXED_RECONSTRUCTION: "Divided Dixie"
 POP_SUPPORT_RADICAL_RECONSTRUCTION: "Radical Reconstruction"
 POP_SUPPORT_JIM_CROW_STATE: "[concept_usfp_jim_crow] [concept_state]"
+POP_SUPPORT_DIXIE_ARISTOCRATS: "[GetCulture('dixie').GetName] [GetPopType('aristocrats').GetName]"
+POP_SUPPORT_DIXIE_FARMERS: "[GetCulture('dixie').GetName] [GetPopType('farmers').GetName]"
+POP_SUPPORT_DIXIE_SOLDIERS: "[GetCulture('dixie').GetName] [GetPopType('soldiers').GetName]"
+POP_SUPPORT_DIXIE_OFFICERS: "[GetCulture('dixie').GetName] [GetPopType('officers').GetName]"
 
 alert_usfp_ineligible_candidate_name: "Ineligible Presidential Candidate"
 alert_usfp_ineligible_candidate_desc: "The [concept_leader] of a [concept_powerful] [concept_interest_group] is not a #tooltippable;tooltip:[SCOPE.GetRootScope.GetCountry.GetTooltipTag],usfp_natural_born_citizens natural-born citizen#! and cannot run for [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')]."

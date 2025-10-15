@@ -29,4 +29,106 @@
 			# }
 		}
 	}
+	s:STATE_LOUISIANA = {
+		region_state:USA = {
+			create_building = {
+				building="building_trade_center"
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:USA"
+						levels=5
+						region="STATE_LOUISIANA"
+					}
+				}
+				reserves=1
+			}
+		}
+	}
+	s:STATE_VIRGINIA = {
+		region_state:USA = {
+			create_building = {
+				building="building_trade_center"
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
+				add_ownership={
+					building={
+						type="building_trade_center"
+						country="c:USA"
+						levels=2
+						region="STATE_VIRGINIA"
+					}
+				}
+				reserves=1
+			}
+		}
+	}
+	s:STATE_GEORGIA = {
+		region_state:USA = {
+			create_building = {
+				building="building_trade_center"
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
+				add_ownership={
+					building={
+						type="building_trade_center"
+						country="c:USA"
+						levels=2
+						region="STATE_GEORGIA"
+					}
+				}
+				reserves=1
+			}
+		}
+	}
+	s:STATE_MISSISSIPPI = {
+		region_state:USA = {
+			create_building = {
+				building="building_trade_center"
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:USA"
+						levels=5
+						region="STATE_MISSISSIPPI"
+					}
+				}
+				reserves=1
+			}
+		}
+	}
+	s:STATE_NORTH_CAROLINA = {
+		region_state:USA = {
+			create_building = {
+				building="building_trade_center"
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
+				add_ownership={
+					building={
+						type="building_trade_center"
+						country="c:USA"
+						levels=2
+						region="STATE_NORTH_CAROLINA"
+					}
+				}
+				reserves=1
+			}
+		}
+	}
+	s:STATE_SOUTH_CAROLINA = {
+		region_state:USA = {
+			create_building = {
+				building="building_trade_center"
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
+				add_ownership={
+					building={
+						type="building_trade_center"
+						country="c:USA"
+						levels=2
+						region="STATE_SOUTH_CAROLINA"
+					}
+				}
+				reserves=1
+			}
+		}
+	}
 }

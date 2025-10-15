@@ -219,6 +219,12 @@ usfp_anti_abolitionist_government = {
 	}
 }
 
+usfp_northern_political_will_zero = {
+	je:je_acw_reconstruction = {
+		"scripted_bar_progress(usfp_reconstruction_northern_will_progress_bar)" = 0
+	}
+}
+
 usfp_canada_zone = {
 	OR = {
 		region = sr:region_canada
@@ -452,10 +458,15 @@ usfp_has_plains_occupation_trigger = {
 }
 
 usfp_is_afro_american_discriminated = {
-	NOR = {
-		has_law_or_variant = law_type:law_cultural_exclusion
-		has_law_or_variant = law_type:law_multicultural
+	custom_description = {
+		text = usfp_afro_american_is_discriminated_trigger
+		subject = this
+		NOR = {
+			has_law_or_variant = law_type:law_cultural_exclusion
+			has_law_or_variant = law_type:law_multicultural
+		}
 	}
+
 }
 
 usfp_character_is_natural_born_citizen = {
