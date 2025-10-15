@@ -4,7 +4,12 @@ usfp_indian_removal_seminole_button = {
 	desc = "usfp_indian_removal_seminole_button_desc"
 
 	visible = {
-		NOT = {
+		always = yes
+	}
+
+	selected = {
+		OR = {
+			has_variable = seminole_removal_ongoing
 			has_variable = usfp_seminole_removed
 		}
 	}
@@ -49,8 +54,13 @@ usfp_indian_removal_cherokee_button = {
 	desc = "usfp_indian_removal_cherokee_button_desc"
 
 	visible = {
-		NOT = {
+		always = yes
+	}
+
+	selected = {
+		OR = {
 			has_variable = usfp_cherokee_removed
+			has_variable = cherokee_removal_ongoing
 		}
 	}
 
@@ -96,8 +106,13 @@ usfp_indian_removal_chickasaw_button = {
 	desc = "usfp_indian_removal_chickasaw_button_desc"
 
 	visible = {
-		NOT = {
+		always = yes
+	}
+
+	selected = {
+		OR = {
 			has_variable = usfp_chickasaw_removed
+			has_variable = chickasaw_removal_ongoing
 		}
 	}
 
@@ -140,9 +155,11 @@ usfp_indian_removal_creek_button = {
 	desc = "usfp_indian_removal_creek_button_desc"
 
 	visible = {
-		NOT = {
-			has_variable = usfp_creek_removed
-		}
+		always = yes
+	}
+
+	selected = {
+		always = yes
 	}
 
 	possible = {
@@ -153,7 +170,10 @@ usfp_indian_removal_creek_button = {
 	}
 
 	effect = {
-		
+		trigger_event = {
+			id = usfp_native_removal.10
+			years = 2
+		}
 	}
 }
 

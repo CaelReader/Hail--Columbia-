@@ -31,10 +31,7 @@ usfp_usa_colonization.1 = {
 	option = {
 		name = usfp_usa_colonization.1.a
 		trigger = {
-			custom_tooltip = {
-				text = enough_manifest_destiny
-				var:manifest_destiny_var >= 4
-			}
+			usfp_manifest_destiny_greater_or_equal_trigger = { value = 4 }
 		}
 		highlighted_option = yes
 		show_as_unavailable = {
@@ -83,10 +80,7 @@ usfp_usa_colonization.1 = {
 	option = {
 		name = usfp_usa_colonization.1.b
 		trigger = {
-			custom_tooltip = {
-				text = enough_manifest_destiny
-				var:manifest_destiny_var >= 3
-			}
+			usfp_manifest_destiny_greater_or_equal_trigger = { value = 3 }
 		}
 		highlighted_option = yes
 		show_as_unavailable = {

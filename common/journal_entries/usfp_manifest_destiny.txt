@@ -86,7 +86,6 @@ usfp_manifest_destiny_main = {
 			id = usfp_manifest_destiny.23
 			popup = yes
 		}
-		remove_modifier = usfp_manifest_destiny_modifier
 	}
 
 	event_outcome_failed_effect_desc = {

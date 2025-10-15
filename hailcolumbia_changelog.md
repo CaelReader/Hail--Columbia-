@@ -697,3 +697,5 @@ AI USA stops taking pro-freedmen options when Northern Political Will has exhaus
 Cheyenne-Arapaho is now Algonquian
 Updated logo of Union Pacific Railroad
 Added some custom tooltips and descriptions to fix tooltips for unavailable event options
+Updated Manifest Destiny triggers to show the required values
+Updated various scripted buttons to show when selected

@@ -249,7 +249,7 @@
 	s:STATE_KANSAS = {
 		region_state:ARP = {
 			create_pop = {
-				culture = siouan
+				culture = algonquian
 				size = 500 #filler
 			}
 		}
@@ -263,8 +263,18 @@
 	s:STATE_NEBRASKA = {
 		region_state:ARP = {
 			create_pop = {
-				culture = siouan
+				culture = algonquian
 				size = 500 #filler
+			}
+		}
+	}
+	s:STATE_COLORADO = {
+		region_state:ARP = {
+			every_scope_pop = {
+				change_pop_culture = {
+					target = cu:algonquian
+					value = 1.0
+				}
 			}
 		}
 	}

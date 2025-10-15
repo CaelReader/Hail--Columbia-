@@ -60,6 +60,12 @@ USFP_TRIGGER_MANIFEST_DESTINY_PRO_EXPANSION_OR_BIGOTED: "[CHARACTER.GetFullName]
 USFP_TRIGGER_MANIFEST_DESTINY_PRO_EXPANSION_OR_BIGOTED_NOT: "[CHARACTER.GetFullName] is #b not#! #tooltippable;tooltip:[Character.GetTooltipTag],usfp_manifest_destiny_special_tooltip_pro_expansion expansionist#! nor has the [GetCharacterTrait('bigoted').GetName] [concept_character_trait]"
 USFP_TRIGGER_MANIFEST_DESTINY_ANTI_EXPANSION: "[CHARACTER.GetFullName] is #tooltippable;tooltip:[Character.GetTooltipTag],usfp_manifest_destiny_special_tooltip_anti_expansion anti-expansion#!"
 USFP_TRIGGER_MANIFEST_DESTINY_ANTI_EXPANSION_NOT: "[CHARACTER.GetFullName] is #b not#! #tooltippable;tooltip:[Character.GetTooltipTag],usfp_manifest_destiny_special_tooltip_anti_expansion anti-expansion#!"
+USFP_MANIFEST_DESTINY_HIGH_ENOUGH: "#bold Manifest Destiny#! has sufficient influence ($VALUE|0$ or more)"
+USFP_MANIFEST_DESTINY_HIGH_ENOUGH_NOT: "#bold Manifest Destiny#! does #b not#! have sufficient influence ($VALUE|0$ or more)"
+USFP_MANIFEST_DESTINY_LOWER_THAN: "#bold Manifest Destiny#! has low enough influence ($VALUE|0$ or less)"
+USFP_MANIFEST_DESTINY_LOWER_THAN_NOT: "#bold Manifest Destiny#! does #b not#! have low enough influence ($VALUE|0$ or less)"
+
 
 USFP_TRIGGER_AFRO_AMERICAN_IS_DISCRIMINATED: "[COUNTRY.GetName] does #b not#! have [GetLawType('law_cultural_exclusion').GetName] or [GetLawType('law_multicultural').GetName] enacted"
 USFP_TRIGGER_AFRO_AMERICAN_IS_DISCRIMINATED_NOT: "[COUNTRY.GetName] has [GetLawType('law_cultural_exclusion').GetName] or [GetLawType('law_multicultural').GetName] enacted"
+

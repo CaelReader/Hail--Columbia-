@@ -3,17 +3,21 @@
 	desc = "usfp_underground_railroad_support_button_desc"
 
 	visible = {
-		NOR = {
-			je:je_usfp_underground_railroad = {
-				has_modifier = usfp_underground_railroad_supporting_modifier
-			}
-			je:je_usfp_underground_railroad = {
-				has_modifier = usfp_underground_railroad_suppressing_modifier
-			}
+		always = yes
+	}
+
+	selected = {
+		je:je_usfp_underground_railroad = {
+			has_modifier = usfp_underground_railroad_supporting_modifier
 		}
 	}
 
 	possible = {
+		NOT = {
+			je:je_usfp_underground_railroad = {
+				has_modifier = usfp_underground_railroad_suppressing_modifier
+			}
+		}
 		ig:ig_landowners = {
 			is_in_government = no
 		}
@@ -64,17 +68,21 @@ usfp_underground_railroad_suppress_button = {
 	desc = "usfp_underground_railroad_suppress_button_desc"
 
 	visible = {
-		NOR = {
-			je:je_usfp_underground_railroad = {
-				has_modifier = usfp_underground_railroad_supporting_modifier
-			}
-			je:je_usfp_underground_railroad = {
-				has_modifier = usfp_underground_railroad_suppressing_modifier
-			}
+		always = yes
+	}
+
+	selected = {
+		je:je_usfp_underground_railroad = {
+			has_modifier = usfp_underground_railroad_suppressing_modifier
 		}
 	}
 
 	possible = {
+		NOT = {
+			je:je_usfp_underground_railroad = {
+				has_modifier = usfp_underground_railroad_supporting_modifier
+			}
+		}
 		any_scope_politician = {
 			has_ideology = ideology:ideology_slaver
 			OR = {

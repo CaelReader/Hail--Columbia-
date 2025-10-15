@@ -31,10 +31,7 @@ usfp_western_purchase_button = {
 	cooldown = { years = 3 }
 
 	possible = {
-		custom_tooltip = {
-			text = enough_manifest_destiny
-			var:manifest_destiny_var > 2
-		}
+		usfp_manifest_destiny_greater_or_equal_trigger = { value = 3 }
 		# custom_tooltip = {
 		# 	text = usa_western_purchase_var
 		# 	NOT = {
@@ -237,10 +234,7 @@ usfp_homestead_act_button = {
 
 	possible = {
 		has_law_or_variant = law_type:law_homesteading
-		custom_tooltip = {
-			text = enough_manifest_destiny
-			var:manifest_destiny_var > 2
-		}
+		usfp_manifest_destiny_greater_or_equal_trigger = { value = 3 }
 		any_scope_state = {
 			# count > 3
 			usfp_american_west_zone = yes
@@ -371,10 +365,7 @@ usfp_cuban_purchase_button = {
 	}
 
 	possible = {
-		custom_tooltip = {
-			text = enough_manifest_destiny
-			var:manifest_destiny_var >= 5
-		}
+		usfp_manifest_destiny_greater_or_equal_trigger = { value = 5 }
 		any_scope_politician = {
 			OR = {
 				interest_group = {
@@ -585,6 +576,10 @@ usfp_secure_trail_button = {
 		}
 	}
 
+	selected = {
+		has_modifier = usfp_frontier_agents_modifier
+	}
+
 	possible = {
 		custom_tooltip = {
 			text = oregon_tt
@@ -597,6 +592,9 @@ usfp_secure_trail_button = {
 		is_at_war = no
 		influence >= 50
 		usfp_has_plains_occupation_trigger = yes
+		NOT = {
+			has_modifier = usfp_frontier_agents_modifier
+		}
 	}
 
 	effect = {
@@ -610,7 +608,6 @@ usfp_secure_trail_button = {
 		}
 		custom_tooltip = {
 			text = horse_creek_treaty_tt
-			set_variable = horse_creek_treaty
 		}
 	}
 
@@ -645,10 +642,7 @@ usfp_demand_bc_button = {
 	}
 
 	possible = {
-		custom_tooltip = {
-			text = enough_manifest_destiny
-			var:manifest_destiny_var > 5
-		}
+		usfp_manifest_destiny_greater_or_equal_trigger = { value = 6 }
 		ruler = {
 			usfp_manifest_destiny_pro_expansion_trigger = yes
 		}

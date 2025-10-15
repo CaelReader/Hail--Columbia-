@@ -140,10 +140,7 @@ usfp_filibuster.1 = {
 		usfp_manifest_more_destiny_effect = yes
 		trigger = {
 			OR = {
-				custom_tooltip = {
-					text = enough_manifest_destiny
-					var:manifest_destiny_var > 5
-				}
+				usfp_manifest_destiny_greater_or_equal_trigger = { value = 6 }
 				ruler = {
 					usfp_manifest_destiny_pro_expansion_trigger = yes
 				}
