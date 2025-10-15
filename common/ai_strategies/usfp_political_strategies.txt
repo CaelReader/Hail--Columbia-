@@ -236,31 +236,7 @@ ai_strategy_manifest_destiny = {
 	
 	#USA shouldn't interfere outside of Western Hemisphere
 	diplomatic_play_neutrality = {
-		value = 50
-		# if = {
-		# 	limit = {
-		# 		scope:diplomatic_play.initiator = {
-		# 			country_is_in_north_america = no
-		# 			country_is_in_south_america = no 
-		# 		}	
-		# 		scope:diplomatic_play.target = { 
-		# 			OR = {
-		# 				country_is_in_north_america = yes 
-		# 				country_is_in_south_america = yes 
-		# 			}
-		# 		}
-		# 	}
-		# 	add = -50
-		# }
-		# if = {
-		# 	limit = {
-		# 		scope:diplomatic_play.target = { 
-		# 			country_is_in_north_america = no
-		# 			country_is_in_south_america = no 
-		# 		}
-		# 	}
-		# 	add = 100
-		# }
+		value = 100
 
 	}
 	
@@ -440,10 +416,30 @@ ai_strategy_manifest_destiny = {
 
 	#generally minds its own business
 	diplomatic_play_support = {
+		if = {
+			limit = {
+				scope:country = {
+						country_is_in_americas = yes
+					}
+				scope:enemy_country = { 
+					country_is_in_americas = no
+				 }
+			}
+			add = {
+				value = 200
+				desc = "ai_strategy_monroe_doctrine"
+			}
+		} else_if = {
+			limit = {
+				scope:country = {
+						country_is_in_americas = no
+					}
+			}
 			add = {
 				value = -100
-				desc = "ai_strategy_manifest_destiny"
+				desc = "ai_strategy_monroe_doctrine"
 			}
+		}
 	}
 	
 }
@@ -526,7 +522,17 @@ ai_strategy_monroe_doctrine = {
 			add = 1
 			max = 2.0
 			min = 0.5
-		}		
+		}
+		
+		#ignore countries outside the western hemisphere
+		if = {
+			limit = {
+				scope:target_country =	{
+					country_is_in_americas = no
+				}	
+			}
+			multiply = 0.1
+		}
 	}
 
 	will_form_power_bloc = {
@@ -568,31 +574,7 @@ ai_strategy_monroe_doctrine = {
 	}
 
 	diplomatic_play_neutrality = {
-		value = 50
-		# if = {
-		# 	limit = {
-		# 		scope:diplomatic_play.initiator = {
-		# 			country_is_in_north_america = no
-		# 			country_is_in_south_america = no 
-		# 		}	
-		# 		scope:diplomatic_play.target = { 
-		# 			OR = {
-		# 				country_is_in_north_america = yes 
-		# 				country_is_in_south_america = yes 
-		# 			}
-		# 		}
-		# 	}
-		# 	add = -200
-		# }
-		# if = {
-		# 	limit = {
-		# 		scope:diplomatic_play.target = { 
-		# 			country_is_in_north_america = no
-		# 			country_is_in_south_america = no 
-		# 		}
-		# 	}
-		# 	add = 100
-		# }
+		value = 100
 
 	}
 
@@ -605,25 +587,20 @@ ai_strategy_monroe_doctrine = {
 		if = {
 			limit = {
 				scope:country = {
-					 	OR = {
-							country_is_in_north_america = yes 
-							country_is_in_south_america = yes 
-						} 
+						country_is_in_americas = yes
 					}
 				scope:enemy_country = { 
-					country_is_in_north_america = no
-					country_is_in_south_america = no 
+					country_is_in_americas = no
 				 }
 			}
 			add = {
-				value = 100
+				value = 200
 				desc = "ai_strategy_monroe_doctrine"
 			}
 		} else_if = {
 			limit = {
 				scope:country = {
-						country_is_in_north_america = no
-						country_is_in_south_america = no 
+						country_is_in_americas = no
 					}
 			}
 			add = {
@@ -631,7 +608,6 @@ ai_strategy_monroe_doctrine = {
 				desc = "ai_strategy_monroe_doctrine"
 			}
 		}
-
 	}
 
 	recklessness = {
@@ -726,11 +702,11 @@ ai_strategy_pacific_empire = {
 	}
 	
 	diplomatic_play_neutrality = {
-		value = 10
+		value = 20
 	}
 	
 	diplomatic_play_boldness = {
-		value = -10
+		value = 10
 	}
 	
 	recklessness = {
@@ -796,7 +772,20 @@ ai_strategy_pacific_empire = {
 				} 
 			}
 			add = 20
-		}		
+		}
+		
+		#more aggressive in the carribean and pacific
+		if = {
+			limit = {
+				scope:target_country = {
+					OR = {
+						country_is_in_central_america = yes
+						capital.region = sr:region_oceania
+					}
+				}
+			}
+			add = 0.5
+		}
 
 		# Less aggressive against countries we're just antagonistic against, rather than belligerent/domineering
 		if = {

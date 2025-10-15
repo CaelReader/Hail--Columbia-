@@ -193,3 +193,38 @@ negotiate_mexican_border = {
 	}
 }
 
+usfp_restore_constitution_decision = {
+	is_shown = {
+		c:USA ?= this
+		NOT = {
+			has_journal_entry = je_usfp_american_constitution
+		}
+	}
+
+	possible = {
+		has_law_or_variant = law_type:law_presidential_republic
+		in_election_campaign = no
+	}
+
+	when_taken = {
+		add_journal_entry = {
+			type = je_usfp_american_constitution
+		}
+		if = {
+			limit = { 
+				has_law = law_type:law_freedom_of_conscience
+			}
+			activate_law = law_type:law_usfp_nominal_separation
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_protectionism
+			 }
+			 activate_law = law_type:law_usfp_american_system
+		}
+	}
+	
+	ai_chance = {
+		value = 100
+	}
+}

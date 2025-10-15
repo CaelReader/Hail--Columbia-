@@ -13,7 +13,10 @@
 	}
 
 	possible = {
-		NOT = {
+		NOR = {
+			je:je_usfp_underground_railroad = {
+				has_modifier = usfp_underground_railroad_supporting_modifier
+			}
 			je:je_usfp_underground_railroad = {
 				has_modifier = usfp_underground_railroad_suppressing_modifier
 			}
@@ -78,9 +81,12 @@ usfp_underground_railroad_suppress_button = {
 	}
 
 	possible = {
-		NOT = {
+		NOR = {
 			je:je_usfp_underground_railroad = {
 				has_modifier = usfp_underground_railroad_supporting_modifier
+			}
+			je:je_usfp_underground_railroad = {
+				has_modifier = usfp_underground_railroad_suppressing_modifier
 			}
 		}
 		any_scope_politician = {

@@ -1,5 +1,6 @@
 ﻿on_monthly_pulse_country = {
 	on_actions = {
+		usfp_monroe_doctrine_fix
 		delay = { days = 10 }
 		usfp_monthly_pulse
 		usfp_arctic_isolation
@@ -125,6 +126,20 @@ usfp_arctic_isolation = {
 					}
 				}
 			}
+		}
+	}
+}
+
+#Why? why? why???
+usfp_monroe_doctrine_fix = {
+	effect = {
+		if = {
+			limit = {
+				is_ai = yes 
+				usfp_country_is_american = no
+				has_strategy = ai_strategy_monroe_doctrine
+			}
+			set_strategy = ai_strategy_armed_isolationism
 		}
 	}
 }

@@ -2087,6 +2087,15 @@ usfp_fugitive_slave_act_effect = {
 				name = usfp_fugitive_slave_law
 			}
 		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			add_modifier = {
+				name = usfp_fugitive_slave_law_movement_modifier
+				years = 5
+			}
+		}
 		je:je_usfp_underground_railroad = {
 			if = {
 				limit = { 

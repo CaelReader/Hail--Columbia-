@@ -699,3 +699,10 @@ Updated logo of Union Pacific Railroad
 Added some custom tooltips and descriptions to fix tooltips for unavailable event options
 Updated Manifest Destiny triggers to show the required values
 Updated various scripted buttons to show when selected
+Brute force on_action to force any non-USA countries to stop having the Monroe Doctrine strategy that they're not allowed to have
+Increased neutrality of the Monroe Doctrine
+Increased weight of Monroe Doctrine to support american countries
+Monroe Doctrine now properly considers central america to be part of its sphere
+Fugitive Slave Act now makes the Abolitionist Movement more angry
+Bleeding Kansas now increases pro/anti-slavery attraction in the state
+Added a decision to restore the Constitution if you lose the JE

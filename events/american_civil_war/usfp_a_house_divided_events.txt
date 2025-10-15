@@ -1085,6 +1085,15 @@ usfp_a_house_divided.11 = {
 			}
 		}
 	}
+
+	after = {
+		scope:kansas_scope = {
+			add_modifier = {
+				name = usfp_bleeding_kansas_state_modifier
+				years = 5
+			}
+		}
+	}
 }
 
 #Peculiar Reconciliation - USA variant
