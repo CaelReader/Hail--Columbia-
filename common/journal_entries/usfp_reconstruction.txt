@@ -8,6 +8,11 @@ usfp_reconstruction_long = {
 	scripted_button = usfp_overturn_plessy_button
 
 	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
 		cu:afro_american = {
 			save_scope_as = afro_american_culture
 		}

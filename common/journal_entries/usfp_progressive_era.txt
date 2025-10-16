@@ -57,6 +57,11 @@ usfp_progressive_era = {
 		}
 	}
 	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
 		ideology:ideology_usfp_progressive = {
 			save_scope_as = progressive_ideology
 		}

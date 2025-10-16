@@ -65,6 +65,11 @@ usfp_gilded_age = {
 		# }
 	}
 	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
 		trigger_event = usfp_gilded_age.1
 		ig:ig_industrialists = {
 			save_scope_as = industrialists_scope

@@ -566,6 +566,11 @@ je_acw_reconstruction = {
 		usfp_reconstruction_army_duties_modifier
 	}
 	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
 		#clean up election-spawned agitators
 		usfp_cleanup_acw_agitators = yes
 		set_variable = {

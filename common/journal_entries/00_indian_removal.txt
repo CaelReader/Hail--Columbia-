@@ -6,6 +6,11 @@
 		c:USA = THIS
 	}
 	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
 		# set_variable = indian_removal_var
 		# ruler = {
 		# 	save_scope_as = indian_removal_president

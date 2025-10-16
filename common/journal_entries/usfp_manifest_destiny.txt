@@ -17,6 +17,11 @@ usfp_manifest_destiny_main = {
 	}
 
 	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
 		set_variable = {
 			name = manifest_destiny_var
 			value = 0
@@ -613,6 +618,14 @@ usfp_je_westward_expansion = {
 	icon = gfx/interface/icons/event_icons/event_map.dds
 
 	group = je_group_usa_manifest_destiny
+	
+	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+	}
 
 	invalid = {
 		has_law_or_variant = law_type:law_no_colonial_affairs
@@ -666,6 +679,11 @@ usfp_je_western_border = {
 	}
 
 	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
 		root = {
 			save_scope_as = usa_scope
 		}
@@ -719,7 +737,7 @@ usfp_je_indian_wars = {
 
 	scripted_button = usfp_provoke_lakota_war_button
 	scripted_button = usfp_break_treaty_button
-
+	
 	modifiers_while_active = {
 		usfp_frontier_army_duties_modifier
 	}
@@ -763,6 +781,11 @@ usfp_je_indian_wars = {
 	}
 
 	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
 		trigger_event = usfp_indian_wars.13 #Peace Policy or War Policy
 		hidden_effect = {
 			c:LKT ?= {

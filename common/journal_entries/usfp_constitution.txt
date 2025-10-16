@@ -3,6 +3,14 @@
 
 	group = je_group_historical_content
 
+	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+	}
+	
 	modifiers_while_active = {
 		usfp_federal_government_modifier
 		usfp_constitutional_tariff_modifier

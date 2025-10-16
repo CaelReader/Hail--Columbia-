@@ -620,7 +620,6 @@ usfp_fix_monarchy_revolt = {
 	}
 }
 
-#this should be election_campaign_ended but it broke
 on_election_campaign_ended = {
 	on_actions = {
 		# delay = { days = 188 }

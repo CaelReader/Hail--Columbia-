@@ -87,6 +87,11 @@ je_usfp_a_house_divided_missouri_compromise = {
 	}
 
 	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
 		s:STATE_MISSOURI.region_state:USA = {
 			save_scope_as = missouri_scope
 		}
@@ -137,6 +142,14 @@ je_usfp_a_house_divided_gag_rule = {
 		usfp_gag_rule_modifier
 	}
 
+	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+	}
+
 	scripted_button = usfp_end_gag_rule_button
 	scripted_button = usfp_break_gag_rule_button
 
@@ -178,6 +191,11 @@ je_usfp_a_house_divided_bleeding_kansas = {
 	scripted_button = usfp_enforce_kansas_constitution_button
 	scripted_progress_bar = usfp_bleeding_kansas_progress_bar
 	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
 		s:STATE_KANSAS.region_state:USA = {
 			save_scope_as = kansas_scope
 		}
@@ -613,48 +631,48 @@ je_usfp_a_house_divided_bleeding_kansas = {
 
 
 # }
-je_usfp_a_house_divided_voting_rights = {
-	icon = "gfx/interface/icons/event_icons/event_election.dds"
+# je_usfp_a_house_divided_voting_rights = {
+# 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
-	group = je_group_usa_american_civil_war
+# 	group = je_group_usa_american_civil_war
 
-	should_be_pinned_by_default = yes
+# 	should_be_pinned_by_default = yes
 
-	modifiers_while_active = {
-		usfp_black_suffrage_denied_modifier
-	}
+# 	modifiers_while_active = {
+# 		usfp_black_suffrage_denied_modifier
+# 	}
 
-	immediate = {
-		cu:afro_american = {
-			save_scope_as = afro_american_culture
-		}
-	}
+# 	immediate = {
+# 		cu:afro_american = {
+# 			save_scope_as = afro_american_culture
+# 		}
+# 	}
 
-	complete = {
-		OR = {
-			has_law_or_variant = law_type:law_cultural_exclusion
-			has_law_or_variant = law_type:law_multicultural
-		}
-	}
+# 	complete = {
+# 		OR = {
+# 			has_law_or_variant = law_type:law_cultural_exclusion
+# 			has_law_or_variant = law_type:law_multicultural
+# 		}
+# 	}
 
-	on_complete = {
-		add_loyalists = {
-			value = medium_radicals
-			culture = cu:afro_american
-		}
-		remove_modifier = usfp_black_suffrage_denied_modifier
-	}
+# 	on_complete = {
+# 		add_loyalists = {
+# 			value = medium_radicals
+# 			culture = cu:afro_american
+# 		}
+# 		remove_modifier = usfp_black_suffrage_denied_modifier
+# 	}
 
 
 
-	invalid = {
-		OR = {
-			country_has_voting_franchise = no
-			has_law_or_variant = law_type:law_council_republic
-		}
-	}
+# 	invalid = {
+# 		OR = {
+# 			country_has_voting_franchise = no
+# 			has_law_or_variant = law_type:law_council_republic
+# 		}
+# 	}
 
-}
+# }
 
 je_usfp_underground_railroad = {
 	icon = "gfx/interface/icons/invention_icons/railways.dds"
@@ -664,6 +682,11 @@ je_usfp_underground_railroad = {
 	should_be_pinned_by_default = yes
 
 	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
 		cu:afro_american = {
 			save_scope_as = afro_american_culture
 		}
@@ -792,6 +815,11 @@ je_usfp_afro_american_colonization = {
 	should_be_pinned_by_default = yes
 
 	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
 		c:LIB = {
 			save_scope_as = liberia_scope
 		}
