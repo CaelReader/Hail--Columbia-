@@ -278,6 +278,16 @@
 			}
 		}
 	}
+	s:STATE_WYOMING = {
+		region_state:ARP = {
+			every_scope_pop = {
+				change_pop_culture = {
+					target = cu:algonquian
+					value = 1.0
+				}
+			}
+		}
+	}
 
 	#Great Sioux Nation
 	s:STATE_MONTANA = {

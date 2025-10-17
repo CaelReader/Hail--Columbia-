@@ -708,10 +708,10 @@ usfp_acw.8 = {
 					this = scope:fsa_scope
 				}
 			}
-			remove_war_goal = {
-				who = initiator
-				war_goal = revoke_all_claims
-			}
+			# remove_war_goal = {
+			# 	who = initiator
+			# 	war_goal = revoke_all_claims
+			# }
 			add_war_goal = {
 				holder = initiator
 				type = annex_country

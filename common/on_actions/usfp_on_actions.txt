@@ -347,43 +347,88 @@ usfp_new_president = {
 		owner = {
 			trigger_event = usfp_usa.21
 		}
+		#manually force ai strats on a new president
 		if = {
 			limit = {
-				usfp_manifest_destiny_pro_expansion_trigger = yes
+				owner = { is_ai = yes}
+			 }
+			if = {
+				limit = {
+					usfp_manifest_destiny_pro_expansion_trigger = yes
+					owner = {
+						has_journal_entry = usfp_manifest_destiny_main
+						NOT = {
+							has_global_variable = american_frontier_closed
+						}
+					} 
+				}
 				owner = {
-					is_ai = yes
-					has_journal_entry = usfp_manifest_destiny_main
-					NOT = {
+					set_strategy = ai_strategy_manifest_destiny
+				}
+			} else_if = {
+				limit = {
+					usfp_manifest_destiny_pro_expansion_trigger = yes
+					owner = {
+						has_journal_entry = usfp_manifest_destiny_main
 						has_global_variable = american_frontier_closed
+					} 
+				}
+				owner = {
+					set_strategy = ai_strategy_pacific_empire
+				}
+			} else_if = {
+				limit = {
+					usfp_manifest_destiny_anti_expansion_trigger = yes
+				}
+				owner = {
+					set_strategy = ai_strategy_monroe_doctrine
+				}
+			}
+			if = {
+				limit = {
+					interest_group = {
+						is_interest_group_type = ig_rural_folk
 					}
-				} 
+				 }
+				 owner = {
+					set_strategy = ai_strategy_agricultural_expansion
+				 }
 			}
-			owner = {
-				set_strategy = ai_strategy_manifest_destiny
+			if = {
+				limit = {
+					interest_group = {
+						is_interest_group_type = ig_landowners
+					}
+				 }
+				 owner = {
+					set_strategy = ai_strategy_plantation_economy
+				 }
 			}
-		} else_if = {
-			limit = {
-				usfp_manifest_destiny_pro_expansion_trigger = yes
+			if = {
+				limit = { 
+					has_ideology = ideology:ideology_usfp_progressive
+				}
 				owner = {
-					is_ai = yes
-					has_journal_entry = usfp_manifest_destiny_main
-					has_global_variable = american_frontier_closed
-				} 
+					set_strategy = ai_strategy_egalitarian_agenda
+				}
 			}
-			owner = {
-				set_strategy = ai_strategy_pacific_empire
+			if = {
+				limit = {
+					usfp_anti_slavery_leader_trigger = yes
+					owner = {
+						NOT = {
+							has_law_or_variant = law_type:law_slavery_banned
+						}
+					}
+				 }
+				 owner = {
+					set_strategy = ai_strategy_anti_slavery_agenda
+				 }
 			}
-		} else_if = {
-			limit = {
-				usfp_manifest_destiny_anti_expansion_trigger = yes
-				owner = {
-					is_ai = yes
-				} 
-			}
-			owner = {
-				set_strategy = ai_strategy_monroe_doctrine
-			}
+
 		}
+		
+
 	}
 }
 

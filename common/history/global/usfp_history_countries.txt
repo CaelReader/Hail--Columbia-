@@ -48,4 +48,8 @@
 			set_state_owner = c:NEW
 		}
 	}
+
+	cu:afro_american = {
+		add_fervor = -20
+	}
 }

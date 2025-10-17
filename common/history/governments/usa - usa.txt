@@ -2,7 +2,7 @@
 	c:USA ?= {
 		py:conservative_party ?= {
 			set_ruling_party = yes
-			add_momentum = 1.5 # Adjusted for historical election results
+			add_momentum = momentum_large # Adjusted for historical election results
 		}					
 	}
 }

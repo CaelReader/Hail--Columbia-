@@ -43,8 +43,8 @@ usfp_gag_rule_modifier = {
 
 usfp_slave_power_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
-	interest_group_ig_landowners_pol_str_mult = 0.10
-	interest_group_ig_landowners_pop_attraction_mult = 1.00
+	# interest_group_ig_landowners_pol_str_mult = 0.10
+	interest_group_ig_landowners_pop_attraction_mult = 0.50
 	country_fervor_target_afro_american_add = -20
 }
 

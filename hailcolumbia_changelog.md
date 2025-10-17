@@ -706,3 +706,7 @@ Monroe Doctrine now properly considers central america to be part of its sphere
 Fugitive Slave Act now makes the Abolitionist Movement more angry
 Bleeding Kansas now increases pro/anti-slavery attraction in the state
 Added a decision to restore the Constitution if you lose the JE
+Nerfed starting Democratic Party momentum
+Nerfed Slave Power modifier
+AI USA presidents now more proactively select new ai strategies upon election
+Second Party System now lowers enactment speed and movement suppression
