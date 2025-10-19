@@ -407,6 +407,12 @@ usfp_reconstruction.15.f: "[SCOPE.sState('farm_state').GetNameNoFormatting] had 
 usfp_reconstruction.15.a: "Let's hope they don't suffer too much backlash."
 usfp_reconstruction.15.b: "Could this work across the rest of the South?"
 
+usfp_reconstruction.16.t: "The Confederate Rebellion"
+usfp_reconstruction.16.d: "[GetCulture('dixie').GetName] insurgents have denounced the post-war [ROOT.GetCountry.GetName] as an illegitimate nation, and have begun calling for the [concept_secession] of the South as a new "Confederate States of America". While these disorganized rebels are unlikely to be able to launch a second civil war, the moniker has quickly been taken up by the supporters of slavery as a way to show their disapproval with the new government."
+usfp_reconstruction.16.f: ""We must never despair, for death is preferable to a life spent under the gauling yoke of abolition rule!"" # Pvt. Jonathan Doyle, 4th La.
+usfp_reconstruction.16.a: "Whatever they call themselves, they are traitors and terrorists!"
+
+
 #### Manifest Destiny Events ###
 
 usfp_manifest_destiny.1.t: "From Sea to Shining Sea?"

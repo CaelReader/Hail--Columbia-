@@ -295,8 +295,17 @@
 					is_in_government = yes
 					party = {
 						OR = {
-							is_party_type = agrarian_party
 							is_party_type = conservative_party
+							AND = {
+								is_party_type = agrarian_party
+								root = {
+									NOT = {
+										any_active_party = {
+											is_party_type = conservative_party
+										}
+									}
+								}
+							}
 						}
 					}
 				}

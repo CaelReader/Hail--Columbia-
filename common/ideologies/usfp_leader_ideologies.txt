@@ -469,7 +469,7 @@ ideology_usfp_strongman_populist = {
 	}
 
 	interest_group_leader_weight = {
-		value = 25
+		value = 15
 		if = {
 			limit = {
 				is_interest_group_type = ig_rural_folk

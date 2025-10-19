@@ -410,7 +410,17 @@ acw_je_events.2 = {
 		ai_chance = {
 			base = 1000
 		}
-		remove_variable = fsa_annex_var
+		if = {
+			limit = {
+				has_variable = fsa_annex_var
+			 }
+			remove_variable = fsa_annex_var
+			trigger_event = {
+				id = usfp_reconstruction.16
+				months = 1
+			}
+		}
+
 		add_modifier = {
 			name = usfp_post_acw_demobilization_modifier
 			years = 25

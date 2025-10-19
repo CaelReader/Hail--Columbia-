@@ -1136,4 +1136,46 @@ usfp_reconstruction.15 = {
 		}
 	}
 }
+#FSA Victory: Confederate Insurgency
+usfp_reconstruction.16 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/waving_flag_csa.dds"
+	event_image = {
+		video = "europenorthamerica_american_civil_war"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	title = usfp_reconstruction.16.t
+	desc = usfp_reconstruction.16.d
+	flavor = usfp_reconstruction.16.f
+	dlc = dlc_usfp
+	placement = scope:confederate_state
+	duration = 3
+	cooldown = {days = never_fire_again_modifier_time } #once
+
+	trigger = {
+		has_variable = fsa_annex_var
+	}
+
+	
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_modifier = unreconstructed_state
+			}
+			save_scope_as = confederate_state
+		}
+	}
+
+	#damn
+	option = {
+		name = usfp_reconstruction.16.a
+		default_option = yes
+		add_radicals = {
+			value = very_large_radicals
+			culture = cu:dixie
+		}
+	}
+}
 #Radical Republicans

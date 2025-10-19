@@ -1104,14 +1104,10 @@ secret_goal_scores = {
 		if = {
 			limit = {
 				scope:country = {
-					 	OR = {
-							country_is_in_north_america = yes 
-							country_is_in_south_america = yes 
-						} 
+						country_is_in_americas = yes
 					}
 				scope:enemy_country = { 
-					country_is_in_north_america = no
-					country_is_in_south_america = no 
+						country_is_in_americas = no
 				 }
 			}
 			add = {
@@ -1121,8 +1117,7 @@ secret_goal_scores = {
 		} else_if = {
 			limit = {
 				scope:country = {
-						country_is_in_north_america = no
-						country_is_in_south_america = no
+						country_is_in_americas = no
 						NOT = {
 							capital.region = sr:region_oceania
 						} 

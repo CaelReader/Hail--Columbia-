@@ -685,6 +685,7 @@ Deseret can spawn if you place a colony in Utah
 CSA should no longer colonize new provinces during the civil war
 
 # 6.2 "Douglass"
+Added a "Confederate Rebellion" event in case the FSA wins and annexes the USA
 Increased attraction of Dixie pops to the pro-slavery movement, especially Aristocrats, Farmers, Soldiers, and Officers
 Adjusted attraction modifiers to the abolitionist and pro-slavery movements
 Added addition starting Trade Centers to the south exporting Fabric
@@ -710,3 +711,5 @@ Nerfed starting Democratic Party momentum
 Nerfed Slave Power modifier
 AI USA presidents now more proactively select new ai strategies upon election
 Second Party System now lowers enactment speed and movement suppression
+The Gilded Age can now be ended early by an appropriate ideology president
+Fixed Dixie Culture not actually attracting to the Neoconfederate movement

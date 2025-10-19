@@ -594,6 +594,16 @@ movement_usfp_neoconfederate = {
 
 		if = {
 			limit = {
+				culture = cu:dixie
+			}
+			add = {
+				value = 15
+				desc = "POP_SUPPORT_DIXIE_CULTURE"
+			}
+		}
+
+		if = {
+			limit = {
 				is_pop_type = aristocrats
 			}
 			add = {
@@ -615,7 +625,7 @@ movement_usfp_neoconfederate = {
 				is_pop_type = peasants
 			}
 			add = {
-				value = 10
+				value = 15
 				desc = "POP_PEASANTS"
 			}
 		}
