@@ -713,3 +713,13 @@ AI USA presidents now more proactively select new ai strategies upon election
 Second Party System now lowers enactment speed and movement suppression
 The Gilded Age can now be ended early by an appropriate ideology president
 Fixed Dixie Culture not actually attracting to the Neoconfederate movement
+
+# 6.3 "Douglass"
+Civil War Legitimacy buff now persists for 4 years after the war (decaying)
+The start of Reconstruction prompts a refresh of IG/Party support
+Getting Slavery Banned to the final enactment phase now triggers Secessionist Conventions unless the pro-slavery movement is sufficiently weak
+Crushed the ability of Slaves in the South to join the Abolitionist movement
+Free afro-americans are now more attracted to the abolitionist movement
+Pro and Ati Slavery movement now have a radicalism modifier that scales with the imbalance of free vs slave incorporated states
+Rebalanced missouri compromise modifiers again
+Election momentum chaos now has a bias against incumbent parties, and especially parties with >100% momentum

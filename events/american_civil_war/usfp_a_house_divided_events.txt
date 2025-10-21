@@ -146,9 +146,23 @@ usfp_a_house_divided.3 = {
 		video = "ep1_clandestine_meeting"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
+	cooldown = {
+		years = 10
+	}
 	title = usfp_a_house_divided.3.t
-	desc = usfp_a_house_divided.3.d
+	desc = {
+		first_valid = {
+			triggered_desc = { 
+				trigger = {
+					is_enacting_law = law_type:law_slavery_banned
+				}
+				desc = usfp_a_house_divided.3.d_enacted
+			}
+			triggered_desc = {
+				desc = usfp_a_house_divided.3.d
+			}
+		}
+	}
 	flavor = usfp_a_house_divided.3.f
 	dlc = dlc_usfp
 	placement = s:STATE_GEORGIA.region_state:USA
@@ -169,12 +183,27 @@ usfp_a_house_divided.3 = {
 	}
 	
 	trigger = {
-		exists = c:USA
-		c:USA = ROOT
+		c:USA ?= ROOT
 		has_journal_entry = je_acw_countdown
-		# NOT = {
-		# 	has_journal_entry = je_usfp_a_house_divided_missouri_compromise
-		# }
+		OR = {
+			ruler = {
+				usfp_anti_slavery_leader_trigger = yes
+			}
+			AND = {
+				is_enacting_law = law_type:law_slavery_banned
+				enactment_phase > 1
+				any_political_movement = {
+					is_political_movement_type = movement_pro_slavery
+					OR = {
+						political_movement_support >= 0.10
+						AND = {
+							political_movement_support >= 0.05
+							political_movement_radicalism >= 0.25
+						}
+					}
+				}
+			}
+		}
 	}
 
 	option = {
@@ -219,6 +248,15 @@ usfp_a_house_divided.3 = {
 				on_created = {
 					set_as_interest_group_leader = yes
 				}
+			}
+		}
+		if = {
+			limit = {
+				is_enacting_law = law_type:law_slavery_banned
+			 }
+			add_modifier = {
+				name = usfp_congressional_uproar
+				months = 1
 			}
 		}
 		ai_chance = {
@@ -1236,6 +1274,13 @@ usfp_a_house_divided.13 = {
 				state_region = s:STATE_CHIHUAHUA
 				state_region = s:STATE_SONORA
 			}
+			any_scope_building = {
+				OR = {
+					is_building_group = bg_agriculture
+					is_building_group = bg_plantations
+				}
+				occupancy < 1.0
+			}
 		}
 	}
 
@@ -1256,6 +1301,13 @@ usfp_a_house_divided.13 = {
 					state_region = s:STATE_RIO_GRANDE
 					state_region = s:STATE_CHIHUAHUA
 					state_region = s:STATE_SONORA
+				}
+				any_scope_building = {
+					OR = {
+						is_building_group = bg_agriculture
+						is_building_group = bg_plantations
+					}
+					occupancy < 1.0
 				}
 			}
 			create_pop = {

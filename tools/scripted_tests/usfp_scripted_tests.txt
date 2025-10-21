@@ -1,0 +1,41 @@
+﻿last_date = "1871.1.1"
+
+tests = {
+	usfp_test_for_acw = {
+		acceptable_fail_rate = 0.1
+		success = {
+			has_global_variable = american_civil_war
+		}
+		fail = {
+			game_date > "1871.1.1"
+		}
+	}
+	usfp_test_for_csa = {
+		acceptable_fail_rate = 0.25
+		success = {
+			has_global_variable = american_civil_war
+			exists = c:CSA
+		}
+		fail = {
+			has_global_variable = american_civil_war
+			exists = c:FSA
+		}
+	}
+	usfp_test_for_acw_victory = {
+		acceptable_fail_rate = 0.25
+		success = {
+			has_global_variable = american_civil_war
+			exists = c:USA
+			c:USA = {
+				has_journal_entry = je_acw_reconstruction
+			}
+		}
+		fail = {
+			has_global_variable = american_civil_war
+			exists = c:USA
+			c:USA = {
+				has_modifier = usfp_secession_legimitized
+			}
+		}
+	}
+}

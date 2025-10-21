@@ -446,6 +446,7 @@ usfp_law_events = {
 	events = {
 		usfp_usa.9 #Constitutional Challenge
 		usfp_a_house_divided.14 #Missouri/1850 Compromise Violation
+		usfp_a_house_divided.3 #Slavery Banned triggers Secessionist Conventions
 	}
 }
 

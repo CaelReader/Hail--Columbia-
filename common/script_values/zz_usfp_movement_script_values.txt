@@ -3,15 +3,46 @@
 usfp_movement_anti_slavery_pop_support_mult = {
 	if = {
 		limit = {
+			is_pop_type = slaves
+			state = {
+				OR = {
+					has_modifier = usfp_deep_south_modifier
+					has_modifier = usfp_upper_south_modifier
+				}
+			}
+		}
+		multiply = {
+			value = 0.1
+			desc = "usfp_slave_power_modifier"
+		}
+	}
+	else_if = {
+		limit = {
 			owner ?= {
 				has_technology_researched = human_rights
 			}
 		}
-		value = 2.0
-		desc = "human_rights"	
+		multiply = {
+			value = 2.0
+			desc = "human_rights"	
+		}
 	}
-	else = {
-		value = 1	# Mult no change
+}
+
+usfp_movement_anti_slavery_pop_support_add = {
+	if = {
+		limit = {
+			NOT = {
+				is_pop_type = slaves
+			}
+			culture = {
+				has_discrimination_trait_group = heritage_group_african
+			}
+		}
+		add = {
+			value = 20
+			desc = "afro_american"
+		}
 	}
 }
 
@@ -36,6 +67,36 @@ usfp_movement_anti_slavery_additional_radicalism_add = {
 		add = {
 			value = political_movement_support
 			desc = "[concept_political_movement_support]"
+		}
+	}
+	if = {
+		limit = {
+			owner ?= {
+				has_journal_entry = je_acw_countdown
+			}
+		}
+		add = {
+			value = {
+				owner ?= {
+					every_scope_state = {
+						limit = {
+							is_incorporated = yes
+							is_slave_state = yes
+						}
+						add = 0.025
+					}
+				}
+				owner ?= {
+					every_scope_state = {
+						limit = {
+							is_incorporated = yes
+							is_slave_state = no
+						}
+						subtract = 0.025
+					}
+				}
+			}
+			desc = "slave_free_state_balance"
 		}
 	}
 }
@@ -114,10 +175,40 @@ usfp_movement_pro_slavery_additional_radicalism_add = {
 				}
 			}
 		}
-		value = 0.3
+		add = {
+			value = 0.3
+			desc = "powerful_abolitionist"
+		}
 	}
-	else = {
-		value = 0	# Add no change
+	if = {
+		limit = {
+			owner ?= {
+				has_journal_entry = je_acw_countdown
+			}
+		}
+		add = {
+			value = {
+				owner ?= {
+					every_scope_state = {
+						limit = {
+							is_incorporated = yes
+							is_slave_state = yes
+						}
+						subtract = 0.025
+					}
+				}
+				owner ?= {
+					every_scope_state = {
+						limit = {
+							is_incorporated = yes
+							is_slave_state = no
+						}
+						add = 0.025
+					}
+				}
+			}
+			desc = "slave_free_state_balance"
+		}
 	}
 }
 

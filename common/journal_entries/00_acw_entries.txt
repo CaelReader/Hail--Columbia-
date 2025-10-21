@@ -457,7 +457,11 @@ je_acw_war = {
 				}
 			}
 		}
-
+		add_modifier = {
+			name = usfp_war_caucus_modifier
+			years = 4
+			is_decaying = yes
+		}
 	}
 
 	fail = {

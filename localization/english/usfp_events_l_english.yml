@@ -16,6 +16,7 @@ usfp_a_house_divided.1.b: "Finally, lets get on with business as usual."
 
 usfp_a_house_divided.3.t: "Secessionist Conventions"
 usfp_a_house_divided.3.d: "In response to the openly anti-slavery platform of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName], several states of the Deep South have immediately called conventions to consider secession from the [ROOT.GetCountry.GetName]."
+usfp_a_house_divided.3.d_enacted: "In response to the apparently imminent enactment of [GetLawType('law_slavery_banned').GetName], several states of the Deep South have called conventions to consider secession from the [ROOT.GetCountry.GetName]."
 usfp_a_house_divided.3.f: ""Our new government is founded upon exactly the opposite idea; its foundations are laid, its corner-stone rests, upon the great truth that the negro is not equal to the white man; that slavery, subordination to the superior race, is his natural and normal condition.""
 usfp_a_house_divided.3.a: "You can have no conflict without being yourselves the aggressors."
 usfp_a_house_divided.3.b: "Wait! We shall enshrine slavery in the constitution!"
