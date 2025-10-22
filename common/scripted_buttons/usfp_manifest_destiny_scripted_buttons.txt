@@ -16,7 +16,21 @@ usfp_western_purchase_button = {
 					state_region = s:STATE_NEVADA
 					state_region = s:STATE_COLORADO
 				}
-				
+			}
+			NOT = {
+				any_scope_state = {
+					OR = {
+						state_region = s:STATE_CALIFORNIA
+						state_region = s:STATE_ARIZONA
+						state_region = s:STATE_UTAH
+						state_region = s:STATE_NEW_MEXICO
+						state_region = s:STATE_NEVADA
+						state_region = s:STATE_COLORADO
+					}
+					is_incorporated = yes
+					is_split_state = no
+					count > 1
+				}
 			}
 		}
 		has_variable = manifest_destiny_var

@@ -9,6 +9,10 @@ notification_usfp_new_american_homeland_name: "[concept_usfp_westward_expansion]
  notification_usfp_new_american_homeland_desc: "[SCOPE.sState('new_homeland_state').GetName] is now considered a [SCOPE.sCulture('new_homeland_culture').GetName] [concept_homeland]."
  notification_usfp_new_american_homeland_tooltip: "#header $notification_usfp_new_american_homeland_name$#!\n$notification_usfp_new_american_homeland_desc$"
 
+notification_usfp_new_mexican_homeland_name: "Northward Expansion"
+ notification_usfp_new_mexican_homeland_desc: "[SCOPE.sState('new_homeland_state').GetName] is now considered a [SCOPE.sCulture('new_homeland_culture').GetName] [concept_homeland]."
+ notification_usfp_new_mexican_homeland_tooltip: "#header $notification_usfp_new_mexican_homeland_name$#!\n$notification_usfp_new_mexican_homeland_desc$"
+
 notification_usfp_slavery_expands_name: "Slavery Spreads to [SCOPE.sState('slavery_expanded_state').GetName]"
  notification_usfp_slavery_expands_desc: "[SCOPE.sState('slavery_expanded_state').GetName] is now a Slave State."
  notification_usfp_slavery_expands_tooltip: "#header $notification_usfp_slavery_expands_name$#!\n$notification_usfp_slavery_expands_desc$"

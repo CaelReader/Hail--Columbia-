@@ -715,6 +715,8 @@ The Gilded Age can now be ended early by an appropriate ideology president
 Fixed Dixie Culture not actually attracting to the Neoconfederate movement
 
 # 6.3 "Douglass"
+Added JE to Mexico that allows them to add Mexican Homelands to the american west if they manage to hold on to them
+Added JE to the canadian holder of Oregon warning them about the Oregon Border Dispute
 Civil War Legitimacy buff now persists for 4 years after the war (decaying)
 The start of Reconstruction prompts a refresh of IG/Party support
 Getting Slavery Banned to the final enactment phase now triggers Secessionist Conventions unless the pro-slavery movement is sufficiently weak
@@ -723,3 +725,4 @@ Free afro-americans are now more attracted to the abolitionist movement
 Pro and Ati Slavery movement now have a radicalism modifier that scales with the imbalance of free vs slave incorporated states
 Rebalanced missouri compromise modifiers again
 Election momentum chaos now has a bias against incumbent parties, and especially parties with >100% momentum
+Western Purchase button is now disabled if Mexico manages to fully colonize and incorporate 2 or more of the relevant states

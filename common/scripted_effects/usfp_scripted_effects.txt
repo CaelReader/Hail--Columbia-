@@ -177,7 +177,14 @@ usfp_mexican_north_purchase_effect = {
 					region_state:MEX = {
 						set_state_owner = c:USA
 					}
+					region_state:USA = {
+						add_modifier = {
+							name = usfp_frontier_migration_modifier
+							years = 2
+						}
+					}
 				}
+
 			}
 			hidden_effect = {
 				annex = c:YUR
@@ -194,6 +201,12 @@ usfp_mexican_north_purchase_effect = {
 					region_state:MEX = {
 						set_state_owner = c:USA
 					}
+					region_state:USA = {
+						add_modifier = {
+							name = usfp_frontier_migration_modifier
+							years = 2
+						}
+					}
 				}
 			}
 			s:STATE_UTAH = {
@@ -207,6 +220,12 @@ usfp_mexican_north_purchase_effect = {
 					}
 					region_state:MEX = {
 						set_state_owner = c:USA
+					}
+					region_state:USA = {
+						add_modifier = {
+							name = usfp_frontier_migration_modifier
+							years = 2
+						}
 					}
 				}
 			}
@@ -228,6 +247,12 @@ usfp_mexican_north_purchase_effect = {
 							provinces = { xd08000  }
 						}
 					}
+					region_state:USA = {
+						add_modifier = {
+							name = usfp_frontier_migration_modifier
+							years = 2
+						}
+					}
 				}
 			}
 			s:STATE_NEW_MEXICO = {
@@ -246,6 +271,12 @@ usfp_mexican_north_purchase_effect = {
 						set_owner_of_provinces = {
 							country = root
 							provinces = { xc03080 xB566BA xB6EC9A }
+						}
+					}
+					region_state:USA = {
+						add_modifier = {
+							name = usfp_frontier_migration_modifier
+							years = 2
 						}
 					}
 				}

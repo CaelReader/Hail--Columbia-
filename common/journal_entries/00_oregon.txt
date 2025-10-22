@@ -163,15 +163,46 @@ je_oregon = {
 	}
 
 	fail = {
-		c:GBR = {
-			relations:ROOT <= relations_threshold:poor
-   	 	}
+		OR = {
+			c:GBR = {
+				relations:ROOT <= relations_threshold:poor
+			}
+			AND = {
+				c:GBR = {
+					NOR = {
+						has_state_in_state_region = STATE_WASHINGTON
+						has_state_in_state_region = STATE_OREGON
+						has_state_in_state_region = STATE_IDAHO
+					}
+				}
+				NOR = {
+					s:STATE_WASHINGTON = {
+						any_scope_state = {
+							owner = {
+									is_subject_of = c:GBR
+							}
+						}
+					}
+					s:STATE_OREGON = {
+						any_scope_state = {
+							owner = {
+									is_subject_of = c:GBR
+							}
+						}
+					}
+					s:STATE_IDAHO = {
+						any_scope_state = {
+							owner = {
+									is_subject_of = c:GBR
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	on_fail = {
-			add_journal_entry = {
-				type = je_conquer_oregon
-			}
 			s:STATE_OREGON = {
 				add_claim = ROOT
 			}
@@ -180,6 +211,9 @@ je_oregon = {
 			}
 			s:STATE_WASHINGTON = {
 				add_claim = ROOT
+			}
+			add_journal_entry = {
+				type = je_conquer_oregon
 			}
 			if = {
 				limit = { 
@@ -208,7 +242,73 @@ je_conquer_oregon = {
 		}
 	}
 
-	weight = 100
+	fail = {
+		NOT = {
+			has_claim = s:STATE_WASHINGTON
+			has_claim = s:STATE_IDAHO
+			has_claim = s:STATE_OREGON
+		}
+	}
+	
 
+	weight = 100
+	should_be_pinned_by_default = yes
 	transferable = no
+}
+
+je_oregon_can = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_historical_content
+
+	immediate = {
+		c:GBR = {
+			save_scope_as = britain_scope
+		}
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+	}
+
+	is_shown_when_inactive = {
+		exists = c:GBR
+		exists = c:USA
+		is_subject_of = c:GBR
+		OR = {
+			has_state_in_state_region = STATE_WASHINGTON
+			has_state_in_state_region = STATE_OREGON
+			has_state_in_state_region = STATE_IDAHO
+		}
+	}
+
+	possible = {
+		c:USA = {
+			OR = {
+				has_journal_entry = je_oregon
+				has_journal_entry = je_conquer_oregon
+			}
+		}
+	}
+
+	fail = {
+		NOT = {
+			has_state_in_state_region = STATE_WASHINGTON
+			has_state_in_state_region = STATE_OREGON
+			has_state_in_state_region = STATE_IDAHO
+		}
+	}
+
+	complete = {
+			c:USA = {
+				NOT = {
+					has_journal_entry = je_oregon
+				}
+				NOT = {
+					has_claim = s:STATE_WASHINGTON
+					has_claim = s:STATE_IDAHO
+					has_claim = s:STATE_OREGON
+				}
+			}
+	}
+	should_be_pinned_by_default = yes
 }

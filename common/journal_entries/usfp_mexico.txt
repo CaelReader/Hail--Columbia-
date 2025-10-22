@@ -1,0 +1,187 @@
+﻿usfp_je_mexican_north = {
+
+	icon = gfx/interface/icons/event_icons/event_map.dds
+
+	group = je_group_historical_content
+	
+	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+	}
+
+	invalid = {
+		has_law_or_variant = law_type:law_no_colonial_affairs
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = { 
+					any_scope_state = {
+						OR = {
+							usfp_mexican_cession_trigger = yes
+							state_region = s:STATE_COLORADO
+						}
+						NOT = {
+							cu:mexican = {
+								has_homeland = prev
+							}
+						}
+						is_split_state = no
+						state_population > 60000
+						religion_percent_state = {
+							target = rel:animist
+							value < 0.3
+						}
+						any_scope_pop = {
+							culture = {
+								shares_heritage_trait_group_with_any_primary_culture =  root
+							}
+						}
+					}
+				}
+				ordered_scope_state = {
+					limit = {
+						OR = {
+							usfp_mexican_cession_trigger = yes
+							state_region = s:STATE_COLORADO
+						}
+						NOT = {
+							cu:mexican = {
+								has_homeland = prev
+							}
+						}
+						is_split_state = no
+						state_population > 60000
+						religion_percent_state = {
+							target = rel:animist
+							value < 0.3
+						}
+						any_scope_pop = {
+							culture = {
+								shares_heritage_trait_group_with_any_primary_culture =  root
+							}
+						}
+					}
+					order_by = state_population
+					state_region = {
+						add_homeland = cu:mexican
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_cultural_community = cu:mexican
+							}
+						}
+						add_cultural_community = cu:mexican
+					}
+					cu:mexican = {
+						save_scope_as = new_homeland_culture
+					}
+					save_scope_as = new_homeland_state
+				}
+				post_notification = usfp_new_mexican_homeland
+			}	
+		}
+	}
+
+	complete = {
+		has_state_in_state_region = STATE_CALIFORNIA
+		trigger_if = {
+			limit = {
+				has_state_in_state_region = STATE_CALIFORNIA
+			}
+			s:STATE_CALIFORNIA.region_state:MEX = {
+				is_split_state = no
+				is_incorporated = yes
+			}
+		}
+		has_state_in_state_region = STATE_NEVADA
+		trigger_if = {
+			limit = {
+				has_state_in_state_region = STATE_NEVADA
+			}
+			s:STATE_NEVADA.region_state:MEX = {
+				is_split_state = no
+				is_incorporated = yes
+			}
+		}
+		has_state_in_state_region = STATE_UTAH
+		trigger_if = {
+			limit = {
+				has_state_in_state_region = STATE_UTAH
+			}
+			s:STATE_UTAH.region_state:MEX = {
+				is_split_state = no
+				is_incorporated = yes
+			}
+		}
+		has_state_in_state_region = STATE_NEW_MEXICO
+		trigger_if = {
+			limit = {
+				has_state_in_state_region = STATE_NEW_MEXICO
+			}
+			s:STATE_NEW_MEXICO.region_state:MEX = {
+				is_split_state = no
+				is_incorporated = yes
+			}
+		}
+		has_state_in_state_region = STATE_ARIZONA
+		trigger_if = {
+			limit = {
+				has_state_in_state_region = STATE_ARIZONA
+			}
+			s:STATE_ARIZONA.region_state:MEX = {
+				is_split_state = no
+				is_incorporated = yes
+			}
+		}
+	}
+
+	on_complete = {
+		every_scope_state = {
+			limit = {
+				OR = {
+					region = sr:region_pacific_coast
+				}
+			}
+			add_modifier = {
+				name = usfp_frontier_migration_modifier
+				years = 4
+			}
+		}
+	}
+
+	fail = {
+		NOT = {
+			any_subject_or_below = {
+				OR = {
+					has_state_in_state_region = STATE_CALIFORNIA
+					has_state_in_state_region = STATE_NEVADA
+					has_state_in_state_region = STATE_UTAH
+					has_state_in_state_region = STATE_NEW_MEXICO
+					has_state_in_state_region = STATE_ARIZONA
+				}
+			}
+		}
+		NOR = {
+			has_state_in_state_region = STATE_CALIFORNIA
+			has_state_in_state_region = STATE_NEVADA
+			has_state_in_state_region = STATE_UTAH
+			has_state_in_state_region = STATE_NEW_MEXICO
+			has_state_in_state_region = STATE_ARIZONA
+		}
+	}
+
+	should_be_pinned_by_default = yes
+
+	weight = 10
+
+	can_revolution_inherit = yes
+}

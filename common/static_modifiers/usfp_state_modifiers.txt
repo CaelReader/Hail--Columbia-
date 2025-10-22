@@ -317,3 +317,9 @@ usfp_bleeding_kansas_state_modifier = {
 	state_pop_support_movement_anti_slavery_mult = 0.50
 	state_pop_support_movement_pro_slavery_mult = 0.50
 }
+
+usfp_frontier_migration_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_map_positive.dds
+	state_migration_pull_mult = 0.15
+	state_assimilation_mult = 0.10
+}

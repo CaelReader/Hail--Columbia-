@@ -52,4 +52,10 @@
 	cu:afro_american = {
 		add_fervor = -20
 	}
+
+	c:MEX = {
+		add_journal_entry = {
+			type = usfp_je_mexican_north
+		}
+	}
 }
