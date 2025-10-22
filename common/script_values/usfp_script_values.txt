@@ -25,6 +25,10 @@ usfp_bleeding_kansas_get_yankee_percent = {
 		limit = {
 			culture_percent_state = {  
 				target = cu:yankee
+				value > 0.0
+			  }
+			culture_percent_state = {  
+				target = cu:yankee
 				value < 0.10  
 			  }  
 		 }
@@ -185,6 +189,10 @@ usfp_bleeding_kansas_get_dixie_percent = {
     value = 0
 	if = {
 		limit = {
+			culture_percent_state = {  
+				target = cu:dixie
+				value > 0.0
+			  }
 			culture_percent_state = {  
 				target = cu:dixie
 				value < 0.10  

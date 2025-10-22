@@ -73,6 +73,9 @@ usfp_movement_anti_slavery_additional_radicalism_add = {
 		limit = {
 			owner ?= {
 				has_journal_entry = je_acw_countdown
+				NOT = {
+					has_journal_entry = je_usfp_a_house_divided_missouri_compromise
+				}
 			}
 		}
 		add = {
@@ -82,6 +85,10 @@ usfp_movement_anti_slavery_additional_radicalism_add = {
 						limit = {
 							is_incorporated = yes
 							is_slave_state = yes
+							NOR = {
+								state_region = s:STATE_DISTRICT_OF_COLUMBIA
+								state_region = s:STATE_WEST_VIRGINIA
+							}
 						}
 						add = 0.025
 					}
@@ -91,6 +98,10 @@ usfp_movement_anti_slavery_additional_radicalism_add = {
 						limit = {
 							is_incorporated = yes
 							is_slave_state = no
+							NOR = {
+								state_region = s:STATE_DISTRICT_OF_COLUMBIA
+								state_region = s:STATE_WEST_VIRGINIA
+							}
 						}
 						subtract = 0.025
 					}
@@ -184,6 +195,9 @@ usfp_movement_pro_slavery_additional_radicalism_add = {
 		limit = {
 			owner ?= {
 				has_journal_entry = je_acw_countdown
+				NOT = {
+					has_journal_entry = je_usfp_a_house_divided_missouri_compromise
+				}
 			}
 		}
 		add = {
@@ -193,6 +207,10 @@ usfp_movement_pro_slavery_additional_radicalism_add = {
 						limit = {
 							is_incorporated = yes
 							is_slave_state = yes
+							NOR = {
+								state_region = s:STATE_DISTRICT_OF_COLUMBIA
+								state_region = s:STATE_WEST_VIRGINIA
+							}
 						}
 						subtract = 0.025
 					}
@@ -202,6 +220,10 @@ usfp_movement_pro_slavery_additional_radicalism_add = {
 						limit = {
 							is_incorporated = yes
 							is_slave_state = no
+							NOR = {
+								state_region = s:STATE_DISTRICT_OF_COLUMBIA
+								state_region = s:STATE_WEST_VIRGINIA
+							}
 						}
 						add = 0.025
 					}

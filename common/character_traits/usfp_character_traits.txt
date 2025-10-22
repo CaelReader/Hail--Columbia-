@@ -11,6 +11,7 @@
 
 	country_modifier = {
 		country_officers_pol_str_mult = 0.10
+		country_infamy_decay_mult = -0.07
 	}
 
 	agitator_modifier = {
@@ -48,6 +49,7 @@ usfp_trait_antiexpansionist = {
 	country_modifier = {
 		country_officers_pol_str_mult = -0.10
 		country_influence_mult = 0.10
+		country_infamy_generation_mult = 0.10
 	}
 
 	agitator_modifier = {

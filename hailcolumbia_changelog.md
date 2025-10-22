@@ -722,7 +722,13 @@ The start of Reconstruction prompts a refresh of IG/Party support
 Getting Slavery Banned to the final enactment phase now triggers Secessionist Conventions unless the pro-slavery movement is sufficiently weak
 Crushed the ability of Slaves in the South to join the Abolitionist movement
 Free afro-americans are now more attracted to the abolitionist movement
-Pro and Ati Slavery movement now have a radicalism modifier that scales with the imbalance of free vs slave incorporated states
+Once the Missouri Compromise is broken, Pro and Anti Slavery movements gain a radicalism modifier that scales with the imbalance of free vs slave incorporated states
 Rebalanced missouri compromise modifiers again
-Election momentum chaos now has a bias against incumbent parties, and especially parties with >100% momentum
+Election momentum chaos now has a bias against incumbent parties, and especially parties with >150% momentum
+Election momentum chaos no longer will decrease parties below -50% or above 150% momentum
+Added game rule to toggle election chaos
 Western Purchase button is now disabled if Mexico manages to fully colonize and incorporate 2 or more of the relevant states
+Mexican Cession states now recieve a short migration buff
+Expansionist and Antiexpansionist traits now impact infamy generation and decay
+Jacksonian Democrat can no longer spawn in the PB, but can spawn in the Armed Forces and Southern Planters
+Updated some labor union events to account for the new laws

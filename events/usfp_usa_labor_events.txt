@@ -274,6 +274,11 @@ usfp_usa_labor.3 = {
 	#cool
 	option = {
 		name = usfp_usa_labor.3.a
+		trigger = {
+			NOT = {
+				has_law_or_variant = law_type:law_combination_acts
+			}
+		}
 		default_option = yes
 		ig:ig_trade_unions = {
 			add_modifier = {
@@ -504,6 +509,7 @@ usfp_usa_labor.4 = {
 			OR = {
 				has_law_or_variant = law_type:law_national_guard
 				has_law_or_variant = law_type:law_secret_police
+				has_law_or_variant = law_type:law_combination_acts
 			}
 		}
 		every_scope_state = {
@@ -544,7 +550,10 @@ usfp_usa_labor.4 = {
 		name = usfp_usa_labor.4.e
 		highlighted_option = yes
 		trigger = {
-			has_law_or_variant = law_type:law_guaranteed_liberties
+			OR = {
+				has_law_or_variant = law_type:law_guaranteed_liberties
+				has_law_or_variant = law_type:law_right_to_associate
+			}
 		}
 		ig:ig_industrialists = {
 			add_modifier = {
@@ -661,6 +670,11 @@ usfp_usa_labor.5 = {
 	#too radical
 	option = {
 		name = usfp_usa_labor.5.b
+		trigger = {
+			NOT = {
+				has_law_or_variant = law_type:law_combination_acts
+			}
+		}
 		ig:ig_trade_unions = {
 			add_modifier = {
 				name = usfp_afl_modifier

@@ -1279,6 +1279,7 @@ usfp_usa.16 = {
 		any_interest_group = {
 			has_party = yes
 		}
+		has_game_rule = yes_election_chaos
 	}
 
 	immediate = {
@@ -1295,22 +1296,52 @@ usfp_usa.16 = {
 				random_list = {
 					10 = {}
 					25 = {
-						add_momentum = momentum_small
+						if = {
+							limit = { 
+								election_momentum < 1.5
+							}
+							add_momentum = momentum_small
+						}
 					}
 					20 = {
-						add_momentum = momentum_small_decrease
+						if = {
+							limit = { 
+								election_momentum > -0.5
+							}
+							add_momentum = momentum_small_decrease
+						}
 					}
 					15 = {
-						add_momentum = momentum_medium
+						if = {
+							limit = { 
+								election_momentum < 1.5
+							}
+							add_momentum = momentum_medium
+						}
 					}
 					10 = {
-						add_momentum = momentum_medium_decrease
+						if = {
+							limit = { 
+								election_momentum > -0.5
+							}
+							add_momentum = momentum_medium_decrease
+						}
 					}
 					2 = {
-						add_momentum = momentum_large
+						if = {
+							limit = { 
+								election_momentum < 1.5
+							}
+							add_momentum = momentum_large
+						}
 					}
 					1 = {
-						add_momentum = momentum_large_decrease
+						if = {
+							limit = { 
+								election_momentum > -0.5
+							}
+							add_momentum = momentum_large_decrease
+						}
 					}
 				}
 			}	
@@ -1355,7 +1386,7 @@ usfp_usa.16 = {
 			party = {
 				if = {
 					limit = { 
-						election_momentum < -0.25
+						election_momentum < -0.5
 					}
 					random_list = {
 						15 = {
@@ -1368,7 +1399,7 @@ usfp_usa.16 = {
 				}
 				else_if = {
 					limit = { 
-						election_momentum < 1.00
+						election_momentum < 0.50
 					}
 					random_list = {
 						75 = {}
@@ -1387,7 +1418,7 @@ usfp_usa.16 = {
 			party = {
 				if = {
 					limit = { 
-						election_momentum > 1.00
+						election_momentum > 1.5
 					}
 					random_list = {
 						15 = {
@@ -1398,7 +1429,10 @@ usfp_usa.16 = {
 						}
 					}
 				}
-				else = {
+				else_if = {
+					limit = { 
+						election_momentum > 0.0
+					}
 					random_list = {
 						75 = {}
 						25 = {
@@ -1437,23 +1471,53 @@ usfp_usa.17 = {
 				party = {
 					random_list = {
 						10 = {}
-						20 = {
-							add_momentum = momentum_small
+						25 = {
+							if = {
+								limit = { 
+									election_momentum < 1.5
+								}
+								add_momentum = momentum_small
+							}
 						}
 						20 = {
-							add_momentum = momentum_small_decrease
+							if = {
+								limit = { 
+									election_momentum > -0.5
+								}
+								add_momentum = momentum_small_decrease
+							}
+						}
+						15 = {
+							if = {
+								limit = { 
+									election_momentum < 1.5
+								}
+								add_momentum = momentum_medium
+							}
 						}
 						10 = {
-							add_momentum = momentum_medium
+							if = {
+								limit = { 
+									election_momentum > -0.5
+								}
+								add_momentum = momentum_medium_decrease
+							}
 						}
-						10 = {
-							add_momentum = momentum_medium_decrease
+						2 = {
+							if = {
+								limit = { 
+									election_momentum < 1.5
+								}
+								add_momentum = momentum_large
+							}
 						}
 						1 = {
-							add_momentum = momentum_large
-						}
-						1 = {
-							add_momentum = momentum_large_decrease
+							if = {
+								limit = { 
+									election_momentum > -0.5
+								}
+								add_momentum = momentum_large_decrease
+							}
 						}
 					}
 				}	

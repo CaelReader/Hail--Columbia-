@@ -776,6 +776,20 @@ usfp_manifest_destiny.6 = {
 		}
 	}
 
+	after = {
+		hidden_effect = {
+			every_scope_state = {
+				limit = {
+					usfp_mexican_cession_trigger = yes
+				}
+				add_modifier = {
+					name = usfp_frontier_migration_modifier
+					years = 2
+				}
+			}
+		}
+	}
+
 }
 
 #PB embrace Empire of Liberty

@@ -47,3 +47,12 @@ country_can_have_cultural_minority_movement_of_culture = { # Fired from the on_n
 		scope:culture = cu:dixie
 	}
 }
+
+ideology_jacksonian_democrat_valid_trigger = {
+	OR = {
+		is_interest_group_type = ig_rural_folk
+		is_interest_group_type = ig_landowners
+		is_interest_group_type = ig_armed_forces
+		is_interest_group_type = ig_trade_unions
+	}
+}

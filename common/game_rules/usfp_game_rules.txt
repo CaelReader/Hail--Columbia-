@@ -21,3 +21,13 @@ usfp_native_consolidation = {
 # 	african_consolidation = {}
 # 	no_african_consolidation = {}
 # }
+
+usfp_election_chaos = {
+	default = yes_election_chaos
+	yes_election_chaos = {
+		
+	}
+	no_election_chaos = {
+
+	}
+}

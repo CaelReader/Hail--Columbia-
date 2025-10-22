@@ -26,7 +26,7 @@ anti_slavery_movement_under_15: "The $movement_anti_slavery$ has less than 15% [
 pro_slavery_movement_under_20: "The $movement_pro_slavery$ has less than 20% [Concept('concept_activism', '$concept_activism_short$')]"
 landowners_not_slaver: "The [GetInterestGroupVariant('ig_landowners',GetPlayer).GetName] are not lead by a [GetIdeology('ideology_slaver').GetName], and are not [concept_marginalized]"
 
-missouri_compromise_break: "This will #red break#! the Missouri Compromise!"
+missouri_compromise_break: "This will #red break#! the Missouri Compromise! The $movement_anti_slavery$ and $movement_pro_slavery$ will gain or lose [Concept('concept_activism', '$concept_activism_short$')] based on the imbalance between Slave and Free [Concept('concept_incorporated_state', '$concept_incorporated_states$')]"
 
 usfp_a_house_divided.4.t: "Twelve Years A Slave"
 usfp_a_house_divided.4.d: "[SCOPE.sCharacter('northup_scope').GetFullName], a free black man from the North, was kidnapped and sold into slavery in the South. After over a decade in bondage, he has returned to freedom and published his story Twelve Years a Slave, which has immediately become a best-seller. [SCOPE.sCharacter('northup_scope').GetLastName]'s detailed account of the abhorrent conditions of slavery corroborate the worst fears of northern abolitionists, even as southern critics decry them as falsehoods."
