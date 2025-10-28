@@ -209,7 +209,7 @@ usfp_je_westward_expansion: "Westward Expansion"
 usfp_je_westward_expansion_reason: "$concept_usfp_westward_expansion_desc$\n\n$westward_expansion_need_repeaters$"
 usfp_je_westward_expansion_complete: "New [Concept('concept_homeland','$concept_homelands$')] will continue to be added to your [Concept('concept_state', '$concept_states$')] for the rest of the game."
 
-westward_expansion_need_repeaters: "@information Development of [GetTechnology('repeaters').GetName] would allow our settlers to effectively repel Indian attacks."
+westward_expansion_need_repeaters: "@information! #italic [GetTechnology('repeaters').GetName] would allow our settlers to effectively repel Indian attacks.#!"
 
 texan_statehood_tex: "Appeal for Statehood"
 texan_statehood_tex_desc: "Our republic was founded by settlers from the United States. We would be stronger as part of the union, if they'll have us."

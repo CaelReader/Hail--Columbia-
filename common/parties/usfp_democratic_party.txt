@@ -1,0 +1,84 @@
+﻿# Hail, Columbia! by CaelReader
+# Sort of a Conservative/Agrarian/Populist party for the most part
+# Core IGs: Landowners, Rural Folk
+# Favorable IGs: Trade Unions
+
+usfp_democratic_party = {
+	color = { 22 102 203 }
+	name = {
+		first_valid = {
+			triggered_desc = {
+				desc = party_us_democrats
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	icon = {
+		default = "/gfx/interface/icons/political_parties/usfp_democratic_party.dds"
+	}
+	# THIS IS RUN ONLY ONCE AT GAME START
+	valid_for_country = {
+		always = yes
+	}
+	available_for_interest_group = {
+		owner = {
+			country_has_voting_franchise = yes
+			has_journal_entry = je_usfp_american_constitution
+		}
+	}
+
+	# Root - IG considering joining
+	# scope:number - the number of IGs that would join this party before the root IG
+	join_weight = {
+		value = {
+			value = 50
+			desc = "usa_two_party_system"
+		}
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_landowners
+				}
+			}
+			add = {
+				value = 100
+				desc = "rural_interests"
+			}
+		}
+		if = {
+			limit = {
+				leader ?= {
+					has_ideology = ideology:ideology_jacksonian_democrat
+				}
+			}
+			add = {
+				value = 1000
+				desc = "from_jacksonian_democrat"
+			}
+		}
+		if = {
+			limit = { leader ?= { has_ideology = ideology:ideology_slaver } }
+			add = {
+				value = 100
+				desc = "from_slaver_leader"
+			}
+		}
+		else_if = {
+			limit = { leader ?= { usfp_anti_slavery_leader_trigger = yes } }
+			add = {
+				value = -100
+				desc = "from_abolitionist_leader"
+			}
+		}
+		if = {
+			limit = { leader ?= { has_ideology = ideology:ideology_market_liberal } }
+			add = {
+				value = 100
+				desc = "usfp_bourbon_democrats"
+			}
+		}
+	}
+}

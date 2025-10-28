@@ -732,3 +732,8 @@ Mexican Cession states now recieve a short migration buff
 Expansionist and Antiexpansionist traits now impact infamy generation and decay
 Jacksonian Democrat can no longer spawn in the PB, but can spawn in the Armed Forces and Southern Planters
 Updated some labor union events to account for the new laws
+
+# 7.0 "Jackson"
+USA now begins with Agrarianism
+American PB now supports the American School
+Added custom Democratic and Republican parties replacing the conservative/liberal parties in the USA

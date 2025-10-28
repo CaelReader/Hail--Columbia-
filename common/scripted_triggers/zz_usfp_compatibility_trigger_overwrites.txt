@@ -56,3 +56,19 @@ ideology_jacksonian_democrat_valid_trigger = {
 		is_interest_group_type = ig_trade_unions
 	}
 }
+
+usfp_has_democratic_party = {
+	any_active_party = {
+		is_party_type = usfp_democratic_party
+	}
+}
+
+usfp_has_republican_party = {
+	any_active_party = {
+		is_party_type = usfp_republican_party
+	}
+}
+
+usfp_has_constitutional_government = {
+	has_journal_entry = je_usfp_american_constitution
+}

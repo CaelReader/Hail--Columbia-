@@ -1,0 +1,110 @@
+﻿# Hail, Columbia! by CaelReader
+# Whig/Republican Party is essentially the Liberal Party in the timeframe
+# Core IGs: PB, Intelligentsia
+# Favorable IGs: Industrialists, Devout
+
+usfp_republican_party = {
+	color = { 240 200 98}
+	name = {
+		first_valid = {
+			triggered_desc = {
+				desc = party_whig_party
+				trigger = {
+					has_variable = whigs_party
+				}
+			}
+			triggered_desc = {
+				desc = party_republicans
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	icon = {
+		default = "/gfx/interface/icons/political_parties/usfp_republican_party.dds"
+	}
+	# THIS IS RUN ONLY ONCE AT GAME START
+	valid_for_country = {
+		always = yes
+	}
+	available_for_interest_group = {
+		owner = {
+			country_has_voting_franchise = yes
+			has_journal_entry = je_usfp_american_constitution
+		}
+		leader ?= { # far right and far left won't join liberal parties
+			NOR = {
+				has_ideology = ideology:ideology_fascist
+				has_ideology = ideology:ideology_integralist
+				has_ideology = ideology:ideology_ethno_nationalist
+				has_ideology = ideology:ideology_communist
+				has_ideology = ideology:ideology_vanguardist
+				has_ideology = ideology:ideology_anarchist
+			}
+		}
+	}
+
+	# Root - IG considering joining
+	# scope:number - the number of IGs that would join this party before the root IG
+	join_weight = {
+		value = {
+			value = 50
+			desc = "usa_two_party_system"
+		}
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_intelligentsia
+				}
+			}
+			add = {
+				value = 100
+				desc = "urban_interests"
+			}
+		}
+		if = {
+			limit = {
+				is_interest_group_type = ig_devout
+			}
+			add = {
+				value = 50
+				desc = "from_archetype_party"
+			}
+		}
+		if = {
+			limit = { leader ?= { has_ideology = ideology:ideology_slaver } }
+			add = {
+				value = -100
+				desc = "from_slaver_leader"
+			}
+		}
+		else_if = {
+			limit = { leader ?= { usfp_anti_slavery_leader_trigger = yes } }
+			add = {
+				value = 100
+				desc = "from_abolitionist_leader"
+			}
+		}
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_american_school
+			}
+			add = {
+				value = 25
+				desc = "ideology_american_school"
+			}
+		}
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_pro_tariff
+			}
+			add = {
+				value = 20
+				desc = "ideology_pro_tariff"
+			}
+		}
+	}
+
+}

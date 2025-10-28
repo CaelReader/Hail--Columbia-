@@ -1,6 +1,6 @@
 ﻿GOVERNMENT = {
 	c:USA ?= {
-		py:conservative_party ?= {
+		py:usfp_democratic_party ?= {
 			set_ruling_party = yes
 			add_momentum = momentum_large # Adjusted for historical election results
 		}					

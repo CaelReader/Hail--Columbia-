@@ -1850,7 +1850,7 @@ usfp_american_igs_effect = {
 			remove_ideology = ideology_republican_reactionary
 			add_ideology = ideology_republican
 			add_ideology = ideology_reactionary_segregationist
-			# add_ideology = ideology_american_school
+			add_ideology = ideology_american_school
 		}
 		ig:ig_rural_folk = {
 			remove_ideology = ideology_particularist
