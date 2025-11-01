@@ -737,3 +737,6 @@ Updated some labor union events to account for the new laws
 USA now begins with Agrarianism
 American PB now supports the American School
 Added custom Democratic and Republican parties replacing the conservative/liberal parties in the USA
+William H Harrison is now the starting leader of the PB
+Daniel Webster is now a starting PB Agitator
+Added starting Trade Privileges treaties for the USA

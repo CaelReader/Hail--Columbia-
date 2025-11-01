@@ -1,0 +1,58 @@
+﻿usfp_je_agenda_jackson = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/jackson_democrat.dds"
+
+	group = je_group_historical_content
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					tax_level > low
+				 }
+				 set_variable = {
+					name = changed_taxes_above_low
+					years = 10
+				 }
+			}
+		}
+	}
+
+	complete = {
+		OR = {
+			custom_tooltip = {
+				text = all_presidential_agenda_items_complete
+				has_law_or_variant = law_type:law_legacy_slavery
+				has_law_or_variant = law_type:law_agrarianism
+				NOT = {
+					has_variable = changed_taxes_above_low
+				}
+				NOT = {
+					market = {
+						any_market_goods = {
+							OR = {
+								import_tariff_level = high_tariffs
+								import_tariff_level = max_tariffs
+							}
+						}
+					}
+				}
+				scaled_debt <= 0
+				has_variable = usfp_indians_removed_end
+			}
+			ruler = {
+				NOT = {
+					has_ideology = ideology:ideology_jacksonian_democrat
+				}
+			}
+		}
+	}
+
+	invalid = {
+		NOT = {
+			has_law_or_variant = law_type:law_presidential_republic
+		}
+	}
+	
+	weight = 200
+	should_be_pinned_by_default = yes
+}

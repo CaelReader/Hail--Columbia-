@@ -20,4 +20,118 @@
 		}
 	}
 
+	#USA-Ottoman Commerce treaty of 1832
+	create_treaty = {
+		name = treaty_name_country_adj_country_adj_treaty_of_commerce_and_navigation
+		first_country = c:USA
+		second_country = c:TUR
+		is_draft = no
+		entered_into_force_on = 1832.2.4
+		binding_period = { 
+			years = 10
+		}
+		articles_to_create = {
+			{
+				article = trade_privilege
+				source_country = c:USA
+				target_country = c:TUR
+			}
+			{
+				article = trade_privilege
+				source_country = c:TUR
+				target_country = c:USA
+			}
+		}
+	}
+
+	#Siamese–American Treaty of Amity and Commerce
+	create_treaty = {
+		name = treaty_name_country_adj_country_adj_treaty_of_amity_and_commerce
+		first_country = c:USA
+		second_country = c:SIA
+		is_draft = no
+		entered_into_force_on = 1833.4.20 #technically signed into force in April 1836, but I want it to be at game start
+		binding_period = { 
+			years = 99 #"as long as Heaven and Earth shall endure"
+		}
+		articles_to_create = { #nominally equal, but actually just gives american traders privileges while not mentioning siamese traders in american ports
+			{
+				article = trade_privilege
+				source_country = c:SIA
+				target_country = c:USA
+			}
+		}
+	}
+
+	#Russian-American Commercial Treaty of 1832 
+	create_treaty = {
+		name = treaty_name_country_adj_country_adj_commercial_treaty
+		first_country = c:USA
+		second_country = c:RUS
+		is_draft = no
+		entered_into_force_on = 1832.12.6
+		binding_period = { 
+			years = 20
+		}
+		articles_to_create = {
+			{
+				article = trade_privilege
+				source_country = c:USA
+				target_country = c:RUS
+			}
+			{
+				article = trade_privilege
+				source_country = c:RUS
+				target_country = c:USA
+			}
+		}
+	}
+
+	#Swedish-American Treaty of 1827
+	create_treaty = {
+		name = treaty_name_country_adj_country_adj_treaty
+		first_country = c:USA
+		second_country = c:SWE
+		is_draft = no
+		entered_into_force_on = 1827.7.4
+		binding_period = { 
+			years = 20
+		}
+		articles_to_create = {
+			{
+				article = trade_privilege
+				source_country = c:USA
+				target_country = c:SWE
+			}
+			{
+				article = trade_privilege
+				source_country = c:SWE
+				target_country = c:USA
+			}
+		}
+	}
+
+	#A CONVENTION To REGULATE THE COMMERCE BETWEEN THE TERRITORIES OF THE UNITED STATES AND OF HIS BRITANNICK MAJESTY
+	create_treaty = {
+		name = treaty_name_country_adj_country_adj_treaty_of_commerce_and_navigation
+		first_country = c:USA
+		second_country = c:GBR
+		is_draft = no
+		entered_into_force_on = 1828.5.15
+		binding_period = { 
+			years = 10
+		}
+		articles_to_create = {
+			{
+				article = trade_privilege
+				source_country = c:USA
+				target_country = c:GBR
+			}
+			{
+				article = trade_privilege
+				source_country = c:GBR
+				target_country = c:USA
+			}
+		}
+	}
 }

@@ -60,8 +60,11 @@ law_usfp_fraternities: "Fraternal Societies"
 law_usfp_fraternities_desc: "Local administration is handled through a system of fraternities which elevate their members to a mixture of elected and hereditary positions."
 law_usfp_tribal_land_ownership: "Land Stewardship"
 law_usfp_tribal_land_ownership_desc: "Land usage rights are held in common, with the community organizing cultivation as needed to feed its members."
+law_usfp_devolved_taxation: "Devolved Taxation"
+law_usfp_devolved_taxation_desc: "Taxation is largely performed by state governments in the form of property taxes, with the federal government levying excise taxes when needed."
 
 treaty_name_dancing_rabbit_creek: "Treaty of Dancing Rabbit Creek"
+treaty_name_country_adj_country_adj_commercial_treaty: "[SECOND_COUNTRY.GetAdjectiveNoFormatting]-[FIRST_COUNTRY.GetAdjectiveNoFormatting] Commercial Treaty"
 
 usfp_pb_philadelphia_treaty: "Philadelphia Treaty"
 usfp_pb_american_free_trade_area: "American Free Trade Area"

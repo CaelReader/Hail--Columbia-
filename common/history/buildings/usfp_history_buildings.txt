@@ -82,6 +82,7 @@
 	}
 	s:STATE_MISSISSIPPI = {
 		region_state:USA = {
+			remove_building = building_government_administration
 			create_building = {
 				building="building_trade_center"
 				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
@@ -99,6 +100,7 @@
 	}
 	s:STATE_NORTH_CAROLINA = {
 		region_state:USA = {
+			remove_building = building_government_administration
 			create_building = {
 				building="building_trade_center"
 				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
@@ -116,6 +118,7 @@
 	}
 	s:STATE_SOUTH_CAROLINA = {
 		region_state:USA = {
+			remove_building = building_government_administration
 			create_building = {
 				building="building_trade_center"
 				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
@@ -129,6 +132,32 @@
 				}
 				reserves=1
 			}
+		}
+	}
+	s:STATE_DISTRICT_OF_COLUMBIA = {
+		region_state:USA = {
+			remove_building = building_government_administration
+			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:USA"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_secular_bureaucrats" "pm_professional_bureaucrats" "pm_horizontal_drawer_cabinets" }
+			}
+		}
+	}
+	s:STATE_MARYLAND = {
+		region_state:USA = {
+			remove_building = building_government_administration
+		}
+	}
+	s:STATE_DELAWARE = {
+		region_state:USA = {
+			remove_building = building_government_administration
 		}
 	}
 }

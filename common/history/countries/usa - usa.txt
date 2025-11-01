@@ -3,7 +3,12 @@
 		set_next_election_date = 1836.12.7
 
 		set_tax_level = low
+		set_military_wage_level = low
+		set_government_wage_level = low
 		
+		add_taxed_goods = g:furniture
+		add_taxed_goods = g:luxury_furniture #representing property taxes
+
 		effect_starting_technology_tier_1_tech = yes
 		
 		set_market_capital = STATE_NEW_YORK
@@ -19,7 +24,7 @@
 		activate_law = law_type:law_frontier_colonization
 		activate_law = law_type:law_right_of_assembly #constitution says Protected Speech, but really the government will intervene when it feels like it
 		activate_law = law_type:law_no_workers_rights
-		activate_law = law_type:law_per_capita_based_taxation #no federal income taxes, only tariffs and excises, states are funded mostly through property taxes
+		activate_law = law_type:law_usfp_devolved_taxation #no federal income taxes, only tariffs and excises, states are funded mostly through property taxes
 		activate_law = law_type:law_national_militia
 		activate_law = law_type:law_local_police
 		activate_law = law_type:law_no_womens_rights # Women couldn't hold property until ~1839

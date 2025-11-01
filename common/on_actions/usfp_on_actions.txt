@@ -669,7 +669,7 @@ usfp_fix_monarchy_revolt = {
 	}
 }
 
-on_election_campaign_ended = {
+on_election_campaign_end = {
 	on_actions = {
 		# delay = { days = 188 }
 		USCWF_precedent_on_action
