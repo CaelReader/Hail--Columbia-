@@ -1901,6 +1901,9 @@ usfp_usa.23 = {
 
 	option = {
 		name = usfp_usa.23.a
+		add_journal_entry = {
+			type = usfp_je_agenda_jackson 
+		}
 		show_as_tooltip = {
 			add_journal_entry = {
 				type = je_indian_removal

@@ -75,6 +75,7 @@
 		add_journal_entry = {type = je_indian_removal}
 		add_journal_entry = {type = je_usfp_american_constitution}
 
+
 		add_modifier = {
 			name = usfp_missouri_compromise_decaying
 			years = 25

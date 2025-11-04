@@ -134,4 +134,39 @@
 			}
 		}
 	}
+
+	#Moroccan-American Friendship Treaty, longest running US diplomatic relationship
+	create_treaty = {
+		name = treaty_name_country_adj_country_adj_treaty_of_peace_and_friendship
+		first_country = c:MOR
+		second_country = c:USA
+		is_draft = no
+		entered_into_force_on = 1787.7.18 #renewed in early 1836
+		binding_period = { 
+			years = 100
+		}
+		articles_to_create = {
+			{
+				article = offer_embassy
+				source_country = c:USA
+				target_country = c:MOR
+			}
+			{
+				article = trade_privilege
+				source_country = c:MOR
+				target_country = c:USA
+			}
+		}
+	}
+	c:MOR = {
+		change_relations = {
+			country = c:USA
+			value = 50
+		}
+		set_secret_goal = {
+			country = c:USA
+			secret_goal = befriend
+		}
+	}
+
 }

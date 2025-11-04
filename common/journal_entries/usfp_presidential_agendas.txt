@@ -3,6 +3,12 @@
 
 	group = je_group_historical_content
 
+	immediate = {
+		ruler = {
+			save_scope_as = jackson_scope
+		}
+	}
+
 	on_monthly_pulse = {
 		effect = {
 			if = {
@@ -21,20 +27,12 @@
 		OR = {
 			custom_tooltip = {
 				text = all_presidential_agenda_items_complete
+				in_election_campaign = yes
 				has_law_or_variant = law_type:law_legacy_slavery
 				has_law_or_variant = law_type:law_agrarianism
+				has_law_or_variant = law_type:law_universal_suffrage
 				NOT = {
 					has_variable = changed_taxes_above_low
-				}
-				NOT = {
-					market = {
-						any_market_goods = {
-							OR = {
-								import_tariff_level = high_tariffs
-								import_tariff_level = max_tariffs
-							}
-						}
-					}
 				}
 				scaled_debt <= 0
 				has_variable = usfp_indians_removed_end
@@ -44,6 +42,53 @@
 					has_ideology = ideology:ideology_jacksonian_democrat
 				}
 			}
+		}
+	}
+
+	on_complete = {
+		add_loyalists = {
+			value = {
+				value = 0.0
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_legacy_slavery
+					}
+					add = 0.01
+				}
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_agrarianism
+					}
+					add = 0.01
+				}
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_universal_suffrage
+					}
+					add = 0.01
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = changed_taxes_above_low
+						}
+					}
+					add = 0.01
+				}
+				if = {
+					limit = {
+						scaled_debt <= 0
+					}
+					add = 0.01
+				}
+				if = {
+					limit = {
+						has_variable = usfp_indians_removed_end
+					}
+					add = 0.01
+				}
+			}
+			interest_group = ig:ig_rural_folk
 		}
 	}
 
