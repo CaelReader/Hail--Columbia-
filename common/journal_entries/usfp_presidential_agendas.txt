@@ -20,6 +20,23 @@
 					years = 10
 				 }
 			}
+			if = {
+				limit = { 
+					OR = {
+						NOT = {
+							has_law_or_variant = law_type:law_legacy_slavery
+						}
+						is_enacting_law = law_type:law_slave_trade
+						is_enacting_law = law_type:law_slavery_banned
+						is_enacting_law = law_type:law_debt_slavery
+						is_enacting_law = law_type:law_colonial_slavery
+					}
+				}
+				set_variable = {
+					name = attempted_to_change_slavery_law
+					years = 10
+				}
+			}
 		}
 	}
 
@@ -51,7 +68,16 @@
 				value = 0.0
 				if = {
 					limit = {
-						has_law_or_variant = law_type:law_legacy_slavery
+						NOR = {
+							NOT = {
+								has_law_or_variant = law_type:law_legacy_slavery
+							}
+							is_enacting_law = law_type:law_slave_trade
+							is_enacting_law = law_type:law_slavery_banned
+							is_enacting_law = law_type:law_debt_slavery
+							is_enacting_law = law_type:law_colonial_slavery
+							has_variable = attempted_to_change_slavery_law
+						}
 					}
 					add = 0.01
 				}
@@ -90,6 +116,63 @@
 			}
 			interest_group = ig:ig_rural_folk
 		}
+		add_modifier = {
+			name = usfp_agenda_completed_modifier
+			years = 4
+			multiplier = {
+				value = {
+					value = 0.0
+					if = {
+						limit = {
+							NOR = {
+								NOT = {
+									has_law_or_variant = law_type:law_legacy_slavery
+								}
+								is_enacting_law = law_type:law_slave_trade
+								is_enacting_law = law_type:law_slavery_banned
+								is_enacting_law = law_type:law_debt_slavery
+								is_enacting_law = law_type:law_colonial_slavery
+								has_variable = attempted_to_change_slavery_law
+							}
+						}
+						add = 1
+					}
+					if = {
+						limit = {
+							has_law_or_variant = law_type:law_agrarianism
+						}
+						add = 1
+					}
+					if = {
+						limit = {
+							has_law_or_variant = law_type:law_universal_suffrage
+						}
+						add = 1
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_variable = changed_taxes_above_low
+							}
+						}
+						add = 1
+					}
+					if = {
+						limit = {
+							scaled_debt <= 0
+						}
+						add = 1
+					}
+					if = {
+						limit = {
+							has_variable = usfp_indians_removed_end
+						}
+						add = 1
+					}
+				}
+			}
+		}
+
 	}
 
 	invalid = {

@@ -1945,6 +1945,10 @@ usfp_usa.23 = {
 			add_declared_interest = region_great_plains
 			set_strategy = ai_strategy_monroe_doctrine
 			set_next_election_date = 1836.12.7 #vanilla bugfix?
+			trigger_event = {
+				id = usfp_panics.1
+				months = 14
+			}
 		}
 	}
 

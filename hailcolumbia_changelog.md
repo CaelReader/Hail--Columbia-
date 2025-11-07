@@ -734,9 +734,17 @@ Jacksonian Democrat can no longer spawn in the PB, but can spawn in the Armed Fo
 Updated some labor union events to account for the new laws
 
 # 7.0 "Jackson"
-USA now begins with Agrarianism
-American PB now supports the American School
-Added custom Democratic and Republican parties replacing the conservative/liberal parties in the USA
-William H Harrison is now the starting leader of the PB
-Daniel Webster is now a starting PB Agitator
-Added starting Trade Privileges treaties for the USA
+## New Content
+	Jacksonian Agenda JE at game start
+	Added the Panic of 1837 plus a JE to recover from it
+	Added starting Trade Privileges treaties for the USA
+	Added custom Democratic and Republican parties replacing the conservative/liberal parties in the USA
+## Updates
+	USA now begins with Agrarianism and a special variant of Consumption-Based Taxation
+	American PB now supports the American School
+	William H Harrison is now the starting leader of the PB
+	Daniel Webster is now a starting PB Agitator
+	Significantly reduced the number of starting Government Admins
+	Removed the SoL change from the planter's Our Peculiar Institution trait
+## Fixes
+	Significantly increased the navy requirement to enforce the Monroe Doctrine so that now you actually have to grow the navy from its starting state 

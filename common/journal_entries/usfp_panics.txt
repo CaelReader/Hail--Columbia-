@@ -1,0 +1,91 @@
+﻿je_usfp_panic_1837 = {
+	icon = "gfx/interface/icons/invention_icons/mutual_funds.dds"
+
+	group = je_group_historical_content
+
+	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_interventionism
+			 }
+			 scope:journal_entry = {
+				add_modifier = {
+					name = usfp_panic_1837_modifier
+					multiplier = 0.5
+				}
+			 }
+		} else = {
+			scope:journal_entry = {
+				add_modifier = usfp_panic_1837_modifier
+			}
+		}
+		set_variable = {
+			name = panic_1837_last_month_gdp
+			value = root.gdp
+		}
+		set_variable = {
+			name = panic_1837_this_month_gdp
+			value = root.gdp
+		}
+		set_variable = {
+			name = panic_1837_gdp_target
+			value = {
+				value = root.gdp
+				multiply = 1.005
+			}
+		}
+	}
+
+	scripted_progress_bar = usfp_panic_1837_recovery_progress_bar
+
+	on_monthly_pulse = {
+		effect = {
+			set_variable = {
+				name = panic_1837_last_month_gdp
+				value = var:panic_1837_this_month_gdp
+			}
+			set_variable = {
+				name = panic_1837_this_month_gdp
+				value = root.gdp
+			}
+			set_variable = {
+				name = panic_1837_gdp_target
+				value = {
+					value = var:panic_1837_this_month_gdp
+					multiply = 1.005
+				}
+			}
+		}
+	}
+
+	invalid = {
+		OR = {
+			has_law_or_variant = law_type:law_command_economy
+			has_law_or_variant = law_type:law_cooperative_ownership
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = panic_recovery_complete
+			scope:journal_entry = {
+				"scripted_bar_progress(usfp_bleeding_kansas_progress_bar)" >= 200
+			}
+		}
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = usfp_post_panic_recovery_modifier
+			years = 3
+		}
+	}
+
+	weight = 200
+	should_be_pinned_by_default = yes
+}

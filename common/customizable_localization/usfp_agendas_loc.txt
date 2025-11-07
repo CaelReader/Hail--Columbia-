@@ -28,6 +28,7 @@ usfp_agenda_jackson_legacy_slavery_checkbox = {
 				is_enacting_law = law_type:law_slavery_banned
 				is_enacting_law = law_type:law_debt_slavery
 				is_enacting_law = law_type:law_colonial_slavery
+				has_variable = attempted_to_change_slavery_law
 			}
 
 		}

@@ -2012,7 +2012,7 @@ usfp_manifest_destiny.18 = {
 	option = {
 		name = usfp_manifest_destiny.18.a
 		trigger = {
-			naval_power_projection >= 80
+			naval_power_projection >= 600
 		}
 		default_option = yes
 		if = {
@@ -2077,7 +2077,7 @@ usfp_manifest_destiny.18 = {
 	option = {
 		name = usfp_manifest_destiny.18.c
 		trigger = {
-			naval_power_projection < 80
+			naval_power_projection < 600
 		}
 		highlighted_option = yes
 		change_relations = {

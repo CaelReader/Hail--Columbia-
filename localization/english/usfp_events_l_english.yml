@@ -807,7 +807,7 @@ usfp_usa.22.f: "Crowds buzzed through the streets set aside for the exposition, 
 usfp_usa.22.a: "Here's to another 100 years!"
 
 usfp_usa.23.t: "The [ROOT.GetCountry.GetRuler.GetLastName] Presidency"
-usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of his office. After asserting the powers of the Federal government in the [concept_usfp_nullification_crisis], he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the [concept_usfp_supreme_court] rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of slavery continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
+usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of his office. After dissolving the Central Bank and asserting the powers of the Federal government in the [concept_usfp_nullification_crisis], he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the [concept_usfp_supreme_court] rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of slavery continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
 usfp_usa.23.f: ""But you must remember, my fellow-citizens, that eternal vigilance by the people is the price of liberty, and that you must pay the price if you wish to secure the blessing."" #Andrew Jackson
 usfp_usa.23.a: "This is a time of opportunity."
 

@@ -739,3 +739,30 @@ usfp_csa_civil_war_no_colonies_modifier = {
 	state_colony_growth_speed_mult = -10.0
 	state_incorporation_speed_mult = -10.0
 }
+
+usfp_panic_1837_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_bank_negative.dds
+	country_loyalists_from_legitimacy_mult = -0.50
+	state_capitalists_investment_pool_efficiency_mult = -0.2
+	state_capitalists_investment_pool_contribution_add = -0.10
+	state_shopkeepers_investment_pool_efficiency_mult = -0.2
+	state_shopkeepers_investment_pool_contribution_add = -0.10
+	state_aristocrats_investment_pool_efficiency_mult = -0.4
+	state_aristocrats_investment_pool_contribution_add = -0.10
+	country_loan_interest_rate_mult = 0.50
+}
+
+usfp_post_panic_recovery_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_currency_positive.dds
+	political_movement_pop_attraction_mult = -0.10
+	state_capitalists_investment_pool_efficiency_mult = 0.10
+	state_aristocrats_investment_pool_efficiency_mult = 0.10
+	state_shopkeepers_investment_pool_efficiency_mult = 0.10
+}
+
+usfp_agenda_completed_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_election_positive.dds
+	state_loyalists_from_political_movements_mult = 0.01
+	country_loyalists_from_legitimacy_mult = 0.01
+	country_legitimacy_headofstate_add = 1
+}

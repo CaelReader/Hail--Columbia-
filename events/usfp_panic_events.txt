@@ -1,0 +1,112 @@
+﻿namespace = usfp_panics
+###### Hail, Columbia! by CaelReader ######
+
+#Panic of 1837
+usfp_panics.1 = {
+	type = country_event
+	placement = root
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_panics.1.t
+	desc = usfp_panics.1.d
+	flavor = usfp_panics.1.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_factory_closed"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/invention_icons/banking.dds"
+
+
+	#uh oh
+	option = {
+		name = usfp_panics.1.a
+		default_option = yes
+		add_journal_entry = {
+			type = je_usfp_panic_1837
+		}
+		show_as_tooltip = {
+			add_modifier = usfp_panic_1837_modifier
+		}
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_ARKANSAS
+					state_region = s:STATE_ILLINOIS
+				}
+				NOT = {
+					has_modifier = usfp_panic_state_default_modifier
+				}
+			}
+			add_modifier = {
+				name = usfp_panic_state_default_modifier
+				years = 4
+			}
+		}
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_INDIANA
+					state_region = s:STATE_MARYLAND
+				}
+				NOT = {
+					has_modifier = usfp_panic_state_default_modifier
+				}
+			}
+			add_modifier = {
+				name = usfp_panic_state_default_modifier
+				years = 4
+			}
+		}
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_LOUISIANA
+					state_region = s:STATE_MISSISSIPPI
+				}
+				NOT = {
+					has_modifier = usfp_panic_state_default_modifier
+				}
+			}
+			add_modifier = {
+				name = usfp_panic_state_default_modifier
+				years = 4
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_PENNSYLVANIA
+				NOT = {
+					has_modifier = usfp_panic_state_default_modifier
+				}
+			}
+			add_modifier = {
+				name = usfp_panic_state_default_modifier
+				years = 4
+			}
+		}
+	}
+
+	#good thing we have a central bank right
+	option = {
+		name = usfp_panics.1.b
+		trigger = {
+			has_law_or_variant = law_type:law_interventionism
+		}
+		show_as_unavailable = {
+			always = yes
+		}
+		add_journal_entry = {
+			type = je_usfp_panic_1837
+		}
+		show_as_tooltip = {
+			add_modifier = {
+				name = usfp_panic_1837_modifier
+				multiplier = 0.5
+			}
+		}
+	}
+
+}
