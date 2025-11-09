@@ -272,6 +272,9 @@ native_resettlement.3 = {
 				months = 9
 			}
 		}
+		ai_chance = {
+			base = 25
+		}
 	}
 	option = { # pay their way
 		name = native_resettlement.3.b
@@ -313,6 +316,9 @@ native_resettlement.3 = {
 				id = usfp_native_removal.3
 				months = 9
 			}
+		}
+		ai_chance = {
+			base = 0
 		}
 	}
 }

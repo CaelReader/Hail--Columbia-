@@ -4,7 +4,7 @@
 #Panic of 1837
 usfp_panics.1 = {
 	type = country_event
-	placement = root
+	placement = s:STATE_NEW_YORK.region_state:USA
 	duration = 3
 	cooldown = { days = never_fire_again_modifier_time } #Once
 
@@ -87,6 +87,12 @@ usfp_panics.1 = {
 				years = 4
 			}
 		}
+		ruler = {
+			add_modifier = {
+				name = usfp_blamed_for_panic
+				years = 5
+			}
+		}
 	}
 
 	#good thing we have a central bank right
@@ -107,6 +113,7 @@ usfp_panics.1 = {
 				multiplier = 0.5
 			}
 		}
+		add_treasury = -500000
 	}
 
 }

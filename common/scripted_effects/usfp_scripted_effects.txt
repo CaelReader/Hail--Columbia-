@@ -847,6 +847,14 @@ usfp_deseret_into_utah_effect = {
 usfp_find_republican_party_effect = {
 	if = {
 		limit = { 
+			exists = py:usfp_republican_party
+		}
+		py:usfp_republican_party = {
+			save_scope_as = republican_party_scope
+		}
+	}
+	else_if = {
+		limit = { 
 			exists = py:liberal_party
 		}
 		py:liberal_party = {

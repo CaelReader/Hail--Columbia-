@@ -133,6 +133,7 @@ law_usfp_devolved_taxation = {
 
 	modifier = {
 		state_bureaucracy_population_base_cost_factor_mult = -0.20
+		state_tax_capacity_add = 25
 		state_tax_capacity_mult = 0.25
 		country_consumption_tax_cost_mult = -0.25
 	}

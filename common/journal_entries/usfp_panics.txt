@@ -1,5 +1,5 @@
 ﻿je_usfp_panic_1837 = {
-	icon = "gfx/interface/icons/invention_icons/mutual_funds.dds"
+	icon = "gfx/interface/icons/invention_icons/central_banking.dds"
 
 	group = je_group_historical_content
 
@@ -74,7 +74,7 @@
 		custom_tooltip = {
 			text = panic_recovery_complete
 			scope:journal_entry = {
-				"scripted_bar_progress(usfp_bleeding_kansas_progress_bar)" >= 200
+				"scripted_bar_progress(usfp_bleeding_kansas_progress_bar)" >= 300
 			}
 		}
 	}

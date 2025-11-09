@@ -1572,6 +1572,13 @@ usfp_usa_colonization.6.d: "It seems that funds and supplies intended for the $u
 usfp_usa_colonization.6.f: ""I found that the enterprise had been abandoned, and that the workers had all become more or less demoralized in the absence of proper control. Many of them had gone actually mad, under the influence of some religious excitement, to which they had surrendered themselves."" #Bernard Kock
 usfp_usa_colonization.6.a: "Send a ship to collect anyone who'd like to return."
 
+### Panic Events ###
+
+usfp_panics.1.t: "Bank Runs"
+usfp_panics.1.d: "When President Jackson dissolved the Second Bank of the United States, loans and hard currency were distributed to many smaller banks in different states. A failure of one such bank has now cascaded into a nation-wide bank run, causing most to run out of their reserves of gold and silver. Faith in the financial sector has collapsed, and multiple state governments have been forced to [concept_default] on their public loans."
+usfp_panics.1.f: ""I'm sorry sir, we cannot redeem this."\n\n"This is from your bank! Says right here - ten dollars, payable to the bearer on demand. Well, I'm the bearer, and I'm demanding!"\n\n"The vaults are empty sir, there's no specie left.""
+usfp_panics.1.a: "These irresponsible speculators will drive us to ruin!"
+usfp_panics.1.b: "The central bank will backstop the financial system."
 
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"
