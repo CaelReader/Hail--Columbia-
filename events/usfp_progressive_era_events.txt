@@ -616,6 +616,7 @@ usfp_progressive_era.8 = {
 		NOT = {
 			has_law_or_variant = law_type:law_womens_suffrage
 		}
+		year > 1880 #Jane Addams should not be spawning early
 	}
 
 	immediate = {

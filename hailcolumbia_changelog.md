@@ -748,6 +748,8 @@ Updated some labor union events to account for the new laws
 	Removed the SoL change from the planter's Our Peculiar Institution trait
 	William H Harrison is now Sickly
 	William H Seward can no longer spawn for the Rural Folk
+	Increased momentum penalties for running a non-white, non-protesant, or woman candidate
+	General Pershing is now Offensive Planner, Traditionalist Commander, Direct
 ## Fixes
 	Significantly increased the navy requirement to enforce the Monroe Doctrine so that now you actually have to grow the navy from its starting state
 	Moving away from Presidential Republic now removes the Constitution JE even if you still have voting

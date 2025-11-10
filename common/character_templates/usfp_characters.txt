@@ -1036,3 +1036,292 @@ usfp_ida_b_wells = {
         chance = 50
     }
 }
+
+#USFP: Billy Sunday, evangelist preacher and baseball player
+usfp_billy_sunday = {
+    first_name = William
+    last_name = Sunday
+    # dna = 
+    historical = yes
+    birth_date = 1862.11.19
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_devout
+    ideology = ideology_moderate
+    traits = {
+        pious
+        charismatic
+        demagogue
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1896.1.1 
+        latest_usage_date = 1917.1.1
+        chance = 50
+    }
+}
+
+#USFP: Walter Rauschenbusch, Social Gospel leader
+usfp_walter_rauschenbusch = {
+    first_name = Walter
+    last_name = Rauschenbusch
+    # dna = 
+    historical = yes
+    birth_date = 1864.10.4
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_devout
+    ideology = ideology_usfp_social_gospel_leader
+    traits = {
+        erudite
+        literary
+        romantic
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1886.1.1
+        latest_usage_date = 1915.1.1
+        chance = 50
+    }
+    agitator_usage = {
+        country_trigger = { 
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1886.1.1
+        latest_usage_date = 1915.1.1
+        chance = 25
+    }
+}
+
+#USFP: Lyman Beecher, abolitionist preacher, father of Henry and Harriet
+usfp_lyman_beecher = {
+    first_name = Lyman
+    last_name = Beecher
+    # dna = 
+    historical = yes
+    birth_date = 1775.10.12
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_devout
+    ideology = ideology_abolitionist
+    traits = {
+        inspirational_orator
+        literary
+        bigoted
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1836.1.1 
+        latest_usage_date = 1852.1.1
+        chance = 50
+    }
+}
+
+#USFP: Henry Ward Beecher, of "beecher's bibles"
+usfp_henry_beecher = {
+    first_name = Henry
+    last_name = Beecher
+    # dna = 
+    historical = yes
+    birth_date = 1813.6.24
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_devout
+    ideology = ideology_abolitionist
+    traits = {
+        resupply_commander
+        expensive_tastes
+        demagogue
+        brave
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1848.1.1 
+        latest_usage_date = 1871.1.1
+        chance = 50
+    }
+    agitator_usage = {
+        country_trigger = { 
+            c:USA ?= this
+            NOT = {
+                has_law = law_type:law_slavery_banned
+            }
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1848.1.1 
+        latest_usage_date = 1871.1.1
+        chance = 75
+    }
+}
+
+#USFP: Peter Cartwright, second great awakening preacher
+usfp_peter_cartwright = {
+    first_name = Peter
+    last_name = Cartwright
+    # dna = 
+    historical = yes
+    birth_date = 1785.9.1
+    culture = cu:dixie
+    religion = rel:protestant
+    female = no
+    interest_group = ig_devout
+    ideology = ideology_jacksonian_democrat
+    traits = {
+        pious
+        charismatic
+        direct
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1836.1.1 
+        latest_usage_date = 1850.1.1
+        chance = 25
+    }
+}
+
+#USFP: Benjamin Tillman, white supremacist
+usfp_benjamin_tillman = {
+    first_name = Benjamin
+    last_name = Tillman
+    # dna = 
+    historical = yes
+    birth_date = 1847.8.11
+    culture = cu:dixie
+    religion = rel:protestant
+    female = no
+    interest_group = ig_landowners
+    ideology = ideology_ethno_nationalist
+    traits = {
+        experienced_political_operator
+        wrathful
+        bigoted
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    c:USA ?= this
+                    has_global_variable = american_civil_war
+                }
+                c:CSA ?= this
+            }
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_landowners
+         }
+        earliest_usage_date = 1890.1.1 
+        latest_usage_date = 1914.1.1
+        chance = 50
+    }
+}
+
+#USFP: David Rice Atchinson, Border Ruffian
+usfp_david_rice_atchinson = {
+    first_name = David
+    last_name = Atchinson
+    # dna = 
+    historical = yes
+    birth_date = 1807.8.11
+    culture = cu:dixie
+    religion = rel:protestant
+    female = no
+    interest_group = ig_armed_forces
+    ideology = ideology_slaver
+    traits = {
+        wrathful
+        basic_colonial_administrator
+        direct
+        usfp_trait_expansionist
+        cruel
+    } 
+    agitator_usage = {
+        country_trigger = {
+            c:USA ?= this
+            has_law_or_variant = law_type:law_legacy_slavery
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+         }
+        earliest_usage_date = 1843.1.1 
+        latest_usage_date = 1862.1.1
+        chance = 50
+    }
+    commander_usage = {
+        country_trigger = {
+            c:CSA ?= this
+         }
+        role = general
+        earliest_usage_date = 1843.1.1 
+        latest_usage_date = 1862.1.1
+        chance = 50
+    }
+}
+
+#USFP: Gerrit Smith, abolitionist philanthropist
+usfp_gerrit_smith = {
+    first_name = Gerrit
+    last_name = Smith
+    # dna = 
+    historical = yes
+    birth_date = 1797.3.6
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_industrialists
+    ideology = ideology_usfp_abolitionist_radical
+    traits = {
+        inept
+        basic_entrepreneur
+        brave
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+            NOT = {
+                has_law_or_variant = law_type:law_slavery_banned
+            }
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+         }
+        earliest_usage_date = 1840.1.1 
+        latest_usage_date = 1872.1.1
+        chance = 25
+    }
+}

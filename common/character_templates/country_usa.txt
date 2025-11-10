@@ -1096,9 +1096,9 @@ usa_general_pershing = {
 	birth_date = 1860.9.13
 	dna = dna_pershing
 	traits = {
-		experienced_offensive_planner
-		persistent
-		reserved
+		basic_offensive_planner
+		traditionalist_commander
+		direct
 	}
 	commander_usage = {
 		country_trigger = {

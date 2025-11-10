@@ -63,7 +63,7 @@ usfp_usa_election.1 = {
 	option = {
 		name = usfp_usa_election.1.a
 		scope:female_ig.party = {
-			add_momentum = momentum_medium_decrease
+			add_momentum = momentum_large_decrease
 		}
 		default_option = yes
 		ai_chance = {
@@ -74,7 +74,7 @@ usfp_usa_election.1 = {
 	option = {
 		name = usfp_usa_election.1.b
 		scope:female_ig.party = {
-			add_momentum = momentum_small_decrease
+			add_momentum = momentum_medium_decrease
 		}
 		if = {
 			limit = { 
@@ -267,7 +267,7 @@ usfp_usa_election.2 = {
 			}
 		}
 		scope:nonwhite_ig.party = {
-			add_momentum = momentum_medium_decrease
+			add_momentum = momentum_large_decrease
 		}
 		default_option = yes
 	}
@@ -280,7 +280,7 @@ usfp_usa_election.2 = {
 			}
 		}
 		scope:nonwhite_ig.party = {
-			add_momentum = momentum_small_decrease
+			add_momentum = momentum_medium_decrease
 		}
 		if = {
 			limit = {
@@ -331,7 +331,7 @@ usfp_usa_election.2 = {
 		}
 		highlighted_option = yes
 		scope:nonwhite_ig.party = {
-			add_momentum = momentum_large_decrease
+			add_momentum = momentum_very_large_decrease
 		}
 		if = {
 			limit = { 
@@ -526,7 +526,7 @@ usfp_usa_election.3 = {
 			}
 		}
 		scope:nonchristian_ig.party = {
-			add_momentum = momentum_medium_decrease
+			add_momentum = momentum_large_decrease
 		}
 		default_option = yes
 	}
@@ -542,7 +542,7 @@ usfp_usa_election.3 = {
 			}
 		}
 		scope:nonchristian_ig.party = {
-			add_momentum = momentum_small_decrease
+			add_momentum = momentum_medium_decrease
 		}
 		if = {
 			limit = {
@@ -591,7 +591,7 @@ usfp_usa_election.3 = {
 		}
 		highlighted_option = yes
 		scope:nonchristian_ig.party = {
-			add_momentum = momentum_large_decrease
+			add_momentum = momentum_very_large_decrease
 		}
 		add_radicals = {
 			value = small_radicals
@@ -686,7 +686,7 @@ usfp_usa_election.3 = {
 		}
 		highlighted_option = yes
 		scope:nonchristian_ig.party = {
-			add_momentum = momentum_large_decrease
+			add_momentum = momentum_very_large_decrease
 		}
 		add_radicals = {
 			value = large_radicals

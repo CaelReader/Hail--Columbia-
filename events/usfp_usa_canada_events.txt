@@ -1,0 +1,18 @@
+namespace = usfp_usa_canada
+###### Hail, Columbia! by CaelReader ######
+
+## Caroline Affair
+# CAN: American sympathizers to the Radical movement
+# USA: Caroline burned
+# GBR: Caroline burned appeal
+
+## Arostook War
+# USA: Border Dispute in Maine
+# GBR/CAN: USA provoking border war
+# GBR: USA border negotiation offer
+# USA: GBR asserting canadian border
+# Webster-Ashburton Treaty
+
+## Fenian Raids
+# CAN: Fenian Incursion
+# USA: Battle of Ridgeway
