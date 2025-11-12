@@ -326,6 +326,7 @@ ideology_usfp_social_gospel_leader = {
 	country_trigger = {
 		usfp_country_is_american = yes
 		religion = rel:protestant
+		has_global_variable = social_gospel_appeared
 	}
 
 	interest_group_leader_trigger = {

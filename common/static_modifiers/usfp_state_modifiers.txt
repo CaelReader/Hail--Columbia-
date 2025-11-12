@@ -330,3 +330,9 @@ usfp_panic_state_default_modifier = {
 	state_construction_mult = -0.25
 	state_institution_impact_add = -0.25
 }
+
+usfp_early_suffrage_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_election_positive.dds
+	state_pop_pol_str_mult = 0.20
+	political_movement_pop_attraction_mult = 0.15
+}

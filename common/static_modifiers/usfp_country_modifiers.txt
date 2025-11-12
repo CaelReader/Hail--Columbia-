@@ -3,6 +3,14 @@
 	interest_group_ig_devout_pol_str_mult = 0.15
 	interest_group_ig_devout_pop_attraction_mult = 0.25
 }
+usfp_third_great_awakening = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_protestant_positive.dds
+	interest_group_ig_devout_pop_attraction_mult = 0.10
+	state_pop_support_movement_anti_slavery_mult = 0.10
+	state_pop_support_movement_corporatist_mult = 0.10
+	state_pop_support_movement_religious_majority_mult = 0.10
+	state_conversion_mult = 0.10
+}
 usfp_seminole_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds
 	unit_defense_mult = 2.0

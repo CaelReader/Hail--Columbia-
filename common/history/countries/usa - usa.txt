@@ -94,6 +94,7 @@
 			value = 0.05
 			pop_type = slaves
 		}
+		
 		add_modifier = {
 			name = usfp_second_great_awakening
 			is_decaying = yes

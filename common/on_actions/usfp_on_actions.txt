@@ -27,6 +27,8 @@ usfp_monthly_pulse = {
 		1 = usfp_usa.18 #Garfield-style Assassination
 		1000 = usfp_usa.20 #Reset Parliamentary Republic to Presidential
 		100 = usfp_indian_wars.15 #Comanche Slave Raid
+		
+		200 = usfp_usa.26 #Dorr Rebellion
 
 		##Labor events
 		100 = usfp_usa_labor.1 #founding of the IWW

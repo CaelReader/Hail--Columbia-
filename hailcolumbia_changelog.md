@@ -735,10 +735,12 @@ Updated some labor union events to account for the new laws
 
 # 7.0 "Jackson"
 ## New Content
-	Jacksonian Agenda JE at game start
+	Added Jacksonian Agenda JE at game start
 	Added the Panic of 1837 plus a JE to recover from it
-	Added starting Trade Privileges treaties for the USA
+	Added events for the Dorr Rebellion, Third Great Awakening
+	Added starting Trade Privileges treaties for the USA with various countries
 	Added custom Democratic and Republican parties replacing the conservative/liberal parties in the USA
+	New Characters: Emma Goldman (imported from ECCHI)
 ## Updates
 	USA now begins with Agrarianism and a special variant of Consumption-Based Taxation
 	American PB now supports the American School
@@ -748,8 +750,9 @@ Updated some labor union events to account for the new laws
 	Removed the SoL change from the planter's Our Peculiar Institution trait
 	William H Harrison is now Sickly
 	William H Seward can no longer spawn for the Rural Folk
-	Increased momentum penalties for running a non-white, non-protesant, or woman candidate
+	Increased momentum penalties for running a non-white, non-protestant, or woman candidate
 	General Pershing is now Offensive Planner, Traditionalist Commander, Direct
+	Having an Afro-american ruler or IG leader in government now gives a boost to Long Reconstruction
 ## Fixes
 	Significantly increased the navy requirement to enforce the Monroe Doctrine so that now you actually have to grow the navy from its starting state
 	Moving away from Presidential Republic now removes the Constitution JE even if you still have voting

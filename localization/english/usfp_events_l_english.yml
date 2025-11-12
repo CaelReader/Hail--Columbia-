@@ -479,7 +479,7 @@ usfp_manifest_destiny.9.a: "Railroads will transform the country!"
 usfp_manifest_destiny.9.b: "These railroads are a financial time-bomb."
 
 usfp_manifest_destiny.10.t: "Tales of Gold Mountain"
-usfp_manifest_destiny.10.d: "News of the discovery of $gold$ in [SCOPE.sState('california_scope').GetName] has reached across the Pacific to [SCOPE.sCountry('china_scope').GetName]. As a result, thousands of [SCOPE.sCulture('han_scope').GetName] migrants have begun to arrive by ship, drawn by tales of the vast wealth flowing from 'Gold Mountain'."
+usfp_manifest_destiny.10.d: "News of the discovery of [GetGoods('gold').GetName] in [SCOPE.sState('california_scope').GetName] has reached across the Pacific to [SCOPE.sCountry('china_scope').GetName]. As a result, thousands of [SCOPE.sCulture('han_scope').GetName] migrants have begun to arrive by ship, drawn by tales of the vast wealth flowing from 'Gold Mountain'."
 usfp_manifest_destiny.10.f: ""O, just marry all the daughters to men from Gold Mountain—\n\nAll those trunks from Gold Mountain — you can demand as many as you want!\n\nO, don't ever marry your daughter to a man from Gold Mountain—\n\nLonely and sad — a cooking pot is her only companion!"" #Cantonese Rhyme
 usfp_manifest_destiny.10.a: "Gold fever is irresistable!"
 usfp_manifest_destiny.10.b: "Foreign laborers are trouble waiting to happen."
@@ -820,6 +820,19 @@ usfp_usa.25.t: "Boll Weevil Infestation"
 usfp_usa.25.d: "A plague of cotton-eating beetles has swept through [GetStrategicRegion('region_dixie').GetName], destroying the harvest of $building_cotton_plantation$ across the entire region. Desperate plantation owners have deployed all sorts of pesticides to try and save their crops, to no avail."
 usfp_usa.25.f: ""The cotton came up and started to growin’, but before the middle of May I looks down one day and see the boll weevil settin’ up in the top of those little cotton stalks, waitin’ for the squares to form. So all that guano we hauled and put down made nothing but a crop of boll weevils."" #Always Agin It. John L. Dove, interviewer; J. Thomas Metz, interviewee, Chapin, South Carolina, January 24, 1939. American Life Histories: Manuscripts from the Federal Writers’ Project, 1936 to 1940. Manuscript Division
 usfp_usa.25.a: "Will the cotton industry ever recover?"
+
+usfp_usa.26.t: "The [SCOPE.sState('dorr_state').GetName] Question"
+usfp_usa.26.d: "A rebellion has broken out against the [concept_state] government of [SCOPE.sState('dorr_state').GetName], attempting to force the immediate adoption of [GetLawType('law_universal_suffrage').GetName] at the local level."
+usfp_usa.26.f: ""It has become the duty of all our citizens who believe that the People are sovereign, and have a right to make and alter their forms of government, now to sustain by all necessary means, the Constitution of adopted and established by the People of this State, and the Government elected under the same. The only other alternative is an abject submission to a despotism, in its various practical effects without a parallel in the history of the American States."\n\n—Thomas Wilson Dorr" #General Orders, enclosed in Thomas Wilson Dorr to Millard, Low & Miller
+usfp_usa.26.a: "This is not democracy, it is anarchy and possibly treason."
+usfp_usa.26.b: "They have the wrong methods but the right spirit."
+
+usfp_usa.27.t: "The Third Great Awakening"
+usfp_usa.27.d: "A new wave of [GetReligion('protestant').GetName] thought has begun to sweep through the churches of the [ROOT.GetCountry.GetName], emphasizing social activism to reform society in preparation for Christ's coming. Spiritual movements within the [GetInterestGroupVariant('ig_devout',GetPlayer).GetName] are branching out and spreading new ideas of Christian practice."
+usfp_usa.27.f: ""Word and work make healthy Christians. If it be all Word and no work, people will suffer from what I may call religious gout. On the other hand if it be all work and no Word, it will not be long before they will fall into all kinds of sin and error; so that they will do more harm than good. But if we first study the Word and then go to work, we shall be healthy, useful Christians."\n\n—Dwight L. Moody"
+usfp_usa.27.a: "What new pieties will they come up with next?"
+usfp_usa.27.b: "The most righteous of causes."
+social_gospelists_can_appear: "[GetIdeology('ideology_usfp_social_gospel_leader').GetName] characters can now appear"
 
 ### USA Labor Events ###
 
@@ -1239,7 +1252,7 @@ usfp_indian_wars.1.a: "A treaty is in our best interests for now."
 usfp_indian_wars.1.b: "We will not be cowed by any Indian."
 
 usfp_indian_wars.2.t: "Blazing the Bozeman Trail"
-usfp_indian_wars.2.d: "Rumors of $gold$ have pushed a steady stream of prospectors north from the main Oregon Trail deeper into [SCOPE.sState('montana_scope').GetStateRegion.GetName]. As traffic grows, so too has harassment from Indian raiders. To secure the gold trail, the Army has put forth a plan to build a chain of forts along the route and ward off further attacks."
+usfp_indian_wars.2.d: "Rumors of [GetGoods('gold').GetName] have pushed a steady stream of prospectors north from the main Oregon Trail deeper into [SCOPE.sState('montana_scope').GetStateRegion.GetName]. As traffic grows, so too has harassment from Indian raiders. To secure the gold trail, the Army has put forth a plan to build a chain of forts along the route and ward off further attacks."
 usfp_indian_wars.2.f: "The trail trodden by the gold diggers had become a dead zone along the plains. The Indians grew more furious at the Whites as the buffalo and antelope herds were depleted year after year. They would not stand idly by and starve."
 usfp_indian_wars.2.a: "We shall protect the prospectors."
 usfp_indian_wars.2.b: "Building forts would be a provocation."

@@ -2115,3 +2115,40 @@ ecchi_usa_brigham_young_character_template = {
     }
 }
 
+## Emma Goldman, imported to the USA
+ecchi_rus_goldman_character_template = {
+	first_name = Emma
+	last_name = Goldman
+	historical = yes
+	culture = cu:ashkenazi #USFP
+	female = yes
+	religion = rel:atheist 
+	ideology = ideology_anarchist #USFP
+	interest_group = ig_intelligentsia #USFP
+	dna = ecchi_dna_emma_goldman
+	birth_date = 1869.6.27
+	traits = { #USFP
+        inspirational_orator
+		charismatic
+		brave
+		persistent
+        literary
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+                c:USA ?= this
+				AND = {
+                    c:RUS ?= this
+                    has_law_or_variant = law_type:law_council_republic
+				}
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 1886.1.1
+		latest_usage_date = 1940.5.14
+		chance = 25
+	}
+}

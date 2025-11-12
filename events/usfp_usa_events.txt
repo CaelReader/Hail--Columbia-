@@ -2067,4 +2067,203 @@ usfp_usa.25 = {
 }
 
 # Dorr Rebellion
+usfp_usa.26 = {
+	type = country_event
+	placement = scope:dorr_state
+	event_image = {
+		video = "europenorthamerica_political_extremism"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+	
+	title = usfp_usa.26.t
+	desc = usfp_usa.26.d
+	flavor = usfp_usa.26.f
+	dlc = dlc_usfp
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	trigger = {
+		c:USA ?= this
+		is_enacting_law = law_type:law_universal_suffrage
+		enactment_phase > 1
+	}
+
+	immediate = {
+		usfp_find_rhode_island_sr_scope = yes
+		scope:rhode_island_sr_scope.region_state:USA = {
+			save_scope_as = dorr_state
+		}
+	}
+
+	#shut down
+	option = {
+		name = usfp_usa.26.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = usfp_dorr_rebellion_negative
+		}
+		scope:dorr_state = {
+			add_radicals_in_state = {
+				value = small_radicals
+				strata = lower
+			}
+			add_loyalists_in_state = {
+				value = small_radicals
+				strata = upper
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#support
+	option = {
+		name = usfp_usa.26.b
+		add_enactment_modifier = {
+			name = usfp_dorr_rebellion_positive
+		}
+		scope:dorr_state = {
+			add_modifier = {
+				name = usfp_early_suffrage_modifier
+				years = 10
+			}
+			add_loyalists_in_state = {
+				value = medium_radicals
+				strata = lower
+			}
+			add_radicals_in_state = {
+				value = large_radicals
+				strata = middle
+			}
+			add_radicals_in_state = {
+				value = very_large_radicals
+				strata = upper
+			}
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_landowners
+				}
+			}
+			add_modifier = {
+				name = usfp_anti_dorr_ig
+				years = 4
+			}
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_trade_unions
+				}
+			}
+			add_modifier = {
+				name = usfp_supported_dorr_ig
+				years = 4
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+}
 # Third Great Awakening
+usfp_usa.27 = {
+	type = country_event
+	placement = scope:awakening_state
+	event_image = {
+		video = "southamerica_christianity"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	
+	title = usfp_usa.27.t
+	desc = usfp_usa.27.d
+	flavor = usfp_usa.27.f
+	dlc = dlc_usfp
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	trigger = {
+		c:USA ?= this
+		religion = rel:protestant
+		has_law_or_variant = law_type:law_freedom_of_conscience
+		has_technology_researched = corporatism
+		any_political_movement = {
+			is_political_movement_type = movement_religious_majority
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				region = sr:region_new_england
+			}
+			save_scope_as = awakening_state
+		}
+	}
+
+	#okay
+	option = {
+		name = usfp_usa.27.a
+		default_option = yes
+		custom_tooltip = {
+			set_global_variable = social_gospel_appeared
+			text = social_gospelists_can_appear
+		}
+		add_modifier = {
+			name = usfp_third_great_awakening
+			years = 30
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#encourage
+	option = {
+		name = usfp_usa.27.b
+		custom_tooltip = {
+			set_global_variable = social_gospel_appeared
+			text = social_gospelists_can_appear
+		}
+		add_modifier = {
+			name = usfp_third_great_awakening
+			years = 30
+		}
+		if = {
+			limit = { 
+				ig:ig_devout = {
+					leader = {
+						is_historical = no
+					}
+				}
+			}
+			ig:ig_devout = {
+				leader = {
+					set_ideology = ideology:ideology_usfp_social_gospel_leader
+				}
+			}
+		}
+		ig:ig_devout = {
+			add_modifier = {
+				name = usfp_third_great_awakening_ig_modifier
+				years = 10
+			}
+		}
+		add_loyalists = {
+			value = small_radicals
+			interest_group = ig:ig_devout
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+}

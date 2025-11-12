@@ -390,3 +390,18 @@ usfp_promoted_afro_american_colonization = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	interest_group_approval_add = 2
 }
+
+usfp_supported_dorr_ig = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 2
+}
+
+usfp_anti_dorr_ig = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = -2
+}
+
+usfp_third_great_awakening_ig_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_protestant_positive.dds
+	interest_group_pol_str_mult = 0.15
+}

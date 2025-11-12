@@ -41,6 +41,24 @@
 			desc = "afro_american_character_popularity"
 			value = usfp_long_reconstruction_get_afro_american_popularity
 		}
+		if = {
+			limit = {
+				OR = {
+					ruler = {
+						culture = cu:afro_american
+					}
+					any_interest_group_in_government = {
+						leader = {
+							culture = cu:afro_american
+						}
+					}
+				}
+			}
+			add = {
+				value = 5.0
+				desc = "afro_american_in_government"
+			}
+		}
 		add = {
 			desc = "afro_american_movement_support"
 			value = usfp_long_reconstruction_get_afro_american_movement_support
