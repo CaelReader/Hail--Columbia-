@@ -143,6 +143,14 @@ usfp_democratic_party = {
 				desc = "ideology_usfp_strongman_populist"
 			}
 		}
+		#Democrats are Democrats
+		else_if = {
+			limit = { leader ?= { has_ideology = ideology:ideology_liberal_leader } }
+			add = {
+				value = 10
+				desc = "ideology_liberal_leader"
+			}
+		}
 		# Hardcore socialists oppose the main parties
 		else_if = {
 			limit = { 

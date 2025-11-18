@@ -753,7 +753,9 @@ Updated some labor union events to account for the new laws
 	Increased momentum penalties for running a non-white, non-protestant, or woman candidate
 	General Pershing is now Offensive Planner, Traditionalist Commander, Direct
 	Having an Afro-american ruler or IG leader in government now gives a boost to Long Reconstruction
+	Indian Removal payments are smaller
 ## Fixes
 	Significantly increased the navy requirement to enforce the Monroe Doctrine so that now you actually have to grow the navy from its starting state
 	Moving away from Presidential Republic now removes the Constitution JE even if you still have voting
 	AI USA will never pay money for indian removal
+	Fixed bug where Jane Addams could spawn infinite times

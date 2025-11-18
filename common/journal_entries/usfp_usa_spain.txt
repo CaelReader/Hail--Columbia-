@@ -1,0 +1,63 @@
+﻿usfp_je_spanish_american_war = {
+
+	icon = gfx/interface/icons/event_icons/event_military.dds
+
+	group = je_group_historical_content
+
+	should_be_pinned_by_default = yes
+	weight = 200
+	is_shown_when_inactive = {
+		exists = c:CUB
+		c:CUB ?= {
+			NOT = {
+				is_subject_of = root
+			}
+		}
+		has_technology_researched = political_agitation
+	}
+
+	possible = {
+		c:CUB = {
+			OR = {
+				liberty_desire >= 75
+				AND = {
+					has_variable = recently_lost_war
+					has_truce_with = c:CUB.overlord
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+		c:CUB = {
+			save_scope_as = cuba_scope
+		}
+		c:CUB = {
+			overlord = {
+				save_scope_as = cuban_overlord
+			}
+		}
+	}
+
+	timeout = 1826 #5 years
+
+	complete = {
+		OR = {
+			c:CUB ?= {
+				is_subject = no
+			}
+			c:CUB ?= {
+				is_subject_of = root
+			}
+			owns_entire_state_region = STATE_CUBA
+		}
+	}
+}

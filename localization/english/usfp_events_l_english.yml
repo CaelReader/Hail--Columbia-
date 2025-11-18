@@ -1593,6 +1593,39 @@ usfp_panics.1.f: ""I'm sorry sir, we cannot redeem this."\n\n"This is from your 
 usfp_panics.1.a: "These irresponsible speculators will drive us to ruin!"
 usfp_panics.1.b: "The central bank will backstop the financial system."
 
+### Canada Events ###
+usfp_usa_canada.1.t: ""
+usfp_usa_canada.1.d: ""
+usfp_usa_canada.1.f: """"
+usfp_usa_canada.1.a: ""
+usfp_usa_canada.1.b: ""
+
+usfp_usa_canada.2.t: ""
+usfp_usa_canada.2.d: ""
+usfp_usa_canada.2.f: """"
+usfp_usa_canada.2.a: ""
+usfp_usa_canada.2.b: ""
+
+usfp_usa_canada.3.t: ""
+usfp_usa_canada.3.d: ""
+usfp_usa_canada.3.f: """"
+usfp_usa_canada.3.a: ""
+usfp_usa_canada.3.b: ""
+
+usfp_usa_canada.4.t: ""
+usfp_usa_canada.4.d: ""
+usfp_usa_canada.4.f: """"
+usfp_usa_canada.4.a: ""
+usfp_usa_canada.4.b: ""
+
+usfp_usa_canada.5.t: ""
+usfp_usa_canada.5.d: ""
+usfp_usa_canada.5.f: """"
+usfp_usa_canada.5.a: ""
+usfp_usa_canada.5.b: ""
+
+
+
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"
 usfp_test.1.f: "sunrise, parabellum"

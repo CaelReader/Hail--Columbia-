@@ -336,3 +336,9 @@ usfp_early_suffrage_modifier = {
 	state_pop_pol_str_mult = 0.20
 	political_movement_pop_attraction_mult = 0.15
 }
+
+usfp_canadian_volunteers_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_soldier_positive.dds
+	state_conscription_rate_mult = 0.25
+	building_training_rate_mult = 0.25
+}

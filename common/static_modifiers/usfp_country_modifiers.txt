@@ -155,7 +155,7 @@ modifier_texas_war_of_independence = {
 
 usfp_chickasaw_removal_payment = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_income_negative.dds
-	country_expenses_add = 3000
+	country_expenses_add = 2000
 }
 
 usa_paying_for_mexico = {

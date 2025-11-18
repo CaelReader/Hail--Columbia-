@@ -67,6 +67,10 @@ usfp_monthly_pulse = {
 		500 = usfp_usa_election.1 #Woman Candidate
 		500 = usfp_usa_election.2 #Non-White Candidate
 		500 = usfp_usa_election.3 #Non-Protestant Candidate
+
+		#Canadian events
+		100 = usfp_usa_canada.1 #Caroline Affair
+		100 = usfp_usa_canada.4 #Fenian Raid
 	}
 }
 
@@ -396,7 +400,7 @@ usfp_new_president = {
 					set_strategy = ai_strategy_agricultural_expansion
 				 }
 			}
-			if = {
+			else_if = {
 				limit = {
 					interest_group = {
 						is_interest_group_type = ig_landowners
@@ -404,6 +408,21 @@ usfp_new_president = {
 				 }
 				 owner = {
 					set_strategy = ai_strategy_plantation_economy
+				 }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						interest_group = {
+							is_interest_group_type = ig_petty_bourgeoisie
+							is_interest_group_type = ig_trade_unions
+							is_interest_group_type = ig_intelligentsia
+							is_interest_group_type = ig_industrialists
+						}
+					}
+				 }
+				 owner = {
+					set_strategy = ai_strategy_industrial_expansion
 				 }
 			}
 			if = {

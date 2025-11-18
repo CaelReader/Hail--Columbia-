@@ -64,6 +64,12 @@ ai_strategy_anti_slavery_agenda = {
 			}
 			add = 500
 		}
+		if = {
+			limit = { 				
+				NOT = { has_law_or_variant = law_type:law_cultural_exclusion }
+			}
+			add = 50
+		}
 	}	
 	
 	pro_interest_groups = {
@@ -106,7 +112,6 @@ ai_strategy_anti_slavery_agenda = {
 
 	possible = {
 		c:USA ?= this
-		NOT = { has_law_or_variant = law_type:law_slavery_banned }
 		OR = {
 			has_journal_entry = je_acw_war
 			has_journal_entry = je_acw_countdown
@@ -952,7 +957,9 @@ secret_goal_scores = {
 	wargoal_weights = {
 		make_protectorate = 1.5	
 		force_nationalization = 1.5
-		conquer_state = 0.0		
+		conquer_state = 0.0
+		liberate_subject = 1.5
+		transfer_subject = 1.5
 	}	
 	
 	treaty_port_value = {
