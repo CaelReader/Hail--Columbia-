@@ -7,6 +7,11 @@
 		ruler = {
 			save_scope_as = jackson_scope
 		}
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
 	}
 
 	on_monthly_pulse = {

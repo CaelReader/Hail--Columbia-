@@ -49,6 +49,13 @@
 
 	timeout = 1826 #5 years
 
+	on_timeout = {
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_petty_bourgeoisie
+		}
+	}
+
 	complete = {
 		OR = {
 			c:CUB ?= {
@@ -59,5 +66,63 @@
 			}
 			owns_entire_state_region = STATE_CUBA
 		}
+	}
+
+	on_complete = {
+		custom_tooltip = doubled_with_phillipines
+		if = {
+			limit = {
+				scope:cuban_overlord = {
+					NOR = {
+						any_scope_state = {
+							OR = {
+								region = sr:region_caribbean
+								region = sr:region_indonesia
+								region = sr:region_oceania
+							}
+						}
+						any_subject_or_below = {
+							any_scope_state = {
+								any_scope_state = {
+									OR = {
+										region = sr:region_caribbean
+										region = sr:region_indonesia
+										region = sr:region_oceania
+									}
+								}
+							}
+						}
+					}
+				}
+			 }
+			add_loyalists = {
+				value = medium_radicals
+				interest_group = ig:ig_petty_bourgeoisie
+			}
+			add_loyalists = {
+				value = very_large_radicals
+				pop_type = officers
+			}
+			add_modifier = {
+				name = usfp_america_enters_world_stage_modifier
+				years = 10
+				multiplier = 2
+			}
+		}
+		else = {
+			add_loyalists = {
+				value = small_radicals
+				interest_group = ig:ig_petty_bourgeoisie
+			}
+			add_loyalists = {
+				value = large_radicals
+				pop_type = officers
+			}
+			add_modifier = {
+				name = usfp_america_enters_world_stage_modifier
+				years = 10
+			}
+		}
+
 	}
 }

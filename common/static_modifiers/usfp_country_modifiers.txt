@@ -774,3 +774,11 @@ usfp_agenda_completed_modifier = {
 	country_loyalists_from_legitimacy_mult = 0.01
 	country_legitimacy_headofstate_add = 1
 }
+
+usfp_america_enters_world_stage_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_manowar_positive.dds
+	country_influence_mult = 0.10
+	country_prestige_from_navy_power_projection_mult = 0.10
+	interest_group_ig_armed_forces_approval_add = 2
+	unit_navy_experience_gain_mult = 0.10
+}

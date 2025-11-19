@@ -220,6 +220,16 @@ usfp_republican_party = {
 				desc = "urban_interests"
 			}
 		}
+		#Armed Forces are slightly inclined to the Whigs/Republicans
+		if = {
+			limit = {
+				is_interest_group_type = ig_armed_forces
+			}
+			add = {
+				value = 5
+				desc = "federal_military_funding"
+			}
+		}
 	}
 
 }

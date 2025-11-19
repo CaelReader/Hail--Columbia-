@@ -1555,9 +1555,12 @@ usfp_usa.18 = {
 		NOT = {
 			has_variable = garfield_assassination
 		}
-		NOT = {
+		NOR = {
 			has_journal_entry = je_acw_countdown
+			has_journal_entry = je_acw_war
 		}
+		month > 4
+		month < 10 #just to make this event rarer
 	}
 
 	immediate = {
