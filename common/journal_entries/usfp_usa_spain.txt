@@ -20,9 +20,16 @@
 		c:CUB = {
 			OR = {
 				liberty_desire >= 75
-				AND = {
-					has_variable = recently_lost_war
-					has_truce_with = c:CUB.overlord
+				custom_tooltip = {
+					text = cuba_independence_crushed
+					AND = {
+						has_variable = recently_lost_war
+						has_truce_with = c:CUB.overlord
+					}
+				}
+				any_diplomatic_play = {
+					is_diplomatic_play_type = dp_independence
+					initiator_is = c:CUB
 				}
 			}
 		}

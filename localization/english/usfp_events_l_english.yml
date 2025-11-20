@@ -1594,35 +1594,36 @@ usfp_panics.1.a: "These irresponsible speculators will drive us to ruin!"
 usfp_panics.1.b: "The central bank will backstop the financial system."
 
 ### Canada Events ###
-usfp_usa_canada.1.t: ""
-usfp_usa_canada.1.d: ""
-usfp_usa_canada.1.f: """"
-usfp_usa_canada.1.a: ""
-usfp_usa_canada.1.b: ""
+usfp_usa_canada.1.t: "[SCOPE.sCountry('usa_scope').GetAdjective] Smugglers"
+usfp_usa_canada.1.d: "[SCOPE.sCountry('usa_scope').GetAdjective] citizens sympathetic to the [SCOPE.sPoliticalMovement('radical_movement').GetName] are ferrying supplies across the border into [SCOPE.sState('ontario_scope').GetName], making the movement much more difficult to suppress."
+usfp_usa_canada.1.f: ""Inhabitants of Upper Canada!\n\nFor nearly fifty years has our country languished under the blighting influence of military despots, strangers from Europe, ruling us, not according to laws of our choice, but by the capricious dictates of their arbitrary power.\n\n—William Lyon Mackenzie"
+usfp_usa_canada.1.a: "Alert the Royal Navy."
+usfp_usa_canada.1.b: "Nothing to see here, move along..."
+caroline_will_be_intercepted: "A Royal Navy ship will intercept the smugglers and destroy their vessel."
 
-usfp_usa_canada.2.t: ""
-usfp_usa_canada.2.d: ""
-usfp_usa_canada.2.f: """"
-usfp_usa_canada.2.a: ""
-usfp_usa_canada.2.b: ""
+usfp_usa_canada.2.t: "Royal Navy Burns [SCOPE.sCountry('usa_scope').GetAdjective] Ship!"
+usfp_usa_canada.2.d: "At the behest of the [SCOPE.sCountry('canadian_country_scope').GetAdjective] government, a [SCOPE.sCountry('britain_scope').GetAdjective] ship has invaded our territorial waters in the Niagara River and destroyed an [SCOPE.sCountry('usa_scope').GetAdjective] steamer, killing at least one of her crew! The British claim that the ship was offering aid to rebellious [SCOPE.sPoliticalMovement('radical_movement').GetName] partisans across the river in [SCOPE.sState('ontario_scope').GetName]."
+usfp_usa_canada.2.f: ""The steamboat Caroline was a hostile vessel engaged in piratical war against her Majesty's people. It was under such circumstances, which it is to be hoped will never recur, that the vessel was attacked by a party of her Majesty's people, captured and destroyed."" #Stephen Fox
+usfp_usa_canada.2.a: "Dispatch a cable, we don't want this to escalate."
+usfp_usa_canada.2.b: "This violation will not go unpunished!"
 
-usfp_usa_canada.3.t: ""
-usfp_usa_canada.3.d: ""
-usfp_usa_canada.3.f: """"
-usfp_usa_canada.3.a: ""
-usfp_usa_canada.3.b: ""
+usfp_usa_canada.3.t: "Royal Navy Burns [SCOPE.sCountry('usa_scope').GetAdjective] Ship"
+usfp_usa_canada.3.d: "At the behest of the [SCOPE.sCountry('canadian_country_scope').GetAdjective] government, a [SCOPE.sCountry('britain_scope').GetAdjective] ship crossed into [SCOPE.sCountry('usa_scope').GetAdjective] waters and destroyed a civilian ship that had been smuggling weapons to the [SCOPE.sPoliticalMovement('radical_movement').GetName] in [SCOPE.sState('ontario_scope').GetName]. An [SCOPE.sCountry('usa_scope').GetAdjectiveNoFormatting] diplomat has arrived, hoping to prevent an international incident."
 
-usfp_usa_canada.4.t: ""
-usfp_usa_canada.4.d: ""
-usfp_usa_canada.4.f: """"
-usfp_usa_canada.4.a: ""
-usfp_usa_canada.4.b: ""
+usfp_usa_canada.3.a: "Let us hash things out with the Americans and secure the [SCOPE.sCountry('canadian_country_scope').GetAdjective] border."
+usfp_usa_canada.3.b: "The Royal Navy will enforce Canadian security as it pleases."
 
-usfp_usa_canada.5.t: ""
-usfp_usa_canada.5.d: ""
-usfp_usa_canada.5.f: """"
-usfp_usa_canada.5.a: ""
-usfp_usa_canada.5.b: ""
+usfp_usa_canada.4.t: "Fenian Incursion"
+usfp_usa_canada.4.d: "An armed band of [GetCulture('irish').GetName] insurgents have crossed into [SCOPE.sState('ontario_scope').GetName] from [SCOPE.sState('fenian_state').GetName]! This so-called Fenian Brotherhood aims to seize control of [ROOT.GetCountry.GetName] in order to force [SCOPE.sCountry('britain_scope').GetName] to acquiesce to the demands of the [SCOPE.sPoliticalMovement('irish_movement').GetName]."
+usfp_usa_canada.4.f: ""We come among you as the foes of British rule in Ireland, exiled from that native land of ours by the oppression of British aristocracy and legislation, our people hunted down to the emigrant ships, or worse, to that charnel of government institutions, the poor-house. We have taken up the sword to strike down the oppressor’s rod and deliver Ireland from the tyrant."" #Fenian proclamation
+usfp_usa_canada.4.a: "We must stand together as Canadians!"
+fenians_defeated: "A hastily assembled militia will drive the Fenians back across the border into [SCOPE.sState('fenian_state').GetName], where the [SCOPE.sCountry('usa_scope').GetAdjective] authorities will surely arrest them"
+
+usfp_usa_canada.5.t: "The Battle of Ridgeway"
+usfp_usa_canada.5.d: "An armed band of [GetCulture('irish').GetName] insurgents crossed the border into [SCOPE.sState('ontario_scope').GetName] intent on forcing the [SCOPE.sCountry('britain_scope').GetAdjective] government to relinquish control over Ireland. Instead, a hastily assembled [SCOPE.sCountry('canadian_country_scope').GetAdjective] militia was able to drive them back, and the [GetCulture('irish').GetName] army is now encamped in [SCOPE.sState('fenian_state').GetName] preparing for further incursions."
+usfp_usa_canada.5.f: ""O Erin! Must we leave you driven by the tyrant’s hand,\n\nMust we ask a Mother’s blessing, in a strange but happy land,\n\nWhere the cruel Cross of England’s thraldom never to be seen,\n\nBut where, thank God! We’ll live and die, still Wearing of the Green."" #Irish Nationalist Song
+usfp_usa_canada.5.a: "Disarm and arrest these bandits at once."
+usfp_usa_canada.5.b: "We will turn a blind eye to the enemies of [SCOPE.sCountry('britain_scope').GetName]."
 
 
 

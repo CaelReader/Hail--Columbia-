@@ -735,11 +735,12 @@ Updated some labor union events to account for the new laws
 
 # 7.0 "Jackson"
 ## New Content
+	Added custom Democratic and Republican parties replacing the conservative/liberal parties in the USA
 	Added Jacksonian Agenda JE at game start
 	Added the Panic of 1837 plus a JE to recover from it
-	Added events for the Dorr Rebellion, Third Great Awakening
+	New JE and Events for the American press to react to atrocities in Cuba and possibly spark a Spanish-American War
+	Added events for the Dorr Rebellion, Third Great Awakening, Caroline Affair, Fenian Raids
 	Added starting Trade Privileges treaties for the USA with various countries
-	Added custom Democratic and Republican parties replacing the conservative/liberal parties in the USA
 	New Characters: Emma Goldman (imported from ECCHI)
 ## Updates
 	USA now begins with Agrarianism and a special variant of Consumption-Based Taxation

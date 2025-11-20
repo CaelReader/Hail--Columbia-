@@ -198,3 +198,36 @@ usfp_colony_accepted = {
 	notification_type = toast
 	color = good
 }
+
+#USA-Canada Relations
+usfp_canada_caroline_burning_escalation_usa = {
+	type = country
+	group = "usfp_usa_canada_group"
+	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_canada_caroline_burning_negotiated = {
+	type = country
+	group = "usfp_usa_canada_group"
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+	notification_type = toast
+	color = good
+}
+
+usfp_canada_caroline_burning_escalation_gbr = {
+	type = country
+	group = "usfp_usa_canada_group"
+	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_usa_supporting_fenians = {
+	type = country
+	group = "usfp_usa_canada_group"
+	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+	notification_type = toast
+	color = bad
+}

@@ -29,6 +29,7 @@ usfp_monthly_pulse = {
 		100 = usfp_indian_wars.15 #Comanche Slave Raid
 		
 		200 = usfp_usa.26 #Dorr Rebellion
+		100 = usfp_usa.27 #Third Great Awakening
 
 		##Labor events
 		100 = usfp_usa_labor.1 #founding of the IWW

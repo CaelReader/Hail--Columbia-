@@ -4,6 +4,7 @@ usfp_westward_expansion_group: "@america_icon! #yellow Hail, Columbia!#! | Westw
 usfp_manifest_destiny_group: "@america_icon! #yellow Hail, Columbia!#! | Manifest Destiny"
 usfp_reconstruction_group: "@america_icon! #yellow Hail, Columbia!#! | Reconstruction"
 usfp_colonization_group: "@america_icon! #yellow Hail, Columbia!#! | Colonization"
+usfp_usa_canada_group: "@america_icon! #yellow Hail, Columbia!#! | US-Canadian Relations"
 
 notification_usfp_new_american_homeland_name: "[concept_usfp_westward_expansion]"
  notification_usfp_new_american_homeland_desc: "[SCOPE.sState('new_homeland_state').GetName] is now considered a [SCOPE.sCulture('new_homeland_culture').GetName] [concept_homeland]."
@@ -103,3 +104,19 @@ notification_usfp_colony_rejected_name: "Colony Proposal Rejected"
 notification_usfp_colony_accepted_name: "Colony Proposal Accepted"
  notification_usfp_colony_accepted_desc: "[SCOPE.sCountry('usa_colony_target_scope').GetName] has accepted our proposal for an $usfp_afro_american_culture$ colony in their territory."
  notification_usfp_colony_accepted_tooltip: "#header $notification_usfp_colony_accepted_name$#!\n$notification_usfp_colony_accepted_desc$"
+
+notification_usfp_canada_caroline_burning_escalation_usa_name: "[SCOPE.sCountry('usa_scope').GetAdjective] Outraged"
+notification_usfp_canada_caroline_burning_escalation_usa_desc: "The Royal Navy's interception of an [SCOPE.sCountry('usa_scope').GetAdjective] smuggling ship in [SCOPE.sState('ontario_scope').GetName] has damaged our [concept_relations]."
+notification_usfp_canada_caroline_burning_escalation_usa_tooltip: "#header $notification_usfp_canada_caroline_burning_escalation_usa_name$#!\n$notification_usfp_canada_caroline_burning_escalation_usa_desc$"
+
+notification_usfp_canada_caroline_burning_negotiated_name: "[SCOPE.sCountry('britain_scope').GetName] Accepts Diplomacy"
+notification_usfp_canada_caroline_burning_negotiated_desc: "[SCOPE.sCountry('britain_scope').GetAdjective] and [SCOPE.sCountry('usa_scope').GetAdjective] ambassadors have met to negotiate the security of the Canadian border, establishing a [concept_truce] and improving our [concept_relations]."
+notification_usfp_canada_caroline_burning_negotiated_tooltip: "#header $notification_usfp_canada_caroline_burning_negotiated_name$#!\n$notification_usfp_canada_caroline_burning_negotiated_desc$"
+
+notification_usfp_canada_caroline_burning_escalation_gbr_name: "[SCOPE.sCountry('britain_scope').GetAdjective] Rejects Diplomacy"
+notification_usfp_canada_caroline_burning_escalation_gbr_desc: "[SCOPE.sCountry('britain_scope').GetName] has damaged our [concept_relations] by asserting unilateral enforcement of the Canadian border."
+notification_usfp_canada_caroline_burning_escalation_gbr_tooltip: "#header $notification_usfp_canada_caroline_burning_escalation_gbr_name$#!\n$notification_usfp_canada_caroline_burning_escalation_gbr_desc$"
+
+notification_usfp_usa_supporting_fenians_gbr_name: "[SCOPE.sCountry('usa_scope').GetAdjective] Support for Fenians"
+notification_usfp_usa_supporting_fenians_gbr_desc: "The [SCOPE.sCountry('usa_scope').GetName] is allowing [GetCulture('irish').GetName] insurgents to strike across the border into [SCOPE.sState('ontario_scope').GetName], greatly increasing [Concept('concept_radical', '$concept_radicalism$')] there."
+notification_usfp_usa_supporting_fenians_gbr_tooltip: "#header $notification_usfp_usa_supporting_fenians_gbr_name$#!\n$notification_usfp_usa_supporting_fenians_gbr_desc$"

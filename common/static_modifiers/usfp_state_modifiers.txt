@@ -342,3 +342,12 @@ usfp_canadian_volunteers_modifier = {
 	state_conscription_rate_mult = 0.25
 	building_training_rate_mult = 0.25
 }
+
+usfp_fenian_raids_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	state_turmoil_effects_mult = 0.10
+	state_radicals_from_political_movements_mult = 0.25
+	state_radicalism_increases_cultural_erasure_mult = 0.20
+	state_radicalism_increases_open_prejudice_mult = 0.20
+	state_radicalism_increases_second_rate_citizen_mult = 0.20
+}
