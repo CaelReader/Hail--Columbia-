@@ -1,5 +1,208 @@
 ﻿namespace = usfp_usa_spain
 ###### Hail, Columbia! by CaelReader ######
 #Cuban Repression, JE spawns
+usfp_usa_spain.1 = {
+	type = country_event
+	placement = scope:cuba_scope.capital
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_usa_spain.1.t
+	desc = usfp_usa_spain.1.d
+	flavor = usfp_usa_spain.1.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+
+	}
+
+	#dispatch the Maine
+	option = {
+		name = usfp_usa_canada.1.a
+		default_option = yes
+		custom_tooltip = {
+			text = maine_heads_to_cuba
+			scope:cuban_overlord = {
+				trigger_event = {
+					id = usfp_usa_spain.2
+					days = 40
+				}
+			}
+		}
+		ig:ig_industrialists = {
+			add_modifier = {
+				name = usfp_protected_ig_interests_modifier
+				years = 4
+			}
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_protected_ig_interests_modifier
+				years = 4
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#ignore
+	option = {
+		name = usfp_usa_canada.1.b
+		add_radicals = {
+			value = medium_radicals
+			strata = middle
+		}
+		if = {
+			limit = { 
+				culture_percent_country = {
+					target = cu:caribeno
+					value > 0
+				}
+			}
+			add_radicals = {
+				value = large_radicals
+				culture = cu:caribeno
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
 #Spain: uh oh a US ship blew up
+usfp_usa_spain.2 = {
+	type = country_event
+	placement = scope:cuba_scope.capital
+	event_image = {
+		video = "votp_gunboat_diplomacy"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	
+	title = usfp_usa_spain.2.t
+	desc = usfp_usa_spain.2.d
+	flavor = usfp_usa_spain.2.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+
+	}
+
+	#this is bad
+	option = {
+		name = usfp_usa_canada.2.a
+		default_option = yes
+		custom_tooltip = usa_may_respond_poorly
+		c:USA = {
+			trigger_event = usfp_usa_spain.3
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+}
 #USA: the Maine exploded!
+usfp_usa_spain.3 = {
+	type = country_event
+	placement = scope:cuba_scope.capital
+	event_image = {
+		video = "votp_gunboat_diplomacy"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	
+	title = usfp_usa_spain.3.t
+	desc = usfp_usa_spain.3.d
+	flavor = usfp_usa_spain.3.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+
+	}
+
+	#blame the Maine on spain!
+	option = {
+		name = usfp_usa_canada.3.a
+		default_option = yes
+		change_relations = {
+			country = scope:cuban_overlord
+			value = -100
+		}
+		if = {
+			limit = { 
+				is_ai = yes
+			}
+			set_secret_goal = {
+				country = scope:cuba_scope
+				secret_goal = conquer
+			}
+		}
+		scope:cuban_overlord = {
+			post_notification = usfp_usa_mad_over_maine
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	#it was an accident
+	option = {
+		name = usfp_usa_canada.3.b
+		add_radicals = {
+			value = large_radicals
+			pop_type = officers
+		}
+		add_radicals = {
+			value = large_radicals
+			pop_type = soldiers
+		}
+		add_radicals = {
+			value = medium_radicals
+			strata = middle
+		}
+		create_unidirectional_truce = {
+			country = scope:cuban_overlord
+			months = 12
+		}
+		scope:cuban_overlord = {
+			post_notification = usfp_usa_not_mad_over_maine
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					OR = {
+						any_scope_treaty = {
+							binds = scope:cuban_overlord
+							any_scope_article = {
+								has_type = defensive_pact
+							}
+						}
+						any_scope_treaty = {
+							binds = scope:cuban_overlord
+							any_scope_article = {
+								has_type = alliance
+							}
+						}
+					}
+				}
+				add = 100
+			}
+		}
+	}
+}
+#Fate of Cuba

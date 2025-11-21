@@ -227,7 +227,9 @@ usfp_canada_caroline_burning_escalation_gbr = {
 usfp_usa_supporting_fenians = {
 	type = country
 	group = "usfp_usa_canada_group"
-	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+	texture = "gfx/interface/icons/notification_icons/revolution.dds"
 	notification_type = toast
 	color = bad
 }
+
+#USA-Caribbean Relations

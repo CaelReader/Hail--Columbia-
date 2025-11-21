@@ -896,6 +896,7 @@ usfp_progressive_era.11 = {
 		show_as_unavailable = {
 			always = yes
 		}
+		highlighted_option = yes
 		add_modifier = {
 			name = usfp_meat_inspectors_modifier
 			days = normal_modifier_time

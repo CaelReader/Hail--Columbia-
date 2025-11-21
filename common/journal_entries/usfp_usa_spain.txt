@@ -36,6 +36,7 @@
 	}
 	
 	immediate = {
+		trigger_event = usfp_usa_spain.1
 		scope:journal_entry = {
             add_com_dlc_icon = {
                 dlc = dlc_usfp
@@ -59,7 +60,7 @@
 	on_timeout = {
 		add_radicals = {
 			value = small_radicals
-			interest_group = ig:ig_petty_bourgeoisie
+			strata = middle
 		}
 	}
 
@@ -104,7 +105,7 @@
 			 }
 			add_loyalists = {
 				value = medium_radicals
-				interest_group = ig:ig_petty_bourgeoisie
+				strata = middle
 			}
 			add_loyalists = {
 				value = very_large_radicals
@@ -115,11 +116,12 @@
 				years = 10
 				multiplier = 2
 			}
+			change_infamy = -10
 		}
 		else = {
 			add_loyalists = {
 				value = small_radicals
-				interest_group = ig:ig_petty_bourgeoisie
+				strata = middle
 			}
 			add_loyalists = {
 				value = large_radicals
@@ -129,6 +131,7 @@
 				name = usfp_america_enters_world_stage_modifier
 				years = 10
 			}
+			change_infamy = -5
 		}
 
 	}

@@ -1,0 +1,85 @@
+﻿amendment_usfp_spoils_system = {
+    parent = law_consumption_based_taxation # optional reference to a law that dictates what stances IGs and movements have toward this amendment
+
+    allowed_laws = { # list of laws that the amendment can be added to
+		law_elected_bureaucrats
+		law_appointed_bureaucrats
+    }
+
+    modifier = {
+
+	}
+
+    possible = {
+        always = yes
+    }
+
+   	can_repeal = {
+		always = yes
+	}
+
+    ai_will_revoke = {
+        always = yes
+    }
+}
+
+amendment_usfp_seperate_but_equal = {
+    parent = law_racial_segegration # optional reference to a law that dictates what stances IGs and movements have toward this amendment
+
+    allowed_laws = { # list of laws that the amendment can be added to
+		law_cultural_exclusion
+    }
+
+    modifier = {
+		country_acceptance_no_shared_heritage_trait_add = -10
+		country_qualification_growth_second_rate_citizen_mult = -0.10
+		country_qualification_growth_open_prejudice_mult = -0.10
+		country_qualification_growth_cultural_erasure_mult = -0.10
+		country_qualification_growth_violent_hostility_mult = -0.10
+	}
+
+    possible = {
+        always = yes
+    }
+
+	can_repeal = {
+		OR = {
+			has_law_or_variant = law_type:law_multicultural
+			NOT = {
+				has_journal_entry = je_usfp_american_constitution
+			}
+		}
+		government_legitimacy >= 51
+	}
+
+    ai_will_revoke = {
+        always = yes
+    }
+}
+
+amendment_usfp_pure_drugs = {
+    parent = law_public_health_insurance # optional reference to a law that dictates what stances IGs and movements have toward this amendment
+
+    allowed_laws = { # list of laws that the amendment can be added to
+		law_public_health_insurance
+		law_private_health_insurance
+		law_charity_hospitals
+    }
+
+    modifier = {
+		country_institution_impact_institution_health_system_mult = 0.10
+		country_institution_cost_institution_health_system_mult = 0.10
+	}
+
+    possible = {
+        always = yes
+    }
+
+   	can_repeal = {
+		always = yes
+	}
+
+    ai_will_revoke = {
+        in_default = yes
+    }
+}
