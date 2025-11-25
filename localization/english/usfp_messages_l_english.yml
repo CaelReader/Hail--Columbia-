@@ -5,6 +5,7 @@ usfp_manifest_destiny_group: "@america_icon! #yellow Hail, Columbia!#! | Manifes
 usfp_reconstruction_group: "@america_icon! #yellow Hail, Columbia!#! | Reconstruction"
 usfp_colonization_group: "@america_icon! #yellow Hail, Columbia!#! | Colonization"
 usfp_usa_canada_group: "@america_icon! #yellow Hail, Columbia!#! | US-Canadian Relations"
+usfp_usa_caribbean_group: "@america_icon! #yellow Hail, Columbia!#! | Caribbean Events"
 
 notification_usfp_new_american_homeland_name: "[concept_usfp_westward_expansion]"
  notification_usfp_new_american_homeland_desc: "[SCOPE.sState('new_homeland_state').GetName] is now considered a [SCOPE.sCulture('new_homeland_culture').GetName] [concept_homeland]."
@@ -120,3 +121,11 @@ notification_usfp_canada_caroline_burning_escalation_gbr_tooltip: "#header $noti
 notification_usfp_usa_supporting_fenians_gbr_name: "[SCOPE.sCountry('usa_scope').GetAdjective] Support for Fenians"
 notification_usfp_usa_supporting_fenians_gbr_desc: "The [SCOPE.sCountry('usa_scope').GetName] is allowing [GetCulture('irish').GetName] insurgents to strike across the border into [SCOPE.sState('ontario_scope').GetName], greatly increasing [Concept('concept_radical', '$concept_radicalism$')] there."
 notification_usfp_usa_supporting_fenians_gbr_tooltip: "#header $notification_usfp_usa_supporting_fenians_gbr_name$#!\n$notification_usfp_usa_supporting_fenians_gbr_desc$"
+
+notification_usfp_usa_mad_over_maine_name: "[SCOPE.sCountry('usa_scope').GetName] Angered"
+notification_usfp_usa_mad_over_maine_desc: "Our [concept_relations] with the [SCOPE.sCountry('usa_scope').GetName] have greatly decreased."
+notification_usfp_usa_mad_over_maine_tooltip: "#header $notification_usfp_usa_mad_over_maine_name$#!\n$notification_usfp_usa_mad_over_maine_desc$"
+
+notification_usfp_usa_not_mad_over_maine_name: "[SCOPE.sCountry('usa_scope').GetName] Doesn't Blame Us"
+notification_usfp_usa_not_mad_over_maine_desc: "The [SCOPE.sCountry('usa_scope').GetName] agrees that the explosion was an accident."
+notification_usfp_usa_not_mad_over_maine_tooltip: "#header $notification_usfp_usa_not_mad_over_maine_name$#!\n$notification_usfp_usa_not_mad_over_maine_desc$"

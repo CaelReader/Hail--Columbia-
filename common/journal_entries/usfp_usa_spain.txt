@@ -2,7 +2,7 @@
 
 	icon = gfx/interface/icons/event_icons/event_military.dds
 
-	group = je_group_historical_content
+	group = je_group_foreign_affairs
 
 	should_be_pinned_by_default = yes
 	weight = 200
@@ -36,7 +36,6 @@
 	}
 	
 	immediate = {
-		trigger_event = usfp_usa_spain.1
 		scope:journal_entry = {
             add_com_dlc_icon = {
                 dlc = dlc_usfp
@@ -52,6 +51,13 @@
 			overlord = {
 				save_scope_as = cuban_overlord
 			}
+		}
+	}
+
+	on_monthly_pulse = {
+		random_events = {
+			chance_of_no_event = 50
+			100 = usfp_usa_spain.1 
 		}
 	}
 
@@ -80,7 +86,7 @@
 		custom_tooltip = doubled_with_phillipines
 		if = {
 			limit = {
-				scope:cuban_overlord = {
+				scope:cuban_overlord ?= {
 					NOR = {
 						any_scope_state = {
 							OR = {
@@ -133,6 +139,18 @@
 			}
 			change_infamy = -5
 		}
-
+		custom_tooltip = cuba_decide_fate
+		if = {
+			limit = {
+				exists = c:CUB
+				c:CUB = {
+					is_subject = no
+				}
+				scope:cuban_overlord = {
+					has_truce_with = root
+				}
+			}
+			trigger_event = usfp_usa_spain.4 
+		}
 	}
 }

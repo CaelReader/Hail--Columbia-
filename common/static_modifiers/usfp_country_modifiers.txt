@@ -65,9 +65,7 @@ usfp_indian_removal_modifier = {
 
 usfp_second_party_system_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
-	country_institution_size_change_speed_mult = -0.25
 	country_law_enactment_time_mult = 0.30
-	country_suppression_attraction_factor = 0.10
 }
 
 usfp_third_party_system_modifier = {
@@ -781,4 +779,9 @@ usfp_america_enters_world_stage_modifier = {
 	country_prestige_from_navy_power_projection_mult = 0.10
 	interest_group_ig_armed_forces_approval_add = 2
 	unit_navy_experience_gain_mult = 0.10
+}
+
+usfp_spoils_system_decaying_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_bureaucracy_negative.dds
+	country_bureaucracy_mult = -0.25
 }

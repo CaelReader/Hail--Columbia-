@@ -233,3 +233,19 @@ usfp_usa_supporting_fenians = {
 }
 
 #USA-Caribbean Relations
+
+usfp_usa_not_mad_over_maine = {
+	type = country
+	group = "usfp_usa_caribbean_group"
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+	notification_type = toast
+	color = good
+}
+
+usfp_usa_mad_over_maine = {
+	type = country
+	group = "usfp_usa_caribbean_group"
+	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+	notification_type = toast
+	color = bad
+}

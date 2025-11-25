@@ -1625,6 +1625,34 @@ usfp_usa_canada.5.f: ""O Erin! Must we leave you driven by the tyrant’s hand,\
 usfp_usa_canada.5.a: "Disarm and arrest these bandits at once."
 usfp_usa_canada.5.b: "We will turn a blind eye to the enemies of [SCOPE.sCountry('britain_scope').GetName]."
 
+### Spanish American War ###
+usfp_usa_spain.1.t: "The Trouble in Cuba"
+usfp_usa_spain.1.d: "In light of the growing unrest in [SCOPE.sCountry('cuba_scope').GetName], our consulate is requesting a show of force to ensure the safety of [ROOT.GetCountry.GetAdjective] citizens and interests on the island."
+usfp_usa_spain.1.f: ""Spanish officers and mob attacked three newspaper offices, not four (as reported yesterday). Soldiers joined the mob when sent to defend the newspapers, and outside the palace shouted death to Blanco and autonomy. If Americans are in danger ships should be ready to move promptly for [SCOPE.sState('cuba_state_scope').GetPortHubName]. Uncertainty and excitement widespread."" #United States Consulate General, Havana
+usfp_usa_spain.1.a: "The Navy will dispatch a ship to [SCOPE.sState('cuba_state_scope').GetPortHubName]."
+usfp_usa_spain.1.b: "[SCOPE.sCountry('cuba_scope').GetName] is not our problem."
+maine_heads_to_cuba: "An [ROOT.GetCountry.GetAdjective] ship will head to [SCOPE.sState('cuba_state_scope').GetPortHubName]"
+
+usfp_usa_spain.2.t: "[SCOPE.sCountry('usa_scope').GetAdjective] Ship Explodes in [SCOPE.sState('cuba_state_scope').GetPortHubName]!"
+usfp_usa_spain.2.d: "An [SCOPE.sCountry('usa_scope').GetAdjective] ship anchored in [SCOPE.sState('cuba_state_scope').GetPortHubName] has exploded and sank, seemingly by accident. Even though we had no involvement, the [SCOPE.sCountry('usa_scope').GetAdjectiveNoFormatting] press has immediately printed headlines blaming us for the disaster, which could have a disastrous effect on our [concept_relations] with the [SCOPE.sCountry('usa_scope').GetName]."
+usfp_usa_spain.2.f: "#bold Explosion in [SCOPE.sState('cuba_state_scope').GetPortHubName] Caused By Bomb Or Torpedo?#!\nTrustworthy American Just Arrived from [SCOPE.sState('cuba_state_scope').GetPortHubName], Says He Overheard Talk There of a Plot to Blow Up the Ship. Dynamite Expert and Others Report to The World that the Wreck Was Not Accidental.\n\n—Headline from #italic The World#!" #The World
+usfp_usa_spain.2.a: "This could get ugly."
+usa_may_respond_poorly: "The [SCOPE.sCountry('usa_scope').GetName] might become hostile towards us in response"
+
+usfp_usa_spain.3.t: "[SCOPE.sCountry('usa_scope').GetAdjective] Ship Destroyed in [SCOPE.sState('cuba_state_scope').GetPortHubName]!"
+usfp_usa_spain.3.d: "The ship we dispatched to [SCOPE.sState('cuba_state_scope').GetPortHubName] has exploded in port! While the initial investigation points to an accident, the press has already labeled it as a deliberate attack by [SCOPE.sCountry('cuban_overlord').GetName] and a cassus belli for war."
+
+usfp_usa_spain.3.a: "Let's blame this on [SCOPE.sCountry('cuban_overlord').GetName]!"
+usfp_usa_spain.3.b: "If it was an accident, there is nobody to blame."
+
+usfp_usa_spain.4.t: "The Future of [SCOPE.sCountry('cuba_scope').GetName]"
+usfp_usa_spain.4.d: "With [SCOPE.sCountry('cuba_scope').GetName] now free from the odious rule of [SCOPE.sCountry('cuban_overlord').GetName], the fate of the island is in our hands."
+usfp_usa_spain.4.f: ""Our mandate is to ensure in the island the establishment of a stable government, capable of maintaining order and observing its international obligations, ensuring peace and tranquillity and the security of its citizens as well as our own, and to use the military and naval forces of the United States as may be necessary for these purposes."" #William McKinley
+usfp_usa_spain.4.a: "We fought to liberate [SCOPE.sCountry('cuba_scope').GetName], but we must secure its stability."
+usfp_usa_spain.4.b: "[SCOPE.sCountry('cuba_scope').GetName] can stand on its own for the first time."
+usfp_usa_spain.4.c: "The [SCOPE.sCountry('cuba_scope').GetAdjective] people yearn to join our great Union."
+
+
 
 
 usfp_test.1.t: "DEBUG EVENT"
