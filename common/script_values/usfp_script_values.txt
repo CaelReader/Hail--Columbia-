@@ -1,4 +1,6 @@
-﻿usfp_bleeding_kansas_get_yankee_radicals = {
+﻿usfp_monroe_doctrine_naval_power = 600
+
+usfp_bleeding_kansas_get_yankee_radicals = {
     value = {
         every_scope_pop = {
             limit = {

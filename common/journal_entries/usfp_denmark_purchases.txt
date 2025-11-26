@@ -1,0 +1,223 @@
+﻿usfp_je_danish_purchases = {
+
+	icon = gfx/interface/icons/event_icons/event_map.dds
+
+	group = je_group_foreign_affairs
+
+	should_be_pinned_by_default = yes
+	weight = 200
+
+	is_shown_when_inactive = {
+		c:USA ?= root
+		NOR = {
+			has_state_in_state_region = STATE_GREENLAND
+			has_state_in_state_region = STATE_ICELAND
+		}
+		NOT = {
+			any_subject_or_below = {
+				OR = {
+					has_state_in_state_region = STATE_GREENLAND
+					has_state_in_state_region = STATE_ICELAND
+				}
+			}
+		}
+		hidden_trigger = {
+			NOT = { has_global_variable = greenland_sold }
+		}
+	}
+
+	possible = {
+		s:STATE_GREENLAND = {
+			any_scope_state = {
+				owner = {
+					is_country_type = recognized
+					relations:root >= relations_threshold:cordial
+				}
+			}
+		}
+		has_interest_marker_in_region = region_north_sea_coast
+		has_journal_entry = usfp_manifest_destiny_main
+		usfp_manifest_destiny_greater_or_equal_trigger = { value = 3 }
+		is_subject = no
+		is_at_war = no
+		country_rank >= rank_value:great_power
+		naval_power_projection >= usfp_monroe_doctrine_naval_power
+	}
+	
+	scripted_button = usfp_danish_purchase_send_offer_button
+	scripted_button = usfp_danish_purchase_buy_greenland_button
+	scripted_button = usfp_danish_purchase_buy_iceland_button
+	scripted_button = usfp_danish_purchase_buy_danish_west_indies_button
+
+	immediate = {
+		c:GBR = {
+			save_scope_as = britain_scope
+		}
+		s:STATE_GREENLAND = {
+			random_scope_state = {
+				limit = {
+					owner = {
+						NOT = {
+							is_country_type = decentralized
+						}
+					}
+				}
+				save_scope_as = greenland_state_scope
+				owner = {
+					save_scope_as = greenland_owner_scope
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:greenland_owner_scope = {
+					country_or_subject_owns_entire_state_region = STATE_ICELAND
+				}
+			 }
+			s:STATE_ICELAND = {
+				random_scope_state = {
+					save_scope_as = iceland_scope
+				}
+			}
+		}
+		if = {
+			limit = { 
+				scope:greenland_owner_scope = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
+			}
+			s:STATE_WEST_INDIES = {
+				random_scope_state = {
+					limit = {
+						owner = scope:greenland_owner_scope
+					}
+					save_scope_as = danish_west_indies_scope
+				}
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					scope:greenland_owner_scope ?= {
+						is_at_war = no
+						NOR = {
+							has_state_in_state_region = STATE_GREENLAND
+							any_subject_or_below = {
+								has_state_in_state_region = STATE_GREENLAND
+							}
+						}
+					}
+				 }
+				 #reassign the scopes in case another country takes over Greenland
+				 s:STATE_GREENLAND = {
+					random_scope_state = {
+						limit = {
+							owner = {
+								NOT = {
+									is_country_type = decentralized
+								}
+							}
+						}
+						save_scope_as = greenland_state_scope
+						owner = {
+							save_scope_as = greenland_owner_scope
+						}
+					}
+				}
+				if = {
+					limit = {
+						scope:greenland_owner_scope = {
+							country_or_subject_owns_entire_state_region = STATE_ICELAND
+						}
+						}
+					s:STATE_ICELAND = {
+						random_scope_state = {
+							save_scope_as = iceland_scope
+						}
+					}
+				}
+				if = {
+					limit = { 
+						scope:greenland_owner_scope = {
+							has_state_in_state_region = STATE_WEST_INDIES
+						}
+					}
+					s:STATE_WEST_INDIES = {
+						random_scope_state = {
+							limit = {
+								owner = scope:greenland_owner_scope
+							}
+							save_scope_as = danish_west_indies_scope
+						}
+					}
+				}
+				remove_variable = usfp_danish_purchases_greenland_desire
+				remove_variable = usfp_danish_purchases_iceland_desire
+				remove_variable = usfp_danish_purchases_west_indies_desire
+			}
+		}
+	}
+
+	complete = {
+		has_state_in_state_region = STATE_GREENLAND
+	}
+
+	on_complete = {
+		set_global_variable = greenland_sold
+		if = {
+			limit = { 
+				exists = c:GBR
+				c:GBR = {
+					any_subject_or_below = {
+						capital = {
+							region = sr:region_canada
+						}
+					}
+				}
+			}
+			change_relations = {
+				country = c:GBR
+				value = -25
+			}
+			c:GBR = {
+				every_subject_or_below = {
+					limit = {
+						capital = {
+							region = sr:region_canada
+						}	
+					}
+					change_relations = {
+						country = ROOT
+						value = -20
+					}
+				}
+			}
+		}
+	}
+
+	fail = {
+		OR = {
+			scope:greenland_owner_scope ?= {
+				OR = {
+					relations:root <= relations_threshold:poor
+					country_rank > root.country_rank
+				}
+			}
+			has_war_with = scope:greenland_owner_scope
+		}
+	}
+
+	on_fail = {
+		if = {
+			limit = {
+				usfp_manifest_destiny_greater_or_equal_trigger = { value = 7 }
+			 }
+			 s:STATE_GREENLAND = {
+				add_claim = root
+			 }
+		}
+	}
+}

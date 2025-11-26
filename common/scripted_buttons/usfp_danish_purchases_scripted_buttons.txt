@@ -1,0 +1,208 @@
+﻿usfp_danish_purchase_send_offer_button = {
+	name = "usfp_danish_purchase_send_offer_button"
+	desc = "usfp_danish_purchase_send_offer_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	cooldown = {
+		years = 15
+	}
+
+
+	possible = {
+		scope:greenland_owner_scope ?= {
+			relations:root >= relations_threshold:cordial
+		}
+		has_interest_marker_in_region = region_north_sea_coast
+		is_at_war = no
+		custom_tooltip = {
+			text = danish_purchase_at_least_one
+			OR = {
+				has_variable = usfp_danish_purchases_greenland_desire
+				has_variable = usfp_danish_purchases_iceland_desire
+				has_variable = usfp_danish_purchases_west_indies_desire
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = send_offer_to_denmark
+		show_as_tooltip = {
+			add_treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_variable = usfp_danish_purchases_greenland_desire
+						usfp_danish_purchase_greenland_valid = yes
+					}
+					add = -2500000
+				}
+				if = {
+					limit = {
+						has_variable = usfp_danish_purchases_iceland_desire
+						usfp_danish_purchase_iceland_valid = yes
+					}
+					add = -3000000
+				}
+				if = {
+					limit = {
+						has_variable = usfp_danish_purchases_west_indies_desire
+						usfp_danish_purchase_west_indies_valid = yes
+					}
+					add = -5000000
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				any_interest_group_in_government = {
+					leader = {
+						usfp_manifest_destiny_pro_expansion_trigger = yes
+					}
+				}
+			}
+			add = 100
+		}
+	}
+}
+
+usfp_danish_purchase_buy_greenland_button = {
+	name = "usfp_danish_purchase_buy_greenland_button"
+	desc = "usfp_danish_purchase_buy_greenland_button_desc"
+
+	visible = {
+		usfp_danish_purchase_greenland_valid = yes
+	}
+
+	selected = {
+		has_variable = usfp_danish_purchases_greenland_desire
+	}
+
+	possible = {
+		has_interest_marker_in_region = region_north_sea_coast
+		is_at_war = no
+	}
+
+	effect = {
+		custom_tooltip = usfp_danish_purchase_greenland_cost
+		if = {
+			limit = {
+				has_variable = usfp_danish_purchases_greenland_desire
+			 }
+			 remove_variable = usfp_danish_purchases_greenland_desire
+		}
+		else = {
+			set_variable = usfp_danish_purchases_greenland_desire
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				any_interest_group_in_government = {
+					leader = {
+						usfp_manifest_destiny_pro_expansion_trigger = yes
+					}
+				}
+			}
+			add = 100
+		}
+	}
+}
+
+usfp_danish_purchase_buy_iceland_button = {
+	name = "usfp_danish_purchase_buy_iceland_button"
+	desc = "usfp_danish_purchase_buy_iceland_button_desc"
+
+	visible = {
+		usfp_danish_purchase_iceland_valid = yes
+	}
+
+	selected = {
+		has_variable = usfp_danish_purchases_iceland_desire
+	}
+
+	possible = {
+		has_interest_marker_in_region = region_north_sea_coast
+		is_at_war = no
+	}
+
+	effect = {
+		custom_tooltip = usfp_danish_purchase_iceland_cost
+		if = {
+			limit = {
+				has_variable = usfp_danish_purchases_iceland_desire
+			 }
+			 remove_variable = usfp_danish_purchases_iceland_desire
+		}
+		else = {
+			set_variable = usfp_danish_purchases_iceland_desire
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				any_interest_group_in_government = {
+					leader = {
+						usfp_manifest_destiny_pro_expansion_trigger = yes
+					}
+				}
+			}
+			add = 100
+		}
+	}
+}
+
+usfp_danish_purchase_buy_danish_west_indies_button = {
+	name = "usfp_danish_purchase_buy_danish_west_indies_button"
+	desc = "usfp_danish_purchase_buy_danish_west_indies_button_desc"
+
+	visible = {
+		usfp_danish_purchase_west_indies_valid = yes
+	}
+
+	selected = {
+		has_variable = usfp_danish_purchases_west_indies_desire
+	}
+
+	possible = {
+		has_interest_marker_in_region = region_caribbean
+		is_at_war = no
+	}
+
+	effect = {
+		custom_tooltip = usfp_danish_purchase_west_indies_cost
+		if = {
+			limit = {
+				has_variable = usfp_danish_purchases_west_indies_desire
+			 }
+			 remove_variable = usfp_danish_purchases_west_indies_desire
+		}
+		else = {
+			set_variable = usfp_danish_purchases_west_indies_desire
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				any_interest_group_in_government = {
+					leader = {
+						usfp_manifest_destiny_pro_expansion_trigger = yes
+					}
+				}
+			}
+			add = 100
+		}
+	}
+}

@@ -551,7 +551,6 @@ usfp_usa_canada.5 = {
 
 ## Arostook War
 # USA: Border Dispute in Maine
-# GBR/CAN: USA provoking border war
+# GBR/CAN: USA occupies northern Maine
 # GBR: USA border negotiation offer
-# USA: GBR asserting canadian border
 # Webster-Ashburton Treaty

@@ -23,7 +23,7 @@
 		}
 		
 		add_taxed_goods = g:grain
-		activate_law = law_type:law_frontier_colonization
+		
 		add_modifier = {
 			name = usfp_canadian_colonization_modifier
 			years = 30

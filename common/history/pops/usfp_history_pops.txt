@@ -51,4 +51,23 @@
 		}
 		liberate_slaves = yes
 	}
+
+	s:STATE_MAINE = {
+		region_state:NBS = {
+			#Aroostook County, Maine, 1840 US Census: population of 9,413
+			#mix of settlers from canada and Maine, around 90% Francophone based on New Brunswick Census
+			create_pop = {
+				culture = franco_canadian
+				size = 8413
+			}
+			create_pop = {
+				culture = anglo_canadian
+				size = 500
+			}
+			create_pop = {
+				culture = yankee
+				size = 500
+			}
+		}
+	}
 }

@@ -182,4 +182,22 @@
 			remove_building = building_government_administration
 		}
 	}
+
+	s:STATE_MAINE = {
+		region_state:NBS = {
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					building={
+						type="building_logging_camp"
+						country="c:NBS"
+						levels=1
+						region="STATE_MAINE"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts"  }
+			}
+		}
+	}
 }

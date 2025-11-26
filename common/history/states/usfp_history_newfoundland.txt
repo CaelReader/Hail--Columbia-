@@ -1,8 +1,0 @@
-﻿STATES = {
-	s:STATE_NEWFOUNDLAND = {
-		create_state = {
-			country = c:NEW
-			owned_provinces = { x5EF6EB } #annex the rest in global
-		}
-	}
-}

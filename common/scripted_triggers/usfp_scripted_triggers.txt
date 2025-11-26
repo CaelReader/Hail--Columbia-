@@ -661,3 +661,27 @@ usfp_any_racist_movement_has_some_support = {
 		political_movement_support >= 0.05
 	}
 }
+
+usfp_danish_purchase_greenland_valid = {
+	exists = scope:greenland_state_scope
+	#sanity check for if states change owners
+	scope:greenland_state_scope = {
+		owner = scope:greenland_owner_scope
+	}
+}
+
+usfp_danish_purchase_iceland_valid = {
+	exists = scope:iceland_scope
+	#sanity check for if states change owners
+	scope:iceland_scope = {
+		owner = scope:greenland_owner_scope
+	}
+}
+
+usfp_danish_purchase_west_indies_valid = {
+	exists = scope:danish_west_indies_scope
+	#sanity check for if states change owners
+	scope:danish_west_indies_scope = {
+		owner = scope:greenland_owner_scope
+	}
+}
