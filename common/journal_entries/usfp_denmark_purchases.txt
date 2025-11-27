@@ -207,13 +207,17 @@
 				}
 			}
 			has_war_with = scope:greenland_owner_scope
+			has_claim = s:STATE_GREENLAND
 		}
 	}
 
 	on_fail = {
 		if = {
 			limit = {
-				usfp_manifest_destiny_greater_or_equal_trigger = { value = 7 }
+				usfp_manifest_destiny_greater_or_equal_trigger = { value = 8 }
+				NOT = {
+					has_claim = s:STATE_GREENLAND
+				}
 			 }
 			 s:STATE_GREENLAND = {
 				add_claim = root

@@ -551,6 +551,282 @@ usfp_usa_canada.5 = {
 
 ## Arostook War
 # USA: Border Dispute in Maine
-# GBR/CAN: USA occupies northern Maine
+usfp_usa_canada.6 = {
+	type = country_event
+	placement = scope:aroostook_state_scope
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_usa_canada.6.t
+	desc = usfp_usa_canada.6.d
+	flavor = usfp_usa_canada.6.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		exists = c:GBR
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+		NOT = {
+			has_truce_with = c:GBR
+		}
+		has_state_in_state_region = STATE_MAINE
+		c:GBR = {
+			OR = {
+				has_state_in_state_region = STATE_MAINE
+				any_subject_or_below = {
+					has_state_in_state_region = STATE_MAINE
+				}
+			}
+		}
+		has_technology_researched = nationalism
+	}
+
+	immediate = {
+		usfp_find_maine_sr_scope = yes
+		scope:maine_sr_scope = {
+			region_state:USA = {
+				save_scope_as = maine_usa_state
+			}
+			random_scope_state = {
+				limit = {
+					OR = {
+						owner = c:GBR
+						owner = {
+							top_overlord = c:GBR
+						}
+					}
+				}
+				save_scope_as = aroostook_state_scope
+				owner = {
+					save_scope_as = canadian_country_scope
+				}
+			}
+		}
+		c:GBR = {
+			save_scope_as = britain_scope
+		}
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+	}
+
+	#negotiate
+	option = {
+		name = usfp_usa_canada.6.a
+		default_option = yes
+		c:GBR = {
+			trigger_event = {
+				id = usfp_usa_canada.7
+				days = 20
+			}
+		}
+		custom_tooltip = britain_accepts_aroostook_treaty
+		show_as_tooltip = {
+			scope:aroostook_state_scope = {
+				set_state_owner = root
+			}
+			create_bidirectional_truce = {
+				country = c:GBR
+				months = 60
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#claim
+	option = {
+		name = usfp_usa_canada.6.b
+		change_relations = {
+			country = c:GBR
+			value = -25
+		}
+		change_relations = {
+			country = scope:canadian_country_scope
+			value = -25
+		}
+		scope:maine_sr_scope = {
+			add_claim = root
+		}
+		scope:maine_usa_state = {
+			add_loyalists_in_state = {
+				value = very_large_radicals
+				culture = cu:yankee
+			}
+		}
+		c:GBR = {
+			post_notification = usa_claims_aroostook
+		}
+		scope:canadian_country_scope = {
+			post_notification = usa_claims_aroostook
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					has_diplomatic_pact = {
+						who = c:GBR
+						type = rivalry
+					}
+				}
+				add = 200
+			}
+		}
+	}
+}
 # GBR: USA border negotiation offer
+usfp_usa_canada.7 = {
+	type = country_event
+	placement = scope:aroostook_state_scope
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_usa_canada.7.t
+	desc = usfp_usa_canada.7.d
+	flavor = usfp_usa_canada.7.f
+	dlc = dlc_usfp
+	duration = 3
+
+	#accept
+	option = {
+		name = usfp_usa_canada.7.a
+		default_option = yes
+		c:USA = {
+			trigger_event = {
+				id = usfp_usa_canada.8
+				years = 1
+			}
+		}
+		change_relations = {
+			country = c:USA
+			value = 15
+		}
+		custom_tooltip = one_year_negotiations
+		show_as_tooltip = {
+			scope:aroostook_state_scope = {
+				set_state_owner = root
+			}
+			create_bidirectional_truce = {
+				country = c:GBR
+				months = 60
+			}
+		}
+		c:USA = {
+			post_notification = gbr_accepts_aroostook_treaty
+		}
+		scope:canadian_country_scope = {
+			post_notification = gbr_accepts_aroostook_treaty
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#reject
+	option = {
+		name = usfp_usa_canada.7.b
+		change_relations = {
+			country = c:USA
+			value = -25
+		}
+		scope:maine_sr_scope = {
+			add_claim = c:USA
+		}
+		scope:aroostook_state_scope = {
+			add_loyalists_in_state = {
+				value = very_large_radicals
+				culture = cu:franco_canadian
+			}
+		}
+		c:USA = {
+			post_notification = gbr_rejects_aroostook_treaty
+		}
+		scope:canadian_country_scope = {
+			post_notification = gbr_rejects_aroostook_treaty
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					has_diplomatic_pact = {
+						who = c:USA
+						type = rivalry
+					}
+				}
+				add = 200
+			}
+		}
+	}
+}
 # Webster-Ashburton Treaty
+usfp_usa_canada.8 = {
+	type = country_event
+	placement = scope:aroostook_state_scope
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_usa_canada.8.t
+	desc = usfp_usa_canada.8.d
+	flavor = usfp_usa_canada.8.f
+	dlc = dlc_usfp
+	duration = 3
+
+	#cool
+	option = {
+		name = usfp_usa_canada.8.a
+		default_option = yes
+		scope:britain_scope = {
+			post_notification = usfp_aroostook_to_usa
+		}
+		scope:aroostook_state_scope = {
+			owner = {
+				post_notification = usfp_aroostook_to_usa
+			}
+			set_state_owner = root
+		}
+		create_bidirectional_truce = {
+			country = c:GBR
+			months = 60
+		}
+		scope:maine_usa_state = {
+			add_loyalists_in_state = {
+				value = medium_radicals
+				culture = cu:yankee
+			}
+			add_loyalists_in_state = {
+				value = small_radicals
+				culture = cu:franco_canadian
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	cancellation_trigger = {
+		OR = {
+			NOT = {
+				exists = scope:aroostook_state_scope
+			}
+			has_war_with = c:GBR
+			has_war_with = scope:canadian_country_scope
+		}
+	}
+}

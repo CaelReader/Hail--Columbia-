@@ -7,7 +7,7 @@
 	}
 
 	cooldown = {
-		years = 15
+		years = 12
 	}
 
 
@@ -30,30 +30,7 @@
 	effect = {
 		custom_tooltip = send_offer_to_denmark
 		show_as_tooltip = {
-			add_treasury = {
-				value = 0
-				if = {
-					limit = {
-						has_variable = usfp_danish_purchases_greenland_desire
-						usfp_danish_purchase_greenland_valid = yes
-					}
-					add = -2500000
-				}
-				if = {
-					limit = {
-						has_variable = usfp_danish_purchases_iceland_desire
-						usfp_danish_purchase_iceland_valid = yes
-					}
-					add = -3000000
-				}
-				if = {
-					limit = {
-						has_variable = usfp_danish_purchases_west_indies_desire
-						usfp_danish_purchase_west_indies_valid = yes
-					}
-					add = -5000000
-				}
-			}
+			usfp_danish_purchase_effect = { MULT = 1 }
 		}
 	}
 

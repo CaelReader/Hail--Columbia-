@@ -2336,3 +2336,58 @@ usfp_create_linconia_effect = {
 				}
 		}
 }
+
+usfp_transfer_danish_islands_effect = {
+	if = {
+		limit = {
+			has_variable = usfp_danish_purchases_greenland_desire
+			usfp_danish_purchase_greenland_valid = yes
+		}
+		scope:greenland_state_scope = {
+			set_state_owner = root
+		}
+	}
+	if = {
+		limit = {
+			has_variable = usfp_danish_purchases_iceland_desire
+			usfp_danish_purchase_iceland_valid = yes
+		}
+		scope:iceland_scope = {
+			set_state_owner = root
+		}
+	}
+	if = {
+		limit = {
+			has_variable = usfp_danish_purchases_west_indies_desire
+			usfp_danish_purchase_west_indies_valid = yes
+		}
+		scope:danish_west_indies_scope = {
+			set_state_owner = root
+		}
+	}
+}
+
+usfp_danish_purchase_effect = {
+	add_treasury = {
+		value = usfp_calculate_danish_purchase_cost
+		multiply = $MULT$
+	}
+	scope:greenland_owner_scope = {
+		add_treasury = {
+			root = {
+				add = usfp_calculate_danish_purchase_cost
+				multiply = -1
+			}
+			multiply = $MULT$
+		}
+	}
+	usfp_transfer_danish_islands_effect = yes
+	change_relations = {
+		country = scope:greenland_owner_scope
+		value = 15
+	}
+	create_bidirectional_truce = {
+		country = scope:greenland_owner_scope
+		months = 48
+	}
+}

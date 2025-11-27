@@ -347,3 +347,8 @@ usfp_danish_purchase_buy_iceland_button: "Ask for [GetStateRegion('STATE_ICELAND
 usfp_danish_purchase_buy_iceland_button_desc: "[GetStateRegion('STATE_ICELAND').GetName] has similar strategic value as [GetStateRegion('STATE_GREENLAND').GetName], though it is further from our waters and much smaller."
 usfp_danish_purchase_buy_danish_west_indies_button: "Ask for the [SCOPE.sState('danish_west_indies_scope').GetName]"
 usfp_danish_purchase_buy_danish_west_indies_button_desc: "The [SCOPE.sState('danish_west_indies_scope').GetName] are a valuable port in the [GetStrategicRegion('region_caribbean').GetName]. We should acquire them from [SCOPE.sCountry('greenland_owner_scope').GetName] before another power sets their sights on the islands."
+send_offer_to_denmark: "We will send our offer to [SCOPE.sCountry('greenland_owner_scope').GetName]. They may refuse or make a counter-offer. This action has a 12 year cooldown. If they accept, the following will occur:"
+danish_purchase_at_least_one: "We have selected at least one territory to purchase"
+usfp_danish_purchase_greenland_cost: "We will offer @money!#yellow [GetPlayer.MakeScope.ScriptValue('usfp_greenland_purchase_lump_sum')]#! for [GetStateRegion('STATE_GREENLAND').GetName]"
+usfp_danish_purchase_iceland_cost: "We will offer @money!#yellow [GetPlayer.MakeScope.ScriptValue('usfp_iceland_purchase_lump_sum')]#! for [GetStateRegion('STATE_ICELAND').GetName]"
+usfp_danish_purchase_west_indies_cost: "We will offer @money!#yellow [GetPlayer.MakeScope.ScriptValue('usfp_west_indies_purchase_lump_sum')]#! for the [SCOPE.sState('danish_west_indies_scope').GetName]"

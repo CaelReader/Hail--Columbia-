@@ -23,10 +23,5 @@
 		}
 		
 		add_taxed_goods = g:grain
-		
-		add_modifier = {
-			name = usfp_canadian_colonization_modifier
-			years = 30
-		}
 	}
 }
