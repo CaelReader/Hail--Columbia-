@@ -1,3 +1,0 @@
-﻿NAI = {
-	NUM_GROWING_COLONIES_MAX = 7
-}
