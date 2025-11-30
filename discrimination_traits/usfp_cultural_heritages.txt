@@ -1,4 +1,0 @@
-﻿heritage_usfp_consolidated_native_north_american = {
-	type = heritage
-	trait_group = heritage_group_indigenous_american
-}
