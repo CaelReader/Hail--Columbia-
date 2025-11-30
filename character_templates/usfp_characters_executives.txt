@@ -1,0 +1,553 @@
+﻿#USFP: executive instead of IG Leader
+ecchi_usa_chrysler_character_template = {
+    first_name = Walter
+    last_name = ecchi_Chrysler
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_market_liberal
+    interest_group = ig_industrialists
+	dna = ecchi_dna_walter_chrysler
+    birth_date = 1875.4.2
+    traits = { arrogant persistent expensive_tastes experienced_entrepreneur }
+    executive_usage = {
+        country_trigger = {
+            exists = c:USA
+            this = c:USA
+        }
+        company_trigger = {
+            is_company_type = company_type:company_basic_motors
+        }
+        earliest_usage_date = 1915.1.1
+        latest_usage_date = 1940.8.18
+        chance = 50
+    }
+}
+
+#samuel colt is now a Characters of Commerce character
+ecchi_usa_colt_character_template = {
+    # first_name = Samuel
+    # last_name = ecchi_Colt
+    # historical = yes
+    # culture = cu:yankee
+    # female = no
+    # religion = protestant
+    # ideology = ideology_jingoist_leader
+    # interest_group = ig_industrialists
+	# dna = ecchi_dna_samuel_colt
+    # birth_date = 1814.7.19
+    # traits = { innovative persistent kidney_stones experienced_entrepreneur }
+    # executive_usage = {
+    #     country_trigger = {
+    #         exists = c:USA
+    #         this = c:USA
+    #     }
+    #     company_trigger = {
+    #         is_company_type = company_type:company_colt_firearms
+    #     }
+    #     earliest_usage_date = 1837.1.1 #USFP: up to 10 years early
+    #     latest_usage_date = 1862.1.10
+    #     chance = 50
+    # }
+}
+
+#USFP: executive instead of IG Leader
+ecchi_cal_strauss_character_template = {
+    first_name = Levi
+    last_name = Strauss
+    historical = yes
+    culture = cu:south_german
+    female = no
+    religion = jewish
+    ideology = ideology_market_liberal
+    interest_group = ig_petty_bourgeoisie
+	dna = ecchi_dna_levi_strauss
+    birth_date = 1829.2.26
+    traits = { innovative direct experienced_entrepreneur }
+    executive_usage = {
+        country_trigger = {
+            exists = c:CAL
+            this = c:CAL
+        }
+        company_trigger = {
+            is_company_type = company_type:company_basic_textiles
+        }
+        earliest_usage_date = 1860.1.1 #USFP: up to 10 years early
+        latest_usage_date = 1902.9.26
+        chance = 75
+    }
+}
+
+#USFP: executive instead of IG Leader
+ecchi_usa_browning_character_template = {
+    first_name = John
+    last_name = ecchi_Browning
+    historical = yes
+    culture = cu:yankee
+    female = no
+    religion = mormon
+    ideology = ideology_jingoist_leader
+    interest_group = ig_industrialists
+	dna = ecchi_dna_john_browning
+    birth_date = 1855.1.23
+    traits = { innovative meticulous experienced_entrepreneur }
+    executive_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:USA
+                    this = c:USA
+                    NOT = { exists = c:DES }
+                }
+                AND = {
+                    exists = c:DES
+                    this = c:DES
+                }
+            }
+        }
+        company_trigger = {
+            OR = {
+                is_company_type = company_type:company_colt_firearms
+                is_company_type = company_type:company_basic_metalworks
+            }
+        }
+        earliest_usage_date = 1870.1.1 #USFP: up to 10 years early
+        latest_usage_date = 1926.11.26
+        chance = 75
+    }
+}
+
+#USFP: executive instead of IG Leader
+ecchi_usa_westinghouse_character_template = {
+    first_name = George
+    last_name = ecchi_Westinghouse
+    historical = yes
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_market_liberal
+    interest_group = ig_industrialists
+	dna = ecchi_dna_george_westinghouse
+    birth_date = 1846.10.6
+    traits = { persistent innovative experienced_entrepreneur }
+    executive_usage = {
+        country_trigger = {
+            exists = c:USA
+            this = c:USA
+        }
+        company_trigger = {
+            OR = {
+                is_company_type = company_type:company_usfp_westinghouse
+				is_company_type = company_type:company_basic_electrics
+            }
+        }
+        earliest_usage_date = 1870.1.1 #USFP: up to 10 years early
+        latest_usage_date = 1914.3.12
+        chance = 75
+    }
+}
+
+#USFP: agitator instead of IG Leader
+ecchi_usa_barnum_character_template = {
+    first_name = ecchi_P_T
+    last_name = Barnum
+    historical = yes
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_abolitionist
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1810.7.5
+	dna = ecchi_dna_p_t_barnum
+    traits = { innovative meticulous grifter experienced_entrepreneur } #USFP
+    agitator_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+		earliest_usage_date = 1865.1.1
+        latest_usage_date = 1891.4.7
+        chance = 30
+    }
+    executive_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        company_trigger = {
+            is_company_type = company_type:company_basic_paper
+        }
+        earliest_usage_date = 1865.1.1 
+        latest_usage_date = 1891.4.7
+        chance = 30
+    }
+}
+
+ecchi_usa_hearst_character_template = {
+    first_name = ecchi_William_Randolph
+    last_name = ecchi_Hearst
+    historical = yes
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_jingoist_leader
+    interest_group = ig_industrialists
+	dna = ecchi_dna_william_randolph_hearst
+    birth_date = 1863.4.29
+	traits = { cautious imperious romantic basic_entrepreneur }
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:USA
+                    this = c:USA
+                    NOT = { exists = c:CAL }
+                }
+                AND = {
+                    exists = c:CAL
+                    this = c:CAL
+                }
+            }
+        }
+        interest_group_trigger = {
+            is_marginal = no
+			OR = {
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_petty_bourgeoisie
+			}
+            ig_hasnt_chosen_ideology_trigger = yes
+        }
+        earliest_usage_date = 1895.1.1
+        latest_usage_date = 1951.8.14
+        chance = 75
+    }
+	executive_usage = {
+		country_trigger = {
+            OR = {
+                AND = {
+                    exists = c:USA
+                    this = c:USA
+                    NOT = { exists = c:CAL }
+                }
+                AND = {
+                    exists = c:CAL
+                    this = c:CAL
+                }
+            }
+        }
+		company_trigger = {
+            OR = {
+                is_company_type = company_type:company_basic_paper
+            }
+        }
+		earliest_usage_date = 1895.1.1 
+        latest_usage_date = 1951.8.14
+        chance = 75
+	}
+}
+
+ecchi_usa_astor_character_template = {
+    first_name = ecchi_John_Jacob
+    last_name = ecchi_Astor
+    historical = yes
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_jingoist_leader
+    interest_group = ig_landowners
+    birth_date = 1864.7.13
+	dna = ecchi_dna_john_jacob_astor
+    traits = { expensive_tastes ambitious meticulous basic_entrepreneur }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:USA
+            this = c:USA
+        }
+        interest_group_trigger = {
+            is_marginal = no
+			OR = {
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_landowners
+			}
+            ig_hasnt_chosen_ideology_trigger = yes
+        }
+        earliest_usage_date = 1894.1.1
+        latest_usage_date = 1912.4.15 #titanic rip
+        chance = 75
+    }
+	executive_usage = {
+		country_trigger = {
+			c:USA ?= this
+		}
+		company_trigger = {
+            OR = {
+                is_company_type = company_type:company_basic_shipyards
+            }
+		}
+        earliest_usage_date = 1894.1.1
+        latest_usage_date = 1912.4.15 #titanic rip
+        chance = 75
+	}
+}
+
+#USFP: Jay Gould, Robber Baron
+usfp_usa_jay_gould = {
+    first_name = Jason
+    last_name = Gould
+    historical = yes
+    dna = usfp_jay_gould
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_market_liberal
+    interest_group = ig_industrialists
+    birth_date = 1836.5.27
+	traits = { ruthless imperious expert_entrepreneur }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_marginal = no
+			is_interest_group_type = ig_industrialists
+            ig_hasnt_chosen_ideology_trigger = yes
+        }
+        earliest_usage_date = 1863.1.1
+        latest_usage_date = 1892.1.1
+        chance = 50
+    }
+	executive_usage = {
+		country_trigger = {
+            c:USA ?= this
+        }
+		company_trigger = {
+            OR = {
+                is_company_type = company_type:company_usfp_union_pacific
+            }
+        }
+        earliest_usage_date = 1853.1.1 #up to 10 years early
+        latest_usage_date = 1892.1.1
+        chance = 100
+	}
+}
+
+#USFP: Thomas Fortune Ryan, American Tobacco
+usfp_usa_thomas_fortune_ryan = {
+    first_name = Thomas
+    last_name = Ryan
+    historical = yes
+    dna = usfp_thomas_fortune_ryan
+    culture = cu:dixie
+    female = no
+    religion = catholic
+    ideology = ideology_ethno_nationalist
+    interest_group = ig_landowners
+    birth_date = 1851.10.17
+	traits = { ruthless pious expert_entrepreneur }
+	executive_usage = {
+		country_trigger = {
+            OR = {
+                 c:USA ?= this
+                 c:CSA ?= this
+            }
+        }
+		company_trigger = {
+            OR = {
+                is_company_type = company_type:company_usfp_american_tobacco
+                is_company_type = company_type:company_basic_colonial_plantations_1
+                is_company_type = company_type:company_basic_metalworks
+            }
+        }
+        earliest_usage_date = 1873.1.1 #up to 10 years early
+        latest_usage_date = 1912.1.1
+        chance = 90
+	}
+}
+
+#USFP: William A. Clark, Copper King
+usfp_usa_william_a_clark = {
+    first_name = William
+    last_name = Clark
+    historical = yes
+    dna = usfp_william_a_clark
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_jingoist_leader
+    interest_group = ig_industrialists
+    birth_date = 1839.1.8
+	traits = { ruthless arrogant explorer basic_entrepreneur }
+	executive_usage = {
+		country_trigger = {
+            OR = {
+                 c:USA ?= this
+            }
+        }
+		company_trigger = {
+            OR = {
+                is_company_type = company_type:company_usfp_anaconda
+                is_company_type = company_type:company_basic_mineral_mining
+                is_company_type = company_type:company_basic_gold_mining
+            }
+        }
+        earliest_usage_date = 1866.1.1 #up to 10 years early
+        latest_usage_date = 1907.1.1
+        chance = 75
+	}
+}
+
+#USFP: John D Ryan, Anaconda Company
+usfp_usa_john_d_ryan = {
+    first_name = John
+    last_name = Ryan
+    historical = yes
+    dna = usfp_john_d_ryan
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_jingoist_leader
+    interest_group = ig_industrialists
+    birth_date = 1864.11.10
+	traits = { ruthless imperious expert_entrepreneur }
+	executive_usage = {
+		country_trigger = {
+            OR = {
+                 c:USA ?= this
+            }
+        }
+		company_trigger = {
+            OR = {
+                is_company_type = company_type:company_usfp_anaconda
+                is_company_type = company_type:company_basic_mineral_mining
+            }
+        }
+        earliest_usage_date = 1890.1.1 #up to 10 years early
+        latest_usage_date = 1933.1.1
+        chance = 100
+	}
+}
+
+#USFP: Henry du Pont, son of the founder
+usfp_usa_henry_du_pont = {
+    first_name = Henry
+    last_name = du_Pont
+    historical = yes
+    dna = usfp_henry_du_pont
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_abolitionist
+    interest_group = ig_armed_forces
+    birth_date = 1812.8.8
+	traits = { basic_artillery_commander innovative basic_diplomat basic_entrepreneur }
+	executive_usage = {
+		country_trigger = {
+            OR = {
+                 c:USA ?= this
+            }
+        }
+		company_trigger = {
+            OR = {
+                is_company_type = company_type:company_usfp_dupont
+            }
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1889.1.1
+        chance = 100
+	}
+}
+
+#USFP: Jack Warner, Warner Bros
+usfp_usa_jack_warner = {
+    first_name = Jack
+    last_name = Warner
+    historical = yes
+    dna = usfp_jack_warner
+    culture = cu:ashkenazi
+    female = no
+    religion = jewish
+    ideology = ideology_republican_leader
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1892.8.2
+	traits = { expert_entrepreneur innovative direct wrathful }
+	executive_usage = {
+		country_trigger = {
+            OR = {
+                 c:USA ?= this
+            }
+        }
+		company_trigger = {
+            OR = {
+                is_company_type = company_type:company_usfp_us_warner_bros
+            }
+        }
+        earliest_usage_date = 1910.1.1
+        latest_usage_date = 1978.1.1
+        chance = 100
+	}
+}
+
+#USFP: Isaac Singer, Singer Corporation
+usfp_usa_isaac_singer = {
+    first_name = Isaac
+    last_name = Singer
+    historical = yes
+    dna = usfp_isaac_singer
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_market_liberal
+    interest_group = ig_industrialists
+    birth_date = 1811.10.27
+	traits = { expert_entrepreneur innovative experienced_diplomat }
+	executive_usage = {
+		country_trigger = {
+            OR = {
+                 c:USA ?= this
+            }
+        }
+		company_trigger = {
+            OR = {
+                is_company_type = company_type:company_usfp_singer
+                is_company_type = company_type:company_basic_metalworks
+            }
+        }
+        earliest_usage_date = 1846.1.1 #up to 10 years early
+        latest_usage_date = 1875.1.1
+        chance = 100
+	}
+}
+
+#USFP: Richard Warren Sears, Sears Roebuck
+usfp_usa_richard_sears = {
+    first_name = Richard
+    last_name = Sears
+    historical = yes
+    dna = usfp_richard_sears
+    culture = cu:yankee
+    female = no
+    religion = protestant
+    ideology = ideology_moderate
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1863.12.7
+	traits = { expert_entrepreneur innovative ambitious }
+	executive_usage = {
+		country_trigger = {
+            OR = {
+                 c:USA ?= this
+            }
+        }
+		company_trigger = {
+            OR = {
+                is_company_type = company_type:company_usfp_sears
+                is_company_type = company_type:company_basic_home_goods
+            }
+        }
+        earliest_usage_date = 1885.1.1 #up to 10 years early
+        latest_usage_date = 1908.1.1
+        chance = 100
+	}
+}

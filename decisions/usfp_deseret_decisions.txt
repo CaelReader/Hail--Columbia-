@@ -1,0 +1,139 @@
+﻿deseret_statehood_des = {
+	is_shown = {
+		exists = c:DES
+		root = c:DES
+		exists = c:USA
+		root = {
+			is_subject_of = c:USA
+		}
+	}
+
+	possible = {
+		OR = {
+			game_date > 1858.1.1
+			total_population > 35000
+			s:STATE_CALIFORNIA = {
+				any_scope_state = {
+					owner = c:USA
+					is_incorporated = yes
+				}
+			}
+			s:STATE_WYOMING = {
+				any_scope_state = {
+					owner = c:USA
+					is_incorporated = yes
+				}
+			}
+			s:STATE_OREGON = {
+				any_scope_state = {
+					owner = c:USA
+					is_incorporated = yes
+				}
+			}
+			owns_entire_state_region = STATE_UTAH
+		}
+		c:USA = {
+			relations:root >= relations_threshold:cordial
+		}
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+		c:USA = {
+			is_at_war = no
+			is_diplomatic_play_committed_participant = no
+			NOT = {
+				has_law_or_variant = law_type:law_no_colonial_affairs
+			}
+		}
+		NOT = {
+			has_variable = utah_statehood_proposal
+		}
+		is_adjacent_to_country = c:USA
+	}
+
+	when_taken = {
+		c:USA = {
+			trigger_event = {
+				id = usfp_mormon.5
+			}
+		}
+		set_variable = utah_statehood_proposal
+	}
+
+	ai_chance = {
+		value = 1000
+	}
+}
+
+deseret_western_claims_des = {
+	is_shown = {
+		exists = c:DES
+		root = c:DES
+		exists = c:USA
+		c:USA = {
+			has_journal_entry = usfp_je_western_border
+		}
+		NOT = {
+			has_claim = s:STATE_CALIFORNIA
+		}
+	}
+
+	possible = {
+		NOT = {
+			has_law_or_variant = law_type:law_no_colonial_affairs
+		}
+		is_diplomatic_play_committed_participant = no
+		c:USA = {
+			is_diplomatic_play_committed_participant = no
+		}
+		OR = {
+			has_technology_researched = civilizing_mission
+			c:LKT ?= {
+				NOT = {
+					is_country_type = decentralized
+				}
+			}
+			c:COM ?= {
+				NOT = {
+					is_country_type = decentralized
+				}
+			}
+		}
+	}
+
+	when_taken = {
+		s:STATE_WYOMING = {
+			add_claim = c:DES
+		}
+		s:STATE_IDAHO = {
+			add_claim = c:DES
+		}
+		s:STATE_NEVADA = {
+			add_claim = c:DES
+		}
+		s:STATE_CALIFORNIA = {
+			add_claim = c:DES
+		}
+		s:STATE_ARIZONA = {
+			add_claim = c:DES
+		}
+		s:STATE_NEW_MEXICO = {
+			add_claim = c:DES
+		}
+		s:STATE_COLORADO = {
+			add_claim = c:DES
+		}
+		c:DES = {
+			change_relations = {
+				country = c:MEX
+				value = -20
+			}
+		}
+		c:USA = {
+			trigger_event = usfp_indian_althist.4
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+}

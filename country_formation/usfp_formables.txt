@@ -1,0 +1,20 @@
+﻿usfp_PSA = {
+	states = {
+		STATE_CALIFORNIA
+		STATE_WASHINGTON
+		STATE_OREGON
+		STATE_NEVADA
+	}
+	
+	required_states_fraction = 0.75
+
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+		NAND = {
+			exists = c:GBR
+			is_subject_of = c:GBR
+		}
+	}
+}
