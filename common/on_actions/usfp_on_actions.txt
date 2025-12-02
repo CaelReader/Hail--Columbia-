@@ -72,6 +72,7 @@ usfp_monthly_pulse = {
 		#Canadian events
 		100 = usfp_usa_canada.1 #Caroline Affair
 		100 = usfp_usa_canada.4 #Fenian Raid
+		100 = usfp_usa_canada.6 #Aroostook War
 	}
 }
 

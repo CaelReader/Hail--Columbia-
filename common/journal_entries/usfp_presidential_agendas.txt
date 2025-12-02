@@ -122,7 +122,7 @@
 			interest_group = ig:ig_rural_folk
 		}
 		add_modifier = {
-			name = usfp_agenda_completed_modifier
+			name = usfp_agenda_completed_jackson_modifier
 			years = 4
 			multiplier = {
 				value = {

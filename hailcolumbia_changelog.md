@@ -739,7 +739,7 @@ Updated some labor union events to account for the new laws
 	Added Jacksonian Agenda JE at game start
 	Added the Panic of 1837 plus a JE to recover from it
 	New JE and Events for the American press to react to atrocities in Cuba and possibly spark a Spanish-American War
-	Added events for the Dorr Rebellion, Third Great Awakening, Caroline Affair, Fenian Raids
+	New events for the Dorr Rebellion, Third Great Awakening, Caroline Affair, Fenian Raids, Aroostook War
 	Added starting Trade Privileges treaties for the USA with various countries
 	New Characters: Emma Goldman (imported from ECCHI), Billy Sunday, Walter Rauschenbusch, Lyman Beecher, Henry Ward Beecher, Peter Cartwright
 ## Updates
@@ -756,6 +756,7 @@ Updated some labor union events to account for the new laws
 	Having an Afro-american ruler or IG leader in government now gives a boost to Long Reconstruction
 	Indian Removal payments are smaller
 	Made the Deranged Office Seeker shoot the president slightly less frequently
+	Monroe Doctrine Violation can now trigger from a european power siding with someone else in a diplo play in the western hemisphere
 ## Fixes
 	Significantly increased the navy requirement to enforce the Monroe Doctrine so that now you actually have to grow the navy from its starting state
 	Moving away from Presidential Republic now removes the Constitution JE even if you still have voting

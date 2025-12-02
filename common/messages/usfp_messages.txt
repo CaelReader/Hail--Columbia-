@@ -199,10 +199,10 @@ usfp_colony_accepted = {
 	color = good
 }
 
-#USA-Canada Relations
+#Diplomatic Messages
 usfp_canada_caroline_burning_escalation_usa = {
 	type = country
-	group = "usfp_usa_canada_group"
+	group = "usfp_usa_diplomacy_group"
 	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
 	notification_type = toast
 	color = bad
@@ -210,7 +210,7 @@ usfp_canada_caroline_burning_escalation_usa = {
 
 usfp_canada_caroline_burning_negotiated = {
 	type = country
-	group = "usfp_usa_canada_group"
+	group = "usfp_usa_diplomacy_group"
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 	notification_type = toast
 	color = good
@@ -218,7 +218,7 @@ usfp_canada_caroline_burning_negotiated = {
 
 usfp_canada_caroline_burning_escalation_gbr = {
 	type = country
-	group = "usfp_usa_canada_group"
+	group = "usfp_usa_diplomacy_group"
 	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
 	notification_type = toast
 	color = bad
@@ -226,17 +226,15 @@ usfp_canada_caroline_burning_escalation_gbr = {
 
 usfp_usa_supporting_fenians = {
 	type = country
-	group = "usfp_usa_canada_group"
+	group = "usfp_usa_diplomacy_group"
 	texture = "gfx/interface/icons/notification_icons/revolution.dds"
 	notification_type = toast
 	color = bad
 }
 
-#USA-Caribbean Relations
-
 usfp_usa_not_mad_over_maine = {
 	type = country
-	group = "usfp_usa_caribbean_group"
+	group = "usfp_usa_diplomacy_group"
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 	notification_type = toast
 	color = good
@@ -244,8 +242,40 @@ usfp_usa_not_mad_over_maine = {
 
 usfp_usa_mad_over_maine = {
 	type = country
-	group = "usfp_usa_caribbean_group"
+	group = "usfp_usa_diplomacy_group"
 	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
 	notification_type = toast
 	color = bad
+}
+
+usfp_usa_claims_aroostook = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/secession.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_gbr_accepts_aroostook_treaty = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+	notification_type = toast
+	color = good
+}
+
+usfp_gbr_rejects_aroostook_treaty = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/secession.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_aroostook_to_usa = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+	notification_type = toast
+	color = good
 }

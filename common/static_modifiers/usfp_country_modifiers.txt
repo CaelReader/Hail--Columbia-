@@ -773,6 +773,15 @@ usfp_agenda_completed_modifier = {
 	country_legitimacy_headofstate_add = 1
 }
 
+usfp_agenda_completed_jackson_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_election_positive.dds
+	country_legitimacy_headofstate_add = 1
+	building_group_bg_agriculture_construction_efficiency_add = 0.02
+	building_group_bg_plantations_construction_efficiency_add = 0.02
+	building_group_bg_ranching_construction_efficiency_add = 0.02
+	state_farmers_investment_pool_efficiency_mult = 0.02
+}
+
 usfp_america_enters_world_stage_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_manowar_positive.dds
 	country_influence_mult = 0.10

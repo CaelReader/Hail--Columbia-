@@ -627,15 +627,7 @@ usfp_usa_canada.6 = {
 			}
 		}
 		custom_tooltip = britain_accepts_aroostook_treaty
-		show_as_tooltip = {
-			scope:aroostook_state_scope = {
-				set_state_owner = root
-			}
-			create_bidirectional_truce = {
-				country = c:GBR
-				months = 60
-			}
-		}
+		custom_tooltip = britain_rejects_aroostook_treaty
 		ai_chance = {
 			base = 100
 		}
@@ -662,10 +654,10 @@ usfp_usa_canada.6 = {
 			}
 		}
 		c:GBR = {
-			post_notification = usa_claims_aroostook
+			post_notification = usfp_usa_claims_aroostook
 		}
 		scope:canadian_country_scope = {
-			post_notification = usa_claims_aroostook
+			post_notification = usfp_usa_claims_aroostook
 		}
 		ai_chance = {
 			base = 0
@@ -724,10 +716,10 @@ usfp_usa_canada.7 = {
 			}
 		}
 		c:USA = {
-			post_notification = gbr_accepts_aroostook_treaty
+			post_notification = usfp_gbr_accepts_aroostook_treaty
 		}
 		scope:canadian_country_scope = {
-			post_notification = gbr_accepts_aroostook_treaty
+			post_notification = usfp_gbr_accepts_aroostook_treaty
 		}
 		ai_chance = {
 			base = 100
@@ -751,10 +743,10 @@ usfp_usa_canada.7 = {
 			}
 		}
 		c:USA = {
-			post_notification = gbr_rejects_aroostook_treaty
+			post_notification = usfp_gbr_rejects_aroostook_treaty
 		}
 		scope:canadian_country_scope = {
-			post_notification = gbr_rejects_aroostook_treaty
+			post_notification = usfp_gbr_rejects_aroostook_treaty
 		}
 		ai_chance = {
 			base = 0

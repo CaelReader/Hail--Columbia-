@@ -1925,37 +1925,17 @@ usfp_manifest_destiny.18 = {
 	trigger = {
 		any_diplomatic_play = {
 			target = {
-				OR = {
-					country_is_in_north_america = yes
-					country_is_in_central_america = yes
-					country_is_in_south_america = yes
-				}
-				has_diplomatic_relevance = ROOT
-				NOT = {
-					this = ROOT
-				}
-				is_revolutionary = no
-				NOT = {
-					has_war_with = root
-				}
+				usfp_monroe_doctrine_valid_defender = yes
 			}
-			initiator = {
-				country_is_in_north_america = no
-				country_is_in_central_america = no
-				country_is_in_south_america = no
-				NOT = {
-					this = ROOT
-				}
-				is_revolutionary = no
-				NOT = {
-					has_war_with = root
-				}
+			any_scope_initiator_ally = {
+				usfp_monroe_doctrine_valid_interloper = yes
 			}
 			NOR = {
 				is_diplomatic_play_type = dp_reduce_autonomy
 				is_diplomatic_play_type = dp_increase_autonomy
 				is_diplomatic_play_type = dp_secession
 				is_diplomatic_play_type = dp_independence
+				is_diplomatic_play_type = dp_native_uprising
 			}
 			is_war = no
 		}
@@ -1965,43 +1945,41 @@ usfp_manifest_destiny.18 = {
 		random_diplomatic_play = {
 			limit = {
 				target = {
-					OR = {
-						country_is_in_north_america = yes
-						country_is_in_central_america = yes
-						country_is_in_south_america = yes
-					}
-					has_diplomatic_relevance = ROOT
-					NOT = {
-						this = ROOT
-					}
-					is_revolutionary = no
-					NOT = {
-						has_war_with = root
-					}
+					usfp_monroe_doctrine_valid_defender = yes
 				}
-				initiator = {
-					country_is_in_north_america = no
-					country_is_in_central_america = no
-					country_is_in_south_america = no
-					NOT = {
-						this = ROOT
-					}
-					is_revolutionary = no
-					NOT = {
-						has_war_with = root
-					}
+				any_scope_initiator_ally = {
+					usfp_monroe_doctrine_valid_interloper = yes
 				}
 				NOR = {
 					is_diplomatic_play_type = dp_reduce_autonomy
 					is_diplomatic_play_type = dp_increase_autonomy
 					is_diplomatic_play_type = dp_secession
 					is_diplomatic_play_type = dp_independence
+					is_diplomatic_play_type = dp_native_uprising
 				}
 				is_war = no
 			}
 			target = {
 				save_scope_as = target_scope
 			}
+			if = {
+				limit = { 
+					initiator = {
+						usfp_monroe_doctrine_valid_interloper = yes
+					}
+				}
+				initiator = {
+					save_scope_as = monroe_doctrine_violator
+				}
+			} else = {
+				random_scope_initiator_ally = {
+					limit = {
+						usfp_monroe_doctrine_valid_interloper = yes
+					}
+					save_scope_as = monroe_doctrine_violator
+				}
+			}
+
 			initiator = {
 				save_scope_as = initiator_scope
 			}
@@ -2033,7 +2011,7 @@ usfp_manifest_destiny.18 = {
 			value = 30
 		}
 		change_relations = {
-			country = scope:initiator_scope
+			country = scope:monroe_doctrine_violator
 			value = -30
 		}
 	}
@@ -2065,7 +2043,7 @@ usfp_manifest_destiny.18 = {
 			}
 		}
 		create_unidirectional_truce = {
-			country = scope:initiator_scope
+			country = scope:monroe_doctrine_violator
 			months = 6
 		}
 		change_relations = {

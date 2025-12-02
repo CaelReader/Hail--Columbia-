@@ -685,3 +685,32 @@ usfp_danish_purchase_west_indies_valid = {
 		owner = scope:greenland_owner_scope
 	}
 }
+
+usfp_monroe_doctrine_valid_interloper = {
+	country_is_in_north_america = no
+	country_is_in_central_america = no
+	country_is_in_south_america = no
+	NOT = {
+		this = ROOT
+	}
+	is_revolutionary = no
+	NOT = {
+		has_war_with = root
+	}
+}
+
+usfp_monroe_doctrine_valid_defender = {
+	OR = {
+		country_is_in_north_america = yes
+		country_is_in_central_america = yes
+		country_is_in_south_america = yes
+	}
+	has_diplomatic_relevance = ROOT
+	NOT = {
+		this = ROOT
+	}
+	is_revolutionary = no
+	NOT = {
+		has_war_with = root
+	}
+}
