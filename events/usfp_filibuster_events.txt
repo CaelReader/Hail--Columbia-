@@ -401,5 +401,6 @@ usfp_filibuster.4 = {
 		}
 	}
 }
-#Narciso López's attack on Cuba
-#Narciso López's attack on Cuba (CUB)
+#USA: Sponsor Narciso López?
+#CUB: Narciso López captured
+#CUB/SPA: Narciso López attacks

@@ -1,0 +1,293 @@
+﻿namespace = usfp_danish_purchases
+###### Hail, Columbia! by CaelReader ######
+
+#DEN: USA wants to buy our islands
+usfp_danish_purchases.1 = {
+	type = country_event
+	placement = scope:relevant_island
+	event_image = {
+		trigger = {
+			c:USA = {
+				OR = {
+					has_variable = usfp_danish_purchases_greenland_desire
+					has_variable = usfp_danish_purchases_iceland_desire
+				}
+			}
+		}
+		video = "unspecific_iceberg"
+	}
+	event_image = {
+		trigger = {
+			c:USA = {
+				NOR = {
+					has_variable = usfp_danish_purchases_greenland_desire
+					has_variable = usfp_danish_purchases_iceland_desire
+				}
+			}
+		}
+		video = "africa_construction_colony"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_danish_purchases.1.t
+	desc = usfp_danish_purchases.1.d
+	flavor = usfp_danish_purchases.1.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+		c:USA = {
+			save_scope_as = usa_scope
+			if = {
+				limit = {
+					has_variable = usfp_danish_purchases_greenland_desire
+				 }
+				 scope:greenland_state_scope = {
+					save_scope_as = relevant_island
+				 }
+			} else_if = {
+				limit = {
+					has_variable = usfp_danish_purchases_iceland_desire
+				 }
+				 scope:iceland_scope = {
+					save_scope_as = relevant_island
+				 }
+			} else = {
+				scope:danish_west_indies_scope = {
+					save_scope_as = relevant_island
+				}
+			}
+		}
+	}
+
+	#refuse
+	option = {
+		name = usfp_danish_purchases.1.a
+		default_option = yes
+		scope:usa_scope = {
+			if = {
+				limit = { 
+					usfp_manifest_destiny_greater_or_equal_trigger = { value = 8 }
+				}
+				trigger_event = {
+					id = usfp_danish_purchases.4
+					days = 10
+				}
+			} else = {
+				post_notification = usfp_denmark_refused_sale
+			}
+		}
+	}
+
+	#accept
+	option = {
+		name = usfp_danish_purchases.1.b
+		scope:usa_scope = {
+			usfp_danish_purchase_effect = { MULT = 1 }
+			post_notification = usfp_denmark_agreed_to_sale
+		}
+	}
+
+	#double price
+	option = {
+		name = usfp_danish_purchases.1.c
+		custom_tooltip = {
+			text = if_usa_accepts
+			scope:usa_scope = {
+				trigger_event = {
+					id = usfp_danish_purchases.2
+					days = 10
+				}
+			}
+		}
+		show_as_tooltip = {
+			scope:usa_scope = {
+				usfp_danish_purchase_effect = { MULT = 2 }
+			}
+		}
+	}
+
+	#only west indies
+	option = {
+		name = usfp_danish_purchases.1.e
+		custom_tooltip = {
+			text = if_usa_accepts
+			scope:usa_scope = {
+				trigger_event = {
+					id = usfp_danish_purchases.3
+					days = 10
+				}
+			}
+		}
+		show_as_tooltip = {
+			c:USA = {
+				add_treasury = {
+					value = usfp_west_indies_purchase_lump_sum
+				}
+				scope:greenland_owner_scope = {
+					add_treasury = {
+						root = {
+							add = usfp_west_indies_purchase_lump_sum
+							multiply = -1
+						}
+					}
+				}
+				usfp_transfer_danish_islands_effect = yes
+				change_relations = {
+					country = scope:greenland_owner_scope
+					value = 15
+				}
+				create_bidirectional_truce = {
+					country = scope:greenland_owner_scope
+					months = 48
+				}
+				scope:danish_west_indies_scope = {
+					set_state_owner = root
+				}
+			}
+		}
+	}
+
+
+}
+#USA: DEN wants double or nothing
+usfp_danish_purchases.2 = {
+	type = country_event
+	placement = scope:relevant_island
+	event_image = {
+		video = "unspecific_iceberg"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_danish_purchases.2.t
+	desc = usfp_danish_purchases.2.d
+	flavor = usfp_danish_purchases.2.f
+	dlc = dlc_usfp
+	duration = 3
+
+	#refuse
+	option = {
+		name = usfp_danish_purchases.2.a
+		default_option = yes
+		scope:greenland_owner_scope = {
+			post_notification = usfp_usa_refused_danish_counteroffer
+		}
+	}
+
+	#accept
+	option = {
+		name = usfp_danish_purchases.2.b
+		usfp_danish_purchase_effect = { MULT = 2 }
+		scope:greenland_owner_scope = {
+			post_notification = usfp_usa_accepted_danish_counteroffer
+		}
+	}
+
+}
+#USA: DEN only wants to sell West Indies
+usfp_danish_purchases.3 = {
+	type = country_event
+	placement = scope:danish_west_indies_scope
+	event_image = {
+		video = "africa_construction_colony"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_danish_purchases.3.t
+	desc = usfp_danish_purchases.3.d
+	flavor = usfp_danish_purchases.3.f
+	dlc = dlc_usfp
+	duration = 3
+
+	#refuse
+	option = {
+		name = usfp_danish_purchases.3.a
+		default_option = yes
+		scope:greenland_owner_scope = {
+			post_notification = usfp_usa_refused_counteroffer
+		}
+	}
+
+	#accept
+	option = {
+		name = usfp_danish_purchases.3.b
+		add_treasury = {
+			value = usfp_west_indies_purchase_lump_sum
+		}
+		scope:greenland_owner_scope = {
+			add_treasury = {
+				root = {
+					add = usfp_west_indies_purchase_lump_sum
+					multiply = -1
+				}
+			}
+		}
+		usfp_transfer_danish_islands_effect = yes
+		change_relations = {
+			country = scope:greenland_owner_scope
+			value = 15
+		}
+		create_bidirectional_truce = {
+			country = scope:greenland_owner_scope
+			months = 48
+		}
+		scope:danish_west_indies_scope = {
+			set_state_owner = root
+		}
+		scope:greenland_owner_scope = {
+			post_notification = usfp_usa_accepted_danish_counteroffer
+		}
+	}
+
+}
+
+#USA: Denmark refuses, claim greenland directly?
+usfp_danish_purchases.4 = {
+	type = country_event
+	placement = scope:greenland_state_scope
+	event_image = {
+		video = "unspecific_iceberg"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_danish_purchases.4.t
+	desc = usfp_danish_purchases.4.d
+	flavor = usfp_danish_purchases.4.f
+	dlc = dlc_usfp
+	duration = 3
+
+	#maybe another time
+	option = {
+		name = usfp_danish_purchases.4.a
+		default_option = yes
+
+	}
+
+	#press claim
+	option = {
+		name = usfp_danish_purchases.4.b
+		highlighted_option = yes
+		trigger = {
+			usfp_manifest_destiny_greater_or_equal_trigger = { value = 8 }
+		}
+		s:STATE_GREENLAND = {
+			add_claim = root
+		}
+		scope:greenland_owner_scope = {
+			post_notification = usa_claiming_greenland
+		}
+	}
+
+}

@@ -28,7 +28,15 @@
 	}
 
 	effect = {
-		custom_tooltip = send_offer_to_denmark
+		custom_tooltip = {
+			text = send_offer_to_denmark
+			scope:greenland_owner_scope = {
+				trigger_event = {
+					id = usfp_danish_purchases.1
+					days = 10
+				}
+			}
+		}
 		show_as_tooltip = {
 			usfp_danish_purchase_effect = { MULT = 1 }
 		}
