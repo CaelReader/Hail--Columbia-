@@ -1325,3 +1325,44 @@ usfp_gerrit_smith = {
         chance = 25
     }
 }
+
+#USFP: Reinhold Niebuhr, theologian
+usfp_reinhold_niebuhr = {
+    first_name = Reinhold
+    last_name = Niebuhr
+    # dna =
+    historical = yes
+    birth_date = 1892.6.21
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_devout
+    ideology = ideology_usfp_social_gospel_leader #would later become a Jingoist after WW2
+    traits = {
+        pious
+        charismatic
+        direct
+        inspirational_orator
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1928.1.1
+        latest_usage_date = 1960.1.1
+        chance = 25
+    }
+    on_created = {
+        if = {
+            limit = {
+                owner ?= {
+                    has_law_or_variant = law_type:law_council_republic
+                } 
+            }
+            set_ideology = ideology:ideology_jingoist_leader
+        }
+    }
+}

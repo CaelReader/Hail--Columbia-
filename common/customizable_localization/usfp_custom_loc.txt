@@ -1,0 +1,125 @@
+﻿usfp_get_danish_islands_purchase_desires = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			c:USA = {
+				has_variable = usfp_danish_purchases_greenland_desire
+				usfp_danish_purchase_greenland_valid = yes
+				has_variable = usfp_danish_purchases_iceland_desire
+				usfp_danish_purchase_iceland_valid = yes
+				has_variable = usfp_danish_purchases_west_indies_desire
+				usfp_danish_purchase_west_indies_valid = yes
+			}
+		}
+		localization_key = usfp_get_danish_islands_purchase_desires_all_three
+	}
+	text = {
+		trigger = {
+			c:USA = {
+				has_variable = usfp_danish_purchases_greenland_desire
+				usfp_danish_purchase_greenland_valid = yes
+				has_variable = usfp_danish_purchases_iceland_desire
+				usfp_danish_purchase_iceland_valid = yes
+				NOT = {
+					AND = {
+						has_variable = usfp_danish_purchases_west_indies_desire
+						usfp_danish_purchase_west_indies_valid = yes
+					}
+				}
+			}
+		}
+		localization_key = usfp_get_danish_islands_purchase_desires_greenland_iceland
+	}
+	text = {
+		trigger = {
+			c:USA = {
+				has_variable = usfp_danish_purchases_greenland_desire
+				usfp_danish_purchase_greenland_valid = yes
+				has_variable = usfp_danish_purchases_west_indies_desire
+				usfp_danish_purchase_west_indies_valid = yes
+				NOT = {
+					AND = {
+						has_variable = usfp_danish_purchases_iceland_desire
+						usfp_danish_purchase_iceland_valid = yes
+					}
+				}
+			}
+		}
+		localization_key = usfp_get_danish_islands_purchase_desires_greenland_windies
+	}
+	text = {
+		trigger = {
+			c:USA = {
+				has_variable = usfp_danish_purchases_greenland_desire
+				usfp_danish_purchase_greenland_valid = yes
+				NOT = {
+					AND = {
+						has_variable = usfp_danish_purchases_iceland_desire
+						usfp_danish_purchase_iceland_valid = yes
+					}
+					AND = {
+						has_variable = usfp_danish_purchases_west_indies_desire
+						usfp_danish_purchase_west_indies_valid = yes
+					}
+				}
+			}
+		}
+		localization_key = usfp_get_danish_islands_purchase_desires_greenland_only
+	}
+	text = {
+		trigger = {
+			c:USA = {
+				has_variable = usfp_danish_purchases_iceland_desire
+				usfp_danish_purchase_iceland_valid = yes
+				has_variable = usfp_danish_purchases_west_indies_desire
+				usfp_danish_purchase_west_indies_valid = yes
+				NOT = {
+					AND = {
+						has_variable = usfp_danish_purchases_greenland_desire
+						usfp_danish_purchase_greenland_valid = yes
+					}
+				}
+			}
+		}
+		localization_key = usfp_get_danish_islands_purchase_desires_iceland_windies
+	}
+	text = {
+		trigger = {
+			c:USA = {
+				has_variable = usfp_danish_purchases_iceland_desire
+				usfp_danish_purchase_iceland_valid = yes
+				NOT = {
+					AND = {
+						has_variable = usfp_danish_purchases_greenland_desire
+						usfp_danish_purchase_greenland_valid = yes
+					}
+					AND = {
+						has_variable = usfp_danish_purchases_west_indies_desire
+						usfp_danish_purchase_west_indies_valid = yes
+					}
+				}
+			}
+		}
+		localization_key = usfp_get_danish_islands_purchase_desires_iceland_only
+	}
+	text = {
+		trigger = {
+			c:USA = {
+				has_variable = usfp_danish_purchases_west_indies_desire
+				usfp_danish_purchase_west_indies_valid = yes
+				NOT = {
+					AND = {
+						has_variable = usfp_danish_purchases_greenland_desire
+						usfp_danish_purchase_greenland_valid = yes
+					}
+					AND = {
+						has_variable = usfp_danish_purchases_iceland_desire
+						usfp_danish_purchase_iceland_valid = yes
+					}
+				}
+			}
+		}
+		localization_key = usfp_get_danish_islands_purchase_desires_windies_only
+	}
+}

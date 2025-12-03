@@ -25,6 +25,7 @@
 				has_variable = usfp_danish_purchases_west_indies_desire
 			}
 		}
+		government_legitimacy >= 66
 	}
 
 	effect = {

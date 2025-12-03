@@ -113,6 +113,12 @@ usfp_danish_purchases.1 = {
 	#only west indies
 	option = {
 		name = usfp_danish_purchases.1.e
+		trigger = {
+			c:USA = {
+				has_variable = usfp_danish_purchases_west_indies_desire
+				usfp_danish_purchase_west_indies_valid = yes
+			}
+		}
 		custom_tooltip = {
 			text = if_usa_accepts
 			scope:usa_scope = {
@@ -211,7 +217,6 @@ usfp_danish_purchases.3 = {
 	#refuse
 	option = {
 		name = usfp_danish_purchases.3.a
-		default_option = yes
 		scope:greenland_owner_scope = {
 			post_notification = usfp_usa_refused_counteroffer
 		}
@@ -220,6 +225,7 @@ usfp_danish_purchases.3 = {
 	#accept
 	option = {
 		name = usfp_danish_purchases.3.b
+		default_option = yes
 		add_treasury = {
 			value = usfp_west_indies_purchase_lump_sum
 		}

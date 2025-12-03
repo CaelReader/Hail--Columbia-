@@ -1673,7 +1673,41 @@ usfp_usa_spain.4.a: "We fought to liberate [SCOPE.sCountry('cuba_scope').GetName
 usfp_usa_spain.4.b: "[SCOPE.sCountry('cuba_scope').GetName] can stand on its own for the first time."
 usfp_usa_spain.4.c: "The [SCOPE.sCountry('cuba_scope').GetAdjective] people yearn to join our great Union."
 
+## Danish Purchases
+usfp_danish_purchases.1.t: "[SCOPE.sCountry('usa_scope').GetName] Offers For Islands"
+usfp_danish_purchases.1.d: "The [SCOPE.sCountry('usa_scope').GetName], desiring to secure additional Atlantic ports for themselves, has approached us with an offer to purchase our holdings in [SCOPE.GetRootScope.GetCountry.GetCustom('usfp_get_danish_islands_purchase_desires')]."
+usfp_danish_purchases.1.f: ""It is self-evident that the Atlantic is critical to our greater national security. Besides, [SCOPE.sCountry('greenland_owner_scope').GetNameNoFormatting] has done little with these islands and is in no position to develop them to their fullest potential. The inhabitants will surely welcome the change, and your finance minister will thank you."" 
+usfp_danish_purchases.1.a: "Our territory is not for sale."
+usfp_danish_purchases.1.b: "Gold is worth more than ice."
+usfp_danish_purchases.1.c: "Double the offer, and we will sell."
+usfp_danish_purchases.1.e: "Offer solely the [SCOPE.sState('danish_west_indies_scope').GetName]."
 
+usfp_danish_purchases.2.t: "[SCOPE.sCountry('greenland_owner_scope').GetAdjective] Counter-Offer"
+usfp_danish_purchases.2.d: "[SCOPE.sCountry('greenland_owner_scope').GetName] is willing to sell, but only if we double our offered sum."
+usfp_danish_purchases.2.f: "The diplomat considered the amended treaty and exhaled slowly. "I will have to take this back and confer, Congress was already hesistant to approve our initial offer. I dread what they will call this deal if we make it."" 
+usfp_danish_purchases.2.a: "Turn them down."
+usfp_danish_purchases.2.b: "It is a worthwhile investment."
+
+usfp_danish_purchases.3.t: "[SCOPE.sCountry('greenland_owner_scope').GetAdjective] Counter-Offer"
+usfp_danish_purchases.3.d: "[SCOPE.sCountry('greenland_owner_scope').GetName] seems unwilling to part with their territory in the north Atlantic, but is willing to negotiate the transfer of the [SCOPE.sState('danish_west_indies_scope').GetName] to our control."
+usfp_danish_purchases.3.f: ""Are the earthquakes of St. Thomas really all we'll be getting? Surely there are better Carribbean ports we could pursue."" 
+usfp_danish_purchases.3.a: "We need all the islands!"
+usfp_danish_purchases.3.b: "Better something than nothing."
+
+usfp_danish_purchases.4.t: "[SCOPE.sCountry('greenland_owner_scope').GetName] Refuses Sale"
+usfp_danish_purchases.4.d: "[SCOPE.sCountry('greenland_owner_scope').GetName] has flatly refused the sale of any of their holdings in the Atlantic."
+usfp_danish_purchases.4.f: ""Greenland belongs in the American embrace, [SCOPE.sCountry('greenland_owner_scope').GetNameNoFormatting] squanders its riches. Besides, what if they sell it to some other power with designs against us?"" 
+usfp_danish_purchases.4.a: "Perhaps they will be more amenable in the future."
+usfp_danish_purchases.4.b: "We cannot abide any other power controlling [GetStateRegion('STATE_GREENLAND').GetName]."
+
+if_usa_accepts: "If the [SCOPE.sCountry('usa_scope').GetName] accepts:"
+usfp_get_danish_islands_purchase_desires_all_three: "[GetStateRegion('STATE_GREENLAND').GetName], [GetStateRegion('STATE_ICELAND').GetName], and the [SCOPE.sState('danish_west_indies_scope').GetName]"
+usfp_get_danish_islands_purchase_desires_greenland_iceland: "[GetStateRegion('STATE_GREENLAND').GetName] and [GetStateRegion('STATE_ICELAND').GetName]"
+usfp_get_danish_islands_purchase_desires_greenland_windies: "[GetStateRegion('STATE_GREENLAND').GetName] and the [SCOPE.sState('danish_west_indies_scope').GetName]"
+usfp_get_danish_islands_purchase_desires_greenland_only: "[GetStateRegion('STATE_GREENLAND').GetName]"
+usfp_get_danish_islands_purchase_desires_iceland_windies: "[GetStateRegion('STATE_ICELAND').GetName] and the [SCOPE.sState('danish_west_indies_scope').GetName]"
+usfp_get_danish_islands_purchase_desires_iceland_only: "[GetStateRegion('STATE_ICELAND').GetName]"
+usfp_get_danish_islands_purchase_desires_windies_only: "the [SCOPE.sState('danish_west_indies_scope').GetName]"
 
 
 usfp_test.1.t: "DEBUG EVENT"
