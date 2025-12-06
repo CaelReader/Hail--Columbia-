@@ -26,6 +26,9 @@
 			}
 		}
 		government_legitimacy >= 66
+		scope:greenland_owner_scope = {
+			government_legitimacy >= 40
+		}
 	}
 
 	effect = {

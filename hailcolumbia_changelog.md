@@ -741,7 +741,7 @@ Updated some labor union events to account for the new laws
 	New JE and Events for the American press to react to atrocities in Cuba and possibly spark a Spanish-American War
 	New events for the Dorr Rebellion, Third Great Awakening, Caroline Affair, Fenian Raids, Aroostook War
 	Added starting Trade Privileges treaties for the USA with various countries
-	New Characters: Emma Goldman (imported from ECCHI), Billy Sunday, Walter Rauschenbusch, Lyman Beecher, Henry Ward Beecher, Peter Cartwright
+	New Characters: Emma Goldman (imported from ECCHI), Billy Sunday, Walter Rauschenbusch, Lyman Beecher, Henry Ward Beecher, Peter Cartwright, Bejamin Tillman, David Atchison, Gerrit Smith, Reinhold Niebuhr
 ## Updates
 	USA now begins with Agrarianism and a special variant of Consumption-Based Taxation
 	American PB now supports the American School

@@ -50,6 +50,7 @@
 	scripted_button = usfp_danish_purchase_buy_danish_west_indies_button
 
 	immediate = {
+		save_scope_as = usa_scope
 		c:GBR = {
 			save_scope_as = britain_scope
 		}

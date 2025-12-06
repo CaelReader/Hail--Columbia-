@@ -18,3 +18,82 @@
 	}
 	
 }
+ 
+usfp_pm_fur_trapping = {
+	texture = "gfx/interface/icons/production_method_icons/pm_hunting.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_silk_add = 5
+			goods_output_fabric_add = 1
+		}
+		level_scaled = {
+			building_employment_laborers_add = 300
+			building_employment_soldiers_add = 200
+		}
+
+	}
+	
+}
+
+usfp_pm_bison_hunting = {
+	texture = "gfx/interface/icons/production_method_icons/pm_bison_hunting.dds"
+	required_input_goods = small_arms
+	unlocking_technologies = {
+		repeaters
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_small_arms_add = 1
+			goods_output_silk_add = 8
+			goods_output_fabric_add = 3
+			building_group_bg_ranching_construction_efficiency_add = 0.02
+		}
+		level_scaled = {
+			building_employment_laborers_add = 300
+			building_employment_soldiers_add = 200
+		}
+	}
+	
+}
+
+
+usfp_pm_fur_manual_transport = {
+	texture = "gfx/interface/icons/production_method_icons/no_rail_transport.dds"
+	building_modifiers = {
+		unscaled = {
+			building_laborers_mortality_mult = 0.1
+			building_soldiers_mortality_mult = 0.1
+		}
+	}
+}
+
+
+usfp_pm_fur_rail_hunting = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 2
+		}
+	}
+
+	unlocking_technologies = {
+		steel_railway_cars
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_transportation_add = 2
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -200
+		}
+		unscaled = {
+			building_laborers_mortality_mult = 0.1
+			building_soldiers_mortality_mult = 0.1
+		}
+	}
+}
