@@ -32,6 +32,10 @@
 	}
 
 	effect = {
+		set_variable = {
+			name = sent_denmark_offer
+			years = 1
+		}
 		custom_tooltip = {
 			text = send_offer_to_denmark
 			scope:greenland_owner_scope = {
@@ -76,6 +80,12 @@ usfp_danish_purchase_buy_greenland_button = {
 	possible = {
 		has_interest_marker_in_region = region_north_sea_coast
 		is_at_war = no
+		custom_tooltip = {
+			text = not_sent_offer_recently
+			NOT = {
+				has_variable = sent_denmark_offer
+			}
+		}
 	}
 
 	effect = {
@@ -121,6 +131,12 @@ usfp_danish_purchase_buy_iceland_button = {
 	possible = {
 		has_interest_marker_in_region = region_north_sea_coast
 		is_at_war = no
+		custom_tooltip = {
+			text = not_sent_offer_recently
+			NOT = {
+				has_variable = sent_denmark_offer
+			}
+		}
 	}
 
 	effect = {
@@ -166,6 +182,12 @@ usfp_danish_purchase_buy_danish_west_indies_button = {
 	possible = {
 		has_interest_marker_in_region = region_caribbean
 		is_at_war = no
+		custom_tooltip = {
+			text = not_sent_offer_recently
+			NOT = {
+				has_variable = sent_denmark_offer
+			}
+		}
 	}
 
 	effect = {

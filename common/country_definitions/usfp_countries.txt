@@ -648,3 +648,17 @@ usfp_LNC = {
 	
 	capital = STATE_PANAMA
 }
+
+#decentralized Greenland
+usfp_KAL = {
+	color = { 192 28 54 }
+	
+	country_type = decentralized
+
+	tier = principality
+	
+	cultures = { inuit }
+	
+	capital = STATE_GREENLAND
+	is_named_from_capital = yes
+}

@@ -2346,6 +2346,20 @@ usfp_transfer_danish_islands_effect = {
 		scope:greenland_state_scope = {
 			set_state_owner = scope:usa_scope
 		}
+		s:STATE_GREENLAND = {
+			remove_claim = scope:greenland_owner_scope
+			add_claim = scope:usa_scope
+		}
+		every_country = {
+			limit = {
+				NOR = {
+					this = root
+					this = scope:greenland_owner_scope
+				}
+				has_interest_marker_in_region = region_north_sea_coast
+			}
+			post_notification = usfp_usa_bought_greenland_third_party
+		}
 	}
 	if = {
 		limit = {
@@ -2355,6 +2369,16 @@ usfp_transfer_danish_islands_effect = {
 		scope:iceland_scope = {
 			set_state_owner = scope:usa_scope
 		}
+		every_country = {
+			limit = {
+				NOR = {
+					this = root
+					this = scope:greenland_owner_scope
+				}
+				has_interest_marker_in_region = region_north_sea_coast
+			}
+			post_notification = usfp_usa_bought_iceland_third_party
+		}
 	}
 	if = {
 		limit = {
@@ -2363,6 +2387,16 @@ usfp_transfer_danish_islands_effect = {
 		}
 		scope:danish_west_indies_scope = {
 			set_state_owner = scope:usa_scope
+		}
+		every_country = {
+			limit = {
+				NOR = {
+					this = root
+					this = scope:greenland_owner_scope
+				}
+				has_interest_marker_in_region = region_caribbean
+			}
+			post_notification = usfp_usa_bought_west_indies_third_party
 		}
 	}
 }

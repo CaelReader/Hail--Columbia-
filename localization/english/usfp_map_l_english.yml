@@ -101,6 +101,8 @@ usfp_ALG: "Algonquin"
 usfp_ALG_ADJ: "Algonquin"
 usfp_ATK: "Nitaskinan"
 usfp_ATK_ADJ: "Atikamekw"
+usfp_KAL: "Kalaallit Nunaat"
+usfp_KAL_ADJ: "Kalaallit"
 
  ASK:0 "Alaska"
  ASK_ADJ:0 "Alaskan"

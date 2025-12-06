@@ -144,3 +144,41 @@ notification_usfp_gbr_rejects_aroostook_treaty_tooltip: "#header $notification_u
 notification_usfp_aroostook_to_usa_name: "[GetStateRegion('STATE_MAINE').GetName] Border Treaty Signed"
 notification_usfp_aroostook_to_usa_desc: "[SCOPE.sCountry('britain_scope').GetName] has concluded a border treaty with the [SCOPE.sCountry('usa_scope').GetName], ceding control of the [SCOPE.sState('aroostook_state_scope').GetName] region."
 notification_usfp_aroostook_to_usa_tooltip: "#header $notification_usfp_aroostook_to_usa_name$#!\n$notification_usfp_aroostook_to_usa_desc$"
+
+
+notification_usfp_denmark_refused_sale_name: "[SCOPE.sCountry('greenland_owner_scope').GetName] Refuses Sale"
+notification_usfp_denmark_refused_sale_desc: "[SCOPE.sCountry('greenland_owner_scope').GetName] has not agreed to sell us their territories at this time."
+notification_usfp_denmark_refused_sale_tooltip: "#header $notification_usfp_denmark_refused_sale_name$#!\n$notification_usfp_denmark_refused_sale_desc$"
+
+
+notification_usfp_denmark_agreed_to_sale_name: "[SCOPE.sCountry('greenland_owner_scope').GetName] Accepts"
+notification_usfp_denmark_agreed_to_sale_desc: "[SCOPE.sCountry('greenland_owner_scope').GetName] has accepted our offer and transferred the requested territories."
+notification_usfp_denmark_agreed_to_sale_tooltip: "#header $notification_usfp_denmark_agreed_to_sale_name$#!\n$notification_usfp_denmark_agreed_to_sale_desc$"
+
+
+notification_usfp_usa_refused_danish_counteroffer_name: "[SCOPE.sCountry('usa_scope').GetName] Refuses"
+notification_usfp_usa_refused_danish_counteroffer_desc: "[SCOPE.sCountry('usa_scope').GetName] has not accepted our counter-offer and negotiations have closed for now."
+notification_usfp_usa_refused_danish_counteroffer_tooltip: "#header $notification_usfp_usa_refused_danish_counteroffer_name$#!\n$notification_usfp_usa_refused_danish_counteroffer_desc$"
+
+
+notification_usfp_usa_accepted_danish_counteroffer_name: "[SCOPE.sCountry('usa_scope').GetName] Accepts"
+notification_usfp_usa_accepted_danish_counteroffer_desc: "[SCOPE.sCountry('usa_scope').GetName] has accepted our counter-offer."
+notification_usfp_usa_accepted_danish_counteroffer_tooltip: "#header $notification_usfp_usa_accepted_danish_counteroffer_name$#!\n$notification_usfp_usa_accepted_danish_counteroffer_desc$"
+
+
+notification_usa_claiming_greenland_name: "[SCOPE.sCountry('usa_scope').GetName] Claims [GetStateRegion('STATE_GREENLAND').GetName]"
+notification_usa_claiming_greenland_desc: "[SCOPE.sCountry('usa_scope').GetName] has broken off negotiations with [SCOPE.sCountry('greenland_owner_scope').GetName] and intends to seize control of [GetStateRegion('STATE_GREENLAND').GetName]."
+notification_usa_claiming_greenland_tooltip: "#header $notification_usa_claiming_greenland_name$#!\n$notification_usa_claiming_greenland_desc$"
+
+
+notification_usfp_usa_bought_west_indies_third_party_name: "[SCOPE.sCountry('usa_scope').GetName] Purchases [GetStateRegion('STATE_WEST_INDIES').GetName]"
+notification_usfp_usa_bought_west_indies_third_party_desc: "[SCOPE.sCountry('usa_scope').GetName] has purchased control of the [SCOPE.sCountry('greenland_owner_scope').GetAdjective] territory in the [GetStateRegion('STATE_WEST_INDIES').GetName]."
+notification_usfp_usa_bought_west_indies_third_party_tooltip: "#header $notification_usfp_usa_bought_west_indies_third_party_name$#!\n$notification_usfp_usa_bought_west_indies_third_party_desc$"
+
+notification_usfp_usa_bought_greenland_third_party_name: "[SCOPE.sCountry('usa_scope').GetName] Purchases [GetStateRegion('STATE_GREENLAND').GetName]"
+notification_usfp_usa_bought_greenland_third_party_desc: "[SCOPE.sCountry('usa_scope').GetName] has purchased control of [GetStateRegion('STATE_GREENLAND').GetName] from [SCOPE.sCountry('greenland_owner_scope').GetName]."
+notification_usfp_usa_bought_greenland_third_party_tooltip: "#header $notification_usfp_usa_bought_greenland_third_party_name$#!\n$notification_usfp_usa_bought_greenland_third_party_desc$"
+
+notification_usfp_usa_bought_iceland_third_party_name: "[SCOPE.sCountry('usa_scope').GetName] Purchases [GetStateRegion('STATE_ICELAND').GetName]"
+notification_usfp_usa_bought_iceland_third_party_desc: "[SCOPE.sCountry('usa_scope').GetName] has purchased the island of [GetStateRegion('STATE_ICELAND').GetName] from [SCOPE.sCountry('greenland_owner_scope').GetName]."
+notification_usfp_usa_bought_iceland_third_party_tooltip: "#header $notification_usfp_usa_bought_iceland_third_party_name$#!\n$notification_usfp_usa_bought_iceland_third_party_desc$"

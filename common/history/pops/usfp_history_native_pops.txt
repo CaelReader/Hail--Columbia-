@@ -966,6 +966,20 @@
 		}
 	}
 
+	#Greenland
+	s:STATE_GREENLAND = {
+		region_state:DEN = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:inuit
+				}
+				move_partial_pop = {
+					state = s:STATE_GREENLAND.region_state:usfp_KAL
+					population_ratio = 0.5
+				}
+			}
+		}
+	}
 	
 
 }

@@ -757,6 +757,10 @@ Updated some labor union events to account for the new laws
 	Indian Removal payments are smaller
 	Made the Deranged Office Seeker shoot the president slightly less frequently
 	Monroe Doctrine Violation can now trigger from a european power siding with someone else in a diplo play in the western hemisphere
+	The Alaskan Purchase no longer auto-annexes the whole state region (Civilizing Mission unlocks a decision to do so)
+	Inuit/Athabaskan centralized countries now bypass the tech requirement to survey the arctic
+	Decolonized Greenland (can be surveyed by decision with Zepplins/Planes)
+	Added Greenland Ice Sheet state trait
 ## Fixes
 	Significantly increased the navy requirement to enforce the Monroe Doctrine so that now you actually have to grow the navy from its starting state
 	Moving away from Presidential Republic now removes the Constitution JE even if you still have voting

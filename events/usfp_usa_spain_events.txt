@@ -291,6 +291,9 @@ usfp_usa_spain.4 = {
 				value = medium_radicals
 			}
 		}
+		ai_chance = {
+			base = 100
+		}
 	}
 
 	#cuba goes free
@@ -336,6 +339,9 @@ usfp_usa_spain.4 = {
 			 }
 			 usfp_manifest_less_destiny_effect = yes
 		}
+		ai_chance = {
+			base = 0
+		}
 	}
 
 	#cuba annex
@@ -370,6 +376,9 @@ usfp_usa_spain.4 = {
 			 }
 			 usfp_anger_abolitionists_effect = { MULT = 3 }
 			 usfp_appease_slavers_effect = { MULT = 1 }
+		}
+		ai_chance = {
+			base = 0
 		}
 	}
 }

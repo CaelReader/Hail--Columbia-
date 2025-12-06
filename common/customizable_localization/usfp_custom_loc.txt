@@ -5,11 +5,19 @@
 		trigger = {
 			c:USA = {
 				has_variable = usfp_danish_purchases_greenland_desire
-				usfp_danish_purchase_greenland_valid = yes
+				root = {
+					has_state_in_state_region = STATE_GREENLAND
+				}
 				has_variable = usfp_danish_purchases_iceland_desire
-				usfp_danish_purchase_iceland_valid = yes
-				has_variable = usfp_danish_purchases_west_indies_desire
-				usfp_danish_purchase_west_indies_valid = yes
+				root = {
+					has_state_in_state_region = STATE_ICELAND
+				}
+								root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
+				root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
 			}
 		}
 		localization_key = usfp_get_danish_islands_purchase_desires_all_three
@@ -18,12 +26,18 @@
 		trigger = {
 			c:USA = {
 				has_variable = usfp_danish_purchases_greenland_desire
-				usfp_danish_purchase_greenland_valid = yes
+				root = {
+					has_state_in_state_region = STATE_GREENLAND
+				}
 				has_variable = usfp_danish_purchases_iceland_desire
-				usfp_danish_purchase_iceland_valid = yes
+				root = {
+					has_state_in_state_region = STATE_ICELAND
+				}
 				NOT = {
 					AND = {
-						has_variable = usfp_danish_purchases_west_indies_desire
+										root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
 						usfp_danish_purchase_west_indies_valid = yes
 					}
 				}
@@ -35,13 +49,21 @@
 		trigger = {
 			c:USA = {
 				has_variable = usfp_danish_purchases_greenland_desire
-				usfp_danish_purchase_greenland_valid = yes
-				has_variable = usfp_danish_purchases_west_indies_desire
-				usfp_danish_purchase_west_indies_valid = yes
+				root = {
+					has_state_in_state_region = STATE_GREENLAND
+				}
+								root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
+				root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
 				NOT = {
 					AND = {
 						has_variable = usfp_danish_purchases_iceland_desire
-						usfp_danish_purchase_iceland_valid = yes
+										root = {
+					has_state_in_state_region = STATE_ICELAND
+				}
 					}
 				}
 			}
@@ -52,15 +74,23 @@
 		trigger = {
 			c:USA = {
 				has_variable = usfp_danish_purchases_greenland_desire
-				usfp_danish_purchase_greenland_valid = yes
+								root = {
+					has_state_in_state_region = STATE_GREENLAND
+				}
 				NOT = {
 					AND = {
 						has_variable = usfp_danish_purchases_iceland_desire
-						usfp_danish_purchase_iceland_valid = yes
+										root = {
+					has_state_in_state_region = STATE_ICELAND
+				}
 					}
 					AND = {
-						has_variable = usfp_danish_purchases_west_indies_desire
-						usfp_danish_purchase_west_indies_valid = yes
+										root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
+						root = {
+							has_state_in_state_region = STATE_WEST_INDIES
+						}
 					}
 				}
 			}
@@ -71,13 +101,19 @@
 		trigger = {
 			c:USA = {
 				has_variable = usfp_danish_purchases_iceland_desire
-				usfp_danish_purchase_iceland_valid = yes
-				has_variable = usfp_danish_purchases_west_indies_desire
+								root = {
+					has_state_in_state_region = STATE_ICELAND
+				}
+								root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
 				usfp_danish_purchase_west_indies_valid = yes
 				NOT = {
 					AND = {
 						has_variable = usfp_danish_purchases_greenland_desire
-						usfp_danish_purchase_greenland_valid = yes
+										root = {
+					has_state_in_state_region = STATE_GREENLAND
+				}
 					}
 				}
 			}
@@ -88,14 +124,20 @@
 		trigger = {
 			c:USA = {
 				has_variable = usfp_danish_purchases_iceland_desire
-				usfp_danish_purchase_iceland_valid = yes
+								root = {
+					has_state_in_state_region = STATE_ICELAND
+				}
 				NOT = {
 					AND = {
 						has_variable = usfp_danish_purchases_greenland_desire
-						usfp_danish_purchase_greenland_valid = yes
+										root = {
+					has_state_in_state_region = STATE_GREENLAND
+				}
 					}
 					AND = {
-						has_variable = usfp_danish_purchases_west_indies_desire
+										root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
 						usfp_danish_purchase_west_indies_valid = yes
 					}
 				}
@@ -106,16 +148,22 @@
 	text = {
 		trigger = {
 			c:USA = {
-				has_variable = usfp_danish_purchases_west_indies_desire
+								root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
 				usfp_danish_purchase_west_indies_valid = yes
 				NOT = {
 					AND = {
 						has_variable = usfp_danish_purchases_greenland_desire
-						usfp_danish_purchase_greenland_valid = yes
+										root = {
+					has_state_in_state_region = STATE_GREENLAND
+				}
 					}
 					AND = {
 						has_variable = usfp_danish_purchases_iceland_desire
-						usfp_danish_purchase_iceland_valid = yes
+										root = {
+					has_state_in_state_region = STATE_ICELAND
+				}
 					}
 				}
 			}

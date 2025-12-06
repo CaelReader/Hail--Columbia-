@@ -39,6 +39,48 @@ usfp_danish_purchases.1 = {
 	duration = 3
 
 	immediate = {
+		s:STATE_GREENLAND = {
+			random_scope_state = {
+				limit = {
+					owner = {
+						NOT = {
+							is_country_type = decentralized
+						}
+					}
+				}
+				save_scope_as = greenland_state_scope
+				owner = {
+					save_scope_as = greenland_owner_scope
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:greenland_owner_scope = {
+					country_or_subject_owns_entire_state_region = STATE_ICELAND
+				}
+			 }
+			s:STATE_ICELAND = {
+				random_scope_state = {
+					save_scope_as = iceland_scope
+				}
+			}
+		}
+		if = {
+			limit = { 
+				scope:greenland_owner_scope = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
+			}
+			s:STATE_WEST_INDIES = {
+				random_scope_state = {
+					limit = {
+						owner = scope:greenland_owner_scope
+					}
+					save_scope_as = danish_west_indies_scope
+				}
+			}
+		}
 		c:USA = {
 			save_scope_as = usa_scope
 			if = {
@@ -61,7 +103,6 @@ usfp_danish_purchases.1 = {
 				}
 			}
 		}
-		save_scope_as = greenland_owner_scope
 	}
 
 	#refuse
@@ -104,6 +145,9 @@ usfp_danish_purchases.1 = {
 			usfp_danish_purchase_effect = { MULT = 1 }
 			post_notification = usfp_denmark_agreed_to_sale
 		}
+		ai_chance = {
+			base = 0
+		}
 	}
 
 	#double price
@@ -130,17 +174,21 @@ usfp_danish_purchases.1 = {
 				usfp_danish_purchase_effect = { MULT = 2 }
 			}
 		}
+		ai_chance = {
+			base = 0
+		}
 	}
 
 	#only west indies
 	option = {
 		name = usfp_danish_purchases.1.e
 		trigger = {
+			has_state_in_state_region = STATE_WEST_INDIES
 			government_legitimacy >= 60
 		}
 		highlighted_option = yes
 		show_as_unavailable = {
-			always = yes
+			has_state_in_state_region = STATE_WEST_INDIES
 		}
 		trigger = {
 			c:USA = {
@@ -170,7 +218,6 @@ usfp_danish_purchases.1 = {
 						}
 					}
 				}
-				usfp_transfer_danish_islands_effect = yes
 				change_relations = {
 					country = scope:greenland_owner_scope
 					value = 15
@@ -183,6 +230,9 @@ usfp_danish_purchases.1 = {
 					set_state_owner = root
 				}
 			}
+		}
+		ai_chance = {
+			base = 0
 		}
 	}
 
@@ -217,6 +267,9 @@ usfp_danish_purchases.2 = {
 		scope:greenland_owner_scope = {
 			post_notification = usfp_usa_refused_danish_counteroffer
 		}
+		ai_chance = {
+			base = 100
+		}
 	}
 
 	#accept
@@ -232,6 +285,9 @@ usfp_danish_purchases.2 = {
 		usfp_danish_purchase_effect = { MULT = 2 }
 		scope:greenland_owner_scope = {
 			post_notification = usfp_usa_accepted_danish_counteroffer
+		}
+		ai_chance = {
+			base = 0
 		}
 	}
 
@@ -262,7 +318,10 @@ usfp_danish_purchases.3 = {
 			value = -5
 		}
 		scope:greenland_owner_scope = {
-			post_notification = usfp_usa_refused_counteroffer
+			post_notification = usfp_usa_refused_danish_counteroffer
+		}
+		ai_chance = {
+			base = 0
 		}
 	}
 
@@ -288,7 +347,6 @@ usfp_danish_purchases.3 = {
 				}
 			}
 		}
-		usfp_transfer_danish_islands_effect = yes
 		change_relations = {
 			country = scope:greenland_owner_scope
 			value = 15
@@ -302,6 +360,19 @@ usfp_danish_purchases.3 = {
 		}
 		scope:greenland_owner_scope = {
 			post_notification = usfp_usa_accepted_danish_counteroffer
+		}
+		every_country = {
+			limit = {
+				NOR = {
+					this = root
+					this = scope:greenland_owner_scope
+				}
+				has_interest_marker_in_region = region_caribbean
+			}
+			post_notification = usfp_usa_bought_west_indies_third_party
+		}
+		ai_chance = {
+			base = 100
 		}
 	}
 
@@ -329,7 +400,9 @@ usfp_danish_purchases.4 = {
 	option = {
 		name = usfp_danish_purchases.4.a
 		default_option = yes
-
+		ai_chance = {
+			base = 100
+		}
 	}
 
 	#press claim
@@ -342,8 +415,14 @@ usfp_danish_purchases.4 = {
 		s:STATE_GREENLAND = {
 			add_claim = root
 		}
-		scope:greenland_owner_scope = {
+		every_country = {
+			limit = {
+				has_interest_marker_in_region = region_north_sea_coast
+			}
 			post_notification = usa_claiming_greenland
+		}
+		ai_chance = {
+			base = 100
 		}
 	}
 

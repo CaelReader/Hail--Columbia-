@@ -15,13 +15,22 @@
 			has_state_in_state_region =  STATE_SASKATCHEWAN
 			has_state_in_state_region =  STATE_MANITOBA
 		}
+		NOT = {
+			is_country_type = decentralized
+		}
 	}
 
 	possible = {
 		is_diplomatic_play_committed_participant = no
-		has_technology_researched = civilizing_mission
-		NOT = {
-			has_law_or_variant = law_type:law_no_colonial_affairs
+		OR = {
+			AND = {
+				has_technology_researched = civilizing_mission
+				has_institution = institution_colonial_affairs
+			}
+			OR = {
+				country_has_primary_culture = cu:inuit
+				country_has_primary_culture = cu:athabaskan
+			}
 		}
 		has_state_in_state_region =  STATE_ONTARIO
 		has_state_in_state_region =  STATE_QUEBEC
@@ -205,18 +214,71 @@ annex_alaskan_north = {
 			}
 		}
 		has_state_in_state_region =  STATE_ALASKA
+		NOT = {
+			is_country_type = decentralized
+		}
 	}
 
 	possible = {
 		is_diplomatic_play_committed_participant = no
-		has_technology_researched = civilizing_mission
-		NOT = {
-			has_law_or_variant = law_type:law_no_colonial_affairs
+		OR = {
+			AND = {
+				has_technology_researched = civilizing_mission
+				has_institution = institution_colonial_affairs
+			}
+			OR = {
+				country_has_primary_culture = cu:inuit
+				country_has_primary_culture = cu:athabaskan
+			}
 		}
 	}
 
 	when_taken = {
 		s:STATE_ALASKA = {
+			every_scope_state = {
+				limit = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+				set_state_owner = root
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 1000
+	}
+}
+
+annex_greenland_north = {
+	is_shown = {
+		s:STATE_GREENLAND = {
+			any_scope_state = {
+				owner = {
+					is_country_type = decentralized
+				}
+			}
+		}
+		has_state_in_state_region = STATE_GREENLAND
+		NOT = {
+			is_country_type = decentralized
+		}
+	}
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		OR = {
+			OR = {
+				has_technology_researched = zeppelins
+				has_technology_researched = military_aviation
+			}
+			country_has_primary_culture = cu:inuit
+		}
+	}
+
+	when_taken = {
+		s:STATE_GREENLAND = {
 			every_scope_state = {
 				limit = {
 					owner = {

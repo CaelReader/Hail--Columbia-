@@ -279,3 +279,67 @@ usfp_aroostook_to_usa = {
 	notification_type = toast
 	color = good
 }
+
+usfp_denmark_refused_sale = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_denmark_agreed_to_sale = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+	notification_type = toast
+	color = good
+}
+
+usfp_usa_refused_danish_counteroffer = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_usa_accepted_danish_counteroffer = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+	notification_type = toast
+	color = good
+}
+
+usa_claiming_greenland = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/secession.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_usa_bought_west_indies_third_party = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+	notification_type = toast
+	color = neutral
+}
+
+usfp_usa_bought_greenland_third_party = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+	notification_type = toast
+	color = neutral
+}
+
+usfp_usa_bought_iceland_third_party = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+	notification_type = toast
+	color = neutral
+}
