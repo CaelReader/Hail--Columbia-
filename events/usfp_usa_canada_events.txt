@@ -1,4 +1,4 @@
-namespace = usfp_usa_canada
+﻿namespace = usfp_usa_canada
 ###### Hail, Columbia! by CaelReader ######
 
 ## Caroline Affair

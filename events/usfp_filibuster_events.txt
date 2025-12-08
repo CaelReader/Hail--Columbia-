@@ -22,7 +22,7 @@ usfp_filibuster.1 = {
 	trigger = {
 		game_date > 1853.1.1
 		game_date < 1865.1.1 
-		var:manifest_destiny_var > 3
+		usfp_manifest_destiny_greater_or_equal_trigger = { value = 4 }
 		NOT = {
 			exists = c:SON
 		}
@@ -402,5 +402,97 @@ usfp_filibuster.4 = {
 	}
 }
 #USA: Sponsor Narciso López?
+usfp_filibuster.5 = {
+	type = country_event
+	placement = scope:cuba_state_scope
+
+	event_image = {
+		video = "ip3_officer_inspecting_peasant_conscripts"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_filibuster.5.t
+	desc = usfp_filibuster.5.d
+	flavor = usfp_filibuster.5.f
+	dlc = dlc_usfp
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	trigger = {
+		game_date > 1850.1.1
+		game_date < 1865.1.1 
+		NOT = {
+			has_state_in_state_region = STATE_CUBA
+		}
+		is_at_war = no
+		usfp_manifest_destiny_greater_or_equal_trigger = { value = 5 }
+		exists = c:CUB
+		c:CUB = {
+			is_subject = yes
+		}
+	}
+
+	immediate = {
+		s:STATE_CUBA = {
+			random_scope_state = {
+				save_scope_as = cuba_state_scope
+			}
+		}
+		c:CUB = {
+			save_scope_as = cuba_scope
+		}
+	}
+
+	#turn blind eye
+	option = {
+		name = usfp_filibuster.5.a
+		default_option = yes
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	#support
+	option = {
+		name = usfp_filibuster.5.b
+
+		ai_chance = {
+			base = 0
+		}
+	}
+	#arrest
+	option = {
+		name = usfp_filibuster.5.c
+		every_interest_group = {
+			limit = {
+				OR = {
+					leader = {
+						usfp_manifest_destiny_pro_expansion_trigger = yes
+					}
+					is_interest_group_type = ig_landowners
+				}
+			}
+			add_modifier = {
+				name = usfp_rejected_filibustering
+				years = 2
+			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					ruler = {
+						usfp_manifest_destiny_pro_expansion_trigger = yes
+					}
+				}
+				add = 100
+			}
+		}
+	}
+}
 #CUB: Narciso López captured
 #CUB/SPA: Narciso López attacks
+#Lopez successful??

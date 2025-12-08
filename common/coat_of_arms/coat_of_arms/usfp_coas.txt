@@ -2211,3 +2211,26 @@ usfp_LNC_communist = {
 		instance = { scale = { 0.2 0.2 } position = { 0.15 0.2 } }
 	}
 }
+
+
+usfp_KAL = { #decentralized Greenland
+	@grn_pos_x = @[7/18]
+	pattern = "pattern_horizontal_split_01.tga"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { @grn_pos_x 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { @grn_pos_x 0.5 } }
+		mask = { 2 }
+	}
+}

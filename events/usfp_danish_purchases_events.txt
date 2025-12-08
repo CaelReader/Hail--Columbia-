@@ -125,6 +125,18 @@ usfp_danish_purchases.1 = {
 			} else = {
 				post_notification = usfp_denmark_refused_sale
 			}
+			if = {
+				limit = {
+					c:USA = {
+						is_ai = yes
+					}
+				 }
+				 c:USA = {
+					remove_variable = usfp_danish_purchases_greenland_desire
+					remove_variable = usfp_danish_purchases_iceland_desire
+					remove_variable = usfp_danish_purchases_west_indies_desire
+				 }
+			}
 		}
 		ai_chance = {
 			base = 100
@@ -147,6 +159,42 @@ usfp_danish_purchases.1 = {
 		}
 		ai_chance = {
 			base = 0
+			#War with germany was the historical context for sale of West Indies
+			modifier = {
+				trigger = {
+					is_at_war = yes
+					OR = {
+						has_war_with = c:PRU
+						has_war_with = c:NGF
+						has_war_with = c:GER
+					}
+				}
+				add = 50
+			}
+			#Denmark could use the cash if bankrupt
+			modifier = {
+				trigger = {
+					OR = {
+						in_default = yes
+						has_modifier = declared_bankruptcy
+					}
+				}
+				add = 25
+			}
+			#AI doesn't want to sell prosperous and incorporated Iceland
+			modifier = {
+				trigger = {
+					c:USA = {
+						has_variable = usfp_danish_purchases_iceland_desire
+					}
+					any_scope_state = {
+						state_region = s:STATE_ICELAND
+						state_population > 100000
+						is_incorporated = yes 
+					}
+				}
+				add = -100
+			}
 		}
 	}
 
@@ -176,6 +224,42 @@ usfp_danish_purchases.1 = {
 		}
 		ai_chance = {
 			base = 0
+			#War with germany makes denmark's position really bad
+			modifier = {
+				trigger = {
+					is_at_war = yes
+					OR = {
+						has_war_with = c:PRU
+						has_war_with = c:NGF
+						has_war_with = c:GER
+					}
+				}
+				add = 50
+			}
+			#Denmark could use the cash if bankrupt
+			modifier = {
+				trigger = {
+					OR = {
+						in_default = yes
+						has_modifier = declared_bankruptcy
+					}
+				}
+				add = 30
+			}
+			#AI doesn't want to sell prosperous and incorporated Iceland
+			modifier = {
+				trigger = {
+					c:USA = {
+						has_variable = usfp_danish_purchases_iceland_desire
+					}
+					any_scope_state = {
+						state_region = s:STATE_ICELAND
+						state_population > 100000
+						is_incorporated = yes 
+					}
+				}
+				add = -25
+			}
 		}
 	}
 
@@ -185,16 +269,13 @@ usfp_danish_purchases.1 = {
 		trigger = {
 			has_state_in_state_region = STATE_WEST_INDIES
 			government_legitimacy >= 60
+			c:USA = {
+				has_variable = usfp_danish_purchases_west_indies_desire
+			}
 		}
 		highlighted_option = yes
 		show_as_unavailable = {
 			has_state_in_state_region = STATE_WEST_INDIES
-		}
-		trigger = {
-			c:USA = {
-				has_variable = usfp_danish_purchases_west_indies_desire
-				usfp_danish_purchase_west_indies_valid = yes
-			}
 		}
 		custom_tooltip = {
 			text = if_usa_accepts
@@ -233,6 +314,46 @@ usfp_danish_purchases.1 = {
 		}
 		ai_chance = {
 			base = 0
+			#War makes denmark's position bad
+			modifier = {
+				trigger = {
+					is_at_war = yes
+				}
+				add = 10
+			}
+			#USA entering war against Germany was historical basis for west indies sale
+			modifier = {
+				trigger = {
+					c:USA = {
+						is_at_war = yes
+						OR = {
+							has_war_with = c:PRU
+							has_war_with = c:NGF
+							has_war_with = c:GER
+						}
+					}
+				}
+				add = 10
+			}
+			#Denmark could use the cash if bankrupt
+			modifier = {
+				trigger = {
+					OR = {
+						in_default = yes
+						has_modifier = declared_bankruptcy
+					}
+				}
+				add = 25
+			}
+			#AI eyeing ports in the Carribbean makes Denmark more willing to acquiese
+			modifier = {
+				trigger = {
+					c:USA = {
+						has_strategy = ai_strategy_pacific_empire
+					} 
+				}
+				add = 50
+			}
 		}
 	}
 
@@ -288,6 +409,15 @@ usfp_danish_purchases.2 = {
 		}
 		ai_chance = {
 			base = 0
+			#If the USA has tons of cash, might as well
+			modifier = {
+				trigger = {
+					c:USA = {
+						gold_reserves > 10000000
+					} 
+				}
+				add = 100
+			}
 		}
 	}
 
@@ -357,6 +487,7 @@ usfp_danish_purchases.3 = {
 		}
 		scope:danish_west_indies_scope = {
 			set_state_owner = root
+			set_state_name = STATE_WEST_INDIES_virgin_islands
 		}
 		scope:greenland_owner_scope = {
 			post_notification = usfp_usa_accepted_danish_counteroffer
@@ -371,6 +502,7 @@ usfp_danish_purchases.3 = {
 			}
 			post_notification = usfp_usa_bought_west_indies_third_party
 		}
+		#AI will always take West Indies if offered
 		ai_chance = {
 			base = 100
 		}
@@ -422,7 +554,18 @@ usfp_danish_purchases.4 = {
 			post_notification = usa_claiming_greenland
 		}
 		ai_chance = {
-			base = 100
+			base = 0
+			#Only explicit expansionists will push to seize Greenland by force
+			modifier = {
+				trigger = {
+					any_interest_group_in_government = {
+						leader = {
+							usfp_manifest_destiny_pro_expansion_trigger = yes
+						}
+					}
+				}
+				add = 200
+			}
 		}
 	}
 

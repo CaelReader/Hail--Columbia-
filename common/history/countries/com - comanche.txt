@@ -16,8 +16,5 @@
 			name = usfp_white_mans_diseases_modifier
 			years = 50
 		}
-		create_character = {
-			template = usfp_chief_iron_jacket
-		}
 	}
 }

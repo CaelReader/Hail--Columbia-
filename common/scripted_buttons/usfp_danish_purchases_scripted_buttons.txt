@@ -29,6 +29,13 @@
 		scope:greenland_owner_scope = {
 			government_legitimacy >= 40
 		}
+		in_default = no
+		NOT = {
+			has_modifier = declared_bankruptcy
+		}
+		ruler = {
+			usfp_manifest_destiny_not_anti_expansion_trigger = yes
+		}
 	}
 
 	effect = {
@@ -59,6 +66,12 @@
 						usfp_manifest_destiny_pro_expansion_trigger = yes
 					}
 				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				has_strategy = ai_strategy_pacific_empire
 			}
 			add = 100
 		}
@@ -212,6 +225,12 @@ usfp_danish_purchase_buy_danish_west_indies_button = {
 						usfp_manifest_destiny_pro_expansion_trigger = yes
 					}
 				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				has_strategy = ai_strategy_pacific_empire
 			}
 			add = 100
 		}

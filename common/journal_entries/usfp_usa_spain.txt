@@ -97,12 +97,10 @@
 						}
 						any_subject_or_below = {
 							any_scope_state = {
-								any_scope_state = {
-									OR = {
-										region = sr:region_caribbean
-										region = sr:region_indonesia
-										region = sr:region_oceania
-									}
+								OR = {
+									region = sr:region_caribbean
+									region = sr:region_indonesia
+									region = sr:region_oceania
 								}
 							}
 						}

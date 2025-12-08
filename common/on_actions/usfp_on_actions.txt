@@ -421,6 +421,11 @@ usfp_new_president = {
 							is_interest_group_type = ig_intelligentsia
 							is_interest_group_type = ig_industrialists
 						}
+						owner = {
+							ig:ig_industrialists = {
+								is_in_government = yes
+							}
+						}
 					}
 				 }
 				 owner = {

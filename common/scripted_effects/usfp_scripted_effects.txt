@@ -2350,15 +2350,17 @@ usfp_transfer_danish_islands_effect = {
 			remove_claim = scope:greenland_owner_scope
 			add_claim = scope:usa_scope
 		}
-		every_country = {
-			limit = {
-				NOR = {
-					this = root
-					this = scope:greenland_owner_scope
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOR = {
+						this = root
+						this = scope:greenland_owner_scope
+					}
+					has_interest_marker_in_region = region_north_sea_coast
 				}
-				has_interest_marker_in_region = region_north_sea_coast
-			}
-			post_notification = usfp_usa_bought_greenland_third_party
+				post_notification = usfp_usa_bought_greenland_third_party
+			}	
 		}
 	}
 	if = {
@@ -2369,15 +2371,17 @@ usfp_transfer_danish_islands_effect = {
 		scope:iceland_scope = {
 			set_state_owner = scope:usa_scope
 		}
-		every_country = {
-			limit = {
-				NOR = {
-					this = root
-					this = scope:greenland_owner_scope
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOR = {
+						this = root
+						this = scope:greenland_owner_scope
+					}
+					has_interest_marker_in_region = region_north_sea_coast
 				}
-				has_interest_marker_in_region = region_north_sea_coast
+				post_notification = usfp_usa_bought_iceland_third_party
 			}
-			post_notification = usfp_usa_bought_iceland_third_party
 		}
 	}
 	if = {
@@ -2387,17 +2391,21 @@ usfp_transfer_danish_islands_effect = {
 		}
 		scope:danish_west_indies_scope = {
 			set_state_owner = scope:usa_scope
+			set_state_name = STATE_WEST_INDIES_virgin_islands
 		}
-		every_country = {
-			limit = {
-				NOR = {
-					this = root
-					this = scope:greenland_owner_scope
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOR = {
+						this = root
+						this = scope:greenland_owner_scope
+					}
+					has_interest_marker_in_region = region_caribbean
 				}
-				has_interest_marker_in_region = region_caribbean
+				post_notification = usfp_usa_bought_west_indies_third_party
 			}
-			post_notification = usfp_usa_bought_west_indies_third_party
 		}
+
 	}
 }
 

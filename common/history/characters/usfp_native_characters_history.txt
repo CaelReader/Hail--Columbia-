@@ -1,0 +1,17 @@
+﻿CHARACTERS = {
+	c:ABS ?= {
+		create_character = {
+			template = usfp_woman_chief
+		}
+	}
+	c:COM ?= {
+		create_character = {
+			template = usfp_chief_iron_jacket
+		}
+	}
+	c:SEQ ?= {
+		create_character = {
+			template = usfp_chief_mushulatubbee_template
+		}
+	}
+}
