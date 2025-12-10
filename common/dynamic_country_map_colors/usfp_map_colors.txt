@@ -34,3 +34,45 @@ usa_technate = {
 		}
 	}
 }
+
+usa_acc = {
+	color = "fsa_blue"
+	possible = {
+		usfp_country_is_american = yes
+		is_revolutionary = yes
+		OR = {
+			var:civil_war_type_var ?= movement_type:movement_usfp_american_constitution
+			var:civil_war_type_var ?= movement_type:movement_radical
+			var:civil_war_type_var ?= movement_type:movement_liberal
+			var:civil_war_type_var ?= movement_type:movement_anti_slavery
+		}
+	}
+}
+
+usa_wca = {
+	color = "usa_red"
+	possible = {
+		usfp_country_is_american = yes
+		is_revolutionary = yes
+		OR = {
+			var:civil_war_type_var ?= movement_type:movement_socialist
+			var:civil_war_type_var ?= movement_type:movement_anarchist
+			var:civil_war_type_var ?= movement_type:movement_communist
+			var:civil_war_type_var ?= movement_type:movement_labor
+		}
+	}
+}
+
+usa_apg = {
+	color = "usa_monarchy_blue"
+	possible = {
+		usfp_country_is_american = yes
+		is_revolutionary = yes
+		OR = {
+			var:civil_war_type_var ?= movement_type:movement_socialist
+			var:civil_war_type_var ?= movement_type:movement_anarchist
+			var:civil_war_type_var ?= movement_type:movement_communist
+			var:civil_war_type_var ?= movement_type:movement_labor
+		}
+	}
+}

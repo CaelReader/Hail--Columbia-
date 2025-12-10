@@ -736,18 +736,25 @@ Updated some labor union events to account for the new laws
 # 7.0 "Jackson"
 ## New Content
 	Added custom Democratic and Republican parties replacing the conservative/liberal parties in the USA
-	Added Jacksonian Agenda JE at game start
+	Added Jacksonian Agenda JE at game start giving context to the starting situation of laws and taxes
 	Added the Panic of 1837 plus a JE to recover from it
 	New JE and Events for the American press to react to atrocities in Cuba and possibly spark a Spanish-American War
 	New events for the Dorr Rebellion, Third Great Awakening, Caroline Affair, Fenian Raids, Aroostook War
 	Added starting Trade Privileges treaties for the USA with various countries
 	New Characters: Emma Goldman (imported from ECCHI), Billy Sunday, Walter Rauschenbusch, Lyman Beecher, Henry Ward Beecher, Peter Cartwright, Bejamin Tillman, David Atchison, Gerrit Smith, Reinhold Niebuhr
-## Updates
-	USA now begins with Agrarianism and a special variant of Consumption-Based Taxation
-	American PB now supports the American School
+	Added Constitutionalist Movement that spawns in response to unconstitutional law enactment
+## 1.12 Compatibility
+
+## 1836 Starting Situation Update
+	USA now begins with Agrarianism and a special variant of Consumption-Based Taxation (cutting the national revenue about in half!)
+	American PB now supports the American School (interventionism and protectionism)
 	William H Harrison is now the starting leader of the PB
 	Daniel Webster is now a starting PB Agitator
-	Significantly reduced the number of starting Government Admins
+	Significantly reduced the number of starting Government Admins to balance the budget
+	USA now starts on low gov/mil wages
+	USA now starts with Consumption taxes on Furniture/Luxury Furniture, representing property taxes
+	Added more Trade Centers exporting Cotton and Tobacco
+## Updates
 	Removed the SoL change from the planter's Our Peculiar Institution trait
 	William H Harrison is now Sickly
 	William H Seward can no longer spawn for the Rural Folk

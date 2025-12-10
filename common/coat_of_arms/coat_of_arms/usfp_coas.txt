@@ -2234,3 +2234,33 @@ usfp_KAL = { #decentralized Greenland
 		mask = { 2 }
 	}
 }
+
+usfp_F_CUB = { # Filibuster Cuba
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_stripes_05.dds"
+		color1 = color1
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.175 0.5 } scale = { 0.4 0.4 } }
+	}
+}

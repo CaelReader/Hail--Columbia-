@@ -662,3 +662,16 @@ usfp_KAL = {
 	capital = STATE_GREENLAND
 	is_named_from_capital = yes
 }
+
+#Filibuster Cuba
+usfp_F_CUB = {
+	color = { 80  190  190 }
+
+	country_type = colonial
+
+	tier = principality
+
+	cultures = { caribeno }
+	capital = STATE_CUBA
+	
+}

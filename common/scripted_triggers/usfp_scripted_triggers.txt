@@ -202,7 +202,6 @@ usfp_enacting_unconstitutional_law = {
 		is_enacting_law = law_type:law_religious_schools
 		is_enacting_law = law_type:law_single_party_state
 		is_enacting_law = law_type:law_isolationism
-		is_enacting_law = law_type:law_land_based_taxation
 	}
 }
 
@@ -220,6 +219,39 @@ usfp_enacting_super_unconstitutional_law = {
 		is_enacting_law = law_type:law_oligarchy
 		is_enacting_law = law_type:law_anarchy
 		is_enacting_law = law_type:law_technocracy
+	}
+}
+
+usfp_has_unconstitutional_law_enacted = {
+	OR = {
+		has_law_or_variant = law_type:law_censorship
+		has_law_or_variant = law_type:law_parliamentary_republic
+		has_law_or_variant = law_type:law_peasant_levies
+		has_law_or_variant = law_type:law_militarized_police
+		has_law_or_variant = law_type:law_appointed_bureaucrats
+		has_law_or_variant = law_type:law_industry_banned
+		has_law_or_variant = law_type:law_command_economy
+		has_law_or_variant = law_type:law_cooperative_ownership
+		has_law_or_variant = law_type:law_religious_schools
+		has_law_or_variant = law_type:law_single_party_state
+		has_law_or_variant = law_type:law_isolationism
+	}
+}
+
+usfp_has_super_unconstitutional_law_enacted = {
+	OR = {
+		has_law_or_variant = law_type:law_outlawed_dissent
+		has_law_or_variant = law_type:law_state_religion
+		has_law_or_variant = law_type:law_state_atheism
+		has_law_or_variant = law_type:law_monarchy
+		has_law_or_variant = law_type:law_theocracy
+		has_law_or_variant = law_type:law_council_republic
+		has_law_or_variant = law_type:law_corporate_state
+		has_law_or_variant = law_type:law_hereditary_bureaucrats
+		has_law_or_variant = law_type:law_autocracy
+		has_law_or_variant = law_type:law_oligarchy
+		has_law_or_variant = law_type:law_anarchy
+		has_law_or_variant = law_type:law_technocracy	
 	}
 }
 

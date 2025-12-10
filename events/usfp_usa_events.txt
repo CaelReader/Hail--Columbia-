@@ -769,6 +769,9 @@ usfp_usa.9 = {
 				years = 4
 			}
 		}
+		create_political_movement = {
+			type = movement_usfp_american_constitution
+		}
 		ai_chance = {
 			base = 20
 		}
@@ -813,6 +816,9 @@ usfp_usa.9 = {
 				years = 4
 			}
 		}
+		create_political_movement = {
+			type = movement_usfp_american_constitution
+		}
 		ai_chance = {
 			base = 20
 		}
@@ -852,6 +858,9 @@ usfp_usa.9 = {
 				years = 4
 				multiplier = 2
 			}
+		}
+		create_political_movement = {
+			type = movement_usfp_american_constitution
 		}
 	}
 
@@ -893,6 +902,9 @@ usfp_usa.9 = {
 		add_radicals = {
 			value = large_radicals
 			culture = cu:yankee
+		}
+		create_political_movement = {
+			type = movement_usfp_american_constitution
 		}
 	}
 

@@ -387,6 +387,67 @@
 			} 
 		}
 	}
+
+	#Revolts
+	dynamic_country_name = {
+		name = usfp_ACC
+		adjective = usfp_ACC_ADJ
+
+		is_revolutionary = yes
+		priority = 1000
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_secessionist = no
+				OR = {
+					var:civil_war_type_var ?= movement_type:movement_usfp_american_constitution
+					var:civil_war_type_var ?= movement_type:movement_radical
+					var:civil_war_type_var ?= movement_type:movement_liberal
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = usfp_WCA
+		adjective = usfp_WCA_ADJ
+
+		is_revolutionary = yes
+		priority = 1000
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_secessionist = no
+				OR = {
+					var:civil_war_type_var ?= movement_type:movement_socialist
+					var:civil_war_type_var ?= movement_type:movement_anarchist
+					var:civil_war_type_var ?= movement_type:movement_communist
+					var:civil_war_type_var ?= movement_type:movement_labor
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = usfp_APG
+		adjective = usfp_APG_ADJ
+
+		is_revolutionary = yes
+		priority = 1000
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_secessionist = no
+				OR = {
+					var:civil_war_type_var ?= movement_type:movement_usfp_neoconfederate
+					var:civil_war_type_var ?= movement_type:movement_cultural_majority
+					var:civil_war_type_var ?= movement_type:movement_fascist
+					var:civil_war_type_var ?= movement_type:movement_usfp_eugenics
+				}
+			}
+		}
+	}
 }
 
 DES = {

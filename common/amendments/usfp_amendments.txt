@@ -111,3 +111,118 @@ amendment_usfp_bill_of_rights = {
         always = yes
     }
 }
+
+amendment_usfp_anti_lynching = {
+    parent = law_cultural_exclusion
+
+    allowed_laws = { # list of laws that the amendment can be added to
+		law_cultural_exclusion
+		law_multicultural
+    }
+
+    modifier = {
+		state_loyalism_increases_full_acceptance_mult = -0.10
+		state_loyalism_increases_open_prejudice_mult = 0.10
+		state_loyalism_increases_second_rate_citizen_mult = 0.10
+	}
+
+    possible = {
+        always = yes
+    }
+
+	can_repeal = {
+		usfp_has_pro_racist_government = yes
+		government_legitimacy >= 51
+	}
+
+    ai_will_revoke = {
+        always = yes
+    }
+}
+
+amendment_usfp_gag_rule = {
+    parent = law_legacy_slavery
+
+    allowed_laws = { # list of laws that the amendment can be added to
+		law_legacy_slavery
+    }
+
+    modifier = {
+		interest_group_ig_intelligentsia_approval_add = -3
+		interest_group_ig_intelligentsia_pol_str_mult = -0.10
+		interest_group_ig_landowners_approval_add = 4
+		political_movement_radicalism_add = 0.05
+	}
+
+    possible = {
+        always = yes
+    }
+
+	can_repeal = {
+		OR = {
+			any_revolution_ongoing = yes
+			AND = {
+				ig:ig_landowners = {
+					is_in_government = no
+				}
+				government_legitimacy >= 51
+			}
+			AND = {
+				ig:ig_intelligentsia = {
+					is_marginal = yes
+				}
+				OR = {
+					any_interest_group = {
+						is_powerful = yes
+						OR = {
+							has_ideology = ideology:ideology_pro_slavery
+							leader = {
+								has_ideology = ideology:ideology_slaver
+							}
+						}
+					}
+					ruler = {
+						has_ideology = ideology:ideology_slaver
+					}
+				}
+				government_legitimacy >= 51
+			}
+		}
+
+	}
+
+    ai_will_revoke = {
+        always = yes
+    }
+}
+
+amendment_usfp_fugitive_slave_act = {
+    parent = law_legacy_slavery
+
+    allowed_laws = { # list of laws that the amendment can be added to
+		law_legacy_slavery
+		law_slave_trade
+		law_debt_slavery
+    }
+
+    modifier = {
+		state_afro_american_standard_of_living_add = -1
+		interest_group_ig_landowners_pol_str_mult = 0.10
+		state_pop_support_movement_pro_slavery_mult = 0.10
+		state_pop_support_movement_anti_slavery_mult = 0.10
+	}
+
+    possible = {
+        always = yes
+    }
+
+	can_repeal = {
+		ruler = {
+			usfp_anti_slavery_leader_trigger = yes
+		}
+	}
+
+    ai_will_revoke = {
+        always = yes
+    }
+}

@@ -21,11 +21,11 @@ usfp_usa_spain.1 = {
 
 	trigger = {
 		is_at_war = no
-		c:SPA = {
-			is_at_war = no
-		}
 		c:CUB = {
 			is_at_war = no
+			overlord = {
+				is_at_war = no
+			}
 		}
 	}
 
@@ -187,12 +187,34 @@ usfp_usa_spain.3 = {
 		}
 		if = {
 			limit = {
-				has_truce_with = c:SPA
+				has_truce_with = scope:cuban_overlord
 			 }
-			 end_truce = c:SPA
+			 end_truce = scope:cuban_overlord
 		}
 		scope:cuban_overlord = {
 			post_notification = usfp_usa_mad_over_maine
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_political_lobby = {
+						is_political_lobby_type = lobby_anti_country
+						target = scope:cuban_overlord
+					}
+				} 
+			}
+			create_political_lobby = {
+				type = lobby_anti_country
+				target = scope:cuban_overlord
+				add_interest_group = ig:ig_petty_bourgeoisie
+			}
+		}
+		add_lobby_appeasement_from_diplomacy_unidirectional = {
+			FIRST = root
+			SECOND = scope:cuban_overlord
+			PRO_AMOUNT = 2
+			ANTI_AMOUNT = -2
+			FACTOR = appeasement_special_events_positive
 		}
 		ai_chance = {
 			base = 50
@@ -220,6 +242,28 @@ usfp_usa_spain.3 = {
 		}
 		scope:cuban_overlord = {
 			post_notification = usfp_usa_not_mad_over_maine
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_political_lobby = {
+						is_political_lobby_type = lobby_anti_country
+						target = scope:cuban_overlord
+					}
+				} 
+			}
+			create_political_lobby = {
+				type = lobby_anti_country
+				target = scope:cuban_overlord
+				add_interest_group = ig:ig_petty_bourgeoisie
+			}
+		}
+		add_lobby_appeasement_from_diplomacy_unidirectional = {
+			FIRST = root
+			SECOND = scope:cuban_overlord
+			PRO_AMOUNT = -2
+			ANTI_AMOUNT = 2
+			FACTOR = appeasement_special_events_negative
 		}
 		ai_chance = {
 			base = 0

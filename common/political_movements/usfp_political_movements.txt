@@ -765,3 +765,274 @@ movement_usfp_neoconfederate = {
 		}		
 	}
 }
+
+movement_usfp_american_constitution = {
+	category = movement_category_ideological
+	ideology = ideology_usfp_american_constitution_movement
+	# Cares about a lot of things and also cares about them all quite a lot
+	law_enactment_radicalism_multiplier = 1.5
+	active_law_radicalism_multiplier = 2.0
+	character_ideologies = {
+		ideology_republican_leader
+		ideology_liberal_leader
+		ideology_radical
+	}
+	creation_trigger = {
+		has_journal_entry = je_usfp_american_constitution
+	}
+	creation_weight = {
+		value = 0 #event-spawned
+	}
+	disband_trigger = {
+		usfp_enacting_unconstitutional_law = no
+		usfp_enacting_super_unconstitutional_law = no
+		usfp_has_unconstitutional_law_enacted = no
+		usfp_has_super_unconstitutional_law_enacted = no
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_republican_leader
+			has_ideology = ideology:ideology_liberal_leader
+			has_ideology = ideology:ideology_radical
+			has_ideology = ideology:ideology_jacksonian_democrat
+			scope:interest_group ?= {
+					OR = {
+						has_ideology = ideology:ideology_liberal
+						has_ideology = ideology:ideology_liberal_modern
+						has_ideology = ideology:ideology_empire_of_liberty
+						has_ideology = ideology:ideology_egalitarian
+						has_ideology = ideology:ideology_egalitarian_modern
+						has_ideology = ideology:ideology_agrarian_jeffersonian
+					}
+			}
+		}
+		NOR = {
+			has_ideology = ideology:ideology_communist
+			has_ideology = ideology:ideology_fascist
+			has_ideology = ideology:ideology_anarchist
+			has_ideology = ideology:ideology_authoritarian
+			has_ideology = ideology:ideology_usfp_strongman_populist
+		}
+	}
+	character_support_weight = {
+		value = 1000 #should be the overwhelmingly most important cause when this movement spawns
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						is_enacting_law = law_type:law_autocracy
+						is_enacting_law = law_type:law_oligarchy
+						is_enacting_law = law_type:law_technocracy
+						has_law_or_variant = law_type:law_autocracy
+						has_law_or_variant = law_type:law_oligarchy
+						has_law_or_variant = law_type:law_technocracy
+					}
+				}
+			}
+			add = {
+				desc = "ABOLISHING_SUFFRAGE"
+				value = 0.75
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		pop_acceptance >= acceptance_status_3
+	}
+
+	pop_support_factors = {
+		movement_support_high_literacy
+		movement_support_high_urbanization
+		movement_support_high_acceptance
+		movement_support_shopkeepers
+		movement_support_officers
+		movement_support_soldiers
+		movement_support_bureaucrats
+		movement_support_radicalization
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+					OR = {
+						is_being_suppressed = yes
+						is_being_bolstered = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}	
+
+		add = {
+			desc = "URBAN_STATE"
+			value = 3
+			multiply = state.state_urbanization_rate
+		}
+
+		add = {
+			value = 5
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = {
+				is_pop_type = officers
+			}
+			add = {
+				value = 100
+				desc = "POP_OFFICERS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = soldiers
+			}
+			add = {
+				value = 50
+				desc = "POP_SOLDIERS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = shopkeepers
+			}
+			add = {
+				value = 75
+				desc = "POP_SHOPKEEPERS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = bureaucrats
+			}
+			add = {
+				value = 100
+				desc = "POP_BUREAUCRATS"
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			add = {
+				value = 25
+				desc = "MIDDLE_NO_ICON"
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			add = {
+				value = 5
+				desc = "LOWER_NO_ICON"
+			}
+		}
+
+		if = {
+			limit = {
+				owner ?= {
+					OR = {
+						usfp_has_unconstitutional_law_enacted = yes
+						usfp_has_super_unconstitutional_law_enacted = yes
+					}
+				}
+			}
+			multiply = { # Multiplied by 2x max
+				desc = "POP_RADICALS"
+				value = pop_radical_fraction
+				add = 1
+			}
+		}
+
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+
+		multiply = {
+			desc = "POP_ACCEPTANCE"
+			value = pop_acceptance
+			divide = 75
+		}
+
+		if = { #late-game radically anti-constitutional movements can weaken this one
+			limit = {
+				owner ?= {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_socialist
+							is_political_movement_type = movement_communist
+							is_political_movement_type = movement_anarchist
+							is_political_movement_type = movement_fascist
+						}
+					}
+				}
+			}
+			multiply = {
+				desc = "POP_RADICAL_MOVEMENT_LOSSES"
+				value = 1
+				subtract = pop_radical_fraction
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+		
+		weight = {
+			value = 1000
+		}	
+	
+		state_weight = {
+			value = 1		
+		}
+	}
+		
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+		
+		weight = {
+			value = 100
+		}		
+	}
+}

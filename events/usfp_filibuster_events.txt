@@ -443,6 +443,9 @@ usfp_filibuster.5 = {
 		}
 		c:CUB = {
 			save_scope_as = cuba_scope
+			overlord = {
+				save_scope_as = cuban_overlord
+			}
 		}
 	}
 
@@ -450,7 +453,12 @@ usfp_filibuster.5 = {
 	option = {
 		name = usfp_filibuster.5.a
 		default_option = yes
-		
+		scope:cuba_scope = {
+			trigger_event = {
+				id = usfp_filibuster.6
+				months = 3
+			}
+		}
 		ai_chance = {
 			base = 100
 		}
@@ -458,7 +466,21 @@ usfp_filibuster.5 = {
 	#support
 	option = {
 		name = usfp_filibuster.5.b
-
+		trigger = {
+			ruler = {
+				usfp_manifest_destiny_pro_expansion_trigger = yes
+			}
+		}
+		highlighted_option = yes
+		show_as_unavailable = {
+			always = yes
+		}
+		scope:cuba_scope = {
+			trigger_event = {
+				id = usfp_filibuster.7
+				months = 3
+			}
+		}
 		ai_chance = {
 			base = 0
 		}
@@ -480,6 +502,13 @@ usfp_filibuster.5 = {
 				years = 2
 			}
 		}
+		add_lobby_appeasement_from_diplomacy_unidirectional = {
+			FIRST = root
+			SECOND = scope:cuban_overlord
+			PRO_AMOUNT = 2
+			ANTI_AMOUNT = -2
+			FACTOR = appeasement_special_events_negative
+		}
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -494,5 +523,141 @@ usfp_filibuster.5 = {
 	}
 }
 #CUB: Narciso López captured
+usfp_filibuster.6 = {
+	type = country_event
+	placement = scope:cuba_state_scope
+
+	event_image = {
+		video = "ep1_redcoats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_filibuster.6.t
+	desc = usfp_filibuster.6.d
+	flavor = usfp_filibuster.6.f
+	dlc = dlc_usfp
+	duration = 3
+
+	#execute
+	option = {
+		name = usfp_filibuster.6.a
+		default_option = yes
+		change_relations = {
+			country = c:USA
+			value = -15
+		}
+		c:USA = {
+			post_notification = cuba_filibusters_failed
+		}
+		add_loyalists = {
+			value = medium_radicals
+			culture = cu:caribeno
+			strata = upper
+		}
+		add_liberty_desire = -15
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#repatriate
+	option = {
+		name = usfp_filibuster.6.b
+		add_radicals = {
+			value = medium_radicals
+			culture = cu:caribeno
+			strata = upper
+		}
+		add_liberty_desire = 10
+		ai_chance = {
+			base = 0
+		}
+	}
+
+}
 #CUB/SPA: Narciso López attacks
-#Lopez successful??
+usfp_filibuster.7 = {
+	type = country_event
+	placement = scope:cuba_state_scope
+
+	event_image = {
+		video = "ep1_redcoats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_filibuster.7.t
+	desc = usfp_filibuster.7.d
+	flavor = usfp_filibuster.7.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+		create_country = {
+			tag = usfp_F_CUB
+			origin = c:USA
+			province = p:xB325C7
+			on_created = {
+				activate_law = law_type:law_autocracy
+				set_ruling_interest_groups = {
+					ig_armed_forces
+				}
+				create_military_formation = {
+					type = army
+					hq_region = root.capital.region
+					combat_unit = {
+						type = unit_type:combat_unit_type_irregular_infantry
+						state_region = s:STATE_CUBA
+						count = 1
+					 }
+				}
+			}
+		}
+	}
+
+	#to arms!
+	option = {
+		name = usfp_filibuster.7.a
+		default_option = yes
+		c:usfp_F_CUB = {
+			create_diplomatic_play = {
+				type = dp_annex_war
+				target_country = c:CUB
+				war = yes
+
+				add_war_goal = {
+					holder = c:CUB
+					type = return_state
+					target_state = c:usfp_F_CUB.capital
+				}
+			}
+		}
+
+	}
+
+}
+#USA: Lopez successful??
+usfp_filibuster.8 = {
+	type = country_event
+	placement = scope:cuba_state_scope
+
+	event_image = {
+		video = "africa_construction_colony"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_filibuster.8.t
+	desc = usfp_filibuster.8.d
+	flavor = usfp_filibuster.8.f
+	dlc = dlc_usfp
+	duration = 3
+
+}

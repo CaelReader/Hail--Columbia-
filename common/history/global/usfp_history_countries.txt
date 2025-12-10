@@ -41,7 +41,7 @@
 		}
 		add_loyalists = {
 			value = 0.10
-			interest_group = ig:ig_rural_folk
+			pop_type = farmers
 		}
 	}
 

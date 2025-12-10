@@ -662,7 +662,8 @@ usfp_remove_party_system = {
 
 on_revolution_start = { on_actions = { 
 	usfp_american_igs_action
-	usfp_fix_monarchy_revolt 
+	usfp_fix_monarchy_revolt
+	usfp_revolution_types 
 } }
 on_secession_start = { on_actions = { 
 	usfp_american_igs_action
@@ -694,6 +695,29 @@ usfp_fix_monarchy_revolt = {
 			 activate_law = law_type:law_presidential_republic
 		}
 	}
+	}
+}
+
+usfp_revolution_types = {
+	effect = {
+		if = {
+			limit = {
+				has_journal_entry = je_usfp_american_constitution
+				scope:target ?= {
+					OR = {
+						var:civil_war_type_var ?= movement_type:movement_usfp_american_constitution
+						var:civil_war_type_var ?= movement_type:movement_radical
+						var:civil_war_type_var ?= movement_type:movement_liberal
+					}
+				}
+			}
+			scope:target ?= {
+				activate_law = law_type:law_presidential_republic
+				activate_law = law_type:law_universal_suffrage
+				activate_law = law_type:law_protected_speech
+				activate_law = law_type:law_elected_bureaucrats
+			}
+		}
 	}
 }
 
