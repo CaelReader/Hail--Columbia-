@@ -1366,3 +1366,24 @@ usfp_reinhold_niebuhr = {
         }
     }
 }
+
+#USFP: Narciso López, filibuster
+usfp_narciso_lopez = {
+    first_name = Narciso
+    last_name = Lopez
+    dna = usfp_narciso_lopez
+    historical = yes
+    birth_date = 1797.11.2
+    culture = cu:north_andean
+    religion = rel:catholic
+    female = no
+    interest_group = ig_armed_forces
+    ideology = ideology_slaver
+    traits = {
+        reckless
+        bandit
+        basic_colonial_administrator
+        basic_offensive_planner
+    }
+    #event-spawned
+}

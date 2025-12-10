@@ -3317,4 +3317,81 @@ usfp_manifest_destiny.30 = {
 
 }
 
+#Oregon Black Exclusion
+usfp_manifest_destiny.31 = {
+	type = country_event
+	placement = scope:oregon_scope
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+	title = usfp_manifest_destiny.31.t
+	desc = usfp_manifest_destiny.31.d
+	flavor = usfp_manifest_destiny.31.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		has_state_in_state_region = STATE_OREGON
+		NOR = {
+			has_law_or_variant = law_type:law_multicultural
+			has_law_or_variant = law_type:law_cultural_exclusion
+		}
+	}
+
+	immediate = {
+		s:STATE_OREGON.region_state:USA = {
+			save_scope_as = oregon_scope
+		}
+	}
+
+
+	#let them
+	option = {
+		name = usfp_manifest_destiny.31.a
+		default_option = yes
+		scope:oregon_scope = {
+			add_acceptance = {
+				culture = cu:afro_american
+				value = -20
+			}
+			usfp_loyalize_whites_in_state = {
+				LOYALISTS = medium_radicals
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#stop them
+	option = {
+		name = usfp_manifest_destiny.31.b
+		trigger = {
+			usfp_is_afro_american_discriminated = no
+		}
+		highlighted_option = yes
+		show_as_unavailable = {
+			always = yes
+		}
+		scope:oregon_scope = {
+			usfp_radicalize_whites_in_state = {
+				RADICALS = large_radicals
+			}
+		}
+		add_loyalists = {
+			value = small_radicals
+			culture = cu:afro_american
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+}
+
 #Californian Revolt

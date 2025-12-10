@@ -9,7 +9,7 @@ acw_events.3.a.t: "The status of the Missouri Compromise will remain uncertain."
 acw_events.3.c.t: "The Missouri Compromise may not survive the realities of westward expansion."
 
 usfp_a_house_divided.1.t: "The Pickney Resolutions"
-usfp_a_house_divided.1.d: "In recent months, the [concept_usfp_house_of_representatives] has been buried in a flood of abolitionist petitions. In response, the [SCOPE.sParty('democratic_party').GetName] has passed resolutions forbidding the consideration or discussion of any matters pertaining to slavery."
+usfp_a_house_divided.1.d: "In recent months, the [concept_usfp_house_of_representatives] has been buried in a flood of abolitionist petitions. In response, the [SCOPE.sParty('democratic_party').GetName] has passed resolutions forbidding the consideration or discussion of any matters pertaining to [GetLawType('law_slave_trade').GetGroup.GetName]."
 usfp_a_house_divided.1.f: ""Resolved — that all petitions, memorials, resolutions, propositions, or papers, relating in any way, or to any extent whatever, to the subject of slavery, or the abolition of slavery, shall, without being either printed or referred, be laid upon the table, and that no further action whatever shall be had thereon.""
 usfp_a_house_divided.1.a: "This is flagrantly unconstitutional."
 usfp_a_house_divided.1.b: "Finally, lets get on with business as usual."
@@ -86,13 +86,13 @@ usfp_a_house_divided.14.c: "Compromise with Slavery is immoral!"
 usfp_a_house_divided.14.b: "Compromise with the abolitionists is untenable!"
 
 usfp_a_house_divided.15.t: "Collapse of the Whigs"
-usfp_a_house_divided.15.d: "Continuing polarization over the matter of Slavery has led to mass defections from the [SCOPE.sParty('whig_scope').GetName], leaving it completely defunct as a political organization. Already a new Republican party has been formed to take its place."
+usfp_a_house_divided.15.d: "Continuing polarization over the matter of [GetLawType('law_slave_trade').GetGroup.GetName] has led to mass defections from the [SCOPE.sParty('whig_scope').GetName], leaving it completely defunct as a political organization. Already a new Republican party has been formed to take its place."
 usfp_a_house_divided.15.f: ""This new party will fitly designate those who had united to restore the Union to its true mission: that of champion and promulgator of Liberty rather than propagandist of slavery."" #Horace Greeley
 usfp_a_house_divided.15.a: "A new political era."
 usfp_a_house_divided.15.a.tt: "The [SCOPE.sParty('whig_scope').GetName] will now be known as the Republican Party."
 
 usfp_a_house_divided.16.t: "Dred Scott v. Sandford"
-usfp_a_house_divided.16.d: "The [concept_usfp_supreme_court] has handed down a landmark decision over the case of an [SCOPE.sCulture('afro_american_scope').GetName] man suing for his freedom. The court has ruled that the Constitution extends no rights to any [SCOPE.sCulture('afro_american_scope').GetName], free or slave, and further that [concept_usfp_congress] has no power to restrict Slavery in the territories."
+usfp_a_house_divided.16.d: "The [concept_usfp_supreme_court] has handed down a landmark decision over the case of an [SCOPE.sCulture('afro_american_scope').GetName] man suing for his freedom. The court has ruled that the Constitution extends no rights to any [SCOPE.sCulture('afro_american_scope').GetName], free or slave, and further that [concept_usfp_congress] has no power to restrict [GetLawType('law_slave_trade').GetGroup.GetName] in the territories."
 usfp_a_house_divided.16.f: ""They were not intended to be included, under the word 'citizens' in the Constitution, and can therefore claim none of the rights and privileges which that instrument provides for and secures to citizens of the United States. On the contrary, they were considered by the founders as a subordinate and inferior class of beings who had been subjugated by the dominant race, and, whether emancipated or not, yet remained subject to their authority, and had no rights or privileges but such as those who held the power and the Government might choose to grant them.""
 usfp_a_house_divided.16.a: "This is the most obscene ruling in history!"
 usfp_a_house_divided.16.b: "Property is property, that is the end of it."
@@ -606,6 +606,12 @@ usfp_manifest_destiny.30.f: ""Mexican have no business in this country. I don't 
 usfp_manifest_destiny.30.a: "This is our land now."
 usfp_manifest_destiny.30.b: "We must uphold our end of the treaty."
 
+usfp_manifest_destiny.31.t: "The White Frontier"
+usfp_manifest_destiny.31.d: "The local government of [SCOPE.sState('oregon_scope').GetName] has voted not only to ban [GetLawType('law_slave_trade').GetGroup.GetName] from the territory but also to entirely outlaw [GetCulture('afro_american').GetCustom('getPluralDemonym')] from setting foot there."
+usfp_manifest_destiny.31.f: ""That if such free negro or mulatto shall fail to quit the country, as required by this act, he or she may be arrested upon a warrant issued by some justice of the peace, and, if guilty upon trial before such justice, shall receive upon his or her bare back not less than twenty nor more than thirty-nine stripes, to be inflicted by the constable of the proper county."" #1844 Law
+usfp_manifest_destiny.31.a: "It is the settlers' decision."
+usfp_manifest_destiny.31.b: "What? That's ridiculous and illegal."
+
 ### Native Removal Events ###
 
 usfp_native_removal.1.t: "The Seminole Removal"
@@ -807,7 +813,7 @@ usfp_usa.22.f: "Crowds buzzed through the streets set aside for the exposition, 
 usfp_usa.22.a: "Here's to another 100 years!"
 
 usfp_usa.23.t: "The [ROOT.GetCountry.GetRuler.GetLastName] Presidency"
-usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of his office. After dissolving the Central Bank and asserting the powers of the Federal government in the [concept_usfp_nullification_crisis], he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the [concept_usfp_supreme_court] rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of slavery continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
+usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of his office. After dissolving the Central Bank and asserting the powers of the Federal government in the [concept_usfp_nullification_crisis], he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the [concept_usfp_supreme_court] rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of [GetLawType('law_slave_trade').GetGroup.GetName] continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
 usfp_usa.23.f: ""But you must remember, my fellow-citizens, that eternal vigilance by the people is the price of liberty, and that you must pay the price if you wish to secure the blessing."" #Andrew Jackson
 usfp_usa.23.a: "This is a time of opportunity."
 
@@ -1016,6 +1022,32 @@ usfp_filibuster.4.f: ""Civilization belongs to the whites. But what civilization
 usfp_filibuster.4.a: "We will annex the territory."
 usfp_filibuster.4.b: "[SCOPE.sCharacter('william_walker_scope').GetFullName] will granted governorship of the territory."
 usfp_filibuster.4.c: "We will not associate with these filibusters."
+
+usfp_filibuster.5.t: "A Cuban Expedition"
+usfp_filibuster.5.d: "A band of [GetCulture('caribeno').GetName] filibusters are currying support for an expedition to [SCOPE.sCountry('cuba_scope').GetName], where they say they will induce a mass uprising of the people there in support of independence from [SCOPE.sCountry('cuban_overlord').GetName] and annexation into the [ROOT.GetCountry.GetName]."
+usfp_filibuster.5.f: ""The people of the island yearn to escape the [SCOPE.sCountry('cuban_overlord').GetAdjectiveNoFormatting] yoke. Adding its vast tracts plantations and legions of slaves to the Union would be a great asset to the South.""
+usfp_filibuster.5.a: "We will turn a blind eye to these activities."
+usfp_filibuster.5.b: "Offer covert support for a takeover of the island."
+usfp_filibuster.5.c: "Arrest these pirates and stop them from making an incident."
+
+usfp_filibuster.6.t: "Filibuster Expedition Captured"
+usfp_filibuster.6.d: "A band of [GetCulture('caribeno').GetName] filibusters landed in western Cuba intent on overthrowing our government on behalf of the [SCOPE.sCountry('usa_scope').GetName]. Fortunately, [SCOPE.sCharacter('general_scope').GetFullName] was quickly able to surround and capture the ill-prepared expedition before they could accomplish anything."
+usfp_filibuster.6.f: "The shabby exiles were paraded through the streets of [SCOPE.GetRootScope.GetCountry.GetCapital.GetCityHubName] in chains, led by the [SCOPE.sCharacter('general_scope').GetPrimaryRoleTitle]. Some onlookers jeered, others threw things at the filibusters, but most just found them a curiosity. Did these bandits really think they could defeat the [ROOT.GetCountry.GetAdjectiveNoFormatting] army?"
+usfp_filibuster.6.a: "Execute the lot of them."
+usfp_filibuster.6.b: "Extradite these criminals back to the [SCOPE.sCountry('usa_scope').GetName]."
+
+usfp_filibuster.7.t: "Filibusters Land in Cuba"
+usfp_filibuster.7.d: "A band of filibusters has landed western Cuba intent on 'liberating' the island on behalf of the [SCOPE.sCountry('usa_scope').GetName]!"
+usfp_filibuster.7.f: "The boat shuddered to a halt against the beach. The leading man leaped ashore carrying what was to be the new flag of Free Cuba.\n\n"Forward quickly! Before the garrison is alerted! For Cuba!""
+usfp_filibuster.7.a: "This rabble has no chance of success."
+
+usfp_filibuster.8.t: "The Free Flag of Cuba"
+usfp_filibuster.8.d: "Through some miracle, [SCOPE.sCountry('filibuster_country_scope').GetRuler.GetFullName] has seized control of Cuba and is petitioning for annexation."
+usfp_filibuster.8.f: ""Civilization belongs to the whites. But what civilization? And until when?""
+usfp_filibuster.8.a: "Cuba was always meant to be ours."
+usfp_filibuster.8.b: "[SCOPE.sCountry('filibuster_country_scope').GetRuler.GetFullName] will govern the island on our behalf."
+usfp_filibuster.8.c: "Filibusters? Who? We have no connection to this..."
+
 
 ### Gilded Age events ###
 

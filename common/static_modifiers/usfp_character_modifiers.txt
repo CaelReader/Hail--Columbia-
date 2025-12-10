@@ -94,3 +94,8 @@ usfp_blamed_for_panic = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bank_negative.dds
 	character_popularity_add = -25
 }
+
+usfp_celebrated_commander_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	character_popularity_add = 20
+}

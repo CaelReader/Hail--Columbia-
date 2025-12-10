@@ -555,6 +555,8 @@ usfp_manifest_destiny_main = {
 			100 = usfp_indian_postremoval.7 #Osage Reign of Terror
 			50 = usfp_native_removal.16 #Northern Removal in case Michigan is slow to colonize
 			100 = usfp_manifest_destiny.30 #Mexican Discrimination
+			50 = usfp_filibuster.5 #Lopez expedition to Cuba
+			50 = usfp_manifest_destiny.31 #Oregon Black Exclusion
 		}
 		events = {
 			# usfp_manifest_destiny.6 #Treaty of GH

@@ -739,7 +739,7 @@ Updated some labor union events to account for the new laws
 	Added Jacksonian Agenda JE at game start giving context to the starting situation of laws and taxes
 	Added the Panic of 1837 plus a JE to recover from it
 	New JE and Events for the American press to react to atrocities in Cuba and possibly spark a Spanish-American War
-	New events for the Dorr Rebellion, Third Great Awakening, Caroline Affair, Fenian Raids, Aroostook War
+	New events for the Dorr Rebellion, Third Great Awakening, Caroline Affair, Fenian Raids, Aroostook War, Lopez Expedition, Oregon Black Exclusion
 	Added starting Trade Privileges treaties for the USA with various countries
 	New Characters: Emma Goldman (imported from ECCHI), Billy Sunday, Walter Rauschenbusch, Lyman Beecher, Henry Ward Beecher, Peter Cartwright, Bejamin Tillman, David Atchison, Gerrit Smith, Reinhold Niebuhr
 	Added Constitutionalist Movement that spawns in response to unconstitutional law enactment

@@ -182,3 +182,7 @@ notification_usfp_usa_bought_greenland_third_party_tooltip: "#header $notificati
 notification_usfp_usa_bought_iceland_third_party_name: "[SCOPE.sCountry('usa_scope').GetName] Purchases [GetStateRegion('STATE_ICELAND').GetName]"
 notification_usfp_usa_bought_iceland_third_party_desc: "[SCOPE.sCountry('usa_scope').GetName] has purchased the island of [GetStateRegion('STATE_ICELAND').GetName] from [SCOPE.sCountry('greenland_owner_scope').GetName]."
 notification_usfp_usa_bought_iceland_third_party_tooltip: "#header $notification_usfp_usa_bought_iceland_third_party_name$#!\n$notification_usfp_usa_bought_iceland_third_party_desc$"
+
+notification_usfp_cuba_filibusters_failed_name: "Filibusters Captured"
+notification_usfp_cuba_filibusters_failed_desc: "[SCOPE.sCountry('cuba_scope').GetName] has captured and executed the filibusters who departed from our shores, harming our [concept_relations]."
+notification_usfp_cuba_filibusters_failed_tooltip: "#header $notification_usfp_cuba_filibusters_failed_name$#!\n$notification_usfp_cuba_filibusters_failed_desc$"

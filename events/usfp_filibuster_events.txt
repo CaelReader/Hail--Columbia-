@@ -427,6 +427,10 @@ usfp_filibuster.5 = {
 		NOT = {
 			has_state_in_state_region = STATE_CUBA
 		}
+		NOT = {
+			has_law_or_variant = law_type:law_slavery_banned
+		}
+		has_journal_entry = je_acw_countdown
 		is_at_war = no
 		usfp_manifest_destiny_greater_or_equal_trigger = { value = 5 }
 		exists = c:CUB
@@ -456,7 +460,7 @@ usfp_filibuster.5 = {
 		scope:cuba_scope = {
 			trigger_event = {
 				id = usfp_filibuster.6
-				months = 3
+				months = 6
 			}
 		}
 		ai_chance = {
@@ -478,7 +482,8 @@ usfp_filibuster.5 = {
 		scope:cuba_scope = {
 			trigger_event = {
 				id = usfp_filibuster.7
-				months = 3
+				months = 6
+				popup = yes
 			}
 		}
 		ai_chance = {
@@ -541,6 +546,21 @@ usfp_filibuster.6 = {
 	dlc = dlc_usfp
 	duration = 3
 
+	immediate = {
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+		random_scope_character = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_armed_forces
+					is_commander = yes
+				}
+			}
+			save_scope_as = general_scope
+		}
+	}
+
 	#execute
 	option = {
 		name = usfp_filibuster.6.a
@@ -549,8 +569,14 @@ usfp_filibuster.6 = {
 			country = c:USA
 			value = -15
 		}
+		overlord = {
+			change_relations = {
+				country = c:USA
+				value = -15
+			}
+		}
 		c:USA = {
-			post_notification = cuba_filibusters_failed
+			post_notification = usfp_cuba_filibusters_failed
 		}
 		add_loyalists = {
 			value = medium_radicals
@@ -577,11 +603,20 @@ usfp_filibuster.6 = {
 		}
 	}
 
+	after = {
+		scope:general_scope = {
+			add_modifier = {
+				name = usfp_celebrated_commander_modifier
+				years = 5
+			}
+		}
+	}
+
 }
 #CUB/SPA: Narciso López attacks
 usfp_filibuster.7 = {
 	type = country_event
-	placement = scope:cuba_state_scope
+	placement = scope:filibuster_country_scope.capital
 
 	event_image = {
 		video = "ep1_redcoats"
@@ -598,25 +633,79 @@ usfp_filibuster.7 = {
 	duration = 3
 
 	immediate = {
-		create_country = {
-			tag = usfp_F_CUB
-			origin = c:USA
-			province = p:xB325C7
-			on_created = {
-				activate_law = law_type:law_autocracy
-				set_ruling_interest_groups = {
-					ig_armed_forces
-				}
-				create_military_formation = {
-					type = army
-					hq_region = root.capital.region
-					combat_unit = {
-						type = unit_type:combat_unit_type_irregular_infantry
-						state_region = s:STATE_CUBA
-						count = 1
-					 }
+		if = {
+			limit = {
+				this = c:CUB
+			 }
+			 create_country = {
+				tag = usfp_F_CUB
+				origin = c:USA
+				province = p:xB325C7
+				on_created = {
+					activate_law = law_type:law_autocracy
+					set_ruling_interest_groups = {
+						ig_armed_forces
+					}
+					create_military_formation = {
+						type = army
+						hq_region = root.capital.region
+						combat_unit = {
+							type = unit_type:combat_unit_type_irregular_infantry
+							state_region = s:STATE_CUBA
+							count = 1 #LMAO
+						}
+					}
+					create_character = {
+						template = usfp_narciso_lopez
+						ruler = yes
+						is_general = yes
+					}
+					capital = {
+						create_pop = {
+							culture = caribeno
+							size = 500
+							pop_type = soldiers
+						}
+						create_pop = {
+							culture = caribeno
+							size = 100
+							pop_type = officers
+						}
+					}
+					add_modifier = {
+						name = usfp_filibusters_modifier
+						years = 2
+					}
+					change_relations = {
+						country = c:CUB
+						value = -100
+					}
+					change_relations = {
+						country = c:CUB.overlord
+						value = -100
+					}
+					change_relations = {
+						country = c:USA
+						value = 100
+					}
+					set_secret_goal = {
+						country = c:CUB
+						secret_goal = conquer
+					}
 				}
 			}
+			overlord = {
+				trigger_event = {
+					id = usfp_filibuster.7
+					popup = yes
+				}
+			}
+		}
+		c:usfp_F_CUB = {
+			ruler = {
+				save_scope_as = lopez_scope
+			}
+			save_scope_as = filibuster_country_scope
 		}
 	}
 
@@ -624,27 +713,50 @@ usfp_filibuster.7 = {
 	option = {
 		name = usfp_filibuster.7.a
 		default_option = yes
-		c:usfp_F_CUB = {
-			create_diplomatic_play = {
-				type = dp_annex_war
-				target_country = c:CUB
-				war = yes
+		change_relations = {
+			country = c:USA
+			value = -30
+		}
+		if = {
+			limit = {
+				this = c:CUB
+			 }
+			 c:usfp_F_CUB = {
+				create_diplomatic_play = {
+				type = dp_revolution
+				target_state = c:CUB.capital
+				annex_as_civil_war = yes
+				escalation = 80
 
-				add_war_goal = {
-					holder = c:CUB
-					type = return_state
-					target_state = c:usfp_F_CUB.capital
+				# add_war_goal = {
+				# 	holder = c:CUB
+				# 	type = return_state
+				# 	target_state = c:usfp_F_CUB.capital
+				# }
+			}
+		}
+		} else = {
+			show_as_tooltip = {
+				create_diplomatic_play = {
+					type = dp_annex_war
+					target_country = c:CUB
+					escalation = 80
+
+					add_war_goal = {
+						holder = c:CUB
+						type = return_state
+						target_state = c:usfp_F_CUB.capital
+					}
 				}
 			}
 		}
-
 	}
 
 }
 #USA: Lopez successful??
 usfp_filibuster.8 = {
 	type = country_event
-	placement = scope:cuba_state_scope
+	placement = scope:filibuster_country_scope.capital
 
 	event_image = {
 		video = "africa_construction_colony"
@@ -659,5 +771,75 @@ usfp_filibuster.8 = {
 	flavor = usfp_filibuster.8.f
 	dlc = dlc_usfp
 	duration = 3
+
+	immediate = {
+		c:usfp_F_CUB = {
+			save_scope_as = filibuster_country_scope
+		}
+	}
+
+	#annex
+	option = {
+		name = usfp_filibuster.8.a
+		default_option = yes
+		annex = c:usfp_F_CUB
+		usfp_manifest_more_destiny_effect = yes
+		if = {
+			limit = {
+				NOT = {
+					has_law_or_variant = law_type:law_slavery_banned
+				}
+			 }
+			 usfp_anger_abolitionists_effect = {  MULT = 3}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#puppet
+	option = {
+		name = usfp_filibuster.8.b
+		usfp_manifest_more_destiny_effect = yes
+		create_diplomatic_pact = {
+			country = c:usfp_F_CUB
+			type = puppet
+		}
+		c:usfp_F_CUB = {
+			add_liberty_desire = -100
+			change_tag = CUB
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	#disavow
+	option = {
+		name = usfp_filibuster.8.b
+		usfp_manifest_less_destiny_effect = yes
+		change_relations = {
+			country = c:usfp_F_CUB
+			value = -20
+		}
+		c:usfp_F_CUB = {
+			change_tag = CUB
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					leader = {
+						usfp_manifest_destiny_pro_expansion_trigger = yes
+					}
+					is_interest_group_type = ig_landowners
+				}
+			}
+			add_modifier = {
+				name = usfp_rejected_filibustering
+				years = 2
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
 
 }
