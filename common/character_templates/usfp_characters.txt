@@ -25,7 +25,7 @@
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_landowners
@@ -62,7 +62,7 @@ ecchi_usa_f_roosevelt_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_intelligentsia
@@ -114,7 +114,7 @@ usfp_agitator_elizabeth_gurley_flynn = {
 			}
 		}
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_trade_unions
             } 
@@ -159,7 +159,7 @@ usfp_robert_la_follette_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_intelligentsia
@@ -261,7 +261,7 @@ usfp_agitator_washington_gladden = {
 			}
 		}
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_devout
             } 
@@ -291,7 +291,7 @@ usfp_thaddeus_stevens_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_intelligentsia
                 is_interest_group_type = ig_petty_bourgeoisie
@@ -330,7 +330,7 @@ usfp_usa_john_fauntroy = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_landowners
 			}
@@ -460,7 +460,7 @@ usfp_usa_william_sumner = {
             has_global_variable = social_darwinism_appeared
         }
         interest_group_trigger = { 
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
         }
         earliest_usage_date = 1872.1.1
@@ -515,7 +515,7 @@ usfp_usa_jane_addams = {
 #     is_agitator = yes
 # }
 
-BIC_swami_vivkananda = { #Swami Vivekananda
+REPLACE_OR_CREATE:BIC_swami_vivkananda = { #Swami Vivekananda
     first_name = Swami
     last_name = Vivekananda
     historical = yes
@@ -542,7 +542,7 @@ BIC_swami_vivkananda = { #Swami Vivekananda
 			has_dlc_feature = ip2_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_devout
         }   
         earliest_usage_date = 1885.1.1
@@ -758,7 +758,7 @@ usfp_usa_horace_greeley = {
     agitator_usage = {
         country_trigger = { c:USA ?= this }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
          }
         earliest_usage_date = 1841.1.1
@@ -788,7 +788,7 @@ usfp_booker_t_washington = {
     agitator_usage = {
         country_trigger = { c:USA ?= this }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
          }
         earliest_usage_date = 1881.9.4
@@ -800,7 +800,7 @@ usfp_booker_t_washington = {
             c:ASA ?= this
          }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
          }
         earliest_usage_date = 1881.9.4
@@ -835,7 +835,7 @@ usfp_marcus_garvey = {
             } 
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_petty_bourgeoisie
          }
         earliest_usage_date = 1918.6.1 #UNIA incorporated
@@ -847,7 +847,7 @@ usfp_marcus_garvey = {
             c:ASA ?= this
          }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_petty_bourgeoisie
          }
         earliest_usage_date = 1918.6.1 #UNIA incorporated
@@ -877,7 +877,7 @@ usfp_a_philip_randolph = {
     agitator_usage = {
         country_trigger = { c:USA ?= this }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_trade_unions
          }
         earliest_usage_date = 1917.1.1 #The Messenger founded
@@ -922,7 +922,7 @@ usfp_hubert_harrison = {
             } 
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
          }
         earliest_usage_date = 1917.1.1
@@ -970,7 +970,7 @@ usfp_james_weldon_johnson = {
             } 
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
          }
         earliest_usage_date = 1917.1.1 #NAACP field secretary
@@ -1017,7 +1017,7 @@ usfp_ida_b_wells = {
             } 
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
          }
         earliest_usage_date = 1892.1.1
@@ -1100,7 +1100,7 @@ usfp_walter_rauschenbusch = {
             c:USA ?= this
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_devout
          }
         earliest_usage_date = 1886.1.1
@@ -1176,7 +1176,7 @@ usfp_henry_beecher = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_devout
          }
         earliest_usage_date = 1848.1.1 

@@ -209,10 +209,10 @@ usfp_republican_party = {
 			limit = {
 				is_interest_group_type = ig_industrialists
 				owner.ig:ig_intelligentsia ?= {
-					is_marginal = yes
+					ig_counts_as_marginal = yes
 				}		
 				owner.ig:ig_petty_bourgeoisie ?= {
-					is_marginal = yes
+					ig_counts_as_marginal = yes
 				} 
 			}
 			add = {

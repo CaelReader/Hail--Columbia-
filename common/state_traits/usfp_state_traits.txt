@@ -27,15 +27,6 @@ state_trait_comanche_domain= {
 }
 
 #from State Traits Expanded
-state_trait_american_chestnuts = {
-    icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
-	
-	modifier = {
-		building_group_bg_logging_throughput_add = 0.10
-		goods_output_hardwood_mult = 0.1
-	}
-}
-
 state_trait_sonoran_desert = {
 	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
 	
@@ -96,8 +87,8 @@ state_trait_puget_sound = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	
 	modifier = {
-		building_shipyards_throughput_add = 0.1
-		building_military_shipyards_throughput_add = 0.1
+		building_shipyard_throughput_add = 0.1
+		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.1
 		state_trade_capacity_mult = 0.15
 		state_building_naval_base_max_level_add = 10
@@ -109,8 +100,8 @@ state_trait_tampa_bay = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	
 	modifier = {
-		building_shipyards_throughput_add = 0.1
-		building_military_shipyards_throughput_add = 0.1
+		building_shipyard_throughput_add = 0.1
+		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.1
 		state_trade_capacity_mult = 0.15
 		state_building_naval_base_max_level_add = 10
@@ -141,8 +132,8 @@ state_trait_burrard_inlet = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	
 	modifier = {
-		building_shipyards_throughput_add = 0.1
-		building_military_shipyards_throughput_add = 0.1
+		building_shipyard_throughput_add = 0.1
+		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.1
 		state_trade_capacity_mult = 0.15
 		state_building_naval_base_max_level_add = 10
@@ -179,8 +170,8 @@ state_trait_san_fran_bay = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	
 	modifier = {
-		building_shipyards_throughput_add = 0.2
-		building_military_shipyards_throughput_add = 0.2
+		building_shipyard_throughput_add = 0.2
+		building_military_shipyard_throughput_add = 0.2
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.30
 		state_building_naval_base_max_level_add = 20
@@ -202,8 +193,8 @@ state_trait_zihuatanejo_bay = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	
 	modifier = {
-		building_shipyards_throughput_add = 0.1
-		building_military_shipyards_throughput_add = 0.1
+		building_shipyard_throughput_add = 0.1
+		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.1
 		state_trade_capacity_mult = 0.15
 		state_building_naval_base_max_level_add = 10
@@ -235,12 +226,9 @@ state_trait_usfp_boll_weevil = {
 	}
 }
 
-#vanilla override
-state_trait_columbia_river = {
-	icon = "gfx/interface/icons/state_trait_icons/river.dds"
-
+#vanilla edit
+INJECT:state_trait_columbia_river = {
 	modifier = {
-		state_infrastructure_add = 20
 		building_group_bg_logging_throughput_add = 0.30
 	}
 }

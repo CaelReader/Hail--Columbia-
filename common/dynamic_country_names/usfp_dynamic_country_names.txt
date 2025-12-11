@@ -1,4 +1,4 @@
-﻿USA = { # United States of America
+﻿REPLACE:USA = { # United States of America
 	dynamic_country_name = {
 		name = dyn_c_united_states
 		adjective = USA_ADJ
@@ -288,31 +288,31 @@
 			scope:actor = {
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_north_america = yes
+					is_in_geographic_region = geographic_region_north_america
 				}
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_south_america = yes
+					is_in_geographic_region = geographic_region_south_america
 				}
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_europe = yes
+					is_in_geographic_region = geographic_region_europe
 				}
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_africa = yes
+					is_in_geographic_region = geographic_region_africa
 				}
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_middle_east = yes
+					is_in_geographic_region = geographic_region_middle_east
 				}
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_india = yes
+					is_in_geographic_region = geographic_region_india
 				}
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_east_asia = yes
+					is_in_geographic_region = geographic_region_east_asia
 				}
 				any_scope_state = {
 					is_incorporated = yes
@@ -349,11 +349,11 @@
 			scope:actor = {
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_north_america = yes
+					is_in_geographic_region = geographic_region_north_america
 				}
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_south_america = yes
+					is_in_geographic_region = geographic_region_south_america
 				}
 			}
 		}

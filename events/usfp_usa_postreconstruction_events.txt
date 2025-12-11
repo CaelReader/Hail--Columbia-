@@ -177,9 +177,10 @@ usfp_usa_postreconstruction.2 = {
 	option = {
 		name = usfp_usa_postreconstruction.2.a
 		default_option = yes
-		je:usfp_reconstruction_long = {
-			add_modifier = {
-				name = usfp_separate_but_equal_modifier
+		active_law:lawgroup_citizenship ?= {
+			add_amendment = {
+				type = amendment_usfp_seperate_but_equal
+				sponsor = PREV.ig:ig_landowners
 			}
 		}
 		usfp_long_reconstruction_lose_progress = {
@@ -217,9 +218,10 @@ usfp_usa_postreconstruction.2 = {
 	#we need to work to overturn this
 	option = {
 		name = usfp_usa_postreconstruction.2.b
-		je:usfp_reconstruction_long = {
-			add_modifier = {
-				name = usfp_separate_but_equal_modifier
+		active_law:lawgroup_citizenship ?= {
+			add_amendment = {
+				type = amendment_usfp_seperate_but_equal
+				sponsor = PREV.ig:ig_landowners
 			}
 		}
 		usfp_long_reconstruction_lose_progress = {
@@ -1453,7 +1455,7 @@ usfp_usa_postreconstruction.9 = {
 				any_scope_state = {
 					total_urbanization > 2000
 					any_scope_building = {
-						is_building_type = building_arts_academy
+						is_building_type = building_art_academy
 					}
 					any_scope_pop = {
 						culture = cu:afro_american
@@ -1472,7 +1474,7 @@ usfp_usa_postreconstruction.9 = {
 				any_scope_state = {
 					total_urbanization > 1000
 					any_scope_building = {
-						is_building_type = building_arts_academy
+						is_building_type = building_art_academy
 					}
 					any_scope_pop = {
 						culture = cu:afro_american
@@ -1502,7 +1504,7 @@ usfp_usa_postreconstruction.9 = {
 				s:STATE_NEW_YORK.region_state:USA = {
 					total_urbanization > 2000
 					any_scope_building = {
-						is_building_type = building_arts_academy
+						is_building_type = building_art_academy
 					}
 					any_scope_pop = {
 						culture = cu:afro_american
@@ -1523,7 +1525,7 @@ usfp_usa_postreconstruction.9 = {
 				limit = {
 					total_urbanization > 2000
 					any_scope_building = {
-						is_building_type = building_arts_academy
+						is_building_type = building_art_academy
 					}
 					any_scope_pop = {
 						culture = cu:afro_american
@@ -1543,7 +1545,7 @@ usfp_usa_postreconstruction.9 = {
 				limit = {
 					total_urbanization > 1000
 					any_scope_building = {
-						is_building_type = building_arts_academy
+						is_building_type = building_art_academy
 					}
 					any_scope_pop = {
 						culture = cu:afro_american
@@ -2372,7 +2374,7 @@ usfp_usa_postreconstruction.14 = {
 		OR = {
 			exists = c:LIB
 			any_scope_state = {
-				state_is_in_africa = yes
+				is_in_geographic_region = geographic_region_africa
 				NOT = {
 					state_region = s:STATE_SINAI
 				}
@@ -2408,7 +2410,7 @@ usfp_usa_postreconstruction.14 = {
 		if = {
 			limit = { 
 				any_scope_state = {
-					state_is_in_africa = yes
+					is_in_geographic_region = geographic_region_africa
 					NOT = {
 						state_region = s:STATE_SINAI
 					}
@@ -2416,7 +2418,7 @@ usfp_usa_postreconstruction.14 = {
 			}
 			ordered_scope_state = {
 				limit = {
-					state_is_in_africa = yes
+					is_in_geographic_region = geographic_region_africa
 					NOT = {
 						state_region = s:STATE_SINAI
 					}
@@ -3099,6 +3101,12 @@ usfp_usa_postreconstruction.18 = {
 		}
 		usfp_long_reconstruction_add_progress = {
 			VALUE = 20
+		}
+		active_law:lawgroup_citizenship ?= {
+			add_amendment = {
+				type = amendment_usfp_anti_lynching
+				sponsor = PREV.ig:ig_intelligentsia
+			}
 		}
 		set_variable = anti_lynching
 		ai_chance = {

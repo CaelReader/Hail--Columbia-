@@ -245,7 +245,7 @@ usfp_end_gag_rule_button = {
 
 	possible = {
 		ig:ig_intelligentsia = {
-			is_marginal = yes
+			ig_counts_as_marginal = yes
 		}
 		OR = {
 			any_interest_group = {

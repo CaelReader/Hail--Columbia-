@@ -89,7 +89,7 @@ usfp_chief_peta_nocona = {
             this = c:COM
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_armed_forces
                 is_interest_group_type = ig_landowners
@@ -132,7 +132,7 @@ usfp_chief_quanah_parker = {
         latest_usage_date = 1911.1.1
         chance = 100
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_armed_forces
                 is_interest_group_type = ig_landowners
@@ -219,7 +219,7 @@ usfp_plenty_coups = {
             this = c:ABS
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_devout
                 is_interest_group_type = ig_landowners

@@ -269,7 +269,7 @@ usfp_break_treaty_button = {
 	visible = {
 		any_decentralized_country = {
 			has_truce_with = root
-			country_is_in_north_america = yes
+			is_in_geographic_region = geographic_region_north_america
 		}
 		has_technology_researched = civilizing_mission
 	}
@@ -286,7 +286,7 @@ usfp_break_treaty_button = {
 		every_decentralized_country = {
 			limit = {
 				has_truce_with = root
-				country_is_in_north_america = yes
+				is_in_geographic_region = geographic_region_north_america
 			}
 			end_truce = root
 			root = {

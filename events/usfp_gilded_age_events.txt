@@ -694,7 +694,7 @@ usfp_gilded_age.8 = {
 		name = usfp_gilded_age.8.c
 		trigger = {
 			ig:ig_trade_unions = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 			}
 		}
 		add_modifier = {

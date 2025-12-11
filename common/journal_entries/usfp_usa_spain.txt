@@ -78,7 +78,7 @@
 			c:CUB ?= {
 				is_subject_of = root
 			}
-			owns_entire_state_region = STATE_CUBA
+			usfp_owns_cuba = yes
 		}
 	}
 

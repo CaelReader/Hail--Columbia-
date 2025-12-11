@@ -475,7 +475,7 @@ native_resettlement.5 = {
 		if = {
 			limit = {
 				any_interest_group = {
-					is_marginal = no
+					ig_counts_as_marginal = no
 					leader = {
 						OR = {
 							has_trait = bigoted
@@ -502,7 +502,7 @@ native_resettlement.5 = {
 		if = {
 			limit = {
 				any_interest_group = {
-					is_marginal = no
+					ig_counts_as_marginal = no
 					leader = {
 						has_ideology = ideology:ideology_pacifist
 					}
@@ -510,7 +510,7 @@ native_resettlement.5 = {
 			}
 			random_interest_group = {
 				limit = {
-					is_marginal = no
+					ig_counts_as_marginal = no
 					leader = {
 						has_ideology = ideology:ideology_pacifist
 					}

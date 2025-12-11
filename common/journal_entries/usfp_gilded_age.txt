@@ -108,7 +108,7 @@ usfp_gilded_age = {
 	fail = {
 		OR = {
 			ig:ig_industrialists = {
-				is_marginal = yes
+				ig_counts_as_marginal = yes
 			}
 			AND = {
 				custom_tooltip = {

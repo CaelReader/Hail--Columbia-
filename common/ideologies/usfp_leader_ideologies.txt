@@ -1,5 +1,5 @@
 ﻿#from USCWF
-ideology_jacksonian_democrat = { #replacing basegame
+REPLACE_OR_CREATE:ideology_jacksonian_democrat = { #replacing basegame
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/jackson_democrat.dds"
 
 	character_ideology = yes
@@ -112,7 +112,7 @@ ideology_jacksonian_democrat = { #replacing basegame
 	}
 }
 
-ideology_usfp_progressive = {
+REPLACE_OR_CREATE:ideology_usfp_progressive = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_usfp_progressive.dds"
 	
 	character_ideology = yes
@@ -268,7 +268,7 @@ ideology_usfp_progressive = {
 	}
 }
 
-ideology_usfp_social_gospel_leader = {
+REPLACE_OR_CREATE:ideology_usfp_social_gospel_leader = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_usfp_social_gospel_leader.dds"
 	
 	character_ideology = yes
@@ -370,7 +370,7 @@ ideology_usfp_social_gospel_leader = {
 
 }
 
-ideology_usfp_strongman_populist = {
+REPLACE_OR_CREATE:ideology_usfp_strongman_populist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_usfp_strongman_populist.dds"
 	
 	character_ideology = yes
@@ -559,7 +559,7 @@ ideology_usfp_strongman_populist = {
 # 	}
 # }
 
-ideology_usfp_abolitionist_radical = {
+REPLACE_OR_CREATE:ideology_usfp_abolitionist_radical = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_usfp_abolitionist_radical.dds"
 	
 	character_ideology = yes
@@ -674,7 +674,7 @@ ideology_usfp_abolitionist_radical = {
 	}	
 }
 
-ideology_usfp_georgist_leader = {
+REPLACE_OR_CREATE:ideology_usfp_georgist_leader = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_usfp_georgist.dds"
 	
 	character_ideology = yes
@@ -870,7 +870,7 @@ ideology_usfp_georgist_leader = {
 
 }
 
-ideology_usfp_social_darwinist_leader = {
+REPLACE_OR_CREATE:ideology_usfp_social_darwinist_leader = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/unused/ideology_leader_individualist.dds"
 	
 	character_ideology = yes
@@ -1047,7 +1047,7 @@ ideology_usfp_social_darwinist_leader = {
 
 }
 
-ideology_usfp_universalist = {
+REPLACE_OR_CREATE:ideology_usfp_universalist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_usfp_universalist.dds"
 	
 	character_ideology = yes
@@ -1191,7 +1191,7 @@ ideology_usfp_universalist = {
 	}
 }
 
-ideology_usfp_pan_indianist = {
+REPLACE_OR_CREATE:ideology_usfp_pan_indianist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_usfp_pan_indianist.dds"
 	character_ideology = yes
 

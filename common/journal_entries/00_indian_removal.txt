@@ -121,7 +121,7 @@
 			if = {
 				limit = {
 					any_interest_group = {
-						is_marginal = no
+						ig_counts_as_marginal = no
 						leader = {
 							OR = {
 								has_trait = bigoted
@@ -148,7 +148,7 @@
 			if = {
 				limit = {
 					any_interest_group = {
-						is_marginal = no
+						ig_counts_as_marginal = no
 						leader = {
 							has_ideology = ideology:ideology_pacifist
 						}
@@ -156,7 +156,7 @@
 				}
 				random_interest_group = {
 					limit = {
-						is_marginal = no
+						ig_counts_as_marginal = no
 						leader = {
 							has_ideology = ideology:ideology_pacifist
 						}

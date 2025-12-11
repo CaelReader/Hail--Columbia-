@@ -743,8 +743,14 @@ Updated some labor union events to account for the new laws
 	Added starting Trade Privileges treaties for the USA with various countries
 	New Characters: Emma Goldman (imported from ECCHI), Billy Sunday, Walter Rauschenbusch, Lyman Beecher, Henry Ward Beecher, Peter Cartwright, Bejamin Tillman, David Atchison, Gerrit Smith, Reinhold Niebuhr
 	Added Constitutionalist Movement that spawns in response to unconstitutional law enactment
+	Added Spoils System and Bill of Rights starting amendments
+	Added Anti-Lynching Law amendment
 ## 1.12 Compatibility
-
+	Reverted Liberia map setup to the new vanilla one
+	Moved the vanilla Fugitive Slave Act amendment to the relevant HC event
+	The Gag Rule is now a Law Amendment
+	Replaced the following modifiers with Law Amendments: Pure Drugs, Separate But Equal, Fugitive Slave Act
+	Updated several vanilla overrides to use the new INJECT syntax for compatibility
 ## 1836 Starting Situation Update
 	USA now begins with Agrarianism and a special variant of Consumption-Based Taxation (cutting the national revenue about in half!)
 	American PB now supports the American School (interventionism and protectionism)
@@ -768,6 +774,7 @@ Updated some labor union events to account for the new laws
 	Inuit/Athabaskan centralized countries now bypass the tech requirement to survey the arctic
 	Decolonized Greenland (can be surveyed by decision with Zepplins/Planes)
 	Added Greenland Ice Sheet state trait
+	Reverted American Chestnuts state trait to vanilla
 ## Fixes
 	Significantly increased the navy requirement to enforce the Monroe Doctrine so that now you actually have to grow the navy from its starting state
 	Moving away from Presidential Republic now removes the Constitution JE even if you still have voting

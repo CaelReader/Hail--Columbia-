@@ -1370,7 +1370,7 @@ usfp_enable_american_indian_culture = {
 		usfp_american_indian_consolidate = yes
 		every_state = {
 			limit = {
-				state_is_in_north_america = yes
+				is_in_geographic_region = geographic_region_north_america
 				state_region = {
 					NOT = {
 						is_homeland = cu:usfp_american_indian
@@ -2091,9 +2091,10 @@ usfp_underground_railroad_choose_escapee_pop_effect = {
 }
 
 usfp_fugitive_slave_act_effect = {
-		je:je_acw_countdown = {
-			add_modifier = {
-				name = usfp_fugitive_slave_law
+		active_law:lawgroup_slavery ?= {
+			add_amendment = {
+				type = amendment_american_fugitive_slaves_act
+				sponsor = ROOT.ig:ig_landowners
 			}
 		}
 		random_political_movement = {
@@ -2122,7 +2123,7 @@ usfp_fugitive_slave_act_effect = {
 usfp_afro_american_colonization_effect = {
 		random_scope_state = {
 			limit = {
-				state_is_in_north_america = yes
+				is_in_geographic_region = geographic_region_north_america
 				culture_percent_state = {
 					target = cu:afro_american
 					value > 0.15
@@ -2431,5 +2432,17 @@ usfp_danish_purchase_effect = {
 	create_bidirectional_truce = {
 		country = scope:greenland_owner_scope
 		months = 48
+	}
+}
+
+usfp_claim_cuba_effect = {
+	s:STATE_WESTERN_CUBA = {
+		add_claim = root
+	}
+	s:STATE_CENTRAL_CUBA = {
+		add_claim = root
+	}
+	s:STATE_EASTERN_CUBA = {
+		add_claim = root
 	}
 }

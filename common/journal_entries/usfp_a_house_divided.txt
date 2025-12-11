@@ -737,9 +737,7 @@ je_usfp_underground_railroad = {
 							je:je_usfp_underground_railroad = {
 								has_modifier = usfp_underground_railroad_suppressing_modifier
 							}
-							je:je_acw_countdown ?= {
-								has_modifier = usfp_fugitive_slave_law
-							}
+							usfp_has_fugitive_slave_act = yes
 						}
 					}
 					usfp_underground_railroad_escapes_to_north_effect = yes #escapees from three different states
@@ -775,9 +773,7 @@ je_usfp_underground_railroad = {
 				}
 				400 = {
 					trigger = {
-						je:je_acw_countdown ?= {
-							has_modifier = usfp_fugitive_slave_law
-						}
+						usfp_has_fugitive_slave_act = yes
 					}
 					usfp_underground_railroad_escapes_to_north_effect = yes
 					usfp_underground_railroad_escapes_to_canada_effect = yes

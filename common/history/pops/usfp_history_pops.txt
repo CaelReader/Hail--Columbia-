@@ -6,51 +6,51 @@
 			religion = mormon
 		}
 	}
-	s:STATE_LIBERIA.region_state:LIB = {
-		kill_population_percent_in_state = {
-			percent = 0.92
-			culture = cu:afro_american
-		}
-		every_scope_pop = {
-			limit = {
-				culture = cu:mande
-			}
-			move_partial_pop = {
-				state = s:STATE_LIBERIA.region_STATE:MDK
-				population_ratio = 0.98
-			}
-		}
-		every_scope_pop = {
-			limit = {
-				culture = cu:kru
-			}
-			move_partial_pop = {
-				state = s:STATE_LIBERIA.region_STATE:KRU
-				population_ratio = 0.98
-			}
-		}
-		every_scope_pop = {
-			limit = {
-				culture = cu:bassa
-				religion = rel:animist
-			}
-			move_partial_pop = {
-				state = s:STATE_LIBERIA.region_STATE:MDK
-				population_ratio = 0.98
-			}
-		}
-		every_scope_pop = {
-			limit = {
-				culture = cu:kissi
-				religion = rel:animist
-			}
-			move_partial_pop = {
-				state = s:STATE_LIBERIA.region_STATE:MDK
-				population_ratio = 0.98
-			}
-		}
-		liberate_slaves = yes
-	}
+	# s:STATE_LIBERIA.region_state:LIB = {
+	# 	kill_population_percent_in_state = {
+	# 		percent = 0.92
+	# 		culture = cu:afro_american
+	# 	}
+	# 	every_scope_pop = {
+	# 		limit = {
+	# 			culture = cu:mande
+	# 		}
+	# 		move_partial_pop = {
+	# 			state = s:STATE_LIBERIA.region_STATE:MDK
+	# 			population_ratio = 0.98
+	# 		}
+	# 	}
+	# 	every_scope_pop = {
+	# 		limit = {
+	# 			culture = cu:kru
+	# 		}
+	# 		move_partial_pop = {
+	# 			state = s:STATE_LIBERIA.region_STATE:KRU
+	# 			population_ratio = 0.98
+	# 		}
+	# 	}
+	# 	every_scope_pop = {
+	# 		limit = {
+	# 			culture = cu:bassa
+	# 			religion = rel:animist
+	# 		}
+	# 		move_partial_pop = {
+	# 			state = s:STATE_LIBERIA.region_STATE:MDK
+	# 			population_ratio = 0.98
+	# 		}
+	# 	}
+	# 	every_scope_pop = {
+	# 		limit = {
+	# 			culture = cu:kissi
+	# 			religion = rel:animist
+	# 		}
+	# 		move_partial_pop = {
+	# 			state = s:STATE_LIBERIA.region_STATE:MDK
+	# 			population_ratio = 0.98
+	# 		}
+	# 	}
+	# 	liberate_slaves = yes
+	# }
 
 	s:STATE_MAINE = {
 		region_state:NBS = {

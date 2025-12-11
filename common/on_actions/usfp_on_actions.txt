@@ -981,7 +981,7 @@ usfp_political_movement_ideologies = {
 					has_discrimination_trait_group = heritage_group_indigenous_american
 				}
 				owner = {
-					country_is_in_north_america = yes
+					is_in_geographic_region = geographic_region_north_america
 				}
 			}
 			set_core_ideology = ideology_usfp_american_indian_movement
@@ -1047,6 +1047,36 @@ usfp_on_war_end_action = {
 					years = 1
 				}
 			}
+		}
+	}
+}
+
+on_government_reformed = {
+	on_actions = {
+		usfp_spoils_system_action
+	}
+}
+
+usfp_spoils_system_action = {
+	effect = {
+		if = {
+			limit = {
+				any_active_law = {
+					has_amendment = amendment_usfp_spoils_system
+				}
+				NOT = {
+					has_modifier = usfp_spoils_system_decaying_modifier
+				}
+			 }
+			 add_modifier = {
+				name = usfp_spoils_system_decaying_modifier
+				years = 2
+				is_decaying = yes
+			 }
+			 change_variable = {
+				name = usfp_spoils_system_abolish_var
+				add = 1
+			 }
 		}
 	}
 }

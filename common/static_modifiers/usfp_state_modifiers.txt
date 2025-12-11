@@ -293,7 +293,7 @@ usfp_state_race_riot_aftermath_modifier = {
 
 usfp_harlem_renaissance_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue2_positive.dds
-	building_arts_academy_throughput_add = 0.10
+	building_art_academy_throughput_add = 0.10
 	state_migration_pull_mult = 0.10
 	state_pop_support_movement_cultural_minority_mult = 0.10
 }

@@ -96,7 +96,7 @@ company_usfp_coca_cola = {
 
 	extension_building_types = {
 		building_sugar_plantation
-		building_arts_academy
+		building_art_academy
 	}
 
 	possible_prestige_goods = {
@@ -1038,7 +1038,7 @@ company_usfp_us_warner_bros = {
 	preferred_headquarters = { STATE_CALIFORNIA }
 
 	building_types = {
-		building_arts_academy
+		building_art_academy
 	}
 
 	extension_building_types = {
@@ -1061,7 +1061,7 @@ company_usfp_us_warner_bros = {
 		has_technology_researched = mass_propaganda
 		any_scope_state = {
 			any_scope_building = {
-				is_building_type = building_arts_academy
+				is_building_type = building_art_academy
 				level >= 5
 				has_active_production_method = pm_film_art
 			}
@@ -1077,7 +1077,7 @@ company_usfp_us_warner_bros = {
 	ai_will_do = {
 		any_scope_state = {
 			any_scope_building = {
-				is_building_type = building_arts_academy
+				is_building_type = building_art_academy
 				level >= 5
 			}
 			state_region = s:STATE_CALIFORNIA

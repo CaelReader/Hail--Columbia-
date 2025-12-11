@@ -31,6 +31,13 @@
 		start_enactment = law_type:law_universal_suffrage #states are in the middle of piecemeal removing tax obligations at the start date
 		activate_law = law_type:law_usfp_nominal_separation #de jure total separation, but de facto anti-catholicism, oppression of animists
 	
+		active_law:lawgroup_governance_principles ?= { # Presidential Republic
+			add_amendment = {
+				type = amendment_american_second_amendment
+				sponsor = PREV.ig:ig_rural_folk
+			}
+		}
+
 		add_modifier = usa_capital_intact
 		set_institution_investment_level = {
 			institution = institution_colonial_affairs
@@ -196,5 +203,29 @@
 			value = 0
 		}
 		trigger_event = usfp_usa.23
+
+		set_variable = free_elections_var
+		active_law:lawgroup_distribution_of_power ?= { # Census Voting - whilst individual parties carried out electoral fraud, the American central government did not typically have any role in rigging elections
+			add_amendment = {
+				type = amendment_tradition_of_free_elections
+				sponsor = PREV.ig:ig_rural_folk
+			}
+		}
+		active_law:lawgroup_bureaucracy ?= {
+			add_amendment = {
+				type = amendment_usfp_spoils_system
+				sponsor = PREV.ig:ig_rural_folk
+			}
+		}
+		set_variable = {
+			name = usfp_spoils_system_abolish_var
+			value = 0
+		}
+		active_law:lawgroup_free_speech ?= {
+			add_amendment = {
+				type = amendment_usfp_bill_of_rights
+				sponsor = PREV.ig:ig_intelligentsia
+			}
+		}
 	}
 }

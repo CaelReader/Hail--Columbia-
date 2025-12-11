@@ -18,7 +18,7 @@ usfp_seminole_modifier = {
 	building_training_rate_add = 1000
 	unit_morale_loss_mult = -0.5
 	unit_kill_rate_add = -0.20
-	unit_advancement_speed_mult = -0.80
+	unit_occupation_mult = -0.80
 }
 usfp_cherokee_syllabary = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
@@ -63,7 +63,7 @@ usfp_indian_removal_modifier = {
 	country_allow_conversion_violent_hostility_bool = yes
 }
 
-usfp_second_party_system_modifier = {
+REPLACE_OR_CREATE:usfp_second_party_system_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
 	country_law_enactment_time_mult = 0.30
 }

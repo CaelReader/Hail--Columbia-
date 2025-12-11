@@ -424,8 +424,10 @@ usfp_filibuster.5 = {
 	trigger = {
 		game_date > 1850.1.1
 		game_date < 1865.1.1 
-		NOT = {
-			has_state_in_state_region = STATE_CUBA
+		NOR = {
+			has_state_in_state_region = STATE_WESTERN_CUBA
+			has_state_in_state_region = STATE_CENTRAL_CUBA
+			has_state_in_state_region = STATE_EASTERN_CUBA
 		}
 		NOT = {
 			has_law_or_variant = law_type:law_slavery_banned
@@ -440,7 +442,7 @@ usfp_filibuster.5 = {
 	}
 
 	immediate = {
-		s:STATE_CUBA = {
+		s:STATE_WESTERN_CUBA = {
 			random_scope_state = {
 				save_scope_as = cuba_state_scope
 			}
@@ -651,7 +653,7 @@ usfp_filibuster.7 = {
 						hq_region = root.capital.region
 						combat_unit = {
 							type = unit_type:combat_unit_type_irregular_infantry
-							state_region = s:STATE_CUBA
+							state_region = s:STATE_WESTERN_CUBA
 							count = 1 #LMAO
 						}
 					}

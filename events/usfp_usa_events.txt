@@ -577,7 +577,7 @@ usfp_usa.8 = {
 				NOT = {
 					party = scope:republican_party_scope
 				}
-				is_marginal = no
+				ig_counts_as_marginal = no
 			}
 			leader = {
 				save_scope_as = nast_target_scope
@@ -653,7 +653,7 @@ usfp_usa.8 = {
 		trigger = {
 			any_interest_group = {
 				is_in_government = no
-				is_marginal = no
+				ig_counts_as_marginal = no
 				has_party = yes
 				party ?= scope:republican_party_scope
 			}
@@ -1301,7 +1301,7 @@ usfp_usa.16 = {
 			}
 			random_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 				has_party = yes
 			}
 			party = {
@@ -1360,7 +1360,7 @@ usfp_usa.16 = {
 		}
 		random_interest_group = {
 			limit = {
-				is_marginal = yes
+				ig_counts_as_marginal = yes
 				NOT = {
 					has_modifier = usfp_election_underdog
 				}
@@ -1477,7 +1477,7 @@ usfp_usa.17 = {
 			}
 			random_interest_group = {
 				limit = {
-					is_marginal = no
+					ig_counts_as_marginal = no
 					has_party = yes
 				}
 				party = {

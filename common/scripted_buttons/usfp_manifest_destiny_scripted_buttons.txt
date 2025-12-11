@@ -116,7 +116,7 @@ usfp_western_purchase_button = {
 		if = {
 			limit = { 
 				gold_reserves > 0
-				weekly_net_fixed_income > 50000
+				net_fixed_income > 50000
 			}
 			add = 10
 		}
@@ -372,8 +372,10 @@ usfp_cuban_purchase_button = {
 		has_variable = ostend_manifesto
 		NOR = {
 			has_variable = offered_for_cuba
-			owns_entire_state_region = STATE_CUBA
-			has_claim = s:STATE_CUBA
+			usfp_owns_cuba = yes
+			has_claim = s:STATE_WESTERN_CUBA
+			has_claim = s:STATE_CENTRAL_CUBA
+			has_claim = s:STATE_EASTERN_CUBA
 		}
 		has_variable = manifest_destiny_var
 	}
@@ -393,13 +395,10 @@ usfp_cuban_purchase_button = {
 		taking_loans = no
 		is_diplomatic_play_committed_participant = no
  		is_at_war = no
-		NOT = {
-			owns_entire_state_region = STATE_CUBA
-		}
-		NOT = {
-			any_subject_or_below = {
-				owns_entire_state_region = STATE_CUBA
-			}
+		NOR = {
+			country_or_subject_owns_entire_state_region = STATE_WESTERN_CUBA
+			country_or_subject_owns_entire_state_region = STATE_CENTRAL_CUBA
+			country_or_subject_owns_entire_state_region = STATE_EASTERN_CUBA
 		}
 		OR = {
 			NOT = {
@@ -413,7 +412,7 @@ usfp_cuban_purchase_button = {
 
 	effect = {
 		set_variable = offered_for_cuba
-		s:STATE_CUBA = {
+		s:STATE_WESTERN_CUBA = {
 			random_scope_state = {
 				limit = {
 					NOT = {
@@ -479,7 +478,7 @@ usfp_claim_canada_button = {
 		OR = {
 			c:GBR ?= {
 				any_subject_or_below = {
-					country_is_in_north_america = yes
+					is_in_geographic_region = geographic_region_north_america
 				}
 				relations:root <= relations_threshold:poor
 			}

@@ -518,14 +518,14 @@ usfp_manifest_destiny_main = {
 					any_scope_state = {
 						has_claim_by = root
 						is_split_state = no
-						state_is_in_north_america = yes
+						is_in_geographic_region = geographic_region_north_america
 					}
 				}
 				random_scope_state = {
 					limit = {
 						has_claim_by = root
 						is_split_state = no
-						state_is_in_north_america = yes
+						is_in_geographic_region = geographic_region_north_america
 					}
 					state_region = {
 						remove_claim = root
