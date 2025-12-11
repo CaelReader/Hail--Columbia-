@@ -2117,7 +2117,7 @@ usfp_fugitive_slave_act_effect = {
 		custom_tooltip = {
 			text = underground_railroad_more_to_canada
 		}
-		set_variable = fugitive_slave_var
+		# set_variable = fugitive_slave_var
 }
 
 usfp_afro_american_colonization_effect = {
@@ -2221,6 +2221,7 @@ usfp_afro_american_colonization_effect = {
 
 usfp_afro_american_pop_emigrate_effect = {
 	ordered_scope_pop = {
+		position = 0
 		limit = {
 			OR = {
 				is_pop_type = laborers

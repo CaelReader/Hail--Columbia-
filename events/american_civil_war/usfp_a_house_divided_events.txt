@@ -2117,6 +2117,7 @@ usfp_a_house_divided.22 = {
 			add_momentum = momentum_medium
 		}
 		ordered_scope_state = {
+			position = 0
 			limit = {
 				region = sr:region_new_england
 			}

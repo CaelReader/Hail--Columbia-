@@ -303,6 +303,7 @@ usfp_homestead_act_button = {
 				}
 				root = {
 					ordered_scope_pop = {
+						position = 0
 						limit = {
 							is_pop_type = peasants
 							culture = cu:usfp_american
@@ -328,6 +329,7 @@ usfp_homestead_act_button = {
 				}
 				root = {
 					ordered_scope_pop = {
+						position = 0
 						limit = {
 							is_pop_type = peasants
 							culture = cu:dixie
@@ -343,6 +345,7 @@ usfp_homestead_act_button = {
 			else = {
 				root = {
 					ordered_scope_pop = {
+						position = 0
 						limit = {
 							is_pop_type = peasants
 							culture = cu:yankee

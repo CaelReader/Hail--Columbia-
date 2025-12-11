@@ -1,4 +1,4 @@
-GLOBAL = {
+﻿GLOBAL = {
 	s:STATE_DISTRICT_OF_COLUMBIA = {
 		region_state:USA = {
 			every_scope_pop = {

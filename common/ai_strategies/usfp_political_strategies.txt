@@ -424,10 +424,12 @@ ai_strategy_manifest_destiny = {
 		if = {
 			limit = {
 				scope:country = {
-						country_is_in_americas = yes
+						is_in_geographic_region = geographic_region_americas
 					}
-				scope:enemy_country = { 
-					country_is_in_americas = no
+				scope:enemy_country = {
+					NOT = {
+						is_in_geographic_region = geographic_region_americas
+					} 
 				 }
 			}
 			add = {
@@ -437,7 +439,9 @@ ai_strategy_manifest_destiny = {
 		} else_if = {
 			limit = {
 				scope:country = {
-						country_is_in_americas = no
+						NOT = {
+							is_in_geographic_region = geographic_region_americas
+						}
 					}
 			}
 			add = {
@@ -533,7 +537,9 @@ ai_strategy_monroe_doctrine = {
 		if = {
 			limit = {
 				scope:target_country =	{
-					country_is_in_americas = no
+					NOT = {
+						is_in_geographic_region = geographic_region_americas
+					}
 				}	
 			}
 			multiply = 0.1
@@ -592,10 +598,12 @@ ai_strategy_monroe_doctrine = {
 		if = {
 			limit = {
 				scope:country = {
-						country_is_in_americas = yes
+						is_in_geographic_region = geographic_region_americas
 					}
 				scope:enemy_country = { 
-					country_is_in_americas = no
+					NOT = {
+						is_in_geographic_region = geographic_region_americas
+					}
 				 }
 			}
 			add = {
@@ -605,7 +613,9 @@ ai_strategy_monroe_doctrine = {
 		} else_if = {
 			limit = {
 				scope:country = {
-						country_is_in_americas = no
+						NOT = {
+							is_in_geographic_region = geographic_region_americas
+						}
 					}
 			}
 			add = {
@@ -1111,10 +1121,12 @@ secret_goal_scores = {
 		if = {
 			limit = {
 				scope:country = {
-						country_is_in_americas = yes
+						is_in_geographic_region = geographic_region_americas
 					}
 				scope:enemy_country = { 
-						country_is_in_americas = no
+						NOT = {
+							is_in_geographic_region = geographic_region_americas
+						}
 				 }
 			}
 			add = {
@@ -1124,9 +1136,9 @@ secret_goal_scores = {
 		} else_if = {
 			limit = {
 				scope:country = {
-						country_is_in_americas = no
-						NOT = {
+						NOR = {
 							capital.region = sr:region_oceania
+							is_in_geographic_region = geographic_region_americas
 						} 
 					}
 			}

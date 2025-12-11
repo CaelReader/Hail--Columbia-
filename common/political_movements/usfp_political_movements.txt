@@ -681,6 +681,7 @@ movement_usfp_neoconfederate = {
 				value = {
 					state = {
 						ordered_scope_pop = {
+							position = 0
 							limit = {
 								culture = {
 									has_discrimination_trait_group = heritage_group_african

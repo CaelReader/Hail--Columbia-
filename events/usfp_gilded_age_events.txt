@@ -1244,10 +1244,10 @@ usfp_gilded_age.15 = {
 				level > 0
 				private_ownership_fraction >= 0.75
 				NOR = {
-					is_building_group = bg_arms_industries
-					is_building_group = bg_munition_plants
-					is_building_group = bg_artillery_foundries
-					is_building_group = bg_military_shipyards
+					is_building_type = building_arms_industry
+					is_building_type = building_munition_plant
+					is_building_type = building_artillery_foundry
+					is_building_type = building_military_shipyard
 					is_building_group = bg_subsistence_agriculture
 					is_building_group = bg_subsistence_ranching
 				}
@@ -1270,10 +1270,10 @@ usfp_gilded_age.15 = {
 					level > 0
 					private_ownership_fraction >= 0.75
 					NOR = {
-						is_building_group = bg_arms_industries
-						is_building_group = bg_munition_plants
-						is_building_group = bg_artillery_foundries
-						is_building_group = bg_military_shipyards
+						is_building_type = building_arms_industry
+						is_building_type = building_munition_plant
+						is_building_type = building_artillery_foundry
+						is_building_type = building_military_shipyard
 						is_building_group = bg_subsistence_agriculture
 						is_building_group = bg_subsistence_ranching
 					}
@@ -1286,10 +1286,10 @@ usfp_gilded_age.15 = {
 					level > 0
 					private_ownership_fraction >= 0.75
 					NOR = {
-						is_building_group = bg_arms_industries
-						is_building_group = bg_munition_plants
-						is_building_group = bg_artillery_foundries
-						is_building_group = bg_military_shipyards
+						is_building_type = building_arms_industry
+						is_building_type = building_munition_plant
+						is_building_type = building_artillery_foundry
+						is_building_type = building_military_shipyard
 						is_building_group = bg_subsistence_agriculture
 						is_building_group = bg_subsistence_ranching
 					}

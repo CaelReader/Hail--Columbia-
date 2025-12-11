@@ -177,6 +177,7 @@ usfp_american_presidents_only = {
 			}
 			every_active_party = {
 				ordered_member = {
+					position = 0
 					order_by = ig_clout
 					leader = {
 						if = {

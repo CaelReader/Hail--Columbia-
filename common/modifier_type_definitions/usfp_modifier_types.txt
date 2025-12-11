@@ -82,7 +82,7 @@ building_soldiers_mortality_mult={
 	}
 }
 
-usfp_spoil_system_on_reform_modifier={
+country_usfp_spoil_system_on_reform_modifier={
 	script_only = yes
 	decimals=1
 	color=neutral
@@ -92,7 +92,7 @@ usfp_spoil_system_on_reform_modifier={
 	}
 }
 
-usfp_gag_rule_block_modifier={
+country_usfp_gag_rule_block_modifier={
 	script_only = yes
 	decimals=1
 	color=bad

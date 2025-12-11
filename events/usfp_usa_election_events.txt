@@ -48,6 +48,7 @@ usfp_usa_election.1 = {
 				}
 			}
 			ordered_member = {
+				position = 0
 				limit = {
 					leader = {
 						is_female = yes
@@ -86,6 +87,7 @@ usfp_usa_election.1 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					OR = {
 						is_political_movement_type = movement_religious_majority
@@ -111,6 +113,7 @@ usfp_usa_election.1 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					OR = {
 						is_political_movement_type = movement_feminist
@@ -237,6 +240,7 @@ usfp_usa_election.2 = {
 				}
 			}
 			ordered_member = {
+				position = 0
 				limit = {
 					leader = {
 						culture = {
@@ -289,6 +293,7 @@ usfp_usa_election.2 = {
 				}
 			 }
 			 ordered_political_movement = {
+				position = 0
 				limit = {
 					usfp_movement_is_racist = yes
 				}
@@ -308,6 +313,7 @@ usfp_usa_election.2 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					culture ?= scope:nonwhite_ig.leader.culture
 				}
@@ -340,6 +346,7 @@ usfp_usa_election.2 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					usfp_movement_is_racist = yes
 				}
@@ -359,6 +366,7 @@ usfp_usa_election.2 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					culture ?= scope:nonwhite_ig.leader.culture
 				}
@@ -393,6 +401,7 @@ usfp_usa_election.2 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					culture ?= scope:nonwhite_ig.leader.culture
 				}
@@ -461,6 +470,7 @@ usfp_usa_election.3 = {
 				}
 			}
 			ordered_member = {
+				position = 0
 				limit = {
 						leader = {
 						NOT = {
@@ -551,6 +561,7 @@ usfp_usa_election.3 = {
 				}
 			 }
 			 ordered_political_movement = {
+				position = 0
 				limit = {
 					is_political_movement_type = movement_religious_majority
 				}
@@ -569,6 +580,7 @@ usfp_usa_election.3 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					religion ?= scope:nonchristian_ig.leader.religion
 				}
@@ -604,6 +616,7 @@ usfp_usa_election.3 = {
 				}
 			 }
 			 ordered_political_movement = {
+				position = 0
 				limit = {
 					is_political_movement_type = movement_religious_majority
 				}
@@ -622,6 +635,7 @@ usfp_usa_election.3 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					religion ?= scope:nonchristian_religion
 				}
@@ -703,6 +717,7 @@ usfp_usa_election.3 = {
 				}
 			 }
 			 ordered_political_movement = {
+				position = 0
 				limit = {
 					is_political_movement_type = movement_religious_majority
 				}
@@ -722,6 +737,7 @@ usfp_usa_election.3 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					religion ?= scope:nonchristian_religion
 				}

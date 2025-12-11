@@ -1,4 +1,4 @@
-COUNTRIES = {
+﻿COUNTRIES = {
 	c:usfp_KAL ?= {
 		usfp_native_startup = yes
 		activate_law = law_type:law_slavery_banned
