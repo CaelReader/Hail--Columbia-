@@ -2241,7 +2241,7 @@ usfp_usa_postreconstruction.13 = {
 				state_is_eligible_as_mass_migration_target = yes
 				any_scope_building = {
 					OR = {
-						is_building_type = building_gold_fields
+						is_building_type = building_gold_field
 						is_building_type = building_gold_mine
 					}
 				}
@@ -2259,7 +2259,7 @@ usfp_usa_postreconstruction.13 = {
 				state_is_eligible_as_mass_migration_target = yes
 				any_scope_building = {
 					OR = {
-						is_building_type = building_gold_fields
+						is_building_type = building_gold_field
 						is_building_type = building_gold_mine
 					}
 				}

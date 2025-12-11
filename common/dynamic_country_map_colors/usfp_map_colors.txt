@@ -22,7 +22,7 @@ usa_anarchist = {
 	}
 }
 
-usa_technate = {
+REPLACE_OR_CREATE:usa_technate = {
 	color = "usa_technate_grey"
 
 	possible = {

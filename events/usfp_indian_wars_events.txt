@@ -222,7 +222,7 @@ usfp_indian_wars.3 = {
 		has_state_in_state_region = STATE_SOUTH_DAKOTA
 		OR = {
 			s:STATE_SOUTH_DAKOTA.region_state:USA = {
-				has_building = building_gold_fields
+				has_building = building_gold_field
 			}
 			game_date > 1874.6.1
 		}

@@ -784,7 +784,7 @@ ai_strategy_pacific_empire = {
 			limit = {
 				scope:target_country = {
 					OR = {
-						country_is_in_central_america = yes
+						is_in_geographic_region = geographic_region_central_america
 						capital.region = sr:region_oceania
 					}
 				}

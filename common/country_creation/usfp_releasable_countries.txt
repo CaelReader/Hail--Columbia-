@@ -1,4 +1,4 @@
-﻿SON = {
+﻿REPLACE_OR_CREATE:SON = {
 	states = {
 		STATE_SONORA
 		STATE_BAJA_CALIFORNIA
@@ -6,7 +6,7 @@
 	ai_will_do = { always = no }
 }
 
-TEX = {
+REPLACE_OR_CREATE:TEX = {
 	states = {
 		STATE_TEXAS
 	}

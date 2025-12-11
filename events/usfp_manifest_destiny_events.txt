@@ -1093,7 +1093,7 @@ usfp_manifest_destiny.10 = {
 		any_scope_state = {
 			state_region = s:STATE_CALIFORNIA
 			any_scope_building = {
-				is_building_type = building_gold_fields
+				is_building_type = building_gold_field
 			}
 		}
 		has_law_or_variant = law_type:law_no_migration_controls
@@ -2518,7 +2518,7 @@ usfp_manifest_destiny.22 = {
 		any_scope_state = {
 			state_region = s:STATE_COLORADO
 			any_scope_building = {
-				is_building_type = building_gold_fields
+				is_building_type = building_gold_field
 			}
 		}
 		s:STATE_COLORADO = {
@@ -3397,7 +3397,7 @@ usfp_manifest_destiny.31 = {
 		default_option = yes
 		scope:oregon_scope = {
 			add_acceptance = {
-				culture = cu:afro_american
+				target = cu:afro_american
 				value = -20
 			}
 			usfp_loyalize_whites_in_state = {

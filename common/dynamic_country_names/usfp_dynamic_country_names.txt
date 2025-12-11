@@ -503,7 +503,7 @@ ARP = {
 	}
 }
 
-LKT = { # Lakota
+REPLACE_OR_CREATE:LKT = { # Lakota
 	dynamic_country_name = {
 		name = dyn_c_oceti_sakowin
 		adjective = dyn_c_oceti_sakowin_adj
@@ -530,7 +530,7 @@ LKT = { # Lakota
 	}
 }
 
-ALK = {
+REPLACE_OR_CREATE:ALK = {
 	dynamic_country_name = {
 		name = dyn_c_russian_american_company
 		adjective = dyn_c_russian_american_company_adj
@@ -615,7 +615,7 @@ usfp_PSA = {
 	}
 }
 
-CAL = {
+REPLACE_OR_CREATE:CAL = {
 	dynamic_country_name = {
 		name = dyn_c_two_californias
 		adjective = dyn_c_two_californias_adj

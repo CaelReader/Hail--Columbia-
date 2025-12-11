@@ -87,7 +87,7 @@ amendment_usfp_pure_drugs = {
     allowed_laws = { # list of laws that the amendment can be added to
 		law_public_health_insurance
 		law_private_health_insurance
-		law_charity_hospitals
+		law_charitable_health_system
     }
 
     modifier = {

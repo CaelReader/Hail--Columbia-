@@ -38,7 +38,7 @@ usfp_pm_fur_trapping = {
 
 usfp_pm_bison_hunting = {
 	texture = "gfx/interface/icons/production_method_icons/pm_bison_hunting.dds"
-	required_input_goods = small_arms
+
 	unlocking_technologies = {
 		repeaters
 	}

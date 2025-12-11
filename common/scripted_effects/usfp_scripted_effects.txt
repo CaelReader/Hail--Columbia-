@@ -36,8 +36,8 @@ usfp_remove_starting_buildings_effect = {
 		remove_building = building_wheat_farm
 	}
 	if = {
-		limit = { has_building = building_barracks }
-		remove_building = building_barracks
+		limit = { has_building = building_barrack }
+		remove_building = building_barrack
 	}
 	if = {
 		limit = { has_building = building_sulfur_mine }
@@ -52,8 +52,8 @@ usfp_remove_starting_buildings_effect = {
 		remove_building = building_tobacco_plantation
 	}
 	if = {
-		limit = { has_building = building_vineyard_plantation  }
-		remove_building = building_vineyard_plantation
+		limit = { has_building = building_vineyard  }
+		remove_building = building_vineyard
 	}
 	if = {
 		limit = { has_building = building_logging_camp  }
@@ -68,8 +68,8 @@ usfp_remove_starting_buildings_effect = {
 		remove_building = building_maize_farm
 	}
 	if = {
-		limit = { has_building = building_chemical_plants }
-		remove_building = building_chemical_plants
+		limit = { has_building = building_chemical_plant }
+		remove_building = building_chemical_plant
 	}
 	if = {
 		limit = { has_building = building_trade_center }

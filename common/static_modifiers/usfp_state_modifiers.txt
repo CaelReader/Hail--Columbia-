@@ -65,7 +65,7 @@ usfp_homestead_act_modifier = {
 	building_group_bg_ranching_allowed_collectivization_add = 0.20
 }
 
-usfp_deep_south_modifier = {
+REPLACE_OR_CREATE:usfp_deep_south_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_positive.dds
 	interest_group_ig_landowners_pol_str_mult = 0.20
 	building_group_bg_agriculture_allowed_collectivization_add = -0.35
@@ -75,7 +75,7 @@ usfp_deep_south_modifier = {
 	state_pop_support_movement_anti_slavery_mult = -0.80
 }
 
-usfp_upper_south_modifier = {
+REPLACE_OR_CREATE:usfp_upper_south_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_positive.dds
 	interest_group_ig_landowners_pol_str_mult = 0.10
 	building_group_bg_agriculture_allowed_collectivization_add = -0.15

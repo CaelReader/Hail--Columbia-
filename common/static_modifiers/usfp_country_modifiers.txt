@@ -140,7 +140,7 @@ usfp_a_house_divided_modifier = {
 	country_academics_pol_str_mult = 0.15
 }
 
-modifier_texas_war_of_independence = {
+REPLACE:modifier_texas_war_of_independence = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	state_conscription_rate_add = 0.3
 	unit_offense_mult = 0.5

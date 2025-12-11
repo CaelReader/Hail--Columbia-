@@ -719,9 +719,11 @@ usfp_danish_purchase_west_indies_valid = {
 }
 
 usfp_monroe_doctrine_valid_interloper = {
-	country_is_in_north_america = no
-	country_is_in_central_america = no
-	country_is_in_south_america = no
+	NOR = {
+		is_in_geographic_region = geographic_region_north_america
+		is_in_geographic_region = geographic_region_central_america
+		is_in_geographic_region = geographic_region_south_america
+	}
 	NOT = {
 		this = ROOT
 	}
@@ -734,8 +736,8 @@ usfp_monroe_doctrine_valid_interloper = {
 usfp_monroe_doctrine_valid_defender = {
 	OR = {
 		is_in_geographic_region = geographic_region_north_america
-		country_is_in_central_america = yes
-		country_is_in_south_america = yes
+		is_in_geographic_region = geographic_region_central_america
+		is_in_geographic_region = geographic_region_south_america
 	}
 	has_diplomatic_relevance = ROOT
 	NOT = {

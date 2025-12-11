@@ -751,6 +751,7 @@ Updated some labor union events to account for the new laws
 	The Gag Rule is now a Law Amendment
 	Replaced the following modifiers with Law Amendments: Pure Drugs, Separate But Equal, Fugitive Slave Act
 	Updated several vanilla overrides to use the new INJECT syntax for compatibility
+	Disabled Durham Tobacco prestige good (3 prestige good limit)
 ## 1836 Starting Situation Update
 	USA now begins with Agrarianism and a special variant of Consumption-Based Taxation (cutting the national revenue about in half!)
 	American PB now supports the American School (interventionism and protectionism)
