@@ -1,7 +1,15 @@
 ﻿usfp_second_great_awakening = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_protestant_positive.dds
-	interest_group_ig_devout_pol_str_mult = 0.25
+	interest_group_ig_devout_pol_str_mult = 0.15
 	interest_group_ig_devout_pop_attraction_mult = 0.25
+}
+usfp_third_great_awakening = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_protestant_positive.dds
+	interest_group_ig_devout_pop_attraction_mult = 0.10
+	state_pop_support_movement_anti_slavery_mult = 0.10
+	state_pop_support_movement_corporatist_mult = 0.10
+	state_pop_support_movement_religious_majority_mult = 0.10
+	state_conversion_mult = 0.10
 }
 usfp_seminole_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds
@@ -10,7 +18,7 @@ usfp_seminole_modifier = {
 	building_training_rate_add = 1000
 	unit_morale_loss_mult = -0.5
 	unit_kill_rate_add = -0.20
-	unit_advancement_speed_mult = -0.80
+	unit_occupation_mult = -0.80
 }
 usfp_cherokee_syllabary = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
@@ -55,11 +63,9 @@ usfp_indian_removal_modifier = {
 	country_allow_conversion_violent_hostility_bool = yes
 }
 
-usfp_second_party_system_modifier = {
+REPLACE_OR_CREATE:usfp_second_party_system_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
-	country_institution_size_change_speed_mult = -0.25
-	country_law_enactment_time_mult = 0.15
-	country_suppression_attraction_factor = 0.10
+	country_law_enactment_time_mult = 0.30
 }
 
 usfp_third_party_system_modifier = {
@@ -134,7 +140,7 @@ usfp_a_house_divided_modifier = {
 	country_academics_pol_str_mult = 0.15
 }
 
-modifier_texas_war_of_independence = {
+REPLACE:modifier_texas_war_of_independence = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	state_conscription_rate_add = 0.3
 	unit_offense_mult = 0.5
@@ -147,7 +153,7 @@ modifier_texas_war_of_independence = {
 
 usfp_chickasaw_removal_payment = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_income_negative.dds
-	country_expenses_add = 3000
+	country_expenses_add = 2000
 }
 
 usa_paying_for_mexico = {
@@ -376,6 +382,9 @@ usfp_filibusters_modifier = {
 	unit_kill_rate_add = 0.10
 	unit_devastation_mult = 0.10
 	country_military_goods_cost_mult = -0.20
+	building_training_rate_mult = 0.50
+	military_formation_mobilization_speed_mult = 0.25
+	military_formation_movement_speed_mult = 0.1
 }
 
 usfp_imperial_ambitions = {
@@ -738,4 +747,54 @@ usfp_csa_civil_war_no_colonies_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	state_colony_growth_speed_mult = -10.0
 	state_incorporation_speed_mult = -10.0
+}
+
+usfp_panic_1837_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_bank_negative.dds
+	country_loyalists_from_legitimacy_mult = -0.50
+	state_capitalists_investment_pool_efficiency_mult = -0.2
+	state_capitalists_investment_pool_contribution_add = -0.10
+	state_shopkeepers_investment_pool_efficiency_mult = -0.2
+	state_shopkeepers_investment_pool_contribution_add = -0.10
+	state_aristocrats_investment_pool_efficiency_mult = -0.4
+	state_aristocrats_investment_pool_contribution_add = -0.10
+	country_loan_interest_rate_mult = 0.50
+	# country_minting_mult = -0.20
+}
+
+usfp_post_panic_recovery_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_currency_positive.dds
+	political_movement_pop_attraction_mult = -0.10
+	state_capitalists_investment_pool_efficiency_mult = 0.10
+	state_aristocrats_investment_pool_efficiency_mult = 0.10
+	state_shopkeepers_investment_pool_efficiency_mult = 0.10
+}
+
+usfp_agenda_completed_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_election_positive.dds
+	state_loyalists_from_political_movements_mult = 0.01
+	country_loyalists_from_legitimacy_mult = 0.01
+	country_legitimacy_headofstate_add = 1
+}
+
+usfp_agenda_completed_jackson_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_election_positive.dds
+	country_legitimacy_headofstate_add = 1
+	building_group_bg_agriculture_construction_efficiency_add = 0.02
+	building_group_bg_plantations_construction_efficiency_add = 0.02
+	building_group_bg_ranching_construction_efficiency_add = 0.02
+	state_farmers_investment_pool_efficiency_mult = 0.02
+}
+
+usfp_america_enters_world_stage_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_manowar_positive.dds
+	country_influence_mult = 0.10
+	country_prestige_from_navy_power_projection_mult = 0.10
+	interest_group_ig_armed_forces_approval_add = 2
+	unit_navy_experience_gain_mult = 0.10
+}
+
+usfp_spoils_system_decaying_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_bureaucracy_negative.dds
+	country_bureaucracy_mult = -0.25
 }

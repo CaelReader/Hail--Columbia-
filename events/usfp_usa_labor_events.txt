@@ -30,7 +30,7 @@ usfp_usa_labor.1 = {
 		has_technology_researched = labor_movement
 		has_technology_researched = socialism
 		ig:ig_trade_unions = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 		}
 		any_scope_state = {
 			state_region = s:STATE_ILLINOIS
@@ -130,7 +130,7 @@ usfp_usa_labor.2 = {
 			has_global_variable = had_haymarket_affair
 		}
 		ig:ig_trade_unions = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 		}
 		any_scope_state = {
 			state_region = s:STATE_ILLINOIS

@@ -1,0 +1,827 @@
+﻿namespace = usfp_usa_canada
+###### Hail, Columbia! by CaelReader ######
+
+## Caroline Affair
+# CAN: American sympathizers to the Radical movement
+usfp_usa_canada.1 = {
+	type = country_event
+	placement = scope:ontario_scope
+	event_image = {
+		video = "votp_gunboat_diplomacy"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	
+	title = usfp_usa_canada.1.t
+	desc = usfp_usa_canada.1.d
+	flavor = usfp_usa_canada.1.f
+	dlc = dlc_usfp
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	trigger = {
+		has_state_in_state_region = STATE_ONTARIO
+		overlord = c:GBR
+		any_neighbouring_state = {
+			owner = c:USA
+		}
+		any_political_movement = {
+			OR = {
+				is_political_movement_type = movement_radical
+				is_political_movement_type = movement_liberal
+			}
+			political_movement_radicalism > 0.50
+		}
+		is_at_war = no
+		c:USA = {
+			is_at_war = no
+		}
+		game_date > 1837.10.1
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_ONTARIO
+			}
+			save_scope_as = ontario_scope
+		}
+		random_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_radical
+					is_political_movement_type = movement_liberal
+				}
+				political_movement_radicalism > 0.50
+			}
+			save_scope_as = radical_movement
+		}
+		save_scope_as = canadian_country_scope
+		c:GBR = {
+			save_scope_as = britain_scope
+		}
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+		s:STATE_NEW_YORK.region_state:USA = {
+			save_scope_as = new_york_scope
+		}
+	}
+
+	#intercept!
+	option = {
+		name = usfp_usa_canada.1.a
+		default_option = yes
+		add_liberty_desire = -10
+		custom_tooltip = {
+			text = caroline_will_be_intercepted
+		}
+		c:USA = {
+			trigger_event = {
+				id = usfp_usa_canada.2
+				days = 14
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#ignore
+	option = {
+		name = usfp_usa_canada.1.b
+		add_liberty_desire = 10
+		scope:ontario_scope = {
+			add_radicals_in_state = {
+				value = medium_radicals
+			}
+		}
+		scope:radical_movement = {
+			add_modifier = {
+				name = usfp_cross_border_smugglers_modifier
+				years = 5
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+# USA: Caroline burned
+usfp_usa_canada.2 = {
+	type = country_event
+	placement = scope:ontario_scope
+	event_image = {
+		video = "votp_gunboat_diplomacy"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	
+	title = usfp_usa_canada.2.t
+	desc = usfp_usa_canada.2.d
+	flavor = usfp_usa_canada.2.f
+	dlc = dlc_usfp
+	duration = 3
+
+	#negotiate
+	option = {
+		name = usfp_usa_canada.2.a
+		default_option = yes
+		c:GBR = {
+			trigger_event = {
+				id = usfp_usa_canada.3
+				days = 14
+			}
+		}
+		change_relations = {
+			country = scope:canadian_country_scope
+			value = -10
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_new_england
+				any_neighbouring_state = {
+					owner = {
+						overlord = c:GBR
+					}
+				}
+			}
+			add_radicals_in_state = {
+				value = small_radicals
+				culture = cu:yankee
+			}
+		}
+		add_lobby_appeasement_from_diplomacy_unidirectional = {
+			FIRST = root
+			SECOND = c:GBR
+			PRO_AMOUNT = 2
+			ANTI_AMOUNT = -2
+			FACTOR = appeasement_special_events_positive
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#escalate
+	option = {
+		name = usfp_usa_canada.2.b
+		c:GBR = {
+			create_incident = {
+				country = c:USA
+				value = 5
+			}
+			post_notification = usfp_canada_caroline_burning_escalation_usa
+		}
+		change_relations = {
+			country = c:GBR
+			value = -30
+		}
+		change_relations = {
+			country = scope:canadian_country_scope
+			value = -30
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_new_england
+				any_neighbouring_state = {
+					owner = {
+						overlord = c:GBR
+					}
+				}
+			}
+			add_loyalists_in_state = {
+				value = small_radicals
+				culture = cu:yankee
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_political_lobby = {
+						is_political_lobby_type = lobby_anti_country
+						target = c:GBR
+					}
+				} 
+			}
+			create_political_lobby = {
+				type = lobby_anti_country
+				target = c:GBR
+				add_interest_group = ig:ig_rural_folk
+			}
+		}
+		add_lobby_appeasement_from_diplomacy_unidirectional = {
+			FIRST = root
+			SECOND = c:GBR
+			PRO_AMOUNT = -2
+			ANTI_AMOUNT = 2
+			FACTOR = appeasement_special_events_negative
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+# GBR: Caroline burned appeal
+usfp_usa_canada.3 = {
+	type = country_event
+	placement = scope:ontario_scope
+	event_image = {
+		video = "votp_gunboat_diplomacy"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	
+	title = usfp_usa_canada.3.t
+	desc = usfp_usa_canada.3.d
+	flavor = usfp_usa_canada.2.f
+	dlc = dlc_usfp
+	duration = 3
+
+	#lets simmer down
+	option = {
+		name = usfp_usa_canada.3.a
+		default_option = yes
+		create_bidirectional_truce = {
+			country = c:USA
+			months = 24
+		}
+		c:USA = {
+			create_bidirectional_truce = {
+				country = scope:canadian_country_scope
+				months = 24
+			}
+		}
+		change_relations = {
+			country = c:USA
+			value = 10
+		}
+		c:USA = {
+			post_notification = usfp_canada_caroline_burning_negotiated
+		}
+		add_lobby_appeasement_from_diplomacy_unidirectional = {
+			FIRST = root
+			SECOND = c:GBR
+			PRO_AMOUNT = 2
+			ANTI_AMOUNT = -2
+			FACTOR = appeasement_special_events_positive
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#escalate
+	option = {
+		name = usfp_usa_canada.3.b
+		c:GBR = {
+			create_incident = {
+				country = c:USA
+				value = 5
+			}
+		}
+		c:USA = {
+			post_notification = usfp_canada_caroline_burning_escalation_gbr
+		}
+		change_relations = {
+			country = c:USA
+			value = -30
+		}
+		add_lobby_appeasement_from_diplomacy_unidirectional = {
+			FIRST = root
+			SECOND = c:GBR
+			PRO_AMOUNT = -2
+			ANTI_AMOUNT = 2
+			FACTOR = appeasement_special_events_negative
+		}
+		c:USA = {
+			if = {
+				limit = {
+					NOT = {
+						any_political_lobby = {
+							is_political_lobby_type = lobby_anti_country
+							target = c:GBR
+						}
+					} 
+				}
+				create_political_lobby = {
+					type = lobby_anti_country
+					target = c:GBR
+					add_interest_group = ig:ig_rural_folk
+				}
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+## Fenian Raids
+# CAN: Fenian Incursion
+usfp_usa_canada.4 = {
+	type = country_event
+	placement = scope:ontario_scope
+	event_image = {
+		video = "ep1_redcoats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_usa_canada.4.t
+	desc = usfp_usa_canada.4.d
+	flavor = usfp_usa_canada.4.f
+	dlc = dlc_usfp
+	duration = 3
+	
+	trigger = {
+		exists = c:USA
+		exists = c:GBR
+		NOT = {
+			exists = c:IRE
+		}
+		has_state_in_state_region = STATE_ONTARIO
+		overlord = c:GBR
+		c:USA = {
+			has_state_in_state_region = STATE_NEW_YORK
+			OR = {
+				has_technology_researched = enlistment_offices
+				has_technology_researched = pan-nationalism
+			}
+		}
+		s:STATE_NEW_YORK.region_state:USA = {
+			culture_percent_state = {
+				target = cu:irish
+				value > 0
+			}
+		}
+		c:GBR = {
+			any_political_movement = {
+				culture ?= cu:irish
+			}
+		}
+		NOT = {
+			has_global_variable = fenian_raids
+		}
+	}
+
+	immediate = {
+		set_global_variable = fenian_raids
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_ONTARIO
+			}
+			save_scope_as = ontario_scope
+		}
+		c:GBR = {
+			random_political_movement = {
+				limit = {
+					culture ?= cu:irish
+				}
+				save_scope_as = irish_movement
+			}
+		}
+		save_scope_as = canadian_country_scope
+		c:GBR = {
+			save_scope_as = britain_scope
+		}
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+		s:STATE_NEW_YORK.region_state:USA = {
+			save_scope_as = fenian_state
+		}
+	}
+
+	#rally a defense
+	option = {
+		name = usfp_usa_canada.4.a
+		default_option = yes
+		custom_tooltip = fenians_defeated
+		every_country = {
+			limit = {
+				country_has_primary_culture = cu:anglo_canadian
+				NOT = {
+					this = root
+				}
+			}
+			change_relations = {
+				country = root
+				value = 20
+			}
+		}
+		scope:ontario_scope = {
+			add_modifier = {
+				name = usfp_canadian_volunteers_modifier
+				years = 10
+			}
+			add_loyalists_in_state = {
+				value = large_radicals
+				culture = cu:irish
+				religion = rel:protestant
+			}
+			add_radicals_in_state = {
+				value = large_radicals
+				culture = cu:irish
+				religion = rel:catholic
+			}
+		}
+		c:USA = {
+			trigger_event = {
+				id = usfp_usa_canada.5
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+}
+# USA: Battle of Ridgeway
+usfp_usa_canada.5 = {
+	type = country_event
+	placement = scope:ontario_scope
+	event_image = {
+		video = "ep1_redcoats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_usa_canada.5.t
+	desc = usfp_usa_canada.5.d
+	flavor = usfp_usa_canada.5.f
+	dlc = dlc_usfp
+	duration = 3
+
+	#crack down
+	option = {
+		name = usfp_usa_canada.5.a
+		default_option = yes
+		change_relations = {
+			country = scope:canadian_country_scope
+			value = 10
+		}
+		scope:fenian_state = {
+			add_radicals_in_state = {
+				value = small_radicals
+				culture = cu:irish
+				religion = rel:catholic
+			}
+		}
+		add_lobby_appeasement_from_diplomacy_unidirectional = {
+			FIRST = root
+			SECOND = c:GBR
+			PRO_AMOUNT = 2
+			ANTI_AMOUNT = -2
+			FACTOR = appeasement_special_events_positive
+		}
+		add_lobby_appeasement_from_diplomacy_unidirectional = {
+			FIRST = root
+			SECOND = scope:canadian_country_scope
+			PRO_AMOUNT = 2
+			ANTI_AMOUNT = -2
+			FACTOR = appeasement_special_events_positive
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#support
+	option = {
+		name = usfp_usa_canada.5.b
+		scope:ontario_scope = {
+			add_modifier = {
+				name = usfp_fenian_raids_modifier
+				years = 10
+			}
+		}
+		change_relations = {
+			country = scope:canadian_country_scope
+			value = -20
+		}
+		change_relations = {
+			country = scope:canadian_country_scope.overlord
+			value = -20
+		}
+		scope:canadian_country_scope = {
+			add_radicals = {
+				value = very_large_radicals
+				culture = cu:irish
+				religion = rel:catholic
+			}
+		}
+		add_loyalists = {
+			value = very_large_radicals
+			culture = cu:irish
+			religion = rel:catholic
+		}
+		scope:canadian_country_scope = {
+			post_notification = usfp_usa_supporting_fenians
+		}
+		scope:canadian_country_scope.overlord = {
+			post_notification = usfp_usa_supporting_fenians
+		}
+		add_lobby_appeasement_from_diplomacy_unidirectional = {
+			FIRST = root
+			SECOND = c:GBR
+			PRO_AMOUNT = -3
+			ANTI_AMOUNT = 3
+			FACTOR = appeasement_special_events_negative
+		}
+		add_lobby_appeasement_from_diplomacy_unidirectional = {
+			FIRST = root
+			SECOND = scope:canadian_country_scope
+			PRO_AMOUNT = -3
+			ANTI_AMOUNT = 3
+			FACTOR = appeasement_special_events_negative
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+## Arostook War
+# USA: Border Dispute in Maine
+usfp_usa_canada.6 = {
+	type = country_event
+	placement = scope:aroostook_state_scope
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_usa_canada.6.t
+	desc = usfp_usa_canada.6.d
+	flavor = usfp_usa_canada.6.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		exists = c:GBR
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+		NOT = {
+			has_truce_with = c:GBR
+		}
+		has_state_in_state_region = STATE_MAINE
+		c:GBR = {
+			OR = {
+				has_state_in_state_region = STATE_MAINE
+				any_subject_or_below = {
+					has_state_in_state_region = STATE_MAINE
+				}
+			}
+		}
+		has_technology_researched = nationalism
+	}
+
+	immediate = {
+		usfp_find_maine_sr_scope = yes
+		scope:maine_sr_scope = {
+			region_state:USA = {
+				save_scope_as = maine_usa_state
+			}
+			random_scope_state = {
+				limit = {
+					OR = {
+						owner = c:GBR
+						owner = {
+							top_overlord = c:GBR
+						}
+					}
+				}
+				save_scope_as = aroostook_state_scope
+				owner = {
+					save_scope_as = canadian_country_scope
+				}
+			}
+		}
+		c:GBR = {
+			save_scope_as = britain_scope
+		}
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+	}
+
+	#negotiate
+	option = {
+		name = usfp_usa_canada.6.a
+		default_option = yes
+		c:GBR = {
+			trigger_event = {
+				id = usfp_usa_canada.7
+				days = 20
+			}
+		}
+		custom_tooltip = britain_accepts_aroostook_treaty
+		custom_tooltip = britain_rejects_aroostook_treaty
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#claim
+	option = {
+		name = usfp_usa_canada.6.b
+		change_relations = {
+			country = c:GBR
+			value = -25
+		}
+		change_relations = {
+			country = scope:canadian_country_scope
+			value = -25
+		}
+		scope:maine_sr_scope = {
+			add_claim = root
+		}
+		scope:maine_usa_state = {
+			add_loyalists_in_state = {
+				value = very_large_radicals
+				culture = cu:yankee
+			}
+		}
+		c:GBR = {
+			post_notification = usfp_usa_claims_aroostook
+		}
+		scope:canadian_country_scope = {
+			post_notification = usfp_usa_claims_aroostook
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					has_diplomatic_pact = {
+						who = c:GBR
+						type = rivalry
+					}
+				}
+				add = 200
+			}
+		}
+	}
+}
+# GBR: USA border negotiation offer
+usfp_usa_canada.7 = {
+	type = country_event
+	placement = scope:aroostook_state_scope
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_usa_canada.7.t
+	desc = usfp_usa_canada.7.d
+	flavor = usfp_usa_canada.7.f
+	dlc = dlc_usfp
+	duration = 3
+
+	#accept
+	option = {
+		name = usfp_usa_canada.7.a
+		default_option = yes
+		c:USA = {
+			trigger_event = {
+				id = usfp_usa_canada.8
+				years = 1
+			}
+		}
+		change_relations = {
+			country = c:USA
+			value = 15
+		}
+		custom_tooltip = one_year_negotiations
+		show_as_tooltip = {
+			scope:aroostook_state_scope = {
+				set_state_owner = root
+			}
+			create_bidirectional_truce = {
+				country = c:GBR
+				months = 60
+			}
+		}
+		c:USA = {
+			post_notification = usfp_gbr_accepts_aroostook_treaty
+		}
+		scope:canadian_country_scope = {
+			post_notification = usfp_gbr_accepts_aroostook_treaty
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#reject
+	option = {
+		name = usfp_usa_canada.7.b
+		change_relations = {
+			country = c:USA
+			value = -25
+		}
+		scope:maine_sr_scope = {
+			add_claim = c:USA
+		}
+		scope:aroostook_state_scope = {
+			add_loyalists_in_state = {
+				value = very_large_radicals
+				culture = cu:franco_canadian
+			}
+		}
+		c:USA = {
+			post_notification = usfp_gbr_rejects_aroostook_treaty
+		}
+		scope:canadian_country_scope = {
+			post_notification = usfp_gbr_rejects_aroostook_treaty
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					has_diplomatic_pact = {
+						who = c:USA
+						type = rivalry
+					}
+				}
+				add = 200
+			}
+		}
+	}
+}
+# Webster-Ashburton Treaty
+usfp_usa_canada.8 = {
+	type = country_event
+	placement = scope:aroostook_state_scope
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	
+	title = usfp_usa_canada.8.t
+	desc = usfp_usa_canada.8.d
+	flavor = usfp_usa_canada.8.f
+	dlc = dlc_usfp
+	duration = 3
+
+	#cool
+	option = {
+		name = usfp_usa_canada.8.a
+		default_option = yes
+		scope:britain_scope = {
+			post_notification = usfp_aroostook_to_usa
+		}
+		scope:aroostook_state_scope = {
+			owner = {
+				post_notification = usfp_aroostook_to_usa
+			}
+			set_state_owner = root
+		}
+		create_bidirectional_truce = {
+			country = c:GBR
+			months = 60
+		}
+		scope:maine_usa_state = {
+			add_loyalists_in_state = {
+				value = medium_radicals
+				culture = cu:yankee
+			}
+			add_loyalists_in_state = {
+				value = small_radicals
+				culture = cu:franco_canadian
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	cancellation_trigger = {
+		OR = {
+			NOT = {
+				exists = scope:aroostook_state_scope
+			}
+			has_war_with = c:GBR
+			has_war_with = scope:canadian_country_scope
+		}
+	}
+}

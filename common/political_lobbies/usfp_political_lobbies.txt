@@ -27,7 +27,7 @@
 # 			OR = {
 # 				NOT = { exists = scope:political_lobby }
 # 				scope:political_lobby ?= { 
-# 					any_lobby_member = { is_marginal = no } 
+# 					any_lobby_member = { ig_counts_as_marginal = no } 
 # 				} 				
 # 			}
 # 		}

@@ -1,11 +1,11 @@
 {
   "name" : "Hail, Columbia! - United States Flavor Pack",
   "id" : "",
-  "version" : "6.3-Douglass",
-  "supported_game_version" : "1.11.*",
+  "version" : "7.0-Jackson",
+  "supported_game_version" : "1.12.*",
   "short_description" : "",
   "tags" : [
-    "1.11"
+    "1.12"
   ],
   "relationships" : [
     {

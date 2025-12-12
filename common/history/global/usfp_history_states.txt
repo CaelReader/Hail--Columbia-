@@ -256,4 +256,8 @@
 	s:STATE_LOUISIANA = { add_state_trait = state_trait_usfp_hookworm }
 	s:STATE_FLORIDA = { add_state_trait = state_trait_usfp_hookworm }
 
+	s:STATE_GREENLAND = {
+		add_state_trait = state_trait_usfp_greenland_ice_sheet
+	}
+
 }

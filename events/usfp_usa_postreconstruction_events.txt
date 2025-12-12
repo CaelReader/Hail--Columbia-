@@ -61,6 +61,7 @@ usfp_usa_postreconstruction.1 = {
 				}
 			}
 			ordered_scope_state = {
+				position = 0
 				limit = {
 					state_region = {
 						is_homeland = cu:dixie
@@ -177,9 +178,10 @@ usfp_usa_postreconstruction.2 = {
 	option = {
 		name = usfp_usa_postreconstruction.2.a
 		default_option = yes
-		je:usfp_reconstruction_long = {
-			add_modifier = {
-				name = usfp_separate_but_equal_modifier
+		active_law:lawgroup_citizenship ?= {
+			add_amendment = {
+				type = amendment_usfp_seperate_but_equal
+				sponsor = PREV.ig:ig_landowners
 			}
 		}
 		usfp_long_reconstruction_lose_progress = {
@@ -217,9 +219,10 @@ usfp_usa_postreconstruction.2 = {
 	#we need to work to overturn this
 	option = {
 		name = usfp_usa_postreconstruction.2.b
-		je:usfp_reconstruction_long = {
-			add_modifier = {
-				name = usfp_separate_but_equal_modifier
+		active_law:lawgroup_citizenship ?= {
+			add_amendment = {
+				type = amendment_usfp_seperate_but_equal
+				sponsor = PREV.ig:ig_landowners
 			}
 		}
 		usfp_long_reconstruction_lose_progress = {
@@ -349,6 +352,7 @@ usfp_usa_postreconstruction.3 = {
 			}
 		} else = {
 			ordered_scope_state = {
+				position = 0
 				limit = {
 					region = sr:region_dixie
 					OR = {
@@ -437,6 +441,7 @@ usfp_usa_postreconstruction.3 = {
 				}
 			 }
 			 ordered_political_movement = {
+				position = 0
 				limit = {
 					usfp_movement_is_racist = yes
 				}
@@ -500,6 +505,7 @@ usfp_usa_postreconstruction.3 = {
 				}
 			 }
 			 ordered_political_movement = {
+				position = 0
 				limit = {
 					usfp_movement_is_racist = yes
 				}
@@ -687,6 +693,7 @@ usfp_usa_postreconstruction.5 = {
 			save_scope_as = great_migration_state_2
 		}
 		ordered_scope_state = {
+			position = 0
 			limit = {
 				state_is_eligible_as_mass_migration_target = yes
 				NOR = {
@@ -715,6 +722,7 @@ usfp_usa_postreconstruction.5 = {
 		default_option = yes
 		scope:great_migration_exit_state = {
 			ordered_scope_pop = {
+				position = 0
 				limit = {
 					culture = cu:afro_american
 				}
@@ -725,6 +733,7 @@ usfp_usa_postreconstruction.5 = {
 				}
 			}
 			ordered_scope_pop = {
+				position = 0
 				limit = {
 					culture = cu:afro_american
 				}
@@ -757,6 +766,7 @@ usfp_usa_postreconstruction.5 = {
 		name = usfp_usa_postreconstruction.5.b
 		scope:great_migration_exit_state = {
 			ordered_scope_pop = {
+				position = 0
 				limit = {
 					culture = cu:afro_american
 				}
@@ -767,6 +777,7 @@ usfp_usa_postreconstruction.5 = {
 				}
 			}
 			ordered_scope_pop = {
+				position = 0
 				limit = {
 					culture = cu:afro_american
 				}
@@ -799,6 +810,7 @@ usfp_usa_postreconstruction.5 = {
 		name = usfp_usa_postreconstruction.5.c
 		scope:great_migration_exit_state = {
 			ordered_scope_pop = {
+				position = 0
 				limit = {
 					culture = cu:afro_american
 				}
@@ -859,6 +871,7 @@ usfp_usa_postreconstruction.6 = {
 		}
 		else = {
 			ordered_scope_state = {
+				position = 0
 				order_by = total_urbanization
 				save_scope_as = boxing_state
 			}
@@ -1059,6 +1072,7 @@ usfp_usa_postreconstruction.7 = {
 
 	immediate = {
 		ordered_political_movement = {
+			position = 0
 			limit = {
 				OR = {
 					is_political_movement_type = movement_anarchist
@@ -1199,6 +1213,7 @@ usfp_usa_postreconstruction.7 = {
 			RADICALS = small_radicals
 		}
 		ordered_political_movement = {
+			position = 0
 			limit = {
 				usfp_movement_is_racist = yes
 			}
@@ -1399,6 +1414,7 @@ usfp_usa_postreconstruction.8 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					usfp_movement_is_racist = yes
 				}
@@ -1453,7 +1469,7 @@ usfp_usa_postreconstruction.9 = {
 				any_scope_state = {
 					total_urbanization > 2000
 					any_scope_building = {
-						is_building_type = building_arts_academy
+						is_building_type = building_art_academy
 					}
 					any_scope_pop = {
 						culture = cu:afro_american
@@ -1472,7 +1488,7 @@ usfp_usa_postreconstruction.9 = {
 				any_scope_state = {
 					total_urbanization > 1000
 					any_scope_building = {
-						is_building_type = building_arts_academy
+						is_building_type = building_art_academy
 					}
 					any_scope_pop = {
 						culture = cu:afro_american
@@ -1502,7 +1518,7 @@ usfp_usa_postreconstruction.9 = {
 				s:STATE_NEW_YORK.region_state:USA = {
 					total_urbanization > 2000
 					any_scope_building = {
-						is_building_type = building_arts_academy
+						is_building_type = building_art_academy
 					}
 					any_scope_pop = {
 						culture = cu:afro_american
@@ -1520,10 +1536,11 @@ usfp_usa_postreconstruction.9 = {
 				} 
 			}
 			ordered_scope_state = {
+				position = 0
 				limit = {
 					total_urbanization > 2000
 					any_scope_building = {
-						is_building_type = building_arts_academy
+						is_building_type = building_art_academy
 					}
 					any_scope_pop = {
 						culture = cu:afro_american
@@ -1540,10 +1557,11 @@ usfp_usa_postreconstruction.9 = {
 			}
 		} else = {
 			ordered_scope_state = {
+				position = 0
 				limit = {
 					total_urbanization > 1000
 					any_scope_building = {
-						is_building_type = building_arts_academy
+						is_building_type = building_art_academy
 					}
 					any_scope_pop = {
 						culture = cu:afro_american
@@ -2034,6 +2052,7 @@ usfp_usa_postreconstruction.12 = {
 		}
 		else = {
 			ordered_scope_state = {
+				position = 0
 				order_by = total_urbanization
 				save_scope_as = film_state
 			}
@@ -2144,6 +2163,7 @@ usfp_usa_postreconstruction.13 = {
 		}
 		else = {
 			ordered_scope_state = {
+				position = 0
 				limit = {
 					region = sr:region_great_plains
 					NOT = {
@@ -2158,6 +2178,7 @@ usfp_usa_postreconstruction.13 = {
 			}
 		}
 		ordered_scope_pop = {
+			position = 0
 			limit = {
 				culture = cu:afro_american
 				state = {
@@ -2239,7 +2260,7 @@ usfp_usa_postreconstruction.13 = {
 				state_is_eligible_as_mass_migration_target = yes
 				any_scope_building = {
 					OR = {
-						is_building_type = building_gold_fields
+						is_building_type = building_gold_field
 						is_building_type = building_gold_mine
 					}
 				}
@@ -2247,6 +2268,7 @@ usfp_usa_postreconstruction.13 = {
 		}
 		highlighted_option = yes
 		ordered_scope_state = {
+			position = 0
 			limit = {
 				region = sr:region_great_plains
 				NOT = {
@@ -2257,7 +2279,7 @@ usfp_usa_postreconstruction.13 = {
 				state_is_eligible_as_mass_migration_target = yes
 				any_scope_building = {
 					OR = {
-						is_building_type = building_gold_fields
+						is_building_type = building_gold_field
 						is_building_type = building_gold_mine
 					}
 				}
@@ -2372,7 +2394,7 @@ usfp_usa_postreconstruction.14 = {
 		OR = {
 			exists = c:LIB
 			any_scope_state = {
-				state_is_in_africa = yes
+				is_in_geographic_region = geographic_region_africa
 				NOT = {
 					state_region = s:STATE_SINAI
 				}
@@ -2408,15 +2430,16 @@ usfp_usa_postreconstruction.14 = {
 		if = {
 			limit = { 
 				any_scope_state = {
-					state_is_in_africa = yes
+					is_in_geographic_region = geographic_region_africa
 					NOT = {
 						state_region = s:STATE_SINAI
 					}
 				}
 			}
 			ordered_scope_state = {
+				position = 0
 				limit = {
-					state_is_in_africa = yes
+					is_in_geographic_region = geographic_region_africa
 					NOT = {
 						state_region = s:STATE_SINAI
 					}
@@ -2619,6 +2642,7 @@ usfp_usa_postreconstruction.15 = {
 			}
 		}
 		ordered_scope_state = {
+			position = 0
 			limit = {
 				state_region = {
 					is_homeland = cu:afro_american
@@ -2626,10 +2650,10 @@ usfp_usa_postreconstruction.15 = {
 				state_is_eligible_as_mass_migration_target = yes
 			}
 			order_by = total_urbanization
-			position = 1
 			save_scope_as = great_return_target_1
 		}
 		ordered_scope_state = {
+			position = 1
 			limit = {
 				state_region = {
 					is_homeland = cu:afro_american
@@ -2637,7 +2661,6 @@ usfp_usa_postreconstruction.15 = {
 				state_is_eligible_as_mass_migration_target = yes
 			}
 			order_by = total_urbanization
-			position = 2
 			save_scope_as = great_return_target_2
 		}
 		random_scope_state = {
@@ -2742,6 +2765,7 @@ usfp_usa_postreconstruction.16 = {
 
 	immediate = {
 		ordered_scope_character = {
+			position = 0
 			limit = {
 				NOT = {
 					culture = cu:dixie
@@ -3099,6 +3123,12 @@ usfp_usa_postreconstruction.18 = {
 		}
 		usfp_long_reconstruction_add_progress = {
 			VALUE = 20
+		}
+		active_law:lawgroup_citizenship ?= {
+			add_amendment = {
+				type = amendment_usfp_anti_lynching
+				sponsor = PREV.ig:ig_intelligentsia
+			}
 		}
 		set_variable = anti_lynching
 		ai_chance = {

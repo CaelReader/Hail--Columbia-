@@ -177,14 +177,14 @@ alaska.2 = {
 			value = 10
 		}
 		s:STATE_ALASKA = {
-			every_scope_state = {
-				limit = {
-					owner = {
-						is_country_type = decentralized
-					}
-				}
-				set_state_owner = scope:alaska_buyer
-			}
+			# every_scope_state = {
+			# 	limit = {
+			# 		owner = {
+			# 			is_country_type = decentralized
+			# 		}
+			# 	}
+			# 	set_state_owner = scope:alaska_buyer
+			# }
 			remove_claim = scope:alaska_seller
 			add_claim = scope:alaska_buyer
 		}

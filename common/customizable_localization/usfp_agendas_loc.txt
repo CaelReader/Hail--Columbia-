@@ -1,0 +1,154 @@
+﻿usfp_agenda_jackson_agrarianism_checkbox = {
+	type = country
+	text = {
+		trigger = {
+			NOT = {
+				has_law_or_variant = law_type:law_agrarianism
+			}
+		}
+		localization_key = metternich_unticked
+	}
+	text = {
+		trigger = {
+			has_law_or_variant = law_type:law_agrarianism
+		}
+		localization_key = metternich_ticked
+	}
+}
+
+usfp_agenda_jackson_legacy_slavery_checkbox = {
+	type = country
+	text = {
+		trigger = {
+			OR = {
+				NOT = {
+					has_law_or_variant = law_type:law_legacy_slavery
+				}
+				is_enacting_law = law_type:law_slave_trade
+				is_enacting_law = law_type:law_slavery_banned
+				is_enacting_law = law_type:law_debt_slavery
+				is_enacting_law = law_type:law_colonial_slavery
+				has_variable = attempted_to_change_slavery_law
+			}
+
+		}
+		localization_key = metternich_unticked
+	}
+	text = {
+		trigger = {
+			has_law_or_variant = law_type:law_legacy_slavery
+		}
+		localization_key = metternich_ticked
+	}
+}
+
+usfp_agenda_jackson_suffrage_checkbox = {
+	type = country
+	text = {
+		trigger = {
+			NOT = {
+				has_law_or_variant = law_type:law_universal_suffrage
+			}
+		}
+		localization_key = metternich_unticked
+	}
+	text = {
+		trigger = {
+			has_law_or_variant = law_type:law_universal_suffrage
+		}
+		localization_key = metternich_ticked
+	}
+}
+
+usfp_agenda_jackson_taxes_checkbox = {
+	type = country
+	text = {
+		trigger = {
+			OR = {
+				has_variable = changed_taxes_above_low
+				tax_level > low
+			}
+		}
+		localization_key = metternich_unticked
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_variable = changed_taxes_above_low
+			}
+			tax_level <= low
+		}
+		localization_key = metternich_ticked
+	}
+}
+
+# usfp_agenda_jackson_tariffs_checkbox = {
+# 	type = country
+# 	text = {
+# 		trigger = {
+# 			market = {
+# 				any_market_goods = {
+# 					root.capital = {
+# 						scope:check_good = {
+# 												OR = {
+# 						import_tariff_level = high_tariffs
+# 						import_tariff_level = max_tariffs
+# 					}
+# 						}
+# 					}
+
+# 				}
+# 			}
+# 		}
+# 		localization_key = metternich_unticked
+# 	}
+# 	text = {
+# 		trigger = {
+# 			NOT = {
+# 				market = {
+# 					any_market_goods = {
+# 						OR = {
+# 							import_tariff_level = high_tariffs
+# 							import_tariff_level = max_tariffs
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		localization_key = metternich_ticked
+# 	}
+# }
+
+usfp_agenda_jackson_debt_checkbox = {
+	type = country
+	text = {
+		trigger = {
+			scaled_debt > 0
+		}
+		localization_key = metternich_unticked
+	}
+	text = {
+		trigger = {
+			scaled_debt <= 0
+		}
+		localization_key = metternich_ticked
+	}
+}
+
+usfp_agenda_jackson_removal_checkbox = {
+	type = country
+	text = {
+		trigger = {
+			NOT = {
+				has_variable = usfp_indians_removed_end
+			}
+		}
+		localization_key = metternich_unticked
+	}
+	text = {
+		trigger = {
+			has_variable = usfp_indians_removed_end
+		}
+		localization_key = metternich_ticked
+	}
+}

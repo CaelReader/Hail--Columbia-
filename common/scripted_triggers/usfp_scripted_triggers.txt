@@ -133,13 +133,14 @@ usfp_north_american_wildfire_zone = {
 }
 
 usfp_american_west_zone = {
-	OR = {
-		region = sr:region_great_plains
-		state_region = s:STATE_ARIZONA
-		state_region = s:STATE_UTAH
-		state_region = s:STATE_IDAHO
-		state_region = s:STATE_NEVADA
-	}
+	is_in_geographic_region = geographic_region_american_west_zone
+	# OR = {
+	# 	region = sr:region_great_plains
+	# 	state_region = s:STATE_ARIZONA
+	# 	state_region = s:STATE_UTAH
+	# 	state_region = s:STATE_IDAHO
+	# 	state_region = s:STATE_NEVADA
+	# }
 }
 
 usfp_northern_mexico_zone = {
@@ -202,7 +203,6 @@ usfp_enacting_unconstitutional_law = {
 		is_enacting_law = law_type:law_religious_schools
 		is_enacting_law = law_type:law_single_party_state
 		is_enacting_law = law_type:law_isolationism
-		is_enacting_law = law_type:law_land_based_taxation
 	}
 }
 
@@ -220,6 +220,39 @@ usfp_enacting_super_unconstitutional_law = {
 		is_enacting_law = law_type:law_oligarchy
 		is_enacting_law = law_type:law_anarchy
 		is_enacting_law = law_type:law_technocracy
+	}
+}
+
+usfp_has_unconstitutional_law_enacted = {
+	OR = {
+		has_law_or_variant = law_type:law_censorship
+		has_law_or_variant = law_type:law_parliamentary_republic
+		has_law_or_variant = law_type:law_peasant_levies
+		has_law_or_variant = law_type:law_militarized_police
+		has_law_or_variant = law_type:law_appointed_bureaucrats
+		has_law_or_variant = law_type:law_industry_banned
+		has_law_or_variant = law_type:law_command_economy
+		has_law_or_variant = law_type:law_cooperative_ownership
+		has_law_or_variant = law_type:law_religious_schools
+		has_law_or_variant = law_type:law_single_party_state
+		has_law_or_variant = law_type:law_isolationism
+	}
+}
+
+usfp_has_super_unconstitutional_law_enacted = {
+	OR = {
+		has_law_or_variant = law_type:law_outlawed_dissent
+		has_law_or_variant = law_type:law_state_religion
+		has_law_or_variant = law_type:law_state_atheism
+		has_law_or_variant = law_type:law_monarchy
+		has_law_or_variant = law_type:law_theocracy
+		has_law_or_variant = law_type:law_council_republic
+		has_law_or_variant = law_type:law_corporate_state
+		has_law_or_variant = law_type:law_hereditary_bureaucrats
+		has_law_or_variant = law_type:law_autocracy
+		has_law_or_variant = law_type:law_oligarchy
+		has_law_or_variant = law_type:law_anarchy
+		has_law_or_variant = law_type:law_technocracy	
 	}
 }
 
@@ -660,4 +693,71 @@ usfp_any_racist_movement_has_some_support = {
 		usfp_movement_is_racist = yes
 		political_movement_support >= 0.05
 	}
+}
+
+usfp_danish_purchase_greenland_valid = {
+	exists = scope:greenland_state_scope
+	#sanity check for if states change owners
+	scope:greenland_state_scope = {
+		owner = scope:greenland_owner_scope
+	}
+}
+
+usfp_danish_purchase_iceland_valid = {
+	exists = scope:iceland_scope
+	#sanity check for if states change owners
+	scope:iceland_scope = {
+		owner = scope:greenland_owner_scope
+	}
+}
+
+usfp_danish_purchase_west_indies_valid = {
+	exists = scope:danish_west_indies_scope
+	#sanity check for if states change owners
+	scope:danish_west_indies_scope = {
+		owner = scope:greenland_owner_scope
+	}
+}
+
+usfp_monroe_doctrine_valid_interloper = {
+	NOR = {
+		is_in_geographic_region = geographic_region_north_america
+		is_in_geographic_region = geographic_region_central_america
+		is_in_geographic_region = geographic_region_south_america
+	}
+	NOT = {
+		this = ROOT
+	}
+	is_revolutionary = no
+	NOT = {
+		has_war_with = root
+	}
+}
+
+usfp_monroe_doctrine_valid_defender = {
+	OR = {
+		is_in_geographic_region = geographic_region_north_america
+		is_in_geographic_region = geographic_region_central_america
+		is_in_geographic_region = geographic_region_south_america
+	}
+	has_diplomatic_relevance = ROOT
+	NOT = {
+		this = ROOT
+	}
+	is_revolutionary = no
+	NOT = {
+		has_war_with = root
+	}
+}
+
+usfp_has_fugitive_slave_act = {
+	any_active_law = {
+		has_amendment = amendment_american_fugitive_slaves_act
+	}
+}
+
+usfp_owns_cuba = {
+	owns_entire_state_region = STATE_WESTERN_CUBA
+	owns_entire_state_region = STATE_CENTRAL_CUBA
+	owns_entire_state_region = STATE_EASTERN_CUBA
 }

@@ -1,0 +1,302 @@
+﻿amendment_usfp_spoils_system = {
+    parent = law_consumption_based_taxation # optional reference to a law that dictates what stances IGs and movements have toward this amendment
+
+    allowed_laws = { # list of laws that the amendment can be added to
+		law_elected_bureaucrats
+		law_appointed_bureaucrats
+    }
+
+    modifier = {
+		country_institution_size_change_speed_mult = -0.25
+		country_usfp_spoil_system_on_reform_modifier = yes
+	}
+
+    possible = {
+        has_journal_entry = je_usfp_american_constitution
+    }
+
+   	can_repeal = {
+		legitimacy > 60
+		OR = {
+			trigger_if = {
+				limit = {
+					has_variable = usfp_spoils_system_abolish_var
+				}
+				custom_tooltip = {
+					text = spoils_system_can_be_abolished_tt
+					var:usfp_spoils_system_abolish_var >= 5
+				}
+			}
+			NOT = {
+				has_journal_entry = je_usfp_american_constitution
+			}
+			any_interest_group_in_government = {
+				is_powerful = yes
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_usfp_progressive
+						has_ideology = ideology:ideology_social_democrat
+					}
+				}
+			}
+		}
+	}
+
+    ai_will_revoke = {
+        always = yes
+    }
+}
+
+amendment_usfp_seperate_but_equal = {
+    parent = law_racial_segregation # optional reference to a law that dictates what stances IGs and movements have toward this amendment
+
+    allowed_laws = { # list of laws that the amendment can be added to
+		law_cultural_exclusion
+    }
+
+    modifier = {
+		country_acceptance_no_shared_heritage_trait_add = -10
+		country_qualification_growth_second_rate_citizen_mult = -0.10
+		country_qualification_growth_open_prejudice_mult = -0.10
+		country_qualification_growth_cultural_erasure_mult = -0.10
+		country_qualification_growth_violent_hostility_mult = -0.10
+	}
+
+    possible = {
+        always = yes
+    }
+
+	can_repeal = {
+		OR = {
+			has_law_or_variant = law_type:law_multicultural
+			NOT = {
+				has_journal_entry = je_usfp_american_constitution
+			}
+		}
+		government_legitimacy >= 51
+	}
+
+    ai_will_revoke = {
+        always = yes
+    }
+}
+
+amendment_usfp_pure_drugs = {
+    parent = law_public_health_insurance # optional reference to a law that dictates what stances IGs and movements have toward this amendment
+
+    allowed_laws = { # list of laws that the amendment can be added to
+		law_public_health_insurance
+		law_private_health_insurance
+		law_charitable_health_system
+    }
+
+    modifier = {
+		country_institution_impact_institution_health_system_mult = 0.10
+		country_institution_cost_institution_health_system_mult = 0.10
+	}
+
+    possible = {
+        always = yes
+    }
+
+   	can_repeal = {
+		always = yes
+	}
+
+    ai_will_revoke = {
+        in_default = yes
+    }
+}
+
+amendment_usfp_bill_of_rights = {
+    parent = law_protected_speech # optional reference to a law that dictates what stances IGs and movements have toward this amendment
+
+    allowed_laws = { # list of laws that the amendment can be added to
+		law_censorship
+		law_right_of_assembly
+    }
+
+    modifier = {
+		country_authority_add = -50
+		country_suppression_attraction_factor = 0.15
+		country_loyalists_from_legitimacy_mult = 0.10
+	}
+
+    possible = {
+        has_journal_entry = je_usfp_american_constitution
+    }
+
+   	can_repeal = {
+		NOT = {
+			has_journal_entry = je_usfp_american_constitution
+		}
+	}
+
+    ai_will_revoke = {
+        always = yes
+    }
+}
+
+amendment_usfp_anti_lynching = {
+    parent = law_cultural_exclusion
+
+    allowed_laws = { # list of laws that the amendment can be added to
+		law_cultural_exclusion
+		law_multicultural
+    }
+
+    modifier = {
+		state_loyalism_increases_full_acceptance_mult = -0.10
+		state_loyalism_increases_open_prejudice_mult = 0.10
+		state_loyalism_increases_second_rate_citizen_mult = 0.10
+	}
+
+    possible = {
+        always = yes
+    }
+
+	can_repeal = {
+		usfp_has_pro_racist_government = yes
+		government_legitimacy >= 51
+	}
+
+    ai_will_revoke = {
+        always = yes
+    }
+}
+
+amendment_usfp_gag_rule = {
+    parent = law_legacy_slavery
+
+    allowed_laws = { # list of laws that the amendment can be added to
+		law_legacy_slavery
+    }
+
+    modifier = {
+		interest_group_ig_intelligentsia_approval_add = -3
+		interest_group_ig_intelligentsia_pol_str_mult = -0.10
+		interest_group_ig_landowners_approval_add = 4
+		political_movement_radicalism_add = 0.05
+		country_usfp_gag_rule_block_modifier = yes
+	}
+
+    possible = {
+        has_journal_entry = je_acw_countdown
+    }
+
+	can_repeal = {
+		# OR = {
+		# 	any_revolution_ongoing = yes
+		# 	AND = {
+		# 		ig:ig_landowners = {
+		# 			is_in_government = no
+		# 		}
+		# 		government_legitimacy >= 51
+		# 	}
+		# 	AND = {
+		# 		ig:ig_intelligentsia = {
+		# 			ig_counts_as_marginal = yes
+		# 		}
+		# 		OR = {
+		# 			any_interest_group = {
+		# 				is_powerful = yes
+		# 				OR = {
+		# 					has_ideology = ideology:ideology_pro_slavery
+		# 					leader = {
+		# 						has_ideology = ideology:ideology_slaver
+		# 					}
+		# 				}
+		# 			}
+		# 			ruler = {
+		# 				has_ideology = ideology:ideology_slaver
+		# 			}
+		# 		}
+				
+		# 	}
+			
+		# }
+		government_legitimacy >= 51
+	}
+
+    ai_will_revoke = {
+        always = yes
+    }
+}
+
+
+REPLACE_OR_CREATE:amendment_american_fugitive_slaves_act = {
+
+	parent = law_legacy_slavery
+
+	allowed_laws = {
+		law_legacy_slavery
+	}
+
+	modifier = {
+		state_afro_american_standard_of_living_add = -1
+		interest_group_ig_landowners_approval_add = 1
+		interest_group_ig_landowners_pol_str_mult = 0.1
+		state_pop_support_movement_pro_slavery_mult = 0.10
+		state_free_state_pop_support_movement_anti_slavery_mult = 0.15
+	}
+
+	possible = {
+		has_journal_entry = je_acw_countdown
+	}
+
+	would_sponsor = {
+		AND = {
+			exists = scope:approval
+			scope:approval > 0
+		}
+	}
+
+	ai_will_revoke = {
+		OR = {
+			ruler = {
+				law_enactment_stance = {
+					law = law_type:law_slavery_banned
+					value > neutral
+				}
+			}
+			any_interest_group = {
+				is_in_government = yes
+				law_enactment_stance = {
+					law = law_type:law_slavery_banned
+					value > neutral
+				}
+			}
+		}
+	}
+
+	can_repeal = {
+		ruler = {
+			usfp_anti_slavery_leader_trigger = yes
+		}
+		legitimacy >= 51
+	}
+}
+
+amendment_usfp_radical_land_redistribution = {
+    parent = law_multicultural
+
+    allowed_laws = { # list of laws that the amendment can be added to
+		law_slavery_banned
+    }
+
+    modifier = {
+		state_radicalism_increases_full_acceptance_mult = 0.25
+	}
+
+    possible = {
+        has_journal_entry = je_acw_reconstruction
+    }
+
+	can_repeal = {
+		government_legitimacy >= 51
+	}
+
+    ai_will_revoke = {
+        always = yes
+    }
+}

@@ -18,7 +18,7 @@ ecchi_usa_van_buren_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_rural_folk
             ig_hasnt_chosen_ideology_trigger = yes
         }
@@ -39,14 +39,14 @@ ecchi_usa_w_harrison_character_template = {
     interest_group = ig_petty_bourgeoisie
     birth_date = 1773.2.9
 	dna = ecchi_dna_william_henry_harrison
-    traits = { experienced_diplomat tactful innovative }
+    traits = { experienced_diplomat tactful innovative sickly }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:USA
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_armed_forces
@@ -77,7 +77,7 @@ ecchi_usa_tyler_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_petty_bourgeoisie
             ig_hasnt_chosen_ideology_trigger = yes
         }
@@ -115,7 +115,7 @@ ecchi_usa_adams_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_petty_bourgeoisie
             ig_hasnt_chosen_ideology_trigger = yes
         }
@@ -143,7 +143,7 @@ ecchi_usa_polk_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_landowners
@@ -176,7 +176,7 @@ ecchi_usa_fillmore_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 			}
@@ -269,7 +269,7 @@ ecchi_usa_johnson_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_petty_bourgeoisie
@@ -303,7 +303,7 @@ ecchi_usa_hayes_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_armed_forces
 				is_interest_group_type = ig_petty_bourgeoisie
@@ -335,7 +335,7 @@ ecchi_usa_garfield_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
@@ -375,7 +375,7 @@ ecchi_usa_arthur_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
@@ -407,7 +407,7 @@ ecchi_usa_cleveland_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_industrialists
@@ -439,7 +439,7 @@ ecchi_usa_b_harrison_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
@@ -470,7 +470,7 @@ ecchi_usa_mckinley_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_industrialists
@@ -504,7 +504,7 @@ ecchi_usa_taft_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
@@ -535,7 +535,7 @@ ecchi_usa_wilson_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_intelligentsia
@@ -602,7 +602,7 @@ ecchi_usa_coolidge_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_industrialists
@@ -709,7 +709,7 @@ ecchi_usa_fremont_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_armed_forces
 			}
@@ -913,7 +913,7 @@ ecchi_usa_edison_character_template = {
     #         this = c:USA
     #     }
     #     interest_group_trigger = {
-    #         is_marginal = no
+    #         ig_counts_as_marginal = no
 	# 		OR = {
 	# 			is_interest_group_type = ig_industrialists
 	# 			is_interest_group_type = ig_intelligentsia
@@ -1084,7 +1084,7 @@ ecchi_usa_lindbergh_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_armed_forces
 				is_interest_group_type = ig_intelligentsia
@@ -1246,7 +1246,7 @@ ecchi_usa_keller_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_trade_unions
                 is_interest_group_type = ig_intelligentsia
@@ -1302,7 +1302,7 @@ ecchi_usa_hill_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_trade_unions
                 is_interest_group_type = ig_rural_folk
@@ -1359,9 +1359,8 @@ ecchi_usa_seward_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
-                is_interest_group_type = ig_rural_folk
                 is_interest_group_type = ig_intelligentsia
                 is_interest_group_type = ig_petty_bourgeoisie
             }
@@ -1418,7 +1417,7 @@ ecchi_usa_sutter_sr_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_landowners
                 is_interest_group_type = ig_industrialists
@@ -1558,7 +1557,7 @@ ecchi_usa_jefferson_davis_character_template = {
     #         }
     #     }
     #     interest_group_trigger = {
-    #         is_marginal = no
+    #         ig_counts_as_marginal = no
 	# 		OR = {
 	# 			is_interest_group_type = ig_rural_folk
 	# 			is_interest_group_type = ig_landowners
@@ -1607,7 +1606,7 @@ ecchi_usa_stephens_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_landowners
 			}
@@ -1726,7 +1725,7 @@ ecchi_tex_de_zavala_character_template = {
 			this = c:TEX
 		}
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_intelligentsia
@@ -1756,7 +1755,7 @@ ecchi_tex_crockett_character_template = {
 			this = c:TEX
 		}
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_armed_forces
 				is_interest_group_type = ig_rural_folk
@@ -1820,7 +1819,7 @@ ecchi_asa_delany_character_template = {
             }
 		}
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_armed_forces
 				is_interest_group_type = ig_petty_bourgeoisie
@@ -1858,7 +1857,7 @@ ecchi_asa_singleton_character_template = {
             }
 		}
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_industrialists
 				is_interest_group_type = ig_rural_folk
@@ -1895,7 +1894,7 @@ ecchi_asa_turner_character_template = {
             }
 		}
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			is_interest_group_type = ig_devout
         }
         earliest_usage_date = 1862.4.1
@@ -1929,7 +1928,7 @@ ecchi_asa_garnet_character_template = {
             }
 		}
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_devout
 				is_interest_group_type = ig_rural_folk
@@ -1962,7 +1961,7 @@ ecchi_usa_douglass_character_template = {
 	# 		}
 	# 	}
     #     interest_group_trigger = {
-    #         is_marginal = no
+    #         ig_counts_as_marginal = no
 	# 		OR = {
 	# 			is_interest_group_type = ig_petty_bourgeoisie
 	# 			is_interest_group_type = ig_intelligentsia
@@ -1993,7 +1992,7 @@ ecchi_asa_du_bois_character_template = {
     #         this = c:ASA
     #     }
     #     interest_group_trigger = {
-    #         is_marginal = no
+    #         ig_counts_as_marginal = no
 	# 		OR = {
 	# 			is_interest_group_type = ig_trade_unions
 	# 			is_interest_group_type = ig_intelligentsia
@@ -2116,3 +2115,40 @@ ecchi_usa_brigham_young_character_template = {
     }
 }
 
+## Emma Goldman, imported to the USA
+ecchi_rus_goldman_character_template = {
+	first_name = Emma
+	last_name = Goldman
+	historical = yes
+	culture = cu:ashkenazi #USFP
+	female = yes
+	religion = rel:atheist 
+	ideology = ideology_anarchist #USFP
+	interest_group = ig_intelligentsia #USFP
+	dna = ecchi_dna_emma_goldman
+	birth_date = 1869.6.27
+	traits = { #USFP
+        inspirational_orator
+		charismatic
+		brave
+		persistent
+        literary
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+                c:USA ?= this
+				AND = {
+                    c:RUS ?= this
+                    has_law_or_variant = law_type:law_council_republic
+				}
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 1886.1.1
+		latest_usage_date = 1940.5.14
+		chance = 25
+	}
+}

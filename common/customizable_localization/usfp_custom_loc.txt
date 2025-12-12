@@ -1,0 +1,173 @@
+﻿usfp_get_danish_islands_purchase_desires = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			c:USA = {
+				has_variable = usfp_danish_purchases_greenland_desire
+				root = {
+					has_state_in_state_region = STATE_GREENLAND
+				}
+				has_variable = usfp_danish_purchases_iceland_desire
+				root = {
+					has_state_in_state_region = STATE_ICELAND
+				}
+								root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
+				root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
+			}
+		}
+		localization_key = usfp_get_danish_islands_purchase_desires_all_three
+	}
+	text = {
+		trigger = {
+			c:USA = {
+				has_variable = usfp_danish_purchases_greenland_desire
+				root = {
+					has_state_in_state_region = STATE_GREENLAND
+				}
+				has_variable = usfp_danish_purchases_iceland_desire
+				root = {
+					has_state_in_state_region = STATE_ICELAND
+				}
+				NOT = {
+					AND = {
+										root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
+						usfp_danish_purchase_west_indies_valid = yes
+					}
+				}
+			}
+		}
+		localization_key = usfp_get_danish_islands_purchase_desires_greenland_iceland
+	}
+	text = {
+		trigger = {
+			c:USA = {
+				has_variable = usfp_danish_purchases_greenland_desire
+				root = {
+					has_state_in_state_region = STATE_GREENLAND
+				}
+								root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
+				root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
+				NOT = {
+					AND = {
+						has_variable = usfp_danish_purchases_iceland_desire
+										root = {
+					has_state_in_state_region = STATE_ICELAND
+				}
+					}
+				}
+			}
+		}
+		localization_key = usfp_get_danish_islands_purchase_desires_greenland_windies
+	}
+	text = {
+		trigger = {
+			c:USA = {
+				has_variable = usfp_danish_purchases_greenland_desire
+								root = {
+					has_state_in_state_region = STATE_GREENLAND
+				}
+				NOT = {
+					AND = {
+						has_variable = usfp_danish_purchases_iceland_desire
+										root = {
+					has_state_in_state_region = STATE_ICELAND
+				}
+					}
+					AND = {
+										root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
+						root = {
+							has_state_in_state_region = STATE_WEST_INDIES
+						}
+					}
+				}
+			}
+		}
+		localization_key = usfp_get_danish_islands_purchase_desires_greenland_only
+	}
+	text = {
+		trigger = {
+			c:USA = {
+				has_variable = usfp_danish_purchases_iceland_desire
+								root = {
+					has_state_in_state_region = STATE_ICELAND
+				}
+								root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
+				usfp_danish_purchase_west_indies_valid = yes
+				NOT = {
+					AND = {
+						has_variable = usfp_danish_purchases_greenland_desire
+										root = {
+					has_state_in_state_region = STATE_GREENLAND
+				}
+					}
+				}
+			}
+		}
+		localization_key = usfp_get_danish_islands_purchase_desires_iceland_windies
+	}
+	text = {
+		trigger = {
+			c:USA = {
+				has_variable = usfp_danish_purchases_iceland_desire
+								root = {
+					has_state_in_state_region = STATE_ICELAND
+				}
+				NOT = {
+					AND = {
+						has_variable = usfp_danish_purchases_greenland_desire
+										root = {
+					has_state_in_state_region = STATE_GREENLAND
+				}
+					}
+					AND = {
+										root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
+						usfp_danish_purchase_west_indies_valid = yes
+					}
+				}
+			}
+		}
+		localization_key = usfp_get_danish_islands_purchase_desires_iceland_only
+	}
+	text = {
+		trigger = {
+			c:USA = {
+								root = {
+					has_state_in_state_region = STATE_WEST_INDIES
+				}
+				usfp_danish_purchase_west_indies_valid = yes
+				NOT = {
+					AND = {
+						has_variable = usfp_danish_purchases_greenland_desire
+										root = {
+					has_state_in_state_region = STATE_GREENLAND
+				}
+					}
+					AND = {
+						has_variable = usfp_danish_purchases_iceland_desire
+										root = {
+					has_state_in_state_region = STATE_ICELAND
+				}
+					}
+				}
+			}
+		}
+		localization_key = usfp_get_danish_islands_purchase_desires_windies_only
+	}
+}

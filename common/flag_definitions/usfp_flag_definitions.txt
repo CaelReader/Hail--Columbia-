@@ -1,4 +1,4 @@
-﻿NEW = { # Newfoundland
+﻿REPLACE:NEW = { # Newfoundland
 	flag_definition = {
 		coa = NEW
 		coa_with_overlord_canton = NEW_subject
@@ -29,7 +29,7 @@
 	}	
 }
 
-NIC = { # Nicaragua
+REPLACE:NIC = { # Nicaragua
 	flag_definition = {
 		coa = NIC
 		subject_canton = NIC	
@@ -91,7 +91,7 @@ usfp_GLC = {
 	}
 }
 
-TIS = { # Turtle Island
+REPLACE:TIS = { # Turtle Island
 	flag_definition = {
 		coa = TIS
 		subject_canton = TIS
@@ -242,7 +242,7 @@ usfp_PSA = {
 	}
 }
 
-FER = {
+REPLACE:FER = {
 	flag_definition = {
 		coa = FER
 		allow_overlord_canton = yes
@@ -251,7 +251,7 @@ FER = {
 	}
 }
 
-FSA = { # Free States of America
+REPLACE:FSA = { # Free States of America
 	flag_definition = {
 		coa = FSA
 		subject_canton = FSA
@@ -300,7 +300,7 @@ usfp_LNC = {
 	}
 }
 
-LIB = { # Liberia
+REPLACE:LIB = { # Liberia
 	flag_definition = {
 		coa = LIB
 		subject_canton = LIB

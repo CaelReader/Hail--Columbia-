@@ -1,0 +1,235 @@
+﻿# Hail, Columbia! by CaelReader
+# Whig/Republican Party is essentially the Liberal Party in the timeframe
+# Core IGs: PB, Intelligentsia
+# Favorable IGs: Industrialists, Devout
+
+usfp_republican_party = {
+	color = { 240 200 98}
+	name = {
+		first_valid = {
+			triggered_desc = {
+				desc = party_whig_party
+				trigger = {
+					has_variable = whigs_party
+				}
+			}
+			triggered_desc = {
+				desc = party_republicans
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	icon = {
+		default = "/gfx/interface/icons/political_parties/usfp_republican_party.dds"
+	}
+	# THIS IS RUN ONLY ONCE AT GAME START
+	valid_for_country = {
+		always = yes
+	}
+	available_for_interest_group = {
+		owner = {
+			country_has_voting_franchise = yes
+			has_journal_entry = je_usfp_american_constitution
+		}
+	}
+
+	# Root - IG considering joining
+	# scope:number - the number of IGs that would join this party before the root IG
+	join_weight = {
+		#Everyone except socialists works within the two-party system
+		if = {
+			limit = {
+				leader = {
+					has_socialist_ideology = no
+				}
+			}
+			add = {
+				value = 50
+				desc = "usa_two_party_system"
+			}
+		}
+		#PB and Intelligentsia should always be Whig/Republican
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_intelligentsia
+				}
+			}
+			add = {
+				value = 100
+				desc = "urban_interests"
+			}
+		}
+		#RF and LO should never be Republicans
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_landowners
+				}
+			}
+			add = {
+				value = -100
+				desc = "rural_interests"
+			}
+		}
+		#Evangelicals are natural Whigs, but become more versatile after the Second Party System
+		if = {
+			limit = {
+				is_interest_group_type = ig_devout
+				owner = {
+					has_variable = whigs_party
+				}
+			}
+			add = {
+				value = 50
+				desc = "natural_whigs"
+			}
+		}
+		## Leader Ideology Check
+		#Republicans are explicitly the abolitionist party, and Whigs de-facto the abolitionist party in Vic3 terms
+		if = {
+			limit = { leader ?= { has_ideology = ideology:ideology_slaver } }
+			add = {
+				value = -100
+				desc = "from_slaver_leader"
+			}
+		}
+		else_if = {
+			limit = { leader ?= { usfp_anti_slavery_leader_trigger = yes } }
+			add = {
+				value = 100
+				desc = "from_abolitionist_leader"
+			}
+		}
+		#Georgists are Republicans even though they're pro free trade
+		else_if = {
+			limit = { leader ?= { has_ideology = ideology:ideology_usfp_georgist_leader } }
+			add = {
+				value = 50
+				desc = "ideology_usfp_georgist_leader"
+			}
+		}
+		#Social Gospelists are Republican
+		else_if = {
+			limit = { leader ?= { has_ideology = ideology:ideology_usfp_social_gospel_leader } }
+			add = {
+				value = 50
+				desc = "ideology_usfp_social_gospel_leader"
+			}
+		}
+		#Republicans are Republicans
+		else_if = {
+			limit = { leader ?= { has_ideology = ideology:ideology_republican_leader } }
+			add = {
+				value = 10
+				desc = "ideology_republican_leader"
+			}
+		}
+		# Hardcore socialists oppose the main parties
+		else_if = {
+			limit = { 
+				leader ?= {  
+					OR = {
+						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_vanguardist
+					}
+				} 
+			}
+			add = {
+				value = -200
+				desc = "from_communism"
+			}
+		}
+		#Whigs/Republicans are protectionist
+		if = {
+			limit = {
+				OR = {
+					law_stance = {
+						law = law_type:law_protectionism
+						value > neutral
+					}
+					has_ideology = ideology:ideology_pro_tariff
+				}
+			}
+			add = {
+				value = 20
+				desc = "ideology_pro_tariff"
+			}
+		}
+		#American School more so
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_american_school
+			}
+			add = {
+				value = 25
+				desc = "ideology_american_school"
+			}
+		}
+		#Progressives don't like an industrialist-dominated party
+		if = {
+			limit = {
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_usfp_progressive
+						has_ideology = ideology:ideology_social_democrat
+					}
+				}
+				owner.ig:ig_industrialists ?= {
+					is_powerful = yes
+					is_member_of_party = owner.py:usfp_republican_party
+				}
+				ig_clout < owner.ig:ig_industrialists.ig_clout
+			}
+			add = {
+				value = -200
+				desc = "party_dominated_by_industrialists"
+			}
+		}
+		#TUs generically don't like joining the Industrialists
+		if = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				owner.ig:ig_industrialists ?= {
+					is_member_of_party = owner.py:usfp_republican_party
+				}
+			}
+			add = {
+				value = -25
+				desc = "industrialists_in_party"
+			}
+		}
+		#Industrialists like the Republican party more if PB/INT get marginalized
+		if = {
+			limit = {
+				is_interest_group_type = ig_industrialists
+				owner.ig:ig_intelligentsia ?= {
+					ig_counts_as_marginal = yes
+				}		
+				owner.ig:ig_petty_bourgeoisie ?= {
+					ig_counts_as_marginal = yes
+				} 
+			}
+			add = {
+				value = 100
+				desc = "urban_interests"
+			}
+		}
+		#Armed Forces are slightly inclined to the Whigs/Republicans
+		if = {
+			limit = {
+				is_interest_group_type = ig_armed_forces
+			}
+			add = {
+				value = 5
+				desc = "federal_military_funding"
+			}
+		}
+	}
+
+}

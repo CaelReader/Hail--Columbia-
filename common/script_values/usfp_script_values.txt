@@ -1,4 +1,6 @@
-﻿usfp_bleeding_kansas_get_yankee_radicals = {
+﻿usfp_monroe_doctrine_naval_power = 1000
+
+usfp_bleeding_kansas_get_yankee_radicals = {
     value = {
         every_scope_pop = {
             limit = {
@@ -537,5 +539,100 @@ usfp_ai_weight_anti_racism_option = {
 		value = -25
 		add = usfp_ai_weight_tally_anti_racism_government
 		subtract = usfp_ai_weight_racist_antiracist_balance_of_movements
+	}
+}
+
+usfp_get_02_percent_inflation_per_year = { #usd/gbp inflation was largely flat over the period but multiply by this to slowly raise prices
+	value = 0.0002
+	multiply = {
+		value = year
+		subtract = 1836
+	}
+	add = 1
+	min = 1
+}
+
+usfp_usd_to_pounds = { #divide historical usd values by this
+	value = 5 #roughly 5:1 exchange rate historically
+}
+
+usfp_alaska_purchase_lump_sum = {
+	value = 7200000 #1867 USD
+	multiply = {
+		value = usfp_get_02_percent_inflation_per_year
+		subtract = 0.0060 #30 years of inflation factored in
+	}
+	divide = usfp_usd_to_pounds
+	round_to = 100000 #diplomatic purchases are not made in highly specific amounts
+}
+
+usfp_cuba_purchase_lump_sum = {
+	value = 130000000 #1854 USD
+	multiply = {
+		value = usfp_get_02_percent_inflation_per_year
+		subtract = 0.0040 #20 years of inflation factored in
+	}
+	divide = usfp_usd_to_pounds
+	round_to = 100000 #diplomatic purchases are not made in highly specific amounts
+}
+
+usfp_greenland_purchase_lump_sum = {
+	value = 2500000 #1867 USD
+	multiply = {
+		value = usfp_get_02_percent_inflation_per_year
+		subtract = 0.0060 #30 years of inflation factored in
+	}
+	divide = usfp_usd_to_pounds
+	round_to = 100000 #diplomatic purchases are not made in highly specific amounts
+}
+
+usfp_iceland_purchase_lump_sum = {
+	value = 3000000 #1867 USD
+	multiply = {
+		value = usfp_get_02_percent_inflation_per_year
+		subtract = 0.0060 #30 years of inflation factored in
+	}
+	divide = usfp_usd_to_pounds
+	round_to = 100000 #diplomatic purchases are not made in highly specific amounts
+}
+
+usfp_west_indies_purchase_lump_sum = {
+	value = 7500000 #1867 USD
+	multiply = {
+		value = usfp_get_02_percent_inflation_per_year
+		subtract = 0.0060 #30 years of inflation factored in
+	}
+	divide = usfp_usd_to_pounds
+	round_to = 100000 #diplomatic purchases are not made in highly specific amounts
+}
+
+usfp_calculate_danish_purchase_cost = {
+	value = 0
+	if = {
+		limit = {
+			scope:usa_scope = {
+				has_variable = usfp_danish_purchases_greenland_desire
+			}
+			usfp_danish_purchase_greenland_valid = yes
+		}
+		subtract = usfp_greenland_purchase_lump_sum
+	}
+	if = {
+		limit = {
+			scope:usa_scope = {
+				has_variable = usfp_danish_purchases_iceland_desire
+			}
+			usfp_danish_purchase_iceland_valid = yes
+		}
+		subtract = usfp_iceland_purchase_lump_sum
+	}
+	if = {
+		limit = {
+			scope:usa_scope = {
+				has_variable = usfp_danish_purchases_west_indies_desire
+			}
+			usfp_danish_purchase_west_indies_valid = yes
+		}
+		subtract = usfp_west_indies_purchase_lump_sum
 	}
 }

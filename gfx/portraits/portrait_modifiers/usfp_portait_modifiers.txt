@@ -145,12 +145,12 @@
                 template = no_prop
                 range = { 0 1 }
             }
-            accessory = {
-                mode = add
-                gene = coats
-                template = american_coats
-                range = { 0 1 } # For the randomness to work correctly
-            }
+            # accessory = {
+            #     mode = add
+            #     gene = coats
+            #     template = american_coats
+            #     range = { 0 1 } # For the randomness to work correctly
+            # }
             accessory = {
                 mode = add
                 gene = epaulettes

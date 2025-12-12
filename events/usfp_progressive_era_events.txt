@@ -107,10 +107,10 @@ usfp_progressive_era.2 = {
 			has_variable = scientific_management_spawned
 		}
 		ig:ig_industrialists = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 		}
 		ig:ig_intelligentsia = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 		}
 	}
 
@@ -603,18 +603,22 @@ usfp_progressive_era.8 = {
 	}
 
 	duration = 3
-	cooldown = {
-		months = 36
-	} #once
+	cooldown = { days = never_fire_again_modifier_time } #Once
 
 	trigger = {
 		ig:ig_petty_bourgeoisie = {
-			NOR = {
+			NOT = {
 				has_ideology = ideology:ideology_feminist_ig
 			}
 		}
 		NOT = {
 			has_law_or_variant = law_type:law_womens_suffrage
+		}
+		year > 1880 #Jane Addams should not be spawning early
+		NOT = {
+			any_scope_character = {
+				has_template = usfp_usa_jane_addams
+			}
 		}
 	}
 
@@ -784,9 +788,11 @@ usfp_progressive_era.10 = {
 		show_as_unavailable = {
 			always = yes
 		}
-		add_modifier = {
-			name = usfp_pure_drugs_modifier
-			years = 10
+		active_law:lawgroup_health_system ?= {
+			add_amendment = {
+				type = amendment_usfp_pure_drugs
+				sponsor = PREV.ig:ig_intelligentsia
+			}
 		}
 	}
 	#good for business!
@@ -892,6 +898,7 @@ usfp_progressive_era.11 = {
 		show_as_unavailable = {
 			always = yes
 		}
+		highlighted_option = yes
 		add_modifier = {
 			name = usfp_meat_inspectors_modifier
 			days = normal_modifier_time
@@ -1478,7 +1485,7 @@ usfp_progressive_era.17 = {
 			is_political_movement_type = movement_usfp_eugenics
 			any_influenced_interest_group = {
 				usfp_ig_eugenicist_candidate = yes
-				is_marginal = no
+				ig_counts_as_marginal = no
 			}
 		}
 	}
@@ -1491,7 +1498,7 @@ usfp_progressive_era.17 = {
 			random_influenced_interest_group = {
 				limit = {
 					usfp_ig_eugenicist_candidate = yes
-					is_marginal = no
+					ig_counts_as_marginal = no
 				}
 				save_scope_as = eugenicist_ig
 				leader = {

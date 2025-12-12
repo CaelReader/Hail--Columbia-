@@ -320,7 +320,7 @@ ecchi_irc_poundmaker_character_template = {
             this = c:IRC
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_landowners
                 is_interest_group_type = ig_intelligentsia

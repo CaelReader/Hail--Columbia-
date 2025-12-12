@@ -16,3 +16,13 @@ usfp_breaking_compromise = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	country_law_enactment_success_add = -0.15
 }
+
+usfp_dorr_rebellion_positive = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_law_enactment_success_add = 0.10
+}
+
+usfp_dorr_rebellion_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_law_enactment_time_mult = 0.15
+}

@@ -732,3 +732,56 @@ Mexican Cession states now recieve a short migration buff
 Expansionist and Antiexpansionist traits now impact infamy generation and decay
 Jacksonian Democrat can no longer spawn in the PB, but can spawn in the Armed Forces and Southern Planters
 Updated some labor union events to account for the new laws
+
+# 7.0 "Jackson"
+## New Content
+	Added custom Democratic and Republican parties replacing the conservative/liberal parties in the USA
+	Added Jacksonian Agenda JE at game start giving context to the starting situation of laws and taxes
+	Added the Panic of 1837 plus a JE to recover from it
+	New JE and Events for the American press to react to atrocities in Cuba and possibly spark a Spanish-American War
+	Added JE for American attempts to purchase Greenland and other islands from Denmark
+	New events for the Dorr Rebellion, Third Great Awakening, Caroline Affair, Fenian Raids, Aroostook War, Lopez Expedition, Oregon Black Exclusion
+	Added starting Trade Privileges treaties for the USA with various countries
+	New Characters: Emma Goldman (imported from ECCHI), Billy Sunday, Walter Rauschenbusch, Lyman Beecher, Henry Ward Beecher, Peter Cartwright, Bejamin Tillman, David Atchison, Gerrit Smith, Reinhold Niebuhr
+	Added Constitutionalist Movement that spawns in response to unconstitutional law enactment
+	Added Spoils System and Bill of Rights starting amendments
+	Added Anti-Lynching Law amendment
+## 1.12 Compatibility
+	Reverted Liberia map setup to the new vanilla one
+	Moved the vanilla Fugitive Slave Act amendment to the relevant HC event
+	The Gag Rule is now a Law Amendment
+	Replaced the following modifiers with Law Amendments: Pure Drugs, Separate But Equal, Fugitive Slave Act
+	Updated several vanilla overrides to use the new INJECT syntax for compatibility
+	Disabled Durham Tobacco prestige good (3 prestige good limit)
+	Confiscate Slaveholder Lands now adds an amendment which unlocks the decree
+	Added custom geographic regions to some triggers for better tooltips
+## 1836 Starting Situation Update
+	USA now begins with Agrarianism and a special variant of Consumption-Based Taxation (cutting the national revenue about in half!)
+	American PB now supports the American School (interventionism and protectionism)
+	William H Harrison is now the starting leader of the PB
+	Daniel Webster is now a starting PB Agitator
+	Significantly reduced the number of starting Government Admins to balance the budget
+	USA now starts on low gov/mil wages
+	USA now starts with Consumption taxes on Furniture/Luxury Furniture, representing property taxes
+	Added more Trade Centers exporting Cotton and Tobacco
+## Updates
+	Removed the SoL change from the planter's Our Peculiar Institution trait
+	William H Harrison is now Sickly
+	William H Seward can no longer spawn for the Rural Folk
+	Increased momentum penalties for running a non-white, non-protestant, or woman candidate
+	General Pershing is now Offensive Planner, Traditionalist Commander, Direct
+	Having an Afro-american ruler or IG leader in government now gives a boost to Long Reconstruction
+	Indian Removal payments are smaller
+	Made the Deranged Office Seeker shoot the president slightly less frequently
+	Monroe Doctrine Violation can now trigger from a european power siding with someone else in a diplo play in the western hemisphere
+	The Alaskan Purchase no longer auto-annexes the whole state region (Civilizing Mission unlocks a decision to do so)
+	Inuit/Athabaskan centralized countries now bypass the tech requirement to survey the arctic
+	Decolonized Greenland (can be surveyed by decision with Zepplins/Planes)
+	Added Greenland Ice Sheet state trait
+	Reverted American Chestnuts state trait to vanilla
+## Fixes
+	Significantly increased the navy requirement to enforce the Monroe Doctrine so that now you actually have to grow the navy from its starting state
+	Moving away from Presidential Republic now removes the Constitution JE even if you still have voting
+	AI USA will never pay money for indian removal
+	Fixed bug where Jane Addams could spawn infinite times
+	The American and Seminole armies in Florida now start mobilized and at the front

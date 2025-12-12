@@ -4,6 +4,7 @@ usfp_westward_expansion_group: "@america_icon! #yellow Hail, Columbia!#! | Westw
 usfp_manifest_destiny_group: "@america_icon! #yellow Hail, Columbia!#! | Manifest Destiny"
 usfp_reconstruction_group: "@america_icon! #yellow Hail, Columbia!#! | Reconstruction"
 usfp_colonization_group: "@america_icon! #yellow Hail, Columbia!#! | Colonization"
+usfp_usa_diplomacy_group: "@america_icon! #yellow Hail, Columbia!#! | Diplomatic Events"
 
 notification_usfp_new_american_homeland_name: "[concept_usfp_westward_expansion]"
  notification_usfp_new_american_homeland_desc: "[SCOPE.sState('new_homeland_state').GetName] is now considered a [SCOPE.sCulture('new_homeland_culture').GetName] [concept_homeland]."
@@ -103,3 +104,85 @@ notification_usfp_colony_rejected_name: "Colony Proposal Rejected"
 notification_usfp_colony_accepted_name: "Colony Proposal Accepted"
  notification_usfp_colony_accepted_desc: "[SCOPE.sCountry('usa_colony_target_scope').GetName] has accepted our proposal for an $usfp_afro_american_culture$ colony in their territory."
  notification_usfp_colony_accepted_tooltip: "#header $notification_usfp_colony_accepted_name$#!\n$notification_usfp_colony_accepted_desc$"
+
+notification_usfp_canada_caroline_burning_escalation_usa_name: "[SCOPE.sCountry('usa_scope').GetAdjective] Outraged"
+notification_usfp_canada_caroline_burning_escalation_usa_desc: "The Royal Navy's interception of an [SCOPE.sCountry('usa_scope').GetAdjective] smuggling ship in [SCOPE.sState('ontario_scope').GetName] has damaged our [concept_relations]."
+notification_usfp_canada_caroline_burning_escalation_usa_tooltip: "#header $notification_usfp_canada_caroline_burning_escalation_usa_name$#!\n$notification_usfp_canada_caroline_burning_escalation_usa_desc$"
+
+notification_usfp_canada_caroline_burning_negotiated_name: "[SCOPE.sCountry('britain_scope').GetName] Accepts Diplomacy"
+notification_usfp_canada_caroline_burning_negotiated_desc: "[SCOPE.sCountry('britain_scope').GetAdjective] and [SCOPE.sCountry('usa_scope').GetAdjective] ambassadors have met to negotiate the security of the Canadian border, establishing a [concept_truce] and improving our [concept_relations]."
+notification_usfp_canada_caroline_burning_negotiated_tooltip: "#header $notification_usfp_canada_caroline_burning_negotiated_name$#!\n$notification_usfp_canada_caroline_burning_negotiated_desc$"
+
+notification_usfp_canada_caroline_burning_escalation_gbr_name: "[SCOPE.sCountry('britain_scope').GetAdjective] Rejects Diplomacy"
+notification_usfp_canada_caroline_burning_escalation_gbr_desc: "[SCOPE.sCountry('britain_scope').GetName] has damaged our [concept_relations] by asserting unilateral enforcement of the Canadian border."
+notification_usfp_canada_caroline_burning_escalation_gbr_tooltip: "#header $notification_usfp_canada_caroline_burning_escalation_gbr_name$#!\n$notification_usfp_canada_caroline_burning_escalation_gbr_desc$"
+
+notification_usfp_usa_supporting_fenians_gbr_name: "[SCOPE.sCountry('usa_scope').GetAdjective] Support for Fenians"
+notification_usfp_usa_supporting_fenians_gbr_desc: "The [SCOPE.sCountry('usa_scope').GetName] is allowing [GetCulture('irish').GetName] insurgents to strike across the border into [SCOPE.sState('ontario_scope').GetName], greatly increasing [Concept('concept_radical', '$concept_radicalism$')] there."
+notification_usfp_usa_supporting_fenians_gbr_tooltip: "#header $notification_usfp_usa_supporting_fenians_gbr_name$#!\n$notification_usfp_usa_supporting_fenians_gbr_desc$"
+
+notification_usfp_usa_mad_over_maine_name: "[SCOPE.sCountry('usa_scope').GetName] Angered"
+notification_usfp_usa_mad_over_maine_desc: "Our [concept_relations] with the [SCOPE.sCountry('usa_scope').GetName] have greatly decreased."
+notification_usfp_usa_mad_over_maine_tooltip: "#header $notification_usfp_usa_mad_over_maine_name$#!\n$notification_usfp_usa_mad_over_maine_desc$"
+
+notification_usfp_usa_not_mad_over_maine_name: "[SCOPE.sCountry('usa_scope').GetName] Doesn't Blame Us"
+notification_usfp_usa_not_mad_over_maine_desc: "The [SCOPE.sCountry('usa_scope').GetName] agrees that the explosion was an accident."
+notification_usfp_usa_not_mad_over_maine_tooltip: "#header $notification_usfp_usa_not_mad_over_maine_name$#!\n$notification_usfp_usa_not_mad_over_maine_desc$"
+
+notification_usfp_usa_claims_aroostook_name: "[SCOPE.sCountry('usa_scope').GetName] Claims [GetStateRegion('STATE_MAINE').GetName]"
+notification_usfp_usa_claims_aroostook_desc: "The [SCOPE.sCountry('usa_scope').GetName] is asserting its [concept_claim] to the disputed region of [SCOPE.sState('aroostook_state_scope').GetName]."
+notification_usfp_usa_claims_aroostook_tooltip: "#header $notification_usfp_usa_claims_aroostook_name$#!\n$notification_usfp_usa_claims_aroostook_desc$"
+
+notification_usfp_gbr_accepts_aroostook_treaty_name: "[SCOPE.sCountry('britain_scope').GetName] Begins [GetStateRegion('STATE_MAINE').GetName] Negotiation"
+notification_usfp_gbr_accepts_aroostook_treaty_desc: "[SCOPE.sCountry('britain_scope').GetName] has agreed to negotiations to determine a new boundary in [GetStateRegion('STATE_MAINE').GetName]."
+notification_usfp_gbr_accepts_aroostook_treaty_tooltip: "#header $notification_usfp_gbr_accepts_aroostook_treaty_name$#!\n$notification_usfp_gbr_accepts_aroostook_treaty_desc$"
+
+notification_usfp_gbr_rejects_aroostook_treaty_name: "[SCOPE.sCountry('britain_scope').GetName] Rejects [GetStateRegion('STATE_MAINE').GetName] Negotiation"
+notification_usfp_gbr_rejects_aroostook_treaty_desc: "[SCOPE.sCountry('britain_scope').GetName] has refused to renegotiate the border in [GetStateRegion('STATE_MAINE').GetName]."
+notification_usfp_gbr_rejects_aroostook_treaty_tooltip: "#header $notification_usfp_gbr_rejects_aroostook_treaty_name$#!\n$notification_usfp_gbr_rejects_aroostook_treaty_desc$"
+
+notification_usfp_aroostook_to_usa_name: "[GetStateRegion('STATE_MAINE').GetName] Border Treaty Signed"
+notification_usfp_aroostook_to_usa_desc: "[SCOPE.sCountry('britain_scope').GetName] has concluded a border treaty with the [SCOPE.sCountry('usa_scope').GetName], ceding control of the [SCOPE.sState('aroostook_state_scope').GetName] region."
+notification_usfp_aroostook_to_usa_tooltip: "#header $notification_usfp_aroostook_to_usa_name$#!\n$notification_usfp_aroostook_to_usa_desc$"
+
+
+notification_usfp_denmark_refused_sale_name: "[SCOPE.sCountry('greenland_owner_scope').GetName] Refuses Sale"
+notification_usfp_denmark_refused_sale_desc: "[SCOPE.sCountry('greenland_owner_scope').GetName] has not agreed to sell us their territories at this time."
+notification_usfp_denmark_refused_sale_tooltip: "#header $notification_usfp_denmark_refused_sale_name$#!\n$notification_usfp_denmark_refused_sale_desc$"
+
+
+notification_usfp_denmark_agreed_to_sale_name: "[SCOPE.sCountry('greenland_owner_scope').GetName] Accepts"
+notification_usfp_denmark_agreed_to_sale_desc: "[SCOPE.sCountry('greenland_owner_scope').GetName] has accepted our offer and transferred the requested territories."
+notification_usfp_denmark_agreed_to_sale_tooltip: "#header $notification_usfp_denmark_agreed_to_sale_name$#!\n$notification_usfp_denmark_agreed_to_sale_desc$"
+
+
+notification_usfp_usa_refused_danish_counteroffer_name: "[SCOPE.sCountry('usa_scope').GetName] Refuses"
+notification_usfp_usa_refused_danish_counteroffer_desc: "[SCOPE.sCountry('usa_scope').GetName] has not accepted our counter-offer and negotiations have closed for now."
+notification_usfp_usa_refused_danish_counteroffer_tooltip: "#header $notification_usfp_usa_refused_danish_counteroffer_name$#!\n$notification_usfp_usa_refused_danish_counteroffer_desc$"
+
+
+notification_usfp_usa_accepted_danish_counteroffer_name: "[SCOPE.sCountry('usa_scope').GetName] Accepts"
+notification_usfp_usa_accepted_danish_counteroffer_desc: "[SCOPE.sCountry('usa_scope').GetName] has accepted our counter-offer."
+notification_usfp_usa_accepted_danish_counteroffer_tooltip: "#header $notification_usfp_usa_accepted_danish_counteroffer_name$#!\n$notification_usfp_usa_accepted_danish_counteroffer_desc$"
+
+
+notification_usa_claiming_greenland_name: "[SCOPE.sCountry('usa_scope').GetName] Claims [GetStateRegion('STATE_GREENLAND').GetName]"
+notification_usa_claiming_greenland_desc: "[SCOPE.sCountry('usa_scope').GetName] has broken off negotiations with [SCOPE.sCountry('greenland_owner_scope').GetName] and intends to seize control of [GetStateRegion('STATE_GREENLAND').GetName]."
+notification_usa_claiming_greenland_tooltip: "#header $notification_usa_claiming_greenland_name$#!\n$notification_usa_claiming_greenland_desc$"
+
+
+notification_usfp_usa_bought_west_indies_third_party_name: "[SCOPE.sCountry('usa_scope').GetName] Purchases [GetStateRegion('STATE_WEST_INDIES').GetName]"
+notification_usfp_usa_bought_west_indies_third_party_desc: "[SCOPE.sCountry('usa_scope').GetName] has purchased control of the [SCOPE.sCountry('greenland_owner_scope').GetAdjective] territory in the [GetStateRegion('STATE_WEST_INDIES').GetName]."
+notification_usfp_usa_bought_west_indies_third_party_tooltip: "#header $notification_usfp_usa_bought_west_indies_third_party_name$#!\n$notification_usfp_usa_bought_west_indies_third_party_desc$"
+
+notification_usfp_usa_bought_greenland_third_party_name: "[SCOPE.sCountry('usa_scope').GetName] Purchases [GetStateRegion('STATE_GREENLAND').GetName]"
+notification_usfp_usa_bought_greenland_third_party_desc: "[SCOPE.sCountry('usa_scope').GetName] has purchased control of [GetStateRegion('STATE_GREENLAND').GetName] from [SCOPE.sCountry('greenland_owner_scope').GetName]."
+notification_usfp_usa_bought_greenland_third_party_tooltip: "#header $notification_usfp_usa_bought_greenland_third_party_name$#!\n$notification_usfp_usa_bought_greenland_third_party_desc$"
+
+notification_usfp_usa_bought_iceland_third_party_name: "[SCOPE.sCountry('usa_scope').GetName] Purchases [GetStateRegion('STATE_ICELAND').GetName]"
+notification_usfp_usa_bought_iceland_third_party_desc: "[SCOPE.sCountry('usa_scope').GetName] has purchased the island of [GetStateRegion('STATE_ICELAND').GetName] from [SCOPE.sCountry('greenland_owner_scope').GetName]."
+notification_usfp_usa_bought_iceland_third_party_tooltip: "#header $notification_usfp_usa_bought_iceland_third_party_name$#!\n$notification_usfp_usa_bought_iceland_third_party_desc$"
+
+notification_usfp_cuba_filibusters_failed_name: "Filibusters Captured"
+notification_usfp_cuba_filibusters_failed_desc: "[SCOPE.sCountry('cuba_scope').GetName] has captured and executed the filibusters who departed from our shores, harming our [concept_relations]."
+notification_usfp_cuba_filibusters_failed_tooltip: "#header $notification_usfp_cuba_filibusters_failed_name$#!\n$notification_usfp_cuba_filibusters_failed_desc$"

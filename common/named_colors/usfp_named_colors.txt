@@ -1,3 +1,4 @@
 ﻿colors = {
 	usa_red = rgb {178 34 52}
+	fsa_blue = rgb { 106  124  243 }
 }

@@ -1,4 +1,4 @@
-﻿USA = { # United States of America
+﻿REPLACE:USA = { # United States of America
 	dynamic_country_name = {
 		name = dyn_c_united_states
 		adjective = USA_ADJ
@@ -288,31 +288,31 @@
 			scope:actor = {
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_north_america = yes
+					is_in_geographic_region = geographic_region_north_america
 				}
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_south_america = yes
+					is_in_geographic_region = geographic_region_south_america
 				}
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_europe = yes
+					is_in_geographic_region = geographic_region_europe
 				}
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_africa = yes
+					is_in_geographic_region = geographic_region_africa
 				}
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_middle_east = yes
+					is_in_geographic_region = geographic_region_middle_east
 				}
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_india = yes
+					is_in_geographic_region = geographic_region_india
 				}
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_east_asia = yes
+					is_in_geographic_region = geographic_region_east_asia
 				}
 				any_scope_state = {
 					is_incorporated = yes
@@ -349,11 +349,11 @@
 			scope:actor = {
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_north_america = yes
+					is_in_geographic_region = geographic_region_north_america
 				}
 				any_scope_state = {
 					is_incorporated = yes
-					state_is_in_south_america = yes
+					is_in_geographic_region = geographic_region_south_america
 				}
 			}
 		}
@@ -385,6 +385,67 @@
 					}
 				}
 			} 
+		}
+	}
+
+	#Revolts
+	dynamic_country_name = {
+		name = usfp_ACC
+		adjective = usfp_ACC_ADJ
+
+		is_revolutionary = yes
+		priority = 1000
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_secessionist = no
+				OR = {
+					var:civil_war_type_var ?= movement_type:movement_usfp_american_constitution
+					var:civil_war_type_var ?= movement_type:movement_radical
+					var:civil_war_type_var ?= movement_type:movement_liberal
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = usfp_WCA
+		adjective = usfp_WCA_ADJ
+
+		is_revolutionary = yes
+		priority = 1000
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_secessionist = no
+				OR = {
+					var:civil_war_type_var ?= movement_type:movement_socialist
+					var:civil_war_type_var ?= movement_type:movement_anarchist
+					var:civil_war_type_var ?= movement_type:movement_communist
+					var:civil_war_type_var ?= movement_type:movement_labor
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = usfp_APG
+		adjective = usfp_APG_ADJ
+
+		is_revolutionary = yes
+		priority = 1000
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_secessionist = no
+				OR = {
+					var:civil_war_type_var ?= movement_type:movement_usfp_neoconfederate
+					var:civil_war_type_var ?= movement_type:movement_cultural_majority
+					var:civil_war_type_var ?= movement_type:movement_fascist
+					var:civil_war_type_var ?= movement_type:movement_usfp_eugenics
+				}
+			}
 		}
 	}
 }
@@ -442,7 +503,7 @@ ARP = {
 	}
 }
 
-LKT = { # Lakota
+REPLACE_OR_CREATE:LKT = { # Lakota
 	dynamic_country_name = {
 		name = dyn_c_oceti_sakowin
 		adjective = dyn_c_oceti_sakowin_adj
@@ -469,7 +530,7 @@ LKT = { # Lakota
 	}
 }
 
-ALK = {
+REPLACE_OR_CREATE:ALK = {
 	dynamic_country_name = {
 		name = dyn_c_russian_american_company
 		adjective = dyn_c_russian_american_company_adj
@@ -554,7 +615,7 @@ usfp_PSA = {
 	}
 }
 
-CAL = {
+REPLACE_OR_CREATE:CAL = {
 	dynamic_country_name = {
 		name = dyn_c_two_californias
 		adjective = dyn_c_two_californias_adj

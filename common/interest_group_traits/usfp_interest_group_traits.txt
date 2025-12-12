@@ -16,7 +16,8 @@ usfp_ig_trait_peculiar_institution = {
 	modifier = {
 		building_cotton_plantation_throughput_add = 0.10
 		building_group_bg_plantations_throughput_add = 0.05
-		building_group_bg_plantations_standard_of_living_add = -1
+		state_slaves_mortality_mult = 0.01 #I want this trait to show that happy slavers is worse for slaves, but mortality isn't exactly right, I would want Slaves SoL
+		# building_group_bg_plantations_standard_of_living_add = -1
 	}
 }
 

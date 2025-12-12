@@ -1,0 +1,68 @@
+﻿geographic_region_american_west_zone = {
+	short_key = "usfp_american_west"
+
+	state_regions = {
+		STATE_CALIFORNIA
+		STATE_NEW_MEXICO
+		STATE_UTAH
+		STATE_NEVADA
+		STATE_ARIZONA
+		STATE_OREGON
+		STATE_WASHINGTON
+		STATE_IDAHO
+		STATE_WYOMING
+		STATE_MONTANA
+		STATE_OKLAHOMA
+		STATE_COLORADO
+		STATE_NORTH_DAKOTA
+		STATE_SOUTH_DAKOTA
+		STATE_NEBRASKA
+		STATE_KANSAS
+		STATE_TEXAS
+		STATE_MINNESOTA
+	}
+}
+
+geographic_region_western_hemisphere = {
+	short_key = "usfp_western_hemisphere"
+
+	strategic_regions = {
+		#geographic_region_north_america
+		sr:region_canada
+		sr:region_new_england
+		sr:region_pacific_coast
+		sr:region_great_plains
+		sr:region_the_midwest
+		sr:region_dixie
+
+		#geographic_region_central_america
+		sr:region_mexico
+		sr:region_central_america
+		sr:region_caribbean
+
+		#geographic_region_south_america
+		sr:region_brazil
+		sr:region_la_plata
+		sr:region_andes
+		sr:region_gran_colombia
+	}
+
+	state_regions = {
+		STATE_GREENLAND
+		STATE_HAWAIIAN_ISLANDS
+	}
+}
+
+geographic_region_central_great_plains = {
+	short_key = "usfp_central_plains"
+
+	state_regions = {
+		STATE_MONTANA
+		STATE_WYOMING
+		STATE_NORTH_DAKOTA
+		STATE_SOUTH_DAKOTA
+		STATE_NEBRASKA
+		STATE_KANSAS
+		STATE_COLORADO
+	}
+}

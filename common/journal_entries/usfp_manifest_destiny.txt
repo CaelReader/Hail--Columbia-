@@ -518,14 +518,14 @@ usfp_manifest_destiny_main = {
 					any_scope_state = {
 						has_claim_by = root
 						is_split_state = no
-						state_is_in_north_america = yes
+						is_in_geographic_region = geographic_region_north_america
 					}
 				}
 				random_scope_state = {
 					limit = {
 						has_claim_by = root
 						is_split_state = no
-						state_is_in_north_america = yes
+						is_in_geographic_region = geographic_region_north_america
 					}
 					state_region = {
 						remove_claim = root
@@ -555,6 +555,8 @@ usfp_manifest_destiny_main = {
 			100 = usfp_indian_postremoval.7 #Osage Reign of Terror
 			50 = usfp_native_removal.16 #Northern Removal in case Michigan is slow to colonize
 			100 = usfp_manifest_destiny.30 #Mexican Discrimination
+			50 = usfp_filibuster.5 #Lopez expedition to Cuba
+			50 = usfp_manifest_destiny.31 #Oregon Black Exclusion
 		}
 		events = {
 			# usfp_manifest_destiny.6 #Treaty of GH
@@ -632,7 +634,10 @@ usfp_je_westward_expansion = {
 	}
 
 	complete = {
-		usfp_owns_american_west = yes
+		any_state_in_usfp_american_west = {
+			count = all
+			owner = root
+		}
 	}
 
 	on_complete = {
@@ -763,18 +768,11 @@ usfp_je_indian_wars = {
 	}
 
 	complete = {
-		owns_entire_state_region = STATE_MONTANA
-		owns_entire_state_region = STATE_WYOMING
-		owns_entire_state_region = STATE_NORTH_DAKOTA
-		owns_entire_state_region = STATE_SOUTH_DAKOTA
-		owns_entire_state_region = STATE_NEBRASKA
-		owns_entire_state_region = STATE_KANSAS
-		s:STATE_COLORADO = { #can be split with Mexico
-			NOT = {
-				any_scope_state = {
-					owner = {
-						is_country_type = decentralized
-					}
+		any_state_in_usfp_central_plains = {
+			count = all
+			owner = {
+				NOT = {
+					is_country_type = decentralized
 				}
 			}
 		}

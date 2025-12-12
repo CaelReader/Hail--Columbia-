@@ -1,4 +1,4 @@
-﻿usfp_country_is_american = {
+﻿REPLACE_OR_CREATE:usfp_country_is_american = {
 	OR = {
 		country_has_primary_culture = cu:yankee
 		country_has_primary_culture = cu:dixie
@@ -6,19 +6,19 @@
 	}
 }
 
-usfp_has_american_primary_culture = {
+REPLACE_OR_CREATE:usfp_has_american_primary_culture = {
 	country_has_primary_culture = cu:usfp_american
 }
 
-is_usfp_active = {
+REPLACE_OR_CREATE:is_usfp_active = {
 	always = yes
 }
 
-usfp_has_missouri_compromise_trigger = {
+REPLACE_OR_CREATE:usfp_has_missouri_compromise_trigger = {
 	has_journal_entry = je_usfp_a_house_divided_missouri_compromise
 }
 
-country_can_have_cultural_minority_movement_of_culture = { # Fired from the on_national_awakening_started on_action, has all of its scopes
+REPLACE:country_can_have_cultural_minority_movement_of_culture = { # Fired from the on_national_awakening_started on_action, has all of its scopes
 	NOT = {
 		any_political_movement = {
 			culture ?= scope:culture
@@ -48,11 +48,27 @@ country_can_have_cultural_minority_movement_of_culture = { # Fired from the on_n
 	}
 }
 
-ideology_jacksonian_democrat_valid_trigger = {
+REPLACE:ideology_jacksonian_democrat_valid_trigger = {
 	OR = {
 		is_interest_group_type = ig_rural_folk
 		is_interest_group_type = ig_landowners
 		is_interest_group_type = ig_armed_forces
 		is_interest_group_type = ig_trade_unions
 	}
+}
+
+REPLACE_OR_CREATE:usfp_has_democratic_party = {
+	any_active_party = {
+		is_party_type = usfp_democratic_party
+	}
+}
+
+REPLACE_OR_CREATE:usfp_has_republican_party = {
+	any_active_party = {
+		is_party_type = usfp_republican_party
+	}
+}
+
+REPLACE_OR_CREATE:usfp_has_constitutional_government = {
+	has_journal_entry = je_usfp_american_constitution
 }

@@ -3,7 +3,12 @@
 		set_next_election_date = 1836.12.7
 
 		set_tax_level = low
+		set_military_wage_level = low
+		set_government_wage_level = low
 		
+		add_taxed_goods = g:furniture
+		add_taxed_goods = g:luxury_furniture #representing property taxes
+
 		effect_starting_technology_tier_1_tech = yes
 		
 		set_market_capital = STATE_NEW_YORK
@@ -15,17 +20,24 @@
 		activate_law = law_type:law_legacy_slavery
 		activate_law = law_type:law_racial_segregation
 		activate_law = law_type:law_usfp_american_system
-		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_agrarianism #Jackson has just abolished the Bank and rejected government investment in infrastructure
 		activate_law = law_type:law_frontier_colonization
-		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_right_of_assembly #constitution says Protected Speech, but really the government will intervene when it feels like it
 		activate_law = law_type:law_no_workers_rights
-		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_usfp_devolved_taxation #no federal income taxes, only tariffs and excises, states are funded mostly through property taxes
 		activate_law = law_type:law_national_militia
 		activate_law = law_type:law_local_police
 		activate_law = law_type:law_no_womens_rights # Women couldn't hold property until ~1839
 		start_enactment = law_type:law_universal_suffrage #states are in the middle of piecemeal removing tax obligations at the start date
 		activate_law = law_type:law_usfp_nominal_separation #de jure total separation, but de facto anti-catholicism, oppression of animists
 	
+		active_law:lawgroup_governance_principles ?= { # Presidential Republic
+			add_amendment = {
+				type = amendment_american_second_amendment
+				sponsor = PREV.ig:ig_rural_folk
+			}
+		}
+
 		add_modifier = usa_capital_intact
 		set_institution_investment_level = {
 			institution = institution_colonial_affairs
@@ -70,6 +82,7 @@
 		add_journal_entry = {type = je_indian_removal}
 		add_journal_entry = {type = je_usfp_american_constitution}
 
+
 		add_modifier = {
 			name = usfp_missouri_compromise_decaying
 			years = 25
@@ -88,14 +101,12 @@
 			value = 0.05
 			pop_type = slaves
 		}
+		
 		add_modifier = {
 			name = usfp_second_great_awakening
 			is_decaying = yes
 			years = 5
 		}
-		# add_modifier = {
-		# 	name = usfp_second_party_system_modifier
-		# }
 		je:je_usfp_american_constitution = {
 			add_modifier = {
 				name = usfp_second_party_system_modifier
@@ -141,7 +152,7 @@
 			remove_ideology = ideology_republican_reactionary
 			add_ideology = ideology_reactionary_segregationist
 			add_ideology = ideology_republican
-			# add_ideology = ideology_american_school
+			add_ideology = ideology_american_school
 		}
 		ig:ig_rural_folk = {
 			remove_ideology = ideology_particularist
@@ -192,5 +203,29 @@
 			value = 0
 		}
 		trigger_event = usfp_usa.23
+
+		set_variable = free_elections_var
+		active_law:lawgroup_distribution_of_power ?= { # Census Voting - whilst individual parties carried out electoral fraud, the American central government did not typically have any role in rigging elections
+			add_amendment = {
+				type = amendment_tradition_of_free_elections
+				sponsor = PREV.ig:ig_rural_folk
+			}
+		}
+		active_law:lawgroup_bureaucracy ?= {
+			add_amendment = {
+				type = amendment_usfp_spoils_system
+				sponsor = PREV.ig:ig_rural_folk
+			}
+		}
+		set_variable = {
+			name = usfp_spoils_system_abolish_var
+			value = 0
+		}
+		active_law:lawgroup_free_speech ?= {
+			add_amendment = {
+				type = amendment_usfp_bill_of_rights
+				sponsor = PREV.ig:ig_intelligentsia
+			}
+		}
 	}
 }

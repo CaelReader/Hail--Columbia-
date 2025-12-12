@@ -47,6 +47,7 @@
 					}
 				}
 				ordered_scope_state = {
+					position = 0
 					limit = {
 						OR = {
 							usfp_mexican_cession_trigger = yes

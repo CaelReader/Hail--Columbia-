@@ -1,34 +1,12 @@
-﻿#override for Nominal Separation support
-pm_religious_academia = {
-	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
-
+﻿#Nominal Separation support
+INJECT:pm_religious_academia = {
 	disallowing_laws = {
-		law_total_separation
-		law_state_atheism
 		law_usfp_nominal_separation
-	}
-
-	building_modifiers = {
-		level_scaled = {
-			building_employment_clergymen_add = 250
-			building_employment_academics_add = 250
-		}
 	}
 }
 
-pm_religious_bureaucrats = {
-	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
-
+INJECT:pm_religious_bureaucrats = {
 	disallowing_laws = {
-		law_total_separation
-		law_state_atheism
 		law_usfp_nominal_separation
-	}
-
-	building_modifiers = {
-		level_scaled = {
-			building_employment_clergymen_add = 250
-			building_employment_bureaucrats_add = 250
-		}
 	}
 }

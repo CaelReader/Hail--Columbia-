@@ -41,6 +41,24 @@
 			desc = "afro_american_character_popularity"
 			value = usfp_long_reconstruction_get_afro_american_popularity
 		}
+		if = {
+			limit = {
+				OR = {
+					ruler = {
+						culture = cu:afro_american
+					}
+					any_interest_group_in_government = {
+						leader = {
+							culture = cu:afro_american
+						}
+					}
+				}
+			}
+			add = {
+				value = 5.0
+				desc = "afro_american_in_government"
+			}
+		}
 		add = {
 			desc = "afro_american_movement_support"
 			value = usfp_long_reconstruction_get_afro_american_movement_support
@@ -294,25 +312,106 @@
 					has_party = yes
 					is_in_government = yes
 					party = {
-						OR = {
-							is_party_type = conservative_party
-							AND = {
-								is_party_type = agrarian_party
-								root = {
-									NOT = {
-										any_active_party = {
-											is_party_type = conservative_party
-										}
-									}
-								}
-							}
-						}
+						is_party_type = usfp_democratic_party
 					}
 				}
 			}
 			subtract = {
 				desc = "democratic_party_in_government"
 				value = 1
+			}
+		}
+	}
+ }
+
+ usfp_panic_1837_recovery_progress_bar = {
+	name = "usfp_panic_1837_recovery_progress_bar"
+	desc = "usfp_panic_1837_recovery_progress_bar_desc"
+	default_green = yes
+
+	start_value = 0
+	min_value = 0
+	max_value = 300
+
+	monthly_progress = {
+		#Natural recovery over time
+		add = {
+			value = 1
+			desc = "panic_recovery_natural"
+		}
+		#GDP growth
+		if = {
+			limit = {
+				var:panic_1837_last_month_gdp < var:panic_1837_this_month_gdp
+			}
+			add = {
+				value = var:panic_1837_gdp_target
+				divide = var:panic_1837_this_month_gdp
+				subtract = 1
+				multiply = 100
+				max = 3
+				desc = "panic_recovery_gdp_growth"
+			}
+		} else = {
+			subtract = {
+				value = var:panic_1837_last_month_gdp
+				divide = var:panic_1837_this_month_gdp
+				subtract = 1
+				multiply = 100
+				max = 3
+				desc = "panic_recovery_gdp_growth"
+			}
+		}
+		#Number of Gold Fields/Gold Mines
+		add = {
+			value = {
+				every_scope_building = {
+					limit = {
+						OR = {
+							is_building_group = bg_gold_fields
+							is_building_group = bg_gold_mining
+						}
+					}
+					add = level
+				}
+				divide = 5
+			}
+			desc = "panic_recovery_gold_sources"
+		}
+		#Number of Railroads
+		add = {
+			value = {
+				every_scope_building = {
+					limit = {
+						is_building_type = building_railway
+					}
+					add = level
+				}
+				divide = 10
+			}
+			desc = "panic_recovery_railroads"
+		}
+		#Interventionism Law
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_interventionism
+			}
+			add = {
+				value = 0.5
+				desc = "law_interventionism"
+			}
+		}
+		#Bankruptcy/Default
+		if = {
+			limit = {
+				OR = {
+					in_default = yes
+					has_modifier = declared_bankruptcy
+				}
+			}
+			subtract = {
+				value = 5
+				desc = "panic_recovery_bankruptcy"
 			}
 		}
 	}

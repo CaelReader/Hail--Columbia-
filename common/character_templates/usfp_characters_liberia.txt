@@ -18,7 +18,7 @@ usfp_lib_anthony_d_williams = {
 			c:LIB ?= this
 		 }
 		interest_group_trigger = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			is_interest_group_type = ig_devout
 		 }
 		earliest_usage_date = 1836.1.1

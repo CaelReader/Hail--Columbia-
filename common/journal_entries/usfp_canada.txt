@@ -1,4 +1,4 @@
-﻿je_canada_can = {
+﻿REPLACE_OR_CREATE:je_canada_can = {
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
 	group = je_group_historical_content
@@ -81,7 +81,7 @@
 			# 		NOT = {
 			# 			this = root
 			# 		}
-			# 		country_is_in_north_america = yes
+			# 		is_in_geographic_region = geographic_region_north_america
 			# 		OR = {
 			# 			country_has_primary_culture = cu:anglo_canadian
 			# 			country_has_primary_culture = cu:franco_canadian
@@ -125,7 +125,7 @@
 	should_be_pinned_by_default = yes
 }
 
-je_canada_gbr = {
+REPLACE_OR_CREATE:je_canada_gbr = {
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
 	group = je_group_historical_content

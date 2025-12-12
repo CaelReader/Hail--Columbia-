@@ -1,0 +1,191 @@
+﻿usfp_je_agenda_jackson = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/jackson_democrat.dds"
+
+	group = je_group_historical_content
+
+	immediate = {
+		ruler = {
+			save_scope_as = jackson_scope
+		}
+		scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					tax_level > low
+				 }
+				 set_variable = {
+					name = changed_taxes_above_low
+					years = 10
+				 }
+			}
+			if = {
+				limit = { 
+					OR = {
+						NOT = {
+							has_law_or_variant = law_type:law_legacy_slavery
+						}
+						is_enacting_law = law_type:law_slave_trade
+						is_enacting_law = law_type:law_slavery_banned
+						is_enacting_law = law_type:law_debt_slavery
+						is_enacting_law = law_type:law_colonial_slavery
+					}
+				}
+				set_variable = {
+					name = attempted_to_change_slavery_law
+					years = 10
+				}
+			}
+		}
+	}
+
+	complete = {
+		OR = {
+			custom_tooltip = {
+				text = all_presidential_agenda_items_complete
+				in_election_campaign = yes
+				has_law_or_variant = law_type:law_legacy_slavery
+				has_law_or_variant = law_type:law_agrarianism
+				has_law_or_variant = law_type:law_universal_suffrage
+				NOT = {
+					has_variable = changed_taxes_above_low
+				}
+				scaled_debt <= 0
+				has_variable = usfp_indians_removed_end
+			}
+			ruler = {
+				NOT = {
+					has_ideology = ideology:ideology_jacksonian_democrat
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		add_loyalists = {
+			value = {
+				value = 0.0
+				if = {
+					limit = {
+						NOR = {
+							NOT = {
+								has_law_or_variant = law_type:law_legacy_slavery
+							}
+							is_enacting_law = law_type:law_slave_trade
+							is_enacting_law = law_type:law_slavery_banned
+							is_enacting_law = law_type:law_debt_slavery
+							is_enacting_law = law_type:law_colonial_slavery
+							has_variable = attempted_to_change_slavery_law
+						}
+					}
+					add = 0.01
+				}
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_agrarianism
+					}
+					add = 0.01
+				}
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_universal_suffrage
+					}
+					add = 0.01
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = changed_taxes_above_low
+						}
+					}
+					add = 0.01
+				}
+				if = {
+					limit = {
+						scaled_debt <= 0
+					}
+					add = 0.01
+				}
+				if = {
+					limit = {
+						has_variable = usfp_indians_removed_end
+					}
+					add = 0.01
+				}
+			}
+			interest_group = ig:ig_rural_folk
+		}
+		add_modifier = {
+			name = usfp_agenda_completed_jackson_modifier
+			years = 4
+			multiplier = {
+				value = {
+					value = 0.0
+					if = {
+						limit = {
+							NOR = {
+								NOT = {
+									has_law_or_variant = law_type:law_legacy_slavery
+								}
+								is_enacting_law = law_type:law_slave_trade
+								is_enacting_law = law_type:law_slavery_banned
+								is_enacting_law = law_type:law_debt_slavery
+								is_enacting_law = law_type:law_colonial_slavery
+								has_variable = attempted_to_change_slavery_law
+							}
+						}
+						add = 1
+					}
+					if = {
+						limit = {
+							has_law_or_variant = law_type:law_agrarianism
+						}
+						add = 1
+					}
+					if = {
+						limit = {
+							has_law_or_variant = law_type:law_universal_suffrage
+						}
+						add = 1
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_variable = changed_taxes_above_low
+							}
+						}
+						add = 1
+					}
+					if = {
+						limit = {
+							scaled_debt <= 0
+						}
+						add = 1
+					}
+					if = {
+						limit = {
+							has_variable = usfp_indians_removed_end
+						}
+						add = 1
+					}
+				}
+			}
+		}
+
+	}
+
+	invalid = {
+		NOT = {
+			has_law_or_variant = law_type:law_presidential_republic
+		}
+	}
+	
+	weight = 200
+	should_be_pinned_by_default = yes
+}

@@ -4,11 +4,11 @@
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/usfp_coca_cola_prestige.dds"
 }
 
-prestige_good_usfp_durham_tobacco = {
-	base_good = tobacco
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/usfp_durham_tobacco_prestige.dds"
-}
+# prestige_good_usfp_durham_tobacco = {
+# 	base_good = tobacco
+# 	prestige_bonus = 0.1
+# 	texture = "gfx/interface/icons/goods_icons/prestige_goods/usfp_durham_tobacco_prestige.dds"
+# }
 
 prestige_good_usfp_hollywood_movies = {
 	base_good = fine_art

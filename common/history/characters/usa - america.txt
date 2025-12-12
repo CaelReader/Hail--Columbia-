@@ -22,7 +22,16 @@
 		}
 
 		create_character = {
+			template = ecchi_usa_w_harrison_character_template
+			ig_leader = yes
+			on_created = {
+				set_variable = memento_mori_immunity
+			}
+		}
+
+		create_character = {
 			template = USA_daniel_webster
+			is_agitator = yes
 			on_created = {
 				set_variable = memento_mori_immunity
 			}

@@ -25,7 +25,7 @@
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_landowners
@@ -62,7 +62,7 @@ ecchi_usa_f_roosevelt_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_intelligentsia
@@ -114,7 +114,7 @@ usfp_agitator_elizabeth_gurley_flynn = {
 			}
 		}
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_trade_unions
             } 
@@ -159,7 +159,7 @@ usfp_robert_la_follette_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_rural_folk
 				is_interest_group_type = ig_intelligentsia
@@ -261,7 +261,7 @@ usfp_agitator_washington_gladden = {
 			}
 		}
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_devout
             } 
@@ -291,7 +291,7 @@ usfp_thaddeus_stevens_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_intelligentsia
                 is_interest_group_type = ig_petty_bourgeoisie
@@ -330,7 +330,7 @@ usfp_usa_john_fauntroy = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_landowners
 			}
@@ -460,7 +460,7 @@ usfp_usa_william_sumner = {
             has_global_variable = social_darwinism_appeared
         }
         interest_group_trigger = { 
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
         }
         earliest_usage_date = 1872.1.1
@@ -515,7 +515,7 @@ usfp_usa_jane_addams = {
 #     is_agitator = yes
 # }
 
-BIC_swami_vivkananda = { #Swami Vivekananda
+REPLACE_OR_CREATE:BIC_swami_vivkananda = { #Swami Vivekananda
     first_name = Swami
     last_name = Vivekananda
     historical = yes
@@ -542,7 +542,7 @@ BIC_swami_vivkananda = { #Swami Vivekananda
 			has_dlc_feature = ip2_content
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_devout
         }   
         earliest_usage_date = 1885.1.1
@@ -758,7 +758,7 @@ usfp_usa_horace_greeley = {
     agitator_usage = {
         country_trigger = { c:USA ?= this }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
          }
         earliest_usage_date = 1841.1.1
@@ -788,7 +788,7 @@ usfp_booker_t_washington = {
     agitator_usage = {
         country_trigger = { c:USA ?= this }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
          }
         earliest_usage_date = 1881.9.4
@@ -800,7 +800,7 @@ usfp_booker_t_washington = {
             c:ASA ?= this
          }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
          }
         earliest_usage_date = 1881.9.4
@@ -835,7 +835,7 @@ usfp_marcus_garvey = {
             } 
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_petty_bourgeoisie
          }
         earliest_usage_date = 1918.6.1 #UNIA incorporated
@@ -847,7 +847,7 @@ usfp_marcus_garvey = {
             c:ASA ?= this
          }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_petty_bourgeoisie
          }
         earliest_usage_date = 1918.6.1 #UNIA incorporated
@@ -877,7 +877,7 @@ usfp_a_philip_randolph = {
     agitator_usage = {
         country_trigger = { c:USA ?= this }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_trade_unions
          }
         earliest_usage_date = 1917.1.1 #The Messenger founded
@@ -922,7 +922,7 @@ usfp_hubert_harrison = {
             } 
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
          }
         earliest_usage_date = 1917.1.1
@@ -970,7 +970,7 @@ usfp_james_weldon_johnson = {
             } 
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
          }
         earliest_usage_date = 1917.1.1 #NAACP field secretary
@@ -1017,7 +1017,7 @@ usfp_ida_b_wells = {
             } 
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
          }
         earliest_usage_date = 1892.1.1
@@ -1035,4 +1035,355 @@ usfp_ida_b_wells = {
         latest_usage_date = 1928.1.1
         chance = 50
     }
+}
+
+#USFP: Billy Sunday, evangelist preacher and baseball player
+usfp_billy_sunday = {
+    first_name = William
+    last_name = Sunday
+    dna = usfp_billy_sunday
+    historical = yes
+    birth_date = 1862.11.19
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_devout
+    ideology = ideology_moderate
+    traits = {
+        pious
+        charismatic
+        demagogue
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1896.1.1 
+        latest_usage_date = 1917.1.1
+        chance = 50
+    }
+}
+
+#USFP: Walter Rauschenbusch, Social Gospel leader
+usfp_walter_rauschenbusch = {
+    first_name = Walter
+    last_name = Rauschenbusch
+    dna = usfp_walter_rauschenbusch
+    historical = yes
+    birth_date = 1864.10.4
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_devout
+    ideology = ideology_usfp_social_gospel_leader
+    traits = {
+        erudite
+        literary
+        romantic
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1886.1.1
+        latest_usage_date = 1915.1.1
+        chance = 50
+    }
+    agitator_usage = {
+        country_trigger = { 
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1886.1.1
+        latest_usage_date = 1915.1.1
+        chance = 25
+    }
+}
+
+#USFP: Lyman Beecher, abolitionist preacher, father of Henry and Harriet
+usfp_lyman_beecher = {
+    first_name = Lyman
+    last_name = Beecher
+    dna = usfp_lyman_beecher
+    historical = yes
+    birth_date = 1775.10.12
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_devout
+    ideology = ideology_abolitionist
+    traits = {
+        inspirational_orator
+        literary
+        bigoted
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1836.1.1 
+        latest_usage_date = 1852.1.1
+        chance = 50
+    }
+}
+
+#USFP: Henry Ward Beecher, of "beecher's bibles"
+usfp_henry_beecher = {
+    first_name = Henry
+    last_name = Beecher
+    dna = usfp_henry_ward_beecher
+    historical = yes
+    birth_date = 1813.6.24
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_devout
+    ideology = ideology_abolitionist
+    traits = {
+        resupply_commander
+        expensive_tastes
+        demagogue
+        brave
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1848.1.1 
+        latest_usage_date = 1871.1.1
+        chance = 50
+    }
+    agitator_usage = {
+        country_trigger = { 
+            c:USA ?= this
+            NOT = {
+                has_law = law_type:law_slavery_banned
+            }
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1848.1.1 
+        latest_usage_date = 1871.1.1
+        chance = 75
+    }
+}
+
+#USFP: Peter Cartwright, second great awakening preacher
+usfp_peter_cartwright = {
+    first_name = Peter
+    last_name = Cartwright
+    dna = usfp_peter_cartwright
+    historical = yes
+    birth_date = 1785.9.1
+    culture = cu:dixie
+    religion = rel:protestant
+    female = no
+    interest_group = ig_devout
+    ideology = ideology_jacksonian_democrat
+    traits = {
+        pious
+        charismatic
+        direct
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1836.1.1 
+        latest_usage_date = 1850.1.1
+        chance = 25
+    }
+}
+
+#USFP: Benjamin Tillman, white supremacist
+usfp_benjamin_tillman = {
+    first_name = Benjamin
+    last_name = Tillman
+    dna = usfp_benjamin_tillman
+    historical = yes
+    birth_date = 1847.8.11
+    culture = cu:dixie
+    religion = rel:protestant
+    female = no
+    interest_group = ig_landowners
+    ideology = ideology_ethno_nationalist
+    traits = {
+        experienced_political_operator
+        wrathful
+        bigoted
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            OR = {
+                AND = {
+                    c:USA ?= this
+                    has_global_variable = american_civil_war
+                }
+                c:CSA ?= this
+            }
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_landowners
+         }
+        earliest_usage_date = 1890.1.1 
+        latest_usage_date = 1914.1.1
+        chance = 50
+    }
+}
+
+#USFP: David Rice Atchinson, Border Ruffian
+usfp_david_rice_atchinson = {
+    first_name = David
+    last_name = Atchison
+    dna = usfp_david_rice_atchison
+    historical = yes
+    birth_date = 1807.8.11
+    culture = cu:dixie
+    religion = rel:protestant
+    female = no
+    interest_group = ig_armed_forces
+    ideology = ideology_slaver
+    traits = {
+        wrathful
+        basic_colonial_administrator
+        direct
+        usfp_trait_expansionist
+        cruel
+    } 
+    agitator_usage = {
+        country_trigger = {
+            c:USA ?= this
+            has_law_or_variant = law_type:law_legacy_slavery
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+         }
+        earliest_usage_date = 1843.1.1 
+        latest_usage_date = 1862.1.1
+        chance = 50
+    }
+    commander_usage = {
+        country_trigger = {
+            c:CSA ?= this
+         }
+        role = general
+        earliest_usage_date = 1843.1.1 
+        latest_usage_date = 1862.1.1
+        chance = 50
+    }
+}
+
+#USFP: Gerrit Smith, abolitionist philanthropist
+usfp_gerrit_smith = {
+    first_name = Gerrit
+    last_name = Smith
+    dna = usfp_gerrit_smith
+    historical = yes
+    birth_date = 1797.3.6
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_industrialists
+    ideology = ideology_usfp_abolitionist_radical
+    traits = {
+        inept
+        basic_entrepreneur
+        brave
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+            NOT = {
+                has_law_or_variant = law_type:law_slavery_banned
+            }
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+         }
+        earliest_usage_date = 1840.1.1 
+        latest_usage_date = 1872.1.1
+        chance = 25
+    }
+}
+
+#USFP: Reinhold Niebuhr, theologian
+usfp_reinhold_niebuhr = {
+    first_name = Reinhold
+    last_name = Niebuhr
+    dna = usfp_reinhold_niebuhr
+    historical = yes
+    birth_date = 1892.6.21
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_devout
+    ideology = ideology_usfp_social_gospel_leader #would later become a Jingoist after WW2
+    traits = {
+        pious
+        charismatic
+        direct
+        inspirational_orator
+    } 
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+         }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+         }
+        earliest_usage_date = 1928.1.1
+        latest_usage_date = 1960.1.1
+        chance = 25
+    }
+    on_created = {
+        if = {
+            limit = {
+                owner ?= {
+                    has_law_or_variant = law_type:law_council_republic
+                } 
+            }
+            set_ideology = ideology:ideology_jingoist_leader
+        }
+    }
+}
+
+#USFP: Narciso López, filibuster
+usfp_narciso_lopez = {
+    first_name = Narciso
+    last_name = Lopez
+    dna = usfp_narciso_lopez
+    historical = yes
+    birth_date = 1797.11.2
+    culture = cu:north_andean
+    religion = rel:catholic
+    female = no
+    interest_group = ig_armed_forces
+    ideology = ideology_slaver
+    traits = {
+        reckless
+        bandit
+        basic_colonial_administrator
+        basic_offensive_planner
+    }
+    #event-spawned
 }

@@ -1,0 +1,235 @@
+﻿# Hail, Columbia! by CaelReader
+# Sort of a Conservative/Agrarian/Populist party for the most part
+# Core IGs: Landowners, Rural Folk
+# Favorable IGs: Trade Unions
+
+usfp_democratic_party = {
+	color = { 22 102 203 }
+	name = {
+		first_valid = {
+			triggered_desc = {
+				desc = party_us_democrats
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	icon = {
+		default = "/gfx/interface/icons/political_parties/usfp_democratic_party.dds"
+	}
+	# THIS IS RUN ONLY ONCE AT GAME START
+	valid_for_country = {
+		always = yes
+	}
+	available_for_interest_group = {
+		owner = {
+			country_has_voting_franchise = yes
+			has_journal_entry = je_usfp_american_constitution
+		}
+	}
+
+	# Root - IG considering joining
+	# scope:number - the number of IGs that would join this party before the root IG
+	join_weight = {
+		#Everyone except socialists works within the two-party system
+		if = {
+			limit = {
+				leader = {
+					has_socialist_ideology = no
+				}
+			}
+			add = {
+				value = 50
+				desc = "usa_two_party_system"
+			}
+		}
+		#RF and LO should always be Democrats
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_landowners
+				}
+			}
+			add = {
+				value = 100
+				desc = "rural_interests"
+			}
+		}
+		#PB and Intelligentsia should never be Democrats
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_intelligentsia
+				}
+			}
+			add = {
+				value = -100
+				desc = "urban_interests"
+			}
+		}
+		#non-socialist TUs are naturally inclined to the Democrats
+		if = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				leader = {
+					has_socialist_ideology = no
+				}
+			}
+			add = {
+				value = 50
+				desc = "populist_interests"
+			}
+		}
+		## Leader Ideology Check
+		#Jacksonian Democrats are Democrats, duh
+		if = {
+			limit = {
+				leader ?= {
+					has_ideology = ideology:ideology_jacksonian_democrat
+				}
+			}
+			add = {
+				value = 1000
+				desc = "from_jacksonian_democrat"
+			}
+		}
+		#Democrats are de-facto the pro-slavery party
+		else_if = {
+			limit = { leader ?= { has_ideology = ideology:ideology_slaver } }
+			add = {
+				value = 100
+				desc = "from_slaver_leader"
+			}
+		}
+		else_if = {
+			limit = { leader ?= { usfp_anti_slavery_leader_trigger = yes } }
+			add = {
+				value = -100
+				desc = "from_abolitionist_leader"
+			}
+		}
+		#Market Liberals like the Democrats
+		else_if = {
+			limit = { leader ?= { has_ideology = ideology:ideology_market_liberal } }
+			add = {
+				value = 100
+				desc = "usfp_bourbon_democrats"
+			}
+		}
+		#Jingoists are pro-expansion and join the Democrats
+		else_if = {
+			limit = { leader ?= { has_ideology = ideology:ideology_jingoist_leader } }
+			add = {
+				value = 25
+				desc = "ideology_jingoist_leader"
+			}
+		}
+		#KKK ethno-nationalists are aligned with the democrats
+		else_if = {
+			limit = { leader ?= { has_ideology = ideology:ideology_ethno_nationalist } }
+			add = {
+				value = 25
+				desc = "ideology_ethno_nationalist"
+			}
+		}
+		#Strongman Populists are populists
+		else_if = {
+			limit = { leader ?= { has_ideology = ideology:ideology_usfp_strongman_populist } }
+			add = {
+				value = 100
+				desc = "ideology_usfp_strongman_populist"
+			}
+		}
+		#Democrats are Democrats
+		else_if = {
+			limit = { leader ?= { has_ideology = ideology:ideology_liberal_leader } }
+			add = {
+				value = 10
+				desc = "ideology_liberal_leader"
+			}
+		}
+		# Hardcore socialists oppose the main parties
+		else_if = {
+			limit = { 
+				leader ?= {  
+					OR = {
+						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_vanguardist
+					}
+				} 
+			}
+			add = {
+				value = -200
+				desc = "from_communism"
+			}
+		}
+		#powerful RF might split off and form the People's Party if the Dems are Industrialist
+		if = {
+			limit = {
+				is_interest_group_type = ig_rural_folk
+				owner.ig:ig_industrialists = {
+					is_powerful = yes
+					is_member_of_party = owner.py:usfp_democratic_party
+					ig_clout > owner.ig:ig_rural_folk.ig_clout
+				}
+			}
+			add = {
+				value = -200
+				desc = "party_dominated_by_industrialists"
+			}
+		}
+		#Progressives don't like an industrialist-dominated party
+		if = {
+			limit = {
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_usfp_progressive
+						has_ideology = ideology:ideology_social_democrat
+					}
+				}
+				owner.ig:ig_industrialists = {
+					is_powerful = yes
+					is_member_of_party = owner.py:usfp_democratic_party
+				}
+				ig_clout < owner.ig:ig_industrialists.ig_clout
+			}
+			add = {
+				value = -200
+				desc = "party_dominated_by_industrialists"
+			}
+		}
+		#Free Trade IGs should prefer the democrats
+		if = {
+			limit = {
+				OR = {
+					law_stance = {
+						law = law_type:law_free_trade
+						value > neutral
+					}
+					has_ideology = ideology:ideology_anti_tariff
+				}
+			}
+			add = {
+				value = 25
+				desc = "from_anti_tariff"
+			}
+		}
+		#TUs generically don't like joining the Industrialists
+		if = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				owner.ig:ig_industrialists = {
+					is_member_of_party = owner.py:usfp_democratic_party
+				}
+			}
+			add = {
+				value = -25
+				desc = "industrialists_in_party"
+			}
+		}
+	}
+}

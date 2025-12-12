@@ -25,7 +25,7 @@
 			count >= 3
 		}
 		any_scope_state = { #USFP: only USA/canada/mexico should be doing this stuff
-			state_is_in_north_america = yes
+			is_in_geographic_region = geographic_region_north_america
 		}
 	}
 
@@ -54,7 +54,7 @@
 		value = 0
 		if = {
 			limit = {
-				weekly_net_fixed_income > money_amount_multiplier_medium
+				net_fixed_income > money_amount_multiplier_medium
 				gold_reserves > 0
 			}
 			add = 10

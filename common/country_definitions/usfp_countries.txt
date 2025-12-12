@@ -1,4 +1,4 @@
-﻿SML = {
+﻿REPLACE_OR_CREATE:SML = {
 	color = { 136 48 47 }
 	
 	country_type = unrecognized
@@ -9,7 +9,7 @@
 	cultures = { muskogean }
 }
 
-CSW = {
+REPLACE_OR_CREATE:CSW = {
 	color = { 113 50 139 }
 	
 	country_type = unrecognized
@@ -20,7 +20,7 @@ CSW = {
 	cultures = { muskogean }
 }
 
-CHE = {
+REPLACE_OR_CREATE:CHE = {
 	color = { 184 84 64 }
 	
 	country_type = unrecognized
@@ -64,7 +64,7 @@ PIU = {
 	cultures = { paiute }
 }
 
-BNN = {
+REPLACE_OR_CREATE:BNN = {
 	color = { 184 149 200 }
 	
 	country_type = decentralized
@@ -120,7 +120,7 @@ AIA = {
 
 }
 
-SLS = {
+REPLACE_OR_CREATE:SLS = {
 	color = { 216 30 4 }
 	
 	country_type = decentralized
@@ -142,7 +142,7 @@ KTN = {
 	cultures = { salish }
 }
 
-ARP = {
+REPLACE_OR_CREATE:ARP = {
 	color = { 223 204 125 }
 
 	country_type = decentralized
@@ -494,7 +494,7 @@ HDA = {
 	capital = STATE_BRITISH_COLUMBIA
 }
 
-NEW = {
+REPLACE_OR_CREATE:NEW = {
 	color = { 255  211  56 }
 	
 	country_type = colonial
@@ -506,7 +506,7 @@ NEW = {
 	is_named_from_capital = yes
 }
 
-DES = {
+REPLACE_OR_CREATE:DES = {
 	color = { 54 106 170 }
 	
 	country_type = colonial
@@ -539,7 +539,7 @@ AHT = {
 	capital = STATE_ALASKA
 }
 
-ATB = {
+REPLACE_OR_CREATE:ATB = {
 	color = { 97 73 102 }
 	
 	country_type = decentralized
@@ -647,4 +647,31 @@ usfp_LNC = {
 	cultures = { afro_american }
 	
 	capital = STATE_PANAMA
+}
+
+#decentralized Greenland
+usfp_KAL = {
+	color = { 192 28 54 }
+	
+	country_type = decentralized
+
+	tier = principality
+	
+	cultures = { inuit }
+	
+	capital = STATE_GREENLAND
+	is_named_from_capital = yes
+}
+
+#Filibuster Cuba
+usfp_F_CUB = {
+	color = { 80  190  190 }
+
+	country_type = colonial
+
+	tier = principality
+
+	cultures = { caribeno }
+	capital = STATE_WESTERN_CUBA
+	
 }

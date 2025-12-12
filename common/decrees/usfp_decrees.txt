@@ -9,22 +9,25 @@
 		building_group_bg_agriculture_throughput_add = -0.10
 		building_group_bg_plantations_throughput_add = -0.10
 	}
-	country_trigger = {
-		usfp_has_dixie_occupation_trigger = yes
-		custom_tooltip = {
-			text = unlocked_radical_land_distribution
-			has_variable = reconstruction_radical_land_distribution
-		}
-		any_interest_group = {
-			is_in_government = yes
-			leader = {
-				OR = {
-					has_ideology = ideology:ideology_usfp_abolitionist_radical
-					has_ideology = ideology:ideology_humanitarian
-				}
-			}	
-		}
-		has_journal_entry = je_acw_reconstruction
+	# country_trigger = {
+	# 	usfp_has_dixie_occupation_trigger = yes
+	# 	custom_tooltip = {
+	# 		text = unlocked_radical_land_distribution
+	# 		has_variable = reconstruction_radical_land_distribution
+	# 	}
+	# 	any_interest_group = {
+	# 		is_in_government = yes
+	# 		leader = {
+	# 			OR = {
+	# 				has_ideology = ideology:ideology_usfp_abolitionist_radical
+	# 				has_ideology = ideology:ideology_humanitarian
+	# 			}
+	# 		}	
+	# 	}
+	# 	has_journal_entry = je_acw_reconstruction
+	# }
+	unlocking_amendments = {
+		amendment_usfp_radical_land_redistribution
 	}
 	state_trigger = {
 		OR = {

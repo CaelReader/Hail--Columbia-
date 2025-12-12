@@ -48,7 +48,7 @@ USA_daniel_webster = {
 	culture = cu:yankee
 	birth_date = 1782.1.18
 	dna = dna_webster
-	ig_leader = yes
+	# ig_leader = yes
 	interest_group = ig_petty_bourgeoisie
 	ideology = ideology_republican_leader
 	traits = {
@@ -209,12 +209,13 @@ usa_lincoln_character_template = {
         country_trigger = {
             exists = c:USA
             this = c:USA
-            NOT = {
+            NOR = {
+				has_global_variable = ruler_selector_abraham_lincoln
                 has_global_variable = lincoln_spawned #USFP
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_petty_bourgeoisie
             NOR = {
                 has_variable = communist_ig_var
@@ -303,7 +304,7 @@ usa_roosevelt_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			is_interest_group_type = ig_petty_bourgeoisie
             NOR = {
                 has_variable = communist_ig_var
@@ -344,7 +345,7 @@ usa_jp_morgan_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_industrialists
         }
         earliest_usage_date = 1865.1.1
@@ -389,7 +390,7 @@ usa_thomas_edison_character_template = {
             has_company = company_type:company_general_electric
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
         }
         earliest_usage_date = 1876.1.1
@@ -432,7 +433,7 @@ uom_mkc = {
             this = c:UOM
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_rural_folk
         }
         earliest_usage_date = 1919.8.19
@@ -493,7 +494,7 @@ usa_mark_twain_character_template = { #Mark Twain
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_intelligentsia
         }   
         earliest_usage_date = 1865.11.18
@@ -566,7 +567,7 @@ usa_mark_twain_character_template = { #Mark Twain
 #             has_company = company_type:company_ford_motor
 #         }
 #         interest_group_trigger = {
-#             is_marginal = no
+#             ig_counts_as_marginal = no
 #             is_interest_group_type = ig_industrialists
 #             NOR = {
 # 				has_variable = communist_ig_var
@@ -587,7 +588,7 @@ usa_mark_twain_character_template = { #Mark Twain
 #             }
 #         }
 #         interest_group_trigger = {
-#             is_marginal = no
+#             ig_counts_as_marginal = no
 #             is_interest_group_type = ig_industrialists
 #         }
 #         earliest_usage_date = 1908.8.12 # first production Model T
@@ -623,7 +624,7 @@ csa_jefferson_davis_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_armed_forces
                 is_interest_group_type = ig_landowners
@@ -1096,9 +1097,9 @@ usa_general_pershing = {
 	birth_date = 1860.9.13
 	dna = dna_pershing
 	traits = {
-		experienced_offensive_planner
-		persistent
-		reserved
+		basic_offensive_planner
+		traditionalist_commander
+		direct
 	}
 	commander_usage = {
 		country_trigger = {
@@ -1268,7 +1269,7 @@ usa_samuel_colt = {
 }
 
 usa_robert_e_lee_wilson = {
-    first_name = Robert_E.Lee
+    first_name = Robert_E_Lee
     last_name = Wilson
     historical = yes
     dna = dna_robert_e_lee_wilson

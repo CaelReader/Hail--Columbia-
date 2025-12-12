@@ -65,7 +65,7 @@ usfp_homestead_act_modifier = {
 	building_group_bg_ranching_allowed_collectivization_add = 0.20
 }
 
-usfp_deep_south_modifier = {
+REPLACE_OR_CREATE:usfp_deep_south_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_positive.dds
 	interest_group_ig_landowners_pol_str_mult = 0.20
 	building_group_bg_agriculture_allowed_collectivization_add = -0.35
@@ -75,7 +75,7 @@ usfp_deep_south_modifier = {
 	state_pop_support_movement_anti_slavery_mult = -0.80
 }
 
-usfp_upper_south_modifier = {
+REPLACE_OR_CREATE:usfp_upper_south_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_aristocrat_positive.dds
 	interest_group_ig_landowners_pol_str_mult = 0.10
 	building_group_bg_agriculture_allowed_collectivization_add = -0.15
@@ -293,7 +293,7 @@ usfp_state_race_riot_aftermath_modifier = {
 
 usfp_harlem_renaissance_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue2_positive.dds
-	building_arts_academy_throughput_add = 0.10
+	building_art_academy_throughput_add = 0.10
 	state_migration_pull_mult = 0.10
 	state_pop_support_movement_cultural_minority_mult = 0.10
 }
@@ -323,4 +323,31 @@ usfp_frontier_migration_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_map_positive.dds
 	state_migration_pull_mult = 0.15
 	state_assimilation_mult = 0.10
+}
+
+usfp_panic_state_default_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_bank_negative.dds
+	state_construction_mult = -0.25
+	state_institution_impact_add = -0.25
+}
+
+usfp_early_suffrage_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_election_positive.dds
+	state_pop_pol_str_mult = 0.20
+	political_movement_pop_attraction_mult = 0.15
+}
+
+usfp_canadian_volunteers_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_soldier_positive.dds
+	state_conscription_rate_mult = 0.25
+	building_training_rate_mult = 0.25
+}
+
+usfp_fenian_raids_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	state_turmoil_effects_mult = 0.10
+	state_radicals_from_political_movements_mult = 0.25
+	state_radicalism_increases_cultural_erasure_mult = 0.20
+	state_radicalism_increases_open_prejudice_mult = 0.20
+	state_radicalism_increases_second_rate_citizen_mult = 0.20
 }

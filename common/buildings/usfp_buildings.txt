@@ -1,5 +1,5 @@
 ﻿usfp_hippo_ranch = {
-	building_group = bg_livestock_ranches
+	building_group = bg_ranching
 
 	icon = "gfx/interface/icons/building_icons/hippo_ranch.dds"
 	
@@ -20,3 +20,23 @@
 	terrain_manipulator = pasture
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 }
+
+#Awaiting INJECT support for state_region resources
+# building_usfp_fur_trapper = {
+# 	building_group = bg_extraction
+# 	icon = "gfx/interface/icons/building_icons/building_usfp_fur_hunting.dds"
+# 	city_type = wood
+# 	levels_per_mesh = 50
+# 	buildable = no
+# 	expandable = no
+# 	downsizeable = no
+# 	can_switch_owner = no
+
+# 	production_method_groups = {
+# 		usfp_pmg_base_building_fur_trapper
+# 		usfp_pmg_fur_trapper_transport
+# 	}
+# 	ownership_type = self
+
+# 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+# }

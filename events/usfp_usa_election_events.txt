@@ -48,6 +48,7 @@ usfp_usa_election.1 = {
 				}
 			}
 			ordered_member = {
+				position = 0
 				limit = {
 					leader = {
 						is_female = yes
@@ -63,7 +64,7 @@ usfp_usa_election.1 = {
 	option = {
 		name = usfp_usa_election.1.a
 		scope:female_ig.party = {
-			add_momentum = momentum_medium_decrease
+			add_momentum = momentum_large_decrease
 		}
 		default_option = yes
 		ai_chance = {
@@ -74,7 +75,7 @@ usfp_usa_election.1 = {
 	option = {
 		name = usfp_usa_election.1.b
 		scope:female_ig.party = {
-			add_momentum = momentum_small_decrease
+			add_momentum = momentum_medium_decrease
 		}
 		if = {
 			limit = { 
@@ -86,6 +87,7 @@ usfp_usa_election.1 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					OR = {
 						is_political_movement_type = movement_religious_majority
@@ -111,6 +113,7 @@ usfp_usa_election.1 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					OR = {
 						is_political_movement_type = movement_feminist
@@ -237,6 +240,7 @@ usfp_usa_election.2 = {
 				}
 			}
 			ordered_member = {
+				position = 0
 				limit = {
 					leader = {
 						culture = {
@@ -267,7 +271,7 @@ usfp_usa_election.2 = {
 			}
 		}
 		scope:nonwhite_ig.party = {
-			add_momentum = momentum_medium_decrease
+			add_momentum = momentum_large_decrease
 		}
 		default_option = yes
 	}
@@ -280,7 +284,7 @@ usfp_usa_election.2 = {
 			}
 		}
 		scope:nonwhite_ig.party = {
-			add_momentum = momentum_small_decrease
+			add_momentum = momentum_medium_decrease
 		}
 		if = {
 			limit = {
@@ -289,6 +293,7 @@ usfp_usa_election.2 = {
 				}
 			 }
 			 ordered_political_movement = {
+				position = 0
 				limit = {
 					usfp_movement_is_racist = yes
 				}
@@ -308,6 +313,7 @@ usfp_usa_election.2 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					culture ?= scope:nonwhite_ig.leader.culture
 				}
@@ -331,7 +337,7 @@ usfp_usa_election.2 = {
 		}
 		highlighted_option = yes
 		scope:nonwhite_ig.party = {
-			add_momentum = momentum_large_decrease
+			add_momentum = momentum_very_large_decrease
 		}
 		if = {
 			limit = { 
@@ -340,6 +346,7 @@ usfp_usa_election.2 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					usfp_movement_is_racist = yes
 				}
@@ -359,6 +366,7 @@ usfp_usa_election.2 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					culture ?= scope:nonwhite_ig.leader.culture
 				}
@@ -393,6 +401,7 @@ usfp_usa_election.2 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					culture ?= scope:nonwhite_ig.leader.culture
 				}
@@ -461,6 +470,7 @@ usfp_usa_election.3 = {
 				}
 			}
 			ordered_member = {
+				position = 0
 				limit = {
 						leader = {
 						NOT = {
@@ -526,7 +536,7 @@ usfp_usa_election.3 = {
 			}
 		}
 		scope:nonchristian_ig.party = {
-			add_momentum = momentum_medium_decrease
+			add_momentum = momentum_large_decrease
 		}
 		default_option = yes
 	}
@@ -542,7 +552,7 @@ usfp_usa_election.3 = {
 			}
 		}
 		scope:nonchristian_ig.party = {
-			add_momentum = momentum_small_decrease
+			add_momentum = momentum_medium_decrease
 		}
 		if = {
 			limit = {
@@ -551,6 +561,7 @@ usfp_usa_election.3 = {
 				}
 			 }
 			 ordered_political_movement = {
+				position = 0
 				limit = {
 					is_political_movement_type = movement_religious_majority
 				}
@@ -569,6 +580,7 @@ usfp_usa_election.3 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					religion ?= scope:nonchristian_ig.leader.religion
 				}
@@ -591,7 +603,7 @@ usfp_usa_election.3 = {
 		}
 		highlighted_option = yes
 		scope:nonchristian_ig.party = {
-			add_momentum = momentum_large_decrease
+			add_momentum = momentum_very_large_decrease
 		}
 		add_radicals = {
 			value = small_radicals
@@ -604,6 +616,7 @@ usfp_usa_election.3 = {
 				}
 			 }
 			 ordered_political_movement = {
+				position = 0
 				limit = {
 					is_political_movement_type = movement_religious_majority
 				}
@@ -622,6 +635,7 @@ usfp_usa_election.3 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					religion ?= scope:nonchristian_religion
 				}
@@ -686,7 +700,7 @@ usfp_usa_election.3 = {
 		}
 		highlighted_option = yes
 		scope:nonchristian_ig.party = {
-			add_momentum = momentum_large_decrease
+			add_momentum = momentum_very_large_decrease
 		}
 		add_radicals = {
 			value = large_radicals
@@ -703,6 +717,7 @@ usfp_usa_election.3 = {
 				}
 			 }
 			 ordered_political_movement = {
+				position = 0
 				limit = {
 					is_political_movement_type = movement_religious_majority
 				}
@@ -722,6 +737,7 @@ usfp_usa_election.3 = {
 				}
 			}
 			ordered_political_movement = {
+				position = 0
 				limit = {
 					religion ?= scope:nonchristian_religion
 				}

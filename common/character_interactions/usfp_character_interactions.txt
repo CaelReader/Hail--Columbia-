@@ -1,4 +1,4 @@
-﻿resign_from_office = {
+﻿REPLACE:resign_from_office = {
 	clicksound = "event:/SFX/UI/Military/command_grant"
 
 	potential = {
@@ -20,7 +20,7 @@
 				ig_approval <= angry
 			}
 			interest_group = {
-				is_marginal = yes
+				ig_counts_as_marginal = yes
 			}
 			popularity <= -50
 			OR = {
@@ -118,7 +118,7 @@
 		if = {
 			limit = {
 				interest_group = {
-					is_marginal = yes
+					ig_counts_as_marginal = yes
 				}
 			}
 			add = 25
@@ -158,7 +158,7 @@
 	}
 }
 
-grant_leadership_to_agitator = {
+REPLACE:grant_leadership_to_agitator = {
 	icon = "gfx/interface/character_panel/grant_command_not.dds"
 	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
 

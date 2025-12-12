@@ -8,7 +8,7 @@
 				is_subject_of = root
 			}
 			any_scope_state = {
-				state_is_in_africa = yes
+				is_in_geographic_region = geographic_region_africa
 				NOT = {
 					state_region = s:STATE_SINAI
 				}
@@ -22,7 +22,7 @@
 				is_subject_of = root
 			}
 			any_scope_state = {
-				state_is_in_africa = yes
+				is_in_geographic_region = geographic_region_africa
 				NOT = {
 					state_region = s:STATE_SINAI
 				}
@@ -30,7 +30,7 @@
 			}
 		}
 		any_scope_state = {
-			state_is_in_north_america = yes
+			is_in_geographic_region = geographic_region_north_america
 			culture_percent_state = {
 				target = cu:afro_american
 				value > 0.15
@@ -52,7 +52,7 @@
 		if = {
 			limit = { 
 				any_scope_state = {
-					state_is_in_africa = yes
+					is_in_geographic_region = geographic_region_africa
 					NOT = {
 						state_region = s:STATE_SINAI
 					}
@@ -60,8 +60,9 @@
 				}
 			}
 			ordered_scope_state = {
+				position = 0
 				limit = {
-					state_is_in_africa = yes
+					is_in_geographic_region = geographic_region_africa
 					NOT = {
 						state_region = s:STATE_SINAI
 					}
@@ -114,7 +115,7 @@ usfp_promote_afro_american_migration_south_america = {
 				OR = {
 					region = sr:region_central_america
 					region = sr:region_caribbean
-					state_is_in_south_america = yes
+					is_in_geographic_region = geographic_region_south_america
 				}
 				free_arable_land > 0
 			}
@@ -125,7 +126,7 @@ usfp_promote_afro_american_migration_south_america = {
 						OR = {
 							region = sr:region_central_america
 							region = sr:region_caribbean
-							state_is_in_south_america = yes
+							is_in_geographic_region = geographic_region_south_america
 						}
 						free_arable_land > 0
 					}
@@ -140,7 +141,7 @@ usfp_promote_afro_american_migration_south_america = {
 				OR = {
 					region = sr:region_central_america
 					region = sr:region_caribbean
-					state_is_in_south_america = yes
+					is_in_geographic_region = geographic_region_south_america
 				}
 				free_arable_land > 0
 			}
@@ -152,7 +153,7 @@ usfp_promote_afro_american_migration_south_america = {
 						OR = {
 							region = sr:region_central_america
 							region = sr:region_caribbean
-							state_is_in_south_america = yes
+							is_in_geographic_region = geographic_region_south_america
 						}
 						free_arable_land > 0
 					}
@@ -161,7 +162,7 @@ usfp_promote_afro_american_migration_south_america = {
 			}
 		}
 		any_scope_state = {
-			state_is_in_north_america = yes
+			is_in_geographic_region = geographic_region_north_america
 			culture_percent_state = {
 				target = cu:afro_american
 				value > 0.15
@@ -198,17 +199,18 @@ usfp_promote_afro_american_migration_south_america = {
 					OR = {
 						region = sr:region_central_america
 						region = sr:region_caribbean
-						state_is_in_south_america = yes
+						is_in_geographic_region = geographic_region_south_america
 					}
 					free_arable_land > 0
 				}
 			}
 			ordered_scope_state = {
+				position = 0
 				limit = {
 					OR = {
 						region = sr:region_central_america
 						region = sr:region_caribbean
-						state_is_in_south_america = yes
+						is_in_geographic_region = geographic_region_south_america
 					}
 					free_arable_land > 0
 				}
@@ -225,17 +227,18 @@ usfp_promote_afro_american_migration_south_america = {
 							OR = {
 								region = sr:region_central_america
 								region = sr:region_caribbean
-								state_is_in_south_america = yes
+								is_in_geographic_region = geographic_region_south_america
 							}
 							free_arable_land > 0
 						}
 					}
 					ordered_scope_state = {
+						position = 0
 						limit = {
 							OR = {
 								region = sr:region_central_america
 								region = sr:region_caribbean
-								state_is_in_south_america = yes
+								is_in_geographic_region = geographic_region_south_america
 							}
 							free_arable_land > 0
 						}
@@ -358,6 +361,7 @@ usfp_linconia_button = {
 		else = {
 			s:STATE_PANAMA = {
 				ordered_scope_state = {
+					position = 0
 					order_by = state_population
 					owner = {
 						trigger_event = {

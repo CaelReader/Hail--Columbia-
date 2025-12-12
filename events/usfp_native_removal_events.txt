@@ -338,6 +338,9 @@ usfp_native_removal.5 = {
 				months = 6
 			}
 		}
+		ai_chance = {
+			base = 0
+		}
 	}
 
 	#Do Not Pay
@@ -362,6 +365,9 @@ usfp_native_removal.5 = {
 				id = usfp_native_removal.6
 				months = 6
 			}
+		}
+		ai_chance = {
+			base = 25
 		}
 	}
 }

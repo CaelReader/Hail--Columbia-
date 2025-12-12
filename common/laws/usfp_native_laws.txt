@@ -89,6 +89,13 @@ law_usfp_tribal_land_ownership = {
 	# 	}
 	# }
 
+	is_visible = {
+		any_primary_culture = {
+			count = all
+			has_discrimination_trait_group = heritage_group_indigenous_american
+		}
+	}
+
 	unlocking_laws = {
 		law_chiefdom
 	}

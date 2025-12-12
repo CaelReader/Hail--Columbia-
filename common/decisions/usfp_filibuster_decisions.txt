@@ -93,3 +93,36 @@ nicaragua_revolt_walker = {
 		value = 1000
 	}
 }
+
+cuba_filibuster_annex = {
+	is_shown = {
+		exists = c:usfp_F_CUB
+		root = c:usfp_F_CUB
+		exists = c:USA
+		NOT = {
+			has_variable = cuba_statehood_ask
+		}
+		OR = {
+			is_subject = no
+			is_subject_of = c:USA
+		}
+	}
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		c:USA = {
+			is_diplomatic_play_committed_participant = no
+		}
+	}
+
+	when_taken = {
+		c:USA = {
+			trigger_event = usfp_filibuster.8
+		}
+		set_variable = cuba_statehood_ask
+	}
+
+	ai_chance = {
+		value = 1000
+	}
+}

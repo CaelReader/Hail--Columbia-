@@ -272,6 +272,9 @@ native_resettlement.3 = {
 				months = 9
 			}
 		}
+		ai_chance = {
+			base = 25
+		}
 	}
 	option = { # pay their way
 		name = native_resettlement.3.b
@@ -297,7 +300,7 @@ native_resettlement.3 = {
 		}
 		add_modifier = {
 			name = USA_paying_removal_costs
-			multiplier = money_amount_multiplier_very_small
+			multiplier = 2000
 			days = short_modifier_time
 		}
 		custom_tooltip = {
@@ -313,6 +316,9 @@ native_resettlement.3 = {
 				id = usfp_native_removal.3
 				months = 9
 			}
+		}
+		ai_chance = {
+			base = 0
 		}
 	}
 }
@@ -469,7 +475,7 @@ native_resettlement.5 = {
 		if = {
 			limit = {
 				any_interest_group = {
-					is_marginal = no
+					ig_counts_as_marginal = no
 					leader = {
 						OR = {
 							has_trait = bigoted
@@ -496,7 +502,7 @@ native_resettlement.5 = {
 		if = {
 			limit = {
 				any_interest_group = {
-					is_marginal = no
+					ig_counts_as_marginal = no
 					leader = {
 						has_ideology = ideology:ideology_pacifist
 					}
@@ -504,7 +510,7 @@ native_resettlement.5 = {
 			}
 			random_interest_group = {
 				limit = {
-					is_marginal = no
+					ig_counts_as_marginal = no
 					leader = {
 						has_ideology = ideology:ideology_pacifist
 					}

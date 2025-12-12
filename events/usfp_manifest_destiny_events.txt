@@ -368,7 +368,7 @@ usfp_manifest_destiny.4 = {
 					leader = {
 						usfp_manifest_destiny_pro_expansion_trigger = yes
 					}
-					is_marginal = no
+					ig_counts_as_marginal = no
 				}
 				NOT = {
 					any_political_lobby = {
@@ -382,7 +382,7 @@ usfp_manifest_destiny.4 = {
 					leader = {
 						usfp_manifest_destiny_pro_expansion_trigger = yes
 					}
-					is_marginal = no
+					ig_counts_as_marginal = no
 				}
 				save_scope_as = jingoist_ig
 			}
@@ -901,7 +901,7 @@ usfp_manifest_destiny.8 = {
 		}
 		naval_power_projection >= 80
 		ig:ig_armed_forces = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 		}
 	}
 
@@ -1022,7 +1022,7 @@ usfp_manifest_destiny.9 = {
 			private_ownership_fraction > 0
 		}
 		ig:ig_industrialists = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 		}
 	}
 
@@ -1093,7 +1093,7 @@ usfp_manifest_destiny.10 = {
 		any_scope_state = {
 			state_region = s:STATE_CALIFORNIA
 			any_scope_building = {
-				is_building_type = building_gold_fields
+				is_building_type = building_gold_field
 			}
 		}
 		has_law_or_variant = law_type:law_no_migration_controls
@@ -1454,18 +1454,15 @@ usfp_manifest_destiny.14 = {
 			has_variable = ostend_manifesto
 		}
 		ig:ig_landowners = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			has_ideology = ideology:ideology_pro_slavery
 		}
 		game_date > 1854.1.1
 		var:manifest_destiny_var >= 3
-		NOT = {
-			owns_entire_state_region = STATE_CUBA
-		}
-		NOT = {
-			any_subject_or_below = {
-				owns_entire_state_region = STATE_CUBA
-			}
+		NOR = {
+			country_or_subject_owns_entire_state_region = STATE_WESTERN_CUBA
+			country_or_subject_owns_entire_state_region = STATE_CENTRAL_CUBA
+			country_or_subject_owns_entire_state_region = STATE_EASTERN_CUBA
 		}
 		OR = {
 			NOT = {
@@ -1482,7 +1479,7 @@ usfp_manifest_destiny.14 = {
 		ig:ig_landowners = {
 			save_scope_as = landowners_ig
 		}
-		s:STATE_CUBA = {
+		s:STATE_WESTERN_CUBA = {
 			random_scope_state = {
 				limit = {
 					NOT = {
@@ -1573,11 +1570,9 @@ usfp_manifest_destiny.14 = {
 		usfp_manifest_more_destiny_effect = yes
 		create_incident = {
 			country = scope:cuba_owner_scope
-			value = 5
+			value = 15
 		}
-		s:STATE_CUBA = {
-			add_claim = root
-		}
+		usfp_claim_cuba_effect = yes
 		usfp_anger_abolitionists_effect = { MULT = 1 }
 	}
 	#Bad idea
@@ -1637,12 +1632,12 @@ usfp_manifest_destiny.15 = {
 		c:USA = {
 			save_scope_as = usa_scope
 		}
-		s:STATE_CUBA = {
+		s:STATE_WESTERN_CUBA = {
 			save_scope_as = cuba_scope
 		}
 		random_scope_state = {
 			limit = {
-				state_region = s:STATE_CUBA
+				state_region = s:STATE_WESTERN_CUBA
 			}
 			save_scope_as = cuba_state_scope
 		}
@@ -1673,7 +1668,29 @@ usfp_manifest_destiny.15 = {
 				name = spain_getting_paid_by_usa
 				years = 4
 			}
-			s:STATE_CUBA = {
+			s:STATE_WESTERN_CUBA = {
+				every_scope_state = {
+					limit = {
+						OR = {
+							owner = root
+							owner = c:CUB
+						}
+					}
+					set_state_owner = c:USA
+				}
+			}
+			s:STATE_CENTRAL_CUBA = {
+				every_scope_state = {
+					limit = {
+						OR = {
+							owner = root
+							owner = c:CUB
+						}
+					}
+					set_state_owner = c:USA
+				}
+			}
+			s:STATE_EASTERN_CUBA = {
 				every_scope_state = {
 					limit = {
 						OR = {
@@ -1740,7 +1757,7 @@ usfp_manifest_destiny.16 = {
 	duration = 3
 
 	immediate = {
-		s:STATE_CUBA = {
+		s:STATE_WESTERN_CUBA = {
 			random_scope_state = {
 				limit = {
 					NOT = {
@@ -1783,13 +1800,11 @@ usfp_manifest_destiny.16 = {
 	#gibs me your island
 	option = {
 		name = usfp_manifest_destiny.16.b
-		s:STATE_CUBA = {
-			add_claim = c:USA
-		}
+		usfp_claim_cuba_effect = yes
 		usfp_manifest_more_destiny_effect = yes
 		create_incident = {
 			country = scope:cuba_owner_scope
-			value = 5
+			value = 15
 		}
 		if = {
 			limit = { 
@@ -1842,7 +1857,7 @@ usfp_manifest_destiny.17 = {
 	duration = 3
 
 	immediate = {
-		s:STATE_CUBA = {
+		s:STATE_WESTERN_CUBA = {
 			random_scope_state = {
 				limit = {
 					NOT = {
@@ -1881,7 +1896,29 @@ usfp_manifest_destiny.17 = {
 				years = 30
 			}
 		}
-		s:STATE_CUBA = {
+		s:STATE_WESTERN_CUBA = {
+			every_scope_state = {
+				limit = {
+					OR = {
+						owner = scope:cuba_owner_scope
+						owner = c:CUB
+					}
+				}
+				set_state_owner = c:USA
+			}
+		}
+		s:STATE_CENTRAL_CUBA = {
+			every_scope_state = {
+				limit = {
+					OR = {
+						owner = scope:cuba_owner_scope
+						owner = c:CUB
+					}
+				}
+				set_state_owner = c:USA
+			}
+		}
+		s:STATE_EASTERN_CUBA = {
 			every_scope_state = {
 				limit = {
 					OR = {
@@ -1925,37 +1962,17 @@ usfp_manifest_destiny.18 = {
 	trigger = {
 		any_diplomatic_play = {
 			target = {
-				OR = {
-					country_is_in_north_america = yes
-					country_is_in_central_america = yes
-					country_is_in_south_america = yes
-				}
-				has_diplomatic_relevance = ROOT
-				NOT = {
-					this = ROOT
-				}
-				is_revolutionary = no
-				NOT = {
-					has_war_with = root
-				}
+				usfp_monroe_doctrine_valid_defender = yes
 			}
-			initiator = {
-				country_is_in_north_america = no
-				country_is_in_central_america = no
-				country_is_in_south_america = no
-				NOT = {
-					this = ROOT
-				}
-				is_revolutionary = no
-				NOT = {
-					has_war_with = root
-				}
+			any_scope_initiator_ally = {
+				usfp_monroe_doctrine_valid_interloper = yes
 			}
 			NOR = {
 				is_diplomatic_play_type = dp_reduce_autonomy
 				is_diplomatic_play_type = dp_increase_autonomy
 				is_diplomatic_play_type = dp_secession
 				is_diplomatic_play_type = dp_independence
+				is_diplomatic_play_type = dp_native_uprising
 			}
 			is_war = no
 		}
@@ -1965,43 +1982,41 @@ usfp_manifest_destiny.18 = {
 		random_diplomatic_play = {
 			limit = {
 				target = {
-					OR = {
-						country_is_in_north_america = yes
-						country_is_in_central_america = yes
-						country_is_in_south_america = yes
-					}
-					has_diplomatic_relevance = ROOT
-					NOT = {
-						this = ROOT
-					}
-					is_revolutionary = no
-					NOT = {
-						has_war_with = root
-					}
+					usfp_monroe_doctrine_valid_defender = yes
 				}
-				initiator = {
-					country_is_in_north_america = no
-					country_is_in_central_america = no
-					country_is_in_south_america = no
-					NOT = {
-						this = ROOT
-					}
-					is_revolutionary = no
-					NOT = {
-						has_war_with = root
-					}
+				any_scope_initiator_ally = {
+					usfp_monroe_doctrine_valid_interloper = yes
 				}
 				NOR = {
 					is_diplomatic_play_type = dp_reduce_autonomy
 					is_diplomatic_play_type = dp_increase_autonomy
 					is_diplomatic_play_type = dp_secession
 					is_diplomatic_play_type = dp_independence
+					is_diplomatic_play_type = dp_native_uprising
 				}
 				is_war = no
 			}
 			target = {
 				save_scope_as = target_scope
 			}
+			if = {
+				limit = { 
+					initiator = {
+						usfp_monroe_doctrine_valid_interloper = yes
+					}
+				}
+				initiator = {
+					save_scope_as = monroe_doctrine_violator
+				}
+			} else = {
+				random_scope_initiator_ally = {
+					limit = {
+						usfp_monroe_doctrine_valid_interloper = yes
+					}
+					save_scope_as = monroe_doctrine_violator
+				}
+			}
+
 			initiator = {
 				save_scope_as = initiator_scope
 			}
@@ -2012,7 +2027,7 @@ usfp_manifest_destiny.18 = {
 	option = {
 		name = usfp_manifest_destiny.18.a
 		trigger = {
-			naval_power_projection >= 80
+			naval_power_projection >= usfp_monroe_doctrine_naval_power
 		}
 		default_option = yes
 		if = {
@@ -2033,7 +2048,7 @@ usfp_manifest_destiny.18 = {
 			value = 30
 		}
 		change_relations = {
-			country = scope:initiator_scope
+			country = scope:monroe_doctrine_violator
 			value = -30
 		}
 	}
@@ -2065,7 +2080,7 @@ usfp_manifest_destiny.18 = {
 			}
 		}
 		create_unidirectional_truce = {
-			country = scope:initiator_scope
+			country = scope:monroe_doctrine_violator
 			months = 6
 		}
 		change_relations = {
@@ -2077,7 +2092,7 @@ usfp_manifest_destiny.18 = {
 	option = {
 		name = usfp_manifest_destiny.18.c
 		trigger = {
-			naval_power_projection < 80
+			naval_power_projection < usfp_monroe_doctrine_naval_power
 		}
 		highlighted_option = yes
 		change_relations = {
@@ -2503,7 +2518,7 @@ usfp_manifest_destiny.22 = {
 		any_scope_state = {
 			state_region = s:STATE_COLORADO
 			any_scope_building = {
-				is_building_type = building_gold_fields
+				is_building_type = building_gold_field
 			}
 		}
 		s:STATE_COLORADO = {
@@ -2853,7 +2868,9 @@ usfp_manifest_destiny.26 = {
 			has_variable = had_american_empire
 		}
 		any_scope_state = {
-			state_is_in_americas = no
+			NOT = {
+				is_in_geographic_region = geographic_region_americas
+			}
 			is_treaty_port = no
 		}
 	}
@@ -2862,7 +2879,9 @@ usfp_manifest_destiny.26 = {
 		set_variable = had_american_empire
 		random_scope_state = {
 			limit = {
-				state_is_in_americas = no
+				NOT = {
+					is_in_geographic_region = geographic_region_americas
+				}
 				is_treaty_port = no
 			}
 			save_scope_as = usa_overseas_territory_scope
@@ -3331,6 +3350,83 @@ usfp_manifest_destiny.30 = {
 				name = usfp_safety_in_numbers_movement_modifier
 				years = 10
 			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+}
+
+#Oregon Black Exclusion
+usfp_manifest_destiny.31 = {
+	type = country_event
+	placement = scope:oregon_scope
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+	title = usfp_manifest_destiny.31.t
+	desc = usfp_manifest_destiny.31.d
+	flavor = usfp_manifest_destiny.31.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+		has_state_in_state_region = STATE_OREGON
+		NOR = {
+			has_law_or_variant = law_type:law_multicultural
+			has_law_or_variant = law_type:law_cultural_exclusion
+		}
+	}
+
+	immediate = {
+		s:STATE_OREGON.region_state:USA = {
+			save_scope_as = oregon_scope
+		}
+	}
+
+
+	#let them
+	option = {
+		name = usfp_manifest_destiny.31.a
+		default_option = yes
+		scope:oregon_scope = {
+			add_acceptance = {
+				target = cu:afro_american
+				value = -20
+			}
+			usfp_loyalize_whites_in_state = {
+				LOYALISTS = medium_radicals
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#stop them
+	option = {
+		name = usfp_manifest_destiny.31.b
+		trigger = {
+			usfp_is_afro_american_discriminated = no
+		}
+		highlighted_option = yes
+		show_as_unavailable = {
+			always = yes
+		}
+		scope:oregon_scope = {
+			usfp_radicalize_whites_in_state = {
+				RADICALS = large_radicals
+			}
+		}
+		add_loyalists = {
+			value = small_radicals
+			culture = cu:afro_american
 		}
 		ai_chance = {
 			base = 0

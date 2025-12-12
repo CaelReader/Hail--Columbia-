@@ -302,6 +302,16 @@
 			add_modifier = usfp_arctic_subsistence_modifier
 		}
 	}
+	s:STATE_GREENLAND = {
+		every_scope_state = {
+			limit = {
+				owner = {
+					is_country_type = decentralized
+				}
+			}
+			add_modifier = usfp_arctic_subsistence_modifier
+		}
+	}
 
 	### from when there was a 420 country limit
 	if = {

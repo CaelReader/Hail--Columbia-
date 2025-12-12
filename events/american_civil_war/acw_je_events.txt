@@ -323,8 +323,8 @@ acw_je_events.2 = {
 					years = 12
 				}
 				if = {
-					limit = { has_building =  building_barracks }
-					remove_building = building_barracks
+					limit = { has_building =  building_barrack }
+					remove_building = building_barrack
 				}
 				if = {
 					limit = { has_building = building_conscription_center }
@@ -354,8 +354,8 @@ acw_je_events.2 = {
 					years = 12
 				}
 				if = {
-					limit = { has_building =  building_barracks }
-					remove_building = building_barracks
+					limit = { has_building =  building_barrack }
+					remove_building = building_barrack
 				}
 				if = {
 					limit = { has_building = building_conscription_center }

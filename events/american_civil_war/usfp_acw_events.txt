@@ -63,6 +63,7 @@ usfp_acw.1 = {
 		}
 		usfp_find_republican_party_effect = yes
 		ordered_interest_group = {
+			position = 0
 			limit = {
 				party = scope:republican_party_scope
 			}
@@ -871,6 +872,7 @@ usfp_acw.10 = {
 		}
 		ig:ig_armed_forces = {
 			ordered_scope_general = {
+				position = 0
 				limit = {
 					is_ruler = no
 					NOR = {
@@ -1506,6 +1508,7 @@ usfp_acw.14 = {
 
 	immediate = {
 		ordered_scope_building = {
+			position = 0
 			limit = {
 				is_building_type = building_cotton_plantation
 			}
@@ -1583,6 +1586,7 @@ usfp_acw.15 = {
 
 	immediate = {
 		ordered_scope_pop = {
+			position = 0
 			limit = {
 				is_pop_type = slaves
 			}
@@ -1946,6 +1950,7 @@ usfp_acw.19 = {
 
 	immediate = {
 		ordered_scope_pop = {
+			position = 0
 			limit = {
 				culture = cu:afro_american
 				is_pop_type = soldiers

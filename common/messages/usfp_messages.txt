@@ -198,3 +198,156 @@ usfp_colony_accepted = {
 	notification_type = toast
 	color = good
 }
+
+#Diplomatic Messages
+usfp_canada_caroline_burning_escalation_usa = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_canada_caroline_burning_negotiated = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+	notification_type = toast
+	color = good
+}
+
+usfp_canada_caroline_burning_escalation_gbr = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_usa_supporting_fenians = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/revolution.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_usa_not_mad_over_maine = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+	notification_type = toast
+	color = good
+}
+
+usfp_usa_mad_over_maine = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_usa_claims_aroostook = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/secession.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_gbr_accepts_aroostook_treaty = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+	notification_type = toast
+	color = good
+}
+
+usfp_gbr_rejects_aroostook_treaty = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/secession.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_aroostook_to_usa = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+	notification_type = toast
+	color = good
+}
+
+usfp_denmark_refused_sale = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_denmark_agreed_to_sale = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+	notification_type = toast
+	color = good
+}
+
+usfp_usa_refused_danish_counteroffer = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_usa_accepted_danish_counteroffer = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+	notification_type = toast
+	color = good
+}
+
+usa_claiming_greenland = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/secession.dds"
+	notification_type = toast
+	color = bad
+}
+
+usfp_usa_bought_west_indies_third_party = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+	notification_type = toast
+	color = neutral
+}
+
+usfp_usa_bought_greenland_third_party = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+	notification_type = toast
+	color = neutral
+}
+
+usfp_usa_bought_iceland_third_party = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+	notification_type = toast
+	color = neutral
+}
+
+usfp_cuba_filibusters_failed = {
+	type = country
+	group = "usfp_usa_diplomacy_group"
+	texture = "gfx/interface/icons/notification_icons/revolution.dds"
+	notification_type = toast
+	color = bad
+}

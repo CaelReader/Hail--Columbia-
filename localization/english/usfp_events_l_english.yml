@@ -9,7 +9,7 @@ acw_events.3.a.t: "The status of the Missouri Compromise will remain uncertain."
 acw_events.3.c.t: "The Missouri Compromise may not survive the realities of westward expansion."
 
 usfp_a_house_divided.1.t: "The Pickney Resolutions"
-usfp_a_house_divided.1.d: "In recent months, the [concept_usfp_house_of_representatives] has been buried in a flood of abolitionist petitions. In response, the [SCOPE.sParty('democratic_party').GetName] has passed resolutions forbidding the consideration or discussion of any matters pertaining to slavery."
+usfp_a_house_divided.1.d: "In recent months, the [concept_usfp_house_of_representatives] has been buried in a flood of abolitionist petitions. In response, the [SCOPE.sParty('democratic_party').GetName] has passed resolutions forbidding the consideration or discussion of any matters pertaining to [GetLawType('law_slave_trade').GetGroup.GetName]."
 usfp_a_house_divided.1.f: ""Resolved — that all petitions, memorials, resolutions, propositions, or papers, relating in any way, or to any extent whatever, to the subject of slavery, or the abolition of slavery, shall, without being either printed or referred, be laid upon the table, and that no further action whatever shall be had thereon.""
 usfp_a_house_divided.1.a: "This is flagrantly unconstitutional."
 usfp_a_house_divided.1.b: "Finally, lets get on with business as usual."
@@ -86,13 +86,13 @@ usfp_a_house_divided.14.c: "Compromise with Slavery is immoral!"
 usfp_a_house_divided.14.b: "Compromise with the abolitionists is untenable!"
 
 usfp_a_house_divided.15.t: "Collapse of the Whigs"
-usfp_a_house_divided.15.d: "Continuing polarization over the matter of Slavery has led to mass defections from the [SCOPE.sParty('whig_scope').GetName], leaving it completely defunct as a political organization. Already a new Republican party has been formed to take its place."
+usfp_a_house_divided.15.d: "Continuing polarization over the matter of [GetLawType('law_slave_trade').GetGroup.GetName] has led to mass defections from the [SCOPE.sParty('whig_scope').GetName], leaving it completely defunct as a political organization. Already a new Republican party has been formed to take its place."
 usfp_a_house_divided.15.f: ""This new party will fitly designate those who had united to restore the Union to its true mission: that of champion and promulgator of Liberty rather than propagandist of slavery."" #Horace Greeley
 usfp_a_house_divided.15.a: "A new political era."
 usfp_a_house_divided.15.a.tt: "The [SCOPE.sParty('whig_scope').GetName] will now be known as the Republican Party."
 
 usfp_a_house_divided.16.t: "Dred Scott v. Sandford"
-usfp_a_house_divided.16.d: "The [concept_usfp_supreme_court] has handed down a landmark decision over the case of an [SCOPE.sCulture('afro_american_scope').GetName] man suing for his freedom. The court has ruled that the Constitution extends no rights to any [SCOPE.sCulture('afro_american_scope').GetName], free or slave, and further that [concept_usfp_congress] has no power to restrict Slavery in the territories."
+usfp_a_house_divided.16.d: "The [concept_usfp_supreme_court] has handed down a landmark decision over the case of an [SCOPE.sCulture('afro_american_scope').GetName] man suing for his freedom. The court has ruled that the Constitution extends no rights to any [SCOPE.sCulture('afro_american_scope').GetName], free or slave, and further that [concept_usfp_congress] has no power to restrict [GetLawType('law_slave_trade').GetGroup.GetName] in the territories."
 usfp_a_house_divided.16.f: ""They were not intended to be included, under the word 'citizens' in the Constitution, and can therefore claim none of the rights and privileges which that instrument provides for and secures to citizens of the United States. On the contrary, they were considered by the founders as a subordinate and inferior class of beings who had been subjugated by the dominant race, and, whether emancipated or not, yet remained subject to their authority, and had no rights or privileges but such as those who held the power and the Government might choose to grant them.""
 usfp_a_house_divided.16.a: "This is the most obscene ruling in history!"
 usfp_a_house_divided.16.b: "Property is property, that is the end of it."
@@ -479,7 +479,7 @@ usfp_manifest_destiny.9.a: "Railroads will transform the country!"
 usfp_manifest_destiny.9.b: "These railroads are a financial time-bomb."
 
 usfp_manifest_destiny.10.t: "Tales of Gold Mountain"
-usfp_manifest_destiny.10.d: "News of the discovery of $gold$ in [SCOPE.sState('california_scope').GetName] has reached across the Pacific to [SCOPE.sCountry('china_scope').GetName]. As a result, thousands of [SCOPE.sCulture('han_scope').GetName] migrants have begun to arrive by ship, drawn by tales of the vast wealth flowing from 'Gold Mountain'."
+usfp_manifest_destiny.10.d: "News of the discovery of [GetGoods('gold').GetName] in [SCOPE.sState('california_scope').GetName] has reached across the Pacific to [SCOPE.sCountry('china_scope').GetName]. As a result, thousands of [SCOPE.sCulture('han_scope').GetName] migrants have begun to arrive by ship, drawn by tales of the vast wealth flowing from 'Gold Mountain'."
 usfp_manifest_destiny.10.f: ""O, just marry all the daughters to men from Gold Mountain—\n\nAll those trunks from Gold Mountain — you can demand as many as you want!\n\nO, don't ever marry your daughter to a man from Gold Mountain—\n\nLonely and sad — a cooking pot is her only companion!"" #Cantonese Rhyme
 usfp_manifest_destiny.10.a: "Gold fever is irresistable!"
 usfp_manifest_destiny.10.b: "Foreign laborers are trouble waiting to happen."
@@ -518,7 +518,7 @@ usfp_manifest_destiny.17.f: ""The United States and every commercial nation woul
 usfp_manifest_destiny.17.a: "Cigars all around!"
 
 usfp_manifest_destiny.18.t: "Monroe Doctrine Violated!"
-usfp_manifest_destiny.18.d: "Under the [concept_usfp_monroe_doctrine], the [ROOT.GetCountry.GetName] nominally opposes any further domination of the Western Hemisphere by foreign powers. [SCOPE.sCountry('initiator_scope').GetName]'s aggressive intentions against [SCOPE.sCountry('target_scope').GetName] are a clear breach of this policy, and so demand a response."
+usfp_manifest_destiny.18.d: "Under the [concept_usfp_monroe_doctrine], the [ROOT.GetCountry.GetName] nominally opposes any further domination of the Western Hemisphere by foreign powers. [SCOPE.sCountry('monroe_doctrine_violator').GetName]'s aggressive intervention against [SCOPE.sCountry('target_scope').GetName] is a clear breach of this policy, and so demands a response."
 usfp_manifest_destiny.18.f: ""We owe it, therefore, to candor and to the amicable relations existing between the United States and those powers to declare that we should consider any attempt on their part to extend their system to any portion of this hemisphere as dangerous to our peace and safety.""
 usfp_manifest_destiny.18.a: "America will not stand idly by!"
 usfp_manifest_destiny.18.b: "[SCOPE.sCountry('target_scope').GetName] is no concern of ours."
@@ -606,6 +606,12 @@ usfp_manifest_destiny.30.f: ""Mexican have no business in this country. I don't 
 usfp_manifest_destiny.30.a: "This is our land now."
 usfp_manifest_destiny.30.b: "We must uphold our end of the treaty."
 
+usfp_manifest_destiny.31.t: "The White Frontier"
+usfp_manifest_destiny.31.d: "The local government of [SCOPE.sState('oregon_scope').GetName] has voted not only to ban [GetLawType('law_slave_trade').GetGroup.GetName] from the territory but also to entirely outlaw [GetCulture('afro_american').GetCustom('getPluralDemonym')] from setting foot there."
+usfp_manifest_destiny.31.f: ""That if such free negro or mulatto shall fail to quit the country, as required by this act, he or she may be arrested upon a warrant issued by some justice of the peace, and, if guilty upon trial before such justice, shall receive upon his or her bare back not less than twenty nor more than thirty-nine stripes, to be inflicted by the constable of the proper county."" #1844 Law
+usfp_manifest_destiny.31.a: "It is the settlers' decision."
+usfp_manifest_destiny.31.b: "What? That's ridiculous and illegal."
+
 ### Native Removal Events ###
 
 usfp_native_removal.1.t: "The Seminole Removal"
@@ -656,7 +662,7 @@ usfp_native_removal.9.b: "Damn these land thieves!"
 
 usfp_native_removal.10.t: "Creek Removal"
 usfp_native_removal.10.d: "While many of the Creek nation accepted our terms of removal, several large bands refused to move. After a brief military expedition in [SCOPE.sState('alabama_scope').GetName], the last of the remaining Creeks have been forcibly escorted to [SCOPE.sState('oklahoma_state').GetName]."
-usfp_native_removal.10.f: ""The men were handcuffed two together, and a long chain passing between the double file connected them all together. The stoical disposition of these forest philosophers was strongly displayed, for neither their physical nor mental sufferings could elicit from them the least indication of distress. The women followed drowned in tears, and giving utterance to most distressing cries; the children joined in from sympathy, for they were yet to young to participate in the unenviable feelings of their parents.""
+usfp_native_removal.10.f: ""The men were handcuffed two together, and a long chain passing between the double file connected them all together. The stoical disposition of these forest philosophers was strongly displayed, for neither their physical nor mental sufferings could elicit from them the least indication of distress. The women followed drowned in tears, and giving utterance to most distressing cries; the children joined in from sympathy, for they were yet too young to participate in the unenviable feelings of their parents.""
 usfp_native_removal.10.a: "They should have taken the treaty we offered."
 usfp_native_removal.10.b: "What a miserable situation."
 
@@ -807,7 +813,7 @@ usfp_usa.22.f: "Crowds buzzed through the streets set aside for the exposition, 
 usfp_usa.22.a: "Here's to another 100 years!"
 
 usfp_usa.23.t: "The [ROOT.GetCountry.GetRuler.GetLastName] Presidency"
-usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of his office. After asserting the powers of the Federal government in the [concept_usfp_nullification_crisis], he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the [concept_usfp_supreme_court] rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of slavery continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
+usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of his office. After dissolving the Central Bank and asserting the powers of the Federal government in the [concept_usfp_nullification_crisis], he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the [concept_usfp_supreme_court] rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of [GetLawType('law_slave_trade').GetGroup.GetName] continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
 usfp_usa.23.f: ""But you must remember, my fellow-citizens, that eternal vigilance by the people is the price of liberty, and that you must pay the price if you wish to secure the blessing."" #Andrew Jackson
 usfp_usa.23.a: "This is a time of opportunity."
 
@@ -820,6 +826,19 @@ usfp_usa.25.t: "Boll Weevil Infestation"
 usfp_usa.25.d: "A plague of cotton-eating beetles has swept through [GetStrategicRegion('region_dixie').GetName], destroying the harvest of $building_cotton_plantation$ across the entire region. Desperate plantation owners have deployed all sorts of pesticides to try and save their crops, to no avail."
 usfp_usa.25.f: ""The cotton came up and started to growin’, but before the middle of May I looks down one day and see the boll weevil settin’ up in the top of those little cotton stalks, waitin’ for the squares to form. So all that guano we hauled and put down made nothing but a crop of boll weevils."" #Always Agin It. John L. Dove, interviewer; J. Thomas Metz, interviewee, Chapin, South Carolina, January 24, 1939. American Life Histories: Manuscripts from the Federal Writers’ Project, 1936 to 1940. Manuscript Division
 usfp_usa.25.a: "Will the cotton industry ever recover?"
+
+usfp_usa.26.t: "The [SCOPE.sState('dorr_state').GetName] Question"
+usfp_usa.26.d: "A rebellion has broken out against the [concept_state] government of [SCOPE.sState('dorr_state').GetName], attempting to force the immediate adoption of [GetLawType('law_universal_suffrage').GetName] at the local level."
+usfp_usa.26.f: ""It has become the duty of all our citizens who believe that the People are sovereign, and have a right to make and alter their forms of government, now to sustain by all necessary means, the Constitution of adopted and established by the People of this State, and the Government elected under the same. The only other alternative is an abject submission to a despotism, in its various practical effects without a parallel in the history of the American States."\n\n—Thomas Wilson Dorr" #General Orders, enclosed in Thomas Wilson Dorr to Millard, Low & Miller
+usfp_usa.26.a: "This is not democracy, it is anarchy and possibly treason."
+usfp_usa.26.b: "They have the wrong methods but the right spirit."
+
+usfp_usa.27.t: "The Third Great Awakening"
+usfp_usa.27.d: "A new wave of [GetReligion('protestant').GetName] thought has begun to sweep through the churches of the [ROOT.GetCountry.GetName], emphasizing social activism to reform society in preparation for Christ's coming. Spiritual movements within the [GetInterestGroupVariant('ig_devout',GetPlayer).GetName] are branching out and spreading new ideas of Christian practice."
+usfp_usa.27.f: ""Word and work make healthy Christians. If it be all Word and no work, people will suffer from what I may call religious gout. On the other hand if it be all work and no Word, it will not be long before they will fall into all kinds of sin and error; so that they will do more harm than good. But if we first study the Word and then go to work, we shall be healthy, useful Christians."\n\n—Dwight L. Moody"
+usfp_usa.27.a: "What new pieties will they come up with next?"
+usfp_usa.27.b: "The most righteous of causes."
+social_gospelists_can_appear: "[GetIdeology('ideology_usfp_social_gospel_leader').GetName] characters can now appear"
 
 ### USA Labor Events ###
 
@@ -1003,6 +1022,32 @@ usfp_filibuster.4.f: ""Civilization belongs to the whites. But what civilization
 usfp_filibuster.4.a: "We will annex the territory."
 usfp_filibuster.4.b: "[SCOPE.sCharacter('william_walker_scope').GetFullName] will granted governorship of the territory."
 usfp_filibuster.4.c: "We will not associate with these filibusters."
+
+usfp_filibuster.5.t: "A Cuban Expedition"
+usfp_filibuster.5.d: "A band of [GetCulture('caribeno').GetName] filibusters are currying support for an expedition to [SCOPE.sCountry('cuba_scope').GetName], where they say they will induce a mass uprising of the people there in support of independence from [SCOPE.sCountry('cuban_overlord').GetName] and annexation into the [ROOT.GetCountry.GetName]."
+usfp_filibuster.5.f: ""The people of the island yearn to escape the [SCOPE.sCountry('cuban_overlord').GetAdjectiveNoFormatting] yoke. Adding its vast tracts plantations and legions of slaves to the Union would be a great asset to the South.""
+usfp_filibuster.5.a: "We will turn a blind eye to these activities."
+usfp_filibuster.5.b: "Offer covert support for a takeover of the island."
+usfp_filibuster.5.c: "Arrest these pirates and stop them from making an incident."
+
+usfp_filibuster.6.t: "Filibuster Expedition Captured"
+usfp_filibuster.6.d: "A band of [GetCulture('caribeno').GetName] filibusters landed in western Cuba intent on overthrowing our government on behalf of the [SCOPE.sCountry('usa_scope').GetName]. Fortunately, [SCOPE.sCharacter('general_scope').GetFullName] was quickly able to surround and capture the ill-prepared expedition before they could accomplish anything."
+usfp_filibuster.6.f: "The shabby exiles were paraded through the streets of [SCOPE.GetRootScope.GetCountry.GetCapital.GetCityHubName] in chains, led by the [SCOPE.sCharacter('general_scope').GetPrimaryRoleTitle]. Some onlookers jeered, others threw things at the filibusters, but most just found them a curiosity. Did these bandits really think they could defeat the [ROOT.GetCountry.GetAdjectiveNoFormatting] army?"
+usfp_filibuster.6.a: "Execute the lot of them."
+usfp_filibuster.6.b: "Extradite these criminals back to the [SCOPE.sCountry('usa_scope').GetName]."
+
+usfp_filibuster.7.t: "Filibusters Land in Cuba"
+usfp_filibuster.7.d: "A band of filibusters has landed western Cuba intent on 'liberating' the island on behalf of the [SCOPE.sCountry('usa_scope').GetName]!"
+usfp_filibuster.7.f: "The boat shuddered to a halt against the beach. The leading man leaped ashore carrying what was to be the new flag of Free Cuba.\n\n"Forward quickly! Before the garrison is alerted! For Cuba!""
+usfp_filibuster.7.a: "This rabble has no chance of success."
+
+usfp_filibuster.8.t: "The Free Flag of Cuba"
+usfp_filibuster.8.d: "Through some miracle, [SCOPE.sCountry('filibuster_country_scope').GetRuler.GetFullName] has seized control of Cuba and is petitioning for annexation."
+usfp_filibuster.8.f: ""Civilization belongs to the whites. But what civilization? And until when?""
+usfp_filibuster.8.a: "Cuba was always meant to be ours."
+usfp_filibuster.8.b: "[SCOPE.sCountry('filibuster_country_scope').GetRuler.GetFullName] will govern the island on our behalf."
+usfp_filibuster.8.c: "Filibusters? Who? We have no connection to this..."
+
 
 ### Gilded Age events ###
 
@@ -1239,7 +1284,7 @@ usfp_indian_wars.1.a: "A treaty is in our best interests for now."
 usfp_indian_wars.1.b: "We will not be cowed by any Indian."
 
 usfp_indian_wars.2.t: "Blazing the Bozeman Trail"
-usfp_indian_wars.2.d: "Rumors of $gold$ have pushed a steady stream of prospectors north from the main Oregon Trail deeper into [SCOPE.sState('montana_scope').GetStateRegion.GetName]. As traffic grows, so too has harassment from Indian raiders. To secure the gold trail, the Army has put forth a plan to build a chain of forts along the route and ward off further attacks."
+usfp_indian_wars.2.d: "Rumors of [GetGoods('gold').GetName] have pushed a steady stream of prospectors north from the main Oregon Trail deeper into [SCOPE.sState('montana_scope').GetStateRegion.GetName]. As traffic grows, so too has harassment from Indian raiders. To secure the gold trail, the Army has put forth a plan to build a chain of forts along the route and ward off further attacks."
 usfp_indian_wars.2.f: "The trail trodden by the gold diggers had become a dead zone along the plains. The Indians grew more furious at the Whites as the buffalo and antelope herds were depleted year after year. They would not stand idly by and starve."
 usfp_indian_wars.2.a: "We shall protect the prospectors."
 usfp_indian_wars.2.b: "Building forts would be a provocation."
@@ -1571,6 +1616,130 @@ usfp_usa_colonization.6.t: "A Failed Venture"
 usfp_usa_colonization.6.d: "It seems that funds and supplies intended for the $usfp_afro_american_culture$ settlement in [SCOPE.sState('haiti_scope').GetName] have been embezzled or otherwise redirected, leaving the colony defunct and its inhabitants stranded in a foreign land."
 usfp_usa_colonization.6.f: ""I found that the enterprise had been abandoned, and that the workers had all become more or less demoralized in the absence of proper control. Many of them had gone actually mad, under the influence of some religious excitement, to which they had surrendered themselves."" #Bernard Kock
 usfp_usa_colonization.6.a: "Send a ship to collect anyone who'd like to return."
+
+### Panic Events ###
+
+usfp_panics.1.t: "Bank Runs"
+usfp_panics.1.d: "When President Jackson dissolved the Second Bank of the United States, loans and hard currency were distributed to many smaller banks in different states. A failure of one such bank has now cascaded into a nation-wide bank run, causing most to run out of their reserves of gold and silver. Faith in the financial sector has collapsed, and multiple state governments have been forced to [concept_default] on their public loans."
+usfp_panics.1.f: ""I'm sorry sir, we cannot redeem this."\n\n"This is from your bank! Says right here - ten dollars, payable to the bearer on demand. Well, I'm the bearer, and I'm demanding!"\n\n"The vaults are empty sir, there's no specie left.""
+usfp_panics.1.a: "These irresponsible speculators will drive us to ruin!"
+usfp_panics.1.b: "The central bank will backstop the financial system."
+
+### Canada Events ###
+usfp_usa_canada.1.t: "[SCOPE.sCountry('usa_scope').GetAdjective] Smugglers"
+usfp_usa_canada.1.d: "[SCOPE.sCountry('usa_scope').GetAdjective] citizens sympathetic to the [SCOPE.sPoliticalMovement('radical_movement').GetName] are ferrying supplies across the border into [SCOPE.sState('ontario_scope').GetName], making the movement much more difficult to suppress."
+usfp_usa_canada.1.f: ""Inhabitants of Upper Canada!\n\nFor nearly fifty years has our country languished under the blighting influence of military despots, strangers from Europe, ruling us, not according to laws of our choice, but by the capricious dictates of their arbitrary power.\n\n—William Lyon Mackenzie"
+usfp_usa_canada.1.a: "Alert the Royal Navy."
+usfp_usa_canada.1.b: "Nothing to see here, move along..."
+caroline_will_be_intercepted: "A Royal Navy ship will intercept the smugglers and destroy their vessel."
+
+usfp_usa_canada.2.t: "Royal Navy Burns [SCOPE.sCountry('usa_scope').GetAdjective] Ship!"
+usfp_usa_canada.2.d: "At the behest of the [SCOPE.sCountry('canadian_country_scope').GetAdjective] government, a [SCOPE.sCountry('britain_scope').GetAdjective] ship has invaded our territorial waters in the Niagara River and destroyed an [SCOPE.sCountry('usa_scope').GetAdjective] steamer, killing at least one of her crew! The British claim that the ship was offering aid to rebellious [SCOPE.sPoliticalMovement('radical_movement').GetName] partisans across the river in [SCOPE.sState('ontario_scope').GetName]."
+usfp_usa_canada.2.f: ""The steamboat Caroline was a hostile vessel engaged in piratical war against her Majesty's people. It was under such circumstances, which it is to be hoped will never recur, that the vessel was attacked by a party of her Majesty's people, captured and destroyed."" #Stephen Fox
+usfp_usa_canada.2.a: "Dispatch a cable, we don't want this to escalate."
+usfp_usa_canada.2.b: "This violation will not go unpunished!"
+
+usfp_usa_canada.3.t: "Royal Navy Burns [SCOPE.sCountry('usa_scope').GetAdjective] Ship"
+usfp_usa_canada.3.d: "At the behest of the [SCOPE.sCountry('canadian_country_scope').GetAdjective] government, a [SCOPE.sCountry('britain_scope').GetAdjective] ship crossed into [SCOPE.sCountry('usa_scope').GetAdjective] waters and destroyed a civilian ship that had been smuggling weapons to the [SCOPE.sPoliticalMovement('radical_movement').GetName] in [SCOPE.sState('ontario_scope').GetName]. An [SCOPE.sCountry('usa_scope').GetAdjectiveNoFormatting] diplomat has arrived, hoping to prevent an international incident."
+
+usfp_usa_canada.3.a: "Let us hash things out with the Americans and secure the [SCOPE.sCountry('canadian_country_scope').GetAdjective] border."
+usfp_usa_canada.3.b: "The Royal Navy will enforce Canadian security as it pleases."
+
+usfp_usa_canada.4.t: "Fenian Incursion"
+usfp_usa_canada.4.d: "An armed band of [GetCulture('irish').GetName] insurgents have crossed into [SCOPE.sState('ontario_scope').GetName] from [SCOPE.sState('fenian_state').GetName]! This so-called Fenian Brotherhood aims to seize control of [ROOT.GetCountry.GetName] in order to force [SCOPE.sCountry('britain_scope').GetName] to acquiesce to the demands of the [SCOPE.sPoliticalMovement('irish_movement').GetName]."
+usfp_usa_canada.4.f: ""We come among you as the foes of British rule in Ireland, exiled from that native land of ours by the oppression of British aristocracy and legislation, our people hunted down to the emigrant ships, or worse, to that charnel of government institutions, the poor-house. We have taken up the sword to strike down the oppressor’s rod and deliver Ireland from the tyrant."" #Fenian proclamation
+usfp_usa_canada.4.a: "We must stand together as Canadians!"
+fenians_defeated: "A hastily assembled militia will drive the Fenians back across the border into [SCOPE.sState('fenian_state').GetName], where the [SCOPE.sCountry('usa_scope').GetAdjective] authorities will surely arrest them"
+
+usfp_usa_canada.5.t: "The Battle of Ridgeway"
+usfp_usa_canada.5.d: "An armed band of [GetCulture('irish').GetName] insurgents crossed the border into [SCOPE.sState('ontario_scope').GetName] intent on forcing the [SCOPE.sCountry('britain_scope').GetAdjective] government to relinquish control over Ireland. Instead, a hastily assembled [SCOPE.sCountry('canadian_country_scope').GetAdjective] militia was able to drive them back, and the [GetCulture('irish').GetName] army is now encamped in [SCOPE.sState('fenian_state').GetName] preparing for further incursions."
+usfp_usa_canada.5.f: ""O Erin! Must we leave you driven by the tyrant’s hand,\n\nMust we ask a Mother’s blessing, in a strange but happy land,\n\nWhere the cruel Cross of England’s thraldom never to be seen,\n\nBut where, thank God! We’ll live and die, still Wearing of the Green."" #Irish Nationalist Song
+usfp_usa_canada.5.a: "Disarm and arrest these bandits at once."
+usfp_usa_canada.5.b: "We will turn a blind eye to the enemies of [SCOPE.sCountry('britain_scope').GetName]."
+
+usfp_usa_canada.6.t: "The [SCOPE.sState('aroostook_state_scope').GetName] War"
+usfp_usa_canada.6.d: "Settlers from [SCOPE.sState('maine_usa_state').GetName] have begun to move north into the disputed [SCOPE.sState('aroostook_state_scope').GetName] region. Conflicts between [GetCulture('yankee').GetName] and [SCOPE.sCountry('canadian_country_scope').GetAdjective] lumbermen are threatening to erupt into open violence."
+usfp_usa_canada.6.f: ""We have placed the American flag there on that side of the river, and we are determined to support it, and nothing but a superior force to ourselves shall take it down. We are on American territory; Great Britain has no jurisdiction here. We have a right to be protected, and will be protected, in what we are doing, by our Government."" #John Baker
+usfp_usa_canada.6.a: "Tell everyone to calm down, we will negotiate a fixed border."
+usfp_usa_canada.6.b: "We will respond to these trespasses with appropriate force."
+britain_accepts_aroostook_treaty: "If [SCOPE.sCountry('britain_scope').GetName] agrees to a border treaty, we will gain control of [SCOPE.sState('aroostook_state_scope').GetName] after negotiations conclude."
+britain_rejects_aroostook_treaty: "If [SCOPE.sCountry('britain_scope').GetName] rejects negotiations, we can press our [concept_claim] to the region."
+
+usfp_usa_canada.7.t: "The [GetStateRegion('STATE_MAINE').GetName] Border Dispute"
+usfp_usa_canada.7.d: "[GetCulture('yankee').GetName] settlers have begun to move north into the disputed [SCOPE.sState('aroostook_state_scope').GetName] region of [SCOPE.sCountry('canadian_country_scope').GetName]. [SCOPE.sCountry('usa_scope').GetAdjective] have proposed a new series of negotiations to finally determine our shared border in [GetStateRegion('STATE_MAINE').GetName]."
+usfp_usa_canada.7.f: ""These boundary lines are simply inexplicable and impractical," said the surveyor, exasperated. Several old treaty maps littered the table, each with conflicting borders drawn haphazardly through terra incognita. A diplomat put his fingers to his forehead in annoyance. "How long will cleaning this up take?" "Oh it's quite rugged terrain Sir, six months maybe, just to draw up a proper map.""
+usfp_usa_canada.7.a: "Send out the surveyors."
+usfp_usa_canada.7.b: "[SCOPE.sCountry('canadian_country_scope').GetName]'s territory is inviolable."
+one_year_negotiations: "After a year of negotiations our treaty will conclude:"
+
+usfp_usa_canada.8.t: "Canadian Border Treaty Signed"
+usfp_usa_canada.8.d: "After a lengthy process of back and forth negotiations and fresh surveys of the relevant terrain, we have resolved a comprehensive treaty with [SCOPE.sCountry('britain_scope').GetName] concerning all their territory in eastern [GetStrategicRegion('region_canada').GetName]."
+usfp_usa_canada.8.f: ""Whereas certain portions of the line of Boundary between the British Dominions in North America and the United States of America, described in the Second Article of the Treaty of Peace of 1783, have not yet been ascertained and determined, notwithstanding the repeated attempts which have been heretofore made for that purpose; and whereas it is now thought to be for the interest of both Parties that, avoiding further discussion of their respective rights..."" #Webster-Ashburton Treaty
+usfp_usa_canada.8.a: "Let us look forward to an enduring relationship with [SCOPE.sCountry('britain_scope').GetName]."
+
+
+### Spanish American War ###
+usfp_usa_spain.1.t: "The Trouble in Cuba"
+usfp_usa_spain.1.d: "In light of the growing unrest in [SCOPE.sCountry('cuba_scope').GetName], our consulate is requesting a show of force to ensure the safety of [ROOT.GetCountry.GetAdjective] citizens and interests on the island."
+usfp_usa_spain.1.f: ""Spanish officers and mob attacked three newspaper offices, not four (as reported yesterday). Soldiers joined the mob when sent to defend the newspapers, and outside the palace shouted death to Blanco and autonomy. If Americans are in danger ships should be ready to move promptly for [SCOPE.sState('cuba_state_scope').GetPortHubName]. Uncertainty and excitement widespread."" #United States Consulate General, Havana
+usfp_usa_spain.1.a: "The Navy will dispatch a ship to [SCOPE.sState('cuba_state_scope').GetCityHubName]."
+usfp_usa_spain.1.b: "[SCOPE.sCountry('cuba_scope').GetName] is not our problem."
+maine_heads_to_cuba: "An [ROOT.GetCountry.GetAdjective] ship will head to [SCOPE.sState('cuba_state_scope').GetCityHubName]"
+
+usfp_usa_spain.2.t: "[SCOPE.sCountry('usa_scope').GetAdjective] Ship Explodes in [SCOPE.sState('cuba_state_scope').GetCityHubName] Harbor!"
+usfp_usa_spain.2.d: "An [SCOPE.sCountry('usa_scope').GetAdjective] ship anchored in [SCOPE.sState('cuba_state_scope').GetCityHubName] has exploded and sank, seemingly by accident. Even though we had no involvement, the [SCOPE.sCountry('usa_scope').GetAdjectiveNoFormatting] press has immediately printed headlines blaming us for the disaster, which could have a disastrous effect on our [concept_relations] with the [SCOPE.sCountry('usa_scope').GetName]."
+usfp_usa_spain.2.f: "#bold Explosion in [SCOPE.sState('cuba_state_scope').GetPortHubName] Caused By Bomb Or Torpedo?#!\nTrustworthy American Just Arrived from [SCOPE.sState('cuba_state_scope').GetCityHubName], Says He Overheard Talk There of a Plot to Blow Up the Ship. Dynamite Expert and Others Report to The World that the Wreck Was Not Accidental.\n\n—Headline from #italic The World#!" #The World
+usfp_usa_spain.2.a: "This could get ugly."
+usa_may_respond_poorly: "The [SCOPE.sCountry('usa_scope').GetName] might become hostile towards us in response"
+
+usfp_usa_spain.3.t: "[SCOPE.sCountry('usa_scope').GetAdjective] Ship Destroyed in [SCOPE.sState('cuba_state_scope').GetCityHubName] Harbor!"
+usfp_usa_spain.3.d: "The ship we dispatched to [SCOPE.sState('cuba_state_scope').GetCityHubName] has exploded in port! While the initial investigation points to an accident, the press has already labeled it as a deliberate attack by [SCOPE.sCountry('cuban_overlord').GetName] and a cassus belli for war."
+
+usfp_usa_spain.3.a: "Let's blame this on [SCOPE.sCountry('cuban_overlord').GetName]!"
+usfp_usa_spain.3.b: "If it was an accident, there is nobody to blame."
+
+usfp_usa_spain.4.t: "The Future of [SCOPE.sCountry('cuba_scope').GetName]"
+usfp_usa_spain.4.d: "With [SCOPE.sCountry('cuba_scope').GetName] now free from the odious rule of [SCOPE.sCountry('cuban_overlord').GetName], the fate of the island is in our hands."
+usfp_usa_spain.4.f: ""Our mandate is to ensure in the island the establishment of a stable government, capable of maintaining order and observing its international obligations, ensuring peace and tranquillity and the security of its citizens as well as our own, and to use the military and naval forces of the United States as may be necessary for these purposes."" #William McKinley
+usfp_usa_spain.4.a: "We fought to liberate [SCOPE.sCountry('cuba_scope').GetName], but we must secure its stability."
+usfp_usa_spain.4.b: "[SCOPE.sCountry('cuba_scope').GetName] can stand on its own for the first time."
+usfp_usa_spain.4.c: "The [SCOPE.sCountry('cuba_scope').GetAdjective] people yearn to join our great Union."
+
+## Danish Purchases
+usfp_danish_purchases.1.t: "[SCOPE.sCountry('usa_scope').GetName] Offers For Islands"
+usfp_danish_purchases.1.d: "The [SCOPE.sCountry('usa_scope').GetName], desiring to secure additional Atlantic ports for themselves, has approached us with an offer to purchase our holdings in [SCOPE.GetRootScope.GetCountry.GetCustom('usfp_get_danish_islands_purchase_desires')]."
+usfp_danish_purchases.1.f: ""It is self-evident that the Atlantic is critical to our greater national security. Besides, [SCOPE.sCountry('greenland_owner_scope').GetNameNoFormatting] has done little with these islands and is in no position to develop them to their fullest potential. The inhabitants will surely welcome the change, and your finance minister will thank you."" 
+usfp_danish_purchases.1.a: "Our territory is not for sale."
+usfp_danish_purchases.1.b: "Gold is worth more than ice."
+usfp_danish_purchases.1.c: "Double the offer, and we will sell."
+usfp_danish_purchases.1.e: "Offer solely the [SCOPE.sState('danish_west_indies_scope').GetName]."
+
+usfp_danish_purchases.2.t: "[SCOPE.sCountry('greenland_owner_scope').GetAdjective] Counter-Offer"
+usfp_danish_purchases.2.d: "[SCOPE.sCountry('greenland_owner_scope').GetName] is willing to sell, but only if we double our offered sum."
+usfp_danish_purchases.2.f: "The diplomat considered the amended treaty and exhaled slowly. "I will have to take this back and confer, Congress was already hesistant to approve our initial offer. I dread what they will call this deal if we make it."" 
+usfp_danish_purchases.2.a: "Turn them down."
+usfp_danish_purchases.2.b: "It is a worthwhile investment."
+
+usfp_danish_purchases.3.t: "[SCOPE.sCountry('greenland_owner_scope').GetAdjective] Counter-Offer"
+usfp_danish_purchases.3.d: "[SCOPE.sCountry('greenland_owner_scope').GetName] seems unwilling to part with their territory in the [GetStrategicRegion('region_north_sea_coast').GetName], but is willing to negotiate the transfer of the [SCOPE.sState('danish_west_indies_scope').GetName] to our control."
+usfp_danish_purchases.3.f: ""Are the earthquakes of St. Thomas really all we'll be getting? Surely there are better Carribbean ports we could pursue."" 
+usfp_danish_purchases.3.a: "We need all the islands!"
+usfp_danish_purchases.3.b: "Better something than nothing."
+
+usfp_danish_purchases.4.t: "[SCOPE.sCountry('greenland_owner_scope').GetName] Refuses Sale"
+usfp_danish_purchases.4.d: "[SCOPE.sCountry('greenland_owner_scope').GetName] has flatly refused the sale of any of their holdings in the Atlantic."
+usfp_danish_purchases.4.f: ""Greenland belongs in the American embrace, [SCOPE.sCountry('greenland_owner_scope').GetNameNoFormatting] squanders its riches. Besides, what if they sell it to some other power with designs against us?"" 
+usfp_danish_purchases.4.a: "Perhaps they will be more amenable in the future."
+usfp_danish_purchases.4.b: "We cannot abide any other power controlling [GetStateRegion('STATE_GREENLAND').GetName]."
+
+if_usa_accepts: "If the [SCOPE.sCountry('usa_scope').GetName] accepts:"
+usfp_get_danish_islands_purchase_desires_all_three: "[GetStateRegion('STATE_GREENLAND').GetName], [GetStateRegion('STATE_ICELAND').GetName], and the [GetStateRegion('STATE_WEST_INDIES').GetName]"
+usfp_get_danish_islands_purchase_desires_greenland_iceland: "[GetStateRegion('STATE_GREENLAND').GetName] and [GetStateRegion('STATE_ICELAND').GetName]"
+usfp_get_danish_islands_purchase_desires_greenland_windies: "[GetStateRegion('STATE_GREENLAND').GetName] and the [GetStateRegion('STATE_WEST_INDIES').GetName]"
+usfp_get_danish_islands_purchase_desires_greenland_only: "[GetStateRegion('STATE_GREENLAND').GetName]"
+usfp_get_danish_islands_purchase_desires_iceland_windies: "[GetStateRegion('STATE_ICELAND').GetName] and the [GetStateRegion('STATE_WEST_INDIES').GetName]"
+usfp_get_danish_islands_purchase_desires_iceland_only: "[GetStateRegion('STATE_ICELAND').GetName]"
+usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STATE_WEST_INDIES').GetName]"
 
 
 usfp_test.1.t: "DEBUG EVENT"

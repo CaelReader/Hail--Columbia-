@@ -60,21 +60,9 @@ usfp_a_house_divided.1 = {
 	option = {
 		name = usfp_a_house_divided.1.a
 		default_option = yes
-		add_journal_entry = {
-			type = je_usfp_a_house_divided_gag_rule
-		}
 		add_radicals = {
 			value = small_radicals
 			interest_group = ig:ig_intelligentsia
-		}
-		random_political_movement = {
-			limit = {
-				is_political_movement_type = movement_anti_slavery
-			}
-			add_modifier = {
-				name = usfp_gag_rule_movement_modifier
-				years = 5
-			}
 		}
 		ig:ig_intelligentsia = {
 			add_modifier = {
@@ -82,27 +70,30 @@ usfp_a_house_divided.1 = {
 				years = 4
 			}
 		}
-		if = {
-			limit = {
-				OR = {
-					is_enacting_law = law_type:law_slave_trade
-					is_enacting_law = law_type:law_slavery_banned
-					is_enacting_law = law_type:law_debt_slavery
-				}
-			}
-			cancel_enactment = yes
-		}
+
 	}
 
 	option = {
 		name = usfp_a_house_divided.1.b
 		default_option = yes
-		add_journal_entry = {
-			type = je_usfp_a_house_divided_gag_rule
-		}
 		add_radicals = {
 			value = small_radicals
 			interest_group = ig:ig_intelligentsia
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_getting_things_done_modifier
+				years = 4
+			}
+		}
+	}
+
+	after = {
+		active_law:lawgroup_slavery ?= {
+			add_amendment = {
+				type = amendment_usfp_gag_rule
+				sponsor = PREV.ig:ig_landowners
+			}
 		}
 		random_political_movement = {
 			limit = {
@@ -111,12 +102,6 @@ usfp_a_house_divided.1 = {
 			add_modifier = {
 				name = usfp_gag_rule_movement_modifier
 				years = 5
-			}
-		}
-		ig:ig_landowners = {
-			add_modifier = {
-				name = usfp_getting_things_done_modifier
-				years = 4
 			}
 		}
 		if = {
@@ -298,7 +283,7 @@ usfp_a_house_divided.3 = {
 							has_ideology = ideology:ideology_slaver
 						}
 					}
-					is_marginal = no
+					ig_counts_as_marginal = no
 				}
 			}
 		}
@@ -1441,7 +1426,7 @@ usfp_a_house_divided.15 = {
 	}
 
 	immediate = {
-		py:liberal_party = {
+		py:usfp_republican_party = {
 			save_scope_as = whig_scope
 		}
 	}
@@ -1690,7 +1675,7 @@ usfp_a_house_divided.17 = {
 			has_variable = whigs_party
 		}
 		ig:ig_petty_bourgeoisie = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 			has_party = yes
 		}
 	}
@@ -2132,6 +2117,7 @@ usfp_a_house_divided.22 = {
 			add_momentum = momentum_medium
 		}
 		ordered_scope_state = {
+			position = 0
 			limit = {
 				region = sr:region_new_england
 			}

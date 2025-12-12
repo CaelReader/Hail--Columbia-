@@ -27,6 +27,9 @@ usfp_monthly_pulse = {
 		1 = usfp_usa.18 #Garfield-style Assassination
 		1000 = usfp_usa.20 #Reset Parliamentary Republic to Presidential
 		100 = usfp_indian_wars.15 #Comanche Slave Raid
+		
+		200 = usfp_usa.26 #Dorr Rebellion
+		100 = usfp_usa.27 #Third Great Awakening
 
 		##Labor events
 		100 = usfp_usa_labor.1 #founding of the IWW
@@ -53,8 +56,8 @@ usfp_monthly_pulse = {
 		1 = usfp_mormon.14 #Mormon assassinates president
 
 		#Eugenics events
-		100 = usfp_progressive_era.17
-		100 = usfp_progressive_era.18
+		100 = usfp_progressive_era.17 #IG potentially adopts Eugenics
+		100 = usfp_progressive_era.18 #Feminist promotes Eugenics
 
 		#Post-Reconstruction Events, can spawn even after the completion of Long Reconstruction
 		400 = usfp_usa_postreconstruction.12 #Birth of a Nation
@@ -65,6 +68,11 @@ usfp_monthly_pulse = {
 		500 = usfp_usa_election.1 #Woman Candidate
 		500 = usfp_usa_election.2 #Non-White Candidate
 		500 = usfp_usa_election.3 #Non-Protestant Candidate
+
+		#Canadian events
+		100 = usfp_usa_canada.1 #Caroline Affair
+		100 = usfp_usa_canada.4 #Fenian Raid
+		100 = usfp_usa_canada.6 #Aroostook War
 	}
 }
 
@@ -169,6 +177,7 @@ usfp_american_presidents_only = {
 			}
 			every_active_party = {
 				ordered_member = {
+					position = 0
 					order_by = ig_clout
 					leader = {
 						if = {
@@ -394,7 +403,7 @@ usfp_new_president = {
 					set_strategy = ai_strategy_agricultural_expansion
 				 }
 			}
-			if = {
+			else_if = {
 				limit = {
 					interest_group = {
 						is_interest_group_type = ig_landowners
@@ -402,6 +411,26 @@ usfp_new_president = {
 				 }
 				 owner = {
 					set_strategy = ai_strategy_plantation_economy
+				 }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						interest_group = {
+							is_interest_group_type = ig_petty_bourgeoisie
+							is_interest_group_type = ig_trade_unions
+							is_interest_group_type = ig_intelligentsia
+							is_interest_group_type = ig_industrialists
+						}
+						owner = {
+							ig:ig_industrialists = {
+								is_in_government = yes
+							}
+						}
+					}
+				 }
+				 owner = {
+					set_strategy = ai_strategy_industrial_expansion
 				 }
 			}
 			if = {
@@ -634,7 +663,8 @@ usfp_remove_party_system = {
 
 on_revolution_start = { on_actions = { 
 	usfp_american_igs_action
-	usfp_fix_monarchy_revolt 
+	usfp_fix_monarchy_revolt
+	usfp_revolution_types 
 } }
 on_secession_start = { on_actions = { 
 	usfp_american_igs_action
@@ -666,6 +696,29 @@ usfp_fix_monarchy_revolt = {
 			 activate_law = law_type:law_presidential_republic
 		}
 	}
+	}
+}
+
+usfp_revolution_types = {
+	effect = {
+		if = {
+			limit = {
+				has_journal_entry = je_usfp_american_constitution
+				scope:target ?= {
+					OR = {
+						var:civil_war_type_var ?= movement_type:movement_usfp_american_constitution
+						var:civil_war_type_var ?= movement_type:movement_radical
+						var:civil_war_type_var ?= movement_type:movement_liberal
+					}
+				}
+			}
+			scope:target ?= {
+				activate_law = law_type:law_presidential_republic
+				activate_law = law_type:law_universal_suffrage
+				activate_law = law_type:law_protected_speech
+				activate_law = law_type:law_elected_bureaucrats
+			}
+		}
 	}
 }
 
@@ -932,7 +985,7 @@ usfp_political_movement_ideologies = {
 					has_discrimination_trait_group = heritage_group_indigenous_american
 				}
 				owner = {
-					country_is_in_north_america = yes
+					is_in_geographic_region = geographic_region_north_america
 				}
 			}
 			set_core_ideology = ideology_usfp_american_indian_movement
@@ -998,6 +1051,36 @@ usfp_on_war_end_action = {
 					years = 1
 				}
 			}
+		}
+	}
+}
+
+on_government_reformed = {
+	on_actions = {
+		usfp_spoils_system_action
+	}
+}
+
+usfp_spoils_system_action = {
+	effect = {
+		if = {
+			limit = {
+				any_active_law = {
+					has_amendment = amendment_usfp_spoils_system
+				}
+				NOT = {
+					has_modifier = usfp_spoils_system_decaying_modifier
+				}
+			 }
+			 add_modifier = {
+				name = usfp_spoils_system_decaying_modifier
+				years = 2
+				is_decaying = yes
+			 }
+			 change_variable = {
+				name = usfp_spoils_system_abolish_var
+				add = 1
+			 }
 		}
 	}
 }

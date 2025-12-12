@@ -1,13 +1,13 @@
 ﻿STATES = {
-	s:STATE_LIBERIA = {
-		set_owner_of_provinces = {
-			country = c:MDK
-			provinces = { xFF3CB6 x80EA03 x55657D xF4E268 x7E9BF6 xC730B8 x56D35D }
-		}
-		set_owner_of_provinces = {
-			country = c:KRU
-			provinces = { xF4E268 x8616D7 x728792 xFA64C3 xA17EB9 }
-		}
-		add_claim = c:LIB
-	}
+	# s:STATE_LIBERIA = {
+	# 	set_owner_of_provinces = {
+	# 		country = c:MDK
+	# 		provinces = { xFF3CB6 x80EA03 x55657D xF4E268 x7E9BF6 xC730B8 x56D35D }
+	# 	}
+	# 	set_owner_of_provinces = {
+	# 		country = c:KRU
+	# 		provinces = { xF4E268 x8616D7 x728792 xFA64C3 xA17EB9 }
+	# 	}
+	# 	add_claim = c:LIB
+	# }
 }

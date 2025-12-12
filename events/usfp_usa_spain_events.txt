@@ -1,0 +1,428 @@
+﻿namespace = usfp_usa_spain
+###### Hail, Columbia! by CaelReader ######
+#Send the Maine
+usfp_usa_spain.1 = {
+	type = country_event
+	placement = scope:cuba_state_scope
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	title = usfp_usa_spain.1.t
+	desc = usfp_usa_spain.1.d
+	flavor = usfp_usa_spain.1.f
+	dlc = dlc_usfp
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	trigger = {
+		is_at_war = no
+		c:CUB = {
+			is_at_war = no
+			overlord = {
+				is_at_war = no
+			}
+		}
+	}
+
+	immediate = {
+		c:USA = {
+			save_scope_as = usa_scope
+		}
+		c:CUB = {
+			save_scope_as = cuba_scope
+		}
+		c:CUB = {
+			overlord = {
+				save_scope_as = cuban_overlord
+			}
+		}
+		scope:cuba_scope = {
+			capital = {
+				save_scope_as = cuba_state_scope
+			}
+		}
+	}
+
+	#dispatch the Maine
+	option = {
+		name = usfp_usa_spain.1.a
+		default_option = yes
+		custom_tooltip = {
+			text = maine_heads_to_cuba
+			scope:cuban_overlord = {
+				trigger_event = {
+					id = usfp_usa_spain.2
+					days = 40
+				}
+			}
+		}
+		ig:ig_industrialists = {
+			add_modifier = {
+				name = usfp_protected_ig_interests_modifier
+				years = 4
+			}
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = usfp_protected_ig_interests_modifier
+				years = 4
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#ignore
+	option = {
+		name = usfp_usa_spain.1.b
+		add_radicals = {
+			value = medium_radicals
+			strata = middle
+		}
+		if = {
+			limit = { 
+				culture_percent_country = {
+					target = cu:caribeno
+					value > 0
+				}
+			}
+			add_radicals = {
+				value = large_radicals
+				culture = cu:caribeno
+			}
+		}
+		if = {
+			limit = { 
+				culture_percent_country = {
+					target = cu:afro_caribeno
+					value > 0
+				}
+			}
+			add_radicals = {
+				value = large_radicals
+				culture = cu:afro_caribeno
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+#Spain: uh oh a US ship blew up
+usfp_usa_spain.2 = {
+	type = country_event
+	placement = scope:cuba_state_scope
+	event_image = {
+		video = "votp_gunboat_diplomacy"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	
+	title = usfp_usa_spain.2.t
+	desc = usfp_usa_spain.2.d
+	flavor = usfp_usa_spain.2.f
+	dlc = dlc_usfp
+	duration = 3
+
+	#this is bad
+	option = {
+		name = usfp_usa_spain.2.a
+		default_option = yes
+		custom_tooltip = usa_may_respond_poorly
+		c:USA = {
+			trigger_event = usfp_usa_spain.3
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+}
+#USA: the Maine exploded!
+usfp_usa_spain.3 = {
+	type = country_event
+	placement = scope:cuba_state_scope
+	event_image = {
+		video = "votp_gunboat_diplomacy"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	
+	title = usfp_usa_spain.3.t
+	desc = usfp_usa_spain.3.d
+	flavor = usfp_usa_spain.2.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+
+	}
+
+	#blame the Maine on spain!
+	option = {
+		name = usfp_usa_spain.3.a
+		default_option = yes
+		change_relations = {
+			country = scope:cuban_overlord
+			value = -100
+		}
+		if = {
+			limit = { 
+				is_ai = yes
+			}
+			set_secret_goal = {
+				country = scope:cuba_scope
+				secret_goal = conquer
+			}
+		}
+		if = {
+			limit = {
+				has_truce_with = scope:cuban_overlord
+			 }
+			 end_truce = scope:cuban_overlord
+		}
+		scope:cuban_overlord = {
+			post_notification = usfp_usa_mad_over_maine
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_political_lobby = {
+						is_political_lobby_type = lobby_anti_country
+						target = scope:cuban_overlord
+					}
+				} 
+			}
+			create_political_lobby = {
+				type = lobby_anti_country
+				target = scope:cuban_overlord
+				add_interest_group = ig:ig_petty_bourgeoisie
+			}
+		}
+		add_lobby_appeasement_from_diplomacy_unidirectional = {
+			FIRST = root
+			SECOND = scope:cuban_overlord
+			PRO_AMOUNT = 2
+			ANTI_AMOUNT = -2
+			FACTOR = appeasement_special_events_positive
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	#it was an accident
+	option = {
+		name = usfp_usa_spain.3.b
+		add_radicals = {
+			value = large_radicals
+			pop_type = officers
+		}
+		add_radicals = {
+			value = large_radicals
+			pop_type = soldiers
+		}
+		add_radicals = {
+			value = medium_radicals
+			strata = middle
+		}
+		create_unidirectional_truce = {
+			country = scope:cuban_overlord
+			months = 12
+		}
+		scope:cuban_overlord = {
+			post_notification = usfp_usa_not_mad_over_maine
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_political_lobby = {
+						is_political_lobby_type = lobby_anti_country
+						target = scope:cuban_overlord
+					}
+				} 
+			}
+			create_political_lobby = {
+				type = lobby_anti_country
+				target = scope:cuban_overlord
+				add_interest_group = ig:ig_petty_bourgeoisie
+			}
+		}
+		add_lobby_appeasement_from_diplomacy_unidirectional = {
+			FIRST = root
+			SECOND = scope:cuban_overlord
+			PRO_AMOUNT = -2
+			ANTI_AMOUNT = 2
+			FACTOR = appeasement_special_events_negative
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					OR = {
+						any_scope_treaty = {
+							binds = scope:cuban_overlord
+							any_scope_article = {
+								has_type = defensive_pact
+							}
+						}
+						any_scope_treaty = {
+							binds = scope:cuban_overlord
+							any_scope_article = {
+								has_type = alliance
+							}
+						}
+					}
+				}
+				add = 100
+			}
+		}
+	}
+}
+#Fate of Cuba
+usfp_usa_spain.4 = {
+	type = country_event
+	placement = scope:cuba_scope.capital
+	event_image = {
+		video = "ep1_transfer_of_authority"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	
+	title = usfp_usa_spain.4.t
+	desc = usfp_usa_spain.4.d
+	flavor = usfp_usa_spain.4.f
+	dlc = dlc_usfp
+	duration = 3
+
+	immediate = {
+		c:CUB = {
+			save_scope_as = cuba_scope
+		}
+	}
+
+	#cuba protectorate
+	option = {
+		name = usfp_usa_spain.4.a
+		default_option = yes
+		create_incident = {
+			country = scope:cuba_scope
+			value = 15
+		}
+		hidden_effect = {
+			scope:cuba_scope = {
+				set_country_type = recognized
+			}
+		}
+		create_diplomatic_pact = {
+			country = scope:cuba_scope
+			type = protectorate
+		}
+		scope:cuba_scope = {
+			add_radicals = {
+				value = medium_radicals
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#cuba goes free
+	option = {
+		name = usfp_usa_spain.4.b
+		change_infamy = -10
+		change_relations = {
+			country = scope:cuba_scope
+			value = 50
+		}
+		scope:cuba_scope = {
+			add_loyalists = {
+				value = medium_radicals
+			}
+		}
+		if = {
+			limit = { 
+				culture_percent_country = {
+					target = cu:caribeno
+					value > 0
+				}
+			}
+			add_loyalists = {
+				value = very_large_radicals
+				culture = cu:caribeno
+			}
+		}
+		if = {
+			limit = { 
+				culture_percent_country = {
+					target = cu:afro_caribeno
+					value > 0
+				}
+			}
+			add_loyalists = {
+				value = very_large_radicals
+				culture = cu:afro_caribeno
+			}
+		}
+		if = {
+			limit = {
+				has_journal_entry = usfp_manifest_destiny_main
+			 }
+			 usfp_manifest_less_destiny_effect = yes
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	#cuba annex
+	option = {
+		name = usfp_usa_spain.4.c
+		trigger = {
+			has_journal_entry = usfp_manifest_destiny_main
+			usfp_manifest_destiny_greater_or_equal_trigger = { value = 5 }
+		}
+		highlighted_option = yes
+		show_as_unavailable = {
+			has_journal_entry = usfp_manifest_destiny_main
+		}
+		create_incident = {
+			country = scope:cuba_scope
+			value = 60
+		}
+		annex = scope:cuba_scope
+		add_radicals = {
+			value = large_radicals
+			culture = cu:caribeno
+		}
+		add_radicals = {
+			value = very_large_radicals
+			culture = cu:afro_caribeno
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_law_or_variant = law_type:law_slavery_banned
+				}
+			 }
+			 usfp_anger_abolitionists_effect = { MULT = 3 }
+			 usfp_appease_slavers_effect = { MULT = 1 }
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}

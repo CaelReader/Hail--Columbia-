@@ -165,7 +165,7 @@ ecchi_usa_barnum_character_template = {
             c:USA ?= this
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_petty_bourgeoisie
         }
 		earliest_usage_date = 1865.1.1
@@ -212,7 +212,7 @@ ecchi_usa_hearst_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_industrialists
 				is_interest_group_type = ig_intelligentsia
@@ -267,7 +267,7 @@ ecchi_usa_astor_character_template = {
             this = c:USA
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			OR = {
 				is_interest_group_type = ig_industrialists
 				is_interest_group_type = ig_landowners
@@ -311,7 +311,7 @@ usfp_usa_jay_gould = {
             c:USA ?= this
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
 			is_interest_group_type = ig_industrialists
             ig_hasnt_chosen_ideology_trigger = yes
         }

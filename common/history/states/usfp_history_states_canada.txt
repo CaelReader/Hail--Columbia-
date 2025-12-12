@@ -1,0 +1,18 @@
+﻿STATES = {
+	s:STATE_NEWFOUNDLAND = {
+		create_state = {
+			country = c:NEW
+			owned_provinces = { x5EF6EB } #annex the rest in global
+		}
+	}
+	s:STATE_MAINE = {
+		#disputed boundary, effectively New Brunswick until the Webster-Ashburton Treaty
+		set_owner_of_provinces = {
+			country = c:NBS
+			provinces = { xFCFF52 xA5DE9D x441473 x1E33E8 x5806F4 xF080C0 }
+		}
+		region_state:NBS = {
+			set_state_name = STATE_MAINE_aroostook
+		}
+	}
+}
