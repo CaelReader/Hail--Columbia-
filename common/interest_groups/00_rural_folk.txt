@@ -438,7 +438,7 @@
 			limit = {
 				exists = scope:company
 				exists = c:BIC
-				c:BIC = {
+				c:BIC ?= {
 					exists = owning_company
 					owning_company = scope:company
 				}

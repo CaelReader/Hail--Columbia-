@@ -21,7 +21,7 @@ Hail, Columbia! is a DLC-Sized Flavor Pack for the United States, including over
 [*]New flavored companies for the USA including DuPont, Sears, and Coca-Cola, along with some new Prestige Goods and Executives.
 [*]Tweaks to the american political system, including new law variants and amendments, a term limit for presidents, flavored parties, and Constitutional precedents.
 [/list]
-
+The mod contains a total of 18 Journal Entries, 264 Events, and 152 Characters.
 [img]https://i.imgur.com/Xw5ZcI9.png[/img]
 [list]
 [*]More Economic & Labor Events (Coal Wars, Roaring 20s, Panics)

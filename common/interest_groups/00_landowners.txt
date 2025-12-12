@@ -204,13 +204,32 @@
 				add_ideology = ideology_scholar_paternalistic
 			}
 		}
-		# Pious Spanish Landowners
+		# Pious Spanish Landowners (and Magnatial Liberal Landowners)
 		else_if = {
 			limit = {
 				country_has_primary_culture = cu:spanish
 			}
+			if = {
+				limit = {
+					OR = {
+						c:SPC ?= this
+						has_variable = spain_carlist_victory
+					}
+			}
 			ig:ig_landowners ?= {
-				add_ideology = ideology_pious
+					remove_ideology = ideology_paternalistic
+					add_ideology = ideology_carlist_ig
+				}
+			}
+			if = {
+				limit = {
+					c:SPA ?= this # Only liberal Spain
+					NOT = { has_variable = spain_carlist_victory }
+				}
+				ig:ig_landowners ?= {
+					remove_ideology = ideology_paternalistic
+					add_ideology = ideology_moderantist
+				}
 			}
 		}
 		# Aristocracy of Officials
@@ -247,6 +266,19 @@
 					has_discrimination_trait_group = heritage_group_european
 					NOT = { has_discrimination_trait = heritage_iberian }
 					NOT = { cu:caribeno = this }
+				}
+			}
+			ig:ig_landowners ?= {
+				remove_ideology = ideology_paternalistic
+				add_ideology = ideology_republican_paternalistic
+			}
+		}
+		# Boer republicanism, but only for states that are only Boer
+		else_if = {
+			limit = {
+				country_has_primary_culture = cu:boer
+				NOT = {
+					NOT = { any_primary_culture = { cu:boer = this } }
 				}
 			}
 			ig:ig_landowners ?= {
@@ -337,6 +369,32 @@
 			}
 			cultures = {
 				bedouin
+			}
+		}
+		rule = {
+			trigger = {
+				c:PHI ?= this
+				NOT = { has_variable = je_philippines_main_reliance_happened }
+				NOT = { any_primary_culture = { cu:filipino = this } }
+				NOT = { any_primary_culture = { cu:filipino_hispanophone = this } }
+				any_primary_culture = { cu:spanish = this }
+			}
+			cultures = {
+				spanish filipino_mestizo
+			}
+		}
+		rule = {
+			trigger = {
+				c:PHI ?= this
+				any_primary_culture = {
+					AND = {
+						cu:spanish = this
+						cu:filipino_hispanophone = this
+					}
+				}
+			}
+			cultures = {
+				spanish filipino_hispanophone
 			}
 		}
 	}
@@ -486,7 +544,6 @@
 						has_journal_entry = je_acw_war
 						has_journal_entry = je_acw_reconstruction
 					}
-					
 				}
 				state = {
 					NOR = {
@@ -495,7 +552,9 @@
 					}
 				}
 			}
-			multiply = 0
+			multiply = {
+				value = 0
+			}
 		}
 	}
 
@@ -579,7 +638,7 @@
 			limit = {
 				exists = scope:company
 				exists = c:BIC
-				c:BIC = {
+				c:BIC ?= {
 					exists = owning_company
 					owning_company = scope:company
 				}

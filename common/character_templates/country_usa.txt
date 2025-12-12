@@ -82,7 +82,7 @@ USA_charles_finney = {
 	}
 }
 
-usa_robert_rantoul_character_template = {
+USA_robert_rantoul = {
 	first_name = Robert
 	last_name = Rantoul
 	historical = yes
@@ -342,7 +342,7 @@ usa_jp_morgan_character_template = {
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:USA
-            this = c:USA
+            c:USA ?= THIS
         }
         interest_group_trigger = {
             ig_counts_as_marginal = no
@@ -373,7 +373,7 @@ usa_thomas_edison_character_template = {
     executive_usage = {
     	country_trigger = {
             exists = c:USA
-            this = c:USA
+            c:USA ?= THIS
             has_dlc_feature = mp1_content
 		}
 		company_trigger = {
@@ -386,7 +386,7 @@ usa_thomas_edison_character_template = {
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:USA
-            this = c:USA
+            c:USA ?= THIS
             has_company = company_type:company_general_electric
         }
         interest_group_trigger = {
@@ -430,7 +430,7 @@ uom_mkc = {
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:UOM
-            this = c:UOM
+            c:UOM ?= THIS
         }
         interest_group_trigger = {
             ig_counts_as_marginal = no
@@ -679,9 +679,8 @@ usa_cristobal_aguilar = {
                 is_incorporated = yes
                 state_region = s:STATE_CALIFORNIA
             }
-
-            country_average_cultural_acceptance = {
-                target = cu:mexican
+            country_average_culture_pop_acceptance = {
+                culture = cu:mexican
                 value >= acceptance_status_4 # Mexico should always pass this check. USA... sometimes.
             }
         }
@@ -712,7 +711,7 @@ usa_general_jesup = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:USA
-			this = c:USA
+			c:USA ?= THIS
 		}
 		role = general
 		earliest_usage_date = 1836.1.1
@@ -736,7 +735,7 @@ usa_admiral_shubrick = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:USA
-			this = c:USA
+			c:USA ?= THIS
 		}
 		role = admiral
 		earliest_usage_date = 1836.1.1
@@ -764,7 +763,7 @@ usa_admiral_dewey = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:USA
-			this = c:USA
+			c:USA ?= THIS
 		}
 		role = admiral
 		earliest_usage_date = 1861.1.1
@@ -792,7 +791,7 @@ usa_admiral_farragut = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:USA
-			this = c:USA
+			c:USA ?= THIS
 		}
 		role = admiral
 		earliest_usage_date = 1836.1.1
@@ -820,7 +819,7 @@ usa_admiral_perry = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:USA
-			this = c:USA
+			c:USA ?= THIS
 		}
 		role = admiral
 		earliest_usage_date = 1836.1.1
@@ -851,12 +850,12 @@ usa_admiral_buchanan = {
 			OR ={
 				AND = {
 					exists = c:USA
-					this = c:USA
+					c:USA ?= THIS
 					NOT = { exists = c:CSA }
 				}
 				AND = {
 					exists = c:CSA
-					this = c:CSA
+					c:CSA ?= THIS
 				}
 			}
 		}
@@ -893,12 +892,12 @@ usa_general_lee = {
 			OR ={
 				AND = {
 					exists = c:USA
-					this = c:USA
+					c:USA ?= THIS
 					NOT = { exists = c:CSA }
 				}
 				AND = {
 					exists = c:CSA
-					this = c:CSA
+					c:CSA ?= THIS
 				}
 			}
 		}
@@ -935,12 +934,12 @@ usa_general_jackson = {
 			OR ={
 				AND = {
 					exists = c:USA
-					this = c:USA
+					c:USA ?= THIS
 					NOT = { exists = c:CSA }
 				}
 				AND = {
 					exists = c:CSA
-					this = c:CSA
+					c:CSA ?= THIS
 				}
 			}
 		}
@@ -977,12 +976,12 @@ usa_general_longstreet = {
 			OR ={
 				AND = {
 					exists = c:USA
-					this = c:USA
+					c:USA ?= THIS
 					NOT = { exists = c:CSA }
 				}
 				AND = {
 					exists = c:CSA
-					this = c:CSA
+					c:CSA ?= THIS
 				}
 			}
 		}
@@ -1018,7 +1017,7 @@ usa_general_sherman = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:USA
-			this = c:USA
+			c:USA ?= THIS
 		}
 		role = general
 		earliest_usage_date = 1860.1.1
@@ -1046,7 +1045,7 @@ usa_general_chaffee = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:USA
-			this = c:USA
+			c:USA ?= THIS
 		}
 		role = general
 		earliest_usage_date = 1882.1.1
@@ -1075,7 +1074,7 @@ usa_general_grant = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:USA
-			this = c:USA
+			c:USA ?= THIS
 		}
 		role = general
 		earliest_usage_date = 1846.1.1
@@ -1104,7 +1103,7 @@ usa_general_pershing = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:USA
-			this = c:USA
+			c:USA ?= THIS
 		}
 		role = general
 		earliest_usage_date = 1895.1.1
@@ -1132,7 +1131,7 @@ usa_general_sheridan = {
 	commander_usage = {
 		country_trigger = {
 			exists = c:USA
-			this = c:USA
+			c:USA ?= THIS
 		}
 		role = general
 		earliest_usage_date = 1865.1.1
@@ -1189,7 +1188,7 @@ usa_rockefeller_character_template = {
     executive_usage = {
     	country_trigger = {
             exists = c:USA
-            this = c:USA
+            c:USA ?= THIS
             has_dlc_feature = mp1_content
 		}
 		company_trigger = {
@@ -1222,7 +1221,7 @@ usa_carnegie_character_template = {
     executive_usage = {
     	country_trigger = {
             exists = c:USA
-            this = c:USA
+            c:USA ?= THIS
             has_dlc_feature = mp1_content
 		}
 		company_trigger = {
@@ -1256,7 +1255,7 @@ usa_samuel_colt = {
     executive_usage = {
     	country_trigger = {
             exists = c:USA
-            this = c:USA
+            c:USA ?= THIS
             has_dlc_feature = mp1_content
 		}
 		company_trigger = {
@@ -1287,7 +1286,7 @@ usa_robert_e_lee_wilson = {
     executive_usage = {
     	country_trigger = {
             exists = c:USA
-            this = c:USA
+            c:USA ?= THIS
             has_dlc_feature = mp1_content
 		}
 		company_trigger = {

@@ -1,6 +1,4 @@
-﻿
-
-# Path to Liberalism
+﻿# Path to Liberalism
 je_liberalism_1 = {
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 	

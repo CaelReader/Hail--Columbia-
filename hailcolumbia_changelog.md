@@ -795,4 +795,4 @@ Increased Party Whip Impact of Federal Government modifier
 Added Ideological Incoherence reduction to Second Party System
 Increased impact of Gold sources on Hard Times recovery
 Added Apolitical Military modifier to the Constitution that massively increases Coup Resistance
-Reduced the infamy cost for claiming Cuba back dowen to 10 from 15
+Reduced the infamy cost for claiming Cuba back down to 10 from 15

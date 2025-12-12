@@ -8,7 +8,7 @@
 		is_immortal = no
 		owner ?= {
 			NOR = {
-				has_law_or_variant = law_type:law_monarchy
+				has_law = law_type:law_monarchy
 				has_law_or_variant = law_type:law_theocracy
 			}
 		}
@@ -16,10 +16,10 @@
 
 	possible = {
 		OR = {
-			interest_group = {
+			interest_group ?= {
 				ig_approval <= angry
 			}
-			interest_group = {
+			interest_group ?= {
 				ig_counts_as_marginal = yes
 			}
 			popularity <= -50
@@ -33,12 +33,12 @@
 				trigger_if = {
 					limit = {
 						any_political_movement = {
-							is_insurrectionary = yes
+							is_revolutionary = yes
 							exists = most_desired_law
 						}
 					}
 					any_political_movement = {
-						is_insurrectionary = yes
+						is_revolutionary = yes
 						exists = most_desired_law
 						most_desired_law ?= { save_temporary_scope_as = revolutionary_law }
 						custom_tooltip = {
@@ -63,7 +63,7 @@
 				trigger_else = {
 					AND = {
 						any_political_movement = {
-							is_insurrectionary = yes
+							is_revolutionary = yes
 						}
 						custom_tooltip = {
 							text = ruler_disapproves_of_revolutionary_law_contextless
@@ -87,7 +87,7 @@
 				owner ?= {
 					any_political_movement = {
 						exists = most_desired_law
-						is_insurrectionary = yes
+						is_revolutionary = yes
 					}
 				}
 			}
@@ -254,7 +254,7 @@ REPLACE:grant_leadership_to_agitator = {
 		}
 		if = {
 			limit = {
-				interest_group = {
+				interest_group ?= {
 					ig_approval <= 0
 				}
 			}
