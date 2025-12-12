@@ -745,6 +745,7 @@ USCWF_precedent_on_action = {
 						NOT = { has_variable = var_elected_once }
 					}
 					set_variable = var_elected_once
+					debug_log = "USFP: President has now been elected once"
 				}
 				else = {
 					if = {
@@ -754,12 +755,14 @@ USCWF_precedent_on_action = {
 								has_variable = president_broke_precedent
 							}
 						 }
+						 debug_log = "USFP: Washington Precedent triggered"
 						 usfp_washington_precedent_effect = yes 
 					}
 					else_if = {
 						limit = {
 							usfp_president_might_go_for_third_term = yes
 						}
+						debug_log = "USFP: President might break Washington Precedent!"
 						set_variable = president_might_break_precedent
 					}	
 				}

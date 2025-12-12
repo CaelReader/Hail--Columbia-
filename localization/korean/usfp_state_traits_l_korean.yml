@@ -5,7 +5,6 @@
  state_trait_canadian_boreal_forests: "캐나다 북방수림"
  state_trait_tornado: "계절성 토네이도"
  state_trait_columbia_plateau: "컬럼비아 평원"
- state_trait_grand_river: "리오 그란데"
  state_trait_sierra_madre_watershed: "시에라 마드레 유역"
  state_trait_alaska_range: "알래스카 산맥"
  state_trait_puget_sound: "퓨젓 사운드"
@@ -20,3 +19,5 @@
  state_trait_san_juan_basin: "샌 후안 분지"
  state_trait_zihuatanejo_bay: "시우아타네호 만"
  state_trait_navel_oranges: "네이블 오렌지"
+ state_trait_usfp_hookworm: "아메리카 구충"
+ state_trait_usfp_boll_weevil: "목화바구미 창궐"
