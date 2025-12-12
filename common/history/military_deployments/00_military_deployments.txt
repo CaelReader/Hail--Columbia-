@@ -25,6 +25,24 @@
 		}
 	}
 
+	#USFP:
+	c:USA ?= {
+			every_military_formation = {
+				limit = {
+					current_hq ?= p:xe3533e.land_hq
+				}
+				fully_mobilize_army = yes
+				teleport_to_front = p:x7fa347.front
+			}
+	}
+
+	c:SML ?= {
+		every_military_formation = {
+			fully_mobilize_army = yes
+			teleport_to_front = p:x7fa347.front
+		}
+	}
+
 	c:BRZ ?= {
 		random_scope_general = {
 			limit = {
@@ -74,6 +92,68 @@
 		every_military_formation = {
 			fully_mobilize_army = yes
 			teleport_to_front = p:xF469BC.front
+		}
+	}
+
+	c:SPC ?= {
+		random_scope_general = {
+			limit = {
+				has_template = SPC_vicente_gonzalez_moreno_template
+			}
+			commander_military_formation = {
+				fully_mobilize_army = yes
+				teleport_to_front = {
+					front = p:x9EC9B8.front
+					base_camp = p:x9EC9B8
+				}
+			}
+		}
+		random_scope_general = {
+			limit = {
+				has_template = SPC_ramon_cabrera_template
+			}
+			commander_military_formation = {
+				fully_mobilize_army = yes
+				teleport_to_front = {
+					front = p:x506040.front
+					base_camp = p:x506040
+				}
+			}
+		}
+		random_scope_general = {
+			limit = {
+				has_template = SPC_juan_antonio_de_urbiztondo_template
+			}
+			commander_military_formation = {
+				fully_mobilize_army = yes
+				teleport_to_front = {
+					front = p:x936FF3.front
+					base_camp = p:x936FF3
+				}
+			}
+		}
+	}
+
+	c:SPA ?= {
+		every_scope_general = {
+			commander_military_formation = {
+				fully_mobilize_army = yes
+				teleport_to_front = p:xAC1425.front
+			}
+		}
+	}
+
+	c:TRI ?= {
+		every_military_formation = {
+			limit = {
+				is_army = yes
+			}
+			fully_mobilize_army = yes
+		}
+	}
+	c:FZN ?= {
+		every_military_formation = {
+			fully_mobilize_army = yes
 		}
 	}
 }

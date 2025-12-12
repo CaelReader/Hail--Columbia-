@@ -2650,11 +2650,10 @@ usfp_usa_postreconstruction.15 = {
 				state_is_eligible_as_mass_migration_target = yes
 			}
 			order_by = total_urbanization
-			position = 1
 			save_scope_as = great_return_target_1
 		}
 		ordered_scope_state = {
-			position = 0
+			position = 1
 			limit = {
 				state_region = {
 					is_homeland = cu:afro_american
@@ -2662,7 +2661,6 @@ usfp_usa_postreconstruction.15 = {
 				state_is_eligible_as_mass_migration_target = yes
 			}
 			order_by = total_urbanization
-			position = 2
 			save_scope_as = great_return_target_2
 		}
 		random_scope_state = {

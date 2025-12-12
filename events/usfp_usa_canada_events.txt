@@ -340,7 +340,7 @@ usfp_usa_canada.4 = {
 	flavor = usfp_usa_canada.4.f
 	dlc = dlc_usfp
 	duration = 3
-	cooldown = { days = never_fire_again_modifier_time } #Once
+	
 	trigger = {
 		exists = c:USA
 		exists = c:GBR
@@ -367,10 +367,13 @@ usfp_usa_canada.4 = {
 				culture ?= cu:irish
 			}
 		}
-
+		NOT = {
+			has_global_variable = fenian_raids
+		}
 	}
 
 	immediate = {
+		set_global_variable = fenian_raids
 		random_scope_state = {
 			limit = {
 				state_region = s:STATE_ONTARIO

@@ -185,36 +185,37 @@ amendment_usfp_gag_rule = {
     }
 
 	can_repeal = {
-		OR = {
-			any_revolution_ongoing = yes
-			AND = {
-				ig:ig_landowners = {
-					is_in_government = no
-				}
-				government_legitimacy >= 51
-			}
-			AND = {
-				ig:ig_intelligentsia = {
-					ig_counts_as_marginal = yes
-				}
-				OR = {
-					any_interest_group = {
-						is_powerful = yes
-						OR = {
-							has_ideology = ideology:ideology_pro_slavery
-							leader = {
-								has_ideology = ideology:ideology_slaver
-							}
-						}
-					}
-					ruler = {
-						has_ideology = ideology:ideology_slaver
-					}
-				}
-				government_legitimacy >= 51
-			}
-		}
-
+		# OR = {
+		# 	any_revolution_ongoing = yes
+		# 	AND = {
+		# 		ig:ig_landowners = {
+		# 			is_in_government = no
+		# 		}
+		# 		government_legitimacy >= 51
+		# 	}
+		# 	AND = {
+		# 		ig:ig_intelligentsia = {
+		# 			ig_counts_as_marginal = yes
+		# 		}
+		# 		OR = {
+		# 			any_interest_group = {
+		# 				is_powerful = yes
+		# 				OR = {
+		# 					has_ideology = ideology:ideology_pro_slavery
+		# 					leader = {
+		# 						has_ideology = ideology:ideology_slaver
+		# 					}
+		# 				}
+		# 			}
+		# 			ruler = {
+		# 				has_ideology = ideology:ideology_slaver
+		# 			}
+		# 		}
+				
+		# 	}
+			
+		# }
+		government_legitimacy >= 51
 	}
 
     ai_will_revoke = {
@@ -274,4 +275,28 @@ REPLACE_OR_CREATE:amendment_american_fugitive_slaves_act = {
 		}
 		legitimacy >= 51
 	}
+}
+
+amendment_usfp_radical_land_redistribution = {
+    parent = law_multicultural
+
+    allowed_laws = { # list of laws that the amendment can be added to
+		law_slavery_banned
+    }
+
+    modifier = {
+		state_radicalism_increases_full_acceptance_mult = 0.25
+	}
+
+    possible = {
+        has_journal_entry = je_acw_reconstruction
+    }
+
+	can_repeal = {
+		government_legitimacy >= 51
+	}
+
+    ai_will_revoke = {
+        always = yes
+    }
 }

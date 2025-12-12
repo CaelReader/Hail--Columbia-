@@ -739,6 +739,7 @@ Updated some labor union events to account for the new laws
 	Added Jacksonian Agenda JE at game start giving context to the starting situation of laws and taxes
 	Added the Panic of 1837 plus a JE to recover from it
 	New JE and Events for the American press to react to atrocities in Cuba and possibly spark a Spanish-American War
+	Added JE for American attempts to purchase Greenland and other islands from Denmark
 	New events for the Dorr Rebellion, Third Great Awakening, Caroline Affair, Fenian Raids, Aroostook War, Lopez Expedition, Oregon Black Exclusion
 	Added starting Trade Privileges treaties for the USA with various countries
 	New Characters: Emma Goldman (imported from ECCHI), Billy Sunday, Walter Rauschenbusch, Lyman Beecher, Henry Ward Beecher, Peter Cartwright, Bejamin Tillman, David Atchison, Gerrit Smith, Reinhold Niebuhr
@@ -752,6 +753,8 @@ Updated some labor union events to account for the new laws
 	Replaced the following modifiers with Law Amendments: Pure Drugs, Separate But Equal, Fugitive Slave Act
 	Updated several vanilla overrides to use the new INJECT syntax for compatibility
 	Disabled Durham Tobacco prestige good (3 prestige good limit)
+	Confiscate Slaveholder Lands now adds an amendment which unlocks the decree
+	Added custom geographic regions to some triggers for better tooltips
 ## 1836 Starting Situation Update
 	USA now begins with Agrarianism and a special variant of Consumption-Based Taxation (cutting the national revenue about in half!)
 	American PB now supports the American School (interventionism and protectionism)

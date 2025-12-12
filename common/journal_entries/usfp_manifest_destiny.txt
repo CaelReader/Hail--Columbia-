@@ -634,7 +634,10 @@ usfp_je_westward_expansion = {
 	}
 
 	complete = {
-		usfp_owns_american_west = yes
+		any_state_in_usfp_american_west = {
+			count = all
+			owner = root
+		}
 	}
 
 	on_complete = {
@@ -765,18 +768,11 @@ usfp_je_indian_wars = {
 	}
 
 	complete = {
-		owns_entire_state_region = STATE_MONTANA
-		owns_entire_state_region = STATE_WYOMING
-		owns_entire_state_region = STATE_NORTH_DAKOTA
-		owns_entire_state_region = STATE_SOUTH_DAKOTA
-		owns_entire_state_region = STATE_NEBRASKA
-		owns_entire_state_region = STATE_KANSAS
-		s:STATE_COLORADO = { #can be split with Mexico
-			NOT = {
-				any_scope_state = {
-					owner = {
-						is_country_type = decentralized
-					}
+		any_state_in_usfp_central_plains = {
+			count = all
+			owner = {
+				NOT = {
+					is_country_type = decentralized
 				}
 			}
 		}

@@ -133,13 +133,14 @@ usfp_north_american_wildfire_zone = {
 }
 
 usfp_american_west_zone = {
-	OR = {
-		region = sr:region_great_plains
-		state_region = s:STATE_ARIZONA
-		state_region = s:STATE_UTAH
-		state_region = s:STATE_IDAHO
-		state_region = s:STATE_NEVADA
-	}
+	is_in_geographic_region = geographic_region_american_west_zone
+	# OR = {
+	# 	region = sr:region_great_plains
+	# 	state_region = s:STATE_ARIZONA
+	# 	state_region = s:STATE_UTAH
+	# 	state_region = s:STATE_IDAHO
+	# 	state_region = s:STATE_NEVADA
+	# }
 }
 
 usfp_northern_mexico_zone = {

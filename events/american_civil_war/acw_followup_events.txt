@@ -237,6 +237,31 @@ acw_followup_events.4 = {
 			}
 			save_scope_as = land_redistribution_state
 		}
+		if = {
+			limit = {
+				any_interest_group = {
+					is_in_government = yes
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_usfp_abolitionist_radical
+							has_ideology = ideology:ideology_humanitarian
+						}
+					}
+				}
+			}
+			random_interest_group = {
+				limit = {
+					is_in_government = yes
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_usfp_abolitionist_radical
+							has_ideology = ideology:ideology_humanitarian
+						}
+					}
+				}
+				save_scope_as = radical_abolitionist_ig
+			}
+		}
 	}
 
 	option = {
@@ -331,7 +356,9 @@ acw_followup_events.4 = {
 			custom_tooltip = {
 				text = acw_followup_events.4.c_trigger
 				NOT = {
-					has_variable = reconstruction_radical_land_distribution
+					any_active_law = {
+						has_amendment = amendment_usfp_radical_land_redistribution
+					}
 				}
 			}
 
@@ -339,7 +366,9 @@ acw_followup_events.4 = {
 		highlighted_option = yes
 		show_as_unavailable = {
 			NOT = {
-				has_variable = reconstruction_radical_land_distribution
+				any_active_law = {
+					has_amendment = amendment_usfp_radical_land_redistribution
+				}
 			}
 		}
 		add_radicals = {
@@ -349,7 +378,12 @@ acw_followup_events.4 = {
 		}
 		custom_tooltip = {
 			text = acw_followup_events.4.ctt
-			set_variable = reconstruction_radical_land_distribution
+		}
+		active_law:lawgroup_slavery ?= {
+			add_amendment = {
+				type = amendment_usfp_radical_land_redistribution
+				sponsor = scope:radical_abolitionist_ig
+			}
 		}
 		ai_chance = {
 			base = 50

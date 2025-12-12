@@ -187,3 +187,10 @@ usfp_LNC: "Linconia"
 usfp_LNC_ADJ: "Linconian"
 
 LIB_FLAVOR_TEXT: "Founded by the American Colonization Society as a home for freed slaves from the United States, the Liberian settlers seek to colonize the region and convert the indigenous population to Christianity. Will Liberia survive and build a freedman's republic?"
+
+geographic_region_american_west_zone: "American West"
+geographic_region_american_west_zone_desc: "The western frontier of the United States, stretching from the Great Plains to the Pacific."
+geographic_region_western_hemisphere: "Western Hemisphere"
+geographic_region_western_hemisphere_desc: "The western half of the world, as envisioned by the Monroe Doctrine."
+geographic_region_central_great_plains: "Central Plains"
+geographic_region_central_great_plains_desc: "The vast inner prairies of the Great American Desert, north of Comanche territory and south of Canada."

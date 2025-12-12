@@ -96,3 +96,5 @@ amendment_usfp_anti_lynching_desc: "Lynching is elevated to a federal crime, pre
 amendment_usfp_gag_rule: "Gag Rule"
 amendment_usfp_gag_rule_desc: "To enforce the Missouri Compromise and adjourn further conflict over the issue, the [concept_usfp_house_of_representatives] has prohibited the consideration of petitions or laws relating to slavery."
 doesnt_have_gag_rule: "Does #bold not#! have the Gag Rule [concept_amendment]"
+amendment_usfp_radical_land_redistribution: "40 Acres and a Mule"
+amendment_usfp_radical_land_redistribution_desc: "The lands of former slavers are seized by the state and made available to be redistributed to freedmen."
