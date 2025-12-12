@@ -66,6 +66,7 @@ usfp_indian_removal_modifier = {
 REPLACE_OR_CREATE:usfp_second_party_system_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
 	country_law_enactment_time_mult = 0.30
+	country_legitimacy_ideological_incoherence_mult = -0.25
 }
 
 usfp_third_party_system_modifier = {
@@ -671,7 +672,7 @@ usfp_federal_government_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
 	country_legitimacy_govt_size_add = -1
 	# country_legitimacy_headofstate_add = 10
-	country_party_whip_impact_add = 0.10
+	country_party_whip_impact_add = 0.25
 	country_agitator_slots_add = 3
 }
 
@@ -797,4 +798,11 @@ usfp_america_enters_world_stage_modifier = {
 usfp_spoils_system_decaying_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bureaucracy_negative.dds
 	country_bureaucracy_mult = -0.25
+}
+
+usfp_apolitical_military_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_officer_positive.dds
+	country_coup_resistance_add = 10.0
+	interest_group_ig_armed_forces_pol_str_mult = -0.10
+	interest_group_ig_armed_forces_pop_attraction_mult = -0.10
 }

@@ -1,5 +1,5 @@
 [img]https://i.imgur.com/PsN4QiL.png[/img]
-[i]for Victoria 3 1.10.*[/i]
+[i]for Victoria 3 1.12.*[/i]
 
 Hail, Columbia! is a DLC-Sized Flavor Pack for the United States, including overhauled and expanded journal entries, interest groups, and characters, as well as tons of new events unique to the USA and North America.
 
@@ -15,23 +15,23 @@ Hail, Columbia! is a DLC-Sized Flavor Pack for the United States, including over
 [*][b]Gilded Age[/b] JE showing the rise of corruption and Trusts in the United States, followed by the [b]Progressive Era[/b] of reform and new ideologies.
 [*]New long-term JE for the US tracking the influence of [b]Manifest Destiny[/b]. You can choose to avoid expansion and entanglements, stick to the historical borders, or promote Manifest Destiny to new heights and incorporate the entire continent into your great republic.
 [*][b]Mormon[/b] content, including the exodus to Deseret and the Utah War.
-[*][b]New flavor events[/b] for the US, including the Seneca Falls Convention, the Great Chicago Fire, and the American Hippo Bill, as well as various american natural disasters like wildfires and tornadoes. The mod includes [b]over 200 new events[/b] in total.
+[*][b]New flavor events[/b] for the US, including the Seneca Falls Convention, the Aroostook War, and the American Hippo Bill, as well as various american natural disasters like wildfires and tornadoes. The mod includes [b]over 200 new events[/b] in total.
 [*]Overhauled Ideologies and Traits for American IGs, including [b]new alternate IG Traits[/b] unlocked during a playthrough.
 [*]Historical agitators, commanders, and politicians for America, including every historical president from Martin Van Buren to FDR.
 [*]New flavored companies for the USA including DuPont, Sears, and Coca-Cola, along with some new Prestige Goods and Executives.
-[*]Tweaks to the american political system, including a Term Limit for presidents, dynamic party names, and Constitutional precedents.
+[*]Tweaks to the american political system, including new law variants and amendments, a term limit for presidents, flavored parties, and Constitutional precedents.
 [/list]
 
 [img]https://i.imgur.com/Xw5ZcI9.png[/img]
 [list]
-[*]More Social & Political Movements (Third Great Awakening, Social Gospel)
 [*]More Economic & Labor Events (Coal Wars, Roaring 20s, Panics)
 [*]More Foreign Policy Events (Great White Fleet, Panama Rebellion)
 [*]Alternate History Content (CSA Victory, FSA, United Syndicates, Turtle Island) 
 [/list]
 
 [img]https://i.imgur.com/eD5BaRs.png[/img]
-Currently includes English, Korean, and German localizations. English text will be displayed for other languages. Feel free to create translations and upload them as seperate mods or send them my way. 
+Currently includes English, Korean, and German localizations. English text will be displayed for other languages. Feel free to create translations and upload them as seperate mods or send them my way.
+Extended German localization available [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3533593303]here.[/url] 
 Chinese localization available [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2880069248]here.[/url]
 Spanish localization available [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3498862406]here.[/url]
 Russian localization available [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3199730217]here.[/url]
@@ -39,7 +39,7 @@ Russian localization available [url=https://steamcommunity.com/sharedfiles/filed
 Check out the full list of Vanilla Overrides in the discussion section.
 [list]
 [*]Requires the [url=https://steamcommunity.com/workshop/filedetails/?id=3385002128]Community Mod Framework[/url]. Load this mod after the CMF in your load order.
-[*]Compatible with Australia & New Zealand Flavor Pack via the CMF. (WARNING: As of 1.9 there's a new problem on certain hardware where if you go above 420 countries on the map the game performance will tank. ANZFP and HC both add lots of decentralized countries to the map and combining the two will immediately exceed this limit.)
+[*]Compatible with Australia & New Zealand Flavor Pack via the CMF.
 [*]Compatible with Greece, Byzantium, & the Balkans Flavor Pack via the CMF.
 [*]Compatible with Morgenrote.
 [*]Compatible with VTM. Load this mod after that mod.
@@ -61,7 +61,7 @@ Check out the full list of Vanilla Overrides in the discussion section.
 [*]Incorporates Character DNA by Lord R
 [*]Incorporates map data by Meriador
 [*]Incorporates Native American population data by Argendauss
-[*]Korean localization courtesy of 케말 파샤
+[*]Korean localization courtesy of 케말 파샤 and 시아츠
 [*]German translation courtesy of KushGene
 [/list]
 

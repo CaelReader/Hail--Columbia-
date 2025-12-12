@@ -564,7 +564,7 @@ usfp_usa_canada.6 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
-	
+	cooldown = { days = never_fire_again_modifier_time } #Once
 	title = usfp_usa_canada.6.t
 	desc = usfp_usa_canada.6.d
 	flavor = usfp_usa_canada.6.f

@@ -1570,7 +1570,7 @@ usfp_manifest_destiny.14 = {
 		usfp_manifest_more_destiny_effect = yes
 		create_incident = {
 			country = scope:cuba_owner_scope
-			value = 15
+			value = 10
 		}
 		usfp_claim_cuba_effect = yes
 		usfp_anger_abolitionists_effect = { MULT = 1 }
@@ -1804,7 +1804,7 @@ usfp_manifest_destiny.16 = {
 		usfp_manifest_more_destiny_effect = yes
 		create_incident = {
 			country = scope:cuba_owner_scope
-			value = 15
+			value = 10
 		}
 		if = {
 			limit = { 

@@ -779,9 +779,20 @@ Updated some labor union events to account for the new laws
 	Decolonized Greenland (can be surveyed by decision with Zepplins/Planes)
 	Added Greenland Ice Sheet state trait
 	Reverted American Chestnuts state trait to vanilla
+	Updated 6.3 Korean localization thanks to 시아츠
 ## Fixes
 	Significantly increased the navy requirement to enforce the Monroe Doctrine so that now you actually have to grow the navy from its starting state
 	Moving away from Presidential Republic now removes the Constitution JE even if you still have voting
 	AI USA will never pay money for indian removal
 	Fixed bug where Jane Addams could spawn infinite times
 	The American and Seminole armies in Florida now start mobilized and at the front
+
+# 7.1 "Jackson"
+Fixed Aroostook War firing more than once
+Fixed Hard Times never ending
+Reduced Expedition Budgets by 20%
+Increased Party Whip Impact of Federal Government modifier
+Added Ideological Incoherence reduction to Second Party System
+Increased impact of Gold sources on Hard Times recovery
+Added Apolitical Military modifier to the Constitution that massively increases Coup Resistance
+Reduced the infamy cost for claiming Cuba back dowen to 10 from 15

@@ -459,6 +459,7 @@ usfp_filibuster.5 = {
 	option = {
 		name = usfp_filibuster.5.a
 		default_option = yes
+		custom_tooltip = usfp_filibuster.5.a.tt
 		scope:cuba_scope = {
 			trigger_event = {
 				id = usfp_filibuster.6
@@ -481,6 +482,7 @@ usfp_filibuster.5 = {
 		show_as_unavailable = {
 			always = yes
 		}
+		custom_tooltip = usfp_filibuster.5.b.tt
 		scope:cuba_scope = {
 			trigger_event = {
 				id = usfp_filibuster.7
