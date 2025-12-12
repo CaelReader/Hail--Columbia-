@@ -20,7 +20,7 @@
 
 			commander_military_formation = {
 				fully_mobilize_army = yes
-				teleport_to_front = p:xA3A810.front
+				teleport_to_front = p:xA3A810.front #USFP
 			}
 		}
 	}

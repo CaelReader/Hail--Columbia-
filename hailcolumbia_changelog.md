@@ -784,3 +784,4 @@ Updated some labor union events to account for the new laws
 	Moving away from Presidential Republic now removes the Constitution JE even if you still have voting
 	AI USA will never pay money for indian removal
 	Fixed bug where Jane Addams could spawn infinite times
+	The American and Seminole armies in Florida now start mobilized and at the front
