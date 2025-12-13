@@ -407,7 +407,14 @@ je_acw_war = {
 	complete = {
 		custom_tooltip = {
 			text = acw_war_tt_complete
-			scope:target = { is_country_alive = no }
+			scope:target = { #failsafe for improperly annexed states
+				OR = {
+					is_country_alive = no
+					any_scope_state = {
+						count <= 2
+					} 
+				} 
+			}
 		}
 	}
 
@@ -429,6 +436,12 @@ je_acw_war = {
 			trigger_event = {
 				id = usfp_acw.10
 				months = 1
+			}
+			if = { #failsafe for improperly annexed states
+				limit = { 
+					exists = scope:target
+				}
+				annex = scope:target
 			}
 		}
 		if = {
@@ -458,11 +471,16 @@ je_acw_war = {
 
 	fail = {
 		exists = scope:target
+		hidden_trigger = {
+			scope:target = { #failsafe for improperly annexed states
+				any_scope_state = {
+					count > 2
+				}
+			}
+		}
 		NOR = {
 			has_war_with = scope:target
-			hidden_trigger = {
-				is_diplomatic_play_enemy_of = scope:target
-			}
+			is_diplomatic_play_enemy_of = scope:target
 		}
 	}
 

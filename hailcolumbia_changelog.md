@@ -796,3 +796,6 @@ Added Ideological Incoherence reduction to Second Party System
 Increased impact of Gold sources on Hard Times recovery
 Added Apolitical Military modifier to the Constitution that massively increases Coup Resistance
 Reduced the infamy cost for claiming Cuba back down to 10 from 15
+
+Reduced Seminole's defense modifier to 100% from 200%
+Added ACW failsafe in case the CSA isn't properly fully annexed by the war
