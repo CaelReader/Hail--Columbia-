@@ -1,76 +1,76 @@
 ﻿l_french:
  #US Characters 
- ecchi_William_H: "William H."
- ecchi_Tyler: "Tyler"
- ecchi_James_K: "James K."
- ecchi_Polk: "Polk"
- ecchi_Alexander_H: "Alexander H."
- ecchi_Stephens: "Stephens"
- ecchi_Huey: "Huey"
- ecchi_John_Quincy: "John Quincy"
- ecchi_Rutherford_B: "Rutherford B."
- ecchi_James_A: "James A."
- ecchi_Chester_A: "Chester A."
- ecchi_William_Howard: "William Howard"
- ecchi_Taft: "Taft"
- ecchi_Warren_G: "Warren G."
- ecchi_Harding: "Harding"
- ecchi_Coolidge: "Coolidge"
- ecchi_Hoover: "Hoover"
- ecchi_John_C: "John C."
- ecchi_MacArthur: "MacArthur"
- ecchi_George_Armstrong: "George Armstrong"
- ecchi_John_Jacob: "John Jacob"
- ecchi_William_Randolph: "William Randolph"
- ecchi_Hearst: "Hearst"
- ecchi_William_Z: "William Z."
- ecchi_Browder: "Browder"
- ecchi_Lindbergh: "Lindbergh"
- ecchi_Ralph_Waldo: "Ralph Waldo"
- ecchi_P_T: "Phineas Taylor"
- ecchi_George_S: "George S."
- ecchi_Westinghouse: "Westinghouse"
- ecchi_Keller: "Keller"
- ecchi_Chrysler: "Chrysler"
- ecchi_Colt: "Colt"
- ecchi_Al: "Al"
- ecchi_Capone: "Capone"
- ecchi_Sutter: "Sutter"
- ecchi_John_Augustus: "John Augustus"
- ecchi_Browning: "Browning"
- ecchi_Katharine_Lee: "Katharine Lee"
- ecchi_L_Frank: "Lyman Frank"
- ecchi_Baum: "Baum"
- ecchi_Champ: "Champ"
- ecchi_Ferguson: "Ferguson"
- ecchi_Wirz: "Wirz"
- ecchi_Nathan_Bedford: "Nathan Bedford"
- ecchi_de_Zavala: "de Zavala"
- ecchi_Davy: "Davy"
- ecchi_Crockett: "Crockett"
- ecchi_Henry_McNeal: "Henry McNeal"
- ecchi_Henry_Highland: "Henry Highland"
- ecchi_Dwight_L: "Dwight L."
- ecchi_Brigham: "Brigham"
- ecchi_Fremont: "Fremont"
- ecchi_Astor: "Astor"
+ ecchi_William_H: "William H." #NT!
+ ecchi_Tyler: "Tyler" #NT!
+ ecchi_James_K: "James K." #NT!
+ ecchi_Polk: "Polk" #NT!
+ ecchi_Alexander_H: "Alexander H." #NT!
+ ecchi_Stephens: "Stephens" #NT!
+ ecchi_Huey: "Huey" #NT!
+ ecchi_John_Quincy: "John Quincy" #NT!
+ ecchi_Rutherford_B: "Rutherford B." #NT!
+ ecchi_James_A: "James A." #NT!
+ ecchi_Chester_A: "Chester A." #NT!
+ ecchi_William_Howard: "William Howard" #NT!
+ ecchi_Taft: "Taft" #NT!
+ ecchi_Warren_G: "Warren G." #NT!
+ ecchi_Harding: "Harding" #NT!
+ ecchi_Coolidge: "Coolidge" #NT!
+ ecchi_Hoover: "Hoover" #NT!
+ ecchi_John_C: "John C." #NT!
+ ecchi_MacArthur: "MacArthur" #NT!
+ ecchi_George_Armstrong: "George Armstrong" #NT!
+ ecchi_John_Jacob: "John Jacob" #NT!
+ ecchi_William_Randolph: "William Randolph" #NT!
+ ecchi_Hearst: "Hearst" #NT!
+ ecchi_William_Z: "William Z." #NT!
+ ecchi_Browder: "Browder" #NT!
+ ecchi_Lindbergh: "Lindbergh" #NT!
+ ecchi_Ralph_Waldo: "Ralph Waldo" #NT!
+ ecchi_P_T: "Phineas Taylor" #NT!
+ ecchi_George_S: "George S." #NT!
+ ecchi_Westinghouse: "Westinghouse" #NT!
+ ecchi_Keller: "Keller" #NT!
+ ecchi_Chrysler: "Chrysler" #NT!
+ ecchi_Colt: "Colt" #NT!
+ ecchi_Al: "Al" #NT!
+ ecchi_Capone: "Capone" #NT!
+ ecchi_Sutter: "Sutter" #NT!
+ ecchi_John_Augustus: "John Augustus" #NT!
+ ecchi_Browning: "Browning" #NT!
+ ecchi_Katharine_Lee: "Katharine Lee" #NT!
+ ecchi_L_Frank: "Lyman Frank" #NT!
+ ecchi_Baum: "Baum" #NT!
+ ecchi_Champ: "Champ" #NT!
+ ecchi_Ferguson: "Ferguson" #NT!
+ ecchi_Wirz: "Wirz" #NT!
+ ecchi_Nathan_Bedford: "Nathan Bedford" #NT!
+ ecchi_de_Zavala: "de Zavala" #NT!
+ ecchi_Davy: "Davy" #NT!
+ ecchi_Crockett: "Crockett" #NT!
+ ecchi_Henry_McNeal: "Henry McNeal" #NT!
+ ecchi_Henry_Highland: "Henry Highland" #NT!
+ ecchi_Dwight_L: "Dwight L." #NT!
+ ecchi_Brigham: "Brigham" #NT!
+ ecchi_Fremont: "Fremont" #NT!
+ ecchi_Astor: "Astor" #NT!
   
   
  #Native Americans 
- ecchi_Sequoyah: "Sequoyah"
- ecchi_EmptySequoyah: ""
- ecchi_Mangas_Coloradas: "Mangas Coloradas"
- ecchi_EmptyMangas_Coloradas: ""
- ecchi_Red_Cloud: "Red Cloud"
- ecchi_EmptyRed_Cloud: ""
- ecchi_Sitting_Bull: "Sitting Bull"
- ecchi_EmptySitting_Bull: ""
- ecchi_Crazy_Horse: "Crazy Horse"
- ecchi_EmptyCrazy_Horse: ""
- ecchi_EmptyGeronimo: ""
- ecchi_Chief_Joseph: "Chief Joseph"
- ecchi_EmptyChief_Joseph: ""
- ecchi_EmptyVictorio: ""
- ecchi_EmptyCochise: ""
- ecchi_Poundmaker: "Poundmaker"
- ecchi_EmptyPoundmaker: ""
+ ecchi_Sequoyah: "Sequoyah" #NT!
+ ecchi_EmptySequoyah: "" #NT!
+ ecchi_Mangas_Coloradas: "Mangas Coloradas" #NT!
+ ecchi_EmptyMangas_Coloradas: "" #NT!
+ ecchi_Red_Cloud: "Red Cloud" #NT!
+ ecchi_EmptyRed_Cloud: "" #NT!
+ ecchi_Sitting_Bull: "Sitting Bull" #NT!
+ ecchi_EmptySitting_Bull: "" #NT!
+ ecchi_Crazy_Horse: "Crazy Horse" #NT!
+ ecchi_EmptyCrazy_Horse: "" #NT!
+ ecchi_EmptyGeronimo: "" #NT!
+ ecchi_Chief_Joseph: "Chief Joseph" #NT!
+ ecchi_EmptyChief_Joseph: "" #NT!
+ ecchi_EmptyVictorio: "" #NT!
+ ecchi_EmptyCochise: "" #NT!
+ ecchi_Poundmaker: "Poundmaker" #NT!
+ ecchi_EmptyPoundmaker: "" #NT!

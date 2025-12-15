@@ -45,6 +45,7 @@ Check out the full list of Vanilla Overrides in the discussion section.
 [*]Compatible with VTM. Load this mod after that mod.
 [*]Compatible with ECCHI Redux. Load this mod after that mod.
 [*]Probably incompatible with any mod that changes the US or the state structure of North America.
+[*]Incompatible with any mod that overwrites the liberal_party and conservative_party definitions (you will have duplicate parties!)
 [*]Incompatible with BPM.
 [*]Incompatible with Gilded Age, Victorian Century, and other large flavor mods (duplicate events & characters)
 [*]Compatible with VFM via [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3383870402]compatibility patch[/url].

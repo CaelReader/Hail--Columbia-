@@ -1,53 +1,55 @@
 ﻿l_japanese:
  #from USCWF 
- ideology_anti_tariff: "Anti-Tariff"
- ideology_anti_tariff_desc: "#lore This group wants to nullify all tariffs on imports and exports.#!"
- ideology_pro_tariff: "Pro-Tariff"
- ideology_pro_tariff_desc: "#lore This group believes that domestic industries should be carefully protected from foreign imports.#!"
- ideology_american_school: "American School"
- ideology_american_school_desc: "#lore This group supports a mix of protectionism and interventionism.#!"
- ideology_empire_of_liberty: "Empire of Liberty"
- ideology_empire_of_liberty_desc: "#lore The spirit of 1776 lives on in this group. They support continental expansionism and a well-regulated militia.#!"
+ ideology_anti_tariff: "Anti-Tariff" #NT!
+ ideology_anti_tariff_desc: "#lore This group wants to nullify all tariffs on imports and exports.#!" #NT!
+ ideology_pro_tariff: "Pro-Tariff" #NT!
+ ideology_pro_tariff_desc: "#lore This group believes that domestic industries should be carefully protected from foreign imports.#!" #NT!
+ ideology_american_school: "American School" #NT!
+ ideology_american_school_desc: "#lore This group supports a mix of protectionism and interventionism.#!" #NT!
+ ideology_empire_of_liberty: "Empire of Liberty" #NT!
+ ideology_empire_of_liberty_desc: "#lore The spirit of 1776 lives on in this group. They support continental expansionism and a well-regulated militia.#!" #NT!
   
- ideology_usfp_progressive: "Progressive"
- ideology_usfp_progressive_desc: "#lore This leader advocates for a wide range of reforms aiming to combat monopolies, corruption, and societal decay.#!"
- ideology_usfp_progressive_movement: "Progressive"
- ideology_usfp_progressive_movement_desc: "#lore This movement advocates for a wide range of reforms aiming to combat monopolies, corruption, and societal decay.#!"
- ideology_usfp_social_gospel_leader: "Social Gospelist"
- ideology_usfp_social_gospel_leader_desc: "#lore This leader seeks to apply Protestant ethics to resolve social inequalities and uplift the citizenry.#!"
- ideology_usfp_strongman_populist: "Strongman Populist"
- ideology_usfp_strongman_populist_desc: "#lore This character positions themselves as a decisive leader who will enact economic reforms to the benefit of the masses. #!"
- ideology_american_school_leader: "American Systemist"
- ideology_american_school_leader_desc: "#lore This character advocates for a mix of protectionism and interventionism.#!"
- ideology_usfp_abolitionist_radical: "Radical Abolitionist"
- ideology_usfp_abolitionist_radical_desc: "#lore This leader seeks the total abolition of slavery and an equal place in society for the freedmen. #!"
- ideology_usfp_georgist_leader: "Georgist"
- ideology_usfp_georgist_leader_desc: "#lore This leader promotes free trade, government intervention against monopolies, and aggressive taxation of landowners. #!"
- ideology_usfp_social_darwinist_leader: "Social Darwinist"
- ideology_usfp_social_darwinist_leader_desc: "#lore This leader sees all life as a struggle where the strong should be free to dominate the weak. They insist that 'undesirables' be removed from the gene pool to ensure social progress and cohesion. #!"
- ideology_usfp_evangelical_moralist: "Evangelical Moralist"
- ideology_usfp_evangelical_moralist_desc: "This group believes in the right to express their own brand of Protestant Christianity, considering it a cornerstone of a morally upstanding republic."
- ideology_usfp_eugenicist: "Eugenicist"
- ideology_usfp_eugenicist_desc: "This group has embraced the concept of eugenics - the selective breeding of humans. They advocate for careful control of the population's gene pool through family planning programs, migration controls, and forced sterilizations."
- ideology_usfp_localist: "Localist"
- ideology_usfp_localist_desc: "This group resents impositions by the national government, preferring for authority to be devolved to local municipalities."
- ideology_usfp_universalist: "Universalist"
- ideology_usfp_universalist_desc: "#lore This leader preaches peace, tolerance and universal brotherhood. They promote open dialogue as the path to mutual understanding between different faiths and cultures. #!"
- ideology_usfp_accomodationist: "Accommodationist"
- ideology_usfp_accomodationist_desc: "This group prefers to keep church and state seperated, but still promotes the moral righteousness of the dominant religion."
- ideology_usfp_pan_indianist: "Pan-Indianist"
- ideology_usfp_pan_indianist_desc: "#lore This leader calls for unity between the indigenous peoples of North America and rejects the encroachment of European settlers and their way of life. #!"
- ideology_usfp_pan_indianist_group: "Pan-Indianist"
- ideology_usfp_pan_indianist_group_desc: "This group calls for unity between the indigenous peoples of North America and rejects the encroachment of European settlers and their way of life."
- ideology_usfp_gender_complementarian: "Gender Complementarian"
- ideology_usfp_gender_complementarian_desc: "This group supports traditional gender roles wherein men and women take on different but complementary roles within society."
- ideology_usfp_native_american_agrarian: "Indigenous Agrarian"
- ideology_usfp_native_american_agrarian_desc: "This group supports traditional modes of land stewardship, rejecting the notion of individual ownership over the earth."
- ideology_usfp_tribal_government: "Decentralist"
- ideology_usfp_tribal_government_desc: "This group prefers a decentralized political structure that does not disrupt their traditional way of life."
+ ideology_usfp_progressive: "Progressive" #NT!
+ ideology_usfp_progressive_desc: "#lore This leader advocates for a wide range of reforms aiming to combat monopolies, corruption, and societal decay.#!" #NT!
+ ideology_usfp_progressive_movement: "Progressive" #NT!
+ ideology_usfp_progressive_movement_desc: "#lore This movement advocates for a wide range of reforms aiming to combat monopolies, corruption, and societal decay.#!" #NT!
+ ideology_usfp_social_gospel_leader: "Social Gospelist" #NT!
+ ideology_usfp_social_gospel_leader_desc: "#lore This leader seeks to apply Protestant ethics to resolve social inequalities and uplift the citizenry.#!" #NT!
+ ideology_usfp_strongman_populist: "Strongman Populist" #NT!
+ ideology_usfp_strongman_populist_desc: "#lore This character positions themselves as a decisive leader who will enact economic reforms to the benefit of the masses. #!" #NT!
+ ideology_american_school_leader: "American Systemist" #NT!
+ ideology_american_school_leader_desc: "#lore This character advocates for a mix of protectionism and interventionism.#!" #NT!
+ ideology_usfp_abolitionist_radical: "Radical Abolitionist" #NT!
+ ideology_usfp_abolitionist_radical_desc: "#lore This leader seeks the total abolition of slavery and an equal place in society for the freedmen. #!" #NT!
+ ideology_usfp_georgist_leader: "Georgist" #NT!
+ ideology_usfp_georgist_leader_desc: "#lore This leader promotes free trade, government intervention against monopolies, and aggressive taxation of landowners. #!" #NT!
+ ideology_usfp_social_darwinist_leader: "Social Darwinist" #NT!
+ ideology_usfp_social_darwinist_leader_desc: "#lore This leader sees all life as a struggle where the strong should be free to dominate the weak. They insist that 'undesirables' be removed from the gene pool to ensure social progress and cohesion. #!" #NT!
+ ideology_usfp_evangelical_moralist: "Evangelical Moralist" #NT!
+ ideology_usfp_evangelical_moralist_desc: "This group believes in the right to express their own brand of Protestant Christianity, considering it a cornerstone of a morally upstanding republic." #NT!
+ ideology_usfp_eugenicist: "Eugenicist" #NT!
+ ideology_usfp_eugenicist_desc: "This group has embraced the concept of eugenics - the selective breeding of humans. They advocate for careful control of the population's gene pool through family planning programs, migration controls, and forced sterilizations." #NT!
+ ideology_usfp_localist: "Localist" #NT!
+ ideology_usfp_localist_desc: "This group resents impositions by the national government, preferring for authority to be devolved to local municipalities." #NT!
+ ideology_usfp_universalist: "Universalist" #NT!
+ ideology_usfp_universalist_desc: "#lore This leader preaches peace, tolerance and universal brotherhood. They promote open dialogue as the path to mutual understanding between different faiths and cultures. #!" #NT!
+ ideology_usfp_accomodationist: "Accommodationist" #NT!
+ ideology_usfp_accomodationist_desc: "This group prefers to keep church and state seperated, but still promotes the moral righteousness of the dominant religion." #NT!
+ ideology_usfp_pan_indianist: "Pan-Indianist" #NT!
+ ideology_usfp_pan_indianist_desc: "#lore This leader calls for unity between the indigenous peoples of North America and rejects the encroachment of European settlers and their way of life. #!" #NT!
+ ideology_usfp_pan_indianist_group: "Pan-Indianist" #NT!
+ ideology_usfp_pan_indianist_group_desc: "This group calls for unity between the indigenous peoples of North America and rejects the encroachment of European settlers and their way of life." #NT!
+ ideology_usfp_gender_complementarian: "Gender Complementarian" #NT!
+ ideology_usfp_gender_complementarian_desc: "This group supports traditional gender roles wherein men and women take on different but complementary roles within society." #NT!
+ ideology_usfp_native_american_agrarian: "Indigenous Agrarian" #NT!
+ ideology_usfp_native_american_agrarian_desc: "This group supports traditional modes of land stewardship, rejecting the notion of individual ownership over the earth." #NT!
+ ideology_usfp_tribal_government: "Decentralist" #NT!
+ ideology_usfp_tribal_government_desc: "This group prefers a decentralized political structure that does not disrupt their traditional way of life." #NT!
  ideology_usfp_afro_american_movement: "Afro-American Liberation" #NT!
  ideology_usfp_afro_american_movement_desc: "This movement seeks the full equality of Afro-Americans and resents the legal structures used to oppress them." #NT!
  ideology_usfp_american_indian_movement: "Native Sovereignist" #NT!
  ideology_usfp_american_indian_movement_desc: "This movement opposes oppressive measures imposed upon their people and seeks to protect and uphold their cultural traditions." #NT!
  ideology_usfp_neoconfederate_movement: "Neo-Confederate" #NT!
  ideology_usfp_neoconfederate_movement_desc: "This movement resents the gains made by immigrants and other racial groups and seeks to put them 'back in their place'. They idolize the Confederate rebellion as a glorious cause fought for the benefit of the White man." #NT!
+ ideology_usfp_american_constitution_movement: "Constitutionalist" #NT!
+ ideology_usfp_american_constitution_movement_desc: "This movement seeks to preserve - or restore - the fundamental laws of the American Constitution." #NT!

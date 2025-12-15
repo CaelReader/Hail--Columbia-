@@ -1,46 +1,46 @@
 ﻿l_turkish:
   
- je_usfp_a_house_divided_main_complete: "The American Civil War has begun."
- je_usfp_a_house_divided_missouri_compromise: "A House Divided: Missouri Compromise"
- je_usfp_a_house_divided_missouri_compromise_reason: "[concept_usfp_congress] maintains a careful balancing act between free and slave states in order to prevent one from dominating the other. The Compromise of 1820 drew a line through the [concept_usfp_louisiana_purchase] at the 36th Parallel, the southern border of [SCOPE.sState('missouri_scope').GetName]. Missouri has been allowed to maintain slavery, but all other territories north of that line shall be free territories. Implicitly, the territories south of the compromise line will become slave states as they are integrated into the union.\n\nThe western extent of the demarcation line has not been concretely determined. If the [SCOPE.GetRootScope.GetCountry.GetName] continues to expand its borders, the status of the compromise will likely be called into question."
- usfp_missouri_compromise_broken: "The Missouri Compromise is superseded by a new policy"
+ je_usfp_a_house_divided_main_complete: "The American Civil War has begun." #NT!
+ je_usfp_a_house_divided_missouri_compromise: "A House Divided: Missouri Compromise" #NT!
+ je_usfp_a_house_divided_missouri_compromise_reason: "[concept_usfp_congress] maintains a careful balancing act between free and slave states in order to prevent one from dominating the other. The Compromise of 1820 drew a line through the [concept_usfp_louisiana_purchase] at the 36th Parallel, the southern border of [SCOPE.sState('missouri_scope').GetName]. Missouri has been allowed to maintain slavery, but all other territories north of that line shall be free territories. Implicitly, the territories south of the compromise line will become slave states as they are integrated into the union.\n\n@information! While this [concept_journal_entry] is active, the $movement_anti_slavery$ and $movement_pro_slavery$ will have significantly reduced [Concept('concept_activism', '$concept_activism_short$')].\n\nThe western extent of the demarcation line has not been concretely determined. If the [SCOPE.GetRootScope.GetCountry.GetName] continues to expand its borders, the status of the compromise will likely be called into question." #NT!
+ usfp_missouri_compromise_broken: "The Missouri Compromise is superseded by a new policy" #NT!
   
- je_usfp_a_house_divided_gag_rule: "A House Divided: The Gag Rule"
- je_usfp_a_house_divided_gag_rule_reason: "To enforce the Missouri Compromise and adjourn further conflict over the issue, the [concept_usfp_house_of_representatives] has prohibited the consideration of petitions or laws relating to slavery."
- je_usfp_a_house_divided_gag_rule_status: "With the gag rule in place, [GetLawType('law_slave_trade').GetGroup.GetName] laws #r cannot#! be [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enacted$')]"
- usfp_end_gag_rule_button: "Repeal Gag Rule"
- usfp_end_gag_rule_button_desc: "With the Abolitionists cowed, the Gag Rule no longer suits our interests."
- usfp_end_gag_rule: "The #Bold A House Divided: The Gag Rule#! [concept_journal_entry] will end"
- usfp_end_gag_rule_button_no_abolitionists: "We do NOT have a [concept_political_movement] to end slavery"
- usfp_end_gag_rule_button_slave_trade: "We have a [concept_political_movement] to expand slavery"
- usfp_break_gag_rule_button: "Break Gag Rule"
- usfp_break_gag_rule_button_desc: "The election results are clear, and the House must be reconvened without the Gag Rule. Our mandate will not be denied!"
+ je_usfp_a_house_divided_gag_rule: "A House Divided: The Gag Rule" #NT!
+ je_usfp_a_house_divided_gag_rule_reason: "To enforce the Missouri Compromise and adjourn further conflict over the issue, the [concept_usfp_house_of_representatives] has prohibited the consideration of petitions or laws relating to slavery." #NT!
+ je_usfp_a_house_divided_gag_rule_status: "With the gag rule in place, [GetLawType('law_slave_trade').GetGroup.GetName] laws #r cannot#! be [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enacted$')]" #NT!
+ usfp_end_gag_rule_button: "Repeal Gag Rule" #NT!
+ usfp_end_gag_rule_button_desc: "With the Abolitionists cowed, the Gag Rule no longer suits our interests." #NT!
+ usfp_end_gag_rule: "The #Bold A House Divided: The Gag Rule#! [concept_journal_entry] will end" #NT!
+ usfp_end_gag_rule_button_no_abolitionists: "We do NOT have a [concept_political_movement] to end slavery" #NT!
+ usfp_end_gag_rule_button_slave_trade: "We have a [concept_political_movement] to expand slavery" #NT!
+ usfp_break_gag_rule_button: "Break Gag Rule" #NT!
+ usfp_break_gag_rule_button_desc: "The election results are clear, and the House must be reconvened without the Gag Rule. Our mandate will not be denied!" #NT!
   
- je_usfp_a_house_divided_bleeding_kansas: "A House Divided: Bleeding Kansas"
- je_usfp_a_house_divided_bleeding_kansas_reason: "Progress towards the #bold left#! of the bar will benefit the cause of slavery, whilst progress towards the #bold right#! of the bar will advance the state towards abolition.\n\n[SCOPE.sState('kansas_scope').GetName] has become a battleground over the matter of slavery. Pro-slavery #bold Border Ruffians#! and abolitionist #bold Free-Staters#! have begun migrating into the territory from neighboring states, seeking to turn it to their side. Violence between the two groups will continue to escalate until the matter is settled one way or the other."
- je_usfp_a_house_divided_bleeding_kansas_special_tooltip: "This rate is determined by the following:\n#variable [Country.MakeScope.Var('bleeding_kansas_yankee_percent').GetValue|+=]#! from the Yankee [Concept('concept_pop', '$concept_population$')]\n#variable [Country.MakeScope.Var('bleeding_kansas_yankee_radicals').GetValue|+=]#! from Yankee [Concept('concept_radical', '$concept_radicals$')]\n#variable [Country.MakeScope.Var('bleeding_kansas_freedmen').GetValue|+=]#! from free Afro-American [Concept('concept_pop', '$concept_pops$')]\n#variable [Country.MakeScope.Var('bleeding_kansas_dixie_percent').GetValue|+=]#! from the Dixie [Concept('concept_pop', '$concept_population$')]\n#variable [Country.MakeScope.Var('bleeding_kansas_dixie_radicals').GetValue|+=]#! from Dixie [Concept('concept_radical', '$concept_radicals$')]\n#variable [Country.MakeScope.Var('bleeding_kansas_aristocrats').GetValue|+=]#! from Dixie $aristocrats$"
- bleeding_kansas_0_progress: "The #bold progress bar#! reaches 0"
- bleeding_kansas_100_progress: "The #bold progress bar#! reaches 100"
- usfp_support_free_kansas_button: "Support Free-Staters"
- usfp_support_free_kansas_button_desc: "It is in our interest that Kansas be a free state. Federal support for the Free-Staters will make it clear that slavery is not welcome."
- usfp_support_slave_kansas_button: "Support Border Ruffians"
- usfp_support_slave_kansas_button_desc: "We need to ensure Kansas becomes a slave state. Federal protections can be extended to those who see it our way."
- usfp_kansas_intervene_cooldown: "We have not recently intervened in Kansas."
- usfp_enforce_kansas_constitution_button: "Enforce Kansas Constitution"
- usfp_enforce_kansas_constitution_button_desc: "The people of Kansas have given us a legal Constitution, and we have recognized it. With the right show of force, we can now deliver a swift resolution to this bloody tragedy."
+ je_usfp_a_house_divided_bleeding_kansas: "A House Divided: Bleeding Kansas" #NT!
+ je_usfp_a_house_divided_bleeding_kansas_reason: "Progress towards the #bold left#! of the bar will benefit the cause of slavery, whilst progress towards the #bold right#! of the bar will advance the state towards abolition.\n\n[SCOPE.sState('kansas_scope').GetName] has become a battleground over the matter of slavery. Pro-slavery #bold Border Ruffians#! and abolitionist #bold Free-Staters#! have begun migrating into the territory from neighboring states, seeking to turn it to their side. Violence between the two groups will continue to escalate until the matter is settled one way or the other." #NT!
+ je_usfp_a_house_divided_bleeding_kansas_special_tooltip: "This rate is determined by the following:\n#variable [Country.MakeScope.Var('bleeding_kansas_yankee_percent').GetValue|+=]#! from the Yankee [Concept('concept_pop', '$concept_population$')]\n#variable [Country.MakeScope.Var('bleeding_kansas_yankee_radicals').GetValue|+=]#! from Yankee [Concept('concept_radical', '$concept_radicals$')]\n#variable [Country.MakeScope.Var('bleeding_kansas_freedmen').GetValue|+=]#! from free Afro-American [Concept('concept_pop', '$concept_pops$')]\n#variable [Country.MakeScope.Var('bleeding_kansas_dixie_percent').GetValue|+=]#! from the Dixie [Concept('concept_pop', '$concept_population$')]\n#variable [Country.MakeScope.Var('bleeding_kansas_dixie_radicals').GetValue|+=]#! from Dixie [Concept('concept_radical', '$concept_radicals$')]\n#variable [Country.MakeScope.Var('bleeding_kansas_aristocrats').GetValue|+=]#! from Dixie $aristocrats$" #NT!
+ bleeding_kansas_0_progress: "The #bold progress bar#! reaches 0" #NT!
+ bleeding_kansas_100_progress: "The #bold progress bar#! reaches 100" #NT!
+ usfp_support_free_kansas_button: "Support Free-Staters" #NT!
+ usfp_support_free_kansas_button_desc: "It is in our interest that Kansas be a free state. Federal support for the Free-Staters will make it clear that slavery is not welcome." #NT!
+ usfp_support_slave_kansas_button: "Support Border Ruffians" #NT!
+ usfp_support_slave_kansas_button_desc: "We need to ensure Kansas becomes a slave state. Federal protections can be extended to those who see it our way." #NT!
+ usfp_kansas_intervene_cooldown: "We have not recently intervened in Kansas." #NT!
+ usfp_enforce_kansas_constitution_button: "Enforce Kansas Constitution" #NT!
+ usfp_enforce_kansas_constitution_button_desc: "The people of Kansas have given us a legal Constitution, and we have recognized it. With the right show of force, we can now deliver a swift resolution to this bloody tragedy." #NT!
   
- usfp_bleeding_kansas_progress_bar: "Bleeding Kansas"
- usfp_bleeding_kansas_progress_bar_free_kansas: "Free-Staters"
- usfp_bleeding_kansas_progress_bar_slave_kansas: "Border Ruffians"
- usfp_bleeding_kansas_yankee_radicals: "[GetCulture('yankee').GetName] [Concept('concept_radical', '$concept_radicals$')]"
- usfp_bleeding_kansas_yankee_population: "the [GetCulture('yankee').GetName] [Concept('concept_pop', '$concept_population$')]"
- usfp_bleeding_kansas_freedmen: "Free [GetCulture('afro_american').GetName] [Concept('concept_pop', '$concept_pops$')] "
- usfp_bleeding_kansas_dixie_radicals: "[GetCulture('dixie').GetName] [Concept('concept_radical', '$concept_radicals$')]"
- usfp_bleeding_kansas_dixie_population: "the [GetCulture('dixie').GetName] [Concept('concept_pop', '$concept_population$')]"
- usfp_bleeding_kansas_dixie_aristocrats: "[GetCulture('dixie').GetName] $aristocrats$"
+ usfp_bleeding_kansas_progress_bar: "Bleeding Kansas" #NT!
+ usfp_bleeding_kansas_progress_bar_free_kansas: "Free-Staters" #NT!
+ usfp_bleeding_kansas_progress_bar_slave_kansas: "Border Ruffians" #NT!
+ usfp_bleeding_kansas_yankee_radicals: "[GetCulture('yankee').GetName] [Concept('concept_radical', '$concept_radicals$')]" #NT!
+ usfp_bleeding_kansas_yankee_population: "the [GetCulture('yankee').GetName] [Concept('concept_pop', '$concept_population$')]" #NT!
+ usfp_bleeding_kansas_freedmen: "Free [GetCulture('afro_american').GetName] [Concept('concept_pop', '$concept_pops$')] " #NT!
+ usfp_bleeding_kansas_dixie_radicals: "[GetCulture('dixie').GetName] [Concept('concept_radical', '$concept_radicals$')]" #NT!
+ usfp_bleeding_kansas_dixie_population: "the [GetCulture('dixie').GetName] [Concept('concept_pop', '$concept_population$')]" #NT!
+ usfp_bleeding_kansas_dixie_aristocrats: "[GetCulture('dixie').GetName] $aristocrats$" #NT!
   
- je_usfp_a_house_divided_voting_rights: "A House Divided: Black Suffrage"
- je_usfp_a_house_divided_voting_rights_reason: "Even in the non-slaveholding states, [SCOPE.sCulture('afro_american_culture').GetName] citizens are almost entirely denied access to the ballot box. Overturning the myriad restrictions on their suffrage will require a concerted effort at the national level."
+ je_usfp_a_house_divided_voting_rights: "A House Divided: Black Suffrage" #NT!
+ je_usfp_a_house_divided_voting_rights_reason: "Even in the non-slaveholding states, [SCOPE.sCulture('afro_american_culture').GetName] citizens are almost entirely denied access to the ballot box. Overturning the myriad restrictions on their suffrage will require a concerted effort at the national level." #NT!
   
  #WIP/Unused stuff for Border State jockeying before the ACW breaks out 
  # je_usfp_a_house_divided_border_states: "A House Divided: The Border States" #NT!
@@ -67,94 +67,94 @@
  # usfp_border_state_tennessee_button: "[SCOPE.sState('tennessee_scope').GetName] is [SCOPE.GetRootScope.GetCountry.GetCustom('dynamic_tennessee_loyalty')]!" #NT!
  # usfp_border_state_tennessee_button_desc: "desc" #NT!
   
- usfp_emancipation_proclamation_button: "Emancipate the Slaves"
- usfp_emancipation_proclamation_button_desc: "War-time exigencies give us the opportunity to liberate slaves in rebel territories, paving the way for a swift and final abolition of slavery."
- usfp_acw_support_button: "Denounce Confederacy"
- usfp_acw_support_button_desc: "This war is for the very soul of the United States, we cannot accept any negotiations with the traitorous south!"
- usfp_acw_support_button.tt: "[concept_war_support] for the Civil War is below 10"
+ usfp_emancipation_proclamation_button: "Emancipate the Slaves" #NT!
+ usfp_emancipation_proclamation_button_desc: "War-time exigencies give us the opportunity to liberate slaves in rebel territories, paving the way for a swift and final abolition of slavery." #NT!
+ usfp_acw_support_button: "Denounce Confederacy" #NT!
+ usfp_acw_support_button_desc: "This war is for the very soul of the United States, we cannot accept any negotiations with the traitorous south!" #NT!
+ usfp_acw_support_button.tt: "[concept_war_support] for the Civil War is below 10" #NT!
   
- usfp_indian_removal_seminole_button: "Begin Seminole Removal"
- usfp_indian_removal_seminole_button_desc: "The Seminole have broken out in open revolt against the Indian Removal Act. We have no choice but to crush the rebellion and enforce their removal. The harsh terrain and hostility of the Seminole are likely to make the process long and costly."
- usfp_indian_removal_cherokee_button: "Begin Cherokee Removal"
- usfp_indian_removal_cherokee_button_desc: "White settlers have long coveted and actively stolen the lands of the Cherokee. In the interests of our mutual peace and prosperity, we will remove them from the east."
- usfp_indian_removal_chickasaw_button: "Begin Chickasaw Removal"
- usfp_indian_removal_chickasaw_button_desc: "We have conveniently allowed settlers to continue to encroach on the lands of the Chickasaw. Facing impossible odds, the nation has reluctantly agreed to sell their land and remove themselves to the west."
- usfp_indian_removal_creek_button: "Begin Creek Removal"
- usfp_indian_removal_creek_button_desc: "The Creek have accepted a treaty of removal, but a large section of them have violently resisted. We have deployed the army to enforce removal."
- usfp_cherokee_treaty_ratified_tooltip: "The Treaty of New Echota has been ratified"
- cherokee_removal_begins: "We will begin to enforce the treaty of removal"
- usfp_cherokee_removal_ongoing_tooltip: "Cherokee Removal is not already ongoing"
- usfp_seminole_removal_ongoing_tooltip: "Seminole Removal is not already ongoing"
- usfp_chickasaw_removal_ongoing_tooltip: "Chickasaw Removal is not already ongoing"
- usfp_creek_removal_ongoing_tooltip: "Creek Removal is not already ongoing"
- je_indian_removal_failure_header: "#title Removal will be prevented if:#!\n"
- je_indian_removal_on_failure_header: "#title If Removal prevented:#!\n$EFFECT$"
- je_indian_removal_complete_header: "#title Removal will be completed if:#!\n"
- je_indian_removal_on_complete_header: "#title If Removal completed:#!\n$EFFECT$"
+ usfp_indian_removal_seminole_button: "Begin Seminole Removal" #NT!
+ usfp_indian_removal_seminole_button_desc: "The Seminole have broken out in open revolt against the Indian Removal Act. We have no choice but to crush the rebellion and enforce their removal. The harsh terrain and hostility of the Seminole are likely to make the process long and costly." #NT!
+ usfp_indian_removal_cherokee_button: "Begin Cherokee Removal" #NT!
+ usfp_indian_removal_cherokee_button_desc: "White settlers have long coveted and actively stolen the lands of the Cherokee. In the interests of our mutual peace and prosperity, we will remove them from the east." #NT!
+ usfp_indian_removal_chickasaw_button: "Begin Chickasaw Removal" #NT!
+ usfp_indian_removal_chickasaw_button_desc: "We have conveniently allowed settlers to continue to encroach on the lands of the Chickasaw. Facing impossible odds, the nation has reluctantly agreed to sell their land and remove themselves to the west." #NT!
+ usfp_indian_removal_creek_button: "Begin Creek Removal" #NT!
+ usfp_indian_removal_creek_button_desc: "The Creek have accepted a treaty of removal, but a large section of them have violently resisted. We have deployed the army to enforce removal." #NT!
+ usfp_cherokee_treaty_ratified_tooltip: "The Treaty of New Echota has been ratified" #NT!
+ cherokee_removal_begins: "We will begin to enforce the treaty of removal" #NT!
+ usfp_cherokee_removal_ongoing_tooltip: "Cherokee Removal is not already ongoing" #NT!
+ usfp_seminole_removal_ongoing_tooltip: "Seminole Removal is not already ongoing" #NT!
+ usfp_chickasaw_removal_ongoing_tooltip: "Chickasaw Removal is not already ongoing" #NT!
+ usfp_creek_removal_ongoing_tooltip: "Creek Removal is not already ongoing" #NT!
+ je_indian_removal_failure_header: "#title Removal will be prevented if:#!\n" #NT!
+ je_indian_removal_on_failure_header: "#title If Removal prevented:#!\n$EFFECT$" #NT!
+ je_indian_removal_complete_header: "#title Removal will be completed if:#!\n" #NT!
+ je_indian_removal_on_complete_header: "#title If Removal completed:#!\n$EFFECT$" #NT!
   
- usfp_cherokee_removal: "The Cherokee have been removed to the [SCOPE.sCountry('indian_territory_scope').GetName]."
- usfp_seminole_removal: "The Seminole have been removed to the [SCOPE.sCountry('indian_territory_scope').GetName]."
- usfp_chickasaw_removal: "The Chickasaw have been removed to the [SCOPE.sCountry('indian_territory_scope').GetName]."
- usfp_choctaw_removal: "The Choctaw have been removed to the [SCOPE.sCountry('indian_territory_scope').GetName]."
- usfp_creek_removal: "The Creek have been removed to the [SCOPE.sCountry('indian_territory_scope').GetName]."
+ usfp_cherokee_removal: "The Cherokee have been removed to the [SCOPE.sCountry('indian_territory_scope').GetName]." #NT!
+ usfp_seminole_removal: "The Seminole have been removed to the [SCOPE.sCountry('indian_territory_scope').GetName]." #NT!
+ usfp_chickasaw_removal: "The Chickasaw have been removed to the [SCOPE.sCountry('indian_territory_scope').GetName]." #NT!
+ usfp_choctaw_removal: "The Choctaw have been removed to the [SCOPE.sCountry('indian_territory_scope').GetName]." #NT!
+ usfp_creek_removal: "The Creek have been removed to the [SCOPE.sCountry('indian_territory_scope').GetName]." #NT!
   
- usfp_chickasaw_removal_payment: "Paying for Chickasaw Removal"
+ usfp_chickasaw_removal_payment: "Paying for Chickasaw Removal" #NT!
   
  usfp_expansionist_tooltip: "#tooltippable;tooltip:[Country.GetTooltipTag],usfp_manifest_destiny_special_tooltip_pro_expansion expansionist#!" #NT!
  usfp_anti_expansionist_tooltip: "#tooltippable;tooltip:[Country.GetTooltipTag],usfp_manifest_destiny_special_tooltip_anti_expansion anti-expansion#!" #NT!
- usfp_manifest_destiny_main: "Manifest Destiny"
- usfp_manifest_destiny_main_reason: "The idea of Manifest Destiny — the belief that the expansion of our nation is a sacred mission that we are duty-bound to carry forth — is beginning to take hold in the [SCOPE.GetRootScope.GetCountry.GetName]. The vast lands of North America beckon with continental opportunity, but how far exactly we should extend our borders remains uncertain.\n\nThe status of the #bold Progress Bar#! tracks the credence of Manifest Destiny in our country, which will be determined by various #tooltippable;tooltip:[Country.GetTooltipTag],usfp_manifest_destiny_special_tooltip_advance pro-expansion#! or #tooltippable;tooltip:[Country.GetTooltipTag],usfp_manifest_destiny_special_tooltip_deplete anti-expansion#! conditions. Our #yellow Manifest Destiny#! modifier will change its effects based on the progress bar, and new opportunities for expansion will present themselves as Manifest Destiny gains greater influence."
+ usfp_manifest_destiny_main: "Manifest Destiny" #NT!
+ usfp_manifest_destiny_main_reason: "The idea of Manifest Destiny — the belief that the expansion of our nation is a sacred mission that we are duty-bound to carry forth — is beginning to take hold in the [SCOPE.GetRootScope.GetCountry.GetName]. The vast lands of North America beckon with continental opportunity, but how far exactly we should extend our borders remains uncertain.\n\nThe status of the #bold Progress Bar#! tracks the credence of Manifest Destiny in our country, which will be determined by various #tooltippable;tooltip:[Country.GetTooltipTag],usfp_manifest_destiny_special_tooltip_advance pro-expansion#! or #tooltippable;tooltip:[Country.GetTooltipTag],usfp_manifest_destiny_special_tooltip_deplete anti-expansion#! conditions. Our #yellow Manifest Destiny#! modifier will change its effects based on the progress bar, and new opportunities for expansion will present themselves as Manifest Destiny gains greater influence." #NT!
  usfp_manifest_destiny_main_lobby: "@america_icon! #yellow Hail, Columbia!#!\nAmerican settlers are steadily pushing westward, aiming to extend their republic from sea to shining sea." #NT!
   
- usfp_manifest_destiny_special_tooltip_advance: "Manifest Destiny will gain influence in our society if we embrace military expansion and racial supremacy.\n\nThe following repeatable events will #bold advance#! the #bold Progress Bar#!:\n• An #tooltippable;tooltip:[Country.GetTooltipTag],usfp_manifest_destiny_special_tooltip_pro_expansion expansionist#! [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')] is elected #italic (once per President)#!\n• A [concept_powerful] [concept_interest_group] gains a #tooltippable;tooltip:[Country.GetTooltipTag],usfp_manifest_destiny_special_tooltip_pro_expansion expansionist#! leader #italic (once per interest group per 20 years)#!\n\nThe outcomes of several [Concept('concept_journal_entry', '$concept_journal_entries$')] can #bold advance#! the #bold Progress Bar#!:\n• Complete the #Bold Indian Removal#! [concept_journal_entry]\n• Fail the #bold Oregon Border Dispute#! [concept_journal_entry]\n• Activate the #bold Indian Wars#! [concept_journal_entry]\n\nCertain actions taken by our government will #bold advance#! the #bold Progress Bar#! #italic (once per action)#!:\n• We [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] the [GetLawType('law_colonial_exploitation').GetName] [concept_law]\n• We [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] the [GetLawType('law_professional_army').GetName] [concept_law]\n• We [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] the [GetLawType('law_national_supremacy').GetName] or [GetLawType('law_ethnostate').GetName] [concept_law]\n• We conquer an overseas [concept_state]\n\nVarious special events and circumstances can also #bold advance#! the #bold Progress Bar#!, such as:\n• A $movement_cultural_majority$ gains enough [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] #italic (once at 20% and at 50%)#!\n• The Texas Rebellion fails\n• We are attacked by Mexico\n• We take All of Mexico in the Treaty of Guadelupe Hidalgo\n• The [concept_usfp_monroe_doctrine] is violated by a European power\n• We support William Walker's expedition to Sonora\n• We pursue the [concept_claim] on Cuba offered by the Ostend Circular"
+ usfp_manifest_destiny_special_tooltip_advance: "Manifest Destiny will gain influence in our society if we embrace military expansion and racial supremacy.\n\nThe following repeatable events will #bold advance#! the #bold Progress Bar#!:\n• An $usfp_expansionist_tooltip$ [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')] is elected #italic (once per President)#!\n• A [concept_powerful] [concept_interest_group] gains a $usfp_expansionist_tooltip$ leader #italic (once per interest group per 20 years)#!\n\nThe outcomes of several [Concept('concept_journal_entry', '$concept_journal_entries$')] can #bold advance#! the #bold Progress Bar#!:\n• Complete the #Bold Indian Removal#! [concept_journal_entry]\n• Fail the #bold Oregon Border Dispute#! [concept_journal_entry]\n• Activate the #bold Indian Wars#! [concept_journal_entry]\n\nCertain actions taken by our government will #bold advance#! the #bold Progress Bar#! #italic (once per action)#!:\n• We [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] the [GetLawType('law_colonial_exploitation').GetName] [concept_law]\n• We [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] the [GetLawType('law_professional_army').GetName] [concept_law]\n• We [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] the [GetLawType('law_national_supremacy').GetName] or [GetLawType('law_ethnostate').GetName] [concept_law]\n• We conquer an overseas [concept_state]\n\nVarious special events and circumstances can also #bold advance#! the #bold Progress Bar#!, such as:\n• A $movement_cultural_majority$ gains enough [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] #italic (once at 20% and at 50%)#!\n• The Texas Rebellion fails\n• We are attacked by Mexico\n• We take All of Mexico in the Treaty of Guadelupe Hidalgo\n• The [concept_usfp_monroe_doctrine] is violated by a European power\n• We support William Walker's expedition to Sonora\n• We pursue the [concept_claim] on Cuba offered by the Ostend Circular" #NT!
   
- usfp_manifest_destiny_special_tooltip_deplete: "Manifest Destiny will lose influence in our society if we reject expansionism and promote racial pluralism.\n\nThe following repeatable events will #bold deplete#! the #bold Progress Bar#!:\n• An #tooltippable;tooltip:[Country.GetTooltipTag],usfp_manifest_destiny_special_tooltip_anti_expansion anti-expansion#! [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')] is elected #italic (once per President)#!\n• A [concept_powerful] [concept_interest_group] gains an #tooltippable;tooltip:[Country.GetTooltipTag],usfp_manifest_destiny_special_tooltip_anti_expansion anti-expansion#! leader #italic (once per interest group per 20 years)#!\n\nThe outcomes of some [Concept('concept_journal_entry', '$concept_journal_entries$')] can #bold deplete#! the #bold Progress Bar#!:\n• Fail the #Bold Indian Removal#! [concept_journal_entry]\n• Complete the #bold Oregon Border Dispute#! [concept_journal_entry]\n• The #bold American Civil War#! breaks out\n• The Union loses the #bold American Civil War#!\n\nCertain actions taken by our government can #bold deplete#! the #bold Progress Bar#! #italic (once per action)#!:\n• We [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] the [GetLawType('law_no_colonial_affairs').GetName] [concept_law]\n• We [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] the [GetLawType('law_multicultural').GetName] [concept_law]\n• We [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] the [GetLawType('law_council_republic').GetName] [concept_law]\n• We [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] the [GetLawType('law_monarchy').GetName] [concept_law]\n\nVarious special events and circumstances can also #bold deplete#! the #bold Progress Bar#!, such as:\n• A $movement_cultural_minority$ gains enough [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] #italic (once at 20% and at 50%)#!\n• We are defeated by Mexico in a [concept_war]\n• We annex only the Mexican Cession in the Treaty of Guadalupe Hidalgo\n• Mexico agrees to a peaceful purchase of the Mexican Cession\n• The American Anti-Imperialist League forms\n• We cease to be a [concept_great_power] \n• We are in [concept_default], or have declared [concept_bankruptcy]"
+ usfp_manifest_destiny_special_tooltip_deplete: "Manifest Destiny will lose influence in our society if we reject expansionism and promote racial pluralism.\n\nThe following repeatable events will #bold deplete#! the #bold Progress Bar#!:\n• An $usfp_anti_expansionist_tooltip$ [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')] is elected #italic (once per President)#!\n• A [concept_powerful] [concept_interest_group] gains an $usfp_anti_expansionist_tooltip$ leader #italic (once per interest group per 20 years)#!\n\nThe outcomes of some [Concept('concept_journal_entry', '$concept_journal_entries$')] can #bold deplete#! the #bold Progress Bar#!:\n• Fail the #Bold Indian Removal#! [concept_journal_entry]\n• Complete the #bold Oregon Border Dispute#! [concept_journal_entry]\n• The #bold American Civil War#! breaks out\n• The Union loses the #bold American Civil War#!\n\nCertain actions taken by our government can #bold deplete#! the #bold Progress Bar#! #italic (once per action)#!:\n• We [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] the [GetLawType('law_no_colonial_affairs').GetName] [concept_law]\n• We [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] the [GetLawType('law_multicultural').GetName] [concept_law]\n• We [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] the [GetLawType('law_council_republic').GetName] [concept_law]\n• We [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] the [GetLawType('law_monarchy').GetName] [concept_law]\n\nVarious special events and circumstances can also #bold deplete#! the #bold Progress Bar#!, such as:\n• A $movement_cultural_minority$ gains enough [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] #italic (once at 20% and at 50%)#!\n• We are defeated by Mexico in a [concept_war]\n• We annex only the Mexican Cession in the Treaty of Guadalupe Hidalgo\n• Mexico agrees to a peaceful purchase of the Mexican Cession\n• The American Anti-Imperialist League forms\n• We cease to be a [concept_great_power] \n• We are in [concept_default], or have declared [concept_bankruptcy]" #NT!
   
- usfp_manifest_destiny_special_tooltip_pro_expansion: "• has the [GetIdeology('ideology_jacksonian_democrat').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_jingoist_leader').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_slaver').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_authoritarian').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_fascist').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_usfp_social_darwinist_leader').GetName] [concept_ideology]\n• has the [GetCharacterTrait('usfp_trait_expansionist').GetName] [concept_character_trait]"
- usfp_manifest_destiny_special_tooltip_anti_expansion: "• has the [GetIdeology('ideology_pacifist').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_anarchist').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_humanitarian').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_humanitarian_royalist').GetName] [concept_ideology]\n• has the [GetCharacterTrait('usfp_trait_antiexpansionist').GetName] [concept_character_trait]"
- usfp_manifest_more_destiny: "#bold Manifest Destiny#! will gain influence."
- usfp_manifest_less_destiny: "#bold Manifest Destiny#! will lose influence."
+ usfp_manifest_destiny_special_tooltip_pro_expansion: "• has the [GetIdeology('ideology_jacksonian_democrat').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_jingoist_leader').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_slaver').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_authoritarian').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_fascist').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_usfp_social_darwinist_leader').GetName] [concept_ideology]\n• has the [GetCharacterTrait('usfp_trait_expansionist').GetName] [concept_character_trait]" #NT!
+ usfp_manifest_destiny_special_tooltip_anti_expansion: "• has the [GetIdeology('ideology_pacifist').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_anarchist').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_humanitarian').GetName] [concept_ideology]\n• has the [GetIdeology('ideology_humanitarian_royalist').GetName] [concept_ideology]\n• has the [GetCharacterTrait('usfp_trait_antiexpansionist').GetName] [concept_character_trait]" #NT!
+ usfp_manifest_more_destiny: "#bold Manifest Destiny#! will gain influence." #NT!
+ usfp_manifest_less_destiny: "#bold Manifest Destiny#! will lose influence." #NT!
  0_progress: "The #bold progress bar#! reaches 0" #NT!
   
- usfp_western_purchase_button: "Make an Offer to Mexico"
- usfp_western_purchase_button_desc: "Mexico's grasp on its northern territories is tenuous. If we wish to expand westward, we might be able to purchase these lands diplomatically."
- mexican_payment_cost: "If Mexico accepts, we will pay them @money!#yellow 3M#! over 4 years."
+ usfp_western_purchase_button: "Make an Offer to Mexico" #NT!
+ usfp_western_purchase_button_desc: "Mexico's grasp on its northern territories is tenuous. If we wish to expand westward, we might be able to purchase these lands diplomatically." #NT!
+ mexican_payment_cost: "If Mexico accepts, we will pay them @money!#yellow 3M#! over 4 years." #NT!
  mexican_subject_forced_purchase_tt: "As our [concept_subject], Mexico will have no choice but to accept." #NT!
- usa_western_purchase_var: "We have not recently made an offer."
- treaty_of_guadalupe: "$concept_occupying$ Mexico's [concept_capital_state] will allow us to dictate terms as we see fit. With a powerful enough concept of Manifest Destiny, we could seize even more territory."
+ usa_western_purchase_var: "We have not recently made an offer." #NT!
+ treaty_of_guadalupe: "$concept_occupying$ Mexico's [concept_capital_state] will allow us to dictate terms as we see fit. With a powerful enough concept of Manifest Destiny, we could #tooltippable;tooltip:[GetPlayer.GetTooltipTag],treaty_of_guadalupe_tooltip seize even more territory#!." #NT!
  treaty_of_guadalupe_tooltip: "Regardless of our declared [Concept('concept_war_goal', '$concept_war_goals$')], Mexico can offer us the Treaty of Guadalupe Hidalgo, which gains additional options the higher the influence of Manifest Destiny, along with escalating [concept_infamy] costs:\n#indent_newline:2 • Mexico's northern territories can always be taken: [GetStateRegion('STATE_TEXAS').GetName], [GetStateRegion('STATE_COLORADO').GetName], [GetStateRegion('STATE_NEW_MEXICO').GetName], [GetStateRegion('STATE_UTAH').GetName], [GetStateRegion('STATE_ARIZONA').GetName], [GetStateRegion('STATE_NEVADA').GetName], and [GetStateRegion('STATE_CALIFORNIA').GetName].#!\n#indent_newline:2 • With 5 or more influence, we can push the border further south, seizing [GetStateRegion('STATE_RIO_GRANDE').GetName], [GetStateRegion('STATE_CHIHUAHUA').GetName], [GetStateRegion('STATE_SONORA').GetName], and [GetStateRegion('STATE_BAJA_CALIFORNIA').GetName] in addition to the northern territories.#!\n#indent_newline:2 • With 6 or more influence, we can take all the above territories and also force Mexico to become our [concept_puppet].#!\n#indent_newline:2 • With 7 or more influence, we can simply annex all of Mexico outright, generating significant [concept_infamy] and [Concept('concept_radical', '$concept_radicals$')].#!" #NT!
- usfp_cuban_purchase_button: "Make an Offer for Cuba"
- usfp_cuban_purchase_button_desc: "Control over Cuba is paramount to our national interests in the Atlantic. We will offer@money!#yellow 13M#!, to be paid over the course of 30 years, for control of the island."
- usfp_claim_canada_button: "Claim Canada"
- usfp_claim_canada_button_desc: "It is only right and just that this great American nation takes the #italic entire#! continent into its embrace. Our northern cousins will thank us for bringing them into the fold."
- usfp_secure_trail_button: "Secure the Oregon Trail"
- usfp_secure_trail_button_desc: "With settlers continuing to emigrate west, we should endeavour to secure a permanent presence along the main route of the Oregon Trail."
+ usfp_cuban_purchase_button: "Make an Offer for Cuba" #NT!
+ usfp_cuban_purchase_button_desc: "Control over Cuba is paramount to our national interests in the Atlantic. We will offer@money!#yellow 13M#!, to be paid over the course of 30 years, for control of the island." #NT!
+ usfp_claim_canada_button: "Claim Canada" #NT!
+ usfp_claim_canada_button_desc: "It is only right and just that this great American nation takes the #italic entire#! continent into its embrace. Our northern cousins will thank us for bringing them into the fold." #NT!
+ usfp_secure_trail_button: "Secure the Oregon Trail" #NT!
+ usfp_secure_trail_button_desc: "With settlers continuing to emigrate west, we should endeavour to secure a permanent presence along the main route of the Oregon Trail." #NT!
  horse_creek_treaty_tt: "Negotiating a treaty with the Plains Indians will allow us to take control of the [Concept('concept_province', '$concept_provinces$')] along the Oregon Trail, connecting our territory to [GetStateRegion('STATE_OREGON').GetName]." #NT!
   
- usfp_promote_manifest_destiny_button: "Promote Continentalism"
- usfp_promote_manifest_destiny_button_desc: "Expansion is key to our overall political strategy. We will elevate continentalist voices in our administration."
- usfp_suppress_manifest_destiny_button: "Suppress Continentalism"
- usfp_suppress_manifest_destiny_button_desc: "The aims of Manifest Destiny run contrary to the stability of the union, and must be opposed."
- enough_manifest_destiny: "#bold Manifest Destiny#! has sufficiently high influence."
- low_manifest_destiny: "#bold Manifest Destiny#! has low enough influence."
- usfp_homestead_act_button: "Encourage Western Settlement"
- usfp_homestead_act_button_desc: "Our western territories yearn to be populated and made productive. By doling out free plots of land to settlers, we can encourage migration and self-sufficiency."
+ usfp_promote_manifest_destiny_button: "Promote Continentalism" #NT!
+ usfp_promote_manifest_destiny_button_desc: "Expansion is key to our overall political strategy. We will elevate continentalist voices in our administration." #NT!
+ usfp_suppress_manifest_destiny_button: "Suppress Continentalism" #NT!
+ usfp_suppress_manifest_destiny_button_desc: "The aims of Manifest Destiny run contrary to the stability of the union, and must be opposed." #NT!
+ enough_manifest_destiny: "#bold Manifest Destiny#! has sufficiently high influence." #NT!
+ low_manifest_destiny: "#bold Manifest Destiny#! has low enough influence." #NT!
+ usfp_homestead_act_button: "Encourage Western Settlement" #NT!
+ usfp_homestead_act_button_desc: "Our western territories yearn to be populated and made productive. By doling out free plots of land to settlers, we can encourage migration and self-sufficiency." #NT!
   
- usfp_reconstruction_swing_freedmen: "Reconstruction will progress in favor of the #bold Freedmen#!."
- usfp_reconstruction_swing_south: "Reconstruction will regress, empowering the #bold Redeemers#!."
- usfp_reconstruction_swing_south_severe: "Reconstruction will #r severely#! regress, empowering the #bold Redeemers#!."
- usfp_reconstruction_end_early: "#r #b Reconstruction will immediately end!#!"
- usfp_reconstruction_enforce_rights_button: "Enforce Voting Rights"
- usfp_reconstruction_enforce_rights_button_desc: "Freedmen continue to be denied their lawful rights across the South. Backed by the might of federal forces, we can ensure that liberty extends to all our citizens."
- dixie_formation_tt: "Any [concept_army] in the [SCOPE.sStrategicRegion('dixie_region').GetName] [concept_hq] has at least #variable 20#! [Concept('concept_unit','$concept_units$')] and a [concept_general]"
- dixie_indian_formation_tt: "Any [concept_army] in the [SCOPE.sStrategicRegion('dixie_region').GetName] [concept_hq] has at least #variable 2#! [Concept('concept_unit','$concept_units$')] and a [concept_general]"
- usfp_reconstruction_confederate_amnesty_button: "Grant Amnesty to Confederates"
- usfp_reconstruction_confederate_amnesty_button_desc: "To secure a lasting peace, an accord must be reached between the gentlemen of the North and South. By pardoning former rebels and allowing them back into government, unrest in the South will be quelled."
- usfp_reconstruction_cointelpro_freedmen_button: "Infiltrate Redeemer Groups"
- usfp_reconstruction_cointelpro_freedmen_button_desc: "These white supremacists are a dangerous criminal element. The Bureau will disrupt their activities."
- usfp_reconstruction_cointelpro_slaver_button: "Disrupt Black Organizations"
- usfp_reconstruction_cointelpro_slaver_button_desc: "Radicalism is spreading among the freedmen. The Bureau will hamper their efforts to coordinate."
- made_devils_bargain: "We have made the Devil's Bargain with the South"
+ usfp_reconstruction_swing_freedmen: "Reconstruction will progress in favor of the #bold Freedmen#!." #NT!
+ usfp_reconstruction_swing_south: "Reconstruction will regress, empowering the #bold Redeemers#!." #NT!
+ usfp_reconstruction_swing_south_severe: "Reconstruction will #r severely#! regress, empowering the #bold Redeemers#!." #NT!
+ usfp_reconstruction_end_early: "#r #b Reconstruction will immediately end!#!" #NT!
+ usfp_reconstruction_enforce_rights_button: "Enforce Voting Rights" #NT!
+ usfp_reconstruction_enforce_rights_button_desc: "Freedmen continue to be denied their lawful rights across the South. Backed by the might of federal forces, we can ensure that liberty extends to all our citizens." #NT!
+ dixie_formation_tt: "Any [concept_army] in the [SCOPE.sStrategicRegion('dixie_region').GetName] [concept_hq] has at least #variable 20#! [Concept('concept_unit','$concept_units$')] and a [concept_general]" #NT!
+ dixie_indian_formation_tt: "Any [concept_army] in the [SCOPE.sStrategicRegion('dixie_region').GetName] [concept_hq] has at least #variable 2#! [Concept('concept_unit','$concept_units$')] and a [concept_general]" #NT!
+ usfp_reconstruction_confederate_amnesty_button: "Grant Amnesty to Confederates" #NT!
+ usfp_reconstruction_confederate_amnesty_button_desc: "To secure a lasting peace, an accord must be reached between the gentlemen of the North and South. By pardoning former rebels and allowing them back into government, unrest in the South will be quelled." #NT!
+ usfp_reconstruction_cointelpro_freedmen_button: "Infiltrate Redeemer Groups" #NT!
+ usfp_reconstruction_cointelpro_freedmen_button_desc: "These white supremacists are a dangerous criminal element. The Bureau will disrupt their activities." #NT!
+ usfp_reconstruction_cointelpro_slaver_button: "Disrupt Black Organizations" #NT!
+ usfp_reconstruction_cointelpro_slaver_button_desc: "Radicalism is spreading among the freedmen. The Bureau will hamper their efforts to coordinate." #NT!
+ made_devils_bargain: "We have made the Devil's Bargain with the South" #NT!
  usfp_reconstruction_northern_will_progress_bar: "Northern Political Will" #NT!
  usfp_reconstruction_northern_will_progress_bar_desc: "$usfp_reconstruction_northern_will_progress_bar$ #italic ([JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%0])#!" #NT!
  usfp_reconstruction_northern_will_base_decay: "Baseline Decay" #NT!
@@ -173,101 +173,109 @@
  usfp_had_reconstruction_outcome_failure: "Completed #bold Reconstruction#! in favor of the Redeemers" #NT!
  usfp_peculiar_reconciliation: "[GetLawType('law_slavery_banned').GetName] [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enacted$')|l] without [concept_secession]" #NT!
   
- usfp_reconstruction_long: "Long Reconstruction"
- usfp_reconstruction_long_reason: "While Reconstruction has largely been a success for the Freedmen, racial prejudice remains deeply engrained at all levels of the [ROOT.GetCountry.GetName]. It will take at least a generation before [SCOPE.sCulture('afro_american_culture').GetName] citizens are truly accepted as a core element of the [ROOT.GetCountry.GetAdjectiveNoFormatting] nation."
- usfp_long_reconstruction_progress_bar: "Afro-American Integration"
- usfp_long_reconstruction_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/2000)"
- afro_american_average_acceptance: "Average [concept_acceptance] of Afro-American [Concept('concept_pop', '$concept_pops$')]"
- afro_american_character_popularity: "[concept_popularity] of Afro-American [Concept('concept_character', '$concept_characters$')]"
- dixie_radicalism: "Dixie [Concept('concept_radical', '$concept_radicals$')]"
- supremacist_movement_support: "$movement_cultural_majority$ [concept_political_movement_support]"
+ usfp_reconstruction_long: "Long Reconstruction" #NT!
+ usfp_reconstruction_long_reason: "Despite the emancipation of the Freedmen, racial prejudice remains deeply engrained at all levels of the [ROOT.GetCountry.GetName]. It will considerable time and concerted effort before [GetCulture('afro_american').GetName] citizens are truly accepted as a core element of the [ROOT.GetCountry.GetAdjectiveNoFormatting] nation. We are likely to encounter greater backlash from racist movements the more we uphold civil rights." #NT!
+ usfp_long_reconstruction_progress_bar: "Afro-American Integration" #NT!
+ usfp_long_reconstruction_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/2200)" #NT!
+ afro_american_average_acceptance: "Average [concept_acceptance] of [GetCulture('afro_american').GetName] [Concept('concept_pop', '$concept_pops$')]" #NT!
+ afro_american_character_popularity: "[concept_popularity] of [GetCulture('afro_american').GetName] [Concept('concept_character', '$concept_characters$')]" #NT!
+ afro_american_in_government: "[GetCulture('afro_american').GetName] [concept_leader] [concept_in_government]" #NT!
+ dixie_radicalism: "Dixie [Concept('concept_radical', '$concept_radicals$')]" #NT!
+ supremacist_movement_support: "[Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] of the $movement_cultural_majority$" #NT!
  neoconfederate_movement_support: "[Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] of the $movement_usfp_neoconfederate$" #NT!
  fascist_movement_support: "[Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] of the $movement_fascist$" #NT!
- afro_americans_under_jim_crow: "Percent of [GetCulture('afro_american').GetName]s living in [concept_usfp_jim_crow] [Concept('concept_state', '$concept_states$')]" #NT!
+ afro_americans_under_jim_crow: "Percent of $usfp_afro_american_culture_plural$ living in [concept_usfp_jim_crow] [Concept('concept_state', '$concept_states$')]" #NT!
  afro_american_movement_support: "[Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] of the [GetCulture('afro_american').GetName] $movement_cultural_minority$" #NT!
- usfp_long_reconstruction_complete_tt: "The #bold Progress Bar#! has reached #bold 2000#!"
+ usfp_long_reconstruction_complete_tt: "The #bold Progress Bar#! has reached #bold 2200#!" #NT!
  usfp_long_reconstruction_lose_progress: "#bold Long Reconstruction#! loses progress" #NT!
  usfp_long_reconstruction_gain_progress: "#bold Long Reconstruction#! gains progress" #NT!
   
  usfp_overturn_plessy_button: "Overturn Plessy" #NT!
  usfp_overturn_plessy_button_desc: "The doctrine of 'seperate but equal' cannot survive the new legal reality." #NT!
   
- usfp_canadian_highlander: "We are the only Canadian colony remaining"
+ usfp_canadian_highlander: "We are the only Canadian colony remaining" #NT!
   
- deseret_statehood_des: "Petition for Statehood"
- deseret_statehood_des_desc: "Our goal has always been to create a place for ourselves within the United States. We should draft a state constitution and send it to Washington for consideration."
- deseret_western_claims_des: "Colonize the West"
- deseret_western_claims_des_desc: "It's free real estate."
+ deseret_statehood_des: "Petition for Statehood" #NT!
+ deseret_statehood_des_desc: "Our goal has always been to create a place for ourselves within the United States. We should draft a state constitution and send it to Washington for consideration." #NT!
+ deseret_western_claims_des: "Colonize the West" #NT!
+ deseret_western_claims_des_desc: "It's free real estate." #NT!
   
- sonora_statehood: "Petition for Statehood"
- sonora_statehood_desc: "With our expedition successful, we should seek recognition and annexation by the United States."
+ sonora_statehood: "Petition for Statehood" #NT!
+ sonora_statehood_desc: "With our expedition successful, we should seek recognition and annexation by the United States." #NT!
+ cuba_filibuster_annex: "Petition for Statehood" #NT!
+ cuba_filibuster_annex_desc: "With our expedition successful, we should seek recognition and annexation by the United States." #NT!
   
- nicaragua_revolt_walker: "Invite American Filibusters"
- nicaragua_revolt_walker_desc: "American volunteers can surely be only a boon to our cause."
+ nicaragua_revolt_walker: "Invite American Filibusters" #NT!
+ nicaragua_revolt_walker_desc: "American volunteers can surely be only a boon to our cause." #NT!
   
- usfp_je_westward_expansion: "Westward Expansion"
- usfp_je_westward_expansion_reason: "$concept_usfp_westward_expansion_desc$"
- usfp_je_westward_expansion_complete: "New [Concept('concept_homeland','$concept_homelands$')] will continue to be added to your [Concept('concept_state', '$concept_states$')] for the rest of the game."
+ usfp_je_westward_expansion: "Westward Expansion" #NT!
+ usfp_je_westward_expansion_reason: "$concept_usfp_westward_expansion_desc$\n\n$westward_expansion_need_repeaters$" #NT!
+ usfp_je_westward_expansion_complete: "New [Concept('concept_homeland','$concept_homelands$')] will continue to be added to your [Concept('concept_state', '$concept_states$')] for the rest of the game." #NT!
   
- texan_statehood_tex: "Appeal for Statehood"
- texan_statehood_tex_desc: "Our republic was founded by settlers from the United States. We would be stronger as part of the union, if they'll have us."
- texan_csa: "Join the Confederacy"
- texan_csa_desc: "We appreciate the CSA as fellow slaveholders and defenders of states' rights. We could join their cause while still retaining our sovereignty."
+ westward_expansion_need_repeaters: "@information! #italic [GetTechnology('repeaters').GetName] would allow our settlers to effectively repel Indian attacks.#!" #NT!
   
- usfp_gilded_age: "The Gilded Age"
- usfp_gilded_age_reason: "Opulence and corruption have come to define the new elite class of [ROOT.GetCountry.GetAdjectiveNoFormatting][SCOPE.gsInterestGroup('industrialists_scope').GetName]. Large [concept_usfp_trusts] increasingly dominate the economy, [concept_usfp_political_machines] take control of local politics, all while corruption scandals continually degrade public trust in the government.\n\nUnless the administration revitalizes itself and passes sweeping reforms, the [ROOT.GetCountry.GetName] will remain at the whims of the Robber Barons for the forseeable future."
- usfp_take_bribes_button: "Take Bribes"
- usfp_take_bribes_button_desc: "We're all friends and colleagues here in the Capitol. What’s a few gifts among friends?"
- usfp_consolidate_trust_button: "Consolidate Trust"
- usfp_consolidate_trust_button_desc: "Horizontal integration is good for business, good for the economy, good for the nation!"
+ texan_statehood_tex: "Appeal for Statehood" #NT!
+ texan_statehood_tex_desc: "Our republic was founded by settlers from the United States. We would be stronger as part of the union, if they'll have us." #NT!
+ texan_csa: "Join the Confederacy" #NT!
+ texan_csa_desc: "We appreciate the CSA as fellow slaveholders and defenders of states' rights. We could join their cause while still retaining our sovereignty." #NT!
+  
+ usfp_gilded_age: "The Gilded Age" #NT!
+ usfp_gilded_age_reason: "Opulence and corruption have come to define the new elite class of [ROOT.GetCountry.GetAdjectiveNoFormatting][SCOPE.gsInterestGroup('industrialists_scope').GetName]. Large [concept_usfp_trusts] increasingly dominate the economy, [concept_usfp_political_machines] take control of local politics, all while corruption scandals continually degrade public trust in the government.\n\nUnless the administration revitalizes itself and passes sweeping reforms, the [ROOT.GetCountry.GetName] will remain at the whims of the Robber Barons for the forseeable future." #NT!
+ usfp_take_bribes_button: "Take Bribes" #NT!
+ usfp_take_bribes_button_desc: "We're all friends and colleagues here in the Capitol. What’s a few gifts among friends?" #NT!
+ usfp_consolidate_trust_button: "Consolidate Trust" #NT!
+ usfp_consolidate_trust_button_desc: "Horizontal integration is good for business, good for the economy, good for the nation!" #NT!
  no_angry_slavers_or_abolitionists: "Neither the $movement_anti_slavery$ or the $movement_pro_slavery$ have more than 30% [Concept('concept_activism', '$concept_activism_short$')]" #NT!
- gilded_age_ended: "#b The Gilded Age#! has run its course"
- usfp_progressive_era: "The Progressive Cause"
- usfp_progressive_era_reason: "The long dominance of [concept_usfp_trusts] and [concept_usfp_political_machines] has not gone unnoticed. Social activism and labor agitation are on the rise in the [ROOT.GetCountry.GetName], while '[Concept('concept_usfp_muckrakers', '$concept_usfp_muckraker$')]' journalists write detailed exposés on the dark underbelly of society and government.\n\nSeeking solutions to these troubles, the [SCOPE.sIdeology('progressive_ideology').GetName] movement promises to uplift the nation by embracing new models of professionalism, scientific methods, and direct democracy."
- usfp_bust_trust_button: "Bust Trust"
- usfp_bust_trust_button_desc: "Large conglomerates have the economy in a stranglehold. It's time we break up these behemoths into smaller entities."
- usfp_remove_machine_button: "Fight Corruption"
- usfp_remove_machine_button_desc: "Open bribery has allowed corrupt political machines to control local politics for too long. We need to dissolve these vote-buying cartels and restore democracy to our cities."
- usfp_progressive_era_eugenics: "The Eugenics Movement"
- usfp_progressive_era_eugenics_reason: "In an attempt to secure their position in society, various groups have begun to push Eugenics as a solution to all manner of social ills. Through family planning and forced sterilizations, they seek to eliminate 'genetically inferior' groups from the population and create a nation solely composed of 'high quality' individuals.\n\nOnly time will tell if any [Concept('concept_interest_group', '$concept_interest_groups$')] will embrace these pseudo-scientific ideas..."
+ gilded_age_ended: "#b The Gilded Age#! has run its course" #NT!
+ anti_trust_president: "The #b President#! has one of the following [Concept('concept_ideology', '$concept_ideologies$')]: [GetIdeology('ideology_usfp_progressive').GetName], [GetIdeology('ideology_social_democrat').GetName], [GetIdeology('ideology_usfp_georgist_leader').GetName], [GetIdeology('ideology_communist').GetName], [GetIdeology('ideology_anarchist').GetName], or [GetIdeology('ideology_vanguardist').GetName]" #NT!
+ usfp_progressive_era: "The Progressive Cause" #NT!
+ usfp_progressive_era_reason: "The long dominance of [concept_usfp_trusts] and [concept_usfp_political_machines] has not gone unnoticed. Social activism and labor agitation are on the rise in the [ROOT.GetCountry.GetName], while '[Concept('concept_usfp_muckrakers', '$concept_usfp_muckraker$')]' journalists write detailed exposés on the dark underbelly of society and government.\n\nSeeking solutions to these troubles, the [SCOPE.sIdeology('progressive_ideology').GetName] movement promises to uplift the nation by embracing new models of professionalism, scientific methods, and direct democracy." #NT!
+ usfp_bust_trust_button: "Bust Trust" #NT!
+ usfp_bust_trust_button_desc: "Large conglomerates have the economy in a stranglehold. It's time we break up these behemoths into smaller entities." #NT!
+ usfp_remove_machine_button: "Fight Corruption" #NT!
+ usfp_remove_machine_button_desc: "Open bribery has allowed corrupt political machines to control local politics for too long. We need to dissolve these vote-buying cartels and restore democracy to our cities." #NT!
+ usfp_progressive_era_eugenics: "The Eugenics Movement" #NT!
+ usfp_progressive_era_eugenics_reason: "In an attempt to secure their position in society, various groups have begun to push Eugenics as a solution to all manner of social ills. Through family planning and forced sterilizations, they seek to eliminate 'genetically inferior' groups from the population and create a nation solely composed of 'high quality' individuals.\n\nOnly time will tell if any [Concept('concept_interest_group', '$concept_interest_groups$')] will embrace these pseudo-scientific ideas..." #NT!
  usfp_progressive_era_goal: "The following must be true for 5 years total (or when the Journal Entry times out):" #NT!
   
- usfp_offer_treaty_of_gh_mex: "Surrender the North"
- usfp_offer_treaty_of_gh_mex_desc: "Our war with the United States is unwinnable. We must sue for peace, on whatever terms will end the conflict."
+ usfp_offer_treaty_of_gh_mex: "Surrender the North" #NT!
+ usfp_offer_treaty_of_gh_mex_desc: "Our war with the United States is unwinnable. We must sue for peace, on whatever terms will end the conflict." #NT!
   
- plains_formation_tt: "Any [concept_army] in the [SCOPE.sStrategicRegion('great_plains_region').GetName] [concept_hq] has at least #variable 3#! [Concept('concept_unit','$concept_units$')] and a [concept_general]"
+ plains_formation_tt: "Any [concept_army] in the [SCOPE.sStrategicRegion('great_plains_region').GetName] [concept_hq] has at least #variable 3#! [Concept('concept_unit','$concept_units$')] and a [concept_general]" #NT!
   
- usfp_je_western_border: "The Indian Preserve"
- usfp_je_western_border_reason: "Much as King George did before the revolution, we have now drawn a line across our western border that no White settlers are to cross. We have committed to maintaining a peaceable boundary with the Great Plains nations, much to the dismay of prospective settlers."
+ usfp_je_western_border: "The Indian Preserve" #NT!
+ usfp_je_western_border_reason: "Much as King George did before the revolution, we have now drawn a line across our western border that no White settlers are to cross. We have committed to maintaining a peaceable boundary with the Great Plains nations, much to the dismay of prospective settlers." #NT!
   
- usfp_indian_appropiations_button: "End the Treaty System"
- usfp_indian_appropiations_button_desc: "Our previous attempts to forge treaties with Indian tribes have proven too cumbersome for our purposes. With the Indian Appropiation Act, we can streamline the acquisition of native lands by dealing with the Indians as individuals."
- usfp_indian_appropiations_button_tt: "The [ROOT.GetCountry.GetName] ceases to recognize any Indian tribe as an independent nation with which to conduct new treaties."
- usfp_indian_appropiations_button_tt2: "All Indians within the [ROOT.GetCountry.GetName] are legally designated as wards of the federal government."
- usfp_enable_american_indian_culture_tt: "Indigenous North American [Concept('concept_pop', '$concept_pops$')] in our [Concept('concept_incorporated_state', '$concept_incorporated_states$')] will be merged into a combined [SCOPE.sCulture('american_indian_culture').GetName] [concept_culture] over time."
+ usfp_indian_appropiations_button: "End the Treaty System" #NT!
+ usfp_indian_appropiations_button_desc: "Our previous attempts to forge treaties with Indian tribes have proven too cumbersome for our purposes. With the Indian Appropiation Act, we can streamline the acquisition of native lands by dealing with the Indians as individuals." #NT!
+ usfp_indian_appropiations_button_tt: "The [ROOT.GetCountry.GetName] ceases to recognize any Indian tribe as an independent nation with which to conduct new treaties." #NT!
+ usfp_indian_appropiations_button_tt2: "All Indians within the [ROOT.GetCountry.GetName] are legally designated as wards of the federal government." #NT!
+ usfp_enable_american_indian_culture_tt: "Indigenous North American [Concept('concept_pop', '$concept_pops$')] in our [Concept('concept_incorporated_state', '$concept_incorporated_states$')] will be merged into a combined [SCOPE.sCulture('american_indian_culture').GetName] [concept_culture] over time." #NT!
   
- usfp_demand_bc_button: "Demand British Columbia"
- usfp_demand_bc_button_desc: "The damnable Brits should get their grubby hands off of the entire Oregon territory! Fifty-four Forty or Fight!"
+ usfp_demand_bc_button: "Demand British Columbia" #NT!
+ usfp_demand_bc_button_desc: "The damnable Brits should get their grubby hands off of the entire Oregon territory! Fifty-four Forty or Fight!" #NT!
   
- usfp_liberia_declare_independence: "Declare Independence"
- usfp_liberia_declare_independence_desc: "The time has come to form a proper Republic of Liberia in the model of the American system."
+ usfp_liberia_declare_independence: "Declare Independence" #NT!
+ usfp_liberia_declare_independence_desc: "The time has come to form a proper Republic of Liberia in the model of the American system." #NT!
   
- usfp_je_indian_wars: "Indian Wars"
- usfp_je_indian_wars_reason: "In the past we have considered the [GetStrategicRegion('region_great_plains').GetName] to be a vast desert best left to the Indians. Now, as White settlers continue to pour west, it is our duty to pacify these lands and bring the Indian to heel - through force if necessary."
- usfp_provoke_lakota_war_button: "Provoke Lakota War"
- usfp_provoke_lakota_war_button_desc: "The Sioux are the greatest obstacle to our westward expansion. If we could provoke them into attacking our settlers, it would give us the pretext to crush them."
- usfp_break_treaties_button: "Break Treaties"
- usfp_break_treaties_button_desc: "The Indians lack the strength to enforce the treaties we have signed, so there is no need for us to abide by them."
+ usfp_je_indian_wars: "Indian Wars" #NT!
+ usfp_je_indian_wars_reason: "In the past we have considered the [GetStrategicRegion('region_great_plains').GetName] to be a vast desert best left to the Indians. Now, as White settlers continue to pour west, it is our duty to pacify these lands and bring the Indian to heel - through force if necessary." #NT!
+ usfp_provoke_lakota_war_button: "Provoke Lakota War" #NT!
+ usfp_provoke_lakota_war_button_desc: "The Sioux are the greatest obstacle to our westward expansion. If we could provoke them into attacking our settlers, it would give us the pretext to crush them." #NT!
+ usfp_break_treaties_button: "Break Treaties" #NT!
+ usfp_break_treaties_button_desc: "The Indians lack the strength to enforce the treaties we have signed, so there is no need for us to abide by them." #NT!
   
- annex_canadian_north: "Survey the Arctic"
- annex_canadian_north_desc: "With our control over Canada solidifed, we can begin to exploit the reosurces of the vast arctic north."
- annex_alaskan_north: "Survey Alaska"
- annex_alaskan_north_desc: "Our colony on the Alaskan coast can serve as a base from which to probe for resources deeper in the wilderness."
+ annex_canadian_north: "Survey the Arctic" #NT!
+ annex_canadian_north_desc: "With our control over Canada solidifed, we can begin to exploit the resources of the vast arctic north." #NT!
+ annex_alaskan_north: "Survey Alaska" #NT!
+ annex_alaskan_north_desc: "Our colony on the Alaskan coast can serve as a base from which to probe for resources deeper in the wilderness." #NT!
+ annex_greenland_north: "Survey Greenland" #NT!
+ annex_greenland_north_desc: "The rugged ice sheet of Greenland can only be properly mapped from the air." #NT!
   
- je_usfp_american_constitution: "Constitution of the United States"
- je_usfp_american_constitution_reason: "The Constitution is the supreme and fundamental law of the [ROOT.GetCountry.GetName]. Along with defining the structure of the state and federal governments, it also sets out various inalienable rights of citizens, nominally limiting the power of the national government.\n\n#bold The following rules are in effect:#!\n• Attempting to [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] #tooltippable;tooltip:[Country.GetTooltipTag],usfp_unconstitutional_laws unconstitutional#! [Concept('concept_law', '$concept_laws$')] will provoke outrage and legal challenges.\n• Only #tooltippable;tooltip:[Country.GetTooltipTag],usfp_natural_born_citizens natural-born citizens#! are eligible to be elected [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')].\n• The government cannot levy [concept_tariffs] on [Concept('concept_trade', '$concept_exports$')]."
- usfp_unconstitutional_laws: "Unconstitutional [Concept('concept_law', '$concept_laws$')]:\n• [GetLawType('law_censorship').GetName]\n• [GetLawType('law_peasant_levies').GetName]\n• [GetLawType('law_parliamentary_republic').GetName]\n• [GetLawType('law_militarized_police').GetName]\n• [GetLawType('law_appointed_bureaucrats').GetName]\n• [GetLawType('law_industry_banned').GetName]\n• [GetLawType('law_command_economy').GetName]\n• [GetLawType('law_industry_banned').GetName]\n• [GetLawType('law_cooperative_ownership').GetName]\n• [GetLawType('law_religious_schools').GetName]\n• [GetLawType('law_single_party_state').GetName]\n• [GetLawType('law_isolationism').GetName]\n• [GetLawType('law_land_based_taxation').GetName]\n\n#italic Very#! Unconstitutional [Concept('concept_law', '$concept_laws$')]:\n• [GetLawType('law_outlawed_dissent').GetName]\n• [GetLawType('law_state_religion').GetName]\n• [GetLawType('law_state_atheism').GetName]\n• [GetLawType('law_monarchy').GetName]\n• [GetLawType('law_theocracy').GetName]\n• [GetLawType('law_council_republic').GetName]\n• [GetLawType('law_autocracy').GetName]\n• [GetLawType('law_oligarchy').GetName]\n• [GetLawType('law_anarchy').GetName]\n• [GetLawType('law_technocracy').GetName]\n• [GetLawType('law_hereditary_bureaucrats').GetName]"
- usfp_natural_born_citizens: "A [concept_character] is eligible for election if their [concept_culture] is one of our [concept_primary_cultures], or has a [concept_homeland] in one of our [Concept('concept_incorporated_state', '$concept_incorporated_states$')] and has a base acceptance level of at least @acceptance_status_3! $open_prejudice$.\n\nCultures with the Indigenous American [concept_cultural_heritage_trait] require a base acceptance level of at least @acceptance_status_4! $second_rate_citizen$ #italic (i.e., under [GetLawType('law_multicultural').GetName])#!"
+ je_usfp_american_constitution: "Constitution of the United States" #NT!
+ je_usfp_american_constitution_reason: "The Constitution is the supreme and fundamental law of the [ROOT.GetCountry.GetName]. Along with defining the structure of the state and federal governments, it also sets out various inalienable rights of citizens, nominally limiting the power of the national government.\n\n#bold The following rules are in effect:#!\n• Attempting to [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] #tooltippable;tooltip:[Country.GetTooltipTag],usfp_unconstitutional_laws unconstitutional#! [Concept('concept_law', '$concept_laws$')] will provoke outrage and legal challenges.\n• Only #tooltippable;tooltip:[Country.GetTooltipTag],usfp_natural_born_citizens natural-born citizens#! are eligible to be elected [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')].\n• Most incumbent [Concept('concept_ruler','Presidents')] will follow the [concept_usfp_washington_precedent], stepping down as [concept_interest_group] [concept_leader] at the end of their second term. \n• The government cannot levy [concept_tariffs] on [Concept('concept_trade', '$concept_exports$')]." #NT!
+ usfp_unconstitutional_laws: "Unconstitutional [Concept('concept_law', '$concept_laws$')]:\n• [GetLawType('law_censorship').GetName]\n• [GetLawType('law_peasant_levies').GetName]\n• [GetLawType('law_parliamentary_republic').GetName]\n• [GetLawType('law_militarized_police').GetName]\n• [GetLawType('law_appointed_bureaucrats').GetName]\n• [GetLawType('law_command_economy').GetName]\n• [GetLawType('law_industry_banned').GetName]\n• [GetLawType('law_cooperative_ownership').GetName]\n• [GetLawType('law_religious_schools').GetName]\n• [GetLawType('law_single_party_state').GetName]\n• [GetLawType('law_isolationism').GetName]\n• [GetLawType('law_land_based_taxation').GetName]\n\n#italic Very#! Unconstitutional [Concept('concept_law', '$concept_laws$')]:\n• [GetLawType('law_outlawed_dissent').GetName]\n• [GetLawType('law_state_religion').GetName]\n• [GetLawType('law_state_atheism').GetName]\n• [GetLawType('law_monarchy').GetName]\n• [GetLawType('law_theocracy').GetName]\n• [GetLawType('law_council_republic').GetName]\n• [GetLawType('law_corporate_state').GetName]\n• [GetLawType('law_autocracy').GetName]\n• [GetLawType('law_oligarchy').GetName]\n• [GetLawType('law_anarchy').GetName]\n• [GetLawType('law_technocracy').GetName]\n• [GetLawType('law_hereditary_bureaucrats').GetName]" #NT!
+ usfp_natural_born_citizens: "A [concept_character] is eligible for election if their [concept_culture] is one of our [concept_primary_cultures], or has a [concept_homeland] in one of our [Concept('concept_incorporated_state', '$concept_incorporated_states$')] and has a base acceptance level of at least @acceptance_status_3! $open_prejudice$.\n\nCultures with the Indigenous American [concept_cultural_heritage_trait] require a base acceptance level of at least @acceptance_status_4! $second_rate_citizen$ #italic (i.e., under [GetLawType('law_multicultural').GetName])#!" #NT!
   
  je_usfp_underground_railroad: "A House Divided: The Underground Railroad" #NT!
  je_usfp_underground_railroad_reason: "The network of secret routes and [GetIdeology('ideology_abolitionist').GetName] safehouses known as the Underground Railroad has been spiriting escaped slaves to freedom for decades. Until slavery is abolished entirely, [GetPopType('slaves').GetName] will regularly escape the Southern [Concept('concept_state', '$concept_states$')] and be transported to freedom in the North or neighboring [Concept('concept_country', '$concept_countries$')].\n\nSince 1836, the Railroad has enabled the escape of:\n• #variable [Country.MakeScope.Var('je_underground_railroad_northern_escapees').GetValue]#! people to the Free [Concept('concept_state', '$concept_states$')]\n• #variable [Country.MakeScope.Var('je_underground_railroad_canada_escapees').GetValue]#! people to [GetStrategicRegion('region_canada').GetName]\n• #variable [Country.MakeScope.Var('je_underground_railroad_southern_escapees').GetValue]#! people to [GetStrategicRegion('region_mexico').GetName] and the [GetStrategicRegion('region_caribbean').GetName]" #NT!
@@ -304,3 +312,48 @@
  usfp_linconia_button: "Found the Colony of Linconia" #NT!
  usfp_linconia_button_desc: "We will fund the construction of an $usfp_afro_american_culture$ [concept_colony_subject] on the west coast of [GetStateRegion('STATE_PANAMA').GetName], named in the honor of the great Abraham Lincoln." #NT!
  linconia_created_tooltip: "Linconia will be created as an [SCOPE.sCountry('usa_scope').GetAdjective] [concept_subject] controlling a single [concept_province] on the western coast of [GetStateRegion('STATE_PANAMA').GetName], and 1000 $usfp_afro_american_culture_plural$ will move there." #NT!
+ country_in_root_market: "Is in the [ROOT.GetCountry.GetAdjective] [concept_market]" #NT!
+  
+ usfp_je_mexican_north: "Securing the North" #NT!
+ usfp_je_mexican_north_reason: "Distance, terrain, and Indian raids have made our control over Alta [GetStateRegion('STATE_CALIFORNIA').GetName] tenuous at best. A campaign of settlement and pacification will be needed to secure our hold over the [GetStateRegion('STATE_CALIFORNIA').GetStrategicRegion.GetName].\n\n@warning! The [SCOPE.sCountry('usa_scope').GetName] is beginning to look westward, and they will surely set their sights on seizing control of all the lands between them and the Pacific!\n\nAs [ROOT.GetCountry.GetName] takes control of [Concept('concept_state', '$concept_states$')] in the American west, new [Concept('concept_homeland', '$concept_homelands$')] will gradually be added to the new territories. To gain homeland status, a candidate state must meet the following conditions:\n\n• Not a [concept_split_state]\n• [Concept('concept_pop', '$concept_population$')] greater than 60,000\n• Less than 30% of the [Concept('concept_pop', '$concept_population$')] is Animist\n• At least one [concept_pop] shares a [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with any Mexican [concept_primary_cultures]\n\n$westward_expansion_need_repeaters$" #NT!
+  
+ je_oregon_can: "The Oregon Border Dispute" #NT!
+ je_oregon_can_reason: "The proper location of the Oregon border has long been an undecided matter between Great Britain and the United States.\n\n@warning! Our [concept_overlord] is liable to cede [GetStateRegion('STATE_WASHINGTON').GetName], [GetStateRegion('STATE_OREGON').GetName], and [GetStateRegion('STATE_IDAHO').GetName] to the Americans, unless [concept_relations] between them break down. If negotiations fail (or we become independent), the United States will stake a [concept_claim] to our territory and attempt to seize it by force!" #NT!
+  
+ usfp_je_agenda_jackson: "The Jacksonian Agenda" #NT!
+ usfp_je_agenda_jackson_reason: "[SCOPE.sCharacter('jackson_scope').GetFullName] has led his populist administration through crisis, scandal, and violence since 1829. While his term in office is coming to an end, a [GetIdeology('ideology_jacksonian_democrat').GetName] successor will be able to take up the cause of limited government, [GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetName], and the Union.\n\n#b The President's Agenda:#!\nRealizing various items on the agenda will improve the effects of this [concept_journal_entry]. These achievements will be scored upon this journal entry successfully #b completing#!.\n• [SCOPE.GetRootScope.GetCountry.GetCustom('usfp_agenda_jackson_agrarianism_checkbox')] [ROOT.GetCountry.GetNameNoFlag] has [GetLawType('law_agrarianism').GetName]\n• [SCOPE.GetRootScope.GetCountry.GetCustom('usfp_agenda_jackson_suffrage_checkbox')] [ROOT.GetCountry.GetNameNoFlag] has [GetLawType('law_universal_suffrage').GetName]\n• [SCOPE.GetRootScope.GetCountry.GetCustom('usfp_agenda_jackson_legacy_slavery_checkbox')] [ROOT.GetCountry.GetNameNoFlag] has [GetLawType('law_legacy_slavery').GetName] and has not attempted to [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enact$')] an alternative [GetLawType('law_slave_trade').GetGroup.GetName] [concept_law]\n• [SCOPE.GetRootScope.GetCountry.GetCustom('usfp_agenda_jackson_taxes_checkbox')] [ROOT.GetCountry.GetNameNoFlag] has not raised [concept_taxes] above #b low#!\n• [SCOPE.GetRootScope.GetCountry.GetCustom('usfp_agenda_jackson_debt_checkbox')] [ROOT.GetCountry.GetNameNoFlag] has taken on no [concept_loans]\n• [SCOPE.GetRootScope.GetCountry.GetCustom('usfp_agenda_jackson_removal_checkbox')] [ROOT.GetCountry.GetNameNoFlag] has completed #b Indian Removal#!" #NT!
+ all_presidential_agenda_items_complete: "All agenda items are completed and an [concept_election] has begun" #NT!
+  
+ je_usfp_panic_1837: "Hard Times" #NT!
+ je_usfp_panic_1837_reason: "A panic in the banking sector has led to widespread economic pessimism. Financial confidence will need to be restored if we are to pull ourselves out of this mess. Growing the [Concept('concept_gdp', '$concept_gdp_short$')], discovering new sources of [GetGoods('gold').GetName], and [GetLawType('law_interventionism').GetName] would all hasten the recovery." #NT!
+ usfp_panic_1837_recovery_progress_bar: "Recovery Progress" #NT!
+ usfp_panic_1837_recovery_progress_bar_desc: "$usfp_panic_1837_recovery_progress_bar$ #italic ([JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%0])#!" #NT!
+ panic_recovery_natural: "Natural Recovery" #NT!
+ panic_recovery_gdp_growth: "Last Month’s [Concept('concept_gdp', '$concept_gdp_short$')] Growth" #NT!
+ panic_recovery_gold_sources: "[GetBuildingType('building_gold_field').GetName] and [GetBuildingType('building_gold_mine').GetName] [Concept('concept_building_level', '$concept_building_levels$')]" #NT!
+ panic_recovery_railroads: "[GetBuildingType('building_railway').GetName] [Concept('concept_building_level', '$concept_building_levels$')]" #NT!
+ panic_recovery_bankruptcy: "[concept_bankruptcy] or [concept_default]" #NT!
+ panic_recovery_complete: "The #b Progress Bar#! has reached 100%" #NT!
+  
+ usfp_je_spanish_american_war: "The Cuban Outrages" #NT!
+ usfp_je_spanish_american_war_reason: "Sensational reports of [SCOPE.sCountry('cuban_overlord').GetAdjective] atrocities against the people of [SCOPE.sCountry('cuba_scope').GetName] have whipped newspaper readers into a jingoistic frenzy. Public calls for [ROOT.GetCountry.GetAdjective] intervention create an opportunity for us to banish [SCOPE.sCountry('cuban_overlord').GetAdjective] influence from the Western Hemisphere if we so wish." #NT!
+ doubled_with_phillipines: "These rewards are #bold doubled#! if [SCOPE.sCountry('cuban_overlord').GetName] has no [Concept('concept_state', '$concept_states$')] or [Concept('concept_subject', '$concept_subjects$')] in the [GetStrategicRegion('region_caribbean').GetName], [GetStrategicRegion('region_oceania').GetName], or [GetStrategicRegion('region_indonesia').GetName]:" #NT!
+ cuba_independence_crushed: "[THIS.GetCountry.GetName] has recently lost an $dp_independence$ war" #NT!
+ cuba_decide_fate: "If [SCOPE.sCountry('cuba_scope').GetName] is liberated by our intervention, we will have the leverage to decide its future" #NT!
+  
+ usfp_je_danish_purchases: "Securing the Atlantic" #NT!
+ usfp_je_danish_purchases_reason: "The island of [GetStateRegion('STATE_GREENLAND').GetName] is critical to the strategic security of the [ROOT.GetCountry.GetName], and potentially holds a bounty of natural resources. We should endeavour to peacefully acquire the territory from [SCOPE.sCountry('greenland_owner_scope').GetName], along with any of their other Atlantic holdings they would be willing to sell.\n\nAcquiring [GetStateRegion('STATE_GREENLAND').GetName] will likely be seen as a provocation by [SCOPE.sCountry('britain_scope').GetName], as it would place us between them and their colonies in [GetStrategicRegion('region_canada').GetName]." #NT!
+ usfp_danish_purchase_send_offer_button: "Send Offer" #NT!
+ usfp_danish_purchase_send_offer_button_desc: "Our asking price for these territories will surely be enough to persuade [SCOPE.sCountry('greenland_owner_scope').GetName]." #NT!
+ usfp_danish_purchase_buy_greenland_button: "Ask for [GetStateRegion('STATE_GREENLAND').GetName]" #NT!
+ usfp_danish_purchase_buy_greenland_button_desc: "[GetStateRegion('STATE_GREENLAND').GetName], with its commanding position in the North Atlantic, is the main prize we seek." #NT!
+ usfp_danish_purchase_buy_iceland_button: "Ask for [GetStateRegion('STATE_ICELAND').GetName]" #NT!
+ usfp_danish_purchase_buy_iceland_button_desc: "[GetStateRegion('STATE_ICELAND').GetName] has similar strategic value as [GetStateRegion('STATE_GREENLAND').GetName], though it is further from our waters and much smaller." #NT!
+ usfp_danish_purchase_buy_danish_west_indies_button: "Ask for the [SCOPE.sState('danish_west_indies_scope').GetName]" #NT!
+ usfp_danish_purchase_buy_danish_west_indies_button_desc: "The [SCOPE.sState('danish_west_indies_scope').GetName] are a valuable port in the [GetStrategicRegion('region_caribbean').GetName]. We should acquire them from [SCOPE.sCountry('greenland_owner_scope').GetName] before another power sets their sights on the islands." #NT!
+ send_offer_to_denmark: "We will send our offer to [SCOPE.sCountry('greenland_owner_scope').GetName]. They may refuse or make a counter-offer. This action has a 12 year cooldown. If they accept, the following will occur:" #NT!
+ danish_purchase_at_least_one: "We have selected at least one territory to purchase" #NT!
+ usfp_danish_purchase_greenland_cost: "We will offer @money!#yellow [GetPlayer.MakeScope.ScriptValue('usfp_greenland_purchase_lump_sum')]#! for [GetStateRegion('STATE_GREENLAND').GetName]" #NT!
+ usfp_danish_purchase_iceland_cost: "We will offer @money!#yellow [GetPlayer.MakeScope.ScriptValue('usfp_iceland_purchase_lump_sum')]#! for [GetStateRegion('STATE_ICELAND').GetName]" #NT!
+ usfp_danish_purchase_west_indies_cost: "We will offer @money!#yellow [GetPlayer.MakeScope.ScriptValue('usfp_west_indies_purchase_lump_sum')]#! for the [SCOPE.sState('danish_west_indies_scope').GetName]" #NT!
+ not_sent_offer_recently: "We have not sent the offer recently" #NT!

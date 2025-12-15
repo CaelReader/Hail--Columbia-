@@ -1,4 +1,11 @@
 ﻿l_polish:
- usfp_hippo_ranch: "Hippopotamus Ranch"
- usfp_pmg_hippo_hunting: "Hippopotamus Hunting"
- usfp_pm_hippo_hunting: "Hippopotamus Hunting"
+ usfp_hippo_ranch: "Hippopotamus Ranch" #NT!
+ usfp_pmg_hippo_hunting: "Hippopotamus Hunting" #NT!
+ usfp_pm_hippo_hunting: "Hippopotamus Hunting" #NT!
+ usfp_pmg_base_building_fur_trapper: "Pelt Hunting" #NT!
+ usfp_pm_fur_trapping: "Fur Trapping" #NT!
+ usfp_pm_bison_hunting: "Bison Hunting" #NT!
+ usfp_pm_fur_manual_transport: "Manual Transport" #NT!
+ usfp_pm_fur_rail_hunting: "Rail Transport" #NT!
+ usfp_pmg_fur_trapper_transport: "Transportation" #NT!
+ building_usfp_fur_trapper: "Fur Trapping Grounds" #NT!

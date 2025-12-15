@@ -1,59 +1,100 @@
 ﻿l_french:
- usfp_lobby_anti_imperial: "Anti-Imperialist Lobby"
- usfp_lobby_anti_imperial_name: "[COUNTRY.GetAdjectiveNoFormatting] Anti-Imperialist League"
- usfp_lobby_anti_imperial_icon: "@usfp_lobby_anti_imperial!"
+ usfp_lobby_anti_imperial: "Anti-Imperialist Lobby" #NT!
+ usfp_lobby_anti_imperial_name: "[COUNTRY.GetAdjectiveNoFormatting] Anti-Imperialist League" #NT!
+ usfp_lobby_anti_imperial_icon: "@usfp_lobby_anti_imperial!" #NT!
   
- lds_church: "Church of Jesus Christ of Latter-Day Saints"
- lds_church_desc: "The Mormon Church was founded during the Second Great Awakening by Joseph Smith, who is said to have recieved new revelations from God in the form of golden tablets. The church's distinct beliefs and practices, including polygamy, put them at odds with most of the rest of Christian society."
- ig_big_men: "Big Men"
- ig_big_men_desc: "So-called 'Big Men' have gathered informal power around themselves through control of property and patronage. They generally seek to entrench their influence in a manner reminiscent of feudal systems."
+ lds_church: "Church of Jesus Christ of Latter-Day Saints" #NT!
+ lds_church_desc: "The Mormon Church was founded during the Second Great Awakening by Joseph Smith, who is said to have recieved new revelations from God in the form of golden tablets. The church's distinct beliefs and practices, including polygamy, put them at odds with most of the rest of Christian society." #NT!
+ ig_big_men: "Big Men" #NT!
+ ig_big_men_desc: "So-called 'Big Men' have gathered informal power around themselves through control of property and patronage. They generally seek to entrench their influence in a manner reminiscent of feudal systems." #NT!
   
- western_aristocrats: "Successful Homesteaders"
+ western_aristocrats: "Successful Homesteaders" #NT!
   
- ai_strategy_anti_slavery_agenda: "Emancipation Legislation"
- ai_strategy_anti_slavery_agenda_desc: "[COUNTRY.GetName] is ready to begin the process of legislatively abolishing slavery. The house will cease to be divided - one way or another."
- ai_strategy_manifest_destiny: "Manifest Destiny"
- ai_strategy_manifest_destiny_desc: "[COUNTRY.GetName] seeks to expand its core territories and pursue its "manifest destiny" across North America."
- ai_strategy_monroe_doctrine: "Monroe Doctrine"
- ai_strategy_monroe_doctrine_desc: "[COUNTRY.GetName] wants to stay out of foreign entanglements and defend the western hemisphere from European intervention."
- ai_strategy_pacific_empire: "Big Stick Diplomacy"
- ai_strategy_pacific_empire_desc: "[COUNTRY.GetName] wants to assert its hegemony over the Americas and the Pacific, while avoiding direct conflicts with other powers."
+ ai_strategy_anti_slavery_agenda: "Emancipation Legislation" #NT!
+ ai_strategy_anti_slavery_agenda_desc: "[COUNTRY.GetName] is ready to begin the process of legislatively abolishing slavery. The house will cease to be divided - one way or another." #NT!
+ ai_strategy_manifest_destiny: "Manifest Destiny" #NT!
+ ai_strategy_manifest_destiny_desc: "[COUNTRY.GetName] seeks to expand its core territories and pursue its "manifest destiny" across North America." #NT!
+ ai_strategy_monroe_doctrine: "Monroe Doctrine" #NT!
+ ai_strategy_monroe_doctrine_desc: "[COUNTRY.GetName] wants to stay out of foreign entanglements and defend the western hemisphere from European intervention." #NT!
+ ai_strategy_pacific_empire: "Big Stick Diplomacy" #NT!
+ ai_strategy_pacific_empire_desc: "[COUNTRY.GetName] wants to assert its hegemony over the Americas and the Pacific, while avoiding direct conflicts with other powers." #NT!
   
- dismantle_jim_crow: "Dismantle Jim Crow"
- dismantle_jim_crow_desc: "The governments of the South have enforced racial terror on their citizens for far too long. It is time that these Jim Crow laws be nullified."
+ dismantle_jim_crow: "Dismantle Jim Crow" #NT!
+ dismantle_jim_crow_desc: "The governments of the South have enforced racial terror on their citizens for far too long. It is time that these Jim Crow laws be nullified." #NT!
   
- negotiate_mexican_border: "Negotiate Mexican Border"
- negotiate_mexican_border_desc: "Our previous border treaties with Mexico were ill-defined and ignorant of the geography of the west. It is clear now that the Rio Grande is the most natural boundary between our two nations."
+ negotiate_mexican_border: "Negotiate Mexican Border" #NT!
+ negotiate_mexican_border_desc: "Our previous border treaties with Mexico were ill-defined and ignorant of the geography of the west. It is clear now that the Rio Grande is the most natural boundary between our two nations." #NT!
   
- movement_usfp_progressive: "Progressive Movement"
- movement_usfp_progressive_name: "$movement_usfp_progressive$"
- STATE_POLITICAL_MACHINE: "[concept_state] run by Political Machine"
- STATE_POLLUTED: "High [concept_generated_pollution] in [concept_state]"
- movement_usfp_eugenics: "Eugenics Movement"
- movement_usfp_eugenics_name: "$movement_usfp_eugenics$"
+ usfp_restore_constitution_decision: "Restore the Constitution" #NT!
+ usfp_restore_constitution_decision_desc: "The Constitution laid down by the founding fathers must be restored as the supreme law of the land." #NT!
+  
+ movement_usfp_progressive: "Progressive Movement" #NT!
+ movement_usfp_progressive_name: "$movement_usfp_progressive$" #NT!
+ STATE_POLITICAL_MACHINE: "[concept_state] run by Political Machine" #NT!
+ STATE_POLLUTED: "High [concept_generated_pollution] in [concept_state]" #NT!
+ movement_usfp_eugenics: "Eugenics Movement" #NT!
+ movement_usfp_eugenics_name: "$movement_usfp_eugenics$" #NT!
  movement_usfp_neoconfederate: "Neo-Confederate Movement" #NT!
  movement_usfp_neoconfederate_name: "$movement_usfp_neoconfederate$" #NT!
+ movement_usfp_american_constitution: "Constitutional Movement" #NT!
+ movement_usfp_american_constitution_name: "$movement_usfp_american_constitution$" #NT!
  POP_SUPPORT_DIXIE_CULTURE: "[GetCulture('dixie').GetName] [concept_culture]" #NT!
  POP_SUPPORT_BLACK_SOL_DIFFERENCE: "[concept_sol] difference with $heritage_group_african$ [Concept('concept_pop', '$concept_pops$')]" #NT!
  POP_SUPPORT_MIXED_RECONSTRUCTION: "Divided Dixie" #NT!
  POP_SUPPORT_RADICAL_RECONSTRUCTION: "Radical Reconstruction" #NT!
  POP_SUPPORT_JIM_CROW_STATE: "[concept_usfp_jim_crow] [concept_state]" #NT!
+ POP_SUPPORT_DIXIE_ARISTOCRATS: "[GetCulture('dixie').GetName] [GetPopType('aristocrats').GetName]" #NT!
+ POP_SUPPORT_DIXIE_FARMERS: "[GetCulture('dixie').GetName] [GetPopType('farmers').GetName]" #NT!
+ POP_SUPPORT_DIXIE_SOLDIERS: "[GetCulture('dixie').GetName] [GetPopType('soldiers').GetName]" #NT!
+ POP_SUPPORT_DIXIE_OFFICERS: "[GetCulture('dixie').GetName] [GetPopType('officers').GetName]" #NT!
+ ABOLISHING_SUFFRAGE: "[Concept('concept_election', '$concept_election_voting_franchise$')] Under Threat" #NT!
   
- alert_usfp_ineligible_candidate_name: "Ineligible Presidential Candidate"
- alert_usfp_ineligible_candidate_desc: "The [concept_leader] of a [concept_powerful] [concept_interest_group] is not a #tooltippable;tooltip:[SCOPE.GetRootScope.GetCountry.GetTooltipTag],usfp_natural_born_citizens natural-born citizen#! and cannot run for [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')]."
- alert_usfp_ineligible_candidate_hint: "If they are the [concept_party_leader], a new [concept_character] will replace them at the start of the [Concept('concept_election', '$concept_election$')]."
- alert_usfp_ineligible_candidate_action: "Politics Panel"
- usfp_ineligible_candidate_setting_name: "Ineligible Presidential Candidate"
+ alert_usfp_ineligible_candidate_name: "Ineligible Presidential Candidate" #NT!
+ alert_usfp_ineligible_candidate_desc: "The [concept_leader] of a [concept_powerful] [concept_interest_group] is not a #tooltippable;tooltip:[SCOPE.GetRootScope.GetCountry.GetTooltipTag],usfp_natural_born_citizens natural-born citizen#! and cannot run for [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')]." #NT!
+ alert_usfp_ineligible_candidate_hint: "If they are the [concept_party_leader], a new [concept_character] will replace them at the start of the [Concept('concept_election', '$concept_election$')]." #NT!
+ alert_usfp_ineligible_candidate_action: "Politics Panel" #NT!
+ usfp_ineligible_candidate_setting_name: "Ineligible Presidential Candidate" #NT!
   
- law_usfp_nominal_separation: "Nominal Separation"
- law_usfp_nominal_separation_desc: "Church and state are officially separated, but exotic faiths are still discriminated against through a variety of legal and paralegal means."
- law_usfp_american_system: "American System"
- law_usfp_american_system_desc: "A variant of $law_protectionism$ allowing for even higher tariffs on imports. Export tariffs are disallowed under the Constitution."
+ law_usfp_nominal_separation: "Nominal Separation" #NT!
+ law_usfp_nominal_separation_desc: "Church and state are officially separated, but exotic faiths are still discriminated against through a variety of legal and paralegal means." #NT!
+ law_usfp_american_system: "American System" #NT!
+ law_usfp_american_system_desc: "A variant of $law_protectionism$ allowing for even higher tariffs on imports. Export tariffs are disallowed under the Constitution." #NT!
+ law_usfp_fraternities: "Fraternal Societies" #NT!
+ law_usfp_fraternities_desc: "Local administration is handled through a system of fraternities which elevate their members to a mixture of elected and hereditary positions." #NT!
+ law_usfp_tribal_land_ownership: "Land Stewardship" #NT!
+ law_usfp_tribal_land_ownership_desc: "Land usage rights are held in common, with the community organizing cultivation as needed to feed its members." #NT!
+ law_usfp_devolved_taxation: "Devolved Taxation" #NT!
+ law_usfp_devolved_taxation_desc: "Taxation is largely performed by state governments in the form of property taxes, with the federal government levying excise taxes when needed." #NT!
   
- treaty_name_dancing_rabbit_creek: "Treaty of Dancing Rabbit Creek"
+ treaty_name_dancing_rabbit_creek: "Treaty of Dancing Rabbit Creek" #NT!
+ treaty_name_country_adj_country_adj_commercial_treaty: "[SECOND_COUNTRY.GetAdjectiveNoFormatting]-[FIRST_COUNTRY.GetAdjectiveNoFormatting] Commercial Treaty" #NT!
+ treaty_name_country_adj_country_adj_treaty_of_peace_and_friendship: "[FIRST_COUNTRY.GetAdjectiveNoFormatting]-[SECOND_COUNTRY.GetAdjectiveNoFormatting] Treaty of Peace and Friendship" #NT!
   
  usfp_pb_philadelphia_treaty: "Philadelphia Treaty" #NT!
  usfp_pb_american_free_trade_area: "American Free Trade Area" #NT!
  usfp_pb_monroe_doctrine: "Monroe Doctrine" #NT!
  usfp_pb_free_world: "Free World" #NT!
  usfp_pb_syndicalist_international: "Syndicalist International" #NT!
+  
+ rule_usfp_election_chaos: "@america_icon! #yellow Hail, Columbia!#! | Chaotic Elections" #NT!
+ setting_yes_election_chaos: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_yes_election_chaos_desc #high Yes #!#!#!" #NT!
+ setting_yes_election_chaos_desc: "Under [GetLawType('law_census_voting').GetName] or [GetLawType('law_universal_suffrage').GetName], [Concept('concept_party', '$concept_parties$')] have a chance to randomly gain or lose [concept_momentum] each week during [Concept('concept_election', '$concept_elections$')]." #NT!
+ setting_no_election_chaos: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_no_election_chaos_desc #high No #!#!#!" #NT!
+ setting_no_election_chaos_desc: "No weekly [concept_momentum] changes are applied." #NT!
+  
+ amendment_usfp_spoils_system: "Spoils System" #NT!
+ amendment_usfp_spoils_system_desc: "Government offices are doled out as rewards for political supporters, causing a reshuffle of the civil service whenever a new party takes power." #NT!
+ spoils_system_can_be_abolished_tt: "[ROOT.GetCountry.GetName] has suffered the effects of the Spoils System enough times (currently [ROOT.GetCountry.MakeScope.Var('usfp_spoils_system_abolish_var').GetValue|v0]/#v 5#!)" #NT!
+ amendment_usfp_bill_of_rights: "Bill of Rights" #NT!
+ amendment_usfp_bill_of_rights_desc: "On paper, the Constitution protects the citizens' right to free speech, making censorship efforts more difficult though not impossible." #NT!
+ amendment_usfp_seperate_but_equal: "Separate but Equal" #NT!
+ amendment_usfp_seperate_but_equal_desc: "Racially segregated facilities are tolerated as long as they nominally provide the same services to both races." #NT!
+ amendment_usfp_pure_drugs: "Pure Drugs" #NT!
+ amendment_usfp_pure_drugs_desc: "Commercial medicines must list their ingredients and submit to government inspection for purity and efficacy." #NT!
+ amendment_usfp_anti_lynching: "Anti-Lynching Bill" #NT!
+ amendment_usfp_anti_lynching_desc: "Lynching is elevated to a federal crime, preventing racist local authorities from shielding the perpetrators." #NT!
+ amendment_usfp_gag_rule: "Gag Rule" #NT!
+ amendment_usfp_gag_rule_desc: "To enforce the Missouri Compromise and adjourn further conflict over the issue, the [concept_usfp_house_of_representatives] has prohibited the consideration of petitions or laws relating to slavery." #NT!
+ doesnt_have_gag_rule: "Does #bold not#! have the Gag Rule [concept_amendment]" #NT!
+ amendment_usfp_radical_land_redistribution: "40 Acres and a Mule" #NT!
+ amendment_usfp_radical_land_redistribution_desc: "The lands of former slavers are seized by the state and made available to be redistributed to freedmen." #NT!
