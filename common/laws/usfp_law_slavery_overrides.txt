@@ -54,7 +54,7 @@ REPLACE:law_slavery_banned = {
 			text = doesnt_have_gag_rule
 			NOT = {
 				any_active_law = {
-					has_amendment = amendment_usfp_gag_rule
+					has_amendment = amendment_type:amendment_usfp_gag_rule
 				}
 			}
 		}
@@ -76,7 +76,7 @@ REPLACE:law_slavery_banned = {
 			text = doesnt_have_gag_rule
 			NOT = {
 				any_active_law = {
-					has_amendment = amendment_usfp_gag_rule
+					has_amendment = amendment_type:amendment_usfp_gag_rule
 				}
 			}
 		}
@@ -216,7 +216,7 @@ REPLACE:law_colonial_slavery = {
 			text = doesnt_have_gag_rule
 			NOT = {
 				any_active_law = {
-					has_amendment = amendment_usfp_gag_rule
+					has_amendment = amendment_type:amendment_usfp_gag_rule
 				}
 			}
 		}
@@ -316,7 +316,7 @@ REPLACE:law_debt_slavery = {
 			text = doesnt_have_gag_rule
 			NOT = {
 				any_active_law = {
-					has_amendment = amendment_usfp_gag_rule
+					has_amendment = amendment_type:amendment_usfp_gag_rule
 				}
 			}
 		}
@@ -413,7 +413,7 @@ REPLACE:law_slave_trade = {
 			text = doesnt_have_gag_rule
 			NOT = {
 				any_active_law = {
-					has_amendment = amendment_usfp_gag_rule
+					has_amendment = amendment_type:amendment_usfp_gag_rule
 				}
 			}
 		}
@@ -499,7 +499,7 @@ REPLACE:law_slave_trade = {
 		}
 		NOT = { #USFP
 			any_active_law = {
-				has_amendment = amendment_usfp_gag_rule
+				has_amendment = amendment_type:amendment_usfp_gag_rule
 			}
 		}
 	}

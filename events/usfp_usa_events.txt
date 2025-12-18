@@ -1569,9 +1569,13 @@ usfp_usa.18 = {
 		NOR = {
 			has_journal_entry = je_acw_countdown
 			has_journal_entry = je_acw_war
+			has_journal_entry = je_acw_reconstruction
 		}
 		month > 4
 		month < 10 #just to make this event rarer
+		active_law:lawgroup_bureaucracy ?= {
+			has_amendment = amendment_type:amendment_usfp_spoils_system
+		}
 	}
 
 	immediate = {
@@ -1585,6 +1589,19 @@ usfp_usa.18 = {
 		name = usfp_usa.18.a
 		default_option = yes
 		usfp_assassinate_president_effect = yes
+		if = {
+			limit = {
+				has_variable = usfp_spoils_system_abolish_var
+				var:usfp_spoils_system_abolish_var < 5
+			}
+			custom_tooltip = {
+				text = immediately_abolish_spoils_system
+				change_variable = {
+					name = usfp_spoils_system_abolish_var
+					add = 5
+				}
+			}
+		}
 	}
 }
 

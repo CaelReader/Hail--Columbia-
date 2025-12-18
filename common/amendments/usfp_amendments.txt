@@ -45,6 +45,8 @@
     ai_will_revoke = {
         always = yes
     }
+
+	amendment_activism_multiplier = 0.0
 }
 
 amendment_usfp_seperate_but_equal = {
@@ -79,6 +81,8 @@ amendment_usfp_seperate_but_equal = {
     ai_will_revoke = {
         always = yes
     }
+
+	amendment_activism_multiplier = 0.5
 }
 
 amendment_usfp_pure_drugs = {
@@ -106,6 +110,8 @@ amendment_usfp_pure_drugs = {
     ai_will_revoke = {
         in_default = yes
     }
+
+	amendment_activism_multiplier = 0.0
 }
 
 amendment_usfp_bill_of_rights = {
@@ -135,6 +141,8 @@ amendment_usfp_bill_of_rights = {
     ai_will_revoke = {
         always = yes
     }
+
+	amendment_activism_multiplier = 0.25
 }
 
 amendment_usfp_anti_lynching = {
@@ -163,6 +171,8 @@ amendment_usfp_anti_lynching = {
     ai_will_revoke = {
         always = yes
     }
+
+	amendment_activism_multiplier = 0.25
 }
 
 amendment_usfp_gag_rule = {
@@ -221,6 +231,8 @@ amendment_usfp_gag_rule = {
     ai_will_revoke = {
         always = yes
     }
+
+	amendment_activism_multiplier = 0.25
 }
 
 
@@ -275,6 +287,8 @@ REPLACE_OR_CREATE:amendment_american_fugitive_slaves_act = {
 		}
 		legitimacy >= 51
 	}
+
+	amendment_activism_multiplier = 0.75
 }
 
 amendment_usfp_radical_land_redistribution = {
@@ -299,6 +313,8 @@ amendment_usfp_radical_land_redistribution = {
     ai_will_revoke = {
         always = yes
     }
+
+	amendment_activism_multiplier = 0.75
 }
 
 REPLACE_OR_CREATE:amendment_american_second_amendment = {
@@ -310,10 +326,10 @@ REPLACE_OR_CREATE:amendment_american_second_amendment = {
 	}
 
 	modifier = {
-		country_yankee_and_dixie_cultures_obsessed_with_guns = yes
-		# state_colony_growth_speed_mult = 0.05
+		state_colony_growth_speed_mult = 0.05
 		building_training_rate_mult = 0.10
-		# state_mortality_mult = 0.01
+		state_non_homeland_mortality_mult = 0.01
+		state_mortality_turmoil_mult = 0.005
 	}
 
 	possible = {
@@ -321,7 +337,24 @@ REPLACE_OR_CREATE:amendment_american_second_amendment = {
 	}
 
 	would_sponsor = {
-		always = no
+		ROOT = {
+			OR = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_petty_bourgeoisie
+				AND = {
+					exists = scope:approval
+					scope:approval > 0
+				}
+			}
+		}
+	}
+
+	on_activate = {
+		second_amendment_add_obsessions_effect = yes
+	}
+
+	on_deactivate = {
+		second_amendment_remove_obsessions_effect = yes
 	}
 
 	ai_will_revoke = {
@@ -333,4 +366,6 @@ REPLACE_OR_CREATE:amendment_american_second_amendment = {
 	can_repeal = {
 		legitimacy >= legitimacy_to_repeal_amendment
 	}
+
+	amendment_activism_multiplier = 0.25
 }

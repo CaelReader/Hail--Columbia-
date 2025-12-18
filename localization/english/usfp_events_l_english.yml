@@ -786,6 +786,7 @@ usfp_usa.18.t: "Crazed Gunman Shoots [ROOT.GetCountry.GetRuler.GetPrimaryRoleTit
 usfp_usa.18.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] has been shot in the streets of [ROOT.GetCountry.GetCapital.GetCityHubName]! After being apprehended, the deranged gunman claimed that he had been instrumental in the president's election, and demanded a position of high office in the administration. The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] has been rushed to the hospital in critical condition."
 usfp_usa.18.f: ""Make way! Make way! The President has been shot! The President has been shot, my God!""
 usfp_usa.18.a: "What a senseless tragedy."
+immediately_abolish_spoils_system: "Completes all progress towards abolishing the Spoils System"
 
 usfp_usa.19.t: "Breaking With Precedent"
 usfp_usa.19.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] has yet to confirm or deny whether [ROOT.GetCountry.GetRuler.GetSheHe] intends to seek a third term in office or not. While there is no rule against it, the precedent set down by George Washington has made third terms an [ROOT.GetCountry.GetAdjective] political taboo. With the beginning of this election's campaigns, [ROOT.GetCountry.GetRuler.GetFullName] must decide."

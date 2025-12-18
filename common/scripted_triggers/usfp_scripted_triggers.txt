@@ -752,7 +752,7 @@ usfp_monroe_doctrine_valid_defender = {
 
 usfp_has_fugitive_slave_act = {
 	any_active_law = {
-		has_amendment = amendment_american_fugitive_slaves_act
+		has_amendment = amendment_type:amendment_american_fugitive_slaves_act
 	}
 }
 

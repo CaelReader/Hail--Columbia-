@@ -1065,8 +1065,8 @@ usfp_spoils_system_action = {
 	effect = {
 		if = {
 			limit = {
-				any_active_law = {
-					has_amendment = amendment_usfp_spoils_system
+				active_law:lawgroup_bureaucracy ?= {
+					has_amendment = amendment_type:amendment_usfp_spoils_system
 				}
 				NOT = {
 					has_modifier = usfp_spoils_system_decaying_modifier
