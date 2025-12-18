@@ -300,3 +300,37 @@ amendment_usfp_radical_land_redistribution = {
         always = yes
     }
 }
+
+REPLACE_OR_CREATE:amendment_american_second_amendment = {
+
+	parent = law_national_guard
+
+	allowed_laws = {
+		law_presidential_republic
+	}
+
+	modifier = {
+		country_yankee_and_dixie_cultures_obsessed_with_guns = yes
+		# state_colony_growth_speed_mult = 0.05
+		building_training_rate_mult = 0.10
+		# state_mortality_mult = 0.01
+	}
+
+	possible = {
+		has_journal_entry = je_usfp_american_constitution
+	}
+
+	would_sponsor = {
+		always = no
+	}
+
+	ai_will_revoke = {
+		NOT = {
+			has_journal_entry = je_usfp_american_constitution
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+}

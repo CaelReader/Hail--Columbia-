@@ -113,4 +113,7 @@ BNN_ADJ:0 "Shoshoni"
 SLS: "Flathead"
 SLS_ADJ: "Flathead"
 
- country_voting_power_from_literacy_add:1 "[concept_political_strength] from Literate Pops’ Votes"
+country_voting_power_from_literacy_add:1 "[concept_political_strength] from Literate Pops’ Votes"
+
+amendment_american_second_amendment: "Right to Bear Arms"
+amendment_american_second_amendment_desc: ""A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.""

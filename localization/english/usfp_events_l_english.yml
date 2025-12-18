@@ -492,28 +492,28 @@ usfp_manifest_destiny.12.a: "Our people must come first."
 usfp_manifest_destiny.12.b: "These policies cannot be allowed to continue."
 
 usfp_manifest_destiny.14.t: "The Ostend Circular"
-usfp_manifest_destiny.14.d: "Several [ROOT.GetCountry.GetAdjective] diplomats aligned with the [SCOPE.gsInterestGroup('landowners_ig').GetName] have composed a dispatch to [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] laying out the case for the acquisition of [SCOPE.sStateRegion('cuba_scope').GetName]. The circular suggests purchasing the island from the [SCOPE.sCountry('cuba_owner_scope').GetAdjective] government, but also justifies taking the island by force if necessary. The document has swiftly leaked to the press, prompting outrage from Abolitionists and European governments alike."
+usfp_manifest_destiny.14.d: "Several [ROOT.GetCountry.GetAdjective] diplomats aligned with the [SCOPE.gsInterestGroup('landowners_ig').GetName] have composed a dispatch to [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] laying out the case for the acquisition of [GetGeographicRegion('geographic_region_cuba').GetName]. The circular suggests purchasing the island from the [SCOPE.sCountry('cuba_owner_scope').GetAdjective] government, but also justifies taking the island by force if necessary. The document has swiftly leaked to the press, prompting outrage from Abolitionists and European governments alike."
 usfp_manifest_destiny.14.f: ""The Union can never enjoy repose, nor possess reliable security, as long as Cuba is not embraced within its boundaries. Its immediate acquisition by our government is of paramount importance, and we cannot doubt but that it is a consummation devoutly wished for by its inhabitants."" #Ostend Manifesto
 usfp_manifest_destiny.14.a: "We are not in the business of crass imperalism."
-usfp_manifest_destiny.14.b: "[SCOPE.sStateRegion('cuba_scope').GetName] is critical to our national security."
+usfp_manifest_destiny.14.b: "[GetGeographicRegion('geographic_region_cuba').GetName] is critical to our national security."
 usfp_manifest_destiny.14.c: "Oh, we won't be #italic purchasing#! anything from [SCOPE.sCountry('cuba_owner_scope').GetName]"
-cuba_offer_available: "An expansionist administration can make an offer to purchase [SCOPE.sStateRegion('cuba_scope').GetName] from [SCOPE.sCountry('cuba_owner_scope').GetName]."
+cuba_offer_available: "An expansionist administration can make an offer to purchase [GetGeographicRegion('geographic_region_cuba').GetName] from [SCOPE.sCountry('cuba_owner_scope').GetName]."
 usfp_manifest_destiny.14.e: "Recall and reprimand these diplomats at once."
 
 usfp_manifest_destiny.15.t: "The Cuban Purchase"
-usfp_manifest_destiny.15.d: "The [SCOPE.sCountry('usa_scope').GetName] is offering to purchase the island of [SCOPE.sStateRegion('cuba_scope').GetName] from us, claiming that control of the island is imperative to their national security. They have offered @money!#yellow 13 Million#!, to be paid over the course of 30 years."
+usfp_manifest_destiny.15.d: "The [SCOPE.sCountry('usa_scope').GetName] is offering to purchase the island of [GetGeographicRegion('geographic_region_cuba').GetName] from us, claiming that control of the island is imperative to their national security. They have offered @money!#yellow 13 Million#!, to be paid over the course of 30 years."
 usfp_manifest_destiny.15.f: ""This object once accomplished, [ROOT.GetCountry.GetNameNoFormatting] would become a centre of attraction for the traveling world, and secure a permanent and profitable market for her various productions. Her fields, under the stimulus given to industry by remunerative prices, would teem with cereal grain, and her vineyards would bring forth a vastly increased quantity of choice wines. [ROOT.GetCountry.GetNameNoFormatting] would speedily become what a bountiful Providence intended she should be - rich, powerful, and contended."" #Ostend Manifesto
 usfp_manifest_destiny.15.b: "Preposterous!"
-usfp_manifest_destiny.15.a: "Let us be rid of [SCOPE.sStateRegion('cuba_scope').GetName]."
+usfp_manifest_destiny.15.a: "Let us be rid of [GetGeographicRegion('geographic_region_cuba').GetName]."
 
 usfp_manifest_destiny.16.t: "[SCOPE.sCountry('cuba_owner_scope').GetName] Refuses"
-usfp_manifest_destiny.16.d: "[SCOPE.sCountry('cuba_owner_scope').GetName] has categorically refused our offer to purchase [SCOPE.sStateRegion('cuba_scope').GetName]. It seems that military intervention will be required if we wish to take control of the island."
+usfp_manifest_destiny.16.d: "[SCOPE.sCountry('cuba_owner_scope').GetName] has categorically refused our offer to purchase [GetGeographicRegion('geographic_region_cuba').GetName]. It seems that military intervention will be required if we wish to take control of the island."
 usfp_manifest_destiny.16.f: ""After we shall have offered [SCOPE.sCountry('cuba_owner_scope').GetNameNoFormatting] a price for Cuba far beyond its present value, and this shall have been refused, it will then be time to consider the question; does Cuba, in the possession of Spain, seriously endanger our internal peace and the existence of our cherished Union?"" #Ostend Manifesto
 usfp_manifest_destiny.16.a: "If they refuse to sell, we will not force them."
 usfp_manifest_destiny.16.b: "We must assert our control over the Gulf."
 
-usfp_manifest_destiny.17.t: "[SCOPE.sCountry('cuba_owner_scope').GetName] Sells [SCOPE.sStateRegion('cuba_scope').GetName]"
-usfp_manifest_destiny.17.d: "[SCOPE.sCountry('cuba_owner_scope').GetName] has agreed to our purchase of [SCOPE.sStateRegion('cuba_scope').GetName]. "
+usfp_manifest_destiny.17.t: "[SCOPE.sCountry('cuba_owner_scope').GetName] Sells [GetGeographicRegion('geographic_region_cuba').GetName]"
+usfp_manifest_destiny.17.d: "[SCOPE.sCountry('cuba_owner_scope').GetName] has agreed to our purchase of [GetGeographicRegion('geographic_region_cuba').GetName]. "
 usfp_manifest_destiny.17.f: ""The United States and every commercial nation would be benefited by this transfer, and the interests of Spain would also be greatly and essentially promoted. She cannot but see what such a sum of money as we are willing to pay for the island would effect in the development of her vast natural resources.""
 usfp_manifest_destiny.17.a: "Cigars all around!"
 
@@ -1010,7 +1010,7 @@ usfp_filibuster.2.f: ""The territory under Mexican rule would forever remain wil
 usfp_filibuster.2.a: "To arms!"
 
 usfp_filibuster.3.t: "Walker's Trial"
-usfp_filibuster.3.d: "With the defeat of William Walker's filibuster expedition, he and his compatriots have been prosecuted for waging an illegal war. With widespread popular support for his activities in [SCOPE.sCountry('california_scope').GetName], Walker is likely to be acquitted by the jury."
+usfp_filibuster.3.d: "With the defeat of William Walker's filibuster expedition, he and his compatriots have been prosecuted for waging an illegal war. With widespread popular support for his activities in [SCOPE.sState('california_scope').GetName], Walker is likely to be acquitted by the jury."
 usfp_filibuster.3.f: ""It is stated that the statute under which the indictment was found, was passed under the section of the Constitution giving to Congress the powers to define offences against the Law of Nations, and therefore the deduction is, that if no offence has been committed against the Law of Nations, I stand here guiltless before you.""
 usfp_filibuster.3.a: "A slap on the wrist is sufficient."
 usfp_filibuster.3.a.t: "William Walker might continue his filibustering activities..."

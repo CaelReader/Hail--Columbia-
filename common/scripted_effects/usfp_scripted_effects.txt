@@ -720,19 +720,22 @@ usfp_oregon_trail_provinces_effect = {
 			provinces = { x30DED0 xC77F08 }
 		}
 	}
-	s:STATE_WYOMING.region_state:USA = {
-		add_modifier = {
-			name = usfp_settlers_gone_west_modifier
-			years = 10
+	hidden_effect = {
+		s:STATE_WYOMING.region_state:USA = {
+			add_modifier = {
+				name = usfp_settlers_gone_west_modifier
+				years = 10
+			}
+		}
+		s:STATE_NEBRASKA.region_state:USA = {
+			add_modifier = {
+				name = usfp_settlers_gone_west_modifier
+				multiplier = 0.5
+				years = 10
+			}
 		}
 	}
-	s:STATE_NEBRASKA.region_state:USA = {
-		add_modifier = {
-			name = usfp_settlers_gone_west_modifier
-			multiplier = 0.5
-			years = 10
-		}
-	}
+
 }
 
 usfp_remove_manifest_destiny_claims_effect = {

@@ -194,7 +194,7 @@ usfp_usa_canada.2 = {
 				}
 			}
 			add_loyalists_in_state = {
-				value = small_radicals
+				value = large_radicals
 				culture = cu:yankee
 			}
 		}

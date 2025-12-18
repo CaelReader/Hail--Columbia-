@@ -298,11 +298,7 @@ usfp_linconia_button = {
 				relations:root >= relations_threshold:friendly
 				is_diplomatic_play_committed_participant = no
 			}
-			owns_entire_state_region = STATE_PANAMA
-			any_subject_or_below = {
-				market.owner = root
-				owns_entire_state_region = STATE_PANAMA
-			}
+			country_or_subject_owns_entire_state_region = STATE_PANAMA
 		}
 		s:STATE_PANAMA = {
 			any_scope_state = {
@@ -347,13 +343,7 @@ usfp_linconia_button = {
 		}
 		if = {
 			limit = {
-				OR = {
-					owns_entire_state_region = STATE_PANAMA
-					any_subject_or_below = {
-						market.owner = root
-						owns_entire_state_region = STATE_PANAMA
-					}
-				}
+				country_or_subject_owns_entire_state_region = STATE_PANAMA
 			 }
 			 add_treasury = -100000
 			 usfp_create_linconia_effect = yes

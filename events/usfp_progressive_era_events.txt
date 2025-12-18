@@ -720,6 +720,7 @@ usfp_progressive_era.9 = {
 	option = {
 		name = usfp_progressive_era.9.a
 		default_option = yes
+		add_electoral_confidence = 0.10
 		scope:initiative_state_scope = {
 			add_modifier = {
 				name = usfp_state_ballot_initiatives_modifier
@@ -737,6 +738,7 @@ usfp_progressive_era.9 = {
 	#bad
 	option = {
 		name = usfp_progressive_era.9.b
+		add_electoral_confidence = 0.05
 		scope:initiative_state_scope = {
 			add_modifier = {
 				name = usfp_state_ballot_initiatives_modifier
@@ -817,6 +819,7 @@ usfp_progressive_era.10 = {
 			}
 		}
 		highlighted_option = yes
+		add_electoral_confidence = -0.05
 		add_radicals = {
 			value = small_radicals
 			pop_type = academics
@@ -914,6 +917,7 @@ usfp_progressive_era.11 = {
 			}
 		}
 		highlighted_option = yes
+		add_electoral_confidence = -0.05
 		add_radicals = {
 			value = small_radicals
 			pop_type = academics
@@ -1006,6 +1010,7 @@ usfp_progressive_era.12 = {
 			}
 		}
 		highlighted_option = yes
+		add_electoral_confidence = -0.05
 		add_radicals = {
 			value = small_radicals
 			pop_type = academics
@@ -1041,6 +1046,7 @@ usfp_progressive_era.13 = {
 	#we need democracy
 	option = {
 		name = usfp_progressive_era.13.a
+		add_electoral_confidence = 0.10
 		default_option = yes
 		random_scope_state = {
 			limit = {
@@ -1056,6 +1062,7 @@ usfp_progressive_era.13 = {
 	#eh its fine
 	option = {
 		name = usfp_progressive_era.13.b
+		add_electoral_confidence = -0.05
 		add_radicals = {
 			value = medium_radicals
 			strata = middle
@@ -1075,6 +1082,7 @@ usfp_progressive_era.13 = {
 			}
 		}
 		highlighted_option = yes
+		add_electoral_confidence = -0.05
 		add_radicals = {
 			value = small_radicals
 			pop_type = academics
@@ -1234,6 +1242,7 @@ usfp_progressive_era.14 = {
 			}
 		}
 		highlighted_option = yes
+		add_electoral_confidence = -0.05
 		add_radicals = {
 			value = small_radicals
 			pop_type = academics
@@ -1398,6 +1407,7 @@ usfp_progressive_era.16 = {
 	option = {
 		name = usfp_progressive_era.16.a
 		default_option = yes
+		add_electoral_confidence = 0.50
 		add_loyalists = {
 			value = large_radicals
 			strata = lower
@@ -1437,6 +1447,7 @@ usfp_progressive_era.16 = {
 	#lets go socialist
 	option = {
 		name = usfp_progressive_era.16.b
+		add_electoral_confidence = 0.20
 		ig:ig_trade_unions = {
 			add_modifier = {
 				name = usfp_socialist_press_for_more_modifier

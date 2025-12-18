@@ -30,11 +30,12 @@ The mod contains a total of 18 Journal Entries, 264 Events, and 152 Characters.
 [/list]
 
 [img]https://i.imgur.com/eD5BaRs.png[/img]
-Currently includes English, Korean, and German localizations. English text will be displayed for other languages. Feel free to create translations and upload them as seperate mods or send them my way.
-Extended German localization available [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3533593303]here.[/url] 
+Currently includes English and Korean localizations. Feel free to create translations and upload them as seperate mods or send them my way.
+German localization available [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3533593303]here.[/url] 
 Chinese localization available [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2880069248]here.[/url]
 Spanish localization available [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3498862406]here.[/url]
 Russian localization available [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3199730217]here.[/url]
+English text will be displayed for other languages.
 
 Check out the full list of Vanilla Overrides in the discussion section.
 [list]
