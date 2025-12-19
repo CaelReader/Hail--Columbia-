@@ -92,3 +92,5 @@
  SLS: "플랫헤드"
  SLS_ADJ: "플랫헤드"
  country_voting_power_from_literacy_add:1 "식자 인구층의 투표권으로 발생하는 [concept_political_strength]"
+ amendment_american_second_amendment: "무기 소지권"
+ amendment_american_second_amendment_desc: "\"자유로운 국가의 안전을 위해 잘 규율된 민병대가 필요하므로, 국민이 무기를 소유하고 휴대할 권리는 침해되어서는 안 된다.\""
