@@ -105,7 +105,16 @@ usfp_democratic_party = {
 			}
 		}
 		else_if = {
-			limit = { leader ?= { usfp_anti_slavery_leader_trigger = yes } }
+			limit = {
+				owner = {
+					OR = {
+						has_journal_entry = je_acw_countdown
+						has_journal_entry = je_acw_war
+						has_journal_entry = je_acw_reconstruction
+					}
+				} 
+				leader ?= { usfp_anti_slavery_leader_trigger = yes } 
+			}
 			add = {
 				value = -100
 				desc = "from_abolitionist_leader"
@@ -203,7 +212,7 @@ usfp_democratic_party = {
 				ig_clout < owner.ig:ig_industrialists.ig_clout
 			}
 			add = {
-				value = -200
+				value = -50
 				desc = "party_dominated_by_industrialists"
 			}
 		}

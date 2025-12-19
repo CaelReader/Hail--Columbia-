@@ -2886,6 +2886,10 @@ usfp_manifest_destiny.26 = {
 				NOT = {
 					is_in_geographic_region = geographic_region_americas
 				}
+				NOR = {
+					state_region = s:STATE_GREENLAND
+					state_region = s:STATE_ICELAND
+				}
 				is_treaty_port = no
 			}
 			save_scope_as = usa_overseas_territory_scope
@@ -3238,8 +3242,10 @@ usfp_manifest_destiny.30 = {
 			state_region = {
 				is_homeland = cu:mexican
 			}
+			is_treaty_port = no
 		}
 		any_scope_state = {
+			is_treaty_port = no
 			state_region = {
 				is_homeland = cu:mexican
 			}
@@ -3263,6 +3269,7 @@ usfp_manifest_destiny.30 = {
 	immediate = {
 		random_scope_state = {
 			limit = {
+				is_treaty_port = no
 				state_region = {
 					is_homeland = cu:mexican
 				}

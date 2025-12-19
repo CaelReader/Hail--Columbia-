@@ -7,13 +7,13 @@
 	should_be_pinned_by_default = yes
 	weight = 200
 	is_shown_when_inactive = {
+		c:USA ?= this
 		exists = c:CUB
 		c:CUB ?= {
 			NOT = {
 				is_subject_of = root
 			}
 		}
-		has_technology_researched = political_agitation
 	}
 
 	possible = {
@@ -33,6 +33,7 @@
 				}
 			}
 		}
+		has_technology_researched = political_agitation
 	}
 	
 	immediate = {
@@ -61,7 +62,17 @@
 		}
 	}
 
-	timeout = 1826 #5 years
+	timeout = {
+		value = 1826 #5 years
+		if = { 
+			limit = {
+				root = {
+					has_war_with = scope:cuban_overlord
+				}
+			}
+			add = 1826
+		}
+	}
 
 	on_timeout = {
 		add_radicals = {

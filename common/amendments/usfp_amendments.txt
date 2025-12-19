@@ -14,7 +14,9 @@
     possible = {
         has_journal_entry = je_usfp_american_constitution
     }
-
+	would_sponsor = {
+		always = no
+	}
    	can_repeal = {
 		legitimacy > 60
 		OR = {
@@ -67,7 +69,9 @@ amendment_usfp_seperate_but_equal = {
     possible = {
         always = yes
     }
-
+	would_sponsor = {
+		always = no
+	}
 	can_repeal = {
 		OR = {
 			has_law_or_variant = law_type:law_multicultural
@@ -102,7 +106,9 @@ amendment_usfp_pure_drugs = {
     possible = {
         always = yes
     }
-
+	would_sponsor = {
+		always = no
+	}
    	can_repeal = {
 		always = yes
 	}
@@ -132,7 +138,9 @@ amendment_usfp_bill_of_rights = {
     possible = {
         has_journal_entry = je_usfp_american_constitution
     }
-
+	would_sponsor = {
+		always = no
+	}
    	can_repeal = {
 		NOT = {
 			has_journal_entry = je_usfp_american_constitution
@@ -163,7 +171,9 @@ amendment_usfp_anti_lynching = {
     possible = {
         always = yes
     }
-
+	would_sponsor = {
+		always = no
+	}
 	can_repeal = {
 		usfp_has_pro_racist_government = yes
 		government_legitimacy >= 51
@@ -194,7 +204,9 @@ amendment_usfp_gag_rule = {
     possible = {
         has_journal_entry = je_acw_countdown
     }
-
+	would_sponsor = {
+		always = no
+	}
 	can_repeal = {
 		# OR = {
 		# 	any_revolution_ongoing = yes
@@ -256,12 +268,8 @@ REPLACE_OR_CREATE:amendment_american_fugitive_slaves_act = {
 	possible = {
 		has_journal_entry = je_acw_countdown
 	}
-
 	would_sponsor = {
-		AND = {
-			exists = scope:approval
-			scope:approval > 0
-		}
+		always = no
 	}
 
 	ai_will_revoke = {
@@ -306,7 +314,9 @@ amendment_usfp_radical_land_redistribution = {
     possible = {
         has_journal_entry = je_acw_reconstruction
     }
-
+	would_sponsor = {
+		always = no
+	}
 	can_repeal = {
 		government_legitimacy >= 51
 	}
@@ -334,20 +344,10 @@ REPLACE_OR_CREATE:amendment_american_second_amendment = {
 	}
 
 	possible = {
-		has_journal_entry = je_usfp_american_constitution
+		has_law_or_variant = law_type:law_presidential_republic
 	}
-
 	would_sponsor = {
-		ROOT = {
-			OR = {
-				is_interest_group_type = ig_rural_folk
-				is_interest_group_type = ig_petty_bourgeoisie
-				AND = {
-					exists = scope:approval
-					scope:approval > 0
-				}
-			}
-		}
+		always = no
 	}
 
 	on_activate = {

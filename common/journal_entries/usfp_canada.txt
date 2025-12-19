@@ -27,7 +27,7 @@
 	complete = {
 		OR = {
 			calc_true_if = {
-				amount >= 6
+				amount >= 7
 				owns_entire_state_region = STATE_ONTARIO
 				owns_entire_state_region = STATE_NEW_BRUNSWICK
 				owns_entire_state_region = STATE_QUEBEC
@@ -180,7 +180,7 @@ REPLACE_OR_CREATE:je_canada_gbr = {
 	complete = {
 		any_subject_or_below = {
 			calc_true_if = {
-				amount >= 6
+				amount >= 7
 				owns_entire_state_region = STATE_ONTARIO
 				owns_entire_state_region = STATE_NEW_BRUNSWICK
 				owns_entire_state_region = STATE_QUEBEC

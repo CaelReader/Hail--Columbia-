@@ -99,7 +99,16 @@ usfp_republican_party = {
 			}
 		}
 		else_if = {
-			limit = { leader ?= { usfp_anti_slavery_leader_trigger = yes } }
+			limit = {
+				owner = {
+					OR = {
+						has_journal_entry = je_acw_countdown
+						has_journal_entry = je_acw_war
+						has_journal_entry = je_acw_reconstruction
+					}
+				}  
+				leader ?= { usfp_anti_slavery_leader_trigger = yes } 
+			}
 			add = {
 				value = 100
 				desc = "from_abolitionist_leader"
@@ -195,7 +204,7 @@ usfp_republican_party = {
 				ig_clout < owner.ig:ig_industrialists.ig_clout
 			}
 			add = {
-				value = -200
+				value = -50
 				desc = "party_dominated_by_industrialists"
 			}
 		}
@@ -232,10 +241,10 @@ usfp_republican_party = {
 			limit = {
 				is_interest_group_type = ig_industrialists
 				owner.ig:ig_intelligentsia ?= {
-					ig_counts_as_marginal = yes
+					ig_clout < 0.05
 				}		
 				owner.ig:ig_petty_bourgeoisie ?= {
-					ig_counts_as_marginal = yes
+					ig_clout < 0.05
 				} 
 			}
 			add = {

@@ -827,3 +827,8 @@ Reformers are now attracted to the Republican Party
 Ethno-Nationalists are much more strongly attracted to the Democratic Party
 The Trade Unions are twice as repelled from a party dominated by the Industrialists
 Jingoists are no longer attracted to the Democratic Party
+Updated weights for the RF and TUs towards the People's Party
+Removed leftover weights for free trade/liberal/conservative parties
+Abolition stops being a deciding factor for parties after Reconstruction is over
+Fixed Cuban Outrages JE spawning for non-usa countries
+The Cuban Outrages timeout gains additional time while at war with Spain
