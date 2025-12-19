@@ -119,19 +119,19 @@ usfp_democratic_party = {
 				desc = "usfp_bourbon_democrats"
 			}
 		}
-		#Jingoists are pro-expansion and join the Democrats
-		else_if = {
-			limit = { leader ?= { has_ideology = ideology:ideology_jingoist_leader } }
-			add = {
-				value = 25
-				desc = "ideology_jingoist_leader"
-			}
-		}
+		# #Jingoists are pro-expansion and join the Democrats
+		# else_if = {
+		# 	limit = { leader ?= { has_ideology = ideology:ideology_jingoist_leader } }
+		# 	add = {
+		# 		value = 15
+		# 		desc = "ideology_jingoist_leader"
+		# 	}
+		# }
 		#KKK ethno-nationalists are aligned with the democrats
 		else_if = {
 			limit = { leader ?= { has_ideology = ideology:ideology_ethno_nationalist } }
 			add = {
-				value = 25
+				value = 75
 				desc = "ideology_ethno_nationalist"
 			}
 		}
@@ -170,12 +170,17 @@ usfp_democratic_party = {
 		#powerful RF might split off and form the People's Party if the Dems are Industrialist
 		if = {
 			limit = {
+				NOT = {
+					owner = {
+						has_variable = whigs_party
+					}
+				}
 				is_interest_group_type = ig_rural_folk
 				owner.ig:ig_industrialists = {
 					is_powerful = yes
 					is_member_of_party = owner.py:usfp_democratic_party
-					ig_clout > owner.ig:ig_rural_folk.ig_clout
 				}
+				is_powerful = yes
 			}
 			add = {
 				value = -200
@@ -223,12 +228,27 @@ usfp_democratic_party = {
 			limit = {
 				is_interest_group_type = ig_trade_unions
 				owner.ig:ig_industrialists = {
+					is_powerful = no
 					is_member_of_party = owner.py:usfp_democratic_party
 				}
 			}
 			add = {
-				value = -25
+				value = -50
 				desc = "industrialists_in_party"
+			}
+		} else_if = {
+			if = {
+				limit = {
+					is_interest_group_type = ig_trade_unions
+					owner.ig:ig_industrialists = {
+						is_powerful = yes
+						is_member_of_party = owner.py:usfp_democratic_party
+					}
+				}
+				add = {
+					value = -100
+					desc = "party_dominated_by_industrialists"
+				}
 			}
 		}
 	}

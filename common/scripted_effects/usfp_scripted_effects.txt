@@ -972,6 +972,19 @@ usfp_reconstruction_conclusion_effect = {
 		remove_modifier = usfp_enforcing_reconstruction
 		remove_modifier = usfp_freedmens_bureau
 	}
+
+	if = {
+		limit = {
+			active_law:lawgroup_slavery ?= {
+				has_amendment = amendment_type:amendment_usfp_radical_land_redistribution
+			}
+		}
+		active_law:lawgroup_slavery ?= {
+			random_scope_amendment = {
+				remove_amendment = yes
+			}
+		}
+	}
 }
 
 usfp_reconstruction_outcome_radical_effect = {

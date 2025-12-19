@@ -811,3 +811,19 @@ Completing the Progressive Era significantly increases Electoral Confidence
 The crazed gunman cannot spawn during Reconstruction
 The crazed gunman can only spawn while the Spoils System is in place
 The crazed gunman assassination now immediately completes all progress towards abolishing the Spoils System
+
+# 7.3 "Jackson"
+Fixed missing Canada Confederation buttons
+Greenland and Iceland no longer trigger the American Empire event
+Fixed 40 Acres and a Mule still spawning even after getting the amendment
+Bill of Rights is no longer removed if you pass Protected Speech proper
+Increased weight of radical abolitionists to the afro-american movement
+40 Acres and a Mule amendment should be removed by Reconstruction concluding
+Reduced acceptance gain from Nominal Separation
+Increased acceptance penalty from Separate But Equal
+Removed Authority and Devout Strength from Nominal Separation
+The Evangelicals are now naturally attracted to the Republican Party
+Reformers are now attracted to the Republican Party
+Ethno-Nationalists are much more strongly attracted to the Democratic Party
+The Trade Unions are twice as repelled from a party dominated by the Industrialists
+Jingoists are no longer attracted to the Democratic Party

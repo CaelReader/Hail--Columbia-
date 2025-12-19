@@ -57,7 +57,7 @@ amendment_usfp_seperate_but_equal = {
     }
 
     modifier = {
-		country_acceptance_no_shared_heritage_trait_add = -10
+		country_acceptance_no_shared_heritage_trait_add = -16
 		country_qualification_growth_second_rate_citizen_mult = -0.10
 		country_qualification_growth_open_prejudice_mult = -0.10
 		country_qualification_growth_cultural_erasure_mult = -0.10
@@ -120,6 +120,7 @@ amendment_usfp_bill_of_rights = {
     allowed_laws = { # list of laws that the amendment can be added to
 		law_censorship
 		law_right_of_assembly
+		law_protected_speech
     }
 
     modifier = {

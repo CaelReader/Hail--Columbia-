@@ -76,17 +76,17 @@ usfp_republican_party = {
 				desc = "rural_interests"
 			}
 		}
-		#Evangelicals are natural Whigs, but become more versatile after the Second Party System
+		#Evangelicals are natural Whigs/Republicans
 		if = {
 			limit = {
 				is_interest_group_type = ig_devout
-				owner = {
-					has_variable = whigs_party
-				}
+				# owner = {
+				# 	has_variable = whigs_party
+				# }
 			}
 			add = {
 				value = 50
-				desc = "natural_whigs"
+				desc = "evangelical_pietism"
 			}
 		}
 		## Leader Ideology Check
@@ -127,6 +127,14 @@ usfp_republican_party = {
 			add = {
 				value = 10
 				desc = "ideology_republican_leader"
+			}
+		}
+		#Reformers are Republicans
+		else_if = {
+			limit = { leader ?= { has_ideology = ideology:ideology_reformer } }
+			add = {
+				value = 20
+				desc = "ideology_reformer"
 			}
 		}
 		# Hardcore socialists oppose the main parties
@@ -195,13 +203,28 @@ usfp_republican_party = {
 		if = {
 			limit = {
 				is_interest_group_type = ig_trade_unions
-				owner.ig:ig_industrialists ?= {
+				owner.ig:ig_industrialists = {
+					is_powerful = no
 					is_member_of_party = owner.py:usfp_republican_party
 				}
 			}
 			add = {
-				value = -25
+				value = -50
 				desc = "industrialists_in_party"
+			}
+		} else_if = {
+			if = {
+				limit = {
+					is_interest_group_type = ig_trade_unions
+					owner.ig:ig_industrialists = {
+						is_powerful = yes
+						is_member_of_party = owner.py:usfp_republican_party
+					}
+				}
+				add = {
+					value = -100
+					desc = "party_dominated_by_industrialists"
+				}
 			}
 		}
 		#Industrialists like the Republican party more if PB/INT get marginalized

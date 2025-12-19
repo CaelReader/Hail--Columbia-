@@ -743,6 +743,7 @@ usfp_reconstruction.11 = {
 					NOR = {
 						is_party_type = agrarian_party
 						is_party_type = conservative_party
+						is_party_type = usfp_democratic_party
 					}
 				}
 			}

@@ -222,6 +222,11 @@ acw_followup_events.4 = {
 				has_decree = decree_usfp_radical_land_distribution
 			}
 		}
+		NOT = {
+			any_active_law = {
+				has_amendment = amendment_type:amendment_usfp_radical_land_redistribution
+			}
+		}
 	}
 
 	immediate = {

@@ -2871,6 +2871,10 @@ usfp_manifest_destiny.26 = {
 			NOT = {
 				is_in_geographic_region = geographic_region_americas
 			}
+			NOR = {
+				state_region = s:STATE_GREENLAND
+				state_region = s:STATE_ICELAND
+			}
 			is_treaty_port = no
 		}
 	}
