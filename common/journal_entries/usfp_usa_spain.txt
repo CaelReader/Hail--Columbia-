@@ -17,7 +17,7 @@
 	}
 
 	possible = {
-		c:CUB = {
+		c:CUB ?= {
 			OR = {
 				liberty_desire >= 75
 				custom_tooltip = {
@@ -66,8 +66,12 @@
 		value = 1826 #5 years
 		if = { 
 			limit = {
+				exists = scope:cuban_overlord
 				root = {
-					has_war_with = scope:cuban_overlord
+					OR = {
+						has_war_with = scope:cuban_overlord
+						has_truce_with = scope:cuban_overlord
+					}
 				}
 			}
 			add = 1826

@@ -833,3 +833,6 @@ Removed leftover weights for free trade/liberal/conservative parties
 Abolition stops being a deciding factor for parties after Reconstruction is over
 Fixed Cuban Outrages JE spawning for non-usa countries
 The Cuban Outrages timeout gains additional time while at war with Spain
+
+Subjects no longer count as monroe doctrine interlopers
+Fixed null state case in Great Return event

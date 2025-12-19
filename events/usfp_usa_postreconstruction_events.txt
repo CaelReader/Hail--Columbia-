@@ -2600,46 +2600,39 @@ usfp_usa_postreconstruction.15 = {
 			}
 		}
 		usfp_is_afro_american_discriminated = no
+		any_scope_state = {
+			count >= 3
+			state_region = {
+				is_homeland = cu:afro_american
+			}
+			state_is_eligible_as_mass_migration_target = yes
+		}
 	}
 
 	immediate = {
-		s:STATE_ONTARIO = {
-			if = {
-				limit = { 
-					any_scope_state = {
-						any_scope_pop = {
-							culture = cu:afro_american
-						}
-					}
+		random_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_ONTARIO
+					state_region = s:STATE_QUEBEC
 				}
-				random_scope_state = {
-					limit = {
-						any_scope_pop = {
-							culture = cu:afro_american
-						}
-					}
-					save_scope_as = great_return_source_1
+				any_scope_pop = {
+					culture = cu:afro_american
 				}
 			}
+			save_scope_as = great_return_source_1
 		}
-		s:STATE_QUEBEC = {
-			if = {
-				limit = { 
-					any_scope_state = {
-						any_scope_pop = {
-							culture = cu:afro_american
-						}
-					}
+		random_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_ONTARIO
+					state_region = s:STATE_QUEBEC
 				}
-				random_scope_state = {
-					limit = {
-						any_scope_pop = {
-							culture = cu:afro_american
-						}
-					}
-					save_scope_as = great_return_source_2
+				any_scope_pop = {
+					culture = cu:afro_american
 				}
 			}
+			save_scope_as = great_return_source_2
 		}
 		ordered_scope_state = {
 			position = 0

@@ -729,6 +729,7 @@ usfp_monroe_doctrine_valid_interloper = {
 		this = ROOT
 	}
 	is_revolutionary = no
+	is_subject = no
 	NOT = {
 		has_war_with = root
 	}

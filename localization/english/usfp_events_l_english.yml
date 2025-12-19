@@ -1660,7 +1660,7 @@ usfp_usa_canada.5.f: ""O Erin! Must we leave you driven by the tyrant’s hand,\
 usfp_usa_canada.5.a: "Disarm and arrest these bandits at once."
 usfp_usa_canada.5.b: "We will turn a blind eye to the enemies of [SCOPE.sCountry('britain_scope').GetName]."
 
-usfp_usa_canada.6.t: "The [SCOPE.sState('aroostook_state_scope').GetName] War"
+usfp_usa_canada.6.t: "The Aroostook War"
 usfp_usa_canada.6.d: "Settlers from [SCOPE.sState('maine_usa_state').GetName] have begun to move north into the disputed [SCOPE.sState('aroostook_state_scope').GetName] region. Conflicts between [GetCulture('yankee').GetName] and [SCOPE.sCountry('canadian_country_scope').GetAdjective] lumbermen are threatening to erupt into open violence."
 usfp_usa_canada.6.f: ""We have placed the American flag there on that side of the river, and we are determined to support it, and nothing but a superior force to ourselves shall take it down. We are on American territory; Great Britain has no jurisdiction here. We have a right to be protected, and will be protected, in what we are doing, by our Government."" #John Baker
 usfp_usa_canada.6.a: "Tell everyone to calm down, we will negotiate a fixed border."
