@@ -182,6 +182,7 @@ usfp_usa_postreconstruction.2 = {
 			add_amendment = {
 				type = amendment_usfp_seperate_but_equal
 				sponsor = PREV.ig:ig_landowners
+				cooldown = 60
 			}
 		}
 		usfp_long_reconstruction_lose_progress = {
@@ -223,6 +224,7 @@ usfp_usa_postreconstruction.2 = {
 			add_amendment = {
 				type = amendment_usfp_seperate_but_equal
 				sponsor = PREV.ig:ig_landowners
+				cooldown = 60
 			}
 		}
 		usfp_long_reconstruction_lose_progress = {
@@ -3121,6 +3123,7 @@ usfp_usa_postreconstruction.18 = {
 			add_amendment = {
 				type = amendment_usfp_anti_lynching
 				sponsor = PREV.ig:ig_intelligentsia
+				cooldown = 60
 			}
 		}
 		set_variable = anti_lynching

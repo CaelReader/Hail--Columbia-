@@ -836,3 +836,7 @@ The Cuban Outrages timeout gains additional time while at war with Spain
 
 Subjects no longer count as monroe doctrine interlopers
 Fixed null state case in Great Return event
+
+Swami Vivekenanda properly spawns as an agitator instead of IG Leader
+Added cooldowns to some amendments
+Fixed constitutional revolution spawning as a chiefdom

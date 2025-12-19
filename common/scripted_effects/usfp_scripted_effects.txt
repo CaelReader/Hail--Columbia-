@@ -2111,6 +2111,7 @@ usfp_fugitive_slave_act_effect = {
 			add_amendment = {
 				type = amendment_american_fugitive_slaves_act
 				sponsor = ROOT.ig:ig_landowners
+				cooldown = 60
 			}
 		}
 		random_political_movement = {
