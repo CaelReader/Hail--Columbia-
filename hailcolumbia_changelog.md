@@ -814,6 +814,7 @@ The crazed gunman assassination now immediately completes all progress towards a
 
 # 7.3 "Jackson"
 Fixed missing Canada Confederation buttons
+Updated Spoils System tooltip
 Greenland and Iceland no longer trigger the American Empire event
 Fixed 40 Acres and a Mule still spawning even after getting the amendment
 Bill of Rights is no longer removed if you pass Protected Speech proper

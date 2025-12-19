@@ -84,9 +84,9 @@ building_soldiers_mortality_mult={
 
 country_usfp_spoil_system_on_reform_modifier={
 	script_only = yes
-	decimals=1
-	color=neutral
-	boolean=yes
+	decimals=0
+	color=good
+	percent=yes
 	game_data={
 		ai_value=0
 	}
