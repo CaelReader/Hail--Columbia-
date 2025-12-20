@@ -1352,7 +1352,7 @@
  usfp_usa_canada.5.f: "\"오 에린이여! 우리가 폭군의 손에 몰려 떠나야 한단 말인가,\n\n낯설지만 행복한 땅에서 어머니의 축복을 구해야 한단 말인가,\n\n영국의 잔혹한 십자가의 속박은 결코 보이지 않으리라,\n\n그러나 감사하게도, 우리는 그곳에서 살고 죽으며 여전히 녹지를 입으리라.\""
  usfp_usa_canada.5.a: "이 도적들을 즉시 무장 해제하고 체포하라."
  usfp_usa_canada.5.b: "우리는 [SCOPE.sCountry('britain_scope').GetName]의 적들에게 눈감아 줄 것이다."
- usfp_usa_canada.6.t: "[SCOPE.sState('aroostook_state_scope').GetName] 전쟁"
+ usfp_usa_canada.6.t: "아루스투크 전쟁"
  usfp_usa_canada.6.d: "[SCOPE.sState('maine_usa_state').GetName] 출신의 정착민들이 분쟁 지역인 [SCOPE.sState('aroostook_state_scope').GetName]로 북상하기 시작했습니다. [GetCulture('yankee').GetName] 벌목꾼들과 [SCOPE.sCountry('canadian_country_scope').GetAdjective] 벌목꾼들 사이의 충돌이 공개적인 폭력 사태로 번질 위기에 놓여 있습니다."
  usfp_usa_canada.6.f: "\"우리는 강 저편에 성조기를 세웠고, 이를 지킬 결의가 되어 있다. 우리보다 압도적으로 우세한 병력만이 그것을 내릴 수 있을 것이다. 우리는 미국 영토에 있으며, 영국은 이곳에 관할권이 없다. 우리는 보호받을 권리가 있고, 우리가 하는 일에 대해 우리 정부의 보호를 받을 것이다.\""
  usfp_usa_canada.6.a: "모두에게 진정하라고 전하라, 우리는 고정된 국경을 협상할 것이다."
