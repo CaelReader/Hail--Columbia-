@@ -352,7 +352,7 @@ je_acw_war = {
 				region = sr:region_mexico
 			}
 			add_radicals_in_state = {
-				value = very_large_radicals
+				value = 0.5
 				culture = cu:mexican
 			}
 		}

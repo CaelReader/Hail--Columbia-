@@ -602,7 +602,7 @@ usfp_manifest_destiny_war_resets_clock: "Declaring an offensive [concept_diploma
 
 usfp_manifest_destiny.30.t: "Foreigners in their Native Land"
 usfp_manifest_destiny.30.d: "As [ROOT.GetCountry.GetAdjective] settlers have poured into our newly acquired territories, they have become increasingly violent against the local [GetCulture('mexican').GetName] inhabitants. The treaty we signed guarantees [GetCulture('mexican').GetName] rights on paper, but in practice they are now being disenfranchised and driven off of their own properties."
-usfp_manifest_destiny.30.f: ""Mexican have no business in this country. I don't believe in them. The men were made to be shot at, and the women were made for our purposes. I'm a white man - I am! A Meixcan is pretty near black. I hate all Mexicans."" #Stockton Times
+usfp_manifest_destiny.30.f: ""Mexicans have no business in this country. I don't believe in them. The men were made to be shot at, and the women were made for our purposes. I'm a white man - I am! A Mexican is pretty near black. I hate all Mexicans."" #Stockton Times
 usfp_manifest_destiny.30.a: "This is our land now."
 usfp_manifest_destiny.30.b: "We must uphold our end of the treaty."
 
@@ -1535,7 +1535,7 @@ usfp_usa_postreconstruction.11.a: "[SCOPE.sState('black_wall_street_state').GetC
 usfp_usa_postreconstruction.11.b: "These terrorists will not get away with this!"
 
 usfp_usa_postreconstruction.12.t: "The Birth of a Nation"
-usfp_usa_postreconstruction.12.d: "A newly relased silent film epic has taken the nation by storm, selling out theatres from coast to coast. The film's demonization of $usfp_afro_american_culture_plural$ and romantic depiction of the Ku Klux Klan has inspired a new wave of white supremacist fervor, setting off a fresh round of riots across the country."
+usfp_usa_postreconstruction.12.d: "A newly released silent film epic has taken the nation by storm, selling out theatres from coast to coast. The film's demonization of $usfp_afro_american_culture_plural$ and romantic depiction of the Ku Klux Klan has inspired a new wave of white supremacist fervor, setting off a fresh round of riots across the country."
 usfp_usa_postreconstruction.12.f: ""The white men were roused by a mere instinct of self-preservation... until at last there had sprung into existence a great Ku Klux Klan, a veritable empire of the South, to protect the southern country."" #The Birth of a Nation
 usfp_usa_postreconstruction.12.a: "This certainly won't help ease tensions."
 usfp_usa_postreconstruction.12.b: "Shut down distribution of the film."

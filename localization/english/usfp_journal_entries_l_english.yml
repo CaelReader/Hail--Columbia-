@@ -357,3 +357,5 @@ usfp_danish_purchase_greenland_cost: "We will offer @money!#yellow [GetPlayer.Ma
 usfp_danish_purchase_iceland_cost: "We will offer @money!#yellow [GetPlayer.MakeScope.ScriptValue('usfp_iceland_purchase_lump_sum')]#! for [GetStateRegion('STATE_ICELAND').GetName]"
 usfp_danish_purchase_west_indies_cost: "We will offer @money!#yellow [GetPlayer.MakeScope.ScriptValue('usfp_west_indies_purchase_lump_sum')]#! for the [SCOPE.sState('danish_west_indies_scope').GetName]"
 not_sent_offer_recently: "We have not sent the offer recently"
+
+usfp_alaska_cost: "We will offer @money!#yellow [GetPlayer.MakeScope.ScriptValue('usfp_alaska_purchase_lump_sum')]#! for [GetStateRegion('STATE_ALASKA').GetName]"

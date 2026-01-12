@@ -160,7 +160,7 @@ usfp_filibuster.1 = {
 		}
 		create_incident = {
 			country = c:MEX
-			value = 10
+			value = 8
 		}
 		random_diplomatic_play = {
 			limit = {

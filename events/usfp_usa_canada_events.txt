@@ -38,9 +38,13 @@ usfp_usa_canada.1 = {
 			is_at_war = no
 		}
 		game_date > 1837.10.1
+		NOT = {
+			has_global_variable = caroline_affair_happened
+		}
 	}
 
 	immediate = {
+		set_global_variable = caroline_affair_happened
 		random_scope_state = {
 			limit = {
 				state_region = s:STATE_ONTARIO
@@ -172,7 +176,7 @@ usfp_usa_canada.2 = {
 		c:GBR = {
 			create_incident = {
 				country = c:USA
-				value = 5
+				value = 4
 			}
 			post_notification = usfp_canada_caroline_burning_escalation_usa
 		}
@@ -282,7 +286,7 @@ usfp_usa_canada.3 = {
 		c:GBR = {
 			create_incident = {
 				country = c:USA
-				value = 5
+				value = 4
 			}
 		}
 		c:USA = {

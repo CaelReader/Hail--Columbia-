@@ -319,7 +319,7 @@ usfp_usa_spain.4 = {
 		default_option = yes
 		create_incident = {
 			country = scope:cuba_scope
-			value = 15
+			value = 12
 		}
 		hidden_effect = {
 			scope:cuba_scope = {
@@ -401,7 +401,7 @@ usfp_usa_spain.4 = {
 		}
 		create_incident = {
 			country = scope:cuba_scope
-			value = 60
+			value = 50
 		}
 		annex = scope:cuba_scope
 		add_radicals = {

@@ -759,7 +759,7 @@ usfp_panic_1837_modifier = {
 	state_shopkeepers_investment_pool_contribution_add = -0.10
 	state_aristocrats_investment_pool_efficiency_mult = -0.4
 	state_aristocrats_investment_pool_contribution_add = -0.10
-	country_loan_interest_rate_mult = 0.50
+	country_loan_interest_rate_mult = 0.40
 	# country_minting_mult = -0.20
 }
 

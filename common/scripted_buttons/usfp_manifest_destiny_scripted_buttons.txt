@@ -541,7 +541,7 @@ usfp_claim_canada_button = {
 				root = {
 					create_incident = {
 						country = prev.owner
-						value = 30
+						value = 20
 					}
 				}
 			}

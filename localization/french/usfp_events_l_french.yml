@@ -602,7 +602,7 @@
   
  usfp_manifest_destiny.30.t: "Foreigners in their Native Land" #NT!
  usfp_manifest_destiny.30.d: "As [ROOT.GetCountry.GetAdjective] settlers have poured into our newly acquired territories, they have become increasingly violent against the local [GetCulture('mexican').GetName] inhabitants. The treaty we signed guarantees [GetCulture('mexican').GetName] rights on paper, but in practice they are now being disenfranchised and driven off of their own properties." #NT!
- usfp_manifest_destiny.30.f: ""Mexican have no business in this country. I don't believe in them. The men were made to be shot at, and the women were made for our purposes. I'm a white man - I am! A Meixcan is pretty near black. I hate all Mexicans."" #NT!
+ usfp_manifest_destiny.30.f: ""Mexicans have no business in this country. I don't believe in them. The men were made to be shot at, and the women were made for our purposes. I'm a white man - I am! A Mexican is pretty near black. I hate all Mexicans."" #NT!
  usfp_manifest_destiny.30.a: "This is our land now." #NT!
  usfp_manifest_destiny.30.b: "We must uphold our end of the treaty." #NT!
   
