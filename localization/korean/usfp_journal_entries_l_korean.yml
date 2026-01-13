@@ -284,3 +284,4 @@
  usfp_danish_purchase_iceland_cost: "[GetStateRegion('STATE_ICELAND').GetName]을(를) 대가로 @money!#yellow [GetPlayer.MakeScope.ScriptValue('usfp_iceland_purchase_lump_sum')]#!를 제시합니다."
  usfp_danish_purchase_west_indies_cost: "[SCOPE.sState('danish_west_indies_scope').GetName]을(를) 대가로 @money!#yellow [GetPlayer.MakeScope.ScriptValue('usfp_west_indies_purchase_lump_sum')]#!를 제시합니다."
  not_sent_offer_recently: "최근에 제안을 보내지 않음"
+ usfp_alaska_cost: "[GetStateRegion('STATE_ALASKA').GetName]를 대가로 @money!#yellow [GetPlayer.MakeScope.ScriptValue('usfp_alaska_purchase_lump_sum')]#!를 제시합니다."
