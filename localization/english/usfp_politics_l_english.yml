@@ -98,3 +98,5 @@ amendment_usfp_gag_rule_desc: "To enforce the Missouri Compromise and adjourn fu
 doesnt_have_gag_rule: "Does #bold not#! have the Gag Rule [concept_amendment]"
 amendment_usfp_radical_land_redistribution: "40 Acres and a Mule"
 amendment_usfp_radical_land_redistribution_desc: "The lands of former slavers are seized by the state and made available to be redistributed to freedmen."
+ amendment_usfp_indian_removal_act: "Indian Removal Act"
+ amendment_usfp_indian_removal_act_desc: "The Federal Government is to 'exchange' Indian lands in the east for lands west of the Mississippi, where the Indians are to be relocated."

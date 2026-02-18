@@ -854,6 +854,8 @@ Fixed a few typos
 Updated korean loc
 
 # 7.5 "Jackson"
+Added fallback MD button to directly claim mexican lands with high MD, bypassing the financial requirements of the Offer decision
 Fixed missing tooltip on Hard Times event
 Fixed Canadian countries missing Colonial Administration government principle
+Fixed Monroe Doctrine violation being triggered by the USA calling in a European ally against a target
 Added checks to hopefully prevent erroneous spawning of Cuba content

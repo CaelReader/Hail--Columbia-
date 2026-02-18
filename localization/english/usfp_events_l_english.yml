@@ -523,7 +523,7 @@ usfp_manifest_destiny.18.f: ""We owe it, therefore, to candor and to the amicabl
 usfp_manifest_destiny.18.a: "America will not stand idly by!"
 usfp_manifest_destiny.18.b: "[SCOPE.sCountry('target_scope').GetName] is no concern of ours."
 usfp_manifest_destiny.18.c: "We can't enforce the doctrine without a navy to match."
-usfp_manifest_destiny.18.e: "We are a bit preoccupied at the moment!"
+usfp_manifest_destiny.18.e: "We are rather preoccupied at the moment!"
 
 usfp_manifest_destiny.19.t: "The [SCOPE.sCulture('american_culture').GetName] Superculture"
 usfp_manifest_destiny.19.d: "The ideals of Manifest Destiny now suffuse the entire nation. From coast to coast, our people talk of the great divine purpose bestowed upon the [ROOT.GetCountry.GetName]. This fervor has had a pronounced impact on the fabric of [ROOT.GetCountry.GetAdjectiveNoFormatting] culture, which will be felt for generations to come."

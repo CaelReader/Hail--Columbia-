@@ -84,7 +84,10 @@ usfp_western_purchase_button = {
 				}
 			}
 			custom_tooltip = mexican_subject_forced_purchase_tt
-		}
+		} else_if = {
+            limit = { usfp_manifest_destiny_greater_or_equal_trigger = { value = 3 } }
+            custom_tooltip = mexican_claims_potential
+        }
 	}
 
 	ai_chance = {
@@ -146,6 +149,99 @@ usfp_western_purchase_button = {
 			add = -1000
 		}
 	}
+}
+
+#In case you end up with high MD without offering to mexico first
+usfp_force_mexican_claims_button = {
+    name = "usfp_force_mexican_claims_button"
+    desc = "usfp_force_mexican_claims_button_desc"
+
+    visible = {
+        exists = c:MEX
+        c:MEX = {
+            any_scope_state = {
+                OR = {
+                    state_region = s:STATE_CALIFORNIA
+                    state_region = s:STATE_ARIZONA
+                    state_region = s:STATE_UTAH
+                    state_region = s:STATE_NEW_MEXICO
+                    state_region = s:STATE_NEVADA
+                    state_region = s:STATE_COLORADO
+                }
+            }
+            NOT = {
+                any_scope_state = {
+                    OR = {
+                        state_region = s:STATE_CALIFORNIA
+                        state_region = s:STATE_ARIZONA
+                        state_region = s:STATE_UTAH
+                        state_region = s:STATE_NEW_MEXICO
+                        state_region = s:STATE_NEVADA
+                        state_region = s:STATE_COLORADO
+                    }
+                    is_incorporated = yes
+                    is_split_state = no
+                    count > 1
+                }
+            }
+        }
+        has_variable = manifest_destiny_var
+        NOT = {
+            has_claim = s:STATE_CALIFORNIA
+        }
+        any_neighbouring_state = {
+            owner = c:MEX
+        }
+        usfp_manifest_destiny_greater_or_equal_trigger = { value = 7 }
+    }
+
+    cooldown = { years = 3 }
+
+    possible = {
+        usfp_manifest_destiny_greater_or_equal_trigger = { value = 8 }
+        is_diplomatic_play_committed_participant = no
+        is_at_war = no
+    }
+
+    effect = {
+        s:STATE_CALIFORNIA = {
+            add_claim = c:USA
+        }
+        s:STATE_NEVADA = {
+            add_claim = c:USA
+        }
+        s:STATE_UTAH = {
+            add_claim = c:USA
+        }
+        s:STATE_ARIZONA = {
+            add_claim = c:USA
+        }
+        s:STATE_NEW_MEXICO = {
+            add_claim = c:USA
+        }
+        s:STATE_TEXAS = {
+            add_claim = c:USA
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    is_ai = yes
+                }
+                set_secret_goal = {
+                    country = c:MEX
+                    secret_goal = conquer
+                }
+            }
+        }
+        create_incident = {
+            country = c:MEX
+            value = 10
+        }
+    }
+
+    ai_chance = {
+        value = 100
+    }
 }
 
 usfp_promote_manifest_destiny_button = {
