@@ -201,6 +201,26 @@ acw_je_events.1 = {
 			}
 			c:CSA = {
 				set_variable = acw_slave_nation_var
+                every_scope_character = {
+                    limit = {
+                        OR = {
+                            usfp_anti_slavery_leader_trigger = yes
+                            culture = cu:afro_american
+                        }
+                    }
+                    if = {
+                        limit = {
+                            OR = {
+                                has_role = agitator
+                                has_role = admiral
+                                has_role = general
+                            }
+                        }
+                        transfer_character = c:USA
+                    } else = {
+                        exile_character = yes
+                    }
+                }
 			}
 
 			# historical Confederates move to CSA

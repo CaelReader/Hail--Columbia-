@@ -65,6 +65,10 @@ notification_usfp_manifest_less_destiny_decay_name: "$manifest_destiny_decrease$
  notification_usfp_manifest_less_destiny_decay_desc: "The ideals of Manifest Destiny fade into memory."
  notification_usfp_manifest_less_destiny_decay_tooltip: "#header $notification_usfp_manifest_less_destiny_decay_name$#!\n$notification_usfp_manifest_less_destiny_decay_desc$"
 
+ notification_usfp_manifest_less_destiny_revolution_name: "$manifest_destiny_decrease$"
+ notification_usfp_manifest_less_destiny_revolution_desc: "The outbreak of [concept_revolution] overshadows the influence of Manifest Destiny."
+ notification_usfp_manifest_less_destiny_revolution_tooltip: "#header $notification_usfp_manifest_less_destiny_revolution_name$#!\n$notification_usfp_manifest_less_destiny_revolution_desc$"
+
 notification_usfp_washington_precedent_name: "[concept_usfp_washington_precedent]"
  notification_usfp_washington_precedent_desc: "[SCOPE.sCharacter('ruler_scope').GetFullName] will not seek a third term in office. [SCOPE.sCharacter('ruler_interest_group_new_leader_scope').GetFullName] is the new [concept_leader] of the [SCOPE.sCharacter('ruler_scope').GetInterestGroup.GetName]."
  notification_usfp_washington_precedent_tooltip: "#header $notification_usfp_washington_precedent_name$#!\n$notification_usfp_washington_precedent_desc$"

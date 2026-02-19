@@ -167,6 +167,20 @@ USA = {	# United States of America
 			}
 		}
 	}
+    #Neoconfederate Revolt
+    flag_definition = {
+        coa = CSA_battle_flag
+        priority = 1000
+        trigger = {
+            coa_def_secessionist_or_revolutionary_trigger = yes
+            scope:actor ?= {
+                OR = {
+                    var:civil_war_type_var ?= movement_type:movement_cultural_majority
+                    var:civil_war_type_var ?= movement_type:movement_usfp_neoconfederate
+                }
+            }
+        }
+    }
 	# 25 to 100 star flag definitions
 	flag_definition = {
 		coa = USA_25

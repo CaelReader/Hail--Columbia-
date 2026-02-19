@@ -664,11 +664,14 @@ usfp_remove_party_system = {
 on_revolution_start = { on_actions = { 
 	usfp_american_igs_action
 	usfp_fix_monarchy_revolt
-	usfp_revolution_types 
+	usfp_revolution_types
+    usfp_neoconfederate_characters_actions
+    usfp_revolution_decrease_md_effect
 } }
 on_secession_start = { on_actions = { 
 	usfp_american_igs_action
-	usfp_fix_monarchy_revolt  
+	usfp_fix_monarchy_revolt
+    usfp_neoconfederate_characters_actions
 } }
 on_country_released_as_own_subject = { on_actions = { usfp_american_igs_action } }
 on_country_released_as_overlord_subject = { on_actions = { usfp_american_igs_action } }
@@ -720,6 +723,58 @@ usfp_revolution_types = {
 			}
 		}
 	}
+}
+
+usfp_neoconfederate_characters_actions = {
+    effect = {
+        if = {
+            limit = {
+                usfp_country_is_american = yes
+                exists = c:USA
+                scope:target ?= {
+                    OR = {
+                        var:civil_war_type_var ?= movement_type:movement_usfp_neoconfederate
+                    }
+                }
+            }
+            scope:target ?= {
+                every_scope_character = {
+                    limit = {
+                        OR = {
+                            usfp_anti_slavery_leader_trigger = yes
+                            has_ideology = ideology:ideology_usfp_progressive
+                            culture = cu:afro_american
+                        }
+                    }
+                    if = {
+                        limit = {
+                            OR = {
+                                has_role = agitator
+                                has_role = admiral
+                                has_role = general
+                            }
+                        }
+                        transfer_character = c:USA
+                    } else = {
+                        exile_character = yes
+                    }
+                }
+            }
+        }
+    }
+}
+
+usfp_revolution_decrease_md_effect = {
+    effect = {
+        if = {
+            limit = {
+                has_journal_entry = usfp_manifest_destiny_main
+                has_variable = manifest_destiny_var
+            }
+            usfp_manifest_less_destiny_effect = yes
+            post_notification = usfp_manifest_less_destiny_revolution
+        }
+    }
 }
 
 on_election_campaign_end = {

@@ -68,11 +68,18 @@ usa_apg = {
 	possible = {
 		usfp_country_is_american = yes
 		is_revolutionary = yes
-		OR = {
-			var:civil_war_type_var ?= movement_type:movement_socialist
-			var:civil_war_type_var ?= movement_type:movement_anarchist
-			var:civil_war_type_var ?= movement_type:movement_communist
-			var:civil_war_type_var ?= movement_type:movement_labor
-		}
+        OR = {
+            var:civil_war_type_var ?= movement_type:movement_cultural_majority
+            var:civil_war_type_var ?= movement_type:movement_fascist
+            var:civil_war_type_var ?= movement_type:movement_usfp_eugenics
+        }
 	}
+}
+
+usa_neoconfederate = {
+    color = "csa_grey"
+    possible = {
+        is_revolutionary = yes
+        var:civil_war_type_var ?= movement_type:movement_usfp_neoconfederate
+    }
 }

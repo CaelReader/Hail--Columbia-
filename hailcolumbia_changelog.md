@@ -854,9 +854,13 @@ Fixed a few typos
 Updated korean loc
 
 # 7.5 "Jackson"
+The outbreak of any revolution now lowers Manifest Destiny
 Acquiring Greenland now makes it cheaper to Claim Canada
 The Claim Canada button now becomes visible 1 MD before it becomes available.
 Added tooltip to Offer Mexican Purchase button to let you know that if Mexico refuses, you'll be able to force the issue.
+Afro-american and anti-slavery characters now flee the CSA (or the Neo-Confederates) upon it spawning
+Neo-Confederate Revolts now use the CSA color and battle flag
+Enacting Ethnostate after Reconstruction now removes Afro-American as a Primary Culture and re-adds Dixie
 Fixed missing tooltip on Hard Times event
 Fixed Canadian countries missing Colonial Administration government principle
 Fixed Monroe Doctrine violation being triggered by the USA calling in a European ally against a target
