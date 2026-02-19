@@ -854,7 +854,9 @@ Fixed a few typos
 Updated korean loc
 
 # 7.5 "Jackson"
-Added fallback MD button to directly claim mexican lands with high MD, bypassing the financial requirements of the Offer decision
+Acquiring Greenland now makes it cheaper to Claim Canada
+The Claim Canada button now becomes visible 1 MD before it becomes available.
+Added tooltip to Offer Mexican Purchase button to let you know that if Mexico refuses, you'll be able to force the issue.
 Fixed missing tooltip on Hard Times event
 Fixed Canadian countries missing Colonial Administration government principle
 Fixed Monroe Doctrine violation being triggered by the USA calling in a European ally against a target

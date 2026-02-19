@@ -563,14 +563,44 @@ usfp_claim_canada_button = {
 	desc = "usfp_claim_canada_button_desc"
 
 	visible = {
-		has_variable = manifest_destiny_var
-		var:manifest_destiny_var >= 10
+        OR = {
+            usfp_manifest_destiny_greater_or_equal_trigger = { value = 9 }
+            AND = {
+                usfp_manifest_destiny_greater_or_equal_trigger = { value = 8 }
+                has_state_in_state_region = STATE_GREENLAND
+            }
+        }
+        NAND = {
+            has_state_in_state_region = STATE_ONTARIO
+            has_state_in_state_region = STATE_MANITOBA
+            has_state_in_state_region = STATE_BRITISH_COLUMBIA
+            has_state_in_state_region = STATE_QUEBEC
+            has_state_in_state_region = STATE_YUKON_TERRITORY
+            has_state_in_state_region = STATE_SASKATCHEWAN
+            has_state_in_state_region = STATE_NORTHWEST_TERRITORIES
+            has_state_in_state_region = STATE_NUNAVUT
+            has_state_in_state_region = STATE_NEW_BRUNSWICK
+            has_state_in_state_region = STATE_NEWFOUNDLAND
+            has_state_in_state_region = STATE_ALBERTA
+        }
+        NOT = {
+            c:CAN ?= {
+                is_subject_of = root
+            }
+        }
 		NOT = {
 			has_variable = claimed_canada
 		}
 	}
 
 	possible = {
+        OR = {
+            usfp_manifest_destiny_greater_or_equal_trigger = { value = 10 }
+            AND = {
+                usfp_manifest_destiny_greater_or_equal_trigger = { value = 9 }
+                has_state_in_state_region = STATE_GREENLAND
+            }
+        }
 		ruler = {
 			usfp_manifest_destiny_pro_expansion_trigger = yes
 		}
@@ -635,10 +665,20 @@ usfp_claim_canada_button = {
 					}
 				}
 				root = {
-					create_incident = {
-						country = prev.owner
-						value = 20
-					}
+                    if = {
+                        limit = {
+                            has_state_in_state_region = STATE_GREENLAND
+                        }
+                        create_incident = {
+                            country = prev.owner
+                            value = 10
+                        }
+                    } else = {
+                        create_incident = {
+                            country = prev.owner
+                            value = 20
+                        }
+                    }
 				}
 			}
 		}
