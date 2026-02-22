@@ -404,3 +404,42 @@ amendment_usfp_indian_removal_act = {
 
 	amendment_activism_multiplier = 0.25
 }
+
+amendment_usfp_african_colonial_acceptance = {
+    parent = law_national_supremacy
+
+    allowed_laws = { # list of laws that the amendment can be added to
+        law_national_supremacy
+        law_racial_segregation
+        law_cultural_exclusion
+        law_multicultural
+    }
+
+    modifier = {
+        country_acceptance_shared_language_trait_add = 40
+        country_acceptance_no_shared_heritage_trait_add = 10
+    }
+
+    possible = {
+        any_primary_culture = {
+            has_discrimination_trait = heritage_african_diaspora
+        }
+    }
+    would_sponsor = {
+        always = no
+    }
+
+    can_repeal = {
+        is_subject = no
+        government_legitimacy >= legitimacy_to_repeal_amendment
+    }
+
+    ai_will_revoke = {
+        OR = {
+            has_law_or_variant = law_type:law_multicultural
+            has_law_or_variant = law_type:law_ethnostate
+        }
+    }
+
+    amendment_activism_multiplier = 0.25
+}
