@@ -51,6 +51,7 @@ usfp_manifest_destiny_main = {
 	progressbar = yes
 
 	scripted_button = usfp_western_purchase_button
+    # scripted_button = usfp_force_mexican_claims_button
 	scripted_button = usfp_promote_manifest_destiny_button
 	scripted_button = usfp_suppress_manifest_destiny_button
 	scripted_button = usfp_homestead_act_button

@@ -101,3 +101,21 @@ country_usfp_gag_rule_block_modifier={
 		ai_value=0
 	}
 }
+
+country_enactment_success_chance_law_no_colonial_affairs_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+country_enactment_success_chance_law_multicultural_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}

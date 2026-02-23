@@ -26,6 +26,14 @@ usfp_usa_spain.1 = {
 			overlord = {
 				is_at_war = no
 			}
+			NOT = {
+				is_subject_of = root
+			}
+		}
+		NOR = {
+			has_state_in_state_region = STATE_WESTERN_CUBA
+			has_state_in_state_region = STATE_EASTERN_CUBA
+			has_state_in_state_region = STATE_CENTRAL_CUBA
 		}
 	}
 
@@ -142,6 +150,21 @@ usfp_usa_spain.2 = {
 		}
 		ai_chance = {
 			base = 100
+		}
+	}
+
+	cancellation_trigger = {
+		OR = {
+			c:USA = {
+				OR = {
+					has_state_in_state_region = STATE_WESTERN_CUBA
+					has_state_in_state_region = STATE_EASTERN_CUBA
+					has_state_in_state_region = STATE_CENTRAL_CUBA
+				}
+			}
+			c:CUB ?= {
+				is_subject_of = c:USA
+			}
 		}
 	}
 
@@ -285,6 +308,21 @@ usfp_usa_spain.3 = {
 					}
 				}
 				add = 100
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		OR = {
+			c:USA = {
+				OR = {
+					has_state_in_state_region = STATE_WESTERN_CUBA
+					has_state_in_state_region = STATE_EASTERN_CUBA
+					has_state_in_state_region = STATE_CENTRAL_CUBA
+				}
+			}
+			c:CUB ?= {
+				is_subject_of = c:USA
 			}
 		}
 	}

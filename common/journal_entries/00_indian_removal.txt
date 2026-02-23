@@ -102,6 +102,11 @@
 			# }
 
 		}
+        # NOT = {
+        #     active_law:lawgroup_colonization ?= {
+        #         has_amendment = amendment_type:amendment_usfp_indian_removal_act
+        #     }
+        # }
 	}
 
 	custom_completion_header = je_indian_removal_complete_header

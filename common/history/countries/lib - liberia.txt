@@ -16,6 +16,13 @@
 		activate_law = law_type:law_national_militia
 		activate_law = law_type:law_frontier_colonization
 		set_variable = american_colonization_society
+
+        active_law:lawgroup_citizenship ?= {
+            add_amendment = {
+                type = amendment_usfp_african_colonial_acceptance
+                sponsor = prev.ig:ig_intelligentsia
+            }
+        }
 		create_political_lobby = {
 			type = lobby_pro_overlord
 			target = c:USA

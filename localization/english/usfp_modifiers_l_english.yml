@@ -312,3 +312,7 @@ country_usfp_spoil_system_on_reform_modifier_desc: "Upon [concept_government_ref
 country_usfp_gag_rule_block_modifier: "Cannot Enact Slavery Laws"
 country_usfp_gag_rule_block_modifier_desc: "[GetLawType('law_slave_trade').GetGroup.GetName] [Concept('concept_law', '$concept_laws$')] can't be [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enacted$')]"
 usfp_apolitical_military_modifier: "Apolitical Military"
+country_enactment_success_chance_law_no_colonial_affairs_add: "[concept_enactment_success] chance for [GetLawType('law_no_colonial_affairs').GetName]"
+country_enactment_success_chance_law_no_colonial_affairs_add_desc: "A flat percentage point increase to the likelihood of enacting the specific law"
+country_enactment_success_chance_law_multicultural_add: "[concept_enactment_success] chance for [GetLawType('law_multicultural').GetName]"
+country_enactment_success_chance_law_multicultural_add_desc: "A flat percentage point increase to the likelihood of enacting the specific law"

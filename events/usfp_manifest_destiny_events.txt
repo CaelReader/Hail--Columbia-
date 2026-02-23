@@ -286,6 +286,12 @@ usfp_manifest_destiny.3 = {
 			}
 		}
 	}
+
+    cancellation_trigger = {
+        c:USA = {
+            has_claim = s:STATE_CALIFORNIA
+        }
+    }
 }
 
 ## Mexican Purchase refused
@@ -1961,12 +1967,23 @@ usfp_manifest_destiny.18 = {
 
 	trigger = {
 		any_diplomatic_play = {
-			target = {
+            target = {
 				usfp_monroe_doctrine_valid_defender = yes
 			}
-			any_scope_initiator_ally = {
-				usfp_monroe_doctrine_valid_interloper = yes
-			}
+            NOR = {
+                initiator_is = root
+                any_scope_initiator_ally = {
+                    this = root
+                }
+            }
+            OR = {
+                any_scope_initiator_ally = {
+                    usfp_monroe_doctrine_valid_interloper = yes
+                }
+                initiator = {
+                    usfp_monroe_doctrine_valid_interloper = yes
+                }
+            }
 			NOR = {
 				is_diplomatic_play_type = dp_reduce_autonomy
 				is_diplomatic_play_type = dp_increase_autonomy
@@ -1981,20 +1998,31 @@ usfp_manifest_destiny.18 = {
 	immediate = {
 		random_diplomatic_play = {
 			limit = {
-				target = {
-					usfp_monroe_doctrine_valid_defender = yes
-				}
-				any_scope_initiator_ally = {
-					usfp_monroe_doctrine_valid_interloper = yes
-				}
-				NOR = {
-					is_diplomatic_play_type = dp_reduce_autonomy
-					is_diplomatic_play_type = dp_increase_autonomy
-					is_diplomatic_play_type = dp_secession
-					is_diplomatic_play_type = dp_independence
-					is_diplomatic_play_type = dp_native_uprising
-				}
-				is_war = no
+                target = {
+                    usfp_monroe_doctrine_valid_defender = yes
+                }
+                NOR = {
+                    initiator_is = root
+                    any_scope_initiator_ally = {
+                        this = root
+                    }
+                }
+                OR = {
+                    any_scope_initiator_ally = {
+                        usfp_monroe_doctrine_valid_interloper = yes
+                    }
+                    initiator = {
+                        usfp_monroe_doctrine_valid_interloper = yes
+                    }
+                }
+                NOR = {
+                    is_diplomatic_play_type = dp_reduce_autonomy
+                    is_diplomatic_play_type = dp_increase_autonomy
+                    is_diplomatic_play_type = dp_secession
+                    is_diplomatic_play_type = dp_independence
+                    is_diplomatic_play_type = dp_native_uprising
+                }
+                is_war = no
 			}
 			target = {
 				save_scope_as = target_scope
@@ -2094,6 +2122,10 @@ usfp_manifest_destiny.18 = {
 		trigger = {
 			naval_power_projection < usfp_monroe_doctrine_naval_power
 		}
+        add_modifier = {
+            name = usfp_ignored_monroe_modifier
+            years = 2
+        }
 		highlighted_option = yes
 		change_relations = {
 			country = scope:target_scope
