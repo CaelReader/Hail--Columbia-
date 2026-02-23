@@ -135,3 +135,6 @@
  notification_usfp_cuba_filibusters_failed_name: "필리버스터 포착"
  notification_usfp_cuba_filibusters_failed_desc: "[SCOPE.sCountry('cuba_scope').GetName]이(가) 우리 영토에서 출항한 필리버스터들을 체포하여 처형함으로써, 양국 간 [concept_relations]이(가) 악화되었습니다."
  notification_usfp_cuba_filibusters_failed_tooltip: "#header $notification_usfp_cuba_filibusters_failed_name$#!\n$notification_usfp_cuba_filibusters_failed_desc$"
+ notification_usfp_manifest_less_destiny_revolution_name: "$manifest_destiny_decrease$"
+ notification_usfp_manifest_less_destiny_revolution_desc: "[concept_revolution]의 발발은 '명백한 운명'의 영향력을 압도합니다."
+ notification_usfp_manifest_less_destiny_revolution_tooltip: "#header $notification_usfp_manifest_less_destiny_revolution_name$#!\n$notification_usfp_manifest_less_destiny_revolution_desc$"

@@ -312,3 +312,7 @@
  country_usfp_gag_rule_block_modifier: "노예법을 시행할 수 없음"
  country_usfp_gag_rule_block_modifier_desc: "[GetLawType('law_slave_trade').GetGroup.GetName] [Concept('concept_law', '$concept_laws$')]은(는) [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enacted$')]될 수 없음"
  usfp_apolitical_military_modifier: "비정치적 군대"
+ country_enactment_success_chance_law_no_colonial_affairs_add: "[GetLawType('law_no_colonial_affairs').GetName]에 대한 [concept_enactment_success] 확률"
+ country_enactment_success_chance_law_no_colonial_affairs_add_desc: "특정 법 제정 확률에 대한 순 증가율"
+ country_enactment_success_chance_law_multicultural_add: "[GetLawType('law_multicultural').GetName]에 대한 [concept_enactment_success] 확률"
+ country_enactment_success_chance_law_multicultural_add_desc: "특정 법 제정 확률에 대한 순 증가율"

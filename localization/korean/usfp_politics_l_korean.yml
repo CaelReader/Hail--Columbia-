@@ -85,3 +85,7 @@
  doesnt_have_gag_rule: "개그 룰 [concept_amendment]이 #bold 없음#!"
  amendment_usfp_radical_land_redistribution: "40 에이커와 노새 한 마리"
  amendment_usfp_radical_land_redistribution_desc: "과거 노예 소유자들의 토지는 국가에 의해 압류되어 해방된 노예들에게 재분배될 수 있도록 제공됩니다."
+ amendment_usfp_indian_removal_act: "인디언 이주법"
+ amendment_usfp_indian_removal_act_desc: "연방 정부는 동부의 인디언 토지를 미시시피강 서쪽의 토지와 '교환'하고, 인디언들을 그곳으로 이주시킬 예정입니다."
+ amendment_usfp_african_colonial_acceptance: "식민지 정체성"
+ amendment_usfp_african_colonial_acceptance_desc: "지배 계층은 자신들의 옛 식민 종주국의 관습을 유지함으로써, 비서구화된 아프리카 인구와 스스로를 구별합니다."
