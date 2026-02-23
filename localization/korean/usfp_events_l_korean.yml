@@ -426,7 +426,7 @@
  usfp_manifest_destiny.18.a: "아메리카는 가만히 있지 않을 것이다!"
  usfp_manifest_destiny.18.b: "[SCOPE.sCountry('target_scope').GetName]은(는) 우리의 관심사가 아니다."
  usfp_manifest_destiny.18.c: "해군이 뒷받침되지 않는다면 먼로 독트린을 실시할 수 없다."
- usfp_manifest_destiny.18.e: "지금 당장은 약간 정신이 없다!"
+ usfp_manifest_destiny.18.e: "지금은 상당히 바쁘다!"
  usfp_manifest_destiny.19.t: "[SCOPE.sCulture('american_culture').GetName] 특권문화"
  usfp_manifest_destiny.19.d: "명백한 운명의 이상이 이제 온 나라에 퍼져 있습니다. 양안에 걸쳐, 우리 국민은 [ROOT.GetCountry.GetName]에게 부여된 위대하고 신성한 목적의식에 관해 논합니다. 이러한 열기는 [ROOT.GetCountry.GetAdjectiveNoFormatting] 문화의 기본 구조에 향후 몇 세대동안 이어질 엄청난 영향을 끼쳤습니다."
  usfp_manifest_destiny.19.f: "\"신성한 임무! 불멸의 사명! 우리 앞에 놓인 길을 빠르고 즐겁게 나아가자! 모든 미국인의 가슴을 활짝 열어 애국심을 빛나게 하고, 사랑하는 조국의 숭고하고 장엄한 운명에 대한 독실한 신앙을 고백하게 해라!\""
