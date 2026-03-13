@@ -104,6 +104,7 @@ usfp_panics.1 = {
 		show_as_unavailable = {
 			always = yes
 		}
+		highlighted_option = yes
 		add_journal_entry = {
 			type = je_usfp_panic_1837
 		}

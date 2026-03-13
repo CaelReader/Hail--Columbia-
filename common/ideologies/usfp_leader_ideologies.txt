@@ -950,6 +950,7 @@ REPLACE_OR_CREATE:ideology_usfp_social_darwinist_leader = {
 		law_anti_strike_laws = neutral
 		law_corporatized_unions = neutral
 		law_right_to_associate = disapprove
+		law_factory_councils = strongly_disapprove
 	}
 
 	country_trigger = {

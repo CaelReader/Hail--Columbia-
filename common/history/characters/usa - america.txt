@@ -43,7 +43,7 @@
 		}
 
 		create_character = {
-			template = usa_robert_rantoul_character_template
+			template = USA_robert_rantoul
 		}
 
 

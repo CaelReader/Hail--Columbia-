@@ -1,0 +1,29 @@
+﻿COUNTRIES = {
+	c:HBC ?= {
+		add_modifier = {
+			name = usfp_canadian_colonization_modifier
+			years = 30
+		}
+	}
+	c:ONT ?= {
+		activate_law = law_type:law_frontier_colonization
+		add_modifier = {
+			name = usfp_canadian_colonization_modifier
+			years = 30
+		}
+	}
+	c:ORG ?= {
+		add_modifier = {
+			name = usfp_canadian_colonization_modifier
+			years = 30
+		}
+	}
+	c:QUE ?= {
+		activate_law = law_type:law_frontier_colonization
+		add_modifier = {
+			name = usfp_canadian_colonization_modifier
+			years = 30
+		}
+	}
+
+}

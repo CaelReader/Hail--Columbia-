@@ -119,6 +119,14 @@ usfp_manifest_less_destiny_decay = {
 	color = bad
 }
 
+usfp_manifest_less_destiny_revolution = {
+    type = country
+    group = "usfp_manifest_destiny_group"
+    texture = "gfx/interface/icons/notification_icons/icon_america.dds"
+    notification_type = toast
+    color = bad
+}
+
 usfp_washington_precedent = {
 	type = country
 	group = "new_ruler_notification_group"

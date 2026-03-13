@@ -14,6 +14,7 @@
 	modifiers_while_active = {
 		usfp_federal_government_modifier
 		usfp_constitutional_tariff_modifier
+		usfp_apolitical_military_modifier
 	}
 
 	fail = {

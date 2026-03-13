@@ -66,6 +66,7 @@ usfp_gilded_age.1 = {
 				years = 20
 			}
 		}
+		add_electoral_confidence = -0.05
 		random_scope_state = {
 			limit = {
 				is_incorporated = yes
@@ -131,6 +132,7 @@ usfp_gilded_age.2 = {
 	option = {
 		name = usfp_gilded_age.2.a
 		default_option = yes
+		add_electoral_confidence = -0.05
 		add_treasury = -1000000
 		scope:scandal_party = {
 			add_momentum = momentum_large_decrease
@@ -172,6 +174,7 @@ usfp_gilded_age.2 = {
 	option = {
 		name = usfp_gilded_age.2.c
 		add_treasury = -1000000
+		add_electoral_confidence = -0.10
 		random_list = {
 			30 = {
 				scope:scandal_party = {
@@ -216,6 +219,7 @@ usfp_gilded_age.2 = {
 	#censor
 	option = {
 		name = usfp_gilded_age.2.e
+		add_electoral_confidence = -0.05
 		add_treasury = -1000000
 		trigger = {
 			OR = {
@@ -279,6 +283,7 @@ usfp_gilded_age.3 = {
 	option = {
 		name = usfp_gilded_age.3.b
 		add_treasury = -400000
+		add_electoral_confidence = -0.05
 		add_modifier = {
 			name = usfp_scandal_outrage_modifier
 			years = 10
@@ -428,6 +433,7 @@ usfp_gilded_age.5 = {
 	#don't do anything
 	option = {
 		name = usfp_gilded_age.5.b
+		add_electoral_confidence = -0.05
 		scope:new_york_scope = {
 			add_loyalists_in_state = {
 				value = small_radicals
@@ -937,6 +943,7 @@ usfp_gilded_age.12 = {
 	option = {
 		name = usfp_gilded_age.12.a
 		default_option = yes
+		add_electoral_confidence = -0.05
 		scope:corruption_state = {
 			add_modifier = {
 				name = usfp_captive_state_government
@@ -986,6 +993,7 @@ usfp_gilded_age.12 = {
 				}
 			}
 		}
+		add_electoral_confidence = -0.10
 		random_scope_character = {
 			limit = {
 				interest_group = {

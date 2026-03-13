@@ -808,7 +808,7 @@ je_usfp_afro_american_colonization = {
 
 	group = je_group_usa_american_civil_war
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default = no
 
 	immediate = {
 		scope:journal_entry = {

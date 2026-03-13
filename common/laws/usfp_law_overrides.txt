@@ -14,3 +14,24 @@ INJECT:law_freedom_of_conscience = {
 		}
 	}
 }
+
+INJECT:law_ethnostate = {
+    on_activate = {
+        if = {
+            limit = {
+                c:USA ?= root
+                country_has_primary_culture = cu:afro_american
+            }
+            remove_primary_culture = cu:afro_american
+        }
+        if = {
+            limit = {
+                c:USA ?= root
+                NOT = {
+                    country_has_primary_culture = cu:dixie
+                }
+            }
+            add_primary_culture = cu:dixie
+        }
+    }
+}

@@ -13,7 +13,7 @@ usfp_third_great_awakening = {
 }
 usfp_seminole_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bowandarrow_positive.dds
-	unit_defense_mult = 2.0
+	unit_defense_mult = 1.0
 	military_formation_mobilization_speed_mult = 1.0
 	building_training_rate_add = 1000
 	unit_morale_loss_mult = -0.5
@@ -66,6 +66,7 @@ usfp_indian_removal_modifier = {
 REPLACE_OR_CREATE:usfp_second_party_system_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
 	country_law_enactment_time_mult = 0.30
+	country_legitimacy_ideological_incoherence_mult = -0.25
 }
 
 usfp_third_party_system_modifier = {
@@ -671,7 +672,7 @@ usfp_federal_government_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
 	country_legitimacy_govt_size_add = -1
 	# country_legitimacy_headofstate_add = 10
-	country_party_whip_impact_add = 0.10
+	country_party_whip_impact_add = 0.25
 	country_agitator_slots_add = 3
 }
 
@@ -758,7 +759,7 @@ usfp_panic_1837_modifier = {
 	state_shopkeepers_investment_pool_contribution_add = -0.10
 	state_aristocrats_investment_pool_efficiency_mult = -0.4
 	state_aristocrats_investment_pool_contribution_add = -0.10
-	country_loan_interest_rate_mult = 0.50
+	country_loan_interest_rate_mult = 0.40
 	# country_minting_mult = -0.20
 }
 
@@ -797,4 +798,11 @@ usfp_america_enters_world_stage_modifier = {
 usfp_spoils_system_decaying_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bureaucracy_negative.dds
 	country_bureaucracy_mult = -0.25
+}
+
+usfp_apolitical_military_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_officer_positive.dds
+	country_coup_resistance_add = 10.0
+	interest_group_ig_armed_forces_pol_str_mult = -0.10
+	interest_group_ig_armed_forces_pop_attraction_mult = -0.10
 }

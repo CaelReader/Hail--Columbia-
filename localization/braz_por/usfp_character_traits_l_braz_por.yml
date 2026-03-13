@@ -1,9 +1,11 @@
 ﻿l_braz_por:
- usfp_trait_expansionist: "Expansionist"
- usfp_trait_expansionist_desc: "This character embraces and promotes the ideal of Manifest Destiny."
- usfp_trait_antiexpansionist: "Anti-Expansionist"
- usfp_trait_antiexpansionist_desc: "This character rejects notions of imperialist expansion and Manifest Destiny."
+ usfp_trait_expansionist: "Expansionist" #NT!
+ usfp_trait_expansionist_desc: "This character embraces and promotes the ideal of Manifest Destiny." #NT!
+ usfp_trait_antiexpansionist: "Anti-Expansionist" #NT!
+ usfp_trait_antiexpansionist_desc: "This character rejects notions of imperialist expansion and Manifest Destiny." #NT!
  usfp_special_character_great_triumvirate: "Great Triumvirate" #NT!
  usfp_special_character_great_triumvirate_desc: "He was one of the esteemed three who steered the country through the Second Party System." #NT!
  usfp_special_character_provisional_president_of_africa: "Provisional President of Africa" #NT!
  usfp_special_character_provisional_president_of_africa_desc: "From across the sea he dreamed of an Africa for Africans." #NT!
+ usfp_special_character_frederick_douglass: "Prophet of Freedom" #NT!
+ usfp_special_character_frederick_douglass_desc: "A former slave who dedicated his life and his voice to the cause of freedom." #NT!

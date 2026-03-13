@@ -46,11 +46,7 @@ alaska.1 = {
 	option = {
 		name = alaska.1.a
 		default_option = yes
-		add_modifier = {
-			name = alaska_rus_big_money
-			months = 12
-			is_decaying = no
-		}
+		add_treasury = usfp_alaska_purchase_lump_sum
 		scope:alaska_buyer = {
 			trigger_event = { id = alaska.2 days = 0 popup = yes }
 		}
@@ -136,9 +132,9 @@ alaska.2 = {
 	option = {
 		name = alaska.2.a
 		default_option = yes
-		add_modifier = {
-			name = alaska_usa_big_money
-			months = 12
+		add_treasury = {
+			value = usfp_alaska_purchase_lump_sum
+			multiply = -1
 		}
 		scope:alaska_seller = {
 			set_variable = successful_sale_of_alaska
@@ -297,7 +293,7 @@ alaska.4 = {
 		ai_chance = {
 			base = 1
 		}
-		custom_tooltip = alaska.4.tt1 # 3 million over a year
+		custom_tooltip = usfp_alaska_cost #usfp_alaska_purchase_lump_sum
 		scope:alaska_seller = {
 			trigger_event = {
 				id = alaska.1

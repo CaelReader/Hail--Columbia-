@@ -74,7 +74,7 @@
 		custom_tooltip = {
 			text = panic_recovery_complete
 			scope:journal_entry = {
-				"scripted_bar_progress(usfp_bleeding_kansas_progress_bar)" >= 300
+				"scripted_bar_progress(usfp_panic_1837_recovery_progress_bar)" >= 300
 			}
 		}
 	}

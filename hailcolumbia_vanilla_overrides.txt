@@ -53,24 +53,16 @@ common/interest_groups/00_rural_folk.txt
 
 common/journal_entries/00_liberalism.txt #to stop the US from getting it
 common/journal_entries/00_suffragists.txt #to stop the US from getting it
-common/journal_entries/01_acw_entries.txt
-common/journal_entries/01_alaska.txt
-common/journal_entries/01_indian_removal.txt
-common/journal_entries/01_oregon.txt
-common/journal_entries/01_texas.txt
-common/journal_entries/05_turtle_island.txt
-common/journal_entries/06_seminole_wars.txt #disabled in favor of Indian Removal JE
+common/journal_entries/00_acw_entries.txt
+common/journal_entries/00_indian_removal.txt
+common/journal_entries/00_oregon.txt
+common/journal_entries/00_texas.txt #disabled
+common/journal_entries/00_turtle_island.txt
+common/journal_entries/00_seminole_wars.txt #disabled in favor of Indian Removal JE
 
 All slavery laws are overwritten
 
-
-#Party definitions are handled in the Community Mod Framework
-
 #Political Movement changes are handled in the Community Mod Framework
-
-common/scripted_buttons/turtle_island_buttons.txt
-
-common/achievement_groups.txt
 
 events/alaska_events.txt
 events/american_civil_war/acw_events.txt

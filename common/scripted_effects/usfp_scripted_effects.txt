@@ -720,19 +720,22 @@ usfp_oregon_trail_provinces_effect = {
 			provinces = { x30DED0 xC77F08 }
 		}
 	}
-	s:STATE_WYOMING.region_state:USA = {
-		add_modifier = {
-			name = usfp_settlers_gone_west_modifier
-			years = 10
+	hidden_effect = {
+		s:STATE_WYOMING.region_state:USA = {
+			add_modifier = {
+				name = usfp_settlers_gone_west_modifier
+				years = 10
+			}
+		}
+		s:STATE_NEBRASKA.region_state:USA = {
+			add_modifier = {
+				name = usfp_settlers_gone_west_modifier
+				multiplier = 0.5
+				years = 10
+			}
 		}
 	}
-	s:STATE_NEBRASKA.region_state:USA = {
-		add_modifier = {
-			name = usfp_settlers_gone_west_modifier
-			multiplier = 0.5
-			years = 10
-		}
-	}
+
 }
 
 usfp_remove_manifest_destiny_claims_effect = {
@@ -968,6 +971,19 @@ usfp_reconstruction_conclusion_effect = {
 		}
 		remove_modifier = usfp_enforcing_reconstruction
 		remove_modifier = usfp_freedmens_bureau
+	}
+
+	if = {
+		limit = {
+			active_law:lawgroup_slavery ?= {
+				has_amendment = amendment_type:amendment_usfp_radical_land_redistribution
+			}
+		}
+		active_law:lawgroup_slavery ?= {
+			random_scope_amendment = {
+				remove_amendment = yes
+			}
+		}
 	}
 }
 
@@ -2095,6 +2111,7 @@ usfp_fugitive_slave_act_effect = {
 			add_amendment = {
 				type = amendment_american_fugitive_slaves_act
 				sponsor = ROOT.ig:ig_landowners
+				cooldown = 60
 			}
 		}
 		random_political_movement = {

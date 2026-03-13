@@ -10,3 +10,7 @@ REPLACE:can_unified_canada = {
 	state_colony_growth_speed_mult = 0.25
 	state_colony_growth_creation_factor = 0.10
 }
+REPLACE:modifier_large_expedition_cost = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_expenses_add = 0.8
+}

@@ -182,6 +182,7 @@ usfp_usa_postreconstruction.2 = {
 			add_amendment = {
 				type = amendment_usfp_seperate_but_equal
 				sponsor = PREV.ig:ig_landowners
+				cooldown = 60
 			}
 		}
 		usfp_long_reconstruction_lose_progress = {
@@ -223,6 +224,7 @@ usfp_usa_postreconstruction.2 = {
 			add_amendment = {
 				type = amendment_usfp_seperate_but_equal
 				sponsor = PREV.ig:ig_landowners
+				cooldown = 60
 			}
 		}
 		usfp_long_reconstruction_lose_progress = {
@@ -2600,46 +2602,39 @@ usfp_usa_postreconstruction.15 = {
 			}
 		}
 		usfp_is_afro_american_discriminated = no
+		any_scope_state = {
+			count >= 3
+			state_region = {
+				is_homeland = cu:afro_american
+			}
+			state_is_eligible_as_mass_migration_target = yes
+		}
 	}
 
 	immediate = {
-		s:STATE_ONTARIO = {
-			if = {
-				limit = { 
-					any_scope_state = {
-						any_scope_pop = {
-							culture = cu:afro_american
-						}
-					}
+		random_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_ONTARIO
+					state_region = s:STATE_QUEBEC
 				}
-				random_scope_state = {
-					limit = {
-						any_scope_pop = {
-							culture = cu:afro_american
-						}
-					}
-					save_scope_as = great_return_source_1
+				any_scope_pop = {
+					culture = cu:afro_american
 				}
 			}
+			save_scope_as = great_return_source_1
 		}
-		s:STATE_QUEBEC = {
-			if = {
-				limit = { 
-					any_scope_state = {
-						any_scope_pop = {
-							culture = cu:afro_american
-						}
-					}
+		random_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_ONTARIO
+					state_region = s:STATE_QUEBEC
 				}
-				random_scope_state = {
-					limit = {
-						any_scope_pop = {
-							culture = cu:afro_american
-						}
-					}
-					save_scope_as = great_return_source_2
+				any_scope_pop = {
+					culture = cu:afro_american
 				}
 			}
+			save_scope_as = great_return_source_2
 		}
 		ordered_scope_state = {
 			position = 0
@@ -3128,6 +3123,7 @@ usfp_usa_postreconstruction.18 = {
 			add_amendment = {
 				type = amendment_usfp_anti_lynching
 				sponsor = PREV.ig:ig_intelligentsia
+				cooldown = 60
 			}
 		}
 		set_variable = anti_lynching

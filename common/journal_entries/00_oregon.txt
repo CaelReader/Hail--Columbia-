@@ -122,7 +122,7 @@ je_oregon = {
 					}
 				}
 			}
-			c:GBR = { trigger_event = { id = oregon.2 } }
+			c:GBR ?= { trigger_event = { id = oregon.2 } }
 		}
 		else = {
 			s:STATE_BRITISH_COLUMBIA = {
@@ -235,7 +235,7 @@ je_conquer_oregon = {
 	scripted_button = usfp_demand_bc_button 
 
 	complete = {
-		c:USA = {
+		c:USA ?= {
 			owns_entire_state_region = STATE_WASHINGTON
 			owns_entire_state_region = STATE_IDAHO
 			owns_entire_state_region = STATE_OREGON

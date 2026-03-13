@@ -374,7 +374,7 @@
 					}
 					add = level
 				}
-				divide = 5
+				divide = 4
 			}
 			desc = "panic_recovery_gold_sources"
 		}

@@ -3,21 +3,22 @@
 	icon = gfx/interface/icons/event_icons/event_military.dds
 
 	group = je_group_foreign_affairs
-
+	
 	should_be_pinned_by_default = yes
+
 	weight = 200
 	is_shown_when_inactive = {
+		c:USA ?= ROOT
 		exists = c:CUB
 		c:CUB ?= {
 			NOT = {
 				is_subject_of = root
 			}
 		}
-		has_technology_researched = political_agitation
 	}
 
 	possible = {
-		c:CUB = {
+		c:CUB ?= {
 			OR = {
 				liberty_desire >= 75
 				custom_tooltip = {
@@ -33,6 +34,7 @@
 				}
 			}
 		}
+		has_technology_researched = political_agitation
 	}
 	
 	immediate = {
@@ -61,7 +63,21 @@
 		}
 	}
 
-	timeout = 1826 #5 years
+	timeout = {
+		value = 1826 #5 years
+		if = { 
+			limit = {
+				exists = scope:cuban_overlord
+				root = {
+					OR = {
+						has_war_with = scope:cuban_overlord
+						has_truce_with = scope:cuban_overlord
+					}
+				}
+			}
+			add = 1826
+		}
+	}
 
 	on_timeout = {
 		add_radicals = {

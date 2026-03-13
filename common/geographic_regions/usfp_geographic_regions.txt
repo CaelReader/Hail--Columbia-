@@ -66,3 +66,13 @@ geographic_region_central_great_plains = {
 		STATE_COLORADO
 	}
 }
+
+geographic_region_cuba = {
+	short_key = "cuba"
+
+	state_regions = {
+		STATE_WESTERN_CUBA
+		STATE_CENTRAL_CUBA
+		STATE_EASTERN_CUBA
+	}
+}

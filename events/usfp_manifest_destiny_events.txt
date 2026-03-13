@@ -104,7 +104,7 @@ usfp_manifest_destiny.2 = {
 		}
 		create_incident = {
 			country = c:USA
-			value = 5
+			value = 4
 		}
 	}
 
@@ -286,6 +286,12 @@ usfp_manifest_destiny.3 = {
 			}
 		}
 	}
+
+    cancellation_trigger = {
+        c:USA = {
+            has_claim = s:STATE_CALIFORNIA
+        }
+    }
 }
 
 ## Mexican Purchase refused
@@ -552,7 +558,7 @@ usfp_manifest_destiny.6 = {
 		name = usfp_manifest_destiny.6.b
 		create_incident = {
 			country = c:MEX
-			value = 5
+			value = 4
 		}
 		ai_chance = {
 			base = 0
@@ -603,7 +609,7 @@ usfp_manifest_destiny.6 = {
 
 		create_incident = {
 			country = c:MEX
-			value = 30
+			value = 25
 		}
 		add_radicals = {
 			value = medium_radicals
@@ -664,7 +670,7 @@ usfp_manifest_destiny.6 = {
 		}
 		create_incident = {
 			country = c:MEX
-			value = 60
+			value = 50
 		}
 		usfp_anger_abolitionists_effect = { MULT = 1.5 }
 		add_radicals = {
@@ -720,7 +726,7 @@ usfp_manifest_destiny.6 = {
 		}
 		create_incident = {
 			country = c:MEX
-			value = 90
+			value = 75
 		}
 		usfp_manifest_more_destiny_effect = yes
 		hidden_effect = {
@@ -1553,7 +1559,7 @@ usfp_manifest_destiny.14 = {
 		custom_tooltip = cuba_offer_available
 		create_incident = {
 			country = scope:cuba_owner_scope
-			value = 5
+			value = 4
 		}
 		usfp_anger_abolitionists_effect = { MULT = 1 }
 	}
@@ -1570,7 +1576,7 @@ usfp_manifest_destiny.14 = {
 		usfp_manifest_more_destiny_effect = yes
 		create_incident = {
 			country = scope:cuba_owner_scope
-			value = 15
+			value = 8
 		}
 		usfp_claim_cuba_effect = yes
 		usfp_anger_abolitionists_effect = { MULT = 1 }
@@ -1804,7 +1810,7 @@ usfp_manifest_destiny.16 = {
 		usfp_manifest_more_destiny_effect = yes
 		create_incident = {
 			country = scope:cuba_owner_scope
-			value = 15
+			value = 8
 		}
 		if = {
 			limit = { 
@@ -1961,12 +1967,23 @@ usfp_manifest_destiny.18 = {
 
 	trigger = {
 		any_diplomatic_play = {
-			target = {
+            target = {
 				usfp_monroe_doctrine_valid_defender = yes
 			}
-			any_scope_initiator_ally = {
-				usfp_monroe_doctrine_valid_interloper = yes
-			}
+            NOR = {
+                initiator_is = root
+                any_scope_initiator_ally = {
+                    this = root
+                }
+            }
+            OR = {
+                any_scope_initiator_ally = {
+                    usfp_monroe_doctrine_valid_interloper = yes
+                }
+                initiator = {
+                    usfp_monroe_doctrine_valid_interloper = yes
+                }
+            }
 			NOR = {
 				is_diplomatic_play_type = dp_reduce_autonomy
 				is_diplomatic_play_type = dp_increase_autonomy
@@ -1981,20 +1998,31 @@ usfp_manifest_destiny.18 = {
 	immediate = {
 		random_diplomatic_play = {
 			limit = {
-				target = {
-					usfp_monroe_doctrine_valid_defender = yes
-				}
-				any_scope_initiator_ally = {
-					usfp_monroe_doctrine_valid_interloper = yes
-				}
-				NOR = {
-					is_diplomatic_play_type = dp_reduce_autonomy
-					is_diplomatic_play_type = dp_increase_autonomy
-					is_diplomatic_play_type = dp_secession
-					is_diplomatic_play_type = dp_independence
-					is_diplomatic_play_type = dp_native_uprising
-				}
-				is_war = no
+                target = {
+                    usfp_monroe_doctrine_valid_defender = yes
+                }
+                NOR = {
+                    initiator_is = root
+                    any_scope_initiator_ally = {
+                        this = root
+                    }
+                }
+                OR = {
+                    any_scope_initiator_ally = {
+                        usfp_monroe_doctrine_valid_interloper = yes
+                    }
+                    initiator = {
+                        usfp_monroe_doctrine_valid_interloper = yes
+                    }
+                }
+                NOR = {
+                    is_diplomatic_play_type = dp_reduce_autonomy
+                    is_diplomatic_play_type = dp_increase_autonomy
+                    is_diplomatic_play_type = dp_secession
+                    is_diplomatic_play_type = dp_independence
+                    is_diplomatic_play_type = dp_native_uprising
+                }
+                is_war = no
 			}
 			target = {
 				save_scope_as = target_scope
@@ -2094,6 +2122,10 @@ usfp_manifest_destiny.18 = {
 		trigger = {
 			naval_power_projection < usfp_monroe_doctrine_naval_power
 		}
+        add_modifier = {
+            name = usfp_ignored_monroe_modifier
+            years = 2
+        }
 		highlighted_option = yes
 		change_relations = {
 			country = scope:target_scope
@@ -2871,6 +2903,10 @@ usfp_manifest_destiny.26 = {
 			NOT = {
 				is_in_geographic_region = geographic_region_americas
 			}
+			NOR = {
+				state_region = s:STATE_GREENLAND
+				state_region = s:STATE_ICELAND
+			}
 			is_treaty_port = no
 		}
 	}
@@ -2881,6 +2917,10 @@ usfp_manifest_destiny.26 = {
 			limit = {
 				NOT = {
 					is_in_geographic_region = geographic_region_americas
+				}
+				NOR = {
+					state_region = s:STATE_GREENLAND
+					state_region = s:STATE_ICELAND
 				}
 				is_treaty_port = no
 			}
@@ -3234,8 +3274,10 @@ usfp_manifest_destiny.30 = {
 			state_region = {
 				is_homeland = cu:mexican
 			}
+			is_treaty_port = no
 		}
 		any_scope_state = {
+			is_treaty_port = no
 			state_region = {
 				is_homeland = cu:mexican
 			}
@@ -3259,6 +3301,7 @@ usfp_manifest_destiny.30 = {
 	immediate = {
 		random_scope_state = {
 			limit = {
+				is_treaty_port = no
 				state_region = {
 					is_homeland = cu:mexican
 				}

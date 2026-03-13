@@ -58,3 +58,18 @@ usfp_find_connecticut_sr_scope = {
 		save_scope_as = connecticut_sr_scope
 	}
 }
+
+REPLACE_OR_CREATE:usfp_remove_american_ideologies = {
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_american_school
+		 }
+		 remove_ideology = ideology_american_school
+	}
+	if = {
+		limit = {
+			has_ideology = ideology:ideology_empire_of_liberty
+		 }
+		 remove_ideology = ideology_empire_of_liberty
+	}
+}
