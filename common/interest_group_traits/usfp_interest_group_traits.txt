@@ -222,3 +222,13 @@ usfp_ig_trait_strong_medicine = {
 		country_loyalists_from_legitimacy_mult = 0.05
 	}
 }
+
+REPLACE:ig_trait_patrician_philanthropy = {
+    icon = "gfx/interface/icons/ig_trait_icons/noblesse_oblige.dds"
+    min_approval = loyal
+
+    modifier = {
+        country_loyalism_increases_full_acceptance_mult = 0.10
+        country_prestige_mult = 0.05
+    }
+}
