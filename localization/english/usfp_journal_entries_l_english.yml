@@ -116,6 +116,10 @@ usfp_manifest_more_destiny: "#bold Manifest Destiny#! will gain influence."
 usfp_manifest_less_destiny: "#bold Manifest Destiny#! will lose influence."
 0_progress: "The #bold progress bar#! reaches 0"
 
+ usfp_je_american_superculture_je: "E Pluribus Unum"
+ usfp_je_american_superculture_je_reason: "As the vision of Manifest Destiny pushes our great republic ever further, it may be possible to bind together all the [GetCulture('yankee').GetLanguageTrait.GetName] settlers of North America into a single identity built on this sacred cause."
+ frontier_closed: "We have closed the American Frontier by completing the #bold Indian Wars#! [concept_journal_entry]"
+
 usfp_western_purchase_button: "Make an Offer to Mexico"
 usfp_western_purchase_button_desc: "Mexico's grasp on its northern territories is tenuous. If we wish to expand westward, we might be able to purchase these lands diplomatically."
  usfp_force_mexican_claims_button: "Claim Mexican Lands"

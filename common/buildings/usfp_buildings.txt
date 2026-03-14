@@ -40,3 +40,53 @@
 
 # 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 # }
+
+building_usfp_national_park = {
+    building_group = bg_usfp_national_parks
+    city_type = wood
+    levels_per_mesh = 1
+    expandable = no
+
+    production_method_groups = {
+        usfp_pmg_base_national_parks
+        usfp_pmg_national_parks_media
+    }
+
+    icon = "gfx/interface/icons/building_icons/building_usfp_national_park.dds"
+
+    required_construction = construction_cost_low
+
+    unlocking_technologies = {
+        civilizing_mission
+    }
+    can_build_government = {
+        owner ?= {
+            NOT = {
+                has_law_or_variant = law_type:law_laissez_faire
+            }
+        }
+    }
+
+    can_build_private = {
+        always = no
+    }
+
+    potential = {
+        # OR = {
+        #     region = sr:region_great_plains
+        #     region = sr:region_pacific_coast
+        #     region = sr:region_dixie
+        #     region = sr:region_new_england
+        #     region = sr:region_the_midwest
+        #     region = sr:region_canada
+        #     region = sr:region_mexico
+        # }
+        free_arable_land >= 15
+    }
+
+    ai_value = {
+        value = 0
+    }
+
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}

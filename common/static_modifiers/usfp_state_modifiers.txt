@@ -351,3 +351,8 @@ usfp_fenian_raids_modifier = {
 	state_radicalism_increases_open_prejudice_mult = 0.20
 	state_radicalism_increases_second_rate_citizen_mult = 0.20
 }
+
+usfp_federal_lands_opened_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_prospecting_positive.dds
+    building_group_bg_extraction_construction_efficiency_add = 0.10
+}

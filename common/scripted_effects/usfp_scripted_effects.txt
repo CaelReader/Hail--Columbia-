@@ -545,8 +545,13 @@ usfp_cleanup_a_house_divided_variables = {
 
 usfp_american_superculture_effect = {
 	add_primary_culture = cu:usfp_american
-	remove_primary_culture = cu:dixie
-	remove_primary_culture = cu:yankee
+    remove_primary_culture = cu:yankee
+    if = {
+        limit = {
+            country_has_primary_culture = cu:dixie
+        }
+        remove_primary_culture = cu:dixie
+    }
 	custom_tooltip = {
 		text = american_superculture_emerges
 		every_scope_pop = {

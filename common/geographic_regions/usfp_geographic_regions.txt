@@ -76,3 +76,13 @@ geographic_region_cuba = {
 		STATE_EASTERN_CUBA
 	}
 }
+
+geographic_region_western_pacific = {
+    short_key = "western_pacific"
+
+    strategic_regions = {
+        sr:region_oceania
+        sr:region_japan
+        sr:region_indonesia
+    }
+}

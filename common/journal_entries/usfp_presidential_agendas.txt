@@ -189,3 +189,187 @@
 	weight = 200
 	should_be_pinned_by_default = yes
 }
+
+usfp_je_agenda_roosevelt_domestic = {
+    icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+
+    group = je_group_historical_content
+
+    immediate = {
+        ruler = {
+            save_scope_as = roosevelt_scope
+        }
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+    }
+
+    is_shown_when_inactive = {
+        #activated by event on new ruler
+    }
+
+    on_monthly_pulse = {
+
+    }
+
+    complete = {
+        OR = {
+            custom_tooltip = {
+                text = all_presidential_agenda_items_complete
+                in_election_campaign = yes
+
+            }
+            custom_tooltip = {
+                text = roosevelt_is_not_president
+                ruler ?= {
+                    NOT = {
+                        has_template = usa_roosevelt_character_template
+                    }
+                }
+            }
+        }
+    }
+
+    on_complete = {
+
+    }
+
+    invalid = {
+        NOT = {
+            has_law_or_variant = law_type:law_presidential_republic
+        }
+    }
+
+    weight = 200
+    should_be_pinned_by_default = yes
+}
+
+usfp_je_agenda_roosevelt_foreign = {
+    icon = "gfx/interface/icons/invention_icons/breech_loading_artillery.dds"
+
+    group = je_group_historical_content
+
+    immediate = {
+        ruler = {
+            save_scope_as = roosevelt_scope
+        }
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+    }
+
+    is_shown_when_inactive = {
+        #activated by event on new ruler
+    }
+
+
+    on_monthly_pulse = {
+
+    }
+
+
+    complete = {
+        OR = {
+            custom_tooltip = {
+                text = all_presidential_agenda_items_complete
+                in_election_campaign = yes
+
+            }
+            custom_tooltip = {
+                text = roosevelt_is_not_president
+                ruler ?= {
+                    NOT = {
+                        has_template = usa_roosevelt_character_template
+                    }
+                }
+            }
+        }
+        #Cuba
+        OR = {
+            c:CUB ?= {
+                is_subject_of = root
+            }
+            c:CUB ?= {
+                is_subject = no
+            }
+            AND = {
+                owns_entire_state_region = STATE_CENTRAL_CUBA
+                owns_entire_state_region = STATE_EASTERN_CUBA
+                owns_entire_state_region = STATE_WESTERN_CUBA
+            }
+        }
+        #Puerto Rico
+        owns_entire_state_region = STATE_PUERTO_RICO
+        #Panama Canal
+        any_scope_building = {
+            is_building_type = building_panama_canal
+            is_under_construction = no
+        }
+        #Monroe Doctrine enforced minus GBR
+        any_country = {
+            filter = {
+                is_in_geographic_region = geographic_region_americas
+            }
+            percent = 0
+            is_subject = yes
+            overlord ?= {
+                NOR = {
+                    is_in_geographic_region = geographic_region_americas
+                    c:GBR ?= this
+                }
+            }
+        }
+        #Pacific Power Projection
+        OR = {
+            any_subject_or_below = {
+                is_in_geographic_region = geographic_region_western_pacific
+                OR = {
+                    is_subject_type = subject_type_colony
+                    is_subject_type = subject_type_puppet
+                }
+            }
+            any_scope_state = {
+                is_in_geographic_region = geographic_region_western_pacific
+                count >= 3
+            }
+        }
+        #Army Reform
+        AND = {
+            any_scope_building = {
+                filter = {
+                    is_building_type = building_barrack
+                }
+                percent = 1
+                has_active_production_method = pm_advanced_tactics_training
+            }
+            army_power_projection > 10000
+        }
+        #Navy Expansion
+        naval_power_projection > 10000
+        #Expanded Power Bloc
+        AND = {
+            is_power_bloc_leader = yes
+            num_power_bloc_members_script > 7
+            power_bloc.current_cohesion_percentage >= 0.90
+            power_bloc.power_bloc_rank >= 3
+        }
+        #Complete Great White Fleet
+    }
+
+    on_complete = {
+
+    }
+
+    invalid = {
+        NOT = {
+            has_law_or_variant = law_type:law_presidential_republic
+        }
+    }
+
+    weight = 200
+    should_be_pinned_by_default = yes
+}

@@ -2165,43 +2165,7 @@ usfp_manifest_destiny.19 = {
 	duration = 3
 
 	trigger = {
-		NOT = {
-			has_variable = had_american_superculture
-		}
-		var:manifest_destiny_var >= 13
-		radical_fraction = {
-			value < 0.3
-			culture = cu:dixie
-		}
-		radical_fraction = {
-			value < 0.4
-			culture = cu:yankee
-		}
-		radical_fraction = {
-			value < 0.3
-			culture = cu:anglo_canadian
-		}
-		loyalist_fraction = {
-			value > 0.15
-			culture = cu:yankee
-		}
-		loyalist_fraction = {
-			value > 0.15
-			culture = cu:dixie
-		}
-		loyalist_fraction = {
-			value > 0.15
-			culture = cu:anglo_canadian
-		}
-		ig:ig_landowners = {
-			NOT = {
-				has_ideology = ideology:ideology_pro_slavery
-			}
-		}
-		is_at_war = no
-		is_diplomatic_play_committed_participant = no
-		has_technology_researched = pan-nationalism
-		has_global_variable = american_frontier_closed
+        #Now spawned by completing JE
 	}
 
 	immediate = {
@@ -2230,12 +2194,15 @@ usfp_manifest_destiny.19 = {
 			}
 		}
 		highlighted_option = yes
+        add_radicals = {
+            value = large_radicals
+        }
 		add_loyalists = {
-			value = medium_radicals
+			value = very_large_radicals
 			culture = cu:yankee
 		}
 		add_loyalists = {
-			value = medium_radicals
+			value = very_large_radicals
 			culture = cu:dixie
 		}
 	}
@@ -2250,8 +2217,11 @@ usfp_manifest_destiny.19 = {
 		}
 		highlighted_option = yes
 		usfp_american_superculture_effect = yes
-		add_loyalists = {
-			value = medium_radicals
+        add_radicals = {
+            value = large_radicals
+        }
+        add_loyalists = {
+			value = very_large_radicals
 			culture = cu:usfp_american
 		}
 	}
@@ -2271,6 +2241,13 @@ usfp_manifest_destiny.19 = {
 			name = usfp_the_melting_pot_modifier
 		}
 		usfp_american_superculture_effect = yes
+        add_radicals = {
+            value = small_radicals
+        }
+        add_loyalists = {
+            value = medium_radicals
+            culture = cu:usfp_american
+        }
 	}
 	#Just Melting Pot
 	option = {
@@ -2303,6 +2280,14 @@ usfp_manifest_destiny.19 = {
 		add_loyalists = {
 			value = large_radicals
 		}
+        add_radicals = {
+            value = medium_radicals
+            culture = cu:yankee
+        }
+        add_radicals = {
+            value = large_radicals
+            culture = cu:dixie
+        }
 	}
 
 }

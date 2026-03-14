@@ -543,7 +543,6 @@ usfp_manifest_destiny_main = {
 			25 = usfp_manifest_destiny.9 #Railroad Tycoons
 			100 = usfp_manifest_destiny.12 #California Genocide
 			100 = usfp_manifest_destiny.14 #Ostend Manifesto
-			100 = usfp_manifest_destiny.19 #American Superculture
 			100 = usfp_manifest_destiny.20 #Oregon Pioneers
 			100 = usfp_manifest_destiny.22 #Pike's Peak Gold Rush
 			100 = usfp_filibuster.1 #William Walker attacks Sonora
@@ -866,4 +865,144 @@ usfp_je_indian_wars = {
 
 	can_revolution_inherit = yes
 	
+}
+
+#American Superculture JE to expose the requirements
+usfp_je_american_superculture_je = {
+
+    icon = gfx/interface/icons/event_icons/waving_flag_usa.dds
+
+    group = je_group_usa_manifest_destiny
+
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+    }
+
+    is_shown_when_inactive = {
+        c:USA ?= root
+        has_journal_entry = usfp_manifest_destiny_main
+        usfp_manifest_destiny_greater_or_equal_trigger = { value = 8 }
+    }
+
+    possible = {
+        has_technology_researched = pan-nationalism
+        usfp_manifest_destiny_greater_or_equal_trigger = { value = 10 }
+        ig:ig_landowners = {
+            NOT = {
+                has_ideology = ideology:ideology_pro_slavery
+            }
+        }
+        radical_fraction = {
+            value < 0.2
+            culture = cu:dixie
+        }
+        radical_fraction = {
+            value < 0.2
+            culture = cu:yankee
+        }
+    }
+
+    complete = {
+        usfp_manifest_destiny_greater_or_equal_trigger = { value = 13 }
+        radical_fraction = {
+            value < 0.15
+            culture = cu:dixie
+        }
+        radical_fraction = {
+            value < 0.25
+            culture = cu:yankee
+        }
+        radical_fraction = {
+            value < 0.3
+            culture = cu:anglo_canadian
+        }
+        loyalist_fraction = {
+            value > 0.3
+            culture = cu:yankee
+        }
+        loyalist_fraction = {
+            value > 0.3
+            culture = cu:dixie
+        }
+        loyalist_fraction = {
+            value > 0.3
+            culture = cu:anglo_canadian
+        }
+        is_at_war = no
+        is_diplomatic_play_committed_participant = no
+        custom_tooltip = {
+            text = frontier_closed
+            has_global_variable = american_frontier_closed
+        }
+    }
+
+    on_complete = {
+        trigger_event = usfp_manifest_destiny.19
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = usfp_manifest_destiny.19.a
+        effect = {
+            execute_event_option = {
+                event = usfp_manifest_destiny.19
+                option = 0
+            }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = usfp_manifest_destiny.19.b
+        effect = {
+            execute_event_option = {
+                event = usfp_manifest_destiny.19
+                option = 1
+            }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = usfp_manifest_destiny.19.c
+        effect = {
+            execute_event_option = {
+                event = usfp_manifest_destiny.19
+                option = 2
+            }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = usfp_manifest_destiny.19.g
+        effect = {
+            execute_event_option = {
+                event = usfp_manifest_destiny.19
+                option = 3
+            }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = usfp_manifest_destiny.19.h
+        effect = {
+            execute_event_option = {
+                event = usfp_manifest_destiny.19
+                option = 4
+            }
+        }
+    }
+
+    fail = {
+        NOT = {
+            has_journal_entry = usfp_manifest_destiny_main
+        }
+    }
+
+    should_be_pinned_by_default = no
+
+    weight = 10
+
+    can_revolution_inherit = yes
 }

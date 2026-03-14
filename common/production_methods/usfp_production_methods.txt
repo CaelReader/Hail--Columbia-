@@ -97,3 +97,71 @@ usfp_pm_fur_rail_hunting = {
 		}
 	}
 }
+
+usfp_pm_national_park_reserve = {
+    texture = "gfx/interface/icons/production_method_icons/usfp_pm_national_park_reserve.dds"
+    state_modifiers = {
+        level_scaled = {
+            state_pollution_generation_add = -100
+            building_group_bg_extraction_construction_efficiency_add = -0.04
+        }
+    }
+}
+
+usfp_pm_national_park_service = {
+    texture = "gfx/interface/icons/production_method_icons/usfp_pm_national_park_service.dds"
+    state_modifiers = {
+        level_scaled = {
+            state_pollution_generation_add = -150
+            state_migration_pull_add = 4
+            country_loyalism_increases_full_acceptance_mult = 0.02
+            building_group_bg_extraction_construction_efficiency_add = -0.04
+        }
+    }
+    # building_modifiers = {
+    #     level_scaled = {
+    #         goods_input_paper_add = 1
+    #         goods_input_groceries_add = 1
+    #     }
+    # }
+    unlocking_technologies = {
+        central_planning
+    }
+}
+
+usfp_pm_national_park_maps = {
+    texture = "gfx/interface/icons/production_method_icons/usfp_pm_national_parks_map.dds"
+    state_modifiers = {
+        unscaled = {
+            state_migration_pull_mult = 0.01
+        }
+    }
+    # building_modifiers = {
+    #     level_scaled = {
+    #         goods_input_paper_add = 1
+    #     }
+    # }
+}
+
+usfp_pm_national_park_photos = {
+    texture = "gfx/interface/icons/production_method_icons/usfp_pm_national_parks_photos.dds"
+    state_modifiers = {
+        unscaled = {
+            state_migration_pull_mult = 0.02
+        }
+    }
+    country_modifiers = {
+        unscaled = {
+            country_prestige_add = 10
+        }
+    }
+    # building_modifiers = {
+    #     level_scaled = {
+    #         goods_input_paper_add = 2
+    #         goods_input_dye_add = 1
+    #     }
+    # }
+    unlocking_technologies = {
+        mass_propaganda
+    }
+}

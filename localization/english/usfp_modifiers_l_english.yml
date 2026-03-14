@@ -316,3 +316,4 @@ country_enactment_success_chance_law_no_colonial_affairs_add: "[concept_enactmen
 country_enactment_success_chance_law_no_colonial_affairs_add_desc: "A flat percentage point increase to the likelihood of enacting the specific law"
 country_enactment_success_chance_law_multicultural_add: "[concept_enactment_success] chance for [GetLawType('law_multicultural').GetName]"
 country_enactment_success_chance_law_multicultural_add_desc: "A flat percentage point increase to the likelihood of enacting the specific law"
+ usfp_federal_lands_opened_modifier: "Extraction Permitted"

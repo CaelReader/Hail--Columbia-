@@ -866,3 +866,10 @@ Fixed missing tooltip on Hard Times event
 Fixed Canadian countries missing Colonial Administration government principle
 Fixed Monroe Doctrine violation being triggered by the USA calling in a European ally against a target
 Added checks to hopefully prevent erroneous spawning of Cuba content
+
+# 8.0 "Roosevelt"
+## New Content
+## Updates
+American Superculture is now a JE to expose its requirements to the player
+Increased Radicals/Loyalists requirements for the Superculture
+## Fixes
