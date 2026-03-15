@@ -552,6 +552,15 @@ usfp_american_superculture_effect = {
         }
         remove_primary_culture = cu:dixie
     }
+    cu:yankee = {
+        add_tradition_trait = tradition_usfp_manifest_destiny
+    }
+    cu:dixie = {
+        add_tradition_trait = tradition_usfp_manifest_destiny
+    }
+    cu:anglo_canadian = {
+        add_tradition_trait = tradition_usfp_manifest_destiny
+    }
 	custom_tooltip = {
 		text = american_superculture_emerges
 		every_scope_pop = {

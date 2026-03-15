@@ -191,7 +191,7 @@
 }
 
 usfp_je_agenda_roosevelt_domestic = {
-    icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+    icon = "gfx/interface/icons/invention_icons/investment_banks.dds"
 
     group = je_group_historical_content
 
@@ -211,7 +211,14 @@ usfp_je_agenda_roosevelt_domestic = {
     }
 
     on_monthly_pulse = {
-
+        effect = {
+            if = {
+                limit = {
+                    has_revolution = yes
+                }
+                set_variable = roosevelt_didnt_avoid_revolution
+            }
+        }
     }
 
     complete = {
@@ -219,7 +226,45 @@ usfp_je_agenda_roosevelt_domestic = {
             custom_tooltip = {
                 text = all_presidential_agenda_items_complete
                 in_election_campaign = yes
-
+                #National Parks
+                any_scope_building = {
+                    is_building_type = building_usfp_national_park
+                    count >= 10
+                }
+                #Busted Trusts
+                has_variable = busted_trusts
+                #Few Companies
+                num_companies <= {
+                    value = max_num_companies
+                    subtract = 3
+                }
+                #Progressive Era Laws
+                has_law_or_variant = law_type:law_interventionism
+                institution_investment_level = {
+                    institution = institution_workplace_safety
+                    value >= 3
+                }
+                institution_investment_level = {
+                    institution = institution_health_system
+                    value >= 3
+                }
+                NOT = {
+                    has_variable = roosevelt_didnt_avoid_revolution
+                }
+                #Marginalize Socialists
+                NOT = {
+                    any_political_movement = {
+                        movement_is_socialist = yes
+                        OR = {
+                            political_movement_radicalism >= 0.75
+                            political_movement_support >= 0.15
+                        }
+                    }
+                }
+                #Industrialists not powerful
+                ig:ig_industrialists ?= {
+                    is_powerful = no
+                }
             }
             custom_tooltip = {
                 text = roosevelt_is_not_president
@@ -260,6 +305,10 @@ usfp_je_agenda_roosevelt_foreign = {
                 dlc = dlc_usfp
             }
         }
+        set_variable = {
+            name = roosevelt_starting_army
+            value = army_power_projection
+        }
     }
 
     is_shown_when_inactive = {
@@ -277,7 +326,80 @@ usfp_je_agenda_roosevelt_foreign = {
             custom_tooltip = {
                 text = all_presidential_agenda_items_complete
                 in_election_campaign = yes
-
+                #Cuba
+                OR = {
+                    c:CUB ?= {
+                        is_subject_of = root
+                    }
+                    c:CUB ?= {
+                        is_subject = no
+                    }
+                    AND = {
+                        owns_entire_state_region = STATE_CENTRAL_CUBA
+                        owns_entire_state_region = STATE_EASTERN_CUBA
+                        owns_entire_state_region = STATE_WESTERN_CUBA
+                    }
+                }
+                #Puerto Rico
+                OR = {
+                    c:PCO ?= {
+                        is_subject_of = root
+                    }
+                    owns_entire_state_region = STATE_PUERTO_RICO
+                }
+                #Panama Canal
+                any_scope_building = {
+                    is_building_type = building_panama_canal
+                    is_under_construction = no
+                }
+                #Monroe Doctrine enforced minus GBR
+                any_country = {
+                    filter = {
+                        is_in_geographic_region = geographic_region_americas
+                    }
+                    percent = 0
+                    is_subject = yes
+                    overlord ?= {
+                        NOR = {
+                            is_in_geographic_region = geographic_region_americas
+                            c:GBR ?= this
+                        }
+                    }
+                }
+                #Pacific Power Projection
+                OR = {
+                    any_subject_or_below = {
+                        is_in_geographic_region = geographic_region_western_pacific
+                        OR = {
+                            is_subject_type = subject_type_colony
+                            is_subject_type = subject_type_puppet
+                        }
+                    }
+                    any_scope_state = {
+                        is_in_geographic_region = geographic_region_western_pacific
+                        count >= 3
+                    }
+                }
+                #Army Reform
+                AND = {
+                    any_scope_building = {
+                        filter = {
+                            is_building_type = building_barrack
+                        }
+                        percent = 1
+                        has_active_production_method = pm_advanced_tactics_training
+                    }
+                    army_power_projection >= usfp_roosevelt_army_target
+                }
+                #Expanded Power Bloc
+                AND = {
+                    is_power_bloc_leader = yes
+                    num_power_bloc_members_script > 7
+                    power_bloc.current_cohesion_percentage >= 0.90
+                    power_bloc.power_bloc_rank >= 3
+                }
+                #Complete Great White Fleet
+                has_variable = great_white_fleet_completed
             }
             custom_tooltip = {
                 text = roosevelt_is_not_president
@@ -288,80 +410,11 @@ usfp_je_agenda_roosevelt_foreign = {
                 }
             }
         }
-        #Cuba
-        OR = {
-            c:CUB ?= {
-                is_subject_of = root
-            }
-            c:CUB ?= {
-                is_subject = no
-            }
-            AND = {
-                owns_entire_state_region = STATE_CENTRAL_CUBA
-                owns_entire_state_region = STATE_EASTERN_CUBA
-                owns_entire_state_region = STATE_WESTERN_CUBA
-            }
-        }
-        #Puerto Rico
-        owns_entire_state_region = STATE_PUERTO_RICO
-        #Panama Canal
-        any_scope_building = {
-            is_building_type = building_panama_canal
-            is_under_construction = no
-        }
-        #Monroe Doctrine enforced minus GBR
-        any_country = {
-            filter = {
-                is_in_geographic_region = geographic_region_americas
-            }
-            percent = 0
-            is_subject = yes
-            overlord ?= {
-                NOR = {
-                    is_in_geographic_region = geographic_region_americas
-                    c:GBR ?= this
-                }
-            }
-        }
-        #Pacific Power Projection
-        OR = {
-            any_subject_or_below = {
-                is_in_geographic_region = geographic_region_western_pacific
-                OR = {
-                    is_subject_type = subject_type_colony
-                    is_subject_type = subject_type_puppet
-                }
-            }
-            any_scope_state = {
-                is_in_geographic_region = geographic_region_western_pacific
-                count >= 3
-            }
-        }
-        #Army Reform
-        AND = {
-            any_scope_building = {
-                filter = {
-                    is_building_type = building_barrack
-                }
-                percent = 1
-                has_active_production_method = pm_advanced_tactics_training
-            }
-            army_power_projection > 10000
-        }
-        #Navy Expansion
-        naval_power_projection > 10000
-        #Expanded Power Bloc
-        AND = {
-            is_power_bloc_leader = yes
-            num_power_bloc_members_script > 7
-            power_bloc.current_cohesion_percentage >= 0.90
-            power_bloc.power_bloc_rank >= 3
-        }
-        #Complete Great White Fleet
+
     }
 
     on_complete = {
-
+        custom_tooltip = extra_bonus_for_completing_all
     }
 
     invalid = {

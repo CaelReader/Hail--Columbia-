@@ -1006,3 +1006,57 @@ usfp_je_american_superculture_je = {
 
     can_revolution_inherit = yes
 }
+
+#Mexican Occupation JE
+usfp_je_mexican_occupation = {
+
+    icon = gfx/interface/icons/event_icons/waving_flag_mexico.dds
+
+    group = je_group_usa_manifest_destiny
+
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+    }
+
+    is_shown_when_inactive = {
+        c:USA ?= root
+        any_scope_state = {
+            region = sr:region_mexico
+        }
+    }
+
+    possible = {
+        any_scope_state = {
+            region = sr:region_mexico
+            count >= 5
+        }
+    }
+
+    complete = {
+
+    }
+
+    on_complete = {
+        add_primary_culture = cu:mexican
+        cu:mexican = {
+            add_tradition_trait = tradition_usfp_manifest_destiny
+        }
+    }
+
+
+    fail = {
+        NOT = {
+            has_journal_entry = usfp_manifest_destiny_main
+        }
+    }
+
+    should_be_pinned_by_default = no
+
+    weight = 10
+
+    can_revolution_inherit = yes
+}

@@ -58,6 +58,7 @@
 				years = 4
 			}
 		}
+        set_variable = busted_trusts
 	}
 
 	ai_chance = {

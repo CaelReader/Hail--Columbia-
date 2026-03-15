@@ -2169,7 +2169,6 @@ usfp_manifest_destiny.19 = {
 	}
 
 	immediate = {
-		set_variable = had_american_superculture
 		cu:usfp_american = {
 			save_scope_as = american_culture
 		}
@@ -2255,6 +2254,15 @@ usfp_manifest_destiny.19 = {
 		add_modifier = {
 			name = usfp_the_melting_pot_modifier
 		}
+        cu:yankee = {
+            add_tradition_trait = tradition_usfp_manifest_destiny
+        }
+        cu:dixie = {
+            add_tradition_trait = tradition_usfp_manifest_destiny
+        }
+        cu:anglo_canadian = {
+            add_tradition_trait = tradition_usfp_manifest_destiny
+        }
 		trigger = {
 			NOT = {
 				has_law_or_variant = law_type:law_ethnostate
@@ -2277,6 +2285,15 @@ usfp_manifest_destiny.19 = {
 		add_modifier = {
 			name = usfp_e_pluribus_unum_modifier
 		}
+        cu:yankee = {
+            add_tradition_trait = tradition_usfp_manifest_destiny
+        }
+        cu:dixie = {
+            add_tradition_trait = tradition_usfp_manifest_destiny
+        }
+        cu:anglo_canadian = {
+            add_tradition_trait = tradition_usfp_manifest_destiny
+        }
 		add_loyalists = {
 			value = large_radicals
 		}

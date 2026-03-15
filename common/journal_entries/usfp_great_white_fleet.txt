@@ -1,0 +1,21 @@
+﻿je_usfp_great_white_fleet = {
+    icon = "gfx/interface/icons/invention_icons/battlefleet_tactics.dds"
+
+    group = je_group_historical_content
+
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+    }
+
+    on_complete = {
+        set_variable = great_white_fleet_completed
+    }
+
+
+    weight = 200
+    should_be_pinned_by_default = yes
+}

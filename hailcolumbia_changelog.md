@@ -869,7 +869,10 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
 
 # 8.0 "Roosevelt"
 ## New Content
+Domestic and Foreign Agenda JEs for Theodore Roosevelt
 ## Updates
 American Superculture is now a JE to expose its requirements to the player
 Increased Radicals/Loyalists requirements for the Superculture
+American Superculture now adds a special Tradition trait to relevant cultures
 ## Fixes
+Failing the Constitution JE now removes the American System law (and re-adds it if you are on Protectionism when you restore the Constitution)

@@ -636,3 +636,29 @@ usfp_calculate_danish_purchase_cost = {
 		subtract = usfp_west_indies_purchase_lump_sum
 	}
 }
+
+usfp_roosevelt_army_target = {
+    if = {
+        limit = {
+            has_variable = roosevelt_starting_army
+        }
+        value = var:roosevelt_starting_army
+        multiply = 1.2
+    }
+    else = {
+        value = 10000
+    }
+}
+
+usfp_roosevelt_navy_target = {
+    if = {
+        limit = {
+            has_variable = roosevelt_starting_navy
+        }
+        value = var:roosevelt_starting_navy
+        multiply = 2
+    }
+    else = {
+        value = 10000
+    }
+}

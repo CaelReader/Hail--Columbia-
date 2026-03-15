@@ -355,6 +355,7 @@ usfp_new_president = {
 	effect = {
 		owner = {
 			trigger_event = usfp_usa.21
+            trigger_event = usfp_usa_roosevelt.2
 		}
 		#manually force ai strats on a new president
 		if = {
