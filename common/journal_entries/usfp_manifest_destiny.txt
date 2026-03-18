@@ -1022,6 +1022,8 @@ usfp_je_mexican_occupation = {
         }
     }
 
+    scripted_progress_bar = usfp_mexican_integration_progress_bar
+
     is_shown_when_inactive = {
         c:USA ?= root
         any_scope_state = {
@@ -1032,25 +1034,49 @@ usfp_je_mexican_occupation = {
     possible = {
         any_scope_state = {
             region = sr:region_mexico
-            count >= 5
+            count >= 6
+        }
+        culture_percent_country = {
+            target = cu:mexican
+            value >= 0.05
         }
     }
 
     complete = {
-
-    }
-
-    on_complete = {
-        add_primary_culture = cu:mexican
-        cu:mexican = {
-            add_tradition_trait = tradition_usfp_manifest_destiny
+        custom_tooltip = {
+            text = usfp_mexican_integration_complete_tt
+            scope:journal_entry = {
+                "scripted_bar_progress(usfp_mexican_integration_progress_bar)" >= 50000
+            }
         }
     }
 
 
-    fail = {
-        NOT = {
-            has_journal_entry = usfp_manifest_destiny_main
+    on_complete = {
+        add_primary_culture = cu:mexican
+        if = {
+            limit = {
+                has_journal_entry = usfp_manifest_destiny_main
+            }
+            cu:mexican = {
+                add_tradition_trait = tradition_usfp_manifest_destiny
+            }
+        }
+
+    }
+
+
+    invalid = {
+        OR = {
+            NOT = {
+                any_scope_state = {
+                    region = sr:region_mexico
+                }
+            }
+            culture_percent_country = {
+                target = cu:mexican
+                value <= 0.02
+            }
         }
     }
 

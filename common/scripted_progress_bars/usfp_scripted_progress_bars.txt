@@ -416,3 +416,64 @@
 		}
 	}
  }
+
+usfp_mexican_integration_progress_bar = {
+    name = "usfp_mexican_integration_progress_bar"
+    desc = "usfp_mexican_integration_progress_bar_desc"
+    default_green = yes
+
+    start_value = 0
+    min_value = 0
+    max_value = 50000
+
+    monthly_progress = {
+        # Mexican as a Primary Culture!? They're spanish-speaking...
+        subtract = {
+            value = 50
+            desc = "mexicans_are_hispanophone"
+        }
+        #...Catholic...
+        subtract = {
+            value = usfp_percent_of_mexicans_are_catholic
+            multiply = 100
+            desc = "mexicans_are_wrong_religion"
+        }
+        #...Radicals!
+        subtract = {
+            value = usfp_get_mexican_radicals
+            multiply = 5
+            desc = "mexican_radicals"
+        }
+        # Unincorporated Mexican Homelands
+        subtract = {
+            every_scope_state = {
+                limit = {
+                    is_incorporated = no
+                    state_region = {
+                        is_homeland = cu:mexican
+                    }
+                }
+                add = 5
+            }
+            desc = "unincorporated_mexican_homelands"
+        }
+        # Average Acceptance
+        add = {
+            value = usfp_get_average_mexican_acceptance
+            desc = "mexican_average_acceptance"
+        }
+        #Need Pan-Nationalism
+        if = {
+            limit = {
+                NOT = {
+                    has_technology_researched = pan-nationalism
+                }
+            }
+            subtract = {
+                value = 500
+                desc = "missing_pan_nationalism"
+            }
+        }
+    }
+
+}

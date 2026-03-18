@@ -1970,7 +1970,14 @@ usfp_usa.23 = {
 			# 	name = usfp_second_party_system_modifier
 			# }
 			start_enactment = law_type:law_universal_suffrage
+            active_law:lawgroup_bureaucracy ?= {
+                add_amendment = {
+                    type = amendment_usfp_spoils_system
+                    sponsor = PREV.ig:ig_rural_folk
+                }
+            }
 		}
+        custom_tooltip = spoils_system_warning
 		hidden_effect = {
 			ruler = {
 				usfp_washington_precedent_effect = yes 

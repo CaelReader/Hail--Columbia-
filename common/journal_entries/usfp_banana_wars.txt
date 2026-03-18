@@ -1,0 +1,117 @@
+﻿usfp_je_banana_wars = {
+
+    icon = gfx/interface/icons/goods_icons/prestige_goods/gros_michel_banana_prestige.dds
+
+    group = je_group_foreign_affairs
+
+    immediate = {
+        set_variable = {
+            name = banana_wars_var
+            value = 0
+        }
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+    }
+
+    goal_add_value = 20
+    progressbar = yes
+    current_value = {
+        value = root.var:banana_wars_var
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            set_variable = {
+                name = banana_wars_var
+                value = usfp_calculate_banana_wars_score
+            }
+        }
+    }
+
+
+    is_shown_when_inactive = {
+        OR = {
+            c:USA ?= root
+            any_company = {
+                is_company_type = company_united_fruit
+            }
+        }
+        NOT = {
+            any_scope_state = {
+                is_incorporated = yes
+                region = sr:region_central_america
+            }
+        }
+        NOT = {
+            has_law_or_variant = law_type:law_council_republic
+        }
+    }
+
+    possible = {
+        has_technology_researched = corporate_management
+        any_country = {
+            capital = {
+                OR = {
+                    region = sr:region_central_america
+                    region = sr:region_caribbean
+                    region = sr:region_gran_colombia
+                }
+            }
+            OR = {
+                save_temporary_scope_as = check_country
+                root = {
+                    has_treaty_foreign_investment_rights_with = { TARGET = scope:check_country }
+                }
+                is_in_customs_union_with = root
+            }
+            OR = {
+                has_revolution = yes
+                country_turmoil >= 0.50
+            }
+        }
+        OR = {
+            ig:ig_industrialists ?= {
+                OR = {
+                    is_in_government = yes
+                    is_powerful = yes
+                }
+            }
+            ruler = {
+                usfp_manifest_destiny_pro_expansion_trigger = yes
+            }
+        }
+
+    }
+
+    complete = {
+
+    }
+
+
+    on_complete = {
+
+    }
+
+    fail = {
+        ig:ig_industrialists ?= {
+            ig_counts_as_marginal = yes
+        }
+    }
+
+
+    invalid = {
+        OR = {
+            has_variable = rejected_banana_wars
+            has_law_or_variant = law_type:law_council_republic
+        }
+    }
+
+    should_be_pinned_by_default = no
+
+    weight = 10
+
+    can_revolution_inherit = yes
+}

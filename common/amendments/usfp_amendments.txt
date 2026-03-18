@@ -9,6 +9,7 @@
     modifier = {
 		country_institution_size_change_speed_mult = -0.25
 		country_usfp_spoil_system_on_reform_modifier = -0.25
+        interest_group_in_government_approval_add = 1
 	}
 
     possible = {

@@ -85,6 +85,7 @@ setting_no_election_chaos_desc: "No weekly [concept_momentum] changes are applie
 amendment_usfp_spoils_system: "Spoils System"
 amendment_usfp_spoils_system_desc: "Government offices are doled out as rewards for political supporters, causing a reshuffle of the civil service whenever a new party takes power."
 spoils_system_can_be_abolished_tt: "[ROOT.GetCountry.GetName] has suffered the effects of the Spoils System enough times (currently [ROOT.GetCountry.MakeScope.Var('usfp_spoils_system_abolish_var').GetValue|v0]/#v 5#!)"
+ spoils_system_warning: "@warning! The Spoils System will temporarily reduce our [concept_bureaucracy] every time we [Concept('concept_government_reform','$concept_government_reform_short$')] our [concept_government]!"
 amendment_usfp_bill_of_rights: "Bill of Rights"
 amendment_usfp_bill_of_rights_desc: "On paper, the Constitution protects the citizens' right to free speech, making censorship efforts more difficult though not impossible."
 amendment_usfp_seperate_but_equal: "Separate but Equal"
@@ -102,3 +103,5 @@ amendment_usfp_radical_land_redistribution_desc: "The lands of former slavers ar
  amendment_usfp_indian_removal_act_desc: "The Federal Government is to 'exchange' Indian lands in the east for lands west of the Mississippi, where the Indians are to be relocated."
  amendment_usfp_african_colonial_acceptance: "Colonial Identity"
  amendment_usfp_african_colonial_acceptance_desc: "The ruling class sets themselves apart from the non-westernized African population by maintaining the customs of their original colonial overlords."
+ amendment_usfp_anti_latino_bias: "Anti-Latino Discrimination"
+ amendment_usfp_anti_latino_bias_desc: "Regardless of their European heritage, people from Latin America are generally considered to be a population of mixed-blood, non-white Catholics undeserving of respect."

@@ -208,6 +208,19 @@ je_acw_countdown = {
 					subtract = 1
 				}
 			}
+            if = {
+                limit = {
+                    NOT = {
+                        has_law_or_variant = law_type:law_slavery_banned
+                        any_political_movement = {
+                            is_political_movement_type = movement_anti_slavery
+                        }
+                    }
+                }
+                create_political_movement = {
+                    type = movement_anti_slavery
+                }
+            }
 		}
 		random_events = {
 			# American Civil War buildup

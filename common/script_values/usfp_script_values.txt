@@ -662,3 +662,147 @@ usfp_roosevelt_navy_target = {
         value = 10000
     }
 }
+
+usfp_percent_of_mexicans_are_catholic = {
+    value = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:mexican
+                religion = {
+                    NOT = {
+                        this = root.religion
+                    }
+                }
+            }
+            add = total_size
+        }
+    }
+    divide = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:mexican
+            }
+            add = total_size
+        }
+        min = 1 # DIV/0 guard
+    }
+}
+
+usfp_get_mexican_radicals = {
+    value = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:mexican
+            }
+            add = pop_radical_fraction
+        }
+    }
+    divide = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:mexican
+            }
+            add = 1
+        }
+        min = 1 # DIV/0 guard
+    }
+}
+
+usfp_get_average_mexican_acceptance = {
+    value = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:mexican
+            }
+            add = pop_acceptance
+        }
+    }
+    divide = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:mexican
+            }
+            add = 1
+        }
+        min = 1 # DIV/0 guard
+    }
+}
+
+usfp_calculate_banana_wars_score = {
+    value = 0
+    every_country = {
+        limit = {
+            capital = {
+                OR = {
+                    region = sr:region_central_america
+                    region = sr:region_caribbean
+                    region = sr:region_gran_colombia
+                }
+            }
+            has_revolution = no
+        }
+        #point: has investment rights or market
+        if = {
+            limit = {
+                OR = {
+                    is_in_customs_union_with = root
+                    save_temporary_scope_as = check_country
+                    root = {
+                        has_treaty_foreign_investment_rights_with = { TARGET = scope:check_country }
+                    }
+                }
+            }
+            add = 1
+        }
+        #point: is subject
+        if = {
+            limit = {
+                is_subject_of = root
+            }
+            add = 1
+        }
+        #point: is non-democratic with Laissez Faire
+        if = {
+            limit = {
+                OR = {
+                    is_subject_of = root
+                    is_in_customs_union_with = root
+                    root = {
+                        has_treaty_foreign_investment_rights_with = { TARGET = scope:check_country }
+                    }
+                }
+                has_law_or_variant = law_type:law_laissez_faire
+                OR = {
+                    has_law_or_variant = law_type:law_autocracy
+                    has_law_or_variant = law_type:law_oligarchy
+                    has_law_or_variant = law_type:law_technocracy
+                    has_law_or_variant = law_type:law_single_party_state
+                }
+            }
+            add = 1
+        }
+        #lose points for council republics
+        if = {
+            limit = {
+                has_law_or_variant = law_type:law_council_republic
+            }
+            subtract = 2
+        }
+    }
+    #point for each unincorporated state
+    every_scope_state = {
+        limit = {
+            OR = {
+                region = sr:region_central_america
+                region = sr:region_caribbean
+                region = sr:region_gran_colombia
+            }
+            is_incorporated = no
+            is_treaty_port = no
+        }
+        add = 1
+    }
+
+    max = 20
+    min = 0
+}
