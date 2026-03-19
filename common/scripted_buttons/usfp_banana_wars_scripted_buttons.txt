@@ -1,0 +1,64 @@
+﻿usfp_good_neighbor_policy_button = {
+    name = "usfp_good_neighbor_policy"
+    desc = "usfp_good_neighbor_policy_desc"
+
+    visible = {
+        NOT = {
+            any_scope_state = {
+                is_in_geographic_region = geographic_region_caribbean_coast
+                is_incorporated = yes
+            }
+        }
+    }
+
+    possible = {
+        has_technology_researched = multilateral_alliances
+        ruler = {
+            usfp_manifest_destiny_not_pro_expansion_trigger = yes
+        }
+        usfp_manifest_destiny_less_or_equal_trigger = {value = 10}
+    }
+
+    effect = {
+        change_infamy = -15
+        every_country_in_caribbean_coast = {
+            change_relations = {
+                country = root
+                value = 10
+            }
+            if = {
+                limit = {
+                    is_subject_of = root
+                }
+                make_independent = yes
+            }
+            save_scope_as = target_country
+            root = {
+                create_unidirectional_truce = {
+                    country = scope:target_country
+                    months = 60
+                }
+            }
+        }
+        custom_tooltip = {
+            text = close_banana_wars
+            set_variable = rejected_banana_wars
+        }
+
+    }
+
+    ai_chance = {
+        value = 0
+        if = {
+            limit = {
+                ruler = {
+                    OR = {
+                        usfp_manifest_destiny_anti_expansion_trigger = yes
+                        has_template = ecchi_usa_f_roosevelt_character_template
+                    }
+                }
+            }
+            add = 100
+        }
+    }
+}

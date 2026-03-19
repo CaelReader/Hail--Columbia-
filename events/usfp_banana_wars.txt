@@ -1,0 +1,7 @@
+﻿namespace = usfp_banana_wars
+
+#Banana Wars start
+#Marines massacre civilians
+#Industrialists make incorporation harder
+#Central American country response
+#Good Neighbor Policy enacted

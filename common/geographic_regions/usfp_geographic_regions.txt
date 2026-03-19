@@ -86,3 +86,13 @@ geographic_region_western_pacific = {
         sr:region_indonesia
     }
 }
+
+geographic_region_caribbean_coast = {
+    short_key = "caribbean_coast"
+
+    strategic_regions = {
+        sr:region_caribbean
+        sr:region_gran_colombia
+        sr:region_central_america
+    }
+}

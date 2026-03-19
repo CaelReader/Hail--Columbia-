@@ -356,3 +356,11 @@ usfp_federal_lands_opened_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_prospecting_positive.dds
     building_group_bg_extraction_construction_efficiency_add = 0.10
 }
+
+usfp_banana_wars_state_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_cop_positive.dds
+    building_group_bg_extraction_throughput_add = 0.05
+    building_group_bg_plantations_throughput_add = 0.10
+    building_group_bg_plantations_laborers_mortality_mult = 0.10
+    state_political_strength_from_wealth_mult = 0.25
+}

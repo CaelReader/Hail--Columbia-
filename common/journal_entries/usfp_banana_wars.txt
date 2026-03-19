@@ -14,9 +14,17 @@
                 dlc = dlc_usfp
             }
         }
+        scope:journal_entry = {
+            add_modifier = {
+                name = usfp_banana_wars_score_modifier
+                multiplier = 0
+            }
+        }
     }
 
-    goal_add_value = 20
+    scripted_button = usfp_good_neighbor_policy_button
+
+    goal_add_value = 30
     progressbar = yes
     current_value = {
         value = root.var:banana_wars_var
@@ -27,6 +35,13 @@
             set_variable = {
                 name = banana_wars_var
                 value = usfp_calculate_banana_wars_score
+            }
+            scope:journal_entry = {
+                remove_modifier = usfp_banana_wars_score_modifier
+                add_modifier = {
+                    name = usfp_banana_wars_score_modifier
+                    multiplier = var:banana_wars_var
+                }
             }
         }
     }
@@ -52,24 +67,26 @@
 
     possible = {
         has_technology_researched = corporate_management
-        any_country = {
-            capital = {
-                OR = {
-                    region = sr:region_central_america
-                    region = sr:region_caribbean
-                    region = sr:region_gran_colombia
-                }
+        NOT = {
+            any_scope_state = {
+                is_incorporated = yes
+                region = sr:region_central_america
             }
+        }
+        any_country = {
+            is_in_geographic_region = geographic_region_caribbean_coast
             OR = {
                 save_temporary_scope_as = check_country
                 root = {
                     has_treaty_foreign_investment_rights_with = { TARGET = scope:check_country }
                 }
                 is_in_customs_union_with = root
+                is_subject_of = root
             }
             OR = {
                 has_revolution = yes
                 country_turmoil >= 0.50
+                has_modifier = declared_bankruptcy
             }
         }
         OR = {
@@ -87,12 +104,51 @@
     }
 
     complete = {
-
+        scope:journal_entry = {
+            is_goal_complete = yes
+        }
     }
 
 
     on_complete = {
-
+        add_modifier = {
+            name = usfp_banana_wars_score_modifier
+            multiplier = 30
+            is_decaying = yes
+            years = 10
+        }
+        if = {
+            limit = {
+                is_power_bloc_leader = yes
+            }
+            every_country_in_caribbean_coast = {
+                save_scope_as = target_country
+                root.power_bloc = {
+                    add_leverage = {
+                        target = scope:target_country
+                        value = 200
+                    }
+                }
+            }
+        }
+        every_state_in_caribbean_coast = {
+            limit = {
+                owner ?= {
+                    OR = {
+                        save_temporary_scope_as = check_country
+                        root = {
+                            has_treaty_foreign_investment_rights_with = { TARGET = scope:check_country }
+                        }
+                        is_in_customs_union_with = root
+                        is_subject_of = root
+                    }
+                }
+            }
+            add_modifier = {
+                name = usfp_banana_wars_state_modifier
+                years = 10
+            }
+        }
     }
 
     fail = {
