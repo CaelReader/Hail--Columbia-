@@ -226,7 +226,10 @@ usfp_usa_roosevelt.4 = {
             }
             AND = {
                 culture = cu:afro_american
-                has_ideology = ideology:ideology_modernizer_leader
+                OR = {
+                    has_ideology = ideology:ideology_modernizer_leader
+                    has_ideology = ideology:ideology_usfp_progressive
+                }
                 popularity >= 10
             }
         }
@@ -252,7 +255,10 @@ usfp_usa_roosevelt.4 = {
             random_scope_character = {
                 limit = {
                     culture = cu:afro_american
-                    has_ideology = ideology:ideology_modernizer_leader
+                    OR = {
+                        has_ideology = ideology:ideology_modernizer_leader
+                        has_ideology = ideology:ideology_usfp_progressive
+                    }
                     popularity >= 10
                 }
                 save_scope_as = booker_t_washington_scope
@@ -386,9 +392,14 @@ usfp_usa_roosevelt.5 = {
         default_option = yes
         add_radicals = {
             culture = cu:afro_american
-            value = small_radicals
+            value = medium_radicals
         }
         scope:brownsville_state_scope = {
+            add_radicals_in_state = {
+                culture = cu:afro_american
+                value = large_radicals
+                pop_type = soldiers
+            }
             usfp_loyalize_dixies_in_state = {
                 LOYALISTS = medium_radicals
             }

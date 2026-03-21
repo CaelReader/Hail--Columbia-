@@ -650,19 +650,6 @@ usfp_roosevelt_army_target = {
     }
 }
 
-usfp_roosevelt_navy_target = {
-    if = {
-        limit = {
-            has_variable = roosevelt_starting_navy
-        }
-        value = var:roosevelt_starting_navy
-        multiply = 2
-    }
-    else = {
-        value = 10000
-    }
-}
-
 usfp_percent_of_mexicans_are_catholic = {
     value = {
         every_scope_pop = {
@@ -804,5 +791,209 @@ usfp_calculate_banana_wars_score = {
     }
 
     max = 30
+    min = 0
+}
+
+usfp_get_roosevelt_domestic_score = {
+    value = 0
+    root = {
+        if = {
+            limit = {
+                usfp_roosevelt_agenda_national_parks_trigger = yes
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                has_variable = busted_trusts
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                has_law_or_variant = law_type:law_interventionism
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                institution_investment_level = {
+                    institution = institution_workplace_safety
+                    value >= 3
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                institution_investment_level = {
+                    institution = institution_health_system
+                    value >= 3
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_variable = roosevelt_didnt_avoid_revolution
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_political_movement = {
+                        movement_is_socialist = yes
+                        OR = {
+                            political_movement_radicalism > 0.75
+                            political_movement_support > 0.15
+                        }
+                    }
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                ig:ig_industrialists ?= {
+                    is_powerful = no
+                }
+            }
+            add = 1
+        }
+        #halved if you go for a third term
+        if = {
+            limit = {
+                has_variable = roosevelt_went_third_term
+            }
+            divide = 2
+        }
+    }
+    min = 0
+}
+
+usfp_get_roosevelt_diplomacy_score = {
+    value = 0
+    root = {
+        if = {
+            limit = {
+                #Cuba
+                OR = {
+                    c:CUB ?= {
+                        is_subject_of = root
+                    }
+                    AND = {
+                        country_or_subject_owns_entire_state_region = STATE_CENTRAL_CUBA
+                        country_or_subject_owns_entire_state_region = STATE_EASTERN_CUBA
+                        country_or_subject_owns_entire_state_region = STATE_WESTERN_CUBA
+                    }
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                #Puerto Rico
+                country_or_subject_owns_entire_state_region = STATE_PUERTO_RICO
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                #Panama Canal
+                any_scope_building = {
+                    is_building_type = building_panama_canal
+                    is_under_construction = no
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                #Monroe Doctrine enforced minus GBR
+                NOT = {
+                    any_country_in_americas = {
+                        is_subject = yes
+                        overlord ?= {
+                            NOR = {
+                                is_in_geographic_region = geographic_region_americas
+                                c:GBR ?= this
+                            }
+                        }
+                    }
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                #Pacific Power Projection
+                OR = {
+                    any_subject_or_below = {
+                        is_in_geographic_region = geographic_region_western_pacific
+                        OR = {
+                            is_subject_type = subject_type_colony
+                            is_subject_type = subject_type_puppet
+                        }
+                    }
+                    any_scope_state = {
+                        is_in_geographic_region = geographic_region_western_pacific
+                        count >= 3
+                    }
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                #Expanded Power Bloc
+                AND = {
+                    is_power_bloc_leader = yes
+                    num_power_bloc_members_script > 7
+                    power_bloc.current_cohesion_percentage >= 0.90
+                    power_bloc.power_bloc_rank >= 3
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                #Army Reform
+                AND = {
+                    any_scope_building = {
+                        filter = {
+                            is_building_type = building_barrack
+                        }
+                        percent = 1
+                        OR = {
+                            has_active_production_method = pm_advanced_tactics_training
+                            has_active_production_method = pm_training_streamlining
+                            has_active_production_method = pm_nco_incorporation
+                            has_active_production_method = pm_mobile_warfare_tactics
+                        }
+                    }
+                    army_power_projection >= var:roosevelt_army_target
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                #Complete Great White Fleet
+                has_variable = great_white_fleet_completed
+            }
+            add = 1
+        }
+
+        #halved if you go for a third term
+        if = {
+            limit = {
+                has_variable = roosevelt_went_third_term
+            }
+            divide = 2
+        }
+    }
     min = 0
 }

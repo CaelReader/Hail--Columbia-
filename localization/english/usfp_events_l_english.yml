@@ -1762,17 +1762,17 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_usa_roosevelt.3.f: "Roosevelt's chest blossomed with pain, but it wasn't the worst he had felt. He tasted his mouth for signs of blood, finding nothing. He judged that the bullet must not have penetrated his lungs. A flesh wound, he'd survive. Roosevelt calmed the crowd before climbing up to the podium.\n\n"Ladies and gentlemen, I don't know whether you fully understand that I have just been shot...""
  usfp_usa_roosevelt.3.a: ""...but it takes more than that to kill a bull moose!""
 
- usfp_usa_roosevelt.4.t: "REPLACE_ME"
- usfp_usa_roosevelt.4.d: "REPLACE_ME"
- usfp_usa_roosevelt.4.f: "REPLACE_ME"
- usfp_usa_roosevelt.4.a: "REPLACE_ME"
- usfp_usa_roosevelt.4.b: "REPLACE_ME"
+ usfp_usa_roosevelt.4.t: "A Dinner with [SCOPE.sCharacter('booker_t_washington_scope').GetLastName]"
+ usfp_usa_roosevelt.4.d: "In an effort to build positive relations with prominent political figures, [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] invited [SCOPE.sCharacter('booker_t_washington_scope').GetFullName] to dine at the [GetBuildingType('building_white_house').GetName]. The [GetCulture('dixie').GetName] press has exploded with immediate and vicious attacks against the President treating with an [GetCulture('afro_american').GetName] on seemingly equal terms."
+ usfp_usa_roosevelt.4.f: ""The most damnable outrage which has ever been perpetrated by any citizen of the United States was committed yesterday by the President. No Southern woman with a proper self-respect would now accept an invitation to the White House, nor would President Roosevelt be welcomed today in Southern homes. He has not inflamed the anger of the Southern people; he has excited their disgust."\n\n—#italic Memphis Scimitar#!"
+ usfp_usa_roosevelt.4.a: "Let's avoid causing any further offense."
+ usfp_usa_roosevelt.4.b: "[ROOT.GetCountry.GetRuler.GetLastName] may dine with whoever he pleases!"
 
- usfp_usa_roosevelt.5.t: "REPLACE_ME"
- usfp_usa_roosevelt.5.d: "REPLACE_ME"
- usfp_usa_roosevelt.5.f: "REPLACE_ME"
- usfp_usa_roosevelt.5.a: "REPLACE_ME"
- usfp_usa_roosevelt.5.b: "REPLACE_ME"
+ usfp_usa_roosevelt.5.t: "[GetCulture('afro_american').GetName] Soldiers Blamed for Crime"
+ usfp_usa_roosevelt.5.d: "The white residents of a town in [SCOPE.sState('brownsville_state_scope').GetName] have pinned the blame for a recent shooting on the [GetCulture('afro_american').GetName] [GetPopType('soldiers').GetName] stationed there. Although the evidence seems obviously fraudulent, the Army authorities have recommended the soldiers be discharged in order to preserve the peace."
+ usfp_usa_roosevelt.5.f: "The Inspector General flipped through the slim file. The shooting was clearly done using a pistol, yet the evidence presented against the troops was rifle cartridges. The commanding officer reports that the soldiers had been in barracks with their weapons under lock and key, but the locals keep pressing the issue. He sighed. This wasn't going to go away on its own."
+ usfp_usa_roosevelt.5.a: "Hand out discharges to placate the residents."
+ usfp_usa_roosevelt.5.b: "Our servicemen are clearly not at fault here."
 
 
 usfp_test.1.t: "DEBUG EVENT"

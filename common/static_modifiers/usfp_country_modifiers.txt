@@ -814,3 +814,18 @@ usfp_banana_wars_score_modifier = {
     country_leverage_generation_mult = 0.005
     unit_army_experience_gain_mult = 0.005
 }
+
+usfp_roosevelt_big_stick_agenda_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
+    country_leverage_generation_mult = 0.04
+    unit_navy_experience_gain_mult = 0.04
+    country_prestige_from_navy_power_projection_mult = 0.04
+
+}
+
+usfp_roosevelt_biggest_stick_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    building_group_bg_military_construction_efficiency_add = 0.20
+    unit_navy_offense_mult = 0.10
+    interest_group_ig_armed_forces_pol_str_mult = 0.25
+}

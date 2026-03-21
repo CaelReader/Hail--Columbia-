@@ -191,7 +191,7 @@
 }
 
 usfp_je_agenda_roosevelt_domestic = {
-    icon = "gfx/interface/icons/invention_icons/investment_banks.dds"
+    icon = "gfx/interface/icons/invention_icons/democracy.dds"
 
     group = je_group_historical_content
 
@@ -214,10 +214,18 @@ usfp_je_agenda_roosevelt_domestic = {
         effect = {
             if = {
                 limit = {
-                    has_revolution = yes
+                    any_civil_war = {
+                        civil_war_progress >= 0.10
+                        is_civil_war_type = revolution
+                    }
                 }
                 set_variable = roosevelt_didnt_avoid_revolution
             }
+        }
+        random_events = {
+            chance_of_no_event = 75
+            100 = usfp_usa_roosevelt.4 #Booker T Washington Dinner
+            100 = usfp_usa_roosevelt.5 #Brownsville Affair
         }
     }
 
@@ -226,45 +234,7 @@ usfp_je_agenda_roosevelt_domestic = {
             custom_tooltip = {
                 text = all_presidential_agenda_items_complete
                 in_election_campaign = yes
-                #National Parks
-                any_scope_building = {
-                    is_building_type = building_usfp_national_park
-                    count >= 10
-                }
-                #Busted Trusts
-                has_variable = busted_trusts
-                #Few Companies
-                num_companies <= {
-                    value = max_num_companies
-                    subtract = 3
-                }
-                #Progressive Era Laws
-                has_law_or_variant = law_type:law_interventionism
-                institution_investment_level = {
-                    institution = institution_workplace_safety
-                    value >= 3
-                }
-                institution_investment_level = {
-                    institution = institution_health_system
-                    value >= 3
-                }
-                NOT = {
-                    has_variable = roosevelt_didnt_avoid_revolution
-                }
-                #Marginalize Socialists
-                NOT = {
-                    any_political_movement = {
-                        movement_is_socialist = yes
-                        OR = {
-                            political_movement_radicalism >= 0.75
-                            political_movement_support >= 0.15
-                        }
-                    }
-                }
-                #Industrialists not powerful
-                ig:ig_industrialists ?= {
-                    is_powerful = no
-                }
+                usfp_roosevelt_domestic_agenda_complete = yes
             }
             custom_tooltip = {
                 text = roosevelt_is_not_president
@@ -278,7 +248,43 @@ usfp_je_agenda_roosevelt_domestic = {
     }
 
     on_complete = {
-
+        add_loyalists = {
+            strata = lower
+            value = {
+                value = 0.01
+                multiply = usfp_get_roosevelt_domestic_score
+            }
+        }
+        add_loyalists = {
+            strata = middle
+            value = {
+                value = 0.02
+                multiply = usfp_get_roosevelt_domestic_score
+            }
+        }
+        every_political_movement = {
+            limit = {
+                is_political_movement_type = movement_usfp_progressive
+            }
+            add_modifier = {
+                name = usfp_roosevelt_domestic_agenda_modifier
+                multiplier = usfp_get_roosevelt_domestic_score
+                years = 10
+            }
+        }
+        custom_tooltip = {
+            text = spawn_progressive_agitator_if_all_completed
+            if = {
+                limit = {
+                    usfp_roosevelt_domestic_agenda_complete = yes
+                }
+                create_character = {
+                    is_agitator = yes
+                    interest_group = ig_petty_bourgeoisie
+                    ideology = ideology_usfp_progressive
+                }
+            }
+        }
     }
 
     invalid = {
@@ -306,8 +312,14 @@ usfp_je_agenda_roosevelt_foreign = {
             }
         }
         set_variable = {
-            name = roosevelt_starting_army
-            value = army_power_projection
+            name = roosevelt_army_target
+            value = {
+                value = army_power_projection
+                multiply = 1.2
+            }
+        }
+        c:GBR = {
+            save_scope_as = britain_scope
         }
     }
 
@@ -322,84 +334,12 @@ usfp_je_agenda_roosevelt_foreign = {
 
 
     complete = {
+
         OR = {
             custom_tooltip = {
                 text = all_presidential_agenda_items_complete
                 in_election_campaign = yes
-                #Cuba
-                OR = {
-                    c:CUB ?= {
-                        is_subject_of = root
-                    }
-                    c:CUB ?= {
-                        is_subject = no
-                    }
-                    AND = {
-                        owns_entire_state_region = STATE_CENTRAL_CUBA
-                        owns_entire_state_region = STATE_EASTERN_CUBA
-                        owns_entire_state_region = STATE_WESTERN_CUBA
-                    }
-                }
-                #Puerto Rico
-                OR = {
-                    c:PCO ?= {
-                        is_subject_of = root
-                    }
-                    owns_entire_state_region = STATE_PUERTO_RICO
-                }
-                #Panama Canal
-                any_scope_building = {
-                    is_building_type = building_panama_canal
-                    is_under_construction = no
-                }
-                #Monroe Doctrine enforced minus GBR
-                any_country = {
-                    filter = {
-                        is_in_geographic_region = geographic_region_americas
-                    }
-                    percent = 0
-                    is_subject = yes
-                    overlord ?= {
-                        NOR = {
-                            is_in_geographic_region = geographic_region_americas
-                            c:GBR ?= this
-                        }
-                    }
-                }
-                #Pacific Power Projection
-                OR = {
-                    any_subject_or_below = {
-                        is_in_geographic_region = geographic_region_western_pacific
-                        OR = {
-                            is_subject_type = subject_type_colony
-                            is_subject_type = subject_type_puppet
-                        }
-                    }
-                    any_scope_state = {
-                        is_in_geographic_region = geographic_region_western_pacific
-                        count >= 3
-                    }
-                }
-                #Army Reform
-                AND = {
-                    any_scope_building = {
-                        filter = {
-                            is_building_type = building_barrack
-                        }
-                        percent = 1
-                        has_active_production_method = pm_advanced_tactics_training
-                    }
-                    army_power_projection >= usfp_roosevelt_army_target
-                }
-                #Expanded Power Bloc
-                AND = {
-                    is_power_bloc_leader = yes
-                    num_power_bloc_members_script > 7
-                    power_bloc.current_cohesion_percentage >= 0.90
-                    power_bloc.power_bloc_rank >= 3
-                }
-                #Complete Great White Fleet
-                has_variable = great_white_fleet_completed
+                usfp_roosevelt_foreign_agenda_complete = yes
             }
             custom_tooltip = {
                 text = roosevelt_is_not_president
@@ -414,7 +354,60 @@ usfp_je_agenda_roosevelt_foreign = {
     }
 
     on_complete = {
+        add_modifier = {
+            name = usfp_roosevelt_big_stick_agenda_modifier
+            years = 10
+            multiplier = usfp_get_roosevelt_diplomacy_score
+        }
+        add_loyalists = {
+            pop_type = officers
+            value = {
+                value = 0.02
+                multiply = usfp_get_roosevelt_diplomacy_score
+            }
+        }
+        add_loyalists = {
+            pop_type = soldiers
+            value = {
+                value = 0.01
+                multiply = usfp_get_roosevelt_diplomacy_score
+            }
+        }
         custom_tooltip = extra_bonus_for_completing_all
+        if = {
+            limit = {
+                usfp_roosevelt_foreign_agenda_complete = yes
+            }
+            add_modifier = {
+                name = usfp_roosevelt_biggest_stick_modifier
+                years = 10
+            }
+            custom_tooltip = {
+                text = jingoist_agitator_appears
+                create_character = {
+                    is_agitator = yes
+                    interest_group = ig_armed_forces
+                    ideology = ideology_jingoist_leader
+                }
+            }
+            usfp_manifest_more_destiny_effect = yes
+        } else = {
+            show_as_tooltip = {
+                add_modifier = {
+                    name = usfp_roosevelt_biggest_stick_modifier
+                    years = 10
+                }
+                custom_tooltip = {
+                    text = jingoist_agitator_appears
+                    create_character = {
+                        is_agitator = yes
+                        interest_group = ig_armed_forces
+                        ideology = ideology_jingoist_leader
+                    }
+                }
+                usfp_manifest_more_destiny_effect = yes
+            }
+        }
     }
 
     invalid = {

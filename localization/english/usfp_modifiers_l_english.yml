@@ -323,3 +323,6 @@ country_enactment_success_chance_law_multicultural_add_desc: "A flat percentage 
  usfp_roosevelt_shot_speech_modifier: "Gave Speech After Being Shot"
  usfp_racial_controversy_modifier: "Racial Controversy"
  usfp_white_house_guest_modifier: "White House Guest"
+ usfp_roosevelt_domestic_agenda_modifier: "Path to Liberty"
+ usfp_roosevelt_big_stick_agenda_modifier: "The New Diplomacy"
+ usfp_roosevelt_biggest_stick_modifier: "The Biggest Stick"

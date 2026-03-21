@@ -869,15 +869,15 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
 
 # 8.0 "Roosevelt"
 ## New Content
-New Domestic and Foreign Agenda JEs for Theodore Roosevelt
-New Banana Wars JE promoting intervention in Latin America on behalf of the Industrialists
-Added small Journal Entry if you take All of Mexico
+    New Domestic and Foreign Agenda JEs for Theodore Roosevelt
+    New Banana Wars JE promoting intervention in Latin America on behalf of the Industrialists
+    Added small Journal Entry if you take All of Mexico
 ## Updates
-American Superculture is now a JE to expose its requirements to the player
-Increased Radicals/Loyalists requirements for the Superculture
-American Superculture now adds a special Tradition trait to relevant cultures
-Added tooltip to intro event alerting the player about the Spoils System
-Spoils System now adds +1 Government IG Approval
+    American Superculture is now a JE to expose its requirements to the player
+    Increased Radicals/Loyalists requirements for the Superculture
+    American Superculture now adds a special Tradition trait to relevant cultures
+    Added tooltip to intro event alerting the player about the Spoils System
+    Spoils System now adds +1 Government IG Approval
 ## Fixes
-Failing the Constitution JE now removes the American System law (and re-adds it if you are on Protectionism when you restore the Constitution)
-A House Divided will now force-spawn an abolitionist movement if it vanishes for some reason
+    Failing the Constitution JE now removes the American System law (and re-adds it if you are on Protectionism when you restore the Constitution)
+    A House Divided will now force-spawn an abolitionist movement if it vanishes for some reason
