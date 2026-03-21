@@ -1387,3 +1387,118 @@ usfp_narciso_lopez = {
     }
     #event-spawned
 }
+
+#Smedley Butler, US Marine Major General, War is a Racket
+usfp_smedley_butler = {
+    first_name = Smedley
+    last_name = Butler
+    # dna =
+    # home_state = STATE_PENNSYLVANIA
+    historical = yes
+    birth_date = 1881.7.30
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_armed_forces
+    ideology = ideology_pacifist
+    traits = {
+        basic_diplomat
+        brave
+        honorable
+        experienced_offensive_planner
+
+    }
+    agitator_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1930.1.1
+        latest_usage_date = 1936.1.1
+        chance = 50
+    }
+    commander_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        role = general
+        earliest_usage_date = 1918.1.1
+        latest_usage_date = 1930.1.1
+        chance = 50
+    }
+}
+
+#Leonard Wood, Governor-General of Philippines
+usfp_leonard_wood = {
+    first_name = Leonard
+    last_name = Wood
+    # dna =
+    # home_state = STATE_NEW_HAMPSHIRE
+    historical = yes
+    birth_date = 1860.10.9
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_armed_forces
+    ideology = ideology_modernizer_leader
+    traits = {
+        brave
+        experienced_colonial_administrator
+        erudite
+        meticulous
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1910.1.1
+        latest_usage_date = 1927.1.1
+        chance = 50
+    }
+    commander_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        role = general
+        earliest_usage_date = 1898.1.1
+        latest_usage_date = 1921.1.1
+        chance = 50
+    }
+}
+
+#Mark Hanna, Mckinley Political Boss
+usfp_gerrit_smith = {
+    first_name = Gerrit
+    last_name = Smith
+    # dna =
+    # home_state = STATE_OHIO
+    historical = yes
+    birth_date = 1837.9.24
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_industrialists
+    ideology = ideology_corporatist_leader
+    traits = {
+        basic_entrepreneur
+        expert_political_operator
+        expensive_tastes
+        imperious
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1897.1.1
+        latest_usage_date = 1901.1.1
+        chance = 25
+    }
+}

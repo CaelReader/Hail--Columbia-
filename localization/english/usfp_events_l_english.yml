@@ -1744,6 +1744,36 @@ usfp_get_danish_islands_purchase_desires_iceland_windies: "[GetStateRegion('STAT
 usfp_get_danish_islands_purchase_desires_iceland_only: "[GetStateRegion('STATE_ICELAND').GetName]"
 usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STATE_WEST_INDIES').GetName]"
 
+ ### Roosevelt Events ###
+
+ usfp_usa_roosevelt.1.t: "The Splendor of Yellowstone"
+ usfp_usa_roosevelt.1.d: "Explorers in northwestern [SCOPE.sState('wyoming_scope').GetName] have mapped a vast expanse of rugged wilderness filled with breathtaking sights and geological features. The surveyors, so moved by its beauty, are eagerly recommending that the area be set aside as a [GetBuildingType('building_usfp_national_park').GetName] for scientific and recreational use."
+ usfp_usa_roosevelt.1.f: ""All these springs are adorned with decorations more beautiful than human art ever conceived, and which have required thousands of years for the cunning hand of nature to form. Persons are now waiting for the spring to open and take possession of these remarkable curiosities, to make merchandise of these beautiful specimens, to fence in these rare wonders, so as to charge visitors a fee for the sight of that which ought to be as free as the air or water."\n\n—Ferdinand V. Hayden"#Ferdinand V. Hayden, letter to congress
+ usfp_usa_roosevelt.1.a: "We will preserve Yellowstone for future generations."
+ usfp_usa_roosevelt.1.b: "But think of the development opportunities!"
+
+ usfp_usa_roosevelt.2.t: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName]"
+ usfp_usa_roosevelt.2.d: "[ROOT.GetCountry.GetRuler.GetFullName] steps into the presidency with enormous energy and a grand vision for the [ROOT.GetCountry.GetName]. At home, he seeks [GetIdeology('ideology_usfp_progressive').GetName] reforms to bring the [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] to heel while avoiding radical upheaval. Abroad, he envisions an [ROOT.GetCountry.GetAdjective] sphere of influence over the Western Hemisphere and across into the Pacific, backed by an unassailably powerful modern navy."
+ usfp_usa_roosevelt.2.f: ""We wish peace, but we wish the peace of justice, the peace of righteousness. We wish it because we think it is right and not because we are afraid. No weak nation that acts manfully and justly should ever have cause to fear us, and no strong power should ever be able to single us out as a subject for insolent aggression."\n\n—Theodore Roosevelt" #Inaugural Adress
+ usfp_usa_roosevelt.2.a: "We will speak softly, and carry a big stick."
+
+ usfp_usa_roosevelt.3.t: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] Shot by Maniac"
+ usfp_usa_roosevelt.3.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] has been shot while on the campaign trail by a man claiming that he was ordered to do so by the ghost of [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting]'s predecessor. [ROOT.GetCountry.GetRuler.GetLastName] refused to rush to the hospital and instead gave his scheduled speech before seeking medical attention."
+ usfp_usa_roosevelt.3.f: "Roosevelt's chest blossomed with pain, but it wasn't the worst he had felt. He tasted his mouth for signs of blood, finding nothing. He judged that the bullet must not have penetrated his lungs. A flesh wound, he'd survive. Roosevelt calmed the crowd before climbing up to the podium.\n\n"Ladies and gentlemen, I don't know whether you fully understand that I have just been shot...""
+ usfp_usa_roosevelt.3.a: ""...but it takes more than that to kill a bull moose!""
+
+ usfp_usa_roosevelt.4.t: "REPLACE_ME"
+ usfp_usa_roosevelt.4.d: "REPLACE_ME"
+ usfp_usa_roosevelt.4.f: "REPLACE_ME"
+ usfp_usa_roosevelt.4.a: "REPLACE_ME"
+ usfp_usa_roosevelt.4.b: "REPLACE_ME"
+
+ usfp_usa_roosevelt.5.t: "REPLACE_ME"
+ usfp_usa_roosevelt.5.d: "REPLACE_ME"
+ usfp_usa_roosevelt.5.f: "REPLACE_ME"
+ usfp_usa_roosevelt.5.a: "REPLACE_ME"
+ usfp_usa_roosevelt.5.b: "REPLACE_ME"
+
 
 usfp_test.1.t: "DEBUG EVENT"
 usfp_test.1.d: "force spawn a character"

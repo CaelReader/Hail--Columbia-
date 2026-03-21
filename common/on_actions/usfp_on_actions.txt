@@ -31,6 +31,9 @@ usfp_monthly_pulse = {
 		200 = usfp_usa.26 #Dorr Rebellion
 		100 = usfp_usa.27 #Third Great Awakening
 
+        100 = usfp_usa_roosevelt.1 #Yellowstone National Park
+        10 = usfp_usa_roosevelt.3 #Roosevelt Shot
+
 		##Labor events
 		100 = usfp_usa_labor.1 #founding of the IWW
 		100 = usfp_usa_labor.2 #Haymarket Affair
@@ -73,6 +76,7 @@ usfp_monthly_pulse = {
 		100 = usfp_usa_canada.1 #Caroline Affair
 		100 = usfp_usa_canada.4 #Fenian Raid
 		100 = usfp_usa_canada.6 #Aroostook War
+
 	}
 }
 

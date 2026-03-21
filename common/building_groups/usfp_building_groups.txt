@@ -1,7 +1,6 @@
 bg_usfp_national_parks = {
     category = development
     always_possible = yes
-    land_usage = urban
 
     lens = special
     cash_reserves_max = 10000

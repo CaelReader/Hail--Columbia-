@@ -61,8 +61,9 @@ building_usfp_national_park = {
     }
     can_build_government = {
         owner ?= {
-            NOT = {
+            NOR = {
                 has_law_or_variant = law_type:law_laissez_faire
+                has_law_or_variant = law_type:law_extraction_economy
             }
         }
     }
@@ -72,15 +73,6 @@ building_usfp_national_park = {
     }
 
     potential = {
-        # OR = {
-        #     region = sr:region_great_plains
-        #     region = sr:region_pacific_coast
-        #     region = sr:region_dixie
-        #     region = sr:region_new_england
-        #     region = sr:region_the_midwest
-        #     region = sr:region_canada
-        #     region = sr:region_mexico
-        # }
         free_arable_land >= 15
     }
 

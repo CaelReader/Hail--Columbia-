@@ -551,3 +551,42 @@ usfp_usa_richard_sears = {
         chance = 100
 	}
 }
+
+#Sam Zemurray, United Fruit Company
+usfp_usa_sam_zemurray = {
+    first_name = Samuel
+    last_name = Zemurray
+    historical = yes
+    # dna =
+    # home_state = STATE_ALABAMA
+    culture = cu:ashkenazi
+    female = no
+    religion = jewish
+    ideology = ideology_market_liberal
+    interest_group = ig_industrialists
+    birth_date = 1877.1.18
+    traits = {
+        direct
+        ambitious
+        experienced_entrepreneur
+        cruel
+        expensive_tastes
+        experienced_political_operator
+    }
+    executive_usage = {
+        country_trigger = {
+            OR = {
+                c:USA ?= this
+            }
+        }
+        company_trigger = {
+            OR = {
+                is_company_type = company_type:company_united_fruit
+                is_company_type = company_type:company_basic_wine_and_fruit
+            }
+        }
+        earliest_usage_date = 1893.1.1 #Cuyamel Fruit
+        latest_usage_date = 1950.1.1
+        chance = 100
+    }
+}

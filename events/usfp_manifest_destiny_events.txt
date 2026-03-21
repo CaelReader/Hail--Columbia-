@@ -902,7 +902,7 @@ usfp_manifest_destiny.8 = {
 				}
 			}
 			ruler = {
-				has_variable = is_theodore_roosevelt
+				has_template = usa_roosevelt_character_template
 			}
 		}
 		naval_power_projection >= 80

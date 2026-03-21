@@ -96,3 +96,23 @@ geographic_region_caribbean_coast = {
         sr:region_central_america
     }
 }
+
+usfp_geographic_region_dixie = {
+    short_key = "dixie"
+
+    state_regions = {
+        STATE_MISSISSIPPI
+        STATE_ALABAMA
+        STATE_FLORIDA
+        STATE_GEORGIA
+        STATE_SOUTH_CAROLINA
+        STATE_NORTH_CAROLINA
+        STATE_VIRGINIA
+        STATE_MARYLAND
+        STATE_DELAWARE
+        STATE_LOUISIANA
+        STATE_ARKANSAS
+        STATE_TEXAS
+        STATE_OKLAHOMA
+    }
+}

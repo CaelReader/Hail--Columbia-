@@ -319,3 +319,7 @@ country_enactment_success_chance_law_multicultural_add_desc: "A flat percentage 
  usfp_federal_lands_opened_modifier: "Extraction Permitted"
  usfp_banana_wars_score_modifier: "Economic Incentives"
  usfp_banana_wars_state_modifier: "American Overseers"
+ usfp_strenuous_life_modifier: "The Strenuous Life"
+ usfp_roosevelt_shot_speech_modifier: "Gave Speech After Being Shot"
+ usfp_racial_controversy_modifier: "Racial Controversy"
+ usfp_white_house_guest_modifier: "White House Guest"

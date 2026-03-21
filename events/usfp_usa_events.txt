@@ -1576,6 +1576,11 @@ usfp_usa.18 = {
 		active_law:lawgroup_bureaucracy ?= {
 			has_amendment = amendment_type:amendment_usfp_spoils_system
 		}
+        NOT = {
+            ruler = {
+                has_template = usa_roosevelt_character_template
+            }
+        }
 	}
 
 	immediate = {
