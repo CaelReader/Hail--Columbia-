@@ -376,6 +376,7 @@ usfp_alaska_cost: "We will offer @money!#yellow [GetPlayer.MakeScope.ScriptValue
  extra_bonus_for_completing_all: "Gain the following extra bonuses if all agenda items are completed:"
  roosevelt_is_not_president: "Theodore Roosevelt is no longer [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')]"
  jingoist_agitator_appears: "A [GetIdeology('ideology_jingoist_leader').GetName] [concept_agitator] appears"
+ roosevelt_rewards_halved: "The rewards from Roosevelt's agendas will be #red halved#!"
 
  usfp_je_mexican_occupation: "The Mexican Occupation"
  usfp_je_mexican_occupation_reason: "Our conquest of the [GetCulture('mexican').GetName] heartlands has fostered an enduring resistance against [ROOT.GetCountry.GetAdjective] occupation. We will face considerable hurdles maintaining control of the region, let alone attempting to incorporate the [GetCulture('mexican').GetName] people into the [ROOT.GetCountry.GetName].\n\n@information! While this [concept_journal_entry] is active, the Mexican National Movement will have significantly increased [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')]."

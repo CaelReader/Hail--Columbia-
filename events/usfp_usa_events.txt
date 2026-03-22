@@ -1686,6 +1686,22 @@ usfp_usa.19 = {
 				name = usfp_caesarism
 			}
 		}
+        if = {
+            limit = {
+                owner = {
+                    OR = {
+                        has_journal_entry = usfp_je_agenda_roosevelt_foreign
+                        has_journal_entry = usfp_je_agenda_roosevelt_domestic
+                    }
+                }
+            }
+            custom_tooltip = {
+                text = roosevelt_rewards_halved
+                owner = {
+                    set_variable = roosevelt_went_third_term
+                }
+            }
+        }
 	}
 	#huey long - cannot normally be achieved before 1936
 	option = {
@@ -1723,6 +1739,22 @@ usfp_usa.19 = {
 				}
 			}
 		}
+        if = {
+            limit = {
+                owner = {
+                    OR = {
+                        has_journal_entry = usfp_je_agenda_roosevelt_foreign
+                        has_journal_entry = usfp_je_agenda_roosevelt_domestic
+                    }
+                }
+            }
+            custom_tooltip = {
+                text = roosevelt_rewards_halved
+                owner = {
+                    set_variable = roosevelt_went_third_term
+                }
+            }
+        }
 	}
 }
 

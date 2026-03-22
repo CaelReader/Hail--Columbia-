@@ -444,3 +444,41 @@ amendment_usfp_african_colonial_acceptance = {
 
     amendment_activism_multiplier = 0.25
 }
+
+amendment_usfp_right_to_contract = {
+    parent = law_no_workers_rights
+
+    allowed_laws = { # list of laws that the amendment can be added to
+        law_worker_protections
+        law_regulatory_bodies
+    }
+
+    modifier = {
+        country_institution_workplace_safety_max_investment_add = -2
+    }
+
+    possible = {
+        has_journal_entry = je_usfp_american_constitution
+    }
+
+    would_sponsor = {
+        always = no
+    }
+
+    can_repeal = {
+        government_legitimacy >= legitimacy_to_repeal_amendment
+        NOT = {
+            has_law_or_variant = law_type:law_laissez_faire
+        }
+        ig:ig_industrialists ?= {
+            is_powerful = no
+            is_in_government = no
+        }
+    }
+
+    ai_will_revoke = {
+        always = yes
+    }
+
+    amendment_activism_multiplier = 0.25
+}
