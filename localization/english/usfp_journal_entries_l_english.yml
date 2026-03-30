@@ -398,3 +398,5 @@ usfp_alaska_cost: "We will offer @money!#yellow [GetPlayer.MakeScope.ScriptValue
  close_banana_wars: "The #bold Banana Wars#! [concept_journal_entry] is removed"
  usfp_good_neighbor_policy: "Enact Good Neighbor Policy"
  usfp_good_neighbor_policy_desc: "Our forceful interventions into Latin America are at an end. We will instead adopt a diplomatic policy that respects the rights of our neighboring countries."
+
+ je_group_us_expansion_global: "American Expansionism"

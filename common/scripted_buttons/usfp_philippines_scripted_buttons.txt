@@ -1,0 +1,35 @@
+﻿usfp_phillipine_insular_government_button = {
+    name = "usfp_phillipine_insular_government_button"
+    desc = "usfp_phillipine_insular_government_button_desc"
+
+    visible = {
+        root = c:USA
+        exists = c:PHI
+        c:PHI ?= {
+            is_subject_of = c:USA
+        }
+    }
+
+    possible = {
+        c:PHI = {
+            NOT = {
+                any_political_movement = {
+                    is_insurrectionary = yes
+                }
+            }
+            country_turmoil < 0.15
+        }
+        is_diplomatic_play_committed_participant = no
+    }
+
+    effect = {
+        c:PHI = {
+            activate_law = law_type:law_presidential_republic
+
+        }
+    }
+
+    ai_chance = {
+        value = 1000
+    }
+}

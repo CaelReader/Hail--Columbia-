@@ -1,0 +1,108 @@
+﻿je_usfp_phillipine_tutelage = {
+    icon = "gfx/interface/icons/event_icons/waving_flags_usa_philippines.dds"
+
+    group =  je_group_us_expansion_global
+
+    should_be_involved = {
+        OR = {
+            c:USA ?= this
+            c:PHI ?= this
+        }
+    }
+
+    should_show_when_not_involved = {
+        OR = {
+            c:USA ?= this
+            c:PHI ?= this
+        }
+    }
+
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+    }
+
+    immediate_all_involved = {
+        c:PHI = {
+            save_scope_as = phillipines_scope
+        }
+        c:USA = {
+            save_scope_as = usa_scope
+        }
+    }
+
+    is_shown_when_inactive = {
+        exists = c:PHI
+        exists = c:USA
+        c:PHI ?= {
+            is_subject = yes
+        }
+    }
+
+    possible = {
+        c:PHI ?= {
+            is_subject_of = c:USA
+        }
+    }
+
+    scripted_button = usfp_phillipine_insular_government_button
+
+    complete = {
+        c:PHI ?= {
+            country_has_voting_franchise = yes
+            legitimacy >= 50
+            OR = {
+                has_law_or_variant = law_type:law_public_health_insurance
+                has_law_or_variant = law_type:law_private_health_insurance
+            }
+            OR = {
+                has_law_or_variant = law_type:law_public_schools
+                has_law_or_variant = law_type:law_private_schools
+            }
+            NOR = {
+                has_law_or_variant = law_type:law_serfdom
+                has_law_or_variant = law_type:law_tenant_farmers
+            }
+            has_law_or_variant = law_type:law_compulsory_primary_school
+            NOT = {
+                has_law_or_variant = law_type:law_state_religion
+            }
+            has_law_or_variant = law_type:law_slavery_banned
+            NOT = {
+                any_political_movement = {
+                    is_insurrectionary = yes
+                }
+            }
+        }
+    }
+
+    on_complete = {
+
+    }
+
+    fail = {
+        NOT = {
+            c:PHI ?= {
+                is_subject_of = c:USA
+            }
+        }
+    }
+
+    on_fail = {
+
+    }
+
+    invalid = {
+        NOT = {
+            exists = c:USA
+            exists = c:PHI
+        }
+    }
+
+
+    weight = 200
+    should_be_pinned_by_default = yes
+}

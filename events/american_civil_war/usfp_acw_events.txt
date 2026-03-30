@@ -1300,179 +1300,155 @@ usfp_acw.10 = {
 # 	}
 # }
 #Mexico revolt (subject)
-# usfp_acw.13 = {
-# 	type = country_event
-# 	placement = scope:mexico_scope.capital
+usfp_acw.13 = {
+	type = country_event
+	placement = scope:mexico_scope.capital
 
-# 	title = usfp_acw.13.t
-# 	desc = usfp_acw.13.d
-# 	flavor = usfp_acw.13.f
-# 	dlc = dlc_usfp
-# 	event_image = {
-# 		video = "votp_barricade"
-# 	}
+	title = usfp_acw.13.t
+	desc = usfp_acw.13.d
+	flavor = usfp_acw.13.f
+	dlc = dlc_usfp
+	event_image = {
+		video = "votp_barricade"
+	}
 
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-# 	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
-# 	duration = 3
+	duration = 3
 
-# 	trigger = {
-# 		NOT = {
-# 			has_variable = had_mexican_rebellion
-# 		}
-# 		c:MEX ?= {
-# 			is_subject_of = root
-# 		}
-# 	}
+	trigger = {
+		NOT = {
+			has_variable = had_mexican_rebellion
+		}
+		c:MEX ?= {
+			is_subject_of = root
+            liberty_desire >= 60
+		}
+	}
 
-# 	immediate = {
-# 		set_variable = had_mexican_rebellion
-# 		# remove_diplomatic_pact = {
-# 		# 	country = c:MEX
-# 		# 	type = dominion
-# 		# }
-# 		# remove_diplomatic_pact = {
-# 		# 	country = c:MEX
-# 		# 	type = puppet
-# 		# }
-# 		# create_diplomatic_pact = {
-# 		# 	country = c:MEX
-# 		# 	type = protectorate
-# 		# }
-# 		create_diplomatic_pact = {
-# 			country = c:MEX
-# 			type = exempt_from_service
-# 		}
-# 		c:MEX = {
-# 			save_scope_as = mexico_scope
-# 			add_loyalists = {
-# 				value = medium_radicals
-# 				culture = cu:mexican
-# 			}
-# 			add_radicals = {
-# 				value = large_radicals
-# 				culture = cu:dixie
-# 			}
-# 		}
-# 		every_scope_state = {
-# 			limit = {
-# 				region = sr:region_mexico
-# 			}
-# 			state_region = {
-# 				add_claim = c:MEX
-# 			}
-# 		}
-# 		every_diplomatic_play = {
-# 			limit = {
-# 				initiator = c:USA
-# 			}
-# 			remove_initiator_backers = {
-# 				c:MEX
-# 			}
-# 		}
-# 		every_diplomatic_play = {
-# 			limit = {
-# 				target = c:USA
-# 			}
-# 			remove_target_backers = {
-# 				c:MEX
-# 			}
-# 		}
-# 		c:MEX = {
-# 			create_diplomatic_play = {
-# 				type = dp_independence
-# 				target_country = root
-# 			}
-# 		}
-# 	}
+	immediate = {
+		set_variable = had_mexican_rebellion
+		c:MEX = {
+			save_scope_as = mexico_scope
+			add_loyalists = {
+				value = large_radicals
+				culture = cu:mexican
+			}
+			add_radicals = {
+				value = very_large_radicals
+				culture = cu:dixie
+			}
+            add_liberty_desire = 100
+		}
+		every_scope_state = {
+			limit = {
+				region = sr:region_mexico
+			}
+			state_region = {
+				add_claim = c:MEX
+			}
+		}
+		every_diplomatic_play = {
+			limit = {
+                OR = {
+                    initiator = c:USA
+                    target = c:USA
+                }
+			}
+            resolve_play_for = c:MEX
+		}
+	}
 
-# 	#fine
-# 	option = {
-# 		name = usfp_acw.13.a
-# 		default_option = yes
-# 		c:MEX = {
-# 			make_independent = yes
-# 		}
-# 		create_truce = {
-# 			country = c:MEX
-# 			months = 60
-# 		}
-# 		every_diplomatic_play = {
-# 			limit = {
-# 				initiator = c:USA
-# 			}
-# 			remove_initiator_backers = {
-# 				c:MEX
-# 			}
-# 		}
-# 		every_diplomatic_play = {
-# 			limit = {
-# 				target = c:USA
-# 			}
-# 			remove_target_backers = {
-# 				c:MEX
-# 			}
-# 		}
-# 		ai_chance = {
-# 			base = 100
-# 		}
-# 	}
-# 	#no!
-# 	option = {
-# 		name = usfp_acw.13.b
-# 		ai_chance = {
-# 			base = 10
-# 			modifier = {
-# 				trigger = {
-# 					ruler = {
-# 						usfp_manifest_destiny_pro_expansion_trigger = yes
-# 					}
-# 				}
-# 				add = 1000
-# 			}
-# 		}
-# 		every_diplomatic_play = {
-# 			limit = {
-# 				initiator = c:USA
-# 			}
-# 			remove_initiator_backers = {
-# 				c:MEX
-# 			}
-# 		}
-# 		every_diplomatic_play = {
-# 			limit = {
-# 				target = c:USA
-# 			}
-# 			remove_target_backers = {
-# 				c:MEX
-# 			}
-# 		}
-# 		if = {
-# 			limit = { 
-# 				exists = c:CSA
-# 			}
-# 			every_diplomatic_play = {
-# 				limit = {
-# 					initiator = c:CSA
-# 				}
-# 				remove_initiator_backers = {
-# 					c:MEX
-# 				}
-				
-# 			}
-# 			every_diplomatic_play = {
-# 				limit = {
-# 					target = c:CSA
-# 				}
-# 				remove_target_backers = {
-# 					c:MEX
-# 				}
-# 			}
-# 		}
-# 	}
-# }
+	#fine
+	option = {
+		name = usfp_acw.13.a
+		default_option = yes
+        change_relations = {
+            country = c:MEX
+            value = -10
+        }
+        usfp_radicalize_dixies_in_country = { RADICALS = small_radicals }
+        c:MEX = {
+			make_independent = yes
+		}
+		create_truce = {
+			country = c:MEX
+			months = 60
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#no!
+	option = {
+		name = usfp_acw.13.b
+        change_relations = {
+            country = c:MEX
+            value = -50
+        }
+        add_radicals = {
+            value = large_radicals
+            culture = cu:mexican
+        }
+        usfp_loyalize_dixies_in_country = { LOYALISTS = small_radicals }
+        c:MEX = {
+            increase_autonomy = yes
+        }
+        if = {
+            limit = {
+                is_at_war = yes
+            }
+            create_diplomatic_play = {
+                initiator = c:MEX
+                target_country = root
+                type = dp_independence
+                war = yes
+                add_war_goal = {
+                    holder = root
+                    target_country = c:MEX
+                    type = reduce_autonomy
+                }
+            }
+        } else = {
+            create_diplomatic_play = {
+                initiator = c:MEX
+                target_country = root
+                type = dp_independence
+                add_war_goal = {
+                    holder = root
+                    target_country = c:MEX
+                    type = reduce_autonomy
+                }
+            }
+        }
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					ruler = {
+						usfp_manifest_destiny_pro_expansion_trigger = yes
+					}
+				}
+				add = 1000
+			}
+		}
+	}
+    after = {
+        every_state_region = {
+            limit = {
+                is_homeland = cu:mexican
+                any_scope_state = {
+                    NOT = {
+                        owner = c:MEX
+                    }
+                }
+            }
+            add_claim = c:MEX
+        }
+    }
+}
 
 #CSA: King Cotton
 usfp_acw.14 = {

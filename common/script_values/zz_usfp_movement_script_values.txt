@@ -325,3 +325,64 @@ usfp_harlem_renaissance_religious_attraction_mult = {
 		}
 	}
  }
+
+usfp_cultural_mexican_movement_attraction_mult = {
+    if = {
+        limit = {
+            owner ?= {
+                has_journal_entry = usfp_je_mexican_occupation
+            }
+            culture = cu:mexican
+        }
+        value = 1.25
+    } else = {
+        value = 1
+    }
+}
+
+usfp_mexican_movement_radicalism_factor_add = {
+    if = {
+        limit = {
+            culture ?= cu:mexican
+            owner ?= {
+                OR = {
+                    has_journal_entry = je_acw_war
+                    has_revolution = yes
+                }
+            }
+        }
+        value = 0.10
+        owner = {
+            every_scope_state = {
+                limit = {
+                    region = sr:region_mexico
+                }
+                add = 0.10
+            }
+        }
+    } else_if = {
+        limit = {
+            culture ?= cu:central_american
+            owner ?= {
+                OR = {
+                    has_journal_entry = je_acw_war
+                    has_revolution = yes
+                }
+            }
+        }
+        value = 0.10
+        owner = {
+            every_scope_state = {
+                limit = {
+                    state_region = {
+                        is_homeland = central_american
+                    }
+                }
+                add = 0.10
+            }
+        }
+    }
+    else = {
+        value = 0
+    }
+}

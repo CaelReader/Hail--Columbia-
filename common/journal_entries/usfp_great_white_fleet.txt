@@ -71,7 +71,7 @@ je_usfp_the_new_navy = {
                 #any ship is a Modern Ironclad or Pre-Dreadnought
             }
             #any other pacific power has a powerful navy
-            any_country_in_americas = {
+            any_country_in_pacific = {
                 NOT = {
                     this = root
                     naval_power_projection >= {
@@ -119,7 +119,13 @@ je_usfp_the_new_navy = {
 
     complete = {
         #navy matches the strongest south american power
-        naval_power_projection >= scope:strongest_navy_in_americas.naval_power_projection
+        trigger_if = {
+            limit = {
+                exists = scope:strongest_navy_in_americas.naval_power_projection
+            }
+            naval_power_projection >= scope:strongest_navy_in_americas.naval_power_projection
+        }
+
         #has at least three pre-dreadnoughts
     }
 

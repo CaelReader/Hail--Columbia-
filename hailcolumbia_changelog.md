@@ -878,6 +878,8 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
     American Superculture now adds a special Tradition trait to relevant cultures
     Added tooltip to intro event alerting the player about the Spoils System
     Spoils System now adds +1 Government IG Approval
+    The Mexican National Movement now gets increased activism proportional to the number of owned mexican states while the Civil War or a Revolution is ongoing
+    A Subject Mexico with sufficient Liberty Desire will now unilaterally declare independence during the Civil War
 ## Fixes
     Failing the Constitution JE now removes the American System law (and re-adds it if you are on Protectionism when you restore the Constitution)
     A House Divided will now force-spawn an abolitionist movement if it vanishes for some reason

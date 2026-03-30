@@ -1020,6 +1020,19 @@ usfp_je_mexican_occupation = {
                 dlc = dlc_usfp
             }
         }
+        if = {
+            limit = {
+                NOT = {
+                    any_political_movement = {
+                        culture ?= cu:mexican
+                    }
+                }
+            }
+            create_political_movement = {
+                type = movement_cultural_minority
+                culture = cu:mexican
+            }
+        }
     }
 
     scripted_progress_bar = usfp_mexican_integration_progress_bar

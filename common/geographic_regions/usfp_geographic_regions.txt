@@ -87,6 +87,21 @@ geographic_region_western_pacific = {
     }
 }
 
+geographic_region_pacific = {
+    short_key = "pacific"
+
+    strategic_regions = {
+        sr:region_oceania
+        sr:region_japan
+        sr:region_indonesia
+        sr:region_pacific_coast
+        sr:region_mexico
+        sr:region_central_america
+        sr:region_andes
+        sr:region_la_plata
+    }
+}
+
 geographic_region_caribbean_coast = {
     short_key = "caribbean_coast"
 

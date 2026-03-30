@@ -531,7 +531,7 @@ je_acw_war = {
 			# acw_je_events.4 #Emancipation Proclamation
 			usfp_acw.6 #March to the Sea
 			# usfp_acw.11 #Rio Grande breaks away 
-			# usfp_acw.13 #Mexican revolt (subject)
+			usfp_acw.13 #Mexican revolt (subject)
 			usfp_acw.17 #Long War
 		}
 		effect = {
