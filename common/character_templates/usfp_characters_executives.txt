@@ -20,7 +20,7 @@ ecchi_usa_chrysler_character_template = {
         }
         earliest_usage_date = 1915.1.1
         latest_usage_date = 1940.8.18
-        chance = 50
+        #guaranteed to spawn if possible
     }
 }
 
@@ -74,7 +74,7 @@ ecchi_cal_strauss_character_template = {
         }
         earliest_usage_date = 1860.1.1 #USFP: up to 10 years early
         latest_usage_date = 1902.9.26
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -113,7 +113,7 @@ ecchi_usa_browning_character_template = {
         }
         earliest_usage_date = 1870.1.1 #USFP: up to 10 years early
         latest_usage_date = 1926.11.26
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -143,7 +143,7 @@ ecchi_usa_westinghouse_character_template = {
         }
         earliest_usage_date = 1870.1.1 #USFP: up to 10 years early
         latest_usage_date = 1914.3.12
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -245,7 +245,7 @@ ecchi_usa_hearst_character_template = {
         }
 		earliest_usage_date = 1895.1.1 
         latest_usage_date = 1951.8.14
-        chance = 75
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -289,7 +289,7 @@ ecchi_usa_astor_character_template = {
 		}
         earliest_usage_date = 1894.1.1
         latest_usage_date = 1912.4.15 #titanic rip
-        chance = 75
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -330,7 +330,7 @@ usfp_usa_jay_gould = {
         }
         earliest_usage_date = 1853.1.1 #up to 10 years early
         latest_usage_date = 1892.1.1
-        chance = 100
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -363,7 +363,7 @@ usfp_usa_thomas_fortune_ryan = {
         }
         earliest_usage_date = 1873.1.1 #up to 10 years early
         latest_usage_date = 1912.1.1
-        chance = 90
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -395,7 +395,7 @@ usfp_usa_william_a_clark = {
         }
         earliest_usage_date = 1866.1.1 #up to 10 years early
         latest_usage_date = 1907.1.1
-        chance = 75
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -426,7 +426,7 @@ usfp_usa_john_d_ryan = {
         }
         earliest_usage_date = 1890.1.1 #up to 10 years early
         latest_usage_date = 1933.1.1
-        chance = 100
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -456,7 +456,7 @@ usfp_usa_henry_du_pont = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1889.1.1
-        chance = 100
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -486,7 +486,7 @@ usfp_usa_jack_warner = {
         }
         earliest_usage_date = 1910.1.1
         latest_usage_date = 1978.1.1
-        chance = 100
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -517,7 +517,7 @@ usfp_usa_isaac_singer = {
         }
         earliest_usage_date = 1846.1.1 #up to 10 years early
         latest_usage_date = 1875.1.1
-        chance = 100
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -548,7 +548,7 @@ usfp_usa_richard_sears = {
         }
         earliest_usage_date = 1885.1.1 #up to 10 years early
         latest_usage_date = 1908.1.1
-        chance = 100
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -587,6 +587,6 @@ usfp_usa_sam_zemurray = {
         }
         earliest_usage_date = 1893.1.1 #Cuyamel Fruit
         latest_usage_date = 1950.1.1
-        chance = 100
+        #guaranteed to spawn if possible
     }
 }

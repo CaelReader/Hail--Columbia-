@@ -1,5 +1,5 @@
 ﻿COUNTRIES = {
-	c:YUR ?= {
+	c:usfp_YUR ?= {
 		usfp_native_startup = yes
 	}
 }

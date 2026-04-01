@@ -223,7 +223,7 @@ je_oregon = {
 			}
 	}
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 	weight = 100
 }
 
@@ -252,7 +252,7 @@ je_conquer_oregon = {
 	
 
 	weight = 100
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 	transferable = no
 }
 
@@ -310,5 +310,5 @@ je_oregon_can = {
 				}
 			}
 	}
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }

@@ -1,4 +1,4 @@
-﻿je_usfp_phillipine_tutelage = {
+﻿je_usfp_philippine_tutelage = {
     icon = "gfx/interface/icons/event_icons/waving_flags_usa_philippines.dds"
 
     group =  je_group_us_expansion_global
@@ -17,6 +17,12 @@
         }
     }
 
+    on_monthly_pulse = {
+        random_events = {
+
+        }
+    }
+
     immediate = {
         scope:journal_entry = {
             add_com_dlc_icon = {
@@ -27,7 +33,7 @@
 
     immediate_all_involved = {
         c:PHI = {
-            save_scope_as = phillipines_scope
+            save_scope_as = philippines_scope
         }
         c:USA = {
             save_scope_as = usa_scope
@@ -48,12 +54,13 @@
         }
     }
 
-    scripted_button = usfp_phillipine_insular_government_button
+    scripted_button = usfp_philippine_insular_government_button
 
     complete = {
         c:PHI ?= {
-            country_has_voting_franchise = yes
             legitimacy >= 50
+            has_law_or_variant = c:USA.active_law:lawgroup_governance_principles.type
+            has_law_or_variant = c:USA.active_law:lawgroup_distribution_of_power.type
             OR = {
                 has_law_or_variant = law_type:law_public_health_insurance
                 has_law_or_variant = law_type:law_private_health_insurance
@@ -92,7 +99,14 @@
     }
 
     on_fail = {
-
+        c:PHI ?= {
+            if = {
+                limit = {
+                    has_modifier = usfp_philippines_military_government_modifier
+                }
+                remove_modifier = usfp_philippines_military_government_modifier
+            }
+        }
     }
 
     invalid = {
@@ -100,9 +114,25 @@
             exists = c:USA
             exists = c:PHI
         }
+        c:USA = {
+            NOT = {
+                has_variable = rejected_philippines_tutelage
+            }
+        }
+    }
+
+    on_invalid = {
+        c:PHI ?= {
+            if = {
+                limit = {
+                    has_modifier = usfp_philippines_military_government_modifier
+                }
+                remove_modifier = usfp_philippines_military_government_modifier
+            }
+        }
     }
 
 
     weight = 200
-    should_be_pinned_by_default = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
 }

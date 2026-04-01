@@ -1,6 +1,6 @@
-﻿usfp_phillipine_insular_government_button = {
-    name = "usfp_phillipine_insular_government_button"
-    desc = "usfp_phillipine_insular_government_button_desc"
+﻿usfp_philippine_insular_government_button = {
+    name = "usfp_philippine_insular_government_button"
+    desc = "usfp_philippine_insular_government_button_desc"
 
     visible = {
         root = c:USA
@@ -24,8 +24,9 @@
 
     effect = {
         c:PHI = {
-            activate_law = law_type:law_presidential_republic
-
+            activate_law = root.active_law:lawgroup_governance_principles.type
+            activate_law = law_type:law_oligarchy
+            remove_modifier = usfp_philippines_military_government_modifier
         }
     }
 

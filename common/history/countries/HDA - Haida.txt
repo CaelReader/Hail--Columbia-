@@ -1,5 +1,5 @@
 ﻿COUNTRIES = {
-	c:HDA ?= {
+	c:usfp_HDA ?= {
 		usfp_native_startup = yes
 		add_modifier = {
 			name = usfp_white_mans_diseases_modifier

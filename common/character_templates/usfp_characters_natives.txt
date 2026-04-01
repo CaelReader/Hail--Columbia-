@@ -103,7 +103,7 @@ usfp_chief_peta_nocona = {
         }
         earliest_usage_date = 1840.1.1
         latest_usage_date = 1864.1.1
-        chance = 100
+        #guaranteed to spawn if possible
     }
 }
 
@@ -130,7 +130,7 @@ usfp_chief_quanah_parker = {
         }
         earliest_usage_date = 1890.1.1
         latest_usage_date = 1911.1.1
-        chance = 100
+        #guaranteed to spawn if possible
         interest_group_trigger = {
             ig_counts_as_marginal = no
             OR = {
@@ -234,7 +234,7 @@ usfp_plenty_coups = {
         }
         earliest_usage_date = 1876.1.1
         latest_usage_date = 1932.1.1
-        chance = 100
+        #guaranteed to spawn if possible
     }
 }
 

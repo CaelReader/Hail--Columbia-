@@ -359,3 +359,11 @@ usfp_cuba_filibusters_failed = {
 	notification_type = toast
 	color = bad
 }
+
+usfp_spoils_system_notification= {
+    type = country
+
+    texture = "gfx/interface/icons/notification_icons/bureaucracy.dds"
+    notification_type = toast
+    color = bad
+}

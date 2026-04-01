@@ -610,7 +610,7 @@ usfp_sonora_defeat = {
 				}
 				exists = c:USA
 				# NOT = {
-				# 	exists = c:SON
+				# 	exists = c:usfp_SON
 				# }
 				owns_entire_state_region = STATE_SONORA
 				owns_entire_state_region = STATE_BAJA_CALIFORNIA
@@ -1137,6 +1137,7 @@ usfp_spoils_system_action = {
 				years = 2
 				is_decaying = yes
 			 }
+            post_notification = usfp_spoils_system_notification
 			 change_variable = {
 				name = usfp_spoils_system_abolish_var
 				add = 1

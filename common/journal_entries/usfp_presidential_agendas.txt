@@ -187,7 +187,7 @@
 	}
 	
 	weight = 200
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 usfp_je_agenda_roosevelt_domestic = {
@@ -294,7 +294,7 @@ usfp_je_agenda_roosevelt_domestic = {
     }
 
     weight = 200
-    should_be_pinned_by_default = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 usfp_je_agenda_roosevelt_foreign = {
@@ -417,5 +417,5 @@ usfp_je_agenda_roosevelt_foreign = {
     }
 
     weight = 200
-    should_be_pinned_by_default = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
 }

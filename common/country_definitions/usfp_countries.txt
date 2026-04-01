@@ -31,7 +31,7 @@ REPLACE_OR_CREATE:CHE = {
 	capital = STATE_GEORGIA
 }
 
-YOK = {
+usfp_YOK = {
 	color = { 213 97 124 }
 	
 	country_type = decentralized
@@ -42,7 +42,7 @@ YOK = {
 	cultures = { hokan }
 }
 
-HOK = {
+usfp_HOK = {
 	color = { 55 54 113 }
 	
 	country_type = decentralized
@@ -53,7 +53,7 @@ HOK = {
 	cultures = { hokan }
 }
 
-PIU = {
+usfp_PIU = {
 	color = { 156 102 0 }
 	
 	country_type = decentralized
@@ -75,7 +75,8 @@ REPLACE_OR_CREATE:BNN = {
 	cultures = { paiute }
 }
 
-YUR = {
+#Yurok
+usfp_YUR = {
 	color = { 196 50 80 }
 	
 	country_type = decentralized
@@ -86,7 +87,7 @@ YUR = {
 	cultures = { hokan }
 }
 
-SRN = {
+usfp_SRN = {
 	color = { 234 135 70 }
 	
 	country_type = decentralized
@@ -97,7 +98,7 @@ SRN = {
 	cultures = { hokan }
 }
 
-GVT = {
+usfp_GVT = {
 	color = { 23 152 88 }
 	
 	country_type = decentralized
@@ -108,7 +109,7 @@ GVT = {
 	capital = STATE_MONTANA
 }
 
-AIA = {
+usfp_AIA = {
 	color = { 183 178 59 }
 	
 	country_type = decentralized
@@ -131,7 +132,7 @@ REPLACE_OR_CREATE:SLS = {
 	cultures = { salish }
 }
 
-KTN = {
+usfp_KTN = {
 	color = { 25 163 105 }
 	
 	country_type = decentralized
@@ -154,7 +155,7 @@ REPLACE_OR_CREATE:ARP = {
 }
 
 #Sahaptin
-SHP = {
+usfp_SHP = {
 	color = { 133 182 231 }
 	
 	country_type = decentralized
@@ -166,7 +167,7 @@ SHP = {
 }
 
 #Salish
-SAL = {
+usfp_SAL = {
 	color = { 170 204 203 }
 	
 	country_type = decentralized
@@ -178,7 +179,7 @@ SAL = {
 }
 
 #Klamath
-KLA = {
+usfp_KLA = {
 	color = { 175 203 228 }
 	
 	country_type = decentralized
@@ -191,7 +192,7 @@ KLA = {
 
 #adapted from Meriadors work
 #Southern Paiute
-SPI = {
+usfp_SPI = {
 	color = { 255 206 0 }
 	
 	country_type = decentralized
@@ -201,7 +202,7 @@ SPI = {
 	capital = STATE_NEVADA
 	cultures = { paiute }
 }
-ECR = {
+usfp_ECR = {
 	color = { 6 250 121 }
 	
 	country_type = decentralized
@@ -212,7 +213,7 @@ ECR = {
 	
 	capital = STATE_NUNAVUT
 }
-INN = {
+usfp_INN = {
 	color = { 239 131 3 }
 	
 	country_type = decentralized
@@ -223,7 +224,7 @@ INN = {
 	
 	capital = STATE_NUNAVUT
 }
-INK = {
+usfp_INK = {
 	color = { 20 30 120 }
 	
 	country_type = decentralized
@@ -234,7 +235,7 @@ INK = {
 	
 	capital = STATE_NUNAVUT
 }
-INV = {
+usfp_INV = {
 	color = { 30 45 180 }
 	
 	country_type = decentralized
@@ -245,7 +246,7 @@ INV = {
 	
 	capital = STATE_NORTHWEST_TERRITORIES
 }
-CPW = {
+usfp_CPW = {
 	color = { 234 67 143 }
 	
 	country_type = decentralized
@@ -256,7 +257,7 @@ CPW = {
 	
 	capital = STATE_NORTHWEST_TERRITORIES
 }
-SWC = {
+usfp_SWC = {
 	color = { 73 146 169 }
 	
 	country_type = decentralized
@@ -267,7 +268,7 @@ SWC = {
 	
 	capital = STATE_NUNAVUT
 }
-WCR = {
+usfp_WCR = {
 	color = { 187 197 129 }
 	
 	country_type = decentralized
@@ -278,7 +279,7 @@ WCR = {
 	
 	capital = STATE_NUNAVUT
 }
-OJI = {
+usfp_OJI = {
 	color = { 114 73 9 }
 	
 	country_type = decentralized
@@ -289,7 +290,7 @@ OJI = {
 	
 	capital = STATE_NUNAVUT
 }
-WKS = {
+usfp_WKS = {
 	color= { 53 94 59 }
 
 	country_type = decentralized
@@ -300,7 +301,7 @@ WKS = {
 	
 	capital = STATE_BRITISH_COLUMBIA
 }
-DGB = {
+usfp_DGB = {
 	color = { 90 23 43 }
 	
 	country_type = decentralized
@@ -311,7 +312,7 @@ DGB = {
 	
 	capital = STATE_NORTHWEST_TERRITORIES
 }
-DKL = {
+usfp_DKL = {
 	color = { 34 176 78 }
 	
 	country_type = decentralized
@@ -322,7 +323,7 @@ DKL = {
 	
 	capital = STATE_BRITISH_COLUMBIA
 }
-YKM = {
+usfp_YKM = {
 	color = { 245 168 23 }
 	
 	country_type = decentralized
@@ -333,7 +334,7 @@ YKM = {
 	
 	capital = STATE_WASHINGTON
 }
-SYX = {
+usfp_SYX = {
 	color = { 167 56 4 }
 	
 	country_type = decentralized
@@ -344,7 +345,7 @@ SYX = {
 	
 	capital = STATE_BRITISH_COLUMBIA
 }
-LLT = {
+usfp_LLT = {
 	color = { 56 75 93 }
 	
 	country_type = decentralized
@@ -366,7 +367,7 @@ usfp_TSI = {
 	
 	capital = STATE_BRITISH_COLUMBIA
 }
-SVY = {
+usfp_SVY = {
 	color = { 45 32 145 }
 	
 	country_type = decentralized
@@ -377,7 +378,7 @@ SVY = {
 	
 	capital = STATE_NORTHWEST_TERRITORIES
 }
-STU = {
+usfp_STU = {
 	color = { 75 65 145 }
 	
 	country_type = decentralized
@@ -388,7 +389,7 @@ STU = {
 	
 	capital = STATE_NORTHWEST_TERRITORIES
 }
-DNZ = {
+usfp_DNZ = {
 	color = { 66 54 15 }
 	
 	country_type = decentralized
@@ -399,7 +400,7 @@ DNZ = {
 	
 	capital = STATE_BRITISH_COLUMBIA
 }
-TLT = {
+usfp_TLT = {
 	color = { 34 65 178 }
 	
 	country_type = decentralized
@@ -410,7 +411,7 @@ TLT = {
 	
 	capital = STATE_BRITISH_COLUMBIA
 }
-TTC = {
+usfp_TTC = {
 	color = { 17 64 81 }
 	
 	country_type = decentralized
@@ -433,7 +434,7 @@ usfp_IPQ = {
 	capital = STATE_ALASKA
 }
 
-TNN = {
+usfp_TNN = {
 	color = { 33 78 84 }
 	
 	country_type = decentralized
@@ -445,7 +446,7 @@ TNN = {
 	capital = STATE_ALASKA
 }
 
-KYK = {
+usfp_KYK = {
 	color = { 84 27 31 }
 	
 	country_type = decentralized
@@ -457,7 +458,7 @@ KYK = {
 	capital = STATE_ALASKA
 }
 
-GWC = {
+usfp_GWC = {
 	color = { 56 59 65 }
 	
 	country_type = decentralized
@@ -470,7 +471,7 @@ GWC = {
 }
 
 
-SWP = {
+usfp_SWP = {
 	color = { 56 87 34 }
 	
 	country_type = decentralized
@@ -482,7 +483,7 @@ SWP = {
 	capital = STATE_BRITISH_COLUMBIA
 }
 
-HDA = {
+usfp_HDA = {
 	color = { 180 14 23 }
 	
 	country_type = decentralized
@@ -517,7 +518,7 @@ REPLACE_OR_CREATE:DES = {
 	capital = STATE_UTAH
 }
 
-SON = {
+usfp_SON = {
 	color = { 212 27 46 }
 	country_type = colonial
 	
@@ -527,7 +528,7 @@ SON = {
 	capital = STATE_BAJA_CALIFORNIA
 }
 
-AHT = {
+usfp_AHT = {
 	color = { 78 20 37 }
 	
 	country_type = decentralized

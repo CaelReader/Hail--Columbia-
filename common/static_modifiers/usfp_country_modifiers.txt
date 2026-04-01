@@ -829,3 +829,14 @@ usfp_roosevelt_biggest_stick_modifier = {
     unit_navy_offense_mult = 0.10
     interest_group_ig_armed_forces_pol_str_mult = 0.25
 }
+
+usfp_philippines_military_government_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_officer_positive.dds
+    country_block_government_reform_bool = yes
+    interest_group_ig_armed_forces_approval_add = 5
+    interest_group_ig_armed_forces_pol_str_mult = 1.00
+    country_law_enactment_imposition_success_add = 0.50
+    country_law_enactment_time_mult = 0.50
+    country_legitimacy_min_add = 30
+    country_liberty_desire_add = -0.10
+}

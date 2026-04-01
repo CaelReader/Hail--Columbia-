@@ -870,16 +870,21 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
 # 8.0 "Roosevelt"
 ## New Content
     New Domestic and Foreign Agenda JEs for Theodore Roosevelt
-    New Banana Wars JE promoting intervention in Latin America on behalf of the Industrialists
+    New Banana Wars JE promoting intervention in Latin America on behalf of your Companies
     Added small Journal Entry if you take All of Mexico
+## 1.13 Compatibility
+    
 ## Updates
     American Superculture is now a JE to expose its requirements to the player
     Increased Radicals/Loyalists requirements for the Superculture
     American Superculture now adds a special Tradition trait to relevant cultures
     Added tooltip to intro event alerting the player about the Spoils System
     Spoils System now adds +1 Government IG Approval
+    Added notification when the Spoils System activates
     The Mexican National Movement now gets increased activism proportional to the number of owned mexican states while the Civil War or a Revolution is ongoing
     A Subject Mexico with sufficient Liberty Desire will now unilaterally declare independence during the Civil War
+    Patrician Philanthropy trait now increases loyalism for full acceptance pops
+    IGs now lose Empire of Liberty ideology when Manifest Destiny begins to decay
 ## Fixes
     Failing the Constitution JE now removes the American System law (and re-adds it if you are on Protectionism when you restore the Constitution)
     A House Divided will now force-spawn an abolitionist movement if it vanishes for some reason

@@ -24,7 +24,7 @@ ecchi_usa_van_buren_character_template = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1862.7.24
-        chance = 100
+        #guaranteed to spawn if possible
     }
 }
 
@@ -55,7 +55,7 @@ ecchi_usa_w_harrison_character_template = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1841.4.7
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -83,7 +83,7 @@ ecchi_usa_tyler_character_template = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1845.1.1
-        chance = 100
+        #guaranteed to spawn if possible
     }
     on_created = { set_variable =  { name = memento_mori_immunity years = 8 } }
 }
@@ -121,7 +121,7 @@ ecchi_usa_adams_character_template = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1840.2.23
-        chance = 50
+        #guaranteed to spawn if possible
     }
 }
 
@@ -152,7 +152,7 @@ ecchi_usa_polk_character_template = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1849.6.15
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -184,7 +184,7 @@ ecchi_usa_fillmore_template = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1874.3.8
-        chance = 25
+        #guaranteed to spawn if possible
     }
 }
 
@@ -220,7 +220,7 @@ ecchi_usa_pierce_character_template = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1869.10.8
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -247,7 +247,7 @@ ecchi_usa_buchanan_character_template = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1868.6.1
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -279,7 +279,7 @@ ecchi_usa_johnson_character_template = {
         }
         earliest_usage_date = 1853.10.17
         latest_usage_date = 1875.7.31
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -313,7 +313,7 @@ ecchi_usa_hayes_character_template = {
         }
         earliest_usage_date = 1865.3.4
         latest_usage_date = 1893.1.17
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -344,7 +344,7 @@ ecchi_usa_garfield_character_template = {
         }
         earliest_usage_date = 1863.3.4
         latest_usage_date = 1881.9.19
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -384,7 +384,7 @@ ecchi_usa_arthur_character_template = {
         }
         earliest_usage_date = 1871.12.1
         latest_usage_date = 1886.11.18
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -417,7 +417,7 @@ ecchi_usa_cleveland_character_template = {
         }
         earliest_usage_date = 1883.1.1
         latest_usage_date = 1908.6.24
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -448,7 +448,7 @@ ecchi_usa_b_harrison_character_template = {
         }
         earliest_usage_date = 1881.3.4
         latest_usage_date = 1893.3.4
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -482,7 +482,7 @@ ecchi_usa_mckinley_character_template = {
         }
         earliest_usage_date = 1885.3.4
         latest_usage_date = 1901.9.14
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -513,7 +513,7 @@ ecchi_usa_taft_character_template = {
         }
         earliest_usage_date = 1890.2.4
         latest_usage_date = 1930.3.8
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -544,7 +544,7 @@ ecchi_usa_wilson_character_template = {
         }
         earliest_usage_date = 1911.1.17
         latest_usage_date = 1924.2.3
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -571,7 +571,7 @@ ecchi_usa_harding_character_template = {
         }
         earliest_usage_date = 1904.1.11
         latest_usage_date = 1923.8.2
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -612,7 +612,7 @@ ecchi_usa_coolidge_character_template = {
         }
         earliest_usage_date = 1914.1.7
         latest_usage_date = 1933.1.5
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -639,7 +639,7 @@ ecchi_usa_hoover_character_template = {
         }
         earliest_usage_date = 1914.10.22
         latest_usage_date = 1964.10.20
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -772,7 +772,7 @@ ecchi_usa_macarthur_character_template = {
 		role = general
 		earliest_usage_date = 1912.1.1
 		latest_usage_date = 1964.4.5
-		chance = 50
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -797,7 +797,7 @@ ecchi_usa_custer_character_template = {
 		role = general
         earliest_usage_date = 1860.1.1
         latest_usage_date = 1876.6.25
-        chance = 100
+        #guaranteed to spawn if possible
     }
 }
 
@@ -976,7 +976,7 @@ ecchi_usa_thomas_character_template = {
         }
         earliest_usage_date = 1922.1.1
         latest_usage_date = 1968.12.19
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1018,7 +1018,7 @@ ecchi_usa_foster_character_template = {
         }
         earliest_usage_date = 1924.1.1
         latest_usage_date = 1961.9.1
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1051,7 +1051,7 @@ ecchi_usa_browder_character_template = {
         }
         earliest_usage_date = 1919.1.1
         latest_usage_date = 1973.1.27
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1100,7 +1100,7 @@ ecchi_usa_lindbergh_character_template = {
         }
         earliest_usage_date = 1927.1.1
         latest_usage_date = 1974.8.26
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1211,7 +1211,7 @@ ecchi_usa_patton_character_template = {
         role = general
         earliest_usage_date = 1915.1.1
         latest_usage_date = 1945.12.21
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1254,7 +1254,7 @@ ecchi_usa_keller_character_template = {
         }
         earliest_usage_date = 1915.1.1
         latest_usage_date = 1968.6.1
-        chance = 75
+        #guaranteed to spawn if possible
     }
     on_created = {
         #in the United Syndicates, Communist ideology becomes less relevant since those laws are already in power
@@ -1368,7 +1368,7 @@ ecchi_usa_seward_character_template = {
         }
         earliest_usage_date = 1839.1.1
         latest_usage_date = 1872.10.10
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1495,7 +1495,7 @@ ecchi_usa_bates_character_template = {
         }
         earliest_usage_date = 1890.1.1
         latest_usage_date = 1929.3.28
-        chance = 25
+        chance = 50
     }
 }
 
@@ -1523,7 +1523,7 @@ ecchi_usa_baum_character_template = {
         }
         earliest_usage_date = 1985.1.1
         latest_usage_date = 1919.5.6
-        chance = 25
+        chance = 50
     }
 }
 
@@ -1614,7 +1614,7 @@ ecchi_usa_stephens_character_template = {
         }
         earliest_usage_date = 1862.2.22
         latest_usage_date = 1883.3.4
-        chance = 50
+        #guaranteed to spawn if possible
     }
     on_created = {
         if = {
@@ -1650,7 +1650,7 @@ ecchi_usa_ferguson_character_template = {
 		role = general
         earliest_usage_date = 1858.1.1
         latest_usage_date = 1865.10.20
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1675,7 +1675,7 @@ ecchi_usa_wirz_character_template = {
 		role = general
         earliest_usage_date = 1860.1.1
         latest_usage_date = 1865.11.10
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1700,7 +1700,7 @@ ecchi_usa_forrest_character_template = {
 		role = general
         earliest_usage_date = 1860.1.1
         latest_usage_date = 1877.10.29
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1733,7 +1733,7 @@ ecchi_tex_de_zavala_character_template = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1836.11.15
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1763,7 +1763,7 @@ ecchi_tex_crockett_character_template = {
         }
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1836.3.6
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1828,7 +1828,7 @@ ecchi_asa_delany_character_template = {
         }
         earliest_usage_date = 1852.1.1
         latest_usage_date = 1885.1.24
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1865,7 +1865,7 @@ ecchi_asa_singleton_character_template = {
         }
         earliest_usage_date = 1874.1.1
         latest_usage_date = 1900.2.17
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1899,7 +1899,7 @@ ecchi_asa_turner_character_template = {
         }
         earliest_usage_date = 1862.4.1
         latest_usage_date = 1915.5.8
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -2149,6 +2149,6 @@ ecchi_rus_goldman_character_template = {
 		}
 		earliest_usage_date = 1886.1.1
 		latest_usage_date = 1940.5.14
-		chance = 25
+        #guaranteed to spawn if possible
 	}
 }

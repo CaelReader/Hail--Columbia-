@@ -1,0 +1,156 @@
+﻿namespace = usfp_philippines
+
+#USA: philippines subjugated
+usfp_philippines.1 = {
+    type = country_event
+    placement = scope:phillipines_scope.capital
+    event_image = {
+        video = "asia_westerners_arriving"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/waving_flags_usa_philippines.dds"
+
+    title = usfp_philippines.1.t
+    desc = usfp_philippines.1.d
+    flavor = usfp_philippines.1.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    immediate = {
+
+    }
+
+    #begin tutelage
+    option = {
+        name = usfp_philippines.1.a
+        default_option = yes
+        scope:philippines_scope = {
+            add_modifier = usfp_philippines_military_government_modifier
+            activate_law = law_type:law_colonial_administration
+            activate_law = law_type:law_autocracy
+            set_ruling_interest_groups = { ig_armed_forces }
+            change_subject_type = subject_type_colony
+            trigger_event = {
+                id = usfp_philippines.2
+                days = 5
+            }
+        }
+        create_unidirectional_truce = {
+            country = scope:philippines_scope
+            months = 60
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #release as independent
+    option = {
+        name = usfp_philippines.1.b
+        scope:philippines_scope = {
+            make_independent = yes
+            activate_law = root.active_law:lawgroup_distribution_of_power.type
+            activate_law = root.active_law:lawgroup_governance_principles.type
+            create_political_lobby = {
+                type = lobby_pro_country
+                target = root
+                add_interest_group = ig:ig_intelligentsia
+            }
+        }
+        if = {
+            limit = {
+                is_power_bloc_leader = yes
+            }
+            power_bloc = {
+                add_leverage = {
+                    target = c:PHI
+                    value = 300
+                }
+            }
+        }
+        change_relations = {
+            country = scope:phillipines_scope
+            value = 50
+        }
+        create_bidirectional_truce = {
+            country = scope:phillipines_scope
+            months = 60
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    #reject JE
+    option = {
+        name = usfp_philippines.1.c
+        custom_tooltip = {
+            text = close_philippines_je
+            set_variable = rejected_philippines_tutelage
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+#PHI: USA is new overlord
+usfp_philippines.2 = {
+    type = country_event
+    placement = scope:phillipines_scope.capital
+    event_image = {
+        video = "asia_westerners_arriving"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/waving_flags_usa_philippines.dds"
+
+    title = usfp_philippines.2.t
+    desc = usfp_philippines.2.d
+    flavor = usfp_philippines.2.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    immediate = {
+
+    }
+
+    #assert independence
+    option = {
+        name = usfp_philippines.2.a
+        default_option = yes
+        highlighted_option = yes
+        trigger = {
+            any_political_movement = {
+                OR = {
+                    is_political_movement_type = movement_radical
+                    is_political_movement_type = movement_liberal
+                }
+            }
+        }
+        add_liberty_desire = 25
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #accept tutelage
+    option = {
+        name = usfp_philippines.2.b
+        add_liberty_desire = -25
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+#Moro Rebellion
+#American Massacres
+#Concentration Camps
+#PHI: Insular Government instated
+#USA: Philippine representatives
+#USA: philippine tutelage over
+#PHI: philippine tutelage over

@@ -4,7 +4,7 @@ je_acw_countdown = {
 
 	group = je_group_usa_american_civil_war
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	is_shown_in_lobby = {
 		c:USA = THIS
@@ -298,9 +298,9 @@ je_acw_war = {
 		# if Sonora exists, they declare for the Confederacy
 			if = {
 				limit = { 
-					exists = c:SON
+					exists = c:usfp_SON
 					exists = c:CSA
-					c:SON = {
+					c:usfp_SON = {
 						is_ai = yes
 						OR = {
 							is_subject_of = c:USA
@@ -308,14 +308,14 @@ je_acw_war = {
 						}
 					}
 				}
-				c:SON = {
+				c:usfp_SON = {
 					make_independent = yes
 					every_diplomatic_play = {
 						limit = {
 							initiator = c:USA
 						}
 						remove_initiator_backers = {
-							c:SON
+							c:usfp_SON
 						}
 					}
 					every_diplomatic_play = {
@@ -323,7 +323,7 @@ je_acw_war = {
 							target = c:USA
 						}
 						remove_target_backers = {
-							c:SON
+							c:usfp_SON
 						}
 					}
 					random_diplomatic_play = {
@@ -336,12 +336,12 @@ je_acw_war = {
 							}
 						}
 						add_initiator_backers = {
-							c:SON
+							c:usfp_SON
 						}
 						add_war_goal = {
 							holder = c:USA
 							type = annex_country
-							target_country = c:SON
+							target_country = c:usfp_SON
 						}
 					}
 				}
@@ -551,7 +551,7 @@ je_acw_war = {
 		}
 	}
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 	
 	can_revolution_inherit = no
 
@@ -799,7 +799,7 @@ je_acw_reconstruction = {
 	scripted_progress_bar =  usfp_reconstruction_northern_will_progress_bar
 
 	timeout = 4380
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_acw_reincorporate = {
@@ -995,7 +995,7 @@ je_acw_wild_wild_west = {
 je_acw_war_csa = {
 	icon = "gfx/interface/icons/event_icons/waving_flag_usa_distress.dds"
 	group = je_group_usa_american_civil_war
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 	on_monthly_pulse = {
 		random_events = {
 			chance_of_no_event = 33

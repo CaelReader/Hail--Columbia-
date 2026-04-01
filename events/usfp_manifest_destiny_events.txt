@@ -3251,6 +3251,15 @@ usfp_manifest_destiny.29 = {
 		}
 		change_infamy = 10
 	}
+
+    after = {
+        every_interest_group = {
+            limit = {
+                has_ideology = ideology:ideology_empire_of_liberty
+            }
+            remove_ideology = ideology_empire_of_liberty
+        }
+    }
 }
 
 #Mexican discrimination

@@ -109,7 +109,7 @@ usfp_manifest_destiny_main = {
 		}
 	}
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	on_monthly_pulse = {
 		effect = {
@@ -650,7 +650,7 @@ usfp_je_westward_expansion = {
 		}
 	}
 
-	should_be_pinned_by_default = no
+	should_be_pinned_by_default_uninvolved_or_context = no
 
 	weight = 10
 
@@ -859,7 +859,7 @@ usfp_je_indian_wars = {
 		}
 	}
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	weight = 10
 
@@ -1000,7 +1000,7 @@ usfp_je_american_superculture_je = {
         }
     }
 
-    should_be_pinned_by_default = no
+    should_be_pinned_by_default_uninvolved_or_context = no
 
     weight = 10
 
@@ -1093,7 +1093,7 @@ usfp_je_mexican_occupation = {
         }
     }
 
-    should_be_pinned_by_default = no
+    should_be_pinned_by_default_uninvolved_or_context = no
 
     weight = 10
 
