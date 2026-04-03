@@ -3,5 +3,136 @@
 #Banana Wars start
 #Marines massacre civilians
 #Industrialists make incorporation harder
+usfp_banana_wars.3 = {
+    type = country_event
+    placement = scope:central_american_state_scope
+    event_image = {
+        video = "ip4_colonial_exploitation_going_well"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/corporate_management.dds"
+
+    title = usfp_banana_wars.3.t
+    desc = usfp_banana_wars.3.d
+    flavor = usfp_banana_wars.3.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        any_scope_state = {
+            is_in_geographic_region = geographic_region_caribbean_coast
+            is_incorporated = no
+            is_treaty_port = no
+        }
+    }
+
+    immediate = {
+        random_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_caribbean_coast
+                is_incorporated = no
+                is_treaty_port = no
+            }
+            save_scope_as = central_american_state_scope
+        }
+        if = {
+            limit = {
+                has_company = company_type:company_united_fruit
+            }
+            company:company_united_fruit = {
+                save_scope_as = united_fruit_scope
+            }
+        }
+    }
+
+    #do not incorporate
+    option = {
+        name = usfp_banana_wars.3.a
+        default_option = yes
+
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #actually we want to turn these into states
+    option = {
+        name = usfp_banana_wars.3.b
+
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    #United Fruit Company
+    option = {
+        name = usfp_banana_wars.3.c
+        highlighted_option = yes
+        trigger = {
+            has_company = company_type:company_united_fruit
+        }
+        custom_tooltip = {
+            text = create_united_fruit_country
+            create_country = {
+                tag = usfp_UFC
+                origin = root
+                state = scope:central_american_state_scope
+            }
+            scope:united_fruit_scope = {
+                add_owned_country = c:usfp_UFC
+            }
+            every_scope_state = {
+                limit = {
+                    is_in_geographic_region = geographic_region_caribbean_coast
+                    is_incorporated = no
+                    is_treaty_port = no
+                }
+                set_state_owner = c:usfp_UFC
+            }
+            create_diplomatic_pact = {
+                country = c:usfp_UFC
+                type = chartered_company
+            }
+            c:usfp_UFC ?= {
+                add_liberty_desire = -100
+                activate_law = law_type:law_land_based_taxation
+                activate_law = law_type:law_appointed_bureaucrats
+                activate_law = law_type:law_colonial_administration
+                activate_law = law_type:law_extraction_economy
+                activate_law = law_type:law_oligarchy
+                activate_law = law_type:law_dedicated_police
+                activate_law = law_type:law_no_schools
+                activate_law = law_type:law_no_workers_rights
+                activate_law = law_type:law_no_health_system
+                activate_law = law_type:law_no_home_affairs
+                activate_law = law_type:law_no_migration_controls
+                activate_law = law_type:law_no_colonial_affairs
+                activate_law = law_type:law_censorship
+                activate_law = law_type:law_child_labor_allowed
+                activate_law = law_type:law_no_social_security
+                activate_law = law_type:law_combination_acts
+                activate_law = law_type:law_commercialized_agriculture
+                activate_law = law_type:law_free_trade
+                ig:ig_industrialists ?= {
+                    if = {
+                        limit = {
+                            has_ideology = ideology:ideology_laissez_faire
+                        }
+                        remove_ideology = ideology_laissez_faire
+                        add_ideology = ideology_colonialist
+                    }
+                }
+                set_ruling_interest_groups = { ig_industrialists ig_armed_forces }
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+}
 #Central American country response
-#Good Neighbor Policy enacted
+#Other countries: Good Neighbor Policy enacted

@@ -115,9 +115,7 @@
             exists = c:PHI
         }
         c:USA = {
-            NOT = {
-                has_variable = rejected_philippines_tutelage
-            }
+            has_variable = rejected_philippines_tutelage
         }
     }
 

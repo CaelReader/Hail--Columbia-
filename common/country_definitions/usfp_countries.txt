@@ -676,3 +676,15 @@ usfp_F_CUB = {
 	capital = STATE_WESTERN_CUBA
 	
 }
+
+#United Fruit Company
+usfp_UFC = {
+    color = { 254  254  53 }
+
+    country_type = company
+
+    tier = principality
+
+    cultures = { yankee dixie }
+    capital = STATE_COSTA_RICA
+}

@@ -888,3 +888,4 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
 ## Fixes
     Failing the Constitution JE now removes the American System law (and re-adds it if you are on Protectionism when you restore the Constitution)
     A House Divided will now force-spawn an abolitionist movement if it vanishes for some reason
+    The USA cannot offer to purchase Cuba from a Rival country

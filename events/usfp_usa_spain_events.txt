@@ -54,6 +54,11 @@ usfp_usa_spain.1 = {
 				save_scope_as = cuba_state_scope
 			}
 		}
+        ordered_scope_ship = {
+            order_by = naval_power_projection
+            position = 5
+            save_scope_as = uss_maine_ship_scope
+        }
 	}
 
 	#dispatch the Maine
@@ -148,6 +153,9 @@ usfp_usa_spain.2 = {
 		c:USA = {
 			trigger_event = usfp_usa_spain.3
 		}
+        scope:uss_maine_ship_scope = {
+            kill_ship = yes
+        }
 		ai_chance = {
 			base = 100
 		}
@@ -311,6 +319,14 @@ usfp_usa_spain.3 = {
 			}
 		}
 	}
+
+    after = {
+        show_as_tooltip = {
+            scope:uss_maine_ship_scope = {
+                kill_ship = yes
+            }
+        }
+    }
 
 	cancellation_trigger = {
 		OR = {

@@ -327,3 +327,12 @@ REPLACE:LIB = { # Liberia
 		}
 	}
 }
+
+usfp_UFC = {
+    flag_definition = {
+        coa = usfp_UFC
+        coa_with_overlord_canton = usfp_UFC
+        allow_overlord_canton = no
+        priority = 10000
+    }
+}

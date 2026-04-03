@@ -1687,7 +1687,7 @@ usfp_usa_spain.1.d: "In light of the growing unrest in [SCOPE.sCountry('cuba_sco
 usfp_usa_spain.1.f: ""Spanish officers and mob attacked three newspaper offices, not four (as reported yesterday). Soldiers joined the mob when sent to defend the newspapers, and outside the palace shouted death to Blanco and autonomy. If Americans are in danger ships should be ready to move promptly for [SCOPE.sState('cuba_state_scope').GetPortHubName]. Uncertainty and excitement widespread."" #United States Consulate General, Havana
 usfp_usa_spain.1.a: "The Navy will dispatch a ship to [SCOPE.sState('cuba_state_scope').GetCityHubName]."
 usfp_usa_spain.1.b: "[SCOPE.sCountry('cuba_scope').GetName] is not our problem."
-maine_heads_to_cuba: "An [ROOT.GetCountry.GetAdjective] ship will head to [SCOPE.sState('cuba_state_scope').GetCityHubName]"
+maine_heads_to_cuba: "The [SCOPE.sShip('uss_maine_ship_scope').GetName] will head to [SCOPE.sState('cuba_state_scope').GetCityHubName]"
 
 usfp_usa_spain.2.t: "[SCOPE.sCountry('usa_scope').GetAdjective] Ship Explodes in [SCOPE.sState('cuba_state_scope').GetCityHubName] Harbor!"
 usfp_usa_spain.2.d: "An [SCOPE.sCountry('usa_scope').GetAdjective] ship anchored in [SCOPE.sState('cuba_state_scope').GetCityHubName] has exploded and sank, seemingly by accident. Even though we had no involvement, the [SCOPE.sCountry('usa_scope').GetAdjectiveNoFormatting] press has immediately printed headlines blaming us for the disaster, which could have a disastrous effect on our [concept_relations] with the [SCOPE.sCountry('usa_scope').GetName]."
@@ -1773,6 +1773,8 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_usa_roosevelt.5.f: "The Inspector General flipped through the slim file. The shooting was clearly done using a pistol, yet the evidence presented against the troops was rifle cartridges. The commanding officer reports that the soldiers had been in barracks with their weapons under lock and key, but the locals keep pressing the issue. He sighed. This wasn't going to go away on its own."
  usfp_usa_roosevelt.5.a: "Hand out discharges to placate the residents."
  usfp_usa_roosevelt.5.b: "Our servicemen are clearly not at fault here."
+
+create_united_fruit_country: "[SCOPE.sCompany('united_fruit_scope').GetName] will assume direct control over our [Concept('concept_unincorporated_state','$concept_unincorporated_states$')] in the [GetGeographicRegion('geographic_region_caribbean_coast').GetName]"
 
 
 usfp_test.1.t: "DEBUG EVENT"

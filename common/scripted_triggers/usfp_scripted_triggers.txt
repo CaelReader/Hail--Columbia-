@@ -758,9 +758,9 @@ usfp_has_fugitive_slave_act = {
 }
 
 usfp_owns_cuba = {
-	owns_entire_state_region = STATE_WESTERN_CUBA
-	owns_entire_state_region = STATE_CENTRAL_CUBA
-	owns_entire_state_region = STATE_EASTERN_CUBA
+    country_or_subject_owns_entire_state_region =  STATE_WESTERN_CUBA
+	country_or_subject_owns_entire_state_region =  STATE_CENTRAL_CUBA
+	country_or_subject_owns_entire_state_region =  STATE_EASTERN_CUBA
 }
 
 usfp_roosevelt_agenda_national_parks_trigger = {

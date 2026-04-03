@@ -50,9 +50,7 @@
     is_shown_when_inactive = {
         OR = {
             c:USA ?= root
-            any_company = {
-                is_company_type = company_united_fruit
-            }
+            has_company = company_type:company_united_fruit
         }
         NOT = {
             any_scope_state = {
@@ -98,6 +96,10 @@
             }
             ruler = {
                 usfp_manifest_destiny_pro_expansion_trigger = yes
+            }
+            any_company = {
+                is_company_type = company_type:company_united_fruit
+                company_is_prosperous = yes
             }
         }
 

@@ -477,6 +477,14 @@ usfp_cuban_purchase_button = {
 			has_claim = s:STATE_EASTERN_CUBA
 		}
 		has_variable = manifest_destiny_var
+        NOR = {
+            any_rival_country = {
+                usfp_owns_cuba = yes
+            }
+            any_rivaling_country = {
+                usfp_owns_cuba = yes
+            }
+        }
 	}
 
 	possible = {

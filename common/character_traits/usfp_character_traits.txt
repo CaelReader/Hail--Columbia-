@@ -79,7 +79,7 @@ usfp_special_character_great_triumvirate = {
 	texture = "gfx/interface/icons/character_trait_icons/special_character_great_triumvirate.dds"
 
 	character_modifier = {
-		character_popularity_add = 10
+        character_prominence_add = 20
 	}
 
 	command_modifier = {

@@ -116,7 +116,9 @@ usfp_philippines.2 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     immediate = {
-
+        overlord = {
+            save_scope_as = usa_scope
+        }
     }
 
     #assert independence
@@ -132,7 +134,18 @@ usfp_philippines.2 = {
                 }
             }
         }
+        show_as_unavailable = {
+            always = yes
+        }
+        ordered_political_movement = {
+            order_by = political_movement_support
+            position = 0
+
+        }
         add_liberty_desire = 25
+        c:USA = {
+            post_notification = usfp_philippines_nationalist_revolt
+        }
         ai_chance = {
             base = 100
         }
@@ -142,12 +155,82 @@ usfp_philippines.2 = {
     option = {
         name = usfp_philippines.2.b
         add_liberty_desire = -25
+        c:USA = {
+            post_notification = usfp_philippines_accept_tutelage
+        }
         ai_chance = {
             base = 1
         }
     }
+
+    after = {
+        show_as_tooltip = {
+            add_modifier = usfp_philippines_military_government_modifier
+            activate_law = law_type:law_colonial_administration
+            activate_law = law_type:law_autocracy
+            set_ruling_interest_groups = { ig_armed_forces }
+            change_subject_type = subject_type_colony
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = {
+            is_subject_of = c:USA
+        }
+    }
 }
 #Moro Rebellion
+usfp_philippines.3 = {
+    type = country_event
+    placement = scope:phillipines_scope.capital
+    event_image = {
+        video = "ip3_angry_mob_raiding_minorities"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+    title = usfp_philippines.3.t
+    desc = usfp_philippines.3.d
+    flavor = usfp_philippines.3.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        c:USA ?= root
+        c:PHI ?= {
+            is_subject_of = root
+            is_diplomatic_play_committed_participant = no
+            has_revolution = no
+        }
+    }
+
+    immediate = {
+
+    }
+
+    #crack down
+    option = {
+        name = usfp_philippines.3.a
+        default_option = yes
+
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #abandon those areas
+    option = {
+        name = usfp_philippines.3.b
+
+        ai_chance = {
+            base = 0
+        }
+    }
+
+}
 #American Massacres
 #Concentration Camps
 #PHI: Insular Government instated

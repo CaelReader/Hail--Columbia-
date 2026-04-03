@@ -114,6 +114,11 @@ usfp_F_CUB_ADJ: "Filibuster"
 usfp_GLC: "Great Lakes"
 usfp_GLC_ADJ: "United Indian"
 
+ usfp_UFC: "United Fruit Company"
+ usfp_UFC_ADJ: "United Fruit"
+ dyn_c_chiquita: "Chiquita"
+ dyn_c_chiquita_ADJ: "Chiquita"
+
 rule_usfp_usa_names:0 "@america_icon! #yellow Hail, Columbia!#! | USA Names"
  setting_usa_initial_names:1 "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_usa_initial_names_desc #high Vanilla #!#!#!"
  setting_usa_initial_names_desc:0 "The country name of the United States will change based on government type, always retaining the initials "USA""
