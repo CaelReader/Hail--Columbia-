@@ -410,3 +410,18 @@ usfp_protected_ig_interests_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 	interest_group_approval_add = 2
 }
+
+usfp_rejected_banana_wars_ig_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_negative.dds
+    interest_group_approval_add = -3
+}
+
+usfp_industrialists_displeased_banana_wars_ig_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_negative.dds
+    interest_group_approval_add = -2
+}
+
+usfp_industrialists_banana_empire_ig_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
+    interest_group_approval_add = 4
+}

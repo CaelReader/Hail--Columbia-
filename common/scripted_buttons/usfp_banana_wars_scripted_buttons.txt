@@ -7,14 +7,22 @@
             any_scope_state = {
                 is_in_geographic_region = geographic_region_caribbean_coast
                 is_incorporated = yes
+                count > 2
             }
         }
     }
 
     possible = {
-        has_technology_researched = multilateral_alliances
-        ruler = {
-            usfp_manifest_destiny_not_pro_expansion_trigger = yes
+        OR = {
+            ruler = {
+                usfp_manifest_destiny_anti_expansion_trigger = yes
+            }
+            AND = {
+                has_technology_researched = multilateral_alliances
+                ruler = {
+                    usfp_manifest_destiny_not_pro_expansion_trigger = yes
+                }
+            }
         }
         usfp_manifest_destiny_less_or_equal_trigger = {value = 10}
     }
@@ -22,10 +30,6 @@
     effect = {
         change_infamy = -15
         every_country_in_caribbean_coast = {
-            change_relations = {
-                country = root
-                value = 10
-            }
             if = {
                 limit = {
                     is_subject_of = root
@@ -39,6 +43,7 @@
                     months = 60
                 }
             }
+            trigger_event = usfp_banana_wars.5
         }
         custom_tooltip = {
             text = close_banana_wars

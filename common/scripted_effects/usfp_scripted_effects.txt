@@ -2478,3 +2478,35 @@ usfp_claim_cuba_effect = {
 		add_claim = root
 	}
 }
+
+usfp_create_anti_country_lobby_if_not_exists = {
+    if = {
+        limit = {
+            NOT = {
+                any_political_lobby = {
+                    is_political_lobby_type = lobby_anti_country
+                    target = $TARGET$
+                }
+            }
+        }
+        create_political_lobby = {
+            type = lobby_anti_country
+            target = $TARGET$
+            add_interest_group = $INTEREST_GROUP$
+        }
+    }
+}
+
+usfp_anger_anti_country_lobby_create_if_missing = {
+    usfp_create_anti_country_lobby_if_not_exists = {
+        TARGET = $TARGET$
+        INTEREST_GROUP = $INTEREST_GROUP$
+    }
+    add_lobby_appeasement_from_diplomacy_unidirectional = {
+        FACTOR = appeasement_special_events_negative
+        PRO_AMOUNT = 0
+        ANTI_AMOUNT = $VALUE$
+        FIRST = root
+        SECOND = $TARGET$
+    }
+}

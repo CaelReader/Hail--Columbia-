@@ -885,7 +885,9 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
     A Subject Mexico with sufficient Liberty Desire will now unilaterally declare independence during the Civil War
     Patrician Philanthropy trait now increases loyalism for full acceptance pops
     IGs now lose Empire of Liberty ideology when Manifest Destiny begins to decay
+    Feminists can now join the Abolitionist movement
 ## Fixes
     Failing the Constitution JE now removes the American System law (and re-adds it if you are on Protectionism when you restore the Constitution)
     A House Divided will now force-spawn an abolitionist movement if it vanishes for some reason
     The USA cannot offer to purchase Cuba from a Rival country
+    An American subject occupying Mexico City now triggers the G-H decision

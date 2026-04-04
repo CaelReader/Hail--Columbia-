@@ -26,6 +26,11 @@ usfp_offer_treaty_of_gh_mex = {
 			capital = {
 				controller = c:USA
 			}
+            capital = {
+                controller = {
+                    is_subject_of = c:USA
+                }
+            }
 			any_scope_war = {
 				attacker_warleader = c:USA
 				has_war_support = {
