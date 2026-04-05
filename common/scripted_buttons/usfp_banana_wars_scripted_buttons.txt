@@ -29,7 +29,12 @@
 
     effect = {
         change_infamy = -15
-        every_country_in_caribbean_coast = {
+        every_country_in_latin_america = {
+            limit = {
+                capital = {
+                    is_in_geographic_region = usfp_geographic_region_latin_america
+                }
+            }
             if = {
                 limit = {
                     is_subject_of = root
@@ -49,7 +54,7 @@
             text = close_banana_wars
             set_variable = rejected_banana_wars
         }
-
+        set_variable = banana_wars_finished
     }
 
     ai_chance = {
@@ -63,7 +68,7 @@
                     }
                 }
             }
-            add = 100
+            add = 1000
         }
     }
 }

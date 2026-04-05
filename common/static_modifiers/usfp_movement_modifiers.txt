@@ -205,3 +205,9 @@ usfp_roosevelt_domestic_agenda_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
     political_movement_pop_attraction_mult = 0.05
 }
+
+usfp_marines_crackdown_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+    political_movement_pop_attraction_mult = -0.15
+    political_movement_radicalism_add = -0.15
+}

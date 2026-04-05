@@ -79,7 +79,7 @@ usfp_remove_machine_button = {
 	}
 
 	possible = {
-		authority >= 75
+		authority >= 100
 		bureaucracy >= 100
 		NOT = {
 			has_modifier = usfp_fighting_corruption_modifier

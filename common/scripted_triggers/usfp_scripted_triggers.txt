@@ -116,9 +116,7 @@ usfp_mexican_cession_trigger = {
 
 usfp_atlantic_hurricane_trigger = {
 	OR = {
-		region = sr:region_caribbean
-		region = sr:region_dixie
-		region = sr:region_new_england
+		region = sr:region_atlantic_coast
 	}
 }
 
@@ -441,9 +439,6 @@ ig_hasnt_chosen_ideology_trigger = {
 }
 
 usfp_has_dixie_occupation_trigger = {
-	sr:region_dixie = {
-		save_temporary_scope_as = dixie_region
-	}
 	custom_tooltip = {
 		text = dixie_formation_tt
 		OR = {
@@ -465,9 +460,6 @@ usfp_has_dixie_occupation_trigger = {
 }
 
 usfp_has_dixie_indian_occupation_trigger = {
-	sr:region_dixie = {
-		save_temporary_scope_as = dixie_region
-	}
 	custom_tooltip = {
 		text = dixie_indian_formation_tt
 		OR = {
@@ -489,9 +481,6 @@ usfp_has_dixie_indian_occupation_trigger = {
 }
 
 usfp_has_plains_occupation_trigger = {
-	sr:region_great_plains = {
-		save_temporary_scope_as = great_plains_region
-	}
 	custom_tooltip = {
 		text = plains_formation_tt
 		OR = {
@@ -571,6 +560,11 @@ usfp_progressive_era_square_deal_conditions = {
 	has_law_or_variant = law_type:law_graduated_taxation
 	has_law_or_variant = law_type:law_womens_suffrage
 	has_law_or_variant = law_type:law_compulsory_primary_school
+    NOT = {
+        active_law:lawgroup_bureaucracy = {
+            has_amendment = amendment_type:amendment_usfp_spoils_system
+        }
+    }
 	has_law_or_variant = law_type:law_elected_bureaucrats
 	has_law_or_variant = law_type:law_public_health_insurance
 	institution_investment_level = {

@@ -873,7 +873,7 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
     New Banana Wars JE promoting intervention in Latin America on behalf of your Companies
     Added small Journal Entry if you take All of Mexico
 ## 1.13 Compatibility
-    
+    Updated strategic region triggers to new map changes
 ## Updates
     American Superculture is now a JE to expose its requirements to the player
     Increased Radicals/Loyalists requirements for the Superculture
@@ -886,6 +886,9 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
     Patrician Philanthropy trait now increases loyalism for full acceptance pops
     IGs now lose Empire of Liberty ideology when Manifest Destiny begins to decay
     Feminists can now join the Abolitionist movement
+    Political Machines can now be removed by decision if you abolish the constitution
+    Fighting the Political Machines is now more expensive
+    Completing the Progressive Era now requires abolishing the Spoils System
 ## Fixes
     Failing the Constitution JE now removes the American System law (and re-adds it if you are on Protectionism when you restore the Constitution)
     A House Divided will now force-spawn an abolitionist movement if it vanishes for some reason

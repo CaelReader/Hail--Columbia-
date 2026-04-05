@@ -2016,12 +2016,17 @@ usfp_usa.23 = {
 		}
         custom_tooltip = spoils_system_warning
 		hidden_effect = {
-			ruler = {
-				usfp_washington_precedent_effect = yes 
-			}
-			add_declared_interest = region_great_plains
+			# ruler = {
+			# 	usfp_washington_precedent_effect = yes
+			# }
+            random_scope_politician = {
+                limit = {
+                    has_template = ecchi_usa_van_buren_character_template
+                }
+                set_as_interest_group_leader = yes
+            }
 			set_strategy = ai_strategy_monroe_doctrine
-			set_next_election_date = 1836.12.7 #vanilla bugfix?
+			# set_next_election_date = 1836.12.7 #vanilla bugfix?
 			trigger_event = {
 				id = usfp_panics.1
 				months = 14
@@ -2104,7 +2109,7 @@ usfp_usa.25 = {
 	cooldown = { days = never_fire_again_modifier_time } #Once
 	trigger = {
 		any_scope_state = {
-			region = sr:region_dixie
+			is_in_geographic_region = geographic_region_dixie_old
 			has_building = building_cotton_plantation
 			NOT = {
 				has_state_trait = state_trait_usfp_boll_weevil
@@ -2116,7 +2121,7 @@ usfp_usa.25 = {
 	immediate = {
 		random_scope_state = {
 			limit = {
-				region = sr:region_dixie
+				is_in_geographic_region = geographic_region_dixie_old
 				has_building = building_cotton_plantation
 			}
 			save_scope_as = boll_weevil_state
@@ -2127,13 +2132,14 @@ usfp_usa.25 = {
 	option = {
 		name = usfp_usa.25.a
 		default_option = yes
-		sr:region_dixie = {
-			every_scope_state = {
-				state_region = {
-					add_state_trait = state_trait_usfp_boll_weevil
-				}
-			}
-		}
+        every_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_dixie_old
+            }
+            state_region = {
+                add_state_trait = state_trait_usfp_boll_weevil
+            }
+        }
 		s:STATE_RIO_GRANDE = {
 			add_state_trait = state_trait_usfp_boll_weevil
 		}

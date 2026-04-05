@@ -2029,7 +2029,7 @@ usfp_a_house_divided.21 = {
 					state_region = s:STATE_RIO_GRANDE
 					state_region = s:STATE_ONTARIO
 					state_region = s:STATE_QUEBEC
-					region = sr:region_caribbean
+					is_in_geographic_region = geographic_region_caribbean_old
 				}
 			}
 			save_scope_as = underground_railroad_state
@@ -2043,10 +2043,9 @@ usfp_a_house_divided.21 = {
 			limit = { 
 				any_scope_state = {
 					OR = {
-						region = sr:region_caribbean
-						region = sr:region_mexico
+						is_in_geographic_region = geographic_region_caribbean_old
+                        is_in_geographic_region = geographic_region_mexico_old
 					}
-
 				}
 			}
 			custom_tooltip = {

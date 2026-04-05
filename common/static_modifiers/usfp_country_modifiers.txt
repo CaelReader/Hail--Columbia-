@@ -532,8 +532,8 @@ usfp_city_beautiful_modifier = {
 
 usfp_fighting_corruption_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_negative.dds
-	country_authority_add = -75
-	country_bureaucracy_add = -100
+	country_authority_add = -100
+	country_bureaucracy_mult = -0.10
 }
 
 usfp_social_hygiene_modifier = {

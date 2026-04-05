@@ -1344,7 +1344,7 @@ usfp_acw.13 = {
 		}
 		every_scope_state = {
 			limit = {
-				region = sr:region_mexico
+                is_in_geographic_region = geographic_region_mexico_old
 			}
 			state_region = {
 				add_claim = c:MEX

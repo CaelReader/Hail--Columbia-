@@ -1040,13 +1040,13 @@ usfp_je_mexican_occupation = {
     is_shown_when_inactive = {
         c:USA ?= root
         any_scope_state = {
-            region = sr:region_mexico
+            is_in_geographic_region = geographic_region_mexico_old
         }
     }
 
     possible = {
         any_scope_state = {
-            region = sr:region_mexico
+            is_in_geographic_region = geographic_region_mexico_old
             count >= 6
         }
         culture_percent_country = {
@@ -1083,7 +1083,7 @@ usfp_je_mexican_occupation = {
         OR = {
             NOT = {
                 any_scope_state = {
-                    region = sr:region_mexico
+                    is_in_geographic_region = geographic_region_mexico_old
                 }
             }
             culture_percent_country = {

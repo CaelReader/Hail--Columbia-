@@ -12,7 +12,7 @@ usfp_offer_treaty_of_gh_mex = {
 			NOR = {
 				# has_state_in_state_region = STATE_CALIFORNIA
 				any_scope_state = {
-					region = sr:region_mexico
+					is_in_geographic_region = geographic_region_mexico_old
 				}
 			}
 			has_journal_entry = usfp_manifest_destiny_main

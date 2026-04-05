@@ -815,7 +815,7 @@ usfp_usa.22.a: "Here's to another 100 years!"
 
 usfp_usa.23.t: "The [ROOT.GetCountry.GetRuler.GetLastName] Presidency"
 usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of his office. After dissolving the Central Bank and asserting the powers of the Federal government in the [concept_usfp_nullification_crisis], he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the [concept_usfp_supreme_court] rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of [GetLawType('law_slave_trade').GetGroup.GetName] continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
-usfp_usa.23.f: ""But you must remember, my fellow-citizens, that eternal vigilance by the people is the price of liberty, and that you must pay the price if you wish to secure the blessing."" #Andrew Jackson
+usfp_usa.23.f: ""But you must remember, my fellow-citizens, that eternal vigilance by the people is the price of liberty, and that you must pay the price if you wish to secure the blessing."\n\n—Andrew Jackson" #Andrew Jackson
 usfp_usa.23.a: "This is a time of opportunity."
 
 usfp_usa.24.t: "Chestnut Blight"
@@ -1753,7 +1753,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_usa_roosevelt.1.b: "But think of the development opportunities!"
 
  usfp_usa_roosevelt.2.t: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName]"
- usfp_usa_roosevelt.2.d: "[ROOT.GetCountry.GetRuler.GetFullName] steps into the presidency with enormous energy and a grand vision for the [ROOT.GetCountry.GetName]. At home, he seeks [GetIdeology('ideology_usfp_progressive').GetName] reforms to bring the [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] to heel while avoiding radical upheaval. Abroad, he envisions an [ROOT.GetCountry.GetAdjective] sphere of influence over the Western Hemisphere and across into the Pacific, backed by an unassailably powerful modern navy."
+ usfp_usa_roosevelt.2.d: "[ROOT.GetCountry.GetRuler.GetFullName] steps into the presidency with enormous energy and a grand vision for the [ROOT.GetCountry.GetName]. At home, he seeks [GetIdeology('ideology_usfp_progressive').GetName] reforms to bring the [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] to heel while avoiding radical upheaval. Abroad, he envisions an [ROOT.GetCountry.GetAdjective] sphere of influence over the [GetGeographicRegion('geographic_region_western_hemisphere').GetName] and across into the [GetGeographicRegion('geographic_region_pacific').GetName], backed by an powerful and modernized navy."
  usfp_usa_roosevelt.2.f: ""We wish peace, but we wish the peace of justice, the peace of righteousness. We wish it because we think it is right and not because we are afraid. No weak nation that acts manfully and justly should ever have cause to fear us, and no strong power should ever be able to single us out as a subject for insolent aggression."\n\n—Theodore Roosevelt" #Inaugural Adress
  usfp_usa_roosevelt.2.a: "We will speak softly, and carry a big stick."
 

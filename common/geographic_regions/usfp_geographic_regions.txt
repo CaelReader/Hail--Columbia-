@@ -28,23 +28,19 @@ geographic_region_western_hemisphere = {
 
 	strategic_regions = {
 		#geographic_region_north_america
-		sr:region_canada
-		sr:region_new_england
-		sr:region_pacific_coast
-		sr:region_great_plains
-		sr:region_the_midwest
-		sr:region_dixie
+        sr:region_canada
+        sr:region_atlantic_coast
+        sr:region_pacific_coast
+        sr:region_great_plains
 
 		#geographic_region_central_america
-		sr:region_mexico
 		sr:region_central_america
-		sr:region_caribbean
 
 		#geographic_region_south_america
-		sr:region_brazil
-		sr:region_la_plata
-		sr:region_andes
-		sr:region_gran_colombia
+        sr:region_brazil
+        sr:region_la_plata
+        sr:region_andes
+        sr:region_gran_colombia
 	}
 
 	state_regions = {
@@ -82,7 +78,7 @@ geographic_region_western_pacific = {
 
     strategic_regions = {
         sr:region_oceania
-        sr:region_japan
+        sr:region_northeast_asia
         sr:region_indonesia
     }
 }
@@ -92,10 +88,9 @@ geographic_region_pacific = {
 
     strategic_regions = {
         sr:region_oceania
-        sr:region_japan
+        sr:region_northeast_asia
         sr:region_indonesia
         sr:region_pacific_coast
-        sr:region_mexico
         sr:region_central_america
         sr:region_andes
         sr:region_la_plata
@@ -106,28 +101,20 @@ geographic_region_caribbean_coast = {
     short_key = "caribbean_coast"
 
     strategic_regions = {
-        sr:region_caribbean
         sr:region_gran_colombia
-        sr:region_central_america
     }
+    state_regions = { STATE_HONDURAS STATE_NICARAGUA STATE_COSTA_RICA STATE_PANAMA STATE_SAN_SALVADOR STATE_YUCATAN STATE_CHIAPAS STATE_GUATEMALA STATE_WESTERN_CUBA STATE_JAMAICA STATE_HAITI STATE_SANTO_DOMINGO STATE_WEST_INDIES STATE_BAHAMAS STATE_PUERTO_RICO STATE_EASTERN_CUBA STATE_CENTRAL_CUBA }
+
 }
 
-usfp_geographic_region_dixie = {
-    short_key = "dixie"
+usfp_geographic_region_latin_america = {
+    short_key = "latin_america"
 
-    state_regions = {
-        STATE_MISSISSIPPI
-        STATE_ALABAMA
-        STATE_FLORIDA
-        STATE_GEORGIA
-        STATE_SOUTH_CAROLINA
-        STATE_NORTH_CAROLINA
-        STATE_VIRGINIA
-        STATE_MARYLAND
-        STATE_DELAWARE
-        STATE_LOUISIANA
-        STATE_ARKANSAS
-        STATE_TEXAS
-        STATE_OKLAHOMA
+    strategic_regions = {
+        sr:region_central_america
+        sr:region_la_plata
+        sr:region_andes
+        sr:region_gran_colombia
+        sr:region_brazil
     }
 }

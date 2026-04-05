@@ -499,7 +499,7 @@ usfp_manifest_destiny.6 = {
 		# }
 		# NOT = {
 		# 	any_scope_state = {
-		# 		region = sr:region_mexico
+		# 		is_in_geographic_region = geographic_region_mexico_old
 		# 	}
 		# }
 	}

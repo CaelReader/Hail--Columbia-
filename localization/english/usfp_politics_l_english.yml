@@ -21,6 +21,8 @@ ai_strategy_pacific_empire_desc: "[COUNTRY.GetName] wants to assert its hegemony
 
 dismantle_jim_crow: "Dismantle Jim Crow"
 dismantle_jim_crow_desc: "The governments of the South have enforced racial terror on their citizens for far too long. It is time that these Jim Crow laws be nullified."
+ dismantle_political_machines: "Dismantle Political Machines"
+ dismantle_political_machines_desc: "The Political Machines are a relic of a bygone era. Their existence is no longer tenable."
 
 negotiate_mexican_border: "Negotiate Mexican Border"
 negotiate_mexican_border_desc: "Our previous border treaties with Mexico were ill-defined and ignorant of the geography of the west. It is clear now that the Rio Grande is the most natural boundary between our two nations."
@@ -105,3 +107,9 @@ amendment_usfp_radical_land_redistribution_desc: "The lands of former slavers ar
  amendment_usfp_african_colonial_acceptance_desc: "The ruling class sets themselves apart from the non-westernized African population by maintaining the customs of their original colonial overlords."
  amendment_usfp_anti_latino_bias: "Anti-Latino Discrimination"
  amendment_usfp_anti_latino_bias_desc: "Regardless of their European heritage, people from Latin America are generally considered to be a population of mixed-blood, non-white Catholics undeserving of respect."
+ amendment_usfp_right_to_contract: "Right to Contract"
+ amendment_usfp_right_to_contract_desc: "The reach of labor regulations is legally restricted, on the grounds that they violate a workers' 'right to contract' with an employer."
+ amendment_usfp_limited_migration_controls: "Limited Migration Controls"
+ amendment_usfp_limited_migration_controls_desc: "Peoples considered particularly foreign are barred from immigration."
+ amendment_usfp_chinese_exclusion: "Chinese Exclusion"
+ amendment_usfp_chinese_exclusion_desc: "People of Chinese descent are blocked from citizenship and subject to deportation."

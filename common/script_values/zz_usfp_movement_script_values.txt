@@ -355,7 +355,7 @@ usfp_mexican_movement_radicalism_factor_add = {
         owner = {
             every_scope_state = {
                 limit = {
-                    region = sr:region_mexico
+                    is_in_geographic_region = geographic_region_mexico_old
                 }
                 add = 0.10
             }

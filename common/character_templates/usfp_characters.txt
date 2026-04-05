@@ -769,7 +769,7 @@ usfp_usa_horace_greeley = {
 
 #USFP: Booker T Washington, African-American leader
 usfp_booker_t_washington = {
-    first_name = Booker
+    first_name = Booker_T
     last_name = Washington
     dna = usfp_usa_booker_t_washington
     historical = yes

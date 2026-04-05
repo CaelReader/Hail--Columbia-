@@ -6,13 +6,13 @@
 				has_law_or_variant = law_type:law_agrarianism
 			}
 		}
-		localization_key = metternich_unticked
+		localization_key = checkbox_unticked
 	}
 	text = {
 		trigger = {
 			has_law_or_variant = law_type:law_agrarianism
 		}
-		localization_key = metternich_ticked
+		localization_key = checkbox_ticked
 	}
 }
 
@@ -32,13 +32,13 @@ usfp_agenda_jackson_legacy_slavery_checkbox = {
 			}
 
 		}
-		localization_key = metternich_unticked
+		localization_key = checkbox_unticked
 	}
 	text = {
 		trigger = {
 			has_law_or_variant = law_type:law_legacy_slavery
 		}
-		localization_key = metternich_ticked
+		localization_key = checkbox_ticked
 	}
 }
 
@@ -50,13 +50,13 @@ usfp_agenda_jackson_suffrage_checkbox = {
 				has_law_or_variant = law_type:law_universal_suffrage
 			}
 		}
-		localization_key = metternich_unticked
+		localization_key = checkbox_unticked
 	}
 	text = {
 		trigger = {
 			has_law_or_variant = law_type:law_universal_suffrage
 		}
-		localization_key = metternich_ticked
+		localization_key = checkbox_ticked
 	}
 }
 
@@ -69,7 +69,7 @@ usfp_agenda_jackson_taxes_checkbox = {
 				tax_level > low
 			}
 		}
-		localization_key = metternich_unticked
+		localization_key = checkbox_unticked
 	}
 	text = {
 		trigger = {
@@ -78,7 +78,7 @@ usfp_agenda_jackson_taxes_checkbox = {
 			}
 			tax_level <= low
 		}
-		localization_key = metternich_ticked
+		localization_key = checkbox_ticked
 	}
 }
 
@@ -100,7 +100,7 @@ usfp_agenda_jackson_taxes_checkbox = {
 # 				}
 # 			}
 # 		}
-# 		localization_key = metternich_unticked
+# 		localization_key = checkbox_unticked
 # 	}
 # 	text = {
 # 		trigger = {
@@ -115,7 +115,7 @@ usfp_agenda_jackson_taxes_checkbox = {
 # 				}
 # 			}
 # 		}
-# 		localization_key = metternich_ticked
+# 		localization_key = checkbox_ticked
 # 	}
 # }
 
@@ -125,13 +125,13 @@ usfp_agenda_jackson_debt_checkbox = {
 		trigger = {
 			scaled_debt > 0
 		}
-		localization_key = metternich_unticked
+		localization_key = checkbox_unticked
 	}
 	text = {
 		trigger = {
 			scaled_debt <= 0
 		}
-		localization_key = metternich_ticked
+		localization_key = checkbox_ticked
 	}
 }
 
@@ -143,13 +143,13 @@ usfp_agenda_jackson_removal_checkbox = {
 				has_variable = usfp_indians_removed_end
 			}
 		}
-		localization_key = metternich_unticked
+		localization_key = checkbox_unticked
 	}
 	text = {
 		trigger = {
 			has_variable = usfp_indians_removed_end
 		}
-		localization_key = metternich_ticked
+		localization_key = checkbox_ticked
 	}
 }
 
@@ -161,13 +161,13 @@ usfp_agenda_roosevelt_national_parks_checkbox = {
         trigger = {
             usfp_roosevelt_agenda_national_parks_trigger = no
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
             usfp_roosevelt_agenda_national_parks_trigger = yes
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -179,13 +179,13 @@ usfp_agenda_roosevelt_busted_trusts_checkbox = {
                 has_variable = busted_trusts
             }
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
             has_variable = busted_trusts
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -200,7 +200,7 @@ usfp_agenda_roosevelt_few_companies_checkbox = {
                 }
             }
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
@@ -209,7 +209,7 @@ usfp_agenda_roosevelt_few_companies_checkbox = {
                 subtract = 3
             }
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -221,13 +221,13 @@ usfp_agenda_roosevelt_interventionism_checkbox = {
                 has_law_or_variant = law_type:law_interventionism
             }
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
             has_law_or_variant = law_type:law_interventionism
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -242,7 +242,7 @@ usfp_agenda_roosevelt_workplace_safety_checkbox = {
                 }
             }
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
@@ -251,7 +251,7 @@ usfp_agenda_roosevelt_workplace_safety_checkbox = {
                 value >= 3
             }
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -266,7 +266,7 @@ usfp_agenda_roosevelt_healthcare_checkbox = {
                 }
             }
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
@@ -275,7 +275,7 @@ usfp_agenda_roosevelt_healthcare_checkbox = {
                 value >= 3
             }
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -291,7 +291,7 @@ usfp_agenda_roosevelt_socialists_checkbox = {
                 }
             }
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
@@ -305,7 +305,7 @@ usfp_agenda_roosevelt_socialists_checkbox = {
                 }
             }
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -315,7 +315,7 @@ usfp_agenda_roosevelt_revolutions_checkbox = {
         trigger = {
             has_variable = roosevelt_didnt_avoid_revolution
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
@@ -323,7 +323,7 @@ usfp_agenda_roosevelt_revolutions_checkbox = {
                 has_variable = roosevelt_didnt_avoid_revolution
             }
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -337,7 +337,7 @@ usfp_agenda_roosevelt_industrialists_checkbox = {
                 }
             }
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
@@ -345,7 +345,7 @@ usfp_agenda_roosevelt_industrialists_checkbox = {
                 is_powerful = no
             }
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -360,7 +360,7 @@ usfp_agenda_roosevelt_panama_checkbox = {
                 }
             }
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
@@ -369,7 +369,7 @@ usfp_agenda_roosevelt_panama_checkbox = {
                 is_under_construction = no
             }
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -390,7 +390,7 @@ usfp_agenda_roosevelt_cuba_checkbox = {
                 }
             }
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
@@ -405,7 +405,7 @@ usfp_agenda_roosevelt_cuba_checkbox = {
                 }
             }
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -417,13 +417,13 @@ usfp_agenda_roosevelt_puerto_rico_checkbox = {
                 country_or_subject_owns_entire_state_region = STATE_PUERTO_RICO
             }
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
             country_or_subject_owns_entire_state_region = STATE_PUERTO_RICO
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -441,7 +441,7 @@ usfp_agenda_roosevelt_monroe_doctrine_checkbox = {
                 }
             }
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
@@ -457,7 +457,7 @@ usfp_agenda_roosevelt_monroe_doctrine_checkbox = {
                 }
             }
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -481,7 +481,7 @@ usfp_agenda_roosevelt_pacific_checkbox = {
                 }
             }
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
@@ -499,7 +499,7 @@ usfp_agenda_roosevelt_pacific_checkbox = {
                 }
             }
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -525,7 +525,7 @@ usfp_agenda_roosevelt_army_checkbox = {
                 }
             }
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
@@ -545,7 +545,7 @@ usfp_agenda_roosevelt_army_checkbox = {
                 army_power_projection >= var:roosevelt_army_target
             }
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -557,13 +557,13 @@ usfp_agenda_roosevelt_navy_checkbox = {
                 has_variable = great_white_fleet_completed
             }
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
             has_variable = great_white_fleet_completed
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }
 
@@ -580,7 +580,7 @@ usfp_agenda_roosevelt_power_bloc_checkbox = {
                 }
             }
         }
-        localization_key = metternich_unticked
+        localization_key = checkbox_unticked
     }
     text = {
         trigger = {
@@ -591,6 +591,6 @@ usfp_agenda_roosevelt_power_bloc_checkbox = {
                 power_bloc.power_bloc_rank >= 3
             }
         }
-        localization_key = metternich_ticked
+        localization_key = checkbox_ticked
     }
 }

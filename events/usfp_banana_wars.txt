@@ -607,7 +607,7 @@ usfp_banana_wars.5 = {
 #Expanded Good Neighbor: release Central America?
 usfp_banana_wars.5 = {
     type = country_event
-    placement = c:USA.capital
+    placement = scope:central_american_state_scope
     event_image = {
         video = "ep1_transfer_of_authority"
     }
@@ -634,7 +634,15 @@ usfp_banana_wars.5 = {
     }
 
     immediate = {
-
+        ordered_scope_state = {
+            limit = {
+                is_treaty_port = no
+                is_in_geographic_region = geographic_region_central_america_old
+            }
+            position = 0
+            order_by = gdp
+            save_scope_as = central_american_state_scope
+        }
     }
 
     #keep
@@ -647,14 +655,46 @@ usfp_banana_wars.5 = {
             culture = cu:central_american
         }
         ai_chance = {
-            base = 100
+            base = 50
         }
     }
 
     #release as subject
     option = {
         name = usfp_banana_wars.5.b
-
+        custom_tooltip = {
+            text = uca_released_as_protectorate
+            create_country = {
+                tag = UCA
+                state = scope:central_american_state_scope
+                origin = root
+            }
+            create_diplomatic_pact = {
+                country = c:UCA
+                type = protectorate
+            }
+            create_bidirectional_truce = {
+                country = c:UCA
+                months = 60
+            }
+            every_scope_state = {
+                limit = {
+                    is_treaty_port = no
+                    is_in_geographic_region = geographic_region_central_america_old
+                }
+                set_state_owner = c:UCA
+            }
+            c:UCA ?= {
+                change_relations = {
+                    country = root
+                    value = 30
+                }
+                add_loyalists = {
+                    value = large_radicals
+                    culture = cu:central_american
+                }
+            }
+        }
         ai_chance = {
             base = 100
         }
@@ -663,9 +703,43 @@ usfp_banana_wars.5 = {
     #release as independent
     option = {
         name = usfp_banana_wars.5.c
-
+        custom_tooltip = {
+            text = uca_released_as_independent
+            create_country = {
+                tag = UCA
+                state = scope:central_american_state_scope
+                origin = root
+            }
+            create_bidirectional_truce = {
+                country = c:UCA
+                months = 60
+            }
+            every_scope_state = {
+                limit = {
+                    is_treaty_port = no
+                    is_in_geographic_region = geographic_region_central_america_old
+                }
+                set_state_owner = c:UCA
+            }
+            c:UCA ?= {
+                change_relations = {
+                    country = root
+                    value = 30
+                }
+                add_loyalists = {
+                    value = large_radicals
+                    culture = cu:central_american
+                }
+            }
+            power_bloc ?= {
+                add_leverage = {
+                    target = c:UCA
+                    value = 1000
+                }
+            }
+        }
         ai_chance = {
-            base = 100
+            base = 0
         }
     }
 
@@ -694,6 +768,7 @@ usfp_banana_wars.6 = {
             has_template = usfp_smedley_butler
         }
         is_at_war = no
+        has_variable = banana_wars_finished
     }
 
     immediate = {
@@ -723,6 +798,7 @@ usfp_banana_wars.6 = {
                 }
                 remove_character_role = admiral
             }
+            add_trait = inspirational_orator
         }
         ai_chance = {
             base = 100
@@ -733,6 +809,7 @@ usfp_banana_wars.6 = {
     option = {
         name = usfp_banana_wars.6.b
         scope:smedley_butler_scope = {
+            add_character_role = agitator
             if = {
                 limit = {
                     has_role_of_type = general
@@ -774,30 +851,102 @@ usfp_banana_wars.7 = {
     flavor = usfp_banana_wars.7.f
     dlc = dlc_usfp
     duration = 3
-    cooldown = { days = never_fire_again_modifier_time } #Once
+    cooldown = { days = long_modifier_time } #Once
 
     trigger = {
-
+        any_subject_or_below = {
+            is_in_geographic_region = usfp_geographic_region_latin_america
+            any_political_movement = {
+                OR = {
+                    movement_is_socialist = yes
+                    is_political_movement_type = movement_labor
+                }
+                OR = {
+                    political_movement_support >= 0.10
+                    political_movement_radicalism >= 0.25
+                }
+            }
+            OR = {
+                is_subject_type = subject_type_colony
+                is_subject_type = subject_type_chartered_company
+                is_subject_type = subject_type_puppet
+            }
+        }
     }
 
     immediate = {
-
+        random_subject_or_below = {
+            limit = {
+                is_in_geographic_region = usfp_geographic_region_latin_america
+                any_political_movement = {
+                    OR = {
+                        movement_is_socialist = yes
+                        is_political_movement_type = movement_labor
+                    }
+                    OR = {
+                        political_movement_support >= 0.10
+                        political_movement_radicalism >= 0.25
+                    }
+                }
+                OR = {
+                    is_subject_type = subject_type_colony
+                    is_subject_type = subject_type_chartered_company
+                    is_subject_type = subject_type_puppet
+                }
+            }
+            save_scope_as = union_busting_subject
+            ordered_political_movement = {
+                limit = {
+                    OR = {
+                        movement_is_socialist = yes
+                        is_political_movement_type = movement_labor
+                    }
+                    OR = {
+                        political_movement_support >= 0.10
+                        political_movement_radicalism >= 0.25
+                    }
+                }
+                order_by = political_movement_support
+                position = 0
+                save_scope_as = union_busting_target_movement
+            }
+        }
     }
 
     #do it
     option = {
         name = usfp_banana_wars.7.a
         default_option = yes
-
+        scope:union_busting_subject = {
+            add_radicals = {
+                value = medium_radicals
+                pop_type = laborers
+            }
+            add_liberty_desire = -20
+            scope:union_busting_target_movement = {
+                add_modifier = {
+                    name = usfp_marines_crackdown_modifier
+                    years = 5
+                }
+            }
+        }
         ai_chance = {
             base = 100
         }
     }
 
-    #stop them
+    #no
     option = {
         name = usfp_banana_wars.7.b
-
+        ig:ig_industrialists ?= {
+            add_modifier = {
+                name = usfp_industrialists_displeased_banana_wars_ig_modifier
+                years = 4
+            }
+        }
+        scope:union_busting_subject = {
+            add_liberty_desire = 20
+        }
         ai_chance = {
             base = 0
         }
