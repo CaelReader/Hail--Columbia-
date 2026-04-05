@@ -343,7 +343,7 @@ usfp_homestead_act_button = {
 	cooldown = { days = 365 }
 
 	possible = {
-		has_law_or_variant = law_type:law_homesteading
+		has_law = law_type:law_homesteading
 		usfp_manifest_destiny_greater_or_equal_trigger = { value = 3 }
 		any_scope_state = {
 			# count > 3

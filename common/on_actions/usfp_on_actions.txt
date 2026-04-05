@@ -34,6 +34,8 @@ usfp_monthly_pulse = {
         100 = usfp_usa_roosevelt.1 #Yellowstone National Park
         10 = usfp_usa_roosevelt.3 #Roosevelt Shot
 
+        100 = usfp_banana_wars.6 #Post Banana Wars: War is a Racket
+
 		##Labor events
 		100 = usfp_usa_labor.1 #founding of the IWW
 		100 = usfp_usa_labor.2 #Haymarket Affair

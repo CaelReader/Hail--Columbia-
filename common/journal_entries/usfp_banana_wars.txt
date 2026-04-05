@@ -5,21 +5,27 @@
     group = je_group_foreign_affairs
 
     immediate = {
-        set_variable = {
-            name = banana_wars_var
-            value = 0
-        }
         scope:journal_entry = {
             add_com_dlc_icon = {
                 dlc = dlc_usfp
             }
         }
-        scope:journal_entry = {
-            add_modifier = {
-                name = usfp_banana_wars_score_modifier
-                multiplier = 0
+        set_variable = {
+            name = banana_wars_var
+            value = usfp_calculate_banana_wars_score
+        }
+        if = {
+            limit = {
+                has_variable = banana_wars_var
+            }
+            scope:journal_entry = {
+                add_modifier = {
+                    name = usfp_banana_wars_score_modifier
+                    multiplier = root.var:banana_wars_var
+                }
             }
         }
+        trigger_event = usfp_banana_wars.1
     }
 
     scripted_button = usfp_good_neighbor_policy_button
@@ -27,7 +33,17 @@
     goal_add_value = 30
     progressbar = yes
     current_value = {
-        value = root.var:banana_wars_var
+        if = {
+            limit = {
+                root = {
+                    has_variable = banana_wars_var
+                }
+            }
+            value = root.var:banana_wars_var
+        }
+        else = {
+            value = 0
+        }
     }
 
     on_monthly_pulse = {
@@ -40,9 +56,15 @@
                 remove_modifier = usfp_banana_wars_score_modifier
                 add_modifier = {
                     name = usfp_banana_wars_score_modifier
-                    multiplier = var:banana_wars_var
+                    multiplier = root.var:banana_wars_var
                 }
             }
+        }
+        random_events = {
+            chance_to_happen = 10
+            100 = usfp_banana_wars.2#Marines Massacre
+            100 = usfp_banana_wars.3#Unincorporated States in Central America
+            100 = usfp_banana_wars.7#Marines Union Bust
         }
     }
 
@@ -73,12 +95,24 @@
                 count > 2
             }
         }
+
         any_country = {
-            is_in_geographic_region = geographic_region_caribbean_coast
+            capital = {
+                is_in_geographic_region = geographic_region_caribbean_coast
+            }
+            save_temporary_scope_as = check_country
             OR = {
-                save_temporary_scope_as = check_country
-                root = {
-                    has_treaty_foreign_investment_rights_with = { TARGET = scope:check_country }
+                custom_tooltip = {
+                    text = usa_has_investment_rights
+                    root = {
+                        any_scope_treaty = {
+                            binds = scope:check_country
+                            any_scope_article = {
+                                has_type = foreign_investment_rights
+                                target_country = root
+                            }
+                        }
+                    }
                 }
                 is_in_customs_union_with = root
                 is_subject_of = root

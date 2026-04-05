@@ -840,3 +840,10 @@ usfp_philippines_military_government_modifier = {
     country_legitimacy_min_add = 30
     country_liberty_desire_add = -0.10
 }
+
+usfp_war_is_a_racket_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+    country_war_exhaustion_casualties_mult = 0.33
+    state_pop_support_movement_socialist_mult = 0.20
+    building_training_rate_mult = -0.15
+}

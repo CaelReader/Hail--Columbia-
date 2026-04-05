@@ -106,15 +106,3 @@ geographic_region_caribbean_coast = {
     state_regions = { STATE_HONDURAS STATE_NICARAGUA STATE_COSTA_RICA STATE_PANAMA STATE_SAN_SALVADOR STATE_YUCATAN STATE_CHIAPAS STATE_GUATEMALA STATE_WESTERN_CUBA STATE_JAMAICA STATE_HAITI STATE_SANTO_DOMINGO STATE_WEST_INDIES STATE_BAHAMAS STATE_PUERTO_RICO STATE_EASTERN_CUBA STATE_CENTRAL_CUBA }
 
 }
-
-usfp_geographic_region_latin_america = {
-    short_key = "latin_america"
-
-    strategic_regions = {
-        sr:region_central_america
-        sr:region_la_plata
-        sr:region_andes
-        sr:region_gran_colombia
-        sr:region_brazil
-    }
-}

@@ -637,18 +637,6 @@ usfp_calculate_danish_purchase_cost = {
 	}
 }
 
-usfp_roosevelt_army_target = {
-    if = {
-        limit = {
-            has_variable = roosevelt_starting_army
-        }
-        value = var:roosevelt_starting_army
-        multiply = 1.2
-    }
-    else = {
-        value = 10000
-    }
-}
 
 usfp_percent_of_mexicans_are_catholic = {
     value = {
@@ -717,8 +705,9 @@ usfp_get_average_mexican_acceptance = {
 
 usfp_calculate_banana_wars_score = {
     value = 0
-    every_state_in_caribbean_coast = {
+    every_state = {
         limit = {
+            is_in_geographic_region = geographic_region_caribbean_coast
             owner ?= {
                 has_revolution = no
                 NOT = {
@@ -732,9 +721,12 @@ usfp_calculate_banana_wars_score = {
                 limit = {
                     OR = {
                         is_in_customs_union_with = root
-                        save_temporary_scope_as = check_country
-                        root = {
-                            has_treaty_foreign_investment_rights_with = { TARGET = scope:check_country }
+                        any_scope_treaty = {
+                            binds = root
+                            any_scope_article = {
+                                has_type = foreign_investment_rights
+                                target_country = root
+                            }
                         }
                     }
                 }
@@ -753,8 +745,12 @@ usfp_calculate_banana_wars_score = {
                     OR = {
                         is_subject_of = root
                         is_in_customs_union_with = root
-                        root = {
-                            has_treaty_foreign_investment_rights_with = { TARGET = scope:check_country }
+                        any_scope_treaty = {
+                            binds = root
+                            any_scope_article = {
+                                has_type = foreign_investment_rights
+                                target_country = root
+                            }
                         }
                     }
                     OR = {

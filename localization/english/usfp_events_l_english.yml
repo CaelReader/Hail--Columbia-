@@ -1774,7 +1774,64 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_usa_roosevelt.5.a: "Hand out discharges to placate the residents."
  usfp_usa_roosevelt.5.b: "Our servicemen are clearly not at fault here."
 
-create_united_fruit_country: "[SCOPE.sCompany('united_fruit_scope').GetName] will assume direct control over our [Concept('concept_unincorporated_state','$concept_unincorporated_states$')] in the [GetGeographicRegion('geographic_region_caribbean_coast').GetName]"
+ usfp_banana_wars.1.t: "Banana Wars"
+ usfp_banana_wars.1.d: "Instability in [SCOPE.sCountry('latin_american_country').GetName] has prompted influential [GetPopType('capitalists').GetName] to request [ROOT.GetCountry.GetAdjective] intervention into the region."
+ usfp_banana_wars.1.f: """"
+ usfp_banana_wars.1.a: "We have a duty to ensure the security of American investments."
+ usfp_banana_wars.1.b: "We will not be gangsters for capitalism."
+
+ usfp_banana_wars.2.t: "Massacre in [SCOPE.sState('massacre_state_scope').GetName]"
+ usfp_banana_wars.2.d: ""
+ usfp_banana_wars.2.f: """"
+ usfp_banana_wars.2.a: "Their methods are crude, but effective."
+ usfp_banana_wars.2.b: "Recall the troops at once."
+
+ usfp_banana_wars.3.t: "The American Jungle"
+ usfp_banana_wars.3.d: ""
+ usfp_banana_wars.3.f: """"
+ usfp_banana_wars.3.a: "Central America will remain a territory for as long as needed."
+ usfp_banana_wars.3.b: "It would be base hypocrisy to deny these territories representation."
+ usfp_banana_wars.3.c: "As the British did in India, we will do in the Caribbean."
+ create_united_fruit_country: "[SCOPE.sCompany('united_fruit_scope').GetName] will assume direct control over our [Concept('concept_unincorporated_state','$concept_unincorporated_states$')] in the [GetGeographicRegion('geographic_region_caribbean_coast').GetName]"
+
+ usfp_banana_wars.4.t: "The [SCOPE.sCountry('usa_scope').GetRuler.GetLastName] Corollary"
+ usfp_banana_wars.4.d: "The [SCOPE.sCountry('usa_scope').GetName] has begun to adopt a more interventionist posture into the affairs of Latin America, seeking to secure the property and investments of its [GetPopType('capitalists').GetName] under the guise of promoting regional stability."
+ usfp_banana_wars.4.f: ""If a nation shows that it knows how to act with reasonable efficiency and decency in social and political matters, if it keeps order and pays its obligations, it need fear no interference from the United States. Chronic wrongdoing, or an impotence which results in a general loosening of the ties of civilized society, may in America, as elsewhere, ultimately require intervention by some civilized nation, and in the Western Hemisphere the adherence of the United States to the Monroe Doctrine may force the United States, however reluctantly, in flagrant cases of such wrongdoing or impotence, to the exercise of an international police power."\n\n—Theodore Roosevelt"
+ usfp_banana_wars.4.a: "We must look to our own defense."
+ usfp_banana_wars.4.b: "If they want to fight, we will not stand idle."
+ usfp_banana_wars.4.c: "The [SCOPE.sCountry('usa_scope').GetName] will not threaten our relationship."
+ usfp_banana_wars.4.g: "By our duty to the #italic Patria Grande #!, we will see the [SCOPE.sCountry('usa_scope').GetName] driven back across the gulf!"
+
+ usfp_banana_wars.5.t: "A Good Neighbor?"
+ usfp_banana_wars.5.d: "[SCOPE.sCountry('usa_scope').GetName] has declared a new diplomatic stance towards [GetGeographicRegion('geographic_region_latin_america').GetName], shifting to a policy of non-interventionism and repudiating their previous behavior of military domination of the region."
+ usfp_banana_wars.5.f: ""In the field of World policy, I would dedicate this nation to the policy of the good neighbor, the neighbor who resolutely respects himself and, because he does so, respects the rights of others, the neighbor who respects his obligations and respects the sanctity of his agreements in and with a World of neighbors."\n\n—Franklin D. Roosevelt"
+ usfp_banana_wars.5.a: "Americans respecting other nations? We'll believe it when we see it."
+ usfp_banana_wars.5.b: "A welcome change of heart."
+
+ usfp_banana_wars.6.t: "War is a Racket"
+ usfp_banana_wars.6.d: ""
+ usfp_banana_wars.6.f: ""War is a racket. It always has been. It is possibly the oldest, easily the most profitable, surely the most vicious. It is the only one international in scope. It is the only one in which the profits are reckoned in dollars and the losses in lives. It is conducted for the benefit of the very few, at the expense of the very many. Out of war a few people make huge fortunes."\n\n—Smedley Butler"
+ usfp_banana_wars.6.a: ""
+ usfp_banana_wars.6.b: ""
+
+ usfp_banana_wars.7.t: "Marines Break Up Unions"
+ usfp_banana_wars.7.d: ""
+ usfp_banana_wars.7.f: """"
+ usfp_banana_wars.7.a: ""
+ usfp_banana_wars.7.b: ""
+
+ usfp_banana_wars.8.t: "The Question of Central America"
+ usfp_banana_wars.8.d: "The pronouncement of our new Good Neighbor Policy has called into question the status of our annexed territories in [GetGeographicRegion('geographic_region_central_america_old').GetName]."
+ usfp_banana_wars.8.f: ""The great American people have their feet set upon a path of ever greater progress so that each Nation may enjoy and each citizen may enjoy the greatest possible measure of security and opportunity. The Government of the United States and my countrymen are ready to contribute to that progress."\n\n—Franklin D. Roosevelt"
+ usfp_banana_wars.8.a: "Our continental territories are integral to the [ROOT.GetCountry.GetName]."
+ usfp_banana_wars.8.b: "We will restore Central America under our protection."
+ usfp_banana_wars.8.c: "We must accept that we were wrong to conquer so far south."
+ uca_released_as_independent: "Our states in [GetGeographicRegion('geographic_region_central_america_old').GetName] will be released as an independent [concept_power_bloc_member]"
+ uca_released_as_protectorate: "Our states in [GetGeographicRegion('geographic_region_central_america_old').GetName] will be released as an [ROOT.GetCountry.GetAdjective] [concept_protectorate]"
+
+
+
+
 
 
 usfp_test.1.t: "DEBUG EVENT"
