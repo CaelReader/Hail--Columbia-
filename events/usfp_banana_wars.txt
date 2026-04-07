@@ -54,6 +54,9 @@ usfp_banana_wars.1 = {
             }
             save_scope_as = latin_american_country
         }
+        c:USA = {
+            save_scope_as = usa_scope
+        }
     }
 
     #accept
@@ -217,6 +220,9 @@ usfp_banana_wars.2 = {
             ANTI_AMOUNT = -2
             PRO_AMOUNT = -2
         }
+        scope:massacre_subject = {
+            post_notification = usfp_marines_banana_wars_massacre
+        }
         ai_chance = {
             base = 100
         }
@@ -224,7 +230,7 @@ usfp_banana_wars.2 = {
 
     #stop
     option = {
-        name = usfp_banana_wars.1.b
+        name = usfp_banana_wars.2.b
         scope:massacre_state_scope = {
             kill_population_in_state = {
                 pop_type = peasants
@@ -244,6 +250,9 @@ usfp_banana_wars.2 = {
         create_incident = {
             country = scope:massacre_subject
             value = 3
+        }
+        scope:massacre_subject = {
+            post_notification = usfp_marines_banana_wars_massacre
         }
         ai_chance = {
             base = 0
@@ -277,6 +286,11 @@ usfp_banana_wars.3 = {
             NOT = {
                 has_building = building_panama_canal
             }
+            culture_percent_state = {
+                target = cu:central_american
+                value >= 0.60
+            }
+            has_building = building_banana_plantation
         }
     }
 
@@ -286,6 +300,14 @@ usfp_banana_wars.3 = {
                 is_in_geographic_region = geographic_region_caribbean_coast
                 is_incorporated = no
                 is_treaty_port = no
+                NOT = {
+                    has_building = building_panama_canal
+                }
+                culture_percent_state = {
+                    target = cu:central_american
+                    value >= 0.60
+                }
+                has_building = building_banana_plantation
             }
             order_by = gdp
             position = 0
@@ -330,7 +352,6 @@ usfp_banana_wars.3 = {
     #actually we want to turn these into states
     option = {
         name = usfp_banana_wars.3.b
-        usfp_manifest_more_destiny_low_effect = yes
         every_scope_state = {
             limit = {
                 is_in_geographic_region = geographic_region_caribbean_coast
@@ -500,6 +521,7 @@ usfp_banana_wars.4 = {
                 is_incorporated = no
                 is_treaty_port = no
             }
+            is_subject = no
         }
         usfp_create_anti_country_lobby_if_not_exists = {
             TARGET = c:USA
@@ -684,7 +706,7 @@ usfp_banana_wars.6 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
 
-    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+    icon = "gfx/interface/icons/invention_icons/military_drill.dds"
 
     title = usfp_banana_wars.6.t
     desc = usfp_banana_wars.6.d
@@ -696,9 +718,11 @@ usfp_banana_wars.6 = {
     trigger = {
         any_scope_character = {
             has_template = usfp_smedley_butler
+            is_busy = no
         }
         is_at_war = no
         has_variable = banana_wars_finished
+        has_variable = aggressive_banana_wars
     }
 
     immediate = {
@@ -716,6 +740,7 @@ usfp_banana_wars.6 = {
         default_option = yes
         scope:smedley_butler_scope = {
             add_character_role = agitator
+            set_interest_group = ig:ig_trade_unions
             if = {
                 limit = {
                     has_role_of_type = general
@@ -751,6 +776,7 @@ usfp_banana_wars.6 = {
         }
         scope:smedley_butler_scope = {
             add_character_role = agitator
+            set_interest_group = ig:ig_trade_unions
             if = {
                 limit = {
                     has_role_of_type = general
@@ -770,6 +796,10 @@ usfp_banana_wars.6 = {
                 place_character_in_void = 72
             }
         }
+        add_radicals = {
+            value = small_radicals
+            pop_type = officers
+        }
         ai_chance = {
             base = 0
         }
@@ -778,7 +808,7 @@ usfp_banana_wars.6 = {
 #US Forces perform union busting
 usfp_banana_wars.7 = {
     type = country_event
-    placement = root
+    placement = scope:union_busting_subject.capital
     event_image = {
         video = "votp_cops_march"
     }
@@ -870,6 +900,7 @@ usfp_banana_wars.7 = {
                     years = 5
                 }
             }
+            post_notification = usfp_marines_break_up_unions
         }
         ai_chance = {
             base = 100

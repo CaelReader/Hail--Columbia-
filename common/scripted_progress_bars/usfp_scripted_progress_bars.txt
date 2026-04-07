@@ -368,8 +368,8 @@
 				every_scope_building = {
 					limit = {
 						OR = {
-							is_building_group = bg_gold_fields
-							is_building_group = bg_gold_mining
+							is_building_type = building_gold_field
+							is_building_type = building_gold_mine
 						}
 					}
 					add = level

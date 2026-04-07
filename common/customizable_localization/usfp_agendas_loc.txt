@@ -554,14 +554,20 @@ usfp_agenda_roosevelt_navy_checkbox = {
     text = {
         trigger = {
             NOT = {
-                has_variable = great_white_fleet_completed
+                OR = {
+                    has_variable = great_white_fleet_completed
+                    naval_power_projection >= root.var:roosevelt_navy_target
+                }
             }
         }
         localization_key = checkbox_unticked
     }
     text = {
         trigger = {
-            has_variable = great_white_fleet_completed
+            OR = {
+                has_variable = great_white_fleet_completed
+                naval_power_projection >= root.var:roosevelt_navy_target
+            }
         }
         localization_key = checkbox_ticked
     }

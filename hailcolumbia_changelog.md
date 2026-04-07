@@ -894,3 +894,4 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
     A House Divided will now force-spawn an abolitionist movement if it vanishes for some reason
     The USA cannot offer to purchase Cuba from a Rival country
     An American subject occupying Mexico City now triggers the G-H decision
+    Fixed Gold Fields and Gold Mines not actually contributing to Hard Times recovery

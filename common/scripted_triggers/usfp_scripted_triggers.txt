@@ -873,5 +873,9 @@ usfp_roosevelt_foreign_agenda_complete = {
         power_bloc.power_bloc_rank >= 3
     }
     #Complete Great White Fleet
-    has_variable = great_white_fleet_completed
+    OR = {
+        has_variable = great_white_fleet_completed
+        naval_power_projection >= root.var:roosevelt_navy_target
+    }
+
 }

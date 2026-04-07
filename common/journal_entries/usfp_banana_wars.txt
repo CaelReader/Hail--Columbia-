@@ -35,14 +35,14 @@
     current_value = {
         if = {
             limit = {
-                root = {
-                    has_variable = banana_wars_var
+                scope:journal_entry = {
+                    goal_value = 0
                 }
             }
-            value = root.var:banana_wars_var
+            value = 0
         }
         else = {
-            value = 0
+            value = root.var:banana_wars_var
         }
     }
 
@@ -59,11 +59,30 @@
                     multiplier = root.var:banana_wars_var
                 }
             }
+            if = {
+                limit = {
+                    any_scope_war = {
+                        defender_warleader = {
+                            is_in_geographic_region = geographic_region_latin_america
+                        }
+                        OR = {
+                            has_war_goal = conquer_state
+                            has_war_goal = return_state
+                            has_war_goal = make_protectorate
+                            has_war_goal = foreign_investment_rights
+                            has_war_goal = enforce_treaty_article
+                            has_war_goal = regime_change
+                            has_war_goal = annex_country
+                        }
+                    }
+                }
+                set_variable = aggressive_banana_wars
+            }
         }
         random_events = {
             chance_to_happen = 10
             100 = usfp_banana_wars.2#Marines Massacre
-            100 = usfp_banana_wars.3#Unincorporated States in Central America
+            200 = usfp_banana_wars.3#Unincorporated States in Central America
             100 = usfp_banana_wars.7#Marines Union Bust
         }
     }
@@ -77,12 +96,21 @@
         NOT = {
             any_scope_state = {
                 is_incorporated = yes
-                region = sr:region_central_america
+                is_in_geographic_region = geographic_region_central_america
                 count > 2
             }
         }
         NOT = {
             has_law_or_variant = law_type:law_council_republic
+        }
+        any_country_in_caribbean_coast = {
+            filter = {
+                capital = {
+                    is_in_geographic_region = geographic_region_caribbean_coast
+                }
+            }
+            is_subject = no
+            percent >= 0.50
         }
     }
 
@@ -91,11 +119,19 @@
         NOT = {
             any_scope_state = {
                 is_incorporated = yes
-                region = sr:region_central_america
+                is_in_geographic_region = geographic_region_central_america
                 count > 2
             }
         }
-
+        any_country_in_caribbean_coast = {
+            filter = {
+                capital = {
+                    is_in_geographic_region = geographic_region_caribbean_coast
+                }
+            }
+            is_subject = no
+            percent >= 0.50
+        }
         any_country = {
             capital = {
                 is_in_geographic_region = geographic_region_caribbean_coast

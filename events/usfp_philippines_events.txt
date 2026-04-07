@@ -3,7 +3,7 @@
 #USA: philippines subjugated
 usfp_philippines.1 = {
     type = country_event
-    placement = scope:phillipines_scope.capital
+    placement = scope:philippines_scope.capital
     event_image = {
         video = "asia_westerners_arriving"
     }
@@ -72,11 +72,11 @@ usfp_philippines.1 = {
             }
         }
         change_relations = {
-            country = scope:phillipines_scope
+            country = scope:philippines_scope
             value = 50
         }
         create_bidirectional_truce = {
-            country = scope:phillipines_scope
+            country = scope:philippines_scope
             months = 60
         }
         ai_chance = {
@@ -99,7 +99,7 @@ usfp_philippines.1 = {
 #PHI: USA is new overlord
 usfp_philippines.2 = {
     type = country_event
-    placement = scope:phillipines_scope.capital
+    placement = scope:philippines_scope.capital
     event_image = {
         video = "asia_westerners_arriving"
     }
@@ -182,7 +182,7 @@ usfp_philippines.2 = {
 #Moro Rebellion
 usfp_philippines.3 = {
     type = country_event
-    placement = scope:phillipines_scope.capital
+    placement = scope:philippines_scope.capital
     event_image = {
         video = "ip3_angry_mob_raiding_minorities"
     }
@@ -237,3 +237,5 @@ usfp_philippines.3 = {
 #USA: Philippine representatives
 #USA: philippine tutelage over
 #PHI: philippine tutelage over
+#PHI: Seditious Dramas
+#PHI: English Language Teachers

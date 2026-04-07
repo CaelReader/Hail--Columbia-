@@ -46,9 +46,46 @@
         c:PHI ?= {
             is_subject = yes
         }
+        NOT = {
+            c:PHI ?= {
+                has_law_or_variant = c:USA.active_law:lawgroup_governance_principles.type
+                trigger_if = {
+                    limit = {
+                        c:USA = {
+                            NOT = {
+                                has_law_or_variant = law_type:law_universal_suffrage
+                            }
+                        }
+                    }
+                    has_law_or_variant = c:USA.active_law:lawgroup_distribution_of_power.type
+                } trigger_else = {
+                    country_has_voting_franchise = yes
+                }
+                OR = {
+                    has_law_or_variant = law_type:law_public_health_insurance
+                    has_law_or_variant = law_type:law_private_health_insurance
+                }
+                OR = {
+                    has_law_or_variant = law_type:law_public_schools
+                    has_law_or_variant = law_type:law_private_schools
+                }
+                NOR = {
+                    has_law_or_variant = law_type:law_serfdom
+                    has_law_or_variant = law_type:law_tenant_farmers
+                }
+                has_law_or_variant = law_type:law_compulsory_primary_school
+                NOT = {
+                    has_law_or_variant = law_type:law_state_religion
+                }
+                has_law_or_variant = law_type:law_slavery_banned
+            }
+        }
     }
 
     possible = {
+        c:USA = {
+            has_technology_researched = civilizing_mission
+        }
         c:PHI ?= {
             is_subject_of = c:USA
         }
@@ -60,7 +97,18 @@
         c:PHI ?= {
             legitimacy >= 50
             has_law_or_variant = c:USA.active_law:lawgroup_governance_principles.type
-            has_law_or_variant = c:USA.active_law:lawgroup_distribution_of_power.type
+            trigger_if = {
+                limit = {
+                    c:USA = {
+                        NOT = {
+                            has_law_or_variant = law_type:law_universal_suffrage
+                        }
+                    }
+                }
+                has_law_or_variant = c:USA.active_law:lawgroup_distribution_of_power.type
+            } trigger_else = {
+                country_has_voting_franchise = yes
+            }
             OR = {
                 has_law_or_variant = law_type:law_public_health_insurance
                 has_law_or_variant = law_type:law_private_health_insurance
@@ -114,9 +162,13 @@
             exists = c:USA
             exists = c:PHI
         }
-        c:USA = {
-            has_variable = rejected_philippines_tutelage
+        custom_tooltip = {
+            text = usa_rejected_philippine_tutelage
+            c:USA = {
+                has_variable = rejected_philippines_tutelage
+            }
         }
+
     }
 
     on_invalid = {
