@@ -477,3 +477,60 @@ usfp_mexican_integration_progress_bar = {
     }
 
 }
+
+usfp_philippine_english_progress_bar = {
+    name = "usfp_philippine_english_progress_bar"
+    desc = "usfp_philippine_english_progress_bar_desc"
+    default_green = yes
+
+    start_value = 0
+    min_value = 0
+    max_value = 5000
+
+    monthly_progress = {
+        scope:journal_entry = {
+            if = {
+                limit = {
+                    c:PHI ?= {
+                        NOR = {
+                            has_law_or_variant = law_type:law_public_schools
+                            has_law_or_variant = law_type:law_private_schools
+                        }
+                    }
+                }
+                add = {
+                    value = 0
+                    desc = "no_public_private_schools"
+                }
+            }
+            else = {
+                add = {
+                    value = c:PHI.literacy_rate
+                    multiply = 10
+                    desc = "country_literacy_rate"
+                }
+                add = {
+                    value = c:PHI.institution_investment_level:institution_schools
+                    multiply = 5
+                    desc = "institution_schools"
+                }
+                add = {
+                    value = {
+                        c:PHI = {
+                            ig:ig_intelligentsia = {
+                                add = ig_approval
+                            }
+                        }
+                    }
+                    desc = "philippine_intelligentsia_approval"
+                }
+                subtract = {
+                    value = c:PHI.liberty_desire
+                    multiply = 0.1
+                    desc = "concept_liberty_desire"
+                }
+            }
+        }
+    }
+
+}

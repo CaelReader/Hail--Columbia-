@@ -871,10 +871,12 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
 ## New Content
     New Domestic and Foreign Agenda JEs for Theodore Roosevelt
     New Banana Wars JE promoting intervention in Latin America on behalf of your Companies
+    The New Navy JE for modernizing your fleets in the face of rising Pacific powers
     Added small Journal Entry if you take All of Mexico
 ## 1.13 Compatibility
     Updated strategic region triggers to new map changes
 ## Updates
+    Only states that actually rebel and join the CSA become unincorporated after the civil war
     American Superculture is now a JE to expose its requirements to the player
     Increased Radicals/Loyalists requirements for the Superculture
     American Superculture now adds a special Tradition trait to relevant cultures

@@ -555,7 +555,7 @@ usfp_agenda_roosevelt_navy_checkbox = {
         trigger = {
             NOT = {
                 OR = {
-                    has_variable = great_white_fleet_completed
+                    has_variable = new_navy_completed
                     naval_power_projection >= root.var:roosevelt_navy_target
                 }
             }
@@ -565,7 +565,7 @@ usfp_agenda_roosevelt_navy_checkbox = {
     text = {
         trigger = {
             OR = {
-                has_variable = great_white_fleet_completed
+                has_variable = new_navy_completed
                 naval_power_projection >= root.var:roosevelt_navy_target
             }
         }

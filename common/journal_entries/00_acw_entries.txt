@@ -414,6 +414,9 @@ je_acw_war = {
 			add_journal_entry = {
 				type = je_acw_war_csa
 			}
+            every_scope_state = {
+                set_variable = csa_state
+            }
 		}
 	}
 
@@ -480,6 +483,10 @@ je_acw_war = {
 			years = 4
 			is_decaying = yes
 		}
+        set_global_variable = {
+            name = acw_recently_finished
+            years = 10
+        }
 	}
 
 	fail = {
@@ -514,6 +521,10 @@ je_acw_war = {
 				years = 50
 			}
 		}
+        set_global_variable = {
+            name = acw_recently_finished
+            years = 10
+        }
 	}
 
 	on_monthly_pulse = {

@@ -1,0 +1,92 @@
+﻿namespace = usfp_usa_navy
+###### Hail, Columbia! by CaelReader ######
+#Post-ACW Naval Advisors
+usfp_usa_navy.1 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "asia_westerners_arriving"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/monitor_tech.dds"
+
+    title = usfp_usa_navy.1.t
+    desc = usfp_usa_navy.1.d
+    flavor = usfp_usa_navy.1.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        has_global_variable = acw_recently_finished
+        country_is_great_power = no
+        capital = {
+            OR = {
+                is_in_geographic_region = geographic_region_pacific
+                is_in_geographic_region = geographic_region_china
+            }
+        }
+        NOT = {
+            has_technology_researched = destroyer
+            has_technology_researched = jeune_ecole
+            has_technology_researched = dreadnought
+        }
+        naval_power_projection <= c:USA.naval_power_projection
+        NOT = {
+            has_law_or_variant = law_type:law_isolationism
+        }
+    }
+
+    immediate = {
+        c:USA = {
+            save_scope_as = usa_scope
+        }
+    }
+
+    #cool
+    option = {
+        name = usfp_usa_navy.1.a
+        default_option = yes
+        add_modifier = {
+            name = usfp_post_acw_naval_advisors_modifier
+            years = 6
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_technology_researched = ironclad_tech
+                }
+            }
+            add_technology_progress = {
+                technology = ironclad_tech
+                progress = 2000
+            }
+        } else_if = {
+            limit = {
+                NOT = {
+                    has_technology_researched = monitor_tech
+                }
+            }
+            add_technology_progress = {
+                technology = monitor_tech
+                progress = 2000
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #we can do it ourselves
+    option = {
+        name = usfp_usa_navy.1.b
+
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+#New Navy Start
+#New Navy Complete

@@ -326,16 +326,17 @@ acw_je_events.2 = {
 				limit = {
 					is_incorporated = yes
 					is_capital = no
-					state_region = {
-						is_homeland = cu:dixie
-						NOT = { is_homeland = cu:yankee }
-					}
-					NOR = {
-						is_state_region_dc = yes
-						state_region = s:STATE_WEST_VIRGINIA
-						is_state_region_maryland = yes
-						is_state_region_delaware = yes
-					}
+					# state_region = {
+					# 	is_homeland = cu:dixie
+					# 	NOT = { is_homeland = cu:yankee }
+					# }
+					# NOR = {
+					# 	is_state_region_dc = yes
+					# 	state_region = s:STATE_WEST_VIRGINIA
+					# 	is_state_region_maryland = yes
+					# 	is_state_region_delaware = yes
+					# }
+                    has_variable = csa_state
 				}
 				set_state_type = unincorporated
 				add_modifier = {

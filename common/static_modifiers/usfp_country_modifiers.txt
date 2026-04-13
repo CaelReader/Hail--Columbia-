@@ -847,3 +847,11 @@ usfp_war_is_a_racket_modifier = {
     state_pop_support_movement_socialist_mult = 0.20
     building_training_rate_mult = -0.15
 }
+
+usfp_post_acw_naval_advisors_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_manowar_positive.dds
+    country_military_tech_spread_mult = 0.25
+    unit_navy_experience_gain_mult = 0.15
+    country_yankee_cultural_acceptance_add = 20
+    country_dixie_cultural_acceptance_add = 20
+}

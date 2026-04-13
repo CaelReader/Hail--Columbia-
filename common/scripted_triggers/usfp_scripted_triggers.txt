@@ -874,7 +874,7 @@ usfp_roosevelt_foreign_agenda_complete = {
     }
     #Complete Great White Fleet
     OR = {
-        has_variable = great_white_fleet_completed
+        has_variable = new_navy_completed
         naval_power_projection >= root.var:roosevelt_navy_target
     }
 

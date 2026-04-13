@@ -29,6 +29,12 @@
                 dlc = dlc_usfp
             }
         }
+        c:PHI = {
+            save_scope_as = philippines_scope
+        }
+        c:USA = {
+            save_scope_as = usa_scope
+        }
     }
 
     immediate_all_involved = {
@@ -47,38 +53,7 @@
             is_subject = yes
         }
         NOT = {
-            c:PHI ?= {
-                has_law_or_variant = c:USA.active_law:lawgroup_governance_principles.type
-                trigger_if = {
-                    limit = {
-                        c:USA = {
-                            NOT = {
-                                has_law_or_variant = law_type:law_universal_suffrage
-                            }
-                        }
-                    }
-                    has_law_or_variant = c:USA.active_law:lawgroup_distribution_of_power.type
-                } trigger_else = {
-                    country_has_voting_franchise = yes
-                }
-                OR = {
-                    has_law_or_variant = law_type:law_public_health_insurance
-                    has_law_or_variant = law_type:law_private_health_insurance
-                }
-                OR = {
-                    has_law_or_variant = law_type:law_public_schools
-                    has_law_or_variant = law_type:law_private_schools
-                }
-                NOR = {
-                    has_law_or_variant = law_type:law_serfdom
-                    has_law_or_variant = law_type:law_tenant_farmers
-                }
-                has_law_or_variant = law_type:law_compulsory_primary_school
-                NOT = {
-                    has_law_or_variant = law_type:law_state_religion
-                }
-                has_law_or_variant = law_type:law_slavery_banned
-            }
+
         }
     }
 
@@ -91,10 +66,17 @@
         }
     }
 
+    scripted_progress_bar = usfp_philippine_english_progress_bar
     scripted_button = usfp_philippine_insular_government_button
 
     complete = {
         c:PHI ?= {
+            custom_tooltip = {
+                text = progress_bar_complete
+                scope:journal_entry = {
+                    "scripted_bar_progress(usfp_philippine_english_progress_bar)" >= 300
+                }
+            }
             legitimacy >= 50
             has_law_or_variant = c:USA.active_law:lawgroup_governance_principles.type
             trigger_if = {
@@ -109,23 +91,36 @@
             } trigger_else = {
                 country_has_voting_franchise = yes
             }
-            OR = {
-                has_law_or_variant = law_type:law_public_health_insurance
-                has_law_or_variant = law_type:law_private_health_insurance
+            custom_tooltip = {
+                text = philippines_school_laws
+                OR = {
+                    has_law_or_variant = law_type:law_public_schools
+                    has_law_or_variant = law_type:law_private_schools
+                }
             }
-            OR = {
-                has_law_or_variant = law_type:law_public_schools
-                has_law_or_variant = law_type:law_private_schools
+            custom_tooltip = {
+                text = philippines_health_laws
+                OR = {
+                    has_law_or_variant = law_type:law_public_health_insurance
+                    has_law_or_variant = law_type:law_private_health_insurance
+                }
             }
-            NOR = {
-                has_law_or_variant = law_type:law_serfdom
-                has_law_or_variant = law_type:law_tenant_farmers
+            custom_tooltip = {
+                text = philippines_no_serfdom_or_tenant
+                NOR = {
+                    has_law_or_variant = law_type:law_serfdom
+                    has_law_or_variant = law_type:law_tenant_farmers
+                }
             }
             has_law_or_variant = law_type:law_compulsory_primary_school
             NOT = {
                 has_law_or_variant = law_type:law_state_religion
             }
             has_law_or_variant = law_type:law_slavery_banned
+            custom_tooltip = {
+                text = turmoil_less_than_40
+                country_turmoil <= 0.40
+            }
             NOT = {
                 any_political_movement = {
                     is_insurrectionary = yes
