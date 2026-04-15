@@ -35,6 +35,7 @@ usfp_monthly_pulse = {
         10 = usfp_usa_roosevelt.3 #Roosevelt Shot
 
         100 = usfp_banana_wars.6 #Post Banana Wars: War is a Racket
+        50 = usfp_usa_navy.1 #Post-ACW Naval Advisors
 
 		##Labor events
 		100 = usfp_usa_labor.1 #founding of the IWW
@@ -992,10 +993,39 @@ on_game_started = {
 	}
 }
 
+on_game_started_after_lobby = {
+    on_actions = {
+        usfp_mod_detector
+    }
+}
+
 usfp_map_startup = {
 	effect = {
 		usfp_map_startup_effect = yes
 	}
+}
+
+usfp_mod_detector = {
+    effect = {
+        if = {
+            limit = {
+                OR = {
+                    BPM_is_active_trigger = yes
+                    community_framework_is_active = no
+                    gilded_age_is_active_trigger = yes
+                }
+            }
+        }
+        every_country = {
+            limit = {
+                is_player = yes
+            }
+            trigger_event = {
+                id = usfp_debug.1
+                popup = yes
+            }
+        }
+    }
 }
 
 # on_character_creation = {

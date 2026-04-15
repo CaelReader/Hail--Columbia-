@@ -1279,10 +1279,7 @@
  usfp_usa_colonization.6.d: "[SCOPE.sState('haiti_scope').GetName]에 있는 $usfp_afro_american_culture$ 정착촌을 위해 마련된 자금과 물자가 횡령되거나 다른 용도로 전용된 것으로 보이며, 이로 인해 식민지는 기능을 잃고 주민들은 외국 땅에 고립되었습니다."
  usfp_usa_colonization.6.f: "\"나는 그 사업이 방치되어 있었고, 적절한 관리가 부재한 탓에 노동자들이 크든 작든 사기가 떨어져 있음을 발견했어. 그들 중 다수는 실제로 종교적 흥분의 영향으로 미쳐버렸고, 그 감정에 자신을 내맡기고 있었어.\""
  usfp_usa_colonization.6.a: "돌아오고 싶은 사람은 누구나 모으러 배를 보내라."
- usfp_test.1.t: "디버그 이벤트"
- usfp_test.1.d: "강제로 캐릭터 생성"
- usfp_test.1.f: "일출, 파라벨럼"
- usfp_test.1.a: "놀랍네요, 바로 그 점이 당신이 최고의 보스인 이유입니다!!!"
+
  usfp_manifest_destiny.31.t: "백색의 개척지"
  usfp_manifest_destiny.31.d: "[SCOPE.sState('oregon_scope').GetName]의 지방 정부는 해당 영토에서 [GetLawType('law_slave_trade').GetGroup.GetName]를 금지하는 데 그치지 않고, [GetCulture('afro_american').GetCustom('getPluralDemonym')]의 입경 자체를 전면적으로 불법화하기로 표결하였습니다."
  usfp_manifest_destiny.31.f: "\"이 법에 따라 출국해야 할 자유 흑인 또는 물라토가 이를 이행하지 않을 경우, 치안판사가 발부한 영장에 의해 체포될 수 있으며, 해당 판사 앞에서의 재판을 통해 유죄로 인정되면 관할 카운티의 집행관에 의해 맨등에 최소 스무 대에서 최대 서른아홉 대의 태형을 받게 된다.\""

@@ -116,6 +116,7 @@ je_usfp_the_new_navy = {
             order_by = naval_power_projection
             save_scope_as = strongest_navy_in_pacific
         }
+        trigger_event = usfp_usa_navy.2
     }
 
     on_monthly_pulse = {
@@ -181,6 +182,27 @@ je_usfp_the_new_navy = {
 
     on_complete = {
         set_variable =  new_navy_completed
+        trigger_event = usfp_usa_navy.2
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = usfp_usa_navy.2.a
+        effect = {
+            execute_event_option = {
+                option = 0
+                event = usfp_usa_navy.2
+            }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = usfp_usa_navy.2.b
+        effect = {
+            execute_event_option = {
+                option = 1
+                event = usfp_usa_navy.2
+            }
+        }
     }
 
 

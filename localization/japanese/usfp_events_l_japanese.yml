@@ -1744,8 +1744,3 @@
  usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STATE_WEST_INDIES').GetName]" #NT!
   
   
- usfp_test.1.t: "DEBUG EVENT" #NT!
- usfp_test.1.d: "force spawn a character" #NT!
- usfp_test.1.f: "sunrise, parabellum" #NT!
- usfp_test.1.a: "amazing, that right there is why you're the best boss!!!" #NT!
-  

@@ -852,6 +852,14 @@ usfp_post_acw_naval_advisors_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_manowar_positive.dds
     country_military_tech_spread_mult = 0.25
     unit_navy_experience_gain_mult = 0.15
+    country_ship_construction_progress_max_add = 5
     country_yankee_cultural_acceptance_add = 20
     country_dixie_cultural_acceptance_add = 20
+}
+
+usfp_navy_catchup_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_manowar_positive.dds
+    country_military_tech_research_speed_mult = 0.05
+    building_group_bg_military_construction_efficiency_add = 0.10
+    country_ship_construction_progress_max_add = 5
 }

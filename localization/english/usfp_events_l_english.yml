@@ -1832,10 +1832,15 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
 
 
 
-
-
-usfp_test.1.t: "DEBUG EVENT"
-usfp_test.1.d: "force spawn a character"
-usfp_test.1.f: "sunrise, parabellum"
-usfp_test.1.a: "amazing, that right there is why you're the best boss!!!"
+ usfp_debug.1.t: "Mod Conflict Detected"
+ usfp_debug.1.d: "Hail, Columbia! has detected an incorrect mod setup. Lots of things will break! Do not report errors from this save game!"
+ usfp_debug.1.f: ""Vegeta, what does the scouter say about their error log?!""
+ usfp_debug.1.a: "The Community Mod Framework must be enabled!"
+ usfp_debug.1.b: "Better Politics Mod is not compatible."
+ usfp_debug.1.c: "Gilded Age is not compatible."
+ usfp_debug.1.g: "Another mod is overwriting party definitions!"
+ default_parties_found: "The USA has a vanilla Conservative or Liberal party active"
+ cmf_is_missing: "The #bold Community Mod Framework#! is not enabled"
+ bpm_is_active: "The #bold Better Politics Mod#! is enabled"
+ gilded_age_is_active: "The #bold Gilded Age#! mod is enabled"
 

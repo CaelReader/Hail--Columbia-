@@ -870,12 +870,14 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
 # 8.0 "Roosevelt"
 ## New Content
     New Domestic and Foreign Agenda JEs for Theodore Roosevelt
-    New Banana Wars JE promoting intervention in Latin America on behalf of your Companies
-    The New Navy JE for modernizing your fleets in the face of rising Pacific powers
+    New Banana Wars JE with 8 events promoting intervention in Latin America on behalf of your Companies
+    Added The New Navy JE for modernizing your fleets in the face of rising Pacific powers
     Added small Journal Entry if you take All of Mexico
+    New events: Yellowstone National Park, Roosevelt Shot, Booker T Washington at the White House, Brownsville Affair, American Naval Advisors
 ## 1.13 Compatibility
     Updated strategic region triggers to new map changes
 ## Updates
+    Added pop-up event alerting the player when the CMF is detected as missing or incompatible mods are enabled
     Only states that actually rebel and join the CSA become unincorporated after the civil war
     American Superculture is now a JE to expose its requirements to the player
     Increased Radicals/Loyalists requirements for the Superculture
