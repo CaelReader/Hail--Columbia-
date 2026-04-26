@@ -425,3 +425,13 @@ usfp_industrialists_banana_empire_ig_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
     interest_group_approval_add = 4
 }
+
+usfp_blocked_armed_forced_activities_ig_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_officer_negative.dds
+    interest_group_approval_add = -3
+}
+
+usfp_rejected_philippine_tutelage_ig_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    interest_group_approval_add = -2
+}

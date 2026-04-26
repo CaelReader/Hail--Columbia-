@@ -835,8 +835,8 @@ usfp_philippines_military_government_modifier = {
     country_block_government_reform_bool = yes
     interest_group_ig_armed_forces_approval_add = 5
     interest_group_ig_armed_forces_pol_str_mult = 1.00
-    country_law_enactment_imposition_success_add = 0.50
-    country_law_enactment_time_mult = 0.50
+    country_law_enactment_imposition_success_add = 0.75
+    country_law_enactment_time_mult = -0.25
     country_legitimacy_min_add = 30
     country_liberty_desire_add = -0.10
 }
@@ -858,8 +858,44 @@ usfp_post_acw_naval_advisors_modifier = {
 }
 
 usfp_navy_catchup_modifier = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_manowar_positive.dds
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_ironclad_positive.dds
     country_military_tech_research_speed_mult = 0.05
     building_group_bg_military_construction_efficiency_add = 0.10
     country_ship_construction_progress_max_add = 5
+}
+
+usfp_new_navy_small_ships_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_cranes_positive.dds
+    country_ship_group_cruisers_construction_efficiency_add = 0.15
+    country_military_tech_spread_mult = 0.10
+    building_group_bg_military_construction_efficiency_add = 0.10
+}
+
+usfp_new_navy_big_ships_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_cranes_positive.dds
+    country_ship_group_capital_ships_construction_efficiency_add = 0.15
+    country_military_tech_spread_mult = 0.10
+    building_group_bg_military_construction_efficiency_add = 0.10
+}
+
+usfp_new_navy_diplo_fleet_complete_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_influence_positive.dds
+    country_leverage_generation_mult = 0.15
+    country_influence_mult = 0.10
+    unit_navy_experience_gain_mult = 0.20
+    interest_group_ig_armed_forces_approval_add = 3
+}
+
+usfp_new_navy_capital_fleet_complete_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
+    power_bloc_cohesion_mult = 0.15
+    country_prestige_from_navy_power_projection_mult = 0.15
+    unit_navy_experience_gain_mult = 0.20
+    interest_group_ig_armed_forces_approval_add = 3
+}
+
+usfp_imminent_revolution_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+    country_revolution_clock_time_add = 0.50
+    political_movement_radicalism_from_enactment_disapproval_mult = 1.00
 }

@@ -14,6 +14,7 @@ usfp_monthly_pulse = {
 		usfp_usa.6 #Great Chicago Fire
 		usfp_usa.16 #Election chaos (ALL democracies, not just the US)
 		usfp_usa.22 #American Centennial
+        usfp_philippines.11 #ESL Amendment Acquired
 	}
 	random_events = {
 		chance_to_happen = 80
@@ -79,6 +80,13 @@ usfp_monthly_pulse = {
 		100 = usfp_usa_canada.1 #Caroline Affair
 		100 = usfp_usa_canada.4 #Fenian Raid
 		100 = usfp_usa_canada.6 #Aroostook War
+
+        #Philippines Events
+        100 = usfp_philippines.3 #Moro Rebellion
+        100 = usfp_philippines.4 #Concentration Camps
+        100 = usfp_philippines.6 #Filipino Representatives
+        100 = usfp_philippines.9 #PHI: Seditious Dramas
+        100 = usfp_philippines.10 #PHI: English Teachers
 
 	}
 }

@@ -69,11 +69,16 @@ je_usfp_the_new_navy = {
             has_technology_researched = ironclad_tech
             has_technology_researched = jeune_ecole
         }
+        NOT = {
+            any_scope_ship = {
+                type = ship_type:ship_type_super_dreadnought
+            }
+        }
     }
 
     possible = {
         #has modern ironclads researched
-        has_technology_researched = ironclad_tech
+        has_technology_researched = monitor_tech
         has_technology_researched = jeune_ecole
         any_country_in_pacific = {
             capital = {
@@ -81,18 +86,32 @@ je_usfp_the_new_navy = {
             }
             NOT = {
                 this = root
-                naval_power_projection >= {
-                    value = root.naval_power_projection
-                    multiply = 1.2
-                }
             }
-            #any ship is a Pre-Dreadnought
-            any_scope_ship = {
-                OR = {
-                    type = ship_type:ship_type_pre_dreadnought
-                    type = ship_type:ship_type_dreadnought
-                    type = ship_type:ship_type_super_dreadnought
+            #if the USA has an old navy, get spooked by even a single Pre-Dreadnought
+            trigger_if = {
+                limit = {
+                    root = {
+                        NOT = {
+                            any_scope_ship = {
+                                OR = {
+                                    type = ship_type:ship_type_pre_dreadnought
+                                    type = ship_type:ship_type_dreadnought
+                                    type = ship_type:ship_type_super_dreadnought
+                                }
+                            }
+                        }
+                    }
                 }
+                any_scope_ship = {
+                    OR = {
+                        type = ship_type:ship_type_pre_dreadnought
+                        type = ship_type:ship_type_dreadnought
+                        type = ship_type:ship_type_super_dreadnought
+                    }
+                }
+            } trigger_else = {
+                #otherwise, get spooked by a near-peer adversary
+                naval_power_projection >= root.naval_power_projection
             }
         }
     }
@@ -139,15 +158,17 @@ je_usfp_the_new_navy = {
 
     complete = {
         #research pre-dreadnoughts
-        has_technology_researched = destroyer
-        #navy matches the strongest south american power
+        has_technology_researched = pre_dreadnought_tech
+        #navy surpasses the strongest pacific power
         trigger_if = {
             limit = {
                 exists = scope:strongest_navy_in_pacific.naval_power_projection
             }
-            naval_power_projection >= scope:strongest_navy_in_pacific.naval_power_projection
+            naval_power_projection >= {
+                value = scope:strongest_navy_in_pacific.naval_power_projection
+                multiply = 1.2
+            }
         }
-
         #has at least three pre-dreadnoughts
         any_scope_ship = {
             OR = {

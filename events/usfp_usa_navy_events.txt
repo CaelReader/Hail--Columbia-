@@ -22,7 +22,7 @@ usfp_usa_navy.1 = {
     trigger = {
         has_global_variable = acw_recently_finished
         country_is_great_power = no
-        country_rank >= rank_value:insignificant_power
+        country_rank >= rank_value:minor_power
         NOT = {
             is_country_type = decentralized
         }
@@ -34,9 +34,7 @@ usfp_usa_navy.1 = {
             }
         }
         NOT = {
-            has_technology_researched = destroyer
-            has_technology_researched = jeune_ecole
-            has_technology_researched = dreadnought
+            has_technology_researched = pre_dreadnought_tech
         }
         naval_power_projection <= c:USA.naval_power_projection
         NOT = {
@@ -111,7 +109,7 @@ usfp_usa_navy.2 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    icon = "gfx/interface/icons/invention_icons/destroyers.dds"
+    icon = "gfx/interface/icons/invention_icons/pre_dreadnought.dds"
 
     title = usfp_usa_navy.2.t
     desc = usfp_usa_navy.2.d
@@ -134,7 +132,15 @@ usfp_usa_navy.2 = {
     option = {
         name = usfp_usa_navy.2.a
         default_option = yes
-
+        show_as_tooltip = {
+            add_journal_entry = {
+                type = je_usfp_the_new_navy
+            }
+        }
+        add_modifier = {
+            name = usfp_new_navy_big_ships_modifier
+            years = 4
+        }
         ai_chance = {
             base = 100
         }
@@ -143,7 +149,15 @@ usfp_usa_navy.2 = {
     #small ships
     option = {
         name = usfp_usa_navy.2.b
-
+        show_as_tooltip = {
+            add_journal_entry = {
+                type = je_usfp_the_new_navy
+            }
+        }
+        add_modifier = {
+            name = usfp_new_navy_small_ships_modifier
+            years = 4
+        }
         ai_chance = {
             base = 0
         }
@@ -182,7 +196,14 @@ usfp_usa_navy.3 = {
     option = {
         name = usfp_usa_navy.3.a
         default_option = yes
-
+        trigger = {
+            has_law_or_variant = law_type:law_diplomatic_navy
+        }
+        add_modifier = {
+            name = usfp_new_navy_diplo_fleet_complete_modifier
+            years = 5
+        }
+        highlighted_option = yes
         ai_chance = {
             base = 100
         }
@@ -191,9 +212,23 @@ usfp_usa_navy.3 = {
     #capital navy
     option = {
         name = usfp_usa_navy.3.b
-
+        trigger = {
+            has_law_or_variant = law_type:law_professional_navy
+        }
+        add_modifier = {
+            name = usfp_new_navy_capital_fleet_complete_modifier
+            years = 5
+        }
+        highlighted_option = yes
         ai_chance = {
             base = 0
+        }
+    }
+
+    cancellation_trigger = {
+        NOR = {
+            has_law_or_variant = law_type:law_diplomatic_navy
+            has_law_or_variant = law_type:law_professional_navy
         }
     }
 }

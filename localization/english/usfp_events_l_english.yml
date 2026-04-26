@@ -125,7 +125,7 @@ usfp_a_house_divided.21.d: "As the [SCOPE.sCountry('usa_scope').GetName] remains
 usfp_a_house_divided.21.f: ""You see those trees," said the noble hearted captain next morning, pointing to a group in the distance; "they grow on free soil, and as soon as your feet touch that, you're a man. I want to see you go and be a freeman."" #Josiah Henson
 usfp_a_house_divided.21.a: "Freedom is the common cause of all mankind."
 usfp_a_house_divided.21.a.tt: "Until the [SCOPE.sCountry('usa_scope').GetName] abolishes [GetLawType('law_slave_trade').GetGroup.GetName], $usfp_afro_american_culture$ [GetPopType('slaves').GetName] will regularly arrive in our [Concept('concept_state', '$concept_states$')] as [concept_loyalist] [GetPopType('laborers').GetName]."
-usfp_a_house_divided.21.a.tt2: "Until the [SCOPE.sCountry('usa_scope').GetName] abolishes [GetLawType('law_slave_trade').GetGroup.GetName], $usfp_afro_american_culture$ [GetPopType('slaves').GetName] will occasionally arrive in our [Concept('concept_state', '$concept_states$')] in [GetStrategicRegion('region_mexico').GetName] or the [GetStrategicRegion('region_caribbean').GetName] as [concept_loyalist] [GetPopType('laborers').GetName]."
+usfp_a_house_divided.21.a.tt2: "Until the [SCOPE.sCountry('usa_scope').GetName] abolishes [GetLawType('law_slave_trade').GetGroup.GetName], $usfp_afro_american_culture$ [GetPopType('slaves').GetName] will occasionally arrive in our [Concept('concept_state', '$concept_states$')] in [GetGeographicRegion('geographic_region_mexico_old').GetName] and the [GetGeographicRegion('geographic_region_caribbean_old').GetName] as [concept_loyalist] [GetPopType('laborers').GetName]."
 
 usfp_a_house_divided.22.t: "Wide Awake"
 usfp_a_house_divided.22.d: "An [GetIdeology('ideology_abolitionist').GetName] youth movement has begun organizing young voters up and down [GetStrategicRegion('region_new_england').GetName] in support of the candidacy of [SCOPE.sCharacter('real_abraham_lincoln_scope').GetFullName]. Adopting military dress and performing grand night marches by torchlight, these 'Wide Awakes' are committed to defending the [SCOPE.sParty('lincoln_party').GetName] against the [SCOPE.sPoliticalMovement('pro_slavery_movement').GetName]."
@@ -239,7 +239,7 @@ usfp_acw.4.d: "An enterprising inventor has come up with a plan to ensure our na
 usfp_acw.4.f: "Now is the age of iron, sirs. If the Union is slow to act on this matter, the rebels will be in New York Harbor by the end of the year!"
 usfp_acw.4.a: "Fund it!"
 usfp_acw.4.b: "This is too costly of a gamble."
-usfp_acw.4.a.tt: "An Ironclad will be built in [SCOPE.sState('new_york_scope').GetName]"
+usfp_acw.4.a.tt: "A Monitor will be built in [SCOPE.sState('new_york_scope').GetName]"
 
 usfp_acw.5.t: "Indians Declare for [SCOPE.sCountry('csa_scope').GetName]"
 usfp_acw.5.d: "The Indian nations remaining in the South have signed treaties with the [SCOPE.sCountry('csa_scope').GetName] and joined in the war on their side."
@@ -1829,6 +1829,91 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  uca_released_as_independent: "Our states in [GetGeographicRegion('geographic_region_central_america_old').GetName] will be released as an independent [concept_power_bloc_member]"
  uca_released_as_protectorate: "Our states in [GetGeographicRegion('geographic_region_central_america_old').GetName] will be released as an [ROOT.GetCountry.GetAdjective] [concept_protectorate]"
 
+ usfp_usa_navy.1.t: "American Naval Expertise"
+ usfp_usa_navy.1.d: "In the wake of the civil war in [SCOPE.sCountry('usa_scope').GetName], former naval officers from both sides of the conflict have begun to offer their services to other countries in the [GetGeographicRegion('geographic_region_pacific').GetName]. This could be an opportunity for us to gain valuable insights into modern ways of shipbuilding and naval warfare."
+ usfp_usa_navy.1.f: "The American passed around a photograph from his country's war. Sailors stood aboard a vessel bolted together out of iron plates, sitting low in the water. A far cry from the sailing ships that once ruled the ways.\n\n"These ships were only the start, and were built quickly for our own needs. If you were to build new ships, starting from scratch, you could leap-frog even the American designs.""
+ usfp_usa_navy.1.a: "With their help, we will become a force to be reckoned with."
+ usfp_usa_navy.1.b: "We must not become reliant on foreign advisors."
+
+ usfp_usa_navy.2.t: "The Influence of Sea Power upon History"
+ usfp_usa_navy.2.d: "Naval developments in [SCOPE.sCountry('strongest_navy_in_pacific').GetName] have provoked some alarm amongst our staff. They have put forth a plan for naval modernization and the adoption of new technologies so as to secure our ability to project power into the [GetGeographicRegion('geographic_region_pacific').GetName]."
+ usfp_usa_navy.2.f: ""The geographical position of the United States and her intrinsic power give her an undeniable advantage; but that advantage will not avail if there is a great inferiority of organized brute-force, which still remains the last argument of republics as of kings."\n\n—Alfred Thayer Mahan"
+ usfp_usa_navy.2.a: "We need huge boats, with lots of guns." #(Gunboats)
+ usfp_usa_navy.2.b: "Swift escort craft can secure the highways of the sea."
+
+ usfp_usa_navy.3.t: "The Great White Fleet"
+ usfp_usa_navy.3.d: "The New Navy has been commissioned and taken to the seas. Their dazzling display of fresh hulls and disciplined sailors sends a clear message: the [ROOT.GetCountry.GetName] remains a pre-eminent naval power."
+ usfp_usa_navy.3.f: "The latest ships from the navy had pulled in to port for a grand exposition. Throngs of onlookers crowded the docks, waving to the sailors on-board. The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] came on board and was saluted by all hands before touring the vessel. The papers were more than happy to print front-page photos of the new fleet, along with bold claims of a world tour soon to come."
+ usfp_usa_navy.3.a: "We won't have any trouble with these ships at our backs."
+ usfp_usa_navy.3.b: "A single shot from our guns will silence any trouble-makers."
+
+ usfp_philippines.1.t: "Benevolent Assimilation"
+ usfp_philippines.1.d: ""
+ usfp_philippines.1.f: ""It should be the earnest wish and paramount aim of the military administration to win the confidence, respect, and affection of the inhabitants of the Philippines by assuring them in every possible way that full measure of individual rights and liberties which is the heritage of free peoples, and by proving to them that the mission of the United States is one of benevolent assimilation substituting the mild sway of justice and right for arbitrary rule."$quote_dash$William Mckinley"
+ usfp_philippines.1.a: "The islands will come under our wing until they are ready."
+ usfp_philippines.1.b: "We come as liberators, not colonizers."
+ usfp_philippines.1.c: "The Philippines is a colony like any other."
+
+ usfp_philippines.2.t: "Under New Management"
+ usfp_philippines.2.d: ""
+ usfp_philippines.2.f: ""It should be the earnest wish and paramount aim of the military administration to win the confidence, respect, and affection of the inhabitants of the Philippines by assuring them in every possible way that full measure of individual rights and liberties which is the heritage of free peoples, and by proving to them that the mission of the United States is one of benevolent assimilation substituting the mild sway of justice and right for arbitrary rule."$quote_dash$William Mckinley"
+ usfp_philippines.2.a: "Libertad, Justicia, y Igualdad!"
+ usfp_philippines.2.b: "We must accept this helping hand."
+
+ usfp_philippines.3.t: "The Moro Rebellion"
+ usfp_philippines.3.d: ""
+ usfp_philippines.3.f: """"
+ usfp_philippines.3.a: "Move in force and bring civilization to these backwards islands."
+ usfp_philippines.3.b: "Withdraw from these areas and focus on the spanish north."
+
+ usfp_philippines.4.t: "Reconcentrados"
+ usfp_philippines.4.d: ""
+ usfp_philippines.4.f: """"
+ usfp_philippines.4.a: "The military must be allowed a free hand."
+ usfp_philippines.4.b: "These actions are counter-productive and cruel."
+
+ usfp_philippines.5.t: "The Insular Government"
+ usfp_philippines.5.d: ""
+ usfp_philippines.5.f: """"
+ usfp_philippines.5.a: "We are on the right path."
+ usfp_philippines.5.b: "They intend to appease us with token representation?"
+
+ usfp_philippines.6.t: "Appeals From the Philippines"
+ usfp_philippines.6.d: ""
+ usfp_philippines.6.f: """"
+ usfp_philippines.6.a: "They argue their case well."
+ usfp_philippines.6.b: "The Filipinos are still but children on the world stage."
+ usfp_philippines.6.c: "These appeals show that the Filipinos are ready for democracy."
+
+ usfp_philippines.7.t: "The Independence of the Philippines"
+ usfp_philippines.7.d: ""
+ usfp_philippines.7.f: """"
+ usfp_philippines.7.a: "The new Philippines is an example to the world."
+
+ usfp_philippines.8.t: "The Independence of the Philippines"
+ usfp_philippines.8.d: ""
+ usfp_philippines.8.f: """"
+ usfp_philippines.8.a: "Finally, get these gringos out of here!"
+ usfp_philippines.8.b: "We will maintain a special relationship with our benefactors."
+ usfp_philippines.8.c: "Actually we might need the American navy to defend our shores..."
+
+ usfp_philippines.9.t: "Seditious Dramas"
+ usfp_philippines.9.d: ""
+ usfp_philippines.9.f: """"
+ usfp_philippines.9.a: "Arrest everyone involved in the productions."
+ usfp_philippines.9.b: "Allow this message to spread far and wide."
+
+ usfp_philippines.10.t: "English Teachers"
+ usfp_philippines.10.d: ""
+ usfp_philippines.10.f: ""Our nation has found herself confronted by a great problem dealing with a people who neither know nor understand the underlying principles of our civilization, yet who, for our mutual happiness and liberty, must be brought into accord with us. The American genius, reasoning from its own experience in the past, seeks a solution of the problem, a bridging of the chasm, through the common schools."$quote_dash$Adeline Knapp"
+ usfp_philippines.10.a: "With their help, we will become a modern nation."
+ usfp_philippines.10.b: "Aquí hablamos español!"
+
+ usfp_philippines.11.t: "The English Philippines"
+ usfp_philippines.11.d: ""
+ usfp_philippines.11.f: """"
+ usfp_philippines.11.a: "We have been given the keys to knowledge."
+ usfp_philippines.11.b: "Our very language has been colonized by the Americans."
 
 
 
@@ -1844,3 +1929,4 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  bpm_is_active: "The #bold Better Politics Mod#! is enabled"
  gilded_age_is_active: "The #bold Gilded Age#! mod is enabled"
 
+quote_dash: "\n\n—"

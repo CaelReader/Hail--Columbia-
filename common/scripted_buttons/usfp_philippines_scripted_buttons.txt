@@ -7,6 +7,7 @@
         exists = c:PHI
         c:PHI ?= {
             is_subject_of = c:USA
+            has_modifier = usfp_philippines_military_government_modifier
         }
     }
 
@@ -18,6 +19,7 @@
                 }
             }
             country_turmoil < 0.15
+            liberty_desire < 25
         }
         is_diplomatic_play_committed_participant = no
     }
@@ -27,6 +29,7 @@
             activate_law = root.active_law:lawgroup_governance_principles.type
             activate_law = law_type:law_oligarchy
             remove_modifier = usfp_philippines_military_government_modifier
+            trigger_event = usfp_philippines.5
         }
     }
 

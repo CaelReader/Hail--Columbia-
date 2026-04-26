@@ -37,6 +37,18 @@ usfp_philippines.1 = {
                 id = usfp_philippines.2
                 days = 5
             }
+            create_character = {
+                is_general = yes
+                interest_group = ig:ig_armed_forces
+                culture = cu:yankee
+                religion = protestant
+                ideology = ideology:ideology_modernizer_leader
+                ruler = yes
+                ig_leader = yes
+                on_created = {
+                    add_trait = special_character_colonial_military
+                }
+            }
         }
         create_unidirectional_truce = {
             country = scope:philippines_scope
@@ -79,6 +91,10 @@ usfp_philippines.1 = {
             country = scope:philippines_scope
             months = 60
         }
+        custom_tooltip = {
+            text = close_philippines_je
+            set_variable = rejected_philippines_tutelage
+        }
         ai_chance = {
             base = 0
         }
@@ -87,6 +103,16 @@ usfp_philippines.1 = {
     #reject JE
     option = {
         name = usfp_philippines.1.c
+        ig:ig_intelligentsia = {
+            add_modifier = {
+                name = usfp_rejected_philippine_tutelage_ig_modifier
+                years = 4
+            }
+        }
+        change_relations = {
+            country = c:PHI
+            value = -25
+        }
         custom_tooltip = {
             text = close_philippines_je
             set_variable = rejected_philippines_tutelage
@@ -140,7 +166,20 @@ usfp_philippines.2 = {
         ordered_political_movement = {
             order_by = political_movement_support
             position = 0
-
+            limit = {
+                OR = {
+                    is_political_movement_type = movement_radical
+                    is_political_movement_type = movement_liberal
+                }
+            }
+            add_modifier = {
+                name = usfp_philippine_revolt_modifier
+                years = 5
+            }
+        }
+        add_modifier = {
+            years = 1
+            name = usfp_imminent_revolution_modifier
         }
         add_liberty_desire = 25
         c:USA = {
@@ -155,6 +194,10 @@ usfp_philippines.2 = {
     option = {
         name = usfp_philippines.2.b
         add_liberty_desire = -25
+        add_loyalists = {
+            value = medium_radicals
+            interest_group = ig:ig_intelligentsia
+        }
         c:USA = {
             post_notification = usfp_philippines_accept_tutelage
         }
@@ -182,7 +225,7 @@ usfp_philippines.2 = {
 #Moro Rebellion
 usfp_philippines.3 = {
     type = country_event
-    placement = scope:philippines_scope.capital
+    placement = scope:moro_state
     event_image = {
         video = "ip3_angry_mob_raiding_minorities"
     }
@@ -204,18 +247,47 @@ usfp_philippines.3 = {
             is_subject_of = root
             is_diplomatic_play_committed_participant = no
             has_revolution = no
+            any_scope_state = {
+                state_region = {
+                    is_homeland = cu:moro
+                }
+            }
         }
+        is_involved_in_journal_entry = je_usfp_philippine_tutelage
     }
 
     immediate = {
-
+        c:PHI ?= {
+            random_scope_state = {
+                limit = {
+                    state_region = {
+                        is_homeland = cu:moro
+                    }
+                }
+                save_scope_as = moro_state
+            }
+        }
     }
 
     #crack down
     option = {
         name = usfp_philippines.3.a
         default_option = yes
-
+        c:PHI ?= {
+            every_scope_state = {
+                limit = {
+                    state_region = {
+                        is_homeland = cu:moro
+                    }
+                }
+                add_devastation = 20
+            }
+            add_radicals = {
+                culture = cu:moro
+                value = very_large_radicals
+            }
+            post_notification = moro_rebellion_crackdown
+        }
         ai_chance = {
             base = 100
         }
@@ -224,18 +296,610 @@ usfp_philippines.3 = {
     #abandon those areas
     option = {
         name = usfp_philippines.3.b
-
+        c:PHI ?= {
+            every_scope_state = {
+                limit = {
+                    state_region = {
+                        is_homeland = cu:moro
+                    }
+                }
+                set_state_type = unincorporated
+                add_modifier = {
+                    name =  usfp_tribal_state_rule_modifier
+                    years = 10
+                }
+            }
+            post_notification = moro_rebellion_withdraw
+        }
         ai_chance = {
             base = 0
         }
     }
 
 }
-#American Massacres
 #Concentration Camps
+usfp_philippines.4 = {
+    type = country_event
+    placement = scope:philippines_scope.capital
+    event_image = {
+        video = "asia_poor_people_moving"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+    title = usfp_philippines.4.t
+    desc = usfp_philippines.4.d
+    flavor = usfp_philippines.4.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        c:USA ?= root
+        c:PHI ?= {
+            is_subject_of = root
+            is_diplomatic_play_committed_participant = no
+            has_revolution = no
+            has_modifier = usfp_philippines_military_government_modifier
+        }
+        is_involved_in_journal_entry = je_usfp_philippine_tutelage
+    }
+
+    immediate = {
+
+    }
+
+    #allow
+    option = {
+        name = usfp_philippines.4.a
+        default_option = yes
+        c:PHI ?= {
+            every_scope_state = {
+                add_modifier = {
+                    name = usfp_concentration_camps_modifier
+                    years = 8
+                }
+                add_devastation = 10
+                add_radicals_in_state = {
+                    pop_type = peasants
+                    value = large_radicals
+                }
+            }
+            post_notification = us_philippines_concentration_camps
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #stop
+    option = {
+        name = usfp_philippines.4.b
+        ig:ig_armed_forces = {
+            add_modifier = {
+                name =  usfp_blocked_armed_forced_activities_ig_modifier
+                years = 5
+            }
+        }
+        c:PHI ?= {
+            add_liberty_desire = 15
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+}
 #PHI: Insular Government instated
+usfp_philippines.5 = {
+    type = country_event
+    placement = scope:philippines_scope.capital
+    event_image = {
+        video = "ep1_transfer_of_authority"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/waving_flags_usa_philippines.dds"
+
+    title = usfp_philippines.5.t
+    desc = usfp_philippines.5.d
+    flavor = usfp_philippines.5.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    immediate = {
+
+    }
+
+    #lose liberty desire
+    option = {
+        name = usfp_philippines.5.a
+        default_option = yes
+        add_liberty_desire = -20
+        add_loyalists = {
+            value = small_radicals
+            strata = middle
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #gain liberty desire
+    option = {
+        name = usfp_philippines.5.b
+        add_liberty_desire = 15
+        add_radicals = {
+            value = small_radicals
+            strata = lower
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    after = {
+        show_as_tooltip = {
+            c:PHI = {
+                activate_law = c:USA.active_law:lawgroup_governance_principles.type
+                activate_law = law_type:law_oligarchy
+                remove_modifier = usfp_philippines_military_government_modifier
+            }
+        }
+    }
+
+}
 #USA: Philippine representatives
+usfp_philippines.6 = {
+    type = country_event
+    placement = scope:philippines_scope.capital
+    event_image = {
+        video = "rp1_brazilian_city"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/waving_flag_philippines.dds"
+
+    title = usfp_philippines.6.t
+    desc = usfp_philippines.6.d
+    flavor = usfp_philippines.6.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        c:USA ?= root
+        c:PHI ?= {
+            is_subject_of = root
+            is_diplomatic_play_committed_participant = no
+            has_revolution = no
+            any_scope_state = {
+                state_region = {
+                    is_homeland = cu:moro
+                }
+            }
+            NOT = {
+                has_modifier = usfp_philippines_military_government_modifier
+            }
+        }
+        is_involved_in_journal_entry = je_usfp_philippine_tutelage
+    }
+
+    immediate = {
+        c:PHI ?= {
+            save_scope_as = philippines_scope
+        }
+    }
+
+    #okay
+    option = {
+        name = usfp_philippines.6.a
+        default_option = yes
+        c:PHI ?= {
+            every_primary_culture = {
+                add_fervor = 10
+            }
+            add_liberty_desire = -10
+            post_notification = philippine_representatives_success
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #no
+    option = {
+        name = usfp_philippines.6.b
+        c:PHI ?= {
+            every_primary_culture = {
+                add_fervor = 5
+            }
+            add_liberty_desire = 20
+            post_notification = philippine_representatives_failure
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    #they're ready for democracy
+    option = {
+        name = usfp_philippines.6.c
+        highlighted_option = yes
+        trigger = {
+            ruler = {
+                law_stance = {
+                    law = law_type:law_multicultural
+                    value = strongly_approve
+                }
+            }
+            country_has_voting_franchise = yes
+            NOT = {
+                c:PHI ?= {
+                    OR = {
+                        has_law_or_variant = law_type:law_census_voting
+                        has_law_or_variant = law_type:law_universal_suffrage
+                        has_law_or_variant = law_type:law_single_party_state
+                    }
+                }
+            }
+        }
+        c:PHI ?= {
+            activate_law = root.active_law:lawgroup_distribution_of_power.type
+            add_liberty_desire = -25
+            every_primary_culture = {
+                add_fervor = 10
+            }
+            post_notification = philippine_representatives_super_success
+        }
+        ai_chance = {
+            base = 50
+        }
+    }
+
+}
 #USA: philippine tutelage over
+usfp_philippines.7 = {
+    type = country_event
+    placement = scope:philippines_scope.capital
+    event_image = {
+        video = "ep1_transfer_of_authority"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/waving_flag_philippines.dds"
+
+    title = usfp_philippines.7.t
+    desc = usfp_philippines.7.d
+    flavor = usfp_philippines.7.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    immediate = {
+        c:PHI ?= {
+            save_scope_as = philippines_scope
+        }
+    }
+
+    #We have done well
+    option = {
+        name = usfp_philippines.7.a
+        default_option = yes
+        c:PHI = {
+            set_country_type = recognized
+            trigger_event = {
+                id = usfp_philippines.8
+                popup = yes
+            }
+        }
+        show_as_tooltip = {
+            create_treaty = {
+                first_country = c:USA
+                second_country = c:PHI
+
+                is_draft = no
+                binding_period = { years = 10 }
+
+                articles_to_create = {
+                    { # Guarantee of Independence
+                        article = guarantee_independence
+                        source_country = c:USA
+                        target_country = c:PHI
+                    }
+                }
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+}
 #PHI: philippine tutelage over
+usfp_philippines.8 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "ep1_transfer_of_authority"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/waving_flag_philippines.dds"
+
+    title = usfp_philippines.8.t
+    desc = usfp_philippines.8.d
+    flavor = usfp_philippines.8.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    immediate = {
+        c:USA = {
+            save_scope_as = usa_scope
+        }
+    }
+
+    #anti-USA independence
+    option = {
+        name = usfp_philippines.8.a
+        make_independent = yes
+        c:USA = {
+            post_notification = philippine_tutelage_over_negative
+            create_unidirectional_truce = {
+                country = c:PHI
+                months = 60
+            }
+        }
+        change_relations = {
+            value = -20
+            country = c:USA
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #pro-USA independence
+    option = {
+        name = usfp_philippines.8.b
+
+        default_option = yes
+        make_independent = yes
+        c:USA = {
+            post_notification = philippine_tutelage_over_positive
+        }
+        create_bidirectional_truce = {
+            country = c:USA
+            months = 60
+        }
+        change_relations = {
+            value = 20
+            country = c:USA
+        }
+        c:USA.power_bloc ?= {
+            add_leverage = { target = c:PHI value = 200 }
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    #stay as protectorate
+    option = {
+        name = usfp_philippines.8.c
+        change_subject_type = subject_type_protectorate
+        c:USA = {
+            post_notification = philippine_tutelage_over_protectorate
+        }
+        c:USA.power_bloc ?= {
+            add_leverage = { target = c:PHI value = 200 }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    after = {
+        create_treaty = {
+            first_country = c:USA
+            second_country = c:PHI
+
+            is_draft = no
+            binding_period = { years = 10 }
+
+            articles_to_create = {
+                { # Guarantee of Independence
+                    article = guarantee_independence
+                    source_country = c:USA
+                    target_country = c:PHI
+                }
+            }
+        }
+        show_as_tooltip = {
+            set_country_type = recognized
+        }
+    }
+
+}
 #PHI: Seditious Dramas
+usfp_philippines.9 = {
+    type = country_event
+    placement = scope:philippines_scope.capital
+    event_image = {
+        video = "ip3_official_reading_dictate"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+    title = usfp_philippines.9.t
+    desc = usfp_philippines.9.d
+    flavor = usfp_philippines.9.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        c:PHI ?= root
+        is_subject = yes
+        is_subject_of = c:USA
+        is_involved_in_journal_entry = je_usfp_philippine_tutelage
+    }
+
+    immediate = {
+
+    }
+
+    #Shut these up
+    option = {
+        name = usfp_philippines.9.a
+        default_option = yes
+
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #encourage them
+    option = {
+        name = usfp_philippines.9.b
+
+        ai_chance = {
+            base = 1
+        }
+    }
+
+}
 #PHI: English Language Teachers
+usfp_philippines.10 = {
+    type = country_event
+    placement = scope:philippines_scope.capital
+    event_image = {
+        video = "ip3_village_school"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+    title = usfp_philippines.10.t
+    desc = usfp_philippines.10.d
+    flavor = usfp_philippines.10.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        c:PHI ?= root
+        is_subject = yes
+        is_subject_of = c:USA
+        is_involved_in_journal_entry = je_usfp_philippine_tutelage
+    }
+
+    immediate = {
+
+    }
+
+    #Cool
+    option = {
+        name = usfp_philippines.10.a
+        default_option = yes
+
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #but we don't want english
+    option = {
+        name = usfp_philippines.10.b
+
+        ai_chance = {
+            base = 1
+        }
+    }
+
+}
+
+#PHI: ESL Acquired
+usfp_philippines.11 = {
+    type = country_event
+    placement = scope:philippines_scope.capital
+    event_image = {
+        video = "ip3_village_school"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+    title = usfp_philippines.11.t
+    desc = usfp_philippines.11.d
+    flavor = usfp_philippines.11.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        c:PHI ?= root
+        has_variable = philippines_english_progress_var
+        var:philippines_english_progress_var >= 5000
+        NOT = {
+            active_law:lawgroup_citizenship = {
+                has_amendment = amendment_type:amendment_english_second_language
+            }
+        }
+        is_involved_in_journal_entry = je_usfp_philippine_tutelage
+    }
+
+    immediate = {
+
+    }
+
+    #Cool
+    option = {
+        name = usfp_philippines.11.a
+        default_option = yes
+        add_liberty_desire = -25
+        active_law:lawgroup_citizenship = {
+            add_amendment = {
+                type = amendment_english_second_language
+                sponsor = root.ig:ig_intelligentsia
+                cooldown = 120
+            }
+        }
+        ai_chance = {
+            base = 110
+        }
+    }
+
+    #Damn
+    option = {
+        name = usfp_philippines.11.b
+        add_liberty_desire = -10
+        add_radicals = {
+            value = large_radicals
+            pop_type = academics
+        }
+        active_law:lawgroup_citizenship = {
+            add_amendment = {
+                type = amendment_english_second_language
+                sponsor = root.ig:ig_intelligentsia
+                cooldown = 120
+            }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+
+}

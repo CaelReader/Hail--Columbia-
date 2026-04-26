@@ -876,6 +876,7 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
     New events: Yellowstone National Park, Roosevelt Shot, Booker T Washington at the White House, Brownsville Affair, American Naval Advisors
 ## 1.13 Compatibility
     Updated strategic region triggers to new map changes
+    The Ironclad Concept event once again spawns the USS Monitor (now as a real Monitor-class ship)
 ## Updates
     Added pop-up event alerting the player when the CMF is detected as missing or incompatible mods are enabled
     Only states that actually rebel and join the CSA become unincorporated after the civil war
