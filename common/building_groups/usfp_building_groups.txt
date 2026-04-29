@@ -1,4 +1,4 @@
-bg_usfp_national_parks = {
+﻿bg_usfp_national_parks = {
     category = development
     always_possible = yes
 
@@ -11,4 +11,26 @@ bg_usfp_national_parks = {
 
     urbanization = 0
     infrastructure_usage_per_level = 0
+}
+
+bg_usfp_fur_trapping = {
+    parent_group = bg_extraction
+
+    lens = forestry
+
+    auto_place_buildings = yes
+
+    discoverable_resource = yes
+
+    depletable_resource = yes
+
+    always_self_owning = yes
+
+    pays_taxes = no
+
+    infrastructure_usage_per_level = 0
+
+    default_building = building_usfp_fur_trapper
+
+    fired_pops_become_radical = no
 }

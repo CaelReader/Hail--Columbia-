@@ -45,7 +45,7 @@ REPLACE_OR_CREATE:ideology_jacksonian_democrat = { #replacing basegame
 		law_collectivized_agriculture = disapprove
 		law_tenant_farmers = disapprove
 		law_commercialized_agriculture = neutral
-		law_homesteading = strongly_approve
+		law_peasant_proprietorship = strongly_approve
 	}
 	
 	country_trigger = {
@@ -575,7 +575,7 @@ REPLACE_OR_CREATE:ideology_usfp_abolitionist_radical = {
 	lawgroup_land_reform = {
 		law_serfdom = strongly_disapprove
 		law_tenant_farmers = disapprove
-		law_homesteading = neutral
+		law_peasant_proprietorship = neutral
 		law_collectivized_agriculture = neutral
 		law_commercialized_agriculture = neutral
 	}
@@ -695,7 +695,7 @@ REPLACE_OR_CREATE:ideology_usfp_georgist_leader = {
 		law_collectivized_agriculture = neutral
 		law_tenant_farmers = strongly_disapprove
 		law_commercialized_agriculture = approve
-		law_homesteading = approve
+		law_peasant_proprietorship = approve
 	}
 	
 	lawgroup_taxation = {
@@ -1224,7 +1224,7 @@ REPLACE_OR_CREATE:ideology_usfp_pan_indianist = {
 		law_collectivized_agriculture = strongly_approve
 		law_tenant_farmers = strongly_disapprove
 		law_commercialized_agriculture = strongly_disapprove
-		law_homesteading = disapprove
+		law_peasant_proprietorship = disapprove
 	}
 
 	lawgroup_economic_system = {	

@@ -1848,27 +1848,27 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_usa_navy.3.b: "A single shot from our guns will silence any trouble-makers."
 
  usfp_philippines.1.t: "Benevolent Assimilation"
- usfp_philippines.1.d: ""
+ usfp_philippines.1.d: "With the Philippines now under our control, a unique opportunity presents itself to us. After centuries of Spanish rule, the population of the islands are primed to be civilized by our guiding hand, uplifted towards our ideals of republican self-government."
  usfp_philippines.1.f: ""It should be the earnest wish and paramount aim of the military administration to win the confidence, respect, and affection of the inhabitants of the Philippines by assuring them in every possible way that full measure of individual rights and liberties which is the heritage of free peoples, and by proving to them that the mission of the United States is one of benevolent assimilation substituting the mild sway of justice and right for arbitrary rule."$quote_dash$William Mckinley"
- usfp_philippines.1.a: "The islands will come under our wing until they are ready."
+ usfp_philippines.1.a: "The islands will come under our wing, until they are ready."
  usfp_philippines.1.b: "We come as liberators, not colonizers."
  usfp_philippines.1.c: "The Philippines is a colony like any other."
 
  usfp_philippines.2.t: "Under New Management"
- usfp_philippines.2.d: ""
+ usfp_philippines.2.d: "The United States has declared that it intends to maintain the Philippines as a colonial subject, claiming that we require their tutelage before being worthy of self-government."
  usfp_philippines.2.f: ""It should be the earnest wish and paramount aim of the military administration to win the confidence, respect, and affection of the inhabitants of the Philippines by assuring them in every possible way that full measure of individual rights and liberties which is the heritage of free peoples, and by proving to them that the mission of the United States is one of benevolent assimilation substituting the mild sway of justice and right for arbitrary rule."$quote_dash$William Mckinley"
  usfp_philippines.2.a: "Libertad, Justicia, y Igualdad!"
- usfp_philippines.2.b: "We must accept this helping hand."
+ usfp_philippines.2.b: "We must accept their helping hand."
 
  usfp_philippines.3.t: "The Moro Rebellion"
- usfp_philippines.3.d: ""
+ usfp_philippines.3.d: "Attacks by Muslim Moro people in the southern islands of the Philippines have prompted retaliation from our garrisons stationed there. Entire tribal groups of Moros have begun to resist any American presence with overwhelming violence."
  usfp_philippines.3.f: """"
- usfp_philippines.3.a: "Move in force and bring civilization to these backwards islands."
- usfp_philippines.3.b: "Withdraw from these areas and focus on the spanish north."
+ usfp_philippines.3.a: "These savages must be shown the error of their ways."
+ usfp_philippines.3.b: "Withdraw from these areas and focus on the north."
 
  usfp_philippines.4.t: "Reconcentrados"
- usfp_philippines.4.d: ""
- usfp_philippines.4.f: """"
+ usfp_philippines.4.d: "In an attempt to consolidate control over the Filipino countryside, the military government has begun forcibly relocating villagers into "zones of protection" where they can be monitored and prevented from potentially lending aid to rebel groups."
+ usfp_philippines.4.f: ""What a farce it all is, this little spot of black sogginess is a reconcentrado pen, with a dead line outside, beyond which everything living is shot. Upon arrival, I found 30 cases of smallpox, and average fresh ones of five a day, which practically have to be turned out to die. At nightfall crowds of huge vampire bats softly swirl out of their orgies over the dead."$quote_dash$Anonymous American Officer" #United States Senate Committee on the Philippines
  usfp_philippines.4.a: "The military must be allowed a free hand."
  usfp_philippines.4.b: "These actions are counter-productive and cruel."
 
@@ -1895,7 +1895,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_philippines.8.f: """"
  usfp_philippines.8.a: "Finally, get these gringos out of here!"
  usfp_philippines.8.b: "We will maintain a special relationship with our benefactors."
- usfp_philippines.8.c: "Actually we might need the American navy to defend our shores..."
+ usfp_philippines.8.c: "Actually, we might need the American navy to defend our shores..."
 
  usfp_philippines.9.t: "Seditious Dramas"
  usfp_philippines.9.d: ""

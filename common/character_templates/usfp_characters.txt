@@ -1472,9 +1472,9 @@ usfp_leonard_wood = {
 }
 
 #Mark Hanna, Mckinley Political Boss
-usfp_gerrit_smith = {
-    first_name = Gerrit
-    last_name = Smith
+usfp_mark_hanna = {
+    first_name = Mark
+    last_name = Hanna
     # dna =
     # home_state = STATE_OHIO
     historical = yes

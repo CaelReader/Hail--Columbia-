@@ -348,14 +348,18 @@ acw_followup_events.4 = {
 		name = acw_followup_events.4.c
 		trigger = {
 			usfp_has_dixie_occupation_trigger = yes
-			any_interest_group_in_government = {
-				leader = {
-					OR = {
-						has_ideology = ideology:ideology_usfp_abolitionist_radical
-						has_ideology = ideology:ideology_humanitarian
-					}
-				}
-			}
+			custom_tooltip = {
+                text = radical_abolitionist_government
+                any_interest_group_in_government = {
+                    leader = {
+                        OR = {
+                            has_ideology = ideology:ideology_usfp_abolitionist_radical
+                            has_ideology = ideology:ideology_humanitarian
+                        }
+                    }
+                }
+            }
+
 			custom_tooltip = {
 				text = acw_followup_events.4.c_trigger
 				NOT = {

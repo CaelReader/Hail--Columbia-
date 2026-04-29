@@ -381,7 +381,6 @@ usfp_banana_wars_capitalist_interference_modifier = {
 usfp_tribal_state_rule_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
     state_disallow_incorporation_bool = yes
-    state_institution_impact_add = -0.75
 }
 
 usfp_concentration_camps_modifier = {

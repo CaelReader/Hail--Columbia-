@@ -22,8 +22,13 @@
 usfp_pm_fur_trapping = {
 	texture = "gfx/interface/icons/production_method_icons/pm_hunting.dds"
 
+    unlocking_technologies = {
+        colonization
+    }
+
 	building_modifiers = {
 		workforce_scaled = {
+            goods_input_small_arms_add = 1
 			goods_output_silk_add = 5
 			goods_output_fabric_add = 1
 		}
@@ -43,9 +48,14 @@ usfp_pm_bison_hunting = {
 		repeaters
 	}
 
+    unlocking_geographic_regions = {
+        geographic_region_american_bison_range
+    }
+
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_small_arms_add = 1
+            goods_input_ammunition_add = 1
 			goods_output_silk_add = 8
 			goods_output_fabric_add = 3
 			building_group_bg_ranching_construction_efficiency_add = 0.02
@@ -53,9 +63,32 @@ usfp_pm_bison_hunting = {
 		level_scaled = {
 			building_employment_laborers_add = 300
 			building_employment_soldiers_add = 200
+            state_animist_standard_of_living_add = -0.5
 		}
 	}
 	
+}
+
+usfp_pm_subsistence_hunting = {
+    texture = "gfx/interface/icons/production_method_icons/pm_hunting.dds"
+
+    unlocking_laws = {
+        law_usfp_tribal_land_ownership
+    }
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_silk_add = 1
+            goods_output_fabric_add = 1
+            goods_output_meat_add = 1
+            building_subsistence_output_add = 4
+        }
+        level_scaled = {
+            building_employment_soldiers_add = 100
+        }
+
+    }
+
 }
 
 

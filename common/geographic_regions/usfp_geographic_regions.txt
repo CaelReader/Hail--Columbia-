@@ -63,6 +63,24 @@ geographic_region_central_great_plains = {
 	}
 }
 
+geographic_region_american_bison_range = {
+    short_key = "usfp_bison_range"
+
+    state_regions = {
+        STATE_TEXAS
+        STATE_OKLAHOMA
+        STATE_COLORADO
+        STATE_WYOMING
+        STATE_MONTANA
+        STATE_ALBERTA
+        STATE_SASKATCHEWAN
+        STATE_NORTH_DAKOTA
+        STATE_SOUTH_DAKOTA
+        STATE_KANSAS
+        STATE_NEBRASKA
+    }
+}
+
 geographic_region_cuba = {
 	short_key = "cuba"
 

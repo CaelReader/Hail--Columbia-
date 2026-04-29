@@ -874,6 +874,7 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
     Added The New Navy JE for modernizing your fleets in the face of rising Pacific powers
     Added small Journal Entry if you take All of Mexico
     New events: Yellowstone National Park, Roosevelt Shot, Booker T Washington at the White House, Brownsville Affair, American Naval Advisors
+    Added Fur Trapping Grounds buildings with a special PM for Bison Hunting
 ## 1.13 Compatibility
     Updated strategic region triggers to new map changes
     The Ironclad Concept event once again spawns the USS Monitor (now as a real Monitor-class ship)
@@ -900,3 +901,5 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
     The USA cannot offer to purchase Cuba from a Rival country
     An American subject occupying Mexico City now triggers the G-H decision
     Fixed Gold Fields and Gold Mines not actually contributing to Hard Times recovery
+    Fixed missing state in Confederados event
+    Fixed broken tooltip for Forty Acres and a Mule

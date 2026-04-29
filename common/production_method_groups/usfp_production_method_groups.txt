@@ -8,7 +8,8 @@
 usfp_pmg_base_building_fur_trapper = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		usfp_pm_fur_trapping
+        usfp_pm_subsistence_hunting
+        usfp_pm_fur_trapping
 		usfp_pm_bison_hunting
 	}
 }

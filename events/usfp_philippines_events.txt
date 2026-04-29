@@ -41,7 +41,7 @@ usfp_philippines.1 = {
                 is_general = yes
                 interest_group = ig:ig_armed_forces
                 culture = cu:yankee
-                religion = protestant
+                religion = rel:protestant
                 ideology = ideology:ideology_modernizer_leader
                 ruler = yes
                 ig_leader = yes
@@ -53,6 +53,22 @@ usfp_philippines.1 = {
         create_unidirectional_truce = {
             country = scope:philippines_scope
             months = 60
+        }
+        create_diplomatic_pact = {
+            type = da_knowledge_sharing
+            country = c:PHI
+        }
+        create_diplomatic_pact = {
+            type = exempt_from_service
+            country = c:PHI
+        }
+        create_diplomatic_pact = {
+            type = decrease_payments
+            country = c:PHI
+        }
+        create_diplomatic_pact = {
+            type = da_support_regime
+            country = c:PHI
         }
         ai_chance = {
             base = 100
@@ -343,6 +359,7 @@ usfp_philippines.4 = {
             is_diplomatic_play_committed_participant = no
             has_revolution = no
             has_modifier = usfp_philippines_military_government_modifier
+            country_turmoil >= 0.25
         }
         is_involved_in_journal_entry = je_usfp_philippine_tutelage
     }

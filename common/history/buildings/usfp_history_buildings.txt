@@ -200,4 +200,78 @@
 			}
 		}
 	}
+
+    #Fur Trapping resources
+    s:STATE_CALIFORNIA = {
+        change_resource_potential = {
+            type = building_usfp_fur_trapper
+            amount = 2
+        }
+    }
+
+    s:STATE_OREGON = {
+        change_resource_potential = {
+            type = building_usfp_fur_trapper
+            amount = 2
+        }
+    }
+
+    s:STATE_WASHINGTON = {
+        change_resource_potential = {
+            type = building_usfp_fur_trapper
+            amount = 2
+        }
+    }
+
+    s:STATE_ALASKA = {
+        change_resource_potential = {
+            type = building_usfp_fur_trapper
+            amount = 2
+        }
+    }
+
+    s:STATE_BRITISH_COLUMBIA = {
+        change_resource_potential = {
+            type = building_usfp_fur_trapper
+            amount = 2
+        }
+    }
+
+    s:STATE_YUKON_TERRITORY = {
+        change_resource_potential = {
+            type = building_usfp_fur_trapper
+            amount = 2
+        }
+    }
+
+    s:STATE_NORTHWEST_TERRITORIES = {
+        change_resource_potential = {
+            type = building_usfp_fur_trapper
+            amount = 2
+        }
+    }
+
+    s:STATE_NUNAVUT = {
+        change_resource_potential = {
+            type = building_usfp_fur_trapper
+            amount = 2
+        }
+    }
+
+    s:STATE_MANITOBA = {
+        change_resource_potential = {
+            type = building_usfp_fur_trapper
+            amount = 2
+        }
+    }
+
+    every_state_region = {
+        limit = {
+            is_in_geographic_region = geographic_region_american_bison_range
+        }
+        change_resource_potential = {
+            type = building_usfp_fur_trapper
+            amount = 5
+        }
+    }
 }

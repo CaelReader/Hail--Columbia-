@@ -352,7 +352,7 @@ ideology_usfp_pan_indianist_group = {
 		law_collectivized_agriculture = strongly_approve
 		law_tenant_farmers = strongly_disapprove
 		law_commercialized_agriculture = strongly_disapprove
-		law_homesteading = disapprove
+        law_peasant_proprietorship = disapprove
 	}
 
 	lawgroup_economic_system = {	
@@ -402,7 +402,7 @@ ideology_usfp_native_american_agrarian = {
 		law_tenant_farmers = disapprove
 		law_commercialized_agriculture = neutral
 		law_collectivized_agriculture = strongly_approve
-		law_homesteading = approve
+        law_peasant_proprietorship = approve
 	}		
 
 	lawgroup_taxation = {
@@ -584,7 +584,7 @@ ideology_usfp_afro_american_movement = {
 		law_collectivized_agriculture = neutral
 		law_tenant_farmers = disapprove
 		law_commercialized_agriculture = neutral
-		law_homesteading = neutral
+		law_peasant_proprietorship = neutral
 	}
 
 }
@@ -747,7 +747,7 @@ ideology_usfp_american_constitution_movement = {
 		law_tenant_farmers = neutral
 		law_commercialized_agriculture = neutral
 		law_collectivized_agriculture = neutral
-		law_homesteading = neutral
+		law_peasant_proprietorship = neutral
 	}
 
 	lawgroup_trade_policy = {		
