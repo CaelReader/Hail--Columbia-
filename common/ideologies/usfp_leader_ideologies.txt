@@ -59,7 +59,7 @@ REPLACE_OR_CREATE:ideology_jacksonian_democrat = { #replacing basegame
 
 	non_interest_group_leader_trigger = {
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_racial_segregation
 				has_law_or_variant = law_type:law_legacy_slavery
@@ -217,7 +217,7 @@ REPLACE_OR_CREATE:ideology_usfp_progressive = {
 	non_interest_group_leader_trigger = {
 		# Agitators should have an ideology at odds with current laws
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_compulsory_primary_school
 				has_law_or_variant = law_type:law_graduated_taxation
@@ -335,7 +335,7 @@ REPLACE_OR_CREATE:ideology_usfp_social_gospel_leader = {
 
 	non_interest_group_leader_trigger = {
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_multicultural
 				has_law_or_variant = law_type:law_old_age_pension
@@ -537,7 +537,7 @@ REPLACE_OR_CREATE:ideology_usfp_strongman_populist = {
 
 # 	non_interest_group_leader_trigger = {
 # 		NAND = {
-# 			has_role = agitator
+# 			has_role_of_type = agitator
 # 			owner = {
 # 				has_law_or_variant = law_type:law_protectionism
 # 				has_law_or_variant = law_type:law_interventionism
@@ -1100,7 +1100,7 @@ REPLACE_OR_CREATE:ideology_usfp_universalist = {
 
 	non_interest_group_leader_trigger = {
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_no_colonial_affairs
 				has_law_or_variant = law_type:law_total_separation
@@ -1270,7 +1270,7 @@ REPLACE_OR_CREATE:ideology_usfp_pan_indianist = {
 			has_discrimination_trait_group = heritage_group_indigenous_american
 		}
 		NAND = {
-			has_role = agitator
+			has_role_of_type = agitator
 			owner = {
 				has_law_or_variant = law_type:law_no_colonial_affairs
 			}

@@ -27,7 +27,7 @@ usfp_acw.1 = {
 		#trigger by ACW JE
 		any_scope_character = {
 			has_variable = nast_var
-			has_role = agitator
+			has_role_of_type = agitator
 		}
 		NOT = {
 			has_variable = nast_acw
@@ -878,9 +878,9 @@ usfp_acw.10 = {
 			ordered_scope_general = {
 				position = 0
 				limit = {
-					is_ruler = no
+					is_ruler_of_own_country = no
 					NOR = {
-						has_role = politician
+						has_role_of_type = politician
 						has_template = usa_general_grant
 					}
 				}
@@ -950,9 +950,9 @@ usfp_acw.10 = {
 		trigger = {
 			any_scope_general = {
 				has_template = usa_general_grant
-				is_ruler = no
+				is_ruler_of_own_country = no
 				NOT = {
-					has_role = politician
+					has_role_of_type = politician
 				}
 			}
 		}

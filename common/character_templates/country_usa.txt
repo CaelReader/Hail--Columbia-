@@ -22,14 +22,6 @@ usa_andrew_jackson_template = {
         expert_political_operator
         usfp_trait_expansionist
     }
-    on_created = {
-        set_variable = {
-            name = is_andrew_jackson
-        }
-        set_variable = {
-            name = memento_mori_immunity
-        }
-    }
 }
 
 USA_john_calhoun = {
@@ -108,9 +100,6 @@ USA_charles_finney = {
 		pious
 		cautious
 		basic_political_operator
-	}
-	on_created = {
-		set_variable = memento_mori_immunity
 	}
     home_region = STATE_NEW_YORK
 }
@@ -289,7 +278,9 @@ usa_lincoln_character_template = {
         #guaranteed to spawn if possible
     }
     on_created = {
-        set_variable = memento_mori_immunity
+        set_career_length = {
+            years = 20 #if not assassinated, anyway
+        }
         if = {
             limit = {
                 owner = {
@@ -352,8 +343,11 @@ usa_roosevelt_character_template = {
         latest_usage_date = 1919.1.1
         #guaranteed to spawn if possible
     }
-    on_created = { 
-        set_variable = memento_mori_immunity
+    on_created = {
+        set_career_length = {
+            years = 20
+            random_range = { 1.0 1.5 } # 20-30 years
+        }
     }
 }
 usa_jp_morgan_character_template = {
@@ -1227,6 +1221,7 @@ USA_william_cramp = { # William Cramp, William Cramp and Sons
     birth_date = 1807.1.1 # Approximate, was born in 1807
     dna = dna_william_cramp
     culture = cu:yankee
+    company = company:company_william_cramp
     interest_group = ig_industrialists
     ideology = ideology_moderate
     home_region = STATE_PENNSYLVANIA

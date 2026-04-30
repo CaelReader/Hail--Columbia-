@@ -85,7 +85,6 @@ ecchi_usa_tyler_character_template = {
         latest_usage_date = 1845.1.1
         #guaranteed to spawn if possible
     }
-    on_created = { set_variable =  { name = memento_mori_immunity years = 8 } }
 }
 
 ecchi_usa_adams_character_template = {

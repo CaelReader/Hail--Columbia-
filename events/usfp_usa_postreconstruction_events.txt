@@ -2771,7 +2771,7 @@ usfp_usa_postreconstruction.16 = {
 						usfp_movement_is_racist = yes
 					} 
 				}
-				is_ruler = no
+				is_ruler_of_own_country = no
 				OR = {
 					culture = {
 						NOT = {

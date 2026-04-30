@@ -385,7 +385,7 @@ usfp_filibusters_modifier = {
 	country_military_goods_cost_mult = -0.20
 	building_training_rate_mult = 0.50
 	military_formation_mobilization_speed_mult = 0.25
-	military_formation_movement_speed_mult = 0.1
+	military_formation_army_movement_speed_mult = 0.1
 }
 
 usfp_imperial_ambitions = {
@@ -792,7 +792,7 @@ usfp_america_enters_world_stage_modifier = {
 	country_influence_mult = 0.10
 	country_prestige_from_navy_power_projection_mult = 0.10
 	interest_group_ig_armed_forces_approval_add = 2
-	unit_navy_experience_gain_mult = 0.10
+	ship_crew_experience_gain_mult = 0.10
 }
 
 usfp_spoils_system_decaying_modifier = {
@@ -818,7 +818,7 @@ usfp_banana_wars_score_modifier = {
 usfp_roosevelt_big_stick_agenda_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
     country_leverage_generation_mult = 0.04
-    unit_navy_experience_gain_mult = 0.04
+    ship_crew_experience_gain_mult = 0.04
     country_prestige_from_navy_power_projection_mult = 0.04
 
 }
@@ -826,7 +826,8 @@ usfp_roosevelt_big_stick_agenda_modifier = {
 usfp_roosevelt_biggest_stick_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
     building_group_bg_military_construction_efficiency_add = 0.20
-    unit_navy_offense_mult = 0.10
+    ship_crew_damage_mult = 0.10
+    ship_vulnerability_mult = 0.05
     interest_group_ig_armed_forces_pol_str_mult = 0.25
 }
 
@@ -851,7 +852,7 @@ usfp_war_is_a_racket_modifier = {
 usfp_post_acw_naval_advisors_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_manowar_positive.dds
     country_military_tech_spread_mult = 0.25
-    unit_navy_experience_gain_mult = 0.15
+    ship_crew_experience_gain_mult = 0.15
     country_ship_construction_progress_max_add = 5
     country_yankee_cultural_acceptance_add = 20
     country_dixie_cultural_acceptance_add = 20
@@ -882,7 +883,7 @@ usfp_new_navy_diplo_fleet_complete_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_influence_positive.dds
     country_leverage_generation_mult = 0.15
     country_influence_mult = 0.10
-    unit_navy_experience_gain_mult = 0.20
+    ship_crew_experience_gain_mult = 0.20
     interest_group_ig_armed_forces_approval_add = 3
 }
 
@@ -890,7 +891,7 @@ usfp_new_navy_capital_fleet_complete_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
     power_bloc_cohesion_mult = 0.15
     country_prestige_from_navy_power_projection_mult = 0.15
-    unit_navy_experience_gain_mult = 0.20
+    ship_crew_experience_gain_mult = 0.20
     interest_group_ig_armed_forces_approval_add = 3
 }
 

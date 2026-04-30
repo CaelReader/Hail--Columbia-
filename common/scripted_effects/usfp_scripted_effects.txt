@@ -773,11 +773,11 @@ usfp_cleanup_acw_agitators = {
 					has_ideology = ideology:ideology_abolitionist
 				}
 				NOR = {
-					has_role = politician
-					has_role = general
-					has_role = admiral
+					has_role_of_type = politician
+					has_role_of_type = general
+					has_role_of_type = admiral
 				}
-				is_ruler = no
+				is_ruler_of_own_country = no
 			}
 			kill_character = {
 				hidden = yes
@@ -2390,7 +2390,7 @@ usfp_transfer_danish_islands_effect = {
 						this = root
 						this = scope:greenland_owner_scope
 					}
-					has_interest_marker_in_region = region_north_sea_coast
+					has_interest_marker_in_region = sr:region_north_sea_coast
 				}
 				post_notification = usfp_usa_bought_greenland_third_party
 			}	
@@ -2411,7 +2411,7 @@ usfp_transfer_danish_islands_effect = {
 						this = root
 						this = scope:greenland_owner_scope
 					}
-					has_interest_marker_in_region = region_north_sea_coast
+					has_interest_marker_in_region = sr:region_north_sea_coast
 				}
 				post_notification = usfp_usa_bought_iceland_third_party
 			}
@@ -2433,7 +2433,7 @@ usfp_transfer_danish_islands_effect = {
 						this = root
 						this = scope:greenland_owner_scope
 					}
-					has_interest_marker_in_region = region_caribbean
+					has_interest_marker_in_region = sr:region_caribbean
 				}
 				post_notification = usfp_usa_bought_west_indies_third_party
 			}

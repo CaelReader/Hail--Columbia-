@@ -25,9 +25,6 @@
 			type = increase_relations
 		}
 	}
-	c:MEX = {
-		add_declared_interest = region_great_plains
-	}
 	c:USA = {
 		ig:ig_petty_bourgeoisie = {
 			save_scope_as = pb_ig

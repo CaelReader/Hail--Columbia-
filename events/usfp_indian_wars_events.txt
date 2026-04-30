@@ -266,8 +266,8 @@ usfp_indian_wars.3 = {
 			every_scope_character = {
 				limit = {
 					OR = {
-						has_role = general
-						is_ruler =  yes
+						has_role_of_type = general
+						is_ruler_of_own_country =  yes
 					}
 				}
 				add_modifier = {
@@ -662,7 +662,7 @@ usfp_indian_wars.7 = {
 			any_military_formation = {
 				is_army = yes
 				any_scope_character = {
-					has_role = general
+					has_role_of_type = general
 				}
 				current_hq = p:x33ee3b.land_hq
 			}
@@ -717,7 +717,7 @@ usfp_indian_wars.7 = {
 				limit = {
 					is_army = yes
 					any_scope_character = {
-						has_role = general
+						has_role_of_type = general
 					}
 					current_hq = p:x33ee3b.land_hq
 				}

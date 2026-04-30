@@ -2,22 +2,26 @@
 	c:USA = {
 		create_character = {
 			template = usa_andrew_jackson_template
-			on_created = {
-				set_variable = memento_mori_immunity
-			}
+            set_career_length = {
+                years = 2 #retires after the presidency
+            }
 		}
 
 		create_character = {
 			template = USA_john_calhoun
 			on_created = {
-				set_variable = memento_mori_immunity
+                set_career_length = {
+                    years = 15 #Great Triumvirate should die around 1850
+                }
 			}
 		}
 
 		create_character = {
 			template = USA_henry_clay
 			on_created = {
-				set_variable = memento_mori_immunity
+                set_career_length = {
+                    years = 15 #Great Triumvirate should die around 1850
+                }
 			}
 		}
 
@@ -25,7 +29,9 @@
 			template = ecchi_usa_w_harrison_character_template
 			ig_leader = yes
 			on_created = {
-				set_variable = memento_mori_immunity
+                set_career_length = {
+                    years = 5 #should die if elected in 1840
+                }
 			}
 		}
 
@@ -33,7 +39,9 @@
 			template = USA_daniel_webster
 
 			on_created = {
-				set_variable = memento_mori_immunity
+                set_career_length = {
+                    years = 15 #Great Triumvirate should die around 1850
+                }
 			}
 		}
 
@@ -79,9 +87,9 @@
 		}
 
 		## Executives ##
-		# create_character = {
-		# 	template = USA_william_cramp
-		# }
+		create_character = {
+			template = USA_william_cramp
+		}
 
 		# create_character = {
 		# 	is_admiral = yes

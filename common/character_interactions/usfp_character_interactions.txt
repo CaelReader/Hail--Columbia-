@@ -4,7 +4,7 @@
 	potential = {
 		has_dlc_feature = voice_of_the_people_content
 		owner ?= scope:actor
-		is_ruler = yes
+		is_ruler_of_own_country = yes
 		is_immortal = no
 		owner ?= {
 			NOR = {
@@ -164,7 +164,7 @@ REPLACE:grant_leadership_to_agitator = {
 
 	potential = {
 		has_dlc_feature = agitators
-		has_role = agitator
+		has_role_of_type = agitator
 		exists = owner
 		owner ?= scope:actor
 	}

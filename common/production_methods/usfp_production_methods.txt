@@ -70,7 +70,7 @@ usfp_pm_bison_hunting = {
 }
 
 usfp_pm_subsistence_hunting = {
-    texture = "gfx/interface/icons/production_method_icons/pm_hunting.dds"
+    texture = "gfx/interface/icons/production_method_icons/pm_bow_and_arrow.dds"
 
     unlocking_laws = {
         law_usfp_tribal_land_ownership

@@ -532,7 +532,7 @@ usfp_usa.8 = {
 		c:USA = root
 		any_scope_character = {
 			has_variable = nast_var
-			has_role = agitator
+			has_role_of_type = agitator
 			NOT = {
 				has_variable = agitator_election_participation
 			}

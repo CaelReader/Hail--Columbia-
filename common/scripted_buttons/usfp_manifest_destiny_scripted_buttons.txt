@@ -494,7 +494,7 @@ usfp_cuban_purchase_button = {
 				interest_group = {
 					is_in_government = yes
 				}
-				is_ruler = yes
+				is_ruler_of_own_country = yes
 			}
 			usfp_manifest_destiny_pro_expansion_trigger = yes
 		}

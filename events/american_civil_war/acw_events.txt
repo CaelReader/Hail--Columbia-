@@ -74,7 +74,7 @@ acw_events.1 = {
         default_option = yes
 		random_scope_character = {
 			limit = {
-				has_role = agitator
+				has_role_of_type = agitator
 				usfp_anti_slavery_leader_trigger = yes
 			}
 			add_modifier = {
@@ -97,7 +97,7 @@ acw_events.1 = {
 		name = acw_events.1.b
 		random_scope_character = {
 			limit = {
-				has_role = agitator
+				has_role_of_type = agitator
 				has_ideology = ideology:ideology_slaver
 			}
 			add_modifier = {
@@ -545,7 +545,7 @@ acw_events.6 = {
 			ig_counts_as_marginal = no
 			any_scope_character = {
 				has_ideology = ideology:ideology_slaver
-				is_ruler = no
+				is_ruler_of_own_country = no
 			}
 		}
 		any_interest_group = {
@@ -556,7 +556,7 @@ acw_events.6 = {
 					has_ideology = ideology:ideology_abolitionist
 					has_ideology = ideology:ideology_usfp_abolitionist_radical
 				}
-				is_ruler = no
+				is_ruler_of_own_country = no
 			}
 		}
 	}
@@ -573,14 +573,14 @@ acw_events.6 = {
 				is_insurrectionary = no
 				any_scope_character = {
 					has_ideology = ideology:ideology_slaver
-					is_ruler = no
+					is_ruler_of_own_country = no
 				}
 			}
 			save_scope_as = preston_brooks_ig
 			random_scope_character = {
 				limit = {
 					has_ideology = ideology:ideology_slaver
-					is_ruler = no
+					is_ruler_of_own_country = no
 				}
 				save_scope_as = preston_brooks_leader
 			}
@@ -594,7 +594,7 @@ acw_events.6 = {
 						has_ideology = ideology:ideology_abolitionist
 						has_ideology = ideology:ideology_usfp_abolitionist_radical
 					}
-					is_ruler = no
+					is_ruler_of_own_country = no
 				}
 			}
 			save_scope_as = charles_sumner_ig
@@ -604,7 +604,7 @@ acw_events.6 = {
 						has_ideology = ideology:ideology_abolitionist
 						has_ideology = ideology:ideology_usfp_abolitionist_radical
 					}
-					is_ruler = no
+					is_ruler_of_own_country = no
 				}
 				save_scope_as = charles_sumner_leader
 			}
@@ -965,12 +965,12 @@ acw_events.9 = {
 		if = {
 			limit = {
 				any_scope_character = {
-					has_role = general
+					has_role_of_type = general
 				}
 			}
 			random_scope_character = {
 				limit = {
-					has_role = general
+					has_role_of_type = general
 				}
 				save_scope_as = acw_victory_general_scope
 			}

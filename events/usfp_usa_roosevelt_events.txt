@@ -113,7 +113,6 @@ usfp_usa_roosevelt.2 = {
             add_modifier = {
                 name = usfp_strenuous_life_modifier
             }
-            set_variable = memento_mori_immunity
         }
         ai_chance = {
             base = 100

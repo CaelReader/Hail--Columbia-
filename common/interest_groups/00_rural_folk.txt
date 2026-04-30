@@ -223,8 +223,10 @@
 		NOR = {
 			AND = {
 				is_pop_type = aristocrats
-				NOT = {
+				NOR = {
 					culture = cu:yankee #USFP
+                    culture = cu:usfp_american
+                    culture = cu:usfp_american_indian
 				}
 			}
 			is_pop_type = capitalists
@@ -314,7 +316,7 @@
 
 		multiply = {
 			desc = "LEADER_POPULARITY"
-			scope:interest_group = {
+			scope:interest_group ?= {
 				leader ?= {
 					value = popularity
 					multiply = 0.0025
@@ -326,7 +328,7 @@
 		}
 		if = {
 			limit = {
-				scope:interest_group = {
+				scope:interest_group ?= {
 					is_in_government = yes
 				}
 			}
@@ -340,7 +342,7 @@
 		
 		if = {
 			limit = {
-				scope:interest_group = {
+				scope:interest_group ?= {
 					is_in_government = yes
 				}
 			}
@@ -353,7 +355,7 @@
 		}
 		if = {
 			limit = {
-				scope:interest_group = {
+				scope:interest_group ?= {
 					is_in_government = no
 				}
 			}
@@ -390,7 +392,7 @@
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_homesteading
+					has_law_or_variant = law_type:law_peasant_proprietorship
 				}
 			}
 			multiply = {
@@ -430,6 +432,10 @@
 		value = 1.0
 	}
 
+	magnate_weight = {
+		value = 0.25
+	}
+
 	executive_weight = {
 		value = 0.1
 		
@@ -459,6 +465,10 @@
 
 	female_executive_chance = {
 		value = 0.0
+	}
+
+	female_monarch_chance = {
+		value = 0.025
 	}
 
 	female_politician_chance = {
@@ -521,16 +531,30 @@
 		}		
 	}
 
-	# The chance that a commander belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular commander in the IG
-	commander_leader_chance = {
-		value = 0.5
-		multiply = ig_commander_leader_chance_mult
+	# Multiplier applied to the weight for an appropriate commander will be selected from the character pool to lead the IG
+	# root = interest group
+	commander_leader_weight = {
+		value = 0.75
 	}
 
-	# The chance that a executive belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular executive in the IG
-	executive_leader_chance = {
-		value = 0.2
+	# Multiplier applied to the weight for an appropriate magnate will be selected from the character pool to lead the IG
+	# root = interest group
+	magnate_leader_weight = {
+		value = 0.25
+		if = {
+			limit = {
+				c:JAP ?= owner
+				NOT = {
+					has_variable = japan_restoration_complete
+				}
+			}
+			add = 5
+		}
+	}
+
+	# Multiplier applied to the weight for an appropriate executive will be selected from the character pool to lead the IG
+	# root = interest group
+	executive_leader_weight = {
+		value = 0.1
 	}
 }

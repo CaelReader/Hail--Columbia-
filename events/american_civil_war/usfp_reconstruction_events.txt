@@ -518,13 +518,13 @@ usfp_reconstruction.7 = {
 		if = {
 			limit = {
 				any_scope_character = {
-					has_role = agitator
+					has_role_of_type = agitator
 					has_ideology = ideology:ideology_slaver
 				}
 			 }
 			 random_scope_character = {
 				limit = {
-					has_role = agitator
+					has_role_of_type = agitator
 					has_ideology = ideology:ideology_slaver
 				}
 				transfer_character = c:BRZ
@@ -956,7 +956,7 @@ usfp_reconstruction.14 = {
 			limit = {
 				is_in_government = yes
 				leader = {
-					is_ruler = no
+					is_ruler_of_own_country = no
 					NOT = {
 						has_ideology = ideology:ideology_slaver
 					}

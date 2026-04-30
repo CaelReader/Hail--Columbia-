@@ -211,9 +211,9 @@ acw_je_events.1 = {
                     if = {
                         limit = {
                             OR = {
-                                has_role = agitator
-                                has_role = admiral
-                                has_role = general
+                                has_role_of_type = agitator
+                                has_role_of_type = admiral
+                                has_role_of_type = general
                             }
                         }
                         transfer_character = c:USA
@@ -228,7 +228,7 @@ acw_je_events.1 = {
 				limit = {
 					has_variable = historical_csa
 					NOR = {
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 						is_heir = yes
 					}
 				}

@@ -1508,13 +1508,13 @@ usfp_a_house_divided.15 = {
 				game_date > 1848.1.1 
 				any_scope_character = {
 					has_template = ecchi_usa_van_buren_character_template
-					is_ruler = no
+					is_ruler_of_own_country = no
 				}
 			}
 			random_scope_character = {
 				limit = {
 					has_template = ecchi_usa_van_buren_character_template
-					is_ruler = no
+					is_ruler_of_own_country = no
 				}
 				set_ideology = ideology:ideology_abolitionist
 			}

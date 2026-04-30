@@ -765,9 +765,9 @@ usfp_neoconfederate_characters_actions = {
                     if = {
                         limit = {
                             OR = {
-                                has_role = agitator
-                                has_role = admiral
-                                has_role = general
+                                has_role_of_type = agitator
+                                has_role_of_type = admiral
+                                has_role_of_type = general
                             }
                         }
                         transfer_character = c:USA
