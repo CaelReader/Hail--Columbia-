@@ -427,7 +427,7 @@ usfp_party_weight_agrarian_add = {
 			}
 			owner.ig:ig_rural_folk = {
 				is_powerful = yes
-				party = owner.py:agrarian_party
+				party ?= owner.py:agrarian_party
 			}
 		}
 		add = {

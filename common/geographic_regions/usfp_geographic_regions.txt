@@ -109,9 +109,22 @@ geographic_region_pacific = {
         sr:region_northeast_asia
         sr:region_indonesia
         sr:region_pacific_coast
-        sr:region_central_america
         sr:region_andes
         sr:region_la_plata
+    }
+
+    state_regions = {
+        STATE_SHENGJING
+        STATE_BEIJING
+        STATE_ZHILI
+        STATE_SHANDONG
+        STATE_JIANGSU
+        STATE_SUZHOU
+        STATE_ZHEJIANG
+        STATE_FUJIAN
+        STATE_FORMOSA
+        STATE_GUANGDONG
+        STATE_SHAOZHOU
     }
 }
 

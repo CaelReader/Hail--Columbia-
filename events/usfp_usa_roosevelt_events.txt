@@ -1,4 +1,4 @@
-namespace = usfp_usa_roosevelt
+﻿namespace = usfp_usa_roosevelt
 ###### Hail, Columbia! by CaelReader ######
 
 #Yellowstone National Park
@@ -356,7 +356,7 @@ usfp_usa_roosevelt.5 = {
     trigger = {
         year >= 1906
         any_scope_state = {
-            is_in_geographic_region = usfp_geographic_region_dixie
+            is_in_geographic_region = geographic_region_dixie_old
             any_scope_pop = {
                 is_pop_type = soldiers
                 culture = cu:afro_american
@@ -370,7 +370,7 @@ usfp_usa_roosevelt.5 = {
     immediate = {
         ordered_scope_state = {
             limit = {
-                is_in_geographic_region = usfp_geographic_region_dixie
+                is_in_geographic_region = geographic_region_dixie_old
                 any_scope_pop = {
                     is_pop_type = soldiers
                     culture = cu:afro_american

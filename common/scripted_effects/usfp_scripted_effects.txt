@@ -2390,7 +2390,7 @@ usfp_transfer_danish_islands_effect = {
 						this = root
 						this = scope:greenland_owner_scope
 					}
-					has_interest_marker_in_region = sr:region_north_sea_coast
+					has_interest_marker_in_region = sr:region_northern_europe
 				}
 				post_notification = usfp_usa_bought_greenland_third_party
 			}	
@@ -2411,7 +2411,7 @@ usfp_transfer_danish_islands_effect = {
 						this = root
 						this = scope:greenland_owner_scope
 					}
-					has_interest_marker_in_region = sr:region_north_sea_coast
+					has_interest_marker_in_region = sr:region_northern_europe
 				}
 				post_notification = usfp_usa_bought_iceland_third_party
 			}

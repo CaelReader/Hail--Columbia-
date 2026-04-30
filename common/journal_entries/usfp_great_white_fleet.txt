@@ -81,9 +81,6 @@ je_usfp_the_new_navy = {
         has_technology_researched = monitor_tech
         has_technology_researched = jeune_ecole
         any_country_in_pacific = {
-            capital = {
-                is_in_geographic_region = geographic_region_pacific
-            }
             NOT = {
                 this = root
             }

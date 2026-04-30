@@ -133,7 +133,7 @@ USA_winfield_scott = {
 	ig_leader = yes
 	interest_group = ig_armed_forces
 	ideology = ideology_abolitionist #USFP
-	hq = region_new_england
+	hq = region_atlantic_coast
 	traits = {
 		traditionalist_commander
 		basic_diplomat

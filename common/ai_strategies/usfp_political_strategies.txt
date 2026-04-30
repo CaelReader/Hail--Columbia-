@@ -387,6 +387,15 @@ ai_strategy_manifest_destiny = {
 		}
 	}
 
+    strategic_region_scores = {
+        if = {
+            limit = {
+                is_in_geographic_region = geographic_region_north_america
+            }
+            add = 1000
+        }
+    }
+
 	secret_goal_scores = {
 		conquer = {
 			trigger = {
@@ -638,6 +647,23 @@ ai_strategy_monroe_doctrine = {
 		force_nationalization = 1.5		
 	}
 
+    strategic_region_scores = {
+        if = {
+            limit = {
+                is_in_geographic_region = geographic_region_north_america
+            }
+            add = 1000
+        }
+        if = {
+            limit = {
+                scope:region = {
+                    is_in_geographic_region = geographic_region_americas
+                }
+            }
+            add = 250
+        }
+    }
+
 	secret_goal_weights = {
 		dominate = 0.5
 		protect = 0.0
@@ -852,29 +878,34 @@ ai_strategy_pacific_empire = {
 	}
 	
 	strategic_region_scores = {
-		region_japan = { # Great Powers with significant navies should pay attention to Japan
-			if = {
-				limit = {
-					exists = c:JAP
-					c:JAP = { has_law_or_variant = law_type:law_isolationism }
-					country_rank = rank_value:great_power
-					navy_size >= 25
-				}
-				add = 1000
-			}				
-		}
-		region_oceania = {
-			add = 1000
-		}
-		region_caribbean = {
-			add = 1000
-		}
-		region_mexico = {
-			add = 1000
-		}
-		region_central_america = {
-			add = 1000
-		}
+        if = { # Great Powers with significant navies should pay attention to Japan
+            limit = {
+                scope:region = {
+                    this = sr:region_northeast_asia
+                }
+            }
+            if = {
+                limit = {
+                    exists = c:JAP
+                    c:JAP ?= { has_law_or_variant = law_type:law_isolationism }
+                    country_rank = rank_value:great_power
+                    navy_size >= 25
+                }
+                add = 1000
+            }
+        }
+        if = {
+            limit = {
+                scope:region = sr:region_oceania
+            }
+            add = 1000
+        }
+        if = {
+            limit = {
+                scope:region = sr:region_central_america
+            }
+            add = 1000
+        }
 	}
 	
 secret_goal_scores = {

@@ -120,7 +120,7 @@ usfp_banana_wars.1 = {
     #reject
     option = {
         name = usfp_banana_wars.1.b
-        ig:ig_industralists ?= {
+        ig:ig_industrialists ?= {
             add_modifier = {
                 name = usfp_rejected_banana_wars_ig_modifier
                 years = 4
@@ -677,7 +677,10 @@ usfp_banana_wars.5 = {
         ai_chance = {
             base = 0
             modifier = {
-                add = c:USA.relations:ROOT
+                trigger = {
+                    c:USA.relations:ROOT >= relations_threshold:cordial
+                }
+                add = 25
             }
         }
     }

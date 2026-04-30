@@ -549,7 +549,7 @@ usfp_danish_purchases.4 = {
 		}
 		every_country = {
 			limit = {
-				has_interest_marker_in_region = sr:region_north_sea_coast
+				has_interest_marker_in_region = sr:region_northern_europe
 			}
 			post_notification = usa_claiming_greenland
 		}

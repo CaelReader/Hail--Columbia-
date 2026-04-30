@@ -107,8 +107,6 @@ acw_je_events.1 = {
 					}
 					activate_law = law_type:law_presidential_republic
 				}
-				add_declared_interest = region_england
-				add_declared_interest = region_france
 				activate_law = law_type:law_agrarianism
 				activate_law = law_type:law_free_trade
 				activate_law = law_type:law_national_supremacy
@@ -229,7 +227,7 @@ acw_je_events.1 = {
 					has_variable = historical_csa
 					NOR = {
 						is_ruler_of_own_country = yes
-						is_heir = yes
+						is_heir_of_own_country = yes
 					}
 				}
 				transfer_character = c:CSA
