@@ -14,7 +14,10 @@
 	}
 
 	possible = {
-		has_interest_marker_in_region = sr:region_pacific_coast
+		OR = {
+		    has_interest_marker_in_region = sr:region_pacific_coast
+			has_interest_marker_in_region = sr:region_great_plains
+		}
 		is_at_war = no
 		# has_technology_researched = quinine USFP: why would this be delayed so late?
 		any_scope_character = {

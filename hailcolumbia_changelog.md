@@ -869,8 +869,9 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
 
 # 8.0 "Roosevelt"
 ## New Content
-    New Domestic and Foreign Agenda JEs for Theodore Roosevelt
-    New Banana Wars JE with 8 events promoting intervention in Latin America on behalf of your Companies
+    Domestic and Foreign Agenda JEs for Theodore Roosevelt
+    Banana Wars JE with 8 events promoting intervention in Latin America on behalf of your Companies
+    Benevolent Assimilation JE with 11 events for the American colonization of the Philippines
     Added The New Navy JE for modernizing your fleets in the face of rising Pacific powers
     Added small Journal Entry if you take All of Mexico
     New events: Yellowstone National Park, Roosevelt Shot, Booker T Washington at the White House, Brownsville Affair, American Naval Advisors

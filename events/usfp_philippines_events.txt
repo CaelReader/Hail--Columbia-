@@ -465,6 +465,12 @@ usfp_philippines.5 = {
                 activate_law = c:USA.active_law:lawgroup_governance_principles.type
                 activate_law = law_type:law_oligarchy
                 remove_modifier = usfp_philippines_military_government_modifier
+                active_law:lawgroup_distribution_of_power ?= {
+                    add_amendment = {
+                        type =  amendment_usfp_philippine_assembly
+                        sponsor = c:PHI.ig:ig_intelligentsia
+                    }
+                }
             }
         }
     }

@@ -620,3 +620,38 @@ amendment_english_second_language = {
 
     amendment_activism_multiplier = 0.0
 }
+
+amendment_usfp_philippine_assembly = {
+
+    parent = law_census_voting
+
+    allowed_laws = {
+        law_oligarchy
+    }
+
+    modifier = {
+        country_legitimacy_govt_total_votes_add = 40
+        country_voting_power_wealth_threshold_add = 10
+        country_voting_power_from_literacy_add = 20
+        country_electoral_confidence_impact_mult = -0.4
+    }
+
+    possible = {
+        c:PHI ?= root
+    }
+
+    would_sponsor = {
+        always = no
+    }
+
+    ai_will_revoke = {
+        always = yes
+    }
+
+    can_repeal = {
+        legitimacy >= legitimacy_to_repeal_amendment
+        is_subject = no
+    }
+
+    amendment_activism_multiplier = 0.5
+}

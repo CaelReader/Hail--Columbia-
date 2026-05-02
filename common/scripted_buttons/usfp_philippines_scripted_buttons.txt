@@ -28,6 +28,12 @@
         c:PHI = {
             activate_law = root.active_law:lawgroup_governance_principles.type
             activate_law = law_type:law_oligarchy
+            active_law:lawgroup_distribution_of_power ?= {
+                add_amendment = {
+                    type =  amendment_usfp_philippine_assembly
+                    sponsor = c:PHI.ig:ig_intelligentsia
+                }
+            }
             remove_modifier = usfp_philippines_military_government_modifier
             trigger_event = usfp_philippines.5
         }
