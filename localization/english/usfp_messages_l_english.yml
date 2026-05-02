@@ -191,7 +191,6 @@ notification_usfp_cuba_filibusters_failed_name: "Filibusters Captured"
 notification_usfp_cuba_filibusters_failed_desc: "[SCOPE.sCountry('cuba_scope').GetName] has captured and executed the filibusters who departed from our shores, harming our [concept_relations]."
 notification_usfp_cuba_filibusters_failed_tooltip: "#header $notification_usfp_cuba_filibusters_failed_name$#!\n$notification_usfp_cuba_filibusters_failed_desc$"
 
-
- notification_ usfp_spoils_system_notification_name: "Offices Doled Out"
- notification_ usfp_spoils_system_notification_desc: "The appointment of new officials under the [GetAmendmentType('amendment_usfp_spoils_system').GetName] has disrupted our [concept_bureaucracy]."
- notification_ usfp_spoils_system_notification_tooltip: "#header $notification_ usfp_spoils_system_notification_name$#!\n$notification_ usfp_spoils_system_notification_desc$"
+ notification_usfp_spoils_system_notification_name: "Offices Doled Out"
+ notification_usfp_spoils_system_notification_desc: "The appointment of new officials under the [GetAmendmentType('amendment_usfp_spoils_system').GetName] has disrupted our [concept_bureaucracy]."
+ notification_usfp_spoils_system_notification_tooltip: "#header $notification_ usfp_spoils_system_notification_name$#!\n$notification_ usfp_spoils_system_notification_desc$"

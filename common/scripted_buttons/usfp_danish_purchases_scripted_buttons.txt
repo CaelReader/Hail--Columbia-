@@ -193,7 +193,7 @@ usfp_danish_purchase_buy_danish_west_indies_button = {
 	}
 
 	possible = {
-		has_interest_marker_in_region = sr:region_caribbean
+		has_interest_marker_in_region = sr:region_central_america
 		is_at_war = no
 		custom_tooltip = {
 			text = not_sent_offer_recently

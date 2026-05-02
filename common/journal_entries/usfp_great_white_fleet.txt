@@ -200,7 +200,7 @@ je_usfp_the_new_navy = {
 
     on_complete = {
         set_variable =  new_navy_completed
-        trigger_event = usfp_usa_navy.2
+        trigger_event = usfp_usa_navy.3
     }
 
     event_outcome_completed_effect_desc = {
@@ -208,7 +208,7 @@ je_usfp_the_new_navy = {
         effect = {
             execute_event_option = {
                 option = 0
-                event = usfp_usa_navy.2
+                event = usfp_usa_navy.3
             }
         }
     }
@@ -218,7 +218,7 @@ je_usfp_the_new_navy = {
         effect = {
             execute_event_option = {
                 option = 1
-                event = usfp_usa_navy.2
+                event = usfp_usa_navy.3
             }
         }
     }

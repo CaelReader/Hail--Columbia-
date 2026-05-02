@@ -1377,7 +1377,7 @@ usfp_acw.13 = {
         c:MEX = {
 			make_independent = yes
 		}
-		create_truce = {
+		create_bidirectional_truce = {
 			country = c:MEX
 			months = 60
 		}
@@ -1404,26 +1404,28 @@ usfp_acw.13 = {
             limit = {
                 is_at_war = yes
             }
-            create_diplomatic_play = {
-                initiator = c:MEX
-                target_country = root
-                type = dp_independence
-                war = yes
-                add_war_goal = {
-                    holder = root
-                    target_country = c:MEX
-                    type = reduce_autonomy
+            c:MEX = {
+                create_diplomatic_play = {
+                    target_country = root
+                    type = dp_independence
+                    war = yes
+                    add_war_goal = {
+                        holder = root
+                        target_country = c:MEX
+                        type = reduce_autonomy
+                    }
                 }
             }
         } else = {
-            create_diplomatic_play = {
-                initiator = c:MEX
-                target_country = root
-                type = dp_independence
-                add_war_goal = {
-                    holder = root
-                    target_country = c:MEX
-                    type = reduce_autonomy
+            c:MEX = {
+                create_diplomatic_play = {
+                    target_country = root
+                    type = dp_independence
+                    add_war_goal = {
+                        holder = root
+                        target_country = c:MEX
+                        type = reduce_autonomy
+                    }
                 }
             }
         }

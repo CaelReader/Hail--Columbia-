@@ -283,9 +283,7 @@ je_acw_war = {
 		usfp_break_compromises_effect = yes
 		if = {
 			limit = {
-				je:je_usfp_american_constitution = {
-					has_modifier = usfp_second_party_system_modifier
-				} 
+                usfp_has_second_party_system = yes
 			}
 			trigger_event = {
 				id = usfp_a_house_divided.15

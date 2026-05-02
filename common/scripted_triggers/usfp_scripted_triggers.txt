@@ -879,3 +879,10 @@ usfp_roosevelt_foreign_agenda_complete = {
     }
 
 }
+
+usfp_has_second_party_system = {
+    has_journal_entry = je_usfp_american_constitution
+    je:je_usfp_american_constitution ?= {
+        has_modifier = usfp_second_party_system_modifier
+    }
+}

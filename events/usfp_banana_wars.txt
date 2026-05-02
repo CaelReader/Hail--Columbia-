@@ -219,6 +219,7 @@ usfp_banana_wars.2 = {
             SECOND = root
             ANTI_AMOUNT = -2
             PRO_AMOUNT = -2
+            FACTOR = appeasement_special_events_negative
         }
         scope:massacre_subject = {
             post_notification = usfp_marines_banana_wars_massacre
@@ -829,7 +830,7 @@ usfp_banana_wars.7 = {
 
     trigger = {
         any_subject_or_below = {
-            is_in_geographic_region = usfp_geographic_region_latin_america
+            is_in_geographic_region = geographic_region_latin_america
             any_political_movement = {
                 OR = {
                     movement_is_socialist = yes
@@ -851,7 +852,7 @@ usfp_banana_wars.7 = {
     immediate = {
         random_subject_or_below = {
             limit = {
-                is_in_geographic_region = usfp_geographic_region_latin_america
+                is_in_geographic_region = geographic_region_latin_america
                 any_political_movement = {
                     OR = {
                         movement_is_socialist = yes

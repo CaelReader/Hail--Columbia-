@@ -1433,6 +1433,12 @@ usfp_a_house_divided.15 = {
 		py:usfp_republican_party = {
 			save_scope_as = whig_scope
 		}
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = movement_pro_slavery
+            }
+            save_scope_as = pro_slavery_movement
+        }
 	}
 
 	trigger = {
@@ -1473,7 +1479,9 @@ usfp_a_house_divided.15 = {
 			}
 		}
 		custom_tooltip = usfp_a_house_divided.15.a.tt
-		remove_variable = whigs_party
+		custom_tooltip = abolitionists_can_become_leaders
+        custom_tooltip = pro_slavery_movement_abolitionist_leader_warning
+        remove_variable = whigs_party
 		ig:ig_landowners = {
 			add_modifier = {
 				name = usfp_ig_sectional_realignment
@@ -2122,7 +2130,7 @@ usfp_a_house_divided.22 = {
 		ordered_scope_state = {
 			position = 0
 			limit = {
-				region = sr:region_new_england
+                is_in_geographic_region = geographic_region_new_england_old
 			}
 			order_by = total_urbanization
 			add_modifier = {

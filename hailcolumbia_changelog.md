@@ -876,6 +876,8 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
     New events: Yellowstone National Park, Roosevelt Shot, Booker T Washington at the White House, Brownsville Affair, American Naval Advisors
     Added Fur Trapping Grounds buildings with a special PM for Bison Hunting
 ## 1.13 Compatibility
+    Added home states to historical character templates
+    Abolitionists can't be selected for IG Leadership until the Whigs collapse
     Updated strategic region triggers to new map changes
     The Ironclad Concept event once again spawns the USS Monitor (now as a real Monitor-class ship)
 ## Updates
@@ -895,6 +897,7 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
     Political Machines can now be removed by decision if you abolish the constitution
     Fighting the Political Machines is now more expensive
     Completing the Progressive Era now requires abolishing the Spoils System
+    Added tooltip to the Collapse of the Whigs warning the player that the pro-slavery movement will instantly seceed if an Abolitionist is elected
 ## Fixes
     Failing the Constitution JE now removes the American System law (and re-adds it if you are on Protectionism when you restore the Constitution)
     A House Divided will now force-spawn an abolitionist movement if it vanishes for some reason

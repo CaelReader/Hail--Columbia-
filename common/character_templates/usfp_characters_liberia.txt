@@ -10,6 +10,7 @@ usfp_lib_anthony_d_williams = {
     religion = rel:protestant
 	female = no
 	birth_date = 1810.6.6 #uknown
+    home_region = STATE_LIBERIA
     traits = {
         pious basic_colonial_administrator
     }

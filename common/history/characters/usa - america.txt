@@ -2,8 +2,11 @@
 	c:USA = {
 		create_character = {
 			template = usa_andrew_jackson_template
-            set_career_length = {
-                years = 2 #retires after the presidency
+            on_created = {
+                set_career_length = {
+                    years = 2 #retires after the presidency
+                }
+                set_variable = { name = is_andrew_jackson }
             }
 		}
 
@@ -100,7 +103,6 @@
 		# 	birth_date = 1783.2.18
 		# 	interest_group = ig_armed_forces
 		# 	ideology = ideology_moderate
-		# 	hq = region_new_england
 		# 	traits = {
 		# 		basic_diplomat
 		# 		tactful
