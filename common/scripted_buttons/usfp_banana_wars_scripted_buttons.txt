@@ -1,0 +1,100 @@
+﻿usfp_good_neighbor_policy_button = {
+    name = "usfp_good_neighbor_policy"
+    desc = "usfp_good_neighbor_policy_desc"
+
+    visible = {
+        NOT = {
+            any_scope_state = {
+                is_in_geographic_region = geographic_region_caribbean_coast
+                is_incorporated = yes
+                count > 2
+            }
+        }
+    }
+
+    possible = {
+        OR = {
+            ruler = {
+                usfp_manifest_destiny_anti_expansion_trigger = yes
+            }
+            AND = {
+                has_technology_researched = multilateral_alliances
+                ruler = {
+                    usfp_manifest_destiny_not_pro_expansion_trigger = yes
+                }
+            }
+        }
+        usfp_manifest_destiny_less_or_equal_trigger = {value = 10}
+    }
+
+    effect = {
+        change_infamy = -15
+        usfp_manifest_less_destiny_effect = yes
+        every_country_in_latin_america = {
+            limit = {
+                capital = {
+                    is_in_geographic_region = geographic_region_latin_america
+                }
+            }
+            if = {
+                limit = {
+                    is_subject_of = root
+                }
+                make_independent = yes
+            }
+        }
+        custom_tooltip = {
+            text = establish_truce_with_latin_america
+            every_country_in_latin_america = {
+                limit = {
+                    capital = {
+                        is_in_geographic_region = geographic_region_latin_america
+                    }
+                }
+                save_scope_as = target_country
+                root = {
+                    create_unidirectional_truce = {
+                        country = scope:target_country
+                        months = 60
+                    }
+                }
+                trigger_event = usfp_banana_wars.5
+            }
+        }
+        custom_tooltip = {
+            text = close_banana_wars
+            set_variable = rejected_banana_wars
+        }
+        set_variable = banana_wars_finished
+        if = {
+            limit = {
+                any_scope_state = {
+                    is_in_geographic_region = geographic_region_central_america_old
+                    is_treaty_port = no
+                    NOT = {
+                        has_building = building_panama_canal
+                    }
+                }
+            }
+            trigger_event = {
+                id = usfp_banana_wars.8
+                days = 30
+            }
+        }
+    }
+
+    ai_chance = {
+        value = 0
+        if = {
+            limit = {
+                ruler = {
+                    OR = {
+                        usfp_manifest_destiny_anti_expansion_trigger = yes
+                        has_template = ecchi_usa_f_roosevelt_character_template
+                    }
+                }
+            }
+            add = 1000
+        }
+    }
+}

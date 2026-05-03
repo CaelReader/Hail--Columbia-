@@ -91,7 +91,8 @@ usfp_indian_postremoval.1 = {
 	#leave them be
 	option = {
 		name = usfp_indian_postremoval.1.b
-		cu:usfp_american_indian = {
+        usfp_manifest_less_destiny_high_effect = yes
+        cu:usfp_american_indian = {
 			add_fervor = 5
 		}
 		every_scope_state = {
@@ -124,7 +125,6 @@ usfp_indian_postremoval.1 = {
 				years = 1
 			}
 		}
-		usfp_manifest_less_destiny_high_effect = yes
 		ai_chance = {
 			base = 0
 		}

@@ -1255,9 +1255,9 @@ usfp_gilded_age.15 = {
 					is_building_type = building_arms_industry
 					is_building_type = building_munition_plant
 					is_building_type = building_artillery_foundry
-					is_building_type = building_military_shipyard
 					is_building_group = bg_subsistence_agriculture
 					is_building_group = bg_subsistence_ranching
+                    is_building_type = building_usfp_fur_trapper
 				}
 			}
 			state_has_building_levels > 20
@@ -1281,9 +1281,9 @@ usfp_gilded_age.15 = {
 						is_building_type = building_arms_industry
 						is_building_type = building_munition_plant
 						is_building_type = building_artillery_foundry
-						is_building_type = building_military_shipyard
 						is_building_group = bg_subsistence_agriculture
 						is_building_group = bg_subsistence_ranching
+                        is_building_type = building_usfp_fur_trapper
 					}
 				}
 				state_has_building_levels > 20
@@ -1297,9 +1297,9 @@ usfp_gilded_age.15 = {
 						is_building_type = building_arms_industry
 						is_building_type = building_munition_plant
 						is_building_type = building_artillery_foundry
-						is_building_type = building_military_shipyard
 						is_building_group = bg_subsistence_agriculture
 						is_building_group = bg_subsistence_ranching
+                        is_building_type = building_usfp_fur_trapper
 					}
 				}
 				save_scope_as = company_town_building_scope

@@ -1,0 +1,379 @@
+﻿#from USCWF
+REPLACE:ideology_republican_paternalistic = { # Replacing basegame to stop stupid US autocratic coups
+    icon = "gfx/interface/icons/ideology_icons/republican_paternalistic.dds"
+
+    lawgroup_governance_principles = {
+        law_presidential_republic = approve
+        law_parliamentary_republic = approve
+        law_theocracy = neutral #approve
+        law_monarchy = neutral
+        law_council_republic = disapprove
+        law_corporate_state = neutral
+    }
+
+    lawgroup_distribution_of_power = {
+        law_single_party_state = neutral
+        law_landed_voting = strongly_approve
+        law_oligarchy = strongly_approve
+        law_autocracy = neutral #approve
+        law_wealth_voting = neutral
+        law_census_voting = disapprove
+        law_universal_suffrage = strongly_disapprove
+        law_anarchy = strongly_disapprove
+        law_technocracy = strongly_disapprove
+    }
+
+    lawgroup_bureaucracy = {
+        law_hereditary_bureaucrats = approve
+        law_appointed_bureaucrats = neutral
+        law_elected_bureaucrats = neutral
+    }
+
+    lawgroup_policing = {
+        law_local_police = approve
+        law_dedicated_police = neutral
+        law_militarized_police = neutral
+        law_no_police = disapprove
+    }
+
+    lawgroup_economic_system = {
+        law_traditionalism = neutral
+        law_agrarianism = approve
+        law_interventionism = neutral
+        law_industry_banned = disapprove
+        law_laissez_faire = neutral
+        law_cooperative_ownership = strongly_disapprove
+        law_command_economy = strongly_disapprove
+        law_extraction_economy = disapprove
+    }
+}
+
+#from USCWF
+REPLACE_OR_CREATE:ideology_jacksonian_democrat = { #replacing basegame
+    icon = "gfx/interface/icons/ideology_icons/ideology_leader/jackson_democrat.dds"
+
+    character_ideology = yes
+
+    lawgroup_governance_principles = {
+        law_monarchy = strongly_disapprove
+        law_theocracy = strongly_disapprove
+        law_council_republic = strongly_disapprove
+        law_parliamentary_republic = neutral
+        law_corporate_state = disapprove
+        law_presidential_republic = approve
+    }
+
+    lawgroup_distribution_of_power = {
+        law_universal_suffrage = strongly_approve
+        law_census_voting = approve
+        law_wealth_voting = neutral
+        law_landed_voting = disapprove
+        law_anarchy = strongly_disapprove
+        law_oligarchy = strongly_disapprove
+        law_autocracy = strongly_disapprove
+        law_single_party_state = disapprove
+        law_technocracy = strongly_disapprove
+    }
+
+    lawgroup_bureaucracy = {
+        law_elected_bureaucrats = approve
+        law_appointed_bureaucrats = neutral
+        law_hereditary_bureaucrats = disapprove
+    }
+
+    #Citizenship and Slavery is a divided issue so neutral across
+
+    lawgroup_colonization = {
+        law_no_colonial_affairs = strongly_disapprove
+        law_colonial_resettlement = strongly_disapprove
+        law_colonial_exploitation = strongly_disapprove
+        law_frontier_colonization = strongly_approve
+    }
+
+    lawgroup_land_reform = {
+        law_serfdom = strongly_disapprove
+        law_collectivized_agriculture = disapprove
+        law_tenant_farmers = disapprove
+        law_commercialized_agriculture = neutral
+        law_peasant_proprietorship = strongly_approve
+    }
+
+    country_trigger = {
+        usfp_country_is_american = yes
+        has_variable = whigs_party
+    }
+
+    interest_group_leader_trigger = {
+        ideology_jacksonian_democrat_valid_trigger = yes
+    }
+
+    non_interest_group_leader_trigger = {
+        NAND = {
+            has_role_of_type = agitator
+            owner = {
+                has_law_or_variant = law_type:law_racial_segregation
+                has_law_or_variant = law_type:law_legacy_slavery
+                has_law_or_variant = law_type:law_elected_bureaucrats
+                has_law_or_variant = law_type:law_universal_suffrage
+                has_law_or_variant = law_type:law_presidential_republic
+            }
+        }
+        interest_group = {
+            ideology_jacksonian_democrat_valid_trigger = yes
+        }
+    }
+
+    interest_group_leader_weight = {
+        add = {
+            value = 300
+            desc = "base_value"
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_variable = communist_ig_var
+                    has_variable = chose_vanguardism
+                    has_variable = chose_anarchism
+                    has_variable = chose_communism
+                    has_variable = chose_ethno_nationalism
+                    has_variable = chose_conservatism
+                    has_variable = chose_fascism
+                }
+            }
+            multiply = {
+                value = 0.1
+                desc = "CHOSE_A_DIFFERENT_PATH"
+            }
+        }
+    }
+
+    non_interest_group_leader_weight = {
+        value = 100
+        if = {
+            limit = {
+                interest_group ?= {
+                    OR = {
+                        has_variable = communist_ig_var
+                        has_variable = chose_vanguardism
+                        has_variable = chose_anarchism
+                        has_variable = chose_communism
+                        has_variable = chose_ethno_nationalism
+                        has_variable = chose_conservatism
+                        has_variable = chose_fascism
+                    }
+                }
+            }
+            multiply = 0.1
+        }
+    }
+}
+
+#overwrite to prevent abolitionists from becoming leaders too early
+REPLACE:ideology_abolitionist = { # Average Progressiveness - 75
+    icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_abolitionist.dds"
+
+    character_ideology = yes
+
+    lawgroup_slavery = {
+        law_slavery_banned = neutral
+        law_legacy_slavery = disapprove
+        law_colonial_slavery = disapprove
+        law_debt_slavery = strongly_disapprove
+        law_slave_trade = strongly_disapprove
+    }
+
+    lawgroup_land_reform = {
+        law_serfdom = strongly_disapprove
+        law_tenant_farmers = neutral
+        law_peasant_proprietorship = neutral
+        law_collectivized_agriculture = neutral
+        law_commercialized_agriculture = neutral
+    }
+
+    country_trigger = {
+        OR = {
+            NOT = { has_law_or_variant = law_type:law_slavery_banned }
+            has_law_or_variant = law_type:law_serfdom
+        }
+    }
+
+    # Character scope
+    interest_group_leader_trigger = {
+        ideology_abolitionist_valid_trigger = yes
+    }
+
+    non_interest_group_leader_trigger = {
+        interest_group ?= {
+            ideology_abolitionist_valid_trigger = yes
+        }
+    }
+
+    interest_group_leader_weight = {
+        value = {
+            add = 100
+            desc = "base_value"
+        }
+
+        if = {
+            limit = {
+                is_interest_group_type = ig_trade_unions
+            }
+            add = {
+                value = 100
+                desc = "ig_trade_unions"
+            }
+        }
+        else_if = {
+            limit = {
+                OR = {
+                    is_interest_group_type = ig_industrialists
+                    is_interest_group_type = ig_petty_bourgeoisie
+                }
+            }
+            add = {
+                value = 50
+                desc = "INTELLIGENTSIA_OR_PB_IG"
+            }
+        }
+        else_if = {
+            limit = {
+                is_interest_group_type = ig_devout
+            }
+            add = {
+                value = 25
+                desc = "ig_devout"
+            }
+        }
+        # liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
+        if = {
+            limit = {
+                has_variable = dreyfusard_victory
+            }
+            add = {
+                value = 50
+                desc = "DREYFUSARD_VICTORY"
+            }
+        }
+        # liberal and/or radical leaders have a higher spawn chance if you win the Two Spains as the liberals.
+        if = {
+            limit = {
+                has_variable = spa_two_spains_liberal_victory
+            }
+            add = {
+                value = 50
+                desc = "SPA_LIBERAL_VICTORY"
+            }
+        }
+        # liberal and/or radical leaders have a higher spawn chance if you succeed in Portugal's Second Liberalism.
+        if = {
+            limit = {
+                has_variable = por_second_liberalism_victory
+            }
+            add = {
+                value = 50
+                desc = "POR_LIBERAL_VICTORY"
+            }
+        }
+        # liberal and/or radical leaders have a higher spawn chance if the Hungarian Revolution was successful.
+        if = {
+            limit = {
+                has_variable = hungarian_revolution_increased_liberalism
+            }
+            add = {
+                value = 50
+                desc = "HUNGARIAN_REVOLUTION"
+            }
+        }
+        if = {
+            limit = {
+                owner = { has_journal_entry = je_acw_countdown }
+            }
+            add = {
+                value = 100
+                desc = "ACW_COUNTDOWN"
+            }
+        }
+        #USFP: Abolitionists are too controversial until the Whigs collapse
+        if = {
+            limit = {
+                owner = {
+                    usfp_has_second_party_system = yes
+                }
+            }
+            multiply = {
+                value = 0.001
+                desc = "usfp_second_party_system_modifier"
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_variable = communist_ig_var
+                    has_variable = chose_vanguardism
+                    has_variable = chose_anarchism
+                    has_variable = chose_communism
+                    has_variable = chose_ethno_nationalism
+                    has_variable = chose_conservatism
+                    has_variable = chose_fascism
+                }
+            }
+            multiply = {
+                value = 0.1
+                desc = "CHOSE_A_DIFFERENT_PATH"
+            }
+        }
+    }
+
+    non_interest_group_leader_weight = {
+        value = 100
+
+        if = {
+            limit = { has_trait = tactful }
+            add = 75
+        }
+
+        if = {
+            limit = {
+                is_interest_group_type = ig_trade_unions
+            }
+            add = 100
+        }
+        else_if = {
+            limit = {
+                OR = {
+                    is_interest_group_type = ig_industrialists
+                    is_interest_group_type = ig_petty_bourgeoisie
+                }
+            }
+            add = 50
+        }
+        else_if = {
+            limit = {
+                is_interest_group_type = ig_devout
+            }
+            add = 25
+        }
+        if = {
+            limit = {
+                owner = { has_journal_entry = je_acw_countdown }
+            }
+            add = 100
+        }
+        if = {
+            limit = {
+                interest_group ?= {
+                    OR = {
+                        has_variable = communist_ig_var
+                        has_variable = chose_vanguardism
+                        has_variable = chose_anarchism
+                        has_variable = chose_communism
+                        has_variable = chose_ethno_nationalism
+                        has_variable = chose_conservatism
+                        has_variable = chose_fascism
+                    }
+                }
+            }
+            multiply = 0.1
+        }
+    }
+}

@@ -1,7 +1,7 @@
 ﻿sonora_statehood = {
 	is_shown = {
-		exists = c:SON
-		root = c:SON
+		exists = c:usfp_SON
+		root = c:usfp_SON
 		exists = c:USA
 		NOT = {
 			has_variable = sonoran_statehood_ask
@@ -57,7 +57,7 @@ nicaragua_revolt_walker = {
 		exists = c:NIC
 		exists = c:USA
 		NOT = {
-			exists = c:SON
+			exists = c:usfp_SON
 		}
 	}
 

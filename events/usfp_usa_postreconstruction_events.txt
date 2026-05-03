@@ -37,11 +37,12 @@ usfp_usa_postreconstruction.1 = {
 	icon = "gfx/interface/icons/event_icons/waving_flag_csa.dds"
 
 	immediate = {
-		sr:region_dixie = {
-			random_scope_state = {
-				save_scope_as = dixie_state
-			}
-		}
+        random_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_dixie_old
+            }
+            save_scope_as = dixie_state
+        }
 	}
 
 	duration = 3
@@ -314,7 +315,7 @@ usfp_usa_postreconstruction.3 = {
 		usfp_is_afro_american_discriminated = no
 		usfp_any_racist_movement_has_some_support = yes
 		any_scope_state = {
-			region = sr:region_dixie
+			is_in_geographic_region = geographic_region_dixie_old
 			OR = {
 				radical_fraction = {
 					value > 0.15
@@ -356,7 +357,7 @@ usfp_usa_postreconstruction.3 = {
 			ordered_scope_state = {
 				position = 0
 				limit = {
-					region = sr:region_dixie
+                    is_in_geographic_region = geographic_region_dixie_old
 					OR = {
 						radical_fraction = {
 							value > 0.15
@@ -2770,7 +2771,7 @@ usfp_usa_postreconstruction.16 = {
 						usfp_movement_is_racist = yes
 					} 
 				}
-				is_ruler = no
+				is_ruler_of_own_country = no
 				OR = {
 					culture = {
 						NOT = {

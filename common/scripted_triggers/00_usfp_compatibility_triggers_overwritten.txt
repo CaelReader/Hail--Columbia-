@@ -37,3 +37,7 @@ is_state_region_connecticut = {
 	state_region = s:STATE_CONNECTICUT
 }
 
+community_framework_is_active = {
+    always = no
+}
+

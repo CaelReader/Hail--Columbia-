@@ -1433,6 +1433,12 @@ usfp_a_house_divided.15 = {
 		py:usfp_republican_party = {
 			save_scope_as = whig_scope
 		}
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = movement_pro_slavery
+            }
+            save_scope_as = pro_slavery_movement
+        }
 	}
 
 	trigger = {
@@ -1473,7 +1479,9 @@ usfp_a_house_divided.15 = {
 			}
 		}
 		custom_tooltip = usfp_a_house_divided.15.a.tt
-		remove_variable = whigs_party
+		custom_tooltip = abolitionists_can_become_leaders
+        custom_tooltip = pro_slavery_movement_abolitionist_leader_warning
+        remove_variable = whigs_party
 		ig:ig_landowners = {
 			add_modifier = {
 				name = usfp_ig_sectional_realignment
@@ -1508,13 +1516,13 @@ usfp_a_house_divided.15 = {
 				game_date > 1848.1.1 
 				any_scope_character = {
 					has_template = ecchi_usa_van_buren_character_template
-					is_ruler = no
+					is_ruler_of_own_country = no
 				}
 			}
 			random_scope_character = {
 				limit = {
 					has_template = ecchi_usa_van_buren_character_template
-					is_ruler = no
+					is_ruler_of_own_country = no
 				}
 				set_ideology = ideology:ideology_abolitionist
 			}
@@ -1859,6 +1867,9 @@ usfp_a_house_divided.19 = {
 				is_agitator = yes
 				on_created = {
 					set_variable = { name = temp_event_target_in_use years = 4 }
+                    set_career_length = {
+                        years = 50
+                    }
 				}
 			}
 		}
@@ -2029,7 +2040,7 @@ usfp_a_house_divided.21 = {
 					state_region = s:STATE_RIO_GRANDE
 					state_region = s:STATE_ONTARIO
 					state_region = s:STATE_QUEBEC
-					region = sr:region_caribbean
+					is_in_geographic_region = geographic_region_caribbean_old
 				}
 			}
 			save_scope_as = underground_railroad_state
@@ -2043,10 +2054,9 @@ usfp_a_house_divided.21 = {
 			limit = { 
 				any_scope_state = {
 					OR = {
-						region = sr:region_caribbean
-						region = sr:region_mexico
+						is_in_geographic_region = geographic_region_caribbean_old
+                        is_in_geographic_region = geographic_region_mexico_old
 					}
-
 				}
 			}
 			custom_tooltip = {
@@ -2123,7 +2133,7 @@ usfp_a_house_divided.22 = {
 		ordered_scope_state = {
 			position = 0
 			limit = {
-				region = sr:region_new_england
+                is_in_geographic_region = geographic_region_new_england_old
 			}
 			order_by = total_urbanization
 			add_modifier = {

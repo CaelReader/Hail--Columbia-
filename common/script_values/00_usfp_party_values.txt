@@ -416,6 +416,9 @@ usfp_party_weight_agrarian_add = {
 						has_modifier = usfp_fourth_party_system_modifier
 					}
 				}
+                any_active_party = {
+                    is_party_type = agrarian_party
+                }
 			}
 			is_interest_group_type = ig_trade_unions
 			leader = {
@@ -427,7 +430,8 @@ usfp_party_weight_agrarian_add = {
 			}
 			owner.ig:ig_rural_folk = {
 				is_powerful = yes
-				party = owner.py:agrarian_party
+                has_party = yes
+				party ?= owner.py:agrarian_party
 			}
 		}
 		add = {

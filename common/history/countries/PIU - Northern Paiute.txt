@@ -1,5 +1,5 @@
 ﻿COUNTRIES = {
-	c:PIU ?= {
+	c:usfp_PIU ?= {
 		usfp_native_startup = yes
 		activate_law = law_type:law_slavery_banned
 	}

@@ -8,7 +8,8 @@
 usfp_pmg_base_building_fur_trapper = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		usfp_pm_fur_trapping
+        usfp_pm_subsistence_hunting
+        usfp_pm_fur_trapping
 		usfp_pm_bison_hunting
 	}
 }
@@ -19,4 +20,20 @@ usfp_pmg_fur_trapper_transport = {
 		usfp_pm_fur_manual_transport
 		usfp_pm_fur_rail_hunting
 	}
+}
+
+usfp_pmg_base_national_parks = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+    production_methods = {
+        usfp_pm_national_park_reserve
+        usfp_pm_national_park_service
+    }
+}
+
+usfp_pmg_national_parks_media = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+    production_methods = {
+        usfp_pm_national_park_maps
+        usfp_pm_national_park_photos
+    }
 }

@@ -1,0 +1,112 @@
+﻿namespace = usfp_debug
+
+
+#incompatible mods detector
+usfp_debug.1 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "unspecific_politicians_arguing"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    title = usfp_debug.1.t
+    desc = usfp_debug.1.d
+    flavor = usfp_debug.1.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        OR = {
+            BPM_is_active_trigger = yes
+            community_framework_is_active = no
+            gilded_age_is_active_trigger = yes
+        }
+    }
+
+    immediate = {
+
+    }
+
+    #cmf missing
+    option = {
+        name = usfp_debug.1.a
+        default_option = yes
+        highlighted_option = yes
+        trigger = {
+            custom_tooltip = {
+                text = cmf_is_missing
+                community_framework_is_active = no
+            }
+        }
+    }
+
+    #BPM detected
+    option = {
+        name = usfp_debug.1.b
+        highlighted_option = yes
+        trigger = {
+            trigger_if = {
+                limit = {
+                    community_framework_is_active = yes
+                }
+                custom_tooltip = {
+                    text = bpm_is_active
+                    BPM_is_active_trigger = yes
+                }
+            }
+            trigger_else = {
+                always = no
+            }
+        }
+    }
+
+    #Gilded Age detected
+    option = {
+        name = usfp_debug.1.c
+        highlighted_option = yes
+        trigger = {
+            trigger_if = {
+                limit = {
+                    community_framework_is_active = yes
+                }
+                custom_tooltip = {
+                    text = gilded_age_is_active
+                    gilded_age_is_active_trigger = yes
+                }
+            }
+            trigger_else = {
+                always = no
+            }
+        }
+    }
+
+    #Parties Overwritten
+    option = {
+        name = usfp_debug.1.g
+        highlighted_option = yes
+        trigger = {
+            trigger_if = {
+                limit = {
+                    community_framework_is_active = yes
+                }
+                custom_tooltip = {
+                    text = default_parties_found
+                    c:USA = {
+                        OR = {
+                            any_active_party = { is_party_type = conservative_party }
+                            any_active_party = { is_party_type = liberal_party }
+                        }
+                    }
+                }
+            }
+            trigger_else = {
+                always = no
+            }
+        }
+    }
+}

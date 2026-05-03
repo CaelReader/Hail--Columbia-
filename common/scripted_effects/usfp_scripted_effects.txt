@@ -181,7 +181,7 @@ usfp_mexican_north_purchase_effect = {
 
 			}
 			hidden_effect = {
-				annex = c:YUR
+				annex = c:usfp_YUR
 			}
 			s:STATE_NEVADA = {
 				add_claim = c:USA
@@ -545,8 +545,22 @@ usfp_cleanup_a_house_divided_variables = {
 
 usfp_american_superculture_effect = {
 	add_primary_culture = cu:usfp_american
-	remove_primary_culture = cu:dixie
-	remove_primary_culture = cu:yankee
+    remove_primary_culture = cu:yankee
+    if = {
+        limit = {
+            country_has_primary_culture = cu:dixie
+        }
+        remove_primary_culture = cu:dixie
+    }
+    cu:yankee = {
+        add_tradition_trait = tradition_usfp_manifest_destiny
+    }
+    cu:dixie = {
+        add_tradition_trait = tradition_usfp_manifest_destiny
+    }
+    cu:anglo_canadian = {
+        add_tradition_trait = tradition_usfp_manifest_destiny
+    }
 	custom_tooltip = {
 		text = american_superculture_emerges
 		every_scope_pop = {
@@ -759,11 +773,11 @@ usfp_cleanup_acw_agitators = {
 					has_ideology = ideology:ideology_abolitionist
 				}
 				NOR = {
-					has_role = politician
-					has_role = general
-					has_role = admiral
+					has_role_of_type = politician
+					has_role_of_type = general
+					has_role_of_type = admiral
 				}
-				is_ruler = no
+				is_ruler_of_own_country = no
 			}
 			kill_character = {
 				hidden = yes
@@ -2005,7 +2019,7 @@ usfp_underground_railroad_escapes_southern_effect = {
 	random_state = {
 		limit = {
 			OR = {
-				region = sr:region_caribbean
+				is_in_geographic_region = geographic_region_caribbean_old
 				state_region = s:STATE_TEXAS
 				state_region = s:STATE_RIO_GRANDE
 			}
@@ -2376,7 +2390,7 @@ usfp_transfer_danish_islands_effect = {
 						this = root
 						this = scope:greenland_owner_scope
 					}
-					has_interest_marker_in_region = region_north_sea_coast
+					has_interest_marker_in_region = sr:region_northern_europe
 				}
 				post_notification = usfp_usa_bought_greenland_third_party
 			}	
@@ -2397,7 +2411,7 @@ usfp_transfer_danish_islands_effect = {
 						this = root
 						this = scope:greenland_owner_scope
 					}
-					has_interest_marker_in_region = region_north_sea_coast
+					has_interest_marker_in_region = sr:region_northern_europe
 				}
 				post_notification = usfp_usa_bought_iceland_third_party
 			}
@@ -2419,7 +2433,7 @@ usfp_transfer_danish_islands_effect = {
 						this = root
 						this = scope:greenland_owner_scope
 					}
-					has_interest_marker_in_region = region_caribbean
+					has_interest_marker_in_region = sr:region_central_america
 				}
 				post_notification = usfp_usa_bought_west_indies_third_party
 			}
@@ -2463,4 +2477,36 @@ usfp_claim_cuba_effect = {
 	s:STATE_EASTERN_CUBA = {
 		add_claim = root
 	}
+}
+
+usfp_create_anti_country_lobby_if_not_exists = {
+    if = {
+        limit = {
+            NOT = {
+                any_political_lobby = {
+                    is_political_lobby_type = lobby_anti_country
+                    target = $TARGET$
+                }
+            }
+        }
+        create_political_lobby = {
+            type = lobby_anti_country
+            target = $TARGET$
+            add_interest_group = $INTEREST_GROUP$
+        }
+    }
+}
+
+usfp_anger_anti_country_lobby_create_if_missing = {
+    usfp_create_anti_country_lobby_if_not_exists = {
+        TARGET = $TARGET$
+        INTEREST_GROUP = $INTEREST_GROUP$
+    }
+    add_lobby_appeasement_from_diplomacy_unidirectional = {
+        FACTOR = appeasement_special_events_negative
+        PRO_AMOUNT = 0
+        ANTI_AMOUNT = $VALUE$
+        FIRST = root
+        SECOND = $TARGET$
+    }
 }

@@ -1,0 +1,615 @@
+﻿namespace = usfp_usa_roosevelt
+###### Hail, Columbia! by CaelReader ######
+
+#Yellowstone National Park
+usfp_usa_roosevelt.1 = {
+    type = country_event
+    placement = scope:wyoming_scope
+    event_image = {
+        video = "europenorthamerica_gold_prospectors"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/romanticism.dds"
+
+    title = usfp_usa_roosevelt.1.t
+    desc = usfp_usa_roosevelt.1.d
+    flavor = usfp_usa_roosevelt.1.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        owns_entire_state_region = STATE_WYOMING
+        s:STATE_WYOMING.region_state:USA = {
+            free_arable_land > 30
+        }
+        has_technology_researched = civilizing_mission
+        NOT = {
+            has_law_or_variant = law_type:law_laissez_faire
+        }
+        c:USA ?= root
+    }
+
+    immediate = {
+        s:STATE_WYOMING.region_state:USA = {
+            save_scope_as = wyoming_scope
+        }
+    }
+
+    #Create Yellowstone National Park
+    option = {
+        name = usfp_usa_roosevelt.1.a
+        default_option = yes
+        scope:wyoming_scope = {
+            create_building = {
+                building = building_usfp_national_park
+                level = 3
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #But that's valuable land!
+    option = {
+        name = usfp_usa_roosevelt.1.b
+        scope:wyoming_scope = {
+            add_modifier = {
+                name = usfp_federal_lands_opened_modifier
+                years = 4
+            }
+        }
+        ai_chance = { base = 0 }
+    }
+}
+
+#Roosevelt Elected
+usfp_usa_roosevelt.2 = {
+    type = country_event
+    placement = root
+
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_election.dds"
+    gui_window = event_window_1char_tabloid
+    left_icon = scope:roosevelt_scope
+    on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+    title = usfp_usa_roosevelt.2.t
+    desc = usfp_usa_roosevelt.2.d
+    flavor = usfp_usa_roosevelt.2.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        ruler = {
+            has_template = usa_roosevelt_character_template
+        }
+        has_law_or_variant = law_type:law_presidential_republic
+        c:USA ?= this
+    }
+
+    immediate = {
+        ruler = {
+            save_scope_as = roosevelt_scope
+        }
+    }
+
+    option = {
+        name = usfp_usa_roosevelt.2.a
+        default_option = yes
+        add_journal_entry = {
+            type = usfp_je_agenda_roosevelt_domestic
+        }
+        add_journal_entry = {
+            type = usfp_je_agenda_roosevelt_foreign
+        }
+        scope:roosevelt_scope = {
+            add_modifier = {
+                name = usfp_strenuous_life_modifier
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+}
+#Roosevelt Shot
+usfp_usa_roosevelt.3 = {
+    type = country_event
+    placement = scope:wisconsin_scope
+
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/triage.dds"
+    gui_window = event_window_1char_tabloid
+    left_icon = scope:roosevelt_scope
+    on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+    title = usfp_usa_roosevelt.3.t
+    desc = usfp_usa_roosevelt.3.d
+    flavor = usfp_usa_roosevelt.3.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        ruler = {
+            has_template = usa_roosevelt_character_template
+        }
+        in_election_campaign = yes
+        ruler.interest_group = {
+            has_party = yes
+        }
+        c:USA ?= root
+    }
+
+    immediate = {
+        ruler = {
+            save_scope_as = roosevelt_scope
+        }
+        s:STATE_WISCONSIN.region_state:USA = {
+            save_scope_as = wisconsin_scope
+        }
+    }
+
+    #It'll take more than that!
+    option = {
+        name = usfp_usa_roosevelt.3.a
+        default_option = yes
+        scope:roosevelt_scope = {
+            add_modifier = {
+                name = usfp_roosevelt_shot_speech_modifier
+                years = 4
+            }
+            interest_group.party = {
+                add_momentum = momentum_small
+            }
+        }
+        random_list = {
+            95 = {
+            }
+            5 = {
+                scope:roosevelt_scope = {
+                    add_trait = wounded
+                }
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = {
+            any_scope_character = {
+                has_template = usa_roosevelt_character_template
+            }
+        }
+    }
+}
+#Afro-american dinner at the white house
+usfp_usa_roosevelt.4 = {
+    type = country_event
+    placement = root
+
+    icon = "gfx/interface/icons/invention_icons/crystal_glass.dds"
+    gui_window = event_window_2char
+
+    left_icon = scope:roosevelt_scope
+    right_icon = scope:booker_t_washington_scope
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    on_opened_soundeffect = "event:/SFX/Events/misc/2Characters"
+
+    title = usfp_usa_roosevelt.4.t
+    desc = usfp_usa_roosevelt.4.d
+    flavor = usfp_usa_roosevelt.4.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        ruler = {
+            has_template = usa_roosevelt_character_template
+        }
+        any_scope_character = {
+            OR = {
+                has_template = usfp_booker_t_washington
+            }
+            AND = {
+                culture = cu:afro_american
+                OR = {
+                    has_ideology = ideology:ideology_modernizer_leader
+                    has_ideology = ideology:ideology_usfp_progressive
+                }
+                popularity >= 10
+            }
+        }
+    }
+
+    immediate = {
+        ruler = {
+            save_scope_as = roosevelt_scope
+        }
+        if = {
+            limit = {
+                any_scope_character = {
+                    has_template = usfp_booker_t_washington
+                }
+            }
+            random_scope_character = {
+                limit = {
+                    has_template = usfp_booker_t_washington
+                }
+                save_scope_as = booker_t_washington_scope
+            }
+        } else = {
+            random_scope_character = {
+                limit = {
+                    culture = cu:afro_american
+                    OR = {
+                        has_ideology = ideology:ideology_modernizer_leader
+                        has_ideology = ideology:ideology_usfp_progressive
+                    }
+                    popularity >= 10
+                }
+                save_scope_as = booker_t_washington_scope
+            }
+        }
+    }
+
+    #Let's not do this again
+    option = {
+        name = usfp_usa_roosevelt.4.a
+        default_option = yes
+        add_radicals = {
+            culture = cu:dixie
+            value = small_radicals
+        }
+        scope:roosevelt_scope = {
+            add_modifier = {
+                name = usfp_racial_controversy_modifier
+                years = 5
+            }
+        }
+        scope:booker_t_washington_scope = {
+            add_modifier = {
+                name = usfp_white_house_guest_modifier
+                years = 2
+                multiplier = 0.5
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #fuck em
+    option = {
+        name = usfp_usa_roosevelt.4.b
+        add_radicals = {
+            culture = cu:dixie
+            value = medium_radicals
+        }
+        add_loyalists = {
+            culture = cu:afro_american
+            value = small_radicals
+        }
+        scope:roosevelt_scope = {
+            add_modifier = {
+                name = usfp_racial_controversy_modifier
+                years = 5
+                multiplier = 2
+            }
+        }
+        scope:booker_t_washington_scope = {
+            add_modifier = {
+                name = usfp_white_house_guest_modifier
+                years = 5
+            }
+        }
+        every_political_movement = {
+            limit = {
+                usfp_movement_is_racist = yes
+            }
+            add_modifier = {
+                name = usfp_movement_agitated_by_antiracism_modifier
+                years = 5
+            }
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = {
+            ruler = {
+                has_template = usa_roosevelt_character_template
+            }
+        }
+    }
+}
+#Brownsville Affair
+usfp_usa_roosevelt.5 = {
+    type = country_event
+    placement = scope:brownsville_state_scope
+    event_image = {
+        video = "votp_hostile_court"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+    title = usfp_usa_roosevelt.5.t
+    desc = usfp_usa_roosevelt.5.d
+    flavor = usfp_usa_roosevelt.5.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        year >= 1906
+        any_scope_state = {
+            is_in_geographic_region = geographic_region_dixie_old
+            any_scope_pop = {
+                is_pop_type = soldiers
+                culture = cu:afro_american
+            }
+            any_scope_pop = {
+                culture = cu:dixie
+            }
+        }
+    }
+
+    immediate = {
+        ordered_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_dixie_old
+                any_scope_pop = {
+                    is_pop_type = soldiers
+                    culture = cu:afro_american
+                }
+                any_scope_pop = {
+                    culture = cu:dixie
+                }
+            }
+            order_by = turmoil
+            position = 0
+            save_scope_as = brownsville_state_scope
+        }
+    }
+
+    #discharge the men
+    option = {
+        name = usfp_usa_roosevelt.5.a
+        default_option = yes
+        add_radicals = {
+            culture = cu:afro_american
+            value = medium_radicals
+        }
+        scope:brownsville_state_scope = {
+            add_radicals_in_state = {
+                culture = cu:afro_american
+                value = large_radicals
+                pop_type = soldiers
+            }
+            usfp_loyalize_dixies_in_state = {
+                LOYALISTS = medium_radicals
+            }
+        }
+        usfp_long_reconstruction_lose_progress = { VALUE = 50 }
+        ai_chance = {
+            base = 500
+        }
+    }
+
+    #they are clearly innocent
+    option = {
+        name = usfp_usa_roosevelt.5.b
+        add_loyalists = {
+            culture = cu:afro_american
+            value = small_radicals
+        }
+        add_loyalists = {
+            culture = cu:afro_american
+            pop_type = soldiers
+            value = large_radicals
+        }
+        usfp_radicalize_dixies_in_country = { RADICALS = large_radicals }
+        scope:brownsville_state_scope = {
+            add_modifier = {
+                name = usfp_state_race_riot_aftermath_modifier
+                years = 1
+                is_decaying = yes
+            }
+        }
+        ai_chance = { base = 0 }
+    }
+}
+
+#COL: Panama Rebellion
+usfp_usa_roosevelt.6 = {
+    type = country_event
+    placement = scope:panama_state
+    event_image = {
+        video = "votp_conspiring"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+    title = usfp_usa_roosevelt.6.t
+    desc = usfp_usa_roosevelt.6.d
+    flavor = usfp_usa_roosevelt.6.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        OR = {
+            c:CLM ?= this
+            c:GCO ?= this
+        }
+        has_state_in_state_region = STATE_PANAMA
+        any_scope_state = {
+            state_region = s:STATE_PANAMA
+            turmoil >= 0.20
+            is_treaty_port = no
+        }
+        exists = c:USA
+        c:USA = {
+            is_at_war = no
+            is_diplomatic_play_committed_participant = no
+            has_technology_researched = civilizing_mission
+            ruler = {
+                usfp_manifest_destiny_pro_expansion_trigger = yes
+            }
+        }
+        NOT = {
+            exists = c:PNM
+        }
+        is_subject = no
+    }
+
+    immediate = {
+        random_scope_state = {
+            limit = {
+                state_region = s:STATE_PANAMA
+            }
+            save_scope_as = panama_state
+        }
+        save_scope_as = panama_owner_scope
+        c:USA = {
+            save_scope_as = usa_scope
+        }
+    }
+
+    #refuse
+    option = {
+        name = usfp_usa_roosevelt.6.a
+        default_option = yes
+        scope:panama_state = {
+            add_radicals_in_state = {
+                value = medium_radicals
+            }
+        }
+        c:USA = {
+            trigger_event = {
+                id = usfp_usa_roosevelt.7
+                days = 10
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #accept
+    option = {
+        name = usfp_usa_roosevelt.6.b
+        create_country = {
+            state = scope:panama_state
+            origin = root
+            tag = PNM
+        }
+        if = {
+            limit = {
+                exists = c:PNM
+            }
+            create_diplomatic_pact = {
+                country = c:PNM
+                type = protectorate
+            }
+        }
+        ai_chance = { base = 0 }
+    }
+}
+
+#USA: Panama Rebellion
+usfp_usa_roosevelt.7 = {
+    type = country_event
+    placement = scope:panama_state
+    event_image = {
+        video = "votp_conspiring"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+    title = usfp_usa_roosevelt.7.t
+    desc = usfp_usa_roosevelt.7.d
+    flavor = usfp_usa_roosevelt.7.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+    }
+
+    immediate = {
+
+    }
+
+    #accept
+    option = {
+        name = usfp_usa_roosevelt.7.a
+        default_option = yes
+        custom_tooltip = {
+            text = create_panama_and_support
+            create_country = {
+                state = scope:panama_state
+                origin = root
+                tag = PNM
+            }
+            s:STATE_PANAMA = {
+                add_claim = scope:panama_owner_scope
+            }
+            if = {
+                limit = {
+                    exists = c:PNM
+                }
+                scope:panama_owner_scope ?= {
+                    create_diplomatic_play = {
+                        target_state = scope:panama_state
+                        type = dp_return_state
+                    }
+                }
+                random_diplomatic_play = {
+                    limit = {
+                        target = c:PNM
+                    }
+                    add_target_backers = { c:USA }
+                }
+                change_relations = {
+                    country = c:PNM
+                    value = 50
+                }
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #refuse
+    option = {
+        name = usfp_usa_roosevelt.7.b
+        change_relations = {
+            country = scope:panama_owner_scope
+            value = 10
+        }
+        create_unidirectional_truce = {
+            country = scope:panama_owner_scope
+            months = 60
+        }
+        ai_chance = { base = 0 }
+    }
+}

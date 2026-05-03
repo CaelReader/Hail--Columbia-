@@ -351,3 +351,42 @@ usfp_fenian_raids_modifier = {
 	state_radicalism_increases_open_prejudice_mult = 0.20
 	state_radicalism_increases_second_rate_citizen_mult = 0.20
 }
+
+usfp_federal_lands_opened_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_prospecting_positive.dds
+    building_group_bg_extraction_construction_efficiency_add = 0.10
+}
+
+usfp_banana_wars_state_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_cop_positive.dds
+    building_group_bg_extraction_throughput_add = 0.05
+    building_group_bg_plantations_throughput_add = 0.10
+    building_group_bg_plantations_laborers_mortality_mult = 0.10
+    state_political_strength_from_wealth_mult = 0.25
+    state_incorporation_speed_mult = -0.75
+}
+
+usfp_banana_wars_colony_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_colonization_negative.dds
+    state_disallow_incorporation_bool = yes
+    state_education_access_add = -0.50
+}
+
+usfp_banana_wars_capitalist_interference_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+    state_incorporation_speed_mult = -0.75
+    state_turmoil_effects_mult = 0.25
+}
+
+usfp_tribal_state_rule_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    state_disallow_incorporation_bool = yes
+}
+
+usfp_concentration_camps_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_skull_negative.dds
+    state_peasants_mortality_mult = 0.02
+    state_turmoil_effects_mult = -0.50
+    state_radicals_from_political_movements_mult = 0.75
+    building_group_bg_agriculture_throughput_add = -0.15
+}

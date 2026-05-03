@@ -114,7 +114,7 @@ usfp_promote_afro_american_migration_south_america = {
 			any_scope_state = {
 				OR = {
 					region = sr:region_central_america
-					region = sr:region_caribbean
+					is_in_geographic_region = geographic_region_caribbean_old
 					is_in_geographic_region = geographic_region_south_america
 				}
 				free_arable_land > 0
@@ -125,7 +125,7 @@ usfp_promote_afro_american_migration_south_america = {
 					any_scope_state = {
 						OR = {
 							region = sr:region_central_america
-							region = sr:region_caribbean
+							is_in_geographic_region = geographic_region_caribbean_old
 							is_in_geographic_region = geographic_region_south_america
 						}
 						free_arable_land > 0
@@ -140,7 +140,7 @@ usfp_promote_afro_american_migration_south_america = {
 			any_scope_state = {
 				OR = {
 					region = sr:region_central_america
-					region = sr:region_caribbean
+					is_in_geographic_region = geographic_region_caribbean_old
 					is_in_geographic_region = geographic_region_south_america
 				}
 				free_arable_land > 0
@@ -152,7 +152,7 @@ usfp_promote_afro_american_migration_south_america = {
 					any_scope_state = {
 						OR = {
 							region = sr:region_central_america
-							region = sr:region_caribbean
+							is_in_geographic_region = geographic_region_caribbean_old
 							is_in_geographic_region = geographic_region_south_america
 						}
 						free_arable_land > 0
@@ -198,7 +198,7 @@ usfp_promote_afro_american_migration_south_america = {
 				any_scope_state = {
 					OR = {
 						region = sr:region_central_america
-						region = sr:region_caribbean
+						is_in_geographic_region = geographic_region_caribbean_old
 						is_in_geographic_region = geographic_region_south_america
 					}
 					free_arable_land > 0
@@ -209,7 +209,7 @@ usfp_promote_afro_american_migration_south_america = {
 				limit = {
 					OR = {
 						region = sr:region_central_america
-						region = sr:region_caribbean
+						is_in_geographic_region = geographic_region_caribbean_old
 						is_in_geographic_region = geographic_region_south_america
 					}
 					free_arable_land > 0
@@ -226,7 +226,7 @@ usfp_promote_afro_american_migration_south_america = {
 						any_scope_state = {
 							OR = {
 								region = sr:region_central_america
-								region = sr:region_caribbean
+								is_in_geographic_region = geographic_region_caribbean_old
 								is_in_geographic_region = geographic_region_south_america
 							}
 							free_arable_land > 0
@@ -237,7 +237,7 @@ usfp_promote_afro_american_migration_south_america = {
 						limit = {
 							OR = {
 								region = sr:region_central_america
-								region = sr:region_caribbean
+								is_in_geographic_region = geographic_region_caribbean_old
 								is_in_geographic_region = geographic_region_south_america
 							}
 							free_arable_land > 0

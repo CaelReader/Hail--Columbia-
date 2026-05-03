@@ -187,5 +187,242 @@
 	}
 	
 	weight = 200
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+usfp_je_agenda_roosevelt_domestic = {
+    icon = "gfx/interface/icons/invention_icons/democracy.dds"
+
+    group = je_group_historical_content
+
+    immediate = {
+        ruler = {
+            save_scope_as = roosevelt_scope
+        }
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+    }
+
+    is_shown_when_inactive = {
+        #activated by event on new ruler
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            if = {
+                limit = {
+                    any_civil_war = {
+                        civil_war_progress >= 0.10
+                        is_civil_war_type = revolution
+                    }
+                }
+                set_variable = roosevelt_didnt_avoid_revolution
+            }
+        }
+        random_events = {
+            chance_of_no_event = 75
+            100 = usfp_usa_roosevelt.4 #Booker T Washington Dinner
+            100 = usfp_usa_roosevelt.5 #Brownsville Affair
+        }
+    }
+
+    complete = {
+        OR = {
+            custom_tooltip = {
+                text = all_presidential_agenda_items_complete
+                in_election_campaign = yes
+                usfp_roosevelt_domestic_agenda_complete = yes
+            }
+            custom_tooltip = {
+                text = roosevelt_is_not_president
+                ruler ?= {
+                    NOT = {
+                        has_template = usa_roosevelt_character_template
+                    }
+                }
+            }
+        }
+    }
+
+    on_complete = {
+        add_loyalists = {
+            strata = lower
+            value = {
+                value = 0.01
+                multiply = usfp_get_roosevelt_domestic_score
+            }
+        }
+        add_loyalists = {
+            strata = middle
+            value = {
+                value = 0.02
+                multiply = usfp_get_roosevelt_domestic_score
+            }
+        }
+        every_political_movement = {
+            limit = {
+                is_political_movement_type = movement_usfp_progressive
+            }
+            add_modifier = {
+                name = usfp_roosevelt_domestic_agenda_modifier
+                multiplier = usfp_get_roosevelt_domestic_score
+                years = 10
+            }
+        }
+        custom_tooltip = {
+            text = spawn_progressive_agitator_if_all_completed
+            if = {
+                limit = {
+                    usfp_roosevelt_domestic_agenda_complete = yes
+                }
+                create_character = {
+                    is_agitator = yes
+                    interest_group = ig_petty_bourgeoisie
+                    ideology = ideology_usfp_progressive
+                }
+            }
+        }
+    }
+
+    invalid = {
+        NOT = {
+            has_law_or_variant = law_type:law_presidential_republic
+        }
+    }
+
+    weight = 200
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+usfp_je_agenda_roosevelt_foreign = {
+    icon = "gfx/interface/icons/invention_icons/breech_loading_artillery.dds"
+
+    group = je_group_historical_content
+
+    immediate = {
+        ruler = {
+            save_scope_as = roosevelt_scope
+        }
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+        set_variable = {
+            name = roosevelt_army_target
+            value = {
+                value = army_power_projection
+                multiply = 1.2
+            }
+        }
+        set_variable = {
+            name = roosevelt_navy_target
+            value = {
+                value = naval_power_projection
+                multiply = 1.5
+            }
+        }
+        c:GBR = {
+            save_scope_as = britain_scope
+        }
+    }
+
+    is_shown_when_inactive = {
+        #activated by event on new ruler
+    }
+
+
+    on_monthly_pulse = {
+
+    }
+
+
+    complete = {
+
+        OR = {
+            custom_tooltip = {
+                text = all_presidential_agenda_items_complete
+                in_election_campaign = yes
+                usfp_roosevelt_foreign_agenda_complete = yes
+            }
+            custom_tooltip = {
+                text = roosevelt_is_not_president
+                ruler ?= {
+                    NOT = {
+                        has_template = usa_roosevelt_character_template
+                    }
+                }
+            }
+        }
+
+    }
+
+    on_complete = {
+        add_modifier = {
+            name = usfp_roosevelt_big_stick_agenda_modifier
+            years = 10
+            multiplier = usfp_get_roosevelt_diplomacy_score
+        }
+        add_loyalists = {
+            pop_type = officers
+            value = {
+                value = 0.02
+                multiply = usfp_get_roosevelt_diplomacy_score
+            }
+        }
+        add_loyalists = {
+            pop_type = soldiers
+            value = {
+                value = 0.01
+                multiply = usfp_get_roosevelt_diplomacy_score
+            }
+        }
+        custom_tooltip = extra_bonus_for_completing_all
+        if = {
+            limit = {
+                usfp_roosevelt_foreign_agenda_complete = yes
+            }
+            add_modifier = {
+                name = usfp_roosevelt_biggest_stick_modifier
+                years = 10
+            }
+            custom_tooltip = {
+                text = jingoist_agitator_appears
+                create_character = {
+                    is_agitator = yes
+                    interest_group = ig_armed_forces
+                    ideology = ideology_jingoist_leader
+                }
+            }
+            usfp_manifest_more_destiny_effect = yes
+        } else = {
+            show_as_tooltip = {
+                add_modifier = {
+                    name = usfp_roosevelt_biggest_stick_modifier
+                    years = 10
+                }
+                custom_tooltip = {
+                    text = jingoist_agitator_appears
+                    create_character = {
+                        is_agitator = yes
+                        interest_group = ig_armed_forces
+                        ideology = ideology_jingoist_leader
+                    }
+                }
+                usfp_manifest_more_destiny_effect = yes
+            }
+        }
+    }
+
+    invalid = {
+        NOT = {
+            has_law_or_variant = law_type:law_presidential_republic
+        }
+    }
+
+    weight = 200
+    should_be_pinned_by_default_uninvolved_or_context = yes
 }

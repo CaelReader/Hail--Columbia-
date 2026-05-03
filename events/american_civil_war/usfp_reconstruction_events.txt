@@ -359,12 +359,15 @@ usfp_reconstruction.5 = {
 
 	trigger = {
 		c:BRZ = {
-			NOR = {
+			has_revolution = no
+            has_any_secessionists_broken_out = no
+            NOR = {
 				has_law_or_variant = law_type:law_slavery_banned
 				has_law_or_variant = law_type:law_closed_borders
 			}
 			any_scope_state = {
-				OR = {
+                state_is_eligible_as_mass_migration_target = yes
+                OR = {
 					state_region = s:STATE_SAO_PAULO
 					state_region = s:STATE_RIO_DE_JANEIRO
 					state_region = s:STATE_MINAS_GERAIS
@@ -515,13 +518,13 @@ usfp_reconstruction.7 = {
 		if = {
 			limit = {
 				any_scope_character = {
-					has_role = agitator
+					has_role_of_type = agitator
 					has_ideology = ideology:ideology_slaver
 				}
 			 }
 			 random_scope_character = {
 				limit = {
-					has_role = agitator
+					has_role_of_type = agitator
 					has_ideology = ideology:ideology_slaver
 				}
 				transfer_character = c:BRZ
@@ -953,7 +956,7 @@ usfp_reconstruction.14 = {
 			limit = {
 				is_in_government = yes
 				leader = {
-					is_ruler = no
+					is_ruler_of_own_country = no
 					NOT = {
 						has_ideology = ideology:ideology_slaver
 					}

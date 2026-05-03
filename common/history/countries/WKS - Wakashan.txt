@@ -1,5 +1,5 @@
 ﻿COUNTRIES = {
-	c:WKS ?= {
+	c:usfp_WKS ?= {
 		usfp_native_startup = yes
 	}
 }

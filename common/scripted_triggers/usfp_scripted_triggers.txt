@@ -116,9 +116,7 @@ usfp_mexican_cession_trigger = {
 
 usfp_atlantic_hurricane_trigger = {
 	OR = {
-		region = sr:region_caribbean
-		region = sr:region_dixie
-		region = sr:region_new_england
+		region = sr:region_atlantic_coast
 	}
 }
 
@@ -441,18 +439,15 @@ ig_hasnt_chosen_ideology_trigger = {
 }
 
 usfp_has_dixie_occupation_trigger = {
-	sr:region_dixie = {
-		save_temporary_scope_as = dixie_region
-	}
 	custom_tooltip = {
 		text = dixie_formation_tt
 		OR = {
 			any_military_formation = {
 				is_army = yes
 				any_scope_character = {
-					has_role = general
+					has_role_of_type = general
 				}
-				current_hq ?= p:xEE9129.land_hq
+				# current_hq ?= p:xEE9129.land_hq
 				any_combat_unit = {
 					count >= 20
 				}
@@ -465,18 +460,15 @@ usfp_has_dixie_occupation_trigger = {
 }
 
 usfp_has_dixie_indian_occupation_trigger = {
-	sr:region_dixie = {
-		save_temporary_scope_as = dixie_region
-	}
 	custom_tooltip = {
 		text = dixie_indian_formation_tt
 		OR = {
 			any_military_formation = {
 				is_army = yes
 				any_scope_character = {
-					has_role = general
+					has_role_of_type = general
 				}
-				current_hq ?= p:xEE9129.land_hq
+				# current_hq ?= p:xEE9129.land_hq
 				any_combat_unit = {
 					count >= 2
 				}
@@ -489,18 +481,15 @@ usfp_has_dixie_indian_occupation_trigger = {
 }
 
 usfp_has_plains_occupation_trigger = {
-	sr:region_great_plains = {
-		save_temporary_scope_as = great_plains_region
-	}
 	custom_tooltip = {
 		text = plains_formation_tt
 		OR = {
 			any_military_formation = {
 				is_army = yes
 				any_scope_character = {
-					has_role = general
+					has_role_of_type = general
 				}
-				current_hq ?= p:x029975.land_hq
+				# current_hq ?= p:x029975.land_hq
 				any_combat_unit = {
 					count >= 3
 				}
@@ -571,6 +560,11 @@ usfp_progressive_era_square_deal_conditions = {
 	has_law_or_variant = law_type:law_graduated_taxation
 	has_law_or_variant = law_type:law_womens_suffrage
 	has_law_or_variant = law_type:law_compulsory_primary_school
+    NOT = {
+        active_law:lawgroup_bureaucracy = {
+            has_amendment = amendment_type:amendment_usfp_spoils_system
+        }
+    }
 	has_law_or_variant = law_type:law_elected_bureaucrats
 	has_law_or_variant = law_type:law_public_health_insurance
 	institution_investment_level = {
@@ -758,7 +752,137 @@ usfp_has_fugitive_slave_act = {
 }
 
 usfp_owns_cuba = {
-	owns_entire_state_region = STATE_WESTERN_CUBA
-	owns_entire_state_region = STATE_CENTRAL_CUBA
-	owns_entire_state_region = STATE_EASTERN_CUBA
+    country_or_subject_owns_entire_state_region =  STATE_WESTERN_CUBA
+	country_or_subject_owns_entire_state_region =  STATE_CENTRAL_CUBA
+	country_or_subject_owns_entire_state_region =  STATE_EASTERN_CUBA
+}
+
+usfp_roosevelt_agenda_national_parks_trigger = {
+    any_scope_building = {
+        is_building_type = building_usfp_national_park
+        count >= 7
+    }
+}
+
+usfp_roosevelt_domestic_agenda_complete = {
+    #National Parks
+    usfp_roosevelt_agenda_national_parks_trigger = yes
+    #Busted Trusts
+    has_variable = busted_trusts
+    #Progressive Era Laws
+    has_law_or_variant = law_type:law_interventionism
+    institution_investment_level = {
+        institution = institution_workplace_safety
+        value >= 3
+    }
+    institution_investment_level = {
+        institution = institution_health_system
+        value >= 3
+    }
+    NOT = {
+        has_variable = roosevelt_didnt_avoid_revolution
+    }
+    NOT = {
+        any_civil_war = {
+            civil_war_progress >= 0.10
+            is_civil_war_type = revolution
+        }
+    }
+    #Marginalize Socialists
+    NOT = {
+        any_political_movement = {
+            movement_is_socialist = yes
+            OR = {
+                political_movement_radicalism > 0.75
+                political_movement_support > 0.15
+            }
+        }
+    }
+    #Industrialists not powerful
+    ig:ig_industrialists ?= {
+        is_powerful = no
+    }
+}
+
+usfp_roosevelt_foreign_agenda_complete = {
+    #Cuba
+    OR = {
+        c:CUB ?= {
+            is_subject_of = root
+        }
+        AND = {
+            country_or_subject_owns_entire_state_region = STATE_CENTRAL_CUBA
+            country_or_subject_owns_entire_state_region = STATE_EASTERN_CUBA
+            country_or_subject_owns_entire_state_region = STATE_WESTERN_CUBA
+        }
+    }
+    #Puerto Rico
+    country_or_subject_owns_entire_state_region = STATE_PUERTO_RICO
+    #Panama Canal
+    any_scope_building = {
+        is_building_type = building_panama_canal
+        is_under_construction = no
+    }
+    #Monroe Doctrine enforced minus GBR
+    NOT = {
+        any_country_in_americas = {
+            is_subject = yes
+            overlord ?= {
+                NOR = {
+                    is_in_geographic_region = geographic_region_americas
+                    c:GBR ?= this
+                }
+            }
+        }
+    }
+    #Pacific Power Projection
+    OR = {
+        any_subject_or_below = {
+            is_in_geographic_region = geographic_region_western_pacific
+            OR = {
+                is_subject_type = subject_type_colony
+                is_subject_type = subject_type_puppet
+            }
+        }
+        any_scope_state = {
+            is_in_geographic_region = geographic_region_western_pacific
+            count >= 3
+        }
+    }
+    #Army Reform
+    AND = {
+        any_scope_building = {
+            filter = {
+                is_building_type = building_barrack
+            }
+            percent = 1
+            OR = {
+                has_active_production_method = pm_advanced_tactics_training
+                has_active_production_method = pm_training_streamlining
+                has_active_production_method = pm_nco_incorporation
+                has_active_production_method = pm_mobile_warfare_tactics
+            }
+        }
+        army_power_projection >= var:roosevelt_army_target
+    }
+    #Expanded Power Bloc
+    AND = {
+        is_power_bloc_leader = yes
+        num_power_bloc_members_script > 7
+        power_bloc.current_cohesion_percentage >= 0.90
+        power_bloc.power_bloc_rank >= 3
+    }
+    #Complete Great White Fleet
+    OR = {
+        has_variable = new_navy_completed
+        naval_power_projection >= root.var:roosevelt_navy_target
+    }
+
+}
+
+usfp_has_second_party_system = {
+    has_journal_entry = je_usfp_american_constitution
+    je:je_usfp_american_constitution ?= {
+        has_modifier = usfp_second_party_system_modifier
+    }
 }

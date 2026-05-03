@@ -343,7 +343,7 @@ usfp_homestead_act_button = {
 	cooldown = { days = 365 }
 
 	possible = {
-		has_law_or_variant = law_type:law_homesteading
+		has_law = law_type:law_homesteading
 		usfp_manifest_destiny_greater_or_equal_trigger = { value = 3 }
 		any_scope_state = {
 			# count > 3
@@ -477,6 +477,14 @@ usfp_cuban_purchase_button = {
 			has_claim = s:STATE_EASTERN_CUBA
 		}
 		has_variable = manifest_destiny_var
+        NOR = {
+            any_rival_country = {
+                usfp_owns_cuba = yes
+            }
+            any_rivaling_country = {
+                usfp_owns_cuba = yes
+            }
+        }
 	}
 
 	possible = {
@@ -486,7 +494,7 @@ usfp_cuban_purchase_button = {
 				interest_group = {
 					is_in_government = yes
 				}
-				is_ruler = yes
+				is_ruler_of_own_country = yes
 			}
 			usfp_manifest_destiny_pro_expansion_trigger = yes
 		}

@@ -385,7 +385,7 @@ usfp_filibusters_modifier = {
 	country_military_goods_cost_mult = -0.20
 	building_training_rate_mult = 0.50
 	military_formation_mobilization_speed_mult = 0.25
-	military_formation_movement_speed_mult = 0.1
+	military_formation_army_movement_speed_mult = 0.1
 }
 
 usfp_imperial_ambitions = {
@@ -532,8 +532,8 @@ usfp_city_beautiful_modifier = {
 
 usfp_fighting_corruption_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_negative.dds
-	country_authority_add = -75
-	country_bureaucracy_add = -100
+	country_authority_add = -100
+	country_bureaucracy_mult = -0.10
 }
 
 usfp_social_hygiene_modifier = {
@@ -759,7 +759,7 @@ usfp_panic_1837_modifier = {
 	state_shopkeepers_investment_pool_contribution_add = -0.10
 	state_aristocrats_investment_pool_efficiency_mult = -0.4
 	state_aristocrats_investment_pool_contribution_add = -0.10
-	country_loan_interest_rate_mult = 0.40
+	country_loan_interest_rate_mult = 0.33
 	# country_minting_mult = -0.20
 }
 
@@ -792,7 +792,7 @@ usfp_america_enters_world_stage_modifier = {
 	country_influence_mult = 0.10
 	country_prestige_from_navy_power_projection_mult = 0.10
 	interest_group_ig_armed_forces_approval_add = 2
-	unit_navy_experience_gain_mult = 0.10
+	ship_crew_experience_gain_mult = 0.10
 }
 
 usfp_spoils_system_decaying_modifier = {
@@ -805,4 +805,120 @@ usfp_apolitical_military_modifier = {
 	country_coup_resistance_add = 10.0
 	interest_group_ig_armed_forces_pol_str_mult = -0.10
 	interest_group_ig_armed_forces_pop_attraction_mult = -0.10
+}
+
+usfp_banana_wars_score_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
+    interest_group_ig_industrialists_approval_add = 0.1
+    country_company_throughput_bonus_add = 0.005
+    country_leverage_generation_mult = 0.005
+    unit_army_experience_gain_mult = 0.005
+}
+
+usfp_roosevelt_big_stick_agenda_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
+    country_leverage_generation_mult = 0.04
+    ship_crew_experience_gain_mult = 0.04
+    country_prestige_from_navy_power_projection_mult = 0.04
+
+}
+
+usfp_roosevelt_biggest_stick_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    building_group_bg_military_construction_efficiency_add = 0.20
+    ship_crew_damage_mult = 0.10
+    ship_vulnerability_mult = 0.05
+    interest_group_ig_armed_forces_pol_str_mult = 0.25
+}
+
+usfp_philippines_military_government_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_officer_positive.dds
+    country_block_government_reform_bool = yes
+    interest_group_ig_armed_forces_approval_add = 5
+    interest_group_ig_armed_forces_pol_str_mult = 1.00
+    country_law_enactment_imposition_success_add = 0.75
+    country_law_enactment_time_mult = -0.25
+    country_legitimacy_min_add = 30
+    country_liberty_desire_add = -0.10
+}
+
+usfp_war_is_a_racket_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+    country_war_exhaustion_casualties_mult = 0.33
+    state_pop_support_movement_socialist_mult = 0.20
+    building_training_rate_mult = -0.15
+}
+
+usfp_post_acw_naval_advisors_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_manowar_positive.dds
+    country_military_tech_spread_mult = 0.25
+    ship_crew_experience_gain_mult = 0.15
+    country_ship_construction_progress_max_add = 5
+    country_yankee_cultural_acceptance_add = 20
+    country_dixie_cultural_acceptance_add = 20
+}
+
+usfp_navy_catchup_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_ironclad_positive.dds
+    country_military_tech_research_speed_mult = 0.05
+    building_group_bg_military_construction_efficiency_add = 0.10
+    country_ship_construction_progress_max_add = 5
+}
+
+usfp_new_navy_small_ships_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_cranes_positive.dds
+    country_ship_group_cruisers_construction_efficiency_add = 0.15
+    country_military_tech_spread_mult = 0.10
+    building_group_bg_military_construction_efficiency_add = 0.10
+}
+
+usfp_new_navy_big_ships_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_cranes_positive.dds
+    country_ship_group_capital_ships_construction_efficiency_add = 0.15
+    country_military_tech_spread_mult = 0.10
+    building_group_bg_military_construction_efficiency_add = 0.10
+}
+
+usfp_new_navy_diplo_fleet_complete_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_influence_positive.dds
+    country_leverage_generation_mult = 0.15
+    country_influence_mult = 0.10
+    ship_crew_experience_gain_mult = 0.20
+    interest_group_ig_armed_forces_approval_add = 3
+}
+
+usfp_new_navy_capital_fleet_complete_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
+    power_bloc_cohesion_mult = 0.15
+    country_prestige_from_navy_power_projection_mult = 0.15
+    ship_crew_experience_gain_mult = 0.20
+    interest_group_ig_armed_forces_approval_add = 3
+}
+
+usfp_imminent_revolution_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+    country_revolution_clock_time_add = 0.50
+    political_movement_radicalism_from_enactment_disapproval_mult = 1.00
+}
+
+usfp_artistic_crackdown_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue2_negative.dds
+    country_society_tech_research_speed_mult = -0.20
+}
+
+usfp_thomasite_educators_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_book2_positive.dds
+    state_education_access_add = 0.10
+    country_institution_cost_institution_schools_mult = -0.15
+    country_institution_schools_max_investment_add = 1
+    country_institution_size_change_speed_institution_schools_mult = 0.25
+    country_liberty_desire_add = -0.10
+    country_enactment_success_chance_law_public_schools_add = 0.20
+}
+
+usfp_supreme_court_showdown_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gavel_negative.dds
+    country_legitimacy_base_add = -20
+    political_movement_pop_attraction_mult = 0.20
+    political_movement_radicalism_from_enactment_disapproval_mult = 0.25
 }

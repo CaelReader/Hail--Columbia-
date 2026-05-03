@@ -9,6 +9,7 @@
     modifier = {
 		country_institution_size_change_speed_mult = -0.25
 		country_usfp_spoil_system_on_reform_modifier = -0.25
+        interest_group_in_government_approval_add = 1
 	}
 
     possible = {
@@ -442,4 +443,216 @@ amendment_usfp_african_colonial_acceptance = {
     }
 
     amendment_activism_multiplier = 0.25
+}
+
+amendment_usfp_right_to_contract = {
+    parent = law_no_workers_rights
+
+    allowed_laws = { # list of laws that the amendment can be added to
+        law_worker_protections
+        law_regulatory_bodies
+    }
+
+    modifier = {
+        country_institution_workplace_safety_max_investment_add = -2
+        state_pop_support_movement_labor_mult = -0.10
+    }
+
+    possible = {
+        has_journal_entry = je_usfp_american_constitution
+    }
+
+    would_sponsor = {
+        always = no
+    }
+
+    can_repeal = {
+        government_legitimacy >= legitimacy_to_repeal_amendment
+        NOT = {
+            has_law_or_variant = law_type:law_laissez_faire
+        }
+        ig:ig_industrialists ?= {
+            is_powerful = no
+            is_in_government = no
+        }
+    }
+
+    ai_will_revoke = {
+        always = yes
+    }
+
+    amendment_activism_multiplier = 0.5
+}
+
+amendment_usfp_limited_migration_controls = {
+    parent = law_migration_controls
+
+    allowed_laws = { # list of laws that the amendment can be added to
+        law_no_migration_controls
+    }
+
+    modifier = {
+        country_migration_restrictiveness_add = 21
+    }
+
+    possible = {
+        has_law_or_variant = law_type:law_no_migration_controls
+    }
+
+    would_sponsor = {
+        always = no
+    }
+
+    can_repeal = {
+        government_legitimacy >= legitimacy_to_repeal_amendment
+        OR = {
+            NOT = {
+                has_journal_entry = je_usfp_american_constitution
+            }
+            has_law_or_variant = law_type:law_multicultural
+        }
+    }
+
+    ai_will_revoke = {
+        always = yes
+    }
+
+    amendment_activism_multiplier = 0.25
+}
+
+amendment_usfp_chinese_exclusion = {
+    parent = law_cultural_exclusion
+
+    allowed_laws = { # list of laws that the amendment can be added to
+        law_subjecthood
+        law_ethnostate
+        law_national_supremacy
+        law_racial_segregation
+        law_cultural_exclusion
+    }
+
+    modifier = {
+        country_han_cultural_acceptance_add = -20
+        country_hakka_cultural_acceptance_add = -20
+        country_manchu_cultural_acceptance_add = -20
+        country_min_cultural_acceptance_add = -20
+        country_yue_cultural_acceptance_add = -20
+    }
+
+    possible = {
+        always = yes
+    }
+
+    would_sponsor = {
+        always = no
+    }
+
+    can_repeal = {
+        government_legitimacy >= legitimacy_to_repeal_amendment
+        OR = {
+            NOT = {
+                has_journal_entry = je_usfp_american_constitution
+            }
+            has_law_or_variant = law_type:law_multicultural
+            any_scope_state = {
+                state_region = {
+                    OR = {
+                        is_homeland = han
+                        is_homeland = hakka
+                        is_homeland = manchu
+                        is_homeland = min
+                        is_homeland = yue
+                    }
+                }
+                is_incorporated = yes
+            }
+        }
+    }
+
+    ai_will_revoke = {
+        always = yes
+    }
+
+    amendment_activism_multiplier = 0.5
+}
+
+amendment_english_second_language = {
+
+
+    allowed_laws = { # list of laws that the amendment can be added to
+        law_subjecthood
+        law_ethnostate
+        law_national_supremacy
+        law_racial_segregation
+        law_cultural_exclusion
+        law_multicultural
+    }
+
+    modifier = {
+        country_british_cultural_acceptance_add = 20
+        country_yankee_cultural_acceptance_add = 20
+        country_dixie_cultural_acceptance_add = 20
+        country_australian_cultural_acceptance_add = 20
+        country_anglo_canadian_cultural_acceptance_add = 20
+        country_scottish_cultural_acceptance_add = 20
+        country_tech_spread_mult = 0.10
+    }
+
+    possible = {
+        always = yes
+    }
+
+    would_sponsor = {
+        always = no
+    }
+
+    can_repeal = {
+        government_legitimacy >= legitimacy_to_repeal_amendment
+        OR = {
+            has_law_or_variant = law_type:law_ethnostate
+            has_law_or_variant = law_type:law_national_supremacy
+        }
+        is_subject = no
+    }
+
+    ai_will_revoke = {
+        always = yes
+    }
+
+    amendment_activism_multiplier = 0.0
+}
+
+amendment_usfp_philippine_assembly = {
+
+    parent = law_census_voting
+
+    allowed_laws = {
+        law_oligarchy
+    }
+
+    modifier = {
+        country_legitimacy_govt_total_votes_add = 40
+        country_voting_power_wealth_threshold_add = 10
+        country_voting_power_from_literacy_add = 20
+        country_electoral_confidence_impact_mult = -0.4
+    }
+
+    possible = {
+        c:PHI ?= root
+    }
+
+    would_sponsor = {
+        always = no
+    }
+
+    ai_will_revoke = {
+        always = yes
+    }
+
+    can_repeal = {
+        legitimacy >= legitimacy_to_repeal_amendment
+        is_subject = no
+    }
+
+    amendment_activism_multiplier = 0.5
 }

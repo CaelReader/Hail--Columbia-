@@ -3,7 +3,7 @@
 	religion = protestant
 	heritage = heritage_north_american_settler
 	language = language_anglophone
-	traditions = { }
+	traditions = { tradition_usfp_american_dream tradition_usfp_manifest_destiny }
 	obsessions = {
 		liquor coffee small_arms
 	}

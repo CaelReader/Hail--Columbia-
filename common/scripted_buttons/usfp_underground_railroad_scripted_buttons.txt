@@ -28,7 +28,7 @@
 			usfp_anti_slavery_leader_trigger = yes
 			OR = {
 				interest_group = { is_in_government = yes }
-				is_ruler = yes
+				is_ruler_of_own_country = yes
 			}
 		}
 		authority >= 75
@@ -52,7 +52,7 @@
 					ideology = ideology:ideology_usfp_abolitionist_radical
 					OR = {
 						interest_group = { is_in_government = yes }
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 					}
 				}	
 			}
@@ -89,7 +89,7 @@ usfp_underground_railroad_suppress_button = {
 			has_ideology = ideology:ideology_slaver
 			OR = {
 				interest_group = { is_in_government = yes }
-				is_ruler = yes
+				is_ruler_of_own_country = yes
 			}
 		}
 		authority >= 75
@@ -122,7 +122,7 @@ usfp_underground_railroad_suppress_button = {
 					ideology = ideology:ideology_slaver
 					OR = {
 						interest_group = { is_in_government = yes }
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 					}
 				}	
 			}
@@ -181,7 +181,7 @@ usfp_underground_railroad_end_interference_button = {
 						ideology = ideology:ideology_usfp_abolitionist_radical
 						OR = {
 							interest_group = { is_in_government = yes }
-							is_ruler = yes
+							is_ruler_of_own_country = yes
 						}
 					}
 				}
@@ -198,7 +198,7 @@ usfp_underground_railroad_end_interference_button = {
 						ideology = ideology:ideology_slaver
 						OR = {
 							interest_group = { is_in_government = yes }
-							is_ruler = yes
+							is_ruler_of_own_country = yes
 						}
 					}
 				}
@@ -229,7 +229,7 @@ usfp_underground_railroad_arm_slaves_button = {
 			}
 			OR = {
 				interest_group = { is_in_government = yes }
-				is_ruler = yes
+				is_ruler_of_own_country = yes
 			}
 		}
 	}
@@ -310,7 +310,7 @@ usfp_underground_railroad_arm_slaves_button = {
 					ideology = ideology:ideology_usfp_abolitionist_radical
 					OR = {
 						interest_group = { is_in_government = yes }
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 					}
 				}	
 			}

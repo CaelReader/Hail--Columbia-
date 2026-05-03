@@ -24,7 +24,7 @@ usfp_filibuster.1 = {
 		game_date < 1865.1.1 
 		usfp_manifest_destiny_greater_or_equal_trigger = { value = 4 }
 		NOT = {
-			exists = c:SON
+			exists = c:usfp_SON
 		}
 		NOT = {
 			has_global_variable = had_walker_sonora
@@ -53,7 +53,7 @@ usfp_filibuster.1 = {
 		s:STATE_SONORA.region_state:MEX = {
 			save_scope_as = sonora_state_scope
 		}
-		s:STATE_BAJA_CALIFORNIA.region_state:SON = {
+		s:STATE_BAJA_CALIFORNIA.region_state:usfp_SON = {
 			save_scope_as = baja_scope
 		}
 		c:MEX = {
@@ -63,13 +63,13 @@ usfp_filibuster.1 = {
 				popup = yes
 			}
 			create_country = {
-				tag = SON
+				tag = usfp_SON
 				state = s:STATE_BAJA_CALIFORNIA.region_state:MEX
 				origin = c:MEX
 				on_created = {
 					save_scope_as = sonora_scope
 					s:STATE_SONORA = {
-						add_claim = c:SON
+						add_claim = c:usfp_SON
 					}
 					create_character = {
 						template = usfp_usa_william_walker
@@ -80,7 +80,7 @@ usfp_filibuster.1 = {
 					set_country_type = unrecognized
 				}
 			}
-			c:SON = {
+			c:usfp_SON = {
 				create_diplomatic_play = {
 					type = dp_return_state
 					target_state = scope:sonora_state_scope
@@ -121,7 +121,7 @@ usfp_filibuster.1 = {
 		name = usfp_filibuster.1.a
 		default_option = yes
 		change_relations = {
-			country = c:SON
+			country = c:usfp_SON
 			value = -20
 		}
 	}
@@ -147,11 +147,11 @@ usfp_filibuster.1 = {
 			}
 		}
 		change_relations = {
-			country = c:SON
+			country = c:usfp_SON
 			value = 50
 		}
 		create_diplomatic_pact = {
-			country = c:SON
+			country = c:usfp_SON
 			type = protectorate
 		}
 		change_relations = {
@@ -164,7 +164,7 @@ usfp_filibuster.1 = {
 		}
 		random_diplomatic_play = {
 			limit = {
-				initiator_is = c:SON
+				initiator_is = c:usfp_SON
 				target_is = c:MEX
 			}
 			add_initiator_backers = {
@@ -172,7 +172,7 @@ usfp_filibuster.1 = {
 			}
 		}
 		hidden_effect = {
-			c:SON = {
+			c:usfp_SON = {
 				set_country_type = colonial
 			}
 		}
@@ -202,7 +202,7 @@ usfp_filibuster.2 = {
 		c:USA = {
 			save_scope_as = usa_scope
 		}
-		s:STATE_BAJA_CALIFORNIA.region_state:SON = {
+		s:STATE_BAJA_CALIFORNIA.region_state:usfp_SON = {
 			save_scope_as = baja_scope
 		}
 	}
@@ -215,7 +215,7 @@ usfp_filibuster.2 = {
 			base = 1000
 		}
 		change_relations = {
-			country = c:SON
+			country = c:usfp_SON
 			value = -100
 		}
 		s:STATE_BAJA_CALIFORNIA = {
@@ -223,13 +223,13 @@ usfp_filibuster.2 = {
 		}
 		random_diplomatic_play = {
 			limit = {
-				initiator_is = c:SON
+				initiator_is = c:usfp_SON
 				target_is = c:MEX
 			}
 			add_war_goal = {
 				holder = root
 				type = return_state
-				target_state = s:STATE_BAJA_CALIFORNIA.region_state:SON
+				target_state = s:STATE_BAJA_CALIFORNIA.region_state:usfp_SON
 				primary_demand = yes
 			}
 		}
@@ -333,7 +333,7 @@ usfp_filibuster.4 = {
 	duration = 3
 
 	immediate = {
-		c:SON = {
+		c:usfp_SON = {
 			save_scope_as = sonora_scope
 			ruler = {
 				save_scope_as = william_walker_scope
@@ -345,7 +345,7 @@ usfp_filibuster.4 = {
 	option = {
 		name = usfp_filibuster.4.a
 		default_option = yes
-		annex = c:SON
+		annex = c:usfp_SON
 		s:STATE_SONORA = {
 			add_claim = c:MEX
 		}
@@ -357,7 +357,7 @@ usfp_filibuster.4 = {
 	option = {
 		name = usfp_filibuster.4.b
 		create_diplomatic_pact = {
-			country = c:SON
+			country = c:usfp_SON
 			type = puppet
 		}
 		s:STATE_SONORA = {
@@ -376,7 +376,7 @@ usfp_filibuster.4 = {
 			}
 		}
 		change_relations = {
-			country = c:SON
+			country = c:usfp_SON
 			value = -20
 		}
 		s:STATE_SONORA = {

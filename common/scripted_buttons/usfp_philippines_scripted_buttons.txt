@@ -1,0 +1,45 @@
+﻿usfp_philippine_insular_government_button = {
+    name = "usfp_philippine_insular_government_button"
+    desc = "usfp_philippine_insular_government_button_desc"
+
+    visible = {
+        root = c:USA
+        exists = c:PHI
+        c:PHI ?= {
+            is_subject_of = c:USA
+            has_modifier = usfp_philippines_military_government_modifier
+        }
+    }
+
+    possible = {
+        c:PHI = {
+            NOT = {
+                any_political_movement = {
+                    is_insurrectionary = yes
+                }
+            }
+            country_turmoil < 0.15
+            liberty_desire < 25
+        }
+        is_diplomatic_play_committed_participant = no
+    }
+
+    effect = {
+        c:PHI = {
+            activate_law = root.active_law:lawgroup_governance_principles.type
+            activate_law = law_type:law_oligarchy
+            active_law:lawgroup_distribution_of_power ?= {
+                add_amendment = {
+                    type =  amendment_usfp_philippine_assembly
+                    sponsor = c:PHI.ig:ig_intelligentsia
+                }
+            }
+            remove_modifier = usfp_philippines_military_government_modifier
+            trigger_event = usfp_philippines.5
+        }
+    }
+
+    ai_chance = {
+        value = 1000
+    }
+}

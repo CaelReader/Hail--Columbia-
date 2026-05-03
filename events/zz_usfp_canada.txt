@@ -48,40 +48,40 @@ can_aus.5 = {
 			s:STATE_BRITISH_COLUMBIA = {
 				if = {
 					limit = {
-						exists = region_state:SYX
+						exists = region_state:usfp_SYX
 					}
-					region_state:SYX = {
+					region_state:usfp_SYX = {
 						set_state_owner = root
 					}
 				}
 				if = {
 					limit = {
-						exists = region_state:SAL
+						exists = region_state:usfp_SAL
 					}
-					region_state:SAL = {
+					region_state:usfp_SAL = {
 						set_state_owner = root
 					}
 				}
 				if = {
 					limit = {
-						exists = region_state:LLT
+						exists = region_state:usfp_LLT
 					}
-					region_state:LLT = {
+					region_state:usfp_LLT = {
 						set_state_owner = root
 					}
 				}
 				if = {
 					limit = {
-						exists = region_state:SWP
+						exists = region_state:usfp_SWP
 					}
-					region_state:SWP = {
+					region_state:usfp_SWP = {
 						set_state_owner = root
 					}
 				}
 			}
 			if = {
-				limit = { exists = c:TLT }
-				annex = c:TLT
+				limit = { exists = c:usfp_TLT }
+				annex = c:usfp_TLT
 			}
 		}
 		if = {
@@ -93,9 +93,9 @@ can_aus.5 = {
 			 s:STATE_ONTARIO = {
 				if = {
 					limit = {
-						exists = region_state:OJI
+						exists = region_state:usfp_OJI
 					 }
-					 region_state:OJI = {
+					 region_state:usfp_OJI = {
 						set_state_owner = root
 					 }
 				 }
@@ -108,8 +108,8 @@ can_aus.5 = {
 				}
 			 }
 			 if = {
-				limit = {exists = c:INK }
-				annex = c:INK
+				limit = {exists = c:usfp_INK }
+				annex = c:usfp_INK
 			 }
 		}
 		s:STATE_NUNAVUT = {
@@ -149,8 +149,8 @@ can_aus.5 = {
 				}
 			 }
 			 if = {
-				limit = { exists = c:CPW }
-				annex = c:CPW
+				limit = { exists = c:usfp_CPW }
+				annex = c:usfp_CPW
 			 }
 		}
 		if = {
@@ -160,12 +160,12 @@ can_aus.5 = {
 				}
 			 }
 			 if = {
-				limit = {exists = c:DNZ }
-				annex = c:DNZ
+				limit = {exists = c:usfp_DNZ }
+				annex = c:usfp_DNZ
 			 }
 			 if = {
-				limit = {exists = c:SVY }
-				annex = c:SVY
+				limit = {exists = c:usfp_SVY }
+				annex = c:usfp_SVY
 			 }
 		}
 	}

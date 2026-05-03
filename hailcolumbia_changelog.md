@@ -866,3 +866,48 @@ Fixed missing tooltip on Hard Times event
 Fixed Canadian countries missing Colonial Administration government principle
 Fixed Monroe Doctrine violation being triggered by the USA calling in a European ally against a target
 Added checks to hopefully prevent erroneous spawning of Cuba content
+
+# 8.0 "Roosevelt"
+## New Content
+    Domestic and Foreign Agenda JEs for Theodore Roosevelt
+    Banana Wars JE with 8 events promoting intervention in Latin America on behalf of your Companies
+    Benevolent Assimilation JE with 11 events for the American colonization of the Philippines
+    Added The New Navy JE for modernizing your fleets in the face of rising Pacific powers
+    Added small Journal Entry if you take All of Mexico
+    New events: Yellowstone National Park, Roosevelt Shot, Booker T Washington at the White House, Brownsville Affair, American Naval Advisors, Lochner Ruling, Chinese Exclusion, Issei Arrivals, Panama Rebellion 
+    Added Fur Trapping Grounds buildings with a special PM for Bison Hunting
+    New characters: Smedley Butler, Sam Zemurray, Leonard Wood, Mark Hanna
+## 1.13 Compatibility
+    Added home states to historical character templates
+    Abolitionists can't be selected for IG Leadership until the Whigs collapse
+    Updated strategic region triggers to new map changes
+    The Ironclad Concept event once again spawns the USS Monitor (now as a real Monitor-class ship)
+    Temporarily disabled HQ checks for army occupation (script trigger broken in 1.13)
+## Updates
+    Added pop-up event alerting the player when the CMF is detected as missing or incompatible mods are enabled
+    Only states that actually rebel and join the CSA become unincorporated after the civil war
+    American Superculture is now a JE to expose its requirements to the player
+    Increased Radicals/Loyalists requirements for the Superculture
+    American Superculture now adds a special Tradition trait to relevant cultures
+    Added tooltip to intro event alerting the player about the Spoils System
+    Spoils System now adds +1 Government IG Approval
+    Added notification when the Spoils System activates
+    The Mexican National Movement now gets increased activism proportional to the number of owned mexican states while the Civil War or a Revolution is ongoing
+    A Subject Mexico with sufficient Liberty Desire will now unilaterally declare independence during the Civil War
+    Patrician Philanthropy trait now increases loyalism for full acceptance pops
+    IGs now lose Empire of Liberty ideology when Manifest Destiny begins to decay
+    Feminists can now join the Abolitionist movement
+    Political Machines can now be removed by decision if you abolish the constitution
+    Fighting the Political Machines is now more expensive
+    Completing the Progressive Era now requires abolishing the Spoils System
+    Added tooltip to the Collapse of the Whigs warning the player that the pro-slavery movement will instantly seceed if an Abolitionist is elected
+    Reduced the Hard Times interest rate modifier from  +40% to +33%
+## Fixes
+    Failing the Constitution JE now removes the American System law (and re-adds it if you are on Protectionism when you restore the Constitution)
+    A House Divided will now force-spawn an abolitionist movement if it vanishes for some reason
+    The USA cannot offer to purchase Cuba from a Rival country
+    An American subject occupying Mexico City now triggers the G-H decision
+    Fixed Gold Fields and Gold Mines not actually contributing to Hard Times recovery
+    Fixed missing state in Confederados event
+    Fixed broken tooltip for Forty Acres and a Mule
+    Fixed vanilla bug where the sale of alaska would also sell the Kurils

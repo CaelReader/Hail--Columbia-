@@ -247,8 +247,8 @@
                         has_discrimination_trait = heritage_african_diaspora
                     }
                     NOR = {
-                        has_role = general
-                        has_role = admiral
+                        has_role_of_type = general
+                        has_role_of_type = admiral
                     }
                     NOT = {
                         has_template = usfp_marcus_garvey

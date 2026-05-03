@@ -636,3 +636,366 @@ usfp_calculate_danish_purchase_cost = {
 		subtract = usfp_west_indies_purchase_lump_sum
 	}
 }
+
+
+usfp_percent_of_mexicans_are_catholic = {
+    value = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:mexican
+                religion = {
+                    NOT = {
+                        this = root.religion
+                    }
+                }
+            }
+            add = total_size
+        }
+    }
+    divide = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:mexican
+            }
+            add = total_size
+        }
+        min = 1 # DIV/0 guard
+    }
+}
+
+usfp_get_mexican_radicals = {
+    value = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:mexican
+            }
+            add = pop_radical_fraction
+        }
+    }
+    divide = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:mexican
+            }
+            add = 1
+        }
+        min = 1 # DIV/0 guard
+    }
+}
+
+usfp_get_average_mexican_acceptance = {
+    value = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:mexican
+            }
+            add = pop_acceptance
+        }
+    }
+    divide = {
+        every_scope_pop = {
+            limit = {
+                culture = cu:mexican
+            }
+            add = 1
+        }
+        min = 1 # DIV/0 guard
+    }
+}
+
+usfp_calculate_banana_wars_score = {
+    value = 0
+    every_state = {
+        limit = {
+            is_in_geographic_region = geographic_region_caribbean_coast
+            owner ?= {
+                has_revolution = no
+                NOT = {
+                    this = root
+                }
+            }
+        }
+        owner ?= {
+            #point: has investment rights or market
+            if = {
+                limit = {
+                    OR = {
+                        is_in_customs_union_with = root
+                        any_scope_treaty = {
+                            binds = root
+                            any_scope_article = {
+                                has_type = foreign_investment_rights
+                                target_country = root
+                            }
+                        }
+                    }
+                }
+                add = 1
+            }
+            #point: is subject
+            if = {
+                limit = {
+                    is_subject_of = root
+                }
+                add = 1
+            }
+            #point: is non-democratic with Laissez Faire or Extraction Economy
+            if = {
+                limit = {
+                    OR = {
+                        is_subject_of = root
+                        is_in_customs_union_with = root
+                        any_scope_treaty = {
+                            binds = root
+                            any_scope_article = {
+                                has_type = foreign_investment_rights
+                                target_country = root
+                            }
+                        }
+                    }
+                    OR = {
+                        has_law_or_variant = law_type:law_laissez_faire
+                        has_law_or_variant = law_type:law_extraction_economy
+                    }
+                    OR = {
+                        has_law_or_variant = law_type:law_autocracy
+                        has_law_or_variant = law_type:law_oligarchy
+                        has_law_or_variant = law_type:law_technocracy
+                        has_law_or_variant = law_type:law_single_party_state
+                    }
+                }
+                add = 1
+            }
+            #lose points for council republics
+            if = {
+                limit = {
+                    has_law_or_variant = law_type:law_council_republic
+                }
+                subtract = 2
+            }
+        }
+    }
+    #point for each unincorporated state
+    every_scope_state = {
+        limit = {
+            OR = {
+                region = sr:region_central_america
+                is_in_geographic_region = geographic_region_caribbean_old
+                region = sr:region_gran_colombia
+            }
+            is_incorporated = no
+            is_treaty_port = no
+        }
+        add = 1
+    }
+
+    max = 30
+    min = 0
+}
+
+usfp_get_roosevelt_domestic_score = {
+    value = 0
+    root = {
+        if = {
+            limit = {
+                usfp_roosevelt_agenda_national_parks_trigger = yes
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                has_variable = busted_trusts
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                has_law_or_variant = law_type:law_interventionism
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                institution_investment_level = {
+                    institution = institution_workplace_safety
+                    value >= 3
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                institution_investment_level = {
+                    institution = institution_health_system
+                    value >= 3
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_variable = roosevelt_didnt_avoid_revolution
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_political_movement = {
+                        movement_is_socialist = yes
+                        OR = {
+                            political_movement_radicalism > 0.75
+                            political_movement_support > 0.15
+                        }
+                    }
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                ig:ig_industrialists ?= {
+                    is_powerful = no
+                }
+            }
+            add = 1
+        }
+        #halved if you go for a third term
+        if = {
+            limit = {
+                has_variable = roosevelt_went_third_term
+            }
+            divide = 2
+        }
+    }
+    min = 0
+}
+
+usfp_get_roosevelt_diplomacy_score = {
+    value = 0
+    root = {
+        if = {
+            limit = {
+                #Cuba
+                OR = {
+                    c:CUB ?= {
+                        is_subject_of = root
+                    }
+                    AND = {
+                        country_or_subject_owns_entire_state_region = STATE_CENTRAL_CUBA
+                        country_or_subject_owns_entire_state_region = STATE_EASTERN_CUBA
+                        country_or_subject_owns_entire_state_region = STATE_WESTERN_CUBA
+                    }
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                #Puerto Rico
+                country_or_subject_owns_entire_state_region = STATE_PUERTO_RICO
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                #Panama Canal
+                any_scope_building = {
+                    is_building_type = building_panama_canal
+                    is_under_construction = no
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                #Monroe Doctrine enforced minus GBR
+                NOT = {
+                    any_country_in_americas = {
+                        is_subject = yes
+                        overlord ?= {
+                            NOR = {
+                                is_in_geographic_region = geographic_region_americas
+                                c:GBR ?= this
+                            }
+                        }
+                    }
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                #Pacific Power Projection
+                OR = {
+                    any_subject_or_below = {
+                        is_in_geographic_region = geographic_region_western_pacific
+                        OR = {
+                            is_subject_type = subject_type_colony
+                            is_subject_type = subject_type_puppet
+                        }
+                    }
+                    any_scope_state = {
+                        is_in_geographic_region = geographic_region_western_pacific
+                        count >= 3
+                    }
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                #Expanded Power Bloc
+                AND = {
+                    is_power_bloc_leader = yes
+                    num_power_bloc_members_script > 7
+                    power_bloc.current_cohesion_percentage >= 0.90
+                    power_bloc.power_bloc_rank >= 3
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                #Army Reform
+                AND = {
+                    any_scope_building = {
+                        filter = {
+                            is_building_type = building_barrack
+                        }
+                        percent = 1
+                        OR = {
+                            has_active_production_method = pm_advanced_tactics_training
+                            has_active_production_method = pm_training_streamlining
+                            has_active_production_method = pm_nco_incorporation
+                            has_active_production_method = pm_mobile_warfare_tactics
+                        }
+                    }
+                    army_power_projection >= var:roosevelt_army_target
+                }
+            }
+            add = 1
+        }
+        if = {
+            limit = {
+                #Complete Great White Fleet
+                OR = {
+                    has_variable = new_navy_completed
+                    naval_power_projection >= root.var:roosevelt_navy_target
+                }
+            }
+            add = 1
+        }
+
+        #halved if you go for a third term
+        if = {
+            limit = {
+                has_variable = roosevelt_went_third_term
+            }
+            divide = 2
+        }
+    }
+    min = 0
+}

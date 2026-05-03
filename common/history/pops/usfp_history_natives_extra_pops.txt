@@ -72,21 +72,7 @@ POPS = {
 			}
 		}
 	}
-	#Maritimes
-	s:STATE_NEW_BRUNSWICK = {
-		region_state:NBS = {
-			create_pop = {
-				culture = algonquian
-				size = 800 # Mikmaq, placeholder estimate
-			}
-		}
-		region_state:NVS = {
-			create_pop = {
-				culture = algonquian
-				size = 1500 # Mikmaq, placeholder estimate
-			}
-		}
-	}
+
 
 	#Mississippi River
 	s:STATE_LOUISIANA = {
