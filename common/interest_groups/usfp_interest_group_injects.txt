@@ -1,0 +1,5 @@
+﻿# INJECT:ig_petty_bourgeoisie = {
+#     character_ideologies = {
+#         ideology_usfp_progressive
+#     }
+# }

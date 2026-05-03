@@ -1,5 +1,5 @@
 ﻿COUNTRIES = {
-	c:AHT ?= {
+	c:usfp_AHT ?= {
 		usfp_native_startup = yes
 		activate_law = law_type:law_slavery_banned
 		remove_modifier = native_conscription_10

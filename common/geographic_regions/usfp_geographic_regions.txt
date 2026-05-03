@@ -28,23 +28,19 @@ geographic_region_western_hemisphere = {
 
 	strategic_regions = {
 		#geographic_region_north_america
-		sr:region_canada
-		sr:region_new_england
-		sr:region_pacific_coast
-		sr:region_great_plains
-		sr:region_the_midwest
-		sr:region_dixie
+        sr:region_canada
+        sr:region_atlantic_coast
+        sr:region_pacific_coast
+        sr:region_great_plains
 
 		#geographic_region_central_america
-		sr:region_mexico
 		sr:region_central_america
-		sr:region_caribbean
 
 		#geographic_region_south_america
-		sr:region_brazil
-		sr:region_la_plata
-		sr:region_andes
-		sr:region_gran_colombia
+        sr:region_brazil
+        sr:region_la_plata
+        sr:region_andes
+        sr:region_gran_colombia
 	}
 
 	state_regions = {
@@ -67,6 +63,24 @@ geographic_region_central_great_plains = {
 	}
 }
 
+geographic_region_american_bison_range = {
+    short_key = "usfp_bison_range"
+
+    state_regions = {
+        STATE_TEXAS
+        STATE_OKLAHOMA
+        STATE_COLORADO
+        STATE_WYOMING
+        STATE_MONTANA
+        STATE_ALBERTA
+        STATE_SASKATCHEWAN
+        STATE_NORTH_DAKOTA
+        STATE_SOUTH_DAKOTA
+        STATE_KANSAS
+        STATE_NEBRASKA
+    }
+}
+
 geographic_region_cuba = {
 	short_key = "cuba"
 
@@ -75,4 +89,51 @@ geographic_region_cuba = {
 		STATE_CENTRAL_CUBA
 		STATE_EASTERN_CUBA
 	}
+}
+
+geographic_region_western_pacific = {
+    short_key = "western_pacific"
+
+    strategic_regions = {
+        sr:region_oceania
+        sr:region_northeast_asia
+        sr:region_indonesia
+    }
+}
+
+geographic_region_pacific = {
+    short_key = "pacific"
+
+    strategic_regions = {
+        sr:region_oceania
+        sr:region_northeast_asia
+        sr:region_indonesia
+        sr:region_pacific_coast
+        sr:region_andes
+        sr:region_la_plata
+    }
+
+    state_regions = {
+        STATE_SHENGJING
+        STATE_BEIJING
+        STATE_ZHILI
+        STATE_SHANDONG
+        STATE_JIANGSU
+        STATE_SUZHOU
+        STATE_ZHEJIANG
+        STATE_FUJIAN
+        STATE_FORMOSA
+        STATE_GUANGDONG
+        STATE_SHAOZHOU
+    }
+}
+
+geographic_region_caribbean_coast = {
+    short_key = "caribbean_coast"
+
+    strategic_regions = {
+        sr:region_gran_colombia
+    }
+    state_regions = { STATE_HONDURAS STATE_NICARAGUA STATE_COSTA_RICA STATE_PANAMA STATE_SAN_SALVADOR STATE_YUCATAN STATE_CHIAPAS STATE_GUATEMALA STATE_WESTERN_CUBA STATE_JAMAICA STATE_HAITI STATE_SANTO_DOMINGO STATE_WEST_INDIES STATE_BAHAMAS STATE_PUERTO_RICO STATE_EASTERN_CUBA STATE_CENTRAL_CUBA }
+
 }

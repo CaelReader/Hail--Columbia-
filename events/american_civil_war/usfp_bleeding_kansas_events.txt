@@ -422,7 +422,7 @@ usfp_bleeding_kansas.6 = {
 
 	trigger = {
 		any_scope_character = {
-			has_variable = john_brown_var
+			has_template = usa_john_brown_character_template
 		}
 		OR = {
 			AND = {
@@ -462,7 +462,7 @@ usfp_bleeding_kansas.6 = {
 		}
 		random_scope_character = {
 			limit = {
-				has_variable = john_brown_var
+                has_template = usa_john_brown_character_template
 			}
 			save_scope_as = john_brown_scope
 		}
@@ -539,7 +539,7 @@ usfp_bleeding_kansas.7 = {
 
 	trigger = {
 		any_scope_character = {
-			has_variable = john_brown_var
+            has_template = usa_john_brown_character_template
 		}
 		OR = {
 			AND = {
@@ -581,7 +581,7 @@ usfp_bleeding_kansas.7 = {
 		}
 		random_scope_character = {
 			limit = {
-				has_variable = john_brown_var
+                has_template = usa_john_brown_character_template
 			}
 			save_scope_as = john_brown_scope
 		}

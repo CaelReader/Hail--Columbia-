@@ -266,8 +266,8 @@ usfp_indian_wars.3 = {
 			every_scope_character = {
 				limit = {
 					OR = {
-						has_role = general
-						is_ruler =  yes
+						has_role_of_type = general
+						is_ruler_of_own_country =  yes
 					}
 				}
 				add_modifier = {
@@ -662,7 +662,7 @@ usfp_indian_wars.7 = {
 			any_military_formation = {
 				is_army = yes
 				any_scope_character = {
-					has_role = general
+					has_role_of_type = general
 				}
 				current_hq = p:x33ee3b.land_hq
 			}
@@ -717,7 +717,7 @@ usfp_indian_wars.7 = {
 				limit = {
 					is_army = yes
 					any_scope_character = {
-						has_role = general
+						has_role_of_type = general
 					}
 					current_hq = p:x33ee3b.land_hq
 				}
@@ -1187,6 +1187,21 @@ usfp_indian_wars.11 = {
 				}
 			}
 		}
+        custom_tooltip = {
+            text = end_of_bison_hunting
+            every_state_region_in_usfp_bison_range = {
+                remove_resource_potential = building_usfp_fur_trapper
+                every_scope_state = {
+                    if = {
+                        limit = {
+                            has_building = building_usfp_fur_trapper
+                        }
+                        remove_building = building_usfp_fur_trapper
+                    }
+                }
+            }
+        }
+
 	}
 }
 #Dawes Act as the end of the Indian Wars
@@ -1290,6 +1305,23 @@ usfp_indian_wars.12 = {
 			base = 1000
 		}
 	}
+
+    after = {
+        custom_tooltip = {
+            text = end_of_fur_trapping
+            every_state_region_in_usfp_american_west = {
+                remove_resource_potential = building_usfp_fur_trapper
+                every_scope_state = {
+                    if = {
+                        limit = {
+                            has_building = building_usfp_fur_trapper
+                        }
+                        remove_building = building_usfp_fur_trapper
+                    }
+                }
+            }
+        }
+    }
 }
 #Indian Wars startup event
 usfp_indian_wars.13 = {

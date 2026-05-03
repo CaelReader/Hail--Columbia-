@@ -1,5 +1,5 @@
 ﻿COUNTRIES = {
-	c:SHP ?= {
+	c:usfp_SHP ?= {
 		usfp_native_startup = yes
 	}
 }

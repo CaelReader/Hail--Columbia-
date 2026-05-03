@@ -1,0 +1,26 @@
+﻿GLOBAL = {
+    #Newfoundland Colony
+    #Wasn't absorbed by Canada until the 1950s, so its set to be English rather than Anglo-Canadian
+    s:STATE_NEWFOUNDLAND = {
+        region_state:GBR = {
+            set_state_owner = c:NEW
+        }
+    }
+
+    ##from State Traits Expanded
+    ## Canadian Boreal Forests
+
+    s:STATE_ALBERTA = { add_state_trait = state_trait_canadian_boreal_forests  }
+    s:STATE_MANITOBA = { add_state_trait = state_trait_canadian_boreal_forests  }
+    s:STATE_NEWFOUNDLAND = { add_state_trait = state_trait_canadian_boreal_forests  }
+    s:STATE_BRITISH_COLUMBIA = { add_state_trait = state_trait_canadian_boreal_forests  }
+
+    s:STATE_QUEBEC = { add_state_trait = state_trait_canadian_boreal_forests  }
+    s:STATE_SASKATCHEWAN = { add_state_trait = state_trait_canadian_boreal_forests  }
+
+    ## American Chestnuts
+    s:STATE_NEW_BRUNSWICK = { add_state_trait = state_trait_american_chestnuts }
+    s:STATE_ONTARIO = { add_state_trait = state_trait_american_chestnuts  }
+
+    s:STATE_BRITISH_COLUMBIA = { add_state_trait = state_trait_burrard_inlet }
+}

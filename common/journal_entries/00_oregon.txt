@@ -42,7 +42,7 @@ je_oregon = {
 
 	possible = { 
 		OR = {
-			has_interest_marker_in_region = region_pacific_coast
+			has_interest_marker_in_region = sr:region_pacific_coast
 			custom_tooltip = {
 				text = oregon_tt
 				has_global_variable = oregon_trail_mapped
@@ -56,7 +56,7 @@ je_oregon = {
 	complete = {
 		OR = {
 			AND = {
-				has_interest_marker_in_region = region_pacific_coast
+				has_interest_marker_in_region = sr:region_pacific_coast
 				custom_tooltip = {
 					text = oregon_tt
 					has_global_variable = oregon_trail_mapped
@@ -223,7 +223,7 @@ je_oregon = {
 			}
 	}
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 	weight = 100
 }
 
@@ -252,7 +252,7 @@ je_conquer_oregon = {
 	
 
 	weight = 100
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 	transferable = no
 }
 
@@ -310,5 +310,5 @@ je_oregon_can = {
 				}
 			}
 	}
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }

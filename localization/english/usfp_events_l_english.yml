@@ -90,6 +90,8 @@ usfp_a_house_divided.15.d: "Continuing polarization over the matter of [GetLawTy
 usfp_a_house_divided.15.f: ""This new party will fitly designate those who had united to restore the Union to its true mission: that of champion and promulgator of Liberty rather than propagandist of slavery."" #Horace Greeley
 usfp_a_house_divided.15.a: "A new political era."
 usfp_a_house_divided.15.a.tt: "The [SCOPE.sParty('whig_scope').GetName] will now be known as the Republican Party."
+ abolitionists_can_become_leaders: "[GetIdeology('ideology_abolitionist').GetName] [Concept('concept_politician', '$concept_politicians$')] can now become [Concept('concept_leader', '$concept_leaders$')]"
+ pro_slavery_movement_abolitionist_leader_warning: "@warning! If an [GetIdeology('ideology_abolitionist').GetName] becomes [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')], the $movement_pro_slavery$ will immediately launch a [concept_secession]!"
 
 usfp_a_house_divided.16.t: "Dred Scott v. Sandford"
 usfp_a_house_divided.16.d: "The [concept_usfp_supreme_court] has handed down a landmark decision over the case of an [SCOPE.sCulture('afro_american_scope').GetName] man suing for his freedom. The court has ruled that the Constitution extends no rights to any [SCOPE.sCulture('afro_american_scope').GetName], free or slave, and further that [concept_usfp_congress] has no power to restrict [GetLawType('law_slave_trade').GetGroup.GetName] in the territories."
@@ -125,10 +127,10 @@ usfp_a_house_divided.21.d: "As the [SCOPE.sCountry('usa_scope').GetName] remains
 usfp_a_house_divided.21.f: ""You see those trees," said the noble hearted captain next morning, pointing to a group in the distance; "they grow on free soil, and as soon as your feet touch that, you're a man. I want to see you go and be a freeman."" #Josiah Henson
 usfp_a_house_divided.21.a: "Freedom is the common cause of all mankind."
 usfp_a_house_divided.21.a.tt: "Until the [SCOPE.sCountry('usa_scope').GetName] abolishes [GetLawType('law_slave_trade').GetGroup.GetName], $usfp_afro_american_culture$ [GetPopType('slaves').GetName] will regularly arrive in our [Concept('concept_state', '$concept_states$')] as [concept_loyalist] [GetPopType('laborers').GetName]."
-usfp_a_house_divided.21.a.tt2: "Until the [SCOPE.sCountry('usa_scope').GetName] abolishes [GetLawType('law_slave_trade').GetGroup.GetName], $usfp_afro_american_culture$ [GetPopType('slaves').GetName] will occasionally arrive in our [Concept('concept_state', '$concept_states$')] in [GetStrategicRegion('region_mexico').GetName] or the [GetStrategicRegion('region_caribbean').GetName] as [concept_loyalist] [GetPopType('laborers').GetName]."
+usfp_a_house_divided.21.a.tt2: "Until the [SCOPE.sCountry('usa_scope').GetName] abolishes [GetLawType('law_slave_trade').GetGroup.GetName], $usfp_afro_american_culture$ [GetPopType('slaves').GetName] will occasionally arrive in our [Concept('concept_state', '$concept_states$')] in [GetGeographicRegion('geographic_region_mexico_old').GetName] and the [GetGeographicRegion('geographic_region_caribbean_old').GetName] as [concept_loyalist] [GetPopType('laborers').GetName]."
 
 usfp_a_house_divided.22.t: "Wide Awake"
-usfp_a_house_divided.22.d: "An [GetIdeology('ideology_abolitionist').GetName] youth movement has begun organizing young voters up and down [GetStrategicRegion('region_new_england').GetName] in support of the candidacy of [SCOPE.sCharacter('real_abraham_lincoln_scope').GetFullName]. Adopting military dress and performing grand night marches by torchlight, these 'Wide Awakes' are committed to defending the [SCOPE.sParty('lincoln_party').GetName] against the [SCOPE.sPoliticalMovement('pro_slavery_movement').GetName]."
+usfp_a_house_divided.22.d: "An [GetIdeology('ideology_abolitionist').GetName] youth movement has begun organizing young voters up and down [GetGeographicRegion('geographic_region_new_england_old').GetName] in support of the candidacy of [SCOPE.sCharacter('real_abraham_lincoln_scope').GetFullName]. Adopting military dress and performing grand night marches by torchlight, these 'Wide Awakes' are committed to defending the [SCOPE.sParty('lincoln_party').GetName] against the [SCOPE.sPoliticalMovement('pro_slavery_movement').GetName]."
 usfp_a_house_divided.22.f: ""We the undersigned, do hereby explicitly declare our entire devotion to the Constitution and the Union, our opposition to interference with slavery in the States where it now legally exists, and our unqualified and unalterable determination to resist by all constitutional means its further extension, and pledge ourselves to use all honorable means for the success and triumph of the [SCOPE.sParty('lincoln_party').GetNameNoFormatting] and of the election of its candidates to office."" #The Glorious Wide Awakes,” June 2, 1860
 usfp_a_house_divided.22.a: "God never made a tyrant or a slave."
 usfp_a_house_divided.22.b: "Nothing but a pack of lawless rioters."
@@ -239,7 +241,7 @@ usfp_acw.4.d: "An enterprising inventor has come up with a plan to ensure our na
 usfp_acw.4.f: "Now is the age of iron, sirs. If the Union is slow to act on this matter, the rebels will be in New York Harbor by the end of the year!"
 usfp_acw.4.a: "Fund it!"
 usfp_acw.4.b: "This is too costly of a gamble."
-usfp_acw.4.a.tt: "An Ironclad will be built in [SCOPE.sState('new_york_scope').GetName]"
+usfp_acw.4.a.tt: "A Monitor will be built in [SCOPE.sState('new_york_scope').GetName]"
 
 usfp_acw.5.t: "Indians Declare for [SCOPE.sCountry('csa_scope').GetName]"
 usfp_acw.5.d: "The Indian nations remaining in the South have signed treaties with the [SCOPE.sCountry('csa_scope').GetName] and joined in the war on their side."
@@ -525,16 +527,16 @@ usfp_manifest_destiny.18.b: "[SCOPE.sCountry('target_scope').GetName] is no conc
 usfp_manifest_destiny.18.c: "We can't enforce the doctrine without a navy to match."
 usfp_manifest_destiny.18.e: "We are rather preoccupied at the moment!"
 
-usfp_manifest_destiny.19.t: "The [SCOPE.sCulture('american_culture').GetName] Superculture"
+usfp_manifest_destiny.19.t: "The [GetCulture('usfp_american').GetName] Superculture"
 usfp_manifest_destiny.19.d: "The ideals of Manifest Destiny now suffuse the entire nation. From coast to coast, our people talk of the great divine purpose bestowed upon the [ROOT.GetCountry.GetName]. This fervor has had a pronounced impact on the fabric of [ROOT.GetCountry.GetAdjectiveNoFormatting] culture, which will be felt for generations to come."
 usfp_manifest_destiny.19.f: ""Divine task! immortal mission! Let us tread fast and joyfully the open trail before us! Let every American heart open wide for patriotism to glow undimmed, and confide with religious faith in the sublime and prodigious destiny of his well-loved country!""
 usfp_manifest_destiny.19.a: "We must guard our sacred identity against foreign influence."
 usfp_manifest_destiny.19.b: "America for Americans!"
-usfp_manifest_destiny.19.c: "We are, all of us, [SCOPE.sCulture('american_culture').GetName]!"
+usfp_manifest_destiny.19.c: "We are, all of us, [GetCulture('usfp_american').GetName]!"
 usfp_manifest_destiny.19.g: "Let all come and find their place here!"
 usfp_manifest_destiny.19.h: "Not a melting pot, but a great mosaic!"
-american_superculture_emerges: "25% of [SCOPE.sCulture('yankee_culture').GetName], [SCOPE.sCulture('dixie_culture').GetName], and [SCOPE.sCulture('anglo_canadian_culture').GetName] [Concept('concept_pop', '$concept_pops$')] adopt the [SCOPE.sCulture('american_culture').GetName] culture."
-american_superculture_homelands: "[SCOPE.sCulture('yankee_culture').GetName], [SCOPE.sCulture('dixie_culture').GetName], and [SCOPE.sCulture('anglo_canadian_culture').GetName] [Concept('concept_homeland', '$concept_homelands$')] become [SCOPE.sCulture('american_culture').GetName] [Concept('concept_homeland', '$concept_homelands$')]."
+american_superculture_emerges: "25% of [GetCulture('yankee').GetName], [GetCulture('dixie').GetName], and [GetCulture('anglo_canadian').GetName] [Concept('concept_pop', '$concept_pops$')] adopt the [GetCulture('usfp_american').GetName] culture."
+american_superculture_homelands: "[GetCulture('yankee').GetName], [GetCulture('dixie').GetName], and [GetCulture('anglo_canadian').GetName] [Concept('concept_homeland', '$concept_homelands$')] become [GetCulture('usfp_american').GetName] [Concept('concept_homeland', '$concept_homelands$')]."
 
 usfp_manifest_destiny.20.t: "Oregon Bound"
 usfp_manifest_destiny.20.d: "With the opening of the Oregon Trail, great wagon trains have begun to set out west towards a new life in [SCOPE.sState('oregon_scope').GetName]. The route across the Great Plains and Rocky Mountains is treacherous, but across the trail salesmen have quickly established depots from which to sell supplies to the weary pioneers."
@@ -815,7 +817,7 @@ usfp_usa.22.a: "Here's to another 100 years!"
 
 usfp_usa.23.t: "The [ROOT.GetCountry.GetRuler.GetLastName] Presidency"
 usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of his office. After dissolving the Central Bank and asserting the powers of the Federal government in the [concept_usfp_nullification_crisis], he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the [concept_usfp_supreme_court] rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of [GetLawType('law_slave_trade').GetGroup.GetName] continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
-usfp_usa.23.f: ""But you must remember, my fellow-citizens, that eternal vigilance by the people is the price of liberty, and that you must pay the price if you wish to secure the blessing."" #Andrew Jackson
+usfp_usa.23.f: ""But you must remember, my fellow-citizens, that eternal vigilance by the people is the price of liberty, and that you must pay the price if you wish to secure the blessing."\n\n—Andrew Jackson" #Andrew Jackson
 usfp_usa.23.a: "This is a time of opportunity."
 
 usfp_usa.24.t: "Chestnut Blight"
@@ -840,6 +842,17 @@ usfp_usa.27.f: ""Word and work make healthy Christians. If it be all Word and no
 usfp_usa.27.a: "What new pieties will they come up with next?"
 usfp_usa.27.b: "The most righteous of causes."
 social_gospelists_can_appear: "[GetIdeology('ideology_usfp_social_gospel_leader').GetName] characters can now appear"
+
+ usfp_usa.28.t: "Chinese Exclusion"
+ usfp_usa.28.d: "The increasing visibility of [SCOPE.sCulture('chinese_culture_scope').GetName] immigrants in the [ROOT.GetCountry.GetName] has fueled calls for an outright ban on any further arrivals from [GetGeographicRegion('geographic_region_china').GetName], and the denial of citizenship to those already here."
+ usfp_usa.28.f: ""We are the warders of the Golden Gate; we must stand here forever in the pathway of the Orient, and if there is any danger or trial it is for us to sound the alarm. I regard the Chinese question as a race question, an international question; and above all a question involving the preservation of our civilization."$quote_dash$Mayor James D. Phelan"
+ usfp_usa.28.a: "It is best to safeguard our own labor force."
+ usfp_usa.28.b: "It would be ridiculous to block valuable workers from strengthening the economy."
+
+ usfp_usa.29.t: "Issei Arrivals"
+ usfp_usa.29.d: "The implementation of [GetAmendmentType('amendment_usfp_chinese_exclusion').GetName] has pushed employers to seek alternative sources of immigrant labor. Initial hirings of [GetCulture('japanese').GetName] workers have drawn a stream of additional migrants across the Pacific into the cities of [SCOPE.sState('target_migration_state').GetName]."
+ usfp_usa.29.f: "Here at the edge of Chinatown, Ushijima had found some Japanese migrants who had preceded him. Stepping inside from the bustling city streets, he rented a cramped room where could rest his head for a few hours. Among his few possession from home was his English language manual, tattered from study. His plan was straightforward: learn the language, find decent paying work, then enter business himself. There would be a future for him here in [SCOPE.sState('target_migration_state').GetNameNoFormatting] beyond anything he could have managed in Japan."
+ usfp_usa.29.a: "The allure of the [Root.GetCountry.GetName] cannot be stymied."
 
 ### USA Labor Events ###
 
@@ -882,6 +895,14 @@ usfp_usa_labor.6.d: "A newly published utopian novel by Edward Bellamy portrays 
 usfp_usa_labor.6.f: ""Their misery came, with all your other miseries, from that incapacity for cooperation which followed from the individualism on which your social system was founded, from your inability to perceive that you could make ten times more profit out of your fellow men by uniting with them than by contending with them."" #Edward Bellamy, Looking Backward
 usfp_usa_labor.6.a: "An inspiring vision of utopia."
 usfp_usa_labor.6.b: "A deranged socialist fantasy."
+
+ usfp_usa_labor.7.t: "Right to Contract"
+ usfp_usa_labor.7.d: "The [concept_usfp_supreme_court] has ruled that our [SCOPE.sLaw('labor_law_scope').GetName] legislation oversteps constitutional protections on citizens' 'freedom to contract', significantly curtailing the scope of the law."
+ usfp_usa_labor.7.f: ""The question necessarily arises: Is this a fair, reasonable and appropriate exercise of the police power of the State, or is it an unreasonable, unnecessary and arbitrary interference with the right of the individual to his personal liberty or to enter into those contracts in relation to labor which may seem to him appropriate or necessary for the support of himself and his family?"$quote_dash$Associate Justice Rufus Peckham"
+ usfp_usa_labor.7.a: "We must accept the court's ruling."
+ usfp_usa_labor.7.b: "We'll fight this corrupt court every step of the way!"
+
+
 
 ### USA Election Events ###
 
@@ -1343,12 +1364,14 @@ usfp_indian_wars.11.t: "Where the Buffalo Once Roamed"
 usfp_indian_wars.11.d: "Years of extermination by soldiers and poachers have driven the American buffalo into near extinction. Deprived of their fundamental basis of subsistence, the plains Indians' ability to resist White encroachment has collapsed."
 usfp_indian_wars.11.f: ""The hunters have done more in the last two years, and will do more in the next year, to settle the vexed Indian question, than the entire regular army has done in the last forty years. They are destroying the Indians' commissary. It is a well-known fact that an army losing its base of supplies is placed at a great disadvantage. For a lasting peace, let them kill, skin, and sell until the buffaloes are exterminated. Then your prairies can be covered with speckled cattle."" #Philip Sheridan
 usfp_indian_wars.11.a: "With the buffalo gone, the plains are ours."
+ end_of_bison_hunting: "All [GetBuildingType('building_usfp_fur_trapper').GetName] are removed from the [GetGeographicRegion('geographic_region_american_bison_range').GetName]"
 
 usfp_indian_wars.12.t: "Allotment"
 usfp_indian_wars.12.d: "The western frontier has been closed. With the plains now firmly under [ROOT.GetCountry.GetAdjective] control, the process of turning Indian hunter-gatherers into good Christian farmers can begin in earnest. Former tribal lands are being apportioned into individual homesteads to be distributed to each Indian family, with the excess sold off to White settlers. Through a system of boarding schools, we can compel the Indians to be absorbed into the American mainstream."
 usfp_indian_wars.12.f: ""The white men made us many promises, more than I can remember, but they never kept but one. They promised to take our land, and they took it."" #Red Cloud
 usfp_indian_wars.12.a: "Kill the Indian, save the man."
 usfp_indian_wars.12.b: "Save the Indian and the man."
+ end_of_fur_trapping: "All [GetBuildingType('building_usfp_fur_trapper').GetName] are removed from the [GetGeographicRegion('geographic_region_american_west_zone').GetName]"
 
 usfp_indian_wars.13.t: "The March of Civilization"
 usfp_indian_wars.13.d: "Gold, Land, and Manifest Destiny continue to propel our settlers westward into the Great Plains. As resistance to this encroachment continues to escalate, we will need to determine our government's policy in dealing with the Indians."
@@ -1687,7 +1710,7 @@ usfp_usa_spain.1.d: "In light of the growing unrest in [SCOPE.sCountry('cuba_sco
 usfp_usa_spain.1.f: ""Spanish officers and mob attacked three newspaper offices, not four (as reported yesterday). Soldiers joined the mob when sent to defend the newspapers, and outside the palace shouted death to Blanco and autonomy. If Americans are in danger ships should be ready to move promptly for [SCOPE.sState('cuba_state_scope').GetPortHubName]. Uncertainty and excitement widespread."" #United States Consulate General, Havana
 usfp_usa_spain.1.a: "The Navy will dispatch a ship to [SCOPE.sState('cuba_state_scope').GetCityHubName]."
 usfp_usa_spain.1.b: "[SCOPE.sCountry('cuba_scope').GetName] is not our problem."
-maine_heads_to_cuba: "An [ROOT.GetCountry.GetAdjective] ship will head to [SCOPE.sState('cuba_state_scope').GetCityHubName]"
+maine_heads_to_cuba: "The [SCOPE.sShip('uss_maine_ship_scope').GetName] will head to [SCOPE.sState('cuba_state_scope').GetCityHubName]"
 
 usfp_usa_spain.2.t: "[SCOPE.sCountry('usa_scope').GetAdjective] Ship Explodes in [SCOPE.sState('cuba_state_scope').GetCityHubName] Harbor!"
 usfp_usa_spain.2.d: "An [SCOPE.sCountry('usa_scope').GetAdjective] ship anchored in [SCOPE.sState('cuba_state_scope').GetCityHubName] has exploded and sank, seemingly by accident. Even though we had no involvement, the [SCOPE.sCountry('usa_scope').GetAdjectiveNoFormatting] press has immediately printed headlines blaming us for the disaster, which could have a disastrous effect on our [concept_relations] with the [SCOPE.sCountry('usa_scope').GetName]."
@@ -1744,9 +1767,202 @@ usfp_get_danish_islands_purchase_desires_iceland_windies: "[GetStateRegion('STAT
 usfp_get_danish_islands_purchase_desires_iceland_only: "[GetStateRegion('STATE_ICELAND').GetName]"
 usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STATE_WEST_INDIES').GetName]"
 
+ ### Roosevelt Events ###
 
-usfp_test.1.t: "DEBUG EVENT"
-usfp_test.1.d: "force spawn a character"
-usfp_test.1.f: "sunrise, parabellum"
-usfp_test.1.a: "amazing, that right there is why you're the best boss!!!"
+ usfp_usa_roosevelt.1.t: "The Splendor of Yellowstone"
+ usfp_usa_roosevelt.1.d: "Explorers in northwestern [SCOPE.sState('wyoming_scope').GetName] have mapped a vast expanse of rugged wilderness filled with breathtaking sights and geological features. The surveyors, so moved by its beauty, are eagerly recommending that the area be set aside as a [GetBuildingType('building_usfp_national_park').GetName] for scientific and recreational use."
+ usfp_usa_roosevelt.1.f: ""All these springs are adorned with decorations more beautiful than human art ever conceived, and which have required thousands of years for the cunning hand of nature to form. Persons are now waiting for the spring to open and take possession of these remarkable curiosities, to make merchandise of these beautiful specimens, to fence in these rare wonders, so as to charge visitors a fee for the sight of that which ought to be as free as the air or water."\n\n—Ferdinand V. Hayden"#Ferdinand V. Hayden, letter to congress
+ usfp_usa_roosevelt.1.a: "We will preserve Yellowstone for future generations."
+ usfp_usa_roosevelt.1.b: "But think of the development opportunities!"
 
+ usfp_usa_roosevelt.2.t: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName]"
+ usfp_usa_roosevelt.2.d: "[ROOT.GetCountry.GetRuler.GetFullName] steps into the presidency with enormous energy and a grand vision for the [ROOT.GetCountry.GetName]. At home, he seeks [GetIdeology('ideology_usfp_progressive').GetName] reforms to bring the [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] to heel while avoiding radical upheaval. Abroad, he envisions an [ROOT.GetCountry.GetAdjective] sphere of influence over the [GetGeographicRegion('geographic_region_western_hemisphere').GetName] and across into the [GetGeographicRegion('geographic_region_pacific').GetName], backed by an powerful and modernized navy."
+ usfp_usa_roosevelt.2.f: ""We wish peace, but we wish the peace of justice, the peace of righteousness. We wish it because we think it is right and not because we are afraid. No weak nation that acts manfully and justly should ever have cause to fear us, and no strong power should ever be able to single us out as a subject for insolent aggression."\n\n—Theodore Roosevelt" #Inaugural Adress
+ usfp_usa_roosevelt.2.a: "We will speak softly, and carry a big stick."
+
+ usfp_usa_roosevelt.3.t: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] Shot by Maniac"
+ usfp_usa_roosevelt.3.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] has been shot while on the campaign trail by a man who claims he was acting on the orders of the ghost of [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting]'s predecessor. [ROOT.GetCountry.GetRuler.GetLastName] refused to rush to the hospital and instead gave his scheduled speech before seeking medical attention."
+ usfp_usa_roosevelt.3.f: "Roosevelt's chest blossomed with pain, but it wasn't the worst he had felt. He tasted his mouth for signs of blood, finding nothing. He judged that the bullet must not have penetrated his lungs. A flesh wound, he'd survive. Roosevelt calmed the crowd before climbing up to the podium.\n\n"Ladies and gentlemen, I don't know whether you fully understand that I have just been shot...""
+ usfp_usa_roosevelt.3.a: ""...but it takes more than that to kill a bull moose!""
+
+ usfp_usa_roosevelt.4.t: "A Dinner with [SCOPE.sCharacter('booker_t_washington_scope').GetLastName]"
+ usfp_usa_roosevelt.4.d: "In an effort to build positive relations with prominent political figures, [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] invited [SCOPE.sCharacter('booker_t_washington_scope').GetFullName] to dine at the [GetBuildingType('building_white_house').GetName]. The [GetCulture('dixie').GetName] press has exploded with immediate and vicious attacks against the President treating with an [GetCulture('afro_american').GetName] on seemingly equal terms."
+ usfp_usa_roosevelt.4.f: ""The most damnable outrage which has ever been perpetrated by any citizen of the United States was committed yesterday by the President. No Southern woman with a proper self-respect would now accept an invitation to the White House, nor would President Roosevelt be welcomed today in Southern homes. He has not inflamed the anger of the Southern people; he has excited their disgust."\n\n—#italic Memphis Scimitar#!"
+ usfp_usa_roosevelt.4.a: "Let's avoid causing any further offense."
+ usfp_usa_roosevelt.4.b: "[ROOT.GetCountry.GetRuler.GetLastName] may dine with whoever he pleases!"
+
+ usfp_usa_roosevelt.5.t: "[GetCulture('afro_american').GetName] Soldiers Blamed for Crime"
+ usfp_usa_roosevelt.5.d: "The white residents of a town in [SCOPE.sState('brownsville_state_scope').GetName] have pinned the blame for a recent shooting on the [GetCulture('afro_american').GetName] [GetPopType('soldiers').GetName] stationed there. Although the evidence seems obviously fraudulent, the Army authorities have recommended the soldiers be discharged in order to preserve the peace."
+ usfp_usa_roosevelt.5.f: "The Inspector General flipped through the slim file. The shooting was clearly done using a pistol, yet the evidence presented against the troops was rifle cartridges. The commanding officer reports that the soldiers had been in barracks with their weapons under lock and key, but the locals keep pressing the issue. He sighed. This wasn't going to go away on its own."
+ usfp_usa_roosevelt.5.a: "Hand out discharges to placate the residents."
+ usfp_usa_roosevelt.5.b: "Our servicemen are clearly not at fault here."
+
+ usfp_usa_roosevelt.6.t: "The Panama Rebellion"
+ usfp_usa_roosevelt.6.d: "Word has reached us that separatist dissidents in [SCOPE.sState('panama_state').GetName] are planning to appeal to the [SCOPE.sCountry('usa_scope').GetName] to support their independence."
+ usfp_usa_roosevelt.6.f: ""Word is, American ships are already en-route on a 'peacekeeping' mission."\n\n"How trustworthy is your source? I have heard that Nicaragua might pounce on the region!"\n\n"Gentlemen, please, this is a tense situation for us all. Send the mobilization orders at once, lest we be caught unprepared.""
+ usfp_usa_roosevelt.6.a: "Let them try."
+ usfp_usa_roosevelt.6.b: "Best we grant them autonomy before this gets out of hand."
+
+ usfp_usa_roosevelt.7.t: "The Panama Rebellion"
+ usfp_usa_roosevelt.7.d: "Separatist dissidents in [SCOPE.sState('panama_state').GetName] are appealing to the [SCOPE.sCountry('usa_scope').GetName] to support their independence."
+ usfp_usa_roosevelt.7.f: ""The Canal Zone is of vital strategic importance for the [SCOPE.sCountry('usa_scope').GetNameNoFormatting]. If [SCOPE.sCountry('panama_owner_scope').GetNameNoFormatting] proves unwilling, then surely a new Republic of Panama will be an amicable partner.""
+ usfp_usa_roosevelt.7.a: "Send the gunboats."
+ usfp_usa_roosevelt.7.b: "We will not violate [SCOPE.sCountry('panama_owner_scope').GetAdjective] sovereignty."
+ create_panama_and_support: "[SCOPE.sState('panama_state').GetName] will begin a [concept_secession] against [SCOPE.sCountry('panama_owner_scope').GetName], with our support."
+
+ usfp_banana_wars.1.t: "Banana Wars"
+ usfp_banana_wars.1.d: "Instability in [SCOPE.sCountry('latin_american_country').GetName] has prompted influential [GetPopType('capitalists').GetName] to request [ROOT.GetCountry.GetAdjective] military intervention in the region."
+ usfp_banana_wars.1.f: ""The expenses are mounting, I mean this is the third plantation hit in as many months, not to mention the shipping disruptions."\n\n"I'm having lunch with the Secretary of State. Once he's on side we should have a permanent solution within the year.""
+ usfp_banana_wars.1.a: "We have a duty to ensure the security of American investments."
+ usfp_banana_wars.1.b: "We will not be gangsters for capitalism."
+
+ usfp_banana_wars.2.t: "Massacre in [SCOPE.sState('massacre_state_scope').GetName]"
+ usfp_banana_wars.2.d: "[ROOT.GetCountry.GetAdjective] Marines on policing duties in [SCOPE.sCountry('massacre_subject').GetName] have gunned down a crowd of dozens of civilians in [SCOPE.sState('massacre_state_scope').GetName]. The unit commander claims that the civilians were giving shelter to rebels in the area, and that the troops' actions are in in-line with the directives handed down from high command."
+ usfp_banana_wars.2.f: "Dark-skinned bodies lay strewn about the road. The screams had faded, but the smell of gunsmoke and blood lingered in the humid air. A marine wandered casually through the carnage. The photographer called out to him to hold still. The marine turned and posed for the photo, leaning on his rifle. With a flash, his handiwork was recorded for posterity."
+ usfp_banana_wars.2.a: "Their methods are crude, but effective."
+ usfp_banana_wars.2.b: "Recall the troops from [SCOPE.sCountry('massacre_subject').GetName] and discipline them at once."
+
+ usfp_banana_wars.3.t: "The American Jungle"
+ usfp_banana_wars.3.d: "Our annexed territories in [GetGeographicRegion('geographic_region_central_america_old').GetName] have proven to be ideal for exploitative plantation practices. The [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] now have a vested interest in blocking these territories from gaining the status of [Concept('concept_incorporated_state', '$concept_incorporated_states$')]."
+ usfp_banana_wars.3.f: ""If you'll turn your attention to the figures on page 12, it should become clear why statehood is out of the question for the foreseeable future. How would your constituents feel about giving the vote to so many Catholics, hm? Not to mention the economic downturn that would result, as we've projected on page 32...""
+ usfp_banana_wars.3.a: "Central America will remain a territory for as long as needed."
+ usfp_banana_wars.3.b: "It would be base hypocrisy to deny these territories representation."
+ usfp_banana_wars.3.c: "As the British did in India, we will do in the Caribbean."
+ create_united_fruit_country: "[SCOPE.sCompany('united_fruit_scope').GetName] will assume direct control over our [Concept('concept_unincorporated_state','$concept_unincorporated_states$')] in the [GetGeographicRegion('geographic_region_caribbean_coast').GetName]"
+
+ usfp_banana_wars.4.t: "The [SCOPE.sCountry('usa_scope').GetRuler.GetLastName] Corollary"
+ usfp_banana_wars.4.d: "The [SCOPE.sCountry('usa_scope').GetName] has begun to adopt a more interventionist posture into the affairs of Latin America, seeking to secure the property and investments of its [GetPopType('capitalists').GetName] under the guise of promoting regional stability."
+ usfp_banana_wars.4.f: ""If a nation shows that it knows how to act with reasonable efficiency and decency in social and political matters, if it keeps order and pays its obligations, it need fear no interference from the United States. Chronic wrongdoing, or an impotence which results in a general loosening of the ties of civilized society, may in America, as elsewhere, ultimately require intervention by some civilized nation, and in the Western Hemisphere the adherence of the United States to the Monroe Doctrine may force the United States, however reluctantly, in flagrant cases of such wrongdoing or impotence, to the exercise of an international police power."\n\n—Theodore Roosevelt"
+ usfp_banana_wars.4.a: "We must look to our own defense."
+ usfp_banana_wars.4.b: "If they want to fight, we will not stand idle."
+ usfp_banana_wars.4.c: "The [SCOPE.sCountry('usa_scope').GetName] will not threaten our relationship."
+ usfp_banana_wars.4.g: "By our duty to the #italic Patria Grande #!, we will see the [SCOPE.sCountry('usa_scope').GetName] driven back across the gulf!"
+
+ usfp_banana_wars.5.t: "A Good Neighbor?"
+ usfp_banana_wars.5.d: "[SCOPE.sCountry('usa_scope').GetName] has declared a new diplomatic stance towards [GetGeographicRegion('geographic_region_latin_america').GetName], shifting to a policy of non-interventionism and repudiating their previous behavior of military domination of the region."
+ usfp_banana_wars.5.f: ""In the field of World policy, I would dedicate this nation to the policy of the good neighbor, the neighbor who resolutely respects himself and, because he does so, respects the rights of others, the neighbor who respects his obligations and respects the sanctity of his agreements in and with a World of neighbors."\n\n—Franklin D. Roosevelt"
+ usfp_banana_wars.5.a: "Americans respecting other nations? We'll believe it when we see it."
+ usfp_banana_wars.5.b: "A welcome change of heart."
+
+ usfp_banana_wars.6.t: "War is a Racket"
+ usfp_banana_wars.6.d: "[SCOPE.sCharacter('smedley_butler_scope').GetFullName], a highly decorated Marine, has retired from the military and embarked on a speaking tour denouncing [ROOT.GetCountry.GetAdjective] aggression in Latin America."
+ usfp_banana_wars.6.f: ""War is a racket. It always has been. It is possibly the oldest, easily the most profitable, surely the most vicious. It is the only one international in scope. It is the only one in which the profits are reckoned in dollars and the losses in lives. It is conducted for the benefit of the very few, at the expense of the very many. Out of war a few people make huge fortunes."\n\n—Smedley Butler"
+ usfp_banana_wars.6.a: "To hell with war!"
+ usfp_banana_wars.6.b: "Investigate him for sedition."
+
+ usfp_banana_wars.7.t: "Marines Break Up Unions"
+ usfp_banana_wars.7.d: "Investors with interests in [SCOPE.sCountry('union_busting_subject').GetName] have roped [ROOT.GetCountry.GetAdjective] Marines into helping break up the activities of the [SCOPE.sPoliticalMovement('union_busting_target_movement').GetName] there."
+ usfp_banana_wars.7.f: ""It's simple Colonel, your men are here to ensure the safety of American interests. Well if that picket line of communists gets its way, there won't #italic be#! any American interests left here to protect.""
+ usfp_banana_wars.7.a: "Let them go ahead."
+ usfp_banana_wars.7.b: "This is outside our forces' mandate."
+
+ usfp_banana_wars.8.t: "The Question of Central America"
+ usfp_banana_wars.8.d: "The pronouncement of our new Good Neighbor Policy has called into question the status of our annexed territories in [GetGeographicRegion('geographic_region_central_america_old').GetName]."
+ usfp_banana_wars.8.f: ""The great American people have their feet set upon a path of ever greater progress so that each Nation may enjoy and each citizen may enjoy the greatest possible measure of security and opportunity. The Government of the United States and my countrymen are ready to contribute to that progress."\n\n—Franklin D. Roosevelt"
+ usfp_banana_wars.8.a: "Our continental territories are integral to the [ROOT.GetCountry.GetName]."
+ usfp_banana_wars.8.b: "Central America will be granted autonomy under a compact of free association."
+ usfp_banana_wars.8.c: "We must accept that we were wrong to conquer so far south."
+ uca_released_as_independent: "Our states in [GetGeographicRegion('geographic_region_central_america_old').GetName] will be released as an independent [concept_power_bloc_member]"
+ uca_released_as_protectorate: "Our states in [GetGeographicRegion('geographic_region_central_america_old').GetName] will be released as an [ROOT.GetCountry.GetAdjective] [concept_protectorate]"
+
+ usfp_usa_navy.1.t: "American Naval Expertise"
+ usfp_usa_navy.1.d: "In the wake of the civil war in [SCOPE.sCountry('usa_scope').GetName], former naval officers from both sides of the conflict have begun to offer their services to other countries in the [GetGeographicRegion('geographic_region_pacific').GetName]. This could be an opportunity for us to gain valuable insights into modern ways of shipbuilding and naval warfare."
+ usfp_usa_navy.1.f: "The American passed around a photograph from his country's war. Sailors stood aboard a vessel bolted together out of iron plates, sitting low in the water. A far cry from the sailing ships that once ruled the ways.\n\n"These ships were only the start, and were built quickly for our own needs. If you were to build new ships, starting from scratch, you could leap-frog even the American designs.""
+ usfp_usa_navy.1.a: "With their help, we will become a force to be reckoned with."
+ usfp_usa_navy.1.b: "We must not become reliant on foreign advisors."
+
+ usfp_usa_navy.2.t: "The Influence of Sea Power upon History"
+ usfp_usa_navy.2.d: "Naval developments in [SCOPE.sCountry('strongest_navy_in_pacific').GetName] have provoked some alarm amongst our staff. They have put forth a plan for naval modernization and the adoption of new technologies so as to secure our ability to project power into the [GetGeographicRegion('geographic_region_pacific').GetName]."
+ usfp_usa_navy.2.f: ""The geographical position of the United States and her intrinsic power give her an undeniable advantage; but that advantage will not avail if there is a great inferiority of organized brute-force, which still remains the last argument of republics as of kings."\n\n—Alfred Thayer Mahan"
+ usfp_usa_navy.2.a: "We need huge boats, with lots of guns." #(Gunboats)
+ usfp_usa_navy.2.b: "Swift escort craft can secure the highways of the sea."
+
+ usfp_usa_navy.3.t: "The Great White Fleet"
+ usfp_usa_navy.3.d: "The New Navy has been commissioned and taken to the seas. Their dazzling display of fresh hulls and disciplined sailors sends a clear message: the [ROOT.GetCountry.GetName] remains a pre-eminent naval power."
+ usfp_usa_navy.3.f: "The latest ships from the navy had pulled in to port for a grand exposition. Throngs of onlookers crowded the docks, waving to the sailors on-board. The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] came on board and was saluted by all hands before touring the vessel. The papers were more than happy to print front-page photos of the new fleet, along with bold claims of a world tour soon to come."
+ usfp_usa_navy.3.a: "We won't have any trouble with these ships at our backs."
+ usfp_usa_navy.3.b: "A single shot from our guns will silence any trouble-makers."
+
+ usfp_philippines.1.t: "Benevolent Assimilation"
+ usfp_philippines.1.d: "With the [SCOPE.sCountry('philippines_scope').GetName] now under our control, a unique opportunity presents itself to us. After centuries of Spanish colonial rule, the population of the islands are primed to be civilized by our guiding hand, uplifted towards our ideals of republican self-government."
+ usfp_philippines.1.f: ""It should be the earnest wish and paramount aim of the military administration to win the confidence, respect, and affection of the inhabitants of the Philippines by assuring them in every possible way that full measure of individual rights and liberties which is the heritage of free peoples, and by proving to them that the mission of the United States is one of benevolent assimilation substituting the mild sway of justice and right for arbitrary rule."$quote_dash$William Mckinley"
+ usfp_philippines.1.a: "The islands will come under our wing, until they are ready."
+ usfp_philippines.1.b: "We come as liberators, not colonizers."
+ usfp_philippines.1.c: "The Philippines is a colony like any other."
+
+ usfp_philippines.2.t: "Under New Management"
+ usfp_philippines.2.d: "The [ROOT.GetCountry.GetOverlord.GetName] has declared that it intends to maintain the [ROOT.GetCountry.GetName] as a colonial [concept_subject], claiming that we require their tutelage before being worthy of self-government."
+ usfp_philippines.2.f: ""It should be the earnest wish and paramount aim of the military administration to win the confidence, respect, and affection of the inhabitants of the Philippines by assuring them in every possible way that full measure of individual rights and liberties which is the heritage of free peoples, and by proving to them that the mission of the United States is one of benevolent assimilation substituting the mild sway of justice and right for arbitrary rule."$quote_dash$William Mckinley"
+ usfp_philippines.2.a: "Libertad, Justicia, y Igualdad!"
+ usfp_philippines.2.b: "We must accept their helping hand."
+
+ usfp_philippines.3.t: "The Moro Rebellion"
+ usfp_philippines.3.d: "Attacks by Muslim [GetCulture('moro').GetName] people in the southern islands of the [SCOPE.sCountry('philippines_scope').GetName] have prompted retaliation from our garrisons stationed there. Entire tribal groups of Moros have begun to resist any [ROOT.GetCountry.GetAdjective] presence with overwhelming violence."
+ usfp_philippines.3.f: "The infirmary was strewn with wounded. Men with deep sword lacerations lay next to women shot through by american bullets. A soldier turned to the medic bandaging his arm.\n\n"They just wouldn't stop, we'd shoot them and they'd keep coming. It's like they don't feel pain or fear death.""
+ usfp_philippines.3.a: "These savages must be shown the error of their ways."
+ usfp_philippines.3.b: "Withdraw from these areas and focus on the north."
+
+ usfp_philippines.4.t: "Reconcentrados"
+ usfp_philippines.4.d: "In an attempt to consolidate control over the Filipino countryside, the military government has begun forcibly relocating villagers into "zones of protection" where they can be monitored and prevented from potentially lending aid to rebel groups."
+ usfp_philippines.4.f: ""What a farce it all is, this little spot of black sogginess is a reconcentrado pen, with a dead line outside, beyond which everything living is shot. Upon arrival, I found 30 cases of smallpox, and average fresh ones of five a day, which practically have to be turned out to die. At nightfall crowds of huge vampire bats softly swirl out of their orgies over the dead."$quote_dash$Anonymous American Officer" #United States Senate Committee on the Philippines
+ usfp_philippines.4.a: "The military must be allowed a free hand."
+ usfp_philippines.4.b: "These actions are counter-productive and cruel."
+
+ usfp_philippines.5.t: "The Insular Government"
+ usfp_philippines.5.d: "The [ROOT.GetCountry.GetOverlord.GetName] has seen fit to end their military rule over the [ROOT.GetCountry.GetName] and install a civilian government. The upper house of Philippine Commissioners remains appointed by the [ROOT.GetCountry.GetOverlord.GetAdjective] [ROOT.GetCountry.GetOverlord.GetRuler.GetPrimaryRoleTitle], but the lower Philippine Assembly will be composed of [Concept('concept_election','$concept_elected$')|l] representatives."
+ usfp_philippines.5.f: ""As high and sacred an obligation rests upon the Government of the United States to give protection for property and life, civil and religious freedom, and wise, firm, and unselfish guidance in the paths of peace and prosperity to all the people of the Philippine Islands. I charge this commission to labor for the full performance of this obligation, in the firm hope that through their labors all the inhabitants of the Philippine Islands may come to look back with gratitude to the day when God gave victory to American arms at Manila and set their land under the sovereignty and the protection of the people of the United States."$quote_dash$William Mckinley" #Reports of the Philippine commission, the civil governor and the heads of the executive departments of the civil government of the Philippine Islands (1900-1903)
+ usfp_philippines.5.a: "We are on the right path."
+ usfp_philippines.5.b: "They intend to appease us with token representation?"
+
+ usfp_philippines.6.t: "Appeals From the Philippines"
+ usfp_philippines.6.d: "Educated members of the [SCOPE.sCountry('philippines_scope').GetAdjective] [SCOPE.gsInterestGroup('philippine_intelligentsia').GetName] have begun touring the [ROOT.GetCountry.GetName] advocating on behalf of their people."
+ usfp_philippines.6.f: ""Give us the chance; treat us exactly as you demanded to be treated at the hands of England, when you rebelled against her autocratic methods. Deal only with facts in a rational and consistent way. Leave empiricism alone, and address yourselves seriously to the work of seeking the solution that shall be honorable to both parties. We can tell you far more than you know; for we know our country and our countrymen, their past history, and what is necessary for their future good."$quote_dash$Emilio Aguinaldo"#Emilio Aguinaldo, The North American Review
+ usfp_philippines.6.a: "They argue their case well."
+ usfp_philippines.6.b: "The Filipinos are still but children on the world stage."
+ usfp_philippines.6.c: "These appeals show that the Filipinos are ready for democracy."
+
+ usfp_philippines.7.t: "The Independence of the Philippines"
+ usfp_philippines.7.d: "Our policy of Benevolent Assimilation has finally borne fruit. Our civilizing influence on the [SCOPE.sCountry('philippines_scope').GetName] has elevated their entire society, and brought them into such a condition that they are now capable of self-government."
+ usfp_philippines.7.f: "The treaty is signed, and the dignitaries shake hands. The flag of a free Philippines is raised once again. [SCOPE.sCountry('philippines_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('philippines_scope').GetRuler.GetLastNameNoFormatting] steps forward and gives a statement. [SCOPE.sCountry('philippines_scope').GetRuler.GetHerHis] words will set the tone of the new country's relationship with the United States going forward."
+ usfp_philippines.7.a: "The new Philippines is an example to the world."
+
+ usfp_philippines.8.t: "The Independence of the Philippines"
+ usfp_philippines.8.d: "The stewardship of the [SCOPE.sCountry('usa_scope').GetName] over the [ROOT.GetCountry.GetName] has come to an end, and our government has been granted its independence."
+ usfp_philippines.8.f: "The treaty is signed, and the dignitaries shake hands. The flag of a free Philippines is raised once again. [SCOPE.sCountry('philippines_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('philippines_scope').GetRuler.GetLastNameNoFormatting] steps forward and gives a statement. [SCOPE.sCountry('philippines_scope').GetRuler.GetHerHis] words will set the tone of the new country's relationship with the United States going forward."
+ usfp_philippines.8.a: "Finally, get these gringos out of here!"
+ usfp_philippines.8.b: "We will maintain a special relationship with our benefactors."
+ usfp_philippines.8.c: "Actually, we might need the American navy to defend our shores..."
+
+ usfp_philippines.9.t: "Seditious Dramas"
+ usfp_philippines.9.d: "Anti-[SCOPE.sCountry('usa_scope').GetAdjective] activists have begun to stir nationalist sentiments by performing politically charged plays."
+ usfp_philippines.9.f: "As the play came to its conclusion, the lead actress stepped forward to deliver her final monologue. At that moment, American police slammed open the doors to the theatre and began making their way through the crowd. The actress stood her ground and continued her illegal speech. The police jumped onto the stage to arrest her, but she continued to shout over the chaos.\n\n"The people will always hold the land in their hearts! The Philippines will be for Filipinos!""
+ usfp_philippines.9.a: "Arrest everyone involved in the productions."
+ usfp_philippines.9.b: "Allow this message to spread far and wide."
+
+ usfp_philippines.10.t: "English Teachers"
+ usfp_philippines.10.d: "A cadre of [ROOT.GetCountry.GetOverlord.GetAdjective] teachers have arrived in the [ROOT.GetCountry.GetName], with a mission to build a new English-language education system capable of teaching basic skills and literacy to the population of the islands."
+ usfp_philippines.10.f: ""Our nation has found herself confronted by a great problem dealing with a people who neither know nor understand the underlying principles of our civilization, yet who, for our mutual happiness and liberty, must be brought into accord with us. The American genius, reasoning from its own experience in the past, seeks a solution of the problem, a bridging of the chasm, through the common schools."$quote_dash$Adeline Knapp"
+ usfp_philippines.10.a: "With their help, we will become a modern nation."
+ usfp_philippines.10.b: "Aquí hablamos español!"
+
+ usfp_philippines.11.t: "The English Philippines"
+ usfp_philippines.11.d: "[ROOT.GetCountry.GetOverlord.GetAdjective] education programs have cemented their influence across the [ROOT.GetCountry.GetName]. English is now widely spoken as a secondary language by the educated population, and advanced topics like science and technology are conducted entirely in English using imported texts."
+ usfp_philippines.11.f: "The teacher had learned to understand her student's peculiar mix of English, Tagalog, and a half dozen other local languages. She noted, with some satisfaction, that the students in her higher classes spoke more and more English, and with greater fluency. Hardly a phrase of Tagalog could be heard in her science class."
+ usfp_philippines.11.a: "We have been given the keys to knowledge."
+ usfp_philippines.11.b: "Our very language has been colonized by the Americans."
+
+
+
+ usfp_debug.1.t: "Mod Conflict Detected"
+ usfp_debug.1.d: "Hail, Columbia! has detected an incorrect mod setup. Lots of things will break! Do not report errors from this save game!"
+ usfp_debug.1.f: ""Vegeta, what does the scouter say about their error log?!""
+ usfp_debug.1.a: "The Community Mod Framework must be enabled!"
+ usfp_debug.1.b: "Better Politics Mod is not compatible."
+ usfp_debug.1.c: "Gilded Age is not compatible."
+ usfp_debug.1.g: "Another mod is overwriting party definitions!"
+ default_parties_found: "The USA has a vanilla Conservative or Liberal party active"
+ cmf_is_missing: "The #bold Community Mod Framework#! is not enabled"
+ bpm_is_active: "The #bold Better Politics Mod#! is enabled"
+ gilded_age_is_active: "The #bold Gilded Age#! mod is enabled"
+
+quote_dash: "\n\n—"

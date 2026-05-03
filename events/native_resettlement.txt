@@ -99,7 +99,7 @@ native_resettlement.2 = {
 				any_interest_group = {
 					leader = {
 						OR = {
-							has_variable = is_andrew_jackson
+                            has_template = usa_andrew_jackson_template
 							has_trait = bigoted
 						}
 					}
@@ -109,7 +109,7 @@ native_resettlement.2 = {
 				limit = { 
 					leader = { 
 						OR = {
-							has_variable = is_andrew_jackson 
+							has_template = usa_andrew_jackson_template
 							has_trait = bigoted
 						}
 					}

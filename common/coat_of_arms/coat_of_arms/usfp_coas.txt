@@ -479,7 +479,7 @@ sub_CSA_canton_saltire = {
 	}		
 }
 
-INV = {
+usfp_INV = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -490,7 +490,7 @@ INV = {
 	}
 }
 
-INK = {
+usfp_INK = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -527,7 +527,7 @@ CTF = {
 	}
 }
 
-WCR = {
+usfp_WCR = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -548,7 +548,7 @@ WCR = {
 	}
 }
 
-SWC = {
+usfp_SWC = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -569,7 +569,7 @@ SWC = {
 	}
 }
 
-ECR = {
+usfp_ECR = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -590,7 +590,7 @@ ECR = {
 	}
 }
 
-OJI = {
+usfp_OJI = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -608,7 +608,7 @@ OJI = {
 	}
 }
 
-INN = {
+usfp_INN = {
 	pattern = "pattern_two_stripes_fimbriated.dds"
 	color1 = "blue_light"
 	color2 = "white"
@@ -665,7 +665,7 @@ BNN = {
 	}
 }
 
-# GWC = {
+# usfp_GWC = {
 # 	pattern = "pattern_solid.tga"
 # 	color1 = "white"
 
@@ -686,7 +686,7 @@ usfp_IPQ = {
 	}
 }
 
-TLT = {
+usfp_TLT = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 
@@ -712,7 +712,7 @@ TLT = {
 	}
 }
 
-HDA = {
+usfp_HDA = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"	
 
@@ -722,7 +722,7 @@ HDA = {
 	}
 }
 
-KYK = {
+usfp_KYK = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -752,7 +752,7 @@ KYK = {
 	}
 }
 
-TNN = {
+usfp_TNN = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -785,7 +785,7 @@ TNN = {
 		instance = { scale = { 0.9 0.9 } position = { 0.5 0.5 } }
 	}
 }
-TTC = {
+usfp_TTC = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -812,7 +812,7 @@ TTC = {
 		instance = { scale = { 0.6 0.6 } position = { 0.5 0.5 } }
 	}
 }
-YUR = {
+usfp_YUR = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -838,7 +838,7 @@ YUR = {
 		instance = { scale = { 0.9 0.9 } position = { 0.5 0.5 } }
 	}
 }
-YOK = {
+usfp_YOK = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	
@@ -864,7 +864,7 @@ YOK = {
 	}
 }
 
-CPW = {
+usfp_CPW = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	colored_emblem = {
@@ -891,7 +891,7 @@ CPW = {
 	}
 }
 
-SRN = {
+usfp_SRN = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	colored_emblem = {
@@ -936,7 +936,7 @@ CSW = {
 	}
 }
 
-SON = {
+usfp_SON = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -1103,7 +1103,7 @@ usfp_ALG = {
 
 }
 
-DGB = {
+usfp_DGB = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	colored_emblem = {
@@ -1128,7 +1128,7 @@ DGB = {
 	
 }
 
-SVY = {
+usfp_SVY = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	colored_emblem = {
@@ -1152,7 +1152,7 @@ SVY = {
 
 }
 
-DNZ = {
+usfp_DNZ = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -1186,7 +1186,7 @@ DNZ = {
 	}
 }
 
-GWC = {
+usfp_GWC = {
 	pattern = "pattern_solid.tga"
 	color1 = "teal"
 	colored_emblem = {
@@ -1205,7 +1205,7 @@ GWC = {
 
 }
 
-STU = {
+usfp_STU = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	colored_emblem = {
@@ -1242,7 +1242,7 @@ STU = {
 	}
 }
 
-AHT = {
+usfp_AHT = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -1315,7 +1315,7 @@ usfp_TSI = {
 	}
 }
 
-WKS = {
+usfp_WKS = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"	
 	colored_emblem = {
@@ -1330,7 +1330,7 @@ WKS = {
 	}
 }
 
-DKL = {
+usfp_DKL = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	colored_emblem = {
@@ -1348,7 +1348,7 @@ DKL = {
 
 }
 
-LLT = {
+usfp_LLT = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
 	colored_emblem = {
@@ -1388,7 +1388,7 @@ LLT = {
 
 }
 
-SAL = {
+usfp_SAL = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"	
 
@@ -1399,7 +1399,7 @@ SAL = {
 	}
 }
 
-SWP = {
+usfp_SWP = {
 	pattern = "pattern_vertical_split_01.tga"
 	color1 = "red"
 	color2 = "white"	
@@ -1426,7 +1426,7 @@ ARP = {
 	}
 }
 
-SYX = {
+usfp_SYX = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"	
 
@@ -1445,7 +1445,7 @@ SYX = {
 	}
 }
 
-YKM = {
+usfp_YKM = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
 	
@@ -1478,7 +1478,7 @@ YKM = {
 
 }
 
-SHP = {
+usfp_SHP = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red_light"
@@ -1511,7 +1511,7 @@ SHP = {
 	}	
 }
 
-KLA = {
+usfp_KLA = {
 	pattern = "pattern_horizontal_split_01.tga"
 	color1 = "white"
 	color2 = "blue_light"	
@@ -1531,7 +1531,7 @@ KLA = {
 	}
 }
 
-HOK = {
+usfp_HOK = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"	
 
@@ -1562,7 +1562,7 @@ HOK = {
 	}
 }
 
-PIU = {
+usfp_PIU = {
 	pattern = "pattern_solid.tga"
 	color1 = "brown"
 	
@@ -1575,7 +1575,7 @@ PIU = {
 	}
 }
 
-SPI = {
+usfp_SPI = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
 	
@@ -1606,7 +1606,7 @@ BLF = {
 	}
 }
 
-KTN = {
+usfp_KTN = {
 	pattern = "pattern_horizontal_split_01.tga"
 	color1 = "white"
 	color2 = "black"
@@ -1642,7 +1642,7 @@ SLS = {
 	}
 }
 
-GVT = {
+usfp_GVT = {
 	pattern = "pattern_horizontal_split_01.tga"
 	color1 = "peach"
 	color2 = "orange"
@@ -2263,4 +2263,23 @@ usfp_F_CUB = { # Filibuster Cuba
 		color2 = color2
 		instance = { position = { 0.175 0.5 } scale = { 0.4 0.4 } }
 	}
+}
+
+usfp_UFC = {
+    pattern = "pattern_solid.tga"
+    color1 = "red"
+    color2 = "white"
+    color3 = "blue"
+    colored_emblem = {
+        texture = "ce_triangle.dds"
+        color1 = "white"
+        instance = { scale = { 1.5 1.3 } position = { 0.45 0.5 } rotation = 90 }
+    }
+    colored_emblem = {
+        texture = "ce_triangle.dds"
+        color1 = "blue"
+        instance = { scale = { 0.91 0.8 } position = { 0.17 0.76 } rotation = 90 }
+        instance = { scale = { 0.91 0.8 } position = { 0.17 0.25 } rotation = 90 }
+    }
+
 }

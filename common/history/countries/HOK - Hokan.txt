@@ -1,5 +1,5 @@
 ﻿COUNTRIES = {
-	c:HOK ?= {
+	c:usfp_HOK ?= {
 		usfp_native_startup = yes
 	}
 }

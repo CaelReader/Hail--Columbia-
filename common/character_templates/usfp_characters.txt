@@ -8,6 +8,7 @@
     ideology = ideology_usfp_strongman_populist
     interest_group = ig_rural_folk
     birth_date = 1893.8.30
+    home_region = STATE_LOUISIANA
 	dna = ecchi_dna_huey_long
     traits = { firebrand charismatic imperious ambitious }
     interest_group_leader_usage = {
@@ -40,7 +41,7 @@
         }
         earliest_usage_date = 1928.5.21
         latest_usage_date = 1935.9.10
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -55,6 +56,7 @@ ecchi_usa_f_roosevelt_character_template = {
     interest_group = ig_intelligentsia
 	dna = ecchi_dna_franklin_roosevelt
     birth_date = 1882.1.30
+    home_region = STATE_NEW_YORK
     traits = { wounded expert_political_operator masterful_diplomat }
     interest_group_leader_usage = {
         country_trigger = {
@@ -71,7 +73,7 @@ ecchi_usa_f_roosevelt_character_template = {
         }
         earliest_usage_date = 1913.3.17
         latest_usage_date = 1945.4.12
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -87,6 +89,7 @@ usfp_bill_haywood_character_template = {
     ideology = ideology_communist
     interest_group = ig_trade_unions
     birth_date = 1869.2.4
+    home_region = STATE_UTAH
     dna = usfp_usa_bill_haywood
     traits = { imposing ambitious direct demagogue scarred }
     #Event-spawned
@@ -104,6 +107,7 @@ usfp_agitator_elizabeth_gurley_flynn = {
     ideology = ideology_communist
     interest_group = ig_trade_unions
     birth_date = 1890.8.7
+    home_region = STATE_NEW_HAMPSHIRE
     dna = usfp_usa_elizabeth_gurley_flynn
     traits = { inspirational_orator persistent reckless }
     agitator_usage = {
@@ -151,6 +155,7 @@ usfp_robert_la_follette_character_template = {
     ideology = ideology_usfp_progressive
     interest_group = ig_intelligentsia
     birth_date = 1855.6.14
+    home_region = STATE_WISCONSIN
     dna = usfp_usa_robert_la_follette
     traits = { experienced_political_operator persistent inspirational_orator }
     interest_group_leader_usage = {
@@ -169,7 +174,7 @@ usfp_robert_la_follette_character_template = {
         }
         earliest_usage_date = 1901.1.1
         latest_usage_date = 1925.6.1
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -184,6 +189,7 @@ usfp_william_jennings_bryan_character_template = {
     ideology = ideology_usfp_progressive
     interest_group = ig_rural_folk
     birth_date = 1860.3.19
+    home_region = STATE_NEBRASKA
     dna = usfp_usa_william_jennings_bryan
     traits = { experienced_political_operator pious firebrand charismatic usfp_trait_antiexpansionist }
     # is_agitator = yes
@@ -199,6 +205,7 @@ usfp_thomas_nast_character_template = {
     last_name = Nast
     historical = yes
     birth_date = 1840.10.26
+    home_region = STATE_NEW_YORK
     culture = cu:south_german
     religion = rel:protestant
     is_agitator = yes
@@ -220,6 +227,7 @@ usfp_solomon_northup_character_template = {
     last_name = Northup
     historical = yes
     birth_date = 1808.6.10
+    home_region = STATE_NEW_YORK
     culture = cu:afro_american
     is_agitator = yes
     female = no
@@ -241,6 +249,7 @@ usfp_agitator_washington_gladden = {
     last_name = Gladden
     historical = yes
     birth_date = 1836.2.11
+    home_region = STATE_PENNSYLVANIA
     culture = cu:yankee
     is_agitator = yes
     female = no
@@ -268,7 +277,7 @@ usfp_agitator_washington_gladden = {
         }   
 		earliest_usage_date = 1877.1.1
 		latest_usage_date = 1913.1.1
-		chance = 50
+		chance = 75
 	} 
 }
 
@@ -283,6 +292,7 @@ usfp_thaddeus_stevens_character_template = {
     ideology = ideology_usfp_abolitionist_radical #aka Chaddeus Stevens
     interest_group = ig_intelligentsia
     birth_date = 1792.4.4
+    home_region = STATE_PENNSYLVANIA
     dna = usfp_usa_thaddeus_stevens 
     traits = { persistent wrathful inspirational_orator basic_political_operator }
     interest_group_leader_usage = {
@@ -300,7 +310,7 @@ usfp_thaddeus_stevens_character_template = {
         }
         earliest_usage_date = 1848.1.1
         latest_usage_date = 1868.1.1
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -314,6 +324,7 @@ usfp_usa_john_fauntroy = {
     ideology = ideology_slaver
     interest_group = ig_landowners
     birth_date = 1836.2.15
+    home_region = STATE_GEORGIA
     traits = { bigoted experienced_political_operator charismatic experienced_diplomat }
     interest_group_leader_usage = {
         country_trigger = {
@@ -354,6 +365,7 @@ usfp_usa_william_lloyd_garrison = {
     ideology = ideology_usfp_abolitionist_radical
     interest_group = ig_intelligentsia
     birth_date = 1805.12.10
+    home_region = STATE_MASSACHUSETTS
     dna = usfp_usa_garrison_william_lloyd
     is_agitator = yes
     traits = { persistent literary honorable romantic }
@@ -370,6 +382,7 @@ usfp_usa_robert_rhett = {
     ideology = ideology_slaver
     interest_group = ig_landowners
     birth_date = 1800.12.21
+    home_region = STATE_SOUTH_CAROLINA
     dna = usfp_usa_rhett_robert
     is_agitator = yes
     traits = { persistent wrathful basic_political_operator literary }
@@ -386,6 +399,7 @@ usfp_usa_henry_george = {
     ideology = ideology_usfp_georgist_leader
     interest_group = ig_intelligentsia
     birth_date = 1839.9.2
+    home_region = STATE_CALIFORNIA
     is_agitator = yes
     dna = usfp_usa_henry_george
     traits = { persistent inspirational_orator literary honorable }
@@ -403,6 +417,7 @@ usfp_usa_william_walker = {
     ideology = ideology_jingoist_leader
     interest_group = ig_landowners
     birth_date = 1824.5.8
+    home_region = STATE_TENNESSEE
     dna = usfp_william_walker
     traits = { reserved celebrity_commander reckless bandit usfp_trait_expansionist }
     #event-spawned
@@ -420,6 +435,7 @@ usfp_usa_terrence_powderly = {
     ideology = ideology_moderate
     interest_group = ig_trade_unions
     birth_date = 1849.1.22
+    home_region = STATE_PENNSYLVANIA
     dna = usfp_usa_terrence_powderly
     traits = { basic_political_operator wounded tactful erudite }
     #event-spawned
@@ -436,6 +452,7 @@ usfp_usa_samuel_gompers = {
     ideology = ideology_republican_leader
     interest_group = ig_trade_unions
     birth_date = 1850.1.27
+    home_region = STATE_NEW_YORK
     dna = usfp_usa_samuel_gompers
     traits = { basic_political_operator meticulous usfp_trait_antiexpansionist master_bureaucrat }
     #event-spawned
@@ -452,6 +469,7 @@ usfp_usa_william_sumner = {
     ideology = ideology_usfp_social_darwinist_leader
     interest_group = ig_intelligentsia
     birth_date = 1840.11.30
+    home_region = STATE_NEW_JERSEY
     dna = usfp_usa_william_sumner
     traits = { literary arrogant direct usfp_trait_antiexpansionist }
     agitator_usage = {
@@ -465,7 +483,7 @@ usfp_usa_william_sumner = {
         }
         earliest_usage_date = 1872.1.1
         latest_usage_date = 1890.1.1
-        chance = 50
+        chance = 50 #can spawn on his own even if not chosen in the event
     }
 }
 
@@ -480,6 +498,7 @@ usfp_usa_jane_addams = {
     ideology = ideology_feminist
     interest_group = ig_intelligentsia
     birth_date = 1860.10.6
+    home_region = STATE_ILLINOIS
     dna = usfp_usa_jane_addams
     traits = { persistent literary ambitious usfp_trait_antiexpansionist }
     #event-spawned
@@ -528,6 +547,7 @@ REPLACE_OR_CREATE:BIC_swami_vivkananda = { #Swami Vivekananda
     interest_group = ig_devout
     is_agitator = yes 
     birth_date = 1863.1.12
+    home_region = STATE_WEST_BENGAL
     traits = {
         pious
         erudite
@@ -547,7 +567,7 @@ REPLACE_OR_CREATE:BIC_swami_vivkananda = { #Swami Vivekananda
         }   
         earliest_usage_date = 1885.1.1
         latest_usage_date = 1900.1.1
-        chance = 50
+        #guaranteed to spawn if possible
     }
 }
 
@@ -563,7 +583,8 @@ usfp_usa_oliver_howard = {
     religion = rel:protestant
 	female = no
 	birth_date = 1830.11.8
-	commander_usage = {
+    home_region = STATE_MAINE
+    commander_usage = {
 		country_trigger = {
 			exists = c:USA
 			this = c:USA
@@ -571,7 +592,7 @@ usfp_usa_oliver_howard = {
 		role = general
 		earliest_usage_date = 1854.1.1
 		latest_usage_date = 1894.1.1	
-		chance = 75
+		#guaranteed to spawn if possible
 	}
     traits = {
         pious honorable basic_defensive_strategist
@@ -590,7 +611,8 @@ usfp_usa_george_crook = {
     religion = rel:protestant
 	female = no
 	birth_date = 1828.9.8
-	commander_usage = {
+    home_region = STATE_OHIO
+    commander_usage = {
 		country_trigger = {
 			exists = c:USA
 			this = c:USA
@@ -598,7 +620,7 @@ usfp_usa_george_crook = {
 		role = general
 		earliest_usage_date = 1852.1.1
 		latest_usage_date = 1890.1.1	
-		chance = 75
+		#guaranteed to spawn if possible
 	}
     traits = {
         honorable explorer reckless
@@ -617,7 +639,8 @@ usfp_usa_john_gibbon = {
     religion = rel:protestant
 	female = no
 	birth_date = 1827.5.20
-	commander_usage = {
+    home_region = STATE_PENNSYLVANIA
+    commander_usage = {
 		country_trigger = {
 			exists = c:USA
 			this = c:USA
@@ -625,7 +648,7 @@ usfp_usa_john_gibbon = {
 		role = general
 		earliest_usage_date = 1847.1.1
 		latest_usage_date = 1891.1.1	
-		chance = 75
+		#guaranteed to spawn if possible
 	}
     traits = {
         honorable basic_artillery_commander literary
@@ -644,7 +667,8 @@ usfp_usa_alfred_terry = {
     religion = rel:protestant
 	female = no
 	birth_date = 1827.11.10
-	commander_usage = {
+    home_region = STATE_CONNECTICUT
+    commander_usage = {
 		country_trigger = {
 			exists = c:USA
 			this = c:USA
@@ -652,7 +676,7 @@ usfp_usa_alfred_terry = {
 		role = general
 		earliest_usage_date = 1861.1.1
 		latest_usage_date = 1888.1.1	
-		chance = 75
+		#guaranteed to spawn if possible
 	}
     traits = {
         meticulous reserved cautious
@@ -671,7 +695,8 @@ usfp_usa_edward_canby = {
     religion = rel:protestant
 	female = no
 	birth_date = 1817.11.9
-	commander_usage = {
+    home_region = STATE_KENTUCKY
+    commander_usage = {
 		country_trigger = {
 			exists = c:USA
 			this = c:USA
@@ -679,7 +704,7 @@ usfp_usa_edward_canby = {
 		role = general
 		earliest_usage_date = 1839.1.1
 		latest_usage_date = 1873.1.1	
-		chance = 75
+		#guaranteed to spawn if possible
 	}
     traits = {
         tactful honorable basic_diplomat master_bureaucrat
@@ -698,7 +723,8 @@ usfp_usa_ranald_mackenzie = {
     religion = rel:protestant
 	female = no
 	birth_date = 1840.7.27
-	commander_usage = {
+    home_region = STATE_NEW_YORK
+    commander_usage = {
 		country_trigger = {
 			exists = c:USA
 			this = c:USA
@@ -706,7 +732,7 @@ usfp_usa_ranald_mackenzie = {
 		role = general
 		earliest_usage_date = 1862.1.1
 		latest_usage_date = 1884.1.1	
-		chance = 75
+		#guaranteed to spawn if possible
 	}
     traits = {
         imperious expert_offensive_planner wrathful
@@ -725,7 +751,8 @@ usfp_usa_winfield_hancock = {
     religion = rel:protestant
 	female = no
 	birth_date = 1824.2.14
-	commander_usage = {
+    home_region = STATE_PENNSYLVANIA
+    commander_usage = {
 		country_trigger = {
 			exists = c:USA
 			this = c:USA
@@ -733,7 +760,7 @@ usfp_usa_winfield_hancock = {
 		role = general
 		earliest_usage_date = 1844.1.1
 		latest_usage_date = 1886.1.1	
-		chance = 75
+		#guaranteed to spawn if possible
 	}
     traits = {
         brave arrogant experienced_defensive_strategist
@@ -752,6 +779,7 @@ usfp_usa_horace_greeley = {
     religion = rel:protestant
 	female = no
 	birth_date = 1811.2.3
+    home_region = STATE_NEW_YORK
     traits = {
         literary inept innovative usfp_trait_expansionist
     }
@@ -763,17 +791,18 @@ usfp_usa_horace_greeley = {
          }
         earliest_usage_date = 1841.1.1
         latest_usage_date = 1865.1.1
-        chance = 50
+        chance = 75
     }
 }
 
 #USFP: Booker T Washington, African-American leader
 usfp_booker_t_washington = {
-    first_name = Booker
+    first_name = Booker_T
     last_name = Washington
     dna = usfp_usa_booker_t_washington
     historical = yes
     birth_date = 1856.4.5
+    home_region = STATE_ALABAMA
     culture = cu:afro_american
     religion = rel:protestant
     female = no
@@ -793,7 +822,7 @@ usfp_booker_t_washington = {
          }
         earliest_usage_date = 1881.9.4
         latest_usage_date = 1915.1.1
-        chance = 50
+        #guaranteed to spawn if possible
     }
     interest_group_leader_usage = {
         country_trigger = {
@@ -805,7 +834,7 @@ usfp_booker_t_washington = {
          }
         earliest_usage_date = 1881.9.4
         latest_usage_date = 1915.1.1
-        chance = 50
+        #guaranteed to spawn if possible
     }
 }
 
@@ -816,6 +845,7 @@ usfp_marcus_garvey = {
     dna = usfp_usa_marcus_garvey
     historical = yes
     birth_date = 1887.10.17
+    home_region = STATE_JAMAICA
     culture = cu:afro_caribbean
     religion = rel:catholic
     female = no
@@ -840,7 +870,7 @@ usfp_marcus_garvey = {
          }
         earliest_usage_date = 1918.6.1 #UNIA incorporated
         latest_usage_date = 1926.1.1 #Deported
-        chance = 95
+        #guaranteed to spawn if possible
     }
     interest_group_leader_usage = {
         country_trigger = {
@@ -863,6 +893,7 @@ usfp_a_philip_randolph = {
     dna = usfp_usa_a_philip_randolph
     historical = yes
     birth_date = 1889.4.15
+    home_region = STATE_FLORIDA
     culture = cu:afro_american
     religion = rel:protestant
     female = no
@@ -882,7 +913,7 @@ usfp_a_philip_randolph = {
          }
         earliest_usage_date = 1917.1.1 #The Messenger founded
         latest_usage_date = 1963.10.29 #March on Washington
-        chance = 50
+        #guaranteed to spawn if possible
     }
     interest_group_leader_usage = {
         country_trigger = {
@@ -893,7 +924,7 @@ usfp_a_philip_randolph = {
          }
         earliest_usage_date = 1917.1.1 #The Messenger founded
         latest_usage_date = 1963.10.29 #March on Washington
-        chance = 50
+        #guaranteed to spawn if possible
     }
 }
 
@@ -904,6 +935,7 @@ usfp_hubert_harrison = {
     dna = usfp_usa_hubert_harry_harrison
     historical = yes
     birth_date = 1883.4.27
+    home_region = STATE_NEW_YORK
     culture = cu:afro_caribbean
     religion = rel:atheist #explicitly anti-theist
     female = no
@@ -927,7 +959,7 @@ usfp_hubert_harrison = {
          }
         earliest_usage_date = 1917.1.1
         latest_usage_date = 1927.1.1
-        chance = 50
+        #guaranteed to spawn if possible
     }
     interest_group_leader_usage = {
         country_trigger = {
@@ -939,7 +971,7 @@ usfp_hubert_harrison = {
          }
         earliest_usage_date = 1917.1.1
         latest_usage_date = 1927.1.1
-        chance = 50
+        #guaranteed to spawn if possible
     }
 }
 
@@ -951,6 +983,7 @@ usfp_james_weldon_johnson = {
     dna = usfp_james_weldon_johnson
     historical = yes
     birth_date = 1871.6.17
+    home_region = STATE_NEW_YORK
     culture = cu:afro_american
     religion = rel:protestant #agnostic, culturally christian
     female = no
@@ -975,7 +1008,7 @@ usfp_james_weldon_johnson = {
          }
         earliest_usage_date = 1917.1.1 #NAACP field secretary
         latest_usage_date = 1938.1.1
-        chance = 75
+        #guaranteed to spawn if possible
     }
     interest_group_leader_usage = {
         country_trigger = {
@@ -987,7 +1020,7 @@ usfp_james_weldon_johnson = {
          }
         earliest_usage_date = 1917.1.1 #NAACP field secretary
         latest_usage_date = 1938.1.1
-        chance = 50
+        #guaranteed to spawn if possible
     }
 }
 
@@ -998,6 +1031,7 @@ usfp_ida_b_wells = {
     dna = usfp_ida_b_wells
     historical = yes
     birth_date = 1862.7.16
+    home_region = STATE_ILLINOIS
     culture = cu:afro_american
     religion = rel:protestant
     female = yes
@@ -1022,7 +1056,7 @@ usfp_ida_b_wells = {
          }
         earliest_usage_date = 1892.1.1
         latest_usage_date = 1928.1.1
-        chance = 75
+        #guaranteed to spawn if possible
     }
     interest_group_leader_usage = {
         country_trigger = {
@@ -1033,7 +1067,7 @@ usfp_ida_b_wells = {
          }
         earliest_usage_date = 1892.1.1
         latest_usage_date = 1928.1.1
-        chance = 50
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1044,6 +1078,7 @@ usfp_billy_sunday = {
     dna = usfp_billy_sunday
     historical = yes
     birth_date = 1862.11.19
+    home_region = STATE_IOWA
     culture = cu:yankee
     religion = rel:protestant
     female = no
@@ -1074,6 +1109,7 @@ usfp_walter_rauschenbusch = {
     dna = usfp_walter_rauschenbusch
     historical = yes
     birth_date = 1864.10.4
+    home_region = STATE_NEW_YORK
     culture = cu:yankee
     religion = rel:protestant
     female = no
@@ -1116,6 +1152,7 @@ usfp_lyman_beecher = {
     dna = usfp_lyman_beecher
     historical = yes
     birth_date = 1775.10.12
+    home_region = STATE_OHIO
     culture = cu:yankee
     religion = rel:protestant
     female = no
@@ -1135,7 +1172,7 @@ usfp_lyman_beecher = {
          }
         earliest_usage_date = 1836.1.1 
         latest_usage_date = 1852.1.1
-        chance = 50
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1146,6 +1183,7 @@ usfp_henry_beecher = {
     dna = usfp_henry_ward_beecher
     historical = yes
     birth_date = 1813.6.24
+    home_region = STATE_NEW_YORK
     culture = cu:yankee
     religion = rel:protestant
     female = no
@@ -1166,7 +1204,7 @@ usfp_henry_beecher = {
          }
         earliest_usage_date = 1848.1.1 
         latest_usage_date = 1871.1.1
-        chance = 50
+        #guaranteed to spawn if possible
     }
     agitator_usage = {
         country_trigger = { 
@@ -1181,7 +1219,7 @@ usfp_henry_beecher = {
          }
         earliest_usage_date = 1848.1.1 
         latest_usage_date = 1871.1.1
-        chance = 75
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1192,6 +1230,7 @@ usfp_peter_cartwright = {
     dna = usfp_peter_cartwright
     historical = yes
     birth_date = 1785.9.1
+    home_region = STATE_ILLINOIS
     culture = cu:dixie
     religion = rel:protestant
     female = no
@@ -1211,7 +1250,7 @@ usfp_peter_cartwright = {
          }
         earliest_usage_date = 1836.1.1 
         latest_usage_date = 1850.1.1
-        chance = 25
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1222,6 +1261,7 @@ usfp_benjamin_tillman = {
     dna = usfp_benjamin_tillman
     historical = yes
     birth_date = 1847.8.11
+    home_region = STATE_SOUTH_CAROLINA
     culture = cu:dixie
     religion = rel:protestant
     female = no
@@ -1247,7 +1287,7 @@ usfp_benjamin_tillman = {
          }
         earliest_usage_date = 1890.1.1 
         latest_usage_date = 1914.1.1
-        chance = 50
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1258,6 +1298,7 @@ usfp_david_rice_atchinson = {
     dna = usfp_david_rice_atchison
     historical = yes
     birth_date = 1807.8.11
+    home_region = STATE_MISSOURI
     culture = cu:dixie
     religion = rel:protestant
     female = no
@@ -1280,7 +1321,7 @@ usfp_david_rice_atchinson = {
          }
         earliest_usage_date = 1843.1.1 
         latest_usage_date = 1862.1.1
-        chance = 50
+        #guaranteed to spawn if possible
     }
     commander_usage = {
         country_trigger = {
@@ -1289,7 +1330,7 @@ usfp_david_rice_atchinson = {
         role = general
         earliest_usage_date = 1843.1.1 
         latest_usage_date = 1862.1.1
-        chance = 50
+        #guaranteed to spawn if possible
     }
 }
 
@@ -1300,6 +1341,7 @@ usfp_gerrit_smith = {
     dna = usfp_gerrit_smith
     historical = yes
     birth_date = 1797.3.6
+    home_region = STATE_NEW_YORK
     culture = cu:yankee
     religion = rel:protestant
     female = no
@@ -1322,7 +1364,7 @@ usfp_gerrit_smith = {
          }
         earliest_usage_date = 1840.1.1 
         latest_usage_date = 1872.1.1
-        chance = 25
+        chance = 75
     }
 }
 
@@ -1333,6 +1375,7 @@ usfp_reinhold_niebuhr = {
     dna = usfp_reinhold_niebuhr
     historical = yes
     birth_date = 1892.6.21
+    home_region = STATE_MICHIGAN
     culture = cu:yankee
     religion = rel:protestant
     female = no
@@ -1353,7 +1396,7 @@ usfp_reinhold_niebuhr = {
          }
         earliest_usage_date = 1928.1.1
         latest_usage_date = 1960.1.1
-        chance = 25
+        chance = 50
     }
     on_created = {
         if = {
@@ -1374,6 +1417,7 @@ usfp_narciso_lopez = {
     dna = usfp_narciso_lopez
     historical = yes
     birth_date = 1797.11.2
+    home_region = STATE_MIRANDA
     culture = cu:north_andean
     religion = rel:catholic
     female = no
@@ -1386,4 +1430,119 @@ usfp_narciso_lopez = {
         basic_offensive_planner
     }
     #event-spawned
+}
+
+#Smedley Butler, US Marine Major General, War is a Racket
+usfp_smedley_butler = {
+    first_name = Smedley
+    last_name = Butler
+    dna = usfp_smedley_butler
+    home_region = STATE_PENNSYLVANIA
+    historical = yes
+    birth_date = 1881.7.30
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_armed_forces
+    ideology = ideology_pacifist
+    traits = {
+        basic_diplomat
+        brave
+        honorable
+        experienced_offensive_planner
+
+    }
+    agitator_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1930.1.1
+        latest_usage_date = 1936.1.1
+        chance = 50
+    }
+    commander_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        role = general
+        earliest_usage_date = 1918.1.1
+        latest_usage_date = 1930.1.1
+        chance = 75
+    }
+}
+
+#Leonard Wood, Governor-General of Philippines
+usfp_leonard_wood = {
+    first_name = Leonard
+    last_name = Wood
+    dna = usfp_leonard_wood
+    home_region = STATE_NEW_HAMPSHIRE
+    historical = yes
+    birth_date = 1860.10.9
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_armed_forces
+    ideology = ideology_modernizer_leader
+    traits = {
+        brave
+        experienced_colonial_administrator
+        erudite
+        meticulous
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1910.1.1
+        latest_usage_date = 1927.1.1
+        #guaranteed to spawn if possible
+    }
+    commander_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        role = general
+        earliest_usage_date = 1898.1.1
+        latest_usage_date = 1921.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+#Mark Hanna, Mckinley Political Boss
+usfp_mark_hanna = {
+    first_name = Mark
+    last_name = Hanna
+    dna = usfp_mark_hanna
+    home_region = STATE_OHIO
+    historical = yes
+    birth_date = 1837.9.24
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_industrialists
+    ideology = ideology_corporatist_leader
+    traits = {
+        basic_entrepreneur
+        expert_political_operator
+        expensive_tastes
+        imperious
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1897.1.1
+        latest_usage_date = 1901.1.1
+        #guaranteed to spawn if possible
+    }
 }

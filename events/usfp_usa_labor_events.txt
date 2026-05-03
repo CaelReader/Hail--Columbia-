@@ -779,3 +779,88 @@ usfp_usa_labor.6 = {
 	}
 }
 
+#Lochner Rulings
+usfp_usa_labor.7 = {
+    type = country_event
+
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
+    event_image = {
+        video = "votp_hostile_court"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    placement = root
+
+    title = usfp_usa_labor.7.t
+    desc = usfp_usa_labor.7.d
+    flavor = usfp_usa_labor.7.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        exists = c:USA
+        c:USA = root
+        has_journal_entry = je_usfp_american_constitution
+        OR = {
+            has_law_or_variant = law_type:law_worker_protections
+            has_law_or_variant = law_type:law_regulatory_bodies
+        }
+        NOT = {
+            active_law:lawgroup_labor_rights = {
+                has_amendment = amendment_type:amendment_usfp_right_to_contract
+            }
+        }
+        has_technology_researched = corporatism
+        has_technology_researched = corporate_management
+    }
+
+    immediate = {
+        active_law:lawgroup_labor_rights = {
+            save_scope_as = labor_law_scope
+        }
+    }
+
+    #damn
+    option = {
+        name = usfp_usa_labor.7.a
+        default_option = yes
+        active_law:lawgroup_labor_rights = {
+            add_amendment = {
+                type = amendment_usfp_right_to_contract
+                cooldown = 60
+                sponsor = root.ig:ig_industrialists
+            }
+        }
+        add_loyalists = {
+            strata = upper
+            value = small_radicals
+        }
+    }
+    #fight the court
+    option = {
+        name = usfp_usa_labor.7.b
+        add_modifier = {
+            name = usfp_supreme_court_showdown_modifier
+            years = 5
+        }
+        add_radicals = {
+            strata = upper
+            value = medium_radicals
+        }
+        ig:ig_trade_unions = {
+            add_modifier = {
+                name = usfp_fought_lochner_rulings_positive_modifier
+                years = 4
+            }
+        }
+        ig:ig_industrialists = {
+            add_modifier = {
+                name = usfp_fought_lochner_rulings_modifier
+                years = 4
+            }
+        }
+    }
+}
+

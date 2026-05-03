@@ -228,3 +228,41 @@ usfp_restore_constitution_decision = {
 		value = 100
 	}
 }
+
+dismantle_political_machines = {
+    is_shown = {
+        any_scope_state = {
+            has_modifier = usfp_captive_state_government
+        }
+        NOT = {
+            has_journal_entry = je_usfp_american_constitution
+        }
+    }
+
+    possible = {
+        NOT = {
+            has_law_or_variant = law_type:law_laissez_faire
+        }
+    }
+
+    when_taken = {
+        every_scope_state = {
+            limit = {
+                has_modifier = usfp_captive_state_government
+            }
+            remove_modifier = usfp_captive_state_government
+            add_radicals_in_state = {
+                value = large_radicals
+                strata = upper
+            }
+        }
+        add_modifier = {
+            name = usfp_fighting_corruption_modifier
+            years = 2
+        }
+    }
+
+    ai_chance = {
+        value = 1000
+    }
+}

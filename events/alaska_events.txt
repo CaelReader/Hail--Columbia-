@@ -51,9 +51,9 @@ alaska.1 = {
 			trigger_event = { id = alaska.2 days = 0 popup = yes }
 		}
 		show_as_tooltip = {
-			random_state = {
+			s:STATE_ALASKA ?= {
+				random_scope_state = {
 				limit = {
-					state_region = s:STATE_ALASKA
 					owner = {
 						OR = {
 							this = scope:alaska_seller
@@ -66,6 +66,7 @@ alaska.1 = {
 					add_claim = scope:alaska_buyer
 				}
 				set_state_owner = scope:alaska_buyer
+			}
 			}
 			change_relations = {
 				country = scope:alaska_buyer
@@ -127,6 +128,18 @@ alaska.2 = {
 
 	immediate = {
 		# Scopes set in alaska.4
+        if = {
+            limit = {
+                exists = c:ALK
+                c:ALK = {
+                    is_subject_of = scope:alaska_seller
+                    has_state_in_state_region = STATE_SAKHALIN
+                }
+            }
+            s:STATE_SAKHALIN.region_state:ALK = {
+                set_state_owner = scope:alaska_seller
+            }
+        }
 	}
 
 	option = {
@@ -151,9 +164,9 @@ alaska.2 = {
 			}
 		}
 		else = {
-			random_state = {
+			s:STATE_ALASKA ?= {
+				random_scope_state = {
 				limit = {
-				state_region = s:STATE_ALASKA
 					owner = {
 						OR = {
 							this = scope:alaska_seller
@@ -162,11 +175,12 @@ alaska.2 = {
 					}
 				}
 			state_region = {
-				remove_claim = scope:alaska_seller
+						remove_claim = root
 				add_claim = scope:alaska_buyer
 			}
 				set_state_owner = scope:alaska_buyer
 			}
+		}
 		}
 		change_relations = {
 			country = scope:alaska_seller
@@ -260,9 +274,9 @@ alaska.4 = {
 		root = {
 			save_scope_as = alaska_buyer
 		}
-		random_state = {
+		s:STATE_ALASKA = {
+			random_scope_state = {
 			limit = {
-				state_region = s:STATE_ALASKA
 				owner = {
 					NOT = {
 						is_country_type = decentralized
@@ -270,21 +284,25 @@ alaska.4 = {
 				}
 			}
 			save_scope_as = alaska_scope
-			if = {
+				if = { # For selling Russian-American Company
 				limit = {
 					owner = {
 						is_subject = yes
+							capital = {
+								state_region = s:STATE_ALASKA
+							}
 					}
 				}
 				owner.top_overlord = {
 					save_scope_as = alaska_seller
 				}
 			}
-			else = {
+				else = { # For other cases
 			owner = {
 				save_scope_as = alaska_seller
 			}
 		}
+	}
 	}
 	}
 

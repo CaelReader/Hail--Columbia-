@@ -1,5 +1,5 @@
 ﻿COUNTRIES = {
-	c:KLA ?= {
+	c:usfp_KLA ?= {
 		usfp_native_startup = yes
 	}
 }

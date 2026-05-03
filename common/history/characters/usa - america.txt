@@ -2,22 +2,29 @@
 	c:USA = {
 		create_character = {
 			template = usa_andrew_jackson_template
-			on_created = {
-				set_variable = memento_mori_immunity
-			}
+            on_created = {
+                set_career_length = {
+                    years = 2 #retires after the presidency
+                }
+                set_variable = { name = is_andrew_jackson }
+            }
 		}
 
 		create_character = {
 			template = USA_john_calhoun
 			on_created = {
-				set_variable = memento_mori_immunity
+                set_career_length = {
+                    years = 15 #Great Triumvirate should die around 1850
+                }
 			}
 		}
 
 		create_character = {
 			template = USA_henry_clay
 			on_created = {
-				set_variable = memento_mori_immunity
+                set_career_length = {
+                    years = 15 #Great Triumvirate should die around 1850
+                }
 			}
 		}
 
@@ -25,15 +32,19 @@
 			template = ecchi_usa_w_harrison_character_template
 			ig_leader = yes
 			on_created = {
-				set_variable = memento_mori_immunity
+                set_career_length = {
+                    years = 5 #should die if elected in 1840
+                }
 			}
 		}
 
 		create_character = {
 			template = USA_daniel_webster
-			is_agitator = yes
+
 			on_created = {
-				set_variable = memento_mori_immunity
+                set_career_length = {
+                    years = 15 #Great Triumvirate should die around 1850
+                }
 			}
 		}
 
@@ -83,25 +94,24 @@
 			template = USA_william_cramp
 		}
 
-		create_character = {
-			is_admiral = yes
-			first_name = James
-			last_name = Biddle
-			historical = yes
-			culture = cu:yankee
-			birth_date = 1783.2.18
-			interest_group = ig_armed_forces
-			ideology = ideology_moderate
-			hq = region_new_england
-			traits = {
-				basic_diplomat
-				tactful
-			}
-		}
+		# create_character = {
+		# 	is_admiral = yes
+		# 	first_name = James
+		# 	last_name = Biddle
+		# 	historical = yes
+		# 	culture = cu:yankee
+		# 	birth_date = 1783.2.18
+		# 	interest_group = ig_armed_forces
+		# 	ideology = ideology_moderate
+		# 	traits = {
+		# 		basic_diplomat
+		# 		tactful
+		# 	}
+		# }
 
-		create_character = {
-			template = usa_admiral_perry
-		}
+		# create_character = {
+		# 	template = usa_admiral_perry
+		# }
 
 	}
 }

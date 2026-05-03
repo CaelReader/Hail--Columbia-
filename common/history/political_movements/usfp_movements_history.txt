@@ -4,5 +4,11 @@
 			type = movement_cultural_minority
 			culture = cu:afro_american
 		}
+        # random_political_movement = {
+        #     limit = {
+        #         is_political_movement_type = movement_pro_slavery
+        #     }
+        #     add_character_ideology = ideology:ideology_jingoist_leader
+        # }
 	}
 }

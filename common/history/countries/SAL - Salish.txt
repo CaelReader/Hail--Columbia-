@@ -1,5 +1,5 @@
 ﻿COUNTRIES = {
-	c:SAL ?= {
+	c:usfp_SAL ?= {
 		usfp_native_startup = yes
 	}
 }

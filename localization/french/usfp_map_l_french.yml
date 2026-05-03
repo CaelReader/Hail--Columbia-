@@ -2,92 +2,92 @@
   
  CSW: "Chickasaw" #NT!
  CSW_ADJ: "Chickasaw" #NT!
- YOK: "Yokut" #NT!
- YOK_ADJ: "Yokut" #NT!
- HOK: "Hokan" #NT!
- HOK_ADJ: "Hokan" #NT!
- PIU: "Northern Paiute" #NT!
- PIU_ADJ: "North Paiute" #NT!
+ usfp_YOK: "Yokut" #NT!
+ usfp_YOK_ADJ: "Yokut" #NT!
+ usfp_HOK: "Hokan" #NT!
+ usfp_HOK_ADJ: "Hokan" #NT!
+ usfp_PIU: "Northern Paiute" #NT!
+ usfp_PIU_ADJ: "North Paiute" #NT!
   
- YUR: "Yurok" #NT!
- YUR_ADJ: "Yurok" #NT!
- SRN: "Taaqtam" #NT!
- SRN_ADJ: "Takic" #NT!
- GVT: "Gros Ventre" #NT!
- GVT_ADJ: "Aaniiih" #NT!
- AIA: "Arikara" #NT!
- AIA_ADJ: "Sahnish" #NT!
+ usfp_YUR: "Yurok" #NT!
+ usfp_YUR_ADJ: "Yurok" #NT!
+ usfp_SRN: "Taaqtam" #NT!
+ usfp_SRN_ADJ: "Takic" #NT!
+ usfp_GVT: "Gros Ventre" #NT!
+ usfp_GVT_ADJ: "Aaniiih" #NT!
+ usfp_AIA: "Arikara" #NT!
+ usfp_AIA_ADJ: "Sahnish" #NT!
  FLT: "Flathead" #NT!
  FLT_ADJ: "Flathead" #NT!
- KTN: "Kutenai" #NT!
- KTN_ADJ: "Ktunaxa" #NT!
- SHP: "Sahaptin" #NT!
- SHP_ADJ: "Sahaptian" #NT!
- SAL: "Salish" #NT!
- SAL_ADJ: "Salishan" #NT!
- KLA: "Klamath" #NT!
- KLA_ADJ: "Klamathan" #NT!
+ usfp_KTN: "Kutenai" #NT!
+ usfp_KTN_ADJ: "Ktunaxa" #NT!
+ usfp_SHP: "Sahaptin" #NT!
+ usfp_SHP_ADJ: "Sahaptian" #NT!
+ usfp_SAL: "Salish" #NT!
+ usfp_SAL_ADJ: "Salishan" #NT!
+ usfp_KLA: "Klamath" #NT!
+ usfp_KLA_ADJ: "Klamathan" #NT!
  dyn_c_arp_cheyenne: "Cheyenne-Arapaho" #NT!
  dyn_c_arp_cheyenne_ADJ: "Cheyenne-Arapaho" #NT!
  dyn_c_arp_cheyenne_only: "Cheyenne" #NT!
  dyn_c_arp_cheyenne_only_ADJ: "Cheyenne" #NT!
   
- SPI: "Southern Paiute" #NT!
- SPI_ADJ: "South Paiute" #NT!
- ECR: "Eastern Cree" #NT!
- ECR_ADJ: "Eastern Cree" #NT!
- INN: "Innu" #NT!
- INN_ADJ: "Innu" #NT!
- INK: "Nunavik" #NT!
- INK_ADJ: "Nunavik" #NT!
- INV: "Inuit Nunangat" #NT!
- INV_ADJ: "Inuit" #NT!
- CPW: "Chipewyan" #NT!
- CPW_ADJ: "Chipewyan" #NT!
- SWC: "Homeguard Cree" #NT!
- SWC_ADJ: "Homeguard Cree" #NT!
- WCR: "Woodland Cree" #NT!
- WCR_ADJ: "Woodland Cree" #NT!
- OJI: "Oji-Cree" #NT!
- OJI_ADJ: "Oji-Cree" #NT!
- WKS: "Wakashan" #NT!
- WKS_ADJ: "Waskashan" #NT!
- DGB: "Dogrib" #NT!
- DGB_ADJ: "Dogrib" #NT!
- DKL: "Dakelh" #NT!
- DKL_ADJ: "Dakelh" #NT!
- LLT: "St'at'imc" #NT!
- LLT_ADJ: "St'at'imc" #NT!
- YKM: "Yakima" #NT!
- YKM_ADJ: "Yakima" #NT!
- SYX: "Syilx" #NT!
- SYX_ADJ: "Syilx" #NT!
+ usfp_SPI: "Southern Paiute" #NT!
+ usfp_SPI_ADJ: "South Paiute" #NT!
+ usfp_ECR: "Eastern Cree" #NT!
+ usfp_ECR_ADJ: "Eastern Cree" #NT!
+ usfp_INN: "Innu" #NT!
+ usfp_INN_ADJ: "Innu" #NT!
+ usfp_INK: "Nunavik" #NT!
+ usfp_INK_ADJ: "Nunavik" #NT!
+ usfp_INV: "Inuit Nunangat" #NT!
+ usfp_INV_ADJ: "Inuit" #NT!
+ usfp_CPW: "Chipewyan" #NT!
+ usfp_CPW_ADJ: "Chipewyan" #NT!
+ usfp_SWC: "Homeguard Cree" #NT!
+ usfp_SWC_ADJ: "Homeguard Cree" #NT!
+ usfp_WCR: "Woodland Cree" #NT!
+ usfp_WCR_ADJ: "Woodland Cree" #NT!
+ usfp_OJI: "Oji-Cree" #NT!
+ usfp_OJI_ADJ: "Oji-Cree" #NT!
+ usfp_WKS: "Wakashan" #NT!
+ usfp_WKS_ADJ: "Waskashan" #NT!
+ usfp_DGB: "Dogrib" #NT!
+ usfp_DGB_ADJ: "Dogrib" #NT!
+ usfp_DKL: "Dakelh" #NT!
+ usfp_DKL_ADJ: "Dakelh" #NT!
+ usfp_LLT: "St'at'imc" #NT!
+ usfp_LLT_ADJ: "St'at'imc" #NT!
+ usfp_YKM: "Yakima" #NT!
+ usfp_YKM_ADJ: "Yakima" #NT!
+ usfp_SYX: "Syilx" #NT!
+ usfp_SYX_ADJ: "Syilx" #NT!
  usfp_TSI: "Tsimshian" #NT!
  usfp_TSI_ADJ: "Tsimshian" #NT!
- SVY: "Dene" #NT!
- SVY_ADJ: "Dene" #NT!
- STU: "Sahtu" #NT!
- STU_ADJ: "Sahtu" #NT!
- DNZ: "Dane-zaa" #NT!
- DNZ_ADJ: "Dane-zaa" #NT!
- TLT: "Tahltan" #NT!
- TLT_ADJ: "Tahltan" #NT!
- TTC: "Tutchone" #NT!
- TTC_ADJ: "Tutchone" #NT!
+ usfp_SVY: "Dene" #NT!
+ usfp_SVY_ADJ: "Dene" #NT!
+ usfp_STU: "Sahtu" #NT!
+ usfp_STU_ADJ: "Sahtu" #NT!
+ usfp_DNZ: "Dane-zaa" #NT!
+ usfp_DNZ_ADJ: "Dane-zaa" #NT!
+ usfp_TLT: "Tahltan" #NT!
+ usfp_TLT_ADJ: "Tahltan" #NT!
+ usfp_TTC: "Tutchone" #NT!
+ usfp_TTC_ADJ: "Tutchone" #NT!
  usfp_IPQ: "Iñupiat Nunaat" #NT!
  usfp_IPQ_ADJ: "Iñupiat" #NT!
- KYK: "Koyukon" #NT!
- KYK_ADJ: "Koyukon" #NT!
- TNN: "Tanana" #NT!
- TNN_ADJ: "Tanana" #NT!
- GWC: "Gwich'in" #NT!
- GWC_ADJ: "Gwich'in" #NT!
- SWP: "Shuswap" #NT!
- SWP_ADJ: "Shuswap" #NT!
- HDA: "Haida Gwaii" #NT!
- HDA_ADJ: "Haida" #NT!
- AHT: "Atna Nenn'" #NT!
- AHT_ADJ: "Ahtna" #NT!
+ usfp_KYK: "Koyukon" #NT!
+ usfp_KYK_ADJ: "Koyukon" #NT!
+ usfp_TNN: "Tanana" #NT!
+ usfp_TNN_ADJ: "Tanana" #NT!
+ usfp_GWC: "Gwich'in" #NT!
+ usfp_GWC_ADJ: "Gwich'in" #NT!
+ usfp_SWP: "Shuswap" #NT!
+ usfp_SWP_ADJ: "Shuswap" #NT!
+ usfp_HDA: "Haida Gwaii" #NT!
+ usfp_HDA_ADJ: "Haida" #NT!
+ usfp_AHT: "Atna Nenn'" #NT!
+ usfp_AHT_ADJ: "Ahtna" #NT!
   
  usfp_IWY: "Ioway" #NT!
  usfp_IWY_ADJ: "Ioway" #NT!
@@ -108,8 +108,8 @@
   
  ASK: "Alaska" #NT!
  ASK_ADJ: "Alaskan" #NT!
- SON: "Sonora" #NT!
- SON_ADJ: "Sonoran" #NT!
+ usfp_SON: "Sonora" #NT!
+ usfp_SON_ADJ: "Sonoran" #NT!
   
  usfp_GLC: "Great Lakes" #NT!
  usfp_GLC_ADJ: "United Indian" #NT!

@@ -131,7 +131,7 @@
 
 	weight = 100
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 REPLACE_OR_CREATE:je_canada_gbr = {
@@ -222,5 +222,5 @@ REPLACE_OR_CREATE:je_canada_gbr = {
 
 	weight = 100
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }

@@ -146,7 +146,7 @@ usfp_usa_canada.2 = {
 		}
 		every_scope_state = {
 			limit = {
-				region = sr:region_new_england
+				is_in_geographic_region = geographic_region_new_england_old
 				any_neighbouring_state = {
 					owner = {
 						overlord = c:GBR
@@ -190,7 +190,7 @@ usfp_usa_canada.2 = {
 		}
 		every_scope_state = {
 			limit = {
-				region = sr:region_new_england
+                is_in_geographic_region = geographic_region_new_england_old
 				any_neighbouring_state = {
 					owner = {
 						overlord = c:GBR

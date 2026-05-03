@@ -1,5 +1,5 @@
 ﻿COUNTRIES = {
-	c:ECR ?= {
+	c:usfp_ECR ?= {
 		usfp_native_startup = yes
 		activate_law = law_type:law_slavery_banned
 	}

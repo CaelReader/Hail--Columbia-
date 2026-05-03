@@ -1,0 +1,234 @@
+﻿namespace = usfp_usa_navy
+###### Hail, Columbia! by CaelReader ######
+#Post-ACW Naval Advisors
+usfp_usa_navy.1 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "asia_westerners_arriving"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/monitor_tech.dds"
+
+    title = usfp_usa_navy.1.t
+    desc = usfp_usa_navy.1.d
+    flavor = usfp_usa_navy.1.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        has_global_variable = acw_recently_finished
+        country_is_great_power = no
+        country_rank >= rank_value:minor_power
+        NOT = {
+            is_country_type = decentralized
+        }
+        naval_power_projection >= 100
+        capital = {
+            OR = {
+                is_in_geographic_region = geographic_region_pacific
+                is_in_geographic_region = geographic_region_china
+            }
+        }
+        NOT = {
+            has_technology_researched = pre_dreadnought_tech
+        }
+        naval_power_projection <= c:USA.naval_power_projection
+        NOT = {
+            has_law_or_variant = law_type:law_isolationism
+        }
+        is_subject = no
+    }
+
+    immediate = {
+        c:USA = {
+            save_scope_as = usa_scope
+        }
+    }
+
+    #cool
+    option = {
+        name = usfp_usa_navy.1.a
+        default_option = yes
+        add_modifier = {
+            name = usfp_post_acw_naval_advisors_modifier
+            years = 6
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_technology_researched = ironclad_tech
+                }
+            }
+            add_technology_progress = {
+                technology = ironclad_tech
+                progress = 2000
+            }
+        } else_if = {
+            limit = {
+                NOT = {
+                    has_technology_researched = monitor_tech
+                }
+            }
+            add_technology_progress = {
+                technology = monitor_tech
+                progress = 2000
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #redouble our efforts
+    option = {
+        name = usfp_usa_navy.1.b
+        add_modifier = {
+            name = usfp_navy_catchup_modifier
+            years = 4
+        }
+        add_loyalists = {
+            value = small_radicals
+            pop_type = officers
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+#New Navy Start
+usfp_usa_navy.2 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "ep2_active_shipyard"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/pre_dreadnought.dds"
+
+    title = usfp_usa_navy.2.t
+    desc = usfp_usa_navy.2.d
+    flavor = usfp_usa_navy.2.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #JE Start
+    }
+
+    immediate = {
+        c:USA = {
+            save_scope_as = usa_scope
+        }
+    }
+
+    #big ships
+    option = {
+        name = usfp_usa_navy.2.a
+        default_option = yes
+        show_as_tooltip = {
+            add_journal_entry = {
+                type = je_usfp_the_new_navy
+            }
+        }
+        add_modifier = {
+            name = usfp_new_navy_big_ships_modifier
+            years = 4
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #small ships
+    option = {
+        name = usfp_usa_navy.2.b
+        show_as_tooltip = {
+            add_journal_entry = {
+                type = je_usfp_the_new_navy
+            }
+        }
+        add_modifier = {
+            name = usfp_new_navy_small_ships_modifier
+            years = 4
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+#New Navy Complete
+usfp_usa_navy.3 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "votp_gunboat_diplomacy"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/battlefleet_tactics.dds"
+
+    title = usfp_usa_navy.3.t
+    desc = usfp_usa_navy.3.d
+    flavor = usfp_usa_navy.3.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #JE Complete
+    }
+
+    immediate = {
+        c:USA = {
+            save_scope_as = usa_scope
+        }
+    }
+
+    #diplo navy
+    option = {
+        name = usfp_usa_navy.3.a
+        default_option = yes
+        trigger = {
+            has_law_or_variant = law_type:law_diplomatic_navy
+        }
+        add_modifier = {
+            name = usfp_new_navy_diplo_fleet_complete_modifier
+            years = 5
+        }
+        highlighted_option = yes
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #capital navy
+    option = {
+        name = usfp_usa_navy.3.b
+        trigger = {
+            has_law_or_variant = law_type:law_professional_navy
+        }
+        add_modifier = {
+            name = usfp_new_navy_capital_fleet_complete_modifier
+            years = 5
+        }
+        highlighted_option = yes
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    cancellation_trigger = {
+        NOR = {
+            has_law_or_variant = law_type:law_diplomatic_navy
+            has_law_or_variant = law_type:law_professional_navy
+        }
+    }
+}

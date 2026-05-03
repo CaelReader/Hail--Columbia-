@@ -498,7 +498,7 @@ usfp_danish_purchases.3 = {
 					this = root
 					this = scope:greenland_owner_scope
 				}
-				has_interest_marker_in_region = region_caribbean
+				has_interest_marker_in_region = sr:region_central_america
 			}
 			post_notification = usfp_usa_bought_west_indies_third_party
 		}
@@ -549,7 +549,7 @@ usfp_danish_purchases.4 = {
 		}
 		every_country = {
 			limit = {
-				has_interest_marker_in_region = region_north_sea_coast
+				has_interest_marker_in_region = sr:region_northern_europe
 			}
 			post_notification = usa_claiming_greenland
 		}

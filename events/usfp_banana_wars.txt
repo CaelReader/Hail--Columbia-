@@ -1,0 +1,1095 @@
+﻿namespace = usfp_banana_wars
+
+#Banana Wars start
+usfp_banana_wars.1 = {
+    type = country_event
+    placement = scope:latin_american_country.capital
+    event_image = {
+        video = "ep1_clandestine_meeting"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/goods_icons/prestige_goods/gros_michel_banana_prestige.dds"
+
+    title = usfp_banana_wars.1.t
+    desc = usfp_banana_wars.1.d
+    flavor = usfp_banana_wars.1.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #JE Start
+    }
+
+    immediate = {
+        random_country = {
+            limit = {
+                capital = {
+                    is_in_geographic_region = geographic_region_caribbean_coast
+                }
+                save_temporary_scope_as = check_country
+                OR = {
+                    custom_tooltip = {
+                        text = usa_has_investment_rights
+                        root = {
+                            any_scope_treaty = {
+                                binds = scope:check_country
+                                any_scope_article = {
+                                    has_type = foreign_investment_rights
+                                    target_country = root
+                                }
+                            }
+                        }
+                    }
+                    is_in_customs_union_with = root
+                    is_subject_of = root
+                }
+                OR = {
+                    has_revolution = yes
+                    country_turmoil >= 0.50
+                    has_modifier = declared_bankruptcy
+                }
+            }
+            save_scope_as = latin_american_country
+        }
+        c:USA = {
+            save_scope_as = usa_scope
+        }
+    }
+
+    #accept
+    option = {
+        name = usfp_banana_wars.1.a
+        default_option = yes
+        if = {
+            limit = {
+                any_scope_pop = {
+                    culture = cu:central_american
+                }
+            }
+            add_radicals = {
+                value = large_radicals
+                culture = cu:central_american
+            }
+        }
+        if = {
+            limit = {
+                any_scope_pop = {
+                    culture = cu:colombian
+                }
+            }
+            add_radicals = {
+                value = large_radicals
+                culture = cu:colombian
+            }
+        }
+        if = {
+            limit = {
+                any_scope_pop = {
+                    culture = cu:north_andean
+                }
+            }
+            add_radicals = {
+                value = large_radicals
+                culture = cu:north_andean
+            }
+        }
+        show_as_tooltip = {
+            add_journal_entry = {
+                type = usfp_je_banana_wars
+            }
+        }
+        every_country_in_caribbean_coast = {
+            limit = {
+                NOT = {
+                    this = root
+                }
+                capital = {
+                    is_in_geographic_region = geographic_region_caribbean_coast
+                }
+            }
+            trigger_event = usfp_banana_wars.4
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #reject
+    option = {
+        name = usfp_banana_wars.1.b
+        ig:ig_industrialists ?= {
+            add_modifier = {
+                name = usfp_rejected_banana_wars_ig_modifier
+                years = 4
+            }
+        }
+        add_radicals = {
+            pop_type = capitalists
+            value = small_radicals
+        }
+        custom_tooltip = {
+            text = close_banana_wars
+            set_variable = rejected_banana_wars
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+#Marines massacre civilians
+usfp_banana_wars.2 = {
+    type = country_event
+    placement = scope:massacre_state_scope
+    event_image = {
+        video = "southamerica_war_civilians"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+    title = usfp_banana_wars.2.t
+    desc = usfp_banana_wars.2.d
+    flavor = usfp_banana_wars.2.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = long_modifier_time }
+
+    trigger = {
+        any_subject_or_below = {
+            is_in_geographic_region = geographic_region_caribbean_coast
+            OR = {
+                is_subject_type = subject_type_chartered_company
+                is_subject_type = subject_type_colony
+                is_subject_type = subject_type_puppet
+            }
+            country_has_voting_franchise = no
+            country_turmoil >= 0.20
+        }
+    }
+
+    immediate = {
+        random_subject_or_below = {
+            limit = {
+                is_in_geographic_region = geographic_region_caribbean_coast
+                OR = {
+                    is_subject_type = subject_type_chartered_company
+                    is_subject_type = subject_type_colony
+                    is_subject_type = subject_type_puppet
+                }
+                country_has_voting_franchise = no
+                country_turmoil >= 0.20
+            }
+            save_scope_as = massacre_subject
+            ordered_scope_state = {
+                order_by = turmoil
+                position = 0
+                save_scope_as = massacre_state_scope
+            }
+        }
+    }
+
+    #abet
+    option = {
+        name = usfp_banana_wars.2.a
+        default_option = yes
+        scope:massacre_state_scope = {
+            kill_population_in_state = {
+                pop_type = peasants
+                value = 200
+            }
+            add_radicals_in_state = {
+                strata = lower
+                value = large_radicals
+            }
+            add_loyalists_in_state = {
+                strata = upper
+                value = large_radicals
+            }
+        }
+        create_incident = {
+            country = scope:massacre_subject
+            value = 5
+        }
+        add_overlord_lobby_appeasement_from_diplomacy = {
+            FIRST = scope:massacre_subject
+            SECOND = root
+            ANTI_AMOUNT = -2
+            PRO_AMOUNT = -2
+            FACTOR = appeasement_special_events_negative
+        }
+        scope:massacre_subject = {
+            post_notification = usfp_marines_banana_wars_massacre
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #stop
+    option = {
+        name = usfp_banana_wars.2.b
+        scope:massacre_state_scope = {
+            kill_population_in_state = {
+                pop_type = peasants
+                value = 150
+            }
+            add_radicals_in_state = {
+                strata = lower
+                value = medium_radicals
+            }
+        }
+        ig:ig_industrialists ?= {
+            add_modifier = {
+                name = usfp_industrialists_displeased_banana_wars_ig_modifier
+                years = 4
+            }
+        }
+        create_incident = {
+            country = scope:massacre_subject
+            value = 3
+        }
+        scope:massacre_subject = {
+            post_notification = usfp_marines_banana_wars_massacre
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+#Industrialists make incorporation harder
+usfp_banana_wars.3 = {
+    type = country_event
+    placement = scope:central_american_state_scope
+    event_image = {
+        video = "ip4_colonial_exploitation_going_well"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/corporate_management.dds"
+
+    title = usfp_banana_wars.3.t
+    desc = usfp_banana_wars.3.d
+    flavor = usfp_banana_wars.3.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        any_scope_state = {
+            is_in_geographic_region = geographic_region_caribbean_coast
+            is_incorporated = no
+            is_treaty_port = no
+            NOT = {
+                has_building = building_panama_canal
+            }
+            culture_percent_state = {
+                target = cu:central_american
+                value >= 0.60
+            }
+            has_building = building_banana_plantation
+        }
+    }
+
+    immediate = {
+        ordered_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_caribbean_coast
+                is_incorporated = no
+                is_treaty_port = no
+                NOT = {
+                    has_building = building_panama_canal
+                }
+                culture_percent_state = {
+                    target = cu:central_american
+                    value >= 0.60
+                }
+                has_building = building_banana_plantation
+            }
+            order_by = gdp
+            position = 0
+            save_scope_as = central_american_state_scope
+        }
+        if = {
+            limit = {
+                has_company = company_type:company_united_fruit
+            }
+            company:company_united_fruit = {
+                save_scope_as = united_fruit_scope
+            }
+        }
+    }
+
+    #do not incorporate
+    option = {
+        name = usfp_banana_wars.3.a
+        default_option = yes
+        ig:ig_industrialists ?= {
+            add_modifier = {
+                name = usfp_protected_ig_interests_modifier
+                years = 4
+            }
+        }
+        every_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_caribbean_coast
+                is_incorporated = no
+                is_treaty_port = no
+            }
+            add_modifier = usfp_banana_wars_colony_modifier
+            add_radicals_in_state = {
+                value = large_radicals
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #actually we want to turn these into states
+    option = {
+        name = usfp_banana_wars.3.b
+        every_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_caribbean_coast
+                is_incorporated = no
+                is_treaty_port = no
+            }
+            add_modifier = {
+                name = usfp_banana_wars_capitalist_interference_modifier
+                years = 5
+            }
+            add_radicals_in_state = {
+                value = medium_radicals
+            }
+        }
+        ig:ig_industrialists ?= {
+            add_modifier = {
+                name = usfp_industrialists_displeased_banana_wars_ig_modifier
+                years = 4
+            }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+
+    #United Fruit Company
+    option = {
+        name = usfp_banana_wars.3.c
+        highlighted_option = yes
+        trigger = {
+            has_company = company_type:company_united_fruit
+        }
+        ig:ig_industrialists ?= {
+            add_modifier = {
+                name = usfp_industrialists_banana_empire_ig_modifier
+                years = 6
+            }
+        }
+        custom_tooltip = {
+            text = create_united_fruit_country
+            create_country = {
+                tag = usfp_UFC
+                origin = root
+                state = scope:central_american_state_scope
+            }
+            scope:united_fruit_scope = {
+                add_owned_country = c:usfp_UFC
+            }
+            every_scope_state = {
+                limit = {
+                    is_in_geographic_region = geographic_region_caribbean_coast
+                    is_incorporated = no
+                    is_treaty_port = no
+                    NOT = {
+                        has_building = building_panama_canal
+                    }
+                }
+                set_state_owner = c:usfp_UFC
+            }
+            create_diplomatic_pact = {
+                country = c:usfp_UFC
+                type = chartered_company
+            }
+            c:usfp_UFC ?= {
+                add_liberty_desire = -100
+                activate_law = law_type:law_land_based_taxation
+                activate_law = law_type:law_appointed_bureaucrats
+                activate_law = law_type:law_colonial_administration
+                activate_law = law_type:law_extraction_economy
+                activate_law = law_type:law_oligarchy
+                activate_law = law_type:law_dedicated_police
+                activate_law = law_type:law_no_schools
+                activate_law = law_type:law_no_workers_rights
+                activate_law = law_type:law_no_health_system
+                activate_law = law_type:law_no_home_affairs
+                activate_law = law_type:law_no_migration_controls
+                activate_law = law_type:law_no_colonial_affairs
+                activate_law = law_type:law_censorship
+                activate_law = law_type:law_child_labor_allowed
+                activate_law = law_type:law_no_social_security
+                activate_law = law_type:law_combination_acts
+                activate_law = law_type:law_commercialized_agriculture
+                activate_law = law_type:law_free_trade
+                ig:ig_industrialists ?= {
+                    if = {
+                        limit = {
+                            has_ideology = ideology:ideology_laissez_faire
+                        }
+                        remove_ideology = ideology_laissez_faire
+                        add_ideology = ideology_colonialist
+                    }
+                }
+                set_ruling_interest_groups = { ig_industrialists ig_armed_forces }
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+}
+#Central American country response
+usfp_banana_wars.4 = {
+    type = country_event
+    placement = scope:central_american_state_scope
+    event_image = {
+        video = "votp_gunboat_diplomacy"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/waving_flag_usa.dds"
+
+    title = usfp_banana_wars.4.t
+    desc = usfp_banana_wars.4.d
+    flavor = usfp_banana_wars.4.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #JE Start
+    }
+
+    immediate = {
+        ordered_scope_state = {
+            position = 0
+            order_by = gdp
+            limit = {
+                is_in_geographic_region = geographic_region_caribbean_coast
+            }
+            save_scope_as = central_american_state_scope
+        }
+        c:USA = {
+            save_scope_as = usa_scope
+        }
+    }
+
+    #uh oh
+    option = {
+        name = usfp_banana_wars.4.a
+        default_option = yes
+        change_relations = {
+            country = c:USA
+            value = -10
+        }
+        if = {
+            limit = {
+                is_subject = no
+            }
+            usfp_create_anti_country_lobby_if_not_exists = {
+                TARGET = c:USA
+                INTEREST_GROUP = ig:ig_armed_forces
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #counter-aggression
+    option = {
+        name = usfp_banana_wars.4.b
+        trigger = {
+            any_neighbouring_state = {
+                owner = c:USA
+                is_in_geographic_region = geographic_region_caribbean_coast
+                is_incorporated = no
+                is_treaty_port = no
+            }
+            is_subject = no
+        }
+        usfp_create_anti_country_lobby_if_not_exists = {
+            TARGET = c:USA
+            INTEREST_GROUP = ig:ig_armed_forces
+        }
+        change_relations = {
+            country = c:USA
+            value = -30
+        }
+        every_neighbouring_state = {
+            limit = {
+                owner = c:USA
+                is_in_geographic_region = geographic_region_caribbean_coast
+                is_incorporated = no
+                is_treaty_port = no
+            }
+            state_region = {
+                add_claim = root
+            }
+        }
+        ai_chance = {
+            base = 5
+        }
+    }
+
+    #allied/great power
+    option = {
+        name = usfp_banana_wars.4.c
+        highlighted_option = yes
+        trigger = {
+            OR = {
+                capital = {
+                    is_in_geographic_region = geographic_region_europe
+                }
+                has_treaty_alliance_with = {
+                    TARGET = c:USA
+                }
+                has_treaty_defensive_pact_with = {
+                    TARGET = c:USA
+                }
+            }
+        }
+        ai_chance = {
+            base = 1000
+        }
+    }
+
+    #Federation of the Americas
+    option = {
+        name = usfp_banana_wars.4.g
+        highlighted_option = yes
+        trigger = {
+            OR = {
+                country_definition = cd:FND
+                country_definition = cd:GCO
+            }
+        }
+        c:USA = {
+            every_scope_state = {
+                limit = {
+                    OR = {
+                        is_in_geographic_region = geographic_region_central_america
+                        is_in_geographic_region = geographic_region_south_america
+                        is_in_geographic_region = geographic_region_caribbean_coast
+                    }
+                    is_treaty_port = no
+                }
+                state_region = {
+                    add_claim = root
+                }
+            }
+        }
+        change_relations = {
+            country = c:USA
+            value = -50
+        }
+        if = {
+            limit = {
+                is_ai = yes
+            }
+            set_secret_goal = {
+                country = c:USA
+                secret_goal = conquer
+            }
+            set_strategy = ai_strategy_territorial_expansion
+        }
+        usfp_create_anti_country_lobby_if_not_exists = {
+            TARGET = c:USA
+            INTEREST_GROUP = ig:ig_armed_forces
+        }
+        ai_chance = {
+            base = 1000
+        }
+    }
+}
+#Other countries: Good Neighbor Policy enacted
+usfp_banana_wars.5 = {
+    type = country_event
+    placement = c:USA.capital
+    event_image = {
+        video = "ep1_transfer_of_authority"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    title = usfp_banana_wars.5.t
+    desc = usfp_banana_wars.5.d
+    flavor = usfp_banana_wars.5.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #JE Button
+    }
+
+    immediate = {
+        c:USA = {
+            save_scope_as = usa_scope
+        }
+    }
+
+    #we are suspicious of this
+    option = {
+        name = usfp_banana_wars.5.a
+        default_option = yes
+        c:USA.power_bloc ?= {
+            add_leverage = {
+                target = root
+                value = -200
+            }
+        }
+        ai_chance = {
+            base = 50
+        }
+    }
+
+    #a welcome change
+    option = {
+        name = usfp_banana_wars.5.b
+        change_relations = {
+            value = 15
+            country = c:USA
+        }
+        c:USA.power_bloc ?= {
+            add_leverage = {
+                target = root
+                value = 100
+            }
+        }
+        ai_chance = {
+            base = 0
+            modifier = {
+                trigger = {
+                    c:USA.relations:ROOT >= relations_threshold:cordial
+                }
+                add = 25
+            }
+        }
+    }
+
+    after = {
+        show_as_tooltip = {
+            c:USA = {
+                create_unidirectional_truce = {
+                    country = root
+                    months = 60
+                }
+            }
+        }
+        custom_tooltip = usa_released_all_latin_american_subjects
+    }
+
+}
+
+#War is a Racket
+usfp_banana_wars.6 = {
+    type = country_event
+    placement = root
+    gui_window = event_window_1char_tabloid
+    left_icon = scope:smedley_butler_scope
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+    icon = "gfx/interface/icons/invention_icons/military_drill.dds"
+
+    title = usfp_banana_wars.6.t
+    desc = usfp_banana_wars.6.d
+    flavor = usfp_banana_wars.6.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        any_scope_character = {
+            has_template = usfp_smedley_butler
+            is_busy = no
+        }
+        is_at_war = no
+        has_variable = banana_wars_finished
+        has_variable = aggressive_banana_wars
+    }
+
+    immediate = {
+        random_scope_character = {
+            limit = {
+                has_template = usfp_smedley_butler
+            }
+            save_scope_as = smedley_butler_scope
+        }
+    }
+
+    #true
+    option = {
+        name = usfp_banana_wars.6.a
+        default_option = yes
+        scope:smedley_butler_scope = {
+            add_character_role = agitator
+            set_interest_group = root.ig:ig_trade_unions
+            if = {
+                limit = {
+                    has_role_of_type = general
+                }
+                remove_character_role = general
+            }
+            if = {
+                limit = {
+                    has_role_of_type = admiral
+                }
+                remove_character_role = admiral
+            }
+            add_trait = inspirational_orator
+            add_career_length = {
+                role = agitator
+                years = 20
+            }
+        }
+        add_modifier = {
+            name = usfp_war_is_a_racket_modifier
+            years = 5
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #false
+    option = {
+        name = usfp_banana_wars.6.b
+        highlighted_option = yes
+        show_as_unavailable = { always = yes }
+        trigger = {
+            NOT = {
+                has_law_or_variant = law_type:law_protected_speech
+            }
+        }
+        scope:smedley_butler_scope = {
+            add_character_role = agitator
+            set_interest_group = ig:ig_trade_unions
+            if = {
+                limit = {
+                    has_role_of_type = general
+                }
+                remove_character_role = general
+            }
+            if = {
+                limit = {
+                    has_role_of_type = admiral
+                }
+                remove_character_role = admiral
+            }
+            custom_tooltip = {
+                text = to_jail_5_tt
+                set_variable = { name = prison_time_var value = 60 }
+                set_variable = { name = prison_country value = owner }
+                place_character_in_void = 72
+            }
+        }
+        add_radicals = {
+            value = small_radicals
+            pop_type = officers
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+#US Forces perform union busting
+usfp_banana_wars.7 = {
+    type = country_event
+    placement = scope:union_busting_subject.capital
+    event_image = {
+        video = "votp_cops_march"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+    title = usfp_banana_wars.7.t
+    desc = usfp_banana_wars.7.d
+    flavor = usfp_banana_wars.7.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = long_modifier_time } #Once
+
+    trigger = {
+        any_subject_or_below = {
+            is_in_geographic_region = geographic_region_latin_america
+            any_political_movement = {
+                OR = {
+                    movement_is_socialist = yes
+                    is_political_movement_type = movement_labor
+                }
+                OR = {
+                    political_movement_support >= 0.10
+                    political_movement_radicalism >= 0.25
+                }
+            }
+            OR = {
+                is_subject_type = subject_type_colony
+                is_subject_type = subject_type_chartered_company
+                is_subject_type = subject_type_puppet
+            }
+        }
+    }
+
+    immediate = {
+        random_subject_or_below = {
+            limit = {
+                is_in_geographic_region = geographic_region_latin_america
+                any_political_movement = {
+                    OR = {
+                        movement_is_socialist = yes
+                        is_political_movement_type = movement_labor
+                    }
+                    OR = {
+                        political_movement_support >= 0.10
+                        political_movement_radicalism >= 0.25
+                    }
+                }
+                OR = {
+                    is_subject_type = subject_type_colony
+                    is_subject_type = subject_type_chartered_company
+                    is_subject_type = subject_type_puppet
+                }
+            }
+            save_scope_as = union_busting_subject
+            ordered_political_movement = {
+                limit = {
+                    OR = {
+                        movement_is_socialist = yes
+                        is_political_movement_type = movement_labor
+                    }
+                    OR = {
+                        political_movement_support >= 0.10
+                        political_movement_radicalism >= 0.25
+                    }
+                }
+                order_by = political_movement_support
+                position = 0
+                save_scope_as = union_busting_target_movement
+            }
+        }
+    }
+
+    #do it
+    option = {
+        name = usfp_banana_wars.7.a
+        default_option = yes
+        scope:union_busting_subject = {
+            add_radicals = {
+                value = medium_radicals
+                pop_type = laborers
+            }
+            add_liberty_desire = -20
+            scope:union_busting_target_movement = {
+                add_modifier = {
+                    name = usfp_marines_crackdown_modifier
+                    years = 5
+                }
+            }
+            post_notification = usfp_marines_break_up_unions
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #no
+    option = {
+        name = usfp_banana_wars.7.b
+        ig:ig_industrialists ?= {
+            add_modifier = {
+                name = usfp_industrialists_displeased_banana_wars_ig_modifier
+                years = 4
+            }
+        }
+        scope:union_busting_subject = {
+            add_liberty_desire = 20
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+#Expanded Good Neighbor: release Central America?
+usfp_banana_wars.8 = {
+    type = country_event
+    placement = scope:central_american_state_scope
+    event_image = {
+        video = "ep1_transfer_of_authority"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    title = usfp_banana_wars.8.t
+    desc = usfp_banana_wars.8.d
+    flavor = usfp_banana_wars.8.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        any_scope_state = {
+            is_treaty_port = no
+            is_in_geographic_region = geographic_region_central_america_old
+            NOT = {
+                has_building = building_panama_canal
+            }
+        }
+        NOT = {
+            exists = c:UCA
+        }
+    }
+
+    immediate = {
+        ordered_scope_state = {
+            limit = {
+                is_treaty_port = no
+                is_in_geographic_region = geographic_region_central_america_old
+                NOT = {
+                    has_building = building_panama_canal
+                }
+            }
+            position = 0
+            order_by = gdp
+            save_scope_as = central_american_state_scope
+        }
+    }
+
+    #keep
+    option = {
+        name = usfp_banana_wars.8.a
+        default_option = yes
+        change_infamy = 8
+        add_radicals = {
+            value = very_large_radicals
+            culture = cu:central_american
+        }
+        ai_chance = {
+            base = 80
+        }
+    }
+
+    #release as subject
+    option = {
+        name = usfp_banana_wars.8.b
+        custom_tooltip = {
+            text = uca_released_as_protectorate
+            create_country = {
+                tag = UCA
+                state = scope:central_american_state_scope
+                origin = root
+            }
+            every_scope_state = {
+                limit = {
+                    is_treaty_port = no
+                    is_in_geographic_region = geographic_region_central_america_old
+                    NOT = {
+                        has_building = building_panama_canal
+                    }
+                }
+                set_state_owner = c:UCA
+            }
+            c:UCA ?= {
+                change_relations = {
+                    country = root
+                    value = 30
+                }
+                add_loyalists = {
+                    value = large_radicals
+                    culture = cu:central_american
+                }
+                create_bidirectional_truce = {
+                    country = c:USA
+                    months = 60
+                }
+            }
+            create_diplomatic_pact = {
+                country = c:UCA
+                type = protectorate
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #release as independent
+    option = {
+        name = usfp_banana_wars.8.c
+        usfp_manifest_less_destiny_effect = yes
+        custom_tooltip = {
+            text = uca_released_as_independent
+            create_country = {
+                tag = UCA
+                state = scope:central_american_state_scope
+                origin = root
+            }
+            create_bidirectional_truce = {
+                country = c:UCA
+                months = 60
+            }
+            every_scope_state = {
+                limit = {
+                    is_treaty_port = no
+                    is_in_geographic_region = geographic_region_central_america_old
+                    NOT = {
+                        has_building = building_panama_canal
+                    }
+                }
+                set_state_owner = c:UCA
+            }
+            c:UCA ?= {
+                change_relations = {
+                    country = root
+                    value = 30
+                }
+                add_loyalists = {
+                    value = large_radicals
+                    culture = cu:central_american
+                }
+            }
+            if = {
+                limit = {
+                    is_power_bloc_leader = yes
+                }
+                power_bloc ?= {
+                    add_leverage = {
+                        target = c:UCA
+                        value = 1000
+                    }
+                }
+                c:UCA = {
+                    join_power_bloc = root
+                }
+            }
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+
+}

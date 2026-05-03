@@ -6,13 +6,13 @@
 				has_law_or_variant = law_type:law_agrarianism
 			}
 		}
-		localization_key = metternich_unticked
+		localization_key = checkbox_unticked
 	}
 	text = {
 		trigger = {
 			has_law_or_variant = law_type:law_agrarianism
 		}
-		localization_key = metternich_ticked
+		localization_key = checkbox_ticked
 	}
 }
 
@@ -32,13 +32,13 @@ usfp_agenda_jackson_legacy_slavery_checkbox = {
 			}
 
 		}
-		localization_key = metternich_unticked
+		localization_key = checkbox_unticked
 	}
 	text = {
 		trigger = {
 			has_law_or_variant = law_type:law_legacy_slavery
 		}
-		localization_key = metternich_ticked
+		localization_key = checkbox_ticked
 	}
 }
 
@@ -50,13 +50,13 @@ usfp_agenda_jackson_suffrage_checkbox = {
 				has_law_or_variant = law_type:law_universal_suffrage
 			}
 		}
-		localization_key = metternich_unticked
+		localization_key = checkbox_unticked
 	}
 	text = {
 		trigger = {
 			has_law_or_variant = law_type:law_universal_suffrage
 		}
-		localization_key = metternich_ticked
+		localization_key = checkbox_ticked
 	}
 }
 
@@ -69,7 +69,7 @@ usfp_agenda_jackson_taxes_checkbox = {
 				tax_level > low
 			}
 		}
-		localization_key = metternich_unticked
+		localization_key = checkbox_unticked
 	}
 	text = {
 		trigger = {
@@ -78,7 +78,7 @@ usfp_agenda_jackson_taxes_checkbox = {
 			}
 			tax_level <= low
 		}
-		localization_key = metternich_ticked
+		localization_key = checkbox_ticked
 	}
 }
 
@@ -100,7 +100,7 @@ usfp_agenda_jackson_taxes_checkbox = {
 # 				}
 # 			}
 # 		}
-# 		localization_key = metternich_unticked
+# 		localization_key = checkbox_unticked
 # 	}
 # 	text = {
 # 		trigger = {
@@ -115,7 +115,7 @@ usfp_agenda_jackson_taxes_checkbox = {
 # 				}
 # 			}
 # 		}
-# 		localization_key = metternich_ticked
+# 		localization_key = checkbox_ticked
 # 	}
 # }
 
@@ -125,13 +125,13 @@ usfp_agenda_jackson_debt_checkbox = {
 		trigger = {
 			scaled_debt > 0
 		}
-		localization_key = metternich_unticked
+		localization_key = checkbox_unticked
 	}
 	text = {
 		trigger = {
 			scaled_debt <= 0
 		}
-		localization_key = metternich_ticked
+		localization_key = checkbox_ticked
 	}
 }
 
@@ -143,12 +143,460 @@ usfp_agenda_jackson_removal_checkbox = {
 				has_variable = usfp_indians_removed_end
 			}
 		}
-		localization_key = metternich_unticked
+		localization_key = checkbox_unticked
 	}
 	text = {
 		trigger = {
 			has_variable = usfp_indians_removed_end
 		}
-		localization_key = metternich_ticked
+		localization_key = checkbox_ticked
 	}
+}
+
+### Roosevelt Agenda items
+
+usfp_agenda_roosevelt_national_parks_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            usfp_roosevelt_agenda_national_parks_trigger = no
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            usfp_roosevelt_agenda_national_parks_trigger = yes
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_busted_trusts_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            NOT = {
+                has_variable = busted_trusts
+            }
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            has_variable = busted_trusts
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_few_companies_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            NOT = {
+                num_companies <= {
+                    value = max_num_companies
+                    subtract = 3
+                }
+            }
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            num_companies <= {
+                value = max_num_companies
+                subtract = 3
+            }
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_interventionism_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            NOT = {
+                has_law_or_variant = law_type:law_interventionism
+            }
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            has_law_or_variant = law_type:law_interventionism
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_workplace_safety_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            NOT = {
+                institution_investment_level = {
+                    institution = institution_workplace_safety
+                    value >= 3
+                }
+            }
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            institution_investment_level = {
+                institution = institution_workplace_safety
+                value >= 3
+            }
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_healthcare_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            NOT = {
+                institution_investment_level = {
+                    institution = institution_health_system
+                    value >= 3
+                }
+            }
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            institution_investment_level = {
+                institution = institution_health_system
+                value >= 3
+            }
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_socialists_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            any_political_movement = {
+                movement_is_socialist = yes
+                OR = {
+                    political_movement_radicalism > 0.75
+                    political_movement_support > 0.15
+                }
+            }
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            NOT = {
+                any_political_movement = {
+                    movement_is_socialist = yes
+                    OR = {
+                        political_movement_radicalism > 0.75
+                        political_movement_support > 0.15
+                    }
+                }
+            }
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_revolutions_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            has_variable = roosevelt_didnt_avoid_revolution
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            NOT = {
+                has_variable = roosevelt_didnt_avoid_revolution
+            }
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_industrialists_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            NOT = {
+                ig:ig_industrialists ?= {
+                    is_powerful = no
+                }
+            }
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            ig:ig_industrialists ?= {
+                is_powerful = no
+            }
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_panama_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            NOT = {
+                any_scope_building = {
+                    is_building_type = building_panama_canal
+                    is_under_construction = no
+                }
+            }
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            any_scope_building = {
+                is_building_type = building_panama_canal
+                is_under_construction = no
+            }
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_cuba_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            NOT = {
+                OR = {
+                    c:CUB ?= {
+                        is_subject_of = root
+                    }
+                    AND = {
+                        country_or_subject_owns_entire_state_region = STATE_CENTRAL_CUBA
+                        country_or_subject_owns_entire_state_region = STATE_EASTERN_CUBA
+                        country_or_subject_owns_entire_state_region = STATE_WESTERN_CUBA
+                    }
+                }
+            }
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            OR = {
+                c:CUB ?= {
+                    is_subject_of = root
+                }
+                AND = {
+                    country_or_subject_owns_entire_state_region = STATE_CENTRAL_CUBA
+                    country_or_subject_owns_entire_state_region = STATE_EASTERN_CUBA
+                    country_or_subject_owns_entire_state_region = STATE_WESTERN_CUBA
+                }
+            }
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_puerto_rico_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            NOT = {
+                country_or_subject_owns_entire_state_region = STATE_PUERTO_RICO
+            }
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            country_or_subject_owns_entire_state_region = STATE_PUERTO_RICO
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_monroe_doctrine_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            any_country_in_americas = {
+                is_subject = yes
+                overlord ?= {
+                    NOR = {
+                        is_in_geographic_region = geographic_region_americas
+                        c:GBR ?= this
+                    }
+                }
+            }
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            NOT = {
+                any_country_in_americas = {
+                    is_subject = yes
+                    overlord ?= {
+                        NOR = {
+                            is_in_geographic_region = geographic_region_americas
+                            c:GBR ?= this
+                        }
+                    }
+                }
+            }
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_pacific_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            NOT = {
+                OR = {
+                    any_subject_or_below = {
+                        is_in_geographic_region = geographic_region_western_pacific
+                        OR = {
+                            is_subject_type = subject_type_colony
+                            is_subject_type = subject_type_puppet
+                        }
+                    }
+                    any_scope_state = {
+                        is_in_geographic_region = geographic_region_western_pacific
+                        count >= 3
+                    }
+                }
+            }
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            OR = {
+                any_subject_or_below = {
+                    is_in_geographic_region = geographic_region_western_pacific
+                    OR = {
+                        is_subject_type = subject_type_colony
+                        is_subject_type = subject_type_puppet
+                    }
+                }
+                any_scope_state = {
+                    is_in_geographic_region = geographic_region_western_pacific
+                    count >= 3
+                }
+            }
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_army_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            NOT = {
+                AND = {
+                    any_scope_building = {
+                        filter = {
+                            is_building_type = building_barrack
+                        }
+                        percent = 1
+                        OR = {
+                            has_active_production_method = pm_advanced_tactics_training
+                            has_active_production_method = pm_training_streamlining
+                            has_active_production_method = pm_nco_incorporation
+                            has_active_production_method = pm_mobile_warfare_tactics
+                        }
+                    }
+                    army_power_projection >= var:roosevelt_army_target
+                }
+            }
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            AND = {
+                any_scope_building = {
+                    filter = {
+                        is_building_type = building_barrack
+                    }
+                    percent = 1
+                    OR = {
+                        has_active_production_method = pm_advanced_tactics_training
+                        has_active_production_method = pm_training_streamlining
+                        has_active_production_method = pm_nco_incorporation
+                        has_active_production_method = pm_mobile_warfare_tactics
+                    }
+                }
+                army_power_projection >= var:roosevelt_army_target
+            }
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_navy_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            NOT = {
+                OR = {
+                    has_variable = new_navy_completed
+                    naval_power_projection >= root.var:roosevelt_navy_target
+                }
+            }
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_variable = new_navy_completed
+                naval_power_projection >= root.var:roosevelt_navy_target
+            }
+        }
+        localization_key = checkbox_ticked
+    }
+}
+
+usfp_agenda_roosevelt_power_bloc_checkbox = {
+    type = country
+    text = {
+        trigger = {
+            NOT = {
+                AND = {
+                    is_power_bloc_leader = yes
+                    num_power_bloc_members_script >= 7
+                    power_bloc.current_cohesion_percentage >= 0.90
+                    power_bloc.power_bloc_rank >= 3
+                }
+            }
+        }
+        localization_key = checkbox_unticked
+    }
+    text = {
+        trigger = {
+            AND = {
+                is_power_bloc_leader = yes
+                num_power_bloc_members_script >= 7
+                power_bloc.current_cohesion_percentage >= 0.90
+                power_bloc.power_bloc_rank >= 3
+            }
+        }
+        localization_key = checkbox_ticked
+    }
 }

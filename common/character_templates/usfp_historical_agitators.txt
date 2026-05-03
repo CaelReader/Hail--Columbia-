@@ -11,6 +11,7 @@ REPLACE_OR_CREATE:agitator_henry_ford = {
 	ideology = ideology_ethno_nationalist
 	birth_date = 1863.7.30
 	dna = dna_henry_ford
+    home_region = STATE_MICHIGAN
 	traits = {
 		bigoted
 		ambitious
@@ -31,7 +32,7 @@ REPLACE_OR_CREATE:agitator_henry_ford = {
         }
 		earliest_usage_date = 1908.8.12 # first production Model T
 		latest_usage_date = 1935.12.31
-		chance = 50
+        #guaranteed to spawn if possible
 	}
     executive_usage = {
         country_trigger = {
@@ -42,7 +43,7 @@ REPLACE_OR_CREATE:agitator_henry_ford = {
         }
         earliest_usage_date = 1898.8.12 # USFP: up to 10 years early
 		latest_usage_date = 1935.12.31
-        chance = 100
+        #guaranteed to spawn if possible
     }
 }
 
@@ -57,6 +58,7 @@ REPLACE_OR_CREATE:agitator_frederick_douglass = {
 	ideology = ideology_usfp_abolitionist_radical
 	birth_date = 1817.2.14 # He was not entirely sure of his birthday or year, but remembered his mom called him "Little Valentine" so he settled for Valentine's Day
 	dna = dna_douglass
+    home_region = STATE_MASSACHUSETTS
 	traits = {
 		firebrand
 		imposing
@@ -78,7 +80,7 @@ REPLACE_OR_CREATE:agitator_frederick_douglass = {
         }   
 		earliest_usage_date = 1840.1.1
 		latest_usage_date = 1877.1.1
-		chance = 100
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -92,6 +94,7 @@ REPLACE_OR_CREATE:agitator_eugene_debs = {
 	interest_group = ig_trade_unions
 	ideology = ideology_social_democrat
 	birth_date = 1855.11.5
+    home_region = STATE_INDIANA
 	dna = dna_debs_eugene
 	traits = {
 		demagogue
@@ -109,7 +112,7 @@ REPLACE_OR_CREATE:agitator_eugene_debs = {
         }   
 		earliest_usage_date = 1893.6.20 # foundation of the American Railway Union
 		latest_usage_date = 1921.12.25
-		chance = 50
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -123,6 +126,7 @@ REPLACE_OR_CREATE:agitator_susan_b_anthony = {
 	interest_group = ig_intelligentsia
 	ideology = ideology_feminist
 	birth_date = 1820.2.15
+    home_region = STATE_NEW_YORK
 	dna = dna_susan_b_anthony
 	traits = {
 		persistent
@@ -146,7 +150,7 @@ REPLACE_OR_CREATE:agitator_susan_b_anthony = {
         }   
 		earliest_usage_date = 1851.1.1
 		latest_usage_date = 1900.1.1
-		chance = 50
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -160,6 +164,7 @@ REPLACE_OR_CREATE:agitator_harriet_tubman = {
 	interest_group = ig_devout
 	ideology = ideology_usfp_abolitionist_radical
 	birth_date = 1822.3.1 # exact birthdate unknown
+    home_region = STATE_PENNSYLVANIA
 	traits = {
 		brave
 		charismatic
@@ -184,7 +189,7 @@ REPLACE_OR_CREATE:agitator_harriet_tubman = {
         }   
 		earliest_usage_date = 1849.9.17
 		latest_usage_date = 1896.1.1
-		chance = 50
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -198,6 +203,7 @@ REPLACE_OR_CREATE:agitator_web_du_bois = { # W.E.B. Du Bois
 	interest_group = ig_intelligentsia
 	ideology = ideology_social_democrat
 	birth_date = 1868.2.23
+    home_region = STATE_GEORGIA # Born in Massachusetts, most famously lived in Atlanta
 	traits = {
 		erudite
 		literary
@@ -216,8 +222,8 @@ REPLACE_OR_CREATE:agitator_web_du_bois = { # W.E.B. Du Bois
 			is_interest_group_type = ig_intelligentsia
         }
 		earliest_usage_date = 1894.6.1
-		latest_usage_date = 1935.12.31 # Died on August 27th, 1963
-		chance = 50
+		latest_usage_date = 1960.12.31 # Died on August 27th, 1963
+        #guaranteed to spawn if possible
 	}
 }
 
@@ -232,6 +238,7 @@ REPLACE_OR_CREATE:usa_john_brown_character_template = {
     interest_group = ig_devout
     ideology = ideology_usfp_abolitionist_radical
     dna = dna_john_brown
+    home_region = STATE_CONNECTICUT
     traits = {
         reserved
         firebrand
@@ -251,6 +258,7 @@ REPLACE_OR_CREATE:usa_emperor_norton_character_template = {
 	ideology = ideology_humanitarian_royalist
 	birth_date = 1818.2.4
 	dna = dna_emperor_norton
+    home_region = STATE_CALIFORNIA
 	traits = {
 		charismatic
 		honorable

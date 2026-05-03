@@ -9,6 +9,12 @@
                 dlc = dlc_usfp
             }
         }
+        if = {
+            limit = {
+                has_law = law_type:law_protectionism
+            }
+            activate_law = law_type:law_usfp_american_system
+        }
 	}
 	
 	modifiers_while_active = {
@@ -16,6 +22,15 @@
 		usfp_constitutional_tariff_modifier
 		usfp_apolitical_military_modifier
 	}
+
+    on_fail = {
+        if = {
+            limit = {
+                has_law = law_type:law_usfp_american_system
+            }
+            activate_law = law_type:law_protectionism
+        }
+    }
 
 	fail = {
 		OR = {

@@ -18,7 +18,7 @@ company_usfp_westinghouse = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_new_england
+		has_interest_marker_in_region = sr:region_atlantic_coast
 	}
 
 	attainable = {

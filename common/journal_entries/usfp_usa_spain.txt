@@ -4,7 +4,7 @@
 
 	group = je_group_foreign_affairs
 	
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	weight = 200
 	is_shown_when_inactive = {
@@ -106,7 +106,7 @@
 					NOR = {
 						any_scope_state = {
 							OR = {
-								region = sr:region_caribbean
+								is_in_geographic_region = geographic_region_caribbean_old
 								region = sr:region_indonesia
 								region = sr:region_oceania
 							}
@@ -114,7 +114,7 @@
 						any_subject_or_below = {
 							any_scope_state = {
 								OR = {
-									region = sr:region_caribbean
+									is_in_geographic_region = geographic_region_caribbean_old
 									region = sr:region_indonesia
 									region = sr:region_oceania
 								}

@@ -1,0 +1,275 @@
+﻿usfp_je_banana_wars = {
+
+    icon = gfx/interface/icons/goods_icons/prestige_goods/gros_michel_banana_prestige.dds
+
+    group = je_group_foreign_affairs
+
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+        set_variable = {
+            name = banana_wars_var
+            value = usfp_calculate_banana_wars_score
+        }
+        if = {
+            limit = {
+                has_variable = banana_wars_var
+            }
+            scope:journal_entry = {
+                add_modifier = {
+                    name = usfp_banana_wars_score_modifier
+                    multiplier = root.var:banana_wars_var
+                }
+            }
+        }
+        trigger_event = usfp_banana_wars.1
+    }
+
+    scripted_button = usfp_good_neighbor_policy_button
+
+    goal_add_value = 30
+    progressbar = yes
+    current_value = {
+        if = {
+            limit = {
+                scope:journal_entry = {
+                    goal_value = 0
+                }
+            }
+            value = 0
+        }
+        else = {
+            value = root.var:banana_wars_var
+        }
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            set_variable = {
+                name = banana_wars_var
+                value = usfp_calculate_banana_wars_score
+            }
+            scope:journal_entry = {
+                remove_modifier = usfp_banana_wars_score_modifier
+                add_modifier = {
+                    name = usfp_banana_wars_score_modifier
+                    multiplier = root.var:banana_wars_var
+                }
+            }
+            if = {
+                limit = {
+                    any_scope_war = {
+                        defender_warleader = {
+                            is_in_geographic_region = geographic_region_latin_america
+                        }
+                        OR = {
+                            has_war_goal = conquer_state
+                            has_war_goal = return_state
+                            has_war_goal = make_protectorate
+                            has_war_goal = foreign_investment_rights
+                            has_war_goal = enforce_treaty_article
+                            has_war_goal = regime_change
+                            has_war_goal = annex_country
+                        }
+                    }
+                }
+                set_variable = aggressive_banana_wars
+            }
+        }
+        random_events = {
+            chance_to_happen = 10
+            100 = usfp_banana_wars.2#Marines Massacre
+            200 = usfp_banana_wars.3#Unincorporated States in Central America
+            100 = usfp_banana_wars.7#Marines Union Bust
+        }
+    }
+
+
+    is_shown_when_inactive = {
+        OR = {
+            c:USA ?= root
+            has_company = company_type:company_united_fruit
+        }
+        NOT = {
+            any_scope_state = {
+                is_incorporated = yes
+                is_in_geographic_region = geographic_region_central_america
+                count > 2
+            }
+        }
+        NOT = {
+            has_law_or_variant = law_type:law_council_republic
+        }
+        any_country_in_caribbean_coast = {
+            filter = {
+                capital = {
+                    is_in_geographic_region = geographic_region_caribbean_coast
+                }
+            }
+            is_subject = no
+            percent >= 0.50
+        }
+    }
+
+    possible = {
+        has_technology_researched = corporate_management
+        NOT = {
+            any_scope_state = {
+                is_incorporated = yes
+                is_in_geographic_region = geographic_region_central_america
+                count > 2
+            }
+        }
+        any_country_in_caribbean_coast = {
+            filter = {
+                capital = {
+                    is_in_geographic_region = geographic_region_caribbean_coast
+                }
+            }
+            is_subject = no
+            percent >= 0.50
+        }
+        any_country = {
+            capital = {
+                is_in_geographic_region = geographic_region_caribbean_coast
+            }
+            save_temporary_scope_as = check_country
+            OR = {
+                custom_tooltip = {
+                    text = usa_has_investment_rights
+                    root = {
+                        any_scope_treaty = {
+                            binds = scope:check_country
+                            any_scope_article = {
+                                has_type = foreign_investment_rights
+                                target_country = root
+                            }
+                        }
+                    }
+                }
+                is_in_customs_union_with = root
+                is_subject_of = root
+            }
+            OR = {
+                has_revolution = yes
+                country_turmoil >= 0.50
+                has_modifier = declared_bankruptcy
+            }
+        }
+        OR = {
+            ig:ig_industrialists ?= {
+                OR = {
+                    is_in_government = yes
+                    is_powerful = yes
+                }
+            }
+            ruler = {
+                usfp_manifest_destiny_pro_expansion_trigger = yes
+            }
+            any_company = {
+                is_company_type = company_type:company_united_fruit
+                company_is_prosperous = yes
+            }
+        }
+
+    }
+
+    complete = {
+        scope:journal_entry = {
+            is_goal_complete = yes
+        }
+    }
+
+
+    on_complete = {
+        add_modifier = {
+            name = usfp_banana_wars_score_modifier
+            multiplier = 30
+            is_decaying = yes
+            years = 10
+        }
+        if = {
+            limit = {
+                is_power_bloc_leader = yes
+            }
+            every_country_in_caribbean_coast = {
+                save_scope_as = target_country
+                root.power_bloc = {
+                    add_leverage = {
+                        target = scope:target_country
+                        value = 200
+                    }
+                }
+            }
+        }
+        every_state_in_caribbean_coast = {
+            limit = {
+                owner ?= {
+                    OR = {
+                        save_temporary_scope_as = check_country
+                        root = {
+                            has_treaty_foreign_investment_rights_with = { TARGET = scope:check_country }
+                        }
+                        is_in_customs_union_with = root
+                        is_subject_of = root
+                    }
+                }
+            }
+            add_modifier = {
+                name = usfp_banana_wars_state_modifier
+                years = 10
+            }
+        }
+        every_state_in_caribbean_coast = {
+            limit = {
+                has_modifier = usfp_banana_wars_colony_modifier
+            }
+            remove_modifier = usfp_banana_wars_colony_modifier
+        }
+        set_variable = banana_wars_finished
+    }
+
+    fail = {
+        ig:ig_industrialists ?= {
+            ig_counts_as_marginal = yes
+        }
+    }
+
+    on_fail = {
+        every_state_in_caribbean_coast = {
+            limit = {
+                has_modifier = usfp_banana_wars_colony_modifier
+            }
+            remove_modifier = usfp_banana_wars_colony_modifier
+        }
+    }
+
+
+    invalid = {
+        OR = {
+            custom_tooltip = {
+                text = refused_banana_wars
+                has_variable = rejected_banana_wars
+            }
+            has_law_or_variant = law_type:law_council_republic
+        }
+    }
+
+    on_invalid = {
+        every_state_in_caribbean_coast = {
+            limit = {
+                has_modifier = usfp_banana_wars_colony_modifier
+            }
+            remove_modifier = usfp_banana_wars_colony_modifier
+        }
+    }
+
+    should_be_pinned_by_default_uninvolved_or_context = yes
+
+    weight = 10
+
+    can_revolution_inherit = yes
+}

@@ -1,7 +1,4 @@
 ﻿STATES = {
-	s:STATE_BRITISH_COLUMBIA = {
-		add_claim = c:ORG
-	}
 	s:STATE_OREGON = {
 		add_claim = c:ORG
 	}
@@ -53,32 +50,7 @@
 	s:STATE_WISCONSIN = {
 		add_claim = c:USA
 	}
-	s:STATE_ONTARIO = {
-		add_claim = c:ONT
-		add_claim = c:HBC
-	}
-	s:STATE_ALBERTA = {
-		add_claim = c:HBC
-	}
-	s:STATE_SASKATCHEWAN = {
-		add_claim = c:HBC
-	}
-	s:STATE_MANITOBA = {
-		add_claim = c:HBC
-	}
-	s:STATE_NUNAVUT = {
-		add_claim = c:HBC
-	}
-	s:STATE_NORTHWEST_TERRITORIES = {
-		add_claim = c:HBC
-	}
-	s:STATE_YUKON_TERRITORY = {
-		add_claim = c:HBC
-	}
-	s:STATE_QUEBEC = {
-		add_claim = c:HBC
-		add_claim = c:QUE
-	}
+
 	s:STATE_COLORADO = {
 		add_claim = c:USA
 		add_claim = c:MEX

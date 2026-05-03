@@ -532,7 +532,7 @@ usfp_usa.8 = {
 		c:USA = root
 		any_scope_character = {
 			has_variable = nast_var
-			has_role = agitator
+			has_role_of_type = agitator
 			NOT = {
 				has_variable = agitator_election_participation
 			}
@@ -1576,6 +1576,11 @@ usfp_usa.18 = {
 		active_law:lawgroup_bureaucracy ?= {
 			has_amendment = amendment_type:amendment_usfp_spoils_system
 		}
+        NOT = {
+            ruler = {
+                has_template = usa_roosevelt_character_template
+            }
+        }
 	}
 
 	immediate = {
@@ -1681,6 +1686,22 @@ usfp_usa.19 = {
 				name = usfp_caesarism
 			}
 		}
+        if = {
+            limit = {
+                owner = {
+                    OR = {
+                        has_journal_entry = usfp_je_agenda_roosevelt_foreign
+                        has_journal_entry = usfp_je_agenda_roosevelt_domestic
+                    }
+                }
+            }
+            custom_tooltip = {
+                text = roosevelt_rewards_halved
+                owner = {
+                    set_variable = roosevelt_went_third_term
+                }
+            }
+        }
 	}
 	#huey long - cannot normally be achieved before 1936
 	option = {
@@ -1718,6 +1739,22 @@ usfp_usa.19 = {
 				}
 			}
 		}
+        if = {
+            limit = {
+                owner = {
+                    OR = {
+                        has_journal_entry = usfp_je_agenda_roosevelt_foreign
+                        has_journal_entry = usfp_je_agenda_roosevelt_domestic
+                    }
+                }
+            }
+            custom_tooltip = {
+                text = roosevelt_rewards_halved
+                owner = {
+                    set_variable = roosevelt_went_third_term
+                }
+            }
+        }
 	}
 }
 
@@ -1970,14 +2007,26 @@ usfp_usa.23 = {
 			# 	name = usfp_second_party_system_modifier
 			# }
 			start_enactment = law_type:law_universal_suffrage
+            active_law:lawgroup_bureaucracy ?= {
+                add_amendment = {
+                    type = amendment_usfp_spoils_system
+                    sponsor = PREV.ig:ig_rural_folk
+                }
+            }
 		}
+        custom_tooltip = spoils_system_warning
 		hidden_effect = {
-			ruler = {
-				usfp_washington_precedent_effect = yes 
-			}
-			add_declared_interest = region_great_plains
+			# ruler = {
+			# 	usfp_washington_precedent_effect = yes
+			# }
+            random_scope_politician = {
+                limit = {
+                    has_template = ecchi_usa_van_buren_character_template
+                }
+                set_as_interest_group_leader = yes
+            }
 			set_strategy = ai_strategy_monroe_doctrine
-			set_next_election_date = 1836.12.7 #vanilla bugfix?
+			# set_next_election_date = 1836.12.7 #vanilla bugfix?
 			trigger_event = {
 				id = usfp_panics.1
 				months = 14
@@ -2060,7 +2109,7 @@ usfp_usa.25 = {
 	cooldown = { days = never_fire_again_modifier_time } #Once
 	trigger = {
 		any_scope_state = {
-			region = sr:region_dixie
+			is_in_geographic_region = geographic_region_dixie_old
 			has_building = building_cotton_plantation
 			NOT = {
 				has_state_trait = state_trait_usfp_boll_weevil
@@ -2072,7 +2121,7 @@ usfp_usa.25 = {
 	immediate = {
 		random_scope_state = {
 			limit = {
-				region = sr:region_dixie
+				is_in_geographic_region = geographic_region_dixie_old
 				has_building = building_cotton_plantation
 			}
 			save_scope_as = boll_weevil_state
@@ -2083,13 +2132,14 @@ usfp_usa.25 = {
 	option = {
 		name = usfp_usa.25.a
 		default_option = yes
-		sr:region_dixie = {
-			every_scope_state = {
-				state_region = {
-					add_state_trait = state_trait_usfp_boll_weevil
-				}
-			}
-		}
+        every_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_dixie_old
+            }
+            state_region = {
+                add_state_trait = state_trait_usfp_boll_weevil
+            }
+        }
 		s:STATE_RIO_GRANDE = {
 			add_state_trait = state_trait_usfp_boll_weevil
 		}
@@ -2236,7 +2286,7 @@ usfp_usa.27 = {
 	immediate = {
 		random_scope_state = {
 			limit = {
-				region = sr:region_new_england
+                is_in_geographic_region = geographic_region_new_england_old
 			}
 			save_scope_as = awakening_state
 		}
@@ -2298,5 +2348,229 @@ usfp_usa.27 = {
 			base = 0
 		}
 	}
+
+}
+
+#Chinese Exclusion Act
+usfp_usa.28 = {
+    type = country_event
+    placement = scope:chinese_state
+    event_image = {
+        video = "unspecific_vandalized_storefront"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    title = usfp_usa.28.t
+    desc = usfp_usa.28.d
+    flavor = usfp_usa.28.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+    trigger = {
+        c:USA ?= this
+        has_technology_researched = pan-nationalism
+        has_technology_researched = identification_documents
+        any_scope_pop = {
+            culture = {
+                has_discrimination_trait = heritage_han
+            }
+        }
+        NOR = {
+            has_law_or_variant = law_type:law_closed_borders
+            has_law_or_variant = law_type:law_multicultural
+        }
+        NOT = {
+            any_scope_state = {
+                state_region = {
+                    OR = {
+                        is_homeland = han
+                        is_homeland = hakka
+                        is_homeland = manchu
+                        is_homeland = min
+                        is_homeland = yue
+                    }
+                }
+                is_incorporated = yes
+            }
+        }
+        any_political_movement = {
+            usfp_movement_is_racist = yes
+        }
+    }
+
+    immediate = {
+        random_scope_state = {
+            limit = {
+                any_scope_pop = {
+                    culture = {
+                        has_discrimination_trait = heritage_han
+                    }
+                }
+            }
+            save_scope_as = chinese_state
+        }
+        ordered_scope_pop = {
+            limit = {
+                culture = {
+                    has_discrimination_trait = heritage_han
+                }
+            }
+            position = 0
+            order_by = total_size
+            culture ?= {
+                save_scope_as = chinese_culture_scope
+            }
+        }
+    }
+
+    #pass
+    option = {
+        name = usfp_usa.28.a
+        default_option = yes
+        active_law:lawgroup_citizenship = {
+            add_amendment = {
+                sponsor = root.ig:ig_petty_bourgeoisie
+                cooldown = 120
+                type = amendment_usfp_chinese_exclusion
+            }
+        }
+        if = {
+            limit = {
+                has_law_or_variant = law_type:law_no_migration_controls
+            }
+            active_law:lawgroup_migration = {
+                add_amendment = {
+                    sponsor = root.ig:ig_petty_bourgeoisie
+                    cooldown = 120
+                    type = amendment_usfp_limited_migration_controls
+                }
+            }
+        }
+        change_relations = {
+            country = c:CHI
+            value = -20
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #don't
+    option = {
+        name = usfp_usa.28.b
+        ordered_political_movement = {
+            limit = {
+                usfp_movement_is_racist = yes
+            }
+            add_modifier = {
+                name = usfp_movement_agitated_by_antiracism_modifier
+                years = 4
+            }
+            position = 0
+            order_by = political_movement_support
+        }
+        usfp_radicalize_whites_in_country = {
+            RADICALS = medium_radicals
+        }
+        add_loyalists = {
+            value = medium_radicals
+            culture = cu:han
+        }
+        ai_chance = {
+            base = 0
+        }
+    }
+}
+
+#Japanese Immigration
+usfp_usa.29 = {
+    type = country_event
+    placement = scope:target_migration_state
+    event_image = {
+        video = "unspecific_steam_ship"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    title = usfp_usa.29.t
+    desc = usfp_usa.29.d
+    flavor = usfp_usa.29.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+    trigger = {
+        c:USA ?= this
+        exists = c:JAP
+        has_technology_researched = pan-nationalism
+        has_technology_researched = identification_documents
+        NOR = {
+            has_law_or_variant = law_type:law_closed_borders
+        }
+        OR = {
+            NOT = {
+                has_law_or_variant = law_type:law_migration_controls
+            }
+            OR = {
+                has_law_or_variant = law_type:law_multicultural
+                has_law_or_variant = law_type:law_cultural_exclusion
+            }
+        }
+        c:JAP = {
+            NOR = {
+                has_law_or_variant = law_type:law_closed_borders
+                has_law_or_variant = law_type:law_isolationism
+                has_law = law_type:law_bakufu
+                has_law_or_variant = law_type:law_serfdom
+            }
+            has_technology_researched = pan-nationalism
+            has_technology_researched = identification_documents
+            relations:root >= relations_threshold:cordial
+        }
+        active_law:lawgroup_citizenship = {
+            has_amendment = amendment_type:amendment_usfp_chinese_exclusion
+        }
+        any_scope_state = {
+            region = sr:region_pacific_coast
+            state_is_eligible_as_mass_migration_target = yes
+        }
+    }
+
+    immediate = {
+        ordered_scope_state = {
+            limit = {
+                region = sr:region_pacific_coast
+                state_is_eligible_as_mass_migration_target = yes
+            }
+            position = 0
+            order_by = state_population
+            save_scope_as = target_migration_state
+        }
+    }
+
+    #okay
+    option = {
+        name = usfp_usa.29.a
+        scope:target_migration_state = {
+            create_mass_migration = {
+                origin = c:JAP
+                culture = cu:japanese
+            }
+            usfp_radicalize_whites_in_state = {
+                RADICALS = small_radicals
+            }
+        }
+        add_loyalists = {
+            value = medium_radicals
+            culture = cu:japanese
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
 
 }

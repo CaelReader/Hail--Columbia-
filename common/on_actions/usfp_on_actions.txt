@@ -14,6 +14,7 @@ usfp_monthly_pulse = {
 		usfp_usa.6 #Great Chicago Fire
 		usfp_usa.16 #Election chaos (ALL democracies, not just the US)
 		usfp_usa.22 #American Centennial
+        usfp_philippines.11 #ESL Amendment Acquired
 	}
 	random_events = {
 		chance_to_happen = 80
@@ -31,6 +32,8 @@ usfp_monthly_pulse = {
 		200 = usfp_usa.26 #Dorr Rebellion
 		100 = usfp_usa.27 #Third Great Awakening
 
+
+
 		##Labor events
 		100 = usfp_usa_labor.1 #founding of the IWW
 		100 = usfp_usa_labor.2 #Haymarket Affair
@@ -38,6 +41,7 @@ usfp_monthly_pulse = {
 		50 = usfp_usa_labor.4 #Great Railroad Strike
 		100 = usfp_usa_labor.5 #AFL
 		50 = usfp_usa_labor.6 #Looking Backwards
+        50 = usfp_usa_labor.7 #Lochner Ruling
 
 		##Disasters
 		1 = usfp_usa.2 #Atlantic Hurricane
@@ -73,6 +77,26 @@ usfp_monthly_pulse = {
 		100 = usfp_usa_canada.1 #Caroline Affair
 		100 = usfp_usa_canada.4 #Fenian Raid
 		100 = usfp_usa_canada.6 #Aroostook War
+
+        #Philippines Events
+        100 = usfp_philippines.3 #Moro Rebellion
+        100 = usfp_philippines.4 #Concentration Camps
+        100 = usfp_philippines.6 #Filipino Representatives
+        100 = usfp_philippines.9 #PHI: Seditious Dramas
+        100 = usfp_philippines.10 #PHI: English Teachers
+
+        #Roosevelt Events
+        50 = usfp_usa.28 #Chinese Exclusion
+        50 = usfp_usa.29 #Japanese Immigration
+        100 = usfp_usa_roosevelt.1 #Yellowstone National Park
+        10 = usfp_usa_roosevelt.3 #Roosevelt Shot
+
+        100 = usfp_banana_wars.6 #Post Banana Wars: War is a Racket
+
+        #Non-USA Events
+        50 = usfp_usa_roosevelt.6 #Colombia: Panama Rebellion
+        50 = usfp_usa_navy.1 #Post-ACW Naval Advisors
+
 	}
 }
 
@@ -355,6 +379,7 @@ usfp_new_president = {
 	effect = {
 		owner = {
 			trigger_event = usfp_usa.21
+            trigger_event = usfp_usa_roosevelt.2
 		}
 		#manually force ai strats on a new president
 		if = {
@@ -395,7 +420,7 @@ usfp_new_president = {
 			}
 			if = {
 				limit = {
-					interest_group = {
+					interest_group ?= {
 						is_interest_group_type = ig_rural_folk
 					}
 				 }
@@ -405,7 +430,7 @@ usfp_new_president = {
 			}
 			else_if = {
 				limit = {
-					interest_group = {
+					interest_group ?= {
 						is_interest_group_type = ig_landowners
 					}
 				 }
@@ -416,7 +441,7 @@ usfp_new_president = {
 			else_if = {
 				limit = {
 					OR = {
-						interest_group = {
+						interest_group ?= {
 							is_interest_group_type = ig_petty_bourgeoisie
 							is_interest_group_type = ig_trade_unions
 							is_interest_group_type = ig_intelligentsia
@@ -605,7 +630,7 @@ usfp_sonora_defeat = {
 				}
 				exists = c:USA
 				# NOT = {
-				# 	exists = c:SON
+				# 	exists = c:usfp_SON
 				# }
 				owns_entire_state_region = STATE_SONORA
 				owns_entire_state_region = STATE_BAJA_CALIFORNIA
@@ -749,9 +774,9 @@ usfp_neoconfederate_characters_actions = {
                     if = {
                         limit = {
                             OR = {
-                                has_role = agitator
-                                has_role = admiral
-                                has_role = general
+                                has_role_of_type = agitator
+                                has_role_of_type = admiral
+                                has_role_of_type = general
                             }
                         }
                         transfer_character = c:USA
@@ -985,10 +1010,39 @@ on_game_started = {
 	}
 }
 
+on_game_started_after_lobby = {
+    on_actions = {
+        usfp_mod_detector
+    }
+}
+
 usfp_map_startup = {
 	effect = {
 		usfp_map_startup_effect = yes
 	}
+}
+
+usfp_mod_detector = {
+    effect = {
+        if = {
+            limit = {
+                OR = {
+                    BPM_is_active_trigger = yes
+                    community_framework_is_active = no
+                    gilded_age_is_active_trigger = yes
+                }
+            }
+        }
+        every_country = {
+            limit = {
+                is_player = yes
+            }
+            trigger_event = {
+                id = usfp_debug.1
+                popup = yes
+            }
+        }
+    }
 }
 
 # on_character_creation = {
@@ -1132,6 +1186,7 @@ usfp_spoils_system_action = {
 				years = 2
 				is_decaying = yes
 			 }
+            post_notification = usfp_spoils_system_notification
 			 change_variable = {
 				name = usfp_spoils_system_abolish_var
 				add = 1

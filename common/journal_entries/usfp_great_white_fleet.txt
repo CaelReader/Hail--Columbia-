@@ -1,0 +1,230 @@
+﻿# needs script support for fleet locations
+# je_usfp_great_white_fleet = {
+#     icon = "gfx/interface/icons/invention_icons/battlefleet_tactics.dds"
+#
+#     group = je_group_historical_content
+#
+#     immediate = {
+#         scope:journal_entry = {
+#             add_com_dlc_icon = {
+#                 dlc = dlc_usfp
+#             }
+#         }
+#     }
+#
+#     is_shown_when_inactive = {
+#         c:USA ?= root
+#         has_technology_researched = ironclad_tech
+#     }
+#
+#     possible = {
+#         #has pre-dreadnoughts researched
+#         any_scope_ship = {
+#             OR = {
+#                 type = ship_type:ship_type_pre_dreadnought
+#                 type = ship_type:ship_type_dreadnought
+#                 type = ship_type:ship_type_super_dreadnought
+#             }
+#             count >= 3
+#         }
+#         #has the New Navy equivalent fleet power
+#         is_at_war = no
+#     }
+#
+#     status_desc = {
+#         #Build a Fleet
+#         #Must be at peace
+#         #Project Power in Oceania
+#         #Project Power in Indonesia
+#         #Project Power in Japan
+#         #Project Power in China
+#         #Project Power in India
+#         #Project Power in Mediterranean
+#         #Project Power in East SA
+#         #Project Power in West SA
+#         #Return Home
+#     }
+#
+#     on_complete = {
+#         set_variable = great_white_fleet_completed
+#     }
+#
+#     on_fail = {
+#         set_variable = great_white_fleet_completed
+#     }
+#
+#
+#     weight = 200
+#     should_be_pinned_by_default_uninvolved_or_context = yes
+# }
+
+je_usfp_the_new_navy = {
+    icon = "gfx/interface/icons/invention_icons/destroyers.dds"
+
+    group = je_group_historical_content
+
+    is_shown_when_inactive = {
+        c:USA ?= root
+        OR = {
+            has_technology_researched = ironclad_tech
+            has_technology_researched = jeune_ecole
+        }
+        NOT = {
+            any_scope_ship = {
+                type = ship_type:ship_type_super_dreadnought
+            }
+        }
+    }
+
+    possible = {
+        #has modern ironclads researched
+        has_technology_researched = monitor_tech
+        has_technology_researched = jeune_ecole
+        any_country_in_pacific = {
+            NOT = {
+                this = root
+            }
+            #if the USA has an old navy, get spooked by even a single Pre-Dreadnought
+            trigger_if = {
+                limit = {
+                    root = {
+                        NOT = {
+                            any_scope_ship = {
+                                OR = {
+                                    type = ship_type:ship_type_pre_dreadnought
+                                    type = ship_type:ship_type_dreadnought
+                                    type = ship_type:ship_type_super_dreadnought
+                                }
+                            }
+                        }
+                    }
+                }
+                any_scope_ship = {
+                    OR = {
+                        type = ship_type:ship_type_pre_dreadnought
+                        type = ship_type:ship_type_dreadnought
+                        type = ship_type:ship_type_super_dreadnought
+                    }
+                }
+            } trigger_else = {
+                #otherwise, get spooked by a near-peer adversary
+                naval_power_projection >= root.naval_power_projection
+            }
+        }
+    }
+
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+        ordered_country_in_pacific = {
+            limit = {
+                capital = {
+                    is_in_geographic_region = geographic_region_pacific
+                }
+                NOT = {
+                    this = root
+                }
+            }
+            position = 0
+            order_by = naval_power_projection
+            save_scope_as = strongest_navy_in_pacific
+        }
+        trigger_event = usfp_usa_navy.2
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            ordered_country_in_pacific = {
+                limit = {
+                    capital = {
+                        is_in_geographic_region = geographic_region_pacific
+                    }
+                    NOT = {
+                        this = root
+                    }
+                }
+                position = 0
+                order_by = naval_power_projection
+                save_scope_as = strongest_navy_in_pacific
+            }
+        }
+    }
+
+    complete = {
+        #research pre-dreadnoughts
+        has_technology_researched = pre_dreadnought_tech
+        #navy surpasses the strongest pacific power
+        trigger_if = {
+            limit = {
+                exists = scope:strongest_navy_in_pacific.naval_power_projection
+            }
+            naval_power_projection >= {
+                value = scope:strongest_navy_in_pacific.naval_power_projection
+                multiply = 1.2
+            }
+        }
+        #has at least three pre-dreadnoughts
+        any_scope_ship = {
+            OR = {
+                type = ship_type:ship_type_pre_dreadnought
+                type = ship_type:ship_type_dreadnought
+                type = ship_type:ship_type_super_dreadnought
+            }
+            count >= 3
+        }
+        OR = {
+            has_law_or_variant = law_type:law_diplomatic_navy
+            has_law_or_variant = law_type:law_professional_navy
+        }
+        #decommissioned wooden ships
+        country_ship_type_fraction = {
+            target = ship_type:ship_type_ship_of_the_line
+            value < 0.10
+        }
+        country_ship_type_fraction = {
+            target = ship_type:ship_type_early_ironclad
+            value < 0.10
+        }
+        country_ship_type_fraction = {
+            target = ship_type:ship_type_frigate
+            value < 0.10
+        }
+        country_ship_type_fraction = {
+            target = ship_type:ship_type_iron_frigate
+            value < 0.10
+        }
+    }
+
+    on_complete = {
+        set_variable =  new_navy_completed
+        trigger_event = usfp_usa_navy.3
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = usfp_usa_navy.2.a
+        effect = {
+            execute_event_option = {
+                option = 0
+                event = usfp_usa_navy.3
+            }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = usfp_usa_navy.2.b
+        effect = {
+            execute_event_option = {
+                option = 1
+                event = usfp_usa_navy.3
+            }
+        }
+    }
+
+
+
+    weight = 200
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}

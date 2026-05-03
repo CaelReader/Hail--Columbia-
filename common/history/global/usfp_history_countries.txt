@@ -25,9 +25,6 @@
 			type = increase_relations
 		}
 	}
-	c:MEX = {
-		add_declared_interest = region_great_plains
-	}
 	c:USA = {
 		ig:ig_petty_bourgeoisie = {
 			save_scope_as = pb_ig
@@ -45,13 +42,6 @@
 		}
 	}
 
-	#Newfoundland Colony
-	#Wasn't absorbed by Canada until the 1950s, so its set to be English rather than Anglo-Canadian
-	s:STATE_NEWFOUNDLAND = {
-		region_state:GBR = {
-			set_state_owner = c:NEW
-		}
-	}
 
 	cu:afro_american = {
 		add_fervor = -20

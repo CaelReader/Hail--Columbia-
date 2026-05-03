@@ -2,3 +2,11 @@
 	type = heritage
 	trait_group = heritage_group_indigenous_american
 }
+
+tradition_usfp_american_dream = {
+    type = tradition
+}
+
+tradition_usfp_manifest_destiny = {
+    type = tradition
+}
