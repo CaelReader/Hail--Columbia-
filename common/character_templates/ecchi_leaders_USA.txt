@@ -187,9 +187,14 @@ ecchi_usa_fillmore_template = {
 			}
             ig_hasnt_chosen_ideology_trigger = yes
         }
-        earliest_usage_date = 1836.1.1
+        earliest_usage_date = 1848.1.1
         latest_usage_date = 1874.3.8
         #guaranteed to spawn if possible
+    }
+    on_created = {
+        set_career_length = {
+            years = 25
+        }
     }
 }
 

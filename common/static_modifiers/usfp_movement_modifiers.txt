@@ -217,3 +217,8 @@ usfp_philippine_revolt_modifier = {
     political_movement_pop_attraction_mult = 0.15
     political_movement_radicalism_add = 2.00
 }
+
+usfp_seditious_dramas_movement_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
+    political_movement_pop_attraction_mult = 0.15
+}

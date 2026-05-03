@@ -1867,6 +1867,9 @@ usfp_a_house_divided.19 = {
 				is_agitator = yes
 				on_created = {
 					set_variable = { name = temp_event_target_in_use years = 4 }
+                    set_career_length = {
+                        years = 50
+                    }
 				}
 			}
 		}

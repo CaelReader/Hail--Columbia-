@@ -759,7 +759,7 @@ usfp_panic_1837_modifier = {
 	state_shopkeepers_investment_pool_contribution_add = -0.10
 	state_aristocrats_investment_pool_efficiency_mult = -0.4
 	state_aristocrats_investment_pool_contribution_add = -0.10
-	country_loan_interest_rate_mult = 0.40
+	country_loan_interest_rate_mult = 0.33
 	# country_minting_mult = -0.20
 }
 
@@ -899,4 +899,19 @@ usfp_imminent_revolution_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
     country_revolution_clock_time_add = 0.50
     political_movement_radicalism_from_enactment_disapproval_mult = 1.00
+}
+
+usfp_artistic_crackdown_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue2_negative.dds
+    country_society_tech_research_speed_mult = -0.20
+}
+
+usfp_thomasite_educators_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_book2_positive.dds
+    state_education_access_add = 0.10
+    country_institution_cost_institution_schools_mult = -0.15
+    country_institution_schools_max_investment_add = 1
+    country_institution_size_change_speed_institution_schools_mult = 0.25
+    country_liberty_desire_add = -0.10
+    country_enactment_success_chance_law_public_schools_add = 0.20
 }

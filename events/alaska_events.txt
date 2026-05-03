@@ -128,6 +128,18 @@ alaska.2 = {
 
 	immediate = {
 		# Scopes set in alaska.4
+        if = {
+            limit = {
+                exists = c:ALK
+                c:ALK = {
+                    is_subject_of = scope:alaska_seller
+                    has_state_in_state_region = STATE_SAKHALIN
+                }
+            }
+            s:STATE_SAKHALIN.region_state:ALK = {
+                set_state_owner = scope:alaska_seller
+            }
+        }
 	}
 
 	option = {

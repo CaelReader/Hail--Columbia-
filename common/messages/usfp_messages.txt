@@ -367,3 +367,115 @@ usfp_spoils_system_notification= {
     notification_type = toast
     color = bad
 }
+
+usfp_marines_banana_wars_massacre= {
+    type = country
+    group = "usfp_usa_diplomacy_group"
+    texture = "gfx/interface/icons/notification_icons/mobilize.dds"
+    notification_type = toast
+    color = bad
+}
+
+usfp_marines_break_up_unions= {
+    type = country
+    group = "usfp_usa_diplomacy_group"
+    texture = "gfx/interface/icons/notification_icons/revolution.dds"
+    notification_type = toast
+    color = bad
+}
+
+usfp_philippines_nationalist_revolt= {
+    type = country
+    group = "usfp_usa_diplomacy_group"
+    texture = "gfx/interface/icons/notification_icons/revolution.dds"
+    notification_type = toast
+    color = bad
+}
+
+
+usfp_philippines_accept_tutelage= {
+    type = country
+    group = "usfp_usa_diplomacy_group"
+    texture = "gfx/interface/icons/notification_icons/colonial.dds"
+    notification_type = toast
+    color = good
+}
+
+
+moro_rebellion_crackdown= {
+    type = country
+    group = "usfp_usa_diplomacy_group"
+    texture = "gfx/interface/icons/notification_icons/revolution.dds"
+    notification_type = toast
+    color = bad
+}
+
+
+moro_rebellion_withdraw= {
+    type = country
+    group = "usfp_usa_diplomacy_group"
+    texture = "gfx/interface/icons/notification_icons/colonial.dds"
+    notification_type = toast
+    color = bad
+}
+
+
+us_philippines_concentration_camps= {
+    type = country
+    group = "usfp_usa_diplomacy_group"
+    texture = "gfx/interface/icons/notification_icons/colonial.dds"
+    notification_type = toast
+    color = bad
+}
+
+
+philippine_representatives_success= {
+    type = country
+    group = "usfp_usa_diplomacy_group"
+    texture = "gfx/interface/icons/notification_icons/influence.dds"
+    notification_type = toast
+    color = good
+}
+
+philippine_representatives_failure= {
+    type = country
+    group = "usfp_usa_diplomacy_group"
+    texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+    notification_type = toast
+    color = bad
+}
+
+
+philippine_representatives_super_success= {
+    type = country
+    group = "usfp_usa_diplomacy_group"
+    texture = "gfx/interface/icons/notification_icons/elections.dds"
+    notification_type = toast
+    color = good
+}
+
+
+philippine_tutelage_over_negative= {
+    type = country
+    group = "usfp_usa_diplomacy_group"
+    texture = "gfx/interface/icons/notification_icons/influence_bad.dds"
+    notification_type = toast
+    color = bad
+}
+
+
+philippine_tutelage_over_positive= {
+    type = country
+    group = "usfp_usa_diplomacy_group"
+    texture = "gfx/interface/icons/notification_icons/influence.dds"
+    notification_type = toast
+    color = good
+}
+
+philippine_tutelage_over_protectorate= {
+    type = country
+    group = "usfp_usa_diplomacy_group"
+    texture = "gfx/interface/icons/notification_icons/influence.dds"
+    notification_type = toast
+    color = good
+}

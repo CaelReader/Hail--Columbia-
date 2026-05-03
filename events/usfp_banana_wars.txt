@@ -744,7 +744,7 @@ usfp_banana_wars.6 = {
         default_option = yes
         scope:smedley_butler_scope = {
             add_character_role = agitator
-            set_interest_group = ig:ig_trade_unions
+            set_interest_group = root.ig:ig_trade_unions
             if = {
                 limit = {
                     has_role_of_type = general
@@ -758,6 +758,10 @@ usfp_banana_wars.6 = {
                 remove_character_role = admiral
             }
             add_trait = inspirational_orator
+            add_career_length = {
+                role = agitator
+                years = 20
+            }
         }
         add_modifier = {
             name = usfp_war_is_a_racket_modifier

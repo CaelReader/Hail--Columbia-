@@ -193,4 +193,52 @@ notification_usfp_cuba_filibusters_failed_tooltip: "#header $notification_usfp_c
 
  notification_usfp_spoils_system_notification_name: "Offices Doled Out"
  notification_usfp_spoils_system_notification_desc: "The appointment of new officials under the [GetAmendmentType('amendment_usfp_spoils_system').GetName] has disrupted our [concept_bureaucracy]."
- notification_usfp_spoils_system_notification_tooltip: "#header $notification_ usfp_spoils_system_notification_name$#!\n$notification_ usfp_spoils_system_notification_desc$"
+ notification_usfp_spoils_system_notification_tooltip: "#header $notification_usfp_spoils_system_notification_name$#!\n$notification_usfp_spoils_system_notification_desc$"
+
+ notification_usfp_marines_banana_wars_massacre_name: "US Marines Massacre"
+ notification_usfp_marines_banana_wars_massacre_desc: "American troops have massacred civilians in [SCOPE.sState('massacre_state_scope').GetName]."
+ notification_usfp_marines_banana_wars_massacre_tooltip: "#header $notification_usfp_marines_banana_wars_massacre_name$#!\n$notification_usfp_marines_banana_wars_massacre_desc$"
+
+ notification_usfp_marines_break_up_unions_name: "US Marines Break Up Unions"
+ notification_usfp_marines_break_up_unions_desc: "American troops have disrupted the activities of the [SCOPE.sPoliticalMovement('union_busting_target_movement').GetName]."
+ notification_usfp_marines_break_up_unions_tooltip: "#header $notification_usfp_marines_break_up_unions_name$#!\n$notification_usfp_marines_break_up_unions_desc$"
+
+ notification_usfp_philippines_nationalist_revolt_name: "Philippine Declaration of Independence"
+ notification_usfp_philippines_nationalist_revolt_desc: "Our occupation of the [SCOPE.sCountry('philippines_scope').GetName] has outraged the [SCOPE.sPoliticalMovement('philippine_national_movement').GetName], who have called for an immediate [concept_revolution]!"
+ notification_usfp_philippines_nationalist_revolt_tooltip: "#header $notification_usfp_philippines_nationalist_revolt_name$#!\n$notification_usfp_philippines_nationalist_revolt_desc$"
+
+ notification_usfp_philippines_accept_tutelage_name: "Philippines Accepts Tutelage"
+ notification_usfp_philippines_accept_tutelage_desc: "Nationalist elements within the Philippines have been mollified, and our stewardship accepted for now."
+ notification_usfp_philippines_accept_tutelage_tooltip: "#header $notification_usfp_philippines_accept_tutelage_name$#!\n$notification_uphilippines_accept_tutelage_desc$"
+
+ notification_moro_rebellion_crackdown_name: "Moro Rebellion"
+ notification_moro_rebellion_crackdown_desc: "[GetCulture('moro').GetName] resistance to American rule has prompted violent reprisals by the occupation authorities."
+ notification_moro_rebellion_crackdown_tooltip: "#header $notification_moro_rebellion_crackdown_name$#!\n$notification_moro_rebellion_crackdown_desc$"
+
+ notification_moro_rebellion_withdraw_name: "Americans Withdraw from Moro Lands"
+ notification_moro_rebellion_withdraw_desc: "The occupation authorities have elected to withdraw from the lands of the [GetCulture('moro').GetName], leaving them as an [concept_unincorporated_state]."
+ notification_moro_rebellion_withdraw_tooltip: "#header $notification_moro_rebellion_withdraw_name$#!\n$notification_moro_rebellion_withdraw_desc$"
+
+ notification_philippine_representatives_success_name: "Appeals Heard"
+ notification_philippine_representatives_success_desc: "Filipino representatives to the American public have garnered support for our independence."
+ notification_philippine_representatives_success_tooltip: "#header $notification_philippine_representatives_success_name$#!\n$notification_philippine_representatives_success_desc$"
+
+ notification_philippine_representatives_failure_name: "Appeals Rejected"
+ notification_philippine_representatives_failure_desc: "Filipino representatives to the American public have been rebuffed."
+ notification_philippine_representatives_failure_tooltip: "#header $notification_philippine_representatives_failure_name$#!\n$notification_philippine_representatives_failure_desc$"
+
+ notification_philippine_representatives_super_success_name: "Elections Decreed"
+ notification_philippine_representatives_super_success_desc: "Representatives sent to the [SCOPE.sCountry('usa_scope').GetName] have convinced the [SCOPE.sCountry('usa_scope').GetRuler.GetPrimaryRoleTitle] to immediately establish democratic governance."
+ notification_philippine_representatives_super_success_tooltip: "#header $notification_philippine_representatives_super_success_name$#!\n$notification_philippine_representatives_super_success_desc$"
+
+ notification_philippine_tutelage_over_negative_name: "Philippines Reject American Influence"
+ notification_philippine_tutelage_over_negative_desc: "The independent [SCOPE.sCountry('philippines_scope').GetName] have distanced themselves from us."
+ notification_philippine_tutelage_over_negative_tooltip: "#header $notification_philippine_tutelage_over_negative_name$#!\n$notification_philippine_tutelage_over_negative_desc$"
+
+ notification_philippine_tutelage_over_positive_name: "Philippines Maintain Positive Relations"
+ notification_philippine_tutelage_over_positive_desc: "The independent [SCOPE.sCountry('philippines_scope').GetName] have established friendly relations with us."
+ notification_philippine_tutelage_over_positive_tooltip: "#header $notification_philippine_tutelage_over_positive_name$#!\n$notification_philippine_tutelage_over_positive_desc$"
+
+ notification_philippine_tutelage_over_protectorate_name: "Philippines Remain Protectorate"
+ notification_philippine_tutelage_over_protectorate_desc: "The [SCOPE.sCountry('philippines_scope').GetName] have opted to become our [concept_protectorate]"
+ notification_philippine_tutelage_over_protectorate_tooltip: "#header $notification_philippine_tutelage_over_protectorate_name$#!\n$notification_philippine_tutelage_over_protectorate_desc$"

@@ -447,7 +447,7 @@ usfp_has_dixie_occupation_trigger = {
 				any_scope_character = {
 					has_role_of_type = general
 				}
-				current_hq ?= p:xEE9129.land_hq
+				# current_hq ?= p:xEE9129.land_hq
 				any_combat_unit = {
 					count >= 20
 				}
@@ -468,7 +468,7 @@ usfp_has_dixie_indian_occupation_trigger = {
 				any_scope_character = {
 					has_role_of_type = general
 				}
-				current_hq ?= p:xEE9129.land_hq
+				# current_hq ?= p:xEE9129.land_hq
 				any_combat_unit = {
 					count >= 2
 				}
@@ -489,7 +489,7 @@ usfp_has_plains_occupation_trigger = {
 				any_scope_character = {
 					has_role_of_type = general
 				}
-				current_hq ?= p:x029975.land_hq
+				# current_hq ?= p:x029975.land_hq
 				any_combat_unit = {
 					count >= 3
 				}

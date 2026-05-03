@@ -20,7 +20,9 @@ usfp_philippines.1 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     immediate = {
-
+        c:PHI ?= {
+            save_scope_as = philippines_scope
+        }
     }
 
     #begin tutelage
@@ -161,6 +163,7 @@ usfp_philippines.2 = {
         overlord = {
             save_scope_as = usa_scope
         }
+        save_scope_as = philippines_scope
     }
 
     #assert independence
@@ -192,6 +195,7 @@ usfp_philippines.2 = {
                 name = usfp_philippine_revolt_modifier
                 years = 5
             }
+            save_scope_as = philippine_national_movement
         }
         add_modifier = {
             years = 1
@@ -516,13 +520,18 @@ usfp_philippines.6 = {
     immediate = {
         c:PHI ?= {
             save_scope_as = philippines_scope
+            ig:ig_intelligentsia = {
+                save_scope_as = philippine_intelligentsia
+            }
+        }
+        c:USA = {
+            save_scope_as = usa_scope
         }
     }
 
     #okay
     option = {
         name = usfp_philippines.6.a
-        default_option = yes
         c:PHI ?= {
             every_primary_culture = {
                 add_fervor = 10
@@ -531,13 +540,14 @@ usfp_philippines.6 = {
             post_notification = philippine_representatives_success
         }
         ai_chance = {
-            base = 100
+            base = 10
         }
     }
 
     #no
     option = {
         name = usfp_philippines.6.b
+        default_option = yes
         c:PHI ?= {
             every_primary_culture = {
                 add_fervor = 5
@@ -546,7 +556,7 @@ usfp_philippines.6 = {
             post_notification = philippine_representatives_failure
         }
         ai_chance = {
-            base = 1
+            base = 10
         }
     }
 
@@ -749,6 +759,22 @@ usfp_philippines.8 = {
         show_as_tooltip = {
             set_country_type = recognized
         }
+        if = {
+            limit = {
+                NOT = {
+                    active_law:lawgroup_citizenship = {
+                        has_amendment = amendment_type:amendment_english_second_language
+                    }
+                }
+            }
+            active_law:lawgroup_citizenship = {
+                add_amendment = {
+                    type = amendment_english_second_language
+                    sponsor = root.ig:ig_intelligentsia
+                    cooldown = 120
+                }
+            }
+        }
     }
 
 }
@@ -776,17 +802,41 @@ usfp_philippines.9 = {
         is_subject = yes
         is_subject_of = c:USA
         is_involved_in_journal_entry = je_usfp_philippine_tutelage
+        any_political_movement = {
+            OR = {
+                is_political_movement_type = movement_liberal
+                is_political_movement_type = movement_radical
+            }
+        }
     }
 
     immediate = {
-
+        ordered_political_movement = {
+            limit = {
+                OR = {
+                    is_political_movement_type = movement_liberal
+                    is_political_movement_type = movement_radical
+                }
+            }
+            save_scope_as = philippine_national_movement
+        }
+        c:USA = {
+            save_scope_as = usa_scope
+        }
     }
 
     #Shut these up
     option = {
         name = usfp_philippines.9.a
         default_option = yes
-
+        add_radicals = {
+            value = medium_radicals
+            pop_type = academics
+        }
+        add_modifier = {
+            name = usfp_artistic_crackdown_modifier
+            years = 2
+        }
         ai_chance = {
             base = 100
         }
@@ -795,7 +845,12 @@ usfp_philippines.9 = {
     #encourage them
     option = {
         name = usfp_philippines.9.b
-
+        scope:philippine_national_movement = {
+            add_modifier = {
+                name = usfp_seditious_dramas_movement_modifier
+                years = 3
+            }
+        }
         ai_chance = {
             base = 1
         }
@@ -836,7 +891,14 @@ usfp_philippines.10 = {
     option = {
         name = usfp_philippines.10.a
         default_option = yes
-
+        add_modifier = {
+            name = usfp_thomasite_educators_modifier
+            years = 10
+        }
+        add_loyalists = {
+            pop_type = academics
+            value = small_radicals
+        }
         ai_chance = {
             base = 100
         }
@@ -845,7 +907,15 @@ usfp_philippines.10 = {
     #but we don't want english
     option = {
         name = usfp_philippines.10.b
-
+        add_modifier = {
+            name = usfp_thomasite_educators_modifier
+            years = 10
+            multiplier = 0.5
+        }
+        add_radicals = {
+            value = medium_radicals
+            interest_group = ig:ig_intelligentsia
+        }
         ai_chance = {
             base = 1
         }
@@ -922,6 +992,12 @@ usfp_philippines.11 = {
         }
         ai_chance = {
             base = 0
+        }
+    }
+
+    cancellation_trigger = {
+        active_law:lawgroup_citizenship = {
+            has_amendment = amendment_type:amendment_english_second_language
         }
     }
 

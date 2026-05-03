@@ -876,11 +876,13 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
     Added small Journal Entry if you take All of Mexico
     New events: Yellowstone National Park, Roosevelt Shot, Booker T Washington at the White House, Brownsville Affair, American Naval Advisors
     Added Fur Trapping Grounds buildings with a special PM for Bison Hunting
+    New characters: Smedley Butler, Sam Zemurray, Leonard Wood, Mark Hanna
 ## 1.13 Compatibility
     Added home states to historical character templates
     Abolitionists can't be selected for IG Leadership until the Whigs collapse
     Updated strategic region triggers to new map changes
     The Ironclad Concept event once again spawns the USS Monitor (now as a real Monitor-class ship)
+    Temporarily disabled HQ checks for army occupation (script trigger broken in 1.13)
 ## Updates
     Added pop-up event alerting the player when the CMF is detected as missing or incompatible mods are enabled
     Only states that actually rebel and join the CSA become unincorporated after the civil war
@@ -899,6 +901,7 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
     Fighting the Political Machines is now more expensive
     Completing the Progressive Era now requires abolishing the Spoils System
     Added tooltip to the Collapse of the Whigs warning the player that the pro-slavery movement will instantly seceed if an Abolitionist is elected
+    Reduced the Hard Times interest rate modifier from  +40% to +33%
 ## Fixes
     Failing the Constitution JE now removes the American System law (and re-adds it if you are on Protectionism when you restore the Constitution)
     A House Divided will now force-spawn an abolitionist movement if it vanishes for some reason
@@ -907,3 +910,4 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
     Fixed Gold Fields and Gold Mines not actually contributing to Hard Times recovery
     Fixed missing state in Confederados event
     Fixed broken tooltip for Forty Acres and a Mule
+    Fixed vanilla bug where the sale of alaska would also sell the Kurils
