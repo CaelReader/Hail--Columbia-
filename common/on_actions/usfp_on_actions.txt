@@ -411,7 +411,7 @@ usfp_new_president = {
 			}
 			if = {
 				limit = {
-					interest_group = {
+					interest_group ?= {
 						is_interest_group_type = ig_rural_folk
 					}
 				 }
@@ -421,7 +421,7 @@ usfp_new_president = {
 			}
 			else_if = {
 				limit = {
-					interest_group = {
+					interest_group ?= {
 						is_interest_group_type = ig_landowners
 					}
 				 }

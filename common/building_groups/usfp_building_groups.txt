@@ -20,9 +20,9 @@ bg_usfp_fur_trapping = {
 
     auto_place_buildings = yes
 
-    discoverable_resource = yes
-
-    depletable_resource = yes
+    # discoverable_resource = yes
+    #
+    # depletable_resource = yes
 
     always_self_owning = yes
 

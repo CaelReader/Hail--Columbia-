@@ -1345,12 +1345,14 @@ usfp_indian_wars.11.t: "Where the Buffalo Once Roamed"
 usfp_indian_wars.11.d: "Years of extermination by soldiers and poachers have driven the American buffalo into near extinction. Deprived of their fundamental basis of subsistence, the plains Indians' ability to resist White encroachment has collapsed."
 usfp_indian_wars.11.f: ""The hunters have done more in the last two years, and will do more in the next year, to settle the vexed Indian question, than the entire regular army has done in the last forty years. They are destroying the Indians' commissary. It is a well-known fact that an army losing its base of supplies is placed at a great disadvantage. For a lasting peace, let them kill, skin, and sell until the buffaloes are exterminated. Then your prairies can be covered with speckled cattle."" #Philip Sheridan
 usfp_indian_wars.11.a: "With the buffalo gone, the plains are ours."
+ end_of_bison_hunting: "All [GetBuildingType('building_usfp_fur_trapper').GetName] are removed from the [GetGeographicRegion('geographic_region_american_bison_range').GetName]"
 
 usfp_indian_wars.12.t: "Allotment"
 usfp_indian_wars.12.d: "The western frontier has been closed. With the plains now firmly under [ROOT.GetCountry.GetAdjective] control, the process of turning Indian hunter-gatherers into good Christian farmers can begin in earnest. Former tribal lands are being apportioned into individual homesteads to be distributed to each Indian family, with the excess sold off to White settlers. Through a system of boarding schools, we can compel the Indians to be absorbed into the American mainstream."
 usfp_indian_wars.12.f: ""The white men made us many promises, more than I can remember, but they never kept but one. They promised to take our land, and they took it."" #Red Cloud
 usfp_indian_wars.12.a: "Kill the Indian, save the man."
 usfp_indian_wars.12.b: "Save the Indian and the man."
+ end_of_fur_trapping: "All [GetBuildingType('building_usfp_fur_trapper').GetName] are removed from the [GetGeographicRegion('geographic_region_american_west_zone').GetName]"
 
 usfp_indian_wars.13.t: "The March of Civilization"
 usfp_indian_wars.13.d: "Gold, Land, and Manifest Destiny continue to propel our settlers westward into the Great Plains. As resistance to this encroachment continues to escalate, we will need to determine our government's policy in dealing with the Indians."
