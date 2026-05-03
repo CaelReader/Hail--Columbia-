@@ -915,3 +915,10 @@ usfp_thomasite_educators_modifier = {
     country_liberty_desire_add = -0.10
     country_enactment_success_chance_law_public_schools_add = 0.20
 }
+
+usfp_supreme_court_showdown_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gavel_negative.dds
+    country_legitimacy_base_add = -20
+    political_movement_pop_attraction_mult = 0.20
+    political_movement_radicalism_from_enactment_disapproval_mult = 0.25
+}

@@ -349,3 +349,6 @@ country_enactment_success_chance_law_multicultural_add_desc: "A flat percentage 
  usfp_seditious_dramas_movement_modifier: "Seditious Dramas"
  usfp_artistic_crackdown_modifier: "Artistic Censorship"
  usfp_thomasite_educators_modifier: "Thomasite Educators"
+ usfp_supreme_court_showdown_modifier: "Judicial Showdown"
+ usfp_fought_lochner_rulings_modifier: "Fought for Labor Rights"
+ usfp_fought_lochner_rulings_positive_modifier: "Fought for Labor Rights"

@@ -435,3 +435,13 @@ usfp_rejected_philippine_tutelage_ig_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
     interest_group_approval_add = -2
 }
+
+usfp_fought_lochner_rulings_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gavel_negative.dds
+    interest_group_approval_add = -5
+}
+
+usfp_fought_lochner_rulings_positive_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gavel_positive.dds
+    interest_group_approval_add = 3
+}

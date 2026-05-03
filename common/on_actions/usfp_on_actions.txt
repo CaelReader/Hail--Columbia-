@@ -32,11 +32,7 @@ usfp_monthly_pulse = {
 		200 = usfp_usa.26 #Dorr Rebellion
 		100 = usfp_usa.27 #Third Great Awakening
 
-        100 = usfp_usa_roosevelt.1 #Yellowstone National Park
-        10 = usfp_usa_roosevelt.3 #Roosevelt Shot
 
-        100 = usfp_banana_wars.6 #Post Banana Wars: War is a Racket
-        50 = usfp_usa_navy.1 #Post-ACW Naval Advisors
 
 		##Labor events
 		100 = usfp_usa_labor.1 #founding of the IWW
@@ -45,6 +41,7 @@ usfp_monthly_pulse = {
 		50 = usfp_usa_labor.4 #Great Railroad Strike
 		100 = usfp_usa_labor.5 #AFL
 		50 = usfp_usa_labor.6 #Looking Backwards
+        50 = usfp_usa_labor.7 #Lochner Ruling
 
 		##Disasters
 		1 = usfp_usa.2 #Atlantic Hurricane
@@ -87,6 +84,18 @@ usfp_monthly_pulse = {
         100 = usfp_philippines.6 #Filipino Representatives
         100 = usfp_philippines.9 #PHI: Seditious Dramas
         100 = usfp_philippines.10 #PHI: English Teachers
+
+        #Roosevelt Events
+        50 = usfp_usa.28 #Chinese Exclusion
+        50 = usfp_usa.29 #Japanese Immigration
+        100 = usfp_usa_roosevelt.1 #Yellowstone National Park
+        10 = usfp_usa_roosevelt.3 #Roosevelt Shot
+
+        100 = usfp_banana_wars.6 #Post Banana Wars: War is a Racket
+
+        #Non-USA Events
+        50 = usfp_usa_roosevelt.6 #Colombia: Panama Rebellion
+        50 = usfp_usa_navy.1 #Post-ACW Naval Advisors
 
 	}
 }
@@ -432,7 +441,7 @@ usfp_new_president = {
 			else_if = {
 				limit = {
 					OR = {
-						interest_group = {
+						interest_group ?= {
 							is_interest_group_type = ig_petty_bourgeoisie
 							is_interest_group_type = ig_trade_unions
 							is_interest_group_type = ig_intelligentsia

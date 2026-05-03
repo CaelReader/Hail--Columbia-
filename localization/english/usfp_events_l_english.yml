@@ -843,6 +843,17 @@ usfp_usa.27.a: "What new pieties will they come up with next?"
 usfp_usa.27.b: "The most righteous of causes."
 social_gospelists_can_appear: "[GetIdeology('ideology_usfp_social_gospel_leader').GetName] characters can now appear"
 
+ usfp_usa.28.t: "Chinese Exclusion"
+ usfp_usa.28.d: "The increasing visibility of [SCOPE.sCulture('chinese_culture_scope').GetName] immigrants in the [ROOT.GetCountry.GetName] has fueled calls for an outright ban on any further arrivals from [GetGeographicRegion('geographic_region_china').GetName], and the denial of citizenship to those already here."
+ usfp_usa.28.f: ""We are the warders of the Golden Gate; we must stand here forever in the pathway of the Orient, and if there is any danger or trial it is for us to sound the alarm. I regard the Chinese question as a race question, an international question; and above all a question involving the preservation of our civilization."$quote_dash$Mayor James D. Phelan"
+ usfp_usa.28.a: "It is best to safeguard our own labor force."
+ usfp_usa.28.b: "It would be ridiculous to block valuable workers from strengthening the economy."
+
+ usfp_usa.29.t: "Issei Arrivals"
+ usfp_usa.29.d: "The implementation of [GetAmendmentType('amendment_usfp_chinese_exclusion').GetName] has pushed employers to seek alternative sources of immigrant labor. Initial hirings of [GetCulture('japanese').GetName] workers have drawn a stream of additional migrants across the Pacific into the cities of [SCOPE.sState('target_migration_state').GetName]."
+ usfp_usa.29.f: "Here at the edge of Chinatown, Ushijima had found some Japanese migrants who had preceded him. Stepping inside from the bustling city streets, he rented a cramped room where could rest his head for a few hours. Among his few possession from home was his English language manual, tattered from study. His plan was straightforward: learn the language, find decent paying work, then enter business himself. There would be a future for him here in [SCOPE.sState('target_migration_state').GetNameNoFormatting] beyond anything he could have managed in Japan."
+ usfp_usa.29.a: "The allure of the [Root.GetCountry.GetName] cannot be stymied."
+
 ### USA Labor Events ###
 
 usfp_usa_labor.1.t: "The Industrial Workers of the World"
@@ -884,6 +895,14 @@ usfp_usa_labor.6.d: "A newly published utopian novel by Edward Bellamy portrays 
 usfp_usa_labor.6.f: ""Their misery came, with all your other miseries, from that incapacity for cooperation which followed from the individualism on which your social system was founded, from your inability to perceive that you could make ten times more profit out of your fellow men by uniting with them than by contending with them."" #Edward Bellamy, Looking Backward
 usfp_usa_labor.6.a: "An inspiring vision of utopia."
 usfp_usa_labor.6.b: "A deranged socialist fantasy."
+
+ usfp_usa_labor.7.t: "Right to Contract"
+ usfp_usa_labor.7.d: "The [concept_usfp_supreme_court] has ruled that our [SCOPE.sLaw('labor_law_scope').GetName] legislation oversteps constitutional protections on citizens' 'freedom to contract', significantly curtailing the scope of the law."
+ usfp_usa_labor.7.f: ""The question necessarily arises: Is this a fair, reasonable and appropriate exercise of the police power of the State, or is it an unreasonable, unnecessary and arbitrary interference with the right of the individual to his personal liberty or to enter into those contracts in relation to labor which may seem to him appropriate or necessary for the support of himself and his family?"$quote_dash$Associate Justice Rufus Peckham"
+ usfp_usa_labor.7.a: "We must accept the court's ruling."
+ usfp_usa_labor.7.b: "We'll fight this corrupt court every step of the way!"
+
+
 
 ### USA Election Events ###
 
@@ -1777,6 +1796,19 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_usa_roosevelt.5.f: "The Inspector General flipped through the slim file. The shooting was clearly done using a pistol, yet the evidence presented against the troops was rifle cartridges. The commanding officer reports that the soldiers had been in barracks with their weapons under lock and key, but the locals keep pressing the issue. He sighed. This wasn't going to go away on its own."
  usfp_usa_roosevelt.5.a: "Hand out discharges to placate the residents."
  usfp_usa_roosevelt.5.b: "Our servicemen are clearly not at fault here."
+
+ usfp_usa_roosevelt.6.t: "The Panama Rebellion"
+ usfp_usa_roosevelt.6.d: "Word has reached us that separatist dissidents in [SCOPE.sState('panama_state').GetName] are planning to appeal to the [SCOPE.sCountry('usa_scope').GetName] to support their independence."
+ usfp_usa_roosevelt.6.f: ""Word is, American ships are already en-route on a 'peacekeeping' mission."\n\n"How trustworthy is your source? I have heard that Nicaragua might pounce on the region!"\n\n"Gentlemen, please, this is a tense situation for us all. Send the mobilization orders at once, lest we be caught unprepared.""
+ usfp_usa_roosevelt.6.a: "Let them try."
+ usfp_usa_roosevelt.6.b: "Best we grant them autonomy before this gets out of hand."
+
+ usfp_usa_roosevelt.7.t: "The Panama Rebellion"
+ usfp_usa_roosevelt.7.d: "Separatist dissidents in [SCOPE.sState('panama_state').GetName] are appealing to the [SCOPE.sCountry('usa_scope').GetName] to support their independence."
+ usfp_usa_roosevelt.7.f: ""The Canal Zone is of vital strategic importance for the [SCOPE.sCountry('usa_scope').GetNameNoFormatting]. If [SCOPE.sCountry('panama_owner_scope').GetNameNoFormatting] proves unwilling, then surely a new Republic of Panama will be an amicable partner.""
+ usfp_usa_roosevelt.7.a: "Send the gunboats."
+ usfp_usa_roosevelt.7.b: "We will not violate [SCOPE.sCountry('panama_owner_scope').GetAdjective] sovereignty."
+ create_panama_and_support: "[SCOPE.sState('panama_state').GetName] will begin a [concept_secession] against [SCOPE.sCountry('panama_owner_scope').GetName], with our support."
 
  usfp_banana_wars.1.t: "Banana Wars"
  usfp_banana_wars.1.d: "Instability in [SCOPE.sCountry('latin_american_country').GetName] has prompted influential [GetPopType('capitalists').GetName] to request [ROOT.GetCountry.GetAdjective] military intervention in the region."

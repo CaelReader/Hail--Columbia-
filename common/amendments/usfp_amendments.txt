@@ -455,6 +455,7 @@ amendment_usfp_right_to_contract = {
 
     modifier = {
         country_institution_workplace_safety_max_investment_add = -2
+        state_pop_support_movement_labor_mult = -0.10
     }
 
     possible = {

@@ -874,7 +874,7 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
     Benevolent Assimilation JE with 11 events for the American colonization of the Philippines
     Added The New Navy JE for modernizing your fleets in the face of rising Pacific powers
     Added small Journal Entry if you take All of Mexico
-    New events: Yellowstone National Park, Roosevelt Shot, Booker T Washington at the White House, Brownsville Affair, American Naval Advisors
+    New events: Yellowstone National Park, Roosevelt Shot, Booker T Washington at the White House, Brownsville Affair, American Naval Advisors, Lochner Ruling, Chinese Exclusion, Issei Arrivals, Panama Rebellion 
     Added Fur Trapping Grounds buildings with a special PM for Bison Hunting
     New characters: Smedley Butler, Sam Zemurray, Leonard Wood, Mark Hanna
 ## 1.13 Compatibility

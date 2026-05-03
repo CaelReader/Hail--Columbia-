@@ -432,3 +432,184 @@ usfp_usa_roosevelt.5 = {
         ai_chance = { base = 0 }
     }
 }
+
+#COL: Panama Rebellion
+usfp_usa_roosevelt.6 = {
+    type = country_event
+    placement = scope:panama_state
+    event_image = {
+        video = "votp_conspiring"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+    title = usfp_usa_roosevelt.6.t
+    desc = usfp_usa_roosevelt.6.d
+    flavor = usfp_usa_roosevelt.6.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        OR = {
+            c:CLM ?= this
+            c:GCO ?= this
+        }
+        has_state_in_state_region = STATE_PANAMA
+        any_scope_state = {
+            state_region = s:STATE_PANAMA
+            turmoil >= 0.20
+            is_treaty_port = no
+        }
+        exists = c:USA
+        c:USA = {
+            is_at_war = no
+            is_diplomatic_play_committed_participant = no
+            has_technology_researched = civilizing_mission
+            ruler = {
+                usfp_manifest_destiny_pro_expansion_trigger = yes
+            }
+        }
+        NOT = {
+            exists = c:PNM
+        }
+        is_subject = no
+    }
+
+    immediate = {
+        random_scope_state = {
+            limit = {
+                state_region = s:STATE_PANAMA
+            }
+            save_scope_as = panama_state
+        }
+        save_scope_as = panama_owner_scope
+        c:USA = {
+            save_scope_as = usa_scope
+        }
+    }
+
+    #refuse
+    option = {
+        name = usfp_usa_roosevelt.6.a
+        default_option = yes
+        scope:panama_state = {
+            add_radicals_in_state = {
+                value = medium_radicals
+            }
+        }
+        c:USA = {
+            trigger_event = {
+                id = usfp_usa_roosevelt.7
+                days = 10
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #accept
+    option = {
+        name = usfp_usa_roosevelt.6.b
+        create_country = {
+            state = scope:panama_state
+            origin = root
+            tag = PNM
+        }
+        if = {
+            limit = {
+                exists = c:PNM
+            }
+            create_diplomatic_pact = {
+                country = c:PNM
+                type = protectorate
+            }
+        }
+        ai_chance = { base = 0 }
+    }
+}
+
+#USA: Panama Rebellion
+usfp_usa_roosevelt.7 = {
+    type = country_event
+    placement = scope:panama_state
+    event_image = {
+        video = "votp_conspiring"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+    title = usfp_usa_roosevelt.7.t
+    desc = usfp_usa_roosevelt.7.d
+    flavor = usfp_usa_roosevelt.7.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+    }
+
+    immediate = {
+
+    }
+
+    #accept
+    option = {
+        name = usfp_usa_roosevelt.7.a
+        default_option = yes
+        custom_tooltip = {
+            text = create_panama_and_support
+            create_country = {
+                state = scope:panama_state
+                origin = root
+                tag = PNM
+            }
+            s:STATE_PANAMA = {
+                add_claim = scope:panama_owner_scope
+            }
+            if = {
+                limit = {
+                    exists = c:PNM
+                }
+                scope:panama_owner_scope ?= {
+                    create_diplomatic_play = {
+                        target_state = scope:panama_state
+                        type = dp_return_state
+                    }
+                }
+                random_diplomatic_play = {
+                    limit = {
+                        target = c:PNM
+                    }
+                    add_target_backers = { c:USA }
+                }
+                change_relations = {
+                    country = c:PNM
+                    value = 50
+                }
+            }
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
+
+    #refuse
+    option = {
+        name = usfp_usa_roosevelt.7.b
+        change_relations = {
+            country = scope:panama_owner_scope
+            value = 10
+        }
+        create_unidirectional_truce = {
+            country = scope:panama_owner_scope
+            months = 60
+        }
+        ai_chance = { base = 0 }
+    }
+}
