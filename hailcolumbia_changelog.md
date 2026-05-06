@@ -911,3 +911,10 @@ Added checks to hopefully prevent erroneous spawning of Cuba content
     Fixed missing state in Confederados event
     Fixed broken tooltip for Forty Acres and a Mule
     Fixed vanilla bug where the sale of alaska would also sell the Kurils
+
+# 8.1 "Roosevelt"
+Fixed missing ship type tooltips on the New Navy JE
+Philippine Assembly now adds Imposed Law success chance
+Social Monarchy now counts as a super unconstitutional law and can trigger monarchy content
+Added Social Monarchy law stances to ideologies
+Increased the Naval Power Projection requirement for the Monroe Doctrine and Securing the Atlantic to 5000

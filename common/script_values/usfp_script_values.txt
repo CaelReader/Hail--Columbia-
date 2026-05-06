@@ -1,4 +1,4 @@
-﻿usfp_monroe_doctrine_naval_power = 1000
+﻿usfp_monroe_doctrine_naval_power = 5000
 
 usfp_bleeding_kansas_get_yankee_radicals = {
     value = {

@@ -2842,7 +2842,7 @@ usfp_manifest_destiny.25 = {
 	}
 
 	trigger = {
-		has_law_or_variant = law_type:law_monarchy
+		country_has_monarchy_law = yes
 		NOT = {
 			has_variable = had_monarchy_destiny
 		}

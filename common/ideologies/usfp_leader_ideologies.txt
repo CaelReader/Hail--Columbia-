@@ -280,7 +280,8 @@ REPLACE_OR_CREATE:ideology_usfp_strongman_populist = {
 		law_parliamentary_republic = neutral
 		law_theocracy = disapprove
 		law_council_republic = disapprove
-		law_corporate_state = neutral
+		law_corporate_state = approve
+        law_social_monarchy = neutral
 	}
 
 	lawgroup_distribution_of_power = {

@@ -84,26 +84,33 @@ je_usfp_the_new_navy = {
             NOT = {
                 this = root
             }
+            is_subject = no
             #if the USA has an old navy, get spooked by even a single Pre-Dreadnought
             trigger_if = {
                 limit = {
                     root = {
                         NOT = {
                             any_scope_ship = {
-                                OR = {
-                                    type = ship_type:ship_type_pre_dreadnought
-                                    type = ship_type:ship_type_dreadnought
-                                    type = ship_type:ship_type_super_dreadnought
+                                custom_tooltip = {
+                                    text = pre_dreadnought_or_better
+                                    OR = {
+                                        type = ship_type:ship_type_pre_dreadnought
+                                        type = ship_type:ship_type_dreadnought
+                                        type = ship_type:ship_type_super_dreadnought
+                                    }
                                 }
                             }
                         }
                     }
                 }
                 any_scope_ship = {
-                    OR = {
-                        type = ship_type:ship_type_pre_dreadnought
-                        type = ship_type:ship_type_dreadnought
-                        type = ship_type:ship_type_super_dreadnought
+                    custom_tooltip = {
+                        text = pre_dreadnought_or_better
+                        OR = {
+                            type = ship_type:ship_type_pre_dreadnought
+                            type = ship_type:ship_type_dreadnought
+                            type = ship_type:ship_type_super_dreadnought
+                        }
                     }
                 }
             } trigger_else = {
@@ -124,6 +131,7 @@ je_usfp_the_new_navy = {
                 capital = {
                     is_in_geographic_region = geographic_region_pacific
                 }
+                is_subject = no
                 NOT = {
                     this = root
                 }
@@ -168,10 +176,13 @@ je_usfp_the_new_navy = {
         }
         #has at least three pre-dreadnoughts
         any_scope_ship = {
-            OR = {
-                type = ship_type:ship_type_pre_dreadnought
-                type = ship_type:ship_type_dreadnought
-                type = ship_type:ship_type_super_dreadnought
+            custom_tooltip = {
+                text = pre_dreadnought_or_better
+                OR = {
+                    type = ship_type:ship_type_pre_dreadnought
+                    type = ship_type:ship_type_dreadnought
+                    type = ship_type:ship_type_super_dreadnought
+                }
             }
             count >= 3
         }

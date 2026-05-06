@@ -8,6 +8,7 @@
 		law_parliamentary_republic = approve
 		law_theocracy = neutral #approve
 		law_monarchy = neutral
+        law_social_monarchy = neutral
 		law_council_republic = disapprove
 		law_corporate_state = neutral
 	}
@@ -150,6 +151,7 @@ ideology_usfp_evangelical_moralist = {
 		law_parliamentary_republic = neutral
 		law_council_republic = strongly_disapprove
 		law_corporate_state = neutral
+        law_social_monarchy = neutral
 	}
 
 	lawgroup_church_and_state = {
@@ -369,6 +371,7 @@ ideology_usfp_tribal_government = {
 
 	lawgroup_governance_principles = {
 		law_monarchy = approve
+        law_social_monarchy = approve
 		law_theocracy = neutral
 		law_presidential_republic = neutral
 		law_parliamentary_republic = approve
@@ -627,6 +630,7 @@ ideology_usfp_neoconfederate_movement = {
 		law_parliamentary_republic = disapprove
 		law_council_republic = strongly_disapprove
 		law_corporate_state = neutral
+        law_social_monarchy = neutral
 	}
 
 }
@@ -650,6 +654,7 @@ ideology_usfp_american_constitution_movement = {
 
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_disapprove
+        law_social_monarchy = strongly_disapprove
 		law_theocracy = strongly_disapprove
 		law_presidential_republic = neutral
 		law_parliamentary_republic = disapprove

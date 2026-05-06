@@ -635,6 +635,7 @@ amendment_usfp_philippine_assembly = {
         country_voting_power_wealth_threshold_add = 10
         country_voting_power_from_literacy_add = 20
         country_electoral_confidence_impact_mult = -0.4
+        country_law_enactment_imposition_success_add = 0.30
     }
 
     possible = {

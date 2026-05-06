@@ -1,5 +1,5 @@
 [img]https://i.imgur.com/PsN4QiL.png[/img]
-[i]for Victoria 3 1.12.*[/i]
+[i]for Victoria 3 1.13.*[/i]
 
 Hail, Columbia! is a DLC-Sized Flavor Pack for the United States, including overhauled and expanded journal entries, interest groups, and characters, as well as tons of new events unique to the USA and North America.
 
@@ -15,6 +15,8 @@ Hail, Columbia! is a DLC-Sized Flavor Pack for the United States, including over
 [*][b]Gilded Age[/b] JE showing the rise of corruption and Trusts in the United States, followed by the [b]Progressive Era[/b] of reform and new ideologies.
 [*]New long-term JE for the US tracking the influence of [b]Manifest Destiny[/b]. You can choose to avoid expansion and entanglements, stick to the historical borders, or promote Manifest Destiny to new heights and incorporate the entire continent into your great republic.
 [*][b]Mormon[/b] content, including the exodus to Deseret and the Utah War.
+[*]Special JEs and events for the presidency of [b]Theodore Roosevelt[/b].
+[*][b]Foreign Policy[/b] JEs including the Banana Wars and the American occupation of the Philippines.
 [*][b]New flavor events[/b] for the US, including the Seneca Falls Convention, the Aroostook War, and the American Hippo Bill, as well as various american natural disasters like wildfires and tornadoes. The mod includes [b]over 200 new events[/b] in total.
 [*]Overhauled Ideologies and Traits for American IGs, including [b]new alternate IG Traits[/b] unlocked during a playthrough.
 [*]Historical agitators, commanders, and politicians for America, including every historical president from Martin Van Buren to FDR.
@@ -25,7 +27,6 @@ The mod contains a total of 18 Journal Entries, 264 Events, and 152 Characters.
 [img]https://i.imgur.com/Xw5ZcI9.png[/img]
 [list]
 [*]More Economic & Labor Events (Coal Wars, Roaring 20s, Panics)
-[*]More Foreign Policy Events (Great White Fleet, Panama Rebellion)
 [*]Alternate History Content (CSA Victory, FSA, United Syndicates, Turtle Island) 
 [/list]
 
@@ -54,15 +55,13 @@ Check out the full list of Vanilla Overrides in the discussion section.
 
 [img]https://i.imgur.com/nxLtJMt.png[/img]
 [list]
-[*]Incorporates [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3121178205]US Civil War Fixed[/url] by Ferrous
-[*]Incorporates some fixes from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2935989855]VTM[/url] by Doodlez and OPB
 [*]Incorporates and updates American characters from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2882342752]ECCHI[/url] by rinbro
 [*]Incorporates American characters from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3154492389]Historical Generals and Admirals[/url] by mæsk
-[*]Incorporates some features from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2882805006]Norton's Flavor Mod[/url] by calvinsoul 
 [*]Incorporates some American state traits from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2903242449]State Traits Expanded[/url] by snekchelly
 [*]Incorporates Character DNA by Lord R
 [*]Incorporates map data by Meriador
 [*]Incorporates Native American population data by Argendauss
+[*]The original version of this mod incorporated script from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3121178205]US Civil War Fixed[/url] by Ferrous, [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2935989855]VTM[/url] by Doodlez and OPB, and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2882805006]Norton's Flavor Mod[/url] by calvinsoul
 [*]Korean localization courtesy of 케말 파샤 and 시아츠
 [*]German translation courtesy of KushGene
 [/list]
