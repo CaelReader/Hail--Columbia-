@@ -1,5 +1,5 @@
 ﻿#Southern Planters
-usfp_ig_trait_king_cotton = {
+REPLACE_OR_CREATE:usfp_ig_trait_king_cotton = {
 	icon = "gfx/interface/icons/ig_trait_icons/materiel_waste.dds"
 	max_approval = unhappy
 	
@@ -9,7 +9,7 @@ usfp_ig_trait_king_cotton = {
 	}
 }
 
-usfp_ig_trait_peculiar_institution = {
+REPLACE_OR_CREATE:usfp_ig_trait_peculiar_institution = {
 	icon = "gfx/interface/icons/ig_trait_icons/peculiar_institution.dds"
 	min_approval = happy
 	
@@ -21,7 +21,7 @@ usfp_ig_trait_peculiar_institution = {
 	}
 }
 
-usfp_ig_trait_lost_cause = {
+REPLACE_OR_CREATE:usfp_ig_trait_lost_cause = {
 	icon = "gfx/interface/icons/ig_trait_icons/lost_cause.dds"
 	max_approval = unhappy
 	
@@ -32,7 +32,7 @@ usfp_ig_trait_lost_cause = {
 }
 
 #Landowners post Civil War
-usfp_ig_trait_lawmen = {
+REPLACE_OR_CREATE:usfp_ig_trait_lawmen = {
 	icon = "gfx/interface/icons/ig_trait_icons/lawmen.dds"
 	min_approval = happy
 	
@@ -43,7 +43,7 @@ usfp_ig_trait_lawmen = {
 }
 
 #Evangelicals
-usfp_ig_trait_postmillennialism = {
+REPLACE_OR_CREATE:usfp_ig_trait_postmillennialism = {
 	icon = "gfx/interface/icons/ig_trait_icons/postmillenialism.dds"
 	max_approval = unhappy
 	
@@ -52,7 +52,7 @@ usfp_ig_trait_postmillennialism = {
 	}
 }
 
-usfp_ig_trait_revivalism = {
+REPLACE_OR_CREATE:usfp_ig_trait_revivalism = {
 	icon = "gfx/interface/icons/ig_trait_icons/revivalism.dds"
 	min_approval = happy
 	
@@ -63,7 +63,7 @@ usfp_ig_trait_revivalism = {
 }
 
 #Yeoman Farmers
-usfp_ig_trait_go_west = {
+REPLACE_OR_CREATE:usfp_ig_trait_go_west = {
 	icon = "gfx/interface/icons/ig_trait_icons/go_west.dds"
 	min_approval = loyal
 	
@@ -72,7 +72,7 @@ usfp_ig_trait_go_west = {
 		country_resource_discovery_chance_mult = 0.10
 	}
 }
-usfp_ig_trait_republican_virtue = {
+REPLACE_OR_CREATE:usfp_ig_trait_republican_virtue = {
 	icon = "gfx/interface/icons/ig_trait_icons/honest_work.dds"
 	min_approval = happy
 	
@@ -81,7 +81,7 @@ usfp_ig_trait_republican_virtue = {
 		state_farmers_education_access_add = 0.10
 	}
 }
-usfp_ig_trait_free_silver = {
+REPLACE_OR_CREATE:usfp_ig_trait_free_silver = {
 	icon = "gfx/interface/icons/ig_trait_icons/free_silver.dds"
 	max_approval = unhappy
 	
@@ -93,7 +93,7 @@ usfp_ig_trait_free_silver = {
 
 
 #Intelligentsia
-usfp_ig_trait_american_exceptionalism = {
+REPLACE_OR_CREATE:usfp_ig_trait_american_exceptionalism = {
 	icon = "gfx/interface/icons/ig_trait_icons/american_exceptionalism.dds"
 	min_approval = loyal
 	
@@ -103,7 +103,7 @@ usfp_ig_trait_american_exceptionalism = {
 	}
 }
 
-usfp_ig_trait_democratic_experiment = {
+REPLACE_OR_CREATE:usfp_ig_trait_democratic_experiment = {
 	icon = "gfx/interface/icons/ig_trait_icons/democratic_experiment.dds"
 	min_approval = happy
 	
@@ -113,7 +113,7 @@ usfp_ig_trait_democratic_experiment = {
 		country_society_tech_research_speed_mult = 0.05
 	}
 }
-usfp_ig_trait_caricature = {
+REPLACE_OR_CREATE:usfp_ig_trait_caricature = {
 	icon = "gfx/interface/icons/ig_trait_icons/caricature.dds"
 	max_approval = unhappy
 	
@@ -124,7 +124,7 @@ usfp_ig_trait_caricature = {
 }
 
 #Trade Unions
-usfp_ig_trait_direct_action = {
+REPLACE_OR_CREATE:usfp_ig_trait_direct_action = {
 	icon = "gfx/interface/icons/ig_trait_icons/direct_action.dds"
 	max_approval = unhappy
 	
@@ -136,7 +136,7 @@ usfp_ig_trait_direct_action = {
 }
 
 #Industrialists
-usfp_ig_trait_rail_tycoons = {
+REPLACE_OR_CREATE:usfp_ig_trait_rail_tycoons = {
 	icon = "gfx/interface/icons/ig_trait_icons/railroad_expansion.dds"
 	min_approval = happy
 	
@@ -146,7 +146,7 @@ usfp_ig_trait_rail_tycoons = {
 	}
 }
 
-usfp_ig_trait_scientific_management = {
+REPLACE_OR_CREATE:usfp_ig_trait_scientific_management = {
 	icon = "gfx/interface/icons/ig_trait_icons/scientific_management.dds"
 	min_approval = happy
 	
@@ -157,7 +157,7 @@ usfp_ig_trait_scientific_management = {
 }
 
 #Armed Forces
-usfp_ig_trait_gunboat_diplomacy = {
+REPLACE_OR_CREATE:usfp_ig_trait_gunboat_diplomacy = {
 	icon = "gfx/interface/icons/ig_trait_icons/gunboat_diplomacy.dds"
 	min_approval = happy
 	
@@ -168,7 +168,7 @@ usfp_ig_trait_gunboat_diplomacy = {
 }
 
 #Native American
-usfp_ig_trait_native_defenders = {
+REPLACE_OR_CREATE:usfp_ig_trait_native_defenders = {
 	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
 	min_approval = loyal
 	modifier = {
@@ -177,7 +177,7 @@ usfp_ig_trait_native_defenders = {
 	}
 }
 
-usfp_ig_trait_feuding_warriors = {
+REPLACE_OR_CREATE:usfp_ig_trait_feuding_warriors = {
 	icon = "gfx/interface/icons/ig_trait_icons/feuds.dds"
 	max_approval = unhappy
 	modifier = {
@@ -186,7 +186,7 @@ usfp_ig_trait_feuding_warriors = {
 	}
 }
 
-usfp_ig_trait_european_science = {
+REPLACE_OR_CREATE:usfp_ig_trait_european_science = {
 	icon = "gfx/interface/icons/ig_trait_icons/rangaku.dds"
 	min_approval = loyal
 	
@@ -195,7 +195,7 @@ usfp_ig_trait_european_science = {
 	}
 }
 
-usfp_ig_trait_village_life = {
+REPLACE_OR_CREATE:usfp_ig_trait_village_life = {
 	icon = "gfx/interface/icons/ig_trait_icons/be_fruitful_and_multiply.dds"
 	min_approval = loyal
 	
@@ -204,7 +204,7 @@ usfp_ig_trait_village_life = {
 	}
 }
 
-usfp_ig_trait_spiritual_visions = {
+REPLACE_OR_CREATE:usfp_ig_trait_spiritual_visions = {
 	icon = "gfx/interface/icons/ig_trait_icons/pious_fiction.dds"
 	max_approval = unhappy
 	modifier = {
@@ -213,7 +213,7 @@ usfp_ig_trait_spiritual_visions = {
 	}
 }
 
-usfp_ig_trait_strong_medicine = {
+REPLACE_OR_CREATE:usfp_ig_trait_strong_medicine = {
 	icon = "gfx/interface/icons/ig_trait_icons/propagandists.dds"
 	min_approval = loyal
 	

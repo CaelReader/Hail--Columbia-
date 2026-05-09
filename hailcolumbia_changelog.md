@@ -918,3 +918,5 @@ Philippine Assembly now adds Imposed Law success chance
 Social Monarchy now counts as a super unconstitutional law and can trigger monarchy content
 Added Social Monarchy law stances to ideologies
 Increased the Naval Power Projection requirement for the Monroe Doctrine and Securing the Atlantic to 5000
+Narciso López's expedition won't trigger against a Cuba that is already your subject
+Council Republics now have a boost to integrating Afro-Americans and Mexicans

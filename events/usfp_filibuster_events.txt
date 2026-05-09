@@ -429,6 +429,11 @@ usfp_filibuster.5 = {
 			has_state_in_state_region = STATE_CENTRAL_CUBA
 			has_state_in_state_region = STATE_EASTERN_CUBA
 		}
+        NOR = {
+            country_or_subject_owns_entire_state_region = STATE_WESTERN_CUBA
+            country_or_subject_owns_entire_state_region = STATE_CENTRAL_CUBA
+            country_or_subject_owns_entire_state_region = STATE_EASTERN_CUBA
+        }
 		NOT = {
 			has_law_or_variant = law_type:law_slavery_banned
 		}
@@ -438,6 +443,9 @@ usfp_filibuster.5 = {
 		exists = c:CUB
 		c:CUB = {
 			is_subject = yes
+            NOT = {
+                is_subject_of = root
+            }
 		}
 	}
 
