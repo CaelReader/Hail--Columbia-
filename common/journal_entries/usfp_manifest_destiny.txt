@@ -753,14 +753,24 @@ usfp_je_indian_wars = {
 		NOT = {
 			has_law_or_variant = law_type:law_no_colonial_affairs
 		}
+        any_scope_state = {
+            region = sr:region_great_plains
+        }
 	}
 
 	possible = {
 		has_journal_entry = usfp_manifest_destiny_main
 		has_technology_researched = repeaters
-		has_state_in_state_region = STATE_COLORADO
-		has_state_in_state_region = STATE_SOUTH_DAKOTA
-		has_state_in_state_region = STATE_WYOMING
+        any_scope_state = {
+            count >= 3
+            OR = {
+                state_region = s:STATE_COLORADO
+                state_region = s:STATE_SOUTH_DAKOTA
+                state_region = s:STATE_NORTH_DAKOTA
+                state_region = s:STATE_WYOMING
+                state_region = s:STATE_MONTANA
+            }
+        }
 	}
 
 	invalid = {

@@ -192,10 +192,19 @@ usfp_william_jennings_bryan_character_template = {
     home_region = STATE_NEBRASKA
     dna = usfp_usa_william_jennings_bryan
     traits = { experienced_political_operator pious firebrand charismatic usfp_trait_antiexpansionist }
-    # is_agitator = yes
-    # Spawned by Event
-    on_created = {
-        set_variable = is_jennings_bryan
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:USA
+            this = c:USA
+        }
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_rural_folk
+            ig_hasnt_chosen_ideology_trigger = yes
+        }
+        earliest_usage_date = 1894.1.1
+        latest_usage_date = 1916.1.1
+        #guaranteed to spawn if possible
     }
 }
 

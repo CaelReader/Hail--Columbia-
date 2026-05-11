@@ -1279,6 +1279,13 @@ usfp_progressive_era.15 = {
 		NOT = {
 			has_global_variable = cross_of_gold
 		}
+        NOT = {
+            ig:ig_rural_folk ?= {
+                leader ?= {
+                    has_template = usfp_william_jennings_bryan_character_template
+                }
+            }
+        }
 		game_date > 1896.1.1
 		ig:ig_rural_folk = {
 			ig_hasnt_chosen_ideology_trigger = yes
@@ -1287,18 +1294,23 @@ usfp_progressive_era.15 = {
 
 	immediate = {
 		set_global_variable = cross_of_gold
-		create_character = {
-			template = usfp_william_jennings_bryan_character_template
-			interest_group = ig:ig_rural_folk
-			on_created = {
-				set_variable = is_jennings_bryan
-			}
-		}
+		if = {
+            limit = {
+                NOT = {
+                    any_character = {
+                        has_template = usfp_william_jennings_bryan_character_template
+                    }
+                }
+            }
+            create_character = {
+                template = usfp_william_jennings_bryan_character_template
+                interest_group = ig:ig_rural_folk
+            }
+        }
 		random_scope_character = {
 			limit = {
-				has_variable = is_jennings_bryan
+				has_template = usfp_william_jennings_bryan_character_template
 			}
-			add_character_role = agitator
 			save_scope_as = bryan_scope
 			interest_group = {
 				party = {
@@ -1361,7 +1373,6 @@ usfp_progressive_era.15 = {
 		name = usfp_progressive_era.15.b
 		default_option = yes
 		scope:bryan_scope = {
-			add_character_role = agitator
 			interest_group = {
 				add_modifier = {
 					name = usfp_cross_of_gold_ig

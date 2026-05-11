@@ -920,3 +920,5 @@ Added Social Monarchy law stances to ideologies
 Increased the Naval Power Projection requirement for the Monroe Doctrine and Securing the Atlantic to 5000
 Narciso López's expedition won't trigger against a Cuba that is already your subject
 Council Republics now have a boost to integrating Afro-Americans and Mexicans
+Updated some character spawning events to integrate with the National Cast
+Indian Wars JE state trigger is now less strict

@@ -1676,11 +1676,12 @@ usfp_a_house_divided.17 = {
 
 	trigger = {
 		game_date > 1859.1.1
-		NOR = {
-			any_scope_character = {
-				has_template = usa_lincoln_character_template
-			}
-			has_global_variable = lincoln_spawned
+		NOT = {
+            ig:ig_petty_bourgeoisie ?= {
+                leader = {
+                    has_template = usa_lincoln_character_template
+                }
+            }
 		}
 		in_election_campaign = yes
 		NOT = {
@@ -1694,18 +1695,23 @@ usfp_a_house_divided.17 = {
 
 	immediate = {
 		set_global_variable = lincoln_spawned
-		create_character = {
-			template = usa_lincoln_character_template
-			interest_group = ig:ig_petty_bourgeoisie
-			# on_created = {
-			# 	set_variable = is_real_abraham_lincoln
-			# }
-		}
+		if = {
+            limit = {
+                NOT = {
+                    any_scope_character = {
+                        has_template = usa_lincoln_character_template
+                    }
+                }
+            }
+            create_character = {
+                template = usa_lincoln_character_template
+                interest_group = ig:ig_petty_bourgeoisie
+            }
+        }
 		random_scope_character = {
 			limit = {
 				has_template = usa_lincoln_character_template
 			}
-			add_character_role = agitator
 			save_scope_as = real_abraham_lincoln_scope
 		}
 		ig:ig_petty_bourgeoisie = {
