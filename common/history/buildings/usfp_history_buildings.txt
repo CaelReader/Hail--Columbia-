@@ -164,7 +164,7 @@
 				add_ownership={
 					country={
 						country="c:USA"
-						levels=5
+						levels=4
 					}
 				}
 				reserves=1
@@ -196,7 +196,7 @@
                 add_ownership={
                     country={
                         country="c:USA"
-                        levels=3
+                        levels=2
                     }
                 }
                 reserves=1
@@ -323,21 +323,6 @@
         change_resource_potential = {
             type = building_usfp_fur_trapper
             amount = 2
-        }
-    }
-
-    c:USA = {
-        every_scope_state = {
-            limit = {
-                has_state_trait = state_trait_american_chestnuts
-                NOT = {
-                    has_building = building_logging_camp
-                }
-            }
-            create_building = {
-                level = 1
-                building = building_logging_camp
-            }
         }
     }
 
