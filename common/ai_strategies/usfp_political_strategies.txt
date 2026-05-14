@@ -349,6 +349,27 @@ ai_strategy_manifest_destiny = {
 		force_nationalization = 0.25
 	}
 
+    # wargoal_scores = {
+    #     usfp_mexican_cession = {
+    #         if = {
+    #             limit = {
+    #                 scope:target_country = {
+    #                     has_state_in_state_region = STATE_CALIFORNIA
+    #                 }
+    #             }
+    #             add = 300
+    #             if = {
+    #                 limit = {
+    #                     ruler = {
+    #                         usfp_manifest_destiny_pro_expansion_trigger = yes
+    #                     }
+    #                 }
+    #                 add = 1000
+    #             }
+    #         }
+    #     }
+    # }
+
 	wargoal_maneuvers_fraction = {
 		value = 0.35
 		# USA should Manifest a lot of Destiny

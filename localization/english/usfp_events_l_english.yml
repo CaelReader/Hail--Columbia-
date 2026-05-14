@@ -459,6 +459,7 @@ usfp_manifest_destiny.6.c: "By right of conquest, we'll take California, New Mex
 usfp_manifest_destiny.6.e: "To secure the peace, [SCOPE.sCountry('mexico_scope').GetName] must submit."
 usfp_manifest_destiny.6.g: "#r After all, why not? Why shouldn't we take all of [SCOPE.sCountry('mexico_scope').GetName]?#!"
 controls_mexico_city: "[SCOPE.sCountry('mexico_scope').GetCapital.GetName] is occupied by [ROOT.GetCountry.GetName]"
+ mexico_fought_cession: "We defeated [SCOPE.sCountry('mexico_scope').GetName] in a [concept_war]"
 usfp_mexican_north_purchase_effect: "[SCOPE.sCountry('mexico_scope').GetName] cedes the following [Concept('concept_state_region', '$concept_state_regions$')] to the [ROOT.GetCountry.GetName]: [GetStateRegion('STATE_TEXAS').GetName], [GetStateRegion('STATE_COLORADO').GetName], [GetStateRegion('STATE_NEW_MEXICO').GetName], [GetStateRegion('STATE_UTAH').GetName], [GetStateRegion('STATE_ARIZONA').GetName], [GetStateRegion('STATE_NEVADA').GetName], and [GetStateRegion('STATE_CALIFORNIA').GetName]"
 usfp_mexican_north_more_states: "[SCOPE.sCountry('mexico_scope').GetName] cedes the following [Concept('concept_state_region', '$concept_state_regions$')] to the [ROOT.GetCountry.GetName]: [GetStateRegion('STATE_RIO_GRANDE').GetName], [GetStateRegion('STATE_CHIHUAHUA').GetName], [GetStateRegion('STATE_SONORA').GetName], and [GetStateRegion('STATE_BAJA_CALIFORNIA').GetName]"
 

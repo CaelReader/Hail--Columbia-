@@ -164,7 +164,7 @@
 				add_ownership={
 					country={
 						country="c:USA"
-						levels=4
+						levels=5
 					}
 				}
 				reserves=1
@@ -188,6 +188,56 @@
             }
 		}
 	}
+    s:STATE_MASSACHUSETTS = {
+        region_state:USA = {
+            remove_building = building_government_administration
+            create_building={
+                building="building_arms_industry"
+                add_ownership={
+                    country={
+                        country="c:USA"
+                        levels=3
+                    }
+                }
+                reserves=1
+                activate_production_methods={ "pm_muskets" "pm_automation_disabled"  }
+            }
+        }
+    }
+    s:STATE_PENNSYLVANIA = {
+        region_state:USA = {
+            create_building={
+                building="building_paper_mill"
+                add_ownership={
+                    building={
+                        type="building_financial_district"
+                        country="c:USA"
+                        levels=5
+                        region="STATE_PENNSYLVANIA"
+                    }
+                }
+                reserves=1
+                activate_production_methods={ "pm_sulfite_pulping" "pm_automation_disabled"  }
+            }
+        }
+    }
+    s:STATE_NEW_YORK = {
+        region_state:USA = {
+            create_building={
+                building="building_logging_camp"
+                add_ownership={
+                    building={
+                        type="building_financial_district"
+                        country="c:USA"
+                        levels=2
+                        region="STATE_NEW_YORK"
+                    }
+                }
+                reserves=1
+                activate_production_methods={ "pm_saw_mills"  "pm_no_equipment" "pm_road_carts" "pm_increased_hardwood" }
+            }
+        }
+    }
 	s:STATE_DELAWARE = {
 		region_state:USA = {
 			remove_building = building_government_administration
@@ -273,6 +323,21 @@
         change_resource_potential = {
             type = building_usfp_fur_trapper
             amount = 2
+        }
+    }
+
+    c:USA = {
+        every_scope_state = {
+            limit = {
+                has_state_trait = state_trait_american_chestnuts
+                NOT = {
+                    has_building = building_logging_camp
+                }
+            }
+            create_building = {
+                level = 1
+                building = building_logging_camp
+            }
         }
     }
 

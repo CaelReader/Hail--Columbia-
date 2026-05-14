@@ -1,0 +1,43 @@
+﻿usfp_dp_mexican_cession = {
+    war_goal = usfp_mexican_cession
+
+    requires_interest_marker = no
+    allow_negotiated_peace = yes
+    add_infamy_for_starting_initiator_wargoals = no
+    initiator_can_add_war_goals = no
+
+    texture = "gfx/interface/icons/war_goals/usfp_mexican_cession.dds"
+
+    selectable_in_lens = {
+        c:USA ?= root
+        exists = c:MEX
+
+        NOR = {
+            has_state_in_state_region = STATE_CALIFORNIA
+            any_subject_or_below = {
+                has_state_in_state_region = STATE_CALIFORNIA
+            }
+            any_scope_state = {
+                is_in_geographic_region = geographic_region_mexico_old
+            }
+        }
+    }
+
+    possible = {
+        has_journal_entry = usfp_manifest_destiny_main
+        has_claim = s:STATE_CALIFORNIA
+        scope:target_country = c:MEX
+    }
+
+    ai_acceptance_max = 0
+
+    on_weekly_pulse = {}
+
+    on_war_begins = {
+        scope:target_country = {
+            set_variable = mexico_fought_cession
+        }
+    }
+
+    on_war_end = {}
+}

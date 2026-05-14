@@ -516,9 +516,9 @@ usfp_manifest_destiny.6 = {
 	}
 
 	cancellation_trigger = {
-		NOR = {
+		NOT = {
 			exists = c:MEX
-			has_war_with = c:MEX
+			# has_war_with = c:MEX
 		}
 	}
 
@@ -554,30 +554,30 @@ usfp_manifest_destiny.6 = {
 	}
 	
 	#Reject the treaty
-	option = {
-		name = usfp_manifest_destiny.6.b
-		create_incident = {
-			country = c:MEX
-			value = 4
-		}
-		ai_chance = {
-			base = 0
-		}
-	}
+	# option = {
+	# 	name = usfp_manifest_destiny.6.b
+	# 	create_incident = {
+	# 		country = c:MEX
+	# 		value = 4
+	# 	}
+	# 	ai_chance = {
+	# 		base = 0
+	# 	}
+	# }
 
 	#Take the northern part of Mexico too
 	option = {
 		name = usfp_manifest_destiny.6.c
 		trigger = {
 			usfp_manifest_destiny_greater_or_equal_trigger = { value = 5 }
-			custom_tooltip = {
-				text = controls_mexico_city
-				c:MEX = {
-					capital = {
-						controller = c:USA
-					}
-				}
-			}
+			# custom_tooltip = {
+			# 	text = controls_mexico_city
+			# 	c:MEX = {
+			# 		capital = {
+			# 			controller = c:USA
+			# 		}
+			# 	}
+			# }
 		}
 		every_diplomatic_play = {
 			limit = {
@@ -612,7 +612,7 @@ usfp_manifest_destiny.6 = {
 			value = 25
 		}
 		add_radicals = {
-			value = medium_radicals
+			value = large_radicals
 			culture = cu:mexican
 		}
 		usfp_anger_abolitionists_effect = { MULT = 1 }
@@ -628,13 +628,19 @@ usfp_manifest_destiny.6 = {
 		trigger = {
 			usfp_manifest_destiny_greater_or_equal_trigger = { value = 6 }
 			custom_tooltip = {
-				text = controls_mexico_city
-				c:MEX = {
-					capital = {
-						controller = c:USA
-					}
-				}
-			}
+                text = mexico_fought_cession
+                c:MEX = {
+                    has_variable = mexico_fought_cession
+                }
+            }
+            # custom_tooltip = {
+			# 	text = controls_mexico_city
+			# 	c:MEX = {
+			# 		capital = {
+			# 			controller = c:USA
+			# 		}
+			# 	}
+			# }
 		}
 		usfp_manifest_more_destiny_effect = yes
 		every_diplomatic_play = {
@@ -674,7 +680,7 @@ usfp_manifest_destiny.6 = {
 		}
 		usfp_anger_abolitionists_effect = { MULT = 1.5 }
 		add_radicals = {
-			value = large_radicals
+			value = very_large_radicals
 			culture = cu:mexican
 		}
 		highlighted_option = yes
@@ -715,14 +721,12 @@ usfp_manifest_destiny.6 = {
 		}
 		trigger = {
 			usfp_manifest_destiny_greater_or_equal_trigger = { value = 7 }
-			custom_tooltip = {
-				text = controls_mexico_city
-				c:MEX = {
-					capital = {
-						controller = c:USA
-					}
-				}
-			}
+            custom_tooltip = {
+                text = mexico_fought_cession
+                c:MEX = {
+                    has_variable = mexico_fought_cession
+                }
+            }
 		}
 		create_incident = {
 			country = c:MEX
@@ -738,7 +742,7 @@ usfp_manifest_destiny.6 = {
 		}
 		annex = c:MEX
 		add_radicals = {
-			value = very_large_radicals
+			value = huge_radicals
 			culture = cu:mexican
 		}
 		usfp_anger_abolitionists_effect = { MULT = 2 }

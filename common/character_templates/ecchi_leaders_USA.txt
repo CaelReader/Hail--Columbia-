@@ -158,6 +158,11 @@ ecchi_usa_polk_character_template = {
         latest_usage_date = 1849.6.15
         #guaranteed to spawn if possible
     }
+    on_created = {
+        set_career_length = {
+            years = 15
+        }
+    }
 }
 
 #Zachary Taylor already a general in game start

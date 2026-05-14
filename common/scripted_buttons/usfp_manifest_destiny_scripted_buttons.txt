@@ -54,7 +54,7 @@ usfp_western_purchase_button = {
 		# }
 
 		in_default = no
-		taking_loans = no
+		scaled_debt < 0.25
 		is_diplomatic_play_committed_participant = no
  		is_at_war = no
 		c:MEX = {
@@ -821,4 +821,59 @@ usfp_demand_bc_button = {
 	ai_chance = {
 		value = 25
 	}
+}
+
+usfp_ai_mexican_cession_button = {
+    name = "usfp_usfp_ai_mexican_cession_button"
+    desc = "usfp_usfp_ai_mexican_cession_button_desc"
+
+    visible = {
+        is_ai = yes
+        exists = c:MEX
+        has_claim = s:STATE_CALIFORNIA
+        NOR = {
+            has_state_in_state_region = STATE_CALIFORNIA
+            any_subject_or_below = {
+                has_state_in_state_region = STATE_CALIFORNIA
+            }
+            any_scope_state = {
+                is_in_geographic_region = geographic_region_mexico_old
+            }
+        }
+        c:MEX = {
+            has_state_in_state_region = STATE_CALIFORNIA
+        }
+    }
+
+    possible = {
+        ruler = {
+            usfp_manifest_destiny_pro_expansion_trigger = yes
+        }
+        is_diplomatic_play_committed_participant = no
+        c:MEX = {
+            is_diplomatic_play_committed_participant = no
+        }
+        NOT = {
+            has_truce_with = c:MEX
+        }
+    }
+
+    effect = {
+        create_diplomatic_play = {
+            type = usfp_dp_mexican_cession
+            target_country = c:MEX
+        }
+    }
+
+    ai_chance = {
+        value = 1
+        if = {
+            limit =  {
+                ruler = {
+                    usfp_manifest_destiny_pro_expansion_trigger = yes
+                }
+            }
+            add = 1000
+        }
+    }
 }

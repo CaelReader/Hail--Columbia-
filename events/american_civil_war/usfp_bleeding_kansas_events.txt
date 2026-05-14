@@ -598,7 +598,7 @@ usfp_bleeding_kansas.7 = {
 		scope:west_virginia_scope = {
 			add_radicals_in_state = {
 				pop_type = slaves
-				value = very_large_radicals
+				value = huge_radicals
 			}
 			add_modifier = {
 				name = usfp_slave_revolt
@@ -611,7 +611,7 @@ usfp_bleeding_kansas.7 = {
 		scope:virginia_scope = {
 			add_radicals_in_state = {
 				pop_type = slaves
-				value = very_large_radicals
+				value = huge_radicals
 			}
 			add_modifier = {
 				name = usfp_slave_revolt

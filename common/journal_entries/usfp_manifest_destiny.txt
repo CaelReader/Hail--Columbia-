@@ -58,6 +58,7 @@ usfp_manifest_destiny_main = {
 	scripted_button = usfp_cuban_purchase_button
 	scripted_button = usfp_claim_canada_button
 	scripted_button = usfp_secure_trail_button
+    scripted_button = usfp_ai_mexican_cession_button
 
 
 	complete = {
