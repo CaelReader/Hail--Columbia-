@@ -19,11 +19,21 @@
 					multiplier = 0.5
 				}
 			 }
+		} else_if = {
+            limit = {
+                is_ai = yes
+            }
+            scope:journal_entry = {
+                add_modifier = {
+                    name = usfp_panic_1837_modifier
+                    multiplier = 0.5
+                }
+            }
 		} else = {
-			scope:journal_entry = {
-				add_modifier = usfp_panic_1837_modifier
-			}
-		}
+            scope:journal_entry = {
+                add_modifier = usfp_panic_1837_modifier
+            }
+        }
 		set_variable = {
 			name = panic_1837_last_month_gdp
 			value = root.gdp

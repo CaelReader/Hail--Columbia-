@@ -451,7 +451,7 @@ texan_war_of_independence.2.d: "We do not wish to antagonize [SCOPE.sCountry('me
 texan_war_of_independence.2.d.t: "If [SCOPE.sCountry('texas_scope').GetName] remains independent, they will likely continue to ask for statehood."
 
 usfp_manifest_destiny.6.t: "Treaty of Guadalupe Hidalgo"
-usfp_manifest_destiny.6.d: "With the enemy army in tatters, [SCOPE.sCountry('mexico_scope').GetName] has been forced to come to terms. Now we must decide how far south this 'Manifest Destiny' should take us."
+usfp_manifest_destiny.6.d: "Unable to withstand our might, [SCOPE.sCountry('mexico_scope').GetName] has been forced to come to terms. Now we must decide how far south this 'Manifest Destiny' should take us."
 usfp_manifest_destiny.6.f: ""The United States of America and the United Mexican States animated by a sincere desire to put an end to the calamities of the war which unhappily exists between the two Republics and to establish Upon a solid basis relations of peace and friendship...""
 usfp_manifest_destiny.6.a: "Our original offer stands. We will simply force [SCOPE.sCountry('mexico_scope').GetName] to sell."
 usfp_manifest_destiny.6.b: "We have other plans for [SCOPE.sCountry('mexico_scope').GetName]."

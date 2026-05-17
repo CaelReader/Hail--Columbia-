@@ -96,19 +96,14 @@
         NOT = {
             any_scope_state = {
                 is_incorporated = yes
-                is_in_geographic_region = geographic_region_central_america
-                count > 2
+                is_in_geographic_region = geographic_region_caribbean_coast
+                count > 4
             }
         }
         NOT = {
             has_law_or_variant = law_type:law_council_republic
         }
         any_country_in_caribbean_coast = {
-            filter = {
-                capital = {
-                    is_in_geographic_region = geographic_region_caribbean_coast
-                }
-            }
             is_subject = no
             percent >= 0.50
         }
@@ -119,23 +114,15 @@
         NOT = {
             any_scope_state = {
                 is_incorporated = yes
-                is_in_geographic_region = geographic_region_central_america
-                count > 2
+                is_in_geographic_region = geographic_region_caribbean_coast
+                count > 4
             }
         }
         any_country_in_caribbean_coast = {
-            filter = {
-                capital = {
-                    is_in_geographic_region = geographic_region_caribbean_coast
-                }
-            }
             is_subject = no
             percent >= 0.50
         }
-        any_country = {
-            capital = {
-                is_in_geographic_region = geographic_region_caribbean_coast
-            }
+        any_country_in_caribbean_coast = {
             save_temporary_scope_as = check_country
             OR = {
                 custom_tooltip = {
@@ -155,9 +142,15 @@
             }
             OR = {
                 has_revolution = yes
-                country_turmoil >= 0.50
+                custom_tooltip = {
+                    text = turmoil_over_50
+                    country_turmoil >= 0.50
+                }
                 has_modifier = declared_bankruptcy
             }
+        }
+        ig:ig_industrialists ?= {
+            ig_counts_as_marginal = no
         }
         OR = {
             ig:ig_industrialists ?= {

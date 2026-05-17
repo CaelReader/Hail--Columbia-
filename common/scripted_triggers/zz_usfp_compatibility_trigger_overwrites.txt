@@ -72,3 +72,15 @@ REPLACE_OR_CREATE:usfp_has_republican_party = {
 REPLACE_OR_CREATE:usfp_has_constitutional_government = {
 	has_journal_entry = je_usfp_american_constitution
 }
+
+REPLACE:ideology_jingoist_leader_valid_trigger = {
+    OR = {
+        owner = {
+            usfp_country_is_american = yes
+        }
+        NOR = {
+            is_interest_group_type = ig_rural_folk
+            is_interest_group_type = ig_armed_forces
+        }
+    }
+}

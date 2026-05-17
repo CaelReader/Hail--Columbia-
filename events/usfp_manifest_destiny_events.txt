@@ -820,6 +820,7 @@ usfp_manifest_destiny.7 = {
 	flavor = usfp_manifest_destiny.7.f
 	dlc = dlc_usfp
 	duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
 
 	trigger = {
 		ig:ig_petty_bourgeoisie = {
@@ -828,6 +829,11 @@ usfp_manifest_destiny.7 = {
 			}
 		}
 		root.var:manifest_destiny_var >= 4
+        NOR = {
+            has_global_variable = american_frontier_closed
+            has_variable = manifest_destiny_decaying
+            owns_entire_state_region = STATE_CALIFORNIA
+        }
 	}
 
 	immediate = {

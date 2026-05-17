@@ -140,7 +140,7 @@ ecchi_usa_polk_character_template = {
     birth_date = 1795.11.2
     home_region = STATE_TENNESSEE
 	dna = ecchi_dna_james_k_polk
-    traits = { wrathful reckless ambitious usfp_trait_expansionist }
+    traits = { experienced_political_operator wrathful reckless ambitious usfp_trait_expansionist }
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:USA
@@ -148,10 +148,7 @@ ecchi_usa_polk_character_template = {
         }
         interest_group_trigger = {
             ig_counts_as_marginal = no
-			OR = {
-				is_interest_group_type = ig_rural_folk
-				is_interest_group_type = ig_landowners
-			}
+            is_interest_group_type = ig_rural_folk
             ig_hasnt_chosen_ideology_trigger = yes
         }
         earliest_usage_date = 1836.1.1

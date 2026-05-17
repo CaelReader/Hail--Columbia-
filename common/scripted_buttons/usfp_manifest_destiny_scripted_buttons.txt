@@ -843,6 +843,9 @@ usfp_ai_mexican_cession_button = {
         c:MEX = {
             has_state_in_state_region = STATE_CALIFORNIA
         }
+        any_neighbouring_state = {
+            owner = c:MEX
+        }
     }
 
     possible = {
@@ -856,6 +859,7 @@ usfp_ai_mexican_cession_button = {
         NOT = {
             has_truce_with = c:MEX
         }
+        in_election_campaign = no
     }
 
     effect = {

@@ -404,6 +404,7 @@ usfp_alaska_cost: "We will offer @money!#yellow [GetPlayer.MakeScope.ScriptValue
  establish_truce_with_latin_america: "We will establish a unilateral [concept_truce] with every country in [GetGeographicRegion('geographic_region_latin_america').GetName]"
  usa_released_all_latin_american_subjects: "Every [SCOPE.sCountry('usa_scope').GetAdjective] [concept_subject] in [GetGeographicRegion('geographic_region_latin_america').GetName] becomes independent"
  usa_has_investment_rights: "Has granted [concept_foreign_investment_rights] to [ROOT.GetCountry.GetName]"
+ turmoil_over_50: "Has 50% or higher [concept_turmoil]"
 
  je_usfp_philippine_tutelage: "Benevolent Assimilation"
  je_usfp_philippine_tutelage_reason: "The [TopScope.sC('usa_scope').GetName] has imposed its sovereignty over the [TopScope.sC('philippines_scope').GetName] with the stated goal of uplifting and civilizing its people, in order to prepare the islands for eventual self-governance and independence.\n\n@information! The Progress Bar tracks the implementation of English-language education across the islands. When it reaches 100%, the [TopScope.sC('philippines_scope').GetName] will gain the [GetAmendmentType('amendment_english_second_language').GetName] [concept_amendment]."

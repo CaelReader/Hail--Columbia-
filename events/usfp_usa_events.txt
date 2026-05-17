@@ -2034,7 +2034,20 @@ usfp_usa.23 = {
 				id = usfp_panics.1
 				months = 14
 			}
+            ig:ig_petty_bourgeoisie = {
+                add_modifier = {
+                    name = usfp_party_nominee_ig
+                    years = 1
+                }
+            }
 		}
+        if = {
+            limit = {
+                is_ai = yes
+            }
+            #to try and prevent ai debt-spiraling
+            add_treasury = 2000000
+        }
 	}
 
 
