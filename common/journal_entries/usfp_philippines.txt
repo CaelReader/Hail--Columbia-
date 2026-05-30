@@ -77,7 +77,7 @@
             custom_tooltip = {
                 text = progress_bar_complete
                 scope:journal_entry = {
-                    "scripted_bar_progress(usfp_philippine_english_progress_bar)" >= 300
+                    "scripted_bar_progress(usfp_philippine_english_progress_bar)" >= 5000
                 }
             }
             legitimacy >= 50

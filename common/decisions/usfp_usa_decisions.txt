@@ -266,3 +266,81 @@ dismantle_political_machines = {
         value = 1000
     }
 }
+
+expand_american_superculture_homeland = {
+    is_shown = {
+        country_has_primary_culture = cu:usfp_american
+        any_scope_state = {
+            state_region = {
+                OR = {
+                    is_homeland = cu:dixie
+                    is_homeland = cu:yankee
+                    is_homeland = cu:anglo_canadian
+                }
+                NOT = {
+                    is_homeland = cu:usfp_american
+                }
+            }
+        }
+    }
+
+    possible = {
+        any_scope_state = {
+            is_incorporated = yes
+            state_region = {
+                OR = {
+                    is_homeland = cu:dixie
+                    is_homeland = cu:yankee
+                    is_homeland = cu:anglo_canadian
+                }
+                NOT = {
+                    is_homeland = cu:usfp_american
+                }
+            }
+        }
+    }
+
+    when_taken = {
+        every_scope_state = {
+            limit = {
+                is_incorporated = yes
+                state_region = {
+                    OR = {
+                        is_homeland = cu:dixie
+                        is_homeland = cu:yankee
+                        is_homeland = cu:anglo_canadian
+                    }
+                    NOT = {
+                        is_homeland = cu:usfp_american
+                    }
+                }
+            }
+            state_region = {
+                remove_homeland = cu:dixie
+                remove_homeland = cu:yankee
+                remove_homeland = cu:anglo_canadian
+                add_homeland = cu:usfp_american
+            }
+            custom_tooltip = {
+                text = american_superculture_emerges
+                every_scope_pop = {
+                    limit = {
+                        OR = {
+                            culture = cu:dixie
+                            culture = cu:anglo_canadian
+                            culture = cu:yankee
+                        }
+                    }
+                    change_pop_culture = {
+                        target = cu:usfp_american
+                        value = 0.25
+                    }
+                }
+            }
+        }
+    }
+
+    ai_chance = {
+        value = 1000
+    }
+}

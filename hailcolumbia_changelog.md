@@ -944,3 +944,27 @@ James K Polk is now always a Rural Folk politician and is an Experienced Politic
 The Pro-Slavery and American Supremacist movements can now spawn Jingoists
 Jingoists can now spawn for the American Rural Folk or Armed Forces
 AI USA now suffers halved effects from the Hard Times JE
+
+# 8.4 "Roosevelt"
+Releasing the envoys in the Trent affair now increases CSA-GBR relations
+The Good Neighbor Policy can't be enacted while in a diplo play
+The Good Neighbor Policy now only considers Central American homelands to be central american
+Cuban Outrages can be unlocked by Political Agitation or War Propaganda
+Increased the Prominence of Roosevelt so that he will take precedence as IG Leader
+Reduced the Spoils System debuff from -25% to -20%
+President John Brown will no longer launch the Harpers Ferry raid
+Trade Unions led by a Social Democrat will eschew the Two Party System
+Other Social Democratic IGs will join a powerful SPA if it exists
+Eugene Debs is now Anti-Expansionist
+Long Reconstruction now adds both Popularity and Prominence of Afro-American characters
+Added missing states to the Pacific georegion
+Fixed the Benevolent Assimilation progress bar finishing too early
+Fixed some loc references to now-removed strategic regions
+
+# 8.5 "Roosevelt"
+Imminent Secession movement modifier now makes the pro-slavery movement actually grow to 100% activism very quickly
+Jefferson Davis is now a Southern Planter
+Mexican Cession DP no longer disappears if you place a colony in California
+Mexican Integration is now boosted by the Popularity and Prominence of Mexican characters, as well as Mexican leaders in government
+Added decision to expand American Superculture homelands into relevant states if acquired after the actual event
+Updated imminent secession tooltip explaining that it can be prevented by reducing the Southern Planters below 5% clout

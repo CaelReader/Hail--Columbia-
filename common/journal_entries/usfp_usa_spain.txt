@@ -34,7 +34,10 @@
 				}
 			}
 		}
-		has_technology_researched = political_agitation
+		OR = {
+            has_technology_researched = political_agitation
+            has_technology_researched = war_propaganda
+        }
 	}
 	
 	immediate = {

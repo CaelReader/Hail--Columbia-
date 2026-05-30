@@ -797,7 +797,7 @@ usfp_america_enters_world_stage_modifier = {
 
 usfp_spoils_system_decaying_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bureaucracy_negative.dds
-	country_bureaucracy_mult = -0.25
+	country_bureaucracy_mult = 1
 }
 
 usfp_apolitical_military_modifier = {

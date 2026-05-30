@@ -91,7 +91,7 @@ usfp_a_house_divided.15.f: ""This new party will fitly designate those who had u
 usfp_a_house_divided.15.a: "A new political era."
 usfp_a_house_divided.15.a.tt: "The [SCOPE.sParty('whig_scope').GetName] will now be known as the Republican Party."
  abolitionists_can_become_leaders: "[GetIdeology('ideology_abolitionist').GetName] [Concept('concept_politician', '$concept_politicians$')] can now become [Concept('concept_leader', '$concept_leaders$')]"
- pro_slavery_movement_abolitionist_leader_warning: "@warning! If an [GetIdeology('ideology_abolitionist').GetName] becomes [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')], the $movement_pro_slavery$ will immediately launch a [concept_secession]!"
+ pro_slavery_movement_abolitionist_leader_warning: "@warning! If an [GetIdeology('ideology_abolitionist').GetName] becomes [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')], the $movement_pro_slavery$ will immediately launch a [concept_secession]! #italic (Unless the [GetInterestGroupVariant('ig_landowners',GetPlayer).GetName] are reduced below 5% [concept_clout] ) #!"
 
 usfp_a_house_divided.16.t: "Dred Scott v. Sandford"
 usfp_a_house_divided.16.d: "The [concept_usfp_supreme_court] has handed down a landmark decision over the case of an [SCOPE.sCulture('afro_american_scope').GetName] man suing for his freedom. The court has ruled that the Constitution extends no rights to any [SCOPE.sCulture('afro_american_scope').GetName], free or slave, and further that [concept_usfp_congress] has no power to restrict [GetLawType('law_slave_trade').GetGroup.GetName] in the territories."
@@ -827,7 +827,7 @@ usfp_usa.24.f: ""Will eating chestnuts by crackling log fires become one of the 
 usfp_usa.24.a: "We will mourn the loss of these perfect trees."
 
 usfp_usa.25.t: "Boll Weevil Infestation"
-usfp_usa.25.d: "A plague of cotton-eating beetles has swept through [GetStrategicRegion('region_dixie').GetName], destroying the harvest of $building_cotton_plantation$ across the entire region. Desperate plantation owners have deployed all sorts of pesticides to try and save their crops, to no avail."
+usfp_usa.25.d: "A plague of cotton-eating beetles has swept through [GetGeographicRegion('geographic_region_dixie_old').GetName], destroying the harvest of $building_cotton_plantation$ across the entire region. Desperate plantation owners have deployed all sorts of pesticides to try and save their crops, to no avail."
 usfp_usa.25.f: ""The cotton came up and started to growin’, but before the middle of May I looks down one day and see the boll weevil settin’ up in the top of those little cotton stalks, waitin’ for the squares to form. So all that guano we hauled and put down made nothing but a crop of boll weevils."" #Always Agin It. John L. Dove, interviewer; J. Thomas Metz, interviewee, Chapin, South Carolina, January 24, 1939. American Life Histories: Manuscripts from the Federal Writers’ Project, 1936 to 1940. Manuscript Division
 usfp_usa.25.a: "Will the cotton industry ever recover?"
 
@@ -916,7 +916,7 @@ usfp_usa_election.1.c: "Perhaps [SCOPE.gsInterestGroup('female_ig').GetLeader.Ge
 
 usfp_usa_election.2.t: "A [SCOPE.gsInterestGroup('nonwhite_ig').GetLeader.GetCulture.GetName] in the White House?"
 usfp_usa_election.2.d: "The [ROOT.GetCountry.GetAdjective] public has balked at the [SCOPE.sParty('nonwhite_party').GetName]'s decision to run a [SCOPE.gsInterestGroup('nonwhite_ig').GetLeader.GetCulture.GetName] candidate for election."
-usfp_usa_election.2.f: ""The [SCOPE.sParty('nonwhite_party').GetNameNoFormatting] must take us for fools. They would place a [SCOPE.gsInterestGroup('nonwhite_ig').GetLeader.GetCulture.GetNameNoFormatting] in the highest office of our white christian country? It's an insult to all American decency.""
+usfp_usa_election.2.f: ""The [SCOPE.sParty('nonwhite_party').GetNameNoFormatting] must take us for fools. They would place a [SCOPE.gsInterestGroup('nonwhite_ig').GetLeader.GetCulture.GetNameNoFormatting] in the highest office of our white Christian country? It's an insult to all American decency.""
 usfp_usa_election.2.a: "The president should reflect the majority."
 usfp_usa_election.2.b: "A [SCOPE.gsInterestGroup('nonwhite_ig').GetLeader.GetCulture.GetName] is an American just like any other citizen!"
 usfp_usa_election.2.c: "Judge not by the color of one's skin!"
@@ -1924,7 +1924,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
 
  usfp_philippines.7.t: "The Independence of the Philippines"
  usfp_philippines.7.d: "Our policy of Benevolent Assimilation has finally borne fruit. Our civilizing influence on the [SCOPE.sCountry('philippines_scope').GetName] has elevated their entire society, and brought them into such a condition that they are now capable of self-government."
- usfp_philippines.7.f: "The treaty is signed, and the dignitaries shake hands. The flag of a free Philippines is raised once again. [SCOPE.sCountry('philippines_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('philippines_scope').GetRuler.GetLastNameNoFormatting] steps forward and gives a statement. [SCOPE.sCountry('philippines_scope').GetRuler.GetHerHis] words will set the tone of the new country's relationship with the United States going forward."
+ usfp_philippines.7.f: "The treaty is signed, and the dignitaries shake hands. The flag of a free Philippines is raised once again. [SCOPE.sCountry('philippines_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('philippines_scope').GetRuler.GetLastNameNoFormatting] steps forward and gives a statement. [SCOPE.sCountry('philippines_scope').GetRuler.GetHerHis|U] words will set the tone of the new country's relationship with the United States going forward."
  usfp_philippines.7.a: "The new Philippines is an example to the world."
 
  usfp_philippines.8.t: "The Independence of the Philippines"

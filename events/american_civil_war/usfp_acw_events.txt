@@ -146,6 +146,12 @@ usfp_acw.2 = {
 	option = {
 		name = usfp_acw.2.a
 		default_option = yes
+        c:CSA = {
+            change_relations = {
+                country = c:GBR
+                value = 20
+            }
+        }
 	}
 	#no!
 	option = {

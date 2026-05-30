@@ -100,6 +100,7 @@ REPLACE_OR_CREATE:agitator_eugene_debs = {
 		demagogue
 		charismatic
 		honorable
+        usfp_trait_antiexpansionist
 	}
 	agitator_usage = {
 		country_trigger = {

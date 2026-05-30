@@ -423,6 +423,8 @@ usfp_bleeding_kansas.6 = {
 	trigger = {
 		any_scope_character = {
 			has_template = usa_john_brown_character_template
+            has_role_of_type = agitator
+            is_ruler_of_own_country = no
 		}
 		OR = {
 			AND = {
@@ -540,6 +542,8 @@ usfp_bleeding_kansas.7 = {
 	trigger = {
 		any_scope_character = {
             has_template = usa_john_brown_character_template
+            has_role_of_type = agitator
+            is_ruler_of_own_country = no
 		}
 		OR = {
 			AND = {

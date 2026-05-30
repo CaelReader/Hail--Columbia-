@@ -25,6 +25,7 @@
             }
         }
         usfp_manifest_destiny_less_or_equal_trigger = {value = 10}
+        is_diplomatic_play_committed_participant = no
     }
 
     effect = {
@@ -73,6 +74,9 @@
                     is_treaty_port = no
                     NOT = {
                         has_building = building_panama_canal
+                    }
+                    state_region = {
+                        is_homeland = cu:central_american
                     }
                 }
             }

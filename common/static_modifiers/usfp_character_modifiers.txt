@@ -120,3 +120,8 @@ usfp_white_house_guest_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
     character_popularity_add = 15
 }
+
+usfp_great_triumvirate = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    character_prominence_add = 15
+}

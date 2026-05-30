@@ -125,6 +125,24 @@ geographic_region_pacific = {
         STATE_FORMOSA
         STATE_GUANGDONG
         STATE_SHAOZHOU
+
+        STATE_BAJA_CALIFORNIA
+        STATE_SONORA
+        STATE_SINALOA
+        STATE_JALISCO
+        STATE_GUERRERO
+        STATE_OAXACA
+        STATE_MEXICO
+        STATE_CHIAPAS
+        STATE_GUATEMALA
+        STATE_SAN_SALVADOR
+        STATE_HONDURAS
+        STATE_NICARAGUA
+        STATE_COSTA_RICA
+        STATE_PANAMA
+        STATE_ANTIOQUIA
+        STATE_CUNDINAMARCA
+        STATE_CAUCA
     }
 }
 

@@ -316,6 +316,7 @@ usa_roosevelt_character_template = {
     dna = dna_roosevelt
 	ig_leader = yes
     traits = {
+        basic_political_operator
         charismatic
         firebrand
         celebrity_commander
@@ -636,9 +637,12 @@ csa_jefferson_davis_template = {
     female = no
     religion = protestant
     ideology = ideology_slaver
-    interest_group = ig_armed_forces
+    interest_group = ig_landowners
     birth_date = 1808.6.3
-    home_region = STATE_MISSISSIPI
+    home_region = STATE_MISSISSIPPI
+    role = character_role_magnate
+    role = character_role_politician
+    holding_type = building_manor_house
     traits = {
         celebrity_commander
         explorer
@@ -656,10 +660,7 @@ csa_jefferson_davis_template = {
         }
         interest_group_trigger = {
             ig_counts_as_marginal = no
-            OR = {
-                is_interest_group_type = ig_armed_forces
-                is_interest_group_type = ig_landowners
-            }
+            is_interest_group_type = ig_landowners
             NOR = {
 				has_variable = communist_ig_var
 				has_variable = chose_vanguardism
@@ -874,7 +875,7 @@ usa_admiral_biddle = {
     interest_group = ig_armed_forces
     ideology = ideology_moderate
     commander_rank = default
-    home_region = STATE_PHILADELPHIA
+    home_region = STATE_PENNSYLVANIA
     traits = {
         basic_diplomat
         tactful

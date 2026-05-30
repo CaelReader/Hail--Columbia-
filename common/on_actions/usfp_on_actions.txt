@@ -1184,6 +1184,7 @@ usfp_spoils_system_action = {
 			 add_modifier = {
 				name = usfp_spoils_system_decaying_modifier
 				years = 2
+                 multiplier = root.modifier:country_usfp_spoil_system_on_reform_modifier
 				is_decaying = yes
 			 }
             post_notification = usfp_spoils_system_notification

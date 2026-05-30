@@ -1,0 +1,10 @@
+﻿COUNTRIES = {
+	c:NVJ ?= {
+		effect_starting_technology_tier_6_tech = yes
+
+
+        usfp_starting_native_laws_effect = yes
+
+		effect_native_conscription_11 = yes
+	}
+}

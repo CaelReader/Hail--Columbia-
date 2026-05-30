@@ -1555,3 +1555,37 @@ usfp_mark_hanna = {
         #guaranteed to spawn if possible
     }
 }
+
+#Django Freeman, easter egg
+usfp_django = {
+    first_name = Django
+    last_name = Freeman
+    # dna =
+    home_region = STATE_SOUTH_CAROLINA
+    # historical = yes
+    birth_date = 1830.12.13
+    culture = cu:afro_american
+    religion = rel:protestant
+    female = no
+    interest_group = ig_armed_forces
+    ideology = ideology_usfp_abolitionist_radical
+    traits = {
+        social_bandit
+        charismatic
+        persistent
+    }
+    agitator_usage = {
+        country_trigger = {
+            c:USA ?= this
+            NOT = {
+                has_law_or_variant = law_type:law_slavery_banned
+            }
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1858.1.1
+        latest_usage_date = 1860.1.1
+        chance = 1
+    }
+}

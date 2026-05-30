@@ -176,6 +176,44 @@ usfp_democratic_party = {
 				desc = "from_communism"
 			}
 		}
+        # SocDem TUs also oppose the main parties
+        if = {
+            limit = {
+                is_interest_group_type = ig_trade_unions
+                leader ?= {
+                    has_ideology = ideology:ideology_social_democrat
+                }
+            }
+            add = {
+                value = -200
+                desc = "from_communism"
+            }
+        }
+        #Other SocDems will join the SPA if it's viable
+        if = {
+            limit = {
+                NOT = {
+                    is_interest_group_type = ig_trade_unions
+                }
+                leader ?= {
+                    has_ideology = ideology:ideology_social_democrat
+                }
+                owner = {
+                    any_active_party = {
+                        is_party_type = social_democrat_party
+                    }
+                    py:social_democrat_party ?= {
+                        any_member = {
+                            is_powerful = yes
+                        }
+                    }
+                }
+            }
+            add = {
+                value = -200
+                desc = "party_socialist_party_of_america"
+            }
+        }
 		#powerful RF might split off and form the People's Party if the Dems are Industrialist
 		if = {
 			limit = {

@@ -743,8 +743,8 @@ usfp_banana_wars.6 = {
         name = usfp_banana_wars.6.a
         default_option = yes
         scope:smedley_butler_scope = {
-            add_character_role = agitator
             set_interest_group = root.ig:ig_trade_unions
+            add_character_role = agitator
             if = {
                 limit = {
                     has_role_of_type = general
@@ -972,6 +972,9 @@ usfp_banana_wars.8 = {
                 NOT = {
                     has_building = building_panama_canal
                 }
+                state_region = {
+                    is_homeland = cu:central_american
+                }
             }
             position = 0
             order_by = gdp
@@ -1009,6 +1012,9 @@ usfp_banana_wars.8 = {
                     is_in_geographic_region = geographic_region_central_america_old
                     NOT = {
                         has_building = building_panama_canal
+                    }
+                    state_region = {
+                        is_homeland = cu:central_american
                     }
                 }
                 set_state_owner = c:UCA
@@ -1058,6 +1064,9 @@ usfp_banana_wars.8 = {
                     is_in_geographic_region = geographic_region_central_america_old
                     NOT = {
                         has_building = building_panama_canal
+                    }
+                    state_region = {
+                        is_homeland = cu:central_american
                     }
                 }
                 set_state_owner = c:UCA

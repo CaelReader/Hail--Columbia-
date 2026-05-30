@@ -377,6 +377,7 @@ usfp_long_reconstruction_get_afro_american_popularity = {
 				culture = cu:afro_american
 			}
 			add = popularity
+            add = prominence
 		}
 	}
 	divide = 10
