@@ -27,7 +27,7 @@
         has_journal_entry = usfp_manifest_destiny_main
         has_claim = s:STATE_CALIFORNIA
         scope:target_country = c:MEX
-        scope:target_coutry = {
+        scope:target_country = {
             has_state_in_state_region = STATE_CALIFORNIA
         }
     }
