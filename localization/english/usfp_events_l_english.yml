@@ -271,6 +271,7 @@ usfp_acw.9.d: "With the victory of the [SCOPE.sCountry('acw_secession_country').
 usfp_acw.9.f: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting] watched the lowering of the Stars and Stripes solemnly. Some of those stars will have to be removed now, [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting] thought, and perhaps next year another star, then another. The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] could see only dark clouds ahead for the nation."
 usfp_acw.9.a: "The [SCOPE.sCountry('acw_secession_country').GetName] cannot be allowed to exist."
 usfp_acw.9.b: "The Union requires a firm hand to guide it through this catastrophe."
+ usfp_acw.9.c: "The Union is dead. Long live Dixie."
 
 usfp_acw.10.t: "Heroes of the Republic"
 usfp_acw.10.d: "Our armies have returned home from the Civil War to great celebration and triumph. In the wake of their victory, many of our valiant officers and commanders have risen to new political prominence."

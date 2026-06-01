@@ -307,8 +307,48 @@
  usfp_agenda_completed_jackson_modifier: "Legacy of Jackson" #NT!
  usfp_celebrated_commander_modifier: "Celebrated Commander" #NT!
  usfp_spoils_system_decaying_modifier: "Patronage Appointments" #NT!
-country_usfp_spoil_system_on_reform_modifier: "Bureaucracy Loss on Government Reform"
-country_usfp_spoil_system_on_reform_modifier_desc: "Upon [concept_government_reform], suffer a decaying [concept_bureaucracy] [concept_modifier] for 2 years"
+ country_usfp_spoil_system_on_reform_modifier: "Bureaucracy Loss on Government Reform" #NT!
+ country_usfp_spoil_system_on_reform_modifier_desc: "Upon [concept_government_reform], suffer a decaying [concept_bureaucracy] [concept_modifier] for 2 years" #NT!
  country_usfp_gag_rule_block_modifier: "Cannot Enact Slavery Laws" #NT!
  country_usfp_gag_rule_block_modifier_desc: "[GetLawType('law_slave_trade').GetGroup.GetName] [Concept('concept_law', '$concept_laws$')] can't be [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enacted$')]" #NT!
  usfp_apolitical_military_modifier: "Apolitical Military" #NT!
+ country_enactment_success_chance_law_no_colonial_affairs_add: "[concept_enactment_success] chance for [GetLawType('law_no_colonial_affairs').GetName]" #NT!
+ country_enactment_success_chance_law_no_colonial_affairs_add_desc: "A flat percentage point increase to the likelihood of enacting the specific law" #NT!
+ country_enactment_success_chance_law_multicultural_add: "[concept_enactment_success] chance for [GetLawType('law_multicultural').GetName]" #NT!
+ country_enactment_success_chance_law_multicultural_add_desc: "A flat percentage point increase to the likelihood of enacting the specific law" #NT!
+ usfp_federal_lands_opened_modifier: "Extraction Permitted" #NT!
+ usfp_banana_wars_score_modifier: "Economic Incentives" #NT!
+ usfp_banana_wars_state_modifier: "American Overseers" #NT!
+ usfp_strenuous_life_modifier: "The Strenuous Life" #NT!
+ usfp_roosevelt_shot_speech_modifier: "Gave Speech After Being Shot" #NT!
+ usfp_racial_controversy_modifier: "Racial Controversy" #NT!
+ usfp_white_house_guest_modifier: "White House Guest" #NT!
+ usfp_roosevelt_domestic_agenda_modifier: "Path to Liberty" #NT!
+ usfp_roosevelt_big_stick_agenda_modifier: "The New Diplomacy" #NT!
+ usfp_roosevelt_biggest_stick_modifier: "The Biggest Stick" #NT!
+ usfp_banana_wars_colony_modifier: "Colonial Territory" #NT!
+ usfp_banana_wars_capitalist_interference_modifier: "Private Interference" #NT!
+ usfp_rejected_banana_wars_ig_modifier: "Refused Caribbean Interventions" #NT!
+ usfp_industrialists_displeased_banana_wars_ig_modifier: "Blocked Exploitation" #NT!
+ usfp_industrialists_banana_empire_ig_modifier: "Banana Imperialism" #NT!
+ usfp_marines_crackdown_modifier: "American Crackdown" #NT!
+ usfp_war_is_a_racket_modifier: "War is a Racket" #NT!
+ usfp_post_acw_naval_advisors_modifier: "American Naval Advisors" #NT!
+ usfp_navy_catchup_modifier: "Self-Strengthening the Navy" #NT!
+ usfp_new_navy_small_ships_modifier: "New Cruiser Designs" #NT!
+ usfp_new_navy_big_ships_modifier: "New Battleship Designs" #NT!
+ usfp_new_navy_diplo_fleet_complete_modifier: "Great White Fleet" #NT!
+ usfp_new_navy_capital_fleet_complete_modifier: "The Big Stick" #NT!
+ usfp_tribal_state_rule_modifier: "Tribal Authorities" #NT!
+ usfp_concentration_camps_modifier: "Reconcentrados" #NT!
+ usfp_blocked_armed_forced_activities_ig_modifier: "Restrained Troops" #NT!
+ usfp_philippine_revolt_modifier: "Independence Movement" #NT!
+ usfp_imminent_revolution_modifier: "Imminent Revolution" #NT!
+ usfp_philippines_military_government_modifier: "Military Government" #NT!
+ usfp_rejected_philippine_tutelage_ig_modifier: "Rejected Benevolent Assimilation" #NT!
+ usfp_seditious_dramas_movement_modifier: "Seditious Dramas" #NT!
+ usfp_artistic_crackdown_modifier: "Artistic Censorship" #NT!
+ usfp_thomasite_educators_modifier: "Thomasite Educators" #NT!
+ usfp_supreme_court_showdown_modifier: "Judicial Showdown" #NT!
+ usfp_fought_lochner_rulings_modifier: "Fought for Labor Rights" #NT!
+ usfp_fought_lochner_rulings_positive_modifier: "Fought for Labor Rights" #NT!

@@ -79,6 +79,7 @@
  acw_followup_events.4.c: "We shall build up a land of free men and free women and freedom!" #NT!
  acw_followup_events.4.ctt: "Enables the $decree_usfp_radical_land_distribution$ [concept_decree], allowing the wholesale redistribution of plantations to the Freedmen. If the decree is kept on a state for 4 years, its plantation economy will be permanently broken, removing the #yellow Deep South#! or #yellow Upper South#! state modifiers and progressing Reconstruction in favor of the #bold Freedmen#!. #red Using this decree will radicalize the South and cost significant Northern Political Will!" #NT!
  acw_followup_events.4.c_trigger: "Has not already unlocked the $decree_usfp_radical_land_distribution$ [concept_decree]" #NT!
+ radical_abolitionist_government: "An [concept_interest_group] [concept_in_government] has a [GetIdeology('ideology_usfp_abolitionist_radical').GetName] or [GetIdeology('ideology_humanitarian').GetName] [concept_leader]" #NT!
  acw_followup_events.5.t: "Supremacist Violence in [SCOPE.sState('supremacist_violence_state').GetName]" #NT!
  acw_followup_events.5.d: "Przemoc między białymi buntownikami i czarnymi wyzwoleńcami jest źródłem znacznych napięć w obszarze administracyjnym [SCOPE.sState('supremacist_violence_state').GetName]."
  acw_followup_events.5.f: "– Buntownicy bezlitośnie tratowali, kopali i bili innych ludzi. Ulicami popłynęła krew niewinnych. Gdy ataki stały się tak zajadłe, że nie było już czasu na przeładowywanie broni, na ziemię zaczęły upadać rewolwery z opróżnionymi magazynkami. Dopiero gdy ogłoszono stan wojenny i zjawili się żołnierze, zrobiło się względnie spokojnie."
@@ -114,3 +115,6 @@
  SLS_ADJ: "Flathead" #NT!
   
  country_voting_power_from_literacy_add: "[concept_political_strength] from Literate Pops’ Votes" #NT!
+  
+ amendment_american_second_amendment: "Right to Bear Arms" #NT!
+ amendment_american_second_amendment_desc: "„Dobrze uregulowana milicja jest niezbędna dla bezpieczeństwa Wolnego Państwa, a prawo ludu do posiadania i noszenia broni nie może być naruszane”."

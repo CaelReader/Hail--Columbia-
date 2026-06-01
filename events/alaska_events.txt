@@ -159,6 +159,19 @@ alaska.2 = {
 					is_subject_of = scope:alaska_seller
 				}
 			}
+            scope:alaska_seller = {
+                c:ALK.owning_company ?= {
+                    if = {
+                        limit = {
+                            is_company_type = company_type:company_russian_american_company
+                        }
+                        remove_owned_country = c:ALK
+                        owner ?= {
+                            remove_company = prev.type
+                        }
+                    }
+                }
+            }
 			scope:alaska_buyer = {
 				annex = c:ALK
 			}
@@ -175,7 +188,7 @@ alaska.2 = {
 					}
 				}
 			state_region = {
-						remove_claim = root
+                remove_claim = root
 				add_claim = scope:alaska_buyer
 			}
 				set_state_owner = scope:alaska_buyer

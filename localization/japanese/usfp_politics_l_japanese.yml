@@ -9,6 +9,9 @@
  ig_big_men_desc: "So-called 'Big Men' have gathered informal power around themselves through control of property and patronage. They generally seek to entrench their influence in a manner reminiscent of feudal systems." #NT!
   
  western_aristocrats: "Successful Homesteaders" #NT!
+ georgism_promoted: "Georgism Promoted" #NT!
+ promoted_social_darwinism: "Social Darwinism Promoted" #NT!
+ tolerant_religious_speech_laws: "Tolerant Religious or Speech Law" #NT!
   
  ai_strategy_anti_slavery_agenda: "Emancipation Legislation" #NT!
  ai_strategy_anti_slavery_agenda_desc: "[COUNTRY.GetName] is ready to begin the process of legislatively abolishing slavery. The house will cease to be divided - one way or another." #NT!
@@ -21,6 +24,8 @@
   
  dismantle_jim_crow: "Dismantle Jim Crow" #NT!
  dismantle_jim_crow_desc: "The governments of the South have enforced racial terror on their citizens for far too long. It is time that these Jim Crow laws be nullified." #NT!
+ dismantle_political_machines: "Dismantle Political Machines" #NT!
+ dismantle_political_machines_desc: "The Political Machines are a relic of a bygone era. Their existence is no longer tenable." #NT!
   
  negotiate_mexican_border: "Negotiate Mexican Border" #NT!
  negotiate_mexican_border_desc: "Our previous border treaties with Mexico were ill-defined and ignorant of the geography of the west. It is clear now that the Rio Grande is the most natural boundary between our two nations." #NT!
@@ -65,6 +70,9 @@
  law_usfp_tribal_land_ownership_desc: "Land usage rights are held in common, with the community organizing cultivation as needed to feed its members." #NT!
  law_usfp_devolved_taxation: "Devolved Taxation" #NT!
  law_usfp_devolved_taxation_desc: "Taxation is largely performed by state governments in the form of property taxes, with the federal government levying excise taxes when needed." #NT!
+ law_usfp_tribal_identity: "Tribal Identity" #NT!
+ law_usfp_tribal_identity_desc: "The polity organizes itself around tribal groupings formed through networks of kinship. Other cultures are largely left to their own devices within their own communities." #NT!
+ EFFECTS_ON_ACCEPTANCE_law_usfp_tribal_identity: "#tooltippable #tooltip:$BREAKDOWN_TAG$ Low Acceptance status Pops face moderate penalties, but more accepted Pops receive few benefits#!#!" #NT!
   
  treaty_name_dancing_rabbit_creek: "Treaty of Dancing Rabbit Creek" #NT!
  treaty_name_country_adj_country_adj_commercial_treaty: "[SECOND_COUNTRY.GetAdjectiveNoFormatting]-[FIRST_COUNTRY.GetAdjectiveNoFormatting] Commercial Treaty" #NT!
@@ -85,6 +93,7 @@
  amendment_usfp_spoils_system: "Spoils System" #NT!
  amendment_usfp_spoils_system_desc: "Government offices are doled out as rewards for political supporters, causing a reshuffle of the civil service whenever a new party takes power." #NT!
  spoils_system_can_be_abolished_tt: "[ROOT.GetCountry.GetName] has suffered the effects of the Spoils System enough times (currently [ROOT.GetCountry.MakeScope.Var('usfp_spoils_system_abolish_var').GetValue|v0]/#v 5#!)" #NT!
+ spoils_system_warning: "@warning! The Spoils System will temporarily reduce our [concept_bureaucracy] every time we [Concept('concept_government_reform','$concept_government_reform_short$')] our [concept_government]!" #NT!
  amendment_usfp_bill_of_rights: "Bill of Rights" #NT!
  amendment_usfp_bill_of_rights_desc: "On paper, the Constitution protects the citizens' right to free speech, making censorship efforts more difficult though not impossible." #NT!
  amendment_usfp_seperate_but_equal: "Separate but Equal" #NT!
@@ -98,3 +107,25 @@
  doesnt_have_gag_rule: "Does #bold not#! have the Gag Rule [concept_amendment]" #NT!
  amendment_usfp_radical_land_redistribution: "40 Acres and a Mule" #NT!
  amendment_usfp_radical_land_redistribution_desc: "The lands of former slavers are seized by the state and made available to be redistributed to freedmen." #NT!
+ amendment_usfp_indian_removal_act: "Indian Removal Act" #NT!
+ amendment_usfp_indian_removal_act_desc: "The Federal Government is to 'exchange' Indian lands in the east for lands west of the Mississippi, where the Indians are to be relocated." #NT!
+ amendment_usfp_african_colonial_acceptance: "Colonial Identity" #NT!
+ amendment_usfp_african_colonial_acceptance_desc: "The ruling class sets themselves apart from the non-westernized African population by maintaining the customs of their original colonial overlords." #NT!
+ amendment_usfp_anti_latino_bias: "Anti-Latino Discrimination" #NT!
+ amendment_usfp_anti_latino_bias_desc: "Regardless of their European heritage, people from Latin America are generally considered to be a population of mixed-blood, non-white Catholics undeserving of respect." #NT!
+ amendment_usfp_right_to_contract: "Right to Contract" #NT!
+ amendment_usfp_right_to_contract_desc: "The reach of labor regulations is legally restricted, on the grounds that they violate a workers' 'right to contract' with an employer." #NT!
+ amendment_usfp_limited_migration_controls: "Limited Migration Controls" #NT!
+ amendment_usfp_limited_migration_controls_desc: "Peoples considered particularly foreign are barred from immigration." #NT!
+ amendment_usfp_chinese_exclusion: "Chinese Exclusion" #NT!
+ amendment_usfp_chinese_exclusion_desc: "People of Chinese descent are blocked from citizenship and subject to deportation." #NT!
+ amendment_english_second_language: "English Second Language" #NT!
+ amendment_english_second_language_desc: "Much of literate society has learned English alongside their mother tongue, though not without some linguistic drift. Specialized subjects such as science and technology are almost exclusively conducted in English, enabling easier access to foreign expertise." #NT!
+ amendment_usfp_philippine_assembly: "Philippine Assembly" #NT!
+ amendment_usfp_philippine_assembly_desc: "A lower house of elected delegates shares power with an upper house of appointed commissioners." #NT!
+  
+ usfp_dp_mexican_cession: "Mexican Cession" #NT!
+ war_goal_usfp_mexican_cession_type_name: "Mexican Cession" #NT!
+ war_goal_usfp_mexican_cession_type_desc: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],treaty_of_guadalupe_tooltip Enforce our Manifest Destiny#! upon Mexico." #NT!
+ war_goal_usfp_mexican_cession: "Mexican Cession" #NT!
+ war_goal_usfp_mexican_cession_desc: "[WAR_GOAL_DRAFT.GetHolder.GetName] #tooltippable;tooltip:[GetPlayer.GetTooltipTag],treaty_of_guadalupe_tooltip enforces its Manifest Destiny#! upon [WAR_GOAL_DRAFT.GetTarget.GetName]" #NT!

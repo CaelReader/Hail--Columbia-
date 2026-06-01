@@ -841,7 +841,45 @@ usfp_acw.9 = {
 			base = 10
 		}
 	}
-
+    #Slaver: become CSA
+    option = {
+        name = usfp_acw.9.c
+        highlighted_option = yes
+        trigger = {
+            NOT = {
+                has_law_or_variant = law_type:law_slavery_banned
+            }
+            exists = c:FSA
+            country_has_primary_culture = cu:dixie
+        }
+        change_tag = CSA
+        usfp_entrench_slavery_effect = yes
+        change_relations = {
+            country = scope:acw_secession_country
+            value = -100
+        }
+        add_modifier = {
+            name = usfp_secession_legimitized
+            is_decaying = yes
+            years = 50
+        }
+        create_diplomatic_pact = {
+            country = scope:acw_secession_country
+            type = rivalry
+        }
+        add_modifier = {
+            name = usfp_secession_legimitized
+            is_decaying = yes
+            years = 20
+        }
+        add_modifier = {
+            name = usfp_slave_power_modifier
+            years = 20
+        }
+        ai_chance = {
+            base = 100
+        }
+    }
 }
 #Post-ACW Armed Forces Boost
 usfp_acw.10 = {

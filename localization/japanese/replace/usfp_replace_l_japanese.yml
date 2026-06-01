@@ -79,6 +79,7 @@
  acw_followup_events.4.c: "We shall build up a land of free men and free women and freedom!" #NT!
  acw_followup_events.4.ctt: "Enables the $decree_usfp_radical_land_distribution$ [concept_decree], allowing the wholesale redistribution of plantations to the Freedmen. If the decree is kept on a state for 4 years, its plantation economy will be permanently broken, removing the #yellow Deep South#! or #yellow Upper South#! state modifiers and progressing Reconstruction in favor of the #bold Freedmen#!. #red Using this decree will radicalize the South and cost significant Northern Political Will!" #NT!
  acw_followup_events.4.c_trigger: "Has not already unlocked the $decree_usfp_radical_land_distribution$ [concept_decree]" #NT!
+ radical_abolitionist_government: "An [concept_interest_group] [concept_in_government] has a [GetIdeology('ideology_usfp_abolitionist_radical').GetName] or [GetIdeology('ideology_humanitarian').GetName] [concept_leader]" #NT!
  acw_followup_events.5.t: "Supremacist Violence in [SCOPE.sState('supremacist_violence_state').GetName]" #NT!
  acw_followup_events.5.d: "白人暴徒と黒人解放奴隷が起こした暴力沙汰で、[SCOPE.sState('supremacist_violence_state').GetName]が極度の緊張状態に陥っている。"
  acw_followup_events.5.f: "「無慈悲な暴徒たちが踏みつけ、蹴り飛ばし、こん棒で殴る。通りは無実の人々が流した血で赤く染まっていた。攻撃の激化によって再装填する余裕もなくなったのか、弾を撃ち尽くしたリボルバーが地面に転がっていた。ここに来てようやく戒厳令が敷かれ、あたかも秩序の再来を告げるかのように軍隊の行進が始まったのだ」"
@@ -114,3 +115,6 @@
  SLS_ADJ: "Flathead" #NT!
   
  country_voting_power_from_literacy_add: "[concept_political_strength] from Literate Pops’ Votes" #NT!
+  
+ amendment_american_second_amendment: "Right to Bear Arms" #NT!
+ amendment_american_second_amendment_desc: "「規律ある民兵は、自由な国家の安全にとって必要であるため、人民が武器を保持し、また携帯する権利は、これを犯してはならない」"

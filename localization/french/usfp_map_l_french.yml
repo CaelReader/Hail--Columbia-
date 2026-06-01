@@ -114,6 +114,11 @@
  usfp_GLC: "Great Lakes" #NT!
  usfp_GLC_ADJ: "United Indian" #NT!
   
+ usfp_UFC: "United Fruit Company" #NT!
+ usfp_UFC_ADJ: "United Fruit" #NT!
+ dyn_c_chiquita: "Chiquita" #NT!
+ dyn_c_chiquita_ADJ: "Chiquita" #NT!
+  
  rule_usfp_usa_names: "@america_icon! #yellow Hail, Columbia!#! | USA Names" #NT!
  setting_usa_initial_names: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_usa_initial_names_desc #high Vanilla #!#!#!" #NT!
  setting_usa_initial_names_desc: "The country name of the United States will change based on government type, always retaining the initials "USA"" #NT!
@@ -194,3 +199,9 @@
  geographic_region_western_hemisphere_desc: "The western half of the world, as envisioned by the Monroe Doctrine." #NT!
  geographic_region_central_great_plains: "Central Plains" #NT!
  geographic_region_central_great_plains_desc: "The vast inner prairies of the Great American Desert, north of Comanche territory and south of Canada." #NT!
+ geographic_region_cuba: "Cuba" #NT!
+ geographic_region_western_pacific: "Western Pacific" #NT!
+ geographic_region_caribbean_coast: "Caribbean Coast" #NT!
+ usfp_geographic_region_dixie: "Dixie" #NT!
+ geographic_region_pacific: "Pacific" #NT!
+ geographic_region_american_bison_range: "Bison Range" #NT!

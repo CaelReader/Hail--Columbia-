@@ -967,4 +967,9 @@ Jefferson Davis is now a Southern Planter
 Mexican Cession DP no longer disappears if you place a colony in California
 Mexican Integration is now boosted by the Popularity and Prominence of Mexican characters, as well as Mexican leaders in government
 Added decision to expand American Superculture homelands into relevant states if acquired after the actual event
+A slaver USA that loses to the FSA can choose to become the CSA and entrench slavery in its IGs
 Updated imminent secession tooltip explaining that it can be prevented by reducing the Southern Planters below 5% clout
+Added double-check to make sure that the CSA actually keeps afro-american slaves as slaves when it spawns
+Merged hotfix change where the Russian-American company is dissolved upon the sale of Alaska
+Removed Brazilian Portuguese english placeholder text in favor of new translation submod
+Updated english placeholder texts for French, Japanese, Polish, Turkish

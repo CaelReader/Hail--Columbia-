@@ -4,8 +4,18 @@
  usfp_pm_hippo_hunting: "Hippopotamus Hunting" #NT!
  usfp_pmg_base_building_fur_trapper: "Pelt Hunting" #NT!
  usfp_pm_fur_trapping: "Fur Trapping" #NT!
+ bg_usfp_fur_trapping: "Fur Trapping" #NT!
  usfp_pm_bison_hunting: "Bison Hunting" #NT!
+ usfp_pm_subsistence_hunting: "Subsistence Hunting" #NT!
  usfp_pm_fur_manual_transport: "Manual Transport" #NT!
  usfp_pm_fur_rail_hunting: "Rail Transport" #NT!
  usfp_pmg_fur_trapper_transport: "Transportation" #NT!
  building_usfp_fur_trapper: "Fur Trapping Grounds" #NT!
+ building_usfp_national_park: "National Park" #NT!
+ bg_usfp_national_parks: "National Parks" #NT!
+ usfp_pmg_base_national_parks: "Park Management" #NT!
+ usfp_pmg_national_parks_media: "Park Media" #NT!
+ usfp_pm_national_park_reserve: "Nature Reserves" #NT!
+ usfp_pm_national_park_service: "National Park Service" #NT!
+ usfp_pm_national_park_maps: "Wilderness Excursions" #NT!
+ usfp_pm_national_park_photos: "Park Advertising" #NT!
