@@ -94,3 +94,4 @@
  country_voting_power_from_literacy_add:1 "식자 인구층의 투표권으로 발생하는 [concept_political_strength]"
  amendment_american_second_amendment: "무기 소지권"
  amendment_american_second_amendment_desc: "\"자유로운 국가의 안전을 위해 잘 규율된 민병대가 필요하므로, 국민이 무기를 소유하고 휴대할 권리는 침해되어서는 안 된다.\""
+ radical_abolitionist_government: "[concept_in_government]에 속한 [concept_interest_group]이(가) [GetIdeology('ideology_usfp_abolitionist_radical').GetName] 또는 [GetIdeology('ideology_humanitarian').GetName] [concept_leader]를 보유함"
