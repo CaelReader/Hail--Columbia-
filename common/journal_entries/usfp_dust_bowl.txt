@@ -1,0 +1,45 @@
+﻿je_usfp_dust_bowl = {
+    icon = "gfx/interface/icons/harvest_condition_icons/usfp_dust_storm.dds"
+
+    group = je_group_historical_content
+
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+
+    }
+
+    scripted_progress_bar = usfp_dust_bowl_desertification_bar
+    scripted_button = usfp_dust_bowl_research_conservation_button
+    scripted_button = usfp_dust_bowl_plant_shelterbelt_button
+
+    on_monthly_pulse = {
+
+    }
+
+    invalid = {
+
+    }
+
+    complete = {
+
+    }
+
+    on_complete = {
+
+    }
+
+    fail = {
+
+    }
+
+    on_fail = {
+
+    }
+
+    weight = 200
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}

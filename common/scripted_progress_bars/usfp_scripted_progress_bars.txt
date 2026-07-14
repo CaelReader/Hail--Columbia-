@@ -593,3 +593,21 @@ usfp_philippine_english_progress_bar = {
     }
 
 }
+
+usfp_dust_bowl_desertification_bar = {
+    name = "usfp_dust_bowl_desertification_bar"
+    desc = "usfp_dust_bowl_desertification_bar_desc"
+    is_inverted = yes
+    default_bad = yes
+
+    start_value = 0
+    min_value = 0
+    max_value = 600
+
+    monthly_progress = {
+        #progress from ongoing dust storms or droughts
+        #small anti-progress from farming technique development
+        #mounting anti-progress from planting the Shelterbelt
+    }
+
+}

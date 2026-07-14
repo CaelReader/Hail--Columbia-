@@ -986,3 +986,8 @@ Dixie Redoubt no longer spawns with the Superculture
 Fixed Sonora not being puppeted by event
 Added tooltip showing that Secessionist Conventions can be avoided if Landowners are low enough clout
 Melting Pot modifier now always allows assimilation to the Primary Culture
+
+# 9.0 "Hoover"
+## New Content
+## Updates
+    The Great Plains is now more susceptible to droughts and extreme winds

@@ -1,0 +1,81 @@
+﻿namespace = usfp_dust_bowl
+
+#Great Plow Up
+usfp_dust_bowl.1 = {
+    type = country_event
+    placement = scope:plow_up_state
+    event_image = {
+        video = "ip4_colonial_exploitation_going_well"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/mechanized_farming.dds"
+
+    title = usfp_dust_bowl.1.t
+    desc = usfp_dust_bowl.1.d
+    flavor = usfp_dust_bowl.1.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        has_technology_researched = compression_ignition
+        has_technology_researched = mechanized_farming
+        any_scope_state = {
+            is_in_geographic_region = geographic_region_southern_great_plains
+            NOT = {
+                state_region = {
+                    has_harvest_condition = drought
+                }
+            }
+        }
+    }
+
+    immediate = {
+        ordered_scope_state = {
+            position = 0
+            order_by = gdp
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            save_scope_as = plow_up_state
+        }
+        set_global_variable = had_great_plow_up
+    }
+
+    #more wheat gooder
+    option = {
+        name = usfp_dust_bowl.1.a
+        default_option = yes
+        every_state_region_in_southern_plains = {
+            add_arable_land = 5
+        }
+    }
+
+    #commercialized ag
+    option = {
+        name = usfp_dust_bowl.1.b
+        show_as_unavailable = { always = yes }
+        trigger = {
+            has_law_or_variant = law_type:law_commercialized_agriculture
+        }
+        highlighted_option = yes
+    }
+
+    #collectivized ag
+    option = {
+        name = usfp_dust_bowl.1.c
+        trigger = {
+            has_law_or_variant = law_type:law_collectivized_agriculture
+        }
+        highlighted_option = yes
+    }
+
+}
+#Dust Bowl JE Begins
+#Dust Bowl JE Remediated
+#Dust Bowl JE Failure
+#Great Dust Storm
+#Dust Bowl Refugees
+#Dust Bowl Research Complete
