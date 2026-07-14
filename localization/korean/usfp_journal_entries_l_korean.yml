@@ -344,3 +344,7 @@
  usfp_usfp_ai_mexican_cession_button: "멕시코와의 전쟁 발발"
  usfp_usfp_ai_mexican_cession_button_desc: "멕시코와의 국경에서 발생하는 적절한 사건이 우리에게 그들의 영토를 침공하고 점령할 구실을 제공해 줄 것입니다."
  turmoil_over_50: "[concept_turmoil]이 50% 이상임"
+ expand_american_superculture_homeland: "[GetCulture('usfp_american').GetName] 본토 확장"
+ expand_american_superculture_homeland_desc: "[GetCulture('usfp_american').GetName] 문화의 통합이 대륙 전체로 확산될 것입니다."
+ mexican_character_popularity: "[GetCulture('mexican').GetName]의 [concept_popularity] 및 [concept_prominence] [Concept('concept_character', '$concept_characters$')]"
+ mexican_in_government: "[GetCulture('mexican').GetName] [concept_leader] [concept_in_government]"
