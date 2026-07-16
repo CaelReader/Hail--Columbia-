@@ -48,6 +48,12 @@
 
     on_invalid = {
         remove_global_variable = dust_bowl_ongoing
+        every_scope_state = {
+            limit = {
+                has_modifier = usfp_shelterbelt_construction_modifier
+            }
+            remove_modifier = usfp_shelterbelt_construction_modifier
+        }
     }
 
     complete = {
@@ -62,6 +68,12 @@
     on_complete = {
         trigger_event = usfp_dust_bowl.3
         remove_global_variable = dust_bowl_ongoing
+        every_scope_state = {
+            limit = {
+                has_modifier = usfp_shelterbelt_construction_modifier
+            }
+            remove_modifier = usfp_shelterbelt_construction_modifier
+        }
     }
 
     fail = {
@@ -76,6 +88,12 @@
     on_fail = {
         trigger_event = usfp_dust_bowl.4
         remove_global_variable = dust_bowl_ongoing
+        every_scope_state = {
+            limit = {
+                has_modifier = usfp_shelterbelt_construction_modifier
+            }
+            remove_modifier = usfp_shelterbelt_construction_modifier
+        }
     }
 
     weight = 200

@@ -266,7 +266,7 @@ usfp_dust_bowl.5 = {
     type = country_event
     placement = scope:plow_up_state
     event_image = {
-        video = "asia_dead_cattle_poor_harvest"
+        video = "unspecific_devastation"
     }
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -281,7 +281,14 @@ usfp_dust_bowl.5 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     trigger = {
-        #JE Start
+        any_scope_state = {
+            state_region = {
+                has_harvest_condition = usfp_dust_storm
+            }
+        }
+        je:je_usfp_dust_bowl = {
+            "scripted_bar_progress(usfp_dust_bowl_desertification_bar)" >= 400
+        }
     }
 
     immediate = {

@@ -409,3 +409,9 @@ usfp_great_plow_up_collectives_modifier = {
 	state_farmers_investment_pool_efficiency_mult = 0.10
 	building_group_bg_agriculture_self_investment_chance_add = 0.50
 }
+
+usfp_shelterbelt_construction_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_negative.dds
+	building_group_bg_agriculture_construction_efficiency_add = -0.15
+	building_group_bg_agriculture_tax_mult = -0.15
+}
