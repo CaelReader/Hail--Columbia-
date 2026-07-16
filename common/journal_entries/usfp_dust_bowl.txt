@@ -11,10 +11,41 @@
         }
         trigger_event = usfp_dust_bowl.2
         set_global_variable = dust_bowl_ongoing
+        set_global_variable = dust_bowl_happened
         every_state_region_in_southern_plains = {
             set_variable = {
                 name = dust_bowl_arable_land_stripped
                 value = 0
+            }
+        }
+    }
+
+    is_shown_when_inactive = {
+        NOT = {
+            has_law = law_type:law_usfp_tribal_land_ownership
+        }
+        OR = {
+            has_global_variable = had_great_plow_up
+            AND = {
+                any_state_in_southern_plains = {
+                    count = all
+                    free_arable_land <= 5
+                }
+                has_technology_researched = compression_ignition
+                has_technology_researched = mechanized_farming
+            }
+
+        }
+        any_scope_state = {
+            is_in_geographic_region = geographic_region_southern_great_plains
+        }
+    }
+
+    possible = {
+        any_scope_state = {
+            is_in_geographic_region = geographic_region_southern_great_plains
+            state_region = {
+                has_harvest_condition = drought
             }
         }
     }

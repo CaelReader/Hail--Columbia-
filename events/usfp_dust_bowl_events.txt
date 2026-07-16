@@ -29,6 +29,15 @@ usfp_dust_bowl.1 = {
                     has_harvest_condition = drought
                 }
             }
+            state_region = {
+                OR = {
+                    has_harvest_condition = optimal_sunlight
+                    has_harvest_condition = moderate_rainfall
+                }
+            }
+        }
+        NOT = {
+            has_global_variable = dust_bowl_happened
         }
     }
 
@@ -165,6 +174,21 @@ usfp_dust_bowl.2 = {
                 }
             }
         }
+        random_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+                NOT = {
+                    this = scope:dust_bowl_state
+                }
+            }
+            state_region = {
+                start_harvest_condition_with_params = {
+                    type = usfp_dust_storm
+                    intensity = 3
+                    duration = 60
+                }
+            }
+        }
     }
 
     #oh dear
@@ -218,17 +242,46 @@ usfp_dust_bowl.3 = {
     option = {
         name = usfp_dust_bowl.3.a
         default_option = yes
-
+        every_state_region_in_southern_plains = {
+            add_arable_land = 10
+        }
+        every_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            add_loyalists_in_state = {
+                pop_type = farmers
+                value = large_radicals
+            }
+        }
     }
 
-    #investigate alternative uses for the land
+    #keep the exploitation to a lower level
     option = {
         name = usfp_dust_bowl.3.b
-
+        every_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            add_modifier = {
+                name = usfp_dust_bowl_sustainability_modifier
+                years = 15
+            }
+            add_loyalists_in_state = {
+                pop_type = farmers
+                value = medium_radicals
+            }
+        }
     }
 
     after = {
         custom_tooltip = dust_bowl_dust_storms_end
+        custom_tooltip = {
+            text = dust_bowl_arable_land_restored
+            every_state_region_in_southern_plains = {
+                add_arable_land = var:dust_bowl_arable_land_stripped
+            }
+        }
     }
 
 
@@ -304,6 +357,7 @@ usfp_dust_bowl.4 = {
         custom_tooltip = dust_bowl_dust_storms_continue
         every_state_region_in_southern_plains = {
             add_state_trait = state_trait_usfp_dust_bowl_desert
+            add_arable_land = -5
         }
     }
 
@@ -438,7 +492,7 @@ usfp_dust_bowl.6 = {
 #Dust Bowl Research Complete
 usfp_dust_bowl.7 = {
     type = country_event
-    placement = scope:plow_up_state
+    placement = scope:dust_bowl_state
     event_image = {
         video = "ep2_intellectual_writer"
     }
@@ -459,7 +513,12 @@ usfp_dust_bowl.7 = {
     }
 
     immediate = {
-
+        random_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            save_scope_as = dust_bowl_state
+        }
     }
 
     #good

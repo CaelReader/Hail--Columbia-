@@ -426,3 +426,11 @@ usfp_dust_bowl_research_state_modifier = {
 	state_harvest_condition_drought_impact_mult = -0.10
 	state_harvest_condition_usfp_dust_storm_impact_mult = -0.10
 }
+
+usfp_dust_bowl_sustainability_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds
+	state_harvest_condition_drought_impact_mult = -0.15
+	state_harvest_condition_extreme_winds_impact_mult = -0.15
+	state_harvest_condition_wildfire_duration_mult = -0.15
+	state_harvest_condition_moderate_rainfall_impact_mult = 0.15
+}
