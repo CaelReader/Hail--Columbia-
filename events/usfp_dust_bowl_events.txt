@@ -471,20 +471,67 @@ usfp_dust_bowl.6 = {
             limit = {
                 is_in_geographic_region = geographic_region_southern_great_plains
             }
+            position = 0
+            order_by = {
+                value = average_sol
+                multiply = -1
+            }
+            save_scope_as = dust_bowl_state
         }
+
     }
 
-    #send them west
+    #okay
     option = {
         name = usfp_dust_bowl.6.a
         default_option = yes
-
+        scope:dust_bowl_state = {
+            add_modifier = {
+                name = usfp_dust_bowl_exodus_modifier
+                years = 5
+            }
+        }
     }
 
-    #send them east
+    #offer resettlement assistance
     option = {
         name = usfp_dust_bowl.6.b
+        scope:dust_bowl_state = {
+            add_modifier = {
+                name = usfp_dust_bowl_resettlment_modifier
+                years = 5
+            }
+        }
+        ig:ig_rural_folk = {
+            add_modifier = {
+                name = usfp_dust_bowl_farmers_helped_positive
+                years = 5
+            }
+        }
+    }
 
+    #stay there okies
+    option = {
+        name = usfp_dust_bowl.6.c
+        scope:dust_bowl_state = {
+            add_modifier = {
+                name = usfp_dust_bowl_exodus_modifier
+                years = 5
+                multiplier = 0.5
+            }
+        }
+        s:STATE_CALIFORNIA.region_state:USA = {
+            add_loyalists_in_state = {
+                interest_group = ig:ig_petty_bourgeoisie
+                value = small_radicals
+            }
+        }
+        s:STATE_ARKANSAS.region_state:USA = {
+            add_loyalists_in_state = {
+                interest_group = ig:ig_petty_bourgeoisie
+                value = small_radicals
+            }
+        }
     }
 
 
@@ -509,7 +556,7 @@ usfp_dust_bowl.7 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     trigger = {
-        #JE Start
+        #JE Button
     }
 
     immediate = {

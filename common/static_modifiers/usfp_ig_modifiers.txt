@@ -460,3 +460,8 @@ usfp_dust_bowl_farmers_blamed_negative = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_negative.dds
 	interest_group_approval_add = -4
 }
+
+usfp_dust_bowl_farmers_helped_positive = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds
+	interest_group_approval_add = 2
+}
