@@ -415,3 +415,14 @@ usfp_shelterbelt_construction_modifier = {
 	building_group_bg_agriculture_construction_efficiency_add = -0.15
 	building_group_bg_agriculture_tax_mult = -0.15
 }
+
+usfp_dust_bowl_aid_to_farmers_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_peasant_positive.dds
+	state_decree_cost_mult = -0.25
+}
+
+usfp_dust_bowl_research_state_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_peasant_positive.dds
+	state_harvest_condition_drought_impact_mult = -0.10
+	state_harvest_condition_usfp_dust_storm_impact_mult = -0.10
+}

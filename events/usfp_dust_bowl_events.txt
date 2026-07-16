@@ -131,7 +131,7 @@ usfp_dust_bowl.1 = {
 #Dust Bowl JE Begins
 usfp_dust_bowl.2 = {
     type = country_event
-    placement = scope:plow_up_state
+    placement = scope:dust_bowl_state
     event_image = {
         video = "asia_dead_cattle_poor_harvest"
     }
@@ -152,7 +152,19 @@ usfp_dust_bowl.2 = {
     }
 
     immediate = {
-
+        random_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            save_scope_as = dust_bowl_state
+            state_region = {
+                start_harvest_condition_with_params = {
+                    type = usfp_dust_storm
+                    intensity = 3
+                    duration = 60
+                }
+            }
+        }
     }
 
     #oh dear
@@ -173,7 +185,7 @@ usfp_dust_bowl.2 = {
 #Dust Bowl JE Remediated
 usfp_dust_bowl.3 = {
     type = country_event
-    placement = scope:plow_up_state
+    placement = scope:dust_bowl_state
     event_image = {
         video = "africa_prosperous_farm"
     }
@@ -194,7 +206,12 @@ usfp_dust_bowl.3 = {
     }
 
     immediate = {
-
+        random_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            save_scope_as = dust_bowl_state
+        }
     }
 
     #irrigate for intensive agriculture
@@ -219,7 +236,7 @@ usfp_dust_bowl.3 = {
 #Dust Bowl JE Failure
 usfp_dust_bowl.4 = {
     type = country_event
-    placement = scope:plow_up_state
+    placement = scope:dust_bowl_state
     event_image = {
         video = "asia_dead_cattle_poor_harvest"
     }
@@ -240,31 +257,61 @@ usfp_dust_bowl.4 = {
     }
 
     immediate = {
-
+        random_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            save_scope_as = dust_bowl_state
+        }
     }
 
     #we are helpless in the face of nature's power
     option = {
         name = usfp_dust_bowl.4.a
         default_option = yes
-
+        ig:ig_intelligentsia ?= {
+            add_modifier = {
+                name = usfp_dust_bowl_failure_ig_negative
+                years = 5
+            }
+        }
+        ig:ig_landowners ?= {
+            add_modifier = {
+                name = usfp_dust_bowl_failure_ig_negative
+                years = 5
+            }
+        }
+        ig:ig_rural_folk ?= {
+            add_modifier = {
+                name = usfp_dust_bowl_failure_ig_negative
+                years = 5
+            }
+        }
     }
 
     #blame the farmers
     option = {
         name = usfp_dust_bowl.4.b
-
+        ig:ig_rural_folk ?= {
+            add_modifier = {
+                name = usfp_dust_bowl_farmers_blamed_negative
+                years = 5
+            }
+        }
     }
 
     after = {
         custom_tooltip = dust_bowl_dust_storms_continue
+        every_state_region_in_southern_plains = {
+            add_state_trait = state_trait_usfp_dust_bowl_desert
+        }
     }
 
 }
 #Great Dust Storm
 usfp_dust_bowl.5 = {
     type = country_event
-    placement = scope:plow_up_state
+    placement = scope:dc_scope
     event_image = {
         video = "unspecific_devastation"
     }
@@ -292,20 +339,47 @@ usfp_dust_bowl.5 = {
     }
 
     immediate = {
-
+        usfp_find_dc_sr_scope = yes
+        scope:dc_sr_scope = {
+            region_state:USA = {
+                save_scope_as = dc_scope
+            }
+        }
     }
 
     #we need a solution
     option = {
         name = usfp_dust_bowl.5.a
         default_option = yes
-
+        every_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            add_modifier = {
+                name = usfp_dust_bowl_aid_to_farmers_modifier
+                years = 5
+            }
+        }
+        ig:ig_petty_bourgeoisie ?= {
+            add_modifier = {
+                name = usfp_dust_storm_ig_negative
+                years = 2
+            }
+        }
     }
 
     #blame the farmers
     option = {
         name = usfp_dust_bowl.5.b
-
+        every_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            add_radicals_in_state = {
+                value = medium_radicals
+                pop_type = farmers
+            }
+        }
     }
 
 
@@ -313,7 +387,7 @@ usfp_dust_bowl.5 = {
 #Dust Bowl Refugees
 usfp_dust_bowl.6 = {
     type = country_event
-    placement = scope:plow_up_state
+    placement = scope:dust_bowl_state
     event_image = {
         video = "asia_poor_people_moving"
     }
@@ -330,11 +404,20 @@ usfp_dust_bowl.6 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     trigger = {
-        #JE Start
+        any_scope_state = {
+            is_in_geographic_region = geographic_region_southern_great_plains
+            state_region = {
+                has_harvest_condition = usfp_dust_storm
+            }
+        }
     }
 
     immediate = {
-
+        ordered_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+        }
     }
 
     #send them west
@@ -383,7 +466,16 @@ usfp_dust_bowl.7 = {
     option = {
         name = usfp_dust_bowl.7.a
         default_option = yes
-
+        custom_tooltp = can_begin_shelterbelt
+        every_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            add_modifier = {
+                name = usfp_dust_bowl_research_state_modifier
+                years = 10
+            }
+        }
     }
 
 

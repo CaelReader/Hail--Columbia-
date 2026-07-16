@@ -445,3 +445,18 @@ usfp_fought_lochner_rulings_positive_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_gavel_positive.dds
     interest_group_approval_add = 3
 }
+
+usfp_dust_storm_ig_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	interest_group_approval_add = -2
+}
+
+usfp_dust_bowl_failure_ig_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_negative.dds
+	interest_group_approval_add = -2
+}
+
+usfp_dust_bowl_farmers_blamed_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_negative.dds
+	interest_group_approval_add = -4
+}
