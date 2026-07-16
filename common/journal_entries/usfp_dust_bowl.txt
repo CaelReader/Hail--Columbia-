@@ -9,7 +9,14 @@
                 dlc = dlc_usfp
             }
         }
-
+        trigger_event = usfp_dust_bowl.2
+        set_global_variable = dust_bowl_ongoing
+        every_state_region_in_southern_plains = {
+            set_variable = {
+                name = dust_bowl_arable_land_stripped
+                value = 0
+            }
+        }
     }
 
     scripted_progress_bar = usfp_dust_bowl_desertification_bar
@@ -17,27 +24,58 @@
     scripted_button = usfp_dust_bowl_plant_shelterbelt_button
 
     on_monthly_pulse = {
-
+        effect = {
+            if = {
+                limit = {
+                    has_variable = dust_bowl_planting_shelterbelt
+                    has_variable = dust_bowl_shelterbelt_progress
+                }
+                change_variable = {
+                    name = dust_bowl_shelterbelt_progress
+                    add = 0.1
+                }
+            }
+        }
     }
 
     invalid = {
+        NOT = {
+            any_scope_state = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+        }
+    }
 
+    on_invalid = {
+        remove_global_variable = dust_bowl_ongoing
     }
 
     complete = {
-
+        custom_tooltip = {
+            text = usfp_dust_bowl_desertification_zero
+            scope:journal_entry = {
+                "scripted_bar_progress(usfp_dust_bowl_desertification_bar)" <= 0
+            }
+        }
     }
 
     on_complete = {
-
+        trigger_event = usfp_dust_bowl.3
+        remove_global_variable = dust_bowl_ongoing
     }
 
     fail = {
-
+        custom_tooltip = {
+            text = usfp_dust_bowl_desertification_full
+            scope:journal_entry = {
+                "scripted_bar_progress(usfp_dust_bowl_desertification_bar)" >= 900
+            }
+        }
     }
 
     on_fail = {
-
+        trigger_event = usfp_dust_bowl.4
+        remove_global_variable = dust_bowl_ongoing
     }
 
     weight = 200

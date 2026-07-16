@@ -600,14 +600,44 @@ usfp_dust_bowl_desertification_bar = {
     is_inverted = yes
     default_bad = yes
 
-    start_value = 0
+    start_value = 300
     min_value = 0
-    max_value = 600
+    max_value = 900
 
     monthly_progress = {
         #progress from ongoing dust storms or droughts
+		add = {
+			every_state_region_in_southern_plains = {
+				limit = {
+					OR = {
+						has_harvest_condition = usfp_dust_storm
+						has_harvest_condition = drought
+					}
+				}
+				add = 1
+			}
+			desc = "dust_bowl_from_droughts_or_dust_storms"
+		}
         #small anti-progress from farming technique development
+		if = {
+			limit = {
+				has_variable = dust_bowl_research_complete
+			}
+			subtract = {
+				value = 1
+				desc = "completed_dust_bowl_research"
+			}
+		}
         #mounting anti-progress from planting the Shelterbelt
+		if = {
+			limit = {
+				has_variable = dust_bowl_shelterbelt_progress
+			}
+			subtract = {
+				value = var:dust_bowl_shelterbelt_progress
+				desc = "dust_bowl_shelterbelt_progress"
+			}
+		}
     }
 
 }

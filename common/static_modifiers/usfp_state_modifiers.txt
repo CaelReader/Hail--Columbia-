@@ -390,3 +390,22 @@ usfp_concentration_camps_modifier = {
     state_radicals_from_political_movements_mult = 0.75
     building_group_bg_agriculture_throughput_add = -0.15
 }
+
+usfp_great_plow_up_state_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_grain_positive.dds
+	building_wheat_farm_throughput_add = 0.20
+	building_group_bg_agriculture_construction_efficiency_add = 0.10
+	state_harvest_condition_drought_impact_mult = 0.25
+}
+
+usfp_great_plow_up_investment_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds
+	state_farmers_investment_pool_contribution_add = 0.10
+	state_aristocrats_investment_pool_contribution_add = 0.10
+}
+
+usfp_great_plow_up_collectives_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds
+	state_farmers_investment_pool_efficiency_mult = 0.10
+	building_group_bg_agriculture_self_investment_chance_add = 0.50
+}

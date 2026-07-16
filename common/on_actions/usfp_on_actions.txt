@@ -1195,3 +1195,29 @@ usfp_spoils_system_action = {
 		}
 	}
 }
+
+on_harvest_condition_started_in_country = {
+	on_actions = {
+		usfp_dust_bowl_action
+	}
+}
+
+usfp_dust_bowl_action = {
+	effect = {
+		if = {
+			limit = {
+				scope:state.state_region = {
+					has_harvest_condition = usfp_dust_storm
+				}
+				scope:state = {
+					arable_land > 10
+				}
+			}
+			scope:state.state_region = {
+				usfp_dust_bowl_remove_arable_land = {
+					LAND = -1
+				}
+			}
+		}
+	}
+}

@@ -2520,3 +2520,11 @@ usfp_begin_chinese_california_migration = {
         }
     }
 }
+
+usfp_dust_bowl_remove_arable_land = {
+	add_arable_land = $LAND$
+	change_variable = {
+		name = dust_bowl_arable_land_stripped
+		add = $LAND$
+	}
+}

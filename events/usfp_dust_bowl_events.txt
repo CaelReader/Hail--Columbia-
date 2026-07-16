@@ -51,6 +51,15 @@ usfp_dust_bowl.1 = {
         every_state_region_in_southern_plains = {
             add_arable_land = 5
         }
+        every_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            add_modifier = {
+                name = usfp_great_plow_up_state_modifier
+                years = 10
+            }
+        }
     }
 
     #commercialized ag
@@ -61,6 +70,26 @@ usfp_dust_bowl.1 = {
             has_law_or_variant = law_type:law_commercialized_agriculture
         }
         highlighted_option = yes
+        every_state_region_in_southern_plains = {
+            add_arable_land = 5
+        }
+        every_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            add_modifier = {
+                name = usfp_great_plow_up_state_modifier
+                years = 10
+            }
+            add_modifier = {
+                name = usfp_great_plow_up_investment_modifier
+                years = 10
+            }
+            add_loyalists_in_state = {
+                pop_type = capitalists
+                value = medium_radicals
+            }
+        }
     }
 
     #collectivized ag
@@ -70,12 +99,285 @@ usfp_dust_bowl.1 = {
             has_law_or_variant = law_type:law_collectivized_agriculture
         }
         highlighted_option = yes
+        every_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            add_modifier = {
+                name = usfp_great_plow_up_state_modifier
+                years = 10
+            }
+            every_scope_state = {
+                limit = {
+                    is_in_geographic_region = geographic_region_southern_great_plains
+                }
+                add_modifier = {
+                    name = usfp_great_plow_up_state_modifier
+                    years = 10
+                }
+                add_modifier = {
+                    name = usfp_great_plow_up_collectives_modifier
+                    years = 10
+                }
+                add_loyalists_in_state = {
+                    pop_type = farmers
+                    value = medium_radicals
+                }
+            }
+        }
     }
 
 }
 #Dust Bowl JE Begins
+usfp_dust_bowl.2 = {
+    type = country_event
+    placement = scope:plow_up_state
+    event_image = {
+        video = "asia_dead_cattle_poor_harvest"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/harvest_condition_icons/usfp_dust_storm.dds"
+
+    title = usfp_dust_bowl.2.t
+    desc = usfp_dust_bowl.2.d
+    flavor = usfp_dust_bowl.2.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #JE Start
+    }
+
+    immediate = {
+
+    }
+
+    #oh dear
+    option = {
+        name = usfp_dust_bowl.2.a
+        default_option = yes
+        every_scope_state = {
+            limit = {
+                has_modifier = usfp_great_plow_up_state_modifier
+            }
+            remove_modifier = usfp_great_plow_up_state_modifier
+        }
+        custom_tooltip = dust_bowl_dust_storms_warning
+    }
+
+
+}
 #Dust Bowl JE Remediated
+usfp_dust_bowl.3 = {
+    type = country_event
+    placement = scope:plow_up_state
+    event_image = {
+        video = "africa_prosperous_farm"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/improved_fertilizer.dds"
+
+    title = usfp_dust_bowl.3.t
+    desc = usfp_dust_bowl.3.d
+    flavor = usfp_dust_bowl.3.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #JE End
+    }
+
+    immediate = {
+
+    }
+
+    #irrigate for intensive agriculture
+    option = {
+        name = usfp_dust_bowl.3.a
+        default_option = yes
+
+    }
+
+    #investigate alternative uses for the land
+    option = {
+        name = usfp_dust_bowl.3.b
+
+    }
+
+    after = {
+        custom_tooltip = dust_bowl_dust_storms_end
+    }
+
+
+}
 #Dust Bowl JE Failure
+usfp_dust_bowl.4 = {
+    type = country_event
+    placement = scope:plow_up_state
+    event_image = {
+        video = "asia_dead_cattle_poor_harvest"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/harvest_condition_icons/usfp_dust_storm.dds"
+
+    title = usfp_dust_bowl.4.t
+    desc = usfp_dust_bowl.4.d
+    flavor = usfp_dust_bowl.4.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #JE End
+    }
+
+    immediate = {
+
+    }
+
+    #we are helpless in the face of nature's power
+    option = {
+        name = usfp_dust_bowl.4.a
+        default_option = yes
+
+    }
+
+    #blame the farmers
+    option = {
+        name = usfp_dust_bowl.4.b
+
+    }
+
+    after = {
+        custom_tooltip = dust_bowl_dust_storms_continue
+    }
+
+}
 #Great Dust Storm
+usfp_dust_bowl.5 = {
+    type = country_event
+    placement = scope:plow_up_state
+    event_image = {
+        video = "asia_dead_cattle_poor_harvest"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/harvest_condition_icons/usfp_dust_storm.dds"
+
+    title = usfp_dust_bowl.5.t
+    desc = usfp_dust_bowl.5.d
+    flavor = usfp_dust_bowl.5.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #JE Start
+    }
+
+    immediate = {
+
+    }
+
+    #we need a solution
+    option = {
+        name = usfp_dust_bowl.5.a
+        default_option = yes
+
+    }
+
+    #blame the farmers
+    option = {
+        name = usfp_dust_bowl.5.b
+
+    }
+
+
+}
 #Dust Bowl Refugees
+usfp_dust_bowl.6 = {
+    type = country_event
+    placement = scope:plow_up_state
+    event_image = {
+        video = "asia_poor_people_moving"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+    title = usfp_dust_bowl.6.t
+    desc = usfp_dust_bowl.6.d
+    flavor = usfp_dust_bowl.6.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #JE Start
+    }
+
+    immediate = {
+
+    }
+
+    #send them west
+    option = {
+        name = usfp_dust_bowl.6.a
+        default_option = yes
+
+    }
+
+    #send them east
+    option = {
+        name = usfp_dust_bowl.6.b
+
+    }
+
+
+}
 #Dust Bowl Research Complete
+usfp_dust_bowl.7 = {
+    type = country_event
+    placement = scope:plow_up_state
+    event_image = {
+        video = "ep2_intellectual_writer"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/nitrogen_fixation.dds"
+
+    title = usfp_dust_bowl.7.t
+    desc = usfp_dust_bowl.7.d
+    flavor = usfp_dust_bowl.7.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #JE Start
+    }
+
+    immediate = {
+
+    }
+
+    #good
+    option = {
+        name = usfp_dust_bowl.7.a
+        default_option = yes
+
+    }
+
+
+}
