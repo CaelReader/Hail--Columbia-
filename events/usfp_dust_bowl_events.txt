@@ -201,7 +201,8 @@ usfp_dust_bowl.2 = {
             }
             remove_modifier = usfp_great_plow_up_state_modifier
         }
-        custom_tooltip = dust_bowl_dust_storms_warning
+        custom_tooltip = dust_bowl_dust_storms_begin
+        custom_tooltip = dust_bowl_dust_storms_arable_land_warning
     }
 
 

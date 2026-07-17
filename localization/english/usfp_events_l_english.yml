@@ -1953,6 +1953,9 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_philippines.11.a: "We have been given the keys to knowledge."
  usfp_philippines.11.b: "Our very language has been colonized by the Americans."
 
+ dust_bowl_dust_storms_begin: "The [GetHarvestConditionType('usfp_dust_storm').GetName] [concept_harvest_condition] can now appear in the [GetGeographicRegion('geographic_region_central_great_plains').GetName] and [GetGeographicRegion('geographic_region_southern_great_plains').GetName]"
+ dust_bowl_dust_storms_arable_land_warning: "@warning! Every [GetHarvestConditionType('usfp_dust_storm').GetName] that appears in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] will #red reduce#! the [concept_arable_land] of the epicenter [concept_state]!"
+
 
 
  usfp_debug.1.t: "Mod Conflict Detected"

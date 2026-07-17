@@ -36,3 +36,12 @@ texticon = {
 		fontsize = 18
 	}
 }
+
+texticon = {
+    icon = usfp_dust_storm
+    iconsize = {
+        offset = { 0 30 }
+        texture = "gfx/interface/icons/harvest_condition_icons/usfp_dust_storm.dds"
+        fontsize = 150
+    }
+}
