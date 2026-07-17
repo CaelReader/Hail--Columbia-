@@ -282,7 +282,7 @@ usfp_ignored_monroe_modifier = {
 
 usfp_intervening_in_kansas = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_negative.dds
-	country_authority_add = -100
+	country_authority_cost_add = 100
 }
 
 usfp_the_melting_pot_modifier = {
@@ -317,7 +317,7 @@ usfp_draft_exemptions = {
 
 usfp_enforcing_reconstruction = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_negative.dds
-	country_authority_add = -75
+    country_authority_cost_add = 75
 }
 
 usfp_freedmens_bureau = {
@@ -492,7 +492,7 @@ usfp_grange_movement_modifier = {
 
 usfp_trust_busting_authority_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_negative.dds
-	country_authority_add = -100
+    country_authority_cost_add = 100
 	country_capitalists_pol_str_mult = -0.10
 	country_company_construction_efficiency_bonus_add = -0.10
 }
@@ -533,7 +533,7 @@ usfp_city_beautiful_modifier = {
 
 usfp_fighting_corruption_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_negative.dds
-	country_authority_add = -100
+    country_authority_cost_add = 100
 	country_bureaucracy_mult = -0.10
 }
 
@@ -547,7 +547,7 @@ usfp_social_hygiene_modifier = {
 usfp_meat_inspectors_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_machinist_positive.dds
 	building_food_industry_throughput_add = -0.10
-	country_bureaucracy_add = -100
+	state_bureaucracy_population_base_cost_factor_mult = 0.05
 }
 
 usfp_pure_drugs_modifier = {
@@ -679,14 +679,14 @@ usfp_federal_government_modifier = {
 
 usfp_underground_railroad_supporting_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
-	country_authority_add = -75
+    country_authority_cost_add = 75
 	interest_group_ig_landowners_approval_add = -3
 	state_pop_support_movement_anti_slavery_mult = 0.10
 }
 
 usfp_underground_railroad_suppressing_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_slave_negative.dds
-	country_authority_add = -75
+    country_authority_cost_add = 75
 	interest_group_ig_landowners_approval_add = 2
 	state_pop_support_movement_pro_slavery_mult = 0.10
 }
@@ -726,7 +726,7 @@ usfp_reconstruction_white_fatigue_modifier = {
 
 usfp_reconstruction_occupation_authority_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_positive.dds
-	country_authority_add = 1.5
+	country_authority_add = 1.5 #multiplied by Northern Political Will
 }
 
 usfp_slave_market_collapse_modifier = {
