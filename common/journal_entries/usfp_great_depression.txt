@@ -1,0 +1,112 @@
+﻿je_usfp_roaring_twenties = {
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+    group = je_group_historical_content
+
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+
+    }
+
+    is_shown_when_inactive = {
+        root = c:USA
+        year >= 1900
+        OR = {
+            has_global_variable = flight_discovered
+            has_technology_researched = mass_propaganda
+            has_technology_researched = paved_roads
+            has_technology_researched = radio
+            has_technology_researched = psychoanalysis
+        }
+        NOT = {
+            has_law_or_variant = law_type:law_command_economy
+        }
+    }
+
+    possible = {
+        has_technology_researched = film
+        calc_true_if = {
+            amount >= 4
+            has_technology_researched = military_aviation
+            has_technology_researched = mass_propaganda
+            has_technology_researched = paved_roads
+            has_technology_researched = radio
+            has_technology_researched = psychoanalysis
+        }
+        is_at_war = no
+        any_scope_state = {
+            any_scope_building = {
+                is_building_type = building_urban_center
+                level >= 30
+                has_active_production_method = pm_electric_streetlights
+            }
+            any_scope_building = {
+                is_building_type = building_art_academy
+                has_active_production_method = pm_film_art
+            }
+            any_scope_building = {
+                is_building_type = building_power_plant
+            }
+            turmoil < 0.25
+        }
+    }
+
+    invalid = {
+        has_law_or_variant = law_type:law_command_economy
+    }
+
+    scripted_progress_bar = usfp_roaring_twenties_optimism_bar
+
+
+    weight = 200
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+je_usfp_great_depression = {
+    icon = "gfx/interface/icons/invention_icons/joint_stock_companies.dds"
+
+    group = je_group_crises
+
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+    }
+
+    #Triggered by end of Roaring Twenties
+
+    invalid = {
+        has_law_or_variant = law_type:law_command_economy
+    }
+
+    scripted_progress_bar = usfp_great_depression_recovery_bar
+
+    complete = {
+        custom_tooltip = {
+            text = progress_bar_complete
+            scope:journal_entry = {
+                "scripted_bar_progress(usfp_great_depression_recovery_bar)" >= 5000
+            }
+        }
+        any_scope_state = {
+            filter = {
+                is_incorporated = yes
+            }
+            percent >= 0.75
+            state_unemployment_rate < 0.12
+        }
+        in_default = no
+        NOT = {
+            has_modifier = declared_bankruptcy
+        }
+    }
+
+    weight = 200
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}
