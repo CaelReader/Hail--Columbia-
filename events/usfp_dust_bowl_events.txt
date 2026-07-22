@@ -108,6 +108,9 @@ usfp_dust_bowl.1 = {
             has_law_or_variant = law_type:law_collectivized_agriculture
         }
         highlighted_option = yes
+        every_state_region_in_southern_plains = {
+            add_arable_land = 5
+        }
         every_scope_state = {
             limit = {
                 is_in_geographic_region = geographic_region_southern_great_plains
@@ -116,22 +119,13 @@ usfp_dust_bowl.1 = {
                 name = usfp_great_plow_up_state_modifier
                 years = 10
             }
-            every_scope_state = {
-                limit = {
-                    is_in_geographic_region = geographic_region_southern_great_plains
-                }
-                add_modifier = {
-                    name = usfp_great_plow_up_state_modifier
-                    years = 10
-                }
-                add_modifier = {
-                    name = usfp_great_plow_up_collectives_modifier
-                    years = 10
-                }
-                add_loyalists_in_state = {
-                    pop_type = farmers
-                    value = medium_radicals
-                }
+            add_modifier = {
+                name = usfp_great_plow_up_collectives_modifier
+                years = 10
+            }
+            add_loyalists_in_state = {
+                pop_type = farmers
+                value = medium_radicals
             }
         }
     }
@@ -573,7 +567,7 @@ usfp_dust_bowl.7 = {
     option = {
         name = usfp_dust_bowl.7.a
         default_option = yes
-        custom_tooltp = can_begin_shelterbelt
+        custom_tooltip = can_begin_shelterbelt
         every_scope_state = {
             limit = {
                 is_in_geographic_region = geographic_region_southern_great_plains

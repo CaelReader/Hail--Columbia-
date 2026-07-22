@@ -441,7 +441,7 @@ usfp_dust_bowl_exodus_modifier = {
 	state_migration_pull_add = -10
 }
 
-usfp_dust_bowl_resettlment_modifier = {
+usfp_dust_bowl_resettlement_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_peasant_negative.dds
 	state_migration_pull_mult = -0.75
 	state_migration_pull_add = -15
