@@ -647,12 +647,13 @@ usfp_roaring_twenties_optimism_bar = {
 	desc = "usfp_roaring_twenties_optimism_bar_desc"
 	default_green = yes
 
-	start_value = 0
+	start_value = 500
 	min_value = 0
 	max_value = 1000
 
 	monthly_progress = {
 		#GDP Growth
+		#Standard of Living
 		#Loyalists
 		#Peace
 	}
@@ -665,7 +666,7 @@ usfp_great_depression_recovery_bar = {
 
 	start_value = 0
 	min_value = 0
-	max_value = 1000
+	max_value = 500
 
 	monthly_progress = {
 		#GDP Growth

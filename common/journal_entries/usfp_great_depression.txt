@@ -53,10 +53,32 @@
             }
             turmoil < 0.25
         }
+        average_sol_for_primary_cultures >= 15
     }
 
     invalid = {
         has_law_or_variant = law_type:law_command_economy
+    }
+
+    on_monthly_pulse = {
+        #
+        effect = {
+            set_variable = {
+                name = roaring_twenties_last_month_gdp
+                value = var:roaring_twenties_this_month_gdp
+            }
+            set_variable = {
+                name = roaring_twenties_this_month_gdp
+                value = root.gdp
+            }
+            set_variable = {
+                name = roaring_twenties_gdp_target
+                value = {
+                    value = var:roaring_twenties_this_month_gdp
+                    multiply = 1.005
+                }
+            }
+        }
     }
 
     scripted_progress_bar = usfp_roaring_twenties_optimism_bar

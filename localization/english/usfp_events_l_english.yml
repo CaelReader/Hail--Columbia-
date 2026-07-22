@@ -1978,7 +1978,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_dust_bowl.4.a: "We are helpless in the face of these completely natural forces..."
  usfp_dust_bowl.4.b: "Those foolish farmers destroyed themselves!"
 
- usfp_dust_bowl.5.t: "Dark Skies Over the East"
+ usfp_dust_bowl.5.t: "Dust Clouds Over the East"
  usfp_dust_bowl.5.d: "An immense dust storm has billowed up out of the [GetStrategicRegion('region_great_plains').GetName] and blown all the way across the country to the [GetStrategicRegion('region_atlantic_coast').GetName]. Day was turned to dusk in [SCOPE.sState('big_eastern_city').GetCityHubName] as the dust began to rain from the sky and settle over the streets."
  usfp_dust_bowl.5.f: "REPLACE_ME"
  usfp_dust_bowl.5.a: "It's certainly hard to ignore."
