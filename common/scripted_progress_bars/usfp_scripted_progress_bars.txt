@@ -647,15 +647,19 @@ usfp_roaring_twenties_optimism_bar = {
 	desc = "usfp_roaring_twenties_optimism_bar_desc"
 	default_green = yes
 
-	start_value = 500
+	start_value = 300
 	min_value = 0
-	max_value = 1000
+	max_value = 1000 #Black Tuesday at 900, ~9 years
 
 	monthly_progress = {
 		#GDP Growth
 		#Standard of Living
 		#Loyalists
 		#Peace
+
+		#Turmoil
+		#Revolution
+		#War
 	}
 }
 
@@ -666,12 +670,19 @@ usfp_great_depression_recovery_bar = {
 
 	start_value = 0
 	min_value = 0
-	max_value = 500
+	max_value = 1000 #Last 10+ years, past the end of the game normally
 
 	monthly_progress = {
+		#Very Low natural recovery
+		add = {
+			value = 0.2
+			desc = "panic_recovery_natural"
+		}
 		#GDP Growth
 		#Low Unemployment
 		#Social Security
 		#Economy Law
+
+		#Turmoil
 	}
 }

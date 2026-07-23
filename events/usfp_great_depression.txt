@@ -1,5 +1,273 @@
+namespace = usfp_great_depression
+
 #Roaring Twenties Start
+usfp_great_depression.1 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "unspecific_world_fair"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+    title = usfp_great_depression.1.t
+    desc = usfp_great_depression.1.d
+    flavor = usfp_great_depression.1.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #JE Start
+    }
+
+    immediate = {
+
+    }
+
+    #let's dance
+    option = {
+        name = usfp_great_depression.1.a
+        default_option = yes
+
+    }
+
+    #the economy is booming!
+    option = {
+        name = usfp_great_depression.1.b
+
+    }
+}
 #Economy has reached a permanent plateau
+usfp_great_depression.2 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "europenorthamerica_london_center"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+    title = usfp_great_depression.2.t
+    desc = usfp_great_depression.2.d
+    flavor = usfp_great_depression.2.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        je:je_usfp_roaring_twenties = {
+            "scripted_bar_progress(usfp_roaring_twenties_optimism_bar)" >= 900
+        }
+    }
+
+    immediate = {
+
+    }
+
+    #surely this will not go wrong
+    option = {
+        name = usfp_great_depression.2.a
+        default_option = yes
+
+    }
+
+}
+#Roaring Twenties Failure
+usfp_great_depression.3 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "europenorthamerica_political_extremism"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    title = usfp_great_depression.3.t
+    desc = usfp_great_depression.3.d
+    flavor = usfp_great_depression.3.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #JE Failure
+    }
+
+    immediate = {
+
+    }
+
+    #radicals
+    option = {
+        name = usfp_great_depression.3.a
+        default_option = yes
+        add_radicals = {
+            value = huge_radicals
+        }
+    }
+
+    #racism
+    option = {
+        name = usfp_great_depression.3.b
+        add_radicals = {
+            value = medium_radicals
+        }
+    }
+}
 #Black Tuesday
+usfp_great_depression.4 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "unspecific_factory_closed"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/mutual_funds.dds"
+
+    title = usfp_great_depression.4.t
+    desc = usfp_great_depression.4.d
+    flavor = usfp_great_depression.4.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    #which falls faster?
+    option = {
+        name = usfp_great_depression.4.a
+        default_option = yes
+
+    }
+
+    #laisez faire
+    option = {
+        name = usfp_great_depression.4.b
+
+    }
+
+    #interventionism
+    option = {
+        name = usfp_great_depression.4.c
+
+    }
+
+    #coops
+    option = {
+        name = usfp_great_depression.4.g
+
+    }
+}
 #Black Tuesday (Non-USA)
+usfp_great_depression.5 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "unspecific_factory_closed"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/mutual_funds.dds"
+
+    title = usfp_great_depression.5.t
+    desc = usfp_great_depression.5.d
+    flavor = usfp_great_depression.5.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    #uh oh
+    option = {
+        name = usfp_great_depression.5.a
+        default_option = yes
+
+    }
+
+    #coops
+    option = {
+        name = usfp_great_depression.5.b
+        highlighted_option = yes
+        trigger = {
+            has_law_or_variant = law_type:law_cooperative_ownership
+            NOT = {
+                has_law_or_variant = law_type:law_isolationism
+            }
+        }
+    }
+
+    #unaffected
+    option = {
+        name = usfp_great_depression.5.b
+        highlighted_option = yes
+        trigger = {
+            OR = {
+                has_law_or_variant = law_type:law_command_economy
+                has_law_or_variant = law_type:law_isolationism
+            }
+        }
+    }
+}
 #Hoovervilles
+usfp_great_depression.6 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "unspecific_vandalized_storefront"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/urbanization.dds"
+
+    title = usfp_great_depression.6.t
+    desc = usfp_great_depression.6.d
+    flavor = usfp_great_depression.6.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    #
+    option = {
+        name = usfp_great_depression.6.a
+        default_option = yes
+
+    }
+
+    #
+    option = {
+        name = usfp_great_depression.6.b
+
+    }
+}

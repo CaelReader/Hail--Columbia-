@@ -9,7 +9,9 @@
                 dlc = dlc_usfp
             }
         }
-
+        trigger_event = {
+            id = usfp_great_depression.1
+        }
     }
 
     is_shown_when_inactive = {
@@ -56,8 +58,12 @@
         average_sol_for_primary_cultures >= 15
     }
 
+
     invalid = {
-        has_law_or_variant = law_type:law_command_economy
+        OR = {
+            has_law_or_variant = law_type:law_command_economy
+            has_global_variable = had_black_tuesday
+        }
     }
 
     on_monthly_pulse = {
@@ -78,6 +84,30 @@
                     multiply = 1.005
                 }
             }
+
+        }
+    }
+
+    timeout = 5400
+
+    on_timeout = {
+        add_loyalists = {
+            value = medium_radicals
+        }
+    }
+
+    fail = {
+        custom_tooltip = {
+            text = progress_bar_zero
+            scope:journal_entry = {
+                "scripted_bar_progress(usfp_roaring_twenties_optimism_bar)" <= 0
+            }
+        }
+    }
+
+    on_fail = {
+        trigger_event = {
+            id = usfp_great_depression.3
         }
     }
 
@@ -89,7 +119,7 @@
 }
 
 je_usfp_great_depression = {
-    icon = "gfx/interface/icons/invention_icons/joint_stock_companies.dds"
+    icon = "gfx/interface/icons/invention_icons/mutual_funds.dds"
 
     group = je_group_crises
 

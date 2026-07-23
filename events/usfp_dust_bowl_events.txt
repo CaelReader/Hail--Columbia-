@@ -538,7 +538,7 @@ usfp_dust_bowl.7 = {
     type = country_event
     placement = scope:dust_bowl_state
     event_image = {
-        video = "ep2_intellectual_writer"
+        video = "ip4_university_lecture"
     }
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
