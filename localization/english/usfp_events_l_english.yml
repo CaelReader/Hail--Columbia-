@@ -1980,7 +1980,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
 
  usfp_dust_bowl.5.t: "Dust Clouds Over the East"
  usfp_dust_bowl.5.d: "An immense dust storm has billowed up out of the [GetStrategicRegion('region_great_plains').GetName] and blown all the way across the country to the [GetStrategicRegion('region_atlantic_coast').GetName]. Day was turned to dusk in [SCOPE.sState('big_eastern_city').GetCityHubName] as the dust began to rain from the sky and settle over the streets."
- usfp_dust_bowl.5.f: "REPLACE_ME"
+ usfp_dust_bowl.5.f: "Visibility in the streets of [SCOPE.sState('big_eastern_city').GetCityHubName] was reduced to nearly 0 at the height of the storm. Annoyed shopkeeps closed their shutters to keep it off their merchandise. Kids played in the dust: "Look Ma, I've got a whole pail of Oklahoma, all mine!""
  usfp_dust_bowl.5.a: "It's certainly hard to ignore."
  usfp_dust_bowl.5.b: "This is all the fault of those greedy farmers!"
 
@@ -1993,7 +1993,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
 
  usfp_dust_bowl.7.t: "Conserving the Prairies"
  usfp_dust_bowl.7.d: "Our research into the ecosystem of the [GetStrategicRegion('region_great_plains').GetName] has produced a slate of recommendations for remediating the dust bowl. The largest project will be the planting of a vast network of treelines in order to break up wind systems and retain moisture in the soil."
- usfp_dust_bowl.7.f: "REPLACE_ME"
+ usfp_dust_bowl.7.f: ""In the drought area people are not afraid to use new methods to meet changes in Nature, and to correct mistakes of the past. If overgrazing has injured range lands, they are willing to reduce the grazing. If certain wheat lands should be returned to pasture they are willing to cooperate. If trees should be planted as windbreaks or to stop erosion they will work with us. If terracing or summer fallowing or crop rotation is called for, they will carry them out. They stand ready to fit, and not to fight, the ways of Nature."$quote_dash$Franklin D. Roosevelt"
  usfp_dust_bowl.7.a: "Perhaps the damage can be undone."
  can_begin_shelterbelt: "We can now begin the Great Plains Shelterbelt project."
 
