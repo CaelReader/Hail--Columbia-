@@ -448,3 +448,15 @@ progress_bar_complete: "The #b Progress Bar#! has reached 100%"
 
  usfp_dust_bowl_desertification_zero: "The #b Progress Bar#! has reached 0%"
  usfp_dust_bowl_desertification_full: "The #b Progress Bar#! has reached 100%"
+
+ je_usfp_roaring_twenties: "The Roaring [SCOPE.GetRootScope.GetCountry.GetCustom('getDecadeName')|U]"
+ je_usfp_roaring_twenties_reason: "Sustained prosperity and technological advancement have brought a spirit of modernity to the [ROOT.GetCountry.GetName]. New trends of artistic, cultural, and social experimentation are spreading rapidly through a growing consumer base hungry for new products and fashions. Money flows freely through the market as investors grow ever more optimistic about the economy's seemingly limitless capacity for growth."
+ usfp_roaring_twenties_optimism_bar: "Optimism"
+ usfp_roaring_twenties_optimism_bar_desc: "Optimism: #italic ([JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%0])#!"
+
+ je_usfp_great_depression: "REPLACE_ME"
+ je_usfp_great_depression_reason: "REPLACE_ME"
+ usfp_great_depression_recovery_bar: "REPLACE_ME"
+ usfp_great_depression_recovery_bar_desc: "REPLACE_ME"
+
+ progress_bar_zero: "The #b Progress Bar#! has reached 0%"

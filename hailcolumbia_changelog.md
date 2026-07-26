@@ -991,3 +991,5 @@ Melting Pot modifier now always allows assimilation to the Primary Culture
 ## New Content
 ## Updates
     The Great Plains is now more susceptible to droughts and extreme winds
+    Changed Post-War Demobilization modifier from a Morale debuff to an Offense debuff
+# Fixes

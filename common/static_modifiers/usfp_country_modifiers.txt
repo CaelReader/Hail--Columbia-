@@ -583,7 +583,7 @@ usfp_post_acw_demobilization_modifier = {
 	building_training_rate_mult = -0.25
 	state_conscription_rate_mult = -0.25
 	unit_experience_gain_mult = -0.25
-	unit_morale_loss_mult = 0.25
+	unit_army_offense_mult = -0.15
 }
 
 usfp_reconstruction_army_duties_modifier = {

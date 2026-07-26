@@ -1956,25 +1956,25 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  #Dust Bowl Events
  usfp_dust_bowl.1.t: "The Great Plow Up"
  usfp_dust_bowl.1.d: "The introduction of gas-powered tractors has enticed farmers in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] to plow up previously unused areas of prairie grass in order to plant expansive fields of wheat."
- usfp_dust_bowl.1.f: "REPLACE_ME"
+ usfp_dust_bowl.1.f: ""I saw the whole country transformed in the sunset glow, all the brown prairie turned to gold. I could feel once more the lure of this great lonely land, waiting with its stores of fertility untouched, for those who shall one day learn to meet its demands, to give to it their patient thought and labor."$quote_dash$Caroline Henderson, #italic Our Homestead Lady #!"
  usfp_dust_bowl.1.a: "More grain is better for everyone."
  usfp_dust_bowl.1.b: "A great opportunity for agro-business firms."
  usfp_dust_bowl.1.c: "Bringing wasteland under cultivation will create more prosperous collectives."
 
  usfp_dust_bowl.2.t: "The Dust Bowl"
  usfp_dust_bowl.2.d: "The expansion of agriculture across the [GetStrategicRegion('region_great_plains').GetName] has torn up the fragile topsoil of the region. Dry weather in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] has now created the conditions for huge amounts of earth to be stripped off by the wind and propelled into dust storms that have begun to regularly roll across the plains and beyond."
- usfp_dust_bowl.2.f: "REPLACE_ME"
+ usfp_dust_bowl.2.f: ""You could see that dust storm comin', the cloud looked deathlike black,\nAnd through our mighty nation, it left a dreadful track.\nFrom Oklahoma City to the Arizona line,\nDakota and Nebraska to the lazy Rio Grande,\nIt fell across our city like a curtain of black rolled down,\nWe thought it was our judgement, we thought it was our doom."$quote_dash$Woody Guthrie, #italic Dust Bowl Ballads#!"
  usfp_dust_bowl.2.a: "Surely the rain will return soon?"
 
  usfp_dust_bowl.3.t: "Clear Skies"
  usfp_dust_bowl.3.d: "Our investments into remediating the soil of the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] have proven successful, ending the threat of large dust storms and creating the opportunity to reopen more land to be placed back under cultivation."
- usfp_dust_bowl.3.f: "REPLACE_ME"
+ usfp_dust_bowl.3.f: ""No cracked earth, no blistering sun, no burning wind, no grasshoppers are a permanent match for the indomitable American farmers and stockmen and their wives and children who have carried on through desperate days, and inspire us with their self-reliance, their tenacity and their courage. It was their fathers' task to make homes; it is their task to keep those homes; it is our task to help them win their fight."$quote_dash$Franklin D. Roosevelt"
  usfp_dust_bowl.3.a: "Pumping the aquifers would let us irrigate the plains year-round."
  usfp_dust_bowl.3.b: "Let's ensure this over-exploitation doesn't happen again."
 
  usfp_dust_bowl.4.t: "The American Desert"
  usfp_dust_bowl.4.d: "The runaway dust storms in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] have resulted in permanent desertification of large sections of the region."
- usfp_dust_bowl.4.f: "REPLACE_ME"
+ usfp_dust_bowl.4.f: ""Dust to eat, and dust to breathe, and dust to drink. Dust in the beds, and in the flour bin. On dishes and walls and windows. In hair and eyes and ears and teeth and throats. To say nothing of the heaped up accumulations on floors and windowsills after one of the bad days. This wind-driven dust, fine as the finest flour, penetrates wherever air can go."$quote_dash$Caroline Henderson, #italic Our Homestead Lady #!"
  usfp_dust_bowl.4.a: "We are helpless in the face of these completely natural forces..."
  usfp_dust_bowl.4.b: "Those foolish farmers destroyed themselves!"
 
@@ -1984,9 +1984,9 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_dust_bowl.5.a: "It's certainly hard to ignore."
  usfp_dust_bowl.5.b: "This is all the fault of those greedy farmers!"
 
- usfp_dust_bowl.6.t: "Walking the Mother Road"
+ usfp_dust_bowl.6.t: "On the Mother Road"
  usfp_dust_bowl.6.d: "With their farms inundated by the dust storms, many impoverished farmers have begun to pack up and flee the [GetGeographicRegion('geographic_region_southern_great_plains').GetName], hoping for new opportunities in the east and west."
- usfp_dust_bowl.6.f: "REPLACE_ME"
+ usfp_dust_bowl.6.f: ""Ma tried to look back, but the body of the load cut off her view. She straightened her head and peered straight ahead along the dirt road. And a great weariness was in her eyes. The people on top of the load did look back. They saw the house and the barn and a little smoke still rising from the chimney. They saw the windows reddening under the first color of the sun. They saw Muley standing forlornly in the dooryard looking after them. And then the hill cut them off. The cotton fields lined the road. And the truck crawled slowly through the dust toward the highway and the west."$quote_dash$John Steinbeck, #italic The Grapes of Wrath #!"
  usfp_dust_bowl.6.a: "The dust is truly unbearable."
  usfp_dust_bowl.6.b: "Offer resettlement assistance to help reduce the burden on the plains."
  usfp_dust_bowl.6.c: "These ignorant Okies are just going to bring trouble with them!"

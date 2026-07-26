@@ -1,5 +1,5 @@
 ﻿je_usfp_roaring_twenties = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    icon = "gfx/interface/icons/central_identity_pillars_icons/cultural.dds"
 
     group = je_group_historical_content
 
@@ -43,7 +43,7 @@
         any_scope_state = {
             any_scope_building = {
                 is_building_type = building_urban_center
-                level >= 30
+                level >= 400
                 has_active_production_method = pm_electric_streetlights
             }
             any_scope_building = {
@@ -55,7 +55,7 @@
             }
             turmoil < 0.25
         }
-        average_sol_for_primary_cultures >= 15
+        average_sol_for_primary_cultures >= 20
     }
 
 

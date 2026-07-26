@@ -130,6 +130,18 @@ usfp_dust_bowl.1 = {
         }
     }
 
+    after = {
+        s:STATE_COLORADO = {
+            add_resource_potential = building_wheat_farm
+        }
+        s:STATE_TEXAS = {
+            add_resource_potential = building_wheat_farm
+        }
+        s:STATE_NEBRASKA = {
+            add_resource_potential = building_wheat_farm
+        }
+    }
+
 }
 #Dust Bowl JE Begins
 usfp_dust_bowl.2 = {
