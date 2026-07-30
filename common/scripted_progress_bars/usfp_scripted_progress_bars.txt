@@ -653,13 +653,74 @@ usfp_roaring_twenties_optimism_bar = {
 
 	monthly_progress = {
 		#GDP Growth
+		if = {
+			limit = {
+				var:roaring_twenties_last_month_gdp < var:roaring_twenties_this_month_gdp
+			}
+			add = {
+				value = var:roaring_twenties_gdp_target
+				divide = var:roaring_twenties_this_month_gdp
+				subtract = 1
+				multiply = 100
+				max = 3
+				desc = "panic_recovery_gdp_growth"
+			}
+		}
 		#Standard of Living
+		if = {
+			limit = {
+				average_sol_for_primary_cultures >= usfp_roaring_twenties_sol_target
+			}
+			add = {
+				value = average_sol_for_primary_cultures
+				subtract = usfp_roaring_twenties_sol_target
+				add = 1
+				desc = "average_sol_for_primary_cultures"
+			}
+		}
 		#Loyalists
+		add = {
+			value = loyalist_fraction
+			desc = "concept_loyalists"
+		}
 		#Peace
+		if = {
+			limit = {
+				is_at_war = no
+			}
+			add = {
+				value = 0.5
+				desc = "at_peace"
+			}
+		}
 
 		#Turmoil
+		subtract = {
+			value = country_turmoil
+			desc = "concept_turmoil"
+		}
 		#Revolution
+		if = {
+			limit = {
+				any_civil_war = {
+					is_civil_war_type = revolution
+				}
+			}
+			subtract = {
+				value = 10
+				desc = "concept_revolution"
+			}
+		}
 		#War
+		if = {
+			limit = {
+				any_enemy_in_war = {
+					country_rank >= rank_value:major_power
+				}
+			}
+			subtract = 5
+			desc = "war_with_major_or_great_power"
+		}
 	}
 }
 
@@ -670,7 +731,7 @@ usfp_great_depression_recovery_bar = {
 
 	start_value = 0
 	min_value = 0
-	max_value = 1000 #Last 10+ years, past the end of the game normally
+	max_value = 5000 #Last 10+ years, past the end of the game normally
 
 	monthly_progress = {
 		#Very Low natural recovery
@@ -679,10 +740,72 @@ usfp_great_depression_recovery_bar = {
 			desc = "panic_recovery_natural"
 		}
 		#GDP Growth
+		if = {
+			limit = {
+				var:great_depression_last_month_gdp < var:great_depression_this_month_gdp
+			}
+			add = {
+				value = var:great_depression_gdp_target
+				divide = var:great_depression_this_month_gdp
+				subtract = 1
+				multiply = 100
+				max = 3
+				desc = "panic_recovery_gdp_growth"
+			}
+		}
 		#Low Unemployment
+		if = {
+			limit = {
+				NOT = {
+					any_scope_state = {
+						state_unemployment_rate > 0.15
+					}
+				}
+			}
+			add = {
+				value = 1
+				desc = "low_unemployment"
+			}
+		}
 		#Social Security
+		if = {
+			limit = {
+				has_institution = institution_social_security
+			}
+			add = {
+				value = institution_investment_level:institution_social_security
+				subtract = 1
+				desc = "institution_social_security"
+			}
+		}
 		#Economy Law
-
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_laissez_faire
+			}
+			subtract = {
+				value = 1
+				desc = "law_laissez_faire"
+			}
+		} else_if = {
+			limit = {
+				has_law_or_variant = law_type:law_cooperative_ownership
+			}
+			add = {
+				value = 3
+				desc = "law_cooperative_ownership"
+			}
+		}
 		#Turmoil
+		if = {
+			limit = {
+				country_turmoil > 0.20
+			}
+			subtract = {
+				value = country_turmoil
+				multiply = 10
+				desc = "concept_turmoil"
+			}
+		}
 	}
 }

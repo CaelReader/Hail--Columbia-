@@ -1000,3 +1000,7 @@ usfp_get_roosevelt_diplomacy_score = {
     }
     min = 0
 }
+
+usfp_roaring_twenties_sol_target = {
+	value = 20
+}

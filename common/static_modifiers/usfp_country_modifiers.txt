@@ -923,3 +923,29 @@ usfp_supreme_court_showdown_modifier = {
     political_movement_pop_attraction_mult = 0.20
     political_movement_radicalism_from_enactment_disapproval_mult = 0.25
 }
+
+usfp_roaring_twenties_optimism_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds #multiplied by Roaring Twenties optimism bar
+	state_capitalists_investment_pool_contribution_add = 0.01
+	state_capitalists_investment_pool_efficiency_mult = 0.01
+	state_shopkeepers_investment_pool_contribution_add = 0.01
+	state_shopkeepers_investment_pool_efficiency_mult = 0.01
+	state_clerks_investment_pool_efficiency_mult = 0.01
+	state_clerks_investment_pool_contribution_add = 0.01
+	political_movement_pop_attraction_mult = -0.01
+}
+
+usfp_roaring_twenties_jazz_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	building_art_academy_throughput_add = 0.10
+	country_society_tech_spread_mult = 0.10
+	country_loyalism_increases_full_acceptance_mult = 0.10
+	country_loyalism_increases_second_rate_citizen_mult = 0.05
+}
+
+usfp_roaring_twenties_art_deco_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_positive.dds
+	building_urban_center_throughput_add = 0.10
+	building_group_bg_light_industry_construction_efficiency_add = 0.10
+	building_power_plant_throughput_add = 0.10
+}

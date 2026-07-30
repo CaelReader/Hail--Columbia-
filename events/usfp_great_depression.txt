@@ -31,13 +31,30 @@ usfp_great_depression.1 = {
     option = {
         name = usfp_great_depression.1.a
         default_option = yes
-
+        add_modifier = {
+            name = usfp_roaring_twenties_jazz_modifier
+            years = 5
+        }
     }
 
-    #the economy is booming!
+    #let's build
     option = {
         name = usfp_great_depression.1.b
+        add_modifier = {
+            name = usfp_roaring_twenties_art_deco_modifier
+            years = 5
+        }
+    }
 
+    after = {
+        add_loyalists = {
+            value = small_radicals
+            strata = middle
+        }
+        add_loyalists = {
+            value = small_radicals
+            strata = upper
+        }
     }
 }
 #Economy has reached a permanent plateau
@@ -73,7 +90,27 @@ usfp_great_depression.2 = {
     option = {
         name = usfp_great_depression.2.a
         default_option = yes
-
+        add_loyalists = {
+            strata = upper
+            value = small_radicals
+        }
+        custom_tooltip = {
+            text = roaring_twenties_increase_optimism
+            je:usfp_reconstruction_long ?= {
+                add_progress = {
+                    name = usfp_roaring_twenties_optimism_bar
+                    value = 25
+                }
+            }
+        }
+        custom_tooltip = {
+            text = black_tuesday_soon
+            trigger_event = {
+                id = usfp_great_depression.4
+                days = 7
+                popup = yes
+            }
+        }
     }
 
 }
@@ -117,7 +154,23 @@ usfp_great_depression.3 = {
     option = {
         name = usfp_great_depression.3.b
         add_radicals = {
-            value = medium_radicals
+            value = large_radicals
+        }
+        add_modifier = {
+            name = modifier_grunderkrach_blame_minorities
+            days = normal_modifier_time
+        }
+        every_interest_group = {
+            limit = {
+                law_stance = {
+                    law = law_type:law_ethnostate
+                    value >= approve
+                }
+            }
+            add_modifier = {
+                name = modifier_grunderkrach_blame_minorities_ig_boost
+                days = normal_modifier_time
+            }
         }
     }
 }
@@ -141,11 +194,11 @@ usfp_great_depression.4 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     trigger = {
-
+        #spawned by Roaring Twenties JE
     }
 
     immediate = {
-
+        set_global_variable = had_black_tuesday
     }
 
     #which falls faster?
@@ -171,6 +224,12 @@ usfp_great_depression.4 = {
     option = {
         name = usfp_great_depression.4.g
 
+    }
+
+    after = {
+        add_journal_entry = {
+            type = je_usfp_great_depression
+        }
     }
 }
 #Black Tuesday (Non-USA)
@@ -204,7 +263,9 @@ usfp_great_depression.5 = {
     option = {
         name = usfp_great_depression.5.a
         default_option = yes
-
+        add_journal_entry = {
+            type = je_usfp_great_depression
+        }
     }
 
     #coops
@@ -217,6 +278,12 @@ usfp_great_depression.5 = {
                 has_law_or_variant = law_type:law_isolationism
             }
         }
+        add_journal_entry = {
+            type = je_usfp_great_depression
+        }
+        ai_chance = {
+            base = 1000
+        }
     }
 
     #unaffected
@@ -228,6 +295,13 @@ usfp_great_depression.5 = {
                 has_law_or_variant = law_type:law_command_economy
                 has_law_or_variant = law_type:law_isolationism
             }
+        }
+        add_loyalists = {
+            strata = middle
+            value = small_radicals
+        }
+        ai_chance = {
+            base = 1000
         }
     }
 }
@@ -251,23 +325,44 @@ usfp_great_depression.6 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     trigger = {
-
+        any_political_movement = {
+            movement_is_socialist = yes
+        }
     }
 
     immediate = {
-
+        ordered_political_movement = {
+            limit = {
+                movement_is_socialist = yes
+            }
+            position = 0
+            order_by = political_movement_support
+            save_scope_as = socialist_movement
+        }
     }
 
-    #
+    #sweep
     option = {
         name = usfp_great_depression.6.a
         default_option = yes
-
+        add_radicals = {
+            strata = lower
+            value = small_radicals
+        }
     }
 
-    #
+    #agitate
     option = {
         name = usfp_great_depression.6.b
 
+    }
+
+    after = {
+        every_scope_state = {
+            custom = hooverville_states
+            limit = {
+
+            }
+        }
     }
 }

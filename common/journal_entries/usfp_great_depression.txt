@@ -8,6 +8,10 @@
             add_com_dlc_icon = {
                 dlc = dlc_usfp
             }
+            add_modifier = {
+                name = usfp_roaring_twenties_optimism_modifier
+                multiplier = 30
+            }
         }
         trigger_event = {
             id = usfp_great_depression.1
@@ -55,7 +59,7 @@
             }
             turmoil < 0.25
         }
-        average_sol_for_primary_cultures >= 20
+        average_sol_for_primary_cultures >= usfp_roaring_twenties_sol_target
     }
 
 
@@ -84,8 +88,24 @@
                     multiply = 1.005
                 }
             }
+            je:je_usfp_roaring_twenties = {
+                remove_modifier = usfp_roaring_twenties_optimism_modifier
+                if = {
+                    limit = {
+                        "scripted_bar_progress(usfp_roaring_twenties_optimism_bar)" > 0
+                    }
+                    add_modifier = {
+                        name = usfp_roaring_twenties_optimism_modifier
+                        multiplier = {
+                            value = "scope:journal_entry.scripted_bar_progress(usfp_roaring_twenties_optimism_bar)"
+                            multiply = 0.1
+                        }
+                    }
+                }
 
+            }
         }
+
     }
 
     timeout = 5400
@@ -137,6 +157,26 @@ je_usfp_great_depression = {
         has_law_or_variant = law_type:law_command_economy
     }
 
+    on_monthly_pulse = {
+        effect = {
+            set_variable = {
+                name = great_depression_last_month_gdp
+                value = var:great_depression_this_month_gdp
+            }
+            set_variable = {
+                name = great_depression_this_month_gdp
+                value = root.gdp
+            }
+            set_variable = {
+                name = great_depression_gdp_target
+                value = {
+                    value = var:roaring_twenties_this_month_gdp
+                    multiply = 1.005
+                }
+            }
+        }
+    }
+
     scripted_progress_bar = usfp_great_depression_recovery_bar
 
     complete = {
@@ -158,6 +198,7 @@ je_usfp_great_depression = {
             has_modifier = declared_bankruptcy
         }
     }
+
 
     weight = 200
     should_be_pinned_by_default_uninvolved_or_context = yes

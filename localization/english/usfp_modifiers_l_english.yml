@@ -361,3 +361,6 @@ country_enactment_success_chance_law_multicultural_add_desc: "A flat percentage 
  usfp_dust_bowl_sustainability_modifier: "Prairie Reserves"
  usfp_dust_bowl_exodus_modifier: "Dust Bowl Exodus"
  usfp_dust_bowl_resettlement_modifier: "Dust Bowl Resettlement"
+ usfp_roaring_twenties_optimism_modifier: "Speculative Investments"
+ usfp_roaring_twenties_jazz_modifier: "The Jazz Age"
+ usfp_roaring_twenties_art_deco_modifier: "Art Deco"
