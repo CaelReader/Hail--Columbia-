@@ -9,8 +9,18 @@
                 dlc = dlc_usfp
             }
             add_modifier = {
-                name = usfp_roaring_twenties_optimism_modifier
-                multiplier = 30
+                name = usfp_roaring_twenties_optimism_tier2_modifier
+            }
+            initialize_com_progress_bar = {
+                progress_bar = usfp_roaring_twenties_optimism_bar
+                index = 0
+            }
+            set_com_progress_bar_levels = {
+                progress_bar = usfp_roaring_twenties_optimism_bar
+                levels = 5
+            }
+            set_com_progress_bar_level_highlight = {
+                progress_bar = usfp_roaring_twenties_optimism_bar
             }
         }
         trigger_event = {
@@ -89,17 +99,112 @@
                 }
             }
             je:je_usfp_roaring_twenties = {
-                remove_modifier = usfp_roaring_twenties_optimism_modifier
                 if = {
                     limit = {
-                        "scripted_bar_progress(usfp_roaring_twenties_optimism_bar)" > 0
-                    }
-                    add_modifier = {
-                        name = usfp_roaring_twenties_optimism_modifier
-                        multiplier = {
-                            value = "scope:journal_entry.scripted_bar_progress(usfp_roaring_twenties_optimism_bar)"
-                            multiply = 0.1
+                        scripted_bar_progress = {
+                            name = usfp_roaring_twenties_optimism_bar
+                            value < 200
                         }
+                    }
+                    if = {
+                        limit = {
+                            je:je_usfp_roaring_twenties ?= {
+                                NOT = {
+                                    has_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                                }
+                            }
+                        }
+                        je:je_usfp_roaring_twenties = {
+                            add_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                            remove_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                            remove_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                            remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                            remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
+                        }
+                    }
+                } else_if = {
+                    limit = {
+                        scripted_bar_progress = {
+                            name = usfp_roaring_twenties_optimism_bar
+                            value < 400
+                        }
+                    }
+                    if = {
+                        limit = {
+                            je:je_usfp_roaring_twenties ?= {
+                                NOT = {
+                                    has_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                                }
+                            }
+                        }
+                        je:je_usfp_roaring_twenties = {
+                            remove_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                            add_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                            remove_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                            remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                            remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
+                        }
+                    }
+                } else_if = {
+                    limit = {
+                        scripted_bar_progress = {
+                            name = usfp_roaring_twenties_optimism_bar
+                            value < 600
+                        }
+                    }
+                    if = {
+                        limit = {
+                            je:je_usfp_roaring_twenties ?= {
+                                NOT = {
+                                    has_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                                }
+                            }
+                        }
+                        je:je_usfp_roaring_twenties = {
+                            remove_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                            remove_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                            add_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                            remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                            remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
+                        }
+                    }
+                } else_if = {
+                    limit = {
+                        scripted_bar_progress = {
+                            name = usfp_roaring_twenties_optimism_bar
+                            value < 800
+                        }
+                    }
+                    if = {
+                        limit = {
+                            je:je_usfp_roaring_twenties ?= {
+                                NOT = {
+                                    has_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                                }
+                            }
+                        }
+                        je:je_usfp_roaring_twenties = {
+                            remove_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                            remove_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                            remove_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                            add_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                            remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
+                        }
+                    }
+                } else_if = {
+                    limit = {
+                        je:je_usfp_roaring_twenties ?= {
+                            NOT = {
+                                has_modifier = usfp_roaring_twenties_optimism_tier5_modifier
+                            }
+                        }
+                    }
+                    je:je_usfp_roaring_twenties = {
+                        remove_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                        add_modifier = usfp_roaring_twenties_optimism_tier5_modifier
                     }
                 }
 

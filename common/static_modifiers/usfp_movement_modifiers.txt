@@ -223,3 +223,8 @@ usfp_seditious_dramas_movement_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_democracy_positive.dds
     political_movement_pop_attraction_mult = 0.15
 }
+
+usfp_hooverville_agitation_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_pop_attraction_mult = 0.25
+}

@@ -924,15 +924,53 @@ usfp_supreme_court_showdown_modifier = {
     political_movement_radicalism_from_enactment_disapproval_mult = 0.25
 }
 
-usfp_roaring_twenties_optimism_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds #multiplied by Roaring Twenties optimism bar
-	state_capitalists_investment_pool_contribution_add = 0.01
-	state_capitalists_investment_pool_efficiency_mult = 0.01
+usfp_roaring_twenties_optimism_tier1_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
+	state_capitalists_investment_pool_efficiency_mult = 0.10
+	state_shopkeepers_investment_pool_efficiency_mult = 0.10
+}
+
+usfp_roaring_twenties_optimism_tier2_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
+	state_capitalists_investment_pool_contribution_add = 0.02
+	state_capitalists_investment_pool_efficiency_mult = 0.15
 	state_shopkeepers_investment_pool_contribution_add = 0.01
-	state_shopkeepers_investment_pool_efficiency_mult = 0.01
-	state_clerks_investment_pool_efficiency_mult = 0.01
+	state_shopkeepers_investment_pool_efficiency_mult = 0.15
+	state_clerks_investment_pool_efficiency_mult = 0.10
+	political_movement_pop_attraction_mult = -0.05
+}
+
+usfp_roaring_twenties_optimism_tier3_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
+	state_capitalists_investment_pool_contribution_add = 0.05
+	state_capitalists_investment_pool_efficiency_mult = 0.20
+	state_shopkeepers_investment_pool_contribution_add = 0.02
+	state_shopkeepers_investment_pool_efficiency_mult = 0.20
+	state_clerks_investment_pool_efficiency_mult = 0.15
+	political_movement_pop_attraction_mult = -0.10
+}
+
+usfp_roaring_twenties_optimism_tier4_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
+	state_capitalists_investment_pool_contribution_add = 0.07
+	state_capitalists_investment_pool_efficiency_mult = 0.25
+	state_shopkeepers_investment_pool_contribution_add = 0.04
+	state_shopkeepers_investment_pool_efficiency_mult = 0.25
+	state_clerks_investment_pool_efficiency_mult = 0.20
 	state_clerks_investment_pool_contribution_add = 0.01
-	political_movement_pop_attraction_mult = -0.01
+	political_movement_pop_attraction_mult = -0.20
+}
+
+usfp_roaring_twenties_optimism_tier5_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
+	state_capitalists_investment_pool_contribution_add = 0.10
+	state_capitalists_investment_pool_efficiency_mult = 0.30
+	state_shopkeepers_investment_pool_contribution_add = 0.6
+	state_shopkeepers_investment_pool_efficiency_mult = 0.30
+	state_clerks_investment_pool_efficiency_mult = 0.25
+	state_clerks_investment_pool_contribution_add = 0.04
+	political_movement_pop_attraction_mult = -0.30
+	political_movement_radicalism_add = -0.10
 }
 
 usfp_roaring_twenties_jazz_modifier = {
