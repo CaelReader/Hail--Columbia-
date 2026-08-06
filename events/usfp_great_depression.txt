@@ -209,30 +209,71 @@ usfp_great_depression.4 = {
     option = {
         name = usfp_great_depression.4.a
         default_option = yes
-
+        add_investment_pool = {
+            value = money_amount_multiplier_very_large
+            multiply = -1
+        }
     }
 
     #laisez faire
     option = {
         name = usfp_great_depression.4.b
-
+        trigger = {
+            has_law_or_variant = law_type:law_laissez_faire
+        }
+        highlighted_option = yes
+        add_investment_pool = {
+            value = money_amount_multiplier_very_large
+            multiply = -1
+        }
     }
 
     #interventionism
     option = {
         name = usfp_great_depression.4.c
-
+        trigger = {
+            has_law_or_variant = law_type:law_interventionism
+        }
+        add_investment_pool = {
+            value = money_amount_multiplier_very_large
+            multiply = -1
+        }
+        highlighted_option = yes
     }
 
     #coops
     option = {
         name = usfp_great_depression.4.g
-
+        trigger = {
+            has_law_or_variant = law_type:law_cooperative_ownership
+        }
+        add_investment_pool = {
+            value = money_amount_multiplier_very_large
+            multiply = -0.75
+        }
+        highlighted_option = yes
     }
 
     after = {
+        custom_tooltip = roaring_twenties_ends
         add_journal_entry = {
             type = je_usfp_great_depression
+        }
+        hidden_effect = {
+            save_scope_as = usa_scope
+            every_country = {
+                limit = {
+                    OR = {
+                        is_country_type = recognized
+                        is_country_type = colonial
+                    }
+                    has_diplomatic_relevance = root
+                }
+                trigger_event = {
+                    id = usfp_great_depression.5
+                    popup = yes
+                }
+            }
         }
     }
 }
@@ -292,7 +333,7 @@ usfp_great_depression.5 = {
 
     #unaffected
     option = {
-        name = usfp_great_depression.5.b
+        name = usfp_great_depression.5.c
         highlighted_option = yes
         trigger = {
             OR = {
@@ -339,6 +380,9 @@ usfp_great_depression.6 = {
         }
         NOT = {
             has_law_or_variant = law_type:law_council_republic
+        }
+        je:je_usfp_great_depression ?= {
+            journal_entry_age > 3650 # days
         }
     }
 
