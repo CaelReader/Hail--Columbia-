@@ -447,3 +447,9 @@ usfp_dust_bowl_resettlement_modifier = {
 	state_migration_pull_add = -15
 	state_bureaucracy_population_base_cost_factor_mult = 0.10
 }
+
+usfp_hooverville_state_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_laborer_negative.dds
+	building_urban_center_throughput_add = -0.10
+	state_loyalism_increases_full_acceptance_mult = -0.20
+}

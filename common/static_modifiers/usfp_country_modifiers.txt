@@ -928,6 +928,7 @@ usfp_roaring_twenties_optimism_tier1_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
 	state_capitalists_investment_pool_efficiency_mult = 0.10
 	state_shopkeepers_investment_pool_efficiency_mult = 0.10
+	building_art_academy_throughput_add = 0.05
 }
 
 usfp_roaring_twenties_optimism_tier2_modifier = {
@@ -938,6 +939,7 @@ usfp_roaring_twenties_optimism_tier2_modifier = {
 	state_shopkeepers_investment_pool_efficiency_mult = 0.15
 	state_clerks_investment_pool_efficiency_mult = 0.10
 	political_movement_pop_attraction_mult = -0.05
+	building_art_academy_throughput_add = 0.10
 }
 
 usfp_roaring_twenties_optimism_tier3_modifier = {
@@ -948,6 +950,7 @@ usfp_roaring_twenties_optimism_tier3_modifier = {
 	state_shopkeepers_investment_pool_efficiency_mult = 0.20
 	state_clerks_investment_pool_efficiency_mult = 0.15
 	political_movement_pop_attraction_mult = -0.10
+	building_art_academy_throughput_add = 0.15
 }
 
 usfp_roaring_twenties_optimism_tier4_modifier = {
@@ -959,6 +962,7 @@ usfp_roaring_twenties_optimism_tier4_modifier = {
 	state_clerks_investment_pool_efficiency_mult = 0.20
 	state_clerks_investment_pool_contribution_add = 0.01
 	political_movement_pop_attraction_mult = -0.20
+	building_art_academy_throughput_add = 0.20
 }
 
 usfp_roaring_twenties_optimism_tier5_modifier = {
@@ -971,6 +975,8 @@ usfp_roaring_twenties_optimism_tier5_modifier = {
 	state_clerks_investment_pool_contribution_add = 0.04
 	political_movement_pop_attraction_mult = -0.30
 	political_movement_radicalism_add = -0.10
+	building_art_academy_throughput_add = 0.25
+	country_prestige_mult = 0.10
 }
 
 usfp_roaring_twenties_jazz_modifier = {

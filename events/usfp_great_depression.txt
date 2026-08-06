@@ -372,6 +372,10 @@ usfp_great_depression.6 = {
             limit = {
                 state_unemployment_rate > 0.10
             }
+            add_modifier = {
+                name = usfp_hooverville_state_modifier
+                years = 5
+            }
         }
     }
 }

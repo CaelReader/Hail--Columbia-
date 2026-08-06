@@ -2005,6 +2005,48 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  dust_bowl_dust_storms_arable_land_warning: "@warning! Every [GetHarvestConditionType('usfp_dust_storm').GetName] that appears in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] will #red reduce#! the [concept_arable_land] of the epicenter [concept_state]!"
 
 
+ #Roaring Twenties and Great Depression Events
+ usfp_great_depression.1.t: "This Side of Paradise"
+ usfp_great_depression.1.d: "REPLACE_ME"
+ usfp_great_depression.1.f: "REPLACE_ME"
+ usfp_great_depression.1.a: "REPLACE_ME"
+ usfp_great_depression.1.b: "REPLACE_ME"
+
+ usfp_great_depression.2.t: "The Line Goes Up"
+ usfp_great_depression.2.d: "As speculative investments have boosted the [ROOT.GetCountry.GetAdjective] stock market to record heights, economic observers have begun to question how long this can be sustained before a significant market correction."
+ usfp_great_depression.2.f: ""Stock prices have reached what looks like a permanently high plateau. Time will tell whether the increase will continue sufficiently to justify the present high level. I expect that it will."$quote_dash$Irving Fisher"
+ usfp_great_depression.2.a: "We have transcended the business cycle!"
+
+ usfp_great_depression.3.t: "The Waste Land"
+ usfp_great_depression.3.d: "REPLACE_ME"
+ usfp_great_depression.3.f: "REPLACE_ME"
+ usfp_great_depression.3.a: "REPLACE_ME"
+ usfp_great_depression.3.b: "REPLACE_ME"
+
+ usfp_great_depression.4.t: "Black Thursday"
+ usfp_great_depression.4.d: "REPLACE_ME"
+ usfp_great_depression.4.f: "REPLACE_ME"
+ usfp_great_depression.4.a: "REPLACE_ME"
+ usfp_great_depression.4.b: "REPLACE_ME"
+ usfp_great_depression.4.c: "REPLACE_ME"
+ usfp_great_depression.4.g: "REPLACE_ME"
+
+ usfp_great_depression.5.t: "Black Tuesday"
+ usfp_great_depression.5.d: "REPLACE_ME"
+ usfp_great_depression.5.f: "REPLACE_ME"
+ usfp_great_depression.5.a: "REPLACE_ME"
+ usfp_great_depression.5.b: "REPLACE_ME"
+
+ usfp_great_depression.6.t: "Welcome to [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting]ville"
+ usfp_great_depression.6.d: "REPLACE_ME"
+ usfp_great_depression.6.f: "REPLACE_ME"
+ usfp_great_depression.6.a: "REPLACE_ME"
+ usfp_great_depression.6.b: "REPLACE_ME"
+
+ roaring_twenties_increase_optimism: "REPLACE_ME"
+ black_tuesday_soon: "@warn! #Red Any cause for concern will cause investors to panic sell #!"
+ hooverville_states: "REPLACE_ME"
+
 
  usfp_debug.1.t: "Mod Conflict Detected"
  usfp_debug.1.d: "Hail, Columbia! has detected an incorrect mod setup. Lots of things will break! Do not report errors from this save game!"
