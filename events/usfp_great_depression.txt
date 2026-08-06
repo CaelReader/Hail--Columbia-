@@ -31,18 +31,23 @@ usfp_great_depression.1 = {
     option = {
         name = usfp_great_depression.1.a
         default_option = yes
-        add_modifier = {
-            name = usfp_roaring_twenties_jazz_modifier
-            years = 5
+        je:je_usfp_roaring_twenties ?= {
+            add_modifier = {
+                name = usfp_roaring_twenties_jazz_modifier
+                years = 5
+            }
         }
+
     }
 
     #let's build
     option = {
         name = usfp_great_depression.1.b
-        add_modifier = {
-            name = usfp_roaring_twenties_art_deco_modifier
-            years = 5
+        je:je_usfp_roaring_twenties ?= {
+            add_modifier = {
+                name = usfp_roaring_twenties_art_deco_modifier
+                years = 5
+            }
         }
     }
 
@@ -330,6 +335,7 @@ usfp_great_depression.6 = {
         }
         any_scope_state = {
             state_unemployment_rate > 0.10
+            is_incorporated = yes
             count >= 3
         }
     }
@@ -371,6 +377,7 @@ usfp_great_depression.6 = {
             custom = hooverville_states
             limit = {
                 state_unemployment_rate > 0.10
+                is_incorporated = yes
             }
             add_modifier = {
                 name = usfp_hooverville_state_modifier

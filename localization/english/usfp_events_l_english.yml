@@ -1402,7 +1402,7 @@ usfp_indian_postremoval.1.d: "A millenarian spiritual movement known as the Ghos
 usfp_indian_postremoval.1.f: ""They told the people they could dance a new world into being. There would be landslides, earthquakes, and big winds. Hills would pile up on each other. The earth would roll up like a carpet with all the white man's ugly things - the stinking new animals, sheep and pigs, the fences, the telegraph poles, the mines and factories. Underneath would be the wonderful old-new world as it had been before the white fat-takers came. The white men will be rolled up, disappear, go back to their own continent."" #Lame Deer
 usfp_indian_postremoval.1.a: "Send in troops to break up the dances."
 usfp_indian_postremoval.1.b: "The dancers are no threat to anyone."
- ghost_dance_states: "Every [concept_state] in the [GetGeographicRegion('geographic_region_american_west_zone').GetName] with an [GetReligion('Animist').GetName] [concept_pop]"
+ ghost_dance_states: "Every [concept_state] in the [GetGeographicRegion('geographic_region_american_west_zone').GetName] with an [GetReligion('animist').GetName] [concept_pop]"
 
 usfp_indian_postremoval.2.t: "Massacre at Wounded Knee"
 usfp_indian_postremoval.2.d: "The troops we sent in to [SCOPE.sState('south_dakota_scope').GetName] to break up the Ghost Dance have slaughtered an entire band of non-hostile [SCOPE.sCulture('dakota_culture').GetName] Indians. The few warriors who resisted were gunned down, while our soldiers fired artillery shells into tipis of unarmed women and children. Those who tried to escape were run down by cavalry and slaughtered."
