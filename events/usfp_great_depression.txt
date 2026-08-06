@@ -37,7 +37,6 @@ usfp_great_depression.1 = {
                 years = 5
             }
         }
-
     }
 
     #let's build
@@ -338,6 +337,9 @@ usfp_great_depression.6 = {
             is_incorporated = yes
             count >= 3
         }
+        NOT = {
+            has_law_or_variant = law_type:law_council_republic
+        }
     }
 
     immediate = {
@@ -355,6 +357,11 @@ usfp_great_depression.6 = {
     option = {
         name = usfp_great_depression.6.a
         default_option = yes
+        trigger = {
+            has_institution = institution_police
+        }
+        highlighted_option = yes
+        show_as_unavailable = { always = yes  }
         add_radicals = {
             strata = lower
             value = medium_radicals

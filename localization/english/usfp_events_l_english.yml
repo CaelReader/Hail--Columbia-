@@ -2007,10 +2007,10 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
 
  #Roaring Twenties and Great Depression Events
  usfp_great_depression.1.t: "This Side of Paradise"
- usfp_great_depression.1.d: "REPLACE_ME"
- usfp_great_depression.1.f: "REPLACE_ME"
- usfp_great_depression.1.a: "REPLACE_ME"
- usfp_great_depression.1.b: "REPLACE_ME"
+ usfp_great_depression.1.d: "Modernity has begun to sweep through [ROOT.GetCountry.GetAdjective] culture, bringing with it new styles in dress, music, architecture, and social conduct. A spirit of optimism for the future has begun to translate into increasingly audacious investments into economic markets."
+ usfp_great_depression.1.f: ""As an endless dream it went on; the spirit of the past brooding over a new generation, the chosen youth from the muddled, unchastened world, still fed romantically on the mistakes and half-forgotten dreams of dead statesmen and poets. Here was a new generation, shouting the old cries, learning the old creeds, through a revery of long days and nights; destined finally to go out into that dirty gray turmoil to follow love and pride; a new generation dedicated more than the last to the fear of poverty and the worship of success"$quote_dash$F. Scott Fitzgerald,#italic This Side of Paradise#!"
+ usfp_great_depression.1.a: "Strike up the band and dance a Charleston!"
+ usfp_great_depression.1.b: "Glass! Chrome! Steel! We will build the city of the future!"
 
  usfp_great_depression.2.t: "The Line Goes Up"
  usfp_great_depression.2.d: "As speculative investments have boosted the [ROOT.GetCountry.GetAdjective] stock market to record heights, economic observers have begun to question how long this can be sustained before a significant market correction."
@@ -2018,13 +2018,13 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_great_depression.2.a: "We have transcended the business cycle!"
 
  usfp_great_depression.3.t: "The Waste Land"
- usfp_great_depression.3.d: "REPLACE_ME"
- usfp_great_depression.3.f: "REPLACE_ME"
- usfp_great_depression.3.a: "REPLACE_ME"
- usfp_great_depression.3.b: "REPLACE_ME"
+ usfp_great_depression.3.d: "The bright future promised by $je_usfp_roaring_twenties$ seems to have collapsed under the weight of material reality. Optimism has given way to a cynical critique of modernity and the present state of affairs."
+ usfp_great_depression.3.f: ""Son of man,\nYou cannot say, or guess, for you know only\nA heap of broken images, where the sun beats,\nAnd the dead tree gives no shelter, the cricket no relief,\nAnd the dry stone no sound of water."$quote_dash$T. S. Eliot,#italic The Waste Land#!"
+ usfp_great_depression.3.a: "It was all in vain."
+ usfp_great_depression.3.b: "Our future has been stolen from us."
 
  usfp_great_depression.4.t: "Black Thursday"
- usfp_great_depression.4.d: "REPLACE_ME"
+ usfp_great_depression.4.d: "An avalanche of panic selling "
  usfp_great_depression.4.f: "REPLACE_ME"
  usfp_great_depression.4.a: "REPLACE_ME"
  usfp_great_depression.4.b: "REPLACE_ME"
