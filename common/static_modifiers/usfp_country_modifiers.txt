@@ -1008,4 +1008,6 @@ usfp_great_depression_modifier = {
 	state_shopkeepers_investment_pool_contribution_add = -0.10
 	country_loan_interest_rate_mult = 0.15
 	political_movement_pop_attraction_mult = 0.33
+    building_throughput_add = -0.30
+    building_minimum_wage_mult = -0.30
 }

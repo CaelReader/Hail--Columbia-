@@ -211,7 +211,7 @@ usfp_great_depression.4 = {
         default_option = yes
         add_investment_pool = {
             value = money_amount_multiplier_very_large
-            multiply = -1
+            multiply = -10
         }
     }
 
@@ -259,10 +259,16 @@ usfp_great_depression.4 = {
         add_journal_entry = {
             type = je_usfp_great_depression
         }
+        show_as_tooltip = {
+            add_modifier = usfp_great_depression_modifier
+        }
         hidden_effect = {
             save_scope_as = usa_scope
             every_country = {
                 limit = {
+                    NOT = {
+                        this = root
+                    }
                     OR = {
                         is_country_type = recognized
                         is_country_type = colonial

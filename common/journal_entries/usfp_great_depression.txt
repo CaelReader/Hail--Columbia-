@@ -276,6 +276,7 @@ je_usfp_great_depression = {
             add_com_dlc_icon = {
                 dlc = dlc_usfp
             }
+            add_modifier = usfp_great_depression_modifier
         }
     }
 
