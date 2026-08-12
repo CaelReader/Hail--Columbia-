@@ -1000,7 +1000,7 @@ usfp_roaring_twenties_art_deco_modifier = {
 }
 
 usfp_great_depression_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_bank_negative.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_bank2_negative.dds
 	country_loyalists_from_legitimacy_mult = -0.50
 	state_capitalists_investment_pool_efficiency_mult = -0.50
 	state_capitalists_investment_pool_contribution_add = -0.10
@@ -1008,6 +1008,11 @@ usfp_great_depression_modifier = {
 	state_shopkeepers_investment_pool_contribution_add = -0.10
 	country_loan_interest_rate_mult = 0.15
 	political_movement_pop_attraction_mult = 0.33
-    building_throughput_add = -0.30
-    building_minimum_wage_mult = -0.30
+}
+
+usfp_great_depression_immediate_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_bank_negative.dds
+	building_throughput_add = -0.50
+	building_minimum_wage_mult = -0.50
+	country_loan_interest_rate_mult = 0.15
 }

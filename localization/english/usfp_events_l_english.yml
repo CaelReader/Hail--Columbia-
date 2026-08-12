@@ -2033,16 +2033,16 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
 
  usfp_great_depression.5.t: "Black Tuesday"
  usfp_great_depression.5.d: "The abrupt collapse of the financial markets in [SCOPE.sCountry('usa_scope').GetName] has sent shockwaves through markets across the rest of the world. [ROOT.GetCountry.GetAdjective] investors have given in to panic selling in an attempt to save their fortunes before a looming economic disaster."
- usfp_great_depression.5.f: "REPLACE_ME"
+ usfp_great_depression.5.f: ""The economic position is only flourishing on the surface. Germany is in fact dancing on a volcano. If the short-term credits are called in, a large section of our economy would collapse."$quote_dash$Gustav Stresemann, German Foreign Minister"
  usfp_great_depression.5.a: "Sell! Sell! Sell!"
  usfp_great_depression.5.b: "We must insulate ourselves from these capitalist markets at once!"
  usfp_great_depression.5.c: "Controlling our own economy bears dividends."
 
  usfp_great_depression.6.t: "Welcome to [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting]ville"
- usfp_great_depression.6.d: "REPLACE_ME"
- usfp_great_depression.6.f: "REPLACE_ME"
- usfp_great_depression.6.a: "REPLACE_ME"
- usfp_great_depression.6.b: "REPLACE_ME"
+ usfp_great_depression.6.d: "[concept_unemployed] workers evicted from their homes have begun to congregate in urban shantytowns dubbed "[ROOT.GetCountry.GetRuler.GetLastNameNoFormatting]villes", creating fertile grounds for [SCOPE.sPoliticalMovement('socialist_movement').GetName] agitation."
+ usfp_great_depression.6.f: ""In this land of richness and plenty, the idle rich ar wallowing in luxury, while masses are dying of starvation and disease"$quote_dash$Seattle Campaign Committee for Immediate Relief"
+ usfp_great_depression.6.a: "Sweep through these camps and arrest any disturbers of the peace."
+ usfp_great_depression.6.b: "Our economic system is clearly bankrupt."
 
  roaring_twenties_increase_optimism: "The #bold Optimism#! of $je_usfp_roaring_twenties$ increases"
  black_tuesday_soon: "@warn! #Red Any cause for concern will cause an investor panic #!"

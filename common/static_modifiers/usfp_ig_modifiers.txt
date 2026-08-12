@@ -465,3 +465,13 @@ usfp_dust_bowl_farmers_helped_positive = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_farmer_positive.dds
 	interest_group_approval_add = 2
 }
+
+usfp_great_depression_ig_intervention_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_negative.dds
+	interest_group_approval_add = -4
+}
+
+usfp_great_depression_ig_laissez_faire_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_negative.dds
+	interest_group_approval_add = -4
+}

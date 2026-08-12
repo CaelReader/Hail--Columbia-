@@ -209,6 +209,12 @@ usfp_great_depression.4 = {
     option = {
         name = usfp_great_depression.4.a
         default_option = yes
+        trigger = {
+            NOR = {
+                has_law_or_variant = law_type:law_laissez_faire
+                has_law_or_variant = law_type:law_cooperative_ownership
+            }
+        }
         add_investment_pool = {
             value = money_amount_multiplier_very_large
             multiply = -10
@@ -222,9 +228,21 @@ usfp_great_depression.4 = {
             has_law_or_variant = law_type:law_laissez_faire
         }
         highlighted_option = yes
+        every_interest_group = {
+            limit = {
+                law_stance = {
+                    law = law_type:law_laissez_faire
+                    value <= disapprove
+                }
+            }
+            add_modifier = {
+                years = 5
+                name = usfp_great_depression_ig_laissez_faire_negative
+            }
+        }
         add_investment_pool = {
             value = money_amount_multiplier_very_large
-            multiply = -1
+            multiply = -15
         }
     }
 
@@ -234,7 +252,23 @@ usfp_great_depression.4 = {
         trigger = {
             has_law_or_variant = law_type:law_interventionism
         }
+        every_interest_group = {
+            limit = {
+                law_stance = {
+                    law = law_type:law_laissez_faire
+                    value >= strongly_approve
+                }
+            }
+            add_modifier = {
+                name = usfp_great_depression_ig_intervention_negative
+                years = 5
+            }
+        }
         add_investment_pool = {
+            value = money_amount_multiplier_very_large
+            multiply = -8
+        }
+        add_treasury = {
             value = money_amount_multiplier_very_large
             multiply = -1
         }
@@ -249,7 +283,7 @@ usfp_great_depression.4 = {
         }
         add_investment_pool = {
             value = money_amount_multiplier_very_large
-            multiply = -0.75
+            multiply = -7.5
         }
         highlighted_option = yes
     }
@@ -258,6 +292,11 @@ usfp_great_depression.4 = {
         custom_tooltip = roaring_twenties_ends
         add_journal_entry = {
             type = je_usfp_great_depression
+        }
+        add_modifier = {
+            name = usfp_great_depression_immediate_modifier
+            years = 1
+            is_decaying = yes
         }
         show_as_tooltip = {
             add_modifier = usfp_great_depression_modifier
@@ -317,6 +356,15 @@ usfp_great_depression.5 = {
         add_journal_entry = {
             type = je_usfp_great_depression
         }
+        add_investment_pool = {
+            value = money_amount_multiplier_very_large
+            multiply = -10
+        }
+        add_modifier = {
+            name = usfp_great_depression_immediate_modifier
+            years = 1
+            is_decaying = yes
+        }
     }
 
     #coops
@@ -328,6 +376,10 @@ usfp_great_depression.5 = {
             NOT = {
                 has_law_or_variant = law_type:law_isolationism
             }
+        }
+        add_investment_pool = {
+            value = money_amount_multiplier_very_large
+            multiply = -7.5
         }
         add_journal_entry = {
             type = je_usfp_great_depression
@@ -390,6 +442,7 @@ usfp_great_depression.6 = {
         je:je_usfp_great_depression ?= {
             journal_entry_age > 3650 # days
         }
+        usfp_country_is_american = yes
     }
 
     immediate = {
