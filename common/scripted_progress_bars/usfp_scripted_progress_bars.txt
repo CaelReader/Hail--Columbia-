@@ -809,3 +809,35 @@ usfp_great_depression_recovery_bar = {
 		}
 	}
 }
+
+usfp_railroad_boom_bar = {
+	name = "usfp_railroad_boom_bar"
+	desc = "usfp_railroad_boom_bar_desc"
+	default_green = yes
+
+	start_value = 0
+	min_value = 0
+	max_value = 4000
+
+	monthly_progress = {
+		add = {
+			every_scope_building = {
+				limit = {
+					is_building_type = building_railway
+				}
+				add = 1
+			}
+			desc = "total_railways"
+		}
+		add = {
+			every_scope_state = {
+				limit = {
+					is_incorporated = yes
+					has_building = building_railway
+				}
+				add = infrastructure_delta
+			}
+			desc = "total_incorporated_infrastructure_delta"
+		}
+	}
+}

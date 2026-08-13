@@ -996,6 +996,17 @@ usfp_manifest_destiny.9 = {
 		ig:ig_industrialists = {
 			set_ig_trait = ig_trait:usfp_ig_trait_rail_tycoons
 		}
+		if = {
+			limit = {
+				NOT = {
+					has_game_rule = usfp_panic_1873_disabled
+				}
+			}
+			add_journal_entry = {
+				type = je_usfp_railroad_bubble
+			}
+			custom_tooltip = railroad_bubble_investment_high
+		}
 	}
 
 	#I hate trains
@@ -1004,6 +1015,23 @@ usfp_manifest_destiny.9 = {
 		add_radicals = {
 			value = small_radicals
 			interest_group = ig:ig_industrialists
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_game_rule = usfp_panic_1873_disabled
+				}
+			}
+			ig:ig_industrialists = {
+				set_ig_trait = ig_trait:usfp_ig_trait_rail_tycoons
+			}
+			add_journal_entry = {
+				type = je_usfp_railroad_bubble
+			}
+			custom_tooltip = {
+				text = railroad_bubble_investment_low
+				set_variable = railroad_bubble_investment_low
+			}
 		}
 	}
 }

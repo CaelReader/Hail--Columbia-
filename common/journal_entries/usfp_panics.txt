@@ -106,40 +106,53 @@ je_usfp_railroad_bubble = {
 
 	group = je_group_historical_content
 
-	is_shown_when_inactive = {
-		this = c:USA
-		has_technology_researched = railways
-	}
-
-	possible = {
-		custom_tooltip = {
-			text = completed_transcontinental_railroad
-		}
-		#need trains to build trains
-		any_scope_building = {
-			count > 10
-			level > 2
-			is_building_type = building_railway
-			is_under_construction = no
-			private_ownership_fraction > 0
-		}
-		ig:ig_industrialists = {
-			ig_counts_as_marginal = no
-		}
-		NOT = {
-			country_has_building_type_monopoly = bt:building_railway
-		}
-	}
+	# is_shown_when_inactive = {
+	# 	this = c:USA
+	# 	has_technology_researched = railways
+	# }
+	#
+	# possible = {
+	# 	custom_tooltip = {
+	# 		text = completed_transcontinental_railroad
+	# 	}
+	# 	#need trains to build trains
+	# 	any_scope_building = {
+	# 		count > 10
+	# 		level > 2
+	# 		is_building_type = building_railway
+	# 		is_under_construction = no
+	# 		private_ownership_fraction > 0
+	# 	}
+	# 	ig:ig_industrialists = {
+	# 		ig_counts_as_marginal = no
+	# 	}
+	# 	NOT = {
+	# 		country_has_building_type_monopoly = bt:building_railway
+	# 	}
+	# }
 
 	immediate = {
-
+		if = {
+			limit = {
+				has_variable = railroad_bubble_investment_low
+			}
+			scope:journal_entry = {
+				add_modifier = {
+					name = usfp_railroad_boom_je_modifier
+					multiplier = 0.5
+				}
+			}
+		} else = {
+			scope:journal_entry = {
+				add_modifier = {
+					name = usfp_railroad_boom_je_modifier
+				}
+			}
+		}
 	}
 
 
 
-	on_monthly_pulse = {
-
-	}
 
 	invalid = {
 		OR = {

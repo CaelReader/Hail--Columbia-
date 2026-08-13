@@ -1589,3 +1589,108 @@ usfp_django = {
         chance = 1
     }
 }
+
+#Lewis Cass, Dem Nominee 1848
+usfp_lewis_cass = {
+    first_name = Lewis
+    last_name = Cass
+    # dna =
+    home_region = STATE_OHIO
+    historical = yes
+    birth_date = 1782.10.9
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_armed_forces
+    ideology = ideology_slaver
+    traits = {
+        basic_diplomat
+        basic_political_operator
+
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1844.1.1
+        latest_usage_date = 1857.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+#John C. Breckinridge, Southern Dem Nominee 1860
+usfp_john_breckinridge = {
+    first_name = John
+    last_name = Breckinridge
+    # dna =
+    home_region = STATE_KENTUCKY
+    historical = yes
+    birth_date = 1821.1.16
+    culture = cu:dixie
+    religion = rel:protestant
+    female = no
+    interest_group = ig_landowners
+    ideology = ideology_slaver
+    traits = {
+        experienced_offensive_planner
+        basic_political_operator
+        brave
+        hedonist
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_landowners
+        }
+        earliest_usage_date = 1851.1.1
+        latest_usage_date = 1860.1.1
+        #guaranteed to spawn if possible
+    }
+    commander_usage = {
+        country_trigger = {
+            c:CSA ?= this
+        }
+        role = general
+        earliest_usage_date =1851.1.1
+        latest_usage_date = 1868.1.1
+    }
+}
+
+#Stephen Douglas, Northern Dem Nominee 1860
+usfp_stephen_douglas = {
+    first_name = Stephen
+    last_name = Douglas
+    # dna =
+    home_region = STATE_ILLINOIS
+    historical = yes
+    birth_date = 1821.1.16
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_rural_folk
+    ideology = ideology_moderate
+    traits = {
+        experienced_political_operator
+        basic_entrepreneur
+        imperious
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_rural_folk
+        }
+        earliest_usage_date = 1847.1.1
+        latest_usage_date = 1861.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+#George B McClellan, Civil War General
+

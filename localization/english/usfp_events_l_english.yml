@@ -477,10 +477,10 @@ usfp_manifest_destiny.8.a: "With the navy at our back, we shall go far!"
 usfp_manifest_destiny.8.b: "The military should keep its focus at home."
 
 usfp_manifest_destiny.9.t: "Railroad Tycoons"
-usfp_manifest_destiny.9.d: "As the economy and territory of the [ROOT.GetCountry.GetName] has grown, the [SCOPE.sBuilding('railway_scope').GetName] has steadily grown in importance alongside. Many [SCOPE.gsInterestGroup('industrialists_scope').GetName] have begun to invest their entire fortunes into the booming rail industry."
-usfp_manifest_destiny.9.f: ""All over it is felt that the old era of stage coaches and ox and mule transportation is rapidly passing away, and that the locomotive, soon to penetrate the State in all directions, will in future carry the wheat to the wharf, the ore to the mill, the timber to the mine; supply the deficiency of navigable streams, open up millions of acres of the best fruit and grain lands in the world, and make accessible and workable thousands of rich mines."" #Henry George
-usfp_manifest_destiny.9.a: "Railroads will transform the country!"
-usfp_manifest_destiny.9.b: "These railroads are a financial time-bomb."
+usfp_manifest_destiny.9.d: "The completion of the Transcontinental Railroad heralds a new age for the [Root.GetCountry.GetName] - an age of the railroad. Faced with such a grand opportunity, many [SCOPE.gsInterestGroup('industrialists_scope').GetName] have begun to invest their entire fortunes into the booming rail industry."
+usfp_manifest_destiny.9.f: ""All over it is felt that the old era of stage coaches and ox and mule transportation is rapidly passing away, and that the locomotive, soon to penetrate the State in all directions, will in future carry the wheat to the wharf, the ore to the mill, the timber to the mine; supply the deficiency of navigable streams, open up millions of acres of the best fruit and grain lands in the world, and make accessible and workable thousands of rich mines."$quote_dash$Henry George"
+usfp_manifest_destiny.9.a: "The transcontinental was just the beginning!"
+usfp_manifest_destiny.9.b: "These speculative railroad companies are a financial time-bomb."
 
 usfp_manifest_destiny.10.t: "Tales of Gold Mountain"
 usfp_manifest_destiny.10.d: "News of the discovery of [GetGoods('gold').GetName] in [SCOPE.sState('california_scope').GetName] has reached across the Pacific to [SCOPE.sCountry('china_scope').GetName]. As a result, thousands of [SCOPE.sCulture('han_scope').GetName] migrants have begun to arrive by ship, drawn by tales of the vast wealth flowing from 'Gold Mountain'."

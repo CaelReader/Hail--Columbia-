@@ -989,6 +989,8 @@ Melting Pot modifier now always allows assimilation to the Primary Culture
 
 # 9.0 "Hoover"
 ## New Content
+	Overhauled vanilla Transcontinental Railroad JE
+	New Railroad Boom JE leading to the Panic of 1873 at its conclusion
 	End-game Dust Bowl JE and Dust Storm Harvest Condition, activated by plowing the Great Plains with advanced technology
 	End-game Roaring Twenties JE that boosts economic and political optimism... while it lasts
 	End-game Great Depression JE created by the collapse of the Roaring Twenties
