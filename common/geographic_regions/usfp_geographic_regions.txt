@@ -168,3 +168,38 @@ geographic_region_southern_great_plains = {
         STATE_NEBRASKA
     }
 }
+
+geographic_region_transcontinental_northern_route = {
+    short_key = "transcontinental_northern_route"
+
+    state_regions = {
+        STATE_WASHINGTON
+        STATE_IDAHO
+        STATE_MONTANA
+        STATE_NORTH_DAKOTA
+        STATE_MINNESOTA
+    }
+}
+
+geographic_region_transcontinental_central_route = {
+    short_key = "transcontinental_central_route"
+
+    state_regions = {
+        STATE_CALIFORNIA
+        STATE_NEVADA
+        STATE_UTAH
+        STATE_WYOMING
+        STATE_NEBRASKA
+    }
+}
+
+geographic_region_transcontinental_southern_route = {
+    short_key = "transcontinental_southern_route"
+
+    state_regions = {
+        STATE_CALIFORNIA
+        STATE_ARIZONA
+        STATE_NEW_MEXICO
+        STATE_TEXAS
+    }
+}

@@ -888,3 +888,31 @@ usfp_has_second_party_system = {
         has_modifier = usfp_second_party_system_modifier
     }
 }
+
+usfp_transcontinental_northern_route_open = {
+	has_state_in_state_region = STATE_WASHINGTON
+	has_state_in_state_region = STATE_IDAHO
+	has_state_in_state_region = STATE_MONTANA
+	has_state_in_state_region = STATE_NORTH_DAKOTA
+	has_state_in_state_region = STATE_MINNESOTA
+}
+
+usfp_transcontinental_central_route_open = {
+	has_state_in_state_region = STATE_CALIFORNIA
+	has_state_in_state_region = STATE_NEVADA
+	OR = {
+		has_state_in_state_region = STATE_UTAH
+		any_subject_or_below = {
+			has_state_in_state_region = STATE_UTAH
+		}
+	}
+	has_state_in_state_region = STATE_WYOMING
+	has_state_in_state_region = STATE_NEBRASKA
+}
+
+usfp_transcontinental_southern_route_open = {
+	has_state_in_state_region = STATE_CALIFORNIA
+	has_state_in_state_region = STATE_ARIZONA
+	has_state_in_state_region = STATE_NEW_MEXICO
+	has_state_in_state_region = STATE_TEXAS
+}

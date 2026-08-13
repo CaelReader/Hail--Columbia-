@@ -123,7 +123,8 @@ amendment_american_second_amendment_desc: ""A well regulated Militia, being nece
  je_trans_continental_railway_reason: "With the [ROOT.GetCountry.GetName] stretching its borders from the [GetStrategicRegion('region_atlantic_coast').GetName] to the [GetStrategicRegion('region_pacific_coast').GetName], a great transcontinental railway is needed to bind the continent together and allow speedy travel from sea to shining sea."
 
  major_railways.2.t: "The First Trans-Continental Railway"
- major_railways.2.d: "With the route between the Atlantic and Pacific complete, the door is open for greater settlement of the American West."
- major_railways.2.f: ""With this golden spike, we call for the unity of our country, as this railroad unites the two great oceans of the world!""
- major_railways.2.a: "We will settle the Great Plains."
- major_railways.2.b: "The West Coast shall be just as prosperous as the East."
+ major_railways.2.d: "Several viable routes have been scouted for a great railway linking the [GetStrategicRegion('region_atlantic_coast').GetName] to the [GetStrategicRegion('region_pacific_coast').GetName]."
+ major_railways.2.f: ""The necessity that now exists for constructing lines of railroad and telegraphic communication between the Atlantic and Pacific coasts of this continent is no longer a question for argument; it is conceded by every one. In order to maintain our present position on the Pacific, we must have some more speedy and direct means of intercourse than is at present afforded by the route through the possessions of a foreign power."$quote_dash$Select Committee on the Pacific Railroad and Telegraph"
+ major_railways.2.a: "The northern route to the Puget Sound may be difficult, but it would be worth the effort."
+ major_railways.2.b: "The central route, following the Oregon Trail to Sacramento, is the obvious choice."
+ major_railways.2.c: "We will follow the southern route across the desert, terminating in Los Angeles."

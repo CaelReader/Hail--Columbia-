@@ -541,7 +541,7 @@ usfp_manifest_destiny_main = {
 			#Call for Cuban Annexation
 			25 = usfp_manifest_destiny.7 #PB gains Empire of Liberty
 			200 = usfp_manifest_destiny.8 #Gunboat Diplomacy
-			25 = usfp_manifest_destiny.9 #Railroad Tycoons
+
 			100 = usfp_manifest_destiny.12 #California Genocide
 			100 = usfp_manifest_destiny.14 #Ostend Manifesto
 			100 = usfp_manifest_destiny.20 #Oregon Pioneers
@@ -1125,13 +1125,14 @@ REPLACE_OR_CREATE:je_trans_continental_railway = {
 	possible = {
 		has_technology_researched = railways
 		OR = {
-			has_state_in_state_region = STATE_NEBRASKA
-			has_state_in_state_region = STATE_MINNESOTA
+			usfp_transcontinental_northern_route_open = yes
+			usfp_transcontinental_central_route_open = yes
+			usfp_transcontinental_southern_route_open = yes
 		}
-		OR = {
-			has_state_in_state_region = STATE_CALIFORNIA
-			has_state_in_state_region = STATE_WASHINGTON
-		}
+	}
+
+	immediate = {
+		trigger_event = { id = major_railways.2 }
 	}
 
 	complete = {
@@ -1183,9 +1184,18 @@ REPLACE_OR_CREATE:je_trans_continental_railway = {
 					state_region = s:STATE_NEVADA
 					has_building = building_railway
 				}
-				any_scope_state = {
-					state_region = s:STATE_UTAH
-					has_building = building_railway
+				OR = {
+					any_scope_state = {
+						state_region = s:STATE_UTAH
+						has_building = building_railway
+					}
+					#allows Deseret subject
+					any_subject_or_below = {
+						any_scope_state = {
+							state_region = s:STATE_UTAH
+							has_building = building_railway
+						}
+					}
 				}
 				any_scope_state = {
 					state_region = s:STATE_WYOMING
@@ -1224,7 +1234,7 @@ REPLACE_OR_CREATE:je_trans_continental_railway = {
 
 	on_complete = {
 		set_global_variable = trans_continental_done
-		trigger_event = { id = major_railways.2 }
+		trigger_event = { id = usfp_manifest_destiny.9 }
 	}
 
 	weight = 50

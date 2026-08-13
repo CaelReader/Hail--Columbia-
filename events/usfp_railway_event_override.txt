@@ -42,30 +42,69 @@ major_railways.2 = {
 
     }
 
-    option = { # settle the great plains
+    #northern route
+    option = {
         name = major_railways.2.a
+        trigger = {
+            usfp_transcontinental_northern_route_open = yes
+        }
+        custom_tooltip = {
+            text = transcontinental_chose_northern_route
+            set_variable = transcontinental_chose_northern_route
+        }
         every_scope_state = {
+            custom = transcontinental_northern_route_states
             limit = {
-                region = sr:region_great_plains
-                has_building = building_railway
+                is_in_geographic_region = geographic_region_transcontinental_northern_route
             }
             add_modifier = {
-                name = great_plains_settlement
-                days = normal_modifier_time
+                name = usfp_transcontinental_construction_modifier
+                years = 4
             }
         }
     }
-    option = { # settle california
+
+    #central route
+    option = {
         name = major_railways.2.b
         default_option = yes
+        trigger = {
+            usfp_transcontinental_central_route_open = yes
+        }
+        custom_tooltip = {
+            text = transcontinental_chose_central_route
+            set_variable = transcontinental_chose_central_route
+        }
         every_scope_state = {
+            custom = transcontinental_central_route_states
             limit = {
-                region = sr:region_pacific_coast
-                has_building = building_railway
+                is_in_geographic_region = geographic_region_transcontinental_central_route
             }
             add_modifier = {
-                name = great_plains_settlement
-                days = normal_modifier_time
+                name = usfp_transcontinental_construction_modifier
+                years = 4
+            }
+        }
+    }
+
+    #southern route
+    option = {
+        name = major_railways.2.c
+        trigger = {
+            usfp_transcontinental_southern_route_open = yes
+        }
+        custom_tooltip = {
+            text = transcontinental_chose_southern_route
+            set_variable = transcontinental_chose_southern_route
+        }
+        every_scope_state = {
+            custom = transcontinental_southern_route_states
+            limit = {
+                is_in_geographic_region = geographic_region_transcontinental_southern_route
+            }
+            add_modifier = {
+                name = usfp_transcontinental_construction_modifier
+                years = 4
             }
         }
     }

@@ -945,7 +945,7 @@ usfp_manifest_destiny.8 = {
 	}
 }
 
-#Railroad Tycoons
+#Railroad Tycoons: Transcontinental JE Finish
 usfp_manifest_destiny.9 = {
 	type = country_event
 	placement = scope:rail_state_scope
@@ -965,93 +965,15 @@ usfp_manifest_destiny.9 = {
 	duration = 3
 
 	trigger = {
-		NOT = {
-			has_variable = had_railroad_tycoons
-		}
-		root.var:manifest_destiny_var >= 1
-		has_technology_researched = railways
-		#railroads to the west!
-		any_scope_state = {
-			OR = {
-				state_region = s:STATE_CALIFORNIA
-				state_region = s:STATE_WASHINGTON
-				state_region = s:STATE_OREGON
-			}
-		}
-		#need some connection opportunities
-		OR = {
-			#Southern Route
-			AND = {
-				any_scope_state = {
-					state_region = s:STATE_ARIZONA
-				}
-				any_scope_state = {
-					state_region = s:STATE_NEW_MEXICO
-				}
-				any_scope_state = {
-					state_region = s:STATE_TEXAS
-				}
-				any_scope_state = {
-					state_region = s:STATE_LOUISIANA
-				}
-			}
-			#Central Route
-			AND = {
-				any_scope_state = {
-					state_region = s:STATE_NEVADA
-				}
-				any_scope_state = {
-					state_region = s:STATE_UTAH
-				}
-				any_scope_state = {
-					state_region = s:STATE_WYOMING
-				}
-				any_scope_state = {
-					state_region = s:STATE_NEBRASKA
-				}
-				any_scope_state = {
-					state_region = s:STATE_IOWA
-				}
-			}
-			#Northern Route
-			AND = {
-				any_scope_state = {
-					state_region = s:STATE_IDAHO
-				}
-				any_scope_state = {
-					state_region = s:STATE_MONTANA
-				}
-				any_scope_state = {
-					state_region = s:STATE_NORTH_DAKOTA
-				}
-				any_scope_state = {
-					state_region = s:STATE_MINNESOTA
-				}
-			}
-		}
-		#need trains to build trains
-		any_scope_building = {
-			count > 10
-			level > 0
-			is_building_type = building_railway
-			is_under_construction = no
-			private_ownership_fraction > 0
-		}
-		ig:ig_industrialists = {
-			ig_counts_as_marginal = no
-		}
+		#Transcontinental JE Complete
 	}
 
 	immediate = {
-		set_variable = had_railroad_tycoons
 		random_scope_state = {
 			limit = {
 				OR = {
-					state_region = s:STATE_MINNESOTA
-					state_region = s:STATE_IOWA
-					state_region = s:STATE_LOUISIANA
-					state_region = s:STATE_NEBRASKA
-					state_region = s:STATE_WYOMING
+					state_region = s:STATE_CALIFORNIA
+					state_region = s:STATE_WASHINGTON
 				}
 			}
 			save_scope_as = rail_state_scope
