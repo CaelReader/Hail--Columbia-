@@ -52,6 +52,9 @@
     }
 
     is_shown_when_inactive = {
+        NOT = {
+            has_game_rule = usfp_great_depression_disabled
+        }
         root = c:USA
         year >= 1900
         OR = {

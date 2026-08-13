@@ -24,10 +24,18 @@ usfp_native_consolidation = {
 
 usfp_election_chaos = {
 	default = yes_election_chaos
-	yes_election_chaos = {
-		
-	}
-	no_election_chaos = {
+	yes_election_chaos = { }
+	no_election_chaos = { }
+}
 
-	}
+usfp_panic_1873 = {
+	default = usfp_panic_1873_enabled
+	usfp_panic_1873_enabled = { }
+	usfp_panic_1873_disabled = { }
+}
+
+usfp_great_depression = {
+	default = usfp_great_depression_enabled
+	usfp_great_depression_enabled = { }
+	usfp_great_depression_disabled = { }
 }

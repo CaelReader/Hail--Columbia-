@@ -1,0 +1,72 @@
+﻿namespace = major_railways
+
+major_railways.2 = {
+    type = country_event
+    event_image = {
+        video = "unspecific_trains"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+    placement = scope:terminus_scope
+
+    title = major_railways.2.t
+    desc = major_railways.2.d
+    flavor = major_railways.2.f
+
+    trigger = {
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                OR = {
+                    has_variable = transcontinental_chose_southern_route
+                    has_variable = transcontinental_chose_central_route
+                }
+            }
+            random_scope_state = {
+                limit = {
+                    state_region = s:STATE_CALIFORNIA
+                }
+                save_scope_as = terminus_scope
+            }
+        } else = {
+            random_scope_state = {
+                limit = {
+                    state_region = s:STATE_WASHINGTON
+                }
+                save_scope_as = terminus_scope
+            }
+        }
+
+    }
+
+    option = { # settle the great plains
+        name = major_railways.2.a
+        every_scope_state = {
+            limit = {
+                region = sr:region_great_plains
+                has_building = building_railway
+            }
+            add_modifier = {
+                name = great_plains_settlement
+                days = normal_modifier_time
+            }
+        }
+    }
+    option = { # settle california
+        name = major_railways.2.b
+        default_option = yes
+        every_scope_state = {
+            limit = {
+                region = sr:region_pacific_coast
+                has_building = building_railway
+            }
+            add_modifier = {
+                name = great_plains_settlement
+                days = normal_modifier_time
+            }
+        }
+    }
+}

@@ -460,3 +460,15 @@ progress_bar_complete: "The #b Progress Bar#! has reached 100%"
  usfp_great_depression_recovery_bar_desc: "Economic Recovery: #italic ([JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%0])#!"
 
  progress_bar_zero: "The #b Progress Bar#! has reached 0%"
+
+ rule_usfp_panic_1873: "@america_icon! #yellow Hail, Columbia!#! | Railroad Bubble"
+ setting_usfp_panic_1873_enabled: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_usfp_panic_1873_enabled_desc #high Enabled #!#!#!"
+ setting_usfp_panic_1873_enabled_desc: "The Railroad Boom [concept_journal_entry] and associated economic crash can occur."
+ setting_usfp_panic_1873_disabled: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_usfp_panic_1873_disabled_desc #high Disabled #!#!#!"
+ setting_usfp_panic_1873_disabled_desc: "The Railroad Boom [concept_journal_entry] and associated economic crash will not occur. #lore For compatibility with other mods that add their own economic crashes.#!"
+
+ rule_usfp_great_depression: "@america_icon! #yellow Hail, Columbia!#! | Great Depression"
+ setting_usfp_great_depression_enabled: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_usfp_great_depression_enabled_desc #high Enabled #!#!#!"
+ setting_usfp_great_depression_enabled_desc: "The Roaring Twenties and Great Depression [Concept('concept_journal_entry', '$concept_journal_entries$')] can occur."
+ setting_usfp_great_depression_disabled: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_usfp_great_depression_disabled_desc #high Disabled #!#!#!"
+ setting_usfp_great_depression_disabled_desc: "The Roaring Twenties and Great Depression [Concept('concept_journal_entry', '$concept_journal_entries$')] will not occur. #lore For compatibility with other mods that add their own economic crashes.#!"

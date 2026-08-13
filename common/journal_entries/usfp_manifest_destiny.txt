@@ -1110,3 +1110,122 @@ usfp_je_mexican_occupation = {
 
     can_revolution_inherit = yes
 }
+
+REPLACE_OR_CREATE:je_trans_continental_railway = {
+	icon = "gfx/interface/icons/invention_icons/railways.dds"
+
+	group = je_group_usa_manifest_destiny
+
+	is_shown_when_inactive = {
+		NOT = { has_global_variable = trans_continental_done }
+		owns_entire_state_region = STATE_NEW_YORK
+		has_state_in_state_region = STATE_NEBRASKA
+	}
+
+	possible = {
+		has_technology_researched = railways
+		OR = {
+			has_state_in_state_region = STATE_NEBRASKA
+			has_state_in_state_region = STATE_MINNESOTA
+		}
+		OR = {
+			has_state_in_state_region = STATE_CALIFORNIA
+			has_state_in_state_region = STATE_WASHINGTON
+		}
+	}
+
+	complete = {
+		hidden_trigger = {
+			OR = {
+				has_variable = transcontinental_chose_northern_route
+				has_variable = transcontinental_chose_central_route
+				has_variable = transcontinental_chose_southern_route
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_variable = transcontinental_chose_northern_route
+			}
+			#Northern Route
+			AND = {
+				any_scope_state = {
+					state_region = s:STATE_WASHINGTON
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_IDAHO
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_MONTANA
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_NORTH_DAKOTA
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_MINNESOTA
+					has_building = building_railway
+				}
+			}
+		} trigger_else_if = {
+			limit = {
+				has_variable = transcontinental_chose_central_route
+			}
+			#Central Route
+			AND = {
+				any_scope_state = {
+					state_region = s:STATE_CALIFORNIA
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_NEVADA
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_UTAH
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_WYOMING
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_NEBRASKA
+					has_building = building_railway
+				}
+			}
+		} trigger_else_if = {
+			limit = {
+				has_variable = transcontinental_chose_southern_route
+			}
+			#Southern Route
+			AND = {
+				any_scope_state = {
+					state_region = s:STATE_CALIFORNIA
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_ARIZONA
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_NEW_MEXICO
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_TEXAS
+					has_building = building_railway
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		set_global_variable = trans_continental_done
+		trigger_event = { id = major_railways.2 }
+	}
+
+	weight = 50
+}
