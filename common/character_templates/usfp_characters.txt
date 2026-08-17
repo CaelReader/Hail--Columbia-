@@ -1693,4 +1693,359 @@ usfp_stephen_douglas = {
 }
 
 #George B McClellan, Civil War General
+usfp_george_mcclellan = {
+    first_name = George
+    last_name = McClellan
+    # dna =
+    home_region = STATE_NEW_JERSEY #born in Philadelphia, but governor of New Jersey
+    historical = yes
+    birth_date = 1826.12.3
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+    traits = {
+        imperious
+        experienced_offensive_planner
+        engineer
+        cautious
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1862.1.1
+        latest_usage_date = 1864.1.1
+        #guaranteed to spawn if possible
+    }
+    commander_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        role = general
+        earliest_usage_date = 1846.1.1
+        latest_usage_date = 1862.1.1
+    }
+}
 
+#Horatio Seymour, 1868 Dem Candidate
+usfp_horatio_seymour = {
+    first_name = Horatio
+    last_name = Seymour
+    # dna =
+    home_region = STATE_NEW_YORK
+    historical = yes
+    birth_date = 1810.5.10
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_industrialists
+    ideology = ideology_ethno_nationalist
+    traits = {
+        basic_entrepreneur
+        experienced_political_operator
+        persistent
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1862.1.1
+        latest_usage_date = 1864.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+#Samuel Tilden, 1876 Dem Candidate
+usfp_samuel_tilden = {
+    first_name = Samuel
+    last_name = Tilden
+    # dna =
+    home_region = STATE_NEW_YORK
+    historical = yes
+    birth_date = 1814.2.9
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_industrialists
+    ideology = ideology_market_liberal
+    traits = {
+        experienced_entrepreneur
+        experienced_political_operator
+        cautious
+    }
+    holding_type = building_financial_district
+    role = magnate
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1870.1.1
+        latest_usage_date = 1880.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+#James G. Blaine, 1880 Rep Candidate
+usfp_james_g_blaine = {
+    first_name = James
+    last_name = Blaine
+    # dna =
+    home_region = STATE_PENNSYLVANIA
+    historical = yes
+    birth_date = 1830.1.31
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_intelligentsia
+    ideology = ideology_reformer
+    traits = {
+        inspirational_orator
+        expert_political_operator
+        persistent
+        basic_entrepreneur
+        expensive_tastes
+        usfp_trait_expansionist
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1863.1.1
+        latest_usage_date = 1890.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+#James B. Weaver, 1892 Populist Candidate
+usfp_james_b_weaver = {
+    first_name = James
+    last_name = Weaver
+    # dna =
+    home_region = STATE_IOWA
+    historical = yes
+    birth_date = 1833.6.12
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_rural_folk
+    ideology = ideology_modernizer_leader
+    traits = {
+        persistent
+        basic_political_operator
+        inspirational_orator
+        erudite
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_rural_folk
+        }
+        earliest_usage_date = 1878.1.1
+        latest_usage_date = 1892.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+#Alton B Parker, 1904 Dem Candidate
+usfp_alton_b_parker = {
+    first_name = Alton
+    last_name = Parker
+    # dna =
+    home_region = STATE_NEW_YORK
+    historical = yes
+    birth_date = 1852.5.14
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_trade_unions #pro-labor lawyer
+    ideology = ideology_moderate
+    traits = {
+        erudite
+        inept
+        direct
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_trade_unions
+        }
+        earliest_usage_date = 1898.1.1
+        latest_usage_date = 1912.1.1
+        chance = 50 #irrelevant
+    }
+}
+
+#Charles Evan Hughes, 1916 Rep Candidate
+usfp_charles_evan_hughes = {
+    first_name = Charles
+    last_name = Hughes
+    # dna =
+    home_region = STATE_NEW_YORK
+    historical = yes
+    birth_date = 1811.4.11
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_intelligentsia
+    ideology = ideology_reformer #not quite a Progressive
+    traits = {
+        erudite
+        innovative
+        honorable
+        tactful
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1906.1.1
+        latest_usage_date = 1920.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+#James M Cox, 1920 Dem Candidate
+usfp_james_m_cox = {
+    first_name = James
+    last_name = Cox
+    # dna =
+    home_region = STATE_OHIO
+    historical = yes
+    birth_date = 1870.3.31
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_rural_folk
+    ideology = ideology_usfp_progressive
+    traits = {
+        literary
+        innovative
+        experienced_entrepreneur
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_rural_folk
+        }
+        earliest_usage_date = 1912.1.1
+        latest_usage_date = 1920.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+#John W Davis, 1924 Dem Candidate
+usfp_john_w_davius = {
+    first_name = John
+    last_name = Davis
+    # dna =
+    home_region = STATE_WEST_VIRGINIA
+    historical = yes
+    birth_date = 1873.4.13
+    culture = cu:dixie
+    religion = rel:protestant
+    female = no
+    interest_group = ig_landowners
+    ideology = ideology_moderate
+    traits = {
+        erudite
+        basic_diplomat
+        tactful
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_landowners
+        }
+        earliest_usage_date = 1911.1.1
+        latest_usage_date = 1924.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+#Al Smith, 1928 Dem Candidate
+usfp_al_smith  = {
+    first_name = Alfred
+    last_name = Smith
+    # dna =
+    home_region = STATE_NEW_YORK
+    historical = yes
+    birth_date = 1873.4.13
+    culture = cu:yankee #Irish American
+    religion = rel:catholic
+    female = no
+    interest_group = ig_trade_unions
+    ideology = ideology_usfp_progressive
+    traits = {
+        inspirational_orator
+        basic_entrepreneur
+        aesthete
+        persistent
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_trade_unions
+        }
+        earliest_usage_date = 1919.1.1
+        latest_usage_date = 1932.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+#Alf Landon, 1936 Rep Candidate
+usfp_alf_landon  = {
+    first_name = Alfred
+    last_name = Landon
+    # dna =
+    home_region = STATE_KANSAS
+    historical = yes
+    birth_date = 1887.9.9
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_industrialists
+    ideology = ideology_corporatist_leader
+    traits = {
+        engineer
+        experienced_entrepreneur
+        meticulous
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1933.1.1
+        latest_usage_date = 1936.1.1
+        #guaranteed to spawn if possible
+    }
+}
