@@ -820,14 +820,30 @@ usfp_railroad_boom_bar = {
 	max_value = 4000
 
 	monthly_progress = {
-		add = {
-			every_scope_building = {
-				limit = {
-					is_building_type = building_railway
-				}
-				add = 1
+		every_scope_building = {
+			limit = {
+				is_building_type = building_railway
 			}
-			desc = "total_railways"
+			add = {
+				value = 0.2
+				desc = "total_railways"
+			}
+			add = {
+				value = {
+					value = 1
+					subtract = occupancy
+				}
+				desc = "railway_vacancies"
+			}
+			if = {
+				limit = {
+					weekly_profit < 0
+				}
+				add = {
+					value = 1
+					desc = "unprofitable_railways"
+				}
+			}
 		}
 		add = {
 			every_scope_state = {

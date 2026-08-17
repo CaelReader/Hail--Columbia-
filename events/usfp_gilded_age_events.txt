@@ -1025,7 +1025,7 @@ usfp_gilded_age.12 = {
 usfp_gilded_age.13 = {
 	type = country_event
 	placement = scope:railway_boom_state
-
+	orphan = yes #replaced with actual Panic of 1873 content
 	title = usfp_gilded_age.13.t
 	desc = usfp_gilded_age.13.d
 	flavor = usfp_gilded_age.13.f

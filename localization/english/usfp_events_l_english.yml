@@ -856,6 +856,19 @@ social_gospelists_can_appear: "[GetIdeology('ideology_usfp_social_gospel_leader'
  usfp_usa.29.f: "Here at the edge of Chinatown, Ushijima had found some Japanese migrants who had preceded him. Stepping inside from the bustling city streets, he rented a cramped room where could rest his head for a few hours. Among his few possession from home was his English language manual, tattered from study. His plan was straightforward: learn the language, find decent paying work, then enter business himself. There would be a future for him here in [SCOPE.sState('target_migration_state').GetNameNoFormatting] beyond anything he could have managed in Japan."
  usfp_usa.29.a: "The allure of the [Root.GetCountry.GetName] cannot be stymied."
 
+ usfp_usa.30.t: "The Monkey Trial"
+ usfp_usa.30.d: "The government of [SCOPE.sState('tennessee_scope').GetName] has decided to outlaw the teaching of the theory of evolution in its public schools. The trial of a schoolteacher has become a national spectacle, with [SCOPE.sCharacter('bryan_scope').GetFullName] intervening on the side of the anti-evolutionists."
+ usfp_usa.30.f: ""Where have you lived all your life?"\n"Not near you." There was laughter and applause in the courtroom.\n"Nor near anybody of learning?"\n"Oh, don't assume you know it all."\n"Do you know there are thousands of books in our libraries on all those subjects I have been asking you about?"\n"I couldn't say, but I will take your word for it.""
+ usfp_usa.30.a: "Evolution is the basis of all modern biology, it must be taught!"
+ usfp_usa.30.b: "We must not abandon our faith."
+ usfp_usa.30.tt: "[SCOPE.sCharacter('bryan_scope').GetFullName] dies of apoplexy after overexerting themselves at the trial"
+
+ usfp_usa.31.t: "Embalmed Beef"
+ usfp_usa.31.d: "The terrible quality of canned beef supplied to our troops has created some outrage in the press. Investigation has pointed to the meatpacking industry of [SCOPE.sState('meat_state_scope').GetName] as the culprit, a procurement source favored by [SCOPE.sCharacter('beef_character_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('beef_character_scope').GetFullName]."
+ usfp_usa.31.f: ""There was no life or nourishment in the meat, it had been used to make beef extract, and after the juice was squeezed out of it the pulp was put back in the cans and labeled 'roast beef.' It has an odor similar to that of a dead human body after being injected with fomaldehyde."" #Nelson A Miles and a US medical officer
+ usfp_usa.31.a: "[SCOPE.sCharacter('beef_character_scope').GetFullName] will no longer be in charge of procurement."
+ usfp_usa.31.b: "They're soldiers, they should be used to eating grub!"
+
 ### USA Labor Events ###
 
 usfp_usa_labor.1.t: "The Industrial Workers of the World"
@@ -1653,6 +1666,13 @@ usfp_panics.1.d: "When President Jackson dissolved the Second Bank of the United
 usfp_panics.1.f: ""I'm sorry sir, we cannot redeem this."\n\n"This is from your bank! Says right here - ten dollars, payable to the bearer on demand. Well, I'm the bearer, and I'm demanding!"\n\n"The vaults are empty sir, there's no specie left.""
 usfp_panics.1.a: "These irresponsible speculators will drive us to ruin!"
 usfp_panics.1.b: "The central bank will backstop the financial system."
+
+ usfp_panics.2.t: "Railroad Bust"
+ usfp_panics.2.d: "The bubble of speculative investments into railroads has abruptly run up against reality. The collapse of a large investment bank has sent stock brokers running for safety, as more and more firms crumple into bankruptcy."
+ usfp_panics.2.f: ""To say that the street became excited would only give a feeble view of the expressions of feeling. The brokers stood perfectly thunderstruck for a moment, and then there was a general run to notify the different houses in Wall street of the failure. The members of the firms who were surprised by this announcement had no time to deliberate. The bear clique was already selling the market down in the Exchange, and prices were declining frightfully..."$quote_dash$The New York Times"
+ usfp_panics.2.a: "Sell, sell, sell!"
+ usfp_panics.2.a.low: "We knew these railroads were trouble!"
+ usfp_panics.2.b: "Begin buying up junk bonds to prop up the market."
 
 ### Canada Events ###
 usfp_usa_canada.1.t: "[SCOPE.sCountry('usa_scope').GetAdjective] Smugglers"

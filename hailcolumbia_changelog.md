@@ -989,14 +989,16 @@ Melting Pot modifier now always allows assimilation to the Primary Culture
 
 # 9.0 "Hoover"
 ## New Content
-	Overhauled vanilla Transcontinental Railroad JE
+	Overhauled vanilla Transcontinental Railroad JE, with choices of route and granting the Railroad Boom JE upon completion
 	New Railroad Boom JE leading to the Panic of 1873 at its conclusion
 	End-game Dust Bowl JE and Dust Storm Harvest Condition, activated by plowing the Great Plains with advanced technology
 	End-game Roaring Twenties JE that boosts economic and political optimism... while it lasts
 	End-game Great Depression JE created by the collapse of the Roaring Twenties
+	New Events: Monkey Trial, Embalmed Beef
 ## Updates
     The Great Plains is now more susceptible to droughts and extreme winds
     Changed Post-War Demobilization modifier from a Morale debuff to an Offense debuff, and reduced it to 20 years from 25
 	Post-War Demobilization modifier is now halved under Professional Army
+	Disabled Gilded Age "Railroad Boom" event, replaced with JE
 # Fixes
 	Fixed overflowing tooltip on Ghost Dance events

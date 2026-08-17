@@ -2590,3 +2590,267 @@ usfp_usa.29 = {
     }
 
 }
+
+#Scopes Monkey Trial
+usfp_usa.30 = {
+	type = country_event
+	placement = scope:tennessee_scope
+	event_image = {
+		video = "ip4_university_lecture"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = usfp_usa.30.t
+	desc = usfp_usa.30.d
+	flavor = usfp_usa.30.f
+	dlc = dlc_usfp
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	trigger = {
+		c:USA ?= this
+		in_election_campaign = no
+		has_technology_researched = mass_propaganda
+		has_technology_researched = behaviorism
+		has_technology_researched = radio
+		has_law_or_variant = law_type:law_presidential_republic
+		has_law_or_variant = law_type:law_elected_bureaucrats
+		has_law_or_variant = law_type:law_public_schools
+		NOT = {
+			has_law_or_variant = law_type:law_state_atheism
+		}
+		any_scope_character = {
+			is_ruler_of_any_country = no
+			OR = {
+				has_template = usfp_william_jennings_bryan_character_template
+				AND = {
+					is_interest_group_type = ig_devout
+					religion = rel:protestant
+				}
+			}
+		}
+		has_state_in_state_region = STATE_TENNESSEE
+	}
+
+	immediate = {
+		s:STATE_TENNESSEE.region_state:USA = {
+			save_scope_as = tennessee_scope
+		}
+		if = {
+			limit = {
+				any_scope_character = {
+					is_ruler_of_any_country = no
+					has_template = usfp_william_jennings_bryan_character_template
+				}
+			}
+			random_scope_character = {
+				limit = {
+					is_ruler_of_any_country = no
+					has_template = usfp_william_jennings_bryan_character_template
+				}
+				save_scope_as = bryans_scope
+			}
+		} else = {
+			random_scope_character = {
+				limit = {
+					is_ruler_of_any_country = no
+					is_interest_group_type = ig_devout
+					religion = rel:protestant
+				}
+				save_scope_as = bryans_scope
+			}
+		}
+	}
+
+	#evolution good
+	option = {
+		name = usfp_usa.30.a
+		default_option = yes
+		add_modifier = {
+			name = usfp_endorsed_evolution_modifier
+			years = 5
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#evolution bad
+	option = {
+		name = usfp_usa.30.b
+		add_modifier = {
+			name = usfp_denied_evolution_modifier
+			years = 5
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		random_list = {
+			95 = {
+				custom_tooltip = {
+					text = usfp_usa.30.tt
+					scope:bryans_scope = {
+						kill_character = yes
+					}
+				}
+			}
+			5 = {}
+		}
+	}
+
+}
+
+#Army Beef Scandal
+usfp_usa.31 = {
+	type = country_event
+	placement = scope:meat_state_scope
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/invention_icons/vacuum_canning.dds"
+
+	title = usfp_usa.31.t
+	desc = usfp_usa.31.d
+	flavor = usfp_usa.31.f
+	dlc = dlc_usfp
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	trigger = {
+		c:USA ?= this
+		is_at_war = yes
+		any_enemy_in_war = {
+			country_rank >= rank_value:major_power
+			capital = {
+				is_not_in_geographic_region = geographic_region_americas
+			}
+		}
+		any_military_formation = {
+			has_mobilization_option = mobilization_option:mobilization_option_extra_supplies
+		}
+		has_technology_researched = vacuum_canning
+		has_technology_researched = military_statistics
+		has_law_or_variant = law_type:law_commercialized_agriculture
+		any_scope_character = {
+			has_role_of_type = general
+			NOT = {
+				is_interest_group_type = ig_trade_unions
+			}
+			NOR = {
+				has_template = usa_general_miles #was the investigator irl
+				has_template = usfp_smedley_butler #will become TUs later
+			}
+		}
+	}
+
+	immediate = {
+		ordered_scope_building = {
+			limit = {
+				is_building_type = building_livestock_ranch
+			}
+			position = 0
+			order_by = level
+			state = {
+				save_scope_as = meat_state_scope
+			}
+		}
+		ordered_scope_character = {
+			limit = {
+				has_role_of_type = general
+				NOT = {
+					is_interest_group_type = ig_trade_unions
+				}
+				NOR = {
+					has_template = usa_general_miles #was the investigator irl
+					has_template = usfp_smedley_butler #will become TUs later
+				}
+			}
+			position = 0
+			order_by = commander_rank
+			save_scope_as = beef_character_scope
+		}
+	}
+
+	#investigate corruption
+	option = {
+		name = usfp_usa.31.a
+		default_option = yes
+		scope:beef_character_scope = {
+			add_modifier = {
+				name = usfp_army_beef_demotion_modifier
+				years = 5
+			}
+		}
+		add_modifier = {
+			years = 1
+			name = usfp_embalmed_beef_modifier
+			is_decaying = yes
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#cope
+	option = {
+		name = usfp_usa.31.b
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = usfp_army_beef_ig_negative
+				years = 4
+			}
+		}
+		ig:ig_industrialists = {
+			add_modifier = {
+				name = usfp_army_beef_ig_positive
+				years = 4
+			}
+		}
+		add_modifier = {
+			years = 4
+			name = usfp_embalmed_beef_modifier
+			is_decaying = yes
+		}
+		if = {
+			limit = {
+				any_company = {
+					OR = {
+						is_company_type = company_basic_fabrics
+						is_company_type = company_usfp_armours
+					}
+				}
+			}
+			every_company = {
+				limit = {
+					OR = {
+						is_company_type = company_basic_fabrics
+						is_company_type = company_usfp_armours
+					}
+				}
+				executive = {
+					add_trait = expensive_tastes
+				}
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		scope:beef_character_scope = {
+			add_modifier = {
+				name = usfp_army_beef_charcter_modifier
+				years = 5
+			}
+		}
+	}
+
+}

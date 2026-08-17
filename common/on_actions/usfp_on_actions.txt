@@ -31,6 +31,8 @@ usfp_monthly_pulse = {
 		
 		200 = usfp_usa.26 #Dorr Rebellion
 		100 = usfp_usa.27 #Third Great Awakening
+		10 = usfp_usa.30 #Scopes Monkey Trial
+		10 = usfp_usa.31 #Army Beef Scandal
 
 
 
