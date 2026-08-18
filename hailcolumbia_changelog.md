@@ -1002,3 +1002,4 @@ Melting Pot modifier now always allows assimilation to the Primary Culture
 	Disabled Gilded Age "Railroad Boom" event, replaced with JE
 # Fixes
 	Fixed overflowing tooltip on Ghost Dance events
+    Fixed broken event overwrites

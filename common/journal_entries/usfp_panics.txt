@@ -149,7 +149,7 @@ je_usfp_railroad_bubble = {
 		custom_tooltip = {
 			text = panic_recovery_complete
 			scope:journal_entry = {
-				"scripted_bar_progress(usfp_railroad_boom_bar)" >= 4000
+				"scripted_bar_progress(usfp_railroad_boom_bar)" >= 2000
 			}
 		}
 	}

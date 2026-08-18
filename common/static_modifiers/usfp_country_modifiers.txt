@@ -1007,14 +1007,19 @@ usfp_great_depression_modifier = {
 	state_shopkeepers_investment_pool_efficiency_mult = -0.75
 	state_shopkeepers_investment_pool_contribution_add = -0.10
 	country_loan_interest_rate_mult = 0.15
+    country_company_throughput_bonus_add = -0.25
+    country_company_construction_efficiency_bonus_add = -0.25
 	political_movement_pop_attraction_mult = 0.33
 }
 
 usfp_great_depression_immediate_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bank_negative.dds
-	building_throughput_add = -0.50
-	building_minimum_wage_mult = -0.50
+	building_throughput_add = -0.75
+	building_minimum_wage_mult = -0.75
 	country_loan_interest_rate_mult = 0.15
+    country_company_throughput_bonus_add = -0.90
+    country_company_construction_efficiency_bonus_add = -0.90
+    state_construction_mult = -0.25
 }
 
 usfp_railroad_boom_je_modifier = {
