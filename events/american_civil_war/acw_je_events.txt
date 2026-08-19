@@ -263,10 +263,22 @@ acw_je_events.1 = {
 		custom_tooltip = {
 			text = je_usfp_underground_railroad_enhanced_effect
 		}
+		add_modifier = {
+			name = usfp_lincolns_volunteers_modifier
+			days = 90
+		}
 	}
 	option = {
 		name = acw_je_events.1.b
 		trigger = { is_player = yes }
+		hidden_effect = {
+			c:USA = {
+				add_modifier = {
+					name = usfp_lincolns_volunteers_modifier
+					days = 90
+				}
+			}
+		}
 		if = {
 			limit = { exists = c:CSA }
 			play_as = c:CSA

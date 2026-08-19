@@ -998,6 +998,7 @@ Melting Pot modifier now always allows assimilation to the Primary Culture
 	Added US Colored Troops loading screen by Angel
 ## Updates
     The Great Plains is now more susceptible to droughts and extreme winds
+	USA now gets a short-term Training Rate boost when the CSA appears
     Changed Post-War Demobilization modifier from a Morale debuff to an Offense debuff, and reduced it to 20 years from 25
 	Post-War Demobilization modifier is now halved under Professional Army
 	Disabled Gilded Age "Railroad Boom" event, replaced with JE
