@@ -485,3 +485,8 @@ usfp_army_beef_ig_negative = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_soldier_negative.dds
 	interest_group_approval_add = -2
 }
+
+usfp_ig_blamed_for_weather_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	interest_group_approval_add = -2
+}

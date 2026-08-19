@@ -2854,3 +2854,248 @@ usfp_usa.31 = {
 	}
 
 }
+
+#San Francisco Earthquake
+usfp_usa.32 = {
+	type = country_event
+	placement = scope:california_scope
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = usfp_usa.32.t
+	desc = usfp_usa.32.d
+	flavor = usfp_usa.32.f
+	dlc = dlc_usfp
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	trigger = {
+		has_state_in_state_region = STATE_CALIFORNIA
+		NOT = {
+			has_global_variable = had_san_francisco_earthquake
+		}
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			devastation < 1
+		}
+		s:STATE_CALIFORNIA = {
+			NOT = {
+				has_harvest_condition = earthquake
+			}
+		}
+		game_date > 1906.5.1
+	}
+
+	immediate = {
+		set_global_variable = had_san_francisco_earthquake
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_CALIFORNIA
+			}
+			save_scope_as = california_scope
+		}
+		scope:california_scope = {
+			state_region = {
+				start_harvest_condition_with_params = {
+					type = earthquake
+					intensity = 6
+					duration = 360
+				}
+			}
+		}
+	}
+
+	#send relief
+	option = {
+		name = usfp_usa.32.a
+		default_option = yes
+		add_treasury = {
+			value = money_amount_multiplier_large
+			multiply = -1
+		}
+		scope:california_scope.state_region = {
+			add_devastation = 30
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#get em out of there
+	option = {
+		name = usfp_usa.32.b
+		trigger = {
+			scope:california_scope = {
+				any_scope_pop = {
+					pop_acceptance <= acceptance_status_3
+				}
+			}
+		}
+		scope:california_scope = {
+			add_modifier = {
+				name = usfp_earthquake_anti_immigrant_modifier
+				years = 5
+			}
+		}
+		scope:california_scope.state_region = {
+			add_devastation = 40
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		scope:california_scope = {
+			add_modifier = {
+				name = usfp_great_urban_fire_modifier
+				years = 2
+				is_decaying = yes
+			}
+			kill_population_in_state = {
+				value = {
+					fixed_range = {
+						min = 700
+						max = 3000
+					}
+				}
+			}
+		}
+	}
+
+
+}
+
+#Johnstown Flood
+usfp_usa.33 = {
+	type = country_event
+	placement = scope:pennsylvania_scope
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = usfp_usa.33.t
+	desc = usfp_usa.33.d
+	flavor = usfp_usa.33.f
+	dlc = dlc_usfp
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	trigger = {
+		has_state_in_state_region = STATE_PENNSYLVANIA
+		any_scope_state = {
+			state_region = s:STATE_PENNSYLVANIA
+			state_region = {
+				OR = {
+					has_harvest_condition = torrential_rains
+					has_harvest_condition = flood
+				}
+			}
+		}
+		game_date > 1899.5.1
+		ig:ig_industrialists = {
+			ig_counts_as_marginal = no
+		}
+		NOR = {
+			has_law_or_variant = law_type:law_cooperative_ownership
+			has_law_or_variant = law_type:law_command_economy
+			has_law_or_variant = law_type:law_industry_banned
+			has_law = law_type:law_usfp_tribal_land_ownership
+			has_law_or_variant = law_type:law_council_republic
+		}
+		any_scope_character = {
+			OR = {
+				has_role_of_type = executive
+				has_role_of_type = magnate
+			}
+			is_interest_group_type = ig_industrialists
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_PENNSYLVANIA
+			}
+			save_scope_as = pennsylvania_scope
+		}
+		random_scope_character = {
+			limit = {
+				OR = {
+					has_role_of_type = executive
+					has_role_of_type = magnate
+				}
+				is_interest_group_type = ig_industrialists
+			}
+			save_scope_as = industrialist_character_scope
+		}
+	}
+
+	#it was an act of god
+	option = {
+		name = usfp_usa.33.a
+		default_option = yes
+		scope:pennsylvania_scope = {
+			add_radicals_in_state = {
+				strata = lower
+				value = medium_radicals
+			}
+		}
+		scope:industrialist_character_scope = {
+			add_modifier = {
+				name = usfp_johnstown_flood_popularity_modifier
+				years = 5
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#the industrialists are to blame
+	option = {
+		name = usfp_usa.33.b
+		ig:ig_industrialists = {
+			add_modifier = {
+				name = usfp_ig_blamed_for_weather_modifier
+				years = 5
+			}
+		}
+		scope:industrialist_character_scope = {
+			add_modifier = {
+				name = usfp_johnstown_flood_blamed_officially_modifier
+				years = 5
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		scope:pennsylvania_scope = {
+			kill_population_in_state = {
+				value = 2000
+			}
+			state_region = {
+				add_devastation = 5
+				if = {
+					limit = {
+						NOT = {
+							has_harvest_condition = flood
+						}
+					}
+				}
+				start_harvest_condition = flood
+			}
+		}
+	}
+
+}

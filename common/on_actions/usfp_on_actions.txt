@@ -15,6 +15,7 @@ usfp_monthly_pulse = {
 		usfp_usa.16 #Election chaos (ALL democracies, not just the US)
 		usfp_usa.22 #American Centennial
         usfp_philippines.11 #ESL Amendment Acquired
+		usfp_usa.32 #San Francisco Earthquake
 	}
 	random_events = {
 		chance_to_happen = 80
@@ -33,6 +34,7 @@ usfp_monthly_pulse = {
 		100 = usfp_usa.27 #Third Great Awakening
 		10 = usfp_usa.30 #Scopes Monkey Trial
 		10 = usfp_usa.31 #Army Beef Scandal
+		100 = usfp_usa.33 #Johnstown Flood
 
 
 

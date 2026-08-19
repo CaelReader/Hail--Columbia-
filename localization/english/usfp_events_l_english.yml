@@ -482,6 +482,13 @@ usfp_manifest_destiny.9.f: ""All over it is felt that the old era of stage coach
 usfp_manifest_destiny.9.a: "The transcontinental was just the beginning!"
 usfp_manifest_destiny.9.b: "These speculative railroad companies are a financial time-bomb."
 
+ transcontinental_chose_northern_route: "The Transcontinental Railway will be built along the [GetGeographicRegion('geographic_region_transcontinental_northern_route').GetName]"
+ transcontinental_northern_route_states: "Every [GetPlayer.GetAdjective] [concept_state] along the [GetGeographicRegion('geographic_region_transcontinental_northern_route').GetName]"
+ transcontinental_chose_central_route: "The Transcontinental Railway will be built along the [GetGeographicRegion('geographic_region_transcontinental_central_route').GetName]"
+ transcontinental_central_route_states: "Every [GetPlayer.GetAdjective] [concept_state] along the [GetGeographicRegion('geographic_region_transcontinental_central_route').GetName]"
+ transcontinental_chose_southern_route: "The Transcontinental Railway will be built along the [GetGeographicRegion('geographic_region_transcontinental_southern_route').GetName]"
+ transcontinental_southern_route_states: "Every [GetPlayer.GetAdjective] [concept_state] along the [GetGeographicRegion('geographic_region_transcontinental_southern_route').GetName]"
+
 usfp_manifest_destiny.10.t: "Tales of Gold Mountain"
 usfp_manifest_destiny.10.d: "News of the discovery of [GetGoods('gold').GetName] in [SCOPE.sState('california_scope').GetName] has reached across the Pacific to [SCOPE.sCountry('china_scope').GetName]. As a result, thousands of [SCOPE.sCulture('han_scope').GetName] migrants have begun to arrive by ship, drawn by tales of the vast wealth flowing from 'Gold Mountain'."
 usfp_manifest_destiny.10.f: ""O, just marry all the daughters to men from Gold Mountain—\n\nAll those trunks from Gold Mountain — you can demand as many as you want!\n\nO, don't ever marry your daughter to a man from Gold Mountain—\n\nLonely and sad — a cooking pot is her only companion!"" #Cantonese Rhyme
@@ -868,6 +875,18 @@ social_gospelists_can_appear: "[GetIdeology('ideology_usfp_social_gospel_leader'
  usfp_usa.31.f: ""There was no life or nourishment in the meat, it had been used to make beef extract, and after the juice was squeezed out of it the pulp was put back in the cans and labeled 'roast beef.' It has an odor similar to that of a dead human body after being injected with fomaldehyde."" #Nelson A Miles and a US medical officer
  usfp_usa.31.a: "[SCOPE.sCharacter('beef_character_scope').GetFullName] will no longer be in charge of procurement."
  usfp_usa.31.b: "They're soldiers, they should be used to eating grub!"
+
+ usfp_usa.32.t: "The Great [SCOPE.sState('california_scope').GetPortHubName] Earthquake"
+ usfp_usa.32.d: "An earthquake of immense magnitude has shaken northern [SCOPE.sState('california_scope').GetName], causing widespread destruction. Fire sparked by the quake have blazed through most of [SCOPE.sState('california_scope').GetPortHubName], leaving the city a hollowed-out ruin."
+ usfp_usa.32.f: ""About a quarter after five the quake woke us up, and our house seemed like it would break all to pieces. We could see fires to the right, front, and left of us. All the buildings were more or less damage, whole blocks of buildings were masses of ruins."$quote_dash$John W. Nourse, San Francisco resident"
+ usfp_usa.32.a: "Organize relief and reconstruction efforts at once."
+ usfp_usa.32.b: "Finally, all those immigrants will be cleared out of the city."
+
+ usfp_usa.33.t: "The Johnstown Flood"
+ usfp_usa.33.d: "A flash flood in [SCOPE.sState('pennsylvania_scope').GetName] has wiped the small town of Johnstown off the map, leaving a trail of bodies in its wake. The source of the flood has been identified as an ill-maintained dam owned by a private resort frequented by [SCOPE.sCharacter('industrialist_character_scope').GetFullName]."
+ usfp_usa.33.f: ""Lovers burnt and sweethearts drowned,\nDarlings lost but never found!\nAll the horrors that hell could wish,\nSuch was the price that was paid for— fish!"$quote_dash$Isaac G. Reed"
+ usfp_usa.33.a: "This was clearly an act of God."
+ usfp_usa.33.b: "[SCOPE.sCharacter('industrialist_character_scope').GetFullName]'s resort will be held liable."
 
 ### USA Labor Events ###
 

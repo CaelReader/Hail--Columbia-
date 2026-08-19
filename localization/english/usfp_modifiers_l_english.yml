@@ -388,3 +388,7 @@ country_enactment_success_chance_law_multicultural_add_desc: "A flat percentage 
  usfp_embalmed_beef_modifier: "Embalmed Beef"
  usfp_army_beef_ig_positive: "Beef Kickbacks"
  usfp_army_beef_ig_negative: "Rancid Supplies"
+ usfp_earthquake_anti_immigrant_modifier: "Sent Packing"
+ usfp_ig_blamed_for_weather_modifier: "Blamed for the Weather"
+ usfp_johnstown_flood_popularity_modifier: "Irresponsible"
+ usfp_johnstown_flood_blamed_officially_modifier: "Flood Damages"

@@ -30,6 +30,8 @@ usfp_ellis_island_modifier = {
 usfp_great_urban_fire_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 	building_urban_center_throughput_add = -0.20
+	building_group_bg_light_industry_throughput_add = -0.15
+	building_group_bg_heavy_industry_throughput_add = -0.10
 	state_construction_mult = -0.20
 }
 
@@ -458,4 +460,13 @@ usfp_transcontinental_construction_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_laborer_positive.dds
 	state_migration_pull_mult = 0.10
 	building_group_bg_infrastructure_construction_efficiency_add = 0.10
+}
+
+usfp_earthquake_anti_immigrant_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	state_migration_pull_mult = -0.30
+	state_loyalism_increases_open_prejudice_mult = -0.50
+	state_loyalism_increases_second_rate_citizen_mult = -0.50
+	state_loyalism_increases_cultural_erasure_mult = -0.50
+	state_loyalism_increases_violent_hostility_mult = -0.50
 }

@@ -37,6 +37,9 @@ usfp_dust_bowl.1 = {
             }
         }
         NOT = {
+            has_law = law_type:law_usfp_tribal_land_ownership
+        }
+        NOT = {
             has_global_variable = dust_bowl_happened
         }
     }

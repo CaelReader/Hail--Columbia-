@@ -130,3 +130,14 @@ usfp_army_beef_demotion_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_officer_negative.dds
 	character_prominence_add = -20
 }
+
+usfp_johnstown_flood_popularity_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_newspaper_negative.dds
+	character_popularity_add = -20
+}
+
+usfp_johnstown_flood_blamed_officially_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_newspaper_negative.dds
+	character_popularity_add = -20
+	character_prominence_add = -20
+}

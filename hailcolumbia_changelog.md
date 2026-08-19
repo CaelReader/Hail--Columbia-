@@ -994,7 +994,8 @@ Melting Pot modifier now always allows assimilation to the Primary Culture
 	End-game Dust Bowl JE and Dust Storm Harvest Condition, activated by plowing the Great Plains with advanced technology
 	End-game Roaring Twenties JE that boosts economic and political optimism... while it lasts
 	End-game Great Depression JE created by the collapse of the Roaring Twenties
-	New Events: Monkey Trial, Embalmed Beef
+	New Events: Monkey Trial, Embalmed Beef, San Francisco Earthquake, Johnstown Flood
+	Added US Colored Troops loading screen by Angel
 ## Updates
     The Great Plains is now more susceptible to droughts and extreme winds
     Changed Post-War Demobilization modifier from a Morale debuff to an Offense debuff, and reduced it to 20 years from 25
