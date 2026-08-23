@@ -1002,6 +1002,9 @@ Melting Pot modifier now always allows assimilation to the Primary Culture
     Changed Post-War Demobilization modifier from a Morale debuff to an Offense debuff, and reduced it to 20 years from 25
 	Post-War Demobilization modifier is now halved under Professional Army
 	Disabled Gilded Age "Railroad Boom" event, replaced with JE
+    Converted Oregon Border Dispute JE into a Contextless JE that all involved parties can view
+    Cleaned up tooltips for completion requirements for the Oregon Border Dispute
+    The Canadian owner of Alberta now annexes the Columbia District after the Treaty is concluded
 # Fixes
 	Fixed overflowing tooltip on Ghost Dance events
     Fixed broken event overwrites

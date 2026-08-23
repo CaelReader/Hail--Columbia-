@@ -104,8 +104,12 @@ usfp_reconstruction_progress_bar_freedmen: "#bold Freedmen#!"
 usfp_reconstruction_progress_bar_redeemers: "#bold Redeemers#!"
 
  je_oregon:0 "The Oregon Border Dispute"
- je_oregon_reason:0 "The proper location of the Oregon border has long been an undecided matter between Great Britain and the United States. As our settlers continue to push west, we will need to reach a final settlement with the British.\n\nAlternatively, if we find ourselves at war in California, a treaty will become a military necessity."
+ je_oregon_reason:0 "The Treaty of 1818 between [SelectLocalization(SCOPE.sCountry('gbr_scope').IsValid, SCOPE.sCountry('gbr_scope').GetName, 'GBR')] and the [SelectLocalization(SCOPE.sCountry('usa_scope').IsValid, SCOPE.sCountry('usa_scope').GetName, 'USA')] established joint control of the Oregon Country on paper. The British have established the most presence in the region, but as American settlers continue to push west, the two powers are likely to partition control of the [SelectLocalization(SCOPE.sCountry('oregon_holder_scope').IsValid, SCOPE.sCountry('oregon_holder_scope').GetName, 'ORG')] between them."
  oregon_tt:1 "Have discovered the Oregon Trail by mapping the American Western Frontier"
+
+ gbr_or_subject_has_state_in_southern_oregon_territory: "Great Britain or its [Concept('concept_subject','$concept_subjects$')] do not have a [concept_state] in [GetStateRegion('STATE_WASHINGTON').GetName], [GetStateRegion('STATE_OREGON').GetName], or [GetStateRegion('STATE_IDAHO').GetName]"
+ usa_has_state_in_montana_wyoming_california: "The United States or its [Concept('concept_subject','$concept_subjects$')] have a [concept_state] in [GetStateRegion('STATE_MONTANA').GetName], [GetStateRegion('STATE_WYOMING').GetName], or [GetStateRegion('STATE_CALIFORNIA').GetName]"
+ usa_or_subject_has_state_in_all_southern_oregon_territory: "The United States or its [Concept('concept_subject','$concept_subjects$')] have [Concept('concept_state', '$concept_states$')] in [GetStateRegion('STATE_WASHINGTON').GetName], [GetStateRegion('STATE_OREGON').GetName], #bold and#! [GetStateRegion('STATE_IDAHO').GetName]"
 
 BNN:0 "Shoshone"
 BNN_ADJ:0 "Shoshoni"

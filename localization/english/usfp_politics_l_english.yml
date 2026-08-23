@@ -26,6 +26,7 @@ dismantle_jim_crow: "Dismantle Jim Crow"
 dismantle_jim_crow_desc: "The governments of the South have enforced racial terror on their citizens for far too long. It is time that these Jim Crow laws be nullified."
  dismantle_political_machines: "Dismantle Political Machines"
  dismantle_political_machines_desc: "The Political Machines are a relic of a bygone era. Their existence is no longer tenable."
+ jim_crow_states: "Every [concept_state] with the #Yellow Jim Crow#! modifier"
 
 negotiate_mexican_border: "Negotiate Mexican Border"
 negotiate_mexican_border_desc: "Our previous border treaties with Mexico were ill-defined and ignorant of the geography of the west. It is clear now that the Rio Grande is the most natural boundary between our two nations."

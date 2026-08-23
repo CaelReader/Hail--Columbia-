@@ -864,11 +864,11 @@ social_gospelists_can_appear: "[GetIdeology('ideology_usfp_social_gospel_leader'
  usfp_usa.29.a: "The allure of the [Root.GetCountry.GetName] cannot be stymied."
 
  usfp_usa.30.t: "The Monkey Trial"
- usfp_usa.30.d: "The government of [SCOPE.sState('tennessee_scope').GetName] has decided to outlaw the teaching of the theory of evolution in its public schools. The trial of a schoolteacher has become a national spectacle, with [SCOPE.sCharacter('bryan_scope').GetFullName] intervening on the side of the anti-evolutionists."
+ usfp_usa.30.d: "The government of [SCOPE.sState('tennessee_scope').GetName] has decided to outlaw the teaching of the theory of evolution in its public schools. The trial of a schoolteacher has become a national spectacle, with [SCOPE.sCharacter('bryans_scope').GetFullName] intervening on the side of the anti-evolutionists."
  usfp_usa.30.f: ""Where have you lived all your life?"\n"Not near you." There was laughter and applause in the courtroom.\n"Nor near anybody of learning?"\n"Oh, don't assume you know it all."\n"Do you know there are thousands of books in our libraries on all those subjects I have been asking you about?"\n"I couldn't say, but I will take your word for it.""
  usfp_usa.30.a: "Evolution is the basis of all modern biology, it must be taught!"
  usfp_usa.30.b: "We must not abandon our faith."
- usfp_usa.30.tt: "[SCOPE.sCharacter('bryan_scope').GetFullName] dies of apoplexy after overexerting themselves at the trial"
+ usfp_usa.30.tt: "[SCOPE.sCharacter('bryans_scope').GetFullName] dies of apoplexy after overexerting themselves at the trial"
 
  usfp_usa.31.t: "Embalmed Beef"
  usfp_usa.31.d: "The terrible quality of canned beef supplied to our troops has created some outrage in the press. Investigation has pointed to the meatpacking industry of [SCOPE.sState('meat_state_scope').GetName] as the culprit, a procurement source favored by [SCOPE.sCharacter('beef_character_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('beef_character_scope').GetFullName]."

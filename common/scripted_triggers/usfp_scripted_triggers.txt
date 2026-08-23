@@ -916,3 +916,115 @@ usfp_transcontinental_southern_route_open = {
 	has_state_in_state_region = STATE_NEW_MEXICO
 	has_state_in_state_region = STATE_TEXAS
 }
+
+usfp_gbr_or_subject_has_state_in_southern_oregon_territory = {
+    custom_tooltip = {
+        text = gbr_or_subject_has_state_in_southern_oregon_territory
+        OR = {
+            s:STATE_WASHINGTON = {
+                any_scope_state = {
+                    owner = {
+                        OR = {
+                            c:GBR = THIS
+                            is_subject_of = c:GBR
+                        }
+                    }
+                }
+            }
+            s:STATE_OREGON = {
+                any_scope_state = {
+                    owner = {
+                        OR = {
+                            c:GBR = THIS
+                            is_subject_of = c:GBR
+                        }
+                    }
+                }
+            }
+            s:STATE_IDAHO = {
+                any_scope_state = {
+                    owner = {
+                        OR = {
+                            c:GBR = THIS
+                            is_subject_of = c:GBR
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+usfp_usa_or_subject_has_state_in_all_southern_oregon_territory = {
+    custom_tooltip = {
+        text = usa_or_subject_has_state_in_all_southern_oregon_territory
+        s:STATE_WASHINGTON = {
+            any_scope_state = {
+                owner = {
+                    OR = {
+                        c:USA = THIS
+                        is_subject_of = c:USA
+                    }
+                }
+            }
+        }
+        s:STATE_OREGON = {
+            any_scope_state = {
+                owner = {
+                    OR = {
+                        c:USA = THIS
+                        is_subject_of = c:USA
+                    }
+                }
+            }
+        }
+        s:STATE_IDAHO = {
+            any_scope_state = {
+                owner = {
+                    OR = {
+                        c:USA = THIS
+                        is_subject_of = c:USA
+                    }
+                }
+            }
+        }
+    }
+}
+
+usfp_usa_has_state_in_montana_wyoming_california = {
+    custom_tooltip = {
+        text = usa_has_state_in_montana_wyoming_california
+        OR = {
+            s:STATE_MONTANA = {
+                any_scope_state = {
+                    owner = {
+                        OR = {
+                            c:USA = THIS
+                            is_subject_of = c:USA
+                        }
+                    }
+                }
+            }
+            s:STATE_WYOMING = {
+                any_scope_state = {
+                    owner = {
+                        OR = {
+                            c:USA = THIS
+                            is_subject_of = c:USA
+                        }
+                    }
+                }
+            }
+            s:STATE_CALIFORNIA = {
+                any_scope_state = {
+                    owner = {
+                        OR = {
+                            c:USA = THIS
+                            is_subject_of = c:USA
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
