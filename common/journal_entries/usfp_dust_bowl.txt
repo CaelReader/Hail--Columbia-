@@ -67,6 +67,11 @@
                 }
             }
         }
+        random_events = {
+            chance_to_happen = 10
+            100 = usfp_dust_bowl.5
+            100 = usfp_dust_bowl.6
+        }
     }
 
     invalid = {

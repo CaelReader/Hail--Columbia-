@@ -510,7 +510,7 @@ usfp_dust_bowl.6 = {
         name = usfp_dust_bowl.6.b
         scope:dust_bowl_state = {
             add_modifier = {
-                name = usfp_dust_bowl_resettlment_modifier
+                name = usfp_dust_bowl_resettlement_modifier
                 years = 5
             }
         }

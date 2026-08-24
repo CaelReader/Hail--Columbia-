@@ -458,6 +458,8 @@ progress_bar_complete: "The #b Progress Bar#! has reached 100%"
  je_usfp_great_depression_reason: "The collapse of financial markets across several [concept_great_power] has sent devastating shockwaves through the global economy. With banks failing left and right, private businesses are scrambling to salvage anything they can, leaving [concept_unemployed] workers in the lurch.\n\nThis is greatest challenge to the global economic order yet, and climbing out of this mess will take sustained effort towards revitalizing new growth, lest radical elements take this opportunity to foment revolution."
  usfp_great_depression_recovery_bar: "Economic Recovery"
  usfp_great_depression_recovery_bar_desc: "Economic Recovery: #italic ([JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%0])#!"
+ usfp_mexican_repatriation_button: "Encourage Mexican Repatriation"
+ usfp_mexican_repatriation_button_desc: "To ease the burden on our social systems and our labor market, we can 'encourage' [GetCulture('mexican').GetCustom('getPluralDemonym')] living in the [ROOT.GetCountry.GetName] to emigrate across the border into Mexico proper."
 
  progress_bar_zero: "The #b Progress Bar#! has reached 0%"
 

@@ -35,6 +35,7 @@ usfp_monthly_pulse = {
 		10 = usfp_usa.30 #Scopes Monkey Trial
 		10 = usfp_usa.31 #Army Beef Scandal
 		100 = usfp_usa.33 #Johnstown Flood
+        100 = usfp_dust_bowl.1 #Great Plow Up
 
 
 

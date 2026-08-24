@@ -1,4 +1,4 @@
-namespace = usfp_great_depression
+﻿namespace = usfp_great_depression
 
 #Roaring Twenties Start
 usfp_great_depression.1 = {
@@ -219,6 +219,11 @@ usfp_great_depression.4 = {
             value = money_amount_multiplier_very_large
             multiply = -10
         }
+        add_modifier = {
+            name = usfp_great_depression_immediate_modifier
+            years = 1
+            is_decaying = yes
+        }
     }
 
     #laisez faire
@@ -243,6 +248,11 @@ usfp_great_depression.4 = {
         add_investment_pool = {
             value = money_amount_multiplier_very_large
             multiply = -15
+        }
+        add_modifier = {
+            name = usfp_great_depression_immediate_modifier
+            years = 1
+            is_decaying = yes
         }
     }
 
@@ -272,6 +282,12 @@ usfp_great_depression.4 = {
             value = money_amount_multiplier_very_large
             multiply = -1
         }
+        add_modifier = {
+            name = usfp_great_depression_immediate_modifier
+            years = 1
+            is_decaying = yes
+            multiplier = 0.5
+        }
         highlighted_option = yes
     }
 
@@ -285,6 +301,12 @@ usfp_great_depression.4 = {
             value = money_amount_multiplier_very_large
             multiply = -7.5
         }
+        add_modifier = {
+            name = usfp_great_depression_immediate_modifier
+            years = 1
+            is_decaying = yes
+            multiplier = 0.5
+        }
         highlighted_option = yes
     }
 
@@ -292,11 +314,6 @@ usfp_great_depression.4 = {
         custom_tooltip = roaring_twenties_ends
         add_journal_entry = {
             type = je_usfp_great_depression
-        }
-        add_modifier = {
-            name = usfp_great_depression_immediate_modifier
-            years = 1
-            is_decaying = yes
         }
         show_as_tooltip = {
             add_modifier = usfp_great_depression_modifier

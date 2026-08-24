@@ -124,7 +124,7 @@
                     multiply = 1.005
                 }
             }
-            je:je_usfp_roaring_twenties = {
+            je:je_usfp_roaring_twenties ?= {
                 if = {
                     limit = {
                         scripted_bar_progress = {
@@ -134,19 +134,15 @@
                     }
                     if = {
                         limit = {
-                            je:je_usfp_roaring_twenties ?= {
-                                NOT = {
-                                    has_modifier = usfp_roaring_twenties_optimism_tier1_modifier
-                                }
+                            NOT = {
+                                has_modifier = usfp_roaring_twenties_optimism_tier1_modifier
                             }
                         }
-                        je:je_usfp_roaring_twenties = {
-                            add_modifier = usfp_roaring_twenties_optimism_tier1_modifier
-                            remove_modifier = usfp_roaring_twenties_optimism_tier2_modifier
-                            remove_modifier = usfp_roaring_twenties_optimism_tier3_modifier
-                            remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
-                            remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
-                        }
+                        add_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
                     }
                 } else_if = {
                     limit = {
@@ -157,19 +153,15 @@
                     }
                     if = {
                         limit = {
-                            je:je_usfp_roaring_twenties ?= {
-                                NOT = {
-                                    has_modifier = usfp_roaring_twenties_optimism_tier2_modifier
-                                }
+                            NOT = {
+                                has_modifier = usfp_roaring_twenties_optimism_tier2_modifier
                             }
                         }
-                        je:je_usfp_roaring_twenties = {
-                            remove_modifier = usfp_roaring_twenties_optimism_tier1_modifier
-                            add_modifier = usfp_roaring_twenties_optimism_tier2_modifier
-                            remove_modifier = usfp_roaring_twenties_optimism_tier3_modifier
-                            remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
-                            remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
-                        }
+                        remove_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                        add_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
                     }
                 } else_if = {
                     limit = {
@@ -180,19 +172,15 @@
                     }
                     if = {
                         limit = {
-                            je:je_usfp_roaring_twenties ?= {
-                                NOT = {
-                                    has_modifier = usfp_roaring_twenties_optimism_tier3_modifier
-                                }
+                            NOT = {
+                                has_modifier = usfp_roaring_twenties_optimism_tier3_modifier
                             }
                         }
-                        je:je_usfp_roaring_twenties = {
-                            remove_modifier = usfp_roaring_twenties_optimism_tier1_modifier
-                            remove_modifier = usfp_roaring_twenties_optimism_tier2_modifier
-                            add_modifier = usfp_roaring_twenties_optimism_tier3_modifier
-                            remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
-                            remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
-                        }
+                        remove_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                        add_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
                     }
                 } else_if = {
                     limit = {
@@ -203,40 +191,34 @@
                     }
                     if = {
                         limit = {
-                            je:je_usfp_roaring_twenties ?= {
-                                NOT = {
-                                    has_modifier = usfp_roaring_twenties_optimism_tier4_modifier
-                                }
-                            }
-                        }
-                        je:je_usfp_roaring_twenties = {
-                            remove_modifier = usfp_roaring_twenties_optimism_tier1_modifier
-                            remove_modifier = usfp_roaring_twenties_optimism_tier2_modifier
-                            remove_modifier = usfp_roaring_twenties_optimism_tier3_modifier
-                            add_modifier = usfp_roaring_twenties_optimism_tier4_modifier
-                            remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
-                        }
-                    }
-                } else_if = {
-                    limit = {
-                        je:je_usfp_roaring_twenties ?= {
                             NOT = {
-                                has_modifier = usfp_roaring_twenties_optimism_tier5_modifier
+                                has_modifier = usfp_roaring_twenties_optimism_tier4_modifier
                             }
                         }
-                    }
-                    je:je_usfp_roaring_twenties = {
                         remove_modifier = usfp_roaring_twenties_optimism_tier1_modifier
                         remove_modifier = usfp_roaring_twenties_optimism_tier2_modifier
                         remove_modifier = usfp_roaring_twenties_optimism_tier3_modifier
-                        remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
-                        add_modifier = usfp_roaring_twenties_optimism_tier5_modifier
+                        add_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
                     }
+                } else_if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = usfp_roaring_twenties_optimism_tier5_modifier
+                        }
+                    }
+                    remove_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                    remove_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                    remove_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                    remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                    add_modifier = usfp_roaring_twenties_optimism_tier5_modifier
                 }
 
             }
         }
-
+        events = {
+            usfp_great_depression.2
+        }
     }
 
     timeout = 5400
@@ -281,9 +263,26 @@ je_usfp_great_depression = {
             }
             add_modifier = usfp_great_depression_modifier
         }
+        set_variable = {
+            name = great_depression_last_month_gdp
+            value = root.gdp
+        }
+        set_variable = {
+            name = great_depression_this_month_gdp
+            value = root.gdp
+        }
+        set_variable = {
+            name = great_depression_gdp_target
+            value = {
+                value = var:great_depression_this_month_gdp
+                multiply = 1.005
+            }
+        }
     }
 
     #Triggered by end of Roaring Twenties
+
+    scripted_button = usfp_mexican_repatriation_button
 
     invalid = {
         has_law_or_variant = law_type:law_command_economy
@@ -302,7 +301,7 @@ je_usfp_great_depression = {
             set_variable = {
                 name = great_depression_gdp_target
                 value = {
-                    value = var:roaring_twenties_this_month_gdp
+                    value = var:great_depression_this_month_gdp
                     multiply = 1.005
                 }
             }
