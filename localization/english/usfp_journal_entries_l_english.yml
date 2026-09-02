@@ -122,6 +122,11 @@ usfp_manifest_less_destiny: "#bold Manifest Destiny#! will lose influence."
  expand_american_superculture_homeland: "Expand [GetCulture('usfp_american').GetName] Homelands"
  expand_american_superculture_homeland_desc: "The unity of [GetCulture('usfp_american').GetName] culture will overspread the entire continent."
 
+ usfp_je_monroe_doctrine: "Monroe Doctrine"
+ usfp_je_monroe_doctrine_reason: "In 1823, President Monroe declared that the sovereign [Concept('concept_country', '$concept_countries$')] of the [GetGeographicRegion('geographic_region_americas').GetName] were to be free from domination by foreign powers. With sufficient [concept_naval_power_projection], we are able to put force behind this doctrine, and perhaps even remove the remaining European colonies from the continent, in time.\n\n@information! The Monroe Doctrine will be violated if a [concept_country] from outside the Americas targets a [concept_country] in the Americas (other than the United States) with a [concept_diplomatic_play], unless the target is already a subject of the initiator."
+ old_world_overlord: "[concept_overlord] is in the [GetGeographicRegion('geographic_region_old_world').GetName]"
+ old_world_owner: "Owned by a [concept_country] in the [GetGeographicRegion('geographic_region_old_world').GetName]"
+
 usfp_western_purchase_button: "Make an Offer to Mexico"
 usfp_western_purchase_button_desc: "Mexico's grasp on its northern territories is tenuous. If we wish to expand westward, we might be able to purchase these lands diplomatically."
  usfp_force_mexican_claims_button: "Claim Mexican Lands"

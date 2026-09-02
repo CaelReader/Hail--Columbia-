@@ -74,6 +74,9 @@ je_usfp_the_new_navy = {
                 type = ship_type:ship_type_super_dreadnought
             }
         }
+        any_country = {
+            naval_power_projection >= root.naval_power_projection
+        }
     }
 
     possible = {

@@ -1008,3 +1008,4 @@ Melting Pot modifier now always allows assimilation to the Primary Culture
 # Fixes
 	Fixed overflowing tooltip on Ghost Dance events
     Fixed broken event overwrites
+    The New Navy JE now hides itself if you are the #1 Naval power
