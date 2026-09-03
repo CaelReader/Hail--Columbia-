@@ -513,3 +513,91 @@ usfp_great_depression.6 = {
         }
     }
 }
+
+#Bonus Army
+usfp_great_depression.7 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "unspecific_vandalized_storefront"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/currency_standards.dds"
+
+    title = usfp_great_depression.7.t
+    desc = usfp_great_depression.7.d
+    flavor = usfp_great_depression.7.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        has_variable = recently_had_war
+        usfp_country_is_american = yes
+        any_scope_pop = {
+            is_pop_type = soldiers
+            OR = {
+                is_employed = no
+                standard_of_living <= 12
+            }
+        }
+        usfp_has_constitutional_government = yes
+    }
+
+    immediate = {
+
+    }
+
+    #sweep
+    option = {
+        name = usfp_great_depression.7.a
+        default_option = yes
+        add_radicals = {
+            pop_type = soldiers
+            value = medium_radicals
+        }
+        ruler = {
+            add_modifier = {
+                name = usfp_bonus_army_blamed
+                years = 5
+            }
+        }
+    }
+
+    #pay
+    option = {
+        name = usfp_great_depression.7.b
+        add_loyalists = {
+            pop_type = soldiers
+            value = large_radicals
+        }
+        add_treasury = {
+            value = {
+                value = money_amount_multiplier_very_large
+                multiply = -1
+            }
+        }
+    }
+
+    #Roosevelt
+    option = {
+        name = usfp_great_depression.7.c
+        highlighted_option = yes
+        trigger = {
+            ruler = {
+                has_ideology = ideology:ideology_usfp_progressive
+            }
+            institution_investment_level = {
+                institution = institution_social_security
+                value >= 2
+            }
+        }
+        add_loyalists = {
+            pop_type = soldiers
+            value = medium_radicals
+        }
+    }
+
+}

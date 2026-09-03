@@ -303,6 +303,7 @@ je_usfp_great_depression = {
         random_events = {
             chance_to_happen = 10
             100 = usfp_great_depression.6
+            100 = usfp_great_depression.7
         }
     }
 

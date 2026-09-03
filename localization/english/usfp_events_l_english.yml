@@ -2093,6 +2093,13 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_great_depression.6.a: "Sweep through these camps and arrest any disturbers of the peace."
  usfp_great_depression.6.b: "Our economic system is clearly bankrupt."
 
+ usfp_great_depression.7.t: "The Bonus Army"
+ usfp_great_depression.7.d: "A group of disgruntled veterans have encamped in [Root.GetCountry.GetCapital.GetCityHubName] demanding the immediate payment of bonds issued to them as payment. The protestors have already clashed with the local police, and intelligence suggests that radical elements intend to turn the marchers toward revolutionary action."
+ usfp_great_depression.7.f: "The police eyed the camp from a distance. The last time they had approached, there was a shooting. The veterans had survived war, and weren't going to run off at the sight of a few truncheons. Better, they decided, to wait for the cavalry to be sent in."
+ usfp_great_depression.7.a: "Send in the real army to clear out this rabble."
+ usfp_great_depression.7.b: "Just pay out the bonuses!"
+ usfp_great_depression.7.c: "Let the veterans know that relief is on the way."
+
  roaring_twenties_increase_optimism: "The #bold Optimism#! of $je_usfp_roaring_twenties$ increases"
  black_tuesday_soon: "@warn! #Red Any cause for concern will cause an investor panic #!"
  hooverville_states: "Every [concept_incorporated_state] with more than 10% [Concept('concept_unemployed', '$concept_unemployment$')]"
