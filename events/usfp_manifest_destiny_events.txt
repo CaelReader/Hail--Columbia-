@@ -3437,4 +3437,88 @@ usfp_manifest_destiny.31 = {
 
 }
 
-#Californian Revolt
+#Monroe Doctrine Complete
+usfp_manifest_destiny.32 = {
+	type = country_event
+	placement = root
+	event_image = {
+		video = "votp_gunboat_diplomacy"
+	}
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/ai_strategy_icons/usfp_pacific_empire_strategy.dds"
+
+	title = usfp_manifest_destiny.32.t
+	desc = usfp_manifest_destiny.32.d
+	flavor = usfp_manifest_destiny.32.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+
+	}
+
+
+	#influence
+	option = {
+		name = usfp_manifest_destiny.32.a
+		default_option = yes
+		usfp_manifest_less_destiny_high_effect = yes
+		add_modifier = {
+			name = usfp_monroe_doctrine_complete_influence_modifier
+			years = 10
+		}
+		every_country_in_usfp_western_hemisphere = {
+			limit = {
+				is_subject = no
+			}
+			custom = "every_independent_country_in_western_hemisphere"
+			change_relations = {
+				country = root
+				value = 10
+			}
+			root = {
+				create_unidirectional_truce = {
+					country = prev
+					years = 5
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#hegemony
+	option = {
+		name = usfp_manifest_destiny.32.b
+		usfp_manifest_more_destiny_effect = yes
+		add_modifier = {
+			name = usfp_monroe_doctrine_complete_hegemony_modifier
+			years = 10
+		}
+		every_country_in_usfp_western_hemisphere = {
+			limit = {
+				is_subject = no
+			}
+			custom = "every_independent_country_in_western_hemisphere"
+			change_relations = {
+				country = root
+				value = -30
+			}
+			create_diplomatic_catalyst = {
+				type = catalyst_journal_entry
+				target = root
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+}

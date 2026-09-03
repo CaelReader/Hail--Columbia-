@@ -481,6 +481,8 @@ usfp_manifest_destiny.9.d: "The completion of the Transcontinental Railroad hera
 usfp_manifest_destiny.9.f: ""All over it is felt that the old era of stage coaches and ox and mule transportation is rapidly passing away, and that the locomotive, soon to penetrate the State in all directions, will in future carry the wheat to the wharf, the ore to the mill, the timber to the mine; supply the deficiency of navigable streams, open up millions of acres of the best fruit and grain lands in the world, and make accessible and workable thousands of rich mines."$quote_dash$Henry George"
 usfp_manifest_destiny.9.a: "The transcontinental was just the beginning!"
 usfp_manifest_destiny.9.b: "These speculative railroad companies are a financial time-bomb."
+ railroad_bubble_investment_high: "The #bold $je_usfp_railroad_bubble$#! [concept_journal_entry] bonuses will be #g stronger#!, but so too will any subsequent #n crash#!"
+ railroad_bubble_investment_low: "The #bold $je_usfp_railroad_bubble$#! [concept_journal_entry] bonuses will be #g weaker#!, but so too will any subsequent #n crash#!"
 
  transcontinental_chose_northern_route: "The Transcontinental Railway will be built along the [GetGeographicRegion('geographic_region_transcontinental_northern_route').GetName]"
  transcontinental_northern_route_states: "Every [GetPlayer.GetAdjective] [concept_state] along the [GetGeographicRegion('geographic_region_transcontinental_northern_route').GetName]"
@@ -622,6 +624,14 @@ usfp_manifest_destiny.31.d: "The local government of [SCOPE.sState('oregon_scope
 usfp_manifest_destiny.31.f: ""That if such free negro or mulatto shall fail to quit the country, as required by this act, he or she may be arrested upon a warrant issued by some justice of the peace, and, if guilty upon trial before such justice, shall receive upon his or her bare back not less than twenty nor more than thirty-nine stripes, to be inflicted by the constable of the proper county."" #1844 Law
 usfp_manifest_destiny.31.a: "It is the settlers' decision."
 usfp_manifest_destiny.31.b: "What? That's ridiculous and illegal."
+
+ usfp_manifest_destiny.32.t: "The Sovereign West"
+ usfp_manifest_destiny.32.d: "The last holdouts of the old European empires in the Americas have been liberated. The [Root.GetCountry.GetName] now stands unopposed in its mastery over the [GetGeographicRegion('geographic_region_western_hemisphere').GetName]."
+ usfp_manifest_destiny.32.f: ""Today the United States is practically sovereign on this continent, and its fiat is law upon the subjects to which it confines its interposition. It is not simply by reason of its high character as a civilized state, nor because wisdom and justice and equity are the invariable characteristics of the dealings of the United States. It is because, in addition to all other grounds, its infinite resources combined with its isolated position render it master of the situation and practically invulnerable as against any or all other powers."$quote_dash$Richard Olney, Secretary of State"
+ usfp_manifest_destiny.32.a: "The Americas can rest easy under our protection."
+ usfp_manifest_destiny.32.b: "The hemisphere is our backyard, and we will do with it as we please."
+
+ every_independent_country_in_western_hemisphere: "Every independent [concept_country] in the [GetGeographicRegion('geographic_region_western_hemisphere').GetName]"
 
 ### Native Removal Events ###
 

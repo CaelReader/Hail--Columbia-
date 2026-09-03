@@ -1265,6 +1265,7 @@ usfp_je_monroe_doctrine = {
     }
 
     complete = {
+		is_power_bloc_leader = yes
         any_country_in_americas = {
             filter = {
                 is_subject = yes
@@ -1309,7 +1310,28 @@ usfp_je_monroe_doctrine = {
                 }
             }
         }
+		trigger_event = usfp_manifest_destiny.32
     }
+
+	event_outcome_completed_effect_desc = {
+		header = usfp_manifest_destiny.32.a
+		effect = {
+			execute_event_option = {
+				event = usfp_manifest_destiny.32
+				option = 0
+			}
+		}
+	}
+
+	event_outcome_completed_effect_desc = {
+		header = usfp_manifest_destiny.32.b
+		effect = {
+			execute_event_option = {
+				event = usfp_manifest_destiny.32
+				option = 1
+			}
+		}
+	}
 
 
     fail = {

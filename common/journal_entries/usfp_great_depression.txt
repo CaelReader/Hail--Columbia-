@@ -257,6 +257,10 @@ je_usfp_great_depression = {
     group = je_group_crises
 
     immediate = {
+        set_variable = {
+            name = great_depression_unemployment_rate
+            value = usfp_country_incorporated_unemployment_rate
+        }
         scope:journal_entry = {
             add_com_dlc_icon = {
                 dlc = dlc_usfp
@@ -271,13 +275,6 @@ je_usfp_great_depression = {
             name = great_depression_this_month_gdp
             value = root.gdp
         }
-        set_variable = {
-            name = great_depression_gdp_target
-            value = {
-                value = var:great_depression_this_month_gdp
-                multiply = 1.005
-            }
-        }
     }
 
     #Triggered by end of Roaring Twenties
@@ -291,19 +288,16 @@ je_usfp_great_depression = {
     on_monthly_pulse = {
         effect = {
             set_variable = {
+                name = great_depression_unemployment_rate
+                value = usfp_country_incorporated_unemployment_rate
+            }
+            set_variable = {
                 name = great_depression_last_month_gdp
                 value = var:great_depression_this_month_gdp
             }
             set_variable = {
                 name = great_depression_this_month_gdp
                 value = root.gdp
-            }
-            set_variable = {
-                name = great_depression_gdp_target
-                value = {
-                    value = var:great_depression_this_month_gdp
-                    multiply = 1.005
-                }
             }
         }
         random_events = {

@@ -1069,3 +1069,17 @@ usfp_lincolns_volunteers_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_soldier_positive.dds
 	building_training_rate_mult = 1.0
 }
+
+usfp_monroe_doctrine_complete_influence_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
+	country_influence_mult = 0.15
+	country_leverage_generation_mult = 0.15
+	country_prestige_mult = 0.10
+}
+
+usfp_monroe_doctrine_complete_hegemony_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
+	country_diplomatic_reputation_add = -10
+	country_prestige_from_navy_power_projection_mult = 0.10
+	country_ship_crew_starting_veterancy_experience_mult = 0.30
+}
