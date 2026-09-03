@@ -864,26 +864,26 @@ social_gospelists_can_appear: "[GetIdeology('ideology_usfp_social_gospel_leader'
  usfp_usa.29.a: "The allure of the [Root.GetCountry.GetName] cannot be stymied."
 
  usfp_usa.30.t: "The Monkey Trial"
- usfp_usa.30.d: "The government of [SCOPE.sState('tennessee_scope').GetName] has decided to outlaw the teaching of the theory of evolution in its public schools. The trial of a schoolteacher has become a national spectacle, with [SCOPE.sCharacter('bryans_scope').GetFullName] intervening on the side of the anti-evolutionists."
+ usfp_usa.30.d: "The state government of [SCOPE.sState('tennessee_scope').GetName] has put a schoolteacher on trial for teaching the theory of human evolution. The intervention of [SCOPE.sCharacter('bryans_scope').GetFullName] on the side of the anti-evolutionists has created a national spectacle and debate over the place of religion in the classroom."
  usfp_usa.30.f: ""Where have you lived all your life?"\n"Not near you." There was laughter and applause in the courtroom.\n"Nor near anybody of learning?"\n"Oh, don't assume you know it all."\n"Do you know there are thousands of books in our libraries on all those subjects I have been asking you about?"\n"I couldn't say, but I will take your word for it.""
  usfp_usa.30.a: "Evolution is the basis of all modern biology, it must be taught!"
  usfp_usa.30.b: "We must not abandon our faith."
  usfp_usa.30.tt: "[SCOPE.sCharacter('bryans_scope').GetFullName] dies of apoplexy after overexerting themselves at the trial"
 
  usfp_usa.31.t: "Embalmed Beef"
- usfp_usa.31.d: "The terrible quality of canned beef supplied to our troops has created some outrage in the press. Investigation has pointed to the meatpacking industry of [SCOPE.sState('meat_state_scope').GetName] as the culprit, a procurement source favored by [SCOPE.sCharacter('beef_character_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('beef_character_scope').GetFullName]."
+ usfp_usa.31.d: "The supplies of canned beef provisioned for our troops has been revealed to be of utterly deplorable quality. Blame has fallen on [SCOPE.sCharacter('beef_character_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('beef_character_scope').GetFullName], who seems to have turned a blind eye in favoring the meatpacking industry of [SCOPE.sState('meat_state_scope').GetName]."
  usfp_usa.31.f: ""There was no life or nourishment in the meat, it had been used to make beef extract, and after the juice was squeezed out of it the pulp was put back in the cans and labeled 'roast beef.' It has an odor similar to that of a dead human body after being injected with fomaldehyde."" #Nelson A Miles and a US medical officer
  usfp_usa.31.a: "[SCOPE.sCharacter('beef_character_scope').GetFullName] will no longer be in charge of procurement."
  usfp_usa.31.b: "They're soldiers, they should be used to eating grub!"
 
  usfp_usa.32.t: "The Great [SCOPE.sState('california_scope').GetPortHubName] Earthquake"
- usfp_usa.32.d: "An earthquake of immense magnitude has shaken northern [SCOPE.sState('california_scope').GetName], causing widespread destruction. Fire sparked by the quake have blazed through most of [SCOPE.sState('california_scope').GetPortHubName], leaving the city a hollowed-out ruin."
+ usfp_usa.32.d: "An earthquake of immense magnitude has shaken northern [SCOPE.sState('california_scope').GetName], causing widespread destruction. Fires sparked by the quake have blazed through most of [SCOPE.sState('california_scope').GetPortHubName], turning large parts of the city into hollowed-out ruins."
  usfp_usa.32.f: ""About a quarter after five the quake woke us up, and our house seemed like it would break all to pieces. We could see fires to the right, front, and left of us. All the buildings were more or less damage, whole blocks of buildings were masses of ruins."$quote_dash$John W. Nourse, San Francisco resident"
  usfp_usa.32.a: "Organize relief and reconstruction efforts at once."
  usfp_usa.32.b: "Finally, all those immigrants will be cleared out of the city."
 
  usfp_usa.33.t: "The Johnstown Flood"
- usfp_usa.33.d: "A flash flood in [SCOPE.sState('pennsylvania_scope').GetName] has wiped the small town of Johnstown off the map, leaving a trail of bodies in its wake. The source of the flood has been identified as an ill-maintained dam owned by a private resort frequented by [SCOPE.sCharacter('industrialist_character_scope').GetFullName]."
+ usfp_usa.33.d: "A dam failure in [SCOPE.sState('pennsylvania_scope').GetName] has wiped the small town of Johnstown off the map, leaving a trail of bodies in its wake. The dam had been purchased by [SCOPE.sCharacter('industrialist_character_scope').GetFullName] as part of a private fishing resort, and seemingly ill-maintained by its owner."
  usfp_usa.33.f: ""Lovers burnt and sweethearts drowned,\nDarlings lost but never found!\nAll the horrors that hell could wish,\nSuch was the price that was paid for— fish!"$quote_dash$Isaac G. Reed"
  usfp_usa.33.a: "This was clearly an act of God."
  usfp_usa.33.b: "[SCOPE.sCharacter('industrialist_character_scope').GetFullName]'s resort will be held liable."
@@ -1995,7 +1995,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
 
  #Dust Bowl Events
  usfp_dust_bowl.1.t: "The Great Plow Up"
- usfp_dust_bowl.1.d: "The introduction of gas-powered tractors has enticed farmers in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] to plow up previously unused areas of prairie grass in order to plant expansive fields of wheat."
+ usfp_dust_bowl.1.d: "The introduction of gas-powered tractors has enticed farmers in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] to plow previously unused areas of prairie grass in order to plant expansive fields of wheat."
  usfp_dust_bowl.1.f: ""I saw the whole country transformed in the sunset glow, all the brown prairie turned to gold. I could feel once more the lure of this great lonely land, waiting with its stores of fertility untouched, for those who shall one day learn to meet its demands, to give to it their patient thought and labor."$quote_dash$Caroline Henderson, #italic Our Homestead Lady #!"
  usfp_dust_bowl.1.a: "More grain is better for everyone."
  usfp_dust_bowl.1.b: "A great opportunity for agro-business firms."
@@ -2007,7 +2007,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_dust_bowl.2.a: "Surely the rain will return soon?"
 
  usfp_dust_bowl.3.t: "Clear Skies"
- usfp_dust_bowl.3.d: "Our investments into remediating the soil of the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] have proven successful, ending the threat of large dust storms and creating the opportunity to reopen more land to be placed back under cultivation."
+ usfp_dust_bowl.3.d: "Our investments into remediating the soil of the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] have proven successful, ending the threat of large dust storms and creating the opportunity to reopen the land for renewed cultivation."
  usfp_dust_bowl.3.f: ""No cracked earth, no blistering sun, no burning wind, no grasshoppers are a permanent match for the indomitable American farmers and stockmen and their wives and children who have carried on through desperate days, and inspire us with their self-reliance, their tenacity and their courage. It was their fathers' task to make homes; it is their task to keep those homes; it is our task to help them win their fight."$quote_dash$Franklin D. Roosevelt"
  usfp_dust_bowl.3.a: "Pumping the aquifers would let us irrigate the plains year-round."
  usfp_dust_bowl.3.b: "Let's ensure this over-exploitation doesn't happen again."
@@ -2015,7 +2015,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_dust_bowl.4.t: "The American Desert"
  usfp_dust_bowl.4.d: "The runaway dust storms in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] have resulted in permanent desertification of large sections of the region."
  usfp_dust_bowl.4.f: ""Dust to eat, and dust to breathe, and dust to drink. Dust in the beds, and in the flour bin. On dishes and walls and windows. In hair and eyes and ears and teeth and throats. To say nothing of the heaped up accumulations on floors and windowsills after one of the bad days. This wind-driven dust, fine as the finest flour, penetrates wherever air can go."$quote_dash$Caroline Henderson, #italic Our Homestead Lady #!"
- usfp_dust_bowl.4.a: "We are helpless in the face of these completely natural forces..."
+ usfp_dust_bowl.4.a: "We are helpless in the face of these immense natural forces..."
  usfp_dust_bowl.4.b: "Those foolish farmers destroyed themselves!"
 
  usfp_dust_bowl.5.t: "Dust Clouds Over the East"
@@ -2046,13 +2046,13 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
 
  #Roaring Twenties and Great Depression Events
  usfp_great_depression.1.t: "This Side of Paradise"
- usfp_great_depression.1.d: "Modernity has begun to sweep through [ROOT.GetCountry.GetAdjective] culture, bringing with it new styles in dress, music, architecture, and social conduct. A spirit of optimism for the future has begun to translate into increasingly audacious investments into economic markets."
+ usfp_great_depression.1.d: "Modernity has begun to sweep through [ROOT.GetCountry.GetAdjective] culture, bringing with it new styles in dress, music, architecture, and social conduct. A spirit of optimism for the future is starting to translate into increasingly audacious investments into economic markets."
  usfp_great_depression.1.f: ""As an endless dream it went on; the spirit of the past brooding over a new generation, the chosen youth from the muddled, unchastened world, still fed romantically on the mistakes and half-forgotten dreams of dead statesmen and poets. Here was a new generation, shouting the old cries, learning the old creeds, through a revery of long days and nights; destined finally to go out into that dirty gray turmoil to follow love and pride; a new generation dedicated more than the last to the fear of poverty and the worship of success"$quote_dash$F. Scott Fitzgerald,#italic This Side of Paradise#!"
  usfp_great_depression.1.a: "Strike up the band and dance a Charleston!"
  usfp_great_depression.1.b: "Glass! Chrome! Steel! We will build the city of the future!"
 
  usfp_great_depression.2.t: "The Line Goes Up"
- usfp_great_depression.2.d: "As speculative investments have boosted the [ROOT.GetCountry.GetAdjective] stock market to record heights, economic observers have begun to question how long this can be sustained before a significant market correction."
+ usfp_great_depression.2.d: "As speculative investments have boosted the [ROOT.GetCountry.GetAdjective] stock market to record heights, economic observers have begun to question how long this can be sustained before the market experiences a significant correction."
  usfp_great_depression.2.f: ""Stock prices have reached what looks like a permanently high plateau. Time will tell whether the increase will continue sufficiently to justify the present high level. I expect that it will."$quote_dash$Irving Fisher"
  usfp_great_depression.2.a: "We have transcended the business cycle!"
 
@@ -2063,7 +2063,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_great_depression.3.b: "Our future has been stolen from us."
 
  usfp_great_depression.4.t: "Black Tuesday"
- usfp_great_depression.4.d: "What began as a small correction in the [ROOT.GetCountry.GetAdjective] stock market has culminated in an an avalanche of panic selling, sending stocks into freefall. Over-leveraged banks have been forced to close, unable to pay out their accounts, causing bank runs across the country. The foundations of the financial system have seemingly collapsed overnight, sending ripples across the entire economy and the rest of the world market."
+ usfp_great_depression.4.d: "What began as a small correction in the [ROOT.GetCountry.GetAdjective] stock market has culminated in an an avalanche of panic selling, sending stocks into freefall. Over-leveraged banks have been forced to close, unable to pay out their accounts, causing bank runs across the country. The foundations of the financial system have seemingly collapsed overnight, sending ripples across the entire economy and the rest of the [concept_world_market]."
  usfp_great_depression.4.f: ""From every point of view, in the extent of losses sustained, in total turnover, in the number of speculators wiped out, the day was the most disastrous in Wall Street's history. Hysteria swept the country and stocks went overboard for just what they would bring at forced sale."$quote_dash$The New York Times"
  usfp_great_depression.4.a: "Which falls faster, a man or his shares?"
  usfp_great_depression.4.b: "This is simply the natural result of market forces."
@@ -2071,7 +2071,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_great_depression.4.g: "Convene an emergency council of syndicates."
 
  usfp_great_depression.5.t: "Black Tuesday"
- usfp_great_depression.5.d: "The abrupt collapse of the financial markets in [SCOPE.sCountry('usa_scope').GetName] has sent shockwaves through markets across the rest of the world. [ROOT.GetCountry.GetAdjective] investors have given in to panic selling in an attempt to save their fortunes before a looming economic disaster."
+ usfp_great_depression.5.d: "The abrupt collapse of the financial markets in [SCOPE.sCountry('usa_scope').GetName] has sent shockwaves through markets across the rest of the world. [ROOT.GetCountry.GetAdjective] investors have given in to panic selling in an attempt to save their fortunes before what seems to be a fast-approaching economic disaster."
  usfp_great_depression.5.f: ""The economic position is only flourishing on the surface. Germany is in fact dancing on a volcano. If the short-term credits are called in, a large section of our economy would collapse."$quote_dash$Gustav Stresemann, German Foreign Minister"
  usfp_great_depression.5.a: "Sell! Sell! Sell!"
  usfp_great_depression.5.b: "We must insulate ourselves from these capitalist markets at once!"
