@@ -477,7 +477,7 @@ usfp_manifest_destiny.8.a: "With the navy at our back, we shall go far!"
 usfp_manifest_destiny.8.b: "The military should keep its focus at home."
 
 usfp_manifest_destiny.9.t: "Railroad Tycoons"
-usfp_manifest_destiny.9.d: "The completion of the Transcontinental Railroad heralds a new age for the [Root.GetCountry.GetName] - an age of the railroad. Faced with such a grand opportunity, many [SCOPE.gsInterestGroup('industrialists_scope').GetName] have begun to invest their entire fortunes into the booming rail industry."
+usfp_manifest_destiny.9.d: "The completion of the Transcontinental Railroad heralds a new age for the [ROOT.GetCountry.GetName] - an age of the railroad. Faced with such a grand opportunity, many [SCOPE.gsInterestGroup('industrialists_scope').GetName] have begun to invest their entire fortunes into the booming rail industry."
 usfp_manifest_destiny.9.f: ""All over it is felt that the old era of stage coaches and ox and mule transportation is rapidly passing away, and that the locomotive, soon to penetrate the State in all directions, will in future carry the wheat to the wharf, the ore to the mill, the timber to the mine; supply the deficiency of navigable streams, open up millions of acres of the best fruit and grain lands in the world, and make accessible and workable thousands of rich mines."$quote_dash$Henry George"
 usfp_manifest_destiny.9.a: "The transcontinental was just the beginning!"
 usfp_manifest_destiny.9.b: "These speculative railroad companies are a financial time-bomb."
@@ -626,7 +626,7 @@ usfp_manifest_destiny.31.a: "It is the settlers' decision."
 usfp_manifest_destiny.31.b: "What? That's ridiculous and illegal."
 
  usfp_manifest_destiny.32.t: "The Sovereign West"
- usfp_manifest_destiny.32.d: "The last holdouts of the old European empires in the Americas have been liberated. The [Root.GetCountry.GetName] now stands unopposed in its mastery over the [GetGeographicRegion('geographic_region_western_hemisphere').GetName]."
+ usfp_manifest_destiny.32.d: "The last holdouts of the old European empires in the Americas have been liberated. The [ROOT.GetCountry.GetName] now stands unopposed in its mastery over the [GetGeographicRegion('geographic_region_western_hemisphere').GetName]."
  usfp_manifest_destiny.32.f: ""Today the United States is practically sovereign on this continent, and its fiat is law upon the subjects to which it confines its interposition. It is not simply by reason of its high character as a civilized state, nor because wisdom and justice and equity are the invariable characteristics of the dealings of the United States. It is because, in addition to all other grounds, its infinite resources combined with its isolated position render it master of the situation and practically invulnerable as against any or all other powers."$quote_dash$Richard Olney, Secretary of State"
  usfp_manifest_destiny.32.a: "The Americas can rest easy under our protection."
  usfp_manifest_destiny.32.b: "The hemisphere is our backyard, and we will do with it as we please."
@@ -2010,6 +2010,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_dust_bowl.1.a: "More grain is better for everyone."
  usfp_dust_bowl.1.b: "A great opportunity for agro-business firms."
  usfp_dust_bowl.1.c: "Bringing wasteland under cultivation will create more prosperous collectives."
+ southern_plains_states: "Every [concept_state] in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName]"
 
  usfp_dust_bowl.2.t: "The Dust Bowl"
  usfp_dust_bowl.2.d: "The expansion of agriculture across the [GetStrategicRegion('region_great_plains').GetName] has torn up the fragile topsoil of the region. Dry weather in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] has now created the conditions for huge amounts of earth to be stripped off by the wind and propelled into dust storms that have begun to regularly roll across the plains and beyond."
@@ -2051,13 +2052,13 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  dust_bowl_arable_land_restored: "All [concept_arable_land] that was removed by the Dust Bowl is restored"
  dust_bowl_dust_storms_continue: "The [GetHarvestConditionType('usfp_dust_storm').GetName] [concept_harvest_condition] can now appear for the rest of the game, but will no longer remove [concept_arable_land]"
  dust_bowl_dust_storms_begin: "The [GetHarvestConditionType('usfp_dust_storm').GetName] [concept_harvest_condition] can now appear in the [GetGeographicRegion('geographic_region_central_great_plains').GetName] and [GetGeographicRegion('geographic_region_southern_great_plains').GetName]"
- dust_bowl_dust_storms_arable_land_warning: "@warning! Every [GetHarvestConditionType('usfp_dust_storm').GetName] that appears in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] will #red reduce#! the [concept_arable_land] of the epicenter [concept_state]!"
+ dust_bowl_dust_storms_arable_land_warning: "@warning! Every [GetHarvestConditionType('usfp_dust_storm').GetName] that appears in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] will #red reduce#! the [concept_arable_land] of the epicenter [concept_state_region]!"
 
 
  #Roaring Twenties and Great Depression Events
  usfp_great_depression.1.t: "This Side of Paradise"
  usfp_great_depression.1.d: "Modernity has begun to sweep through [ROOT.GetCountry.GetAdjective] culture, bringing with it new styles in dress, music, architecture, and social conduct. A spirit of optimism for the future is starting to translate into increasingly audacious investments into economic markets."
- usfp_great_depression.1.f: ""As an endless dream it went on; the spirit of the past brooding over a new generation, the chosen youth from the muddled, unchastened world, still fed romantically on the mistakes and half-forgotten dreams of dead statesmen and poets. Here was a new generation, shouting the old cries, learning the old creeds, through a revery of long days and nights; destined finally to go out into that dirty gray turmoil to follow love and pride; a new generation dedicated more than the last to the fear of poverty and the worship of success"$quote_dash$F. Scott Fitzgerald,#italic This Side of Paradise#!"
+ usfp_great_depression.1.f: ""As an endless dream it went on; the spirit of the past brooding over a new generation, the chosen youth from the muddled, unchastened world, still fed romantically on the mistakes and half-forgotten dreams of dead statesmen and poets. Here was a new generation, shouting the old cries, learning the old creeds, through a revery of long days and nights; destined finally to go out into that dirty gray turmoil to follow love and pride; a new generation dedicated more than the last to the fear of poverty and the worship of success."$quote_dash$F. Scott Fitzgerald,#italic This Side of Paradise#!"
  usfp_great_depression.1.a: "Strike up the band and dance a Charleston!"
  usfp_great_depression.1.b: "Glass! Chrome! Steel! We will build the city of the future!"
 
@@ -2101,9 +2102,9 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_great_depression.7.c: "Let the veterans know that relief is on the way."
 
  roaring_twenties_increase_optimism: "The #bold Optimism#! of $je_usfp_roaring_twenties$ increases"
- black_tuesday_soon: "@warn! #Red Any cause for concern will cause an investor panic #!"
+ black_tuesday_soon: "@warning! #Red Any cause for concern will cause an investor panic #!"
  hooverville_states: "Every [concept_incorporated_state] with more than 10% [Concept('concept_unemployed', '$concept_unemployment$')]"
- roaring_twenties_ends: "$je_usfp_roaring_twenties$ comes to an abrupt end"
+ roaring_twenties_ends: "#bold $je_usfp_roaring_twenties$#! comes to an abrupt end"
 
 
  usfp_debug.1.t: "Mod Conflict Detected"

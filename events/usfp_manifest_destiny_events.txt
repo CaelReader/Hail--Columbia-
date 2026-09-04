@@ -3485,7 +3485,7 @@ usfp_manifest_destiny.32 = {
 			root = {
 				create_unidirectional_truce = {
 					country = prev
-					years = 5
+					months = 60
 				}
 			}
 		}

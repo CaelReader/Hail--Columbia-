@@ -2957,12 +2957,7 @@ usfp_usa.32 = {
 				is_decaying = yes
 			}
 			kill_population_in_state = {
-				value = {
-					fixed_range = {
-						min = 700
-						max = 3000
-					}
-				}
+				value = 1000
 			}
 		}
 	}

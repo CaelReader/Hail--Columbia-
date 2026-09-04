@@ -58,17 +58,16 @@
         effect = {
             if = {
                 limit = {
-                    has_variable = dust_bowl_planting_shelterbelt
                     has_variable = dust_bowl_shelterbelt_progress
                 }
                 change_variable = {
                     name = dust_bowl_shelterbelt_progress
-                    add = 0.1
+                    add = 0.2
                 }
             }
         }
         random_events = {
-            chance_to_happen = 10
+            chance_to_happen = 75
             100 = usfp_dust_bowl.5
             100 = usfp_dust_bowl.6
         }
@@ -116,7 +115,7 @@
         custom_tooltip = {
             text = usfp_dust_bowl_desertification_full
             scope:journal_entry = {
-                "scripted_bar_progress(usfp_dust_bowl_desertification_bar)" >= 900
+                "scripted_bar_progress(usfp_dust_bowl_desertification_bar)" >= 1000
             }
         }
     }

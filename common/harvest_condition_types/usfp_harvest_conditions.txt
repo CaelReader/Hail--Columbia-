@@ -68,12 +68,12 @@
     }
 
     chance = {
-        value = 0.01
+        value = 50
         if = {
             limit = {
                 is_in_geographic_region = geographic_region_southern_great_plains
             }
-            multiply = 2.0
+            multiply = 20.0
         }
     }
 

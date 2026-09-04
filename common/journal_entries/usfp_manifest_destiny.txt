@@ -1303,6 +1303,9 @@ usfp_je_monroe_doctrine = {
             every_country_in_old_world = {
                 save_scope_as = old_world_country
                 limit = {
+                    NOT = {
+                        is_country_type = decentralized
+                    }
                     has_claim = prev
                 }
                 prev = {

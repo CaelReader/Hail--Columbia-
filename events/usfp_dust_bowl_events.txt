@@ -60,12 +60,13 @@ usfp_dust_bowl.1 = {
     option = {
         name = usfp_dust_bowl.1.a
         default_option = yes
-        every_state_region_in_southern_plains = {
-            add_arable_land = 5
-        }
         every_scope_state = {
+            custom = "southern_plains_states"
             limit = {
                 is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            state_region = {
+                add_arable_land = 5
             }
             add_modifier = {
                 name = usfp_great_plow_up_state_modifier
@@ -82,12 +83,13 @@ usfp_dust_bowl.1 = {
             has_law_or_variant = law_type:law_commercialized_agriculture
         }
         highlighted_option = yes
-        every_state_region_in_southern_plains = {
-            add_arable_land = 5
-        }
         every_scope_state = {
+            custom = "southern_plains_states"
             limit = {
                 is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            state_region = {
+                add_arable_land = 5
             }
             add_modifier = {
                 name = usfp_great_plow_up_state_modifier
@@ -111,12 +113,13 @@ usfp_dust_bowl.1 = {
             has_law_or_variant = law_type:law_collectivized_agriculture
         }
         highlighted_option = yes
-        every_state_region_in_southern_plains = {
-            add_arable_land = 5
-        }
         every_scope_state = {
+            custom = "southern_plains_states"
             limit = {
                 is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            state_region = {
+                add_arable_land = 5
             }
             add_modifier = {
                 name = usfp_great_plow_up_state_modifier
@@ -375,7 +378,7 @@ usfp_dust_bowl.4 = {
 #Great Dust Storm
 usfp_dust_bowl.5 = {
     type = country_event
-    placement = scope:dc_scope
+    placement = scope:big_eastern_city
     event_image = {
         video = "unspecific_devastation"
     }
@@ -584,7 +587,10 @@ usfp_dust_bowl.7 = {
     option = {
         name = usfp_dust_bowl.7.a
         default_option = yes
-        custom_tooltip = can_begin_shelterbelt
+        custom_tooltip = {
+            text = can_begin_shelterbelt
+            set_variable = dust_bowl_research_complete
+        }
         every_scope_state = {
             limit = {
                 is_in_geographic_region = geographic_region_southern_great_plains

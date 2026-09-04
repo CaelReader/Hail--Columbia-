@@ -592,24 +592,40 @@ usfp_dust_bowl_desertification_bar = {
     is_inverted = yes
     default_bad = yes
 
-    start_value = 300
+    start_value = 200
     min_value = 0
-    max_value = 900
+    max_value = 1000
 
     monthly_progress = {
         #progress from ongoing dust storms or droughts
 		add = {
-			every_state_region_in_southern_plains = {
+			every_scope_state = {
 				limit = {
-					OR = {
-						has_harvest_condition = usfp_dust_storm
-						has_harvest_condition = drought
-					}
+                    is_in_geographic_region = geographic_region_southern_great_plains
+					state_region = {
+                        OR = {
+                            has_harvest_condition = usfp_dust_storm
+                            has_harvest_condition = drought
+                        }
+                    }
 				}
 				add = 1
 			}
 			desc = "dust_bowl_from_droughts_or_dust_storms"
 		}
+        #progress from removed arable land
+        add = {
+            every_scope_state = {
+                limit = {
+                    state_region = {
+                        has_variable = dust_bowl_arable_land_stripped
+                    }
+                }
+                add = state_region.var:dust_bowl_arable_land_stripped
+            }
+            multiply = -1
+            desc = "dust_bowl_from_arable_land_stripped"
+        }
         #small anti-progress from farming technique development
 		if = {
 			limit = {
@@ -810,7 +826,7 @@ usfp_railroad_boom_bar = {
 
 	start_value = 0
 	min_value = 0
-	max_value = 2000
+	max_value = 1000
 
     is_inverted = yes
 
@@ -820,7 +836,8 @@ usfp_railroad_boom_bar = {
                 limit = {
                     is_building_type = building_railway
                 }
-                add = 0.2
+                add = level
+                multiply = 0.2
             }
             desc = "total_railways"
         }

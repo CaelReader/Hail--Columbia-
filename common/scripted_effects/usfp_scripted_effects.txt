@@ -93,15 +93,20 @@ usfp_manifest_more_destiny_effect = {
 		}
 
 	}
-	hidden_effect = {
-		je:usfp_manifest_destiny_main = {
-			remove_modifier = usfp_manifest_destiny_modifier
-			add_modifier = {
-				name = usfp_manifest_destiny_modifier
-				multiplier = root.var:manifest_destiny_var
-			}
-		}
-	}
+    if = {
+        limit = {
+            has_journal_entry = usfp_manifest_destiny_main
+        }
+        hidden_effect = {
+            je:usfp_manifest_destiny_main ?= {
+                remove_modifier = usfp_manifest_destiny_modifier
+                add_modifier = {
+                    name = usfp_manifest_destiny_modifier
+                    multiplier = root.var:manifest_destiny_var
+                }
+            }
+        }
+    }
 }
 
 usfp_manifest_less_destiny_effect = {
@@ -131,15 +136,20 @@ usfp_manifest_less_destiny_effect = {
 			}
 		}
 	}
-	hidden_effect = {
-		je:usfp_manifest_destiny_main = {
-			remove_modifier = usfp_manifest_destiny_modifier
-			add_modifier = {
-				name = usfp_manifest_destiny_modifier
-				multiplier = root.var:manifest_destiny_var
-			}
-		}
-	}
+    if = {
+        limit = {
+            has_journal_entry = usfp_manifest_destiny_main
+        }
+        hidden_effect = {
+            je:usfp_manifest_destiny_main ?= {
+                remove_modifier = usfp_manifest_destiny_modifier
+                add_modifier = {
+                    name = usfp_manifest_destiny_modifier
+                    multiplier = root.var:manifest_destiny_var
+                }
+            }
+        }
+    }
 }
 
 usfp_manifest_more_destiny_low_effect = {

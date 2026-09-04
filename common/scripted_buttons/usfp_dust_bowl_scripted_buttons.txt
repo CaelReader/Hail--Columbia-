@@ -34,6 +34,7 @@ usfp_dust_bowl_research_conservation_button = {
             id = usfp_dust_bowl.7
             years = 3
         }
+        set_variable = researching_dust_bowl
     }
 }
 
