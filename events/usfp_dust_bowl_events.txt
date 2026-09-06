@@ -273,6 +273,7 @@ usfp_dust_bowl.3 = {
     option = {
         name = usfp_dust_bowl.3.b
         every_scope_state = {
+            custom = "southern_plains_states"
             limit = {
                 is_in_geographic_region = geographic_region_southern_great_plains
             }

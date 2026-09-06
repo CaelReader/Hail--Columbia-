@@ -16,5 +16,10 @@
 				basic_diplomat
 			}
 		}
+
+        create_character = {
+            template = ecchi_seq_sequoyah_character_template
+            ig_leader = yes
+        }
 	}
 }

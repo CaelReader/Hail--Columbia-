@@ -1,0 +1,17 @@
+﻿usfp_dust_bowl_states_arable_land = {
+    scope = country
+
+    effect = {
+        if = {
+            limit = {
+                has_variable_list = usfp_dust_bowl_state_regions
+            }
+            every_in_list = {
+                variable = usfp_dust_bowl_state_regions
+
+                custom_tooltip = "usfp_dust_bowl_state_regions" # for each print a line
+            }
+        }
+        # no empty state here
+    }
+}

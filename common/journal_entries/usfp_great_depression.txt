@@ -1,7 +1,7 @@
 ﻿je_usfp_roaring_twenties = {
     icon = "gfx/interface/icons/central_identity_pillars_icons/cultural.dds"
 
-    group = je_group_internal_affairs
+    group = je_group_usfp_political_eras
 
     widget = {
         gui = "gui/com_journal_injects/injects.gui"
@@ -41,13 +41,6 @@
         set_variable = {
             name = roaring_twenties_this_month_gdp
             value = root.gdp
-        }
-        set_variable = {
-            name = roaring_twenties_gdp_target
-            value = {
-                value = var:roaring_twenties_this_month_gdp
-                multiply = 1.005
-            }
         }
     }
 
@@ -116,13 +109,6 @@
             set_variable = {
                 name = roaring_twenties_this_month_gdp
                 value = root.gdp
-            }
-            set_variable = {
-                name = roaring_twenties_gdp_target
-                value = {
-                    value = var:roaring_twenties_this_month_gdp
-                    multiply = 1.005
-                }
             }
             je:je_usfp_roaring_twenties ?= {
                 if = {
@@ -252,9 +238,9 @@
 }
 
 je_usfp_great_depression = {
-    icon = "gfx/interface/icons/invention_icons/mutual_funds.dds"
+    icon = "gfx/interface/icons/alert_icons/company_losing_prosperity.dds"
 
-    group = je_group_crises
+    group = je_group_usfp_financial
 
     immediate = {
         set_variable = {

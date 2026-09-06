@@ -1,4 +1,4 @@
-usfp_dust_bowl_research_conservation_button = {
+﻿usfp_dust_bowl_research_conservation_button = {
     name = "usfp_dust_bowl_research_conservation_button"
     desc = "usfp_dust_bowl_research_conservation_button_desc"
 

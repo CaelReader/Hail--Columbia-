@@ -4,6 +4,7 @@
 		delay = { days = 10 }
 		usfp_monthly_pulse
 		usfp_arctic_isolation
+        usfp_american_superculture_action
 	}
 }
 
@@ -179,6 +180,34 @@ usfp_monroe_doctrine_fix = {
 			set_strategy = ai_strategy_armed_isolationism
 		}
 	}
+}
+
+usfp_american_superculture_action = {
+    trigger = {
+        country_has_primary_culture = cu:usfp_american
+        any_scope_pop = {
+            OR = {
+                culture = cu:yankee
+                culture = cu:dixie
+                culture = cu:anglo_canadian
+            }
+        }
+    }
+    effect = {
+        random_scope_pop = {
+            limit = {
+                OR = {
+                    culture = cu:yankee
+                    culture = cu:dixie
+                    culture = cu:anglo_canadian
+                }
+            }
+            change_pop_culture = {
+                target = cu:usfp_american
+                value = 1.00
+            }
+        }
+    }
 }
 
 
@@ -1208,6 +1237,9 @@ on_harvest_condition_started_in_country = {
 }
 
 usfp_dust_bowl_action = {
+    trigger = {
+        has_global_variable = dust_bowl_ongoing
+    }
 	effect = {
 		if = {
 			limit = {
@@ -1218,6 +1250,24 @@ usfp_dust_bowl_action = {
 					arable_land > 10
 				}
 			}
+            if = {
+                limit = {
+                    NOT = {
+                        root = {
+                            is_target_in_variable_list = {
+                                name = usfp_dust_bowl_state_regions
+                                target = scope:state.state_region
+                            }
+                        }
+                    }
+                }
+                root = {
+                    add_to_variable_list = {
+                        name = usfp_dust_bowl_state_regions
+                        target = scope:state.state_region
+                    }
+                }
+            }
 			scope:state.state_region = {
 				usfp_dust_bowl_remove_arable_land = {
 					LAND = -1
@@ -1225,4 +1275,26 @@ usfp_dust_bowl_action = {
 			}
 		}
 	}
+}
+
+on_character_creation = {
+    on_actions = {
+        usfp_american_superculture_character
+    }
+}
+
+usfp_american_superculture_character = {
+    trigger = {
+        owner ?= {
+            country_has_primary_culture = cu:usfp_american
+        }
+        OR = {
+            culture = cu:yankee
+            culture = cu:dixie
+            culture = cu:anglo_canadian
+        }
+    }
+    effect = {
+        change_character_culture = cu:usfp_american
+    }
 }

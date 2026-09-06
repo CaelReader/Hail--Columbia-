@@ -2119,6 +2119,7 @@ usfp_manifest_destiny.19 = {
 	immediate = {
 		cu:usfp_american = {
 			save_scope_as = american_culture
+            set_fervor = 100
 		}
 		cu:anglo_canadian = {
 			save_scope_as = anglo_canadian_culture

@@ -1,7 +1,7 @@
 ﻿je_usfp_dust_bowl = {
     icon = "gfx/interface/icons/harvest_condition_icons/usfp_dust_storm.dds"
 
-    group = je_group_historical_content
+    group = je_group_crises
 
     immediate = {
         scope:journal_entry = {
@@ -109,6 +109,35 @@
             }
             remove_modifier = usfp_shelterbelt_construction_modifier
         }
+        show_as_tooltip = { #actually applied in the event
+            custom_tooltip = dust_bowl_dust_storms_end
+            custom_tooltip = {
+                text = dust_bowl_arable_land_restored
+                every_state_region_in_southern_plains = {
+                    add_arable_land = var:dust_bowl_arable_land_stripped
+                }
+            }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = usfp_dust_bowl.3.a
+        effect = {
+            execute_event_option = {
+                event = usfp_dust_bowl.3
+                option = 0
+            }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = usfp_dust_bowl.3.b
+        effect = {
+            execute_event_option = {
+                event = usfp_dust_bowl.3
+                option = 1
+            }
+        }
     }
 
     fail = {
@@ -128,6 +157,33 @@
                 has_modifier = usfp_shelterbelt_construction_modifier
             }
             remove_modifier = usfp_shelterbelt_construction_modifier
+        }
+        show_as_tooltip = { #actually applied in the event
+            custom_tooltip = dust_bowl_dust_storms_continue
+            every_state_region_in_southern_plains = {
+                add_state_trait = state_trait_usfp_dust_bowl_desert
+                add_arable_land = -5
+            }
+        }
+    }
+
+    event_outcome_failed_effect_desc = {
+        header = usfp_dust_bowl.4.a
+        effect = {
+            execute_event_option = {
+                event = usfp_dust_bowl.4
+                option = 0
+            }
+        }
+    }
+
+    event_outcome_failed_effect_desc = {
+        header = usfp_dust_bowl.4.b
+        effect = {
+            execute_event_option = {
+                event = usfp_dust_bowl.4
+                option = 1
+            }
         }
     }
 
