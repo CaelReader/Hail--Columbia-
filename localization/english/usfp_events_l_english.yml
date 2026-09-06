@@ -477,10 +477,19 @@ usfp_manifest_destiny.8.a: "With the navy at our back, we shall go far!"
 usfp_manifest_destiny.8.b: "The military should keep its focus at home."
 
 usfp_manifest_destiny.9.t: "Railroad Tycoons"
-usfp_manifest_destiny.9.d: "As the economy and territory of the [ROOT.GetCountry.GetName] has grown, the [SCOPE.sBuilding('railway_scope').GetName] has steadily grown in importance alongside. Many [SCOPE.gsInterestGroup('industrialists_scope').GetName] have begun to invest their entire fortunes into the booming rail industry."
-usfp_manifest_destiny.9.f: ""All over it is felt that the old era of stage coaches and ox and mule transportation is rapidly passing away, and that the locomotive, soon to penetrate the State in all directions, will in future carry the wheat to the wharf, the ore to the mill, the timber to the mine; supply the deficiency of navigable streams, open up millions of acres of the best fruit and grain lands in the world, and make accessible and workable thousands of rich mines."" #Henry George
-usfp_manifest_destiny.9.a: "Railroads will transform the country!"
-usfp_manifest_destiny.9.b: "These railroads are a financial time-bomb."
+usfp_manifest_destiny.9.d: "The completion of the Transcontinental Railroad heralds a new age for the [ROOT.GetCountry.GetName] - an age of the railroad. Faced with such a grand opportunity, many [SCOPE.gsInterestGroup('industrialists_scope').GetName] have begun to invest their entire fortunes into the booming rail industry."
+usfp_manifest_destiny.9.f: ""All over it is felt that the old era of stage coaches and ox and mule transportation is rapidly passing away, and that the locomotive, soon to penetrate the State in all directions, will in future carry the wheat to the wharf, the ore to the mill, the timber to the mine; supply the deficiency of navigable streams, open up millions of acres of the best fruit and grain lands in the world, and make accessible and workable thousands of rich mines."$quote_dash$Henry George"
+usfp_manifest_destiny.9.a: "The transcontinental was just the beginning!"
+usfp_manifest_destiny.9.b: "These speculative railroad companies are a financial time-bomb."
+ railroad_bubble_investment_high: "The #bold $je_usfp_railroad_bubble$#! [concept_journal_entry] bonuses will be #g stronger#!, but so too will any subsequent #n crash#!"
+ railroad_bubble_investment_low: "The #bold $je_usfp_railroad_bubble$#! [concept_journal_entry] bonuses will be #g weaker#!, but so too will any subsequent #n crash#!"
+
+ transcontinental_chose_northern_route: "The Transcontinental Railway will be built along the [GetGeographicRegion('geographic_region_transcontinental_northern_route').GetName]"
+ transcontinental_northern_route_states: "Every [GetPlayer.GetAdjective] [concept_state] along the [GetGeographicRegion('geographic_region_transcontinental_northern_route').GetName]"
+ transcontinental_chose_central_route: "The Transcontinental Railway will be built along the [GetGeographicRegion('geographic_region_transcontinental_central_route').GetName]"
+ transcontinental_central_route_states: "Every [GetPlayer.GetAdjective] [concept_state] along the [GetGeographicRegion('geographic_region_transcontinental_central_route').GetName]"
+ transcontinental_chose_southern_route: "The Transcontinental Railway will be built along the [GetGeographicRegion('geographic_region_transcontinental_southern_route').GetName]"
+ transcontinental_southern_route_states: "Every [GetPlayer.GetAdjective] [concept_state] along the [GetGeographicRegion('geographic_region_transcontinental_southern_route').GetName]"
 
 usfp_manifest_destiny.10.t: "Tales of Gold Mountain"
 usfp_manifest_destiny.10.d: "News of the discovery of [GetGoods('gold').GetName] in [SCOPE.sState('california_scope').GetName] has reached across the Pacific to [SCOPE.sCountry('china_scope').GetName]. As a result, thousands of [SCOPE.sCulture('han_scope').GetName] migrants have begun to arrive by ship, drawn by tales of the vast wealth flowing from 'Gold Mountain'."
@@ -615,6 +624,14 @@ usfp_manifest_destiny.31.d: "The local government of [SCOPE.sState('oregon_scope
 usfp_manifest_destiny.31.f: ""That if such free negro or mulatto shall fail to quit the country, as required by this act, he or she may be arrested upon a warrant issued by some justice of the peace, and, if guilty upon trial before such justice, shall receive upon his or her bare back not less than twenty nor more than thirty-nine stripes, to be inflicted by the constable of the proper county."" #1844 Law
 usfp_manifest_destiny.31.a: "It is the settlers' decision."
 usfp_manifest_destiny.31.b: "What? That's ridiculous and illegal."
+
+ usfp_manifest_destiny.32.t: "The Sovereign West"
+ usfp_manifest_destiny.32.d: "The last holdouts of the old European empires in the Americas have been liberated. The [ROOT.GetCountry.GetName] now stands unopposed in its mastery over the [GetGeographicRegion('geographic_region_western_hemisphere').GetName]."
+ usfp_manifest_destiny.32.f: ""Today the United States is practically sovereign on this continent, and its fiat is law upon the subjects to which it confines its interposition. It is not simply by reason of its high character as a civilized state, nor because wisdom and justice and equity are the invariable characteristics of the dealings of the United States. It is because, in addition to all other grounds, its infinite resources combined with its isolated position render it master of the situation and practically invulnerable as against any or all other powers."$quote_dash$Richard Olney, Secretary of State"
+ usfp_manifest_destiny.32.a: "The Americas can rest easy under our protection."
+ usfp_manifest_destiny.32.b: "The hemisphere is our backyard, and we will do with it as we please."
+
+ every_independent_country_in_western_hemisphere: "Every independent [concept_country] in the [GetGeographicRegion('geographic_region_western_hemisphere').GetName]"
 
 ### Native Removal Events ###
 
@@ -855,6 +872,31 @@ social_gospelists_can_appear: "[GetIdeology('ideology_usfp_social_gospel_leader'
  usfp_usa.29.d: "The implementation of [GetAmendmentType('amendment_usfp_chinese_exclusion').GetName] has pushed employers to seek alternative sources of immigrant labor. Initial hirings of [GetCulture('japanese').GetName] workers have drawn a stream of additional migrants across the Pacific into the cities of [SCOPE.sState('target_migration_state').GetName]."
  usfp_usa.29.f: "Here at the edge of Chinatown, Ushijima had found some Japanese migrants who had preceded him. Stepping inside from the bustling city streets, he rented a cramped room where could rest his head for a few hours. Among his few possession from home was his English language manual, tattered from study. His plan was straightforward: learn the language, find decent paying work, then enter business himself. There would be a future for him here in [SCOPE.sState('target_migration_state').GetNameNoFormatting] beyond anything he could have managed in Japan."
  usfp_usa.29.a: "The allure of the [Root.GetCountry.GetName] cannot be stymied."
+
+ usfp_usa.30.t: "The Monkey Trial"
+ usfp_usa.30.d: "The state government of [SCOPE.sState('tennessee_scope').GetName] has put a schoolteacher on trial for teaching the theory of human evolution. The intervention of [SCOPE.sCharacter('bryans_scope').GetFullName] on the side of the anti-evolutionists has created a national spectacle and debate over the place of religion in the classroom."
+ usfp_usa.30.f: ""Where have you lived all your life?"\n"Not near you." There was laughter and applause in the courtroom.\n"Nor near anybody of learning?"\n"Oh, don't assume you know it all."\n"Do you know there are thousands of books in our libraries on all those subjects I have been asking you about?"\n"I couldn't say, but I will take your word for it.""
+ usfp_usa.30.a: "Evolution is the basis of all modern biology, it must be taught!"
+ usfp_usa.30.b: "We must not abandon our faith."
+ usfp_usa.30.tt: "[SCOPE.sCharacter('bryans_scope').GetFullName] dies of apoplexy after overexerting themselves at the trial"
+
+ usfp_usa.31.t: "Embalmed Beef"
+ usfp_usa.31.d: "The supplies of canned beef provisioned for our troops has been revealed to be of utterly deplorable quality. Blame has fallen on [SCOPE.sCharacter('beef_character_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('beef_character_scope').GetFullName], who seems to have turned a blind eye in favoring the meatpacking industry of [SCOPE.sState('meat_state_scope').GetName]."
+ usfp_usa.31.f: ""There was no life or nourishment in the meat, it had been used to make beef extract, and after the juice was squeezed out of it the pulp was put back in the cans and labeled 'roast beef.' It has an odor similar to that of a dead human body after being injected with fomaldehyde."" #Nelson A Miles and a US medical officer
+ usfp_usa.31.a: "[SCOPE.sCharacter('beef_character_scope').GetFullName] will no longer be in charge of procurement."
+ usfp_usa.31.b: "They're soldiers, they should be used to eating grub!"
+
+ usfp_usa.32.t: "The Great [SCOPE.sState('california_scope').GetPortHubName] Earthquake"
+ usfp_usa.32.d: "An earthquake of immense magnitude has shaken northern [SCOPE.sState('california_scope').GetName], causing widespread destruction. Fires sparked by the quake have blazed through most of [SCOPE.sState('california_scope').GetPortHubName], turning large parts of the city into hollowed-out ruins."
+ usfp_usa.32.f: ""About a quarter after five the quake woke us up, and our house seemed like it would break all to pieces. We could see fires to the right, front, and left of us. All the buildings were more or less damage, whole blocks of buildings were masses of ruins."$quote_dash$John W. Nourse, San Francisco resident"
+ usfp_usa.32.a: "Organize relief and reconstruction efforts at once."
+ usfp_usa.32.b: "Finally, all those immigrants will be cleared out of the city."
+
+ usfp_usa.33.t: "The Johnstown Flood"
+ usfp_usa.33.d: "A dam failure in [SCOPE.sState('pennsylvania_scope').GetName] has wiped the small town of Johnstown off the map, leaving a trail of bodies in its wake. The dam had been purchased by [SCOPE.sCharacter('industrialist_character_scope').GetFullName] as part of a private fishing resort, and seemingly ill-maintained by its owner."
+ usfp_usa.33.f: ""Lovers burnt and sweethearts drowned,\nDarlings lost but never found!\nAll the horrors that hell could wish,\nSuch was the price that was paid for— fish!"$quote_dash$Isaac G. Reed"
+ usfp_usa.33.a: "This was clearly an act of God."
+ usfp_usa.33.b: "[SCOPE.sCharacter('industrialist_character_scope').GetFullName]'s resort will be held liable."
 
 ### USA Labor Events ###
 
@@ -1402,6 +1444,7 @@ usfp_indian_postremoval.1.d: "A millenarian spiritual movement known as the Ghos
 usfp_indian_postremoval.1.f: ""They told the people they could dance a new world into being. There would be landslides, earthquakes, and big winds. Hills would pile up on each other. The earth would roll up like a carpet with all the white man's ugly things - the stinking new animals, sheep and pigs, the fences, the telegraph poles, the mines and factories. Underneath would be the wonderful old-new world as it had been before the white fat-takers came. The white men will be rolled up, disappear, go back to their own continent."" #Lame Deer
 usfp_indian_postremoval.1.a: "Send in troops to break up the dances."
 usfp_indian_postremoval.1.b: "The dancers are no threat to anyone."
+ ghost_dance_states: "Every [concept_state] in the [GetGeographicRegion('geographic_region_american_west_zone').GetName] with an [GetReligion('animist').GetName] [concept_pop]"
 
 usfp_indian_postremoval.2.t: "Massacre at Wounded Knee"
 usfp_indian_postremoval.2.d: "The troops we sent in to [SCOPE.sState('south_dakota_scope').GetName] to break up the Ghost Dance have slaughtered an entire band of non-hostile [SCOPE.sCulture('dakota_culture').GetName] Indians. The few warriors who resisted were gunned down, while our soldiers fired artillery shells into tipis of unarmed women and children. Those who tried to escape were run down by cavalry and slaughtered."
@@ -1652,6 +1695,13 @@ usfp_panics.1.d: "When President Jackson dissolved the Second Bank of the United
 usfp_panics.1.f: ""I'm sorry sir, we cannot redeem this."\n\n"This is from your bank! Says right here - ten dollars, payable to the bearer on demand. Well, I'm the bearer, and I'm demanding!"\n\n"The vaults are empty sir, there's no specie left.""
 usfp_panics.1.a: "These irresponsible speculators will drive us to ruin!"
 usfp_panics.1.b: "The central bank will backstop the financial system."
+
+ usfp_panics.2.t: "Railroad Bust"
+ usfp_panics.2.d: "The bubble of speculative investments into railroads has abruptly run up against reality. The collapse of a large investment bank has sent stock brokers running for safety, as more and more firms crumple into bankruptcy."
+ usfp_panics.2.f: ""To say that the street became excited would only give a feeble view of the expressions of feeling. The brokers stood perfectly thunderstruck for a moment, and then there was a general run to notify the different houses in Wall street of the failure. The members of the firms who were surprised by this announcement had no time to deliberate. The bear clique was already selling the market down in the Exchange, and prices were declining frightfully..."$quote_dash$The New York Times"
+ usfp_panics.2.a: "Sell, sell, sell!"
+ usfp_panics.2.a.low: "We knew these railroads were trouble!"
+ usfp_panics.2.b: "Begin buying up junk bonds to prop up the market."
 
 ### Canada Events ###
 usfp_usa_canada.1.t: "[SCOPE.sCountry('usa_scope').GetAdjective] Smugglers"
@@ -1953,6 +2003,108 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_philippines.11.a: "We have been given the keys to knowledge."
  usfp_philippines.11.b: "Our very language has been colonized by the Americans."
 
+ #Dust Bowl Events
+ usfp_dust_bowl.1.t: "The Great Plow Up"
+ usfp_dust_bowl.1.d: "The introduction of gas-powered tractors has enticed farmers in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] to plow previously unused areas of prairie grass in order to plant expansive fields of wheat."
+ usfp_dust_bowl.1.f: ""I saw the whole country transformed in the sunset glow, all the brown prairie turned to gold. I could feel once more the lure of this great lonely land, waiting with its stores of fertility untouched, for those who shall one day learn to meet its demands, to give to it their patient thought and labor."$quote_dash$Caroline Henderson, #italic Our Homestead Lady #!"
+ usfp_dust_bowl.1.a: "More grain is better for everyone."
+ usfp_dust_bowl.1.b: "A great opportunity for agro-business firms."
+ usfp_dust_bowl.1.c: "Bringing wasteland under cultivation will create more prosperous collectives."
+ southern_plains_states: "Every [concept_state] in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName]"
+
+ usfp_dust_bowl.2.t: "The Dust Bowl"
+ usfp_dust_bowl.2.d: "The expansion of agriculture across the [GetStrategicRegion('region_great_plains').GetName] has torn up the fragile topsoil of the region. Dry weather in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] has now created the conditions for huge amounts of earth to be stripped off by the wind and propelled into dust storms that have begun to regularly roll across the plains and beyond."
+ usfp_dust_bowl.2.f: ""You could see that dust storm comin', the cloud looked deathlike black,\nAnd through our mighty nation, it left a dreadful track.\nFrom Oklahoma City to the Arizona line,\nDakota and Nebraska to the lazy Rio Grande,\nIt fell across our city like a curtain of black rolled down,\nWe thought it was our judgement, we thought it was our doom."$quote_dash$Woody Guthrie, #italic Dust Bowl Ballads#!"
+ usfp_dust_bowl.2.a: "Surely the rain will return soon?"
+
+ usfp_dust_bowl.3.t: "Clear Skies"
+ usfp_dust_bowl.3.d: "Our investments into remediating the soil of the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] have proven successful, ending the threat of large dust storms and creating the opportunity to reopen the land for renewed cultivation."
+ usfp_dust_bowl.3.f: ""No cracked earth, no blistering sun, no burning wind, no grasshoppers are a permanent match for the indomitable American farmers and stockmen and their wives and children who have carried on through desperate days, and inspire us with their self-reliance, their tenacity and their courage. It was their fathers' task to make homes; it is their task to keep those homes; it is our task to help them win their fight."$quote_dash$Franklin D. Roosevelt"
+ usfp_dust_bowl.3.a: "Pumping the aquifers would let us irrigate the plains year-round."
+ usfp_dust_bowl.3.b: "Let's ensure this over-exploitation doesn't happen again."
+
+ usfp_dust_bowl.4.t: "The American Desert"
+ usfp_dust_bowl.4.d: "The runaway dust storms in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] have resulted in permanent desertification of large sections of the region."
+ usfp_dust_bowl.4.f: ""Dust to eat, and dust to breathe, and dust to drink. Dust in the beds, and in the flour bin. On dishes and walls and windows. In hair and eyes and ears and teeth and throats. To say nothing of the heaped up accumulations on floors and windowsills after one of the bad days. This wind-driven dust, fine as the finest flour, penetrates wherever air can go."$quote_dash$Caroline Henderson, #italic Our Homestead Lady #!"
+ usfp_dust_bowl.4.a: "We are helpless in the face of these immense natural forces..."
+ usfp_dust_bowl.4.b: "Those foolish farmers destroyed themselves!"
+
+ usfp_dust_bowl.5.t: "Dust Clouds Over the East"
+ usfp_dust_bowl.5.d: "An immense dust storm has billowed up out of the [GetStrategicRegion('region_great_plains').GetName] and blown all the way across the country to the [GetStrategicRegion('region_atlantic_coast').GetName]. Day was turned to dusk in [SCOPE.sState('big_eastern_city').GetCityHubName] as the dust began to rain from the sky and settle over the streets."
+ usfp_dust_bowl.5.f: "Visibility in the streets of [SCOPE.sState('big_eastern_city').GetCityHubName] was reduced to nearly 0 at the height of the storm. Annoyed shopkeeps closed their shutters to keep it off their merchandise. Kids played in the dust: "Look Ma, I've got a whole pail of Oklahoma, all mine!""
+ usfp_dust_bowl.5.a: "It's certainly hard to ignore."
+ usfp_dust_bowl.5.b: "This is all the fault of those greedy farmers!"
+
+ usfp_dust_bowl.6.t: "On the Mother Road"
+ usfp_dust_bowl.6.d: "With their farms inundated by the dust storms, many impoverished farmers have begun to pack up and flee the [GetGeographicRegion('geographic_region_southern_great_plains').GetName], hoping for new opportunities in the east and west."
+ usfp_dust_bowl.6.f: ""Ma tried to look back, but the body of the load cut off her view. She straightened her head and peered straight ahead along the dirt road. And a great weariness was in her eyes. The people on top of the load did look back. They saw the house and the barn and a little smoke still rising from the chimney. They saw the windows reddening under the first color of the sun. They saw Muley standing forlornly in the dooryard looking after them. And then the hill cut them off. The cotton fields lined the road. And the truck crawled slowly through the dust toward the highway and the west."$quote_dash$John Steinbeck, #italic The Grapes of Wrath #!"
+ usfp_dust_bowl.6.a: "The dust is truly unbearable."
+ usfp_dust_bowl.6.b: "Offer resettlement assistance to help reduce the burden on the plains."
+ usfp_dust_bowl.6.c: "These ignorant Okies are just going to bring trouble with them!"
+
+ usfp_dust_bowl.7.t: "Conserving the Prairies"
+ usfp_dust_bowl.7.d: "Our research into the ecosystem of the [GetStrategicRegion('region_great_plains').GetName] has produced a slate of recommendations for remediating the dust bowl. The largest project will be the planting of a vast network of treelines in order to break up wind systems and retain moisture in the soil."
+ usfp_dust_bowl.7.f: ""In the drought area people are not afraid to use new methods to meet changes in Nature, and to correct mistakes of the past. If overgrazing has injured range lands, they are willing to reduce the grazing. If certain wheat lands should be returned to pasture they are willing to cooperate. If trees should be planted as windbreaks or to stop erosion they will work with us. If terracing or summer fallowing or crop rotation is called for, they will carry them out. They stand ready to fit, and not to fight, the ways of Nature."$quote_dash$Franklin D. Roosevelt"
+ usfp_dust_bowl.7.a: "Perhaps the damage can be undone."
+ can_begin_shelterbelt: "We can now begin the Great Plains Shelterbelt project."
+
+ dust_bowl_dust_storms_end: "The [GetHarvestConditionType('usfp_dust_storm').GetName] [concept_harvest_condition] will no longer appear"
+ dust_bowl_arable_land_restored: "All [concept_arable_land] that was removed by the Dust Bowl is restored"
+ dust_bowl_dust_storms_continue: "The [GetHarvestConditionType('usfp_dust_storm').GetName] [concept_harvest_condition] can now appear for the rest of the game, but will no longer remove [concept_arable_land]"
+ dust_bowl_dust_storms_begin: "The [GetHarvestConditionType('usfp_dust_storm').GetName] [concept_harvest_condition] can now appear in the [GetGeographicRegion('geographic_region_central_great_plains').GetName] and [GetGeographicRegion('geographic_region_southern_great_plains').GetName]"
+ dust_bowl_dust_storms_arable_land_warning: "@warning! Every [GetHarvestConditionType('usfp_dust_storm').GetName] that appears in the [GetGeographicRegion('geographic_region_southern_great_plains').GetName] will #red reduce#! the [concept_arable_land] of the epicenter [concept_state_region]!"
+
+
+ #Roaring Twenties and Great Depression Events
+ usfp_great_depression.1.t: "This Side of Paradise"
+ usfp_great_depression.1.d: "Modernity has begun to sweep through [ROOT.GetCountry.GetAdjective] culture, bringing with it new styles in dress, music, architecture, and social conduct. A spirit of optimism for the future is starting to translate into increasingly audacious investments into economic markets."
+ usfp_great_depression.1.f: ""As an endless dream it went on; the spirit of the past brooding over a new generation, the chosen youth from the muddled, unchastened world, still fed romantically on the mistakes and half-forgotten dreams of dead statesmen and poets. Here was a new generation, shouting the old cries, learning the old creeds, through a revery of long days and nights; destined finally to go out into that dirty gray turmoil to follow love and pride; a new generation dedicated more than the last to the fear of poverty and the worship of success."$quote_dash$F. Scott Fitzgerald,#italic This Side of Paradise#!"
+ usfp_great_depression.1.a: "Strike up the band and dance a Charleston!"
+ usfp_great_depression.1.b: "Glass! Chrome! Steel! We will build the city of the future!"
+
+ usfp_great_depression.2.t: "The Line Goes Up"
+ usfp_great_depression.2.d: "As speculative investments have boosted the [ROOT.GetCountry.GetAdjective] stock market to record heights, economic observers have begun to question how long this can be sustained before the market experiences a significant correction."
+ usfp_great_depression.2.f: ""Stock prices have reached what looks like a permanently high plateau. Time will tell whether the increase will continue sufficiently to justify the present high level. I expect that it will."$quote_dash$Irving Fisher"
+ usfp_great_depression.2.a: "We have transcended the business cycle!"
+
+ usfp_great_depression.3.t: "The Waste Land"
+ usfp_great_depression.3.d: "The bright future promised by $je_usfp_roaring_twenties$ seems to have collapsed under the weight of material reality. Optimism has given way to a cynical critique of modernity and the present state of affairs."
+ usfp_great_depression.3.f: ""Son of man,\nYou cannot say, or guess, for you know only\nA heap of broken images, where the sun beats,\nAnd the dead tree gives no shelter, the cricket no relief,\nAnd the dry stone no sound of water."$quote_dash$T. S. Eliot,#italic The Waste Land#!"
+ usfp_great_depression.3.a: "It was all in vain."
+ usfp_great_depression.3.b: "Our future has been stolen from us."
+
+ usfp_great_depression.4.t: "Black Tuesday"
+ usfp_great_depression.4.d: "What began as a small correction in the [ROOT.GetCountry.GetAdjective] stock market has culminated in an an avalanche of panic selling, sending stocks into freefall. Over-leveraged banks have been forced to close, unable to pay out their accounts, causing bank runs across the country. The foundations of the financial system have seemingly collapsed overnight, sending ripples across the entire economy and the rest of the [concept_world_market]."
+ usfp_great_depression.4.f: ""From every point of view, in the extent of losses sustained, in total turnover, in the number of speculators wiped out, the day was the most disastrous in Wall Street's history. Hysteria swept the country and stocks went overboard for just what they would bring at forced sale."$quote_dash$The New York Times"
+ usfp_great_depression.4.a: "Which falls faster, a man or his shares?"
+ usfp_great_depression.4.b: "This is simply the natural result of market forces."
+ usfp_great_depression.4.c: "Immediate relief is required!"
+ usfp_great_depression.4.g: "Convene an emergency council of syndicates."
+
+ usfp_great_depression.5.t: "Black Tuesday"
+ usfp_great_depression.5.d: "The abrupt collapse of the financial markets in [SCOPE.sCountry('usa_scope').GetName] has sent shockwaves through markets across the rest of the world. [ROOT.GetCountry.GetAdjective] investors have given in to panic selling in an attempt to save their fortunes before what seems to be a fast-approaching economic disaster."
+ usfp_great_depression.5.f: ""The economic position is only flourishing on the surface. Germany is in fact dancing on a volcano. If the short-term credits are called in, a large section of our economy would collapse."$quote_dash$Gustav Stresemann, German Foreign Minister"
+ usfp_great_depression.5.a: "Sell! Sell! Sell!"
+ usfp_great_depression.5.b: "We must insulate ourselves from these capitalist markets at once!"
+ usfp_great_depression.5.c: "Controlling our own economy bears dividends."
+
+ usfp_great_depression.6.t: "Welcome to [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting]ville"
+ usfp_great_depression.6.d: "[concept_unemployed] workers evicted from their homes have begun to congregate in urban shantytowns dubbed "[ROOT.GetCountry.GetRuler.GetLastNameNoFormatting]villes", creating fertile grounds for [SCOPE.sPoliticalMovement('socialist_movement').GetName] agitation."
+ usfp_great_depression.6.f: ""In this land of richness and plenty, the idle rich ar wallowing in luxury, while masses are dying of starvation and disease"$quote_dash$Seattle Campaign Committee for Immediate Relief"
+ usfp_great_depression.6.a: "Sweep through these camps and arrest any disturbers of the peace."
+ usfp_great_depression.6.b: "Our economic system is clearly bankrupt."
+
+ usfp_great_depression.7.t: "The Bonus Army"
+ usfp_great_depression.7.d: "A group of disgruntled veterans have encamped in [ROOT.GetCountry.GetCapital.GetCityHubName] demanding the immediate payment of bonds issued to them as payment. The protestors have already clashed with the local police, and intelligence suggests that radical elements intend to turn the marchers toward revolutionary action."
+ usfp_great_depression.7.f: "The police eyed the camp from a distance. The last time they had approached, there was a shooting. The veterans had survived war, and weren't going to run off at the sight of a few truncheons. Better, they decided, to wait for the cavalry to be sent in."
+ usfp_great_depression.7.a: "Send in the real army to clear out this rabble."
+ usfp_great_depression.7.b: "Just pay out the bonuses!"
+ usfp_great_depression.7.c: "Let the veterans know that relief is on the way."
+
+ roaring_twenties_increase_optimism: "The #bold Optimism#! of $je_usfp_roaring_twenties$ increases"
+ black_tuesday_soon: "@warning! #Red Any cause for concern will cause an investor panic #!"
+ hooverville_states: "Every [concept_incorporated_state] with more than 10% [Concept('concept_unemployed', '$concept_unemployment$')]"
+ roaring_twenties_ends: "#bold $je_usfp_roaring_twenties$#! comes to an abrupt end"
 
 
  usfp_debug.1.t: "Mod Conflict Detected"

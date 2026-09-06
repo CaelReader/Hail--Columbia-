@@ -1,4 +1,6 @@
 ﻿GLOBAL = {
+
+    add_contextless_journal_entry = je_oregon
     #Newfoundland Colony
     #Wasn't absorbed by Canada until the 1950s, so its set to be English rather than Anglo-Canadian
     s:STATE_NEWFOUNDLAND = {

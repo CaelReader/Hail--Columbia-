@@ -1,3 +1,11 @@
 ﻿je_group_us_expansion_global = {
     context = none
 }
+
+je_group_usfp_financial = {
+    context = country
+}
+
+je_group_usfp_political_eras = {
+    context = country
+}

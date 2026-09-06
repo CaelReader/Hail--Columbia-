@@ -118,3 +118,114 @@ usfp_panics.1 = {
 	}
 
 }
+
+#Panic of 1873
+usfp_panics.2 = {
+	type = country_event
+	placement = s:STATE_NEW_YORK.region_state:USA
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	title = usfp_panics.2.t
+	desc = usfp_panics.2.d
+	flavor = usfp_panics.2.f
+
+	dlc = dlc_usfp
+	event_image = {
+		video = "unspecific_factory_closed"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/invention_icons/banking.dds"
+
+
+	#uh oh
+	option = {
+		name = {
+			trigger = {
+				has_variable = railroad_bubble_investment_low
+			}
+			text = usfp_panics.2.a.low
+		}
+		name = usfp_panics.2.a
+		default_option = yes
+		if = {
+			limit = {
+				has_variable = railroad_bubble_investment_low
+			}
+			add_modifier = {
+				name = usfp_panic_1873_modifier
+				years = 5
+				is_decaying = yes
+				multiplier = 0.5
+			}
+			add_investment_pool = {
+				value = money_amount_multiplier_very_large
+				multiply = -1
+			}
+		} else = {
+			add_modifier = {
+				name = usfp_panic_1873_modifier
+				years = 5
+				is_decaying = yes
+			}
+			add_investment_pool = {
+				value = money_amount_multiplier_very_large
+				multiply = -2
+			}
+		}
+
+
+	}
+
+	#backstop failing firms
+	option = {
+		name = usfp_panics.2.b
+		trigger = {
+			has_law_or_variant = law_type:law_interventionism
+		}
+		show_as_unavailable = {
+			always = yes
+		}
+		highlighted_option = yes
+		if = {
+			limit = {
+				has_variable = railroad_bubble_investment_low
+			}
+			add_modifier = {
+				name = usfp_panic_1873_modifier
+				years = 5
+				is_decaying = yes
+				multiplier = 0.40
+			}
+			add_investment_pool = {
+				value = money_amount_multiplier_very_large
+				multiply = -0.5
+			}
+		} else = {
+			add_modifier = {
+				name = usfp_panic_1873_modifier
+				years = 5
+				multiplier = 0.80
+				is_decaying = yes
+			}
+			add_investment_pool = {
+				value = money_amount_multiplier_very_large
+				multiply = -1
+			}
+		}
+		add_treasury = {
+			value = money_amount_multiplier_very_large
+			multiply = -1
+		}
+	}
+
+	after = {
+		ruler = {
+			add_modifier = {
+				name = usfp_blamed_for_panic
+				years = 5
+			}
+		}
+	}
+
+}

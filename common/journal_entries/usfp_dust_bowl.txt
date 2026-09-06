@@ -1,0 +1,192 @@
+﻿je_usfp_dust_bowl = {
+    icon = "gfx/interface/icons/harvest_condition_icons/usfp_dust_storm.dds"
+
+    group = je_group_crises
+
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+        trigger_event = usfp_dust_bowl.2
+        set_global_variable = dust_bowl_ongoing
+        set_global_variable = dust_bowl_happened
+        every_state_region_in_southern_plains = {
+            set_variable = {
+                name = dust_bowl_arable_land_stripped
+                value = 0
+            }
+        }
+    }
+
+    is_shown_when_inactive = {
+        NOT = {
+            has_law = law_type:law_usfp_tribal_land_ownership
+        }
+        OR = {
+            has_global_variable = had_great_plow_up
+            AND = {
+                any_state_in_southern_plains = {
+                    count = all
+                    free_arable_land <= 5
+                }
+                has_technology_researched = compression_ignition
+                has_technology_researched = mechanized_farming
+            }
+
+        }
+        any_scope_state = {
+            is_in_geographic_region = geographic_region_southern_great_plains
+        }
+    }
+
+    possible = {
+        any_scope_state = {
+            is_in_geographic_region = geographic_region_southern_great_plains
+            state_region = {
+                has_harvest_condition = drought
+            }
+        }
+    }
+
+    scripted_progress_bar = usfp_dust_bowl_desertification_bar
+    scripted_button = usfp_dust_bowl_research_conservation_button
+    scripted_button = usfp_dust_bowl_plant_shelterbelt_button
+
+    on_monthly_pulse = {
+        effect = {
+            if = {
+                limit = {
+                    has_variable = dust_bowl_shelterbelt_progress
+                }
+                change_variable = {
+                    name = dust_bowl_shelterbelt_progress
+                    add = 0.2
+                }
+            }
+        }
+        random_events = {
+            chance_to_happen = 75
+            100 = usfp_dust_bowl.5
+            100 = usfp_dust_bowl.6
+        }
+    }
+
+    invalid = {
+        NOT = {
+            any_scope_state = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+        }
+    }
+
+    on_invalid = {
+        remove_global_variable = dust_bowl_ongoing
+        every_scope_state = {
+            limit = {
+                has_modifier = usfp_shelterbelt_construction_modifier
+            }
+            remove_modifier = usfp_shelterbelt_construction_modifier
+        }
+    }
+
+    complete = {
+        custom_tooltip = {
+            text = usfp_dust_bowl_desertification_zero
+            scope:journal_entry = {
+                "scripted_bar_progress(usfp_dust_bowl_desertification_bar)" <= 0
+            }
+        }
+    }
+
+    on_complete = {
+        trigger_event = usfp_dust_bowl.3
+        remove_global_variable = dust_bowl_ongoing
+        every_scope_state = {
+            limit = {
+                has_modifier = usfp_shelterbelt_construction_modifier
+            }
+            remove_modifier = usfp_shelterbelt_construction_modifier
+        }
+        show_as_tooltip = { #actually applied in the event
+            custom_tooltip = dust_bowl_dust_storms_end
+            custom_tooltip = {
+                text = dust_bowl_arable_land_restored
+                every_state_region_in_southern_plains = {
+                    add_arable_land = var:dust_bowl_arable_land_stripped
+                }
+            }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = usfp_dust_bowl.3.a
+        effect = {
+            execute_event_option = {
+                event = usfp_dust_bowl.3
+                option = 0
+            }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = usfp_dust_bowl.3.b
+        effect = {
+            execute_event_option = {
+                event = usfp_dust_bowl.3
+                option = 1
+            }
+        }
+    }
+
+    fail = {
+        custom_tooltip = {
+            text = usfp_dust_bowl_desertification_full
+            scope:journal_entry = {
+                "scripted_bar_progress(usfp_dust_bowl_desertification_bar)" >= 1000
+            }
+        }
+    }
+
+    on_fail = {
+        trigger_event = usfp_dust_bowl.4
+        remove_global_variable = dust_bowl_ongoing
+        every_scope_state = {
+            limit = {
+                has_modifier = usfp_shelterbelt_construction_modifier
+            }
+            remove_modifier = usfp_shelterbelt_construction_modifier
+        }
+        show_as_tooltip = { #actually applied in the event
+            custom_tooltip = dust_bowl_dust_storms_continue
+            every_state_region_in_southern_plains = {
+                add_state_trait = state_trait_usfp_dust_bowl_desert
+                add_arable_land = -5
+            }
+        }
+    }
+
+    event_outcome_failed_effect_desc = {
+        header = usfp_dust_bowl.4.a
+        effect = {
+            execute_event_option = {
+                event = usfp_dust_bowl.4
+                option = 0
+            }
+        }
+    }
+
+    event_outcome_failed_effect_desc = {
+        header = usfp_dust_bowl.4.b
+        effect = {
+            execute_event_option = {
+                event = usfp_dust_bowl.4
+                option = 1
+            }
+        }
+    }
+
+    weight = 200
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}

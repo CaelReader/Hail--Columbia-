@@ -986,3 +986,31 @@ Dixie Redoubt no longer spawns with the Superculture
 Fixed Sonora not being puppeted by event
 Added tooltip showing that Secessionist Conventions can be avoided if Landowners are low enough clout
 Melting Pot modifier now always allows assimilation to the Primary Culture
+
+# 9.0 "Hoover"
+## New Content
+	Overhauled vanilla Transcontinental Railroad JE, with choices of route and granting the Railroad Boom JE upon completion
+	New Railroad Boom JE leading to the Panic of 1873 at its conclusion
+	End-game Dust Bowl JE and Dust Storm Harvest Condition, activated by plowing the Great Plains with advanced technology
+	End-game Roaring Twenties JE that boosts economic and political optimism... while it lasts
+	End-game Great Depression JE created by the collapse of the Roaring Twenties
+	New Events: Monkey Trial, Embalmed Beef, San Francisco Earthquake, Johnstown Flood
+	Added US Colored Troops loading screen by Angel
+    New Characters: Lewis Cass, John C Breckinridge, Stephen Douglas, George McClellan, Horatio Seymour, Samuel Tilden, James Blaine, James Weaver, Alton Parker, Charles Hughes, James Cox, John Davis, Al Smith, Alf Landon
+## Updates
+    The Great Plains is now more susceptible to droughts and extreme winds
+	USA now gets a short-term Training Rate boost when the CSA appears
+    Changed Post-War Demobilization modifier from a Morale debuff to an Offense debuff, and reduced it to 20 years from 25
+	Post-War Demobilization modifier is now halved under Professional Army
+	Disabled Gilded Age "Railroad Boom" event, replaced with JE
+    Converted Oregon Border Dispute JE into a Contextless JE that all involved parties can view
+    Cleaned up tooltips for completion requirements for the Oregon Border Dispute
+    The Canadian owner of Alberta now annexes the Columbia District after the Treaty is concluded
+    With the American Superculture, yankee/dixie/anglo-canadian pops will slowly auto-convert to the superculture
+    Yankee/Dixie/Anglo-Canadian characters that spawn after forming the Superculture will also have their culture switched to it
+# Fixes
+	Fixed overflowing tooltip on Ghost Dance events
+    Fixed broken event overwrites
+    The New Navy JE now hides itself if you are the #1 Naval power
+    Fixed crash in Chaotic Elections game rule text
+    Smedley Butler now lo longer spawns as an agitator before being recruited as a general (no movement to join)

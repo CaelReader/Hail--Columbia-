@@ -4,6 +4,7 @@
 		delay = { days = 10 }
 		usfp_monthly_pulse
 		usfp_arctic_isolation
+        usfp_american_superculture_action
 	}
 }
 
@@ -15,6 +16,7 @@ usfp_monthly_pulse = {
 		usfp_usa.16 #Election chaos (ALL democracies, not just the US)
 		usfp_usa.22 #American Centennial
         usfp_philippines.11 #ESL Amendment Acquired
+		usfp_usa.32 #San Francisco Earthquake
 	}
 	random_events = {
 		chance_to_happen = 80
@@ -31,6 +33,10 @@ usfp_monthly_pulse = {
 		
 		200 = usfp_usa.26 #Dorr Rebellion
 		100 = usfp_usa.27 #Third Great Awakening
+		10 = usfp_usa.30 #Scopes Monkey Trial
+		10 = usfp_usa.31 #Army Beef Scandal
+		100 = usfp_usa.33 #Johnstown Flood
+        100 = usfp_dust_bowl.1 #Great Plow Up
 
 
 
@@ -174,6 +180,34 @@ usfp_monroe_doctrine_fix = {
 			set_strategy = ai_strategy_armed_isolationism
 		}
 	}
+}
+
+usfp_american_superculture_action = {
+    trigger = {
+        country_has_primary_culture = cu:usfp_american
+        any_scope_pop = {
+            OR = {
+                culture = cu:yankee
+                culture = cu:dixie
+                culture = cu:anglo_canadian
+            }
+        }
+    }
+    effect = {
+        random_scope_pop = {
+            limit = {
+                OR = {
+                    culture = cu:yankee
+                    culture = cu:dixie
+                    culture = cu:anglo_canadian
+                }
+            }
+            change_pop_culture = {
+                target = cu:usfp_american
+                value = 1.00
+            }
+        }
+    }
 }
 
 
@@ -1194,4 +1228,73 @@ usfp_spoils_system_action = {
 			 }
 		}
 	}
+}
+
+on_harvest_condition_started_in_country = {
+	on_actions = {
+		usfp_dust_bowl_action
+	}
+}
+
+usfp_dust_bowl_action = {
+    trigger = {
+        has_global_variable = dust_bowl_ongoing
+    }
+	effect = {
+		if = {
+			limit = {
+				scope:state.state_region = {
+					has_harvest_condition = usfp_dust_storm
+				}
+				scope:state = {
+					arable_land > 10
+				}
+			}
+            if = {
+                limit = {
+                    NOT = {
+                        root = {
+                            is_target_in_variable_list = {
+                                name = usfp_dust_bowl_state_regions
+                                target = scope:state.state_region
+                            }
+                        }
+                    }
+                }
+                root = {
+                    add_to_variable_list = {
+                        name = usfp_dust_bowl_state_regions
+                        target = scope:state.state_region
+                    }
+                }
+            }
+			scope:state.state_region = {
+				usfp_dust_bowl_remove_arable_land = {
+					LAND = -1
+				}
+			}
+		}
+	}
+}
+
+on_character_creation = {
+    on_actions = {
+        usfp_american_superculture_character
+    }
+}
+
+usfp_american_superculture_character = {
+    trigger = {
+        owner ?= {
+            country_has_primary_culture = cu:usfp_american
+        }
+        OR = {
+            culture = cu:yankee
+            culture = cu:dixie
+            culture = cu:anglo_canadian
+        }
+    }
+    effect = {
+        change_character_culture = cu:usfp_american
+    }
 }

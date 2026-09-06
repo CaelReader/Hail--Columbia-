@@ -541,7 +541,7 @@ usfp_manifest_destiny_main = {
 			#Call for Cuban Annexation
 			25 = usfp_manifest_destiny.7 #PB gains Empire of Liberty
 			200 = usfp_manifest_destiny.8 #Gunboat Diplomacy
-			25 = usfp_manifest_destiny.9 #Railroad Tycoons
+
 			100 = usfp_manifest_destiny.12 #California Genocide
 			100 = usfp_manifest_destiny.14 #Ostend Manifesto
 			100 = usfp_manifest_destiny.20 #Oregon Pioneers
@@ -1102,6 +1102,244 @@ usfp_je_mexican_occupation = {
                 value <= 0.02
             }
         }
+    }
+
+    should_be_pinned_by_default_uninvolved_or_context = no
+
+    weight = 10
+
+    can_revolution_inherit = yes
+}
+
+REPLACE_OR_CREATE:je_trans_continental_railway = {
+	icon = "gfx/interface/icons/invention_icons/railways.dds"
+
+	group = je_group_usa_manifest_destiny
+
+	is_shown_when_inactive = {
+		NOT = { has_global_variable = trans_continental_done }
+		owns_entire_state_region = STATE_NEW_YORK
+		has_state_in_state_region = STATE_NEBRASKA
+	}
+
+	possible = {
+		has_technology_researched = railways
+		OR = {
+			usfp_transcontinental_northern_route_open = yes
+			usfp_transcontinental_central_route_open = yes
+			usfp_transcontinental_southern_route_open = yes
+		}
+	}
+
+	immediate = {
+		trigger_event = { id = major_railways.2 }
+	}
+
+	complete = {
+		hidden_trigger = {
+			OR = {
+				has_variable = transcontinental_chose_northern_route
+				has_variable = transcontinental_chose_central_route
+				has_variable = transcontinental_chose_southern_route
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_variable = transcontinental_chose_northern_route
+			}
+			#Northern Route
+			AND = {
+				any_scope_state = {
+					state_region = s:STATE_WASHINGTON
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_IDAHO
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_MONTANA
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_NORTH_DAKOTA
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_MINNESOTA
+					has_building = building_railway
+				}
+			}
+		} trigger_else_if = {
+			limit = {
+				has_variable = transcontinental_chose_central_route
+			}
+			#Central Route
+			AND = {
+				any_scope_state = {
+					state_region = s:STATE_CALIFORNIA
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_NEVADA
+					has_building = building_railway
+				}
+				OR = {
+					any_scope_state = {
+						state_region = s:STATE_UTAH
+						has_building = building_railway
+					}
+					#allows Deseret subject
+					any_subject_or_below = {
+						any_scope_state = {
+							state_region = s:STATE_UTAH
+							has_building = building_railway
+						}
+					}
+				}
+				any_scope_state = {
+					state_region = s:STATE_WYOMING
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_NEBRASKA
+					has_building = building_railway
+				}
+			}
+		} trigger_else_if = {
+			limit = {
+				has_variable = transcontinental_chose_southern_route
+			}
+			#Southern Route
+			AND = {
+				any_scope_state = {
+					state_region = s:STATE_CALIFORNIA
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_ARIZONA
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_NEW_MEXICO
+					has_building = building_railway
+				}
+				any_scope_state = {
+					state_region = s:STATE_TEXAS
+					has_building = building_railway
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		set_global_variable = trans_continental_done
+		trigger_event = { id = usfp_manifest_destiny.9 }
+	}
+
+	weight = 50
+}
+
+#Monroe Doctrine
+usfp_je_monroe_doctrine = {
+
+    icon = gfx/interface/icons/ai_strategy_icons/usfp_monroe_doctrine_strategy.dds
+
+    group = je_group_usa_manifest_destiny
+
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+    }
+
+    is_shown_when_inactive = {
+        c:USA ?= root
+    }
+
+    possible = {
+        country_rank >= rank_value:great_power
+        naval_power_projection >= usfp_monroe_doctrine_naval_power
+    }
+
+    complete = {
+		is_power_bloc_leader = yes
+        any_country_in_americas = {
+            filter = {
+                is_subject = yes
+            }
+            percent = 0
+            custom_tooltip = {
+                text = old_world_overlord
+                overlord ?= {
+                    is_in_geographic_region = geographic_region_old_world
+                }
+            }
+
+        }
+        any_state_in_americas = {
+            count = 0
+            custom_tooltip = {
+                text = old_world_owner
+                owner = {
+                    is_in_geographic_region = geographic_region_old_world
+                }
+            }
+        }
+    }
+
+
+    on_complete = {
+        every_state_region_in_americas = {
+            if = {
+                limit = {
+                    any_country_in_old_world = {
+                        has_claim = prev
+                    }
+                }
+            }
+            every_country_in_old_world = {
+                save_scope_as = old_world_country
+                limit = {
+                    NOT = {
+                        is_country_type = decentralized
+                    }
+                    has_claim = prev
+                }
+                prev = {
+                    remove_claim = scope:old_world_country
+                }
+            }
+        }
+		trigger_event = usfp_manifest_destiny.32
+    }
+
+	event_outcome_completed_effect_desc = {
+		header = usfp_manifest_destiny.32.a
+		effect = {
+			execute_event_option = {
+				event = usfp_manifest_destiny.32
+				option = 0
+			}
+		}
+	}
+
+	event_outcome_completed_effect_desc = {
+		header = usfp_manifest_destiny.32.b
+		effect = {
+			execute_event_option = {
+				event = usfp_manifest_destiny.32
+				option = 1
+			}
+		}
+	}
+
+
+    fail = {
+        country_rank < rank_value:major_power
+        is_diplomatic_play_committed_participant = no
     }
 
     should_be_pinned_by_default_uninvolved_or_context = no

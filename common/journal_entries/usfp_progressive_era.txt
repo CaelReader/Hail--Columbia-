@@ -1,7 +1,7 @@
 ﻿###### Hail, Columbia! by CaelReader ######
 usfp_progressive_era = {
 	icon = gfx/interface/icons/ideology_icons/ideology_usfp_progressive_movement.dds
-	group = je_group_internal_affairs
+	group = je_group_usfp_political_eras
 	should_be_pinned_by_default_uninvolved_or_context = yes
 	is_shown_when_inactive = {
 		exists = c:USA

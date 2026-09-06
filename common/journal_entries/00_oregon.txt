@@ -2,90 +2,89 @@
 je_oregon = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
-	group = je_group_usa_manifest_destiny
+	group = je_group_us_expansion_global
 
-	is_shown_when_inactive = {
-		exists = c:USA
-		exists = c:GBR
-		c:USA = ROOT
-		s:STATE_WASHINGTON = {
-			any_scope_state = {
-				owner = {
-					OR = {
-						c:GBR = THIS
-						is_subject_of = c:GBR
-					}
-				}
-			}
-		}
-		s:STATE_OREGON = {
-			any_scope_state = {
-				owner = {
-					OR = {
-						c:GBR = THIS
-						is_subject_of = c:GBR
-					}
-				}
-			}
-		}
-		s:STATE_IDAHO = {
-			any_scope_state = {
-				owner = {
-					OR = {
-						c:GBR = THIS
-						is_subject_of = c:GBR
-					}
-				}
-			}
-		}
-	}
+    should_show_when_not_involved = {
+        OR = {
+            this = c:USA
+            this = c:GBR
+            is_in_geographic_region = geographic_region_canada
+            any_scope_state = {
+                OR = {
+                    state_region = s:STATE_WASHINGTON
+                    state_region = s:STATE_OREGON
+                    state_region = s:STATE_IDAHO
+                    state_region = s:STATE_BRITISH_COLUMBIA
+                }
+            }
+        }
+    }
 
-	possible = { 
-		OR = {
-			has_interest_marker_in_region = sr:region_pacific_coast
-			custom_tooltip = {
-				text = oregon_tt
-				has_global_variable = oregon_trail_mapped
-			}
-			has_state_in_state_region = STATE_MONTANA
-			has_state_in_state_region = STATE_WYOMING
-			has_state_in_state_region = STATE_CALIFORNIA
-		}
-	}
+    should_be_involved = {
+        OR = {
+            this = c:USA
+            this = c:GBR
+            AND = {
+                is_subject_of = c:GBR
+                any_scope_state = {
+                    OR = {
+                        state_region = s:STATE_WASHINGTON
+                        state_region = s:STATE_OREGON
+                        state_region = s:STATE_IDAHO
+                        state_region = s:STATE_BRITISH_COLUMBIA
+                    }
+                }
+            }
+        }
+    }
+
+    should_be_pinned_by_default_involved = yes
+
+    immediate = {
+        c:ORG ?= {
+            save_scope_as = oregon_holder_scope
+        }
+        c:GBR ?= {
+            save_scope_as = gbr_scope
+        }
+        c:USA ?= {
+            save_scope_as = usa_scope
+        }
+    }
 
 	complete = {
-		OR = {
-			AND = {
-				has_interest_marker_in_region = sr:region_pacific_coast
-				custom_tooltip = {
-					text = oregon_tt
-					has_global_variable = oregon_trail_mapped
-				}
-				OR = {
-					has_state_in_state_region = STATE_MONTANA
-					has_state_in_state_region = STATE_WYOMING
-					has_state_in_state_region = STATE_CALIFORNIA
-				}
-				c:GBR = {
-					relations:ROOT >= relations_threshold:cordial
-				}
-			}
-			AND = {
-				c:GBR = { relations:ROOT >= relations_threshold:amicable }
-				s:STATE_CALIFORNIA = {
-					any_scope_state = {
-						owner = {
-							has_war_with = root
-						}
-					}
-				}
-			}
-			AND = {
-				has_state_in_state_region = STATE_IDAHO
-				has_state_in_state_region = STATE_WASHINGTON
-				has_state_in_state_region = STATE_OREGON
-			}
-		}
+        custom_tooltip = {
+            text = oregon_tt
+            has_global_variable = oregon_trail_mapped
+        }
+        c:GBR = {
+            scope:usa_scope = {
+                relations:prev >= relations_threshold:cordial
+            }
+        }
+        c:USA = {
+            has_interest_marker_in_region = sr:region_pacific_coast
+            OR = {
+                OR = {
+                    usfp_usa_has_state_in_montana_wyoming_california = yes
+                    usfp_usa_or_subject_has_state_in_all_southern_oregon_territory = yes
+                }
+                AND = {
+                    c:GBR = {
+                        scope:usa_scope = {
+                            relations:prev >= relations_threshold:amicable
+                        }
+                    }
+                    s:STATE_CALIFORNIA = {
+                        any_scope_state = {
+                            owner = {
+                                has_war_with = c:USA
+                            }
+                        }
+                    }
+                }
+            }
+        }
 	}
 
 	on_complete = {
@@ -138,15 +137,15 @@ je_oregon = {
 				}
 			}
 			s:STATE_IDAHO = {
-				add_claim = ROOT
+				add_claim = c:USA
 				remove_claim = scope:oregon_holder_scope
 			}
 			s:STATE_WASHINGTON = {
-				add_claim = ROOT
+				add_claim = c:USA
 				remove_claim = scope:oregon_holder_scope
 			}
 			s:STATE_OREGON = {
-				add_claim = ROOT
+				add_claim = c:USA
 				remove_claim = scope:oregon_holder_scope
 			}
 			add_modifier = {
@@ -154,76 +153,76 @@ je_oregon = {
 				days = normal_modifier_time
 			}
 		}
-		if = {
-			limit = { 
-				has_journal_entry = usfp_manifest_destiny_main
-			}
-			usfp_manifest_less_destiny_high_effect = yes
-		}
+        c:USA = {
+            if = {
+                limit = {
+                    has_journal_entry = usfp_manifest_destiny_main
+                }
+                usfp_manifest_less_destiny_high_effect = yes
+            }
+        }
 	}
+
+    event_outcome_completed_effect_desc = {
+        effect = {
+            execute_event_option = {
+                event = oregon.2
+                option = 0
+            }
+        }
+    }
 
 	fail = {
 		OR = {
+            c:GBR = {
+                has_diplomats_expelled = c:USA
+            }
+            c:GBR = {
+                has_war_with = c:USA
+            }
 			c:GBR = {
-				relations:ROOT <= relations_threshold:poor
+                scope:usa_scope = {
+                    relations:prev <= relations_threshold:poor
+                }
 			}
-			AND = {
-				c:GBR = {
-					NOR = {
-						has_state_in_state_region = STATE_WASHINGTON
-						has_state_in_state_region = STATE_OREGON
-						has_state_in_state_region = STATE_IDAHO
-					}
-				}
-				NOR = {
-					s:STATE_WASHINGTON = {
-						any_scope_state = {
-							owner = {
-									is_subject_of = c:GBR
-							}
-						}
-					}
-					s:STATE_OREGON = {
-						any_scope_state = {
-							owner = {
-									is_subject_of = c:GBR
-							}
-						}
-					}
-					s:STATE_IDAHO = {
-						any_scope_state = {
-							owner = {
-									is_subject_of = c:GBR
-							}
-						}
-					}
-				}
-			}
+            usfp_gbr_or_subject_has_state_in_southern_oregon_territory = no
 		}
 	}
 	
 	on_fail = {
 			s:STATE_OREGON = {
-				add_claim = ROOT
+				add_claim = c:USA
 			}
 			s:STATE_IDAHO = {
-				add_claim = ROOT
+				add_claim = c:USA
 			}
 			s:STATE_WASHINGTON = {
-				add_claim = ROOT
+				add_claim = c:USA
 			}
-			add_journal_entry = {
-				type = je_conquer_oregon
-			}
-			if = {
-				limit = { 
-					has_journal_entry = usfp_manifest_destiny_main
-				}
-				usfp_manifest_more_destiny_effect = yes
-			}
+            c:USA = {
+                add_journal_entry = {
+                    type = je_conquer_oregon
+                }
+                if = {
+                    limit = {
+                        has_journal_entry = usfp_manifest_destiny_main
+                    }
+                    usfp_manifest_more_destiny_effect = yes
+                }
+            }
 	}
 
-	should_be_pinned_by_default_uninvolved_or_context = yes
+    invalid = {
+        OR = {
+            NOT = {
+                exists = c:USA
+            }
+            NOT = {
+                exists = c:GBR
+            }
+        }
+    }
+
 	weight = 100
 }
 
@@ -254,61 +253,4 @@ je_conquer_oregon = {
 	weight = 100
 	should_be_pinned_by_default_uninvolved_or_context = yes
 	transferable = no
-}
-
-je_oregon_can = {
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
-
-	group = je_group_historical_content
-
-	immediate = {
-		c:GBR = {
-			save_scope_as = britain_scope
-		}
-		c:USA = {
-			save_scope_as = usa_scope
-		}
-	}
-
-	is_shown_when_inactive = {
-		exists = c:GBR
-		exists = c:USA
-		is_subject_of = c:GBR
-		OR = {
-			has_state_in_state_region = STATE_WASHINGTON
-			has_state_in_state_region = STATE_OREGON
-			has_state_in_state_region = STATE_IDAHO
-		}
-	}
-
-	possible = {
-		c:USA = {
-			OR = {
-				has_journal_entry = je_oregon
-				has_journal_entry = je_conquer_oregon
-			}
-		}
-	}
-
-	fail = {
-		NOT = {
-			has_state_in_state_region = STATE_WASHINGTON
-			has_state_in_state_region = STATE_OREGON
-			has_state_in_state_region = STATE_IDAHO
-		}
-	}
-
-	complete = {
-			c:USA = {
-				NOT = {
-					has_journal_entry = je_oregon
-				}
-				NOT = {
-					has_claim = s:STATE_WASHINGTON
-					has_claim = s:STATE_IDAHO
-					has_claim = s:STATE_OREGON
-				}
-			}
-	}
-	should_be_pinned_by_default_uninvolved_or_context = yes
 }

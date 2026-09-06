@@ -1,7 +1,7 @@
 ﻿je_usfp_panic_1837 = {
 	icon = "gfx/interface/icons/invention_icons/central_banking.dds"
 
-	group = je_group_historical_content
+	group = je_group_usfp_financial
 
 	immediate = {
 		scope:journal_entry = {
@@ -42,13 +42,6 @@
 			name = panic_1837_this_month_gdp
 			value = root.gdp
 		}
-		set_variable = {
-			name = panic_1837_gdp_target
-			value = {
-				value = root.gdp
-				multiply = 1.005
-			}
-		}
 	}
 
 	scripted_progress_bar = usfp_panic_1837_recovery_progress_bar
@@ -62,13 +55,6 @@
 			set_variable = {
 				name = panic_1837_this_month_gdp
 				value = root.gdp
-			}
-			set_variable = {
-				name = panic_1837_gdp_target
-				value = {
-					value = var:panic_1837_this_month_gdp
-					multiply = 1.005
-				}
 			}
 		}
 	}
@@ -93,6 +79,71 @@
 		add_modifier = {
 			name = usfp_post_panic_recovery_modifier
 			years = 3
+		}
+	}
+
+	weight = 200
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+
+je_usfp_railroad_bubble = {
+	icon = "gfx/interface/icons/invention_icons/steel_railway_cars.dds"
+
+	group = je_group_usfp_financial
+
+
+	immediate = {
+		if = {
+			limit = {
+				has_variable = railroad_bubble_investment_low
+			}
+			scope:journal_entry = {
+				add_modifier = {
+					name = usfp_railroad_boom_je_modifier
+					multiplier = 0.5
+				}
+			}
+		} else = {
+			scope:journal_entry = {
+				add_modifier = {
+					name = usfp_railroad_boom_je_modifier
+				}
+			}
+		}
+	}
+
+	scripted_progress_bar = usfp_railroad_boom_bar
+
+	timeout = 7200 #20 years
+
+	on_timeout = {
+		add_loyalists = {
+			pop_type = capitalists
+			value = medium_radicals
+		}
+	}
+
+	invalid = {
+		OR = {
+			has_law_or_variant = law_type:law_command_economy
+			has_law_or_variant = law_type:law_cooperative_ownership
+		}
+	}
+
+	fail = {
+		custom_tooltip = {
+			text = panic_recovery_complete
+			scope:journal_entry = {
+				"scripted_bar_progress(usfp_railroad_boom_bar)" >= 1000
+			}
+		}
+	}
+
+	on_fail = {
+		trigger_event = {
+			id = usfp_panics.2
+			popup = yes
 		}
 	}
 

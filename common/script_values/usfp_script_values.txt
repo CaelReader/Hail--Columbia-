@@ -1000,3 +1000,27 @@ usfp_get_roosevelt_diplomacy_score = {
     }
     min = 0
 }
+
+usfp_roaring_twenties_sol_target = {
+	value = 20
+}
+
+usfp_country_incorporated_unemployment_rate = {
+	every_scope_state = {
+		limit = {
+			is_incorporated = yes
+		}
+		add = {
+			value = state_unemployment_rate
+			multiply = state_population
+		}
+	}
+	divide = {
+		every_scope_state = {
+			limit = {
+				is_incorporated = yes
+			}
+			add = state_population
+		}
+	}
+}

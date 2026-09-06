@@ -767,6 +767,7 @@ usfp_mormon.10 = {
 	duration = 3
 
 	trigger = {
+		always = no #too minor to bug the player with
 		exists = c:USA
 		c:USA = root
 		game_date > 1890.1.1

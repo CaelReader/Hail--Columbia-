@@ -1,0 +1,84 @@
+﻿usfp_dust_bowl_research_conservation_button = {
+    name = "usfp_dust_bowl_research_conservation_button"
+    desc = "usfp_dust_bowl_research_conservation_button_desc"
+
+    visible = {
+        NOT = {
+            has_variable = dust_bowl_research_complete
+        }
+    }
+
+    possible = {
+        has_technology_researched = nitrogen_fixation
+        any_scope_state = {
+            is_in_geographic_region = geographic_region_southern_great_plains
+            any_scope_building = {
+                is_building_type = building_university
+                level >= 2
+                occupancy >= 0.75
+            }
+        }
+        hidden_trigger = {
+            NOT = {
+                has_variable = researching_dust_bowl
+            }
+        }
+    }
+
+    selected = {
+        has_variable = researching_dust_bowl
+    }
+
+    effect = {
+        trigger_event = {
+            id = usfp_dust_bowl.7
+            years = 3
+        }
+        set_variable = researching_dust_bowl
+    }
+}
+
+usfp_dust_bowl_plant_shelterbelt_button = {
+    name = "usfp_dust_bowl_plant_shelterbelt_button"
+    desc = "usfp_dust_bowl_plant_shelterbelt_button_desc"
+
+    visible = {
+        always = yes
+    }
+
+    possible = {
+        has_technology_researched = central_planning
+        NOT = {
+            has_law_or_variant = law_type:law_laissez_faire
+        }
+        custom_tooltip = {
+            text = completed_dust_bowl_research
+            has_variable = dust_bowl_research_complete
+        }
+        hidden_trigger = {
+            NOT = {
+                has_variable = dust_bowl_shelterbelt_progress
+            }
+        }
+    }
+
+    selected = {
+        has_variable = dust_bowl_shelterbelt_progress
+    }
+
+    effect = {
+        set_variable = {
+            name = dust_bowl_shelterbelt_progress
+            value = 0.2
+        }
+        custom_tooltip = dust_bowl_shelterbelt_begins
+        every_scope_state = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            add_modifier = {
+                name = usfp_shelterbelt_construction_modifier
+            }
+        }
+    }
+}

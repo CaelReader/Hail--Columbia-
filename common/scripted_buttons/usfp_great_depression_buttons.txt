@@ -1,0 +1,107 @@
+﻿usfp_mexican_repatriation_button = {
+    name = "usfp_mexican_repatriation_button"
+    desc = "usfp_mexican_repatriation_button_desc"
+
+    visible = {
+        NOT = {
+            country_has_primary_culture = cu:mexican
+        }
+        exists = c:MEX
+        c:MEX = {
+            NOT = {
+                is_subject_of = root
+            }
+        }
+        NOT = {
+            has_variable = did_mexican_repatriation
+        }
+        NOT = {
+            has_law_or_variant = law_type:law_closed_borders
+        }
+        any_scope_state = {
+            state_region = {
+                is_homeland = cu:mexican
+            }
+            any_scope_pop = {
+                culture = cu:mexican
+            }
+        }
+    }
+
+    possible = {
+        any_interest_group_in_government = {
+            OR = {
+                law_stance = {
+                    law = law_type:law_racial_segregation
+                    value >= approve
+                }
+                law_stance = {
+                    law = law_type:law_national_supremacy
+                    value >= approve
+                }
+                law_stance = {
+                    law = law_type:law_ethnostate
+                    value >= approve
+                }
+            }
+        }
+        c:MEX = {
+            any_scope_state = {
+                state_is_eligible_as_mass_migration_target = yes
+            }
+            NOT = {
+                has_law_or_variant = law_type:law_closed_borders
+            }
+        }
+        NOT = {
+            has_war_with = c:MEX
+        }
+    }
+
+    effect = {
+        set_variable = did_mexican_repatriation
+        add_radicals = {
+            culture = cu:mexican
+            value = medium_radicals
+        }
+        c:MEX = {
+            ordered_scope_state = {
+                limit = {
+                    state_is_eligible_as_mass_migration_target = yes
+                }
+                order_by = gdp
+                position = 0
+                create_mass_migration = {
+                    culture = cu:mexican
+                    origin = root
+                }
+            }
+        }
+        every_interest_group = {
+            limit = {
+                OR = {
+                    law_stance = {
+                        law = law_type:law_racial_segregation
+                        value >= approve
+                    }
+                    law_stance = {
+                        law = law_type:law_national_supremacy
+                        value >= approve
+                    }
+                    law_stance = {
+                        law = law_type:law_ethnostate
+                        value >= approve
+                    }
+                }
+            }
+            add_modifier = {
+                name = usfp_mexican_repatriation_ig_positive
+                years = 4
+            }
+        }
+    }
+
+    ai_chance = {
+        value = 25
+    }
+}

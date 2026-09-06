@@ -1,0 +1,111 @@
+﻿namespace = major_railways
+
+major_railways.2 = {
+    type = country_event
+    event_image = {
+        video = "unspecific_trains"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+    placement = scope:terminus_scope
+
+    title = major_railways.2.t
+    desc = major_railways.2.d
+    flavor = major_railways.2.f
+
+    trigger = {
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                OR = {
+                    has_variable = transcontinental_chose_southern_route
+                    has_variable = transcontinental_chose_central_route
+                }
+            }
+            random_scope_state = {
+                limit = {
+                    state_region = s:STATE_CALIFORNIA
+                }
+                save_scope_as = terminus_scope
+            }
+        } else = {
+            random_scope_state = {
+                limit = {
+                    state_region = s:STATE_WASHINGTON
+                }
+                save_scope_as = terminus_scope
+            }
+        }
+
+    }
+
+    #northern route
+    option = {
+        name = major_railways.2.a
+        trigger = {
+            usfp_transcontinental_northern_route_open = yes
+        }
+        custom_tooltip = {
+            text = transcontinental_chose_northern_route
+            set_variable = transcontinental_chose_northern_route
+        }
+        every_scope_state = {
+            custom = transcontinental_northern_route_states
+            limit = {
+                is_in_geographic_region = geographic_region_transcontinental_northern_route
+            }
+            add_modifier = {
+                name = usfp_transcontinental_construction_modifier
+                years = 4
+            }
+        }
+    }
+
+    #central route
+    option = {
+        name = major_railways.2.b
+        default_option = yes
+        trigger = {
+            usfp_transcontinental_central_route_open = yes
+        }
+        custom_tooltip = {
+            text = transcontinental_chose_central_route
+            set_variable = transcontinental_chose_central_route
+        }
+        every_scope_state = {
+            custom = transcontinental_central_route_states
+            limit = {
+                is_in_geographic_region = geographic_region_transcontinental_central_route
+            }
+            add_modifier = {
+                name = usfp_transcontinental_construction_modifier
+                years = 4
+            }
+        }
+    }
+
+    #southern route
+    option = {
+        name = major_railways.2.c
+        trigger = {
+            usfp_transcontinental_southern_route_open = yes
+        }
+        custom_tooltip = {
+            text = transcontinental_chose_southern_route
+            set_variable = transcontinental_chose_southern_route
+        }
+        every_scope_state = {
+            custom = transcontinental_southern_route_states
+            limit = {
+                is_in_geographic_region = geographic_region_transcontinental_southern_route
+            }
+            add_modifier = {
+                name = usfp_transcontinental_construction_modifier
+                years = 4
+            }
+        }
+    }
+}

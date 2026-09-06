@@ -59,7 +59,7 @@
  usfp_pb_syndicalist_international: "생디칼리슴 인터내셔널"
  rule_usfp_election_chaos: "@america_icon! #yellow 헤일, 컬럼비아!#! | 혼란스러운 선거"
  setting_yes_election_chaos: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_yes_election_chaos_desc #high 예 #!#!#!"
- setting_yes_election_chaos_desc: "[GetLawType('law_census_voting').GetName] 또는 [GetLawType('law_universal_suffrage').GetName] 하에서는, [Concept('concept_election', '$concept_elections$')] 기간 동안 [Concept('concept_party', '$concept_parties$')]가 매주 무작위로 [concept_momentum]을 얻거나 잃을 수 있습니다."
+ setting_yes_election_chaos_desc: "$law_census_voting$  또는 $law_universal_suffrage$ 하에서는, [Concept('concept_election', '$concept_elections$')] 기간 동안 [Concept('concept_party', '$concept_parties$')]가 매주 무작위로 [concept_momentum]을 얻거나 잃을 수 있습니다."
  setting_no_election_chaos: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_no_election_chaos_desc #high 아니오 #!#!#!"
  setting_no_election_chaos_desc: "주간 [concept_momentum] 변경 사항은 적용되지 않습니다."
  movement_usfp_american_constitution: "헌법 운동"

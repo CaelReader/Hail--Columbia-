@@ -1,0 +1,612 @@
+﻿namespace = usfp_great_depression
+
+#Roaring Twenties Start
+usfp_great_depression.1 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "unspecific_world_fair"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+    title = usfp_great_depression.1.t
+    desc = usfp_great_depression.1.d
+    flavor = usfp_great_depression.1.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #JE Start
+    }
+
+    immediate = {
+
+    }
+
+    #let's dance
+    option = {
+        name = usfp_great_depression.1.a
+        default_option = yes
+        je:je_usfp_roaring_twenties ?= {
+            add_modifier = {
+                name = usfp_roaring_twenties_jazz_modifier
+                years = 5
+            }
+        }
+    }
+
+    #let's build
+    option = {
+        name = usfp_great_depression.1.b
+        je:je_usfp_roaring_twenties ?= {
+            add_modifier = {
+                name = usfp_roaring_twenties_art_deco_modifier
+                years = 5
+            }
+        }
+    }
+
+    after = {
+        add_loyalists = {
+            value = small_radicals
+            strata = middle
+        }
+        add_loyalists = {
+            value = small_radicals
+            strata = upper
+        }
+    }
+}
+#Economy has reached a permanent plateau
+usfp_great_depression.2 = {
+    type = country_event
+    placement = scope:new_york_scope
+    event_image = {
+        video = "europenorthamerica_london_center"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+    title = usfp_great_depression.2.t
+    desc = usfp_great_depression.2.d
+    flavor = usfp_great_depression.2.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        je:je_usfp_roaring_twenties ?= {
+            "scripted_bar_progress(usfp_roaring_twenties_optimism_bar)" >= 900
+        }
+    }
+
+    immediate = {
+        s:STATE_NEW_YORK = {
+            region_state:USA = {
+                save_scope_as = new_york_scope
+            }
+        }
+    }
+
+    #surely this will not go wrong
+    option = {
+        name = usfp_great_depression.2.a
+        default_option = yes
+        add_loyalists = {
+            strata = upper
+            value = small_radicals
+        }
+        custom_tooltip = {
+            text = roaring_twenties_increase_optimism
+            je:je_usfp_roaring_twenties ?= {
+                add_progress = {
+                    name = usfp_roaring_twenties_optimism_bar
+                    value = 25
+                }
+            }
+        }
+        custom_tooltip = {
+            text = black_tuesday_soon
+            trigger_event = {
+                id = usfp_great_depression.4
+                days = 7
+                popup = yes
+            }
+        }
+    }
+
+}
+#Roaring Twenties Failure
+usfp_great_depression.3 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "europenorthamerica_political_extremism"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    title = usfp_great_depression.3.t
+    desc = usfp_great_depression.3.d
+    flavor = usfp_great_depression.3.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #JE Failure
+    }
+
+    immediate = {
+
+    }
+
+    #radicals
+    option = {
+        name = usfp_great_depression.3.a
+        default_option = yes
+        add_radicals = {
+            value = huge_radicals
+        }
+    }
+
+    #racism
+    option = {
+        name = usfp_great_depression.3.b
+        add_radicals = {
+            value = large_radicals
+        }
+        add_modifier = {
+            name = modifier_grunderkrach_blame_minorities
+            days = normal_modifier_time
+        }
+        every_interest_group = {
+            limit = {
+                law_stance = {
+                    law = law_type:law_ethnostate
+                    value >= approve
+                }
+            }
+            add_modifier = {
+                name = modifier_grunderkrach_blame_minorities_ig_boost
+                days = normal_modifier_time
+            }
+        }
+    }
+}
+#Black Tuesday
+usfp_great_depression.4 = {
+    type = country_event
+    placement = scope:new_york_scope
+    event_image = {
+        video = "unspecific_factory_closed"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/mutual_funds.dds"
+
+    title = usfp_great_depression.4.t
+    desc = usfp_great_depression.4.d
+    flavor = usfp_great_depression.4.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #spawned by Roaring Twenties JE
+    }
+
+    immediate = {
+        set_global_variable = had_black_tuesday
+        s:STATE_NEW_YORK = {
+            region_state:USA = {
+                save_scope_as = new_york_scope
+            }
+        }
+    }
+
+    #which falls faster?
+    option = {
+        name = usfp_great_depression.4.a
+        default_option = yes
+        trigger = {
+            NOR = {
+                has_law_or_variant = law_type:law_laissez_faire
+                has_law_or_variant = law_type:law_cooperative_ownership
+            }
+        }
+        add_investment_pool = {
+            value = money_amount_multiplier_very_large
+            multiply = -10
+        }
+        add_modifier = {
+            name = usfp_great_depression_immediate_modifier
+            years = 1
+            is_decaying = yes
+        }
+    }
+
+    #laisez faire
+    option = {
+        name = usfp_great_depression.4.b
+        trigger = {
+            has_law_or_variant = law_type:law_laissez_faire
+        }
+        highlighted_option = yes
+        every_interest_group = {
+            limit = {
+                law_stance = {
+                    law = law_type:law_laissez_faire
+                    value <= disapprove
+                }
+            }
+            add_modifier = {
+                years = 5
+                name = usfp_great_depression_ig_laissez_faire_negative
+            }
+        }
+        add_investment_pool = {
+            value = money_amount_multiplier_very_large
+            multiply = -15
+        }
+        add_modifier = {
+            name = usfp_great_depression_immediate_modifier
+            years = 1
+            is_decaying = yes
+        }
+    }
+
+    #interventionism
+    option = {
+        name = usfp_great_depression.4.c
+        trigger = {
+            has_law_or_variant = law_type:law_interventionism
+        }
+        every_interest_group = {
+            limit = {
+                law_stance = {
+                    law = law_type:law_laissez_faire
+                    value >= strongly_approve
+                }
+            }
+            add_modifier = {
+                name = usfp_great_depression_ig_intervention_negative
+                years = 5
+            }
+        }
+        add_investment_pool = {
+            value = money_amount_multiplier_very_large
+            multiply = -8
+        }
+        add_treasury = {
+            value = money_amount_multiplier_very_large
+            multiply = -1
+        }
+        add_modifier = {
+            name = usfp_great_depression_immediate_modifier
+            years = 1
+            is_decaying = yes
+            multiplier = 0.5
+        }
+        highlighted_option = yes
+    }
+
+    #coops
+    option = {
+        name = usfp_great_depression.4.g
+        trigger = {
+            has_law_or_variant = law_type:law_cooperative_ownership
+        }
+        add_investment_pool = {
+            value = money_amount_multiplier_very_large
+            multiply = -7.5
+        }
+        add_modifier = {
+            name = usfp_great_depression_immediate_modifier
+            years = 1
+            is_decaying = yes
+            multiplier = 0.5
+        }
+        highlighted_option = yes
+    }
+
+    after = {
+        custom_tooltip = roaring_twenties_ends
+        add_journal_entry = {
+            type = je_usfp_great_depression
+        }
+        show_as_tooltip = {
+            add_modifier = usfp_great_depression_modifier
+        }
+        hidden_effect = {
+            save_scope_as = usa_scope
+            every_country = {
+                limit = {
+                    NOT = {
+                        this = root
+                    }
+                    OR = {
+                        is_country_type = recognized
+                        is_country_type = colonial
+                    }
+                    has_diplomatic_relevance = root
+                }
+                trigger_event = {
+                    id = usfp_great_depression.5
+                    popup = yes
+                }
+            }
+        }
+    }
+}
+#Black Tuesday (Non-USA)
+usfp_great_depression.5 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "unspecific_factory_closed"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/mutual_funds.dds"
+
+    title = usfp_great_depression.5.t
+    desc = usfp_great_depression.5.d
+    flavor = usfp_great_depression.5.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    #uh oh
+    option = {
+        name = usfp_great_depression.5.a
+        default_option = yes
+        add_journal_entry = {
+            type = je_usfp_great_depression
+        }
+        add_investment_pool = {
+            value = money_amount_multiplier_very_large
+            multiply = -10
+        }
+        add_modifier = {
+            name = usfp_great_depression_immediate_modifier
+            years = 1
+            is_decaying = yes
+        }
+    }
+
+    #coops
+    option = {
+        name = usfp_great_depression.5.b
+        highlighted_option = yes
+        trigger = {
+            has_law_or_variant = law_type:law_cooperative_ownership
+            NOT = {
+                has_law_or_variant = law_type:law_isolationism
+            }
+        }
+        add_investment_pool = {
+            value = money_amount_multiplier_very_large
+            multiply = -7.5
+        }
+        add_journal_entry = {
+            type = je_usfp_great_depression
+        }
+        ai_chance = {
+            base = 1000
+        }
+    }
+
+    #unaffected
+    option = {
+        name = usfp_great_depression.5.c
+        highlighted_option = yes
+        trigger = {
+            OR = {
+                has_law_or_variant = law_type:law_command_economy
+                has_law_or_variant = law_type:law_isolationism
+            }
+        }
+        add_loyalists = {
+            strata = middle
+            value = small_radicals
+        }
+        ai_chance = {
+            base = 1000
+        }
+    }
+}
+#Hoovervilles
+usfp_great_depression.6 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "unspecific_vandalized_storefront"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/urbanization.dds"
+
+    title = usfp_great_depression.6.t
+    desc = usfp_great_depression.6.d
+    flavor = usfp_great_depression.6.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        any_political_movement = {
+            movement_is_socialist = yes
+        }
+        any_scope_state = {
+            state_unemployment_rate > 0.10
+            is_incorporated = yes
+            count >= 3
+        }
+        NOT = {
+            has_law_or_variant = law_type:law_council_republic
+        }
+        je:je_usfp_great_depression ?= {
+            journal_entry_age > 3650 # days
+        }
+        usfp_country_is_american = yes
+    }
+
+    immediate = {
+        ordered_political_movement = {
+            limit = {
+                movement_is_socialist = yes
+            }
+            position = 0
+            order_by = political_movement_support
+            save_scope_as = socialist_movement
+        }
+    }
+
+    #sweep
+    option = {
+        name = usfp_great_depression.6.a
+        default_option = yes
+        trigger = {
+            has_institution = institution_police
+        }
+        highlighted_option = yes
+        show_as_unavailable = { always = yes  }
+        add_radicals = {
+            strata = lower
+            value = medium_radicals
+        }
+    }
+
+    #agitate
+    option = {
+        name = usfp_great_depression.6.b
+        scope:socialist_movement = {
+            add_modifier = {
+                name = usfp_hooverville_agitation_modifier
+                years = 5
+            }
+        }
+    }
+
+    after = {
+        every_scope_state = {
+            custom = hooverville_states
+            limit = {
+                state_unemployment_rate > 0.10
+                is_incorporated = yes
+            }
+            add_modifier = {
+                name = usfp_hooverville_state_modifier
+                years = 5
+            }
+        }
+    }
+}
+
+#Bonus Army
+usfp_great_depression.7 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "unspecific_vandalized_storefront"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/currency_standards.dds"
+
+    title = usfp_great_depression.7.t
+    desc = usfp_great_depression.7.d
+    flavor = usfp_great_depression.7.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        has_variable = recently_had_war
+        usfp_country_is_american = yes
+        any_scope_pop = {
+            is_pop_type = soldiers
+            OR = {
+                is_employed = no
+                standard_of_living <= 12
+            }
+        }
+        usfp_has_constitutional_government = yes
+    }
+
+    immediate = {
+
+    }
+
+    #sweep
+    option = {
+        name = usfp_great_depression.7.a
+        default_option = yes
+        add_radicals = {
+            pop_type = soldiers
+            value = medium_radicals
+        }
+        ruler = {
+            add_modifier = {
+                name = usfp_bonus_army_blamed
+                years = 5
+            }
+        }
+    }
+
+    #pay
+    option = {
+        name = usfp_great_depression.7.b
+        add_loyalists = {
+            pop_type = soldiers
+            value = large_radicals
+        }
+        add_treasury = {
+            value = {
+                value = money_amount_multiplier_very_large
+                multiply = -1
+            }
+        }
+    }
+
+    #Roosevelt
+    option = {
+        name = usfp_great_depression.7.c
+        highlighted_option = yes
+        trigger = {
+            ruler = {
+                has_ideology = ideology:ideology_usfp_progressive
+            }
+            institution_investment_level = {
+                institution = institution_social_security
+                value >= 2
+            }
+        }
+        add_loyalists = {
+            pop_type = soldiers
+            value = medium_radicals
+        }
+    }
+
+}

@@ -1,0 +1,341 @@
+﻿je_usfp_roaring_twenties = {
+    icon = "gfx/interface/icons/central_identity_pillars_icons/cultural.dds"
+
+    group = je_group_usfp_political_eras
+
+    widget = {
+        gui = "gui/com_journal_injects/injects.gui"
+        name = "com_journal_entry_progress_bars"
+        container = "com_custom_widget_container_scripted_progress_bars"
+    }
+
+    immediate = {
+        create_com_progress_bar = {
+            progress_bar = usfp_roaring_twenties_optimism_bar
+            index = 0
+            color = green
+        }
+        set_com_progress_bar_levels = {
+            progress_bar = usfp_roaring_twenties_optimism_bar
+            levels = 5
+        }
+        set_com_progress_bar_level_highlight = {
+            progress_bar = usfp_roaring_twenties_optimism_bar
+        }
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+            add_modifier = {
+                name = usfp_roaring_twenties_optimism_tier2_modifier
+            }
+        }
+
+        trigger_event = {
+            id = usfp_great_depression.1
+        }
+        set_variable = {
+            name = roaring_twenties_last_month_gdp
+            value = root.gdp
+        }
+        set_variable = {
+            name = roaring_twenties_this_month_gdp
+            value = root.gdp
+        }
+    }
+
+    is_shown_when_inactive = {
+        NOT = {
+            has_game_rule = usfp_great_depression_disabled
+        }
+        root = c:USA
+        year >= 1900
+        OR = {
+            has_global_variable = flight_discovered
+            has_technology_researched = mass_propaganda
+            has_technology_researched = paved_roads
+            has_technology_researched = radio
+            has_technology_researched = psychoanalysis
+        }
+        NOT = {
+            has_law_or_variant = law_type:law_command_economy
+        }
+    }
+
+    possible = {
+        has_technology_researched = film
+        calc_true_if = {
+            amount >= 4
+            has_technology_researched = military_aviation
+            has_technology_researched = mass_propaganda
+            has_technology_researched = paved_roads
+            has_technology_researched = radio
+            has_technology_researched = psychoanalysis
+        }
+        is_at_war = no
+        any_scope_state = {
+            any_scope_building = {
+                is_building_type = building_urban_center
+                level >= 400
+                has_active_production_method = pm_electric_streetlights
+            }
+            any_scope_building = {
+                is_building_type = building_art_academy
+                has_active_production_method = pm_film_art
+            }
+            any_scope_building = {
+                is_building_type = building_power_plant
+            }
+            turmoil < 0.25
+        }
+        average_sol_for_primary_cultures >= usfp_roaring_twenties_sol_target
+    }
+
+
+    invalid = {
+        OR = {
+            has_law_or_variant = law_type:law_command_economy
+            has_global_variable = had_black_tuesday
+        }
+    }
+
+    on_monthly_pulse = {
+        #
+        effect = {
+            set_variable = {
+                name = roaring_twenties_last_month_gdp
+                value = var:roaring_twenties_this_month_gdp
+            }
+            set_variable = {
+                name = roaring_twenties_this_month_gdp
+                value = root.gdp
+            }
+            je:je_usfp_roaring_twenties ?= {
+                if = {
+                    limit = {
+                        scripted_bar_progress = {
+                            name = usfp_roaring_twenties_optimism_bar
+                            value < 200
+                        }
+                    }
+                    if = {
+                        limit = {
+                            NOT = {
+                                has_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                            }
+                        }
+                        add_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
+                    }
+                } else_if = {
+                    limit = {
+                        scripted_bar_progress = {
+                            name = usfp_roaring_twenties_optimism_bar
+                            value < 400
+                        }
+                    }
+                    if = {
+                        limit = {
+                            NOT = {
+                                has_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                            }
+                        }
+                        remove_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                        add_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
+                    }
+                } else_if = {
+                    limit = {
+                        scripted_bar_progress = {
+                            name = usfp_roaring_twenties_optimism_bar
+                            value < 600
+                        }
+                    }
+                    if = {
+                        limit = {
+                            NOT = {
+                                has_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                            }
+                        }
+                        remove_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                        add_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
+                    }
+                } else_if = {
+                    limit = {
+                        scripted_bar_progress = {
+                            name = usfp_roaring_twenties_optimism_bar
+                            value < 800
+                        }
+                    }
+                    if = {
+                        limit = {
+                            NOT = {
+                                has_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                            }
+                        }
+                        remove_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                        add_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                        remove_modifier = usfp_roaring_twenties_optimism_tier5_modifier
+                    }
+                } else_if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = usfp_roaring_twenties_optimism_tier5_modifier
+                        }
+                    }
+                    remove_modifier = usfp_roaring_twenties_optimism_tier1_modifier
+                    remove_modifier = usfp_roaring_twenties_optimism_tier2_modifier
+                    remove_modifier = usfp_roaring_twenties_optimism_tier3_modifier
+                    remove_modifier = usfp_roaring_twenties_optimism_tier4_modifier
+                    add_modifier = usfp_roaring_twenties_optimism_tier5_modifier
+                }
+
+            }
+        }
+        events = {
+            usfp_great_depression.2
+        }
+    }
+
+    timeout = 5400
+
+    on_timeout = {
+        add_loyalists = {
+            value = medium_radicals
+        }
+    }
+
+    fail = {
+        custom_tooltip = {
+            text = progress_bar_zero
+            scope:journal_entry = {
+                "scripted_bar_progress(usfp_roaring_twenties_optimism_bar)" <= 0
+            }
+        }
+    }
+
+    on_fail = {
+        trigger_event = {
+            id = usfp_great_depression.3
+        }
+    }
+
+    event_outcome_failed_effect_desc = {
+        header = usfp_great_depression.3.a
+        effect = {
+            execute_event_option = {
+                event = usfp_great_depression.3
+                option = 0
+            }
+        }
+    }
+
+    event_outcome_failed_effect_desc = {
+        header = usfp_great_depression.3.b
+        effect = {
+            execute_event_option = {
+                event = usfp_great_depression.3
+                option = 1
+            }
+        }
+    }
+
+    scripted_progress_bar = usfp_roaring_twenties_optimism_bar
+
+
+    weight = 200
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+je_usfp_great_depression = {
+    icon = "gfx/interface/icons/alert_icons/company_losing_prosperity.dds"
+
+    group = je_group_usfp_financial
+
+    immediate = {
+        set_variable = {
+            name = great_depression_unemployment_rate
+            value = usfp_country_incorporated_unemployment_rate
+        }
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+            add_modifier = usfp_great_depression_modifier
+        }
+        set_variable = {
+            name = great_depression_last_month_gdp
+            value = root.gdp
+        }
+        set_variable = {
+            name = great_depression_this_month_gdp
+            value = root.gdp
+        }
+    }
+
+    #Triggered by end of Roaring Twenties
+
+    scripted_button = usfp_mexican_repatriation_button
+
+    invalid = {
+        has_law_or_variant = law_type:law_command_economy
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            set_variable = {
+                name = great_depression_unemployment_rate
+                value = usfp_country_incorporated_unemployment_rate
+            }
+            set_variable = {
+                name = great_depression_last_month_gdp
+                value = var:great_depression_this_month_gdp
+            }
+            set_variable = {
+                name = great_depression_this_month_gdp
+                value = root.gdp
+            }
+        }
+        random_events = {
+            chance_to_happen = 10
+            100 = usfp_great_depression.6
+            100 = usfp_great_depression.7
+        }
+    }
+
+    scripted_progress_bar = usfp_great_depression_recovery_bar
+
+    complete = {
+        custom_tooltip = {
+            text = progress_bar_complete
+            scope:journal_entry = {
+                "scripted_bar_progress(usfp_great_depression_recovery_bar)" >= 5000
+            }
+        }
+        any_scope_state = {
+            filter = {
+                is_incorporated = yes
+            }
+            percent >= 0.75
+            state_unemployment_rate < 0.12
+        }
+        in_default = no
+        NOT = {
+            has_modifier = declared_bankruptcy
+        }
+    }
+
+
+    weight = 200
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}

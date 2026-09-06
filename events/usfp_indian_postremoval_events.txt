@@ -45,6 +45,7 @@ usfp_indian_postremoval.1 = {
 			add_fervor = 5
 		}
 		every_scope_state = {
+			custom = ghost_dance_states
 			limit = {
 				OR = {
 					usfp_american_west_zone = yes
@@ -96,10 +97,17 @@ usfp_indian_postremoval.1 = {
 			add_fervor = 5
 		}
 		every_scope_state = {
+			custom = ghost_dance_states
 			limit = {
 				OR = {
 					usfp_american_west_zone = yes
 					state_region = s:STATE_CALIFORNIA
+				}
+				NOT = {
+					state_region = s:STATE_NEW_MEXICO #navajo rejected the Ghost Dance
+				}
+				any_scope_pop = {
+					religion = rel:animist
 				}
 			}
 			add_modifier = {
@@ -298,6 +306,7 @@ usfp_indian_postremoval.3 = {
 			}
 		}
 		every_scope_state = {
+			custom = ghost_dance_states
 			limit = {
 				OR = {
 					usfp_american_west_zone = yes

@@ -119,3 +119,39 @@ country_enactment_success_chance_law_multicultural_add={
 		ai_value=0
 	}
 }
+
+state_harvest_condition_usfp_dust_storm_impact_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_usfp_dust_storm_duration_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_moderate_rainfall_impact_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_harvest_condition_moderate_rainfall_duration_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}

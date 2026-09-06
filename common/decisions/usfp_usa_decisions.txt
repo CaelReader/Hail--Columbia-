@@ -45,6 +45,7 @@
 			years = 5
 		}
 		every_scope_state = {
+            custom = jim_crow_states
 			limit = {
 				has_modifier = usfp_jim_crow
 			}

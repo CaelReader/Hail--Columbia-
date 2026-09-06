@@ -263,10 +263,22 @@ acw_je_events.1 = {
 		custom_tooltip = {
 			text = je_usfp_underground_railroad_enhanced_effect
 		}
+		add_modifier = {
+			name = usfp_lincolns_volunteers_modifier
+			days = 90
+		}
 	}
 	option = {
 		name = acw_je_events.1.b
 		trigger = { is_player = yes }
+		hidden_effect = {
+			c:USA = {
+				add_modifier = {
+					name = usfp_lincolns_volunteers_modifier
+					days = 90
+				}
+			}
+		}
 		if = {
 			limit = { exists = c:CSA }
 			play_as = c:CSA
@@ -446,12 +458,6 @@ acw_je_events.2 = {
 				months = 1
 			}
 		}
-
-		add_modifier = {
-			name = usfp_post_acw_demobilization_modifier
-			years = 25
-			is_decaying = yes
-		}
 		if = {
 			limit = { 
 				any_scope_character = {
@@ -481,11 +487,6 @@ acw_je_events.2 = {
 		#unfinished
 		add_journal_entry = {
 			type = je_acw_wild_wild_west
-		}
-		add_modifier = {
-			name = usfp_post_acw_demobilization_modifier
-			years = 25
-			is_decaying = yes
 		}
 	}
 
@@ -518,11 +519,6 @@ acw_je_events.2 = {
 		ai_chance = {
 			base = 1000
 		}
-		add_modifier = {
-			name = usfp_post_acw_demobilization_modifier
-			years = 25
-			is_decaying = yes
-		}
 	}
 	#CSA but without banning slavery
 	option = {
@@ -547,11 +543,6 @@ acw_je_events.2 = {
 			value = very_large_radicals
 			pop_type = slaves
 		}
-		add_modifier = {
-			name = usfp_post_acw_demobilization_modifier
-			years = 25
-			is_decaying = yes
-		}
 		if = {
 			limit = { 
 				any_scope_character = {
@@ -572,6 +563,24 @@ acw_je_events.2 = {
 	after = {
 		recalculate_pop_ig_support = yes
 		update_party_support = yes
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_professional_army
+			}
+			add_modifier = {
+				name = usfp_post_acw_demobilization_modifier
+				years = 20
+				is_decaying = yes
+				multiplier = 0.5
+			}
+		}
+		else = {
+			add_modifier = {
+				name = usfp_post_acw_demobilization_modifier
+				years = 20
+				is_decaying = yes
+			}
+		}
 	}
 }
 

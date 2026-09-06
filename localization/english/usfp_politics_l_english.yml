@@ -26,6 +26,7 @@ dismantle_jim_crow: "Dismantle Jim Crow"
 dismantle_jim_crow_desc: "The governments of the South have enforced racial terror on their citizens for far too long. It is time that these Jim Crow laws be nullified."
  dismantle_political_machines: "Dismantle Political Machines"
  dismantle_political_machines_desc: "The Political Machines are a relic of a bygone era. Their existence is no longer tenable."
+ jim_crow_states: "Every [concept_state] with the #Yellow Jim Crow#! modifier"
 
 negotiate_mexican_border: "Negotiate Mexican Border"
 negotiate_mexican_border_desc: "Our previous border treaties with Mexico were ill-defined and ignorant of the geography of the west. It is clear now that the Rio Grande is the most natural boundary between our two nations."
@@ -86,7 +87,7 @@ usfp_pb_syndicalist_international: "Syndicalist International"
 
 rule_usfp_election_chaos: "@america_icon! #yellow Hail, Columbia!#! | Chaotic Elections"
 setting_yes_election_chaos: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_yes_election_chaos_desc #high Yes #!#!#!"
-setting_yes_election_chaos_desc: "Under [GetLawType('law_census_voting').GetName] or [GetLawType('law_universal_suffrage').GetName], [Concept('concept_party', '$concept_parties$')] have a chance to randomly gain or lose [concept_momentum] each week during [Concept('concept_election', '$concept_elections$')]."
+setting_yes_election_chaos_desc: "Under $law_census_voting$ or $law_universal_suffrage$, [Concept('concept_party', '$concept_parties$')] have a chance to randomly gain or lose [concept_momentum] each week during [Concept('concept_election', '$concept_elections$')]."
 setting_no_election_chaos: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_no_election_chaos_desc #high No #!#!#!"
 setting_no_election_chaos_desc: "No weekly [concept_momentum] changes are applied."
 

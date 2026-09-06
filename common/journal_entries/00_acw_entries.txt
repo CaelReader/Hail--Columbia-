@@ -471,7 +471,7 @@ je_acw_war = {
 				}
 				add_modifier = {
 					name = usfp_post_acw_demobilization_modifier
-					years = 25
+					years = 20
 					is_decaying = yes
 				}
 			}

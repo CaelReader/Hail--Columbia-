@@ -1,0 +1,84 @@
+﻿usfp_dust_storm = {
+    trigger = {
+        OR = {
+            has_global_variable = dust_bowl_ongoing
+            any_scope_state = {
+                has_state_trait = state_trait_usfp_dust_bowl_desert
+            }
+        }
+        OR = {
+            is_in_geographic_region = geographic_region_southern_great_plains
+            is_in_geographic_region = geographic_region_central_great_plains
+        }
+    }
+
+    incompatible_with = torrential_rains
+    incompatible_with = moderate_rainfall
+    incompatible_with = flood
+    incompatible_with = hailstorm
+    incompatible_with = optimal_sunlight
+    incompatible_with = frost
+
+
+    range = {
+        integer_range = {
+            min = 1
+            max = 2
+        }
+    }
+
+    duration = {
+        fixed_range = {
+            min = 3
+            max = 6
+        }
+    }
+
+    modifier = {
+        # Throughput
+        building_group_bg_agriculture_throughput_add = -0.10
+        building_group_bg_plantations_throughput_add = -0.10
+        building_group_bg_ranching_throughput_add = -0.10
+        building_subsistence_output_mult = -0.10
+        state_migration_pull_mult = -0.15
+        state_peasants_mortality_mult = 0.005
+        state_farmers_mortality_mult = 0.005
+        state_birth_rate_mult = -0.01
+    }
+
+    intensity = {
+        if = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            fixed_range = {
+                min = 2
+                max = 5
+            }
+        }
+        else_if = {
+            limit = {
+                is_in_geographic_region = geographic_region_central_great_plains
+            }
+            fixed_range = {
+                min = 1
+                max = 3
+            }
+        }
+    }
+
+    chance = {
+        value = 50
+        if = {
+            limit = {
+                is_in_geographic_region = geographic_region_southern_great_plains
+            }
+            multiply = 20.0
+        }
+    }
+
+    color = { 92 69 41 }
+    icon = "gfx/interface/icons/harvest_condition_icons/usfp_dust_storm.dds"
+    map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+    graphics = extreme_winds
+}

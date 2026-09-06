@@ -945,7 +945,7 @@ usfp_manifest_destiny.8 = {
 	}
 }
 
-#Railroad Tycoons
+#Railroad Tycoons: Transcontinental JE Finish
 usfp_manifest_destiny.9 = {
 	type = country_event
 	placement = scope:rail_state_scope
@@ -965,93 +965,15 @@ usfp_manifest_destiny.9 = {
 	duration = 3
 
 	trigger = {
-		NOT = {
-			has_variable = had_railroad_tycoons
-		}
-		root.var:manifest_destiny_var >= 1
-		has_technology_researched = railways
-		#railroads to the west!
-		any_scope_state = {
-			OR = {
-				state_region = s:STATE_CALIFORNIA
-				state_region = s:STATE_WASHINGTON
-				state_region = s:STATE_OREGON
-			}
-		}
-		#need some connection opportunities
-		OR = {
-			#Southern Route
-			AND = {
-				any_scope_state = {
-					state_region = s:STATE_ARIZONA
-				}
-				any_scope_state = {
-					state_region = s:STATE_NEW_MEXICO
-				}
-				any_scope_state = {
-					state_region = s:STATE_TEXAS
-				}
-				any_scope_state = {
-					state_region = s:STATE_LOUISIANA
-				}
-			}
-			#Central Route
-			AND = {
-				any_scope_state = {
-					state_region = s:STATE_NEVADA
-				}
-				any_scope_state = {
-					state_region = s:STATE_UTAH
-				}
-				any_scope_state = {
-					state_region = s:STATE_WYOMING
-				}
-				any_scope_state = {
-					state_region = s:STATE_NEBRASKA
-				}
-				any_scope_state = {
-					state_region = s:STATE_IOWA
-				}
-			}
-			#Northern Route
-			AND = {
-				any_scope_state = {
-					state_region = s:STATE_IDAHO
-				}
-				any_scope_state = {
-					state_region = s:STATE_MONTANA
-				}
-				any_scope_state = {
-					state_region = s:STATE_NORTH_DAKOTA
-				}
-				any_scope_state = {
-					state_region = s:STATE_MINNESOTA
-				}
-			}
-		}
-		#need trains to build trains
-		any_scope_building = {
-			count > 10
-			level > 0
-			is_building_type = building_railway
-			is_under_construction = no
-			private_ownership_fraction > 0
-		}
-		ig:ig_industrialists = {
-			ig_counts_as_marginal = no
-		}
+		#Transcontinental JE Complete
 	}
 
 	immediate = {
-		set_variable = had_railroad_tycoons
 		random_scope_state = {
 			limit = {
 				OR = {
-					state_region = s:STATE_MINNESOTA
-					state_region = s:STATE_IOWA
-					state_region = s:STATE_LOUISIANA
-					state_region = s:STATE_NEBRASKA
-					state_region = s:STATE_WYOMING
+					state_region = s:STATE_CALIFORNIA
+					state_region = s:STATE_WASHINGTON
 				}
 			}
 			save_scope_as = rail_state_scope
@@ -1074,6 +996,17 @@ usfp_manifest_destiny.9 = {
 		ig:ig_industrialists = {
 			set_ig_trait = ig_trait:usfp_ig_trait_rail_tycoons
 		}
+		if = {
+			limit = {
+				NOT = {
+					has_game_rule = usfp_panic_1873_disabled
+				}
+			}
+			add_journal_entry = {
+				type = je_usfp_railroad_bubble
+			}
+			custom_tooltip = railroad_bubble_investment_high
+		}
 	}
 
 	#I hate trains
@@ -1082,6 +1015,23 @@ usfp_manifest_destiny.9 = {
 		add_radicals = {
 			value = small_radicals
 			interest_group = ig:ig_industrialists
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_game_rule = usfp_panic_1873_disabled
+				}
+			}
+			ig:ig_industrialists = {
+				set_ig_trait = ig_trait:usfp_ig_trait_rail_tycoons
+			}
+			add_journal_entry = {
+				type = je_usfp_railroad_bubble
+			}
+			custom_tooltip = {
+				text = railroad_bubble_investment_low
+				set_variable = railroad_bubble_investment_low
+			}
 		}
 	}
 }
@@ -2169,6 +2119,7 @@ usfp_manifest_destiny.19 = {
 	immediate = {
 		cu:usfp_american = {
 			save_scope_as = american_culture
+            set_fervor = 100
 		}
 		cu:anglo_canadian = {
 			save_scope_as = anglo_canadian_culture
@@ -3487,4 +3438,88 @@ usfp_manifest_destiny.31 = {
 
 }
 
-#Californian Revolt
+#Monroe Doctrine Complete
+usfp_manifest_destiny.32 = {
+	type = country_event
+	placement = root
+	event_image = {
+		video = "votp_gunboat_diplomacy"
+	}
+	cooldown = { days = never_fire_again_modifier_time } #Once
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/ai_strategy_icons/usfp_pacific_empire_strategy.dds"
+
+	title = usfp_manifest_destiny.32.t
+	desc = usfp_manifest_destiny.32.d
+	flavor = usfp_manifest_destiny.32.f
+	dlc = dlc_usfp
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+
+	}
+
+
+	#influence
+	option = {
+		name = usfp_manifest_destiny.32.a
+		default_option = yes
+		usfp_manifest_less_destiny_high_effect = yes
+		add_modifier = {
+			name = usfp_monroe_doctrine_complete_influence_modifier
+			years = 10
+		}
+		every_country_in_usfp_western_hemisphere = {
+			limit = {
+				is_subject = no
+			}
+			custom = "every_independent_country_in_western_hemisphere"
+			change_relations = {
+				country = root
+				value = 10
+			}
+			root = {
+				create_unidirectional_truce = {
+					country = prev
+					months = 60
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#hegemony
+	option = {
+		name = usfp_manifest_destiny.32.b
+		usfp_manifest_more_destiny_effect = yes
+		add_modifier = {
+			name = usfp_monroe_doctrine_complete_hegemony_modifier
+			years = 10
+		}
+		every_country_in_usfp_western_hemisphere = {
+			limit = {
+				is_subject = no
+			}
+			custom = "every_independent_country_in_western_hemisphere"
+			change_relations = {
+				country = root
+				value = -30
+			}
+			create_diplomatic_catalyst = {
+				type = catalyst_journal_entry
+				target = root
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+}

@@ -356,23 +356,15 @@
 		#GDP growth
 		if = {
 			limit = {
-				var:panic_1837_last_month_gdp < var:panic_1837_this_month_gdp
+				has_variable = panic_1837_last_month_gdp
 			}
 			add = {
-				value = var:panic_1837_gdp_target
-				divide = var:panic_1837_this_month_gdp
-				subtract = 1
+				value = var:panic_1837_this_month_gdp
+				subtract = var:panic_1837_last_month_gdp
+				divide = var:panic_1837_last_month_gdp
 				multiply = 100
-				max = 3
-				desc = "panic_recovery_gdp_growth"
-			}
-		} else = {
-			subtract = {
-				value = var:panic_1837_last_month_gdp
-				divide = var:panic_1837_this_month_gdp
-				subtract = 1
-				multiply = 100
-				max = 3
+				max = 5
+				min = -5
 				desc = "panic_recovery_gdp_growth"
 			}
 		}
@@ -592,4 +584,296 @@ usfp_philippine_english_progress_bar = {
         }
     }
 
+}
+
+usfp_dust_bowl_desertification_bar = {
+    name = "usfp_dust_bowl_desertification_bar"
+    desc = "usfp_dust_bowl_desertification_bar_desc"
+    is_inverted = yes
+    default_bad = yes
+
+    start_value = 200
+    min_value = 0
+    max_value = 1000
+
+    monthly_progress = {
+        #progress from ongoing dust storms or droughts
+		add = {
+			every_scope_state = {
+				limit = {
+                    is_in_geographic_region = geographic_region_southern_great_plains
+					state_region = {
+                        OR = {
+                            has_harvest_condition = usfp_dust_storm
+                            has_harvest_condition = drought
+                        }
+                    }
+				}
+				add = 1
+			}
+			desc = "dust_bowl_from_droughts_or_dust_storms"
+		}
+        #progress from removed arable land
+        add = {
+            every_scope_state = {
+                limit = {
+                    state_region = {
+                        has_variable = dust_bowl_arable_land_stripped
+                    }
+                }
+                add = state_region.var:dust_bowl_arable_land_stripped
+            }
+            multiply = -1
+            desc = "dust_bowl_from_arable_land_stripped"
+        }
+        #small anti-progress from farming technique development
+		if = {
+			limit = {
+				has_variable = dust_bowl_research_complete
+			}
+			subtract = {
+				value = 1
+				desc = "completed_dust_bowl_research"
+			}
+		}
+        #mounting anti-progress from planting the Shelterbelt
+		if = {
+			limit = {
+				has_variable = dust_bowl_shelterbelt_progress
+			}
+			subtract = {
+				value = var:dust_bowl_shelterbelt_progress
+				desc = "dust_bowl_shelterbelt_progress"
+			}
+		}
+    }
+
+}
+
+usfp_roaring_twenties_optimism_bar = {
+	name = "usfp_roaring_twenties_optimism_bar"
+	desc = "usfp_roaring_twenties_optimism_bar_desc"
+	default_green = yes
+
+	start_value = 300
+	min_value = 0
+	max_value = 1000 #Black Tuesday at 900, ~9 years
+
+	monthly_progress = {
+		#GDP Growth
+		if = {
+			limit = {
+				has_variable = roaring_twenties_last_month_gdp
+			}
+			add = {
+				value = var:roaring_twenties_this_month_gdp
+				subtract = var:roaring_twenties_last_month_gdp
+				divide = var:roaring_twenties_last_month_gdp
+				multiply = 100
+				max = 5
+				min = -5
+				desc = "panic_recovery_gdp_growth"
+			}
+		}
+		#Standard of Living
+		if = {
+			limit = {
+				average_sol_for_primary_cultures >= usfp_roaring_twenties_sol_target
+			}
+			add = {
+				value = average_sol_for_primary_cultures
+				subtract = usfp_roaring_twenties_sol_target
+				add = 1
+				desc = "average_sol_for_primary_cultures"
+			}
+		}
+		#Loyalists
+		add = {
+			value = loyalist_fraction
+			desc = "concept_loyalists"
+		}
+		#Peace
+		if = {
+			limit = {
+				is_at_war = no
+			}
+			add = {
+				value = 0.5
+				desc = "at_peace"
+			}
+		}
+
+		#Turmoil
+		subtract = {
+			value = country_turmoil
+			desc = "concept_turmoil"
+		}
+		#Revolution
+		if = {
+			limit = {
+				any_civil_war = {
+					is_civil_war_type = revolution
+				}
+			}
+			subtract = {
+				value = 10
+				desc = "concept_revolution"
+			}
+		}
+		#War
+		if = {
+			limit = {
+				any_enemy_in_war = {
+					country_rank >= rank_value:major_power
+				}
+			}
+			subtract = 5
+			desc = "war_with_major_or_great_power"
+		}
+	}
+}
+
+usfp_great_depression_recovery_bar = {
+	name = "usfp_great_depression_recovery_bar"
+	desc = "usfp_great_depression_recovery_bar_desc"
+	default_green = yes
+
+	start_value = 0
+	min_value = 0
+	max_value = 5000 #Last 10+ years, past the end of the game normally
+
+	monthly_progress = {
+		#Very Low natural recovery
+		add = {
+			value = 0.2
+			desc = "panic_recovery_natural"
+		}
+		#GDP Growth
+		if = {
+			limit = {
+				has_variable = great_depression_last_month_gdp
+			}
+			add = {
+				value = var:great_depression_this_month_gdp
+				subtract = var:great_depression_last_month_gdp
+				divide = var:great_depression_last_month_gdp
+				multiply = 100
+				max = 5
+				min = -5
+				desc = "panic_recovery_gdp_growth"
+			}
+		}
+		#Low Unemployment
+		if = {
+			limit = {
+				has_variable = great_depression_unemployment_rate
+				var:great_depression_unemployment_rate < 0.10
+			}
+			add = {
+				value = 1
+				subtract = var:great_depression_unemployment_rate
+				multiply = 10
+				desc = "low_unemployment"
+			}
+		}
+		#Social Security
+		if = {
+			limit = {
+				has_institution = institution_social_security
+			}
+			add = {
+				value = institution_investment_level:institution_social_security
+				subtract = 1
+				desc = "institution_social_security"
+			}
+		}
+		#Economy Law
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_laissez_faire
+			}
+			subtract = {
+				value = 1
+				desc = "law_laissez_faire"
+			}
+		} else_if = {
+			limit = {
+				has_law_or_variant = law_type:law_cooperative_ownership
+			}
+			add = {
+				value = 3
+				desc = "law_cooperative_ownership"
+			}
+		}
+		#Turmoil
+		if = {
+			limit = {
+				country_turmoil > 0.20
+			}
+			subtract = {
+				value = country_turmoil
+				multiply = 10
+				desc = "concept_turmoil"
+			}
+		}
+	}
+}
+
+usfp_railroad_boom_bar = {
+	name = "usfp_railroad_boom_bar"
+	desc = "usfp_railroad_boom_bar_desc"
+	default_green = yes
+
+	start_value = 0
+	min_value = 0
+	max_value = 1000
+
+    is_inverted = yes
+
+    monthly_progress = {
+        add = {
+            every_scope_building = {
+                limit = {
+                    is_building_type = building_railway
+                }
+                add = level
+                multiply = 0.2
+            }
+            desc = "total_railways"
+        }
+        add = {
+            every_scope_building = {
+                limit = {
+                    is_building_type = building_railway
+                }
+                add = {
+                    value = 1
+                    subtract = occupancy
+                }
+            }
+            desc = "railway_vacancies"
+        }
+        add = {
+            every_scope_building = {
+                limit = {
+                    is_building_type = building_railway
+                    weekly_profit < 0
+                }
+                add = 1
+            }
+            desc = "unprofitable_railways"
+        }
+        add = {
+            every_scope_state = {
+                limit = {
+                    is_incorporated = yes
+                    has_building = building_railway
+                }
+                add = infrastructure_delta
+            }
+            divide = 10
+            max = 10
+            desc = "total_incorporated_infrastructure_delta"
+        }
+    }
 }
