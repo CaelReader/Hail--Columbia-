@@ -1014,7 +1014,8 @@ usfp_great_depression_modifier = {
 
 usfp_great_depression_immediate_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_bank_negative.dds
-	building_throughput_add = -0.75
+	building_group_bg_heavy_industry_throughput_add = -0.75
+    building_group_bg_light_industry_throughput_add = -0.75
 	building_minimum_wage_mult = -0.75
 	country_loan_interest_rate_mult = 0.15
     country_company_throughput_bonus_add = -0.90

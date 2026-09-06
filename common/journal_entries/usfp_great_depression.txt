@@ -230,6 +230,26 @@
         }
     }
 
+    event_outcome_failed_effect_desc = {
+        header = usfp_great_depression.3.a
+        effect = {
+            execute_event_option = {
+                event = usfp_great_depression.3
+                option = 0
+            }
+        }
+    }
+
+    event_outcome_failed_effect_desc = {
+        header = usfp_great_depression.3.b
+        effect = {
+            execute_event_option = {
+                event = usfp_great_depression.3
+                option = 1
+            }
+        }
+    }
+
     scripted_progress_bar = usfp_roaring_twenties_optimism_bar
 
 

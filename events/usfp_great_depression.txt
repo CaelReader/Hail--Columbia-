@@ -64,7 +64,7 @@ usfp_great_depression.1 = {
 #Economy has reached a permanent plateau
 usfp_great_depression.2 = {
     type = country_event
-    placement = root
+    placement = scope:new_york_scope
     event_image = {
         video = "europenorthamerica_london_center"
     }
@@ -81,13 +81,17 @@ usfp_great_depression.2 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     trigger = {
-        je:je_usfp_roaring_twenties = {
+        je:je_usfp_roaring_twenties ?= {
             "scripted_bar_progress(usfp_roaring_twenties_optimism_bar)" >= 900
         }
     }
 
     immediate = {
-
+        s:STATE_NEW_YORK = {
+            region_state:USA = {
+                save_scope_as = new_york_scope
+            }
+        }
     }
 
     #surely this will not go wrong
@@ -100,7 +104,7 @@ usfp_great_depression.2 = {
         }
         custom_tooltip = {
             text = roaring_twenties_increase_optimism
-            je:usfp_reconstruction_long ?= {
+            je:je_usfp_roaring_twenties ?= {
                 add_progress = {
                     name = usfp_roaring_twenties_optimism_bar
                     value = 25
@@ -181,7 +185,7 @@ usfp_great_depression.3 = {
 #Black Tuesday
 usfp_great_depression.4 = {
     type = country_event
-    placement = root
+    placement = scope:new_york_scope
     event_image = {
         video = "unspecific_factory_closed"
     }
@@ -203,6 +207,11 @@ usfp_great_depression.4 = {
 
     immediate = {
         set_global_variable = had_black_tuesday
+        s:STATE_NEW_YORK = {
+            region_state:USA = {
+                save_scope_as = new_york_scope
+            }
+        }
     }
 
     #which falls faster?
