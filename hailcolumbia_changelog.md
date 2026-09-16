@@ -1014,3 +1014,5 @@ Melting Pot modifier now always allows assimilation to the Primary Culture
     The New Navy JE now hides itself if you are the #1 Naval power
     Fixed crash in Chaotic Elections game rule text
     Smedley Butler now lo longer spawns as an agitator before being recruited as a general (no movement to join)
+
+#9.1 "Hoover"
