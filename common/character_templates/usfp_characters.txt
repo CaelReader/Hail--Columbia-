@@ -86,7 +86,7 @@ usfp_bill_haywood_character_template = {
     religion = rel:atheist
     female = no
     is_agitator = yes
-    ideology = ideology_communist
+    ideology = ideology_anarchist
     interest_group = ig_trade_unions
     birth_date = 1869.2.4
     home_region = STATE_UTAH
@@ -2047,5 +2047,291 @@ usfp_alf_landon  = {
         earliest_usage_date = 1933.1.1
         latest_usage_date = 1936.1.1
         #guaranteed to spawn if possible
+    }
+}
+
+#John Reed, socialist journalist
+usfp_john_reed  = {
+    first_name = John
+    last_name = Reed
+    # dna =
+    home_region = STATE_OREGON
+    historical = yes
+    birth_date = 1887.10.22
+    culture = cu:yankee
+    religion = rel:atheist
+    female = no
+    interest_group = ig_intelligentsia
+    ideology = ideology_communist
+    traits = {
+        alcoholic
+        literary
+        brave
+        persistent
+    }
+    agitator_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1913.1.1
+        latest_usage_date = 1920.1.1
+        chance = 50
+    }
+}
+
+#Louise Bryant, feminist journalist
+usfp_louise_bryant  = {
+    first_name = Louise
+    last_name = Bryant
+    # dna =
+    home_region = STATE_CALIFORNIA
+    historical = yes
+    birth_date = 1885.12.5
+    culture = cu:yankee
+    religion = rel:atheist
+    female = yes
+    interest_group = ig_intelligentsia
+    ideology = ideology_feminist
+    traits = {
+        literary
+        brave
+        charismatic
+    }
+    agitator_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1916.1.1
+        latest_usage_date = 1923.1.1
+        chance = 50
+    }
+}
+
+#Mother Jones, union activist, IWW co-founder
+usfp_mother_jones  = {
+    first_name = Mary
+    last_name = Jones
+    # dna =
+    home_region = STATE_ILLINOIS #born in Cork, ended up in Chicago
+    historical = yes
+    birth_date = 1837.8.1 #Baptized
+    culture = cu:irish
+    religion = rel:catholic
+    female = yes
+    interest_group = ig_trade_unions
+    ideology = ideology_communist
+    traits = {
+        firebrand
+        charismatic
+        grifter
+        persistent
+    }
+    agitator_usage = {
+        country_trigger = {
+            c:USA ?= this
+            has_technology_researched = socialism
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_trade_unions
+        }
+        earliest_usage_date = 1871.1.1
+        latest_usage_date = 1923.1.1
+        chance = 50
+    }
+}
+
+#John L Lewis, head of the CIO
+usfp_alf_landon  = {
+    first_name = John
+    last_name = Lewis
+    # dna =
+    home_region = STATE_IOWA
+    historical = yes
+    birth_date = 1880.2.12
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_trade_unions
+    ideology = ideology_republican_leader
+    traits = {
+        expert_political_operator
+        persistent
+        imperious
+        imposing
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_trade_unions
+        }
+        earliest_usage_date = 1919.1.1
+        latest_usage_date = 1959.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+#Daniel De Leon, Socialist
+usfp_daniel_de_leon  = {
+    first_name = Daniel
+    last_name = De_Leon
+    # dna =
+    home_region = STATE_WEST_INDIES #Curacao
+    historical = yes
+    birth_date = 1854.12.14
+    culture = cu:sephardic
+    religion = rel:catholic
+    female = no
+    interest_group = ig_intelligentsia
+    ideology = ideology_communist
+    traits = {
+        erudite
+        arrogant
+        direct
+        inspirational_orator
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1890.1.1
+        latest_usage_date = 1913.1.1
+        #guaranteed to spawn if possible
+    }
+}
+
+#Victoria Woodhull, Feminist activist
+usfp_victoria_woodhull  = {
+    first_name = Victoria
+    last_name = Woodhull
+    # dna =
+    home_region = STATE_OHIO
+    historical = yes
+    birth_date = 1838.9.23
+    culture = cu:yankee
+    religion = rel:protestant
+    female = yes
+    interest_group = ig_trade_unions #socialist feminist
+    ideology = ideology_feminist
+    traits = {
+        pious
+        experienced_entrepreneur
+        literary
+    }
+    agitator_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_trade_unions
+        }
+        earliest_usage_date = 1870.1.1
+        latest_usage_date = 1877.1.1
+        chance = 50
+    }
+}
+
+#Benjamin Tucker, eclectic individualist anarchist
+usfp_benjamin_tucker  = {
+    first_name = Benjamin
+    last_name = Tucker
+    # dna =
+    home_region = STATE_MASSACHUSETTS #born in Cork, ended up in Chicago
+    historical = yes
+    birth_date = 1854.4.17
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    interest_group = ig_intelligentsia #socialist feminist
+    ideology = ideology_anarchist #sort of
+    traits = {
+        literary
+        direct
+        persistent
+    }
+    agitator_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1876.1.1
+        latest_usage_date = 1939.1.1
+        chance = 25 #irrelevant
+    }
+}
+
+#Lucy Parsons, Anarchist, IWW, Haymarket widow
+usfp_lucy_parsons  = {
+    first_name = Lucy
+    last_name = Parsons
+    # dna =
+    home_region = STATE_ILLINOIS #born in Texas or Virginia
+    historical = yes
+    birth_date = 1851.5.16 #unknown date
+    culture = cu:afro_american
+    religion = rel:protestant
+    female = yes
+    interest_group = ig_intelligentsia
+    ideology = ideology_anarchist
+    traits = {
+        demagogue
+        persistent
+        brave
+        imperious
+    }
+    agitator_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1873.1.1
+        latest_usage_date = 1932.1.1
+        chance = 50
+    }
+}
+
+#Ed Boyce, Western Federation of Miners
+usfp_ed_boyce  = {
+    first_name = Edward
+    last_name = Boyce
+    # dna =
+    home_region = STATE_ULSTER
+    historical = yes
+    birth_date = 1862.11.8
+    culture = cu:irish
+    religion = rel:catholic
+    female = no
+    interest_group = ig_trade_unions
+    ideology = ideology_state_socialist
+    traits = {
+        demagogue
+        basic_entrepreneur
+        brave
+        direct
+    }
+    agitator_usage = {
+        country_trigger = {
+            c:USA ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_trade_unions
+        }
+        earliest_usage_date = 1892.1.1
+        latest_usage_date = 1902.1.1
+        chance = 50
     }
 }
