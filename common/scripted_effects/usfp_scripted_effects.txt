@@ -2538,3 +2538,10 @@ usfp_dust_bowl_remove_arable_land = {
 		add = $LAND$
 	}
 }
+
+usfp_disband_constitutionalist_movement = {
+	custom_tooltip = {
+		text = constitutionalist_movement_disbands
+		set_variable = usfp_ended_constitutionalism
+	}
+}

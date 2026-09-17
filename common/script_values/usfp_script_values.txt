@@ -1024,3 +1024,271 @@ usfp_country_incorporated_unemployment_rate = {
 		}
 	}
 }
+
+usfp_second_revolution_get_americanism_target = {
+	# Primary Cultures Fervor
+	add = {
+		every_primary_culture = {
+			add = culture_current_fervor
+		}
+		desc = "primary_cultures_fervor"
+	}
+	# Completed Superculture
+	if = {
+		limit = {
+			country_has_primary_culture = cu:usfp_american
+		}
+		add = {
+			value = 1
+			desc = "formed_american_superculture"
+		}
+	}
+	# Supremacist and Traditionalist Movement
+	add = {
+		every_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_cultural_majority
+					is_political_movement_type = movement_religious_majority
+				}
+			}
+			add = political_movement_radicalism
+			add = political_movement_support
+		}
+		desc = "supremacist_and_traditionalist_activism_and_support"
+	}
+	# Constitutionalist and Liberal Movement
+	add = {
+		every_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_liberal
+					is_political_movement_type = movement_usfp_american_constitution
+					is_political_movement_type = movement_usfp_progressive
+				}
+			}
+			add = political_movement_radicalism
+			add = political_movement_support
+		}
+		desc = "liberal_progressive_constitutionalist_activism_and_support"
+	}
+	# Fascist and White Movement
+	add = {
+		every_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_fascist
+					is_political_movement_type = movement_usfp_neoconfederate
+					is_political_movement_type = movement_white
+				}
+			}
+			add = political_movement_radicalism
+			add = political_movement_support
+		}
+		desc = "fascist_neoconfederate_white_activism_and_support"
+	}
+	# IGs supporting Presidential Republic
+	add = {
+		every_interest_group = {
+			limit = {
+				ig_counts_as_marginal = no
+				law_enactment_stance = {
+					value >= approve
+					law = law_type:law_presidential_republic
+				}
+			}
+			add = ig_clout
+		}
+		desc = "igs_supporting_presidential_republic"
+	}
+	# American Laws
+	if = {
+		limit = {
+			has_law = law_type:law_usfp_nominal_separation
+		}
+		add = {
+			value = 1
+			desc = "law_usfp_nominal_separation"
+		}
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_interventionism
+		}
+		add = {
+			value = 0.5
+			desc = "law_interventionism"
+		}
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_laissez_faire
+		}
+		add = {
+			value = 1
+			desc = "law_interventionism"
+		}
+	}
+	if = {
+		limit = {
+			has_variable = usfp_second_revolution_supported_americanism
+		}
+		add = {
+			add = institution_investment_level:institution_schools
+			add = institution_investment_level:institution_home_affairs
+			divide = 5
+			min = 0
+			desc = "institutions_support_americanism"
+		}
+	}
+}
+
+usfp_second_revolution_get_antiamericanism_target = {
+	# Anarchist Movement
+	subtract = {
+		every_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_anarchist
+				}
+			}
+			add = political_movement_radicalism
+			add = political_movement_support
+		}
+		desc = "anarchist_movement_activism_and_support"
+	}
+	# Communist Movement
+	subtract = {
+		every_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_communist
+				}
+			}
+			add = political_movement_radicalism
+			add = political_movement_support
+		}
+		desc = "anarchist_movement_activism_and_support"
+	}
+	# Cultural Minority Movements
+	subtract = {
+		every_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_cultural_minority
+					is_political_movement_type = movement_minority_rights
+				}
+			}
+			add = political_movement_radicalism
+			add = political_movement_support
+		}
+		desc = "minority_movements_activism_and_support"
+	}
+	# Non-Primary Culture Pops
+	subtract = {
+		value = 1
+		subtract = {
+			every_primary_culture = {
+				value = "root.culture_percent_country(this)"
+			}
+		}
+		desc = "percent_non_primary_cultures"
+	}
+	# Non-Homeland Incorporated States
+	subtract = {
+		every_scope_state = {
+			limit = {
+				is_incorporated = yes
+				NOT = {
+					is_homeland_of_country_cultures = root
+				}
+			}
+			add = 0.2
+		}
+		desc = "non_homeland_incorporate_states"
+	}
+	# IGs supporting Council Republic
+	subtract = {
+		every_interest_group = {
+			limit = {
+				ig_counts_as_marginal = no
+				law_stance = {
+					value >= approve
+					law = law_type:law_council_republic
+				}
+			}
+			add = ig_clout
+		}
+		desc = "igs_supporting_council_republic"
+	}
+	# Revolutionary Laws
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_state_atheism
+		}
+		subtract = {
+			value = 1
+			desc = "law_state_atheism"
+		}
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_multicultural
+		}
+		subtract = {
+			value = 0.5
+			desc = "law_multicultural"
+		}
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_anarchy
+		}
+		subtract = {
+			value = 1
+			desc = "law_anarchy"
+		}
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_no_colonial_affairs
+		}
+		subtract = {
+			value = 1
+			desc = "law_no_colonial_affairs"
+		}
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_single_party_state
+		}
+		subtract = {
+			value = 1
+			desc = "law_single_party_state"
+		}
+	}
+	if = {
+		limit = {
+			country_has_voting_franchise = no
+			NOT = {
+				has_law_or_variant = law_type:law_anarchy
+			}
+		}
+		subtract = {
+			value = 1
+			desc = "no_voting_franchise"
+		}
+	}
+	if = {
+		limit = {
+			has_variable = usfp_second_revolution_supported_antiamericanism
+		}
+		subtract = {
+			add = institution_investment_level:institution_schools
+			add = institution_investment_level:institution_home_affairs
+			divide = 5
+			min = 0
+			desc = "institutions_support_antiamericanism"
+		}
+	}
+}

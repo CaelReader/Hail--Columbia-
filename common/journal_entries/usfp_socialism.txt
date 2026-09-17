@@ -1,0 +1,50 @@
+﻿#Second Revolution, ending the Constitutionalist movement
+usfp_je_second_revolution = {
+
+    icon = gfx/interface/icons/ai_strategy_icons/revolutionary.dds
+
+    group = je_group_historical_content
+
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+    }
+
+    is_shown_when_inactive = {
+        c:USA ?= root
+        has_technology_researched = socialism
+        any_political_movement = {
+            movement_is_socialist = yes
+        }
+    }
+
+    possible = {
+        has_law_or_variant = law_type:law_council_republic
+        is_revolutionary = no
+        is_secessionist = no
+    }
+
+    complete = {
+        #maintain 75% American/Antiamerican for 5 years
+    }
+
+
+    on_complete = {
+        usfp_disband_constitutionalist_movement = yes
+    }
+
+    fail = {
+        NOT = {
+            has_law_or_variant = law_type:law_council_republic
+        }
+    }
+
+    should_be_pinned_by_default_uninvolved_or_context = no
+
+    weight = 10
+
+    can_revolution_inherit = yes
+}
