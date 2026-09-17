@@ -223,6 +223,10 @@
     }
     s:STATE_NEW_YORK = {
         region_state:USA = {
+			create_building = {
+				building = "building_usfp_eerie_canal"
+				level = 1
+			}
             create_building={
                 building="building_logging_camp"
                 add_ownership={
