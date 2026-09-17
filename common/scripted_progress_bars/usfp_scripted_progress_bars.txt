@@ -881,6 +881,7 @@ usfp_railroad_boom_bar = {
 usfp_second_revolution_bar = {
 	name = "usfp_second_revolution_bar"
 	desc = "usfp_second_revolution_bar_desc"
+	second_desc = "usfp_second_revolution_bar_desc2"
 	double_sided_bad = yes
 
 	start_value = 500

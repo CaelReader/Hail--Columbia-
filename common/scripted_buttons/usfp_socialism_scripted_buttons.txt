@@ -1,0 +1,96 @@
+usfp_second_revolution_destroy_monuments_button = {
+    name = "usfp_second_revolution_destroy_monuments_button"
+    desc = "usfp_second_revolution_destroy_monuments_button_desc"
+
+    visible = {
+        any_scope_building = {
+            OR = {
+                is_building_type = building_white_house
+                is_building_type = building_statue_of_liberty
+            }
+        }
+        NOT = {
+            has_variable = usfp_destroyed_american_monuments
+        }
+    }
+
+    possible = {
+        ruler = {
+            OR = {
+                has_ideology = ideology:ideology_communist
+                has_ideology = ideology:ideology_vanguardist
+                has_ideology = ideology:ideology_anarchist
+                has_ideology = ideology:ideology_nihilist
+            }
+        }
+    }
+
+    effect = {
+        custom_tooltip = {
+            text = "second_revolution_gains_antiamericanism"
+            set_variable = usfp_destroyed_american_monuments
+        }
+        every_scope_state = {
+            limit = {
+                has_building = building_white_house
+            }
+            remove_building = building_white_house
+            add_modifier = {
+                name = usfp_revolutionary_architecture_monuments_destroyed_modifier
+                years = 2
+            }
+        }
+        every_scope_state = {
+            limit = {
+                has_building = building_statue_of_liberty
+            }
+            remove_building = building_statue_of_liberty
+            add_modifier = {
+                name = usfp_revolutionary_architecture_monuments_destroyed_modifier
+                years = 2
+            }
+        }
+        every_scope_state = {
+            limit = {
+                has_modifier = usfp_national_mall_modifier
+            }
+            remove_modifier = usfp_national_mall_modifier
+        }
+        every_primary_culture = {
+            root = {
+                add_radicals = {
+                    value = large_radicals
+                    culture = prev
+                }
+            }
+        }
+        every_interest_group = {
+            limit = {
+                leader = {
+                    has_socialist_ideology = no
+                }
+            }
+            add_modifier = {
+                name = usfp_destroyed_monuments_ig_negative
+                years = 2
+            }
+        }
+        every_political_movement = {
+            limit = {
+                OR = {
+                    is_political_movement_type = movement_cultural_majority
+                    is_political_movement_type = movement_usfp_neoconfederate
+                    is_political_movement_type = movement_usfp_american_constitution
+                }
+            }
+            add_modifier = {
+                name = usfp_destroyed_monuments_movement_modifier
+                years = 2
+            }
+        }
+    }
+
+    ai_chance = {
+        value = 0
+    }
+}

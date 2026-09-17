@@ -1033,6 +1033,17 @@ usfp_second_revolution_get_americanism_target = {
 		}
 		desc = "primary_cultures_fervor"
 	}
+	#Manifest Destiny points
+	if = {
+		limit = {
+			has_journal_entry = usfp_manifest_destiny_main
+			has_variable = manifest_destiny_var
+		}
+		add = {
+			value = var:manifest_destiny_var
+			desc = "manifest_destiny"
+		}
+	}
 	# Completed Superculture
 	if = {
 		limit = {
@@ -1157,7 +1168,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 		}
 		desc = "anarchist_movement_activism_and_support"
 	}
-	# Communist Movement
+	# Communist or Revolutionary Socialist Movement
 	subtract = {
 		every_political_movement = {
 			limit = {
@@ -1289,6 +1300,16 @@ usfp_second_revolution_get_antiamericanism_target = {
 			divide = 5
 			min = 0
 			desc = "institutions_support_antiamericanism"
+		}
+	}
+	#Monument Destruction
+	if = {
+		limit = {
+			has_variable = usfp_destroyed_american_monuments
+		}
+		subtract = {
+			value = 3
+			desc = "destroyed_american_monuments"
 		}
 	}
 }

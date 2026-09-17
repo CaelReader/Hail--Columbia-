@@ -470,3 +470,8 @@ usfp_earthquake_anti_immigrant_modifier = {
 	state_loyalism_increases_cultural_erasure_mult = -0.50
 	state_loyalism_increases_violent_hostility_mult = -0.50
 }
+
+usfp_revolutionary_architecture_monuments_destroyed_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_positive.dds
+	state_construction_mult = 0.05
+}

@@ -5,6 +5,10 @@ usfp_je_second_revolution = {
 
     group = je_group_historical_content
 
+    scripted_button = usfp_second_revolution_destroy_monuments_button
+
+    scripted_progress_bar = usfp_second_revolution_bar
+
     immediate = {
         scope:journal_entry = {
             add_com_dlc_icon = {
@@ -28,7 +32,7 @@ usfp_je_second_revolution = {
     }
 
     complete = {
-        #maintain 75% American/Antiamerican for 5 years
+        #reach 75% American/Antiamerican and then maintain 70% for 5 years
     }
 
 
