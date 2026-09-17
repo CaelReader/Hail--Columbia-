@@ -1,0 +1,111 @@
+﻿building_usfp_brooklyn_bridge = {
+    building_group = bg_monuments
+    icon = "gfx/interface/icons/building_icons/statue_of_liberty.dds"
+    expandable = no
+    downsizeable = no
+    unique = yes
+
+    production_method_groups = {
+        usfp_pmg_base_brooklyn_bridge
+    }
+
+    unlocking_technologies = {
+        steel_frame_buildings
+    }
+
+    required_construction = construction_cost_monument
+
+    potential = {
+        state_region = s:STATE_NEW_YORK
+    }
+
+    ai_value = 10000
+
+    downsizeable = no
+
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_usfp_golden_gate_bridge = {
+    building_group = bg_monuments
+    icon = "gfx/interface/icons/building_icons/statue_of_liberty.dds"
+    expandable = no
+    downsizeable = no
+    unique = yes
+
+    production_method_groups = {
+        usfp_pmg_base_golden_gate_bridge
+    }
+
+    unlocking_technologies = {
+        arc_welding
+    }
+
+    required_construction = construction_cost_monument
+
+    potential = {
+        state_region = s:STATE_CALIFORNIA
+    }
+
+    ai_value = 10000
+
+    downsizeable = no
+
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_usfp_hoover_dam = {
+    building_group = bg_monuments
+    icon = "gfx/interface/icons/building_icons/statue_of_liberty.dds"
+    expandable = no
+    downsizeable = no
+    unique = yes
+
+    production_method_groups = {
+        usfp_pmg_base_hoover_dam
+    }
+
+    unlocking_technologies = {
+        concrete_fortifications
+    }
+
+    required_construction = construction_cost_canal
+
+    potential = {
+        state_region = s:STATE_NEVADA
+    }
+
+    possible = {
+        owner ?= {
+            has_technology_researched = electrical_generation
+        }
+    }
+
+    ai_value = 10000
+
+    downsizeable = no
+
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_usfp_eerie_canal = {
+    building_group = bg_canals
+    icon = "gfx/interface/icons/building_icons/kiel_canal.dds"
+
+    expandable = no
+    downsizeable = no
+    unique = yes
+    required_construction = construction_cost_canal
+
+    ai_value = 100000 # Canals are very important
+
+    potential = {
+        state_region = s:STATE_NEW_YORK
+    }
+
+    production_method_groups = {
+        pmg_usfp_eerie_canal
+    }
+
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_harbour.dds"
+}

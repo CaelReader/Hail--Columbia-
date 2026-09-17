@@ -37,3 +37,25 @@ usfp_pmg_national_parks_media = {
         usfp_pm_national_park_photos
     }
 }
+
+usfp_pmg_base_brooklyn_bridge = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+	is_hidden_when_unavailable = yes
+
+	production_methods = {
+		pm_usfp_brookyln_bridge_cable_cars
+		pm_usfp_brookyln_bridge_roadway
+		pm_monument_prestige_only
+		pm_monument_no_effects
+	}
+}
+
+pmg_usfp_eerie_canal = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_usfp_eerie_canal
+	}
+}
