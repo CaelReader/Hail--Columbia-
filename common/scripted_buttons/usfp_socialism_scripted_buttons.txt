@@ -63,6 +63,7 @@ usfp_second_revolution_destroy_monuments_button = {
                     culture = prev
                 }
             }
+            add_fervor = -15
         }
         every_interest_group = {
             limit = {

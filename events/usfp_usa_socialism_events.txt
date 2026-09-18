@@ -1,0 +1,85 @@
+﻿# Second Revolution Intro Event
+# Second Revolution: American Socialism Conclusion
+# Second Revolution: Internationalism Conclusion
+usfp_usa_socialism.3 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "gfx/event_pictures/votp_agitator_speaking.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/socialism.dds"
+
+    title = usfp_usa_socialism.3.t
+    desc = usfp_usa_socialism.3.d
+    flavor = usfp_usa_socialism.3.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    #add all the cultures
+    option = {
+        name = usfp_usa_socialism.3.a
+        default_option = yes
+        highlighted_option = yes
+        trigger = {
+            has_law_or_variant = law_type:law_multicultural
+        }
+        usfp_radicalize_whites_in_country = {
+            RADICALS = large_radicals
+        }
+        every_scope_culture = {
+            limit = {
+                OR = {
+                    NOT = {
+                        has_discrimination_trait_group = heritage_group_indigenous_american
+                    }
+                    has_discrimination_trait = heritage_usfp_consolidated_native_north_american
+                }
+                NOT = {
+                    is_primary_culture_of = root
+                }
+                any_scope_homeland_state = {
+                    OR = {
+                        is_in_geographic_region = geographic_region_americas
+                        is_in_geographic_region = geographic_region_caribbean_old
+                        state_region = s:STATE_HAWAIIAN_ISLANDS
+                    }
+                    owner ?= root
+                    is_incorporated = yes
+                }
+            }
+            root = {
+                add_primary_culture = prev
+                # add_loyalists = {
+                #     value = large_radicals
+                #     culture = prev
+                # }
+            }
+        }
+        #who watches the watchmen?
+        if = {
+            limit = {
+                any_scope_state = {
+                    count >= 3
+                    state_region = {
+                        is_homeland = cu:vietnamese
+                    }
+                    is_incorporated = yes
+                }
+            }
+            add_primary_culture = cu:vietnamese
+        }
+    }
+
+}

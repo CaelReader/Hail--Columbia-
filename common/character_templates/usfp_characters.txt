@@ -2335,3 +2335,34 @@ usfp_ed_boyce  = {
         chance = 50
     }
 }
+
+#despite everything, it's still you
+usfp_sean_vas_terra  = {
+    first_name = Sean_2
+    last_name = vas_Terra
+    # dna =
+    home_region = STATE_CALIFORNIA
+    # historical = yes
+    age = 28
+    culture = cu:yankee
+    religion = rel:atheist
+    female = no
+    interest_group = ig_intelligentsia
+    ideology = ideology_anarchist
+    traits = {
+        erudite
+        reserved
+        meticulous
+    }
+    agitator_usage = {
+        country_trigger = {
+            owns_entire_state_region = STATE_CALIFORNIA
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1930.1.1
+        latest_usage_date = 2050.1.1
+        chance = 10 #easter egg
+    }
+}
