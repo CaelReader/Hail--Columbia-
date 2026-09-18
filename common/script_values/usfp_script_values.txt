@@ -1031,7 +1031,13 @@ usfp_second_revolution_get_americanism_target = {
 		every_primary_culture = {
 			add = culture_current_fervor
 		}
-		desc = "primary_cultures_fervor"
+        divide = {
+            every_primary_culture = {
+                add = 1
+            }
+        }
+        divide = 100
+		desc = "average_primary_cultures_fervor"
 	}
 	#Manifest Destiny points
 	if = {
@@ -1041,6 +1047,7 @@ usfp_second_revolution_get_americanism_target = {
 		}
 		add = {
 			value = var:manifest_destiny_var
+            divide = 13
 			desc = "manifest_destiny"
 		}
 	}
@@ -1152,6 +1159,7 @@ usfp_second_revolution_get_americanism_target = {
 			desc = "institutions_support_americanism"
 		}
 	}
+    #Consolidation in State and Revolution
 }
 
 usfp_second_revolution_get_antiamericanism_target = {
@@ -1179,7 +1187,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 			add = political_movement_radicalism
 			add = political_movement_support
 		}
-		desc = "anarchist_movement_activism_and_support"
+		desc = "communist_movement_activism_and_support"
 	}
 	# Cultural Minority Movements
 	subtract = {
@@ -1200,7 +1208,8 @@ usfp_second_revolution_get_antiamericanism_target = {
 		value = 1
 		subtract = {
 			every_primary_culture = {
-				value = "root.culture_percent_country(this)"
+                save_temporary_scope_as = primary_culture_scope
+				add = "root.culture_percent_country(scope:primary_culture_scope)"
 			}
 		}
 		desc = "percent_non_primary_cultures"
@@ -1312,4 +1321,5 @@ usfp_second_revolution_get_antiamericanism_target = {
 			desc = "destroyed_american_monuments"
 		}
 	}
+    #Confrontation in State and Revolution
 }
