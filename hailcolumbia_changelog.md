@@ -1015,4 +1015,7 @@ Melting Pot modifier now always allows assimilation to the Primary Culture
     Fixed crash in Chaotic Elections game rule text
     Smedley Butler now lo longer spawns as an agitator before being recruited as a general (no movement to join)
 
-#9.1 "Hoover"
+# 9.1 "Hoover"
+You can now nationalize the railways to end the Railroad bubble
+Fixed Mexican Homelands not being added after completing the Securing the North JE
+Fixed Oregon Treaty not removing claims properly

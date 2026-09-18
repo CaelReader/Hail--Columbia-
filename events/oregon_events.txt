@@ -81,80 +81,8 @@ oregon.2 = {
 			}
 		}
 		show_as_tooltip = {
-			s:STATE_IDAHO = {
-				random_scope_state = {
-					limit = {
-						exists = c:GBR
-						owner = {
-							OR = {
-								c:GBR = THIS
-								is_subject_of = c:GBR
-							}
-						}
-					}
-					set_state_owner = c:USA
-				}
-			}
-			s:STATE_WASHINGTON = {
-				random_scope_state = {
-					limit = {
-						exists = c:GBR
-						owner = {
-							OR = {
-								c:GBR = THIS
-								is_subject_of = c:GBR
-							}
-						}
-					}
-					set_state_owner = c:USA
-				}
-			}
-			s:STATE_OREGON = {
-				random_scope_state = {
-					limit = {
-						exists = c:GBR
-						owner = {
-							OR = {
-								c:GBR = THIS
-								is_subject_of = c:GBR
-							}
-						}
-					}
-					set_state_owner = c:USA
-				}
-			}
+            usfp_oregon_treaty_effect = yes
 		}
-        s:STATE_BRITISH_COLUMBIA = {
-            random_scope_state = {
-                limit = {
-                    OR = {
-                        owner = c:GBR
-                        owner = {
-                            is_subject_of = c:GBR
-                        }
-                    }
-
-                }
-                owner = {
-                    save_scope_as = oregon_holder_scope
-                }
-            }
-        }
-        c:GBR = {
-            if = {
-                limit = {
-                    any_subject_or_below = {
-                        has_state_in_state_region = STATE_ALBERTA
-                    }
-                }
-                random_subject_or_below = {
-                    limit = {
-                        has_state_in_state_region = STATE_ALBERTA
-                    }
-                    annex_with_incorporation = scope:oregon_holder_scope
-                }
-            }
-        }
         hidden_effect = {
             if = {
                 limit = {
@@ -295,54 +223,7 @@ oregon.3 = {
 	option = {
 		name = oregon.3.a
 		default_option = yes
-		s:STATE_IDAHO = {
-			random_scope_state = {
-				limit = {
-					exists = c:GBR
-					owner = {
-						OR = {
-							c:GBR = THIS
-							is_subject_of = c:GBR
-						}
-					}
-				}
-				set_state_owner = c:USA
-			}
-			remove_claim = scope:oregon_holder_scope
-			add_claim = c:USA
-		}
-		s:STATE_WASHINGTON = {
-			random_scope_state = {
-				limit = {
-					exists = c:GBR
-					owner = {
-						OR = {
-							c:GBR = THIS
-							is_subject_of = c:GBR
-						}
-					}
-				}
-				set_state_owner = c:USA
-			}
-			remove_claim = scope:oregon_holder_scope
-			add_claim = c:USA
-		}
-		s:STATE_OREGON = {
-			random_scope_state = {
-				limit = {
-					exists = c:GBR
-					owner = {
-						OR = {
-							c:GBR = THIS
-							is_subject_of = c:GBR
-						}
-					}
-				}
-				set_state_owner = c:USA
-			}
-			remove_claim = scope:oregon_holder_scope
-			add_claim = c:USA
-		}
+		usfp_oregon_treaty_effect = yes
 	}
 }
 
