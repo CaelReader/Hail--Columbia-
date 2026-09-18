@@ -40,6 +40,9 @@ usfp_usa_socialism.3 = {
         }
         every_scope_culture = {
             limit = {
+                NOT = {
+                    this = cu:dixie
+                }
                 OR = {
                     NOT = {
                         has_discrimination_trait_group = heritage_group_indigenous_american
