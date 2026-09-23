@@ -242,7 +242,7 @@ pm_usfp_brookyln_bridge_roadway = {
 	}
 }
 
-pm_usfp_eerie_canal = {
+pm_usfp_erie_canal = {
 	texture = "gfx/interface/icons/production_method_icons/canals.dds"
 
 	country_modifiers = {
