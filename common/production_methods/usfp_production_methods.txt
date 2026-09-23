@@ -200,7 +200,7 @@ usfp_pm_national_park_photos = {
 }
 
 pm_usfp_brookyln_bridge_cable_cars = {
-	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+	texture = "gfx/interface/icons/production_method_icons/trains_electric.dds"
 
 	is_hidden_when_unavailable = yes
 
@@ -219,7 +219,7 @@ pm_usfp_brookyln_bridge_cable_cars = {
 }
 
 pm_usfp_brookyln_bridge_roadway = {
-	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+	texture = "gfx/interface/icons/production_method_icons/automobiles.dds"
 
 	is_hidden_when_unavailable = yes
 
@@ -242,7 +242,7 @@ pm_usfp_brookyln_bridge_roadway = {
 	}
 }
 
-pm_usfp_eerie_canal = {
+pm_usfp_erie_canal = {
 	texture = "gfx/interface/icons/production_method_icons/canals.dds"
 
 	country_modifiers = {
@@ -259,4 +259,23 @@ pm_usfp_eerie_canal = {
 			state_market_access_price_impact = 0.05
 		}
 	}
+}
+
+
+pm_usfp_hoover_dam = {
+    texture = "gfx/interface/icons/production_method_icons/hydroelectric_plant.dds"
+
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_input_engines_add = 50 # 600
+            goods_output_electricity_add = 400
+        }
+
+        level_scaled = {
+            building_employment_laborers_add = 200
+            building_employment_machinists_add = 600
+            building_employment_engineers_add = 200
+        }
+    }
 }

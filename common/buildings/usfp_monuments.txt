@@ -1,6 +1,6 @@
 ﻿building_usfp_brooklyn_bridge = {
     building_group = bg_monuments
-    icon = "gfx/interface/icons/building_icons/statue_of_liberty.dds"
+    icon = "gfx/interface/icons/building_icons/brooklyn_bridge.dds"
     expandable = no
     downsizeable = no
     unique = yes
@@ -28,7 +28,7 @@
 
 building_usfp_golden_gate_bridge = {
     building_group = bg_monuments
-    icon = "gfx/interface/icons/building_icons/statue_of_liberty.dds"
+    icon = "gfx/interface/icons/building_icons/golden_gate_bridge.dds"
     expandable = no
     downsizeable = no
     unique = yes
@@ -56,7 +56,7 @@ building_usfp_golden_gate_bridge = {
 
 building_usfp_hoover_dam = {
     building_group = bg_monuments
-    icon = "gfx/interface/icons/building_icons/statue_of_liberty.dds"
+    icon = "gfx/interface/icons/building_icons/hoover_dam.dds"
     expandable = no
     downsizeable = no
     unique = yes
@@ -88,7 +88,7 @@ building_usfp_hoover_dam = {
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 }
 
-building_usfp_eerie_canal = {
+building_usfp_erie_canal = {
     building_group = bg_canals
     icon = "gfx/interface/icons/building_icons/kiel_canal.dds"
 
@@ -104,7 +104,7 @@ building_usfp_eerie_canal = {
     }
 
     production_method_groups = {
-        pmg_usfp_eerie_canal
+        pmg_usfp_erie_canal
     }
 
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_harbour.dds"

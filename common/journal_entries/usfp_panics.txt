@@ -115,6 +115,8 @@ je_usfp_railroad_bubble = {
 
 	scripted_progress_bar = usfp_railroad_boom_bar
 
+	scripted_button = usfp_nationalize_railroads_button
+
 	timeout = 7200 #20 years
 
 	on_timeout = {
@@ -128,6 +130,7 @@ je_usfp_railroad_bubble = {
 		OR = {
 			has_law_or_variant = law_type:law_command_economy
 			has_law_or_variant = law_type:law_cooperative_ownership
+			has_variable = usfp_nationalized_railroads
 		}
 	}
 

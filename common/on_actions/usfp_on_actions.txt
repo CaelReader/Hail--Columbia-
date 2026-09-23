@@ -5,6 +5,7 @@
 		usfp_monthly_pulse
 		usfp_arctic_isolation
         usfp_american_superculture_action
+        usfp_mexican_homelands_pulse
 	}
 }
 
@@ -210,6 +211,84 @@ usfp_american_superculture_action = {
     }
 }
 
+usfp_mexican_homelands_pulse = {
+    trigger = {
+        c:MEX ?= root
+        NOT = {
+            has_journal_entry = usfp_je_mexican_north
+        }
+    }
+    effect = {
+        if = {
+            limit = {
+                any_scope_state = {
+                    OR = {
+                        usfp_mexican_cession_trigger = yes
+                        state_region = s:STATE_COLORADO
+                    }
+                    NOT = {
+                        cu:mexican = {
+                            has_homeland = prev
+                        }
+                    }
+                    is_split_state = no
+                    state_population > 60000
+                    religion_percent_state = {
+                        target = rel:animist
+                        value < 0.3
+                    }
+                    any_scope_pop = {
+                        culture = {
+                            shares_heritage_trait_group_with_any_primary_culture =  root
+                        }
+                    }
+                }
+            }
+            ordered_scope_state = {
+                position = 0
+                limit = {
+                    OR = {
+                        usfp_mexican_cession_trigger = yes
+                        state_region = s:STATE_COLORADO
+                    }
+                    NOT = {
+                        cu:mexican = {
+                            has_homeland = prev
+                        }
+                    }
+                    is_split_state = no
+                    state_population > 60000
+                    religion_percent_state = {
+                        target = rel:animist
+                        value < 0.3
+                    }
+                    any_scope_pop = {
+                        culture = {
+                            shares_heritage_trait_group_with_any_primary_culture =  root
+                        }
+                    }
+                }
+                order_by = state_population
+                state_region = {
+                    add_homeland = cu:mexican
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_cultural_community = cu:mexican
+                        }
+                    }
+                    add_cultural_community = cu:mexican
+                }
+                cu:mexican = {
+                    save_scope_as = new_homeland_culture
+                }
+                save_scope_as = new_homeland_state
+            }
+            post_notification = usfp_new_mexican_homeland
+        }
+    }
+}
 
 on_election_campaign_start = {
 	on_actions = {

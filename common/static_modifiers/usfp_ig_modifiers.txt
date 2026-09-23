@@ -500,3 +500,13 @@ usfp_destroyed_monuments_ig_negative = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	interest_group_approval_add = -4
 }
+
+usfp_ig_nationalized_railways_negative_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_negative.dds
+	interest_group_approval_add = -5
+}
+
+usfp_ig_nationalized_railways_positive_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
+	interest_group_approval_add = 2
+}

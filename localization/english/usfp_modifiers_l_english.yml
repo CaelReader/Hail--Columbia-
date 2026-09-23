@@ -397,6 +397,8 @@ country_enactment_success_chance_law_multicultural_add_desc: "A flat percentage 
  usfp_monroe_doctrine_complete_hegemony_modifier: "Our Hemisphere"
  usfp_monroe_doctrine_complete_influence_modifier: "Free and Independent Continent"
  usfp_bonus_army_blamed: "Violence Against Veterans"
+ usfp_ig_nationalized_railways_negative_modifier: "Nationalized Railways"
+ usfp_ig_nationalized_railways_positive_modifier: "Nationalized Railways"
  usfp_destroyed_monuments_ig_negative: "Heritage Demolished"
  usfp_destroyed_monuments_movement_modifier: "Heritage Demolished"
  usfp_revolutionary_architecture_monuments_destroyed_modifier: "Revolutionary Architecture"

@@ -51,11 +51,36 @@ usfp_pmg_base_brooklyn_bridge = {
 	}
 }
 
-pmg_usfp_eerie_canal = {
+pmg_usfp_erie_canal = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_usfp_eerie_canal
+		pm_usfp_erie_canal
 	}
+}
+
+usfp_pmg_base_hoover_dam = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+    ai_selection = most_productive
+    is_hidden_when_unavailable = yes
+
+    production_methods = {
+        pm_usfp_hoover_dam
+        pm_monument_prestige_only
+        pm_monument_no_effects
+    }
+}
+
+
+usfp_pmg_base_golden_gate_bridge = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+    ai_selection = most_productive
+    is_hidden_when_unavailable = yes
+
+    production_methods = {
+        pm_usfp_brookyln_bridge_roadway
+        pm_monument_prestige_only
+        pm_monument_no_effects
+    }
 }
