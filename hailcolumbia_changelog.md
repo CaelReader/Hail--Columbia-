@@ -1016,6 +1016,10 @@ Melting Pot modifier now always allows assimilation to the Primary Culture
     Smedley Butler now lo longer spawns as an agitator before being recruited as a general (no movement to join)
 
 # 9.1 "Hoover"
+New monument buildings: Eerie Canal (built on game start), Brooklyn Bridge, Golden Gate Bridge, Boulder Dam
+Great Lakes state trait now gives +5% MAPI
 You can now nationalize the railways to end the Railroad bubble
+Updated Transcontinental route triggers to allow you to plan a route that you haven't yet colonized
 Fixed Mexican Homelands not being added after completing the Securing the North JE
 Fixed Oregon Treaty not removing claims properly
+

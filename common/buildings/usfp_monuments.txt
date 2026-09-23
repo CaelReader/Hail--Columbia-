@@ -1,6 +1,6 @@
 ﻿building_usfp_brooklyn_bridge = {
     building_group = bg_monuments
-    icon = "gfx/interface/icons/building_icons/statue_of_liberty.dds"
+    icon = "gfx/interface/icons/building_icons/brooklyn_bridge.dds"
     expandable = no
     downsizeable = no
     unique = yes
@@ -28,7 +28,7 @@
 
 building_usfp_golden_gate_bridge = {
     building_group = bg_monuments
-    icon = "gfx/interface/icons/building_icons/statue_of_liberty.dds"
+    icon = "gfx/interface/icons/building_icons/golden_gate_bridge.dds"
     expandable = no
     downsizeable = no
     unique = yes
@@ -56,7 +56,7 @@ building_usfp_golden_gate_bridge = {
 
 building_usfp_hoover_dam = {
     building_group = bg_monuments
-    icon = "gfx/interface/icons/building_icons/statue_of_liberty.dds"
+    icon = "gfx/interface/icons/building_icons/hoover_dam.dds"
     expandable = no
     downsizeable = no
     unique = yes

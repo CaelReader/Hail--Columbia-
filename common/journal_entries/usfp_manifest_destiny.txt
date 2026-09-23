@@ -1118,17 +1118,34 @@ REPLACE_OR_CREATE:je_trans_continental_railway = {
 
 	is_shown_when_inactive = {
 		NOT = { has_global_variable = trans_continental_done }
-		owns_entire_state_region = STATE_NEW_YORK
-		has_state_in_state_region = STATE_NEBRASKA
 	}
 
 	possible = {
 		has_technology_researched = railways
-		OR = {
-			usfp_transcontinental_northern_route_open = yes
-			usfp_transcontinental_central_route_open = yes
-			usfp_transcontinental_southern_route_open = yes
-		}
+        OR = {
+            calc_true_if = {
+                amount >= 2
+                usfp_transcontinental_northern_route_open = yes
+                usfp_transcontinental_central_route_open = yes
+                usfp_transcontinental_southern_route_open = yes
+            }
+            #in case you don't take the Mexican Cession
+            hidden_trigger = {
+                AND = {
+                    owns_entire_state_region = STATE_WASHINGTON
+                    s:STATE_CALIFORNIA = {
+                        NOT = {
+                            any_scope_state = {
+                                owner ?= {
+                                    is_country_type = decentralized
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        is_at_war = no
 	}
 
 	immediate = {
