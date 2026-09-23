@@ -385,13 +385,12 @@ usfp_usa_labor.4 = {
 	dlc = dlc_usfp
 	duration = 3
 
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
 	trigger = {
 		exists = c:USA
 		c:USA = root
-		NOT = {
-			has_variable = had_great_railroad_strike
-		}
-		game_date > 1877.6.1
+		has_modifier = usfp_panic_1873_modifier
 		NOR = {
 			has_law_or_variant = law_type:law_worker_protections
 			has_law_or_variant = law_type:law_old_age_pension
@@ -410,7 +409,6 @@ usfp_usa_labor.4 = {
 	}
 
 	immediate = {
-		set_variable = had_great_railroad_strike
 		random_scope_state = {
 			limit = {
 				OR = {

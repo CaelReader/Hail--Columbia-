@@ -1,0 +1,112 @@
+﻿#Coal Wars
+usfp_je_coal_wars = {
+
+    icon = gfx/interface/icons/goods_icons/coal.dds
+
+    group = je_group_historical_content
+
+
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+    }
+
+    is_shown_when_inactive = {
+        c:USA ?= root
+        has_technology_researched = socialism
+        any_political_movement = {
+            movement_is_socialist = yes
+        }
+        any_scope_state = {
+            is_in_geographic_region = geographic_region_atlantic_coast
+            has_building = building_coal_mine
+        }
+        NAND = {
+            has_law_or_variant = law_type:law_worker_protections
+            institution_investment_level = {
+                institution = institution_workplace_safety
+                value < 3
+            }
+        }
+        ig:ig_trade_unions ?= {
+            ig_counts_as_marginal = no
+            ig_clout >= 0.1
+        }
+        ig:ig_industrialists ?= {
+            ig_counts_as_marginal = no
+        }
+    }
+
+    possible = {
+        any_scope_state = {
+            #West Virginia should be prioritized as the center of the wars but not guaranteed
+            has_building = building_coal_mine
+            is_incorporated = yes
+            any_scope_pop = {
+                pop_employment_building = building_coal_mine
+                OR = {
+                    is_pop_type = laborers
+                    is_pop_type = machinists
+                }
+                OR = {
+                    pop_radical_fraction >= 0.15
+                    standard_of_living < 14
+                }
+            }
+        }
+        ig:ig_trade_unions ?= {
+            ig_counts_as_marginal = no
+        }
+        any_political_movement = {
+            OR = {
+                movement_is_socialist = yes
+                is_political_movement_type = movement_labor
+            }
+        }
+    }
+
+    #workplace safety and the end of company towns
+    complete = {
+        OR = {
+            AND = {
+                has_law_or_variant = law_type:law_regulatory_bodies
+                institution_investment_level = {
+                    institution = institution_workplace_safety
+                    value >= 5
+                }
+            }
+            AND = {
+                has_law_or_variant = law_type:law_worker_protections
+                institution_investment_level = {
+                    institution = institution_workplace_safety
+                    value >= 3
+                }
+            }
+        }
+    }
+
+
+    on_complete = {
+
+    }
+
+    #Crushing of the strikes and the TUs
+    fail = {
+
+    }
+
+    #Council Republic
+    invalid = {
+        has_radical_leftist_economy = yes
+    }
+
+
+    should_be_pinned_by_default_uninvolved_or_context = yes
+
+    weight = 100
+
+    can_revolution_inherit = yes
+}
