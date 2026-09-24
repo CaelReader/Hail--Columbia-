@@ -6,6 +6,8 @@ usfp_je_second_revolution = {
     group = je_group_historical_content
 
     scripted_button = usfp_second_revolution_destroy_monuments_button
+    scripted_button = usfp_second_revolution_suppress_dixie_button
+    scripted_button = usfp_second_revolution_complete_reconstruction_button
 
     scripted_progress_bar = usfp_second_revolution_bar
 

@@ -135,7 +135,7 @@
 
 	#United American Syndicates, regular or cybernetic council republic
 	dynamic_country_name = {
-		name = dyn_c_usp_united_american_syndicates
+		name = dync_c_usfp_united_workers_republics_of_america
 		adjective = USA_ADJ
 		
 		is_main_tag_only = yes
