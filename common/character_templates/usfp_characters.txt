@@ -2125,7 +2125,7 @@ usfp_mother_jones  = {
     religion = rel:catholic
     female = yes
     interest_group = ig_trade_unions
-    ideology = ideology_communist
+    ideology = ideology_anarchist
     traits = {
         firebrand
         charismatic
@@ -2252,7 +2252,7 @@ usfp_benjamin_tucker  = {
     culture = cu:yankee
     religion = rel:protestant
     female = no
-    interest_group = ig_intelligentsia #socialist feminist
+    interest_group = ig_intelligentsia
     ideology = ideology_anarchist #sort of
     traits = {
         literary
@@ -2348,7 +2348,7 @@ usfp_sean_vas_terra  = {
     religion = rel:atheist
     female = no
     interest_group = ig_intelligentsia
-    ideology = ideology_anarchist
+    ideology = ideology_anarchist#close enough
     traits = {
         erudite
         reserved
