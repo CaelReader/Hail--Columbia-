@@ -12,6 +12,7 @@ usfp_je_coal_wars = {
                 dlc = dlc_usfp
             }
         }
+        trigger_event = usfp_coal_wars.1
     }
 
     is_shown_when_inactive = {
@@ -41,6 +42,7 @@ usfp_je_coal_wars = {
     }
 
     possible = {
+        has_technology_researched = political_agitation
         any_scope_state = {
             #West Virginia should be prioritized as the center of the wars but not guaranteed
             has_building = building_coal_mine
@@ -85,17 +87,26 @@ usfp_je_coal_wars = {
                     value >= 3
                 }
             }
+            #Corporatized Unions variant
+            AND = {
+                has_law_or_variant = law_type:law_corporatized_unions
+                has_institution = institution_workplace_safety
+            }
         }
     }
 
 
     on_complete = {
-
+        trigger_event = usfp_coal_wars.7
     }
 
     #Crushing of the strikes and the TUs
     fail = {
 
+    }
+
+    on_fail = {
+        trigger_event = usfp_coal_wars.8
     }
 
     #Council Republic

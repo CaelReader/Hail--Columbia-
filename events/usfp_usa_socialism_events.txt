@@ -1,5 +1,74 @@
-﻿# Second Revolution Intro Event
+﻿namespace = usfp_usa_socialism
+# Second Revolution Intro Event
+usfp_usa_socialism.1 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "gfx/event_pictures/votp_agitator_speaking.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/socialism.dds"
+
+    title = usfp_usa_socialism.1.t
+    desc = usfp_usa_socialism.1.d
+    flavor = usfp_usa_socialism.1.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    option = {
+        name = usfp_usa_socialism.1.a
+        default_option = yes
+
+    }
+
+}
+
 # Second Revolution: American Socialism Conclusion
+usfp_usa_socialism.2 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "gfx/event_pictures/votp_agitator_speaking.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/socialism.dds"
+
+    title = usfp_usa_socialism.2.t
+    desc = usfp_usa_socialism.2.d
+    flavor = usfp_usa_socialism.2.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    option = {
+        name = usfp_usa_socialism.2.a
+        default_option = yes
+
+    }
+
+}
+
 # Second Revolution: Internationalism Conclusion
 usfp_usa_socialism.3 = {
     type = country_event

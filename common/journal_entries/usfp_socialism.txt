@@ -11,11 +11,23 @@ usfp_je_second_revolution = {
 
     scripted_progress_bar = usfp_second_revolution_bar
 
+    widget = {
+        gui = "gui/com_journal_injects/injects.gui"
+        name = "com_journal_entry_progress_bars"
+        container = "com_custom_widget_container_scripted_progress_bars"
+    }
+
     immediate = {
         scope:journal_entry = {
             add_com_dlc_icon = {
                 dlc = dlc_usfp
             }
+        }
+        create_com_progress_bar_with_target = {
+            progress_bar = usfp_second_revolution_bar
+            index = 0
+            target_type = gold_bar							#style of target marker
+            target_value = spb_com_progress_in_style_target
         }
     }
 
@@ -24,6 +36,12 @@ usfp_je_second_revolution = {
         has_technology_researched = socialism
         any_political_movement = {
             movement_is_socialist = yes
+        }
+    }
+
+    on_monthly_pulse = {
+        effect = {
+
         }
     }
 

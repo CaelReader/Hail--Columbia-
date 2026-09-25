@@ -1,0 +1,288 @@
+namespace = usfp_coal_wars
+
+# JE start: United Mine Workers
+usfp_coal_wars.1 = {
+    type = country_event
+    placement = scope:coal_mine_state
+    event_image = {
+        video = "gfx/event_pictures/ip4_mining_scene.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/socialism.dds"
+
+    title = usfp_coal_wars.1.t
+    desc = usfp_coal_wars.1.d
+    flavor = usfp_coal_wars.1.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+        ordered_scope_state = {
+            limit = {
+                has_building = building_coal_mine
+            }
+            order_by = "ig_state_pol_strength_share(scope:trade_unions_ig)"
+        }
+        save_scope_as = coal_mine_state
+    }
+
+    option = {
+        name = usfp_coal_wars.1.a
+        default_option = yes
+
+    }
+}
+
+# Mother Jones Spawn
+usfp_coal_wars.2 = {
+    type = country_event
+    placement = root
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    gui_window = event_window_1char_tabloid
+    left_icon = scope:mother_jones_scope
+    on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+    title = usfp_coal_wars.2.t
+    desc = usfp_coal_wars.2.d
+    flavor = usfp_coal_wars.2.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        NOT = {
+            any_scope_character = {
+                has_template = usfp_mother_jones
+            }
+        }
+        year >= 1871
+    }
+
+    immediate = {
+        create_character = {
+            template = usfp_mother_jones
+            is_agitator = yes
+            save_scope_as = mother_jones_scope
+        }
+    }
+
+    option = {
+        name = usfp_coal_wars.2.a
+        default_option = yes
+
+    }
+}
+
+# Matewan Massacre
+usfp_coal_wars.3 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "gfx/event_pictures/southamerica_public_figure_assassination.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+    title = usfp_coal_wars.3.t
+    desc = usfp_coal_wars.3.d
+    flavor = usfp_coal_wars.3.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    option = {
+        name = usfp_coal_wars.3.a
+        default_option = yes
+
+    }
+}
+
+# Battle of Blair Mountain
+usfp_coal_wars.4 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+    title = usfp_coal_wars.4.t
+    desc = usfp_coal_wars.4.d
+    flavor = usfp_coal_wars.4.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    option = {
+        name = usfp_coal_wars.4.a
+        default_option = yes
+
+    }
+}
+
+# Ludlow Massacre
+usfp_coal_wars.5 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+    title = usfp_coal_wars.5.t
+    desc = usfp_coal_wars.5.d
+    flavor = usfp_coal_wars.5.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    option = {
+        name = usfp_coal_wars.5.a
+        default_option = yes
+
+    }
+}
+
+# Great Coal Strike
+usfp_coal_wars.6 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "gfx/event_pictures/votp_agitator_speaking.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/labor_movement.dds"
+
+    title = usfp_coal_wars.6.t
+    desc = usfp_coal_wars.6.d
+    flavor = usfp_coal_wars.6.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    option = {
+        name = usfp_coal_wars.6.a
+        default_option = yes
+
+    }
+}
+
+# Conclusion: Union Victory
+usfp_coal_wars.7 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "gfx/event_pictures/southamerica_factory_opening.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/labor_movement.dds"
+
+    title = usfp_coal_wars.7.t
+    desc = usfp_coal_wars.7.d
+    flavor = usfp_coal_wars.7.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    option = {
+        name = usfp_coal_wars.7.a
+        default_option = yes
+
+    }
+}
+
+# Conclusion: Union Defeated
+usfp_coal_wars.8 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "gfx/event_pictures/votp_cops_march.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/corporate_management.dds"
+
+    title = usfp_coal_wars.8.t
+    desc = usfp_coal_wars.8.d
+    flavor = usfp_coal_wars.8.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    option = {
+        name = usfp_coal_wars.8.a
+        default_option = yes
+
+    }
+}

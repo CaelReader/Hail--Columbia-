@@ -1164,7 +1164,7 @@ usfp_second_revolution_get_americanism_target = {
 
 usfp_second_revolution_get_antiamericanism_target = {
 	# Anarchist Movement
-	subtract = {
+	add = {
 		every_political_movement = {
 			limit = {
 				OR = {
@@ -1177,7 +1177,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 		desc = "anarchist_movement_activism_and_support"
 	}
 	# Communist or Revolutionary Socialist Movement
-	subtract = {
+	add = {
 		every_political_movement = {
 			limit = {
 				OR = {
@@ -1190,7 +1190,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 		desc = "communist_movement_activism_and_support"
 	}
 	# Cultural Minority Movements
-	subtract = {
+	add = {
 		every_political_movement = {
 			limit = {
 				OR = {
@@ -1204,7 +1204,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 		desc = "minority_movements_activism_and_support"
 	}
 	# Non-Primary Culture Pops
-	subtract = {
+	add = {
 		value = 1
 		subtract = {
 			every_primary_culture = {
@@ -1215,7 +1215,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 		desc = "percent_non_primary_cultures"
 	}
 	# Non-Homeland Incorporated States
-	subtract = {
+	add = {
 		every_scope_state = {
 			limit = {
 				is_incorporated = yes
@@ -1228,7 +1228,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 		desc = "non_homeland_incorporate_states"
 	}
 	# IGs supporting Council Republic
-	subtract = {
+	add = {
 		every_interest_group = {
 			limit = {
 				ig_counts_as_marginal = no
@@ -1246,7 +1246,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 		limit = {
 			has_law_or_variant = law_type:law_state_atheism
 		}
-		subtract = {
+		add = {
 			value = 1
 			desc = "law_state_atheism"
 		}
@@ -1255,7 +1255,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 		limit = {
 			has_law_or_variant = law_type:law_multicultural
 		}
-		subtract = {
+		add = {
 			value = 0.5
 			desc = "law_multicultural"
 		}
@@ -1264,7 +1264,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 		limit = {
 			has_law_or_variant = law_type:law_anarchy
 		}
-		subtract = {
+		add = {
 			value = 1
 			desc = "law_anarchy"
 		}
@@ -1273,7 +1273,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 		limit = {
 			has_law_or_variant = law_type:law_no_colonial_affairs
 		}
-		subtract = {
+		add = {
 			value = 1
 			desc = "law_no_colonial_affairs"
 		}
@@ -1282,7 +1282,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 		limit = {
 			has_law_or_variant = law_type:law_single_party_state
 		}
-		subtract = {
+		add = {
 			value = 1
 			desc = "law_single_party_state"
 		}
@@ -1294,7 +1294,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 				has_law_or_variant = law_type:law_anarchy
 			}
 		}
-		subtract = {
+		add = {
 			value = 1
 			desc = "no_voting_franchise"
 		}
@@ -1303,7 +1303,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 		limit = {
 			has_variable = usfp_second_revolution_supported_antiamericanism
 		}
-		subtract = {
+		add = {
 			add = institution_investment_level:institution_schools
 			add = institution_investment_level:institution_home_affairs
 			divide = 5
@@ -1316,10 +1316,77 @@ usfp_second_revolution_get_antiamericanism_target = {
 		limit = {
 			has_variable = usfp_destroyed_american_monuments
 		}
-		subtract = {
+		add = {
 			value = 3
 			desc = "destroyed_american_monuments"
 		}
 	}
     #Confrontation in State and Revolution
+}
+
+#based on the State and Revolution script values
+usfp_second_revolution_americanism_display = {
+    if = {
+        limit = {
+            has_journal_entry = usfp_je_second_revolution
+        }
+        value = usfp_second_revolution_get_americanism_target # x/(x+y)
+        divide = {
+            value = usfp_second_revolution_get_americanism_target
+            add = usfp_second_revolution_get_antiamericanism_target
+            min = 0.01
+        }
+        multiply = 100
+        round = yes
+        divide = 100
+        min = 0
+        max = 1
+    }
+    else = {
+        value = 0
+    }
+}
+
+usfp_second_revolution_antiamericanism_display = {
+    if = {
+        limit = {
+            has_journal_entry = usfp_je_second_revolution
+        }
+        value = usfp_second_revolution_get_antiamericanism_target # x/(x+y)
+        divide = {
+            value = usfp_second_revolution_get_antiamericanism_target
+            add = usfp_second_revolution_get_americanism_target
+            min = 0.01
+        }
+        multiply = 100
+        round = yes
+        divide = 100
+        min = 0
+        max = 1
+    }
+    else = {
+        value = 0
+    }
+}
+
+usfp_second_revolution_americanism_progress = {
+    if = {
+        limit = {
+            has_journal_entry = usfp_je_second_revolution
+        }
+        value = "je:usfp_je_second_revolution.scripted_bar_progress(usfp_second_revolution_bar)"
+        divide = 100
+    }
+}
+
+# Country. The remaining share of the Economic bar.
+state_and_revolution_antiamericanism_progress = {
+    value = 100
+    if = {
+        limit = {
+            has_journal_entry = usfp_je_second_revolution
+        }
+        subtract = "je:usfp_je_second_revolution.scripted_bar_progress(usfp_second_revolution_bar)"
+        divide = 100
+    }
 }

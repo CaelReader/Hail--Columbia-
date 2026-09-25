@@ -2129,20 +2129,27 @@ usfp_mother_jones  = {
     traits = {
         firebrand
         charismatic
-        grifter
         persistent
+        direct
     }
-    agitator_usage = {
-        country_trigger = {
-            c:USA ?= this
-            has_technology_researched = socialism
+    # event-spawned
+    # agitator_usage = {
+    #     country_trigger = {
+    #         c:USA ?= this
+    #         has_technology_researched = socialism
+    #     }
+    #     interest_group_trigger = {
+    #         is_interest_group_type = ig_trade_unions
+    #     }
+    #     earliest_usage_date = 1871.1.1
+    #     latest_usage_date = 1923.1.1
+    #     chance = 50
+    # }
+    on_created = {
+        add_career_length = {
+            role = agitator
+            years = 40
         }
-        interest_group_trigger = {
-            is_interest_group_type = ig_trade_unions
-        }
-        earliest_usage_date = 1871.1.1
-        latest_usage_date = 1923.1.1
-        chance = 50
     }
 }
 
@@ -2175,6 +2182,12 @@ usfp_alf_landon  = {
         earliest_usage_date = 1919.1.1
         latest_usage_date = 1959.1.1
         #guaranteed to spawn if possible
+    }
+    on_created = {
+        add_career_length = {
+            role = politician
+            years = 40
+        }
     }
 }
 

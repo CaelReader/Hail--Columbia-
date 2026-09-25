@@ -2627,3 +2627,26 @@ usfp_disband_constitutionalist_movement = {
 		set_variable = usfp_ended_constitutionalism
 	}
 }
+
+usfp_second_revolution_calculate_targets = {
+    set_variable = {
+        name = usfp_second_revolution_americanism_target
+        value = usfp_second_revolution_get_americanism_target
+    }
+    set_variable = {
+        name = usfp_second_revolution_internationalism_target
+        value = usfp_second_revolution_get_antiamericanism_target
+    }
+    set_variable = { name = state_and_revolution_economic_current_var value = "scope:journal_entry.scripted_bar_progress(je_state_and_revolution_economic_bar)" }
+    set_variable = {
+        name = state_and_revolution_economic_pivot_var
+        value = 100
+    }
+    change_variable = {
+        name = state_and_revolution_economic_pivot_var
+        multiply = ROOT.state_and_revolution_economic_confrontation_display
+    }
+    scope:journal_entry ?= {
+
+    }
+}

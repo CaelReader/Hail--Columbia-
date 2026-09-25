@@ -889,11 +889,11 @@ usfp_second_revolution_bar = {
 	max_value = 1000
 
 	monthly_progress = {
-		## Americanism Progress
-		add = usfp_second_revolution_get_americanism_target
-
-
-		## Internationalism Progress
-		add = usfp_second_revolution_get_antiamericanism_target
+        add = {
+            desc = "usfp_second_revolution_progress_desc"
+            value = owner.var:second_re
+            subtract = owner.var:state_and_revolution_political_current_var
+            multiply = 0.05 # How aggressively this will chase the pivot value. Higher = more aggressive.
+        }
 	}
 }
