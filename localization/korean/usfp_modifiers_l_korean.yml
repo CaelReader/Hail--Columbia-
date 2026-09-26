@@ -397,3 +397,5 @@
  usfp_monroe_doctrine_complete_hegemony_modifier: "우리의 반구"
  usfp_monroe_doctrine_complete_influence_modifier: "자유롭고 독립적인 대륙"
  usfp_bonus_army_blamed: "재향군인에 대한 폭력"
+ usfp_ig_nationalized_railways_negative_modifier: "철도 국유화"
+ usfp_ig_nationalized_railways_positive_modifier: "철도 국유화"

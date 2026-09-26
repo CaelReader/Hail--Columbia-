@@ -403,3 +403,6 @@
  total_incorporated_infrastructure_delta: "[Concept('concept_incorporated_state', '$concept_incorporated_states$')]의 미사용 [concept_infrastructure]"
  railway_vacancies: "낮은 [concept_occupancy] 철도"
  unprofitable_railways: "수익성 없는 철도"
+ usfp_nationalize_railroads_button: "철도 국유화"
+ usfp_nationalize_railroads_button_desc: "철도는 무책임한 시장 행위자들에게 맡길 수 없는 명백한 국가 핵심 기반시설입니다."
+ prevent_railroad_crash: "즉시 이 [concept_journal_entry]을 종료하여 충돌을 방지합니다."
