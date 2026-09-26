@@ -1363,6 +1363,18 @@ usfp_second_revolution_get_antiamericanism_target = {
             desc = "at_war_with_ethnostate"
         }
     }
+    #Colonial Affairs is negative
+    if = {
+        limit = {
+            has_institution = institution_colonial_affairs
+        }
+        subtract = {
+            add = institution_investment_level:institution_colonial_affairs
+            divide = 5
+            min = 0
+            desc = "second_revolution_colonial_affairs"
+        }
+    }
     #Confrontation in State and Revolution
 
 }
