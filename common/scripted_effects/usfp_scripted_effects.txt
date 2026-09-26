@@ -2637,16 +2637,13 @@ usfp_second_revolution_calculate_targets = {
         name = usfp_second_revolution_internationalism_target
         value = usfp_second_revolution_get_antiamericanism_target
     }
-    set_variable = { name = state_and_revolution_economic_current_var value = "scope:journal_entry.scripted_bar_progress(je_state_and_revolution_economic_bar)" }
+    set_variable = { name = usfp_second_revolution_current_var value = "scope:journal_entry.scripted_bar_progress(usfp_second_revolution_bar)" }
     set_variable = {
-        name = state_and_revolution_economic_pivot_var
+        name = usfp_second_revolution_total_target
         value = 100
     }
     change_variable = {
-        name = state_and_revolution_economic_pivot_var
-        multiply = ROOT.state_and_revolution_economic_confrontation_display
-    }
-    scope:journal_entry ?= {
-
+        name = usfp_second_revolution_total_target
+        multiply = ROOT.usfp_second_revolution_americanism_display
     }
 }

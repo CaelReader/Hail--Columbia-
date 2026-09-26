@@ -884,16 +884,16 @@ usfp_second_revolution_bar = {
 	second_desc = "usfp_second_revolution_bar_desc2"
 	double_sided_bad = yes
 
-	start_value = 500
+	start_value = 50
 	min_value = 0
-	max_value = 1000
+	max_value = 100
 
 	monthly_progress = {
         add = {
             desc = "usfp_second_revolution_progress_desc"
-            value = owner.var:second_re
-            subtract = owner.var:state_and_revolution_political_current_var
-            multiply = 0.05 # How aggressively this will chase the pivot value. Higher = more aggressive.
+            value = owner.var:usfp_second_revolution_total_target
+            subtract = owner.var:usfp_second_revolution_current_var
+            multiply = 0.5 # How aggressively this will chase the pivot value. Higher = more aggressive.
         }
 	}
 }

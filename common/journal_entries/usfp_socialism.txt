@@ -17,18 +17,61 @@ usfp_je_second_revolution = {
         container = "com_custom_widget_container_scripted_progress_bars"
     }
 
+    status_desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = {
+                    var:usfp_second_revolution_current_var >= 70
+                }
+                desc = usfp_je_second_revolution_cementing_americanism
+            }
+            triggered_desc = {
+                trigger = {
+                    var:usfp_second_revolution_current_var <= 30
+                }
+                desc = usfp_je_second_revolution_cementing_internationalism
+            }
+            triggered_desc = {
+                trigger = {
+                    var:usfp_second_revolution_total_target >= 60
+                }
+                desc = usfp_je_second_revolution_leaning_americanism
+            }
+            triggered_desc = {
+                trigger = {
+                    var:usfp_second_revolution_total_target <= 40
+                }
+                desc = usfp_je_second_revolution_leaning_internationalism
+            }
+            triggered_desc = {
+                desc = usfp_je_second_revolution_undecided
+            }
+        }
+        first_valid = {
+            triggered_desc = {
+                desc = usfp_second_revolution_targets
+            }
+        }
+    }
+
     immediate = {
         scope:journal_entry = {
             add_com_dlc_icon = {
                 dlc = dlc_usfp
             }
         }
-        create_com_progress_bar_with_target = {
-            progress_bar = usfp_second_revolution_bar
-            index = 0
-            target_type = gold_bar							#style of target marker
-            target_value = spb_com_progress_in_style_target
+        set_variable = {
+            name = usfp_second_revolution_americanism_target
+            value = usfp_second_revolution_get_americanism_target
         }
+        set_variable = {
+            name = usfp_second_revolution_internationalism_target
+            value = usfp_second_revolution_get_antiamericanism_target
+        }
+        set_variable = { name = usfp_second_revolution_total_target value = 50 }
+        set_variable = { name = usfp_second_revolution_current_var value = 50 }
+        set_variable = { name = usfp_second_revolution_americanism_cementing_progress value = 0 }
+        set_variable = { name = usfp_second_revolution_antiamericanism_cementing_progress value = 0 }
     }
 
     is_shown_when_inactive = {
@@ -39,9 +82,46 @@ usfp_je_second_revolution = {
         }
     }
 
+
     on_monthly_pulse = {
         effect = {
-
+            usfp_second_revolution_calculate_targets = yes
+            if = {
+                limit = {
+                    NOT = {
+                        has_variable = usfp_second_revolution_americanism_reached_75
+                    }
+                    var:usfp_second_revolution_current_var >= 75
+                }
+                set_variable = usfp_second_revolution_americanism_reached_75
+            }
+            if = {
+                limit = {
+                    has_variable = usfp_second_revolution_americanism_reached_75
+                }
+                change_variable = {
+                    name = usfp_second_revolution_americanism_cementing_progress
+                    add = 1
+                }
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_variable = usfp_second_revolution_antiamericanism_reached_75
+                    }
+                    var:usfp_second_revolution_current_var <= 25
+                }
+                set_variable = usfp_second_revolution_antiamericanism_reached_75
+            }
+            if = {
+                limit = {
+                    has_variable = usfp_second_revolution_antiamericanism_reached_75
+                }
+                change_variable = {
+                    name = usfp_second_revolution_antiamericanism_cementing_progress
+                    add = 1
+                }
+            }
         }
     }
 
@@ -53,6 +133,28 @@ usfp_je_second_revolution = {
 
     complete = {
         #reach 75% American/Antiamerican and then maintain 70% for 5 years
+        OR = {
+            AND = {
+                custom_tooltip = {
+                    text = americanism_reached_75
+                    has_variable = usfp_second_revolution_americanism_reached_75
+                }
+                custom_tooltip = {
+                    text = americanism_reached_75_then_70_five_years
+                    var:usfp_second_revolution_americanism_cementing_progress >= 60
+                }
+            }
+            AND = {
+                custom_tooltip = {
+                    text = antiamericanism_reached_75
+                    has_variable = usfp_second_revolution_antiamericanism_reached_75
+                }
+                custom_tooltip = {
+                    text = antiamericanism_reached_75_then_70_five_years
+                    var:usfp_second_revolution_americanism_cementing_progress >= 60
+                }
+            }
+        }
     }
 
 

@@ -1321,7 +1321,22 @@ usfp_second_revolution_get_antiamericanism_target = {
 			desc = "destroyed_american_monuments"
 		}
 	}
+    #At war with Ethnostate
+    if = {
+        limit = {
+            is_at_war = yes
+            any_enemy_in_war = {
+                country_rank >= rank_value:major_power
+                has_law_or_variant = law_type:law_ethnostate
+            }
+        }
+        add = {
+            value = 0.5
+            desc = "at_war_with_ethnostate"
+        }
+    }
     #Confrontation in State and Revolution
+
 }
 
 #based on the State and Revolution script values
@@ -1379,8 +1394,7 @@ usfp_second_revolution_americanism_progress = {
     }
 }
 
-# Country. The remaining share of the Economic bar.
-state_and_revolution_antiamericanism_progress = {
+usfp_second_revolution_antiamericanism_progress = {
     value = 100
     if = {
         limit = {
@@ -1389,4 +1403,15 @@ state_and_revolution_antiamericanism_progress = {
         subtract = "je:usfp_je_second_revolution.scripted_bar_progress(usfp_second_revolution_bar)"
         divide = 100
     }
+}
+
+usfp_second_revolution_drift_bar_target = {
+    value = var:usfp_second_revolution_total_target
+}
+
+usfp_second_revolution_drift_value = {
+    desc = "usfp_second_revolution_progress_desc"
+    value = owner.var:usfp_second_revolution_total_target
+    subtract = owner.var:usfp_second_revolution_current_var
+    multiply = 0.05 # How aggressively this will chase the pivot value. Higher = more aggressive.
 }
