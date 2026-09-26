@@ -1070,10 +1070,9 @@ usfp_second_revolution_get_americanism_target = {
 					is_political_movement_type = movement_religious_majority
 				}
 			}
-			add = political_movement_radicalism
 			add = political_movement_support
 		}
-		desc = "supremacist_and_traditionalist_activism_and_support"
+		desc = "supremacist_and_traditionalist_support"
 	}
 	# Constitutionalist and Liberal Movement
 	add = {
@@ -1085,25 +1084,22 @@ usfp_second_revolution_get_americanism_target = {
 					is_political_movement_type = movement_usfp_progressive
 				}
 			}
-			add = political_movement_radicalism
 			add = political_movement_support
 		}
-		desc = "liberal_progressive_constitutionalist_activism_and_support"
+		desc = "liberal_progressive_constitutionalist_support"
 	}
-	# Fascist and White Movement
+	# Fascist and Neo-Confederate Movement
 	add = {
 		every_political_movement = {
 			limit = {
 				OR = {
 					is_political_movement_type = movement_fascist
 					is_political_movement_type = movement_usfp_neoconfederate
-					is_political_movement_type = movement_white
 				}
 			}
-			add = political_movement_radicalism
 			add = political_movement_support
 		}
-		desc = "fascist_neoconfederate_white_activism_and_support"
+		desc = "fascist_neoconfederate_support"
 	}
 	# IGs supporting Presidential Republic
 	add = {
@@ -1144,9 +1140,39 @@ usfp_second_revolution_get_americanism_target = {
 		}
 		add = {
 			value = 1
-			desc = "law_interventionism"
+			desc = "law_laissez_faire"
 		}
 	}
+    #Racism
+    if = {
+        limit = {
+            has_law_or_variant = law_type:law_ethnostate
+        }
+        add = {
+            value = 2
+            desc = "law_ethnostate"
+        }
+    } else_if = {
+        if = {
+            limit = {
+                has_law_or_variant = law_type:law_national_supremacy
+            }
+            add = {
+                value = 1
+                desc = "law_national_supremacy"
+            }
+        }
+    } else_if = {
+        if = {
+            limit = {
+                has_law_or_variant = law_type:law_racial_segregation
+            }
+            add = {
+                value = 0.5
+                desc = "law_racial_segregation"
+            }
+        }
+    }
 	if = {
 		limit = {
 			has_variable = usfp_second_revolution_supported_americanism
@@ -1156,7 +1182,7 @@ usfp_second_revolution_get_americanism_target = {
 			add = institution_investment_level:institution_home_affairs
 			divide = 5
 			min = 0
-			desc = "institutions_support_americanism"
+			desc = "second_revolution_institutions_support"
 		}
 	}
     #Consolidation in State and Revolution
@@ -1171,7 +1197,6 @@ usfp_second_revolution_get_antiamericanism_target = {
 					is_political_movement_type = movement_anarchist
 				}
 			}
-			add = political_movement_radicalism
 			add = political_movement_support
 		}
 		desc = "anarchist_movement_activism_and_support"
@@ -1184,7 +1209,6 @@ usfp_second_revolution_get_antiamericanism_target = {
 					is_political_movement_type = movement_communist
 				}
 			}
-			add = political_movement_radicalism
 			add = political_movement_support
 		}
 		desc = "communist_movement_activism_and_support"
@@ -1198,7 +1222,6 @@ usfp_second_revolution_get_antiamericanism_target = {
 					is_political_movement_type = movement_minority_rights
 				}
 			}
-			add = political_movement_radicalism
 			add = political_movement_support
 		}
 		desc = "minority_movements_activism_and_support"
@@ -1229,6 +1252,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 	}
 	# IGs supporting Council Republic
 	add = {
+        value = 0
 		every_interest_group = {
 			limit = {
 				ig_counts_as_marginal = no
@@ -1236,10 +1260,14 @@ usfp_second_revolution_get_antiamericanism_target = {
 					value >= approve
 					law = law_type:law_council_republic
 				}
+                law_stance = {
+                    value >= approve
+                    law = law_type:law_multicultural
+                }
 			}
 			add = ig_clout
 		}
-		desc = "igs_supporting_council_republic"
+		desc = "igs_supporting_council_republic_and_multiculturalism"
 	}
 	# Revolutionary Laws
 	if = {
@@ -1308,7 +1336,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 			add = institution_investment_level:institution_home_affairs
 			divide = 5
 			min = 0
-			desc = "institutions_support_antiamericanism"
+			desc = "second_revolution_institutions_support"
 		}
 	}
 	#Monument Destruction
