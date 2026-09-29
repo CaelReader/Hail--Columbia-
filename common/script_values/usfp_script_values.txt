@@ -1287,7 +1287,12 @@ usfp_second_revolution_get_antiamericanism_target = {
 			value = 0.5
 			desc = "law_multicultural"
 		}
-	}
+	} else = {
+        subtract = {
+            value = 0.5
+            desc = "no_multiculturalism"
+        }
+    }
 	if = {
 		limit = {
 			has_law_or_variant = law_type:law_anarchy

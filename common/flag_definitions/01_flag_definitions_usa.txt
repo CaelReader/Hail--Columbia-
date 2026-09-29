@@ -30,6 +30,7 @@ USA = {	# United States of America
 			coa_def_theocracy_flag_trigger = yes
 		}
 	}
+    #Americanist Democratic
 	flag_definition = {
 		coa = USA_syndicalist
 		priority = 2000
@@ -41,6 +42,7 @@ USA = {	# United States of America
 
 		}
 	}
+    #Internationalist Anarchist
 	flag_definition = {
 		coa = USA_anarchist
 		priority = 2000
@@ -48,11 +50,28 @@ USA = {	# United States of America
 			coa_def_anarchy_flag_trigger = yes
 		}
 	}
+    #Americanist Anarchist
+
+    #Americanist Authoritarian Communist
+    flag_definition = {
+        coa = USA_communist_americanist
+        priority = 1500
+        trigger = {
+            coa_def_communist_flag_trigger = yes
+            scope:actor ?= {
+                NOT = {
+                    has_variable = usfp_second_revolution_internationalism_embraced
+                }
+            }
+        }
+    }
+    #Internationalist Communist
 	flag_definition = {
 		coa = USA_communist
 		priority = 1500
 		trigger = { 
 			coa_def_communist_flag_trigger = yes
+            scope:actor ?= { has_variable = usfp_second_revolution_internationalism_embraced }
 		}
 	}
 	flag_definition = {

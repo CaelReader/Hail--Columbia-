@@ -2,4 +2,6 @@
 	usa_red = rgb {178 34 52}
 	fsa_blue = rgb { 106  124  243 }
     csa_grey = rgb { 190  186  202 }
+    cyan_pale = rgb { 173 222 233 }
+    gold_dark = rgb { 167 99 40 }
 }

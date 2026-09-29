@@ -60,6 +60,7 @@ usfp_je_second_revolution = {
                 dlc = dlc_usfp
             }
         }
+        trigger_event = usfp_usa_socialism.1
         set_variable = {
             name = usfp_second_revolution_americanism_target
             value = usfp_second_revolution_get_americanism_target
@@ -160,6 +161,7 @@ usfp_je_second_revolution = {
 
     on_complete = {
         usfp_disband_constitutionalist_movement = yes
+        set_variable = usfp_second_revolution_internationalism_embraced
     }
 
     fail = {

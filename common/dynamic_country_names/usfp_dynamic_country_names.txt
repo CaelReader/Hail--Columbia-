@@ -133,7 +133,7 @@
 		}
 	}
 
-	#United American Syndicates, regular or cybernetic council republic
+	#United Workers' Republics of America, generic/americanist socialist
 	dynamic_country_name = {
 		name = dync_c_usfp_united_workers_republics_of_america
 		adjective = USA_ADJ
@@ -147,18 +147,80 @@
 			scope:actor ?= {
 				OR = {
 					has_law_or_variant = law_type:law_universal_suffrage
+                    has_law_or_variant = law_type:law_census_voting
 					has_law_or_variant = law_type:law_technocracy
 				}
 				NOT = {
 					has_law_or_variant = law_type:law_anarchy
 				}
+                NOT = {
+                    has_variable = usfp_second_revolution_internationalism_embraced
+                }
 			}
 		}
 	}
 
-	#USAS, undemocratic council republic
+    #americanist socialist americas
+    dynamic_country_name = {
+        name = dync_c_usfp_united_workers_republics_of_americas
+        adjective = USA_ADJ
+
+        is_main_tag_only = yes
+        priority = 100
+
+        trigger = {
+            has_game_rule = usa_dynamic_names
+            coa_def_communist_flag_trigger = yes
+            scope:actor ?= {
+                OR = {
+                    has_law_or_variant = law_type:law_universal_suffrage
+                    has_law_or_variant = law_type:law_census_voting
+                    has_law_or_variant = law_type:law_technocracy
+                }
+                NOT = {
+                    has_law_or_variant = law_type:law_anarchy
+                }
+                NOT = {
+                    has_variable = usfp_second_revolution_internationalism_embraced
+                }
+            }
+            scope:actor ?= {
+                any_scope_state = {
+                    is_incorporated = yes
+                    is_in_geographic_region = geographic_region_north_america
+                }
+                any_scope_state = {
+                    is_incorporated = yes
+                    is_in_geographic_region = geographic_region_south_america
+                }
+            }
+        }
+    }
+
+
+    #Union of Workers' Republics, internationalist socialist
+    dynamic_country_name = {
+        name = dync_c_usfp_union_of_workers_republics
+        adjective = dync_c_usfp_union_of_workers_republics_ADJ
+
+        is_main_tag_only = yes
+        priority = 0
+
+        trigger = {
+            has_game_rule = usa_dynamic_names
+            coa_def_communist_flag_trigger = yes
+            scope:actor ?= {
+                NOT = {
+                    has_law_or_variant = law_type:law_anarchy
+                }
+                has_variable = usfp_second_revolution_internationalism_embraced
+            }
+        }
+    }
+
+	#Socialist Union of Workers' Republics in America, authoritarian americanist
 	dynamic_country_name = {
-		name = dyn_c_usp_union_of_socialist_american_states
+		name = dyn_c_usp_socialist_authoritarian_americanist
 		adjective = USA_ADJ
 		
 		is_main_tag_only = yes
@@ -170,17 +232,57 @@
 			scope:actor ?= {
 				NOR = {
 					has_law_or_variant = law_type:law_universal_suffrage
+                    has_law_or_variant = law_type:law_census_voting
 					has_law_or_variant = law_type:law_technocracy
 					has_law_or_variant = law_type:law_anarchy
 				}
+                NOT = {
+                    has_variable = usfp_second_revolution_internationalism_embraced
+                }
 			}
 		}
 	}
+
+    #authoritarian americanist americas
+    dynamic_country_name = {
+        name = dyn_c_usp_socialist_authoritarian_americanist_americas
+        adjective = dyn_c_usp_pan_american_ADJ
+
+        is_main_tag_only = yes
+        priority = 100
+
+        trigger = {
+            has_game_rule = usa_dynamic_names
+            coa_def_communist_flag_trigger = yes
+            scope:actor ?= {
+                NOR = {
+                    has_law_or_variant = law_type:law_universal_suffrage
+                    has_law_or_variant = law_type:law_census_voting
+                    has_law_or_variant = law_type:law_technocracy
+                    has_law_or_variant = law_type:law_anarchy
+                }
+                NOT = {
+                    has_variable = usfp_second_revolution_internationalism_embraced
+                }
+            }
+            scope:actor ?= {
+                any_scope_state = {
+                    is_incorporated = yes
+                    is_in_geographic_region = geographic_region_north_america
+                }
+                any_scope_state = {
+                    is_incorporated = yes
+                    is_in_geographic_region = geographic_region_south_america
+                }
+            }
+        }
+    }
+
 	
-	#American Syndicalist Federation, anarchist
+	#Cooperative Commonwealth, internationalist anarchist
 	dynamic_country_name = {
-		name = dyn_c_usp_american_syndicalist_federation
-		adjective = USA_ADJ
+		name = dyn_c_usp_united_cooperative_commonwealth
+		adjective = dyn_c_usp_united_cooperative_commonwealth_ADJ
 		
 		is_main_tag_only = yes
 		priority = 0
@@ -188,8 +290,53 @@
 		trigger = {
 			has_game_rule = usa_dynamic_names
 			coa_def_anarchy_flag_trigger = yes
+            scope:actor ?= { has_variable = usfp_second_revolution_internationalism_embraced }
 		}
 	}
+
+    #Industrial Commonwealth of America, americanist anarchist
+    dynamic_country_name = {
+        name = dyn_c_usp_industrial_commonwealth_of_america
+        adjective = USA_ADJ
+
+        is_main_tag_only = yes
+        priority = 0
+
+        trigger = {
+            has_game_rule = usa_dynamic_names
+            coa_def_anarchy_flag_trigger = yes
+            NOT = {
+                has_variable = usfp_second_revolution_internationalism_embraced
+            }
+        }
+    }
+
+    #americanist anarchist americas
+    dynamic_country_name = {
+        name = dyn_c_usp_industrial_commonwealth_of_americas
+        adjective = dyn_c_usp_pan_american_ADJ
+
+        is_main_tag_only = yes
+        priority = 100
+
+        trigger = {
+            has_game_rule = usa_dynamic_names
+            coa_def_anarchy_flag_trigger = yes
+            NOT = {
+                has_variable = usfp_second_revolution_internationalism_embraced
+            }
+            scope:actor ?= {
+                any_scope_state = {
+                    is_incorporated = yes
+                    is_in_geographic_region = geographic_region_north_america
+                }
+                any_scope_state = {
+                    is_incorporated = yes
+                    is_in_geographic_region = geographic_region_south_america
+                }
+            }
+        }
+    }
 
 	#American Commonwealth, theocratic
 	dynamic_country_name = {
@@ -346,7 +493,7 @@
 					has_law_or_variant = law_type:law_technocracy
 				}
 			}
-			scope:actor = {
+			scope:actor ?= {
 				any_scope_state = {
 					is_incorporated = yes
 					is_in_geographic_region = geographic_region_north_america

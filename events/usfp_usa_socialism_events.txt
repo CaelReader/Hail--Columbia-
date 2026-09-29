@@ -26,10 +26,23 @@ usfp_usa_socialism.1 = {
 
     }
 
+    #Choose Americanism
     option = {
         name = usfp_usa_socialism.1.a
         default_option = yes
+        custom_tooltip = {
+            text = second_revolution_institutions_will_support_americanism
+            set_variable = usfp_second_revolution_supported_americanism
+        }
+    }
 
+    #Choose Internationalism
+    option = {
+        name = usfp_usa_socialism.1.a
+        custom_tooltip = {
+            text = second_revolution_institutions_will_support_internationalism
+            set_variable = usfp_second_revolution_supported_antiamericanism
+        }
     }
 
 }
@@ -65,6 +78,12 @@ usfp_usa_socialism.2 = {
         name = usfp_usa_socialism.2.a
         default_option = yes
 
+    }
+
+    after = {
+        show_as_tooltip = {
+            usfp_disband_constitutionalist_movement = yes
+        }
     }
 
 }
@@ -151,6 +170,12 @@ usfp_usa_socialism.3 = {
                 }
             }
             add_primary_culture = cu:vietnamese
+        }
+    }
+
+    after = {
+        show_as_tooltip = {
+            usfp_disband_constitutionalist_movement = yes
         }
     }
 
