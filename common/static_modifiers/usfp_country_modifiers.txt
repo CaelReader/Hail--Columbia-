@@ -1084,3 +1084,15 @@ usfp_monroe_doctrine_complete_hegemony_modifier = {
 	country_prestige_from_navy_power_projection_mult = 0.10
 	country_ship_crew_starting_veterancy_experience_mult = 0.30
 }
+
+usfp_coal_wars_ongoing_strikes = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_laborer_negative.dds
+	building_coal_mine_throughput_add = -0.10
+	state_pop_support_movement_labor_mult = 0.10
+}
+
+usfp_coal_wars_great_coal_strike = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	building_coal_mine_throughput_add = -0.66
+	state_radicals_from_political_movements_mult = 0.10
+}

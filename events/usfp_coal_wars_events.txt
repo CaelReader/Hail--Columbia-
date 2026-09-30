@@ -3,7 +3,7 @@ namespace = usfp_coal_wars
 # JE start: United Mine Workers
 usfp_coal_wars.1 = {
     type = country_event
-    placement = scope:coal_mine_state
+    placement = root.var:usfp_coal_wars_umwa_target
     event_image = {
         video = "gfx/event_pictures/ip4_mining_scene.bk2"
     }
@@ -24,17 +24,18 @@ usfp_coal_wars.1 = {
     }
 
     immediate = {
-        ordered_scope_state = {
-            limit = {
-                has_building = building_coal_mine
-            }
-            order_by = "ig_state_pol_strength_share(scope:trade_unions_ig)"
-        }
-        save_scope_as = coal_mine_state
+
     }
 
+    #support the union
     option = {
         name = usfp_coal_wars.1.a
+
+    }
+
+    #support the coal mines
+    option = {
+        name = usfp_coal_wars.1.b
         default_option = yes
 
     }
@@ -60,33 +61,40 @@ usfp_coal_wars.2 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     trigger = {
-        NOT = {
-            any_scope_character = {
-                has_template = usfp_mother_jones
-            }
+        any_scope_character = {
+            has_role_of_type = agitator
+            has_template = usfp_mother_jones
         }
         year >= 1871
     }
 
     immediate = {
-        create_character = {
-            template = usfp_mother_jones
-            is_agitator = yes
+        random_scope_character = {
+            limit = {
+                has_template = usfp_mother_jones
+            }
             save_scope_as = mother_jones_scope
         }
     }
 
+    #miner's angel
     option = {
         name = usfp_coal_wars.2.a
         default_option = yes
 
     }
+
+    #seems suspicious
+    option = {
+        name = usfp_coal_wars.2.b
+
+    }
 }
 
-# Matewan Massacre
+# Battle of Matewan
 usfp_coal_wars.3 = {
     type = country_event
-    placement = root
+    placement = scope:west_virginia_scope
     event_image = {
         video = "gfx/event_pictures/southamerica_public_figure_assassination.bk2"
     }
@@ -103,16 +111,26 @@ usfp_coal_wars.3 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     trigger = {
-
+        #unionization of West Virginia has begun
     }
 
     immediate = {
-
+        s:STATE_WEST_VIRGINIA.region_state:USA = {
+            save_scope_as = west_virginia_scope
+        }
+        set_variable = usfp_coal_wars_had_matewan
     }
 
+    #this was self-defense
     option = {
         name = usfp_coal_wars.3.a
         default_option = yes
+
+    }
+
+    #union violence!
+    option = {
+        name = usfp_coal_wars.3.a
 
     }
 }
@@ -120,7 +138,7 @@ usfp_coal_wars.3 = {
 # Battle of Blair Mountain
 usfp_coal_wars.4 = {
     type = country_event
-    placement = root
+    placement = scope:west_virginia_scope
     event_image = {
         video = "gfx/event_pictures/southamerica_war_civilians.bk2"
     }
@@ -137,24 +155,41 @@ usfp_coal_wars.4 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     trigger = {
-
+        #unionization of West Virginia is in progress
+        has_variable = usfp_coal_wars_had_matewan
     }
 
     immediate = {
-
+        s:STATE_WEST_VIRGINIA.region_state:USA = {
+            save_scope_as = west_virginia_scope
+        }
     }
 
+    #send in federal troops to restore peace
     option = {
         name = usfp_coal_wars.4.a
         default_option = yes
 
     }
+
+    #allow baldwin-feltz to attack
+    option = {
+        name = usfp_coal_wars.4.b
+
+    }
+
+    #send support to the strikers
+    option = {
+        name = usfp_coal_wars.4.c
+
+    }
+
 }
 
 # Ludlow Massacre
 usfp_coal_wars.5 = {
     type = country_event
-    placement = root
+    placement = scope:colorado_scope
     event_image = {
         video = "gfx/event_pictures/southamerica_war_civilians.bk2"
     }
@@ -171,18 +206,32 @@ usfp_coal_wars.5 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     trigger = {
-
+        #Colorado unionization in progress
+        has_state_in_state_region = STATE_COLORADO
+        s:STATE_COLORADO.region_state:USA = {
+            has_building = building_coal_mine
+        }
     }
 
     immediate = {
-
+        s:STATE_COLORADO.region_state:USA = {
+            save_scope_as = colorado_scope
+        }
     }
 
+    #restore the peace
     option = {
         name = usfp_coal_wars.5.a
         default_option = yes
 
     }
+
+    #blame coal company
+    option = {
+        name = usfp_coal_wars.5.b
+
+    }
+
 }
 
 # Great Coal Strike
@@ -282,6 +331,85 @@ usfp_coal_wars.8 = {
 
     option = {
         name = usfp_coal_wars.8.a
+        default_option = yes
+
+    }
+}
+
+#Bloody Harlan
+usfp_coal_wars.9 = {
+    type = country_event
+    placement = scope:kentucky_scope
+    event_image = {
+        video = "gfx/event_pictures/votp_cops_march.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+    title = usfp_coal_wars.9.t
+    desc = usfp_coal_wars.9.d
+    flavor = usfp_coal_wars.9.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+        #Kentucky unionization in progress
+        has_state_in_state_region = STATE_KENTUCKY
+        s:STATE_KENTUCKY.region_state:USA = {
+            has_building = building_coal_mine
+        }
+    }
+
+    immediate = {
+        s:STATE_KENTUCKY.region_state:USA = {
+            save_scope_as = kentucky_scope
+        }
+    }
+
+    option = {
+        name = usfp_coal_wars.9.a
+        default_option = yes
+
+    }
+}
+
+#Unions throw in with socialist revolution
+usfp_coal_wars.10 = {
+    type = country_event
+    placement = scope:kentucky_scope
+    event_image = {
+        video = "gfx/event_pictures/votp_agitator_speaking.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    title = usfp_coal_wars.10.t
+    desc = usfp_coal_wars.10.d
+    flavor = usfp_coal_wars.10.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = normal_modifier_time }
+
+    trigger = {
+        any_political_movement = {
+            OR = {
+                movement_is_socialist = yes
+                is_political_movement_type = movement_labor
+            }
+        }
+    }
+
+    immediate = {
+
+    }
+
+    option = {
+        name = usfp_coal_wars.10.a
         default_option = yes
 
     }

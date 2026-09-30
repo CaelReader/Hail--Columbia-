@@ -2132,19 +2132,18 @@ usfp_mother_jones  = {
         persistent
         direct
     }
-    # event-spawned
-    # agitator_usage = {
-    #     country_trigger = {
-    #         c:USA ?= this
-    #         has_technology_researched = socialism
-    #     }
-    #     interest_group_trigger = {
-    #         is_interest_group_type = ig_trade_unions
-    #     }
-    #     earliest_usage_date = 1871.1.1
-    #     latest_usage_date = 1923.1.1
-    #     chance = 50
-    # }
+    agitator_usage = {
+        country_trigger = {
+            c:USA ?= this
+            has_technology_researched = socialism
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_trade_unions
+        }
+        earliest_usage_date = 1871.1.1
+        latest_usage_date = 1923.1.1
+        chance = 50
+    }
     on_created = {
         add_career_length = {
             role = agitator

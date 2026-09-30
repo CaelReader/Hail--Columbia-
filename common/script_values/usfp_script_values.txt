@@ -1460,3 +1460,64 @@ usfp_second_revolution_drift_value = {
     subtract = owner.var:usfp_second_revolution_current_var
     multiply = 0.05 # How aggressively this will chase the pivot value. Higher = more aggressive.
 }
+
+usfp_coal_wars_unionization_progress = {
+	#TUs clout
+	add = {
+		value = "ig_state_pol_strength_share(scope:trade_unions_ig)"
+		desc = "trade_unions_clout"
+	}
+	#Labor radicals
+	add = {
+		every_scope_pop = {
+			limit = {
+				pop_employment_building = building_coal_mine
+				is_pop_type = laborers
+			}
+			add = pop_radical_fraction
+		}
+		divide = {
+			every_scope_pop = {
+				limit = {
+					pop_employment_building = building_coal_mine
+					is_pop_type = laborers
+				}
+				add = 1
+			}
+		}
+		desc = "radical_coal_miners"
+	}
+	#UMWA focus state
+	if = {
+		limit = {
+			root.var:usfp_coal_wars_umwa_target = this
+		}
+		add = {
+			value = 2
+			desc = "united_mine_workers_focus_state"
+		}
+	}
+	#Favorable Laws
+	if = {
+		limit = {
+			owner = {
+				has_law_or_variant = law_type:law_right_to_associate
+			}
+		}
+		multiply = {
+			value = 1.5
+			desc = "law_right_to_associate"
+		}
+	}
+
+	#Violent Suppression
+	if = {
+		limit = {
+			has_decree = decree_violent_suppression
+		}
+		divide = {
+			value = 2
+			desc = "decree_violent_suppression"
+		}
+	}
+}

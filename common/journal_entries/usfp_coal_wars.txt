@@ -5,15 +5,7 @@ usfp_je_coal_wars = {
 
     group = je_group_historical_content
 
-
-    immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
-        trigger_event = usfp_coal_wars.1
-    }
+    scripted_progress_bar = usfp_coal_wars_union_leverage_bar
 
     is_shown_when_inactive = {
         c:USA ?= root
@@ -25,11 +17,25 @@ usfp_je_coal_wars = {
             is_in_geographic_region = geographic_region_atlantic_coast
             has_building = building_coal_mine
         }
-        NAND = {
-            has_law_or_variant = law_type:law_worker_protections
-            institution_investment_level = {
-                institution = institution_workplace_safety
-                value < 3
+        NOR = {
+            AND = {
+                has_law_or_variant = law_type:law_regulatory_bodies
+                institution_investment_level = {
+                    institution = institution_workplace_safety
+                    value >= 5
+                }
+            }
+            AND = {
+                has_law_or_variant = law_type:law_worker_protections
+                institution_investment_level = {
+                    institution = institution_workplace_safety
+                    value >= 3
+                }
+            }
+            #Corporatized Unions variant
+            AND = {
+                has_law_or_variant = law_type:law_corporatized_unions
+                has_institution = institution_workplace_safety
             }
         }
         ig:ig_trade_unions ?= {
@@ -44,7 +50,6 @@ usfp_je_coal_wars = {
     possible = {
         has_technology_researched = political_agitation
         any_scope_state = {
-            #West Virginia should be prioritized as the center of the wars but not guaranteed
             has_building = building_coal_mine
             is_incorporated = yes
             any_scope_pop = {
@@ -66,6 +71,139 @@ usfp_je_coal_wars = {
             OR = {
                 movement_is_socialist = yes
                 is_political_movement_type = movement_labor
+            }
+        }
+        NOR = {
+            has_law_or_variant = law_type:law_guild_system
+            has_law_or_variant = law_type:law_combination_acts
+            has_law_or_variant = law_type:law_corporatized_unions
+            has_law_or_variant = law_type:law_factory_councils
+        }
+    }
+
+    immediate = {
+        scope:journal_entry = {
+            add_com_dlc_icon = {
+                dlc = dlc_usfp
+            }
+        }
+        every_scope_state = {
+            limit = {
+                has_building = building_coal_mine
+                is_incorporated = yes
+            }
+            root = {
+                add_to_variable_list = {
+                    name = usfp_coal_wars_states
+                    target = prev
+                }
+            }
+        }
+        every_in_list = {
+            list = usfp_coal_wars_states
+            set_variable = {
+                name = usfp_coal_wars_state_unionization
+                value = 0
+            }
+        }
+        ordered_in_list = {
+            list = usfp_coal_wars_states
+            order_by = "ig_state_pol_strength_share(scope:trade_unions_ig)"
+            root = {
+                set_variable = {
+                    name = usfp_coal_wars_umwa_target
+                    value = prev
+                }
+            }
+            change_variable = {
+                name = usfp_coal_wars_state_unionization
+                add = 50
+            }
+        }
+        trigger_event = usfp_coal_wars.1
+    }
+
+    status_desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = {
+                    scope:journal_entry = {
+                        has_modifier = usfp_coal_wars_great_coal_strike
+                    }
+                }
+                desc = usfp_coal_wars_great_coal_strike_ongoing
+            }
+            triggered_desc = {
+                trigger = {
+                    any_in_list = {
+                        list = usfp_coal_wars_states
+                        count = all
+                        has_variable = usfp_state_unionized
+                    }
+                }
+                desc = usfp_coal_wars_all_states_unionized
+            }
+            triggered_desc = {
+                trigger = {
+                    has_variable = usfp_coal_wars_umwa_target
+                }
+                desc = usfp_coal_wars_umwa_organizing_state
+            }
+        }
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            every_in_list = {
+                list = usfp_coal_wars_states
+                if = {
+                    limit = {
+                        var:usfp_coal_wars_state_unionization < 100
+                    }
+                    change_variable = {
+                        name = usfp_coal_wars_state_unionization
+                        add = usfp_coal_wars_unionization_progress
+                    }
+                }
+                if = {
+                    limit = {
+                        var:usfp_coal_wars_state_unionization >= 100
+                        this = root.var:usfp_coal_wars_umwa_target
+                        NOT = {
+                            is_target_in_variable_list = {
+                                name = usfp_coal_wars_unionized_states
+                                target = this
+                            }
+                        }
+                    }
+                    root = {
+                        add_to_variable_list = {
+                            name = usfp_coal_wars_unionized_states
+                            target = prev
+                        }
+                    }
+                    random_scope_building = {
+                        limit = {
+                            is_building_type = building_coal_mine
+                        }
+                        add_modifier = {
+                            name = usfp_coal_wars_union_established_modifier
+                        }
+                    }
+                    ordered_in_list = {
+                        list = usfp_coal_wars_states
+                        order_by = var:usfp_coal_wars_state_unionization
+                        root = {
+                            set_variable = {
+                                name = usfp_coal_wars_umwa_target
+                                value = prev
+                            }
+                        }
+                    }
+                    set_variable = usfp_state_unionized
+                    save_scope_as = new_union_state
+                    post_notification = usfp_coal_wars_state_unionized
+                }
             }
         }
     }
