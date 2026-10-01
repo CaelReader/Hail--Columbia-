@@ -17,9 +17,6 @@ usfp_je_coal_wars = {
             has_law_or_variant = law_type:law_council_republic
         }
         has_technology_researched = socialism
-        any_political_movement = {
-            movement_is_socialist = yes
-        }
         any_scope_state = {
             is_in_geographic_region = geographic_region_atlantic_coast
             has_building = building_coal_mine
@@ -74,12 +71,6 @@ usfp_je_coal_wars = {
         ig:ig_trade_unions ?= {
             ig_counts_as_marginal = no
         }
-        any_political_movement = {
-            OR = {
-                movement_is_socialist = yes
-                is_political_movement_type = movement_labor
-            }
-        }
         NOR = {
             has_law_or_variant = law_type:law_guild_system
             has_law_or_variant = law_type:law_combination_acts
@@ -92,6 +83,18 @@ usfp_je_coal_wars = {
         scope:journal_entry = {
             add_com_dlc_icon = {
                 dlc = dlc_usfp
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_political_movement = {
+                        is_political_movement_type = movement_labor
+                    }
+                }
+            }
+            create_political_movement = {
+                type = movement_labor
             }
         }
         every_scope_state = {

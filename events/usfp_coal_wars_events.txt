@@ -143,6 +143,15 @@ usfp_coal_wars.3 = {
         name = usfp_coal_wars.3.a
 
     }
+
+    after = {
+        scope:west_virginia_scope = {
+            add_modifier = {
+                name = usfp_coal_wars_violence_modifier
+                years = 2
+            }
+        }
+    }
 }
 
 # Battle of Blair Mountain
@@ -242,6 +251,15 @@ usfp_coal_wars.5 = {
 
     }
 
+    after = {
+        scope:colorado_scope = {
+            add_modifier = {
+                name = usfp_coal_wars_violence_modifier
+                years = 2
+            }
+        }
+    }
+
 }
 
 # Great Coal Strike
@@ -271,10 +289,52 @@ usfp_coal_wars.6 = {
 
     }
 
+    #let them starve
     option = {
         name = usfp_coal_wars.6.a
         default_option = yes
+        add_radicals = {
+            value = small_radicals
+            interest_group = ig:ig_trade_unions
+        }
+    }
 
+    #immediate negotiations
+    option = {
+        name = usfp_coal_wars.6.b
+        highlighted_option = yes
+        trigger = {
+            OR = {
+                is_enacting_law = law_type:law_worker_protections
+                has_law_or_variant = law_type:law_worker_protections
+            }
+        }
+        show_as_unavailable = { always = yes }
+        if = {
+            limit = {
+                is_enacting_law = law_type:law_worker_protections
+            }
+            add_enactment_phase = 1
+        } else_if = {
+            limit = {
+                has_law_or_variant = law_type:law_worker_protections
+                institution_investment_level = {
+                    institution = institution_workplace_safety
+                    value < 5
+                }
+            }
+            change_institution_investment_level = {
+                institution = institution_workplace_safety
+                investment = 1
+            }
+        }
+    }
+
+    after = {
+        custom_tooltip = usfp_coal_wars_strike_will_drain_leverage
+        je:usfp_je_coal_wars = {
+            add_modifier = usfp_coal_wars_great_coal_strike
+        }
     }
 }
 
@@ -308,7 +368,14 @@ usfp_coal_wars.7 = {
     option = {
         name = usfp_coal_wars.7.a
         default_option = yes
-
+        add_loyalists = {
+            interest_group = ig:ig_trade_unions
+            value = large_radicals
+        }
+        add_radicals = {
+            pop_type = capitalists
+            value = large_radicals
+        }
     }
 }
 
@@ -342,7 +409,32 @@ usfp_coal_wars.8 = {
     option = {
         name = usfp_coal_wars.8.a
         default_option = yes
-
+        add_loyalists = {
+            pop_type = capitalists
+            value = medium_radicals
+        }
+        add_loyalists = {
+            strata = middle
+            value = medium_radicals
+        }
+        every_political_movement = {
+            limit = {
+                is_political_movement_type = movement_labor
+            }
+            add_modifier = {
+                name = usfp_unions_defeated_modifier
+                years = 5
+            }
+        }
+        every_political_movement = {
+            limit = {
+                movement_is_socialist = yes
+            }
+            add_modifier = {
+                name = usfp_unions_defeated_radical_turn_modifier
+                years = 5
+            }
+        }
     }
 }
 

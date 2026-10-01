@@ -914,7 +914,7 @@ usfp_coal_wars_union_leverage_bar = {
 				limit = {
 					has_variable = usfp_state_unionized
 				}
-				add = 1
+				add = 0.1
 			}
 			desc = "coal_wars_unionized_states"
 		}
@@ -937,6 +937,46 @@ usfp_coal_wars_union_leverage_bar = {
 		add = {
 			value = root.market.mg:coal.market_goods_pricier
 			desc = "price_of_coal"
+		}
+		subtract = {
+			value = 0
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_labor
+					is_being_suppressed = yes
+				}
+				add = {
+					value = "root.institution_investment_level(institution_home_affairs)"
+					divide = 5
+				}
+			}
+			desc = "suppressed_labor_movement"
+		}
+		add = {
+			value = 0
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_labor
+					is_being_suppressed = yes
+				}
+				add = {
+					value = "root.institution_investment_level(institution_home_affairs)"
+					divide = 5
+				}
+			}
+			desc = "bolstered_labor_movement"
+		}
+		#General Coal Strike rapidly drains leverage
+		if = {
+			limit = {
+				je:usfp_je_coal_wars ?= {
+					has_modifier = usfp_coal_wars_great_coal_strike
+				}
+			}
+			subtract = {
+				value = 100
+				desc = "usfp_coal_wars_great_coal_strike"
+			}
 		}
 	}
 }
