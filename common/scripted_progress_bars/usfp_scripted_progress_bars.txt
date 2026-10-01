@@ -909,6 +909,15 @@ usfp_coal_wars_union_leverage_bar = {
 
 	monthly_progress = {
 		#Unionized Coal States
+		add = {
+			every_scope_state = {
+				limit = {
+					has_variable = usfp_state_unionized
+				}
+				add = 1
+			}
+			desc = "coal_wars_unionized_states"
+		}
 		#TUs Clout
 		add = {
 			value = ig:ig_trade_unions.ig_clout
@@ -923,6 +932,11 @@ usfp_coal_wars_union_leverage_bar = {
 				add = political_movement_support
 			}
 			desc = "labor_movement_support"
+		}
+		#Price of Coal
+		add = {
+			value = root.market.mg:coal.market_goods_pricier
+			desc = "price_of_coal"
 		}
 	}
 }

@@ -1094,5 +1094,7 @@ usfp_coal_wars_ongoing_strikes = {
 usfp_coal_wars_great_coal_strike = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
 	building_coal_mine_throughput_add = -0.66
+	building_group_bg_mining_throughput_add = -0.20
+	building_railway_throughput_add = -0.20
 	state_radicals_from_political_movements_mult = 0.10
 }

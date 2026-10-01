@@ -10,7 +10,7 @@ usfp_coal_wars.1 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    icon = "gfx/interface/icons/invention_icons/socialism.dds"
+    icon = "gfx/interface/icons/invention_icons/labor_movement.dds"
 
     title = usfp_coal_wars.1.t
     desc = usfp_coal_wars.1.d
@@ -30,14 +30,24 @@ usfp_coal_wars.1 = {
     #support the union
     option = {
         name = usfp_coal_wars.1.a
-
+        ig:ig_trade_unions ?= {
+            add_modifier = {
+                name = usfp_coal_wars_union_strength_ig_modifier
+                years = 5
+            }
+        }
     }
 
     #support the coal mines
     option = {
         name = usfp_coal_wars.1.b
         default_option = yes
-
+        ig:ig_industrialists ?= {
+            add_modifier = {
+                name = usfp_coal_wars_backed_coal_companies_ig_modifier
+                years = 5
+            }
+        }
     }
 }
 
@@ -77,7 +87,7 @@ usfp_coal_wars.2 = {
         }
     }
 
-    #miner's angel
+    #miners' angel
     option = {
         name = usfp_coal_wars.2.a
         default_option = yes
@@ -244,7 +254,7 @@ usfp_coal_wars.6 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    icon = "gfx/interface/icons/invention_icons/labor_movement.dds"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
     title = usfp_coal_wars.6.t
     desc = usfp_coal_wars.6.d
@@ -341,7 +351,7 @@ usfp_coal_wars.9 = {
     type = country_event
     placement = scope:kentucky_scope
     event_image = {
-        video = "gfx/event_pictures/votp_cops_march.bk2"
+        video = "gfx/event_pictures/europenorthamerica_before_the_battle.bk2"
     }
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -401,16 +411,72 @@ usfp_coal_wars.10 = {
                 movement_is_socialist = yes
                 is_political_movement_type = movement_labor
             }
+            is_insurrectionary = yes
+            civil_war ?= {
+                civil_war_progress >= 0.50
+            }
         }
     }
 
     immediate = {
-
+        ordered_political_movement = {
+            limit = {
+                OR = {
+                    movement_is_socialist = yes
+                    is_political_movement_type = movement_labor
+                }
+                is_insurrectionary = yes
+                civil_war ?= {
+                    civil_war_progress >= 0.50
+                }
+            }
+            order_by = political_movement_support
+            save_scope_as = revolutionary_movement
+        }
     }
 
+    #viva la revolution
     option = {
         name = usfp_coal_wars.10.a
         default_option = yes
-
+        every_scope_state = {
+            custom = coal_wars_every_unionized_state
+            limit = {
+                has_variable = usfp_state_unionized
+            }
+            add_radicals_in_state = {
+                value = large_radicals
+                interest_group = root.ig:ig_trade_unions
+            }
+        }
     }
+
+    #reinforce patriotic labor
+    option = {
+        name = usfp_coal_wars.10.b
+        highlighted_option = yes
+        trigger = {
+            ig:ig_trade_unions ?= {
+                leader = {
+                    has_socialist_ideology = no
+                }
+            }
+        }
+        show_as_unavailable = { always = yes }
+        every_scope_state = {
+            custom = coal_wars_every_unionized_state
+            limit = {
+                has_variable = usfp_state_unionized
+            }
+            add_radicals_in_state = {
+                value = medium_radicals
+                pop_type = laborers
+            }
+        }
+        add_loyalists = {
+            interest_group = root.ig:ig_trade_unions
+            value = small_radicals
+        }
+    }
+
 }

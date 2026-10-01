@@ -407,3 +407,5 @@ country_enactment_success_chance_law_multicultural_add_desc: "A flat percentage 
  usfp_coal_wars_violence_modifier: "Mine Wars"
  usfp_coal_wars_union_established_modifier: "Union Recognized"
  usfp_strike_enthusiasm_modifier: "Strike Enthusiasm"
+ usfp_coal_wars_union_strength_ig_modifier: "Unionization Drives"
+ usfp_coal_wars_backed_coal_companies_ig_modifier: "Key Industries Support"

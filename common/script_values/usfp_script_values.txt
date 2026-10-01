@@ -1464,7 +1464,7 @@ usfp_second_revolution_drift_value = {
 usfp_coal_wars_unionization_progress = {
 	#TUs clout
 	add = {
-		value = "ig_state_pol_strength_share(scope:trade_unions_ig)"
+		value = "ig_state_pol_strength_share(root.ig:ig_trade_unions)"
 		desc = "trade_unions_clout"
 	}
 	#Labor radicals
@@ -1518,6 +1518,23 @@ usfp_coal_wars_unionization_progress = {
 		divide = {
 			value = 2
 			desc = "decree_violent_suppression"
+		}
+	}
+
+	#Industrialists Clout
+	subtract = {
+		value = "ig_state_pol_strength_share(root.ig:ig_industrialists)"
+		desc = "industrialists_clout"
+	}
+
+	#West Virginia difficulty
+	if = {
+		limit = {
+			state_region = s:STATE_WEST_VIRGINIA
+		}
+		subtract = {
+			value = 1
+			desc = "west_virginia_rugged_terrain"
 		}
 	}
 }

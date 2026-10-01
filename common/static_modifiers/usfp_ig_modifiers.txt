@@ -510,3 +510,13 @@ usfp_ig_nationalized_railways_positive_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
 	interest_group_approval_add = 2
 }
+
+usfp_coal_wars_union_strength_ig_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_laborer_positive.dds
+	interest_group_pop_attraction_mult = 0.20
+}
+
+usfp_coal_wars_backed_coal_companies_ig_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
+	interest_group_approval_add = 2
+}

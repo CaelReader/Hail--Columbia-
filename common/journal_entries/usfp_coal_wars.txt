@@ -7,8 +7,15 @@ usfp_je_coal_wars = {
 
     scripted_progress_bar = usfp_coal_wars_union_leverage_bar
 
+    modifiers_while_active = {
+        usfp_coal_wars_ongoing_strikes
+    }
+
     is_shown_when_inactive = {
         c:USA ?= root
+        NOT = {
+            has_law_or_variant = law_type:law_council_republic
+        }
         has_technology_researched = socialism
         any_political_movement = {
             movement_is_socialist = yes
@@ -240,7 +247,15 @@ usfp_je_coal_wars = {
 
     #Crushing of the strikes and the TUs
     fail = {
-
+        custom_tooltip = {
+            text = progress_bar_zero
+            scope:journal_entry = {
+                scripted_bar_progress = {
+                    name = usfp_coal_wars_union_leverage_bar
+                    value <= 0
+                }
+            }
+        }
     }
 
     on_fail = {
