@@ -117,8 +117,8 @@ usfp_je_coal_wars = {
             }
         }
         ordered_in_list = {
-            list = usfp_coal_wars_states
-            order_by = "ig_state_pol_strength_share(scope:trade_unions_ig)"
+            variable = usfp_coal_wars_states
+            order_by = "ig_state_pol_strength_share(root.ig:ig_trade_unions)"
             root = {
                 set_variable = {
                     name = usfp_coal_wars_umwa_target
@@ -146,7 +146,7 @@ usfp_je_coal_wars = {
             triggered_desc = {
                 trigger = {
                     any_in_list = {
-                        list = usfp_coal_wars_states
+                        variable = usfp_coal_wars_states
                         count = all
                         has_variable = usfp_state_unionized
                     }
@@ -220,6 +220,12 @@ usfp_je_coal_wars = {
 
     #workplace safety and the end of company towns
     complete = {
+        #repeal lochner
+        active_law:lawgroup_labor_rights = {
+            NOT = {
+                has_amendment = amendment_type:amendment_usfp_right_to_contract
+            }
+        }
         OR = {
             AND = {
                 has_law_or_variant = law_type:law_regulatory_bodies

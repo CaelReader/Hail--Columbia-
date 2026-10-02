@@ -1023,3 +1023,12 @@ Updated Transcontinental route triggers to allow you to plan a route that you ha
 Fixed Mexican Homelands not being added after completing the Securing the North JE
 Fixed Oregon Treaty not removing claims properly
 
+#10.0 "Debs"
+## New Content
+
+## Updates
+
+## Fixes
+    Claim Canada button now works even against non-confederated canadian tags
+    
+

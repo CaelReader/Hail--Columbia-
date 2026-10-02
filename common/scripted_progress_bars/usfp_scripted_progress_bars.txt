@@ -914,13 +914,14 @@ usfp_coal_wars_union_leverage_bar = {
 				limit = {
 					has_variable = usfp_state_unionized
 				}
-				add = 0.1
+				add = 1
 			}
 			desc = "coal_wars_unionized_states"
 		}
 		#TUs Clout
 		add = {
 			value = ig:ig_trade_unions.ig_clout
+            multiply = 10
 			desc = "trade_unions_clout"
 		}
 		#Labor Movement Support
@@ -931,11 +932,13 @@ usfp_coal_wars_union_leverage_bar = {
 				}
 				add = political_movement_support
 			}
+            multiply = 10
 			desc = "labor_movement_support"
 		}
 		#Price of Coal
 		add = {
 			value = root.market.mg:coal.market_goods_pricier
+            multiply = 10
 			desc = "price_of_coal"
 		}
 		subtract = {

@@ -545,11 +545,12 @@ progress_bar_complete: "The #b Progress Bar#! has reached 100%"
  usfp_second_revolution_complete_reconstruction_button_desc: "The great crime of slavery still stains the fabric of our country. Self-determination for the Black Belt must begin with economic liberation."
 
  usfp_je_coal_wars: "Coal Wars"
- usfp_je_coal_wars_reason: "Downtrodden coal miners across the country have begun to agitate for fair contracts and better conditions. The #bold United Mine Workers of America#! seeks to unionize every Coal Mine in the country and force the industry to grant them concessions.\n\n@warning! When the Union Leverage bar reaches 100%, the UMWA will launch a nation-wide general coal strike!"
+ usfp_je_coal_wars_reason: "Downtrodden coal miners across the country have begun to agitate for fair contracts and better conditions. The #bold United Mine Workers of America#! seeks to establish nation-wide unionization in order to force the industry to come to terms.\n\n@warning! If #b Union Leverage#! reaches 100% before their demands are met, the UMWA will launch a nation-wide #tooltippable;tooltip:[GetPlayer.GetTooltipTag],usfp_coal_wars_great_coal_strike_tt $usfp_coal_wars_great_coal_strike$#!!"
+ usfp_coal_wars_great_coal_strike_tt: "[GetStaticModifier('usfp_coal_wars_great_coal_strike').GetName|v]\n[GetStaticModifier('usfp_coal_wars_great_coal_strike').GetDesc]"
 
  usfp_coal_wars_great_coal_strike_ongoing: "The Big Coal Strike is ongoing!"
- usfp_coal_wars_all_states_unionized: "Every coalfield in [Root.GetCountry.GetName] has been unionized"
- usfp_coal_wars_umwa_organizing_state: "The United Mine Workers are organizing the coalfields of [Country.MakeScope.Var('usfp_coal_wars_umwa_target').GetState.GetName]"
+ usfp_coal_wars_all_states_unionized: "Every coalfield in the [ROOT.GetCountry.GetName] has been unionized"
+ usfp_coal_wars_umwa_organizing_state: "The #bold United Mine Workers#! are organizing the [GetBuildingType('building_coal_mine').GetName] of [ROOT.Var('usfp_coal_wars_umwa_target').GetState.GetName]"
 
  usfp_coal_wars_union_leverage_bar: "Union Leverage"
  usfp_coal_wars_union_leverage_bar_desc: "Union Leverage: #italic ([JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%0])#!"

@@ -612,18 +612,26 @@ usfp_claim_canada_button = {
 		ruler = {
 			usfp_manifest_destiny_pro_expansion_trigger = yes
 		}
-		OR = {
-			c:GBR ?= {
-				any_subject_or_below = {
-					is_in_geographic_region = geographic_region_north_america
-				}
-				relations:root <= relations_threshold:poor
-			}
-			c:CAN ?= {
-				is_subject = no
-				relations:root <= relations_threshold:poor
-			}
-		}
+        any_country_in_canada = {
+            filter = {
+                NOT = {
+                    is_country_type = decentralized
+                }
+            }
+            percent = 1
+            OR = {
+                AND = {
+                    is_subject = no
+                    relations:root <= relations_threshold:poor
+                }
+                AND = {
+                    is_subject = yes
+                    overlord ?= {
+                        relations:root <= relations_threshold:poor
+                    }
+                }
+            }
+        }
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 	}
