@@ -154,24 +154,35 @@ dyn_c_united_states_of_the_americas: "United States of the Americas"
 dyn_c_american_reich: "American Reich"
 
  #Generic Socialist / Democratic Americanist
- dync_c_usfp_united_workers_republics_of_america: "United Workers' Republics of America"
- dync_c_usfp_united_workers_republics_of_americas: "United Workers' Republics of the Americas"
+ dync_c_usfp_usa_socialist_democratic: "United Workers' Republics of America"
+ dync_c_usfp_usa_socialist_democratic_americas: "United Workers' Republics of the Americas"
 
  #Anarchist/Syndicalist Internationalist
- dyn_c_usp_united_cooperative_commonwealth: "Cooperative Commonwealth"
- dyn_c_usp_united_cooperative_commonwealth_ADJ: "Co-op"
+ dyn_c_usp_usa_anarchist_internationalist: "Cooperative Commonwealth"
+ dyn_c_usp_usa_anarchist_internationalist_ADJ: "Co-op"
 
  #Anarchist/Syndicalist Americanist
- dyn_c_usp_industrial_commonwealth_of_america: "Industrial Commonwealth of America"
- dyn_c_usp_industrial_commonwealth_of_americas: "Pan-American Industrial Commonwealth"
+ dyn_c_usp_usa_americanist_anarchist: "Workers' Commonwealth of America"
+ dyn_c_usp_usa_americanist_anarchist_americas: "Pan-American Workers' Commonwealth"
 
- #Democratic/Authoritarian Internationalist
- dync_c_usfp_union_of_workers_republics: "Union of Workers' Republics"
- dync_c_usfp_union_of_workers_republics_ADJ: "Union"
+ #Democratic Internationalist
+ dync_c_usfp_usa_socialist_internationalist: "Union of Workers' Republics"
+ dync_c_usfp_usa_socialist_internationalist_ADJ: "Union"
+
+ #Authoritarian Internationalist
+ dync_c_usfp_usa_socialist_authoritarian_internationalist: "Union of Socialist Workers' Republics"
+ dync_c_usfp_usa_socialist_authoritarian_internationalist_ADJ: "Union"
 
  #Authoritarian Americanist
- dyn_c_usp_socialist_authoritarian_americanist: "Socialist Union of Workers' Republics in America"
- dyn_c_usp_socialist_authoritarian_americanist_americas: "Pan-American Socialist Union of Workers' Republics"
+ dyn_c_usp_socialist_authoritarian_americanist: "United Socialist States of America"
+ dyn_c_usp_socialist_authoritarian_americanist_americas: "United Socialist States of the Americas"
+
+ #Cybernetic Americanist is just "united states" as per Looking Backwards
+
+ #Cybernetic Internationalist
+ dync_c_usfp_usa_cybernetic_internationalist: "Industrial Union"
+ dync_c_usfp_usa_cybernetic_internationalist_ADJ: "Union"
+
  dyn_c_usp_pan_american_ADJ: "Pan-American"
 
 dyn_c_utah_territory: "Utah Territory"

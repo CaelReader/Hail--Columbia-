@@ -135,7 +135,7 @@
 
 	#United Workers' Republics of America, generic/americanist socialist
 	dynamic_country_name = {
-		name = dync_c_usfp_united_workers_republics_of_america
+		name = dync_c_usfp_usa_socialist_democratic
 		adjective = USA_ADJ
 		
 		is_main_tag_only = yes
@@ -148,7 +148,6 @@
 				OR = {
 					has_law_or_variant = law_type:law_universal_suffrage
                     has_law_or_variant = law_type:law_census_voting
-					has_law_or_variant = law_type:law_technocracy
 				}
 				NOT = {
 					has_law_or_variant = law_type:law_anarchy
@@ -162,7 +161,7 @@
 
     #americanist socialist americas
     dynamic_country_name = {
-        name = dync_c_usfp_united_workers_republics_of_americas
+        name = dync_c_usfp_usa_socialist_democratic_americas
         adjective = USA_ADJ
 
         is_main_tag_only = yes
@@ -175,7 +174,6 @@
                 OR = {
                     has_law_or_variant = law_type:law_universal_suffrage
                     has_law_or_variant = law_type:law_census_voting
-                    has_law_or_variant = law_type:law_technocracy
                 }
                 NOT = {
                     has_law_or_variant = law_type:law_anarchy
@@ -200,8 +198,8 @@
 
     #Union of Workers' Republics, internationalist socialist
     dynamic_country_name = {
-        name = dync_c_usfp_union_of_workers_republics
-        adjective = dync_c_usfp_union_of_workers_republics_ADJ
+        name = dync_c_usfp_usa_socialist_internationalist
+        adjective = dync_c_usfp_usa_socialist_internationalist_ADJ
 
         is_main_tag_only = yes
         priority = 0
@@ -246,7 +244,7 @@
     #authoritarian americanist americas
     dynamic_country_name = {
         name = dyn_c_usp_socialist_authoritarian_americanist_americas
-        adjective = dyn_c_usp_pan_american_ADJ
+        adjective = USA_ADJ
 
         is_main_tag_only = yes
         priority = 100
@@ -281,8 +279,8 @@
 	
 	#Cooperative Commonwealth, internationalist anarchist
 	dynamic_country_name = {
-		name = dyn_c_usp_united_cooperative_commonwealth
-		adjective = dyn_c_usp_united_cooperative_commonwealth_ADJ
+		name = dyn_c_usp_usa_anarchist_internationalist
+		adjective = dyn_c_usp_usa_anarchist_internationalist_ADJ
 		
 		is_main_tag_only = yes
 		priority = 0
@@ -294,9 +292,9 @@
 		}
 	}
 
-    #Industrial Commonwealth of America, americanist anarchist
+    #Workers' Commonwealth of America, americanist anarchist
     dynamic_country_name = {
-        name = dyn_c_usp_industrial_commonwealth_of_america
+        name = dyn_c_usp_usa_americanist_anarchist
         adjective = USA_ADJ
 
         is_main_tag_only = yes
@@ -313,7 +311,7 @@
 
     #americanist anarchist americas
     dynamic_country_name = {
-        name = dyn_c_usp_industrial_commonwealth_of_americas
+        name = dyn_c_usp_usa_americanist_anarchist_americas
         adjective = dyn_c_usp_pan_american_ADJ
 
         is_main_tag_only = yes
@@ -337,6 +335,46 @@
             }
         }
     }
+
+
+    #cybernetic americanist is just "United States"
+    dynamic_country_name = {
+        name = dyn_c_united_states
+        adjective = USA_ADJ
+
+        is_main_tag_only = yes
+        priority = 0
+
+        trigger = {
+            has_game_rule = usa_dynamic_names
+            coa_def_communist_flag_trigger = yes
+            scope:actor ?= {
+                has_law_or_variant = law_type:law_technocracy
+                NOT = {
+                    has_variable = usfp_second_revolution_internationalism_embraced
+                }
+            }
+        }
+    }
+
+    #cybernetic internationalist
+    dynamic_country_name = {
+        name = dync_c_usfp_usa_cybernetic_internationalist
+        adjective = dync_c_usfp_usa_cybernetic_internationalist_ADJ
+
+        is_main_tag_only = yes
+        priority = 0
+
+        trigger = {
+            has_game_rule = usa_dynamic_names
+            coa_def_communist_flag_trigger = yes
+            scope:actor ?= {
+                has_law_or_variant = law_type:law_technocracy
+                has_variable = usfp_second_revolution_internationalism_embraced
+            }
+        }
+    }
+
 
 	#American Commonwealth, theocratic
 	dynamic_country_name = {
