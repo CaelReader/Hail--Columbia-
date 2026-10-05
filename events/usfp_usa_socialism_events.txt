@@ -131,6 +131,9 @@ usfp_usa_socialism.3 = {
                 NOT = {
                     this = cu:dixie
                 }
+                NOT = {
+                    this = cu:british #falklands
+                }
                 OR = {
                     NOT = {
                         has_discrimination_trait_group = heritage_group_indigenous_american

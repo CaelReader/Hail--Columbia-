@@ -33,29 +33,89 @@ USA = {	# United States of America
     #Americanist Democratic
 	flag_definition = {
 		coa = USA_syndicalist
-		priority = 2000
+		priority = 1500
 		trigger = {
 			coa_def_communist_flag_trigger = yes
 			scope:actor ?= {
-				has_law_or_variant = law_type:law_universal_suffrage
+                country_has_voting_franchise = yes
+                NOR = {
+                    has_law_or_variant = law_type:law_single_party_state
+                    has_law_or_variant = law_type:law_anarchy
+                }
 			}
 
 		}
 	}
+    #Internationalist Democratic
+    flag_definition = {
+        coa = USA_syndicalist_internationalist
+        priority = 2000
+        trigger = {
+            coa_def_communist_flag_trigger = yes
+            scope:actor ?= {
+                country_has_voting_franchise = yes
+                NOR = {
+                    has_law_or_variant = law_type:law_single_party_state
+                    has_law_or_variant = law_type:law_anarchy
+                }
+                has_variable = usfp_second_revolution_internationalism_embraced
+            }
+        }
+    }
     #Internationalist Anarchist
 	flag_definition = {
 		coa = USA_anarchist
 		priority = 2000
 		trigger = { 
 			coa_def_anarchy_flag_trigger = yes
+            scope:actor ?= {
+                has_variable = usfp_second_revolution_internationalism_embraced
+            }
 		}
 	}
     #Americanist Anarchist
-
+    flag_definition = {
+        coa = USA_anarchist_americanist
+        priority = 2000
+        trigger = {
+            coa_def_anarchy_flag_trigger = yes
+            scope:actor ?= {
+                NOT = {
+                    has_variable = usfp_second_revolution_internationalism_embraced
+                }
+            }
+        }
+    }
+    #Americanist Cybernetic
+    flag_definition = {
+        coa = USA_cybernetic_americanist
+        priority = 1500
+        trigger = {
+            coa_def_communist_flag_trigger = yes
+            scope:actor ?= {
+                has_law_or_variant = law_type:law_technocracy
+                NOT = {
+                    has_variable = usfp_second_revolution_internationalism_embraced
+                }
+            }
+        }
+    }
+    #Internationalist Cybernetic
+    flag_definition = {
+        coa = USA_cybernetic_internationalist
+        priority = 1500
+        trigger = {
+            coa_def_communist_flag_trigger = yes
+            scope:actor ?= {
+                has_law_or_variant = law_type:law_technocracy
+                has_variable = usfp_second_revolution_internationalism_embraced
+            }
+        }
+    }
     #Americanist Authoritarian Communist
     flag_definition = {
         coa = USA_communist_americanist
-        priority = 1500
+        priority = 1400
         trigger = {
             coa_def_communist_flag_trigger = yes
             scope:actor ?= {
@@ -74,6 +134,7 @@ USA = {	# United States of America
             scope:actor ?= { has_variable = usfp_second_revolution_internationalism_embraced }
 		}
 	}
+
 	flag_definition = {
 		coa = USA_fascist
 		subject_canton = USA_fascist

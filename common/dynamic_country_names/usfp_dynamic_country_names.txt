@@ -196,13 +196,13 @@
     }
 
 
-    #Union of Workers' Republics, internationalist socialist
+    #internationalist socialist
     dynamic_country_name = {
         name = dync_c_usfp_usa_socialist_internationalist
         adjective = dync_c_usfp_usa_socialist_internationalist_ADJ
 
         is_main_tag_only = yes
-        priority = 0
+        priority = 100
 
         trigger = {
             has_game_rule = usa_dynamic_names
@@ -216,7 +216,30 @@
         }
     }
 
-	#Socialist Union of Workers' Republics in America, authoritarian americanist
+    #authoritarian internationalist
+    dynamic_country_name = {
+        name = dync_c_usfp_usa_socialist_authoritarian_internationalist
+        adjective = dync_c_usfp_usa_socialist_authoritarian_internationalist_ADJ
+
+        is_main_tag_only = yes
+        priority = 200
+
+        trigger = {
+            has_game_rule = usa_dynamic_names
+            coa_def_communist_flag_trigger = yes
+            scope:actor ?= {
+                NOR = {
+                    has_law_or_variant = law_type:law_universal_suffrage
+                    has_law_or_variant = law_type:law_census_voting
+                    has_law_or_variant = law_type:law_technocracy
+                    has_law_or_variant = law_type:law_anarchy
+                }
+                has_variable = usfp_second_revolution_internationalism_embraced
+            }
+        }
+    }
+
+	#authoritarian americanist
 	dynamic_country_name = {
 		name = dyn_c_usp_socialist_authoritarian_americanist
 		adjective = USA_ADJ
@@ -343,7 +366,7 @@
         adjective = USA_ADJ
 
         is_main_tag_only = yes
-        priority = 0
+        priority = 100
 
         trigger = {
             has_game_rule = usa_dynamic_names
@@ -363,7 +386,7 @@
         adjective = dync_c_usfp_usa_cybernetic_internationalist_ADJ
 
         is_main_tag_only = yes
-        priority = 0
+        priority = 100
 
         trigger = {
             has_game_rule = usa_dynamic_names
