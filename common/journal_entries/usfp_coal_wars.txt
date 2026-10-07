@@ -271,6 +271,8 @@ usfp_je_coal_wars = {
         trigger_event = usfp_coal_wars.8
     }
 
+    #cleanup unionization modifiers
+
     #Council Republic
     invalid = {
         has_radical_leftist_economy = yes

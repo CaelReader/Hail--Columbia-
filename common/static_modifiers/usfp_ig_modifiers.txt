@@ -520,3 +520,13 @@ usfp_coal_wars_backed_coal_companies_ig_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
 	interest_group_approval_add = 2
 }
+
+usfp_ig_industrialists_mad_coal_wars_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	interest_group_approval_add = -2
+}
+
+usfp_ig_trade_unions_mad_coal_wars_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	interest_group_approval_add = -2
+}

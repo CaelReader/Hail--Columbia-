@@ -488,3 +488,23 @@ usfp_coal_wars_union_established_modifier = {
 	building_laborers_mortality_mult = -0.05
 	building_minimum_wage_mult = 0.10
 }
+
+usfp_coal_wars_unionization_strong_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_laborer_positive.dds
+	state_pop_support_movement_labor_mult = 0.20
+	state_pop_support_movement_socialist_mult = 0.20
+}
+
+usfp_coal_wars_unionization_defeated_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_laborer_negative.dds
+	state_pop_support_movement_labor_mult = -0.20
+	state_pop_support_movement_socialist_mult = -0.20
+}
+
+usfp_coal_wars_unionization_radicalized_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	state_pop_support_movement_labor_mult = -0.50
+	state_pop_support_movement_socialist_mult = 0.30
+	state_pop_support_movement_communist_mult = 0.30
+	state_pop_support_movement_anarchist_mult = 0.30
+}

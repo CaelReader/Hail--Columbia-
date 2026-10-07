@@ -2647,3 +2647,13 @@ usfp_second_revolution_calculate_targets = {
         multiply = ROOT.usfp_second_revolution_americanism_display
     }
 }
+
+usfp_coal_wars_reset_unionization_progress = {
+	custom_tooltip = {
+		text = usfp_coal_wars_unionization_reset
+		set_variable = {
+			name = usfp_coal_wars_state_unionization
+			value = 0
+		}
+	}
+}

@@ -49,6 +49,19 @@ usfp_coal_wars.1 = {
             }
         }
     }
+
+    #unions are illegal
+    option = {
+        name = usfp_coal_wars.1.c
+        trigger = {
+            has_law_or_variant = law_type:law_combination_acts
+        }
+        highlighted_option = yes
+        add_radicals = {
+            pop_type = laborers
+            value = medium_radicals
+        }
+    }
 }
 
 # Mother Jones Spawn
@@ -98,7 +111,9 @@ usfp_coal_wars.2 = {
     option = {
         name = usfp_coal_wars.2.a
         default_option = yes
-
+        scope:mother_jones_scope ?= {
+            add_modifier = { name = usfp_miners_angel_modifier }
+        }
     }
 
     #seems suspicious
@@ -130,7 +145,13 @@ usfp_coal_wars.3 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     trigger = {
-        #unionization of West Virginia has begun
+        has_state_in_state_region = STATE_WEST_VIRGINIA
+        s:STATE_WEST_VIRGINIA.region_state:USA = {
+            has_building = building_coal_mine
+            #unionization in progress
+            has_variable = usfp_coal_wars_state_unionization
+            var:usfp_coal_wars_state_unionization >= 25
+        }
     }
 
     immediate = {
@@ -144,13 +165,23 @@ usfp_coal_wars.3 = {
     option = {
         name = usfp_coal_wars.3.a
         default_option = yes
-
+        ig:ig_industrialists ?= {
+            add_modifier = {
+                name = usfp_ig_industrialists_mad_coal_wars_modifier
+                years = 4
+            }
+        }
     }
 
     #union violence!
     option = {
         name = usfp_coal_wars.3.a
-
+        ig:ig_trade_unions ?= {
+            add_modifier = {
+                name = usfp_ig_trade_unions_mad_coal_wars_modifier
+                years = 4
+            }
+        }
     }
 
     after = {
@@ -183,8 +214,14 @@ usfp_coal_wars.4 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     trigger = {
-        #unionization of West Virginia is in progress
         has_variable = usfp_coal_wars_had_matewan
+        has_state_in_state_region = STATE_WEST_VIRGINIA
+        s:STATE_WEST_VIRGINIA.region_state:USA = {
+            has_building = building_coal_mine
+            #unionization in progress
+            has_variable = usfp_coal_wars_state_unionization
+            var:usfp_coal_wars_state_unionization >= 75
+        }
     }
 
     immediate = {
@@ -197,7 +234,21 @@ usfp_coal_wars.4 = {
     option = {
         name = usfp_coal_wars.4.a
         default_option = yes
-
+        scope:west_virginia_scope ?= {
+            kill_population_in_state = {
+                pop_type = laborers
+                value = 100
+            }
+            add_modifier = {
+                name = usfp_coal_wars_violence_modifier
+                years = 2
+            }
+            add_modifier = {
+                name = usfp_coal_wars_unionization_defeated_modifier
+                years = 10
+            }
+            usfp_coal_wars_reset_unionization_progress = yes
+        }
     }
 
     #allow baldwin-feltz to attack
@@ -209,6 +260,31 @@ usfp_coal_wars.4 = {
                 is_in_government = yes
             }
         }
+        scope:west_virginia_scope ?= {
+            add_devastation = 5
+            kill_population_in_state = {
+                pop_type = laborers
+                value = 1000
+            }
+            add_modifier = {
+                name = usfp_coal_wars_violence_modifier
+                years = 2
+                multiplier = 2
+            }
+            add_modifier = {
+                name = usfp_coal_wars_unionization_defeated_modifier
+                years = 10
+                multiplier = 2
+            }
+            usfp_coal_wars_reset_unionization_progress = yes
+        }
+        ig:ig_trade_unions ?= {
+            add_modifier = {
+                name = usfp_ig_trade_unions_mad_coal_wars_modifier
+                years = 4
+                multiplier = 2
+            }
+        }
     }
 
     #send support to the strikers
@@ -218,6 +294,28 @@ usfp_coal_wars.4 = {
         trigger = {
             ig:ig_trade_unions ?= {
                 is_in_government = yes
+            }
+        }
+        scope:west_virginia_scope ?= {
+            kill_population_in_state = {
+                pop_type = laborers
+                value = 100
+            }
+            add_modifier = {
+                name = usfp_coal_wars_violence_modifier
+                years = 2
+                multiplier = 2
+            }
+            add_modifier = {
+                name = usfp_coal_wars_unionization_strong_modifier
+                years = 10
+            }
+        }
+        ig:ig_industrialists ?= {
+            add_modifier = {
+                name = usfp_ig_industrialists_mad_coal_wars_modifier
+                years = 4
+                multiplier = 2
             }
         }
     }
@@ -235,7 +333,7 @@ usfp_coal_wars.4 = {
                     has_template = usfp_mother_jones
                     has_role_of_type = agitator
                 }
-                retire_character = yes
+                retire_character = yes #disgraced after trying to stop the miners march
             }
         }
     }
@@ -262,10 +360,12 @@ usfp_coal_wars.5 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     trigger = {
-        #Colorado unionization in progress
         has_state_in_state_region = STATE_COLORADO
         s:STATE_COLORADO.region_state:USA = {
             has_building = building_coal_mine
+            #unionization in progress
+            has_variable = usfp_coal_wars_state_unionization
+            var:usfp_coal_wars_state_unionization >= 75
         }
     }
 
@@ -279,17 +379,48 @@ usfp_coal_wars.5 = {
     option = {
         name = usfp_coal_wars.5.a
         default_option = yes
-
+        scope:colorado_scope = {
+            add_modifier = {
+                name = usfp_coal_wars_unionization_defeated_modifier
+                years = 5
+            }
+            usfp_coal_wars_reset_unionization_progress = yes
+        }
     }
 
     #blame coal company
     option = {
         name = usfp_coal_wars.5.b
+        add_radicals = {
+            strata = upper
+            value = medium_radicals
+        }
+        if = {
+            limit = {
+                has_company = company_type:company_usfp_cfi
+            }
+            every_company = {
+                limit = {
+                    is_company_type = company_usfp_cfi
+                }
+                executive = {
+                    add_modifier = {
+                        name = usfp_coal_wars_butcher_modifier
+                        years = 5
+                    }
+                }
+            }
+        }
 
     }
 
     after = {
         scope:colorado_scope = {
+            add_devastation = 5
+            kill_population_in_state = {
+                pop_type = laborers
+                value = 100
+            }
             add_modifier = {
                 name = usfp_coal_wars_violence_modifier
                 years = 2
@@ -495,10 +626,12 @@ usfp_coal_wars.9 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     trigger = {
-        #Kentucky unionization in progress
         has_state_in_state_region = STATE_KENTUCKY
         s:STATE_KENTUCKY.region_state:USA = {
             has_building = building_coal_mine
+            #Kentucky unionization in progress
+            has_variable = usfp_coal_wars_state_unionization
+            var:usfp_coal_wars_state_unionization >= 75
         }
     }
 
@@ -508,10 +641,66 @@ usfp_coal_wars.9 = {
         }
     }
 
+    #restore peace
     option = {
         name = usfp_coal_wars.9.a
         default_option = yes
+        scope:kentucky_scope ?= {
+            add_loyalists_in_state = {
+                pop_type = capitalists
+                value = large_radicals
+            }
+            add_modifier = {
+                name = usfp_coal_wars_unionization_defeated_modifier
+                years = 5
+            }
+            usfp_coal_wars_reset_unionization_progress = yes
+        }
+    }
 
+    #pro-labor
+    option = {
+        name = usfp_coal_wars.9.b
+        scope:kentucky_scope ?= {
+            add_loyalists_in_state = {
+                pop_type = laborers
+                value = small_radicals
+            }
+            add_modifier = {
+                name = usfp_coal_wars_unionization_strong_modifier
+                years = 5
+            }
+        }
+    }
+
+    #pro-communist
+    option = {
+        name = usfp_coal_wars.9.c
+        trigger = {
+            any_political_movement = {
+                movement_is_socialist = yes
+            }
+        }
+        highlighted_option = yes
+        scope:kentucky_scope ?= {
+            add_radicals_in_state = {
+                pop_type = laborers
+                value = large_radicals
+            }
+            add_modifier = {
+                name = usfp_coal_wars_unionization_radicalized_modifier
+                years = 5
+            }
+        }
+    }
+
+    after = {
+        scope:kentucky_scope = {
+            add_modifier = {
+                name = usfp_coal_wars_violence_modifier
+                years = 5
+            }
+        }
     }
 }
 
@@ -544,6 +733,10 @@ usfp_coal_wars.10 = {
             civil_war ?= {
                 civil_war_progress >= 0.50
             }
+        }
+        any_scope_state = {
+            has_variable = usfp_state_unionized
+            count >= 3
         }
     }
 

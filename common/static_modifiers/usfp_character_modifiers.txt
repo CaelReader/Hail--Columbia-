@@ -117,7 +117,7 @@ usfp_racial_controversy_modifier = {
 }
 
 usfp_white_house_guest_modifier = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
     character_popularity_add = 15
 }
 
@@ -145,4 +145,14 @@ usfp_johnstown_flood_blamed_officially_modifier = {
 usfp_bonus_army_blamed = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_soldier_negative.dds
 	character_popularity_add = -50
+}
+
+usfp_miners_angel_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	character_popularity_add = 15
+}
+
+usfp_coal_wars_butcher_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	character_popularity_add = -30
 }
