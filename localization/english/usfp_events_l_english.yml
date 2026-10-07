@@ -1,6 +1,20 @@
 ﻿l_english:
 ### Hail, Columbia! by CaelReader ###
 
+ usfp_debug.1.t: "Mod Conflict Detected"
+ usfp_debug.1.d: "Hail, Columbia! has detected an incorrect mod setup. Lots of things will break! Do not report errors from this save game!"
+ usfp_debug.1.f: ""Vegeta, what does the scouter say about their error log?!""
+ usfp_debug.1.a: "The Community Mod Framework must be enabled!"
+ usfp_debug.1.b: "Better Politics Mod is not compatible."
+ usfp_debug.1.c: "Gilded Age is not compatible."
+ usfp_debug.1.g: "Another mod is overwriting party definitions!"
+ default_parties_found: "The USA has a vanilla Conservative or Liberal party active"
+ cmf_is_missing: "The #bold Community Mod Framework#! is not enabled"
+ bpm_is_active: "The #bold Better Politics Mod#! is enabled"
+ gilded_age_is_active: "The #bold Gilded Age#! mod is enabled"
+
+ quote_dash: "\n\n—"
+
 ### A House Divided Events ###
 
 acw_events.1.a.t: "An [SCOPE.sIdeology('abolitionist_scope').GetName] [concept_agitator] will appear in [SCOPE.sCountry('usa_scope').GetName]."
@@ -2106,17 +2120,84 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  hooverville_states: "Every [concept_incorporated_state] with more than 10% [Concept('concept_unemployed', '$concept_unemployment$')]"
  roaring_twenties_ends: "#bold $je_usfp_roaring_twenties$#! comes to an abrupt end"
 
+ usfp_coal_wars.1.t: "Coal Wars"
+ usfp_coal_wars.1.d: "Downtrodden coal miners have come together to form the United Mine Workers of America, an industry-wide organizing aiming to unionize every Coal Mine in the [ROOT.GetCountry.GetName] and bring an end to the abuses of the industry. Confrontations between striking workers and private security forces are growing increasingly violent."
+ usfp_coal_wars.1.f: "REPLACE_ME"
+ usfp_coal_wars.1.a: "REPLACE_ME"
+ usfp_coal_wars.1.b: "REPLACE_ME"
+ usfp_coal_wars.1.c: "REPLACE_ME"
 
- usfp_debug.1.t: "Mod Conflict Detected"
- usfp_debug.1.d: "Hail, Columbia! has detected an incorrect mod setup. Lots of things will break! Do not report errors from this save game!"
- usfp_debug.1.f: ""Vegeta, what does the scouter say about their error log?!""
- usfp_debug.1.a: "The Community Mod Framework must be enabled!"
- usfp_debug.1.b: "Better Politics Mod is not compatible."
- usfp_debug.1.c: "Gilded Age is not compatible."
- usfp_debug.1.g: "Another mod is overwriting party definitions!"
- default_parties_found: "The USA has a vanilla Conservative or Liberal party active"
- cmf_is_missing: "The #bold Community Mod Framework#! is not enabled"
- bpm_is_active: "The #bold Better Politics Mod#! is enabled"
- gilded_age_is_active: "The #bold Gilded Age#! mod is enabled"
+ usfp_coal_wars.2.t: "The Most Dangerous Woman in America"
+ usfp_coal_wars.2.d: "[SCOPE.sCharacter('mother_jones_scope').GetFirstName] "Mother" [SCOPE.sCharacter('mother_jones_scope').GetLastName] has become a fixture of strikes across the coalfields. "
+ usfp_coal_wars.2.f: "REPLACE_ME"
+ usfp_coal_wars.2.a: "REPLACE_ME"
+ usfp_coal_wars.2.b: "REPLACE_ME"
 
-quote_dash: "\n\n—"
+ usfp_coal_wars.3.t: "The Battle of Matewan"
+ usfp_coal_wars.3.d: "REPLACE_ME"
+ usfp_coal_wars.3.f: "REPLACE_ME"
+ usfp_coal_wars.3.a: "REPLACE_ME"
+
+ usfp_coal_wars.4.t: "The Battle of Blair Mountain"
+ usfp_coal_wars.4.d: "REPLACE_ME"
+ usfp_coal_wars.4.f: "REPLACE_ME"
+ usfp_coal_wars.4.a: "REPLACE_ME"
+ usfp_coal_wars.4.b: "REPLACE_ME"
+ usfp_coal_wars.4.c: "REPLACE_ME"
+
+ usfp_coal_wars.5.t: "The Ludlow Massacre"
+ usfp_coal_wars.5.d: "REPLACE_ME"
+ usfp_coal_wars.5.f: "REPLACE_ME"
+ usfp_coal_wars.5.a: "REPLACE_ME"
+ usfp_coal_wars.5.b: "REPLACE_ME"
+
+ usfp_coal_wars.6.t: "The Big Coal Strike"
+ usfp_coal_wars.6.d: "The United Mine Workers have called a nation-wide strike of coal miners, in an effort to force the industry to come to terms. Unionized and non-unionized miners alike have walked off the job, with several associated mining and railway unions also calling sympathy strikes."
+ usfp_coal_wars.6.f: "REPLACE_ME"
+ usfp_coal_wars.6.a: "We can wait them out."
+ usfp_coal_wars.6.b: "Make it clear that the unions will get what they want."
+ usfp_coal_wars_strike_will_drain_leverage: "The general strike will #red rapidly deplete#! #bold Union Leverage#!!"
+
+ usfp_coal_wars.7.t: "The United Mine Workers"
+ usfp_coal_wars.7.d: "The enforcement of Worker Protections has forced the hand of the coal industry and marked a major victory for the Trade Unions. With union contract signed across the country, the violence at the coalfields has come to an end."
+ usfp_coal_wars.7.f: "REPLACE_ME"
+ usfp_coal_wars.7.a: "REPLACE_ME"
+
+ usfp_coal_wars.8.t: "Yellow Dogs"
+ usfp_coal_wars.8.d: "REPLACE_ME"
+ usfp_coal_wars.8.f: "REPLACE_ME"
+ usfp_coal_wars.8.a: "REPLACE_ME"
+
+ usfp_coal_wars.9.t: "Bloody Harlan"
+ usfp_coal_wars.9.d: "REPLACE_ME"
+ usfp_coal_wars.9.f: "REPLACE_ME"
+ usfp_coal_wars.9.a: "REPLACE_ME"
+ usfp_coal_wars.9.b: "REPLACE_ME"
+ usfp_coal_wars.9.c: "REPLACE_ME"
+
+ usfp_coal_wars.10.t: "Which Side Are You On?"
+ usfp_coal_wars.10.d: "The violent agitation of the [SCOPE.sPoliticalMovement('revolutionary_movement').GetName] has found many adherents in the coalfields. Unionized workers, having armed themselves for self-defense against their bosses, have now begun to declare for the revolution en-masse."
+ usfp_coal_wars.10.f: "REPLACE_ME"
+ usfp_coal_wars.10.a: "REPLACE_ME"
+ usfp_coal_wars.10.b: "REPLACE_ME"
+
+ coal_wars_every_unionized_state: "Every [concept_state] unionized by the #bold UMWA#!"
+
+ usfp_usa_socialism.1.t: "The Continental Congress of the Working Class"
+ usfp_usa_socialism.1.d: "REPLACE_ME"
+ usfp_usa_socialism.1.f: "REPLACE_ME"
+ usfp_usa_socialism.1.a: "[currentyear] will answer the promise of 1776."
+ usfp_usa_socialism.1.b: "We must let the past die. Kill it, if we have to."
+
+ usfp_usa_socialism.2.t: "Socialism with American Characteristics"
+ usfp_usa_socialism.2.d: "REPLACE_ME"
+ usfp_usa_socialism.2.f: "REPLACE_ME"
+ usfp_usa_socialism.2.a: "Communism is as American as apple pie!"
+
+ usfp_usa_socialism.3.t: "Solidarity Forever"
+ usfp_usa_socialism.3.d: "REPLACE_ME"
+ usfp_usa_socialism.3.f: "REPLACE_ME"
+ usfp_usa_socialism.3.a: "The International is the human race!"
+
+ second_revolution_institutions_will_support_americanism: "REPLACE_ME"
+ second_revolution_institutions_will_support_internationalism: "REPLACE_ME"

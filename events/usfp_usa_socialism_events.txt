@@ -38,7 +38,7 @@ usfp_usa_socialism.1 = {
 
     #Choose Internationalism
     option = {
-        name = usfp_usa_socialism.1.a
+        name = usfp_usa_socialism.1.b
         custom_tooltip = {
             text = second_revolution_institutions_will_support_internationalism
             set_variable = usfp_second_revolution_supported_antiamericanism

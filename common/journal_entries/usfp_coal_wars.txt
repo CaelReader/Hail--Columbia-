@@ -226,6 +226,8 @@ usfp_je_coal_wars = {
                 has_amendment = amendment_type:amendment_usfp_right_to_contract
             }
         }
+        NOT = { has_law_or_variant = law_type:law_child_labor_allowed }
+        NOT = { has_law_or_variant = law_type:law_combination_acts }
         OR = {
             AND = {
                 has_law_or_variant = law_type:law_regulatory_bodies
