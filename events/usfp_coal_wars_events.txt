@@ -30,6 +30,11 @@ usfp_coal_wars.1 = {
     #support the union
     option = {
         name = usfp_coal_wars.1.a
+        trigger = {
+            NOT= {
+                has_law_or_variant = law_type:law_combination_acts
+            }
+        }
         ig:ig_trade_unions ?= {
             add_modifier = {
                 name = usfp_coal_wars_union_strength_ig_modifier
@@ -42,6 +47,11 @@ usfp_coal_wars.1 = {
     option = {
         name = usfp_coal_wars.1.b
         default_option = yes
+        trigger = {
+            NOT= {
+                has_law_or_variant = law_type:law_combination_acts
+            }
+        }
         ig:ig_industrialists ?= {
             add_modifier = {
                 name = usfp_coal_wars_backed_coal_companies_ig_modifier
@@ -92,6 +102,9 @@ usfp_coal_wars.2 = {
         }
         empty_agitator_slots >= 1
         year >= 1894
+        NOT = {
+            has_global_variable = mother_jones_spawned
+        }
     }
 
     immediate = {
@@ -105,6 +118,7 @@ usfp_coal_wars.2 = {
             }
             save_scope_as = mother_jones_scope
         }
+        set_global_variable = mother_jones_spawned
     }
 
     #miners' angel
