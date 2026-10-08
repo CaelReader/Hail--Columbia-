@@ -916,7 +916,7 @@ social_gospelists_can_appear: "[GetIdeology('ideology_usfp_social_gospel_leader'
 
 usfp_usa_labor.1.t: "The Industrial Workers of the World"
 usfp_usa_labor.1.d: "A convention of radical trade unionists has met in [SCOPE.sState('illinois_scope').GetCityHubName] and founded an organization they call the Industrial Workers of the World, which seeks to unite workers of all trades into 'one big union'. Adopting a much more militant stance than traditional labor organizations, the IWW's stated objective is the total abolition of the wage system, and their platform calls for this to be accomplished through direct action, general strikes, and sabotage."
-usfp_usa_labor.1.f: ""It is the historic mission of the working class to do away with capitalism. The army of production must be organized, not only for everyday struggle with capitalists, but also to carry on production when capitalism shall have been overthrown. By organizing industrially we are forming the structure of the new society within the shell of the old."" #IWW Constitution Preamble
+usfp_usa_labor.1.f: ""We are here to confederate the workers of this country into a working class movement that shall have for its purpose the emancipation of the working class from the slave bondage of capitalism. The aims and objects of this organization should be to put the working class in possession of the economic power, the means of life, in control of the machinery of production and distribution, without regard to capitalist masters."$quote_dash$William "Big Bill" Haywood"
 usfp_usa_labor.1.a: "An injury to one is an injury to all!"
 usfp_usa_labor.1.b: "These radicals are a threat to social order."
 
@@ -2120,7 +2120,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  hooverville_states: "Every [concept_incorporated_state] with more than 10% [Concept('concept_unemployed', '$concept_unemployment$')]"
  roaring_twenties_ends: "#bold $je_usfp_roaring_twenties$#! comes to an abrupt end"
 
- usfp_coal_wars.1.t: "Coal Wars"
+ usfp_coal_wars.1.t: "Sixteen Tons"
  usfp_coal_wars.1.d: "Downtrodden coal miners have come together to form the United Mine Workers of America, an industry-wide organizing aiming to unionize every Coal Mine in the [ROOT.GetCountry.GetName] and bring an end to the abuses of the industry. Confrontations between striking workers and private security forces are growing increasingly violent."
  usfp_coal_wars.1.f: "REPLACE_ME"
  usfp_coal_wars.1.a: "REPLACE_ME"
@@ -2158,8 +2158,8 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_coal_wars.6.b: "Make it clear that the unions will get what they want."
  usfp_coal_wars_strike_will_drain_leverage: "The general strike will #red rapidly deplete#! #bold Union Leverage#!!"
 
- usfp_coal_wars.7.t: "The United Mine Workers"
- usfp_coal_wars.7.d: "The enforcement of Worker Protections has forced the hand of the coal industry and marked a major victory for the Trade Unions. With union contract signed across the country, the violence at the coalfields has come to an end."
+ usfp_coal_wars.7.t: "This Is What The Union Done"
+ usfp_coal_wars.7.d: "The enforcement of Worker Protections has forced the hand of the coal industry and marked a major victory for the Trade Unions. With union contracts signed across the country, the violence at the coalfields has come to an end."
  usfp_coal_wars.7.f: "REPLACE_ME"
  usfp_coal_wars.7.a: "REPLACE_ME"
 
@@ -2170,34 +2170,34 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
 
  usfp_coal_wars.9.t: "Bloody Harlan"
  usfp_coal_wars.9.d: "REPLACE_ME"
- usfp_coal_wars.9.f: "REPLACE_ME"
+ usfp_coal_wars.9.f: ""They say in Harlan County\nThere are no neutrals there\nYou'll either be a union man\nOr a thug for J.H. Blair"$quote_dash$Florence Reece, #italic Which Side Are You On?#!"
  usfp_coal_wars.9.a: "REPLACE_ME"
  usfp_coal_wars.9.b: "REPLACE_ME"
  usfp_coal_wars.9.c: "REPLACE_ME"
 
  usfp_coal_wars.10.t: "Which Side Are You On?"
  usfp_coal_wars.10.d: "The violent agitation of the [SCOPE.sPoliticalMovement('revolutionary_movement').GetName] has found many adherents in the coalfields. Unionized workers, having armed themselves for self-defense against their bosses, have now begun to declare for the revolution en-masse."
- usfp_coal_wars.10.f: "REPLACE_ME"
- usfp_coal_wars.10.a: "REPLACE_ME"
- usfp_coal_wars.10.b: "REPLACE_ME"
+ usfp_coal_wars.10.f: ""Timid and muddled trade unions are a logical throwoff of a timid and muddled working class. But as the workers gradually become educated, and especially as a more militant and intelligent element achieves leadership among them, the trade unions will constantly take on higher forms and a more advanced psychology, until finally they develop into scientifically constructed, class conscious weapons in the revolutionary struggle."$quote_dash$William Z. Foster, #italic The Bankruptcy of the American Labor Movement#!"
+ usfp_coal_wars.10.a: "Take up your rifles, and break your chains!"
+ usfp_coal_wars.10.b: "The patriotic unions must stand fast."
 
  coal_wars_every_unionized_state: "Every [concept_state] unionized by the #bold UMWA#!"
 
  usfp_usa_socialism.1.t: "The Continental Congress of the Working Class"
- usfp_usa_socialism.1.d: "REPLACE_ME"
- usfp_usa_socialism.1.f: "REPLACE_ME"
- usfp_usa_socialism.1.a: "[currentyear] will answer the promise of 1776."
+ usfp_usa_socialism.1.d: "The new American [GetLawType('law_council_republic').GetName] has triumphed over the constitutional order of old. Even so, the American ideal remains deeply rooted both within and without the socialist movement. We stand at a crossroads between the transformation of our national identity, or its dissolution in favor of international solidarity for all."
+ usfp_usa_socialism.1.f: ""It is the historic mission of the working class to do away with capitalism. The army of production must be organized, not only for everyday struggle with capitalists, but also to carry on production when capitalism shall have been overthrown. By organizing industrially we are forming the structure of the new society within the shell of the old."$quote_dash$Constitution of the Industrial Workers of the World"
+ usfp_usa_socialism.1.a: "[TimeKeeper.GetCurrentDate.Format('y')] will fulfill the promises of 1776."
  usfp_usa_socialism.1.b: "We must let the past die. Kill it, if we have to."
 
  usfp_usa_socialism.2.t: "Socialism with American Characteristics"
- usfp_usa_socialism.2.d: "REPLACE_ME"
- usfp_usa_socialism.2.f: "REPLACE_ME"
+ usfp_usa_socialism.2.d: "American Socialism has been cemented as the prevailing ideology of the [ROOT.GetCountry.GetName]. The pantheon of socialist heroes has come to include George Washington and Thomas Paine, and patriotic americans now extoll the virtues of life, liberty, and the cooperative commonwealth."
+ usfp_usa_socialism.2.f: ""The revolutionary tradition is the heart of Americanism. We Communists claim the revolutionary traditions of Americanism. We are the only ones who consciously continue those traditions to the problems of today."$quote_dash$Earl Browder, #italic What is Communism?#!"
  usfp_usa_socialism.2.a: "Communism is as American as apple pie!"
 
  usfp_usa_socialism.3.t: "Solidarity Forever"
- usfp_usa_socialism.3.d: "REPLACE_ME"
- usfp_usa_socialism.3.f: "REPLACE_ME"
+ usfp_usa_socialism.3.d: "The Second American Revolution will be remembered in stark contrast to the first. The new [ROOT.GetCountry.GetName] has rejected the hypocrisy of the old America and embraced the brotherhood of humanity,standing as a beacon to the world of Internationalist triumph."
+ usfp_usa_socialism.3.f: ""Let us sink such differences as nationality, religion, politics, and set our eyes eternally and forever towards the rising star of the industrial republic of labor; remembering that we have left the old behind and have set our faces toward the future. There is no power on Earth that can stop men and women who are determined to be free at all hazards. There is no power on Earth so great as the power of intellect. It moves the world and it moves the Earth."$quote_dash$Lucy E. Parsons"
  usfp_usa_socialism.3.a: "The International is the human race!"
 
- second_revolution_institutions_will_support_americanism: "REPLACE_ME"
- second_revolution_institutions_will_support_internationalism: "REPLACE_ME"
+ second_revolution_institutions_will_support_americanism: "Our #bold Home Affairs#! and #bold Schools#! [Concept('concept_institution', '$concept_institutions$')] will promote Americanism"
+ second_revolution_institutions_will_support_internationalism: "Our #bold Home Affairs#! and #bold Schools#! [Concept('concept_institution', '$concept_institutions$')] will promote Internationalism"

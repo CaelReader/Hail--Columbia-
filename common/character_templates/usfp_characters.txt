@@ -2308,6 +2308,7 @@ usfp_lucy_parsons  = {
     agitator_usage = {
         country_trigger = {
             c:USA ?= this
+            has_law_or_variant = law_type:law_slavery_banned
         }
         interest_group_trigger = {
             is_interest_group_type = ig_intelligentsia
