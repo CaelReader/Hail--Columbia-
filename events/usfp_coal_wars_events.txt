@@ -189,7 +189,7 @@ usfp_coal_wars.3 = {
 
     #union violence!
     option = {
-        name = usfp_coal_wars.3.a
+        name = usfp_coal_wars.3.b
         ig:ig_trade_unions ?= {
             add_modifier = {
                 name = usfp_ig_trade_unions_mad_coal_wars_modifier
@@ -230,6 +230,8 @@ usfp_coal_wars.4 = {
     trigger = {
         has_variable = usfp_coal_wars_had_matewan
         has_state_in_state_region = STATE_WEST_VIRGINIA
+        has_technology_researched = military_aviation
+        has_technology_researched = automatic_machine_guns
         s:STATE_WEST_VIRGINIA.region_state:USA = {
             has_building = building_coal_mine
             #unionization in progress
@@ -375,6 +377,7 @@ usfp_coal_wars.5 = {
 
     trigger = {
         has_state_in_state_region = STATE_COLORADO
+        has_technology_researched = automatic_machine_guns
         s:STATE_COLORADO.region_state:USA = {
             has_building = building_coal_mine
             #unionization in progress
@@ -544,7 +547,28 @@ usfp_coal_wars.7 = {
     }
 
     immediate = {
-
+        if = {
+            limit = {
+                has_law_or_variant = law_type:law_corporatized_unions
+            }
+            law_type:law_corporatized_unions = {
+                save_scope_as = pro_union_law
+            }
+        } else_if = {
+            limit = {
+                has_law_or_variant = law_type:law_worker_protections
+            }
+            law_type:law_worker_protections = {
+                save_scope_as = pro_union_law
+            }
+        } else_if = {
+            limit = {
+                has_law_or_variant = law_type:law_regulatory_bodies
+            }
+            law_type:law_regulatory_bodies = {
+                save_scope_as = pro_union_law
+            }
+        }
     }
 
     option = {
@@ -675,6 +699,16 @@ usfp_coal_wars.9 = {
     #pro-labor
     option = {
         name = usfp_coal_wars.9.b
+        trigger = {
+            NOR = {
+                has_law_or_variant = law_type:law_combination_acts
+                has_law_or_variant = law_type:law_anti_strike_laws
+            }
+        }
+        highlighted_option = yes
+        show_as_unavailable = {
+            always = yes
+        }
         scope:kentucky_scope ?= {
             add_loyalists_in_state = {
                 pop_type = laborers
