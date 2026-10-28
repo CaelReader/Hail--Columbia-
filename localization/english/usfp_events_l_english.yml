@@ -2131,7 +2131,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_coal_wars.2.d: "[SCOPE.sCharacter('mother_jones_scope').GetFirstName] "Mother" [SCOPE.sCharacter('mother_jones_scope').GetLastName] has become a fixture of strikes across the coalfields, travelling up and down Appalachia delivering speeches encouraging working men to stand up for themselves."
  usfp_coal_wars.2.f: ""The labor movement was not originated by man. The labor movement, my friends, was a command from God Almighty. He commanded the prophets thousands of years ago to go down and redeem the Israelites that were in bondage, and he organized the men into a union and went to work. And they said, “The masters have made us gather straw, they have been more cruel than they were before. What are we going to do?” The prophet said, “A voice from heaven has come to get you together.” They got together and the prophet led them out of the land of bondage and robbery and plunder into the land of freedom."$quote_dash$Mother Jones"
  usfp_coal_wars.2.a: "Fight like hell!"
- usfp_coal_wars.2.b: "She seems to 'misplace' a lot of the donations she collects..."
+ usfp_coal_wars.2.b: "She seems to 'misplace' many of the donations she collects..."
 
  usfp_coal_wars.3.t: "The Battle of Matewan"
  usfp_coal_wars.3.d: "A gun battle between company security and local officials in [SCOPE.sState('west_virginia_scope').GetName] has left a dozen dead, including the pro-union mayor. This has prompted a wave of violence between strikers and private forces across the state."
