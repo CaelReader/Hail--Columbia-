@@ -249,3 +249,14 @@ usfp_unions_defeated_radical_turn_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_socialism_positive.dds
 	political_movement_pop_attraction_mult = 0.15
 }
+
+usfp_seattle_commune_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_socialism_positive.dds
+	political_movement_radicalism_add = 0.25
+}
+
+usfp_business_plot_movement_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_socialism_positive.dds
+	political_movement_pop_attraction_mult = 0.10
+	political_movement_radicalism_add = 0.10
+}

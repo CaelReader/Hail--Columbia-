@@ -717,7 +717,7 @@ je_acw_reconstruction = {
 				if = {
 					limit = {
 						has_variable = radical_land_distribution
-						var:radical_land_distribution < 4
+						var:radical_land_distribution < 3
 					 }
 					# if = {
 					# 	limit = {
@@ -753,7 +753,7 @@ je_acw_reconstruction = {
 				if = {
 					limit = {
 						has_variable = radical_land_distribution
-						var:radical_land_distribution = 4
+						var:radical_land_distribution = 3
 						NOT = {
 							has_modifier = usfp_freedmens_holdings
 						}

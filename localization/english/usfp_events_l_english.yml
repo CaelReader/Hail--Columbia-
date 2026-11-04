@@ -960,7 +960,30 @@ usfp_usa_labor.6.b: "A deranged socialist fantasy."
  usfp_usa_labor.7.a: "We must accept the court's ruling."
  usfp_usa_labor.7.b: "We'll fight this corrupt court every step of the way!"
 
+ usfp_usa_labor.8.t: "Steel Mill Lockout"
+ usfp_usa_labor.8.d: "REPLACE_ME"
+ usfp_usa_labor.8.f: "REPLACE_ME"
+ usfp_usa_labor.8.a: "Use state forces to protect strikebreakers."
+ usfp_usa_labor.8.b: "Let the Pinkertons fight it out with the Union."
+ usfp_usa_labor.8.c: "Intervene and force negotiations."
 
+ usfp_usa_labor.9.t: "LA Times Office Bombed!"
+ usfp_usa_labor.9.d: "REPLACE_ME"
+ usfp_usa_labor.9.f: "REPLACE_ME"
+ usfp_usa_labor.9.a: "This terrorism is unacceptable."
+ usfp_usa_labor.9.b: "Dynamitings will continue until conditions improve."
+
+ usfp_usa_labor.10.t: "The [SCOPE.sState('washington_scope').GetCityHubName] General Strike"
+ usfp_usa_labor.10.d: "Inspired by the revolutionary [SCOPE.sCountry('foreign_council_republic').GetGovernment.GetName] in [SCOPE.sCountry('foreign_council_republic').GetName], the unions of [SCOPE.sState('washington_scope').GetCityHubName] have called a general strike, shutting down most economic activity in the city."
+ usfp_usa_labor.10.f: ""The [SCOPE.sCountry('foreign_council_republic').GetAdjectiveNoFormatting]s have shown you the way out. What are you going to do about it? You are doomed to wage slavery till you die unless you wake up, realize that you and the boss have nothing in common, that the employing class must be overthrown, and that you, the workers, must take over the control of your jobs, and through them, the control over your lives instead of offering yourself up to the masters as a sacrifice six days a week, so that they may coin profits out of your sweat and toil.""
+ usfp_usa_labor.10.a: "A show of force will put a swift end to this insurrection."
+ usfp_usa_labor.10.b: "[SCOPE.sState('washington_scope').GetCityHubName] will be our [SCOPE.sCountry('foreign_council_republic').GetCapital.GetCityHubName]!"
+
+ usfp_usa_labor.11.t: "The Business Plot"
+ usfp_usa_labor.11.d: "A conspiracy of disgruntled [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] have approached [SCOPE.sCharacter('business_plot_general').GetPrimaryRoleTitle] [SCOPE.sCharacter('business_plot_general').GetFullName] and asked [SCOPE.sCharacter('business_plot_general').GetHerHim] to lead a [concept_coup] on their behalf, with the [SCOPE.sPoliticalMovement('fascist_movement').GetName] providing the muscle for a march on [ROOT.GetCountry.GetCapital.GetCityHubName]."
+ usfp_usa_labor.11.f: "REPLACE_ME"
+ usfp_usa_labor.11.a: "[SCOPE.sCharacter('business_plot_general').GetFullName] would not go along with this treason."
+ usfp_usa_labor.11.b: "[SCOPE.sCharacter('business_plot_general').GetFullName] would certainly be preferable to [ROOT.GetCountry.GetRuler.GetFullName]"
 
 ### USA Election Events ###
 

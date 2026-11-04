@@ -77,7 +77,7 @@
  indian_removal_end: "The Five Civilized Tribes will be removed from their ancestral lands at great loss of life." #NT!
   
  acw_followup_events.4.c: "We shall build up a land of free men and free women and freedom!" #NT!
- acw_followup_events.4.ctt: "Enables the $decree_usfp_radical_land_distribution$ [concept_decree], allowing the wholesale redistribution of plantations to the Freedmen. If the decree is kept on a state for 4 years, its plantation economy will be permanently broken, removing the #yellow Deep South#! or #yellow Upper South#! state modifiers and progressing Reconstruction in favor of the #bold Freedmen#!. #red Using this decree will radicalize the South and cost significant Northern Political Will!" #NT!
+ acw_followup_events.4.ctt: "Enables the $decree_usfp_radical_land_distribution$ [concept_decree], allowing the wholesale redistribution of plantations to the Freedmen. If the decree is kept on a state for 3 years, its plantation economy will be permanently broken, removing the #yellow Deep South#! or #yellow Upper South#! state modifiers and progressing Reconstruction in favor of the #bold Freedmen#!. #red Using this decree will radicalize the South and cost significant Northern Political Will!" #NT!
  acw_followup_events.4.c_trigger: "Has not already unlocked the $decree_usfp_radical_land_distribution$ [concept_decree]" #NT!
  radical_abolitionist_government: "An [concept_interest_group] [concept_in_government] has a [GetIdeology('ideology_usfp_abolitionist_radical').GetName] or [GetIdeology('ideology_humanitarian').GetName] [concept_leader]" #NT!
  acw_followup_events.5.t: "Supremacist Violence in [SCOPE.sState('supremacist_violence_state').GetName]" #NT!

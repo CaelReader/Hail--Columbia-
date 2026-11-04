@@ -530,3 +530,28 @@ usfp_ig_trade_unions_mad_coal_wars_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
 	interest_group_approval_add = -2
 }
+
+usfp_homestead_strike_defeated_ig_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	interest_group_pol_str_mult = -0.15
+}
+
+usfp_backed_trade_unions_positive_ig_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	interest_group_approval_add = 2
+}
+
+usfp_backed_trade_unions_negative_ig_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	interest_group_approval_add = -2
+}
+
+usfp_industrialists_fear_revolt_ig_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = -5
+}
+
+usfp_business_plot_foiled_ig_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_pol_str_mult = -0.10
+}

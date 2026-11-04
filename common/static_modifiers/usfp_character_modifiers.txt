@@ -156,3 +156,9 @@ usfp_coal_wars_butcher_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
 	character_popularity_add = -30
 }
+
+usfp_business_plot_spotlight = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	character_prominence_add = 15
+	character_loyalty_add = 50
+}
