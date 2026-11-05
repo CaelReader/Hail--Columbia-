@@ -429,4 +429,6 @@ country_enactment_success_chance_law_multicultural_add_desc: "A flat percentage 
  usfp_seattle_commune_modifier: "Within the Shell of the Old"
  usfp_business_plot_movement_modifier: "Business Plot"
  usfp_business_plot_foiled_ig_modifier: "Plot Foiled"
- usfp_business_plot_spotlight: "Congressional Expose"
+ usfp_business_plot_spotlight: "Congressional Testimony"
+ usfp_business_plot_revealed_conspirator: "Conspiracy Exposed"
+ usfp_agitator_bombing_campaign_modifier: "Terrorist Reputation"

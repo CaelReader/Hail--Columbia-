@@ -1028,7 +1028,7 @@ Fixed Oregon Treaty not removing claims properly
 	Coal Wars JE detailing the UMWA's struggle to organize the coalfields in the face of company violence, with 10 events
 	Second Revolution JE for a USA that adopts Council Republic, determining the fate of the american national identity
 	New Events: Homestead Strike, Seattle General Strike, LA Times Bombing, Business Plot
-	New Characters: 
+	New Characters: John Reed, Louise Bryant
 ## Updates
 	Confiscate Slaver Lands now only takes 3 years to break up the plantations instead of 4
 ## Fixes

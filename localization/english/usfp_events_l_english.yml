@@ -980,10 +980,12 @@ usfp_usa_labor.6.b: "A deranged socialist fantasy."
  usfp_usa_labor.10.b: "[SCOPE.sState('washington_scope').GetCityHubName] will be our [SCOPE.sCountry('foreign_council_republic').GetCapital.GetCityHubName]!"
 
  usfp_usa_labor.11.t: "The Business Plot"
- usfp_usa_labor.11.d: "A conspiracy of disgruntled [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] have approached [SCOPE.sCharacter('business_plot_general').GetPrimaryRoleTitle] [SCOPE.sCharacter('business_plot_general').GetFullName] and asked [SCOPE.sCharacter('business_plot_general').GetHerHim] to lead a [concept_coup] on their behalf, with the [SCOPE.sPoliticalMovement('fascist_movement').GetName] providing the muscle for a march on [ROOT.GetCountry.GetCapital.GetCityHubName]."
- usfp_usa_labor.11.f: "REPLACE_ME"
- usfp_usa_labor.11.a: "[SCOPE.sCharacter('business_plot_general').GetFullName] would not go along with this treason."
+ usfp_usa_labor.11.d: "A conspiracy of disgruntled [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] have approached [SCOPE.sCharacter('business_plot_general').GetPrimaryRoleTitle] [SCOPE.sCharacter('business_plot_general').GetFullName] and asked [SCOPE.sCharacter('business_plot_general').GetHerHim] to lead a [concept_coup] on their behalf, wherein the [SCOPE.sPoliticalMovement('fascist_movement').GetName] would provide the muscle for a march on [ROOT.GetCountry.GetCapital.GetCityHubName] to oust [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName]."
+ usfp_usa_labor.11.f: "In a way, it didn't matter who they were. In fact, their anonymity was part of the whole business. They thought themselves part of the march of history, the tide of progress and the wave of the future. They were men who felt that The Time Had Come. Regimes can survive barbarian hordes, crazed terrorists, and hooded secret societies, but they're in real trouble when prosperous and anonymous men sit around a big table and think thoughts like that." #Terry Pratchett, Feet of Clay
+ usfp_usa_labor.11.a: "[SCOPE.sCharacter('business_plot_general').GetFullName] would never abide this treason!"
  usfp_usa_labor.11.b: "[SCOPE.sCharacter('business_plot_general').GetFullName] would certainly be preferable to [ROOT.GetCountry.GetRuler.GetFullName]"
+ usfp_usa_labor.11.c: "Drag these traitors into the spotlight!"
+ is_not_smedly_butler: "is NOT Smedley Butler"
 
 ### USA Election Events ###
 

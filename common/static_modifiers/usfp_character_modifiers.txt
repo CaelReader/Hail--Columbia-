@@ -162,3 +162,14 @@ usfp_business_plot_spotlight = {
 	character_prominence_add = 15
 	character_loyalty_add = 50
 }
+
+usfp_business_plot_revealed_conspirator = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+    character_popularity_add = -50
+    character_loyalty_add = -50
+}
+
+usfp_agitator_bombing_campaign_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+    character_popularity_add = -50
+}
