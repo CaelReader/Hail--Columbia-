@@ -1845,8 +1845,10 @@ usfp_american_igs_effect = {
 				c:LIB ?= this
 			}
 		}
-		ig:ig_armed_forces = { 
-			add_ideology = ideology_republican
+		ig:ig_armed_forces = {
+            remove_ideology = ideology_militarist
+            add_ideology = ideology_patriotic
+            add_ideology = ideology_republican
 		}
 		ig:ig_devout = {
 			remove_ideology = ideology_moralist

@@ -127,8 +127,10 @@
 		}
 		set_variable = { name = gov_petition_fired months = 150 }
 		set_variable = whigs_party
-		ig:ig_armed_forces = { 
-			add_ideology = ideology_republican
+		ig:ig_armed_forces = {
+            remove_ideology = ideology_militarist
+            add_ideology = ideology_patriotic
+            add_ideology = ideology_republican
 		}
 		ig:ig_devout = {
 			remove_ideology = ideology_moralist

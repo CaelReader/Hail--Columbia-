@@ -3,7 +3,7 @@ je_acw_countdown = {
 	icon = "gfx/interface/icons/event_icons/abolition_slave.dds"
 
 	group = je_group_usa_american_civil_war
-
+    highlight = yes
 	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	is_shown_in_lobby = {
@@ -29,6 +29,12 @@ je_acw_countdown = {
 	current_value = {
 		value = root.var:acw_progress_var
 	}
+
+    widget = {
+        gui = "gui/journal_entry_widgets/usfp_je_widgets.gui"
+        name = "usfp_widget_a_house_divided_active_je_list"
+        container = "custom_widget_container_3"
+    }
 
 	status_desc = {
 		first_valid = {
@@ -262,7 +268,7 @@ je_acw_countdown = {
 		government_legitimacy > 20
 	}
 	progressbar = yes
-	weight = 100
+	weight = 10000
 }
 
 je_acw_war = {

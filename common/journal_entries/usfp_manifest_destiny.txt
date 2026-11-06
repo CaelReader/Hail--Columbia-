@@ -3,6 +3,9 @@
 usfp_manifest_destiny_main = {
 	icon = gfx/interface/icons/event_icons/hail_columbia_icon.dds
 	group = je_group_usa_manifest_destiny
+    dlc = dlc_usfp
+    highlight = yes
+
 	is_shown_in_lobby = {
 		c:USA = THIS
 	}
@@ -17,11 +20,6 @@ usfp_manifest_destiny_main = {
 	}
 
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
 		set_variable = {
 			name = manifest_destiny_var
 			value = 0
@@ -49,6 +47,12 @@ usfp_manifest_destiny_main = {
 	}
 
 	progressbar = yes
+
+    widget = {
+        gui = "gui/journal_entry_widgets/usfp_je_widgets.gui"
+        name = "usfp_widget_je_manifest_destiny_active_je_list"
+        container = "custom_widget_container_3"
+    }
 
 	scripted_button = usfp_western_purchase_button
     # scripted_button = usfp_force_mexican_claims_button
@@ -585,7 +589,7 @@ usfp_manifest_destiny_main = {
 		value = 13
 	}
 
-	weight = 500
+	weight = 10000
 
 	can_revolution_inherit = yes
 

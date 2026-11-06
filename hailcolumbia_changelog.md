@@ -1029,6 +1029,8 @@ Fixed Oregon Treaty not removing claims properly
 	Second Revolution JE for a USA that adopts Council Republic, determining the fate of the american national identity
 	New Events: Homestead Strike, Seattle General Strike, LA Times Bombing, Business Plot
 	New Characters: John Reed, Louise Bryant
+## 1.15 Compatibility
+    American Armed Forces are Patriotic, not Militarist
 ## Updates
 	Confiscate Slaver Lands now only takes 3 years to break up the plantations instead of 4
 ## Fixes

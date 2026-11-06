@@ -80,11 +80,6 @@ usfp_je_coal_wars = {
     }
 
     immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
         if = {
             limit = {
                 NOT = {
@@ -110,7 +105,7 @@ usfp_je_coal_wars = {
             }
         }
         every_in_list = {
-            list = usfp_coal_wars_states
+            variable = usfp_coal_wars_states
             set_variable = {
                 name = usfp_coal_wars_state_unionization
                 value = 0
@@ -165,7 +160,7 @@ usfp_je_coal_wars = {
     on_monthly_pulse = {
         effect = {
             every_in_list = {
-                list = usfp_coal_wars_states
+                variable = usfp_coal_wars_states
                 if = {
                     limit = {
                         var:usfp_coal_wars_state_unionization < 100
@@ -200,9 +195,15 @@ usfp_je_coal_wars = {
                             name = usfp_coal_wars_union_established_modifier
                         }
                     }
+                    set_variable = usfp_state_unionized
                     ordered_in_list = {
-                        list = usfp_coal_wars_states
+                        variable = usfp_coal_wars_states
                         order_by = var:usfp_coal_wars_state_unionization
+                        limit = {
+                            NOT = {
+                                has_variable = usfp_state_unionized
+                            }
+                        }
                         root = {
                             set_variable = {
                                 name = usfp_coal_wars_umwa_target
@@ -210,7 +211,6 @@ usfp_je_coal_wars = {
                             }
                         }
                     }
-                    set_variable = usfp_state_unionized
                     save_scope_as = new_union_state
                     post_notification = usfp_coal_wars_state_unionized
                 }
@@ -227,6 +227,54 @@ usfp_je_coal_wars = {
         events = {
             usfp_coal_wars.6
             usfp_coal_wars.10
+        }
+    }
+
+    map_color = {
+        if = {
+            limit = {
+                owner = {
+                    is_target_in_variable_list = { name = usfp_coal_wars_states target = root }
+                }
+            }
+            value = "grey"
+        }
+        if = {
+            limit = {
+                has_variable = usfp_coal_wars_state_unionization
+            }
+            lerp = {
+                min_color = "grey" # color
+                max_color = "red" # color
+                factor = {
+                    value = this.var:usfp_coal_wars_state_unionization
+                    divide = 100
+                }
+            }
+        }
+    }
+
+    map_color_second = {
+        if = {
+            limit = {
+                this = owner.var:usfp_coal_wars_umwa_target
+            }
+            value = "reform_or_revolution_socialist_red"
+        }
+    }
+
+    map_tooltip = {
+        if = {
+            limit = {
+                this = owner.var:usfp_coal_wars_umwa_target
+            }
+            custom_tooltip_no_bullet = "coal_wars_umwa_target_state"
+        }
+        if = {
+            limit = {
+                has_variable = usfp_coal_wars_state_unionization
+            }
+            custom_tooltip_no_bullet = "coal_wars_state_unionization_level"
         }
     }
 

@@ -479,3 +479,11 @@ philippine_tutelage_over_protectorate= {
     notification_type = toast
     color = good
 }
+
+usfp_coal_wars_state_unionized = {
+    type = country
+
+    texture = "gfx/interface/icons/notification_icons/revolution.dds"
+    notification_type = toast
+    color = good
+}
