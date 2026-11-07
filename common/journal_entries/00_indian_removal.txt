@@ -1,16 +1,12 @@
 ﻿je_indian_removal = {
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
-
+    dlc = dlc_usfp
 	group = je_group_usa_manifest_destiny
 	is_shown_in_lobby = {
 		c:USA = THIS
 	}
+    activation_description = { always = yes }
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
 		# set_variable = indian_removal_var
 		# ruler = {
 		# 	save_scope_as = indian_removal_president
@@ -66,197 +62,190 @@
 	scripted_button = usfp_indian_removal_cherokee_button
 	scripted_button = usfp_indian_removal_chickasaw_button
 
+    outcome = {
+        header = je_indian_removal_complete_header
+        effect_header = je_indian_removal_on_complete_header
+        color = "red_outcome"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            custom_tooltip = {
+                text = usfp_cherokee_removal
+                has_variable = usfp_cherokee_removed
+            }
+            custom_tooltip = {
+                text = usfp_seminole_removal
+                has_variable = usfp_seminole_removed
+            }
+            custom_tooltip = {
+                text = usfp_chickasaw_removal
+                has_variable = usfp_chickasaw_removed
+            }
+            custom_tooltip = {
+                text = usfp_creek_removal #basically complete by 1836, last conflict event triggers automatically and resolves this objective
+                has_variable = usfp_creek_removed
+            }
+            custom_tooltip = {
+                text = usfp_choctaw_removal #first to go, earlier in the decade
+                always = yes
+            }
+        }
+        effect = {
+            custom_tooltip = {
+                text = indian_removal_end
+                trigger_event = { id = native_resettlement.5 }
+            }
+            hidden_effect = {
+                usfp_cleanup_indian_removal_variables = yes
+            }
+            show_as_tooltip = {
+                if = {
+                    limit = {
+                        any_interest_group = {
+                            ig_counts_as_marginal = no
+                            leader = {
+                                OR = {
+                                    has_trait = bigoted
+                                    has_ideology = ideology:ideology_jingoist_leader
+                                }
+                            }
+                        }
+                    }
+                    random_interest_group = {
+                        limit = {
+                            leader = {
+                                OR = {
+                                    has_trait = bigoted
+                                    has_ideology = ideology:ideology_jingoist_leader
+                                }
+                            }
+                        }
+                        add_modifier = {
+                            name = indian_removal_approval
+                            days = normal_modifier_time
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        any_interest_group = {
+                            ig_counts_as_marginal = no
+                            leader = {
+                                has_ideology = ideology:ideology_pacifist
+                            }
+                        }
+                    }
+                    random_interest_group = {
+                        limit = {
+                            ig_counts_as_marginal = no
+                            leader = {
+                                has_ideology = ideology:ideology_pacifist
+                            }
+                        }
+                        add_modifier = {
+                            name = indian_removal_approval
+                            days = normal_modifier_time
+                            multiplier = -1
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        has_journal_entry = usfp_manifest_destiny_main
+                    }
+                    usfp_manifest_more_destiny_effect = yes
+                    set_variable = destiny_manifested_indian_removal
+                }
+                set_variable = usfp_indians_removed_end
+            }
+        }
+    }
 
-	complete = {
-			custom_tooltip = {
-				text = usfp_cherokee_removal
-				has_variable = usfp_cherokee_removed
-			}
-			custom_tooltip = {
-				text = usfp_seminole_removal
-				has_variable = usfp_seminole_removed
-			}
-			custom_tooltip = {
-				text = usfp_chickasaw_removal
-				has_variable = usfp_chickasaw_removed
-			}
-			custom_tooltip = {
-				text = usfp_creek_removal #basically complete by 1836, last conflict event triggers automatically and resolves this objective
-				has_variable = usfp_creek_removed
-			}
-			custom_tooltip = {
-				text = usfp_choctaw_removal #first to go, earlier in the decade
-				always = yes
-			}
+    outcome = {
+        header = je_indian_removal_failure_header
+        effect_header = je_indian_removal_on_failure_header
+        color = "green_outcome"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                has_law_or_variant = law_type:law_no_colonial_affairs
+                has_law_or_variant = law_type:law_multicultural
+            }
+        }
+        effect = {
+            trigger_event = { id = native_resettlement.6 }
+            hidden_effect = {
+                usfp_cleanup_indian_removal_variables = yes
+            }
+            show_as_tooltip = {
+                if = {
+                    limit = {
+                        has_law_or_variant = law_type:law_multicultural
+                        c:SEQ = {
+                            is_player = no
+                        }
+                    }
+                    annex = c:SEQ
+                }
+                if = {
+                    limit = {
+                        has_law_or_variant = law_type:law_multicultural
+                        exists = c:CHE
+                        c:CHE = {
+                            is_player = no
+                        }
+                    }
+                    annex = c:CHE
+                }
+                if = {
+                    limit = {
+                        has_law_or_variant = law_type:law_multicultural
+                        exists = c:CSW
+                        c:CSW = {
+                            is_player = no
+                        }
+                    }
+                    annex = c:CSW
+                }
+                else = {
+                    add_modifier = {
+                        name = native_american_rights
+                        days = long_modifier_time
+                    }
+                }
+                add_radicals = {
+                    value = medium_radicals
+                    culture = cu:yankee
+                }
+                add_radicals = {
+                    value = large_radicals
+                    culture = cu:dixie
+                }
+            }
+        }
+    }
 
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = { c:SEQ ?= { is_at_war_with_overlord = yes } }
+            OR = {
+                NOT = { owns_entire_or_is_contesting_state_region = STATE_GEORGIA }
+                NOT = {
+                    AND = {
+                        exists = c:SEQ
+                        exists = c:USA
+                        c:SEQ ?= { is_subject_of = c:USA }
+                    }
+                }
+            }
+            NOT = { war_may_restore_country = SEQ }
+        }
+        effect = {
+            usfp_cleanup_indian_removal_variables = yes
+        }
+    }
 
-	fail = {
-		OR = {
-			has_law_or_variant = law_type:law_no_colonial_affairs
-			has_law_or_variant = law_type:law_multicultural
-			# AND = {
-			# 	cultural_acceptance_base = { target = cu:cherokee value >= acceptance_status_4 }
-			# 	cultural_acceptance_base = { target = cu:caddoan value >= acceptance_status_4 }
-			# 	cultural_acceptance_base = { target = cu:muskogean value >= acceptance_status_4 }
-			# }
-
-		}
-        # NOT = {
-        #     active_law:lawgroup_colonization ?= {
-        #         has_amendment = amendment_type:amendment_usfp_indian_removal_act
-        #     }
-        # }
-	}
-
-	custom_completion_header = je_indian_removal_complete_header
-	custom_on_completion_header = je_indian_removal_on_complete_header
-	custom_failure_header = je_indian_removal_failure_header
-	custom_on_failure_header = je_indian_removal_on_failure_header
-	
-	on_complete = {
-		custom_tooltip = {
-			text = indian_removal_end
-			trigger_event = { id = native_resettlement.5 }
-		}
-		hidden_effect = {
-			usfp_cleanup_indian_removal_variables = yes
-		}
-		show_as_tooltip = {
-			if = {
-				limit = {
-					any_interest_group = {
-						ig_counts_as_marginal = no
-						leader = {
-							OR = {
-								has_trait = bigoted
-								has_ideology = ideology:ideology_jingoist_leader
-							}
-						}
-					}
-				}
-				random_interest_group = {
-					limit = {
-						leader = {
-							OR = {
-								has_trait = bigoted
-								has_ideology = ideology:ideology_jingoist_leader
-							}
-						}
-					}
-					add_modifier = {
-						name = indian_removal_approval
-						days = normal_modifier_time
-					}
-				}
-			}
-			if = {
-				limit = {
-					any_interest_group = {
-						ig_counts_as_marginal = no
-						leader = {
-							has_ideology = ideology:ideology_pacifist
-						}
-					}
-				}
-				random_interest_group = {
-					limit = {
-						ig_counts_as_marginal = no
-						leader = {
-							has_ideology = ideology:ideology_pacifist
-						}
-					}
-					add_modifier = {
-						name = indian_removal_approval
-						days = normal_modifier_time
-						multiplier = -1
-					}
-				}
-			}
-			if = {
-				limit = { 
-					has_journal_entry = usfp_manifest_destiny_main
-				}
-				usfp_manifest_more_destiny_effect = yes
-				set_variable = destiny_manifested_indian_removal
-			}
-			set_variable = usfp_indians_removed_end
-		}
-	}
-
-	on_fail = {
-		trigger_event = { id = native_resettlement.6 }
-		hidden_effect = {
-			usfp_cleanup_indian_removal_variables = yes
-		}
-		show_as_tooltip = {
-			if = {
-				limit = {
-					has_law_or_variant = law_type:law_multicultural
-					c:SEQ = {
-						is_player = no
-					}
-				}
-				annex = c:SEQ
-			}
-			if = {
-				limit = { 
-					has_law_or_variant = law_type:law_multicultural
-					exists = c:CHE
-					c:CHE = {
-						is_player = no
-					}
-				}
-				annex = c:CHE
-			}
-			if = {
-				limit = { 
-					has_law_or_variant = law_type:law_multicultural
-					exists = c:CSW
-					c:CSW = {
-						is_player = no
-					}
-				}
-				annex = c:CSW
-			}
-			else = {
-				add_modifier = {
-					name = native_american_rights
-					days = long_modifier_time
-				}
-			}
-			add_radicals = {
-				value = medium_radicals
-				culture = cu:yankee
-			}
-			add_radicals = {
-				value = large_radicals
-				culture = cu:dixie
-			}
-		}
-	}
-	
-	invalid = {
-		OR = {
-			NOT = { 
-				has_state_in_state_region = STATE_GEORGIA
-			}
-			NOT = {
-				AND = {
-					exists = c:SEQ
-					exists = c:USA
-					c:SEQ = { is_subject_of = c:USA }
-				}
-			}
-		}
-	}
-
-	on_invalid = {
-		hidden_effect = {
-			usfp_cleanup_indian_removal_variables = yes
-		}
-	}
-	
 	weight = 200
 	
 	should_be_pinned_by_default_uninvolved_or_context = yes

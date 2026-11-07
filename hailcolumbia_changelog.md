@@ -1034,6 +1034,7 @@ Fixed Oregon Treaty not removing claims properly
     Anaconda is now a Copper Mines company
 ## Updates
 	Confiscate Slaver Lands now only takes 3 years to break up the plantations instead of 4
+    The Great Depression now wrecks building cash reserve limits
 ## Fixes
     Claim Canada button now works even against non-confederated canadian tags
     

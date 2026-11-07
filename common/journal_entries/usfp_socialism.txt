@@ -74,9 +74,18 @@ usfp_je_second_revolution = {
     is_shown_when_inactive = {
         c:USA ?= root
         has_technology_researched = socialism
-        any_political_movement = {
-            movement_is_socialist = yes
+        OR = {
+            any_political_movement = {
+                movement_is_socialist = yes
+            }
+            has_law_or_variant = law_type:law_council_republic
         }
+    }
+
+    possible = {
+        has_law_or_variant = law_type:law_council_republic
+        is_revolutionary = no
+        is_secessionist = no
     }
 
 
@@ -124,11 +133,7 @@ usfp_je_second_revolution = {
         }
     }
 
-    possible = {
-        has_law_or_variant = law_type:law_council_republic
-        is_revolutionary = no
-        is_secessionist = no
-    }
+
 
     #Americanism Outcome
     outcome = {
@@ -174,6 +179,11 @@ usfp_je_second_revolution = {
             custom_tooltip = {
                 text = antiamericanism_reached_75_then_70_five_years
                 var:usfp_second_revolution_americanism_cementing_progress >= 60
+            }
+            has_law_or_variant = law_type:law_multicultural
+            OR = {
+                has_law_or_variant = law_type:law_total_separation
+                has_law_or_variant = law_type:law_state_atheism
             }
         }
         effect = {

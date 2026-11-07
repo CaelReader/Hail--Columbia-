@@ -4,6 +4,10 @@ je_liberalism_1 = {
 	
    group = je_group_internal_affairs
 
+   activation_description = {
+      always = yes
+   }
+
 	is_shown_when_inactive = {
 		NOT = { has_variable = liberalism_1_done }
 		has_technology_researched = democracy
@@ -24,14 +28,23 @@ je_liberalism_1 = {
 							has_technology_researched = feminism
 						}
 					}
-					has_ideology = ideology:ideology_liberal_modern
+					OR = {
+					    has_ideology = ideology:ideology_liberal_modern
+						has_ideology = ideology:ideology_universalist_modern
+					}
 				}
 				trigger_else = {
+					OR = {
 					has_ideology = ideology:ideology_liberal
+						has_ideology = ideology:ideology_universalist
+					}
 				}
 				any_scope_character = {
 					OR = {
+						AND = {
+							prominence >= define:NCharacters|PROMINENCE_IMPORTANT_THRESHOLD
 						has_role_of_type = politician
+						}
 						has_role_of_type = agitator
 					}
 					OR = {
@@ -46,7 +59,12 @@ je_liberalism_1 = {
 		}
 	}
 
-	complete = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
 		OR = {
 			has_law_or_variant = law_type:law_census_voting
 			has_law_or_variant = law_type:law_universal_suffrage
@@ -61,6 +79,8 @@ je_liberalism_1 = {
 					OR = {
 						has_ideology = ideology:ideology_liberal
 						has_ideology = ideology:ideology_liberal_modern
+							has_ideology = ideology:ideology_universalist
+							has_ideology = ideology:ideology_universalist_modern
 					}
 				}
 				leader = { has_ideology = ideology:ideology_radical }
@@ -74,12 +94,12 @@ je_liberalism_1 = {
 			}
 		}
 	}
-	
-	on_complete = {
+		effect = {
 		set_variable = liberalism_1_done
 		trigger_event = { id = liberalism.1 }
 	}
-	
+	}
+
 	weight = 10000
 }
 
@@ -89,10 +109,23 @@ je_liberalism_2 = {
 	
 	group = je_group_internal_affairs
 
-	complete = {
+	activation_description = {
+		always = yes
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
 		has_law_or_variant = law_type:law_free_trade
 		scope:journal_entry = {
 			is_goal_complete = yes
+		}
+	}
+		effect = {
+			trigger_event = { id = liberalism.2 }
 		}
 	}
 
@@ -103,10 +136,6 @@ je_liberalism_2 = {
 	goal_add_value = {
 		value = total_trade_value
 		multiply = 0.5
-	}
-	
-	on_complete = {
-		trigger_event = { id = liberalism.2 }
 	}
 
 	progressbar = yes
@@ -120,7 +149,16 @@ je_liberalism_3 = {
 	
 	group = je_group_internal_affairs
 
-	complete = {
+	activation_description = {
+		always = yes
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
 		OR = {
 			has_law_or_variant = law_type:law_right_of_assembly
 			has_law_or_variant = law_type:law_protected_speech
@@ -140,11 +178,11 @@ je_liberalism_3 = {
 			occupancy > 0.9
 		}
 	}
-	
-	on_complete = {
+		effect = {
 		trigger_event = { id = liberalism.3 }
 	}
-	
+	}
+
 	weight = 5000
 }
 
@@ -154,7 +192,16 @@ je_liberalism_4 = {
 	
 	group = je_group_internal_affairs
 
-	complete = {
+	activation_description = {
+		always = yes
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
 		OR = {
 			has_law_or_variant = law_type:law_freedom_of_conscience
 			has_law_or_variant = law_type:law_total_separation
@@ -164,10 +211,10 @@ je_liberalism_4 = {
 		has_law_or_variant = law_type:law_no_migration_controls
 		average_sol >= 12
 	}
-	
-	on_complete = {
+		effect = {
 		trigger_event = { id = liberalism.4 }
 	}
-	
+	}
+
 	weight = 5000
 }
