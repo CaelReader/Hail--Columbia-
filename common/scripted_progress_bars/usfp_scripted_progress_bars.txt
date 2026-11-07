@@ -882,7 +882,12 @@ usfp_second_revolution_bar = {
 	name = "usfp_second_revolution_bar"
 	desc = "usfp_second_revolution_bar_desc"
 	second_desc = "usfp_second_revolution_bar_desc2"
-	double_sided_bad = yes
+
+    progress_texture = "gfx/interface/progressbar/progressbar_default.dds"
+    background_texture = "gfx/interface/progressbar/progressbar_bad.dds"
+    glow_texture = "gfx/interface/progressbar/progressbar_default_glow.dds"
+    glow_line_texture = "gfx/interface/progressbar/progressbar_bad_glow_line.dds"
+    marker = yes
 
 	start_value = 50
 	min_value = 0

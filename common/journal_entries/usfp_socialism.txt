@@ -2,7 +2,8 @@
 usfp_je_second_revolution = {
 
     icon = gfx/interface/icons/ai_strategy_icons/revolutionary.dds
-
+    dlc = dlc_usfp
+    highlight = yes
     group = je_group_historical_content
 
     scripted_button = usfp_second_revolution_destroy_monuments_button
@@ -11,11 +12,11 @@ usfp_je_second_revolution = {
 
     scripted_progress_bar = usfp_second_revolution_bar
 
-    widget = {
-        gui = "gui/com_journal_injects/injects.gui"
-        name = "com_journal_entry_progress_bars"
-        container = "com_custom_widget_container_scripted_progress_bars"
-    }
+    # widget = {
+    #     gui = "gui/com_journal_injects/injects.gui"
+    #     name = "com_journal_entry_progress_bars"
+    #     container = "com_custom_widget_container_scripted_progress_bars"
+    # }
 
     status_desc = {
         first_valid = {
@@ -55,11 +56,6 @@ usfp_je_second_revolution = {
     }
 
     immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
         trigger_event = usfp_usa_socialism.1
         set_variable = {
             name = usfp_second_revolution_americanism_target
@@ -99,6 +95,7 @@ usfp_je_second_revolution = {
             if = {
                 limit = {
                     has_variable = usfp_second_revolution_americanism_reached_75
+                    var:usfp_second_revolution_current_var >= 70
                 }
                 change_variable = {
                     name = usfp_second_revolution_americanism_cementing_progress
@@ -117,6 +114,7 @@ usfp_je_second_revolution = {
             if = {
                 limit = {
                     has_variable = usfp_second_revolution_antiamericanism_reached_75
+                    var:usfp_second_revolution_current_var <= 30
                 }
                 change_variable = {
                     name = usfp_second_revolution_antiamericanism_cementing_progress
@@ -132,47 +130,80 @@ usfp_je_second_revolution = {
         is_secessionist = no
     }
 
-    complete = {
-        #reach 75% American/Antiamerican and then maintain 70% for 5 years
-        OR = {
-            AND = {
-                custom_tooltip = {
-                    text = americanism_reached_75
-                    has_variable = usfp_second_revolution_americanism_reached_75
-                }
-                custom_tooltip = {
-                    text = americanism_reached_75_then_70_five_years
-                    var:usfp_second_revolution_americanism_cementing_progress >= 60
-                }
+    #Americanism Outcome
+    outcome = {
+        header = usfp_je_second_revolution_americanist_header
+        effect_header = usfp_je_second_revolution_on_americanist_victory_header
+        color = "blue"
+        conclusion_desc = usfp_je_second_revolution_americanist_conclusion_desc
+        trigger = {
+            custom_tooltip = {
+                text = americanism_reached_75
+                has_variable = usfp_second_revolution_americanism_reached_75
             }
-            AND = {
-                custom_tooltip = {
-                    text = antiamericanism_reached_75
-                    has_variable = usfp_second_revolution_antiamericanism_reached_75
-                }
-                custom_tooltip = {
-                    text = antiamericanism_reached_75_then_70_five_years
-                    var:usfp_second_revolution_americanism_cementing_progress >= 60
+            custom_tooltip = {
+                text = americanism_reached_75_then_70_five_years
+                var:usfp_second_revolution_americanism_cementing_progress >= 60
+            }
+        }
+        effect = {
+            trigger_event = usfp_usa_socialism.2
+        }
+        event_outcome_effect_desc = {
+            effect = {
+                execute_event_option = {
+                    event = usfp_usa_socialism.2
+                    option = 0
                 }
             }
         }
     }
 
 
-    on_complete = {
-        usfp_disband_constitutionalist_movement = yes
-        set_variable = usfp_second_revolution_internationalism_embraced
+    #Internationalist Outcome
+    outcome = {
+        header = usfp_je_second_revolution_internationalist_header
+        effect_header = usfp_je_second_revolution_on_internationalist_victory_header
+        color = "red"
+        conclusion_desc = usfp_je_second_revolution_internationalist_conclusion_desc
+        trigger = {
+            custom_tooltip = {
+                text = antiamericanism_reached_75
+                has_variable = usfp_second_revolution_antiamericanism_reached_75
+            }
+            custom_tooltip = {
+                text = antiamericanism_reached_75_then_70_five_years
+                var:usfp_second_revolution_americanism_cementing_progress >= 60
+            }
+        }
+        effect = {
+            trigger_event = usfp_usa_socialism.3
+            custom_tooltip = usfp_second_revolution_gain_all_american_primary_cultures
+            set_variable = usfp_second_revolution_internationalism_embraced
+        }
+        event_outcome_effect_desc = {
+            effect = {
+                execute_event_option = {
+                    event = usfp_usa_socialism.3
+                    option = 0
+                }
+            }
+        }
     }
 
-    fail = {
-        NOT = {
-            has_law_or_variant = law_type:law_council_republic
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                has_law_or_variant = law_type:law_council_republic
+            }
         }
     }
 
     should_be_pinned_by_default_uninvolved_or_context = yes
 
-    weight = 100
+    weight = 10000
 
     can_revolution_inherit = yes
 }

@@ -77,7 +77,22 @@ usfp_usa_socialism.2 = {
     option = {
         name = usfp_usa_socialism.2.a
         default_option = yes
-
+        every_primary_culture = {
+            root = {
+                add_loyalists = {
+                    culture = prev
+                    strata = middle
+                    value = large_radicals
+                }
+            }
+            root = {
+                add_loyalists = {
+                    culture = prev
+                    strata = lower
+                    value = medium_radicals
+                }
+            }
+        }
     }
 
     after = {

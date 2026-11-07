@@ -148,6 +148,7 @@
 				OR = {
 					has_law_or_variant = law_type:law_universal_suffrage
                     has_law_or_variant = law_type:law_census_voting
+                    has_law_or_variant = law_type:law_labour_suffrage
 				}
 				NOT = {
 					has_law_or_variant = law_type:law_anarchy
@@ -174,6 +175,7 @@
                 OR = {
                     has_law_or_variant = law_type:law_universal_suffrage
                     has_law_or_variant = law_type:law_census_voting
+                    has_law_or_variant = law_type:law_labour_suffrage
                 }
                 NOT = {
                     has_law_or_variant = law_type:law_anarchy
@@ -231,6 +233,7 @@
                 NOR = {
                     has_law_or_variant = law_type:law_universal_suffrage
                     has_law_or_variant = law_type:law_census_voting
+                    has_law_or_variant = law_type:law_labour_suffrage
                     has_law_or_variant = law_type:law_technocracy
                     has_law_or_variant = law_type:law_anarchy
                 }
@@ -254,6 +257,7 @@
 				NOR = {
 					has_law_or_variant = law_type:law_universal_suffrage
                     has_law_or_variant = law_type:law_census_voting
+                    has_law_or_variant = law_type:law_labour_suffrage
 					has_law_or_variant = law_type:law_technocracy
 					has_law_or_variant = law_type:law_anarchy
 				}
@@ -279,6 +283,7 @@
                 NOR = {
                     has_law_or_variant = law_type:law_universal_suffrage
                     has_law_or_variant = law_type:law_census_voting
+                    has_law_or_variant = law_type:law_labour_suffrage
                     has_law_or_variant = law_type:law_technocracy
                     has_law_or_variant = law_type:law_anarchy
                 }
