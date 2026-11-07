@@ -961,23 +961,23 @@ usfp_usa_labor.6.b: "A deranged socialist fantasy."
  usfp_usa_labor.7.b: "We'll fight this corrupt court every step of the way!"
 
  usfp_usa_labor.8.t: "Steel Mill Lockout"
- usfp_usa_labor.8.d: "REPLACE_ME"
- usfp_usa_labor.8.f: "REPLACE_ME"
+ usfp_usa_labor.8.d: "Owners of the [GetBuildingType('building_steel_mill').GetName] in [SCOPE.sState('homestead_strike_state').GetName] have locked out their workers in an attempt to break the local steel union. The union has responded by organizing a siege of the mills and blocking any attempts by strikebreakers to re-open them."
+ usfp_usa_labor.8.f: ""It is against public policy and subversive of the fundamental principles of American liberty that a whole community of workers should be denied employment or suffer any other social detriment on account of membership in a church, a political party or a trade union. It is our duty as American citizens to resist by every legal and ordinary means the unconstitutional, anarchic and revolutionary policy of the steel companies, which seems to evince a contempt for public and private interests and a disdain for the public conscience."$quote_dash$Declaration of the Strike Committee, 1892"
  usfp_usa_labor.8.a: "Use state forces to protect strikebreakers."
  usfp_usa_labor.8.b: "Let the Pinkertons fight it out with the Union."
- usfp_usa_labor.8.c: "Intervene and force negotiations."
+ usfp_usa_labor.8.c: "Intervene and force a negotiated settlement."
 
  usfp_usa_labor.9.t: "LA Times Office Bombed!"
- usfp_usa_labor.9.d: "REPLACE_ME"
- usfp_usa_labor.9.f: "REPLACE_ME"
+ usfp_usa_labor.9.d: "The newspaper offices of the Los Angeles Times have been bombed and reduced to rubble! A pair of radical ironworkers have plead guilty to the attack, claiming they intended to punish the newspaper owners for their anti-union writings. Public outrage has tarred the [SCOPE.sPoliticalMovement('labor_movement_scope').GetName] and [SCOPE.sPoliticalMovement('anarchist_movement_scope').GetName] as murderers and cowards."
+ usfp_usa_labor.9.f: ""It is easy enough for a gentleman of education and refinement to sit at his typewriter and point out the crimes of the workers. But let him be one of them himself, reared in hard poverty, denied education, thrown into the brute struggle for existence from childhood, oppressed, exploited, forced to strike, clubbed by the police, jailed while his family is evicted, and his wife and children are hungry, and he will hesitate to condemn these as criminals who fight against the crimes of which they are the victims of such savage methods as have been forced upon them by their masters."$quote_dash$Eugene V. Debs"
  usfp_usa_labor.9.a: "This terrorism is unacceptable."
  usfp_usa_labor.9.b: "Dynamitings will continue until conditions improve."
 
- usfp_usa_labor.10.t: "The [SCOPE.sState('washington_scope').GetCityHubName] General Strike"
- usfp_usa_labor.10.d: "Inspired by the revolutionary [SCOPE.sCountry('foreign_council_republic').GetGovernment.GetName] in [SCOPE.sCountry('foreign_council_republic').GetName], the unions of [SCOPE.sState('washington_scope').GetCityHubName] have called a general strike, shutting down most economic activity in the city."
- usfp_usa_labor.10.f: ""The [SCOPE.sCountry('foreign_council_republic').GetAdjectiveNoFormatting]s have shown you the way out. What are you going to do about it? You are doomed to wage slavery till you die unless you wake up, realize that you and the boss have nothing in common, that the employing class must be overthrown, and that you, the workers, must take over the control of your jobs, and through them, the control over your lives instead of offering yourself up to the masters as a sacrifice six days a week, so that they may coin profits out of your sweat and toil.""
+ usfp_usa_labor.10.t: "The Seattle General Strike"
+ usfp_usa_labor.10.d: "Inspired by the revolutionary [SCOPE.sCountry('foreign_council_republic').GetGovernment.GetName] in [SCOPE.sCountry('foreign_council_republic').GetName], the unions of Seattle have called a general strike, bringing most economic activity in the city to a halt."
+ usfp_usa_labor.10.f: ""The [SCOPE.sCountry('foreign_council_republic').GetAdjectiveNoFormatting]s have shown you the way out. What are you going to do about it? You are doomed to wage slavery till you die unless you wake up, realize that you and the boss have nothing in common, that the employing class must be overthrown, and that you, the workers, must take over the control of your jobs, and through them, the control over your lives instead of offering yourself up to the masters as a sacrifice six days a week, so that they may coin profits out of your sweat and toil."" #seattle general strike pamphlet
  usfp_usa_labor.10.a: "A show of force will put a swift end to this insurrection."
- usfp_usa_labor.10.b: "[SCOPE.sState('washington_scope').GetCityHubName] will be our [SCOPE.sCountry('foreign_council_republic').GetCapital.GetCityHubName]!"
+ usfp_usa_labor.10.b: "Seattle will be our [SCOPE.sCountry('foreign_council_republic').GetCapital.GetCityHubName]!"
 
  usfp_usa_labor.11.t: "The Business Plot"
  usfp_usa_labor.11.d: "A conspiracy of disgruntled [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] have approached [SCOPE.sCharacter('business_plot_general').GetPrimaryRoleTitle] [SCOPE.sCharacter('business_plot_general').GetFullName] and asked [SCOPE.sCharacter('business_plot_general').GetHerHim] to lead a [concept_coup] on their behalf, wherein the [SCOPE.sPoliticalMovement('fascist_movement').GetName] would provide the muscle for a march on [ROOT.GetCountry.GetCapital.GetCityHubName] to oust [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName]."
@@ -2155,12 +2155,12 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_coal_wars.2.t: "The Most Dangerous Woman in America"
  usfp_coal_wars.2.d: "[SCOPE.sCharacter('mother_jones_scope').GetFirstName] "Mother" [SCOPE.sCharacter('mother_jones_scope').GetLastName] has become a fixture of strikes across the coalfields, travelling up and down Appalachia delivering speeches encouraging working men to stand up for themselves."
  usfp_coal_wars.2.f: ""The labor movement was not originated by man. The labor movement, my friends, was a command from God Almighty. He commanded the prophets thousands of years ago to go down and redeem the Israelites that were in bondage, and he organized the men into a union and went to work. And they said, “The masters have made us gather straw, they have been more cruel than they were before. What are we going to do?” The prophet said, “A voice from heaven has come to get you together.” They got together and the prophet led them out of the land of bondage and robbery and plunder into the land of freedom."$quote_dash$Mother Jones"
- usfp_coal_wars.2.a: "Fight like hell!"
+ usfp_coal_wars.2.a: "Let us pray for the dead, and fight like hell for the living!"
  usfp_coal_wars.2.b: "She seems to 'misplace' many of the donations she collects..."
 
  usfp_coal_wars.3.t: "The Battle of Matewan"
  usfp_coal_wars.3.d: "A gun battle between company security and local officials in [SCOPE.sState('west_virginia_scope').GetName] has left a dozen dead, including the pro-union mayor. This has prompted a wave of violence between strikers and private forces across the state."
- usfp_coal_wars.3.f: "REPLACE_ME"
+ usfp_coal_wars.3.f: "The sheriff approached the company men, backed by the mayor and several miners.\n\n"You are all under arrest for carrying illegal weapons."\n"Actually, #italic we#! have a warrant for #italic your#! arrest, sheriff."\n\nThe sheriff handed the agents' warrant back to the mayor for inspection, who looked over it quickly.\n"This is a completely bogus scrap of paper, you have no authority in this town!"\n\nOne of the agents quickly draw a gun from his pocket and opened fire."
  usfp_coal_wars.3.a: "This is justified self-defense."
  usfp_coal_wars.3.b: "These union agitators are violent insurgents."
 
@@ -2172,8 +2172,8 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_coal_wars.4.c: "Let's ensure the strikers are well-armed..."
 
  usfp_coal_wars.5.t: "The Ludlow Massacre"
- usfp_coal_wars.5.d: "Private security forces in [SCOPE.sState('colorado_scope').GetName] have machine-gunned a tent colony of striking miners and their families."
- usfp_coal_wars.5.f: "REPLACE_ME"
+ usfp_coal_wars.5.d: "Private security forces in [SCOPE.sState('colorado_scope').GetName] have machine-gunned and burned a tent colony of striking miners and their families. Local labor organizers have issued a call to arms in response, vowing revenge."
+ usfp_coal_wars.5.f: ""The men rushed to the assistance of their families; and as they did so, they were dropped as the whirring messengers of death sped surely to the mark. One man counted the bodies of nine little children, taken from one ashy pit, their tiny fingers burned away as they held to the edge in their struggle to escape. Thugs in State uniform hacked at the lifeless forms, in some instances nearly cutting off heads and limbs to show their contempt for the strikers."$quote_dash$Julia May Courtney, #italics Remember Ludlow!#!"
  usfp_coal_wars.5.a: "The national guard must restore order."
  usfp_coal_wars.5.b: "The coal companies have this blood on their hands."
 

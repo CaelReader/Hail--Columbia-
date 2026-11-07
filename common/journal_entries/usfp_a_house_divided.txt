@@ -679,7 +679,7 @@ je_usfp_underground_railroad = {
 
 	group = je_group_usa_american_civil_war
 
-	should_be_pinned_by_default_uninvolved_or_context = yes
+	should_be_pinned_by_default_uninvolved_or_context = no
 
 	immediate = {
 		scope:journal_entry = {

@@ -1093,6 +1093,18 @@ usfp_usa_labor.9 = {
 			}
 			save_scope_as = california_scope
 		}
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = movement_labor
+            }
+            save_scope_as = labor_movement_scope
+        }
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = movement_anarchist
+            }
+            save_scope_as = anarchist_movement_scope
+        }
 	}
 
 	#lock them up
@@ -1140,6 +1152,13 @@ usfp_usa_labor.9 = {
 	}
 
     after = {
+        scope:california_scope = {
+            kill_population_in_state = {
+                pop_type = clerks
+                value = 20
+            }
+        }
+
         every_scope_character = {
             limit = {
                 has_ideology = ideology:ideology_anarchist
@@ -1158,7 +1177,7 @@ usfp_usa_labor.10 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 	event_image = {
-		video = "unspecific_factory_closed"
+		video = "ip5_soviet_deliberation"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"

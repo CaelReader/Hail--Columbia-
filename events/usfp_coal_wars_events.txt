@@ -427,8 +427,16 @@ usfp_coal_wars.5 = {
                     }
                 }
             }
+        } else = {
+            ig:ig_industrialists ?= {
+                leader = {
+                    add_modifier = {
+                        name = usfp_coal_wars_butcher_modifier
+                        years = 5
+                    }
+                }
+            }
         }
-
     }
 
     after = {
@@ -467,7 +475,9 @@ usfp_coal_wars.6 = {
     cooldown = { days = never_fire_again_modifier_time } #Once
 
     trigger = {
-
+        je:usfp_je_coal_wars ?= {
+            "scripted_bar_progress(usfp_coal_wars_union_leverage_bar)" >= 100
+        }
     }
 
     immediate = {
