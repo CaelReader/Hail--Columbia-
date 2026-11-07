@@ -1031,6 +1031,7 @@ Fixed Oregon Treaty not removing claims properly
 	New Characters: John Reed, Louise Bryant
 ## 1.15 Compatibility
     American Armed Forces are Patriotic, not Militarist
+    Anaconda is now a Copper Mines company
 ## Updates
 	Confiscate Slaver Lands now only takes 3 years to break up the plantations instead of 4
 ## Fixes

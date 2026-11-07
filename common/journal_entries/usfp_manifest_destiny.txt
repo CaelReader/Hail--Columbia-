@@ -19,6 +19,13 @@ usfp_manifest_destiny_main = {
 		has_technology_researched = nationalism
 	}
 
+    scaling_modifiers_while_active = {
+        modifier = usfp_manifest_destiny_modifier
+        value = {
+            value = root.var:manifest_destiny_var
+        }
+    }
+
 	immediate = {
 		set_variable = {
 			name = manifest_destiny_var

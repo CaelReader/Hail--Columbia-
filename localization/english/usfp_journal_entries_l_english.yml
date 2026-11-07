@@ -1,22 +1,13 @@
 ﻿l_english:
 
+ usfp_relevant_jes_list: "Related [Concept('concept_journal_entry','$concept_journal_entries|q$')]:"
+
 je_usfp_a_house_divided_main_complete:0 "The American Civil War has begun."
-je_usfp_a_house_divided_missouri_compromise:0 "A House Divided: Missouri Compromise"
+je_usfp_a_house_divided_missouri_compromise:0 "Missouri Compromise"
 je_usfp_a_house_divided_missouri_compromise_reason:0 "[concept_usfp_congress] maintains a careful balancing act between free and slave states in order to prevent one from dominating the other. The Compromise of 1820 drew a line through the [concept_usfp_louisiana_purchase] at the 36th Parallel, the southern border of [SCOPE.sState('missouri_scope').GetName]. Missouri has been allowed to maintain slavery, but all other territories north of that line shall be free territories. Implicitly, the territories south of the compromise line will become slave states as they are integrated into the union.\n\n@information! While this [concept_journal_entry] is active, the $movement_anti_slavery$ and $movement_pro_slavery$ will have significantly reduced [Concept('concept_activism', '$concept_activism_short$')].\n\nThe western extent of the demarcation line has not been concretely determined. If the [SCOPE.GetRootScope.GetCountry.GetName] continues to expand its borders, the status of the compromise will likely be called into question."
 usfp_missouri_compromise_broken: "The Missouri Compromise is superseded by a new policy"
 
-je_usfp_a_house_divided_gag_rule: "A House Divided: The Gag Rule"
-je_usfp_a_house_divided_gag_rule_reason: "To enforce the Missouri Compromise and adjourn further conflict over the issue, the [concept_usfp_house_of_representatives] has prohibited the consideration of petitions or laws relating to slavery."
-je_usfp_a_house_divided_gag_rule_status: "With the gag rule in place, [GetLawType('law_slave_trade').GetGroup.GetName] laws #r cannot#! be [Concept('concept_enactment_of_laws','$concept_enactment_of_laws_enacted$')]"
-usfp_end_gag_rule_button: "Repeal Gag Rule"
-usfp_end_gag_rule_button_desc: "With the Abolitionists cowed, the Gag Rule no longer suits our interests."
-usfp_end_gag_rule: "The #Bold A House Divided: The Gag Rule#! [concept_journal_entry] will end"
-usfp_end_gag_rule_button_no_abolitionists: "We do NOT have a [concept_political_movement] to end slavery"
-usfp_end_gag_rule_button_slave_trade: "We have a [concept_political_movement] to expand slavery"
-usfp_break_gag_rule_button: "Break Gag Rule"
-usfp_break_gag_rule_button_desc: "The election results are clear, and the House must be reconvened without the Gag Rule. Our mandate will not be denied!"
-
-je_usfp_a_house_divided_bleeding_kansas:0 "A House Divided: Bleeding Kansas"
+je_usfp_a_house_divided_bleeding_kansas:0 "Bleeding Kansas"
 je_usfp_a_house_divided_bleeding_kansas_reason:0 "Progress towards the #bold left#! of the bar will benefit the cause of slavery, whilst progress towards the #bold right#! of the bar will advance the state towards abolition.\n\n[SCOPE.sState('kansas_scope').GetName] has become a battleground over the matter of slavery. Pro-slavery #bold Border Ruffians#! and abolitionist #bold Free-Staters#! have begun migrating into the territory from neighboring states, seeking to turn it to their side. Violence between the two groups will continue to escalate until the matter is settled one way or the other."
 je_usfp_a_house_divided_bleeding_kansas_special_tooltip: "This rate is determined by the following:\n#variable [Country.MakeScope.Var('bleeding_kansas_yankee_percent').GetValue|+=]#! from the Yankee [Concept('concept_pop', '$concept_population$')]\n#variable [Country.MakeScope.Var('bleeding_kansas_yankee_radicals').GetValue|+=]#! from Yankee [Concept('concept_radical', '$concept_radicals$')]\n#variable [Country.MakeScope.Var('bleeding_kansas_freedmen').GetValue|+=]#! from free Afro-American [Concept('concept_pop', '$concept_pops$')]\n#variable [Country.MakeScope.Var('bleeding_kansas_dixie_percent').GetValue|+=]#! from the Dixie [Concept('concept_pop', '$concept_population$')]\n#variable [Country.MakeScope.Var('bleeding_kansas_dixie_radicals').GetValue|+=]#! from Dixie [Concept('concept_radical', '$concept_radicals$')]\n#variable [Country.MakeScope.Var('bleeding_kansas_aristocrats').GetValue|+=]#! from Dixie $aristocrats$"
 bleeding_kansas_0_progress: "The #bold progress bar#! reaches 0"
@@ -38,9 +29,6 @@ usfp_bleeding_kansas_freedmen: "Free [GetCulture('afro_american').GetName] [Conc
 usfp_bleeding_kansas_dixie_radicals: "[GetCulture('dixie').GetName] [Concept('concept_radical', '$concept_radicals$')]"
 usfp_bleeding_kansas_dixie_population: "the [GetCulture('dixie').GetName] [Concept('concept_pop', '$concept_population$')]"
 usfp_bleeding_kansas_dixie_aristocrats: "[GetCulture('dixie').GetName] $aristocrats$"
-
-je_usfp_a_house_divided_voting_rights: "A House Divided: Black Suffrage"
-je_usfp_a_house_divided_voting_rights_reason: "Even in the non-slaveholding states, [SCOPE.sCulture('afro_american_culture').GetName] citizens are almost entirely denied access to the ballot box. Overturning the myriad restrictions on their suffrage will require a concerted effort at the national level."
 
 #WIP/Unused stuff for Border State jockeying before the ACW breaks out
 # je_usfp_a_house_divided_border_states:0 "A House Divided: The Border States"
@@ -293,7 +281,7 @@ je_usfp_american_constitution_reason: "The Constitution is the supreme and funda
 usfp_unconstitutional_laws: "Unconstitutional [Concept('concept_law', '$concept_laws$')]:\n• [GetLawType('law_censorship').GetName]\n• [GetLawType('law_peasant_levies').GetName]\n• [GetLawType('law_parliamentary_republic').GetName]\n• [GetLawType('law_militarized_police').GetName]\n• [GetLawType('law_appointed_bureaucrats').GetName]\n• [GetLawType('law_command_economy').GetName]\n• [GetLawType('law_industry_banned').GetName]\n• [GetLawType('law_cooperative_ownership').GetName]\n• [GetLawType('law_religious_schools').GetName]\n• [GetLawType('law_single_party_state').GetName]\n• [GetLawType('law_isolationism').GetName]\n\n#italic Very#! Unconstitutional [Concept('concept_law', '$concept_laws$')]:\n• [GetLawType('law_outlawed_dissent').GetName]\n• [GetLawType('law_state_religion').GetName]\n• [GetLawType('law_state_atheism').GetName]\n• [GetLawType('law_monarchy').GetName]\n• [GetLawType('law_social_monarchy').GetName]\n• [GetLawType('law_theocracy').GetName]\n• [GetLawType('law_council_republic').GetName]\n• [GetLawType('law_corporate_state').GetName]\n• [GetLawType('law_autocracy').GetName]\n• [GetLawType('law_oligarchy').GetName]\n• [GetLawType('law_anarchy').GetName]\n• [GetLawType('law_technocracy').GetName]\n• [GetLawType('law_hereditary_bureaucrats').GetName]"
 usfp_natural_born_citizens: "A [concept_character] is eligible for election if their [concept_culture] is one of our [concept_primary_cultures], or has a [concept_homeland] in one of our [Concept('concept_incorporated_state', '$concept_incorporated_states$')] and has a base acceptance level of at least @acceptance_status_3! $open_prejudice$.\n\nCultures with the Indigenous American [concept_cultural_heritage_trait] require a base acceptance level of at least @acceptance_status_4! $second_rate_citizen$ #italic (i.e., under [GetLawType('law_multicultural').GetName])#!"
 
-je_usfp_underground_railroad: "A House Divided: The Underground Railroad"
+je_usfp_underground_railroad: "The Underground Railroad"
 je_usfp_underground_railroad_reason: "The network of secret routes and [GetIdeology('ideology_abolitionist').GetName] safehouses known as the Underground Railroad has been spiriting escaped slaves to freedom for decades. Until slavery is abolished entirely, [GetPopType('slaves').GetName] will regularly escape the Southern [Concept('concept_state', '$concept_states$')] and be transported to freedom in the North or neighboring [Concept('concept_country', '$concept_countries$')].\n\nSince 1836, the Railroad has enabled the escape of:\n• #variable [Country.MakeScope.Var('je_underground_railroad_northern_escapees').GetValue]#! people to the Free [Concept('concept_state', '$concept_states$')]\n• #variable [Country.MakeScope.Var('je_underground_railroad_canada_escapees').GetValue]#! people to [GetStrategicRegion('region_canada').GetName]\n• #variable [Country.MakeScope.Var('je_underground_railroad_southern_escapees').GetValue]#! people to [GetGeographicRegion('geographic_region_mexico_old').GetName] and the [GetGeographicRegion('geographic_region_caribbean_old').GetName]"
 csa_doesnt_exist: "The Confederate States of America does not exist"
 usfp_underground_railroad_support_button: "Support Railroad"
@@ -313,7 +301,7 @@ je_usfp_underground_railroad_complete: "#lore The Underground Railroad will no l
 je_acw_war_csa: "The War of Southern Independence"
 je_acw_war_csa_reason: "If we are to preserve slavery and our way of life, we must fight the [GetCulture('yankee').GetName] and establish an enduring Southern republic."
 
-je_usfp_afro_american_colonization: "A House Divided: African Colonization"
+je_usfp_afro_american_colonization: "African Colonization"
 je_usfp_afro_american_colonization_reason: "Founded in 1816, the American Colonization Society promotes the 'repatriation' of freed slaves to Africa, as a way to grant them their freedom while also maintaining [GetLawType('law_racial_segregation').GetName] in the [ROOT.GetCountry.GetName]. Their efforts have culminated in the recent founding of the colony of [SCOPE.sCountry('liberia_scope').GetName] on the coast of [SCOPE.sCountry('liberia_scope').GetCapital.GetStateRegion.GetStrategicRegion.GetName], and promoters of colonization schemes continue to search for new locations where $usfp_afro_american_culture_plural$ could be settled.\n\n$usfp_afro_american_culture_plural$ themselves, thoroughly Christianized and centuries removed from their African origins, almost totally reject colonization, making it difficult for such schemes to find more than a handful of volunteers. Nevertheless, we can choose to dedicate resources towards settlement programs as the opportunity arises."
 
 usfp_promote_afro_american_migration_africa: "Sponsor African Colonization"
@@ -556,12 +544,19 @@ progress_bar_complete: "The #b Progress Bar#! has reached 100%"
  usfp_coal_wars_union_leverage_bar: "Union Leverage"
  usfp_coal_wars_union_leverage_bar_desc: "Union Leverage: #italic ([JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%0])#!"
  coal_wars_unionized_states: "States with Unionized Coal Mines"
- trade_unions_clout: "[concept_clout] of the Trade Unions"
+ trade_unions_clout: "[GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetName] [concept_clout] "
  labor_movement_support: "[Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] of the #v $movement_labor_short$#! [Concept('concept_political_movement','$concept_political_movement_short$')]"
  suppressed_labor_movement: "#v $movement_labor_short$#! [Concept('concept_political_movement','$concept_political_movement_short$')] being [Concept('concept_suppress', '$concept_suppressed$')]"
  bolstered_labor_movement: "#v $movement_labor_short$#! [Concept('concept_political_movement','$concept_political_movement_short$')] being [Concept('concept_bolster','$concept_bolstered$')]"
  price_of_coal: "[concept_market_price] of @coal! Coal"
  radical_coal_miners: "[concept_radical] [GetPopType('laborers').GetName] working in [GetBuildingType('building_coal_mine').GetName]"
  united_mine_workers_focus_state: "#bold United Mine Workers#! Unionization Efforts"
- industrialists_clout: "[concept_clout] of the Industrialists"
- west_virginia_rugged_terrain: "[GetStateRegion('STATE_WEST_VIRGINIA').GetName]'s geography"
+ industrialists_clout: "[GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] [concept_clout]"
+ west_virginia_rugged_terrain: "[GetStateRegion('STATE_WEST_VIRGINIA').GetName]'s craggy geography"
+
+ coal_wars_umwa_target_state: "[THIS.GetState.GetName] is the current focus of the #bold United Mine Workers#!"
+ coal_wars_valid_state: "[THIS.GetState.GetName] is a [concept_incorporated_state] with [GetBuildingType('building_coal_mine').GetName]"
+ coal_wars_unincorporated_state: "[THIS.GetState.GetName] has [GetBuildingType('building_coal_mine').GetName] but is an [concept_unincorporated_state]"
+ coal_wars_state_unionization_level: "#bold Unionization:#! #yellow [THIS.Var('usfp_coal_wars_state_unionization').GetValue|0]%#!"
+ coal_wars_state_unionization_progress: "Progress per month: [THIS.ScriptValue('usfp_coal_wars_unionization_progress')|=+2v]  #indent_newline:3 \n[THIS.GetScriptValueDesc('usfp_coal_wars_unionization_progress')]"
+ coal_wars_state_unionized: "The [GetBuildingType('building_coal_mine').GetName] of [THIS.GetState.GetName] have been unionized"

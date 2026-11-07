@@ -61,7 +61,7 @@ flowcontainer = {
                     align = nobaseline
                     default_format = "#title"
                     margin_bottom = 2
-                    text = "a_house_divided_control_active_je_list_header"
+                    text = "usfp_relevant_jes_list"
                 }
 
                 flowcontainer = {
@@ -81,3 +81,5 @@ flowcontainer = {
         }
     }
 }
+
+

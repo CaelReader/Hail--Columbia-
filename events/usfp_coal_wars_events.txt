@@ -632,6 +632,27 @@ usfp_coal_wars.8 = {
                 years = 5
             }
         }
+        if = {
+            limit = {
+                NOT = {
+                    any_political_movement = {
+                        movement_is_socialist = yes
+                    }
+                }
+            }
+            random_list = {
+                33 = {
+                    create_political_movement = {
+                        type = movement_anarchist
+                    }
+                }
+                66 = {
+                    create_political_movement = {
+                        type = movement_socialist
+                    }
+                }
+            }
+        }
         every_political_movement = {
             limit = {
                 movement_is_socialist = yes
@@ -783,7 +804,7 @@ usfp_coal_wars.10 = {
             }
         }
         any_scope_state = {
-            has_variable = usfp_state_unionized
+            has_variable = usfp_coal_wars_state_unionized
             count >= 3
         }
     }
@@ -812,7 +833,7 @@ usfp_coal_wars.10 = {
         every_scope_state = {
             custom = coal_wars_every_unionized_state
             limit = {
-                has_variable = usfp_state_unionized
+                has_variable = usfp_coal_wars_state_unionized
             }
             add_radicals_in_state = {
                 value = large_radicals
@@ -836,7 +857,7 @@ usfp_coal_wars.10 = {
         every_scope_state = {
             custom = coal_wars_every_unionized_state
             limit = {
-                has_variable = usfp_state_unionized
+                has_variable = usfp_coal_wars_state_unionized
             }
             add_radicals_in_state = {
                 value = medium_radicals

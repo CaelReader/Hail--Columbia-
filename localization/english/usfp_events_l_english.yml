@@ -2190,7 +2190,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
  usfp_coal_wars.7.a: "There is power in a band of working folk!"
 
  usfp_coal_wars.8.t: "Yellow Dogs"
- usfp_coal_wars.8.d: "The drive to unionize the coal mines has been broken. As strike budgets and momentum have been depleted, workers have been replaced with scabs working under new contracts that outright forbid union participation. With the UMWA collapsing, many disaffected members have fled to radical socialist organizations."
+ usfp_coal_wars.8.d: "The drive to unionize the [GetBuildingType('building_coal_mine').GetName] has been broken. With support for the striker drying up, the companies have brought in replacement scabs under new contracts that outright forbid union participation. With the UMWA collapsing, many disaffected members have fled to radical socialist organizations."
  usfp_coal_wars.8.f: "REPLACE_ME"
  usfp_coal_wars.8.a: "If the companies don't improve conditions, we may have larger problems..."
 

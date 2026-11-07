@@ -5,6 +5,9 @@ je_acw_countdown = {
 	group = je_group_usa_american_civil_war
     highlight = yes
 	should_be_pinned_by_default_uninvolved_or_context = yes
+    activation_description = {
+        always = yes
+    }
 
 	is_shown_in_lobby = {
 		c:USA = THIS
@@ -25,6 +28,11 @@ je_acw_countdown = {
 			save_scope_as = landowners_scope
 		}
 	}
+
+    modifiers_while_active = {
+        usfp_a_house_divided_modifier
+        usfp_slave_power_modifier
+    }
 
 	current_value = {
 		value = root.var:acw_progress_var
@@ -140,57 +148,62 @@ je_acw_countdown = {
 		}
 	}
 
-	complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-		has_law_or_variant = law_type:law_slavery_banned
-		any_revolution_ongoing = no
-		government_legitimacy > 20
-	}
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            scope:journal_entry = {
+                is_goal_complete = yes
+            }
+            has_law_or_variant = law_type:law_slavery_banned
+            any_revolution_ongoing = no
+            government_legitimacy > 20
+        }
+        effect = {
+            trigger_event = {
+                id = usfp_a_house_divided.12
+                days = 0
+                popup = yes
+            }
+            set_variable = je_acw_countdown_complete
+        }
+        event_outcome_effect_desc = {
+            effect = {
+                execute_event_option = {
+                    event = usfp_a_house_divided.12
+                    option = 0
+                }
+            }
+        }
+    }
 
-	on_complete = {
-		trigger_event = {
-			id = usfp_a_house_divided.12
-			days = 0
-			popup = yes
-		}
-		set_variable = je_acw_countdown_complete
-	}
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                has_civil_war_from_movement_type = movement_type:movement_pro_slavery
+                has_civil_war_from_movement_type = movement_type:movement_anti_slavery
+            }
+        }
+        effect = {
+            if = {
+                limit = {
+                    has_civil_war_from_movement_type = movement_type:movement_pro_slavery
+                }
+                set_variable = csa_will_spawn_var
+            }
+            custom_tooltip = {
+                text = acw_will_happen_tt
+                trigger_event = { id = acw_je_events.1 }
+            }
+        }
+    }
 
-	event_outcome_completed_effect_desc = {
-		effect = {
-			execute_event_option = {
-				event = usfp_a_house_divided.12
-				option = 0
-			}
-		}
-	}
-
-
-	modifiers_while_active = {
-		usfp_a_house_divided_modifier
-		usfp_slave_power_modifier
-	}
-	fail = {
-		OR = {
-			has_civil_war_from_movement_type = movement_type:movement_pro_slavery
-			has_civil_war_from_movement_type = movement_type:movement_anti_slavery
-		}		
-	}
-
-	on_fail = {
-		if = {
-			limit = {
-				has_civil_war_from_movement_type = movement_type:movement_pro_slavery
-			}
-			set_variable = csa_will_spawn_var
-		}
-		custom_tooltip = {
-			text = acw_will_happen_tt
-			trigger_event = { id = acw_je_events.1 }
-		}
-	}
 
 	on_monthly_pulse = {
 		effect = {
@@ -576,7 +589,10 @@ je_acw_war = {
 
 #USFP: overhauled into just dealing with CSA aftermath
 je_acw_reconstruction = {
-
+    icon = "gfx/interface/icons/invention_icons/egalitarianism.dds"
+    group = je_group_usa_american_civil_war
+    highlight = yes
+    dlc = dlc_usfp
 	status_desc = {
 		first_valid = {
 			triggered_desc = { 
@@ -600,19 +616,12 @@ je_acw_reconstruction = {
 			}
 		}
 	}
-	icon = "gfx/interface/icons/invention_icons/egalitarianism.dds"
 
-	group = je_group_usa_american_civil_war
 
 	modifiers_while_active = {
 		usfp_reconstruction_army_duties_modifier
 	}
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
 		#clean up election-spawned agitators
 		usfp_cleanup_acw_agitators = yes
 		set_variable = {
@@ -627,16 +636,6 @@ je_acw_reconstruction = {
 		}
 		cu:yankee = {
 			save_scope_as = yankee_culture
-		}
-		je:je_acw_reconstruction ?= {
-			add_modifier = {
-				name = usfp_reconstruction_white_fatigue_modifier
-				multiplier = var:reconstruction_var
-			}
-			add_modifier = {
-				name = usfp_reconstruction_occupation_authority_modifier
-				multiplier = 100
-			}
 		}
 		if = {
 			limit = { 
@@ -677,26 +676,38 @@ je_acw_reconstruction = {
 			20 = usfp_reconstruction.15 #Rural Folk support Reconstruction
 		}
 		effect = {
-			je:je_acw_reconstruction = {
-				remove_modifier = usfp_reconstruction_white_fatigue_modifier
-				add_modifier = {
-					name = usfp_reconstruction_white_fatigue_modifier
-					multiplier = var:reconstruction_var
-				}
-				remove_modifier = usfp_reconstruction_occupation_authority_modifier
-				if = {
-					limit = { 
-						"scripted_bar_progress(usfp_reconstruction_northern_will_progress_bar)" > 0
-					}
-					add_modifier = {
-						name = usfp_reconstruction_occupation_authority_modifier
-						multiplier = "scope:journal_entry.scripted_bar_progress(usfp_reconstruction_northern_will_progress_bar)"
-					}
-				}
-
-			}
+			# je:je_acw_reconstruction = {
+			# 	remove_modifier = usfp_reconstruction_white_fatigue_modifier
+			# 	add_modifier = {
+			# 		name = usfp_reconstruction_white_fatigue_modifier
+			# 		multiplier = var:reconstruction_var
+			# 	}
+			# 	remove_modifier = usfp_reconstruction_occupation_authority_modifier
+			# 	if = {
+			# 		limit = {
+			# 			"scripted_bar_progress(usfp_reconstruction_northern_will_progress_bar)" > 0
+			# 		}
+			# 		add_modifier = {
+			# 			name = usfp_reconstruction_occupation_authority_modifier
+			# 			multiplier = "scope:journal_entry.scripted_bar_progress(usfp_reconstruction_northern_will_progress_bar)"
+			# 		}
+			# 	}
+			# }
 		}
 	}
+
+    scaling_modifiers_while_active = {
+        modifier = usfp_reconstruction_white_fatigue_modifier
+        value = {
+            value = root.var:reconstruction_var
+        }
+    }
+    scaling_modifiers_while_active = {
+        modifier = usfp_reconstruction_occupation_authority_modifier
+        value = {
+            value = "scope:journal_entry.scripted_bar_progress(usfp_reconstruction_northern_will_progress_bar)"
+        }
+    }
 
 	on_yearly_pulse = {
 		effect = {

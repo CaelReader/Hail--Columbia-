@@ -114,6 +114,7 @@ usfp_je_coal_wars = {
         ordered_in_list = {
             variable = usfp_coal_wars_states
             order_by = "ig_state_pol_strength_share(root.ig:ig_trade_unions)"
+            position = 0
             root = {
                 set_variable = {
                     name = usfp_coal_wars_umwa_target
@@ -143,7 +144,7 @@ usfp_je_coal_wars = {
                     any_in_list = {
                         variable = usfp_coal_wars_states
                         count = all
-                        has_variable = usfp_state_unionized
+                        has_variable = usfp_coal_wars_state_unionized
                     }
                 }
                 desc = usfp_coal_wars_all_states_unionized
@@ -165,9 +166,14 @@ usfp_je_coal_wars = {
                     limit = {
                         var:usfp_coal_wars_state_unionization < 100
                     }
-                    change_variable = {
+                    set_variable = {
                         name = usfp_coal_wars_state_unionization
-                        add = usfp_coal_wars_unionization_progress
+                        value = {
+                            value = var:usfp_coal_wars_state_unionization
+                            add = usfp_coal_wars_unionization_progress
+                            min = 0
+                            max = 100
+                        }
                     }
                 }
                 if = {
@@ -195,13 +201,14 @@ usfp_je_coal_wars = {
                             name = usfp_coal_wars_union_established_modifier
                         }
                     }
-                    set_variable = usfp_state_unionized
+                    set_variable = usfp_coal_wars_state_unionized
                     ordered_in_list = {
                         variable = usfp_coal_wars_states
                         order_by = var:usfp_coal_wars_state_unionization
+                        position = 0
                         limit = {
                             NOT = {
-                                has_variable = usfp_state_unionized
+                                has_variable = usfp_coal_wars_state_unionized
                             }
                         }
                         root = {
@@ -212,7 +219,9 @@ usfp_je_coal_wars = {
                         }
                     }
                     save_scope_as = new_union_state
-                    post_notification = usfp_coal_wars_state_unionized
+                    owner = {
+                        post_notification = usfp_coal_wars_state_unionized
+                    }
                 }
             }
         }
@@ -241,6 +250,12 @@ usfp_je_coal_wars = {
         }
         if = {
             limit = {
+                has_variable = usfp_coal_wars_state_unionized
+            }
+            value = "yellow"
+        }
+        else_if = {
+            limit = {
                 has_variable = usfp_coal_wars_state_unionization
             }
             lerp = {
@@ -259,85 +274,145 @@ usfp_je_coal_wars = {
             limit = {
                 this = owner.var:usfp_coal_wars_umwa_target
             }
-            value = "reform_or_revolution_socialist_red"
+            value = "yellow"
         }
     }
 
     map_tooltip = {
         if = {
             limit = {
+                owner = {
+                    has_variable = usfp_coal_wars_umwa_target
+                }
                 this = owner.var:usfp_coal_wars_umwa_target
             }
             custom_tooltip_no_bullet = "coal_wars_umwa_target_state"
         }
+        else_if = {
+            limit = {
+                has_building = building_coal_mine
+                is_incorporated = yes
+            }
+            custom_tooltip_no_bullet = "coal_wars_valid_state"
+        } else_if = {
+            limit = {
+                has_building = building_coal_mine
+                is_incorporated = no
+            }
+            custom_tooltip_no_bullet = "coal_wars_unincorporated_state"
+        }
         if = {
+            limit = {
+                has_variable = usfp_coal_wars_state_unionized
+            }
+            custom_tooltip_no_bullet = "coal_wars_state_unionized"
+        }
+        else_if = {
             limit = {
                 has_variable = usfp_coal_wars_state_unionization
             }
             custom_tooltip_no_bullet = "coal_wars_state_unionization_level"
+            custom_tooltip_no_bullet = "coal_wars_state_unionization_progress"
         }
     }
 
     #workplace safety and the end of company towns
-    complete = {
-        #repeal lochner
-        active_law:lawgroup_labor_rights = {
-            NOT = {
-                has_amendment = amendment_type:amendment_usfp_right_to_contract
-            }
-        }
-        NOT = { has_law_or_variant = law_type:law_child_labor_allowed }
-        NOT = { has_law_or_variant = law_type:law_combination_acts }
-        OR = {
-            AND = {
-                has_law_or_variant = law_type:law_regulatory_bodies
-                institution_investment_level = {
-                    institution = institution_workplace_safety
-                    value >= 5
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            #repeal lochner
+            active_law:lawgroup_labor_rights = {
+                NOT = {
+                    has_amendment = amendment_type:amendment_usfp_right_to_contract
                 }
             }
-            AND = {
-                has_law_or_variant = law_type:law_worker_protections
-                institution_investment_level = {
-                    institution = institution_workplace_safety
-                    value >= 3
+            NOT = { has_law_or_variant = law_type:law_child_labor_allowed }
+            NOT = { has_law_or_variant = law_type:law_combination_acts }
+            OR = {
+                AND = {
+                    has_law_or_variant = law_type:law_regulatory_bodies
+                    institution_investment_level = {
+                        institution = institution_workplace_safety
+                        value >= 5
+                    }
+                }
+                AND = {
+                    has_law_or_variant = law_type:law_worker_protections
+                    institution_investment_level = {
+                        institution = institution_workplace_safety
+                        value >= 3
+                    }
+                }
+                #Corporatized Unions variant
+                AND = {
+                    has_law_or_variant = law_type:law_corporatized_unions
+                    has_institution = institution_workplace_safety
                 }
             }
-            #Corporatized Unions variant
-            AND = {
-                has_law_or_variant = law_type:law_corporatized_unions
-                has_institution = institution_workplace_safety
+        }
+        effect = {
+            trigger_event = usfp_coal_wars.7
+        }
+        event_outcome_effect_desc = {
+            effect = {
+                execute_event_option = {
+                    event = usfp_coal_wars.7
+                    option = 0
+                }
             }
         }
-    }
-
-
-    on_complete = {
-        trigger_event = usfp_coal_wars.7
     }
 
     #Crushing of the strikes and the TUs
-    fail = {
-        custom_tooltip = {
-            text = progress_bar_zero
-            scope:journal_entry = {
-                scripted_bar_progress = {
-                    name = usfp_coal_wars_union_leverage_bar
-                    value <= 0
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            custom_tooltip = {
+                text = progress_bar_zero
+                scope:journal_entry = {
+                    scripted_bar_progress = {
+                        name = usfp_coal_wars_union_leverage_bar
+                        value <= 0
+                    }
+                }
+            }
+        }
+        effect = {
+            trigger_event = usfp_coal_wars.8
+        }
+        event_outcome_effect_desc = {
+            effect = {
+                execute_event_option = {
+                    event = usfp_coal_wars.8
+                    option = 0
                 }
             }
         }
     }
 
-    on_fail = {
-        trigger_event = usfp_coal_wars.8
-    }
 
     #cleanup unionization modifiers
 
-    #Council Republic
-    invalid = {
-        has_radical_leftist_economy = yes
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            OR = {
+                has_radical_leftist_economy = yes
+                NOT = {
+                    any_scope_state = {
+                        has_building = building_coal_mine
+                        is_incorporated = yes
+                    }
+                }
+            }
+        }
     }
 
 

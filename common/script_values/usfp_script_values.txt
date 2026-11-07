@@ -1495,33 +1495,47 @@ usfp_second_revolution_drift_value = {
 usfp_coal_wars_unionization_progress = {
 	#TUs clout
 	add = {
-		value = "ig_state_pol_strength_share(root.ig:ig_trade_unions)"
+		value = "ig_state_pol_strength_share(owner.ig:ig_trade_unions)"
+        multiply = 100
 		desc = "trade_unions_clout"
 	}
 	#Labor radicals
-	add = {
-		every_scope_pop = {
-			limit = {
-				pop_employment_building = building_coal_mine
-				is_pop_type = laborers
-			}
-			add = pop_radical_fraction
-		}
-		divide = {
-			every_scope_pop = {
-				limit = {
-					pop_employment_building = building_coal_mine
-					is_pop_type = laborers
-				}
-				add = 1
-			}
-		}
-		desc = "radical_coal_miners"
-	}
+	if = {
+        limit = {
+            any_scope_pop = {
+                pop_employment_building = building_coal_mine
+                is_pop_type = laborers
+                pop_radical_fraction > 0
+            }
+        }
+        value = {
+            add = {
+                every_scope_pop = {
+                    limit = {
+                        pop_employment_building = building_coal_mine
+                        is_pop_type = laborers
+                    }
+                    add = pop_radical_fraction
+                }
+                divide = {
+                    every_scope_pop = {
+                        limit = {
+                            pop_employment_building = building_coal_mine
+                            is_pop_type = laborers
+                        }
+                        add = 1
+                    }
+                }
+            }
+            multiply = 100
+            desc = "radical_coal_miners"
+        }
+
+    }
 	#UMWA focus state
 	if = {
 		limit = {
-			root.var:usfp_coal_wars_umwa_target = this
+			owner.var:usfp_coal_wars_umwa_target = this
 		}
 		add = {
 			value = 2
@@ -1554,7 +1568,8 @@ usfp_coal_wars_unionization_progress = {
 
 	#Industrialists Clout
 	subtract = {
-		value = "ig_state_pol_strength_share(root.ig:ig_industrialists)"
+		value = "ig_state_pol_strength_share(owner.ig:ig_industrialists)"
+        multiply = 50
 		desc = "industrialists_clout"
 	}
 
