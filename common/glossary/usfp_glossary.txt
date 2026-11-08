@@ -1,0 +1,25 @@
+glossary_usfp_house_of_representatives = {}
+
+glossary_usfp_senate = {}
+
+glossary_usfp_congress = {}
+
+glossary_usfp_louisiana_purchase = {}
+
+glossary_usfp_trusts = {}
+
+glossary_usfp_political_machines = {}
+
+glossary_usfp_muckrakers = {}
+
+glossary_usfp_popular_sovereignty = {}
+
+glossary_usfp_supreme_court = {}
+
+glossary_usfp_nullification_crisis = {}
+
+glossary_usfp_jim_crow = {}
+
+glossary_usfp_thirteen_colonies = {}
+
+glossary_usfp_monroe_doctrine = {}

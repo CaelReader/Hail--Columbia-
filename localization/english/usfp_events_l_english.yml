@@ -23,7 +23,7 @@ acw_events.3.a.t: "The status of the Missouri Compromise will remain uncertain."
 acw_events.3.c.t: "The Missouri Compromise may not survive the realities of westward expansion."
 
 usfp_a_house_divided.1.t: "The Pickney Resolutions"
-usfp_a_house_divided.1.d: "In recent months, the [concept_usfp_house_of_representatives] has been buried in a flood of abolitionist petitions. In response, the [SCOPE.sParty('democratic_party').GetName] has passed resolutions forbidding the consideration or discussion of any matters pertaining to [GetLawType('law_slave_trade').GetGroup.GetName]."
+usfp_a_house_divided.1.d: "In recent months, the [glossary_usfp_house_of_representatives] has been buried in a flood of abolitionist petitions. In response, the [SCOPE.sParty('democratic_party').GetName] has passed resolutions forbidding the consideration or discussion of any matters pertaining to [GetLawType('law_slave_trade').GetGroup.GetName]."
 usfp_a_house_divided.1.f: ""Resolved — that all petitions, memorials, resolutions, propositions, or papers, relating in any way, or to any extent whatever, to the subject of slavery, or the abolition of slavery, shall, without being either printed or referred, be laid upon the table, and that no further action whatever shall be had thereon.""
 usfp_a_house_divided.1.a: "This is flagrantly unconstitutional."
 usfp_a_house_divided.1.b: "Finally, lets get on with business as usual."
@@ -55,20 +55,20 @@ usfp_a_house_divided.5.a: "Everyone should know of the injustices of slavery."
 usfp_a_house_divided.5.b: "This book is an outrageous fiction."
 
 usfp_a_house_divided.6.t: "The Impending Crisis of the South"
-usfp_a_house_divided.6.d: "A radical economic treatise has been published in [SCOPE.sState('maryland_scope').GetName], laying out an argument that slavery has stunted the growth of the Southern economy and will lead to its long-term ruin. The book has been so controversial that several southern states have declared its possession a capital offense, and the [concept_usfp_house_of_representatives] has become embroiled in constant argument on the subject."
+usfp_a_house_divided.6.d: "A radical economic treatise has been published in [SCOPE.sState('maryland_scope').GetName], laying out an argument that slavery has stunted the growth of the Southern economy and will lead to its long-term ruin. The book has been so controversial that several southern states have declared its possession a capital offense, and the [glossary_usfp_house_of_representatives] has become embroiled in constant argument on the subject."
 usfp_a_house_divided.6.f: ""Freesoilers and abolitionists are the only true friends of the South; slaveholders and slave-breeders are downright enemies of their own section. Anti-slavery men are working for the Union and for the good of the whole world; proslavery men are working for the disunion of the States, and for the good of nothing except themselves.""
 usfp_a_house_divided.6.a: "Slavery is bad for the South!"
 usfp_a_house_divided.6.b: "Slavery is the bedrock of Southern civilization!"
 
 usfp_a_house_divided.7.t: "[SCOPE.sState('california_scope').GetName] Petitions for Statehood"
-usfp_a_house_divided.7.d: "To organize the expanding population of [SCOPE.sState('california_scope').GetName], the new settlers have held a constitutional convention and are now petitioning for statehood. Their constitution outlaws slavery and claims a territory that crosses the Missouri Compromise line, causing consternation in [concept_usfp_congress] over potentially upsetting the balance between free and slave states."
+usfp_a_house_divided.7.d: "To organize the expanding population of [SCOPE.sState('california_scope').GetName], the new settlers have held a constitutional convention and are now petitioning for statehood. Their constitution outlaws slavery and claims a territory that crosses the Missouri Compromise line, causing consternation in [glossary_usfp_congress] over potentially upsetting the balance between free and slave states."
 usfp_a_house_divided.7.f: ""Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, that the state of California shall be one, and is hereby declared to be one, of the United States of America, and admitted into the Union on an equal footing with the original states in all respects whatever. ""
 usfp_a_house_divided.7.a: "Welcome to the Union!"
 usfp_a_house_divided.7.b: "We cannot unilaterally add a new free state."
 compromise_of_1850_soon: "Our westward expansion has made the Missouri Compromise untenable. A new compromise will need to be developed."
 
 usfp_a_house_divided.8.t: "A New Compromise"
-usfp_a_house_divided.8.d_california: "The admission of [SCOPE.sState('california_scope').GetName] to the Union has incensed the [SCOPE.gsInterestGroup('planters_scope').GetName], who have already begun to discuss secession amongst themselves. [SCOPE.sCharacter('compromise_leader').GetFullName] has assembled a compromise package to defuse tensions: The doctrine of [concept_usfp_popular_sovereignty] will allow the people of each western territory to decide the status of slavery, and the Fugitive Slave Act will compel citizens of free states to help catch runaway slaves."
+usfp_a_house_divided.8.d_california: "The admission of [SCOPE.sState('california_scope').GetName] to the Union has incensed the [SCOPE.gsInterestGroup('planters_scope').GetName], who have already begun to discuss secession amongst themselves. [SCOPE.sCharacter('compromise_leader').GetFullName] has assembled a compromise package to defuse tensions: The doctrine of [glossary_usfp_popular_sovereignty] will allow the people of each western territory to decide the status of slavery, and the Fugitive Slave Act will compel citizens of free states to help catch runaway slaves."
 usfp_a_house_divided.8.d: "The status of our western territories is threatening to escalate the sectional divide between North and South. [SCOPE.sCharacter('compromise_leader').GetFullName] has assembled a compromise package to defuse tensions: [SCOPE.sState('california_scope').GetName] will be admitted to the Union as a free state. In turn, the doctrine of popular sovereignty will allow the people of each western territory to decide the status of slavery, and the Fugitive Slave Act will compel citizens of free states to help catch runaway slaves."
 usfp_a_house_divided.8.f: ""With these bills, we shall arrive at a final settlement between the sections, and preserve the union henceforth.""
 usfp_a_house_divided.8.a: "The Union is saved!"
@@ -90,7 +90,7 @@ usfp_a_house_divided.11.a: "[SCOPE.sState('kansas_scope').GetName] will be free 
 usfp_a_house_divided.11.b: "Yankees should mind their own business."
 usfp_a_house_divided.11.c: "This will be decided at the ballot box."
 
-usfp_a_house_divided.12.d: "With years having passed since the passage of [SCOPE.sLaw('slavery_banned_scope').GetName], the [SCOPE.gsInterestGroup('slaver_ig').GetName] have been forced to accept the new economic order. They have instead enacted a regime of racist '[concept_usfp_jim_crow]' laws across the South in an effort to curtail the rights of the now free $usfp_afro_american_culture_plural$."
+usfp_a_house_divided.12.d: "With years having passed since the passage of [SCOPE.sLaw('slavery_banned_scope').GetName], the [SCOPE.gsInterestGroup('slaver_ig').GetName] have been forced to accept the new economic order. They have instead enacted a regime of racist '[glossary_usfp_jim_crow]' laws across the South in an effort to curtail the rights of the now free $usfp_afro_american_culture_plural$."
 
 usfp_a_house_divided.14.t: "Breaking the Compromise"
 usfp_a_house_divided.14.d: "Representatives from across the sectional divide have opposed [SCOPE.sLaw('current_law_scope').GetName] as a breach of the accord between North and South, denouncing it as a danger to national unity."
@@ -108,7 +108,7 @@ usfp_a_house_divided.15.a.tt: "The [SCOPE.sParty('whig_scope').GetName] will now
  pro_slavery_movement_abolitionist_leader_warning: "@warning! If an [GetIdeology('ideology_abolitionist').GetName] becomes [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')], the $movement_pro_slavery$ will immediately launch a [concept_secession]! #italic (Unless the [GetInterestGroupVariant('ig_landowners',GetPlayer).GetName] are reduced below 5% [concept_clout] ) #!"
 
 usfp_a_house_divided.16.t: "Dred Scott v. Sandford"
-usfp_a_house_divided.16.d: "The [concept_usfp_supreme_court] has handed down a landmark decision over the case of an [SCOPE.sCulture('afro_american_scope').GetName] man suing for his freedom. The court has ruled that the Constitution extends no rights to any [SCOPE.sCulture('afro_american_scope').GetName], free or slave, and further that [concept_usfp_congress] has no power to restrict [GetLawType('law_slave_trade').GetGroup.GetName] in the territories."
+usfp_a_house_divided.16.d: "The [glossary_usfp_supreme_court] has handed down a landmark decision over the case of an [SCOPE.sCulture('afro_american_scope').GetName] man suing for his freedom. The court has ruled that the Constitution extends no rights to any [SCOPE.sCulture('afro_american_scope').GetName], free or slave, and further that [glossary_usfp_congress] has no power to restrict [GetLawType('law_slave_trade').GetGroup.GetName] in the territories."
 usfp_a_house_divided.16.f: ""They were not intended to be included, under the word 'citizens' in the Constitution, and can therefore claim none of the rights and privileges which that instrument provides for and secures to citizens of the United States. On the contrary, they were considered by the founders as a subordinate and inferior class of beings who had been subjugated by the dominant race, and, whether emancipated or not, yet remained subject to their authority, and had no rights or privileges but such as those who held the power and the Government might choose to grant them.""
 usfp_a_house_divided.16.a: "This is the most obscene ruling in history!"
 usfp_a_house_divided.16.b: "Property is property, that is the end of it."
@@ -213,7 +213,7 @@ usfp_bleeding_kansas.7.a: "By God, the madman's done it!"
 usfp_bleeding_kansas.7.b: "We must crush these uppity slaves at once!"
 
 usfp_bleeding_kansas.8.t: "Competing Constitutions"
-usfp_bleeding_kansas.8.d: "Two separate delegations have arrived from [SCOPE.sState('kansas_scope').GetName], both carrying state Constitutions to be ratified by [concept_usfp_congress]: one banning slavery and the other enshrining it. Both groups claim to be the legitimate representatives of the people of [SCOPE.sState('kansas_scope').GetName], but it falls to us to decide which to accept."
+usfp_bleeding_kansas.8.d: "Two separate delegations have arrived from [SCOPE.sState('kansas_scope').GetName], both carrying state Constitutions to be ratified by [glossary_usfp_congress]: one banning slavery and the other enshrining it. Both groups claim to be the legitimate representatives of the people of [SCOPE.sState('kansas_scope').GetName], but it falls to us to decide which to accept."
 usfp_bleeding_kansas.8.f: ""Our Constitution has been duly ratified by the rightfully elected delegates of the free state of Kansas. We've just come from Constitution Hall in Topeka, despite these border ruffians trying to stop us!"\n\n"Well our Constitution has been duly ratified by the true delegates of the people of Kansas. And we wrote ours in the #italic real#! Constitution Hall, in Lecompton!""
 usfp_bleeding_kansas.8.a: "The Free-Staters' Constitution is clearly the legitimate choice."
 usfp_bleeding_kansas.8.b: "The pro-slavery Constitution is obviously the will of the voters."
@@ -383,17 +383,17 @@ usfp_reconstruction.8.a: "There is no progress without struggle."
 usfp_reconstruction.8.b: "Our promise is only half-fulfilled."
 
 usfp_reconstruction.9.t: "Divided Dixie"
-usfp_reconstruction.9.d: "Reconstruction is finally coming to a close as the southern states are reincorporated fully into the [ROOT.GetCountry.GetName]. States with large [GetCulture('afro_american').GetName] populations have been able to secure the fruits of Reconstruction, while those with [GetCulture('dixie').GetName] majorities have succumbed to Redeemer control. The wounds of the war have scarred over, but the South now stands divided between free states and racist '[concept_usfp_jim_crow]' regimes."
+usfp_reconstruction.9.d: "Reconstruction is finally coming to a close as the southern states are reincorporated fully into the [ROOT.GetCountry.GetName]. States with large [GetCulture('afro_american').GetName] populations have been able to secure the fruits of Reconstruction, while those with [GetCulture('dixie').GetName] majorities have succumbed to Redeemer control. The wounds of the war have scarred over, but the South now stands divided between free states and racist '[glossary_usfp_jim_crow]' regimes."
 usfp_reconstruction.9.f: ""All I ask is, give the black man a chance to stand on his own legs! Let him alone! If you see him on his way to school, let him alone, -- don't disturb him! If you see him going to the dinner-table at a hotel, let him go! If you see him going to the ballot-box, let him alone, -- don't disturb him!"" #Frederick Douglass
 usfp_reconstruction.9.a: "Time will heal all wounds."
 
 usfp_reconstruction.10.t: "The Redemption of the South"
-usfp_reconstruction.10.d: "Reconstruction is finally coming to a close as the southern states are reincorporated fully into the [ROOT.GetCountry.GetName]. In the face of violent opposition and weak government support, Reconstruction has failed, leaving the Redeemers in full control of the former Confederacy. While this has allowed a reconciliation with the rebels on the national level, it entails the destruction of [GetCulture('afro_american').GetName] rights under the heel of racist '[concept_usfp_jim_crow]' laws that have been implemented across the South."
+usfp_reconstruction.10.d: "Reconstruction is finally coming to a close as the southern states are reincorporated fully into the [ROOT.GetCountry.GetName]. In the face of violent opposition and weak government support, Reconstruction has failed, leaving the Redeemers in full control of the former Confederacy. While this has allowed a reconciliation with the rebels on the national level, it entails the destruction of [GetCulture('afro_american').GetName] rights under the heel of racist '[glossary_usfp_jim_crow]' laws that have been implemented across the South."
 usfp_reconstruction.10.f: ""Where justice is denied, where poverty is enforced, where ignorance prevails, and where any one class is made to feel that society is an organized conspiracy to oppress, rob and degrade them, neither persons nor property will be safe."" #Frederick Douglass
 usfp_reconstruction.10.a: "This will haunt our country for centuries to come."
 usfp_reconstruction.10.b: "Reconciliation with the South is all that matters."
-usfp_reconstruction_full_jim_crow: "[concept_usfp_jim_crow] laws will be enacted in all southern [Concept('concept_state', '$concept_states$')]"
-usfp_reconstruction_partial_jim_crow: "[concept_usfp_jim_crow] laws will be enacted in southern [Concept('concept_state', '$concept_states$')] that lack a large [GetCulture('afro_american').GetName] [Concept('concept_pop', '$concept_population$')]"
+usfp_reconstruction_full_jim_crow: "[glossary_usfp_jim_crow] laws will be enacted in all southern [Concept('concept_state', '$concept_states$')]"
+usfp_reconstruction_partial_jim_crow: "[glossary_usfp_jim_crow] laws will be enacted in southern [Concept('concept_state', '$concept_states$')] that lack a large [GetCulture('afro_american').GetName] [Concept('concept_pop', '$concept_population$')]"
 
 usfp_reconstruction.11.t: "A Devil's Bargain"
 usfp_reconstruction.11.d: "The recent election of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] is being contested by several Southern states. We could possibly reach an accord by fast-tracking the end of Reconstruction in exchange for the states accepting the election results."
@@ -434,7 +434,7 @@ usfp_reconstruction.16.a: "Whatever they call themselves, they are traitors and 
 #### Manifest Destiny Events ###
 
 usfp_manifest_destiny.1.t: "From Sea to Shining Sea?"
-usfp_manifest_destiny.1.d: "Since the days of the [concept_usfp_thirteen_colonies], the settlers of the [ROOT.GetCountry.GetName] have looked upon the lands to the west with desire, and a complete disregard for their existing inhabitants. Now a lofty justification for expansion is beginning to emerge in our national consciousness — that of Manifest Destiny. Proponents of the idea claim that it is not only our right but our sacred duty to seize and populate the entirety of the great American continent."
+usfp_manifest_destiny.1.d: "Since the days of the [glossary_usfp_thirteen_colonies], the settlers of the [ROOT.GetCountry.GetName] have looked upon the lands to the west with desire, and a complete disregard for their existing inhabitants. Now a lofty justification for expansion is beginning to emerge in our national consciousness — that of Manifest Destiny. Proponents of the idea claim that it is not only our right but our sacred duty to seize and populate the entirety of the great American continent."
 usfp_manifest_destiny.1.f: ""Our claim by the right of our manifest destiny is to overspread and to possess the whole of the continent which Providence has given us. It is for the development of the great experiment of liberty and federated self-government entrusted to us.""
 usfp_manifest_destiny.1.a: "The birthday of a new world is at hand!"
 usfp_manifest_destiny.1.b: "There's nothing sacred about conquest."
@@ -545,7 +545,7 @@ usfp_manifest_destiny.17.f: ""The United States and every commercial nation woul
 usfp_manifest_destiny.17.a: "Cigars all around!"
 
 usfp_manifest_destiny.18.t: "Monroe Doctrine Violated!"
-usfp_manifest_destiny.18.d: "Under the [concept_usfp_monroe_doctrine], the [ROOT.GetCountry.GetName] nominally opposes any further domination of the Western Hemisphere by foreign powers. [SCOPE.sCountry('monroe_doctrine_violator').GetName]'s aggressive intervention against [SCOPE.sCountry('target_scope').GetName] is a clear breach of this policy, and so demands a response."
+usfp_manifest_destiny.18.d: "Under the [glossary_usfp_monroe_doctrine], the [ROOT.GetCountry.GetName] nominally opposes any further domination of the Western Hemisphere by foreign powers. [SCOPE.sCountry('monroe_doctrine_violator').GetName]'s aggressive intervention against [SCOPE.sCountry('target_scope').GetName] is a clear breach of this policy, and so demands a response."
 usfp_manifest_destiny.18.f: ""We owe it, therefore, to candor and to the amicable relations existing between the United States and those powers to declare that we should consider any attempt on their part to extend their system to any portion of this hemisphere as dangerous to our peace and safety.""
 usfp_manifest_destiny.18.a: "America will not stand idly by!"
 usfp_manifest_destiny.18.b: "[SCOPE.sCountry('target_scope').GetName] is no concern of ours."
@@ -786,7 +786,7 @@ usfp_usa.8.b: "The name Harper's Weekly belongs in the mud."
 usfp_usa.8.c: "Stop those presses."
 
 usfp_usa.9.t: "Constitutional Challenge"
-usfp_usa.9.d: "Opponents of [SCOPE.sLaw('current_law_scope').GetName] have challenged the proposal on grounds of violating the [ROOT.GetCountry.GetAdjective] Constitution. Unless the [concept_usfp_supreme_court] is swayed to read the constitution in our favor, the law would be instantly nullified even if passed by [concept_usfp_congress]."
+usfp_usa.9.d: "Opponents of [SCOPE.sLaw('current_law_scope').GetName] have challenged the proposal on grounds of violating the [ROOT.GetCountry.GetAdjective] Constitution. Unless the [glossary_usfp_supreme_court] is swayed to read the constitution in our favor, the law would be instantly nullified even if passed by [glossary_usfp_congress]."
 usfp_usa.9.f: ""The powers of the legislature are defined and limited; and that those limits may not be mistaken or forgotten. Certainly all those who have framed written constitutions contemplate them as forming the fundamental and paramount law of the nation, and consequently the theory of every such government must be, that an act of the legislature, repugnant to the constitution, is void.""
 usfp_usa.9.a: "The law cannot go forward."
 usfp_usa.9.b: "Under a certain interpretation, the law is perfectly constitutional!"
@@ -806,7 +806,7 @@ georgists_can_spawn_double: "[SCOPE.sIdeology('georgism_scope').GetName] charact
 #11 moved to progressive
 
 usfp_usa.12.t: "The [ROOT.GetCountry.GetAdjective] Hippo Plan"
-usfp_usa.12.d: "A novel proposal has been submitted to [concept_usfp_congress] as a solution to the rising cost of $meat$. The plan calls for a population of African Hippopotamuses to be introduced to the [SCOPE.sState('louisiana_scope').GetName] bayou, where they can feast on invasive plants and be slaughtered for their meat."
+usfp_usa.12.d: "A novel proposal has been submitted to [glossary_usfp_congress] as a solution to the rising cost of $meat$. The plan calls for a population of African Hippopotamuses to be introduced to the [SCOPE.sState('louisiana_scope').GetName] bayou, where they can feast on invasive plants and be slaughtered for their meat."
 usfp_usa.12.f: ""Great Britain has eaten the Australian kangaroo and likes him, horseflesh is a staple in continental Europe, and the people of Central America eat the lizard. Why cannot Americans absorb the hippopotamus?""
 usfp_usa.12.a: "Who let this guy in here?"
 usfp_usa.12.b: "We shall feast on lake cow bacon!"
@@ -833,7 +833,7 @@ usfp_usa.19.c: "I defy any sonofabitch to get me out under four terms!"
 usfp_usa.19.e: "We should not change horses mid stream!"
 
 usfp_usa.20.t: "Separation of Powers"
-usfp_usa.20.d: "With chaos in the Executive Branch, [concept_usfp_congress] has been forced to take a leading role in the [ROOT.GetCountry.GetAdjective] government, in violation of the constitution. With no obvious mechanism to restore normalcy, it falls to the representatives to determine the future structure of the republic."
+usfp_usa.20.d: "With chaos in the Executive Branch, [glossary_usfp_congress] has been forced to take a leading role in the [ROOT.GetCountry.GetAdjective] government, in violation of the constitution. With no obvious mechanism to restore normalcy, it falls to the representatives to determine the future structure of the republic."
 usfp_usa.20.f: ""The principle of the Constitution is that of a separation of legislative, Executive and Judiciary functions, except in cases specified. If this principle be not expressed in direct terms, it is clearly the spirit of the Constitution, and it ought to be so commented and acted on by every friend of free government."" #Thomas Jefferson
 usfp_usa.20.a: "We must restore the rightful republic."
 usfp_usa.20.b: "Amend the constitution. Congress will reign supreme."
@@ -849,7 +849,7 @@ usfp_usa.22.f: "Crowds buzzed through the streets set aside for the exposition, 
 usfp_usa.22.a: "Here's to another 100 years!"
 
 usfp_usa.23.t: "The [ROOT.GetCountry.GetRuler.GetLastName] Presidency"
-usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of his office. After dissolving the Central Bank and asserting the powers of the Federal government in the [concept_usfp_nullification_crisis], he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the [concept_usfp_supreme_court] rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of [GetLawType('law_slave_trade').GetGroup.GetName] continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
+usfp_usa.23.d: "Nearing the end of his second term, [ROOT.GetCountry.GetRuler.GetFullName] has left an indelible mark on the history of his office. After dissolving the Central Bank and asserting the powers of the Federal government in the [glossary_usfp_nullification_crisis], he has aggressively moved to seize American Indian lands in the south, sparking war in [SCOPE.sStateRegion('florida_region_scope').GetName] even as the [glossary_usfp_supreme_court] rules against his actions. While his [SCOPE.sIdeology('jacksonian_ideology').GetName] agenda moves forward, the matter of [GetLawType('law_slave_trade').GetGroup.GetName] continues to smolder in the heart of the [ROOT.GetCountry.GetAdjective] Republic."
 usfp_usa.23.f: ""But you must remember, my fellow-citizens, that eternal vigilance by the people is the price of liberty, and that you must pay the price if you wish to secure the blessing."\n\n—Andrew Jackson" #Andrew Jackson
 usfp_usa.23.a: "This is a time of opportunity."
 
@@ -955,7 +955,7 @@ usfp_usa_labor.6.a: "An inspiring vision of utopia."
 usfp_usa_labor.6.b: "A deranged socialist fantasy."
 
  usfp_usa_labor.7.t: "Right to Contract"
- usfp_usa_labor.7.d: "The [concept_usfp_supreme_court] has ruled that our [SCOPE.sLaw('labor_law_scope').GetName] legislation oversteps constitutional protections on citizens' 'freedom to contract', significantly curtailing the scope of the law."
+ usfp_usa_labor.7.d: "The [glossary_usfp_supreme_court] has ruled that our [SCOPE.sLaw('labor_law_scope').GetName] legislation oversteps constitutional protections on citizens' 'freedom to contract', significantly curtailing the scope of the law."
  usfp_usa_labor.7.f: ""The question necessarily arises: Is this a fair, reasonable and appropriate exercise of the police power of the State, or is it an unreasonable, unnecessary and arbitrary interference with the right of the individual to his personal liberty or to enter into those contracts in relation to labor which may seem to him appropriate or necessary for the support of himself and his family?"$quote_dash$Associate Justice Rufus Peckham"
  usfp_usa_labor.7.a: "We must accept the court's ruling."
  usfp_usa_labor.7.b: "We'll fight this corrupt court every step of the way!"
@@ -1041,8 +1041,8 @@ usfp_mormon.4.a: "The Mormons will secure [SCOPE.sState('utah_scope').GetStateRe
 usfp_mormon.4.b: "These cultists chose their exile."
 
 usfp_mormon.5.t: "The State of Deseret?"
-usfp_mormon.5.d: "The Mormons of [SCOPE.sCountry('deseret_scope').GetName] have drafted a state constitution and are petitioning for acceptance into the Union. Their proposed constitution is silent on the matter of slavery, and some in [concept_usfp_congress] have raised concerns about the heavy influence of the LDS Church on the local government."
-usfp_mormon.5.d_noslavery: "The Mormons of [SCOPE.sCountry('deseret_scope').GetName] have drafted a state constitution and are petitioning for acceptance into the Union. Some in [concept_usfp_congress] have raised concerns about the heavy influence of the LDS Church on the local government, deriding the Mormons as theocrats in all but name."
+usfp_mormon.5.d: "The Mormons of [SCOPE.sCountry('deseret_scope').GetName] have drafted a state constitution and are petitioning for acceptance into the Union. Their proposed constitution is silent on the matter of slavery, and some in [glossary_usfp_congress] have raised concerns about the heavy influence of the LDS Church on the local government."
+usfp_mormon.5.d_noslavery: "The Mormons of [SCOPE.sCountry('deseret_scope').GetName] have drafted a state constitution and are petitioning for acceptance into the Union. Some in [glossary_usfp_congress] have raised concerns about the heavy influence of the LDS Church on the local government, deriding the Mormons as theocrats in all but name."
 usfp_mormon.5.f: ""We therefore, ask your honorable body to favorably consider their interests; and, if consistent with the constitution and usages of the federal government, that our constitution be ratified, and that the State of Deseret be admitted into the Union on an equal footing with other States; or such other form of civil government as your wisdom and magnanimity may award to the people of Deseret."" #Deseret to the House
 usfp_mormon.5.a: "The Mormons have earned their state."
 usfp_mormon.5.b: "Let's not get too hasty. Deseret will be reorganized as the Utah Territory."
@@ -1172,7 +1172,7 @@ usfp_gilded_age.2.c: "Deny everything!"
 usfp_gilded_age.2.e: "Stop the spread of this misinformation."
 
 usfp_gilded_age.3.t: "Postal Fraud"
-usfp_gilded_age.3.d: "A corruption ring has been discovered using fraudulent United States Post Office contracts to funnel millions from the treasury into the hands of compliant senators and secretaries. National newspapers have already begun printing the scandal in frontpage headlines, and [concept_usfp_congress] is demanding a thorough investigation."
+usfp_gilded_age.3.d: "A corruption ring has been discovered using fraudulent United States Post Office contracts to funnel millions from the treasury into the hands of compliant senators and secretaries. National newspapers have already begun printing the scandal in frontpage headlines, and [glossary_usfp_congress] is demanding a thorough investigation."
 usfp_gilded_age.3.f: ""THE STAR ROUTE SWINDLE" was across all the papers. Caricactures of the men involved stole away bags of treasury funds while an impotent congress looked away. The mockery would have been less effective if it wasn't so accurate."
 usfp_gilded_age.3.a: "This cannot be allowed to continue."
 usfp_gilded_age.3.b: "Downplay the issue."
@@ -1187,7 +1187,7 @@ social_darwinism_promoted: "[SCOPE.sIdeology('social_darwinism_scope').GetName] 
 social_darwinist_appears: "A [SCOPE.sIdeology('social_darwinism_scope').GetName] [concept_agitator] will appear in [SCOPE.sCountry('usa_scope').GetName]."
 
 usfp_gilded_age.5.t: "The Tweed Regime"
-usfp_gilded_age.5.d: "As [concept_usfp_political_machines] have taken root across the country, [SCOPE.sState('new_york_scope').GetName] has been effectively taken over by one William 'Boss' Tweed and his Tammany Hall club. With political offices packed with cronies, purchased votes, and bribed judges, the entire apparatus of the state government is now at his beck and call. Details of Tweed's corruption and fraud have begun to leak to the press, driving public calls for his removal."
+usfp_gilded_age.5.d: "As [glossary_usfp_political_machines] have taken root across the country, [SCOPE.sState('new_york_scope').GetName] has been effectively taken over by one William 'Boss' Tweed and his Tammany Hall club. With political offices packed with cronies, purchased votes, and bribed judges, the entire apparatus of the state government is now at his beck and call. Details of Tweed's corruption and fraud have begun to leak to the press, driving public calls for his removal."
 usfp_gilded_age.5.f: "The press were calling them the "Forty Thieves", the ring of Tweed's underlings who stole as much as they could from the state's budget. Inflated contracts worth five, ten, hundreds of times their true value were handed out in exchange for support. The operation wasn't particularly well hidden, but Tammany Hall controlled all the mechanisms of government, and so could simply block any complaint or inquiry."
 usfp_gilded_age.5.a: "Tweed must go."
 usfp_gilded_age.5.b: "[SCOPE.sState('new_york_scope').GetName] seems to be doing just fine under Tweed."
@@ -1231,7 +1231,7 @@ usfp_gilded_age.11.f: ""A great sensation was created in this city this morning 
 usfp_gilded_age.11.a: "Live by the gun, die by the gun."
 
 usfp_gilded_age.12.t: "Corrupt Dealings in [SCOPE.sState('corruption_state').GetName]"
-usfp_gilded_age.12.d: "A [Concept('concept_usfp_political_machines', '$concept_usfp_political_machine$')] serving the interests of the [SCOPE.gsInterestGroup('industrialists_scope').GetName] has taken control of [SCOPE.sState('corruption_state').GetName]. All opposition has been sidelined in the courts, the legislature, and the bureaucracy, allowing corruption to run rampant."
+usfp_gilded_age.12.d: "A [Concept('glossary_usfp_political_machines', '$glossary_usfp_political_machine$')] serving the interests of the [SCOPE.gsInterestGroup('industrialists_scope').GetName] has taken control of [SCOPE.sState('corruption_state').GetName]. All opposition has been sidelined in the courts, the legislature, and the bureaucracy, allowing corruption to run rampant."
 usfp_gilded_age.12.f: ""I've been called a boss. All there is to it is having friends, doing things for people, and then later on they'll do things for you ... You can't coerce people into doing things for you — you can't make them vote for you. I never coerced anybody in my life. Wherever you see a man bulldozing anybody he don't last long."" #James Pendergast
 usfp_gilded_age.12.a: "[SCOPE.sState('corruption_state').GetName] will need to sort itself out."
 usfp_gilded_age.12.b: "We need to shut down these machines!"
@@ -1318,32 +1318,32 @@ usfp_progressive_era.9.a: "Direct democracy will strengthen the republic."
 usfp_progressive_era.9.b: "The mob doesn't know whats best for it."
 
 usfp_progressive_era.10.t: "Death's Laboratory"
-usfp_progressive_era.10.d: "Newspapers and billboards across the country advertise patent medicines, drugs to cure all ills without any listed ingredients or verification. A shocking [Concept('concept_usfp_muckrakers', '$concept_usfp_muckraker$')] exposé has revealed that not only do many of these drugs not deliver health, they in fact lead to harm, addiction, and death! An outraged public has already begun pressing for new regulations to be placed on medicines to ensure their quality and efficacy."
+usfp_progressive_era.10.d: "Newspapers and billboards across the country advertise patent medicines, drugs to cure all ills without any listed ingredients or verification. A shocking [Concept('glossary_usfp_muckrakers', '$glossary_usfp_muckraker$')] exposé has revealed that not only do many of these drugs not deliver health, they in fact lead to harm, addiction, and death! An outraged public has already begun pressing for new regulations to be placed on medicines to ensure their quality and efficacy."
 usfp_progressive_era.10.f: ""Gullible America will spend this year some seventy-five millions of dollars in the purchase of patent medicines. In consideration of this sum it will swallow huge quantities of alcohol, an appalling amount of opiates and narcotics, a wide assortment of varied drugs ranging from powerful and dangerous heart depressants to insidious liver stimulants; and, far in excess of all other ingredients, undiluted fraud. For fraud, exploited by the skillfulest of advertising bunco men, is the basis of the trade."" #Samuel Hopkins Adams
 usfp_progressive_era.10.a: "We can't let this fraud continue."
 usfp_progressive_era.10.b: "Consumers can make their own decisions."
 usfp_progressive_era_censor_muckraker: "These muckrakers must be told when to stop."
 
 usfp_progressive_era.11.t: "The Jungle"
-usfp_progressive_era.11.d: "[Concept('concept_usfp_muckrakers', '$concept_usfp_muckraker$')] Upton Sinclair has published a novel detailing the horrors of the [ROOT.GetCountry.GetAdjective] meat-packing industry, filled with lurid details of mutilated workers, animal cruelty, and unsanitary conditions. While the author emphasizes the plight of the factory workers, public outcry has gripped the nation over the claims of plants intentionally including diseased and rotten meat in their processes."
+usfp_progressive_era.11.d: "[Concept('glossary_usfp_muckrakers', '$glossary_usfp_muckraker$')] Upton Sinclair has published a novel detailing the horrors of the [ROOT.GetCountry.GetAdjective] meat-packing industry, filled with lurid details of mutilated workers, animal cruelty, and unsanitary conditions. While the author emphasizes the plight of the factory workers, public outcry has gripped the nation over the claims of plants intentionally including diseased and rotten meat in their processes."
 usfp_progressive_era.11.f: ""The great packing machine ground on remorselessly, without thinking of green fields; and the men and women and children who were part of it never saw any green thing, not even a flower. Four or five miles to the east of them lay the blue waters of Lake Michigan; but for all the good it did them it might have been as far away as the Pacific Ocean. They had only Sundays, and then they were too tired to walk. They were tied to the great packing machine, and tied to it for life."" #Upton Sinclair
 usfp_progressive_era.11.a: "These working conditions are intolerable!"
 usfp_progressive_era.11.b: "They put #italic what#! in the sausage?!"
 
 usfp_progressive_era.12.t: "The Bitter Cry of Children"
-usfp_progressive_era.12.d: "A [Concept('concept_usfp_muckrakers', '$concept_usfp_muckraker$')] has released their detailed investigation into the conditions of child laborers in the [ROOT.GetCountry.GetName], highlighting the deleterious impact on the childrens' education, intelligence, and emotional health. The heartbreaking account of their struggles has fueled further public support for [SCOPE.sLaw('compulsory_school_scope').GetName]."
+usfp_progressive_era.12.d: "A [Concept('glossary_usfp_muckrakers', '$glossary_usfp_muckraker$')] has released their detailed investigation into the conditions of child laborers in the [ROOT.GetCountry.GetName], highlighting the deleterious impact on the childrens' education, intelligence, and emotional health. The heartbreaking account of their struggles has fueled further public support for [SCOPE.sLaw('compulsory_school_scope').GetName]."
 usfp_progressive_era.12.f: ""I could not do that work and live, but there were boys of ten and twelve years of age doing it for fifty and sixty cents a day. Some of them had never been inside of a school; few of them could read a child's primer. True, some of them attended the night schools, but after working ten hours in the breaker the educational results from attending school were practically nil."" #John Spargo
 usfp_progressive_era.12.a: "We can't keep feeding kids into machines."
 usfp_progressive_era.12.b: "The children yearn for the factories!"
 
 usfp_progressive_era.13.t: "The Shame of the Cities"
-usfp_progressive_era.13.d: "A series of [Concept('concept_usfp_muckrakers', '$concept_usfp_muckraker$')] articles have exposed the illegal activities of various [concept_usfp_political_machines] across the [ROOT.GetCountry.GetName]. The corrupt dealings in dozen different cities are layed out in exquisite detail, but the author also highlights efforts taken by local citizens to oppose machine politics, serving as a call to action to citizens across the country."
+usfp_progressive_era.13.d: "A series of [Concept('glossary_usfp_muckrakers', '$glossary_usfp_muckraker$')] articles have exposed the illegal activities of various [glossary_usfp_political_machines] across the [ROOT.GetCountry.GetName]. The corrupt dealings in dozen different cities are layed out in exquisite detail, but the author also highlights efforts taken by local citizens to oppose machine politics, serving as a call to action to citizens across the country."
 usfp_progressive_era.13.f: ""These events have shown St. Louis that its bankers, brokers, corporation officers, its business men are the sources of evil, so that from the start it will know the municipal problem in its true light. With a tradition for public spirit, it may push aside the scruples of the hundreds of men down in blue book, and red book, and church register, who are lying hidden behind the statutes of limitations, and the city may restore good government. Otherwise the exposures of these crimes will result only in the perfection of the corrupt system. For the corrupt can learn a lesson when the good citizens cannot.""
 usfp_progressive_era.13.a: "We must revitalize our public institutions."
 usfp_progressive_era.13.b: "The machines keep the money flowing."
 
 usfp_progressive_era.14.t: "The History of [SCOPE.sCompany('standard_oil_scope').GetName]"
-usfp_progressive_era.14.d: "[Concept('concept_usfp_muckrakers', '$concept_usfp_muckraker$')] Ida Tarbell has published a series of articles exposing the underhanded business practices of [SCOPE.sCompany('standard_oil_scope').GetName], detailing their intentional monopolization of the market. Newspapers across the country have praised Tarbell's work and denounced the company's illegal and rapacious behavior. Progressive voices within [concept_usfp_congress] have already put together a plan to strengthen antitrust laws and break up [SCOPE.sCompany('standard_oil_scope').GetName]."
+usfp_progressive_era.14.d: "[Concept('glossary_usfp_muckrakers', '$glossary_usfp_muckraker$')] Ida Tarbell has published a series of articles exposing the underhanded business practices of [SCOPE.sCompany('standard_oil_scope').GetName], detailing their intentional monopolization of the market. Newspapers across the country have praised Tarbell's work and denounced the company's illegal and rapacious behavior. Progressive voices within [glossary_usfp_congress] have already put together a plan to strengthen antitrust laws and break up [SCOPE.sCompany('standard_oil_scope').GetName]."
 usfp_progressive_era.14.f: ""Now, if this company were the only concern in the country guilty of the practices which have given it monopolistic power, this story never would have been written. But it is simply the most conspicuous type of what can be done by these practices. The methods it employs with such acumen, persistency, and secrecy are employed by all sorts of business men, from corner grocers up to bankers. If exposed, they are excused on the ground that this is business."" #Ida Tarbell
 usfp_progressive_era.14.a: "Let's bust some trusts!"
 usfp_progressive_era.14.b: "Why should [SCOPE.sCompany('standard_oil_scope').GetName] be punished for its success?"
@@ -1571,7 +1571,7 @@ neoconfederate_radical_support: "Because we completed #bold Reconstruction#! in 
 neoconfederate_mixed_support: "Because we completed #bold Reconstruction#! with a mixed outcome, more European-heritage [Concept('concept_pop', '$concept_pops$')] will [Concept('concept_political_movement_support', '$concept_political_movement_support_short$')] the $ideology_usfp_neoconfederate_movement$ [Concept('concept_political_movement', '$concept_political_movement_short$')]"
 
 usfp_usa_postreconstruction.2.t: "Plessy v. Ferguson"
-usfp_usa_postreconstruction.2.d: "The [concept_usfp_supreme_court] has made a landmark ruling against an $usfp_afro_american_culture$ man attempting to use a Whites-only train car in [SCOPE.sState('jim_crow_state').GetName]. According to the court, [concept_usfp_jim_crow] laws do not contradict the national [GetLawType('law_cultural_exclusion').GetName] law as long as the facilities provided for each race are "separate but equal". The decision has been taken as carte blanche by segregrationists to impose similar laws in towns and cities across the [ROOT.GetCountry.GetName]."
+usfp_usa_postreconstruction.2.d: "The [glossary_usfp_supreme_court] has made a landmark ruling against an $usfp_afro_american_culture$ man attempting to use a Whites-only train car in [SCOPE.sState('jim_crow_state').GetName]. According to the court, [glossary_usfp_jim_crow] laws do not contradict the national [GetLawType('law_cultural_exclusion').GetName] law as long as the facilities provided for each race are "separate but equal". The decision has been taken as carte blanche by segregrationists to impose similar laws in towns and cities across the [ROOT.GetCountry.GetName]."
 usfp_usa_postreconstruction.2.f: ""We consider the underlying fallacy of the plaintiff's argument to consist in the assumption that the enforced separation of the two races stamps the colored race with a badge of inferiority. If this be so, it is not by reason of anything found in the act, but solely because the colored race chooses to put that construction on it."" #SCOTUS
 usfp_usa_postreconstruction.2.a: "We must respect the Court's decision."
 usfp_usa_postreconstruction.2.b: "This is utterly unacceptable."
@@ -1590,7 +1590,7 @@ usfp_usa_postreconstruction.4.a: "A positive development."
 usfp_usa_postreconstruction.4.b: "This sounds like a cabal of subversives."
 
 usfp_usa_postreconstruction.5.t: "The Great Migration"
-usfp_usa_postreconstruction.5.d: "$usfp_afro_american_culture$ citizens have begun to flee the [concept_usfp_jim_crow] [Concept('concept_state', '$concept_states$')] en-masse, seeking greater freedoms and opportunities in the ever-expanding cities of the North."
+usfp_usa_postreconstruction.5.d: "$usfp_afro_american_culture$ citizens have begun to flee the [glossary_usfp_jim_crow] [Concept('concept_state', '$concept_states$')] en-masse, seeking greater freedoms and opportunities in the ever-expanding cities of the North."
 usfp_usa_postreconstruction.5.f: ""Now, why should I remain longer south,\nTo be kicked and dogged around?\n“Crackers” to knock me in the mouth\nAnd shoot my brother down.\nNo, I won’t. I’m leaving today,\nNo longer can I wait.\nIf the recruiters fail to take me ‘way,\nI’m bound to catch a freight."" # “Bound for the Promised Land”* by Mr. Ward originally published in the Chicago Defender
 usfp_usa_postreconstruction.5.a: "They are willing their own American Dream into reality."
 usfp_usa_postreconstruction.5.b: "[SCOPE.sState('great_migration_state_3').GetName] needs more workers!"
@@ -1630,7 +1630,7 @@ afro_americans_socialist_movement_attraction: "$usfp_afro_american_culture$ [Con
 afro_americans_religious_movement_attraction: "$usfp_afro_american_culture$ [Concept('concept_pop', '$concept_pops$')] will be more attracted to Religious [Concept('concept_political_movement','$concept_political_movements$')]"
 
 usfp_usa_postreconstruction.10.t: "Black Wall Street"
-usfp_usa_postreconstruction.10.d: "A prosperous $usfp_afro_american_culture$ neighborhood in [SCOPE.sState('black_wall_street_state').GetCityHubName] has attracted acclaim as the 'Black Wall Street' in honor of its prosperity in the face of [concept_usfp_jim_crow] discrimination."
+usfp_usa_postreconstruction.10.d: "A prosperous $usfp_afro_american_culture$ neighborhood in [SCOPE.sState('black_wall_street_state').GetCityHubName] has attracted acclaim as the 'Black Wall Street' in honor of its prosperity in the face of [glossary_usfp_jim_crow] discrimination."
 usfp_usa_postreconstruction.10.f: ""We went into slavery without a language; we came out speaking the proud Anglo-Saxon tongue. We went into slavery with slave chains clanking about our wrists; we came out with the American ballot in our hands. Progress, progress is the law of nature; under God it shall be our eternal guiding star."" #Booker T. Washington
 usfp_usa_postreconstruction.10.a: "A testament to $usfp_afro_american_culture$ industry."
 usfp_usa_postreconstruction.10.b: "Black Wall Street should grow and become a beacon of prosperity!"
@@ -1648,7 +1648,7 @@ usfp_usa_postreconstruction.12.a: "This certainly won't help ease tensions."
 usfp_usa_postreconstruction.12.b: "Shut down distribution of the film."
 
 usfp_usa_postreconstruction.13.t: "The New Exodus"
-usfp_usa_postreconstruction.13.d: "Faced with destitution in the [concept_usfp_jim_crow] [Concept('concept_state', '$concept_states$')], $usfp_afro_american_culture$ associations have begun to organize an exodus to [SCOPE.sState('kansas_scope').GetName], seeking a new life on the frontier."
+usfp_usa_postreconstruction.13.d: "Faced with destitution in the [glossary_usfp_jim_crow] [Concept('concept_state', '$concept_states$')], $usfp_afro_american_culture$ associations have begun to organize an exodus to [SCOPE.sState('kansas_scope').GetName], seeking a new life on the frontier."
 usfp_usa_postreconstruction.13.f: ""Extending Our Voices to Heaven.\nFarewell, dear friends, farewell.\nWe are on our rapid march to Kansas, the land that gives\nBirth to freedom.\nMay God Almighty bless you all.\nFarewell, dear friends, farewell."" #The Land That Gives Birth to Freedom, Words by Hester Hickman.
 usfp_usa_postreconstruction.13.a: "The west promises freedom for all."
 usfp_usa_postreconstruction.13.b: "We need those workers in the South!"
@@ -1691,7 +1691,7 @@ usfp_usa_postreconstruction.18.b: "We must have a nationwide anti-lynching law."
 ### USA (afro-american) Colonization Events ###
 
 usfp_usa_colonization.1.t: "[SCOPE.sCountry('santo_domingo_scope').GetName] Seeks Annexation"
-usfp_usa_colonization.1.d: "With their national security under serious threat, the government of [SCOPE.sCountry('santo_domingo_scope').GetName] has requested annexation by the [ROOT.GetCountry.GetName]. Proponents in [concept_usfp_congress] say that the island could become a haven from discrimination for $usfp_afro_american_culture_plural$, while opponents balk at the notion of adding an [GetCulture('afro_caribeno').GetName] population to the union."
+usfp_usa_colonization.1.d: "With their national security under serious threat, the government of [SCOPE.sCountry('santo_domingo_scope').GetName] has requested annexation by the [ROOT.GetCountry.GetName]. Proponents in [glossary_usfp_congress] say that the island could become a haven from discrimination for $usfp_afro_american_culture_plural$, while opponents balk at the notion of adding an [GetCulture('afro_caribeno').GetName] population to the union."
 usfp_usa_colonization.1.f: ""The colored man cannot be spared until his place is supplied, but with a refuge like Santo Domingo his worth here would soon be discovered and he would soon receive such recognition as to induce him to stay: or if Providence designed that the two races should not live together he would find a home in the Antilles."" #Ulysses S Grant
 usfp_usa_colonization.1.a: "[SCOPE.sCountry('santo_domingo_scope').GetName] will become an [ROOT.GetCountry.GetAdjective] territory."
 usfp_usa_colonization.1.b: "We will bring [SCOPE.sCountry('santo_domingo_scope').GetName] under our wing."

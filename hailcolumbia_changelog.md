@@ -1034,6 +1034,8 @@ Fixed Oregon Treaty not removing claims properly
     Anaconda is now a Copper Mines company
     Updated all JEs to new outcome setup
     Updated events that interact with socialist ideologies
+    Updated historical information Concepts to Glossaries
+    Added a starting Copper Mine to Vermont
 ## Updates
 	Confiscate Slaver Lands now only takes 3 years to break up the plantations instead of 4
     The Great Depression now wrecks building cash reserve limits

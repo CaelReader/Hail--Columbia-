@@ -47,7 +47,7 @@
  POP_SUPPORT_BLACK_SOL_DIFFERENCE: "[concept_sol] difference with $heritage_group_african$ [Concept('concept_pop', '$concept_pops$')]" #NT!
  POP_SUPPORT_MIXED_RECONSTRUCTION: "Divided Dixie" #NT!
  POP_SUPPORT_RADICAL_RECONSTRUCTION: "Radical Reconstruction" #NT!
- POP_SUPPORT_JIM_CROW_STATE: "[concept_usfp_jim_crow] [concept_state]" #NT!
+ POP_SUPPORT_JIM_CROW_STATE: "[glossary_usfp_jim_crow] [concept_state]" #NT!
  POP_SUPPORT_DIXIE_ARISTOCRATS: "[GetCulture('dixie').GetName] [GetPopType('aristocrats').GetName]" #NT!
  POP_SUPPORT_DIXIE_FARMERS: "[GetCulture('dixie').GetName] [GetPopType('farmers').GetName]" #NT!
  POP_SUPPORT_DIXIE_SOLDIERS: "[GetCulture('dixie').GetName] [GetPopType('soldiers').GetName]" #NT!
@@ -103,7 +103,7 @@
  amendment_usfp_anti_lynching: "Anti-Lynching Bill" #NT!
  amendment_usfp_anti_lynching_desc: "Lynching is elevated to a federal crime, preventing racist local authorities from shielding the perpetrators." #NT!
  amendment_usfp_gag_rule: "Gag Rule" #NT!
- amendment_usfp_gag_rule_desc: "To enforce the Missouri Compromise and adjourn further conflict over the issue, the [concept_usfp_house_of_representatives] has prohibited the consideration of petitions or laws relating to slavery." #NT!
+ amendment_usfp_gag_rule_desc: "To enforce the Missouri Compromise and adjourn further conflict over the issue, the [glossary_usfp_house_of_representatives] has prohibited the consideration of petitions or laws relating to slavery." #NT!
  doesnt_have_gag_rule: "Does #bold not#! have the Gag Rule [concept_amendment]" #NT!
  amendment_usfp_radical_land_redistribution: "40 Acres and a Mule" #NT!
  amendment_usfp_radical_land_redistribution_desc: "The lands of former slavers are seized by the state and made available to be redistributed to freedmen." #NT!
