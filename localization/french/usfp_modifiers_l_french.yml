@@ -314,8 +314,6 @@
  usfp_apolitical_military_modifier: "Apolitical Military" #NT!
  country_enactment_success_chance_law_no_colonial_affairs_add: "[concept_enactment_success] chance for [GetLawType('law_no_colonial_affairs').GetName]" #NT!
  country_enactment_success_chance_law_no_colonial_affairs_add_desc: "A flat percentage point increase to the likelihood of enacting the specific law" #NT!
- country_enactment_success_chance_law_multicultural_add: "[concept_enactment_success] chance for [GetLawType('law_multicultural').GetName]" #NT!
- country_enactment_success_chance_law_multicultural_add_desc: "A flat percentage point increase to the likelihood of enacting the specific law" #NT!
  usfp_federal_lands_opened_modifier: "Extraction Permitted" #NT!
  usfp_banana_wars_score_modifier: "Economic Incentives" #NT!
  usfp_banana_wars_state_modifier: "American Overseers" #NT!

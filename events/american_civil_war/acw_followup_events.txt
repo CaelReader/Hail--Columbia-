@@ -186,7 +186,7 @@ acw_followup_events.3 = {
 	}
 }
 
-# Forty Acres and a Mule
+# Forty Acres and a Mule - replaced with button
 acw_followup_events.4 = {
 	type = country_event
 
@@ -194,7 +194,7 @@ acw_followup_events.4 = {
 	desc = acw_followup_events.4.d
 	flavor = acw_followup_events.4.f
 	placement = scope:land_redistribution_state
-
+    orphan = yes
 	event_image = {
 		video = "asia_dead_cattle_poor_harvest"
 	}
@@ -359,7 +359,6 @@ acw_followup_events.4 = {
                     }
                 }
             }
-
 			custom_tooltip = {
 				text = acw_followup_events.4.c_trigger
 				NOT = {
@@ -368,7 +367,6 @@ acw_followup_events.4 = {
 					}
 				}
 			}
-
 		}
 		highlighted_option = yes
 		show_as_unavailable = {

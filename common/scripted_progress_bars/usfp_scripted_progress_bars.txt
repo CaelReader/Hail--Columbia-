@@ -221,7 +221,14 @@
 	name = "usfp_reconstruction_progress_bar"
 	desc = "usfp_reconstruction_progress_bar_freedmen"
 	second_desc = "usfp_reconstruction_progress_bar_redeemers"
-	double_sided_bad = yes
+
+     progress_texture = "gfx/interface/progressbar/progressbar_green.dds"
+     background_texture = "gfx/interface/progressbar/progressbar_white.dds"
+     glow_texture = "gfx/interface/progressbar/progressbar_gold_glow.dds"
+     glow_line_texture = "gfx/interface/progressbar/progressbar_gold_glow_line.dds"
+     marker = yes
+     left_icon = "gfx/interface/icons/ideology_icons/ideology_usfp_abolitionist_radical_movement.dds"
+     right_icon = "gfx/interface/icons/ideology_icons/ideology_usfp_neoconfederate.dds"
 
 	start_value = 5
 	min_value = 0

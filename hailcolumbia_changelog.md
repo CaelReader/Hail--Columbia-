@@ -1038,6 +1038,8 @@ Fixed Oregon Treaty not removing claims properly
     Added a starting Copper Mine to Vermont
 ## Updates
 	Confiscate Slaver Lands now only takes 3 years to break up the plantations instead of 4
+    Confiscate Slaver Lands is now unlocked by JE button rather than random event
+    Updated Reconstruction tooltips and scripted bar stylings
     The Great Depression now wrecks building cash reserve limits
     Added vanilla Suffragists events to the Progressive Era JE
 ## Fixes

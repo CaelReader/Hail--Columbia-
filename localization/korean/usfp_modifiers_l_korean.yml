@@ -314,8 +314,6 @@
  usfp_apolitical_military_modifier: "비정치적 군대"
  country_enactment_success_chance_law_no_colonial_affairs_add: "[GetLawType('law_no_colonial_affairs').GetName]에 대한 [concept_enactment_success] 확률"
  country_enactment_success_chance_law_no_colonial_affairs_add_desc: "특정 법 제정 확률에 대한 순 증가율"
- country_enactment_success_chance_law_multicultural_add: "[GetLawType('law_multicultural').GetName]에 대한 [concept_enactment_success] 확률"
- country_enactment_success_chance_law_multicultural_add_desc: "특정 법 제정 확률에 대한 순 증가율"
  usfp_federal_lands_opened_modifier: "추출 허용"
  usfp_banana_wars_score_modifier: "경제적 보상"
  usfp_banana_wars_state_modifier: "미국인 감독관들"

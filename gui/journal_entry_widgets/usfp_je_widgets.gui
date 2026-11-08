@@ -19,7 +19,7 @@ flowcontainer = {
 					align = nobaseline
 					default_format = "#title"
 					margin_bottom = 2
-					text = "je_manifest_destiny_control_active_je_list_header"
+					text = "usfp_relevant_jes_list"
 				}
 
 				flowcontainer = {

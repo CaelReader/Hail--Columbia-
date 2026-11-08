@@ -671,13 +671,15 @@ je_acw_reconstruction = {
 
 	scripted_button = usfp_reconstruction_enforce_rights_button
 	scripted_button = usfp_reconstruction_confederate_amnesty_button
+    scripted_button = usfp_reconstruction_radical_land_distribution_button
 	scripted_button = usfp_reconstruction_cointelpro_freedmen_button
-	scripted_button = usfp_reconstruction_cointelpro_slaver_button 
+	scripted_button = usfp_reconstruction_cointelpro_slaver_button
+
 
 	on_monthly_pulse = {
 		random_events = {
 			180 = 0
-			20 = acw_followup_events.4 # Forty Acres and a Mule
+			# 20 = acw_followup_events.4 # Forty Acres and a Mule
 			20 = acw_followup_events.5 # Supremacist Violence
 			20 = acw_followup_events.6 # Black Codes
 			20 = acw_followup_events.7 # Paramilitaries
