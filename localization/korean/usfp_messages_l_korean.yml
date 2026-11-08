@@ -88,7 +88,7 @@
  notification_usfp_canada_caroline_burning_escalation_gbr_desc: "[SCOPE.sCountry('britain_scope').GetName]은 캐나다 국경에 대한 일방적 집행을 주장함으로써 우리의 [concept_relations]을 훼손했습니다."
  notification_usfp_canada_caroline_burning_escalation_gbr_tooltip: "#header $notification_usfp_canada_caroline_burning_escalation_gbr_name$#!\n$notification_usfp_canada_caroline_burning_escalation_gbr_desc$"
  notification_usfp_usa_supporting_fenians_gbr_name: "[SCOPE.sCountry('usa_scope').GetAdjective]이 페니언을 지지함"
- notification_usfp_usa_supporting_fenians_gbr_desc: "[SCOPE.sCountry('usa_scope').GetName]이 [GetCulture('irish').GetName] 반군이 국경을 넘어 [SCOPE.sState('ontario_scope').GetName]를 공격하도록 허용하여, 그곳의 [Concept('concept_radical', '$concept_radicalism$')]가 크게 증가하고 있습니다."
+ notification_usfp_usa_supporting_fenians_gbr_desc: "[SCOPE.sCountry('usa_scope').GetName]이 [GetCulture('irish').GetName] 반군이 국경을 넘어 [SCOPE.sState('ontario_scope').GetName]를 공격하도록 허용하여, 그곳의 [Concept('concept_radical', '$concept_radicalism|q$')]가 크게 증가하고 있습니다."
  notification_usfp_usa_supporting_fenians_gbr_tooltip: "#header $notification_usfp_usa_supporting_fenians_gbr_name$#!\n$notification_usfp_usa_supporting_fenians_gbr_desc$"
  notification_usfp_usa_mad_over_maine_name: "[SCOPE.sCountry('usa_scope').GetName]이 분노함"
  notification_usfp_usa_mad_over_maine_desc: "[SCOPE.sCountry('usa_scope').GetName]과의 [concept_relations]이 크게 감소했습니다."

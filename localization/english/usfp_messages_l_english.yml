@@ -122,7 +122,7 @@ notification_usfp_canada_caroline_burning_escalation_gbr_desc: "[SCOPE.sCountry(
 notification_usfp_canada_caroline_burning_escalation_gbr_tooltip: "#header $notification_usfp_canada_caroline_burning_escalation_gbr_name$#!\n$notification_usfp_canada_caroline_burning_escalation_gbr_desc$"
 
 notification_usfp_usa_supporting_fenians_gbr_name: "[SCOPE.sCountry('usa_scope').GetAdjective] Support for Fenians"
-notification_usfp_usa_supporting_fenians_gbr_desc: "The [SCOPE.sCountry('usa_scope').GetName] is allowing [GetCulture('irish').GetName] insurgents to strike across the border into [SCOPE.sState('ontario_scope').GetName], greatly increasing [Concept('concept_radical', '$concept_radicalism$')] there."
+notification_usfp_usa_supporting_fenians_gbr_desc: "The [SCOPE.sCountry('usa_scope').GetName] is allowing [GetCulture('irish').GetName] insurgents to strike across the border into [SCOPE.sState('ontario_scope').GetName], greatly increasing [Concept('concept_radical', '$concept_radicalism|q$')] there."
 notification_usfp_usa_supporting_fenians_gbr_tooltip: "#header $notification_usfp_usa_supporting_fenians_gbr_name$#!\n$notification_usfp_usa_supporting_fenians_gbr_desc$"
 
 notification_usfp_usa_mad_over_maine_name: "[SCOPE.sCountry('usa_scope').GetName] Angered"
