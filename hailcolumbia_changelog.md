@@ -1036,6 +1036,9 @@ Fixed Oregon Treaty not removing claims properly
     Updated events that interact with socialist ideologies
     Updated historical information Concepts to Glossaries
     Added a starting Copper Mine to Vermont
+    The Constitutional Movement now folds into the Anti-Communist Movement
+    Added law stances for new laws to ideologies
+    Extraordinary Commission is unconstitutional, Military/Communal Bureaucrats are super unconstitutional
 ## Updates
 	Confiscate Slaver Lands now only takes 3 years to break up the plantations instead of 4
     Confiscate Slaver Lands is now unlocked by JE button rather than random event

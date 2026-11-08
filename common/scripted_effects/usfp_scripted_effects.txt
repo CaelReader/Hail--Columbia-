@@ -2623,13 +2623,6 @@ usfp_oregon_treaty_effect = {
     }
 }
 
-usfp_disband_constitutionalist_movement = {
-	custom_tooltip = {
-		text = constitutionalist_movement_disbands
-		set_variable = usfp_ended_constitutionalism
-	}
-}
-
 usfp_second_revolution_calculate_targets = {
     set_variable = {
         name = usfp_second_revolution_americanism_target

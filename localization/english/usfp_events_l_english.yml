@@ -2180,7 +2180,7 @@ usfp_get_danish_islands_purchase_desires_windies_only: "the [GetStateRegion('STA
 
  usfp_coal_wars.6.t: "The Big Coal Strike"
  usfp_coal_wars.6.d: "In an effort to force the [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] to come to terms, the United Mine Workers have called a nation-wide strike of coal miners. Unionized and non-unionized miners alike have walked off the job, with several associated mining and railway unions also calling sympathy strikes."
- usfp_coal_wars.6.f: "REPLACE_ME"
+ usfp_coal_wars.6.f: "The picket line grew rowdy. The column of strikebreakers were attempting to force their way through to the mine, but the union men weren't budging. The yelling escalated, and fists began to fly. After a few minutes, the scabs were forced back, plus a few more black eyes."
  usfp_coal_wars.6.a: "We can wait them out."
  usfp_coal_wars.6.b: "Make it clear that the unions will get what they want."
  usfp_coal_wars_strike_will_drain_leverage: "The general strike will #red rapidly deplete#! #bold Union Leverage#!!"

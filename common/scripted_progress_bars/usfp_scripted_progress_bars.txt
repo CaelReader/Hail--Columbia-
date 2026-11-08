@@ -158,7 +158,13 @@
 	name = "usfp_bleeding_kansas_progress_bar"
 	desc = "usfp_bleeding_kansas_progress_bar_free_kansas"
 	second_desc = "usfp_bleeding_kansas_progress_bar_slave_kansas"
-	double_sided_bad = yes
+     progress_texture = "gfx/interface/progressbar/progressbar_blue.dds"
+     background_texture = "gfx/interface/progressbar/progressbar_bad.dds"
+     glow_texture = "gfx/interface/progressbar/progressbar_blue_glow.dds"
+     glow_line_texture = "gfx/interface/progressbar/progressbar_blue_glow_line.dds"
+     marker = yes
+     left_icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_abolitionist.dds"
+     right_icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_slaver.dds"
 
 	monthly_progress = {
 		add = {

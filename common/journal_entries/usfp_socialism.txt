@@ -134,8 +134,6 @@ usfp_je_second_revolution = {
         }
     }
 
-
-
     #Americanism Outcome
     outcome = {
         header = usfp_je_second_revolution_americanist_header
@@ -151,6 +149,7 @@ usfp_je_second_revolution = {
                 text = americanism_reached_75_then_70_five_years
                 var:usfp_second_revolution_americanism_cementing_progress >= 60
             }
+            any_revolution_ongoing = no
         }
         effect = {
             trigger_event = usfp_usa_socialism.2
@@ -181,6 +180,7 @@ usfp_je_second_revolution = {
                 text = antiamericanism_reached_75_then_70_five_years
                 var:usfp_second_revolution_americanism_cementing_progress >= 60
             }
+            any_revolution_ongoing = no
             has_law_or_variant = law_type:law_multicultural
             OR = {
                 has_law_or_variant = law_type:law_total_separation

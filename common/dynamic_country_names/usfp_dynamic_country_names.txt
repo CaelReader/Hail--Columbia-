@@ -617,6 +617,7 @@
 					var:civil_war_type_var ?= movement_type:movement_usfp_american_constitution
 					var:civil_war_type_var ?= movement_type:movement_radical
 					var:civil_war_type_var ?= movement_type:movement_liberal
+                    var:civil_war_type_var ?= movement_type:movement_anti_communist
 				}
 			}
 		}

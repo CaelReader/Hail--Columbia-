@@ -131,6 +131,7 @@ REPLACE_OR_CREATE:ideology_empire_of_liberty = { # USIT + USPB
 		law_professional_army = neutral
 		law_peasant_levies = disapprove
 		law_mass_conscription = neutral
+        law_revolutionary_guard = disapprove
 	}
 
 	lawgroup_colonization = {		
@@ -138,6 +139,7 @@ REPLACE_OR_CREATE:ideology_empire_of_liberty = { # USIT + USPB
 		law_colonial_resettlement = disapprove
 		law_colonial_exploitation = disapprove
 		law_frontier_colonization = approve
+        law_internal_colonization = neutral
 	}
 }
 
@@ -211,6 +213,7 @@ ideology_usfp_localist = {
 		law_professional_army = neutral
 		law_mass_conscription = disapprove
 		law_peasant_levies = disapprove
+        law_revolutionary_guard = neutral
 	}
 
 	lawgroup_slavery = {
@@ -225,6 +228,8 @@ ideology_usfp_localist = {
 		law_hereditary_bureaucrats = strongly_disapprove
 		law_appointed_bureaucrats = disapprove
 		law_elected_bureaucrats = neutral
+        law_military_bureaucrats = disapprove
+        law_communal_administration = neutral
 	}
 
 	lawgroup_internal_security = {
@@ -232,6 +237,7 @@ ideology_usfp_localist = {
 		law_national_guard = neutral
 		law_no_home_affairs = neutral
 		law_guaranteed_liberties = neutral
+        law_extraordinary_commission = strongly_disapprove
 	}
 	
 	lawgroup_church_and_state = {
@@ -263,6 +269,8 @@ ideology_usfp_accomodationist = {
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = neutral	
 		law_hereditary_bureaucrats = disapprove
+        law_military_bureaucrats = disapprove
+        law_communal_administration = disapprove
 	}
 
 	lawgroup_caste_hegemony = {
@@ -281,6 +289,7 @@ ideology_usfp_pan_indianist_group = {
 		law_colonial_resettlement = strongly_disapprove
 		law_colonial_exploitation = strongly_disapprove
 		law_frontier_colonization = strongly_disapprove
+        law_internal_colonization = disapprove
 	}
 
 	lawgroup_citizenship = {
@@ -391,6 +400,7 @@ ideology_usfp_tribal_government = {
 		law_anarchy = approve
 		law_technocracy = strongly_disapprove
 		law_elder_council = strongly_approve
+        law_labour_suffrage = neutral
 	}
 
 	lawgroup_internal_security = {
@@ -398,6 +408,7 @@ ideology_usfp_tribal_government = {
 		law_national_guard = neutral
 		law_no_home_affairs = neutral
 		law_guaranteed_liberties = neutral
+        law_extraordinary_commission = strongly_disapprove
 	}
 
 	lawgroup_church_and_state = {
@@ -421,7 +432,8 @@ ideology_usfp_progressive_movement = {
 		law_technocracy = neutral
 		law_oligarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove	
-		law_single_party_state = strongly_disapprove	
+		law_single_party_state = strongly_disapprove
+        law_labour_suffrage = disapprove
 	}
 
 	lawgroup_economic_system = {	
@@ -480,6 +492,8 @@ ideology_usfp_progressive_movement = {
 		law_elected_bureaucrats = neutral
 		law_appointed_bureaucrats = disapprove
 		law_hereditary_bureaucrats = disapprove
+        law_military_bureaucrats = disapprove
+        law_communal_administration = disapprove
 	}
 
 	lawgroup_slavery = {
@@ -523,6 +537,7 @@ ideology_usfp_afro_american_movement = {
 		law_no_home_affairs = neutral
 		law_national_guard = disapprove
 		law_secret_police = strongly_disapprove
+        law_extraordinary_commission = neutral
 	}
 	
 	lawgroup_free_speech = {
@@ -573,6 +588,7 @@ ideology_usfp_american_indian_movement = {
 		law_no_home_affairs = neutral
 		law_national_guard = disapprove
 		law_secret_police = strongly_disapprove
+        law_extraordinary_commission = disapprove
 	}
 	
 	lawgroup_free_speech = {
@@ -587,6 +603,7 @@ ideology_usfp_american_indian_movement = {
 		law_colonial_resettlement = disapprove
 		law_colonial_exploitation = disapprove
 		law_frontier_colonization = disapprove
+        law_internal_colonization = disapprove
 	}
 
 }
@@ -672,6 +689,7 @@ ideology_usfp_american_constitution_movement = {
 		law_universal_suffrage = neutral
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+        law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_free_speech = {
@@ -685,6 +703,8 @@ ideology_usfp_american_constitution_movement = {
 		law_elected_bureaucrats = neutral
 		law_appointed_bureaucrats = disapprove
 		law_hereditary_bureaucrats = strongly_disapprove
+        law_military_bureaucrats = strongly_disapprove
+        law_communal_administration = strongly_disapprove
 	}
 
 	lawgroup_economic_system = {		
@@ -724,6 +744,7 @@ ideology_usfp_american_constitution_movement = {
 		law_professional_army = neutral
 		law_peasant_levies = disapprove
 		law_mass_conscription = neutral
+        law_revolutionary_guard = neutral
 	}
 
 }

@@ -77,6 +77,15 @@ usfp_usa_socialism.2 = {
     option = {
         name = usfp_usa_socialism.2.a
         default_option = yes
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = movement_anti_communist
+            }
+            add_modifier = {
+                name = usfp_constitutional_movement_coopted_modifier
+                years = 20
+            }
+        }
         every_primary_culture = {
             root = {
                 add_loyalists = {
@@ -92,12 +101,6 @@ usfp_usa_socialism.2 = {
                     value = medium_radicals
                 }
             }
-        }
-    }
-
-    after = {
-        show_as_tooltip = {
-            usfp_disband_constitutionalist_movement = yes
         }
     }
 
@@ -188,12 +191,6 @@ usfp_usa_socialism.3 = {
                 }
             }
             add_primary_culture = cu:vietnamese
-        }
-    }
-
-    after = {
-        show_as_tooltip = {
-            usfp_disband_constitutionalist_movement = yes
         }
     }
 

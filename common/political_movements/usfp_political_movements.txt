@@ -783,6 +783,9 @@ movement_usfp_american_constitution = {
 			has_variable = usfp_ended_constitutionalism
 		}
 	}
+    on_created = {
+        add_movement_enthusiasm_modifier = yes
+    }
 	creation_weight = {
 		value = 0 #event-spawned
 	}
@@ -795,11 +798,13 @@ movement_usfp_american_constitution = {
 				usfp_has_super_unconstitutional_law_enacted = no
 			}
 			has_variable = usfp_ended_constitutionalism
+            has_council_republic_law = yes
 		}
 	}
-	on_created = {
-		add_movement_enthusiasm_modifier = yes
-	}
+    on_disbanded = {
+        fold_movement_into_anti_communist_movement_effect = yes
+    }
+
 	character_support_trigger = {
 		OR = {
 			has_ideology = ideology:ideology_republican_leader
