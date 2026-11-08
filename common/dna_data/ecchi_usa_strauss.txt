@@ -1,6 +1,8 @@
 ﻿ecchi_dna_levi_strauss = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 211 255 149 134 }
  		skin_color={ 82 2 82 2 }
  		eye_color={ 215 184 215 184 }

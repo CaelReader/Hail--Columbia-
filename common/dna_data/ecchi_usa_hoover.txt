@@ -1,6 +1,8 @@
 ﻿ecchi_dna_herbert_hoover = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 163 173 169 202 }
  		skin_color={ 45 27 45 27 }
  		eye_color={ 96 146 96 146 }

@@ -1,4 +1,4 @@
-namespace = usfp_coal_wars
+﻿namespace = usfp_coal_wars
 
 # JE start: United Mine Workers
 usfp_coal_wars.1 = {

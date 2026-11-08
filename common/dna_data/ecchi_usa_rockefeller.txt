@@ -1,6 +1,8 @@
 ﻿ecchi_dna_john_rockefeller = {
     portrait_info = {
     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 175 170 175 170 }
  		skin_color={ 84 9 84 9 }
  		eye_color={ 248 150 248 150 }

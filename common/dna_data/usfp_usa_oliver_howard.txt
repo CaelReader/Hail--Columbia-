@@ -1,6 +1,8 @@
 ﻿usfp_usa_oliver_howard={
 	portrait_info = {
-		genes={ 		hair_color={ 211 196 179 164 }
+		genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 211 196 179 164 }
  		skin_color={ 26 12 26 12 }
  		eye_color={ 49 160 230 160 }
  		gene_cheek_fat={ "cheek_fat" 66 "cheek_fat" 122 }

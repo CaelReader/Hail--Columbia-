@@ -1,6 +1,8 @@
 ﻿usfp_plenty_coups={
 	portrait_info = {
-		genes={ 		hair_color={ 19 235 19 235 }
+		genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 19 235 19 235 }
  		skin_color={ 57 175 90 148 }
  		eye_color={ 37 212 37 212 }
  		gene_cheek_fat={ "cheek_fat" 100 "cheek_fat" 79 }

@@ -1,6 +1,8 @@
 ﻿usfp_usa_winfield_hancock ={
 	portrait_info = {
-		genes={ 		hair_color={ 5 238 5 238 }
+		genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 5 238 5 238 }
 		skin_color={ 5 15 5 15 }
 		eye_color={ 52 126 244 158 }
 		gene_cheek_fat={ "cheek_fat" 105 "cheek_fat" 125 }

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_john_augustus_sutter = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 224 183 224 119 }
  		skin_color={ 19 11 19 11 }
  		eye_color={ 254 141 254 141 }

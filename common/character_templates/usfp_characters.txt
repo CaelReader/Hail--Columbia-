@@ -104,7 +104,7 @@ usfp_agitator_elizabeth_gurley_flynn = {
     religion = rel:atheist
     female = yes
     is_agitator = yes
-    ideology = ideology_communist
+    ideology = ideology_communist_leader
     interest_group = ig_trade_unions
     birth_date = 1890.8.7
     home_region = STATE_NEW_HAMPSHIRE
@@ -139,7 +139,7 @@ usfp_agitator_elizabeth_gurley_flynn = {
             set_ideology = ideology:ideology_feminist
         }
         else = {
-            set_ideology = ideology:ideology_communist
+            set_ideology = ideology:ideology_communist_leader
         }
     }
 }
@@ -907,7 +907,7 @@ usfp_a_philip_randolph = {
     religion = rel:protestant
     female = no
     interest_group = ig_trade_unions
-    ideology = ideology_social_democrat #socialist rather than communist
+    ideology = ideology_state_socialist #socialist rather than communist
     traits = {
         demagogue
         charismatic
@@ -949,7 +949,7 @@ usfp_hubert_harrison = {
     religion = rel:atheist #explicitly anti-theist
     female = no
     interest_group = ig_intelligentsia
-    ideology = ideology_communist #IWW supporter
+    ideology = ideology_communist_leader #IWW supporter
     traits = {
         inspirational_orator
         erudite
@@ -2062,7 +2062,7 @@ usfp_john_reed  = {
     religion = rel:atheist
     female = no
     interest_group = ig_intelligentsia
-    ideology = ideology_communist
+    ideology = ideology_communist_leader
     traits = {
         alcoholic
         literary
@@ -2155,7 +2155,7 @@ usfp_mother_jones  = {
 }
 
 #John L Lewis, head of the CIO
-usfp_alf_landon  = {
+usfp_john_lewis  = {
     first_name = John
     last_name = Lewis
     # dna =
@@ -2204,7 +2204,7 @@ usfp_daniel_de_leon  = {
     religion = rel:catholic
     female = no
     interest_group = ig_intelligentsia
-    ideology = ideology_communist
+    ideology = ideology_communist_leader
     traits = {
         erudite
         arrogant

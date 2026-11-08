@@ -2,7 +2,9 @@
 
 dna_william_wotherspoon = {
      portrait_info = {
-     genes={        hair_color={ 170 212 170 212 }
+     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+        hair_color={ 170 212 170 212 }
           skin_color={ 95 9 95 9 }
           eye_color={ 212 179 212 179 }
           gene_cheek_fat={ "cheek_fat" 171 "cheek_fat" 171 }

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_joshua_norton = {
     portrait_info = {
     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 6 231 6 231 }
  		skin_color={ 27 28 27 28 }
  		eye_color={ 194 132 194 132 }

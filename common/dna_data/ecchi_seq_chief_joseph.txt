@@ -1,6 +1,8 @@
 ﻿ecchi_dna_chief_joseph = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 51 231 51 231 }
  		skin_color={ 102 150 102 150 }
  		eye_color={ 35 230 35 230 }

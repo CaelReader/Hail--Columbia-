@@ -1,6 +1,8 @@
 ﻿usfp_usa_thaddeus_stevens={
 	portrait_info = {
-		genes={ 		hair_color={ 34 253 199 253 }
+		genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 34 253 199 253 }
 		skin_color={ 27 15 27 15 }
 		eye_color={ 75 148 196 148 }
 		gene_cheek_fat={ "cheek_fat" 128 "cheek_fat" 128 }

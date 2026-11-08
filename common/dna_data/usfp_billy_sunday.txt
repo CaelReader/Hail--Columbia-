@@ -1,6 +1,8 @@
 ﻿usfp_billy_sunday={
 	portrait_info = {
-	genes={ 		hair_color={ 9 242 9 242 }
+	genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 9 242 9 242 }
  		skin_color={ 4 1 4 14 }
  		eye_color={ 37 42 37 113 }
  		gene_cheek_fat={ "cheek_fat" 183 "cheek_fat" 133 }

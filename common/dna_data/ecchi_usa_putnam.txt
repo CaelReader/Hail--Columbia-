@@ -1,6 +1,8 @@
 ﻿ecchi_dna_george_putnam = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 125 229 125 229 }
  		skin_color={ 1 23 1 23 }
  		eye_color={ 184 142 184 142 }

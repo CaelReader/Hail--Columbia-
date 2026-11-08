@@ -1,6 +1,8 @@
 ﻿ecchi_dna_earl_browder = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 24 232 24 232 }
  		skin_color={ 123 11 123 11 }
  		eye_color={ 99 147 99 147 }

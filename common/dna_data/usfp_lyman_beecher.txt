@@ -1,6 +1,8 @@
 ﻿usfp_lyman_beecher={
 	portrait_info = {
-	genes={ 		hair_color={ 179 218 179 218 }
+	genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 179 218 179 218 }
  		skin_color={ 41 28 41 28 }
  		eye_color={ 172 207 141 94 }
  		gene_cheek_fat={ "cheek_fat" 172 "cheek_fat" 172 }

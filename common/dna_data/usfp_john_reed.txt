@@ -1,6 +1,8 @@
-usfp_john_reed={
+﻿usfp_john_reed={
     portrait_info = {
-    genes={ 		hair_color={ 21 252 21 252 }
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 21 252 21 252 }
         skin_color={ 48 27 48 27 }
         eye_color={ 56 109 164 109 }
         gene_cheek_fat={ "cheek_fat" 196 "cheek_fat" 139 }

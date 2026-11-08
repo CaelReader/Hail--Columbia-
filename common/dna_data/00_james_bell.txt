@@ -1,7 +1,9 @@
 ﻿
 dna_james_bell = {
      portrait_info = {
-     genes={        hair_color={ 147 255 147 80 }
+     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+        hair_color={ 147 255 147 80 }
           skin_color={ 80 22 80 22 }
           eye_color={ 211 160 211 160 }
           gene_cheek_fat={ "cheek_fat" 143 "cheek_fat" 143 }

@@ -1,6 +1,8 @@
 ﻿usfp_walter_rauschenbusch={
 	portrait_info = {
-	genes={ 		hair_color={ 50 253 50 253 }
+	genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 50 253 50 253 }
  		skin_color={ 58 25 58 25 }
  		eye_color={ 19 113 230 102 }
  		gene_cheek_fat={ "cheek_fat" 140 "cheek_fat" 140 }

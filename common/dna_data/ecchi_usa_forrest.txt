@@ -1,6 +1,8 @@
 ﻿ecchi_dna_nathan_bedford_forrest = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 200 190 200 190 }
  		skin_color={ 27 19 27 19 }
  		eye_color={ 156 202 156 202 }

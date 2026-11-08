@@ -1,6 +1,8 @@
 ﻿usfp_usa_william_jennings_bryan={
 	portrait_info = {
-		genes={ 		hair_color={ 215 183 215 183 }
+		genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 215 183 215 183 }
 		skin_color={ 255 0 82 1 }
 		eye_color={ 35 197 249 197 }
 		gene_cheek_fat={ "cheek_fat" 237 "cheek_fat" 121 }

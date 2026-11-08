@@ -2,7 +2,9 @@
 
 dna_hunter_liggett = {
      portrait_info = {
-     genes={        hair_color={ 23 247 23 247 }
+     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+        hair_color={ 23 247 23 247 }
           skin_color={ 40 30 40 30 }
           eye_color={ 16 193 16 193 }
           gene_cheek_fat={ "cheek_fat" 114 "cheek_fat" 114 }

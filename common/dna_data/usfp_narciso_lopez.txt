@@ -1,6 +1,8 @@
 ﻿usfp_narciso_lopez ={
 	portrait_info = {
-	genes={ 		hair_color={ 33 250 33 250 }
+	genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 33 250 33 250 }
  		skin_color={ 138 127 138 127 }
  		eye_color={ 61 251 61 251 }
  		gene_cheek_fat={ "cheek_fat" 127 "cheek_fat" 127 }

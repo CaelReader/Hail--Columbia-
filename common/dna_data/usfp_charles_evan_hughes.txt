@@ -1,6 +1,8 @@
 ﻿usfp_charles_evan_hughes={
     portrait_info = {
-    genes={ 		hair_color={ 101 203 218 140 }
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 101 203 218 140 }
         skin_color={ 49 3 49 3 }
         eye_color={ 32 132 32 132 }
         gene_cheek_fat={ "cheek_fat" 161 "cheek_fat" 131 }

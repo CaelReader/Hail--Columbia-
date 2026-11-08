@@ -1,5 +1,7 @@
 ﻿usfp_usa_jane_addams={
-	portrait_info = {genes={ 		hair_color={ 0 248 39 248 }
+	portrait_info = {genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 0 248 39 248 }
 	skin_color={ 26 13 26 13 }
 	eye_color={ 244 83 244 83 }
 	gene_cheek_fat={ "cheek_fat" 87 "cheek_fat" 154 }

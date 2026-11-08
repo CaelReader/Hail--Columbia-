@@ -2,7 +2,9 @@
 
 dna_robert_bullard = {
      portrait_info = {
-     genes={        hair_color={ 105 241 105 241 }
+     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+        hair_color={ 105 241 105 241 }
           skin_color={ 23 15 23 15 }
           eye_color={ 177 195 177 195 }
           gene_cheek_fat={ "cheek_fat" 93 "cheek_fat" 93 }

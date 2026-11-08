@@ -1,6 +1,8 @@
 ﻿ecchi_dna_andrew_johnson = {
     portrait_info = {
     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 106 238 106 238 }
  		skin_color={ 76 11 76 11 }
  		eye_color={ 254 183 254 183 }

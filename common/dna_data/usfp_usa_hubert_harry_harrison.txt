@@ -1,6 +1,8 @@
 ﻿usfp_usa_hubert_harry_harrison={
 portrait_info = {
-	genes={ 		hair_color={ 91 252 91 252 }
+	genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 91 252 91 252 }
  		skin_color={ 153 224 153 224 }
  		eye_color={ 65 247 65 247 }
  		gene_cheek_fat={ "cheek_fat" 149 "cheek_fat" 127 }

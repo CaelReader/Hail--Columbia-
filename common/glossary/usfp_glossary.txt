@@ -1,4 +1,4 @@
-glossary_usfp_house_of_representatives = {}
+﻿glossary_usfp_house_of_representatives = {}
 
 glossary_usfp_senate = {}
 

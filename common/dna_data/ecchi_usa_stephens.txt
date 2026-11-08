@@ -1,6 +1,8 @@
 ﻿ecchi_dna_alexander_stephens = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 57 242 57 242 }
  		skin_color={ 41 15 41 15 }
  		eye_color={ 248 138 248 138 }

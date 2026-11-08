@@ -861,25 +861,36 @@ je_acw_reincorporate = {
     activation_description = {
         always = yes
     }
-	complete = {
-		NOT = {
-			any_scope_state = {
-				has_modifier = unreconstructed_state
-				is_incorporated = no
-			}
-		}
-		NOT = {
-			any_scope_state = {
-				state_region = {
-					is_homeland = cu:dixie
-				}
-				loyalist_fraction = {
-					value < 0.2
-					culture = cu:dixie
-				}
-			}
-		}
-	}
+
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            NOT = {
+                any_scope_state = {
+                    has_modifier = unreconstructed_state
+                    is_incorporated = no
+                }
+            }
+            NOT = {
+                any_scope_state = {
+                    state_region = {
+                        is_homeland = cu:dixie
+                    }
+                    loyalist_fraction = {
+                        value < 0.2
+                        culture = cu:dixie
+                    }
+                }
+            }
+        }
+        effect = {
+
+        }
+    }
+
 
 	# on_complete = {
 	# 	# custom_tooltip = {
@@ -908,7 +919,7 @@ je_acw_reincorporate = {
 	# 	always = yes
 	# }
 
-	timeout = 4380
+	# timeout = 4380
 }
 
 # je_acw_equality = {
@@ -1033,6 +1044,16 @@ je_acw_wild_wild_west = {
                     usfp_american_west_zone = yes
                 }
             }
+        }
+    }
+
+    outcome = {
+        header = JOURNAL_ENTRY_TIMEOUT
+        effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+        flags = { timeout }
+        conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+        effect = {
+            je_acw_wild_wild_west_cleanup = yes
         }
     }
 

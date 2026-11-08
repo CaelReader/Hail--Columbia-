@@ -1,6 +1,10 @@
 ﻿usfp_usa_bill_haywood={
 	portrait_info = {
-		genes={ 		hair_color={ 1 216 225 172 }
+		genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 1 216 225 172 }
 		skin_color={ 73 10 73 10 }
 		eye_color={ 15 134 170 134 }
 		gene_cheek_fat={ "cheek_fat" 114 "cheek_fat" 114 }

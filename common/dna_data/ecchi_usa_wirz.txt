@@ -1,6 +1,8 @@
 ﻿ecchi_dna_henry_wirz = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 166 212 166 166 }
  		skin_color={ 2 27 2 27 }
  		eye_color={ 161 188 161 188 }

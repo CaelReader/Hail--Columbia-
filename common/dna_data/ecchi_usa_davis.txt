@@ -1,6 +1,8 @@
 ﻿ecchi_dna_jefferson_davis = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 222 174 222 174 }
  		skin_color={ 46 30 46 30 }
  		eye_color={ 56 171 56 171 }

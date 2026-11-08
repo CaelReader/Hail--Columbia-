@@ -1,6 +1,8 @@
 ﻿usfp_usa_booker_t_washington={
 portrait_info = {
-	genes={ 		hair_color={ 0 255 82 230 }
+	genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 0 255 82 230 }
  		skin_color={ 142 213 142 213 }
  		eye_color={ 1 243 44 243 }
  		gene_cheek_fat={ "cheek_fat" 203 "cheek_fat" 127 }

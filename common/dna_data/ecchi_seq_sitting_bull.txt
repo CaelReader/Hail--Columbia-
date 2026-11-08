@@ -1,6 +1,8 @@
 ﻿ecchi_dna_sitting_bull = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 107 229 107 229 }
  		skin_color={ 156 138 156 138 }
  		eye_color={ 78 248 78 248 }

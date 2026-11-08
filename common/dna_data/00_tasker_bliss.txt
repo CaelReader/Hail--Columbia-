@@ -2,7 +2,9 @@
 
 dna_tasker_bliss = {
      portrait_info = {
-     genes={        hair_color={ 180 248 180 248 }
+     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+        hair_color={ 180 248 180 248 }
           skin_color={ 28 8 28 8 }
           eye_color={ 193 194 193 194 }
           gene_cheek_fat={ "cheek_fat" 132 "cheek_fat" 132 }

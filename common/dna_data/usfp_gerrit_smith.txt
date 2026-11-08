@@ -1,6 +1,8 @@
 ﻿usfp_gerrit_smith={
 	portrait_info = {
-	genes={ 		hair_color={ 211 192 211 192 }
+	genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 211 192 211 192 }
  		skin_color={ 32 17 32 17 }
  		eye_color={ 73 240 73 138 }
  		gene_cheek_fat={ "cheek_fat" 249 "cheek_fat" 137 }

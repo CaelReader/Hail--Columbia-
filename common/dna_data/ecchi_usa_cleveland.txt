@@ -1,6 +1,8 @@
 ﻿ecchi_dna_grover_cleveland = {
     portrait_info = {
     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 181 166 181 166 }
  		skin_color={ 122 0 122 0 }
  		eye_color={ 82 127 82 127 }

@@ -1,6 +1,8 @@
-usfp_louise_bryant={
+﻿usfp_louise_bryant={
     portrait_info = {
-    genes={ 		hair_color={ 80 248 84 248 }
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 80 248 84 248 }
         skin_color={ 125 24 125 24 }
         eye_color={ 53 159 187 159 }
         gene_cheek_fat={ "cheek_fat" 106 "cheek_fat" 106 }

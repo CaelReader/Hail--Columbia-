@@ -1,6 +1,8 @@
 ﻿ecchi_dna_poundmaker = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 75 237 75 237 }
  		skin_color={ 82 127 82 127 }
  		eye_color={ 80 242 80 242 }

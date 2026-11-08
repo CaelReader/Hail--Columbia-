@@ -1,6 +1,8 @@
 ﻿ecchi_dna_eugene_debs = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 77 248 77 248 }
  		skin_color={ 26 10 67 10 }
  		eye_color={ 237 132 237 132 }

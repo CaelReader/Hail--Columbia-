@@ -4,6 +4,7 @@ usfp_manifest_destiny_main = {
 	icon = gfx/interface/icons/event_icons/hail_columbia_icon.dds
 	group = je_group_usa_manifest_destiny
     dlc = dlc_usfp
+    activation_description = { always = yes }
     highlight = yes
 
 	is_shown_in_lobby = {
@@ -72,26 +73,17 @@ usfp_manifest_destiny_main = {
     scripted_button = usfp_ai_mexican_cession_button
 
     outcome = {
-        header = je_standard_completion_header
+        header = je_usfp_manifest_destiny_decay_complete_header
         effect_header = je_standard_on_completion_header
         color = "gold_positive"
         conclusion_desc = je_standard_completion_conclusion_desc
         flags = { historical }
         trigger = {
-            trigger_if = {
-                limit = {
-                    has_variable = manifest_destiny_decaying
-                }
-                is_diplomatic_play_committed_participant = no
-                custom_tooltip = {
-                    text = 0_progress
-                    root.var:manifest_destiny_var <= 0
-                }
-            }
-            trigger_else = {
-                hidden_trigger = {
-                    always = no
-                }
+            year >= 1900
+            is_diplomatic_play_committed_participant = no
+            custom_tooltip = {
+                text = 0_progress
+                root.var:manifest_destiny_var <= 0
             }
         }
         effect = {
@@ -105,14 +97,12 @@ usfp_manifest_destiny_main = {
         color = "blue_negative"
         conclusion_desc = je_standard_failure_conclusion_desc
         trigger = {
-            fail = {
-                OR = {
-                    country_rank < rank_value:major_power
-                    is_subject = yes
-                }
-                is_at_war = no
-                is_diplomatic_play_committed_participant = no
+            OR = {
+                country_rank < rank_value:major_power
+                is_subject = yes
             }
+            is_at_war = no
+            is_diplomatic_play_committed_participant = no
         }
         effect = {
             trigger_event = {

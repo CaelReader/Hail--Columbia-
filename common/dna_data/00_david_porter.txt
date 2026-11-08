@@ -2,7 +2,9 @@
 
 dna_david_porter = {
      portrait_info = {
-     genes={        hair_color={ 221 226 221 226 }
+     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+        hair_color={ 221 226 221 226 }
           skin_color={ 49 10 49 10 }
           eye_color={ 96 174 96 174 }
           gene_cheek_fat={ "cheek_fat" 106 "cheek_fat" 106 }

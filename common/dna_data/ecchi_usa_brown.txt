@@ -1,6 +1,8 @@
 ﻿ecchi_dna_john_brown = {
     portrait_info = {
     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 105 233 105 233 }
  		skin_color={ 0 28 0 28 }
  		eye_color={ 245 165 245 165 }

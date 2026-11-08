@@ -846,7 +846,7 @@ usfp_usa.9 = {
 				}
 				leader = {
 					NOR = {
-						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_communist_leader
 						has_ideology = ideology:ideology_anarchist
 						has_ideology = ideology:ideology_vanguardist
 					}

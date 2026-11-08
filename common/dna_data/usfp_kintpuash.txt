@@ -1,6 +1,8 @@
 ﻿usfp_kintpuash={
 	portrait_info = {
-		genes={ 		hair_color={ 1 255 36 250 }
+		genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 1 255 36 250 }
  		skin_color={ 35 159 155 132 }
  		eye_color={ 37 251 37 251 }
  		gene_cheek_fat={ "cheek_fat" 54 "cheek_fat" 54 }

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_william_mckinley = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 201 185 201 185 }
  		skin_color={ 104 9 104 9 }
  		eye_color={ 203 189 203 189 }

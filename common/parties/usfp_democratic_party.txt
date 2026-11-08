@@ -165,7 +165,7 @@ usfp_democratic_party = {
 			limit = { 
 				leader ?= {  
 					OR = {
-						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_communist_leader
 						has_ideology = ideology:ideology_anarchist
 						has_ideology = ideology:ideology_vanguardist
 					}
@@ -181,7 +181,7 @@ usfp_democratic_party = {
             limit = {
                 is_interest_group_type = ig_trade_unions
                 leader ?= {
-                    has_ideology = ideology:ideology_social_democrat
+                    has_ideology = ideology:ideology_state_socialist
                 }
             }
             add = {
@@ -196,13 +196,13 @@ usfp_democratic_party = {
                     is_interest_group_type = ig_trade_unions
                 }
                 leader ?= {
-                    has_ideology = ideology:ideology_social_democrat
+                    has_ideology = ideology:ideology_state_socialist
                 }
                 owner = {
                     any_active_party = {
-                        is_party_type = social_democrat_party
+                        is_party_type = socialist_party
                     }
-                    py:social_democrat_party ?= {
+                    py:socialist_party ?= {
                         any_member = {
                             is_powerful = yes
                         }
@@ -240,7 +240,7 @@ usfp_democratic_party = {
 				leader = {
 					OR = {
 						has_ideology = ideology:ideology_usfp_progressive
-						has_ideology = ideology:ideology_social_democrat
+						has_ideology = ideology:ideology_state_socialist
 					}
 				}
 				owner.ig:ig_industrialists = {

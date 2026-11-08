@@ -2,7 +2,9 @@
 
 dna_thomas_howard = {
      portrait_info = {
-     genes={        hair_color={ 227 247 227 247 }
+     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+        hair_color={ 227 247 227 247 }
           skin_color={ 60 4 60 4 }
           eye_color={ 21 185 21 185 }
           gene_cheek_fat={ "cheek_fat" 132 "cheek_fat" 132 }

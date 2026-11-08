@@ -96,7 +96,7 @@ usfp_victory_over_nullification_crisis_modifier = {
 
 usfp_acw_union_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
-	country_war_exhaustion_casualties_mult = -0.50
+	country_war_support_casualties_mult = -0.50
 	# unit_morale_loss_mult = -0.50
 	# military_formation_organization_gain_mult = 1.0
 	building_training_rate_mult = 0.5
@@ -109,7 +109,7 @@ usfp_acw_union_modifier = {
 
 usfp_acw_csa_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
-	country_war_exhaustion_casualties_mult = -0.50
+	country_war_support_casualties_mult = -0.50
 	# unit_morale_loss_mult = -0.50
 	# military_formation_organization_gain_mult = 1.0
 	# building_training_rate_mult = 0.5
@@ -122,7 +122,7 @@ usfp_acw_csa_modifier = {
 
 usfp_acw_fsa_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
-	country_war_exhaustion_casualties_mult = -0.50
+	country_war_support_casualties_mult = -0.50
 	# unit_morale_loss_mult = -0.50
 	# military_formation_organization_gain_mult = 1.0
 	building_training_rate_mult = 0.5
@@ -520,7 +520,7 @@ usfp_trust_dominance_modifier = {
 usfp_anti_imperialist_league_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_influence_negative.dds
 	country_infamy_generation_mult = 0.10
-	country_war_exhaustion_casualties_mult = 0.15
+	country_war_support_casualties_mult = 0.15
 	country_liberty_desire_of_subjects_add = 0.02
 	country_loyalism_increases_violent_hostility_mult = 0.05
 	country_loyalism_increases_cultural_erasure_mult = 0.05
@@ -845,7 +845,7 @@ usfp_philippines_military_government_modifier = {
 
 usfp_war_is_a_racket_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-    country_war_exhaustion_casualties_mult = 0.33
+    country_war_support_casualties_mult = 0.33
     state_pop_support_movement_socialist_mult = 0.20
     building_training_rate_mult = -0.15
 }

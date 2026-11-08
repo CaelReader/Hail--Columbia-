@@ -1,6 +1,8 @@
 ﻿ecchi_dna_joe_hill = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 22 250 22 250 }
  		skin_color={ 19 16 19 16 }
  		eye_color={ 178 132 178 132 }
