@@ -3,6 +3,9 @@ usfp_gilded_age = {
 	icon = gfx/interface/icons/event_icons/boss_tweed_icon.dds
 	group = je_group_usfp_political_eras
 	should_be_pinned_by_default_uninvolved_or_context = yes
+    dlc = dlc_usfp
+    activation_description = { always = yes }
+
 	is_shown_when_inactive = {
 		exists = c:USA
 		c:USA = ROOT
@@ -65,138 +68,153 @@ usfp_gilded_age = {
 		# }
 	}
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
 		trigger_event = usfp_gilded_age.1
 		ig:ig_industrialists = {
 			save_scope_as = industrialists_scope
 		}
 	}
-	on_timeout = {
-		set_variable = gilded_age_complete
-		add_modifier = {
-			name = usfp_gilded_age_corruption_modifier
-			years = 4
-			is_decaying = yes
-		}
-		add_modifier = {
-			name = usfp_gilded_age_modifier
-			years = 4
-			is_decaying = yes
-		}
-		hidden_effect = {
-			if = {
-				limit = { 
-					any_scope_character = {
-						has_template = usfp_thomas_nast_character_template
-					}
-				}
-				random_scope_character = {
-					limit = {
-						has_template = usfp_thomas_nast_character_template
-					}
-					kill_character = {
-						hidden = yes
-					}
-				}
-			}
-		}
-	}
-	fail = {
-		OR = {
-			ig:ig_industrialists = {
-				ig_counts_as_marginal = yes
-			}
-			AND = {
-				custom_tooltip = {
-					text = anti_trust_president
-					ruler = {
-						OR = {
-							has_ideology = ideology:ideology_usfp_progressive
-							has_ideology = ideology:ideology_social_democrat
-							has_ideology = ideology:ideology_usfp_georgist_leader
-							has_ideology = ideology:ideology_communist
-							has_ideology = ideology:ideology_anarchist
-							has_ideology = ideology:ideology_vanguardist
-						}
-					}
-				}
-				government_legitimacy >= 51
-			}
+
+    outcome = {
+        header = JOURNAL_ENTRY_TIMEOUT
+        effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+        flags = { timeout historical }
+        conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+        effect = {
+            set_variable = gilded_age_complete
+            add_modifier = {
+                name = usfp_gilded_age_corruption_modifier
+                years = 4
+                is_decaying = yes
+            }
+            add_modifier = {
+                name = usfp_gilded_age_modifier
+                years = 4
+                is_decaying = yes
+            }
+            hidden_effect = {
+                if = {
+                    limit = {
+                        any_scope_character = {
+                            has_template = usfp_thomas_nast_character_template
+                        }
+                    }
+                    random_scope_character = {
+                        limit = {
+                            has_template = usfp_thomas_nast_character_template
+                        }
+                        kill_character = {
+                            hidden = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                ig:ig_industrialists = {
+                    ig_counts_as_marginal = yes
+                }
+                AND = {
+                    custom_tooltip = {
+                        text = anti_trust_president
+                        ruler = {
+                            OR = {
+                                has_ideology = ideology:ideology_usfp_progressive
+                                has_ideology = ideology:ideology_social_democrat
+                                has_ideology = ideology:ideology_usfp_georgist_leader
+                                has_ideology = ideology:ideology_communist
+                                has_ideology = ideology:ideology_anarchist
+                                has_ideology = ideology:ideology_vanguardist
+                            }
+                        }
+                    }
+                    government_legitimacy >= 51
+                }
 
 
-			has_law_or_variant = law_type:law_council_republic
-			AND = {
-				has_law_or_variant = law_type:law_elected_bureaucrats
-				OR = {
-					has_law_or_variant = law_type:law_proportional_taxation
-					has_law_or_variant = law_type:law_graduated_taxation
-				}
-				institution_investment_level = {
-					institution = institution_workplace_safety
-					value > 3
-				}
-				institution_investment_level = {
-					institution = institution_social_security
-					value > 3
-				}
-				bureaucracy >= 1000
-			}
-		}
-	}
-	on_fail = {
-		add_radicals = {
-			value = large_radicals
-			strata = upper
-		}
-		set_variable = gilded_age_complete
-		hidden_effect = {
-			if = {
-				limit = { 
-					any_scope_character = {
-						has_template = usfp_thomas_nast_character_template
-					}
-				}
-				random_scope_character = {
-					limit = {
-						has_template = usfp_thomas_nast_character_template
-					}
-					kill_character = {
-						hidden = yes
-					}
-				}
-			}
-		}
-	}
-	invalid = {
-		OR = {
-			has_law_or_variant = law_type:law_command_economy
-			has_law_or_variant = law_type:law_cooperative_ownership
-		}
-	}
-	on_invalid = {
-		set_variable = gilded_age_complete
-		hidden_effect = {
-			if = {
-				limit = { 
-					any_scope_character = {
-						has_template = usfp_thomas_nast_character_template
-					}
-				}
-				random_scope_character = {
-					limit = {
-						has_template = usfp_thomas_nast_character_template
-					}
-					kill_character = {
-						hidden = yes
-					}
-				}
-			}
-		}
-	}
+                has_law_or_variant = law_type:law_council_republic
+                AND = {
+                    has_law_or_variant = law_type:law_elected_bureaucrats
+                    OR = {
+                        has_law_or_variant = law_type:law_proportional_taxation
+                        has_law_or_variant = law_type:law_graduated_taxation
+                    }
+                    institution_investment_level = {
+                        institution = institution_workplace_safety
+                        value > 3
+                    }
+                    institution_investment_level = {
+                        institution = institution_social_security
+                        value > 3
+                    }
+                    bureaucracy >= 1000
+                }
+            }
+        }
+        effect = {
+            add_radicals = {
+                value = large_radicals
+                strata = upper
+            }
+            set_variable = gilded_age_complete
+            hidden_effect = {
+                if = {
+                    limit = {
+                        any_scope_character = {
+                            has_template = usfp_thomas_nast_character_template
+                        }
+                    }
+                    random_scope_character = {
+                        limit = {
+                            has_template = usfp_thomas_nast_character_template
+                        }
+                        kill_character = {
+                            hidden = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                has_law_or_variant = law_type:law_command_economy
+                has_law_or_variant = law_type:law_cooperative_ownership
+            }
+        }
+        effect = {
+            set_variable = gilded_age_complete
+            hidden_effect = {
+                if = {
+                    limit = {
+                        any_scope_character = {
+                            has_template = usfp_thomas_nast_character_template
+                        }
+                    }
+                    random_scope_character = {
+                        limit = {
+                            has_template = usfp_thomas_nast_character_template
+                        }
+                        kill_character = {
+                            hidden = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 	modifiers_while_active = {
 		usfp_gilded_age_modifier
 		usfp_gilded_age_corruption_modifier

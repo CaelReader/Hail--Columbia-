@@ -67,6 +67,7 @@
         effect_header = je_indian_removal_on_complete_header
         color = "red_outcome"
         conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
         trigger = {
             custom_tooltip = {
                 text = usfp_cherokee_removal

@@ -2,84 +2,12 @@
 #USFP JE replacement for vanilla ACW leadup journals
 
 
-#Slave Power: the strangehold of the Southern Planters
-# je_usfp_a_house_divided_slave_power = {
-# 	icon = "gfx/interface/icons/event_icons/event_election.dds"
-
-# 	group = je_group_historical_content
-
-# 	modifiers_while_active = {
-# 		usfp_slave_power_modifier
-# 	}
-
-# 	should_be_pinned_by_default_uninvolved_or_context = yes
-
-# 	fail = {
-# 		scope:journal_entry = {
-# 			is_goal_complete = yes
-# 		}
-# 		ig:ig_landowners = {
-# 			AND = {
-# 				is_in_government = no
-# 				is_powerful = no
-# 				is_being_bolstered = no
-# 			}
-# 		}
-# 	}
-
-# 	immediate = {
-# 		set_variable = {
-# 			name = slave_power_var
-# 			value = 0
-# 		}
-# 		ig:ig_landowners = {
-# 			save_scope_as = landowners_ig
-# 		}
-# 		ideology:ideology_abolitionist = {
-# 			save_scope_as = abolitionist_scope
-# 		}
-# 	}
-
-# 	on_monthly_pulse = {
-# 		effect = {
-# 			if = {
-# 				limit = {
-# 					ig:ig_landowners = {
-# 						AND = {
-# 							is_in_government = no
-# 							is_powerful = no
-# 							is_being_bolstered = no
-# 						}
-# 					}
-# 				}
-# 				change_variable = {
-# 					name = slave_power_var
-# 					add = 1
-# 				}
-# 			}
-# 		}
-# 	}
-# 	current_value = {
-# 		value = root.var:slave_power_var
-# 	}
-
-# 	goal_add_value = {
-# 		value = 60
-# 	}
-
-# 	invalid = {
-# 		NOT = {
-# 			has_journal_entry = je_acw_countdown
-# 		}
-# 	}
-# }
-
 #Missouri Compromise
 je_usfp_a_house_divided_missouri_compromise = {
 	icon = "gfx/interface/icons/generic_icons/truce.dds"
-
+    dlc = dlc_usfp
 	group = je_group_usa_american_civil_war
-
+    activation_description = { always = yes }
 	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	modifiers_while_active = {
@@ -87,103 +15,58 @@ je_usfp_a_house_divided_missouri_compromise = {
 	}
 
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
 		s:STATE_MISSOURI.region_state:USA = {
 			save_scope_as = missouri_scope
 		}
 	}
 
-	fail = {
-		OR = {
-			NOT = {
-				root = {
-					has_state_in_state_region = STATE_MISSOURI
-				}
-			}
-			has_law_or_variant = law_type:law_slavery_banned
-			has_law_or_variant = law_type:law_slave_trade
-			custom_tooltip = {
-				text = usfp_missouri_compromise_broken
-				has_variable = missouri_compromise_broken_var
-			}
-			
-		}
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        flags = { historical }
+        trigger = {
+            OR = {
+                NOT = {
+                    root = {
+                        has_state_in_state_region = STATE_MISSOURI
+                    }
+                }
+                has_law_or_variant = law_type:law_slavery_banned
+                has_law_or_variant = law_type:law_slave_trade
+                custom_tooltip = {
+                    text = usfp_missouri_compromise_broken
+                    has_variable = missouri_compromise_broken_var
+                }
 
-	}
-
-	on_fail = {
-		usfp_break_compromises_effect = yes
-	}
-
-	invalid = {
-		NOT = {
-			has_journal_entry = je_acw_countdown
-		}
-	}
-
-	on_invalid = {
-		usfp_break_compromises_effect = yes
-	}
-}
-
-#Gag Rule: separate JE to be transparent with failure conditions
-je_usfp_a_house_divided_gag_rule = {
-	icon = "gfx/interface/icons/event_icons/event_scales.dds"
-
-	group = je_group_usa_american_civil_war
-
-	should_be_pinned_by_default_uninvolved_or_context = yes
-
-	modifiers_while_active = {
-		usfp_gag_rule_modifier
-	}
-
-	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
             }
         }
-	}
+        effect = {
+            usfp_break_compromises_effect = yes
+        }
+    }
 
-	scripted_button = usfp_end_gag_rule_button
-	scripted_button = usfp_break_gag_rule_button
-
-	status_desc = {
-		first_valid = {
-			triggered_desc = { 
-				desc = je_usfp_a_house_divided_gag_rule_status
-			}
-		}
-	}
-
-	fail = {
-		ig:ig_landowners = {
-			is_in_government = no
-		}
-		government_legitimacy >= 51
-	}
-
-	invalid = {
-		OR = {
-			NOT = {
-				has_journal_entry = je_acw_countdown
-			}
-			has_variable = removed_gag_rule
-		}
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                has_journal_entry = je_acw_countdown
+            }
+        }
+        effect = {
+            usfp_break_compromises_effect = yes
+        }
+    }
 }
 
 #Bleeding Kansas: after the Missouri Compromise is broken
 je_usfp_a_house_divided_bleeding_kansas = {
 	icon = "gfx/interface/icons/generic_icons/secession_culture_ongoing.dds"
-
+    dlc = dlc_usfp
 	group = je_group_usa_american_civil_war
-
+    activation_description = { always = yes }
 	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	scripted_button = usfp_support_free_kansas_button
@@ -191,11 +74,6 @@ je_usfp_a_house_divided_bleeding_kansas = {
 	scripted_button = usfp_enforce_kansas_constitution_button
 	scripted_progress_bar = usfp_bleeding_kansas_progress_bar
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
 		s:STATE_KANSAS.region_state:USA = {
 			save_scope_as = kansas_scope
 		}
@@ -231,236 +109,250 @@ je_usfp_a_house_divided_bleeding_kansas = {
 
 	timeout = 2190
 
-	on_timeout = {
-		if = {
-			limit = {
-				scope:journal_entry = {
-					"scripted_bar_progress(usfp_bleeding_kansas_progress_bar)" <= 45
-				}
-			}
-			#Slave Kansas
-			trigger_event = {
-				id = usfp_bleeding_kansas.10
-				popup = yes
-			}
-			show_as_tooltip = {
-				scope:kansas_scope = {
-					add_loyalists_in_state = {
-						value = large_radicals
-						culture = cu:dixie
-					}
-					enslave_discriminated_farm_workers = yes
-					if = {
-						limit = { 
-							is_incorporated = no
-						}
-						set_state_type = incorporated
-					}
-					if = {
-						limit = { 
-							cu:dixie = {
-								NOT = {
-									has_homeland = prev.state_region
-								}
-							}
-						}
-						state_region = {
-							add_homeland = cu:dixie
-						}
-					}
-					if = {
-						limit = { 
-							exists = c:CSA
-						}
-						set_state_owner = c:CSA
-					}
-				}
-				if = {
-					limit = {
-						exists = c:CSA
-						has_state_in_state_region = STATE_MISSOURI
-					}
-					s:STATE_MISSOURI.region_state:USA = {
-						set_state_owner = c:CSA
-					}
-				}
-			}
-		} else = {
-			#Free Kansas
-			trigger_event = {
-				id = usfp_bleeding_kansas.9
-				popup = yes
-			}
-			show_as_tooltip = {
-				scope:kansas_scope = {
-				add_loyalists_in_state = {
-					value = large_radicals
-					culture = cu:yankee
-				}
-				if = {
-					limit = { 
-						any_scope_pop = {
-							is_pop_type = slaves
-						}
-					}
-					liberate_slaves = yes
-				}
-				if = {
-					limit = { 
-						is_incorporated = no
-					}
-					set_state_type = incorporated
-				}
-				if = {
-					limit = { 
-						cu:yankee = {
-							NOT = {
-								has_homeland = prev.state_region
-							}
-						}
-					}
-					state_region = {
-						add_homeland = cu:yankee
-					}
-				}
-				}
-			}
-		}
-	}
+    outcome = {
+        header = JOURNAL_ENTRY_TIMEOUT
+        effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+        flags = { timeout }
+        conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+        effect = {
+            if = {
+                limit = {
+                    scope:journal_entry = {
+                        "scripted_bar_progress(usfp_bleeding_kansas_progress_bar)" <= 45
+                    }
+                }
+                #Slave Kansas
+                trigger_event = {
+                    id = usfp_bleeding_kansas.10
+                    popup = yes
+                }
+                show_as_tooltip = {
+                    scope:kansas_scope = {
+                        add_loyalists_in_state = {
+                            value = large_radicals
+                            culture = cu:dixie
+                        }
+                        enslave_discriminated_farm_workers = yes
+                        if = {
+                            limit = {
+                                is_incorporated = no
+                            }
+                            set_state_type = incorporated
+                        }
+                        if = {
+                            limit = {
+                                cu:dixie = {
+                                    NOT = {
+                                        has_homeland = prev.state_region
+                                    }
+                                }
+                            }
+                            state_region = {
+                                add_homeland = cu:dixie
+                            }
+                        }
+                        if = {
+                            limit = {
+                                exists = c:CSA
+                            }
+                            set_state_owner = c:CSA
+                        }
+                    }
+                    if = {
+                        limit = {
+                            exists = c:CSA
+                            has_state_in_state_region = STATE_MISSOURI
+                        }
+                        s:STATE_MISSOURI.region_state:USA = {
+                            set_state_owner = c:CSA
+                        }
+                    }
+                }
+            } else = {
+                #Free Kansas
+                trigger_event = {
+                    id = usfp_bleeding_kansas.9
+                    popup = yes
+                }
+                show_as_tooltip = {
+                    scope:kansas_scope = {
+                        add_loyalists_in_state = {
+                            value = large_radicals
+                            culture = cu:yankee
+                        }
+                        if = {
+                            limit = {
+                                any_scope_pop = {
+                                    is_pop_type = slaves
+                                }
+                            }
+                            liberate_slaves = yes
+                        }
+                        if = {
+                            limit = {
+                                is_incorporated = no
+                            }
+                            set_state_type = incorporated
+                        }
+                        if = {
+                            limit = {
+                                cu:yankee = {
+                                    NOT = {
+                                        has_homeland = prev.state_region
+                                    }
+                                }
+                            }
+                            state_region = {
+                                add_homeland = cu:yankee
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-	complete = {
-		OR = {
-			custom_tooltip = {
-				text = bleeding_kansas_0_progress
-				scope:journal_entry = {
-					"scripted_bar_progress(usfp_bleeding_kansas_progress_bar)" <= 0
-				}
-			}
-			custom_tooltip = {
-				text = bleeding_kansas_100_progress
-				scope:journal_entry = {
-					"scripted_bar_progress(usfp_bleeding_kansas_progress_bar)" >= 100
-				}
-			}
-			custom_tooltip = {
-				text = acw_will_happen_tt
-				has_global_variable = american_civil_war
-			}
-		}
-	}
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
+        trigger = {
+            OR = {
+                custom_tooltip = {
+                    text = bleeding_kansas_0_progress
+                    scope:journal_entry = {
+                        "scripted_bar_progress(usfp_bleeding_kansas_progress_bar)" <= 0
+                    }
+                }
+                custom_tooltip = {
+                    text = bleeding_kansas_100_progress
+                    scope:journal_entry = {
+                        "scripted_bar_progress(usfp_bleeding_kansas_progress_bar)" >= 100
+                    }
+                }
+                custom_tooltip = {
+                    text = acw_will_happen_tt
+                    has_global_variable = american_civil_war
+                }
+            }
+        }
+        effect = {
+            if = {
+                limit = {
+                    scope:journal_entry = {
+                        "scripted_bar_progress(usfp_bleeding_kansas_progress_bar)" <= 45
+                    }
+                }
+                #Slave Kansas
+                trigger_event = {
+                    id = usfp_bleeding_kansas.10
+                    popup = yes
+                }
+                show_as_tooltip = {
+                    scope:kansas_scope = {
+                        add_loyalists_in_state = {
+                            value = large_radicals
+                            culture = cu:dixie
+                        }
+                        enslave_discriminated_farm_workers = yes
+                        if = {
+                            limit = {
+                                is_incorporated = no
+                            }
+                            set_state_type = incorporated
+                        }
+                        if = {
+                            limit = {
+                                cu:dixie = {
+                                    NOT = {
+                                        has_homeland = prev.state_region
+                                    }
+                                }
+                            }
+                            state_region = {
+                                add_homeland = cu:dixie
+                            }
+                        }
+                        if = {
+                            limit = {
+                                exists = c:CSA
+                            }
+                            set_state_owner = c:CSA
+                        }
+                    }
+                    if = {
+                        limit = {
+                            exists = c:CSA
+                            has_state_in_state_region = STATE_MISSOURI
+                        }
+                        s:STATE_MISSOURI.region_state:USA = {
+                            set_state_owner = c:CSA
+                        }
+                    }
+                }
+            } else = {
+                #Free Kansas
+                trigger_event = {
+                    id = usfp_bleeding_kansas.9
+                    popup = yes
+                }
+                show_as_tooltip = {
+                    scope:kansas_scope = {
+                        add_loyalists_in_state = {
+                            value = large_radicals
+                            culture = cu:yankee
+                        }
+                        if = {
+                            limit = {
+                                any_scope_pop = {
+                                    is_pop_type = slaves
+                                }
+                            }
+                            liberate_slaves = yes
+                        }
+                        if = {
+                            limit = {
+                                is_incorporated = no
+                            }
+                            set_state_type = incorporated
+                        }
+                        if = {
+                            limit = {
+                                cu:yankee = {
+                                    NOT = {
+                                        has_homeland = prev.state_region
+                                    }
+                                }
+                            }
+                            state_region = {
+                                add_homeland = cu:yankee
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-	on_complete = {
-		if = {
-			limit = {
-				scope:journal_entry = {
-					"scripted_bar_progress(usfp_bleeding_kansas_progress_bar)" <= 45
-				}
-			}
-			#Slave Kansas
-			trigger_event = {
-				id = usfp_bleeding_kansas.10
-				popup = yes
-			}
-			show_as_tooltip = {
-				scope:kansas_scope = {
-					add_loyalists_in_state = {
-						value = large_radicals
-						culture = cu:dixie
-					}
-					enslave_discriminated_farm_workers = yes
-					if = {
-						limit = { 
-							is_incorporated = no
-						}
-						set_state_type = incorporated
-					}
-					if = {
-						limit = { 
-							cu:dixie = {
-								NOT = {
-									has_homeland = prev.state_region
-								}
-							}
-						}
-						state_region = {
-							add_homeland = cu:dixie
-						}
-					}
-					if = {
-						limit = { 
-							exists = c:CSA
-						}
-						set_state_owner = c:CSA
-					}
-				}
-				if = {
-					limit = {
-						exists = c:CSA
-						has_state_in_state_region = STATE_MISSOURI
-					}
-					s:STATE_MISSOURI.region_state:USA = {
-						set_state_owner = c:CSA
-					}
-				}
-			}
-		} else = {
-			#Free Kansas
-			trigger_event = {
-				id = usfp_bleeding_kansas.9
-				popup = yes
-			}
-			show_as_tooltip = {
-				scope:kansas_scope = {
-				add_loyalists_in_state = {
-					value = large_radicals
-					culture = cu:yankee
-				}
-				if = {
-					limit = { 
-						any_scope_pop = {
-							is_pop_type = slaves
-						}
-					}
-					liberate_slaves = yes
-				}
-				if = {
-					limit = { 
-						is_incorporated = no
-					}
-					set_state_type = incorporated
-				}
-				if = {
-					limit = { 
-						cu:yankee = {
-							NOT = {
-								has_homeland = prev.state_region
-							}
-						}
-					}
-					state_region = {
-						add_homeland = cu:yankee
-					}
-				}
-				}
-			}
-		}
-	}
-
-	invalid = {
-		NOT = {
-			any_scope_state = {
-				state_region = s:STATE_KANSAS
-			}
-		}
-		NOT = {
-			has_law_or_variant = law_type:law_legacy_slavery
-		}
-	}
-	on_invalid = {
-		hidden_effect = {
-			usfp_cleanup_bleeding_kansas_variables = yes
-		}
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                any_scope_state = {
+                    state_region = s:STATE_KANSAS
+                }
+            }
+            NOT = {
+                has_law_or_variant = law_type:law_legacy_slavery
+            }
+        }
+        effect = {
+            usfp_cleanup_bleeding_kansas_variables = yes
+        }
+    }
 
 }
 
@@ -676,17 +568,12 @@ je_usfp_a_house_divided_bleeding_kansas = {
 
 je_usfp_underground_railroad = {
 	icon = "gfx/interface/icons/invention_icons/railways.dds"
-
+    dlc = dlc_usfp
 	group = je_group_usa_american_civil_war
-
+    activation_description = { always = yes }
 	should_be_pinned_by_default_uninvolved_or_context = no
 
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
 		cu:afro_american = {
 			save_scope_as = afro_american_culture
 		}
@@ -783,39 +670,43 @@ je_usfp_underground_railroad = {
 		}
 	}
 
-	complete = {
-		has_law_or_variant = law_type:law_slavery_banned
-		NOT = {
-			has_journal_entry = je_acw_countdown
-		}
-		custom_tooltip = {
-			text = csa_doesnt_exist
-			OR = {
-				NOT = { exists = c:CSA }
-				c:CSA ?= {
-					has_law_or_variant = law_type:law_slavery_banned
-				}
-			}
+    outcome = {
+        header = je_usfp_underground_railroad_complete
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
+        trigger = {
+            has_law_or_variant = law_type:law_slavery_banned
+            NOT = {
+                has_journal_entry = je_acw_countdown
+            }
+            custom_tooltip = {
+                text = csa_doesnt_exist
+                OR = {
+                    NOT = { exists = c:CSA }
+                    c:CSA ?= {
+                        has_law_or_variant = law_type:law_slavery_banned
+                    }
+                }
 
-		}
-	}
-	custom_completion_header = je_usfp_underground_railroad_complete
+            }
+        }
+        effect = {
 
+        }
+    }
 }
 
 je_usfp_afro_american_colonization = {
 	icon = "gfx/interface/icons/law_icons/colonial_resettlement.dds"
-
+    dlc = dlc_usfp
+    activation_description = { always = yes }
 	group = je_group_usa_american_civil_war
 
 	should_be_pinned_by_default_uninvolved_or_context = no
 
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
 		c:LIB = {
 			save_scope_as = liberia_scope
 		}
@@ -833,15 +724,23 @@ je_usfp_afro_american_colonization = {
 		}
 	}
 
-	fail = {
-		OR = {
-			AND = {
-				has_law_or_variant = law_type:law_slavery_banned
-				usfp_is_afro_american_discriminated = no
-			}
-			has_law_or_variant = law_type:law_no_colonial_affairs
-		}
-	}
-	custom_failure_header = je_usfp_afro_american_colonization_fail
+    outcome = {
+        header = je_usfp_afro_american_colonization_fail
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        flags = { historical }
+        trigger = {
+            OR = {
+                AND = {
+                    has_law_or_variant = law_type:law_slavery_banned
+                    usfp_is_afro_american_discriminated = no
+                }
+                has_law_or_variant = law_type:law_no_colonial_affairs
+            }
+        }
+        effect = {
 
+        }
+    }
 }

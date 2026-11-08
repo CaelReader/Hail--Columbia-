@@ -3,6 +3,9 @@ usfp_progressive_era = {
 	icon = gfx/interface/icons/ideology_icons/ideology_usfp_progressive_movement.dds
 	group = je_group_usfp_political_eras
 	should_be_pinned_by_default_uninvolved_or_context = yes
+    dlc = dlc_usfp
+    activation_description = { always = yes }
+
 	is_shown_when_inactive = {
 		exists = c:USA
 		c:USA = ROOT
@@ -57,11 +60,6 @@ usfp_progressive_era = {
 		}
 	}
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
 		ideology:ideology_usfp_progressive = {
 			save_scope_as = progressive_ideology
 		}
@@ -96,122 +94,70 @@ usfp_progressive_era = {
 			strata = upper
 		}
 	}
-	complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-		usfp_progressive_era_square_deal_conditions = yes
-	}
-	on_complete = {
-		trigger_event = usfp_progressive_era.16
-	}
 
-	event_outcome_completed_effect_desc = {
-		effect = {
-			add_loyalists = {
-				value = large_radicals
-				strata = lower
-			}
-			add_loyalists = {
-				value = small_radicals
-				strata = middle
-			}
-			add_radicals = {
-				value = large_radicals
-				strata = upper
-			}
-			every_interest_group = {
-				limit = {
-					leader = {
-						has_ideology = ideology:ideology_usfp_progressive
-					}
-				}
-				add_modifier = {
-					name = usfp_progressive_victory_modifier
-					years = 20
-				}
-			}
-			ig:ig_trade_unions = {
-				if = {
-					limit = { has_ideology = ideology:ideology_socialist }
-					remove_ideology = ideology_socialist
-				}
-			}
-			every_scope_state = {
-				limit = {
-					has_modifier = usfp_captive_state_government
-				}
-				remove_modifier = usfp_captive_state_government
-			}
-		}
-	}
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            scope:journal_entry = {
+                is_goal_complete = yes
+            }
+            usfp_progressive_era_square_deal_conditions = yes
+        }
+        effect = {
+            trigger_event = usfp_progressive_era.16
+        }
+        event_outcome_effect_desc = {
+            header = usfp_progressive_era.16.a
+            effect = {
+                execute_event_option = {
+                    event = usfp_progressive_era.16
+                    option = 0
+                }
+            }
+        }
+        event_outcome_effect_desc = {
+            header = usfp_progressive_era.16.b
+            effect = {
+                execute_event_option = {
+                    event = usfp_progressive_era.16
+                    option = 1
+                }
+            }
+        }
+    }
 
-	on_timeout = {
-		if = {
-			limit = { usfp_progressive_era_square_deal_conditions = yes  }
-			trigger_event = usfp_progressive_era.16
-			show_as_tooltip = {
-				add_loyalists = {
-					value = small_radicals
-					strata = middle
-				}
-				add_radicals = {
-					value = large_radicals
-					strata = upper
-				}
-				every_scope_state = {
-					limit = {
-						has_modifier = usfp_captive_state_government
-					}
-					remove_modifier = usfp_captive_state_government
-				}
-			}
-		}
-	}
+    outcome = {
+        header = JOURNAL_ENTRY_TIMEOUT
+        effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+        flags = { timeout historical }
+        conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+        effect = {
+            if = {
+                limit = { usfp_progressive_era_square_deal_conditions = yes  }
+                trigger_event = usfp_progressive_era.16
+                show_as_tooltip = {
+                    add_loyalists = {
+                        value = small_radicals
+                        strata = middle
+                    }
+                    add_radicals = {
+                        value = large_radicals
+                        strata = upper
+                    }
+                    every_scope_state = {
+                        limit = {
+                            has_modifier = usfp_captive_state_government
+                        }
+                        remove_modifier = usfp_captive_state_government
+                    }
+                }
+            }
+        }
+    }
 
-	event_outcome_timeout_effect_desc = {
-		effect = {
-			if = {
-				limit = { usfp_progressive_era_square_deal_conditions = yes  }
-			add_loyalists = {
-				value = large_radicals
-				strata = lower
-			}
-			add_loyalists = {
-				value = small_radicals
-				strata = middle
-			}
-			add_radicals = {
-				value = large_radicals
-				strata = upper
-			}
-			every_interest_group = {
-				limit = {
-					leader = {
-						has_ideology = ideology:ideology_usfp_progressive
-					}
-				}
-				add_modifier = {
-					name = usfp_progressive_victory_modifier
-					years = 20
-				}
-			}
-			ig:ig_trade_unions = {
-				if = {
-					limit = { has_ideology = ideology:ideology_socialist }
-					remove_ideology = ideology_socialist
-				}
-			}
-			every_scope_state = {
-				limit = {
-					has_modifier = usfp_captive_state_government
-				}
-				remove_modifier = usfp_captive_state_government
-			}
-			}
-		}
-	}
-	
 	on_monthly_pulse = {
 		random_events = {
 			chance_of_no_event = 85
@@ -228,6 +174,12 @@ usfp_progressive_era = {
 			10 = usfp_progressive_era.12 #Muckraker: The Bitter Cry of Children
 			10 = usfp_progressive_era.13 #Muckraker: The Shame of the Cities
 			10 = usfp_progressive_era.14 #Muckraker: History of Standard Oil
+            #vanilla suffragist events merged from suffrage JE
+            20 = suffragist_events.1
+            20 = suffragist_events.2
+            20 = suffragist_events.5
+            20 = suffragist_events.7
+            20 = suffragist_events.8
 		}
 		events = {
 			usfp_progressive_era.15 #Cross of Gold, Bryan spawn

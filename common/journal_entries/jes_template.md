@@ -42,13 +42,17 @@ outcome = {
     }
 }
 
-event_outcome_effect_desc = {
-    effect = {
-        execute_event_option = {
-            event = usfp_a_house_divided.12
-            option = 0
+        event_outcome_effect_desc = {
+            header = usfp_manifest_destiny.19.a
+            effect = {
+                execute_event_option = {
+                    event = usfp_manifest_destiny.19
+                    option = 0
+                }
+            }
         }
-    }
-}
 
 flags = { historical }
+
+    dlc = dlc_usfp
+    activation_description = { always = yes }

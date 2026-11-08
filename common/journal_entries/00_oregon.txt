@@ -59,6 +59,7 @@ je_oregon = {
         effect_header = je_standard_on_completion_header
         color = "gold_positive"
         conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
         trigger = {
             custom_tooltip = {
                 text = oregon_tt
@@ -245,9 +246,7 @@ je_conquer_oregon = {
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
 	group = je_group_usa_manifest_destiny
-    activation_description = {
-        always = yes
-    }
+    activation_description = { always = yes }
 	scripted_button = usfp_demand_bc_button
 
     outcome = {

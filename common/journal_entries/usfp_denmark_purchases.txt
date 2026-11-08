@@ -1,8 +1,9 @@
 ﻿usfp_je_danish_purchases = {
 
 	icon = gfx/interface/icons/event_icons/event_map.dds
-
-	group = je_group_foreign_affairs
+    dlc = dlc_usfp
+    activation_description = { always = yes }
+	group = je_group_usa_manifest_destiny
 
 	should_be_pinned_by_default_uninvolved_or_context = yes
 	weight = 200
@@ -32,6 +33,9 @@
 				owner = {
 					is_country_type = recognized
 					relations:root >= relations_threshold:cordial
+                    NOT = {
+                        has_diplomats_expelled = root
+                    }
 				}
 			}
 		}
@@ -162,67 +166,78 @@
 		}
 	}
 
-	complete = {
-		has_state_in_state_region = STATE_GREENLAND
-	}
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            has_state_in_state_region = STATE_GREENLAND
+        }
+        effect = {
+            set_global_variable = greenland_sold
+            if = {
+                limit = {
+                    exists = c:GBR
+                    c:GBR = {
+                        any_subject_or_below = {
+                            capital = {
+                                region = sr:region_canada
+                            }
+                        }
+                    }
+                }
+                change_relations = {
+                    country = c:GBR
+                    value = -25
+                }
+                c:GBR = {
+                    every_subject_or_below = {
+                        limit = {
+                            capital = {
+                                region = sr:region_canada
+                            }
+                        }
+                        change_relations = {
+                            country = ROOT
+                            value = -20
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-	on_complete = {
-		set_global_variable = greenland_sold
-		if = {
-			limit = { 
-				exists = c:GBR
-				c:GBR = {
-					any_subject_or_below = {
-						capital = {
-							region = sr:region_canada
-						}
-					}
-				}
-			}
-			change_relations = {
-				country = c:GBR
-				value = -25
-			}
-			c:GBR = {
-				every_subject_or_below = {
-					limit = {
-						capital = {
-							region = sr:region_canada
-						}	
-					}
-					change_relations = {
-						country = ROOT
-						value = -20
-					}
-				}
-			}
-		}
-	}
-
-	fail = {
-		OR = {
-			scope:greenland_owner_scope ?= {
-				OR = {
-					relations:root <= relations_threshold:poor
-					country_rank > root.country_rank
-				}
-			}
-			has_war_with = scope:greenland_owner_scope
-			has_claim = s:STATE_GREENLAND
-		}
-	}
-
-	on_fail = {
-		if = {
-			limit = {
-				usfp_manifest_destiny_greater_or_equal_trigger = { value = 8 }
-				NOT = {
-					has_claim = s:STATE_GREENLAND
-				}
-			 }
-			 s:STATE_GREENLAND = {
-				add_claim = root
-			 }
-		}
-	}
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                scope:greenland_owner_scope ?= {
+                    OR = {
+                        relations:root <= relations_threshold:poor
+                        country_rank > root.country_rank
+                        has_diplomats_expelled = root
+                    }
+                }
+                has_war_with = scope:greenland_owner_scope
+                has_claim = s:STATE_GREENLAND
+            }
+        }
+        effect = {
+            if = {
+                limit = {
+                    usfp_manifest_destiny_greater_or_equal_trigger = { value = 8 }
+                    NOT = {
+                        has_claim = s:STATE_GREENLAND
+                    }
+                }
+                s:STATE_GREENLAND = {
+                    add_claim = root
+                }
+            }
+        }
+    }
 }

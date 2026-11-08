@@ -1,14 +1,10 @@
 ﻿je_usfp_american_constitution = {
 	icon = "gfx/interface/icons/war_goals/unused/force_recognition.dds"
-
+    dlc = dlc_usfp
+    activation_description = { always = yes }
 	group = je_group_historical_content
 
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
         if = {
             limit = {
                 has_law = law_type:law_protectionism
@@ -22,29 +18,33 @@
 		usfp_constitutional_tariff_modifier
 		usfp_apolitical_military_modifier
 	}
-
-    on_fail = {
-        if = {
-            limit = {
-                has_law = law_type:law_usfp_american_system
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                NOT = {
+                    has_law_or_variant = law_type:law_presidential_republic
+                }
+                NOR = {
+                    has_law_or_variant = law_type:law_landed_voting
+                    has_law_or_variant = law_type:law_wealth_voting
+                    has_law_or_variant = law_type:law_census_voting
+                    has_law_or_variant = law_type:law_universal_suffrage
+                    has_law_or_variant = law_type:law_single_party_state
+                }
             }
-            activate_law = law_type:law_protectionism
+        }
+        effect = {
+            if = {
+                limit = {
+                    has_law = law_type:law_usfp_american_system
+                }
+                activate_law = law_type:law_protectionism
+            }
         }
     }
-
-	fail = {
-		OR = {
-			NOT = {
-				has_law_or_variant = law_type:law_presidential_republic
-			}
-			NOR = {
-				has_law_or_variant = law_type:law_landed_voting
-				has_law_or_variant = law_type:law_wealth_voting
-				has_law_or_variant = law_type:law_census_voting
-				has_law_or_variant = law_type:law_universal_suffrage
-				has_law_or_variant = law_type:law_single_party_state
-			}
-		}
-	}
 
 }

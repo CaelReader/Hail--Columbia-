@@ -5,11 +5,6 @@
 #     group = je_group_historical_content
 #
 #     immediate = {
-#         scope:journal_entry = {
-#             add_com_dlc_icon = {
-#                 dlc = dlc_usfp
-#             }
-#         }
 #     }
 #
 #     is_shown_when_inactive = {
@@ -60,7 +55,8 @@
 
 je_usfp_the_new_navy = {
     icon = "gfx/interface/icons/invention_icons/destroyers.dds"
-
+    dlc = dlc_usfp
+    activation_description = { always = yes }
     group = je_group_historical_content
 
     is_shown_when_inactive = {
@@ -124,11 +120,6 @@ je_usfp_the_new_navy = {
     }
 
     immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
         ordered_country_in_pacific = {
             limit = {
                 capital = {
@@ -164,80 +155,82 @@ je_usfp_the_new_navy = {
         }
     }
 
-    complete = {
-        #research pre-dreadnoughts
-        has_technology_researched = pre_dreadnought_tech
-        #navy surpasses the strongest pacific power
-        trigger_if = {
-            limit = {
-                exists = scope:strongest_navy_in_pacific.naval_power_projection
-            }
-            naval_power_projection >= {
-                value = scope:strongest_navy_in_pacific.naval_power_projection
-                multiply = 1.2
-            }
-        }
-        #has at least three pre-dreadnoughts
-        any_scope_ship = {
-            custom_tooltip = {
-                text = pre_dreadnought_or_better
-                OR = {
-                    type = ship_type:ship_type_pre_dreadnought
-                    type = ship_type:ship_type_dreadnought
-                    type = ship_type:ship_type_super_dreadnought
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
+        trigger = {
+            #research pre-dreadnoughts
+            has_technology_researched = pre_dreadnought_tech
+            #navy surpasses the strongest pacific power
+            trigger_if = {
+                limit = {
+                    exists = scope:strongest_navy_in_pacific.naval_power_projection
+                }
+                naval_power_projection >= {
+                    value = scope:strongest_navy_in_pacific.naval_power_projection
+                    multiply = 1.2
                 }
             }
-            count >= 3
+            #has at least three pre-dreadnoughts
+            any_scope_ship = {
+                custom_tooltip = {
+                    text = pre_dreadnought_or_better
+                    OR = {
+                        type = ship_type:ship_type_pre_dreadnought
+                        type = ship_type:ship_type_dreadnought
+                        type = ship_type:ship_type_super_dreadnought
+                    }
+                }
+                count >= 3
+            }
+            OR = {
+                has_law_or_variant = law_type:law_diplomatic_navy
+                has_law_or_variant = law_type:law_professional_navy
+            }
+            #decommissioned wooden ships
+            country_ship_type_fraction = {
+                target = ship_type:ship_type_ship_of_the_line
+                value < 0.10
+            }
+            country_ship_type_fraction = {
+                target = ship_type:ship_type_early_ironclad
+                value < 0.10
+            }
+            country_ship_type_fraction = {
+                target = ship_type:ship_type_frigate
+                value < 0.10
+            }
+            country_ship_type_fraction = {
+                target = ship_type:ship_type_iron_frigate
+                value < 0.10
+            }
         }
-        OR = {
-            has_law_or_variant = law_type:law_diplomatic_navy
-            has_law_or_variant = law_type:law_professional_navy
-        }
-        #decommissioned wooden ships
-        country_ship_type_fraction = {
-            target = ship_type:ship_type_ship_of_the_line
-            value < 0.10
-        }
-        country_ship_type_fraction = {
-            target = ship_type:ship_type_early_ironclad
-            value < 0.10
-        }
-        country_ship_type_fraction = {
-            target = ship_type:ship_type_frigate
-            value < 0.10
-        }
-        country_ship_type_fraction = {
-            target = ship_type:ship_type_iron_frigate
-            value < 0.10
-        }
-    }
-
-    on_complete = {
-        set_variable =  new_navy_completed
-        trigger_event = usfp_usa_navy.3
-    }
-
-    event_outcome_completed_effect_desc = {
-        header = usfp_usa_navy.2.a
         effect = {
-            execute_event_option = {
-                option = 0
-                event = usfp_usa_navy.3
+            set_variable =  new_navy_completed
+            trigger_event = usfp_usa_navy.3
+        }
+        event_outcome_effect_desc = {
+            header = usfp_usa_navy.2.a
+            effect = {
+                execute_event_option = {
+                    option = 0
+                    event = usfp_usa_navy.3
+                }
+            }
+        }
+        event_outcome_effect_desc = {
+            header = usfp_usa_navy.2.b
+            effect = {
+                execute_event_option = {
+                    option = 1
+                    event = usfp_usa_navy.3
+                }
             }
         }
     }
-
-    event_outcome_completed_effect_desc = {
-        header = usfp_usa_navy.2.b
-        effect = {
-            execute_event_option = {
-                option = 1
-                event = usfp_usa_navy.3
-            }
-        }
-    }
-
-
 
     weight = 200
     should_be_pinned_by_default_uninvolved_or_context = yes

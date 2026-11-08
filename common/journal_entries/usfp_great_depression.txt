@@ -2,6 +2,8 @@
     icon = "gfx/interface/icons/central_identity_pillars_icons/cultural.dds"
 
     group = je_group_usfp_political_eras
+    dlc = dlc_usfp
+    activation_description = { always = yes }
 
     widget = {
         gui = "gui/com_journal_injects/injects.gui"
@@ -23,9 +25,6 @@
             progress_bar = usfp_roaring_twenties_optimism_bar
         }
         scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
             add_modifier = {
                 name = usfp_roaring_twenties_optimism_tier2_modifier
             }
@@ -91,11 +90,14 @@
         average_sol_for_primary_cultures >= usfp_roaring_twenties_sol_target
     }
 
-
-    invalid = {
-        OR = {
-            has_law_or_variant = law_type:law_command_economy
-            has_global_variable = had_black_tuesday
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                has_law_or_variant = law_type:law_command_economy
+                has_global_variable = had_black_tuesday
+            }
         }
     }
 
@@ -209,49 +211,57 @@
 
     timeout = 5400
 
-    on_timeout = {
-        add_loyalists = {
-            value = medium_radicals
-        }
-    }
-
-    fail = {
-        custom_tooltip = {
-            text = progress_bar_zero
-            scope:journal_entry = {
-                "scripted_bar_progress(usfp_roaring_twenties_optimism_bar)" <= 0
+    outcome = {
+        header = JOURNAL_ENTRY_TIMEOUT
+        effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+        flags = { timeout }
+        conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+        effect = {
+            add_loyalists = {
+                value = medium_radicals
             }
         }
     }
 
-    on_fail = {
-        trigger_event = {
-            id = usfp_great_depression.3
-        }
-    }
-
-    event_outcome_failed_effect_desc = {
-        header = usfp_great_depression.3.a
-        effect = {
-            execute_event_option = {
-                event = usfp_great_depression.3
-                option = 0
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            custom_tooltip = {
+                text = progress_bar_zero
+                scope:journal_entry = {
+                    "scripted_bar_progress(usfp_roaring_twenties_optimism_bar)" <= 0
+                }
             }
         }
-    }
-
-    event_outcome_failed_effect_desc = {
-        header = usfp_great_depression.3.b
         effect = {
-            execute_event_option = {
-                event = usfp_great_depression.3
-                option = 1
+            trigger_event = {
+                id = usfp_great_depression.3
+            }
+        }
+        event_outcome_effect_desc = {
+            header = usfp_great_depression.3.a
+            effect = {
+                execute_event_option = {
+                    event = usfp_great_depression.3
+                    option = 0
+                }
+            }
+        }
+        event_outcome_effect_desc = {
+            header = usfp_great_depression.3.b
+            effect = {
+                execute_event_option = {
+                    event = usfp_great_depression.3
+                    option = 1
+                }
             }
         }
     }
 
     scripted_progress_bar = usfp_roaring_twenties_optimism_bar
-
 
     weight = 200
     should_be_pinned_by_default_uninvolved_or_context = yes
@@ -259,7 +269,8 @@
 
 je_usfp_great_depression = {
     icon = "gfx/interface/icons/alert_icons/company_losing_prosperity.dds"
-
+    dlc = dlc_usfp
+    activation_description = { always = yes }
     group = je_group_usfp_financial
 
     immediate = {
@@ -268,9 +279,6 @@ je_usfp_great_depression = {
             value = usfp_country_incorporated_unemployment_rate
         }
         scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
             add_modifier = usfp_great_depression_modifier
         }
         set_variable = {
@@ -287,8 +295,12 @@ je_usfp_great_depression = {
 
     scripted_button = usfp_mexican_repatriation_button
 
-    invalid = {
-        has_law_or_variant = law_type:law_command_economy
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            has_law_or_variant = law_type:law_command_economy
+        }
     }
 
     on_monthly_pulse = {
@@ -315,27 +327,36 @@ je_usfp_great_depression = {
 
     scripted_progress_bar = usfp_great_depression_recovery_bar
 
-    complete = {
-        custom_tooltip = {
-            text = progress_bar_complete
-            scope:journal_entry = {
-                "scripted_bar_progress(usfp_great_depression_recovery_bar)" >= 5000
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
+        trigger = {
+            custom_tooltip = {
+                text = progress_bar_complete
+                scope:journal_entry = {
+                    "scripted_bar_progress(usfp_great_depression_recovery_bar)" >= 5000
+                }
+            }
+            any_scope_state = {
+                filter = {
+                    is_incorporated = yes
+                }
+                percent >= 0.75
+                state_unemployment_rate < 0.12
+            }
+            in_default = no
+            NOT = {
+                has_modifier = declared_bankruptcy
             }
         }
-        any_scope_state = {
-            filter = {
-                is_incorporated = yes
-            }
-            percent >= 0.75
-            state_unemployment_rate < 0.12
-        }
-        in_default = no
-        NOT = {
-            has_modifier = declared_bankruptcy
+        effect = {
+
         }
     }
 
-
-    weight = 200
+    weight = 500
     should_be_pinned_by_default_uninvolved_or_context = yes
 }

@@ -2659,3 +2659,30 @@ usfp_coal_wars_reset_unionization_progress = {
 		}
 	}
 }
+
+usfp_coal_wars_cleanup = {
+    hidden_effect = {
+        remove_variable = usfp_coal_wars_had_matewan
+        remove_variable = usfp_coal_wars_umwa_target
+        every_scope_state = {
+            limit = {
+                has_variable = usfp_coal_wars_state_unionization
+            }
+            remove_variable = usfp_coal_wars_state_unionization
+        }
+        every_scope_state = {
+            limit = {
+                has_variable = usfp_coal_wars_state_unionized
+            }
+            remove_variable = usfp_coal_wars_state_unionized
+        }
+        clear_variable_list = usfp_coal_wars_states
+        clear_variable_list = usfp_coal_wars_unionized_states
+        every_scope_building = {
+            limit = {
+                has_modifier = usfp_coal_wars_union_established_modifier
+            }
+            remove_modifier = usfp_coal_wars_union_established_modifier
+        }
+    }
+}

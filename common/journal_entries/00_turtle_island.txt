@@ -3,6 +3,10 @@
 	
 	group = je_group_foreign_affairs
 
+	activation_description = {
+		always = yes
+	}
+
 	scripted_button = je_unite_the_nations_proclaim_turtle_island_button
     scripted_button = je_unite_the_nations_organize_the_tribes_button
     scripted_button = je_unite_the_nations_offer_confederation_button
@@ -46,7 +50,12 @@
 		is_subject = no
 	}
 
-	complete = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
 		custom_tooltip = {
 			text = je_unite_the_nations_complete_tt
 				NOT = {
@@ -63,8 +72,7 @@
             count >= 5
         }
 	}
-
-	on_complete = {
+		effect = {
 		if = {
 			limit = { is_country_type = unrecognized }
 			set_country_type = recognized
@@ -73,12 +81,8 @@
 			name = turtle_island_state_of_nations
 			months = -1 # FOREVER
 		}
+			je_unite_the_nations_cleanup = yes
 	}
-
-	fail = {
-	}
-
-	on_fail = {
 	}
 
 	weight = 100

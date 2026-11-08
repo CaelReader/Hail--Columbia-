@@ -4,7 +4,7 @@ usfp_je_second_revolution = {
     icon = gfx/interface/icons/ai_strategy_icons/revolutionary.dds
     dlc = dlc_usfp
     highlight = yes
-    group = je_group_historical_content
+    group = je_group_socialism
 
     scripted_button = usfp_second_revolution_destroy_monuments_button
     scripted_button = usfp_second_revolution_suppress_dixie_button

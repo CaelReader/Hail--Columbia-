@@ -1,9 +1,9 @@
 ﻿#Coal Wars
 usfp_je_coal_wars = {
-
     icon = gfx/interface/icons/goods_icons/coal.dds
-
     group = je_group_historical_content
+    dlc = dlc_usfp
+    activation_description = { always = yes }
 
     scripted_progress_bar = usfp_coal_wars_union_leverage_bar
 
@@ -322,6 +322,7 @@ usfp_je_coal_wars = {
         effect_header = je_standard_on_completion_header
         color = "gold_positive"
         conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
         trigger = {
             #repeal lochner
             active_law:lawgroup_labor_rights = {
@@ -355,6 +356,7 @@ usfp_je_coal_wars = {
         }
         effect = {
             trigger_event = usfp_coal_wars.7
+            usfp_coal_wars_cleanup = yes
         }
         event_outcome_effect_desc = {
             effect = {
@@ -385,6 +387,7 @@ usfp_je_coal_wars = {
         }
         effect = {
             trigger_event = usfp_coal_wars.8
+            usfp_coal_wars_cleanup = yes
         }
         event_outcome_effect_desc = {
             effect = {
@@ -396,8 +399,6 @@ usfp_je_coal_wars = {
         }
     }
 
-
-    #cleanup unionization modifiers
 
     outcome = {
         flags = { hidden invalid_outcome }
@@ -412,6 +413,9 @@ usfp_je_coal_wars = {
                     }
                 }
             }
+        }
+        effect = {
+            usfp_coal_wars_cleanup = yes
         }
     }
 

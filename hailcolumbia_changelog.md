@@ -1032,9 +1032,12 @@ Fixed Oregon Treaty not removing claims properly
 ## 1.15 Compatibility
     American Armed Forces are Patriotic, not Militarist
     Anaconda is now a Copper Mines company
+    Updated all JEs to new outcome setup
+    Updated events that interact with socialist ideologies
 ## Updates
 	Confiscate Slaver Lands now only takes 3 years to break up the plantations instead of 4
     The Great Depression now wrecks building cash reserve limits
+    Added vanilla Suffragists events to the Progressive Era JE
 ## Fixes
     Claim Canada button now works even against non-confederated canadian tags
     
