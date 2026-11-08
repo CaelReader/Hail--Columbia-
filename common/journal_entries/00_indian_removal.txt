@@ -229,9 +229,9 @@
         flags = { hidden invalid_outcome }
         conclusion_desc = je_standard_failure_conclusion_desc
         trigger = {
-            NOT = { c:SEQ ?= { is_at_war_with_overlord = yes } }
+            c:SEQ ?= { is_at_war_with_overlord = no }
             OR = {
-                NOT = { owns_entire_or_is_contesting_state_region = STATE_GEORGIA }
+                NOT = { has_state_in_state_region = STATE_GEORGIA }
                 NOT = {
                     AND = {
                         exists = c:SEQ
