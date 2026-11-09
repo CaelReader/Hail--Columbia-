@@ -584,7 +584,7 @@ usfp_manifest_destiny_main = {
 			usfp_manifest_destiny.10 #California Gold Rush
 			usfp_manifest_destiny.13 #new homelands
 			usfp_manifest_destiny.18 #Monroe violation
-			usfp_manifest_destiny.24 #Revolutionary Destiny
+			# usfp_manifest_destiny.24 #Revolutionary Destiny
 			usfp_manifest_destiny.25 #Monarchy Destiny
 			usfp_indian_postremoval.4 #Sequoyah Constitution
 			usfp_manifest_destiny.29 #Manifest Destiny decay begins

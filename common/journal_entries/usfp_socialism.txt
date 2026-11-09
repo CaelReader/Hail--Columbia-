@@ -10,6 +10,7 @@ usfp_je_second_revolution = {
     scripted_button = usfp_second_revolution_destroy_monuments_button
     scripted_button = usfp_second_revolution_suppress_dixie_button
     scripted_button = usfp_second_revolution_complete_reconstruction_button
+    scripted_button = usfp_second_revolution_switch_outlook_button
 
     scripted_progress_bar = usfp_second_revolution_bar
 
@@ -172,13 +173,21 @@ usfp_je_second_revolution = {
         color = "red"
         conclusion_desc = usfp_je_second_revolution_internationalist_conclusion_desc
         trigger = {
-            custom_tooltip = {
-                text = antiamericanism_reached_75
-                has_variable = usfp_second_revolution_antiamericanism_reached_75
-            }
-            custom_tooltip = {
-                text = antiamericanism_reached_75_then_70_five_years
-                var:usfp_second_revolution_americanism_cementing_progress >= 60
+            OR = {
+                AND = {
+                    custom_tooltip = {
+                        text = antiamericanism_reached_75
+                        has_variable = usfp_second_revolution_antiamericanism_reached_75
+                    }
+                    custom_tooltip = {
+                        text = antiamericanism_reached_75_then_70_five_years
+                        var:usfp_second_revolution_antiamericanism_cementing_progress >= 60
+                    }
+                }
+                custom_tooltip = {
+                    text = formed_socialist_world_republic
+                    has_variable = sozialistische_weltrepublik_var
+                }
             }
             any_revolution_ongoing = no
             has_law_or_variant = law_type:law_multicultural

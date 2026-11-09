@@ -331,8 +331,10 @@
         trigger = {
             has_game_rule = usa_dynamic_names
             coa_def_anarchy_flag_trigger = yes
-            NOT = {
-                has_variable = usfp_second_revolution_internationalism_embraced
+            scope:actor ?= {
+                NOT = {
+                    has_variable = usfp_second_revolution_internationalism_embraced
+                }
             }
         }
     }
@@ -348,10 +350,10 @@
         trigger = {
             has_game_rule = usa_dynamic_names
             coa_def_anarchy_flag_trigger = yes
-            NOT = {
-                has_variable = usfp_second_revolution_internationalism_embraced
-            }
             scope:actor ?= {
+                NOT = {
+                    has_variable = usfp_second_revolution_internationalism_embraced
+                }
                 any_scope_state = {
                     is_incorporated = yes
                     is_in_geographic_region = geographic_region_north_america
@@ -391,7 +393,7 @@
         adjective = dync_c_usfp_usa_cybernetic_internationalist_ADJ
 
         is_main_tag_only = yes
-        priority = 100
+        priority = 500
 
         trigger = {
             has_game_rule = usa_dynamic_names

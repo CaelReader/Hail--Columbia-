@@ -103,7 +103,7 @@ USA = {	# United States of America
     #Internationalist Cybernetic
     flag_definition = {
         coa = USA_cybernetic_internationalist
-        priority = 1500
+        priority = 2000
         trigger = {
             coa_def_communist_flag_trigger = yes
             scope:actor ?= {
@@ -131,7 +131,12 @@ USA = {	# United States of America
 		priority = 1500
 		trigger = { 
 			coa_def_communist_flag_trigger = yes
-            scope:actor ?= { has_variable = usfp_second_revolution_internationalism_embraced }
+            scope:actor ?= {
+                NOT = {
+                    has_law_or_variant = law_type:law_technocracy
+                }
+                has_variable = usfp_second_revolution_internationalism_embraced
+            }
 		}
 	}
 

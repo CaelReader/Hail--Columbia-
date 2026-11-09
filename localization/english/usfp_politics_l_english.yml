@@ -130,6 +130,10 @@ amendment_usfp_radical_land_redistribution_desc: "The lands of former slavers ar
  amendment_english_second_language_desc: "Much of literate society has learned English alongside their mother tongue, though not without some linguistic drift. Specialized subjects such as science and technology are almost exclusively conducted in English, enabling easier access to foreign expertise."
  amendment_usfp_philippine_assembly: "Philippine Assembly"
  amendment_usfp_philippine_assembly_desc: "A lower house of elected delegates shares power with an upper house of appointed commissioners."
+ amendment_usfp_second_revolution_americanist_education: "Americanist Education"
+ amendment_usfp_second_revolution_americanist_education_desc: "Patriotic education standards portray American revolutionary history as a historical process that uniquely placed the American people on the path towards the final triumph of liberty and socialism."
+ amendment_usfp_second_revolution_internationalist_education: "Internationalist Education"
+ amendment_usfp_second_revolution_internationalist_education_desc: "Multi-lingual education programs emphasize the role of cultural exchange in the history of the United States, while highlighting the crimes of the previous constitutional order."
 
  usfp_dp_mexican_cession: "Mexican Cession"
  war_goal_usfp_mexican_cession_type_name: "Mexican Cession"

@@ -250,3 +250,87 @@ usfp_second_revolution_complete_reconstruction_button = {
         value = 100
     }
 }
+
+usfp_second_revolution_switch_outlook_button = {
+    name = "usfp_second_revolution_switch_outlook_button"
+    desc = "usfp_second_revolution_switch_outlook_button_desc"
+
+    visible = {
+        any_active_law = {
+            OR = {
+                has_amendment = amendment_type:amendment_usfp_second_revolution_internationalist_education
+                has_amendment = amendment_type:amendment_usfp_second_revolution_americanist_education
+            }
+        }
+    }
+
+    possible = {
+        NOT = {
+            has_modifier = usfp_second_revolution_switching_stance_modifier
+        }
+    }
+
+    cooldown = {
+        years = 5
+    }
+
+    effect = {
+        #switch from americanism to internationalism
+        if = {
+            limit = {
+                has_variable = usfp_second_revolution_supported_americanism
+            }
+            active_law:lawgroup_education_system = {
+                random_scope_amendment = {
+                    limit = {
+                        type = amendment_type:amendment_usfp_second_revolution_americanist_education
+                    }
+                    remove_amendment = yes
+                }
+            }
+            active_law:lawgroup_education_system = {
+                add_amendment = {
+                    type = amendment_usfp_second_revolution_internationalist_education
+                    sponsor = PREV.ig:ig_intelligentsia
+                }
+            }
+            custom_tooltip = {
+                text = second_revolution_institutions_will_support_internationalism
+                remove_variable = usfp_second_revolution_supported_americanism
+                set_variable = usfp_second_revolution_supported_antiamericanism
+            }
+        }
+        else_if = {
+            limit = {
+                has_variable = usfp_second_revolution_supported_antiamericanism
+            }
+            active_law:lawgroup_education_system = {
+                random_scope_amendment = {
+                    limit = {
+                        type = amendment_type:amendment_usfp_second_revolution_internationalist_education
+                    }
+                    remove_amendment = yes
+                }
+            }
+            active_law:lawgroup_education_system = {
+                add_amendment = {
+                    type = amendment_usfp_second_revolution_americanist_education
+                    sponsor = PREV.ig:ig_intelligentsia
+                }
+            }
+            custom_tooltip = {
+                text = second_revolution_institutions_will_support_americanism
+                remove_variable = usfp_second_revolution_supported_antiamericanism
+                set_variable = usfp_second_revolution_supported_americanism
+            }
+        }
+        add_modifier = {
+            name = usfp_second_revolution_switching_stance_modifier
+            years = 5
+        }
+    }
+
+    ai_chance = {
+        value = 100
+    }
+}

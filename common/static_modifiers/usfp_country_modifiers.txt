@@ -1100,3 +1100,9 @@ usfp_coal_wars_great_coal_strike = {
 	building_railway_throughput_add = -0.20
 	state_radicals_from_political_movements_mult = 0.10
 }
+
+usfp_second_revolution_switching_stance_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+    interest_group_in_government_attraction_mult = -0.15
+    country_legitimacy_base_add = -10
+}

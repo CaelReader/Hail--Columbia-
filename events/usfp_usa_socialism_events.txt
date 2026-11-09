@@ -30,6 +30,20 @@ usfp_usa_socialism.1 = {
     option = {
         name = usfp_usa_socialism.1.a
         default_option = yes
+        if = {
+            limit = {
+                NOT = {
+                    has_law_or_variant = law_type:law_public_schools
+                }
+            }
+            activate_law = law_type:law_public_schools
+        }
+        active_law:lawgroup_education_system = {
+            add_amendment = {
+                type = amendment_usfp_second_revolution_americanist_education
+                sponsor = PREV.ig:ig_intelligentsia
+            }
+        }
         custom_tooltip = {
             text = second_revolution_institutions_will_support_americanism
             set_variable = usfp_second_revolution_supported_americanism
@@ -39,6 +53,20 @@ usfp_usa_socialism.1 = {
     #Choose Internationalism
     option = {
         name = usfp_usa_socialism.1.b
+        if = {
+            limit = {
+                NOT = {
+                    has_law_or_variant = law_type:law_public_schools
+                }
+            }
+            activate_law = law_type:law_public_schools
+        }
+        active_law:lawgroup_education_system = {
+            add_amendment = {
+                type = amendment_usfp_second_revolution_internationalist_education
+                sponsor = PREV.ig:ig_intelligentsia
+            }
+        }
         custom_tooltip = {
             text = second_revolution_institutions_will_support_internationalism
             set_variable = usfp_second_revolution_supported_antiamericanism
@@ -137,10 +165,6 @@ usfp_usa_socialism.3 = {
     option = {
         name = usfp_usa_socialism.3.a
         default_option = yes
-        highlighted_option = yes
-        trigger = {
-            has_law_or_variant = law_type:law_multicultural
-        }
         usfp_radicalize_whites_in_country = {
             RADICALS = large_radicals
         }

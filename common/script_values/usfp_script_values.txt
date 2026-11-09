@@ -1074,19 +1074,17 @@ usfp_second_revolution_get_americanism_target = {
 		}
 		desc = "supremacist_and_traditionalist_support"
 	}
-	# Constitutionalist and Liberal Movement
+	# White Movement
 	add = {
 		every_political_movement = {
 			limit = {
 				OR = {
-					is_political_movement_type = movement_liberal
-					is_political_movement_type = movement_usfp_american_constitution
-					is_political_movement_type = movement_usfp_progressive
+                    is_political_movement_type = movement_anti_communist
 				}
 			}
 			add = political_movement_support
 		}
-		desc = "liberal_progressive_constitutionalist_support"
+		desc = "anti_communist_support"
 	}
 	# Fascist and Neo-Confederate Movement
 	add = {
@@ -1207,6 +1205,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 			limit = {
 				OR = {
 					is_political_movement_type = movement_communist
+                    has_core_ideology = ideology:ideology_revolutionary_socialist_movement
 				}
 			}
 			add = political_movement_support
