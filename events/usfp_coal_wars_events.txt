@@ -161,8 +161,7 @@ usfp_coal_wars.3 = {
     trigger = {
         has_state_in_state_region = STATE_WEST_VIRGINIA
         s:STATE_WEST_VIRGINIA.region_state:USA = {
-            has_building = building_coal_mine
-            #unionization in progress
+            usfp_coal_wars_valid_state = yes
             has_variable = usfp_coal_wars_state_unionization
             var:usfp_coal_wars_state_unionization >= 25
         }
@@ -233,7 +232,7 @@ usfp_coal_wars.4 = {
         has_technology_researched = military_aviation
         has_technology_researched = automatic_machine_guns
         s:STATE_WEST_VIRGINIA.region_state:USA = {
-            has_building = building_coal_mine
+            usfp_coal_wars_valid_state = yes
             #unionization in progress
             has_variable = usfp_coal_wars_state_unionization
             var:usfp_coal_wars_state_unionization >= 75
@@ -379,7 +378,7 @@ usfp_coal_wars.5 = {
         has_state_in_state_region = STATE_COLORADO
         has_technology_researched = automatic_machine_guns
         s:STATE_COLORADO.region_state:USA = {
-            has_building = building_coal_mine
+            usfp_coal_wars_valid_state = yes
             #unionization in progress
             has_variable = usfp_coal_wars_state_unionization
             var:usfp_coal_wars_state_unionization >= 75
@@ -697,7 +696,7 @@ usfp_coal_wars.9 = {
     trigger = {
         has_state_in_state_region = STATE_KENTUCKY
         s:STATE_KENTUCKY.region_state:USA = {
-            has_building = building_coal_mine
+            usfp_coal_wars_valid_state = yes
             #Kentucky unionization in progress
             has_variable = usfp_coal_wars_state_unionization
             var:usfp_coal_wars_state_unionization >= 75

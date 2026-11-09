@@ -1037,3 +1037,15 @@ usfp_usa_has_state_in_montana_wyoming_california = {
         }
     }
 }
+
+usfp_coal_wars_valid_state = {
+    is_incorporated = yes
+    has_building = building_coal_mine
+    OR = {
+        any_scope_building = {
+            is_building_type = building_coal_mine
+            private_ownership_fraction >= 0.10
+        }
+        has_decree = decree_violent_suppression
+    }
+}
