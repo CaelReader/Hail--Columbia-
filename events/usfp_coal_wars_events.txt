@@ -99,6 +99,7 @@ usfp_coal_wars.2 = {
                 has_role_of_type = agitator
                 has_template = usfp_mother_jones
             }
+            is_template_used = usfp_mother_jones
         }
         empty_agitator_slots >= 1
         year >= 1894

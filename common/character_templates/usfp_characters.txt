@@ -2125,7 +2125,7 @@ usfp_mother_jones  = {
     religion = rel:catholic
     female = yes
     interest_group = ig_trade_unions
-    ideology = ideology_utopian #not particularly ideological
+    ideology = ideology_moderate #not particularly ideological
     traits = {
         firebrand
         wrathful

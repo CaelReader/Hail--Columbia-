@@ -42,13 +42,7 @@ usfp_je_coal_wars = {
                 has_institution = institution_workplace_safety
             }
         }
-        ig:ig_trade_unions ?= {
-            ig_counts_as_marginal = no
-            ig_clout >= 0.1
-        }
-        ig:ig_industrialists ?= {
-            ig_counts_as_marginal = no
-        }
+
     }
 
     possible = {
@@ -68,6 +62,9 @@ usfp_je_coal_wars = {
             }
         }
         ig:ig_trade_unions ?= {
+            ig_counts_as_marginal = no
+        }
+        ig:ig_industrialists ?= {
             ig_counts_as_marginal = no
         }
         NOR = {

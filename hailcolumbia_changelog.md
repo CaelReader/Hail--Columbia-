@@ -1028,7 +1028,7 @@ Fixed Oregon Treaty not removing claims properly
 	Coal Wars JE detailing the UMWA's struggle to organize the coalfields in the face of company violence, with 10 events
 	Second Revolution JE for a USA that adopts Council Republic, determining the fate of the american national identity
 	New Events: Homestead Strike, Seattle General Strike, LA Times Bombing, Business Plot
-	New Characters: John Reed, Louise Bryant
+	New Characters: John Reed, Louise Bryant, Mother Jones, John L Lewis, 
 ## 1.15 Compatibility
     American Armed Forces are Patriotic, not Militarist
     Anaconda is now a Copper Mines company
@@ -1039,7 +1039,7 @@ Fixed Oregon Treaty not removing claims properly
     The Constitutional Movement now folds into the Anti-Communist Movement
     Added law stances for new laws to ideologies
     Extraordinary Commission is unconstitutional, Military/Communal Bureaucrats are super unconstitutional
-    Updated new contextless canadian JE to work with the 
+    Updated new contextless canadian JE to work with the native tags
 ## Updates
 	Confiscate Slaver Lands now only takes 3 years to break up the plantations instead of 4
     Confiscate Slaver Lands is now unlocked by JE button rather than random event
