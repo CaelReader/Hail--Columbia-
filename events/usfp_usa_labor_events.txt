@@ -1059,16 +1059,17 @@ usfp_usa_labor.9 = {
 
 	trigger = {
 		has_state_in_state_region = STATE_CALIFORNIA
-		s:STATE_CALIFORNIA.region_state:USA = {
-			radical_fraction = {
-				value >= 0.10
-				strata = lower
-			}
-			loyalist_fraction = {
-				value <= 0.50
-				strata = lower
-			}
-		}
+        any_scope_state = {
+            state_region = s:STATE_CALIFORNIA
+            radical_fraction = {
+                value >= 0.10
+                strata = lower
+            }
+            loyalist_fraction = {
+                value <= 0.50
+                strata = lower
+            }
+        }
 		any_political_movement = {
 			is_political_movement_type = movement_labor
 			political_movement_radicalism >= 0.25
@@ -1193,16 +1194,17 @@ usfp_usa_labor.10 = {
 
 	trigger = {
 		has_state_in_state_region = STATE_WASHINGTON
-		s:STATE_WASHINGTON.region_state:USA = {
-			radical_fraction = {
-				value >= 0.10
-				strata = lower
-			}
-			loyalist_fraction = {
-				value <= 0.50
-				strata = lower
-			}
-		}
+        any_scope_state = {
+            state_region = s:STATE_WASHINGTON
+            radical_fraction = {
+                value >= 0.10
+                strata = lower
+            }
+            loyalist_fraction = {
+                value <= 0.50
+                strata = lower
+            }
+        }
 		any_political_movement = {
 			movement_is_socialist = yes
 		}

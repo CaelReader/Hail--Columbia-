@@ -779,9 +779,6 @@ movement_usfp_american_constitution = {
 	}
 	creation_trigger = {
 		has_journal_entry = je_usfp_american_constitution
-		NOT = {
-			has_variable = usfp_ended_constitutionalism
-		}
 	}
     on_created = {
         add_movement_enthusiasm_modifier = yes
@@ -797,7 +794,6 @@ movement_usfp_american_constitution = {
 				usfp_has_unconstitutional_law_enacted = no
 				usfp_has_super_unconstitutional_law_enacted = no
 			}
-			has_variable = usfp_ended_constitutionalism
             has_council_republic_law = yes
 		}
 	}

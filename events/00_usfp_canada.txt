@@ -29,7 +29,8 @@ can_aus.5 = {
 
 	option = {
 		name = can_aus.5.a
-		add_modifier = {
+		change_tag = CAN
+        add_modifier = {
 			name = can_unified_canada
 			days = normal_modifier_time
 		}

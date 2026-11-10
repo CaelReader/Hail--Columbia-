@@ -154,6 +154,7 @@ usfp_je_second_revolution = {
         }
         effect = {
             trigger_event = usfp_usa_socialism.2
+            usfp_second_revolution_cleanup = yes
         }
         event_outcome_effect_desc = {
             effect = {
@@ -200,6 +201,7 @@ usfp_je_second_revolution = {
             trigger_event = usfp_usa_socialism.3
             custom_tooltip = usfp_second_revolution_gain_all_american_primary_cultures
             set_variable = usfp_second_revolution_internationalism_embraced
+            usfp_second_revolution_cleanup = yes
         }
         event_outcome_effect_desc = {
             effect = {
@@ -218,6 +220,9 @@ usfp_je_second_revolution = {
             NOT = {
                 has_law_or_variant = law_type:law_council_republic
             }
+        }
+        effect = {
+            usfp_second_revolution_cleanup = yes
         }
     }
 

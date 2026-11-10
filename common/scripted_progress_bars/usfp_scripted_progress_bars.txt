@@ -158,10 +158,10 @@
 	name = "usfp_bleeding_kansas_progress_bar"
 	desc = "usfp_bleeding_kansas_progress_bar_free_kansas"
 	second_desc = "usfp_bleeding_kansas_progress_bar_slave_kansas"
-     progress_texture = "gfx/interface/progressbar/progressbar_blue.dds"
+     progress_texture = "gfx/interface/progressbar/progressbar_default.dds"
      background_texture = "gfx/interface/progressbar/progressbar_bad.dds"
-     glow_texture = "gfx/interface/progressbar/progressbar_blue_glow.dds"
-     glow_line_texture = "gfx/interface/progressbar/progressbar_blue_glow_line.dds"
+     glow_texture = "gfx/interface/progressbar/progressbar_default_glow.dds"
+     glow_line_texture = "gfx/interface/progressbar/progressbar_default_glow_line.dds"
      marker = yes
      left_icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_abolitionist.dds"
      right_icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_slaver.dds"
@@ -667,6 +667,7 @@ usfp_roaring_twenties_optimism_bar = {
 	name = "usfp_roaring_twenties_optimism_bar"
 	desc = "usfp_roaring_twenties_optimism_bar_desc"
 	default_green = yes
+    marker = no
 
 	start_value = 300
 	min_value = 0
@@ -907,11 +908,17 @@ usfp_second_revolution_bar = {
 	max_value = 100
 
 	monthly_progress = {
-        add = {
-            desc = "usfp_second_revolution_progress_desc"
-            value = owner.var:usfp_second_revolution_total_target
-            subtract = owner.var:usfp_second_revolution_current_var
-            multiply = 0.5 # How aggressively this will chase the pivot value. Higher = more aggressive.
+        if = {
+            limit = {
+                has_variable = usfp_second_revolution_total_target
+                has_variable = usfp_second_revolution_current_var
+            }
+            add = {
+                desc = "usfp_second_revolution_progress_desc"
+                value = owner.var:usfp_second_revolution_total_target
+                subtract = owner.var:usfp_second_revolution_current_var
+                multiply = 0.5 # How aggressively this will chase the pivot value. Higher = more aggressive.
+            }
         }
 	}
 }

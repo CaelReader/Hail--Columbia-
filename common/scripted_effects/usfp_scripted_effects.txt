@@ -2679,3 +2679,20 @@ usfp_coal_wars_cleanup = {
         }
     }
 }
+
+usfp_second_revolution_cleanup = {
+    if = {
+        limit = {
+            has_variable = usfp_second_revolution_americanism_target
+        }
+        remove_variable = usfp_second_revolution_americanism_target
+    }
+    if = {
+        limit = {
+            has_variable = usfp_second_revolution_internationalism_target
+        }
+        remove_variable = usfp_second_revolution_internationalism_target
+    }
+    remove_variable = usfp_second_revolution_current_var
+    remove_variable = usfp_second_revolution_total_target
+}
