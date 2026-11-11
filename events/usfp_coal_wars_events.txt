@@ -118,6 +118,10 @@ usfp_coal_wars.2 = {
                 has_template = usfp_mother_jones
             }
             save_scope_as = mother_jones_scope
+            add_career_length = {
+                role = agitator
+                years = 30
+            }
         }
         set_global_variable = mother_jones_spawned
     }
@@ -231,7 +235,10 @@ usfp_coal_wars.4 = {
         has_variable = usfp_coal_wars_had_matewan
         has_state_in_state_region = STATE_WEST_VIRGINIA
         has_technology_researched = military_aviation
-        has_technology_researched = automatic_machine_guns
+        OR = {
+            has_technology_researched = automatic_machine_guns
+            has_technology_researched = handcranked_machine_gun
+        }
         s:STATE_WEST_VIRGINIA.region_state:USA = {
             usfp_coal_wars_valid_state = yes
             #unionization in progress
@@ -476,7 +483,11 @@ usfp_coal_wars.6 = {
 
     trigger = {
         je:usfp_je_coal_wars ?= {
-            "scripted_bar_progress(usfp_coal_wars_union_leverage_bar)" >= 100
+            "scripted_bar_progress(usfp_coal_wars_union_leverage_bar)" >= 1000
+        }
+        NOR = {
+            is_enacting_law = law_type:law_corporatized_unions
+            has_law_or_variant = law_type:law_corporatized_unions
         }
     }
 
@@ -491,6 +502,13 @@ usfp_coal_wars.6 = {
         add_radicals = {
             value = small_radicals
             interest_group = ig:ig_trade_unions
+        }
+        every_in_list = {
+            variable = usfp_coal_wars_states
+            add_radicals_in_state = {
+                value = large_radicals
+                pop_type = laborers
+            }
         }
     }
 

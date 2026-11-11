@@ -15,6 +15,9 @@
     }
 
     possible = {
+        active_law:lawgroup_education_system = {
+            has_amendment = amendment_type:amendment_usfp_second_revolution_internationalist_education
+        }
         ruler = {
             OR = {
                 has_ideology = ideology:ideology_communist_leader
@@ -129,7 +132,7 @@ usfp_second_revolution_suppress_dixie_button = {
                 }
             }
         }
-        has_law_or_variant = law_type:law_secret_police
+        has_law_or_variant = law_type:law_extraordinary_commission
         OR = {
             has_law_or_variant = law_type:law_censorship
             has_law_or_variant = law_type:law_outlawed_dissent

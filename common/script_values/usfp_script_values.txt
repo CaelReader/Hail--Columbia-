@@ -1048,6 +1048,7 @@ usfp_second_revolution_get_americanism_target = {
 		add = {
 			value = var:manifest_destiny_var
             divide = 13
+            multiply = 10
 			desc = "manifest_destiny"
 		}
 	}
@@ -1111,6 +1112,7 @@ usfp_second_revolution_get_americanism_target = {
 			}
 			add = ig_clout
 		}
+        multiply = 1
 		desc = "igs_supporting_presidential_republic"
 	}
 	# American Laws
@@ -1187,7 +1189,7 @@ usfp_second_revolution_get_americanism_target = {
 }
 
 usfp_second_revolution_get_antiamericanism_target = {
-	# Anarchist Movement
+    # Anarchist Movement
 	add = {
 		every_political_movement = {
 			limit = {
@@ -1266,6 +1268,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 			}
 			add = ig_clout
 		}
+        multiply = 1
 		desc = "igs_supporting_council_republic_and_multiculturalism"
 	}
 	# Revolutionary Laws
@@ -1306,29 +1309,18 @@ usfp_second_revolution_get_antiamericanism_target = {
 			has_law_or_variant = law_type:law_no_colonial_affairs
 		}
 		add = {
-			value = 1
+			value = 0.5
 			desc = "law_no_colonial_affairs"
 		}
 	}
 	if = {
 		limit = {
 			has_law_or_variant = law_type:law_single_party_state
+            has_variable = usfp_second_revolution_supported_antiamericanism
 		}
 		add = {
 			value = 1
 			desc = "law_single_party_state"
-		}
-	}
-	if = {
-		limit = {
-			country_has_voting_franchise = no
-			NOT = {
-				has_law_or_variant = law_type:law_anarchy
-			}
-		}
-		add = {
-			value = 1
-			desc = "no_voting_franchise"
 		}
 	}
 	if = {
@@ -1349,7 +1341,7 @@ usfp_second_revolution_get_antiamericanism_target = {
 			has_variable = usfp_destroyed_american_monuments
 		}
 		add = {
-			value = 3
+			value = 1
 			desc = "destroyed_american_monuments"
 		}
 	}
@@ -1378,6 +1370,10 @@ usfp_second_revolution_get_antiamericanism_target = {
             min = 0
             desc = "second_revolution_colonial_affairs"
         }
+    }
+    subtract = {
+        value = country_turmoil
+        desc = "[concept_turmoil]"
     }
 	#Other Multicultural Council Republics
 	if = {
@@ -1495,9 +1491,21 @@ usfp_coal_wars_unionization_progress = {
 	#TUs clout
 	add = {
 		value = "ig_state_pol_strength_share(owner.ig:ig_trade_unions)"
-        multiply = 100
+        multiply = 10
 		desc = "trade_unions_clout"
 	}
+    #UMWA focus state
+    if = {
+        limit = {
+            owner.var:usfp_coal_wars_umwa_target = this
+        }
+        add = {
+            value = "ig_state_pol_strength_share(owner.ig:ig_trade_unions)"
+            multiply = 10
+            add = 1
+            desc = "united_mine_workers_focus_state"
+        }
+    }
 	#Labor radicals
 	if = {
         limit = {
@@ -1507,7 +1515,7 @@ usfp_coal_wars_unionization_progress = {
                 pop_radical_fraction > 0
             }
         }
-        value = {
+        add = {
             add = {
                 every_scope_pop = {
                     limit = {
@@ -1526,21 +1534,10 @@ usfp_coal_wars_unionization_progress = {
                     }
                 }
             }
-            multiply = 100
+            multiply = 10
             desc = "radical_coal_miners"
         }
-
     }
-	#UMWA focus state
-	if = {
-		limit = {
-			owner.var:usfp_coal_wars_umwa_target = this
-		}
-		add = {
-			value = 2
-			desc = "united_mine_workers_focus_state"
-		}
-	}
 	#Favorable Laws
 	if = {
 		limit = {
@@ -1553,6 +1550,17 @@ usfp_coal_wars_unionization_progress = {
 			desc = "law_right_to_associate"
 		}
 	}
+
+    #West Virginia difficulty
+    if = {
+        limit = {
+            state_region = s:STATE_WEST_VIRGINIA
+        }
+        divide = {
+            value = 2
+            desc = "west_virginia_rugged_terrain"
+        }
+    }
 
 	#Violent Suppression
 	if = {
@@ -1568,18 +1576,7 @@ usfp_coal_wars_unionization_progress = {
 	#Industrialists Clout
 	subtract = {
 		value = "ig_state_pol_strength_share(owner.ig:ig_industrialists)"
-        multiply = 50
+        multiply = 5
 		desc = "industrialists_clout"
-	}
-
-	#West Virginia difficulty
-	if = {
-		limit = {
-			state_region = s:STATE_WEST_VIRGINIA
-		}
-		subtract = {
-			value = 1
-			desc = "west_virginia_rugged_terrain"
-		}
 	}
 }

@@ -243,7 +243,7 @@ notification_usfp_cuba_filibusters_failed_tooltip: "#header $notification_usfp_c
  notification_philippine_tutelage_over_protectorate_desc: "The [SCOPE.sCountry('philippines_scope').GetName] have opted to become our [concept_protectorate]"
  notification_philippine_tutelage_over_protectorate_tooltip: "#header $notification_philippine_tutelage_over_protectorate_name$#!\n$notification_philippine_tutelage_over_protectorate_desc$"
 
- usfp_coal_wars_state_unionized_name: "Coalfields Unionized"
- usfp_coal_wars_state_unionized_desc: "The [GetBuildingType('building_coal_mine').GetName] in [SCOPE.sState('new_union_state').GetName] have gained #tooltippable;tooltip:[GetPlayer.GetTooltipTag],usfp_coal_wars_union_contract_tt $usfp_coal_wars_union_contract_tt$#!"
- usfp_coal_wars_state_unionized_tooltip: "#header $usfp_coal_wars_state_unionized_name$#!\n$usfp_coal_wars_state_unionized_desc$"
+ notification_usfp_coal_wars_state_unionized_name: "Coalfields Unionized"
+ notification_usfp_coal_wars_state_unionized_desc: "The [GetBuildingType('building_coal_mine').GetName] in [SCOPE.sState('new_union_state').GetName] have gained #tooltippable;tooltip:[GetPlayer.GetTooltipTag],usfp_coal_wars_union_contract_tt $usfp_coal_wars_union_contract_tt$#!"
+ notification_usfp_coal_wars_state_unionized_tooltip: "#header $notification_usfp_coal_wars_state_unionized_name$#!\n$notification_usfp_coal_wars_state_unionized_desc$"
 usfp_coal_wars_union_contract_tt: "[GetStaticModifier('usfp_coal_wars_union_established_modifier').GetName|v]\n[GetStaticModifier('usfp_coal_wars_union_established_modifier').GetDesc]"

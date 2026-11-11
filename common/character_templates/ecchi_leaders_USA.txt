@@ -1897,7 +1897,7 @@ ecchi_asa_singleton_character_template = {
     birth_date = 1809.4.17
     home_region = STATE_TENNESSEE
     is_agitator = yes
-    traits = { charismatic tactful direct }
+    traits = { charismatic tactful direct persistent }
     agitator_usage = {
         country_trigger = {
             OR = {
@@ -1916,7 +1916,7 @@ ecchi_asa_singleton_character_template = {
 			}
         }
         earliest_usage_date = 1874.1.1
-        latest_usage_date = 1900.2.17
+        latest_usage_date = 1887.1.1
         #guaranteed to spawn if possible
     }
 }

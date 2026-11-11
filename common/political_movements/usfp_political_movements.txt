@@ -16,6 +16,12 @@
 	on_created = {
 		add_movement_enthusiasm_modifier = yes
 	}
+    disband_trigger = {
+        has_council_republic_law = yes
+    }
+    on_disbanded = {
+        fold_movement_into_anti_communist_movement_effect = yes
+    }
 	character_support_trigger = {
 		OR = {
 			has_ideology = ideology:ideology_usfp_progressive
@@ -231,6 +237,12 @@ movement_usfp_eugenics = {
 	on_created = {
 		add_movement_enthusiasm_modifier = yes
 	}
+    disband_trigger = {
+        has_council_republic_law = yes
+    }
+    on_disbanded = {
+        fold_movement_into_anti_communist_movement_effect = yes
+    }
 	character_support_trigger = {
 		OR = {
 			has_ideology = ideology:ideology_usfp_social_darwinist_leader
@@ -261,11 +273,7 @@ movement_usfp_eugenics = {
 	}
 
 	pop_support_trigger = {
-		pop_acceptance >= 60
-	}
-
-	disband_trigger = {
-		always = no #should stick around until the end of the game
+		pop_acceptance >= acceptance_status_4
 	}
 
 	pop_support_weight = {
@@ -437,6 +445,12 @@ movement_usfp_neoconfederate = {
 	on_created = {
 		add_movement_enthusiasm_modifier = yes
 	}
+    disband_trigger = {
+        has_council_republic_law = yes
+    }
+    on_disbanded = {
+        fold_movement_into_anti_communist_movement_effect = yes
+    }
 	character_support_trigger = {
 		OR = {
 			has_ideology = ideology:ideology_ethno_nationalist

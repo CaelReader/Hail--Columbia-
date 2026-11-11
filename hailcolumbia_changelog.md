@@ -1040,6 +1040,7 @@ Fixed Oregon Treaty not removing claims properly
     Added law stances for new laws to ideologies
     Extraordinary Commission is unconstitutional, Military/Communal Bureaucrats are super unconstitutional
     Updated new contextless canadian JE to work with the native tags
+    The American White Movement gets a special core ideology
 ## Updates
 	Confiscate Slaver Lands now only takes 3 years to break up the plantations instead of 4
     Confiscate Slaver Lands is now unlocked by JE button rather than random event

@@ -967,6 +967,19 @@ usfp_coal_wars_union_leverage_bar = {
             multiply = 10
 			desc = "labor_movement_support"
 		}
+        if = {
+            limit = {
+                any_in_list = {
+                    variable = usfp_coal_wars_states
+                    count = all
+                    has_variable = usfp_coal_wars_state_unionized
+                }
+            }
+            multiply = {
+                value = 2
+                desc = "usfp_coal_wars_all_states_unionized"
+            }
+        }
 		#Price of Coal
 		add = {
 			value = root.market.mg:coal.market_goods_pricier

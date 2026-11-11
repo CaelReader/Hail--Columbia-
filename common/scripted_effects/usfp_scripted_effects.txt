@@ -2650,6 +2650,13 @@ usfp_coal_wars_reset_unionization_progress = {
 			name = usfp_coal_wars_state_unionization
 			value = 0
 		}
+        remove_variable = usfp_coal_wars_state_unionized
+        every_scope_building = {
+            limit = {
+                has_modifier = usfp_coal_wars_union_established_modifier
+            }
+            remove_modifier = usfp_coal_wars_union_established_modifier
+        }
 	}
 }
 
@@ -2670,7 +2677,6 @@ usfp_coal_wars_cleanup = {
             remove_variable = usfp_coal_wars_state_unionized
         }
         clear_variable_list = usfp_coal_wars_states
-        clear_variable_list = usfp_coal_wars_unionized_states
         every_scope_building = {
             limit = {
                 has_modifier = usfp_coal_wars_union_established_modifier

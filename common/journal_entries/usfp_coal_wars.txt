@@ -176,18 +176,7 @@ usfp_je_coal_wars = {
                     limit = {
                         var:usfp_coal_wars_state_unionization >= 100
                         this = root.var:usfp_coal_wars_umwa_target
-                        NOT = {
-                            is_target_in_variable_list = {
-                                name = usfp_coal_wars_unionized_states
-                                target = this
-                            }
-                        }
-                    }
-                    root = {
-                        add_to_variable_list = {
-                            name = usfp_coal_wars_unionized_states
-                            target = prev
-                        }
+                        NOT = { has_variable = usfp_coal_wars_state_unionized }
                     }
                     random_scope_building = {
                         limit = {
@@ -198,19 +187,21 @@ usfp_je_coal_wars = {
                         }
                     }
                     set_variable = usfp_coal_wars_state_unionized
-                    ordered_in_list = {
-                        variable = usfp_coal_wars_states
-                        order_by = var:usfp_coal_wars_state_unionization
-                        position = 0
-                        limit = {
-                            NOT = {
-                                has_variable = usfp_coal_wars_state_unionized
+                    root = {
+                        ordered_in_list = {
+                            variable = usfp_coal_wars_states
+                            limit = {
+                                NOT = {
+                                    has_variable = usfp_coal_wars_state_unionized
+                                }
                             }
-                        }
-                        root = {
-                            set_variable = {
-                                name = usfp_coal_wars_umwa_target
-                                value = prev
+                            order_by = var:usfp_coal_wars_state_unionization
+                            position = 0
+                            root = {
+                                set_variable = {
+                                    name = usfp_coal_wars_umwa_target
+                                    value = prev
+                                }
                             }
                         }
                     }
@@ -232,6 +223,40 @@ usfp_je_coal_wars = {
         events = {
             usfp_coal_wars.6
             usfp_coal_wars.10
+        }
+    }
+    on_yearly_pulse = {
+        effect = {
+            #in case the UMWA gets stuck
+            if = {
+                limit = {
+                    has_variable = usfp_coal_wars_umwa_target
+                    any_scope_state = {
+                        var:usfp_coal_wars_state_unionization < 95
+                        this = root.var:usfp_coal_wars_umwa_target
+                        usfp_coal_wars_unionization_progress < 0
+                    }
+                }
+                root = {
+                    ordered_in_list = {
+                        variable = usfp_coal_wars_states
+                        limit = {
+                            NOT = {
+                                has_variable = usfp_coal_wars_state_unionized
+                                this = root.var:usfp_coal_wars_umwa_target
+                            }
+                        }
+                        order_by = var:usfp_coal_wars_state_unionization
+                        position = 1
+                        root = {
+                            set_variable = {
+                                name = usfp_coal_wars_umwa_target
+                                value = prev
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -268,6 +293,9 @@ usfp_je_coal_wars = {
     map_color_second = {
         if = {
             limit = {
+                owner = {
+                    has_variable = usfp_coal_wars_umwa_target
+                }
                 this = owner.var:usfp_coal_wars_umwa_target
             }
             value = "yellow"
@@ -378,6 +406,15 @@ usfp_je_coal_wars = {
                         name = usfp_coal_wars_union_leverage_bar
                         value <= 0
                     }
+                }
+            }
+            NOR = {
+                is_enacting_law = law_type:law_worker_protections
+                is_enacting_law = law_type:law_regulatory_bodies
+                is_enacting_law = law_type:law_corporatized_unions
+                custom_tooltip = {
+                    text = currently_expanding_workplace_safety
+                    expanding_institution = institution_workplace_safety
                 }
             }
         }

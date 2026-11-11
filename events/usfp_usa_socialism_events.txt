@@ -73,6 +73,28 @@ usfp_usa_socialism.1 = {
         }
     }
 
+    #handle ideologies
+    after = {
+        every_interest_group = {
+            limit = {
+                has_ideology = ideology:ideology_american_school
+            }
+            remove_ideology = ideology_american_school
+        }
+        every_interest_group = {
+            limit = {
+                has_ideology = ideology:ideology_empire_of_liberty
+            }
+            remove_ideology = ideology_empire_of_liberty
+        }
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = movement_anti_communist
+            }
+            set_core_ideology = ideology_usfp_american_constitution_anti_communist_movement
+        }
+    }
+
 }
 
 # Second Revolution: American Socialism Conclusion
@@ -215,6 +237,15 @@ usfp_usa_socialism.3 = {
                 }
             }
             add_primary_culture = cu:vietnamese
+        }
+    }
+
+    after = {
+        random_political_movement = {
+            limit = {
+                has_core_ideology = ideology:ideology_usfp_american_constitution_anti_communist_movement
+            }
+            set_core_ideology = ideology_anti_communist_movement
         }
     }
 

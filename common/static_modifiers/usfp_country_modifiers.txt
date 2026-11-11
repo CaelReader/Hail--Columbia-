@@ -743,6 +743,7 @@ usfp_naacp_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_newspaper_positive.dds
 	country_qualification_growth_second_rate_citizen_mult = 0.10
 	country_qualification_growth_open_prejudice_mult = 0.10
+    country_qualification_growth_cultural_erasure_mult = 0.10
 }
 
 usfp_csa_civil_war_no_colonies_modifier = {
