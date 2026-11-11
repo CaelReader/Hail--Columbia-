@@ -1049,5 +1049,5 @@ Fixed Oregon Treaty not removing claims properly
     Added vanilla Suffragists events to the Progressive Era JE
 ## Fixes
     Claim Canada button now works even against non-confederated canadian tags
-    
+    Fixed some script errors in events
 
