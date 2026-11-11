@@ -1028,7 +1028,7 @@ Fixed Oregon Treaty not removing claims properly
 	Coal Wars JE detailing the UMWA's struggle to organize the coalfields in the face of company violence, with 10 events
 	Second Revolution JE for a USA that adopts Council Republic, determining the fate of the american national identity
 	New Events: Homestead Strike, Seattle General Strike, LA Times Bombing, Business Plot
-	New Characters: John Reed, Louise Bryant, Mother Jones, John L Lewis, 
+	New Characters: John Reed, Louise Bryant, Mother Jones, John L Lewis, Daniel De Leon, Victoria Woodhull, Benjamin Tucker, Lucy Parsons, Ed Boyce
 ## 1.15 Compatibility
     American Armed Forces are Patriotic, not Militarist
     Anaconda is now a Copper Mines company
