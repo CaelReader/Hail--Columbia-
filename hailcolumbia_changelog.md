@@ -1041,6 +1041,7 @@ Fixed Oregon Treaty not removing claims properly
     Extraordinary Commission is unconstitutional, Military/Communal Bureaucrats are super unconstitutional
     Updated new contextless canadian JE to work with the native tags
     The American White Movement gets a special core ideology
+    Now soft-requires No Assimilation Across Heritage Groups, preventing Afro-American pops in the north from vanishing
 ## Updates
 	Confiscate Slaver Lands now only takes 3 years to break up the plantations instead of 4
     Confiscate Slaver Lands is now unlocked by JE button rather than random event
