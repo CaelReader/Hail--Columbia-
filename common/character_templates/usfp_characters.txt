@@ -2351,6 +2351,70 @@ usfp_ed_boyce  = {
     }
 }
 
+# #Carlo Tresca, IWW anarchist
+# usfp_carlo_tresca  = {
+#     first_name = Carlo
+#     last_name = Tresca
+#     # dna =
+#     home_region = STATE_ABRUZZO
+#     historical = yes
+#     birth_date = 1879.3.9
+#     culture = cu:south_italian
+#     religion = rel:atheist
+#     female = no
+#     interest_group = ig_trade_unions
+#     ideology = ideology_anarchist
+#     traits = {
+#         literary
+#         direct
+#         charismatic
+#         inspirational_orator
+#     }
+#     agitator_usage = {
+#         country_trigger = {
+#             c:USA ?= this
+#         }
+#         interest_group_trigger = {
+#             is_interest_group_type = ig_trade_unions
+#         }
+#         earliest_usage_date = 1912.1.1
+#         latest_usage_date = 1943.1.1
+#         chance = 50
+#     }
+# }
+#
+# #Alexander Berkman, Russian-American Anarchist
+# usfp_alexander_berkman  = {
+#     first_name = Alexander
+#     last_name = Berkman
+#     # dna =
+#     home_region = STATE_VILNIUS
+#     historical = yes
+#     birth_date = 1870.11.21
+#     culture = cu:ashkenazi
+#     religion = rel:atheist
+#     female = no
+#     interest_group = ig_intelligentsia
+#     ideology = ideology_anarchist
+#     traits = {
+#         literary
+#         erudite
+#         direct
+#         brave
+#     }
+#     agitator_usage = {
+#         country_trigger = {
+#             c:USA ?= this
+#         }
+#         interest_group_trigger = {
+#             is_interest_group_type = ig_intelligentsia
+#         }
+#         earliest_usage_date = 1889.1.1
+#         latest_usage_date = 1936.1.1
+#         chance = 50
+#     }
+# }
+
 #despite everything, it's still you
 usfp_sean_vas_terra  = {
     first_name = Sean_2

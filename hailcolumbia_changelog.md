@@ -1023,7 +1023,7 @@ Updated Transcontinental route triggers to allow you to plan a route that you ha
 Fixed Mexican Homelands not being added after completing the Securing the North JE
 Fixed Oregon Treaty not removing claims properly
 
-#10.0 "Debs"
+# 10.0 "Debs"
 ## New Content
 	Coal Wars JE detailing the UMWA's struggle to organize the coalfields in the face of company violence, with 10 events
 	Second Revolution JE for a USA that adopts Council Republic, determining the fate of the american national identity
