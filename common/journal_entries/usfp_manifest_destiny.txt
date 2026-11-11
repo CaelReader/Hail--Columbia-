@@ -3,6 +3,10 @@
 usfp_manifest_destiny_main = {
 	icon = gfx/interface/icons/event_icons/hail_columbia_icon.dds
 	group = je_group_usa_manifest_destiny
+    dlc = dlc_usfp
+    activation_description = { always = yes }
+    highlight = yes
+
 	is_shown_in_lobby = {
 		c:USA = THIS
 	}
@@ -16,12 +20,14 @@ usfp_manifest_destiny_main = {
 		has_technology_researched = nationalism
 	}
 
-	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
+    scaling_modifiers_while_active = {
+        modifier = usfp_manifest_destiny_modifier
+        value = {
+            value = root.var:manifest_destiny_var
         }
+    }
+
+	immediate = {
 		set_variable = {
 			name = manifest_destiny_var
 			value = 0
@@ -50,6 +56,12 @@ usfp_manifest_destiny_main = {
 
 	progressbar = yes
 
+    widget = {
+        gui = "gui/journal_entry_widgets/usfp_je_widgets.gui"
+        name = "usfp_widget_je_manifest_destiny_active_je_list"
+        container = "custom_widget_container_3"
+    }
+
 	scripted_button = usfp_western_purchase_button
     # scripted_button = usfp_force_mexican_claims_button
 	scripted_button = usfp_promote_manifest_destiny_button
@@ -60,55 +72,63 @@ usfp_manifest_destiny_main = {
 	scripted_button = usfp_secure_trail_button
     scripted_button = usfp_ai_mexican_cession_button
 
+    outcome = {
+        header = je_usfp_manifest_destiny_decay_complete_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
+        trigger = {
+            year >= 1900
+            is_diplomatic_play_committed_participant = no
+            custom_tooltip = {
+                text = 0_progress
+                root.var:manifest_destiny_var <= 0
+            }
+        }
+        effect = {
 
-	complete = {
-		trigger_if = {
-			limit = {
-				has_variable = manifest_destiny_decaying
-			}
-			is_diplomatic_play_committed_participant = no
-			custom_tooltip = {
-				text = 0_progress
-				root.var:manifest_destiny_var <= 0
-			}
-		}
-		trigger_else = {
-			hidden_trigger = {
-				always = no
-			}
-		}
-	}
+        }
+    }
 
-	fail = {
-		OR = {
-			country_rank < rank_value:major_power
-			is_subject = yes
-		}
-		is_at_war = no
-		is_diplomatic_play_committed_participant = no
-	}
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                country_rank < rank_value:major_power
+                is_subject = yes
+            }
+            is_at_war = no
+            is_diplomatic_play_committed_participant = no
+        }
+        effect = {
+            trigger_event = {
+                id = usfp_manifest_destiny.23
+                popup = yes
+            }
+        }
+        event_outcome_effect_desc = {
+            effect = {
+                add_radicals = {
+                    value = very_large_radicals
+                }
+                usfp_remove_manifest_destiny_claims_effect = yes
+            }
+        }
+    }
 
-	on_fail = {
-		trigger_event = {
-			id = usfp_manifest_destiny.23
-			popup = yes
-		}
-	}
-
-	event_outcome_failed_effect_desc = {
-		effect = {
-			add_radicals = {
-				value = very_large_radicals
-			}
-			usfp_remove_manifest_destiny_claims_effect = yes
-		}
-	}
-
-	invalid = {
-		NOT = {
-			root = c:USA
-		}
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                root = c:USA
+            }
+        }
+    }
 
 	should_be_pinned_by_default_uninvolved_or_context = yes
 
@@ -564,7 +584,7 @@ usfp_manifest_destiny_main = {
 			usfp_manifest_destiny.10 #California Gold Rush
 			usfp_manifest_destiny.13 #new homelands
 			usfp_manifest_destiny.18 #Monroe violation
-			usfp_manifest_destiny.24 #Revolutionary Destiny
+			# usfp_manifest_destiny.24 #Revolutionary Destiny
 			usfp_manifest_destiny.25 #Monarchy Destiny
 			usfp_indian_postremoval.4 #Sequoyah Constitution
 			usfp_manifest_destiny.29 #Manifest Destiny decay begins
@@ -585,7 +605,7 @@ usfp_manifest_destiny_main = {
 		value = 13
 	}
 
-	weight = 500
+	weight = 10000
 
 	can_revolution_inherit = yes
 
@@ -617,39 +637,42 @@ usfp_manifest_destiny_main = {
 
 #Goal-type JE that explains westward expansion mechanic
 usfp_je_westward_expansion = {
-
+    dlc = dlc_usfp
+    activation_description = { always = yes }
 	icon = gfx/interface/icons/event_icons/event_map.dds
 
 	group = je_group_usa_manifest_destiny
-	
-	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
+
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            has_law_or_variant = law_type:law_no_colonial_affairs
+        }
+    }
+
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
+        trigger = {
+            any_state_in_usfp_american_west = {
+                count = all
+                owner = root
             }
         }
-	}
-
-	invalid = {
-		has_law_or_variant = law_type:law_no_colonial_affairs
-	}
-
-	complete = {
-		any_state_in_usfp_american_west = {
-			count = all
-			owner = root
-		}
-	}
-
-	on_complete = {
-		add_modifier = {
-			name = usfp_sea_to_shining_sea_modifier
-			years = 10
-		}
-		custom_tooltip = {
-			text = usfp_je_westward_expansion_complete
-		}
-	}
+        effect = {
+            add_modifier = {
+                name = usfp_sea_to_shining_sea_modifier
+                years = 10
+            }
+            custom_tooltip = {
+                text = usfp_je_westward_expansion_complete
+            }
+        }
+    }
 
 	should_be_pinned_by_default_uninvolved_or_context = no
 
@@ -663,6 +686,8 @@ usfp_je_western_border = {
 	icon = gfx/interface/icons/event_icons/event_map.dds
 
 	group = je_group_usa_manifest_destiny
+    dlc = dlc_usfp
+    activation_description = { always = yes }
 
 	modifiers_while_active = {
 		usfp_settler_westward_pressure
@@ -685,11 +710,6 @@ usfp_je_western_border = {
 	}
 
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
 		root = {
 			save_scope_as = usa_scope
 		}
@@ -705,40 +725,53 @@ usfp_je_western_border = {
 			1000 = usfp_indian_althist.5 #Comanche become centralized
 		}
 	}
-	
 
-	fail = {
-		OR = {
-			NOT = {
-				has_law_or_variant = law_type:law_no_colonial_affairs
-			}
-			OR = {
-				has_state_in_state_region = STATE_SOUTH_DAKOTA
-				has_state_in_state_region = STATE_NORTH_DAKOTA
-				has_state_in_state_region = STATE_MONTANA
-				has_state_in_state_region = STATE_UTAH
-				has_state_in_state_region = STATE_WYOMING
-			}
-		}
-	}
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                NOT = {
+                    has_law_or_variant = law_type:law_no_colonial_affairs
+                }
+                OR = {
+                    has_state_in_state_region = STATE_SOUTH_DAKOTA
+                    has_state_in_state_region = STATE_NORTH_DAKOTA
+                    has_state_in_state_region = STATE_MONTANA
+                    has_state_in_state_region = STATE_UTAH
+                    has_state_in_state_region = STATE_WYOMING
+                }
+            }
+        }
+        effect = {
 
-	invalid = {
-		NOT = {
-			sr:region_great_plains = {
-				any_state = {
-					owner = {
-						is_country_type = decentralized
-					}
-				}
-			}
-		}
-	}
+        }
+    }
+
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                sr:region_great_plains = {
+                    any_state = {
+                        owner = {
+                            is_country_type = decentralized
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 #Indian Wars JE
 usfp_je_indian_wars = {
 	icon = gfx/interface/icons/event_icons/event_military.dds
-
+    dlc = dlc_usfp
+    activation_description = { always = yes }
 	group = je_group_usa_manifest_destiny
 
 	scripted_button = usfp_provoke_lakota_war_button
@@ -774,73 +807,78 @@ usfp_je_indian_wars = {
         }
 	}
 
-	invalid = {
-		has_law_or_variant = law_type:law_no_colonial_affairs
-	}
 
-	complete = {
-		any_state_in_usfp_central_plains = {
-			count = all
-			owner = {
-				NOT = {
-					is_country_type = decentralized
-				}
-			}
-		}
-	}
-
-	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
+    immediate = {
+        trigger_event = usfp_indian_wars.13 #Peace Policy or War Policy
+        hidden_effect = {
+            c:LKT ?= {
+                create_character = {
+                    template = ecchi_lkt_sitting_bull_character_template
+                    ruler = yes
+                }
+                create_character = {
+                    template = ecchi_lkt_crazy_horse_character_template
+                    is_general = yes
+                }
+            }
+            c:usfp_MDC ?= {
+                create_character = {
+                    template = usfp_kintpuash
+                    ruler = yes
+                }
+            }
+            c:NZP ?= {
+                create_character = {
+                    template = ecchi_nzp_chief_joseph_character_template
+                    heir = yes
+                }
             }
         }
-		trigger_event = usfp_indian_wars.13 #Peace Policy or War Policy
-		hidden_effect = {
-			c:LKT ?= {
-				create_character = {
-					template = ecchi_lkt_sitting_bull_character_template
-					ruler = yes
-				}
-				create_character = {
-					template = ecchi_lkt_crazy_horse_character_template
-					is_general = yes
-				}
-			}
-			c:usfp_MDC ?= {
-				create_character = {
-					template = usfp_kintpuash
-					ruler = yes
-				}
-			}
-			c:NZP ?= {
-				create_character = {
-					template = ecchi_nzp_chief_joseph_character_template
-					heir = yes
-				}
-			}
-		}
-		set_variable = {
-			name = bison_hunting
-			value = 0
-		}
-	}
+        set_variable = {
+            name = bison_hunting
+            value = 0
+        }
+    }
 
-	on_complete = {
-		trigger_event = usfp_indian_wars.12 #Allotment
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            has_law_or_variant = law_type:law_no_colonial_affairs
+        }
+    }
 
-	event_outcome_completed_effect_desc = {
-		effect = {
-			cu:usfp_american_indian = {
-				save_temporary_scope_as = american_indian_culture
-			}
-			usfp_enable_american_indian_culture = yes
-			s:STATE_OKLAHOMA = {
-				add_claim = root
-			}
-		}
-	}
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
+        trigger = {
+            any_state_in_usfp_central_plains = {
+                count = all
+                owner = {
+                    NOT = {
+                        is_country_type = decentralized
+                    }
+                }
+            }
+        }
+        effect = {
+            trigger_event = usfp_indian_wars.12
+        }
+        event_outcome_effect_desc = {
+            effect = {
+                cu:usfp_american_indian = {
+                    save_temporary_scope_as = american_indian_culture
+                }
+                usfp_enable_american_indian_culture = yes
+                s:STATE_OKLAHOMA = {
+                    add_claim = root
+                }
+            }
+        }
+    }
 
 	on_monthly_pulse = {
 		random_events = {
@@ -882,16 +920,9 @@ usfp_je_indian_wars = {
 usfp_je_american_superculture_je = {
 
     icon = gfx/interface/icons/event_icons/waving_flag_usa.dds
-
+    dlc = dlc_usfp
+    activation_description = { always = yes }
     group = je_group_usa_manifest_destiny
-
-    immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
-    }
 
     is_shown_when_inactive = {
         c:USA ?= root
@@ -917,97 +948,112 @@ usfp_je_american_superculture_je = {
         }
     }
 
-    complete = {
-        usfp_manifest_destiny_greater_or_equal_trigger = { value = 13 }
-        radical_fraction = {
-            value < 0.15
-            culture = cu:dixie
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            usfp_manifest_destiny_greater_or_equal_trigger = { value = 13 }
+            radical_fraction = {
+                value < 0.15
+                culture = cu:dixie
+            }
+            radical_fraction = {
+                value < 0.2
+                culture = cu:yankee
+            }
+            radical_fraction = {
+                value < 0.3
+                culture = cu:anglo_canadian
+            }
+            loyalist_fraction = {
+                value > 0.3
+                culture = cu:yankee
+            }
+            loyalist_fraction = {
+                value > 0.3
+                culture = cu:dixie
+            }
+            loyalist_fraction = {
+                value > 0.3
+                culture = cu:anglo_canadian
+            }
+            is_at_war = no
+            is_diplomatic_play_committed_participant = no
+            custom_tooltip = {
+                text = frontier_closed
+                has_global_variable = american_frontier_closed
+            }
         }
-        radical_fraction = {
-            value < 0.2
-            culture = cu:yankee
-        }
-        radical_fraction = {
-            value < 0.3
-            culture = cu:anglo_canadian
-        }
-        loyalist_fraction = {
-            value > 0.3
-            culture = cu:yankee
-        }
-        loyalist_fraction = {
-            value > 0.3
-            culture = cu:dixie
-        }
-        loyalist_fraction = {
-            value > 0.3
-            culture = cu:anglo_canadian
-        }
-        is_at_war = no
-        is_diplomatic_play_committed_participant = no
-        custom_tooltip = {
-            text = frontier_closed
-            has_global_variable = american_frontier_closed
-        }
-    }
-
-    on_complete = {
-        trigger_event = usfp_manifest_destiny.19
-    }
-
-    event_outcome_completed_effect_desc = {
-        header = usfp_manifest_destiny.19.a
         effect = {
-            execute_event_option = {
-                event = usfp_manifest_destiny.19
-                option = 0
+            trigger_event = usfp_manifest_destiny.19
+        }
+
+
+        event_outcome_effect_desc = {
+            header = usfp_manifest_destiny.19.a
+            effect = {
+                execute_event_option = {
+                    event = usfp_manifest_destiny.19
+                    option = 0
+                }
+            }
+        }
+
+        event_outcome_effect_desc = {
+            header = usfp_manifest_destiny.19.b
+            effect = {
+                execute_event_option = {
+                    event = usfp_manifest_destiny.19
+                    option = 1
+                }
+            }
+        }
+
+        event_outcome_effect_desc = {
+            header = usfp_manifest_destiny.19.c
+            effect = {
+                execute_event_option = {
+                    event = usfp_manifest_destiny.19
+                    option = 2
+                }
+            }
+        }
+
+        event_outcome_effect_desc = {
+            header = usfp_manifest_destiny.19.g
+            effect = {
+                execute_event_option = {
+                    event = usfp_manifest_destiny.19
+                    option = 3
+                }
+            }
+        }
+
+        event_outcome_effect_desc = {
+            header = usfp_manifest_destiny.19.h
+            effect = {
+                execute_event_option = {
+                    event = usfp_manifest_destiny.19
+                    option = 4
+                }
             }
         }
     }
 
-    event_outcome_completed_effect_desc = {
-        header = usfp_manifest_destiny.19.b
-        effect = {
-            execute_event_option = {
-                event = usfp_manifest_destiny.19
-                option = 1
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                has_journal_entry = usfp_manifest_destiny_main
             }
         }
-    }
-
-    event_outcome_completed_effect_desc = {
-        header = usfp_manifest_destiny.19.c
         effect = {
-            execute_event_option = {
-                event = usfp_manifest_destiny.19
-                option = 2
-            }
-        }
-    }
 
-    event_outcome_completed_effect_desc = {
-        header = usfp_manifest_destiny.19.g
-        effect = {
-            execute_event_option = {
-                event = usfp_manifest_destiny.19
-                option = 3
-            }
-        }
-    }
-
-    event_outcome_completed_effect_desc = {
-        header = usfp_manifest_destiny.19.h
-        effect = {
-            execute_event_option = {
-                event = usfp_manifest_destiny.19
-                option = 4
-            }
-        }
-    }
-
-    fail = {
-        NOT = {
-            has_journal_entry = usfp_manifest_destiny_main
         }
     }
 
@@ -1020,17 +1066,13 @@ usfp_je_american_superculture_je = {
 
 #Mexican Occupation JE
 usfp_je_mexican_occupation = {
-
+    dlc = dlc_usfp
+    activation_description = { always = yes }
     icon = gfx/interface/icons/event_icons/waving_flag_mexico.dds
 
     group = je_group_usa_manifest_destiny
 
     immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
         if = {
             limit = {
                 NOT = {
@@ -1066,44 +1108,49 @@ usfp_je_mexican_occupation = {
         }
     }
 
-    complete = {
-        custom_tooltip = {
-            text = usfp_mexican_integration_complete_tt
-            scope:journal_entry = {
-                "scripted_bar_progress(usfp_mexican_integration_progress_bar)" >= 50000
-            }
-        }
-    }
-
-
-    on_complete = {
-        add_primary_culture = cu:mexican
-        if = {
-            limit = {
-                has_journal_entry = usfp_manifest_destiny_main
-            }
-            cu:mexican = {
-                add_tradition_trait = tradition_usfp_manifest_destiny
-            }
-        }
-
-    }
-
-
-    invalid = {
-        OR = {
-            NOT = {
-                any_scope_state = {
-                    is_in_geographic_region = geographic_region_mexico_old
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            custom_tooltip = {
+                text = usfp_mexican_integration_complete_tt
+                scope:journal_entry = {
+                    "scripted_bar_progress(usfp_mexican_integration_progress_bar)" >= 50000
                 }
             }
-            culture_percent_country = {
-                target = cu:mexican
-                value <= 0.02
+        }
+        effect = {
+            add_primary_culture = cu:mexican
+            if = {
+                limit = {
+                    has_journal_entry = usfp_manifest_destiny_main
+                }
+                cu:mexican = {
+                    add_tradition_trait = tradition_usfp_manifest_destiny
+                }
             }
         }
     }
 
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                NOT = {
+                    any_scope_state = {
+                        is_in_geographic_region = geographic_region_mexico_old
+                    }
+                }
+                culture_percent_country = {
+                    target = cu:mexican
+                    value <= 0.02
+                }
+            }
+        }
+    }
     should_be_pinned_by_default_uninvolved_or_context = no
 
     weight = 10
@@ -1113,7 +1160,7 @@ usfp_je_mexican_occupation = {
 
 REPLACE_OR_CREATE:je_trans_continental_railway = {
 	icon = "gfx/interface/icons/invention_icons/railways.dds"
-
+    activation_description = { always = yes }
 	group = je_group_usa_manifest_destiny
 
 	is_shown_when_inactive = {
@@ -1152,107 +1199,113 @@ REPLACE_OR_CREATE:je_trans_continental_railway = {
 		trigger_event = { id = major_railways.2 }
 	}
 
-	complete = {
-		hidden_trigger = {
-			OR = {
-				has_variable = transcontinental_chose_northern_route
-				has_variable = transcontinental_chose_central_route
-				has_variable = transcontinental_chose_southern_route
-			}
-		}
-		trigger_if = {
-			limit = {
-				has_variable = transcontinental_chose_northern_route
-			}
-			#Northern Route
-			AND = {
-				any_scope_state = {
-					state_region = s:STATE_WASHINGTON
-					has_building = building_railway
-				}
-				any_scope_state = {
-					state_region = s:STATE_IDAHO
-					has_building = building_railway
-				}
-				any_scope_state = {
-					state_region = s:STATE_MONTANA
-					has_building = building_railway
-				}
-				any_scope_state = {
-					state_region = s:STATE_NORTH_DAKOTA
-					has_building = building_railway
-				}
-				any_scope_state = {
-					state_region = s:STATE_MINNESOTA
-					has_building = building_railway
-				}
-			}
-		} trigger_else_if = {
-			limit = {
-				has_variable = transcontinental_chose_central_route
-			}
-			#Central Route
-			AND = {
-				any_scope_state = {
-					state_region = s:STATE_CALIFORNIA
-					has_building = building_railway
-				}
-				any_scope_state = {
-					state_region = s:STATE_NEVADA
-					has_building = building_railway
-				}
-				OR = {
-					any_scope_state = {
-						state_region = s:STATE_UTAH
-						has_building = building_railway
-					}
-					#allows Deseret subject
-					any_subject_or_below = {
-						any_scope_state = {
-							state_region = s:STATE_UTAH
-							has_building = building_railway
-						}
-					}
-				}
-				any_scope_state = {
-					state_region = s:STATE_WYOMING
-					has_building = building_railway
-				}
-				any_scope_state = {
-					state_region = s:STATE_NEBRASKA
-					has_building = building_railway
-				}
-			}
-		} trigger_else_if = {
-			limit = {
-				has_variable = transcontinental_chose_southern_route
-			}
-			#Southern Route
-			AND = {
-				any_scope_state = {
-					state_region = s:STATE_CALIFORNIA
-					has_building = building_railway
-				}
-				any_scope_state = {
-					state_region = s:STATE_ARIZONA
-					has_building = building_railway
-				}
-				any_scope_state = {
-					state_region = s:STATE_NEW_MEXICO
-					has_building = building_railway
-				}
-				any_scope_state = {
-					state_region = s:STATE_TEXAS
-					has_building = building_railway
-				}
-			}
-		}
-	}
-
-	on_complete = {
-		set_global_variable = trans_continental_done
-		trigger_event = { id = usfp_manifest_destiny.9 }
-	}
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
+        trigger = {
+            hidden_trigger = {
+                OR = {
+                    has_variable = transcontinental_chose_northern_route
+                    has_variable = transcontinental_chose_central_route
+                    has_variable = transcontinental_chose_southern_route
+                }
+            }
+            trigger_if = {
+                limit = {
+                    has_variable = transcontinental_chose_northern_route
+                }
+                #Northern Route
+                AND = {
+                    any_scope_state = {
+                        state_region = s:STATE_WASHINGTON
+                        has_building = building_railway
+                    }
+                    any_scope_state = {
+                        state_region = s:STATE_IDAHO
+                        has_building = building_railway
+                    }
+                    any_scope_state = {
+                        state_region = s:STATE_MONTANA
+                        has_building = building_railway
+                    }
+                    any_scope_state = {
+                        state_region = s:STATE_NORTH_DAKOTA
+                        has_building = building_railway
+                    }
+                    any_scope_state = {
+                        state_region = s:STATE_MINNESOTA
+                        has_building = building_railway
+                    }
+                }
+            } trigger_else_if = {
+                limit = {
+                    has_variable = transcontinental_chose_central_route
+                }
+                #Central Route
+                AND = {
+                    any_scope_state = {
+                        state_region = s:STATE_CALIFORNIA
+                        has_building = building_railway
+                    }
+                    any_scope_state = {
+                        state_region = s:STATE_NEVADA
+                        has_building = building_railway
+                    }
+                    OR = {
+                        any_scope_state = {
+                            state_region = s:STATE_UTAH
+                            has_building = building_railway
+                        }
+                        #allows Deseret subject
+                        any_subject_or_below = {
+                            any_scope_state = {
+                                state_region = s:STATE_UTAH
+                                has_building = building_railway
+                            }
+                        }
+                    }
+                    any_scope_state = {
+                        state_region = s:STATE_WYOMING
+                        has_building = building_railway
+                    }
+                    any_scope_state = {
+                        state_region = s:STATE_NEBRASKA
+                        has_building = building_railway
+                    }
+                }
+            } trigger_else_if = {
+                limit = {
+                    has_variable = transcontinental_chose_southern_route
+                }
+                #Southern Route
+                AND = {
+                    any_scope_state = {
+                        state_region = s:STATE_CALIFORNIA
+                        has_building = building_railway
+                    }
+                    any_scope_state = {
+                        state_region = s:STATE_ARIZONA
+                        has_building = building_railway
+                    }
+                    any_scope_state = {
+                        state_region = s:STATE_NEW_MEXICO
+                        has_building = building_railway
+                    }
+                    any_scope_state = {
+                        state_region = s:STATE_TEXAS
+                        has_building = building_railway
+                    }
+                }
+            }
+        }
+        effect = {
+            set_global_variable = trans_continental_done
+            trigger_event = { id = usfp_manifest_destiny.9 }
+        }
+    }
 
 	weight = 50
 }
@@ -1261,16 +1314,10 @@ REPLACE_OR_CREATE:je_trans_continental_railway = {
 usfp_je_monroe_doctrine = {
 
     icon = gfx/interface/icons/ai_strategy_icons/usfp_monroe_doctrine_strategy.dds
-
+    dlc = dlc_usfp
+    activation_description = { always = yes }
     group = je_group_usa_manifest_destiny
 
-    immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
-    }
 
     is_shown_when_inactive = {
         c:USA ?= root
@@ -1281,82 +1328,92 @@ usfp_je_monroe_doctrine = {
         naval_power_projection >= usfp_monroe_doctrine_naval_power
     }
 
-    complete = {
-		is_power_bloc_leader = yes
-        any_country_in_americas = {
-            filter = {
-                is_subject = yes
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            is_power_bloc_leader = yes
+            any_country_in_americas = {
+                filter = {
+                    is_subject = yes
+                }
+                percent = 0
+                custom_tooltip = {
+                    text = old_world_overlord
+                    overlord ?= {
+                        is_in_geographic_region = geographic_region_old_world
+                    }
+                }
+
             }
-            percent = 0
-            custom_tooltip = {
-                text = old_world_overlord
-                overlord ?= {
-                    is_in_geographic_region = geographic_region_old_world
+            any_state_in_americas = {
+                count = 0
+                custom_tooltip = {
+                    text = old_world_owner
+                    owner = {
+                        is_in_geographic_region = geographic_region_old_world
+                    }
                 }
             }
-
         }
-        any_state_in_americas = {
-            count = 0
-            custom_tooltip = {
-                text = old_world_owner
-                owner = {
-                    is_in_geographic_region = geographic_region_old_world
+        effect = {
+            every_state_region_in_americas = {
+                if = {
+                    limit = {
+                        any_country_in_old_world = {
+                            has_claim = prev
+                        }
+                    }
                 }
-            }
-        }
-    }
-
-
-    on_complete = {
-        every_state_region_in_americas = {
-            if = {
-                limit = {
-                    any_country_in_old_world = {
+                every_country_in_old_world = {
+                    save_scope_as = old_world_country
+                    limit = {
+                        NOT = {
+                            is_country_type = decentralized
+                        }
                         has_claim = prev
                     }
+                    prev = {
+                        remove_claim = scope:old_world_country
+                    }
                 }
             }
-            every_country_in_old_world = {
-                save_scope_as = old_world_country
-                limit = {
-                    NOT = {
-                        is_country_type = decentralized
-                    }
-                    has_claim = prev
-                }
-                prev = {
-                    remove_claim = scope:old_world_country
+            trigger_event = usfp_manifest_destiny.32
+        }
+        event_outcome_effect_desc = {
+            header = usfp_manifest_destiny.32.a
+            effect = {
+                execute_event_option = {
+                    event = usfp_manifest_destiny.32
+                    option = 0
                 }
             }
         }
-		trigger_event = usfp_manifest_destiny.32
+        event_outcome_effect_desc = {
+            header = usfp_manifest_destiny.32.b
+            effect = {
+                execute_event_option = {
+                    event = usfp_manifest_destiny.32
+                    option = 1
+                }
+            }
+        }
     }
 
-	event_outcome_completed_effect_desc = {
-		header = usfp_manifest_destiny.32.a
-		effect = {
-			execute_event_option = {
-				event = usfp_manifest_destiny.32
-				option = 0
-			}
-		}
-	}
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            country_rank < rank_value:major_power
+            is_diplomatic_play_committed_participant = no
+        }
+        effect = {
 
-	event_outcome_completed_effect_desc = {
-		header = usfp_manifest_destiny.32.b
-		effect = {
-			execute_event_option = {
-				event = usfp_manifest_destiny.32
-				option = 1
-			}
-		}
-	}
-
-
-    fail = {
-        country_rank < rank_value:major_power
-        is_diplomatic_play_committed_participant = no
+        }
     }
 
     should_be_pinned_by_default_uninvolved_or_context = no

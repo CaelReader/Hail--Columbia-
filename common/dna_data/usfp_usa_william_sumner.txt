@@ -1,5 +1,7 @@
 ﻿usfp_usa_william_sumner={
-	portrait_info = { genes={ 		hair_color={ 43 253 43 253 }
+	portrait_info = { genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 43 253 43 253 }
 	skin_color={ 103 8 103 8 }
 	eye_color={ 242 103 242 103 }
 	gene_cheek_fat={ "cheek_fat" 141 "cheek_fat" 136 }

@@ -27,6 +27,7 @@
 	}
 
 	on_enable = {
+		# ONLY HANDLE IG TRAITS IN THIS BLOCK
 		ig:ig_landowners ?= {
 			if = {
 				limit = {
@@ -104,8 +105,8 @@
 			}
 		}
 		
-		# Squattocracy
-		if = {
+		# FLAVOUR AND IDEOLOGIES GO HERE
+		if = { # Squattocracy
 			limit = {
 				country_has_primary_culture = cu:australian
 			}
@@ -113,8 +114,7 @@
 				set_interest_group_name = ig_squattocracy
 			}
 		}
-		# Local Governors
-		else_if = {
+		else_if = { # Local Governors
 			limit = {
 				c:TUR ?= this
 			}
@@ -122,8 +122,7 @@
 				set_interest_group_name = ig_local_governors
 			}
 		}
-		# Junkers
-		else_if = {
+		else_if = { # Junkers
 			limit = {
 				c:PRU ?= this
 			}
@@ -133,17 +132,17 @@
 				add_ideology = ideology_junker_paternalistic
 			}
 		}
-		# Gentry Assembly
-		else_if = {
+		else_if = { # Gentry Assembly
 			limit = {
 				c:RUS ?= this
 			}
 			ig:ig_landowners ?= {
 				set_interest_group_name = ig_gentry_assembly
+				remove_ideology = ideology_patriarchal
+				add_ideology = ideology_russian_patriarchal
 			}
 		}
-		# Roman Landowners
-		else_if = {
+		else_if = { # Roman Landowners
 			limit = {
 				c:PAP ?= this
 			}
@@ -153,8 +152,7 @@
 				add_ideology = ideology_papal_paternalistic
 			}
 		}
-		# Ali'i
-		else_if = {
+		else_if = { # Ali'i
 			limit = {
 				country_has_primary_culture = cu:hawaiian
 			}
@@ -163,8 +161,7 @@
 				add_ideology = ideology_loyalist
 			}
 		}
-		# Landed Gentry
-		else_if = {
+		else_if = { # Landed Gentry
 			limit = {
 				c:GBR ?= this
 			}
@@ -174,8 +171,7 @@
 				add_ideology = ideology_magnatial
 			}
 		}
-		# Polish Landowners
-		else_if = {
+		else_if = { # Polish Landowners
 			limit = {
 				country_has_primary_culture = cu:polish
 			}
@@ -184,8 +180,7 @@
 				add_ideology = ideology_magnatial
 			}
 		}
-		# Yangban Officials
-		else_if = {
+		else_if = { # Yangban Officials
 			limit = {
 				c:KOR ?= this
 			}
@@ -193,8 +188,7 @@
 				set_interest_group_name = ig_yangban
 			}
 		}
-		# Scholar Officials
-		else_if = {
+		else_if = { # Scholar Officials
 			limit = {
 				c:CHI ?= this
 			}
@@ -204,8 +198,7 @@
 				add_ideology = ideology_scholar_paternalistic
 			}
 		}
-		# Pious Spanish Landowners (and Magnatial Liberal Landowners)
-		else_if = {
+		else_if = { # Pious Spanish Landowners (and Magnatial Liberal Landowners)
 			limit = {
 				country_has_primary_culture = cu:spanish
 			}
@@ -232,8 +225,7 @@
 				}
 			}
 		}
-		# Aristocracy of Officials
-		else_if = {
+		else_if = { # Aristocracy of Officials
 			limit = {
 				country_has_primary_culture = cu:norwegian
 			}
@@ -241,8 +233,7 @@
 				set_interest_group_name = ig_aristocracy_of_officials
 			}
 		}
-		# Southern Planters
-		else_if = {
+		else_if = { # South American Caudillos/republicans
 			limit = {
 				OR = {
 					AND = {
@@ -258,8 +249,7 @@
 				add_ideology = ideology_republican_paternalistic
 			}
 		}
-		# South American Caudillos/republicans
-		else_if = {
+		else_if = { # South American Caudillos/republicans
 			limit = {
 				any_primary_culture = {
 					has_discrimination_trait = language_hispanophone
@@ -273,8 +263,7 @@
 				add_ideology = ideology_republican_paternalistic
 			}
 		}
-		# Boer republicanism, but only for states that are only Boer
-		else_if = {
+		else_if = { # Boer republicanism, but only for states that are only Boer
 			limit = {
 				country_has_primary_culture = cu:boer
 				NOT = {
@@ -286,8 +275,7 @@
 				add_ideology = ideology_republican_paternalistic
 			}
 		}
-		# India
-		else_if = {
+		else_if = { # India
 			limit = {
 				OR = {
 					c:BIC ?= this
@@ -310,7 +298,7 @@
 				set_ig_trait = ig_trait:ig_trait_profitable_estates
 			}
 		}
-		else_if = {
+		else_if = { # Zanzibar
 			limit = {
 				c:ZAN ?= this
 				any_primary_culture = { cu:bedouin = this }
@@ -320,10 +308,8 @@
 				set_interest_group_name = ig_wamanga
 			}
 		}
-		# Magnates
-		else_if = {
+		else_if = { # Magnates
 			limit = {
-				has_dlc_feature = ip3_content
 				any_primary_culture = {
 					OR = {
 						cu:polish = this
@@ -336,8 +322,7 @@
 				set_interest_group_name = ig_magnates
 			}
 		}
-		# Daimyo
-		else_if = {
+		else_if = { # Daimyo
 			limit = {
 				country_has_primary_culture = cu:japanese
 			}
@@ -351,10 +336,8 @@
 				add_ideology = ideology_japan_paternalistic
 			}
 		}
-		# Boyars
-		else_if = {
+		else_if = { # Boyars
 			limit = {
-				has_dlc_feature = ip3_content
 				country_has_primary_culture = cu:romanian
 			}
 			ig:ig_landowners ?= {

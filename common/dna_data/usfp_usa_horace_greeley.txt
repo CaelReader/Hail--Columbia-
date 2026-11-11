@@ -1,6 +1,8 @@
 ﻿usfp_usa_horace_greeley={
 portrait_info = {
-	genes={ 		hair_color={ 223 211 223 211 }
+	genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 223 211 223 211 }
  		skin_color={ 84 22 84 22 }
  		eye_color={ 17 90 237 90 }
  		gene_cheek_fat={ "cheek_fat" 212 "cheek_fat" 133 }

@@ -49,6 +49,10 @@ usfp_monthly_pulse = {
 		100 = usfp_usa_labor.5 #AFL
 		50 = usfp_usa_labor.6 #Looking Backwards
         50 = usfp_usa_labor.7 #Lochner Ruling
+        100 = usfp_usa_labor.8 #Homestead Strike
+        100 = usfp_usa_labor.9 #LA Times Bombing
+        100 = usfp_usa_labor.10 #Seattle General Strike
+        100 = usfp_usa_labor.11 #Business Plot
 
 		##Disasters
 		1 = usfp_usa.2 #Atlantic Hurricane

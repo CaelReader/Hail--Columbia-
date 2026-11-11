@@ -1,23 +1,23 @@
 ﻿usfp_je_mexican_north = {
 
 	icon = gfx/interface/icons/event_icons/event_map.dds
-
+    dlc = dlc_usfp
+    activation_description = { always = yes }
 	group = je_group_historical_content
 	
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
 		c:USA = {
 			save_scope_as = usa_scope
 		}
 	}
 
-	invalid = {
-		has_law_or_variant = law_type:law_no_colonial_affairs
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            has_law_or_variant = law_type:law_no_colonial_affairs
+        }
+    }
 
 	on_monthly_pulse = {
 		effect = {
@@ -92,93 +92,108 @@
 		}
 	}
 
-	complete = {
-		has_state_in_state_region = STATE_CALIFORNIA
-		trigger_if = {
-			limit = {
-				has_state_in_state_region = STATE_CALIFORNIA
-			}
-			s:STATE_CALIFORNIA.region_state:MEX = {
-				is_split_state = no
-				is_incorporated = yes
-			}
-		}
-		has_state_in_state_region = STATE_NEVADA
-		trigger_if = {
-			limit = {
-				has_state_in_state_region = STATE_NEVADA
-			}
-			s:STATE_NEVADA.region_state:MEX = {
-				is_split_state = no
-				is_incorporated = yes
-			}
-		}
-		has_state_in_state_region = STATE_UTAH
-		trigger_if = {
-			limit = {
-				has_state_in_state_region = STATE_UTAH
-			}
-			s:STATE_UTAH.region_state:MEX = {
-				is_split_state = no
-				is_incorporated = yes
-			}
-		}
-		has_state_in_state_region = STATE_NEW_MEXICO
-		trigger_if = {
-			limit = {
-				has_state_in_state_region = STATE_NEW_MEXICO
-			}
-			s:STATE_NEW_MEXICO.region_state:MEX = {
-				is_split_state = no
-				is_incorporated = yes
-			}
-		}
-		has_state_in_state_region = STATE_ARIZONA
-		trigger_if = {
-			limit = {
-				has_state_in_state_region = STATE_ARIZONA
-			}
-			s:STATE_ARIZONA.region_state:MEX = {
-				is_split_state = no
-				is_incorporated = yes
-			}
-		}
-	}
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            has_state_in_state_region = STATE_CALIFORNIA
+            trigger_if = {
+                limit = {
+                    has_state_in_state_region = STATE_CALIFORNIA
+                }
+                s:STATE_CALIFORNIA.region_state:MEX = {
+                    is_split_state = no
+                    is_incorporated = yes
+                }
+            }
+            has_state_in_state_region = STATE_NEVADA
+            trigger_if = {
+                limit = {
+                    has_state_in_state_region = STATE_NEVADA
+                }
+                s:STATE_NEVADA.region_state:MEX = {
+                    is_split_state = no
+                    is_incorporated = yes
+                }
+            }
+            has_state_in_state_region = STATE_UTAH
+            trigger_if = {
+                limit = {
+                    has_state_in_state_region = STATE_UTAH
+                }
+                s:STATE_UTAH.region_state:MEX = {
+                    is_split_state = no
+                    is_incorporated = yes
+                }
+            }
+            has_state_in_state_region = STATE_NEW_MEXICO
+            trigger_if = {
+                limit = {
+                    has_state_in_state_region = STATE_NEW_MEXICO
+                }
+                s:STATE_NEW_MEXICO.region_state:MEX = {
+                    is_split_state = no
+                    is_incorporated = yes
+                }
+            }
+            has_state_in_state_region = STATE_ARIZONA
+            trigger_if = {
+                limit = {
+                    has_state_in_state_region = STATE_ARIZONA
+                }
+                s:STATE_ARIZONA.region_state:MEX = {
+                    is_split_state = no
+                    is_incorporated = yes
+                }
+            }
+        }
+        effect = {
+            every_scope_state = {
+                limit = {
+                    OR = {
+                        region = sr:region_pacific_coast
+                    }
+                }
+                add_modifier = {
+                    name = usfp_frontier_migration_modifier
+                    years = 4
+                }
+            }
+        }
+    }
 
-	on_complete = {
-		every_scope_state = {
-			limit = {
-				OR = {
-					region = sr:region_pacific_coast
-				}
-			}
-			add_modifier = {
-				name = usfp_frontier_migration_modifier
-				years = 4
-			}
-		}
-	}
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        flags = { historical }
+        trigger = {
+            NOT = {
+                any_subject_or_below = {
+                    OR = {
+                        has_state_in_state_region = STATE_CALIFORNIA
+                        has_state_in_state_region = STATE_NEVADA
+                        has_state_in_state_region = STATE_UTAH
+                        has_state_in_state_region = STATE_NEW_MEXICO
+                        has_state_in_state_region = STATE_ARIZONA
+                    }
+                }
+            }
+            NOR = {
+                has_state_in_state_region = STATE_CALIFORNIA
+                has_state_in_state_region = STATE_NEVADA
+                has_state_in_state_region = STATE_UTAH
+                has_state_in_state_region = STATE_NEW_MEXICO
+                has_state_in_state_region = STATE_ARIZONA
+            }
+        }
+        effect = {
 
-	fail = {
-		NOT = {
-			any_subject_or_below = {
-				OR = {
-					has_state_in_state_region = STATE_CALIFORNIA
-					has_state_in_state_region = STATE_NEVADA
-					has_state_in_state_region = STATE_UTAH
-					has_state_in_state_region = STATE_NEW_MEXICO
-					has_state_in_state_region = STATE_ARIZONA
-				}
-			}
-		}
-		NOR = {
-			has_state_in_state_region = STATE_CALIFORNIA
-			has_state_in_state_region = STATE_NEVADA
-			has_state_in_state_region = STATE_UTAH
-			has_state_in_state_region = STATE_NEW_MEXICO
-			has_state_in_state_region = STATE_ARIZONA
-		}
-	}
+        }
+    }
 
 	should_be_pinned_by_default_uninvolved_or_context = yes
 

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_brigham_young = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 26 247 26 247 }
  		skin_color={ 39 1 39 1 }
  		eye_color={ 173 130 173 130 }

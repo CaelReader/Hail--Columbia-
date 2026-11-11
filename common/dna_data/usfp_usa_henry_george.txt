@@ -1,5 +1,7 @@
 ﻿usfp_usa_henry_george={
-	portrait_info = {genes={ 		hair_color={ 0 255 0 0 }
+	portrait_info = {genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 0 255 0 0 }
 	skin_color={ 0 0 0 0 }
 	eye_color={ 2 30 0 0 }
 	gene_cheek_fat={ "cheek_fat" 167 "cheek_fat" 127 }

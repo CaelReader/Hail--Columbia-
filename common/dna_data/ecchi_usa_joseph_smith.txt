@@ -1,6 +1,8 @@
 ﻿ecchi_dna_joseph_smith = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 94 240 94 240 }
  		skin_color={ 108 5 108 5 }
  		eye_color={ 72 169 72 169 }

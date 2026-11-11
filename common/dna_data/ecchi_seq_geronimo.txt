@@ -1,6 +1,8 @@
 ﻿ecchi_dna_geronimo = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 56 230 56 230 }
  		skin_color={ 138 127 138 127 }
  		eye_color={ 63 243 63 243 }

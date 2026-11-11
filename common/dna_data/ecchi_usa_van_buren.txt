@@ -1,6 +1,8 @@
 ﻿ecchi_dna_martin_van_buren = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 168 181 168 181 }
  		skin_color={ 94 21 94 21 }
  		eye_color={ 68 160 68 160 }

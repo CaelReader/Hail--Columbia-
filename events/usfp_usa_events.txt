@@ -842,11 +842,11 @@ usfp_usa.9 = {
 		every_interest_group = {
 			limit = {
 				NOT = {
-					has_ideology = ideology:ideology_socialist
+					has_ideology = ideology:ideology_communist
 				}
 				leader = {
 					NOR = {
-						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_communist_leader
 						has_ideology = ideology:ideology_anarchist
 						has_ideology = ideology:ideology_vanguardist
 					}

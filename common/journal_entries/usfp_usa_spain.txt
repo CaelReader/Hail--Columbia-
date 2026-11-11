@@ -3,7 +3,9 @@
 	icon = gfx/interface/icons/event_icons/event_military.dds
 
 	group = je_group_foreign_affairs
-	
+    dlc = dlc_usfp
+    activation_description = { always = yes }
+
 	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	weight = 200
@@ -41,11 +43,6 @@
 	}
 	
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
 		c:USA = {
 			save_scope_as = usa_scope
 		}
@@ -82,92 +79,104 @@
 		}
 	}
 
-	on_timeout = {
-		add_radicals = {
-			value = small_radicals
-			strata = middle
-		}
-	}
+    outcome = {
+        header = JOURNAL_ENTRY_TIMEOUT
+        effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+        flags = { timeout }
+        conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+        effect = {
+            add_radicals = {
+                value = small_radicals
+                strata = middle
+            }
+        }
+    }
 
-	complete = {
-		OR = {
-			c:CUB ?= {
-				is_subject = no
-			}
-			c:CUB ?= {
-				is_subject_of = root
-			}
-			usfp_owns_cuba = yes
-		}
-	}
-
-	on_complete = {
-		custom_tooltip = doubled_with_phillipines
-		if = {
-			limit = {
-				scope:cuban_overlord ?= {
-					NOR = {
-						any_scope_state = {
-							OR = {
-								is_in_geographic_region = geographic_region_caribbean_old
-								region = sr:region_indonesia
-								region = sr:region_oceania
-							}
-						}
-						any_subject_or_below = {
-							any_scope_state = {
-								OR = {
-									is_in_geographic_region = geographic_region_caribbean_old
-									region = sr:region_indonesia
-									region = sr:region_oceania
-								}
-							}
-						}
-					}
-				}
-			 }
-			add_loyalists = {
-				value = medium_radicals
-				strata = middle
-			}
-			add_loyalists = {
-				value = very_large_radicals
-				pop_type = officers
-			}
-			add_modifier = {
-				name = usfp_america_enters_world_stage_modifier
-				years = 10
-				multiplier = 2
-			}
-			change_infamy = -10
-		}
-		else = {
-			add_loyalists = {
-				value = small_radicals
-				strata = middle
-			}
-			add_loyalists = {
-				value = large_radicals
-				pop_type = officers
-			}
-			add_modifier = {
-				name = usfp_america_enters_world_stage_modifier
-				years = 10
-			}
-			change_infamy = -5
-		}
-		custom_tooltip = cuba_decide_fate
-		if = {
-			limit = {
-				exists = c:CUB
-				c:CUB = {
-					is_subject = no
-				}
-				scope:cuban_overlord = {
-					has_truce_with = root
-				}
-			}
-			trigger_event = usfp_usa_spain.4 
-		}
-	}
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
+        trigger = {
+            OR = {
+                c:CUB ?= {
+                    is_subject = no
+                }
+                c:CUB ?= {
+                    is_subject_of = root
+                }
+                usfp_owns_cuba = yes
+            }
+        }
+        effect = {
+            custom_tooltip = doubled_with_phillipines
+            if = {
+                limit = {
+                    scope:cuban_overlord ?= {
+                        NOR = {
+                            any_scope_state = {
+                                OR = {
+                                    is_in_geographic_region = geographic_region_caribbean_old
+                                    region = sr:region_indonesia
+                                    region = sr:region_oceania
+                                }
+                            }
+                            any_subject_or_below = {
+                                any_scope_state = {
+                                    OR = {
+                                        is_in_geographic_region = geographic_region_caribbean_old
+                                        region = sr:region_indonesia
+                                        region = sr:region_oceania
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                add_loyalists = {
+                    value = medium_radicals
+                    strata = middle
+                }
+                add_loyalists = {
+                    value = very_large_radicals
+                    pop_type = officers
+                }
+                add_modifier = {
+                    name = usfp_america_enters_world_stage_modifier
+                    years = 10
+                    multiplier = 2
+                }
+                change_infamy = -10
+            }
+            else = {
+                add_loyalists = {
+                    value = small_radicals
+                    strata = middle
+                }
+                add_loyalists = {
+                    value = large_radicals
+                    pop_type = officers
+                }
+                add_modifier = {
+                    name = usfp_america_enters_world_stage_modifier
+                    years = 10
+                }
+                change_infamy = -5
+            }
+            custom_tooltip = cuba_decide_fate
+            if = {
+                limit = {
+                    exists = c:CUB
+                    c:CUB = {
+                        is_subject = no
+                    }
+                    scope:cuban_overlord = {
+                        has_truce_with = root
+                    }
+                }
+                trigger_event = usfp_usa_spain.4
+            }
+        }
+    }
 }

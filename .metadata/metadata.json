@@ -1,12 +1,12 @@
 {
   "name" : "Hail, Columbia! - United States Flavor Pack",
   "id" : "",
-  "version" : "9.1-Hoover",
-  "supported_game_version" : "1.13.*",
+  "version" : "10.0-Debs",
+  "supported_game_version" : "1.15.*",
   "short_description" : "",
   "game_id" : "victoria3",
   "tags" : [
-    "1.13"
+    "1.15"
   ],
   "relationships" : [
     {

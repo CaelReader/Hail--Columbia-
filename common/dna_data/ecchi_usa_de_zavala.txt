@@ -1,6 +1,8 @@
 ﻿ecchi_dna_lorenzo_de_zavala = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 55 235 55 235 }
  		skin_color={ 191 40 137 127 }
  		eye_color={ 54 251 54 251 }

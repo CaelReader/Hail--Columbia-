@@ -93,20 +93,20 @@ usfp_manifest_more_destiny_effect = {
 		}
 
 	}
-    if = {
-        limit = {
-            has_journal_entry = usfp_manifest_destiny_main
-        }
-        hidden_effect = {
-            je:usfp_manifest_destiny_main ?= {
-                remove_modifier = usfp_manifest_destiny_modifier
-                add_modifier = {
-                    name = usfp_manifest_destiny_modifier
-                    multiplier = root.var:manifest_destiny_var
-                }
-            }
-        }
-    }
+    # if = {
+    #     limit = {
+    #         has_journal_entry = usfp_manifest_destiny_main
+    #     }
+    #     hidden_effect = {
+    #         je:usfp_manifest_destiny_main ?= {
+    #             remove_modifier = usfp_manifest_destiny_modifier
+    #             add_modifier = {
+    #                 name = usfp_manifest_destiny_modifier
+    #                 multiplier = root.var:manifest_destiny_var
+    #             }
+    #         }
+    #     }
+    # }
 }
 
 usfp_manifest_less_destiny_effect = {
@@ -136,20 +136,20 @@ usfp_manifest_less_destiny_effect = {
 			}
 		}
 	}
-    if = {
-        limit = {
-            has_journal_entry = usfp_manifest_destiny_main
-        }
-        hidden_effect = {
-            je:usfp_manifest_destiny_main ?= {
-                remove_modifier = usfp_manifest_destiny_modifier
-                add_modifier = {
-                    name = usfp_manifest_destiny_modifier
-                    multiplier = root.var:manifest_destiny_var
-                }
-            }
-        }
-    }
+    # if = {
+    #     limit = {
+    #         has_journal_entry = usfp_manifest_destiny_main
+    #     }
+    #     hidden_effect = {
+    #         je:usfp_manifest_destiny_main ?= {
+    #             remove_modifier = usfp_manifest_destiny_modifier
+    #             add_modifier = {
+    #                 name = usfp_manifest_destiny_modifier
+    #                 multiplier = root.var:manifest_destiny_var
+    #             }
+    #         }
+    #     }
+    # }
 }
 
 usfp_manifest_more_destiny_low_effect = {
@@ -1845,8 +1845,10 @@ usfp_american_igs_effect = {
 				c:LIB ?= this
 			}
 		}
-		ig:ig_armed_forces = { 
-			add_ideology = ideology_republican
+		ig:ig_armed_forces = {
+            remove_ideology = ideology_militarist
+            add_ideology = ideology_patriotic
+            add_ideology = ideology_republican
 		}
 		ig:ig_devout = {
 			remove_ideology = ideology_moralist
@@ -1909,53 +1911,53 @@ usfp_american_igs_effect = {
 	}
 }
 
-usfp_acw_border_states_total_war_csa = {
-	if = {
-		limit = { 
-			any_scope_state = {
-				c:CSA ?= owner
-				controller = {
-					has_war_with = c:CSA
-				}
-			}
-		}
-		region_state:CSA = {
-			set_state_owner = c:USA
-		}
-		c:USA = {
-			random_scope_war = {
-				limit = {
-					attacker_warleader = c:CSA
-				}
-				add_war_exhaustion = {
-					target = c:USA
-					value = -20
-				}
-			}
-		}
-	} else_if = {
-		limit = { 
-			any_scope_state = {
-				c:USA ?= owner
-				c:CSA ?= controller
-			}
-		}
-		region_state:USA = {
-			set_state_owner = c:CSA
-		}
-		c:CSA = {
-			random_scope_war = {
-				limit = {
-					attacker_warleader = c:CSA
-				}
-				add_war_exhaustion = {
-					target = c:CSA
-					value = -20
-				}
-			}
-		}
-	}
-}
+# usfp_acw_border_states_total_war_csa = {
+# 	if = {
+# 		limit = {
+# 			any_scope_state = {
+# 				c:CSA ?= owner
+# 				controller = {
+# 					has_war_with = c:CSA
+# 				}
+# 			}
+# 		}
+# 		region_state:CSA = {
+# 			set_state_owner = c:USA
+# 		}
+# 		c:USA = {
+# 			random_scope_war = {
+# 				limit = {
+# 					attacker_warleader = c:CSA
+# 				}
+# 				add_war_exhaustion = {
+# 					target = c:USA
+# 					value = -20
+# 				}
+# 			}
+# 		}
+# 	} else_if = {
+# 		limit = {
+# 			any_scope_state = {
+# 				c:USA ?= owner
+# 				c:CSA ?= controller
+# 			}
+# 		}
+# 		region_state:USA = {
+# 			set_state_owner = c:CSA
+# 		}
+# 		c:CSA = {
+# 			random_scope_war = {
+# 				limit = {
+# 					attacker_warleader = c:CSA
+# 				}
+# 				add_war_exhaustion = {
+# 					target = c:CSA
+# 					value = -20
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 usfp_break_compromises_effect = {
 		if = {
@@ -2619,4 +2621,84 @@ usfp_oregon_treaty_effect = {
             }
         }
     }
+}
+
+usfp_second_revolution_calculate_targets = {
+    set_variable = {
+        name = usfp_second_revolution_americanism_target
+        value = usfp_second_revolution_get_americanism_target
+    }
+    set_variable = {
+        name = usfp_second_revolution_internationalism_target
+        value = usfp_second_revolution_get_antiamericanism_target
+    }
+    set_variable = { name = usfp_second_revolution_current_var value = "scope:journal_entry.scripted_bar_progress(usfp_second_revolution_bar)" }
+    set_variable = {
+        name = usfp_second_revolution_total_target
+        value = 100
+    }
+    change_variable = {
+        name = usfp_second_revolution_total_target
+        multiply = ROOT.usfp_second_revolution_americanism_display
+    }
+}
+
+usfp_coal_wars_reset_unionization_progress = {
+	custom_tooltip = {
+		text = usfp_coal_wars_unionization_reset
+		set_variable = {
+			name = usfp_coal_wars_state_unionization
+			value = 0
+		}
+        remove_variable = usfp_coal_wars_state_unionized
+        every_scope_building = {
+            limit = {
+                has_modifier = usfp_coal_wars_union_established_modifier
+            }
+            remove_modifier = usfp_coal_wars_union_established_modifier
+        }
+	}
+}
+
+usfp_coal_wars_cleanup = {
+    hidden_effect = {
+        remove_variable = usfp_coal_wars_had_matewan
+        remove_variable = usfp_coal_wars_umwa_target
+        every_scope_state = {
+            limit = {
+                has_variable = usfp_coal_wars_state_unionization
+            }
+            remove_variable = usfp_coal_wars_state_unionization
+        }
+        every_scope_state = {
+            limit = {
+                has_variable = usfp_coal_wars_state_unionized
+            }
+            remove_variable = usfp_coal_wars_state_unionized
+        }
+        clear_variable_list = usfp_coal_wars_states
+        every_scope_building = {
+            limit = {
+                has_modifier = usfp_coal_wars_union_established_modifier
+            }
+            remove_modifier = usfp_coal_wars_union_established_modifier
+        }
+    }
+}
+
+usfp_second_revolution_cleanup = {
+    if = {
+        limit = {
+            has_variable = usfp_second_revolution_americanism_target
+        }
+        remove_variable = usfp_second_revolution_americanism_target
+    }
+    if = {
+        limit = {
+            has_variable = usfp_second_revolution_internationalism_target
+        }
+        remove_variable = usfp_second_revolution_internationalism_target
+    }
+    remove_variable = usfp_second_revolution_current_var
+    remove_variable = usfp_second_revolution_total_target
 }

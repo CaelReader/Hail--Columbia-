@@ -1,6 +1,8 @@
 ﻿usfp_usa_emerson={
 	portrait_info = {
-		genes={ 		hair_color={ 146 158 166 190 }
+		genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 146 158 166 190 }
 		skin_color={ 92 20 92 20 }
 		eye_color={ 229 140 174 140 }
 		gene_cheek_fat={ "cheek_fat" 89 "cheek_fat" 117 }

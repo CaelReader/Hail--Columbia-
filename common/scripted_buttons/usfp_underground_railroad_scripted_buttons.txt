@@ -223,7 +223,7 @@ usfp_underground_railroad_arm_slaves_button = {
 				has_ideology = ideology:ideology_usfp_abolitionist_radical
 				has_ideology = ideology:ideology_jingoist_leader
 				has_ideology = ideology:ideology_anarchist
-				has_ideology = ideology:ideology_communist
+				has_ideology = ideology:ideology_communist_leader
 				has_ideology = ideology:ideology_vanguardist
 				culture = cu:afro_american
 			}

@@ -201,6 +201,7 @@ usfp_enacting_unconstitutional_law = {
 		is_enacting_law = law_type:law_religious_schools
 		is_enacting_law = law_type:law_single_party_state
 		is_enacting_law = law_type:law_isolationism
+        is_enacting_law = law_type:law_extraordinary_commission
 	}
 }
 
@@ -215,6 +216,8 @@ usfp_enacting_super_unconstitutional_law = {
 		is_enacting_law = law_type:law_council_republic
 		is_enacting_law = law_type:law_corporate_state
 		is_enacting_law = law_type:law_hereditary_bureaucrats
+        is_enacting_law = law_type:law_military_bureaucrats
+        is_enacting_law = law_type:law_communal_administration
 		is_enacting_law = law_type:law_autocracy
 		is_enacting_law = law_type:law_oligarchy
 		is_enacting_law = law_type:law_anarchy
@@ -376,7 +379,7 @@ usfp_president_might_go_for_third_term = {
 		has_ideology = ideology:ideology_authoritarian
 		has_ideology = ideology:ideology_vanguardist
 		has_ideology = ideology:ideology_fascist
-		has_ideology = ideology:ideology_communist
+		has_ideology = ideology:ideology_communist_leader
 		has_ideology = ideology:ideology_usfp_strongman_populist
 		has_ideology = ideology:ideology_usfp_social_darwinist_leader
 		has_ideology = ideology:ideology_usfp_progressive
@@ -390,9 +393,9 @@ usfp_ig_dislikes_trusts = {
 		leader = {
 			OR = {
 				has_ideology = ideology:ideology_usfp_progressive
-				has_ideology = ideology:ideology_social_democrat
+				has_ideology = ideology:ideology_state_socialist
 				has_ideology = ideology:ideology_usfp_georgist_leader
-				has_ideology = ideology:ideology_communist
+				has_ideology = ideology:ideology_communist_leader
 				has_ideology = ideology:ideology_anarchist
 				has_ideology = ideology:ideology_vanguardist
 			}
@@ -648,7 +651,7 @@ usfp_character_is_anti_racist = {
 		has_ideology = ideology:ideology_humanitarian
 		has_ideology = ideology:ideology_humanitarian_royalist
 		has_ideology = ideology:ideology_usfp_social_gospel_leader
-		has_ideology = ideology:ideology_communist
+		has_ideology = ideology:ideology_communist_leader
 	}
 }
 
@@ -1032,5 +1035,17 @@ usfp_usa_has_state_in_montana_wyoming_california = {
                 }
             }
         }
+    }
+}
+
+usfp_coal_wars_valid_state = {
+    is_incorporated = yes
+    has_building = building_coal_mine
+    OR = {
+        any_scope_building = {
+            is_building_type = building_coal_mine
+            private_ownership_fraction >= 0.10
+        }
+        has_decree = decree_violent_suppression
     }
 }

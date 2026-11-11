@@ -1,6 +1,8 @@
 ﻿usfp_smedley_butler={
     portrait_info = {
-        genes={ 		hair_color={ 25 245 25 245 }
+        genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 25 245 25 245 }
         skin_color={ 90 22 90 22 }
         eye_color={ 56 181 56 181 }
         gene_cheek_fat={ "cheek_fat" 147 "cheek_fat" 147 }

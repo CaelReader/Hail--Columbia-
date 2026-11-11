@@ -2,7 +2,9 @@
 
 dna_peyton_march = {
      portrait_info = {
-     genes={        hair_color={ 190 224 190 224 }
+     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+        hair_color={ 190 224 190 224 }
           skin_color={ 2 27 2 27 }
           eye_color={ 105 204 105 204 }
           gene_cheek_fat={ "cheek_fat" 117 "cheek_fat" 117 }

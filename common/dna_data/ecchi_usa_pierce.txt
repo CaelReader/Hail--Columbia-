@@ -1,6 +1,8 @@
 ﻿ecchi_dna_franklin_pierce = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 173 174 173 174 }
  		skin_color={ 71 27 71 27 }
  		eye_color={ 145 135 145 135 }

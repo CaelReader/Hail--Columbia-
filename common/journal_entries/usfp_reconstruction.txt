@@ -4,15 +4,13 @@ usfp_reconstruction_long = {
 	icon = "gfx/interface/icons/invention_icons/international_diplomacy.dds"
 	should_be_pinned_by_default_uninvolved_or_context = yes
 	group = je_group_usa_american_civil_war
+    dlc = dlc_usfp
+    activation_description = { always = yes }
+
 	scripted_progress_bar = usfp_long_reconstruction_progress_bar
 	scripted_button = usfp_overturn_plessy_button
 
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
 		cu:afro_american = {
 			save_scope_as = afro_american_culture
 		}
@@ -57,42 +55,52 @@ usfp_reconstruction_long = {
 		}
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = usfp_long_reconstruction_complete_tt
-			scope:journal_entry = {
-				"scripted_bar_progress(usfp_long_reconstruction_progress_bar)" >= 2200
-			}
-		}
-	}
-	on_complete = {
-		add_primary_culture = cu:afro_american
-		ig:ig_petty_bourgeoisie = {
-			if = {
-				limit = { 
-					has_ideology = ideology:ideology_reactionary_segregationist
-				}
-				remove_ideology = ideology_reactionary_segregationist
-				add_ideology = ideology_reactionary_exclusionist
-			}
-		}
-		add_loyalists = {
-			value = medium_radicals
-			culture = cu:afro_american
-		}
-		every_scope_state = {
-            custom = jim_crow_states
-			limit = {
-				has_modifier = usfp_jim_crow
-			}
-			remove_modifier = usfp_jim_crow
-		}
-	}
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            custom_tooltip = {
+                text = usfp_long_reconstruction_complete_tt
+                scope:journal_entry = {
+                    "scripted_bar_progress(usfp_long_reconstruction_progress_bar)" >= 2200
+                }
+            }
+        }
+        effect = {
+            add_primary_culture = cu:afro_american
+            ig:ig_petty_bourgeoisie = {
+                if = {
+                    limit = {
+                        has_ideology = ideology:ideology_reactionary_segregationist
+                    }
+                    remove_ideology = ideology_reactionary_segregationist
+                    add_ideology = ideology_reactionary_exclusionist
+                }
+            }
+            add_loyalists = {
+                value = medium_radicals
+                culture = cu:afro_american
+            }
+            every_scope_state = {
+                custom = jim_crow_states
+                limit = {
+                    has_modifier = usfp_jim_crow
+                }
+                remove_modifier = usfp_jim_crow
+            }
+        }
+    }
 
-	invalid = {
-		culture_percent_country = {
-			target = cu:afro_american
-			value = 0
-		}
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            culture_percent_country = {
+                target = cu:afro_american
+                value = 0
+            }
+        }
+    }
 }

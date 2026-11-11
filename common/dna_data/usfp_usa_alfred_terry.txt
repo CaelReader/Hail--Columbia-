@@ -1,6 +1,8 @@
 ﻿usfp_usa_alfred_terry={
 	portrait_info = {
-		genes={ 		hair_color={ 46 230 46 230 }
+		genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 46 230 46 230 }
  		skin_color={ 26 24 26 24 }
  		eye_color={ 80 220 245 155 }
  		gene_cheek_fat={ "cheek_fat" 141 "cheek_fat" 141 }

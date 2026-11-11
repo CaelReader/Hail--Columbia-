@@ -1,6 +1,8 @@
 ﻿ecchi_dna_champ_ferguson = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 210 182 210 182 }
  		skin_color={ 111 24 111 24 }
  		eye_color={ 245 187 245 187 }

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_charles_linbergh = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 62 230 62 230 }
  		skin_color={ 20 18 20 18 }
  		eye_color={ 228 168 228 168 }

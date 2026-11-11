@@ -1,6 +1,7 @@
 ﻿je_usfp_philippine_tutelage = {
     icon = "gfx/interface/icons/event_icons/waving_flags_usa_philippines.dds"
-
+    dlc = dlc_usfp
+    activation_description = { always = yes }
     group =  je_group_us_expansion_global
 
     should_be_involved = {
@@ -26,11 +27,6 @@
     }
 
     immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
         c:PHI = {
             save_scope_as = philippines_scope
         }
@@ -72,121 +68,137 @@
     scripted_progress_bar = usfp_philippine_english_progress_bar
     scripted_button = usfp_philippine_insular_government_button
 
-    complete = {
-        c:PHI ?= {
-            custom_tooltip = {
-                text = progress_bar_complete
-                scope:journal_entry = {
-                    "scripted_bar_progress(usfp_philippine_english_progress_bar)" >= 5000
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
+        trigger = {
+            c:PHI ?= {
+                custom_tooltip = {
+                    text = progress_bar_complete
+                    scope:journal_entry = {
+                        "scripted_bar_progress(usfp_philippine_english_progress_bar)" >= 5000
+                    }
                 }
-            }
-            legitimacy >= 50
-            has_law_or_variant = c:USA.active_law:lawgroup_governance_principles.type
-            trigger_if = {
-                limit = {
-                    c:USA = {
-                        NOT = {
-                            has_law_or_variant = law_type:law_universal_suffrage
+                legitimacy >= 50
+                has_law_or_variant = c:USA.active_law:lawgroup_governance_principles.type
+                trigger_if = {
+                    limit = {
+                        c:USA = {
+                            NOT = {
+                                has_law_or_variant = law_type:law_universal_suffrage
+                            }
+                        }
+                    }
+                    has_law_or_variant = c:USA.active_law:lawgroup_distribution_of_power.type
+                } trigger_else = {
+                    country_has_voting_franchise = yes
+                }
+                trigger_if = {
+                    limit = {
+                        exists = scope:philippines_scope
+                    }
+                    custom_tooltip = {
+                        text = philippines_school_laws
+                        OR = {
+                            has_law_or_variant = law_type:law_public_schools
+                            has_law_or_variant = law_type:law_private_schools
+                        }
+                    }
+                    custom_tooltip = {
+                        text = philippines_health_laws
+                        OR = {
+                            has_law_or_variant = law_type:law_public_health_insurance
+                            has_law_or_variant = law_type:law_private_health_insurance
+                        }
+                    }
+                    custom_tooltip = {
+                        text = philippines_no_serfdom_or_tenant
+                        NOR = {
+                            has_law_or_variant = law_type:law_serfdom
+                            has_law_or_variant = law_type:law_tenant_farmers
                         }
                     }
                 }
-                has_law_or_variant = c:USA.active_law:lawgroup_distribution_of_power.type
-            } trigger_else = {
-                country_has_voting_franchise = yes
-            }
-            trigger_if = {
-                limit = {
-                    exists = scope:philippines_scope
+                has_law_or_variant = law_type:law_compulsory_primary_school
+                NOT = {
+                    has_law_or_variant = law_type:law_state_religion
                 }
+                has_law_or_variant = law_type:law_slavery_banned
                 custom_tooltip = {
-                    text = philippines_school_laws
-                    OR = {
-                        has_law_or_variant = law_type:law_public_schools
-                        has_law_or_variant = law_type:law_private_schools
-                    }
+                    text = turmoil_less_than_40
+                    country_turmoil <= 0.40
                 }
-                custom_tooltip = {
-                    text = philippines_health_laws
-                    OR = {
-                        has_law_or_variant = law_type:law_public_health_insurance
-                        has_law_or_variant = law_type:law_private_health_insurance
-                    }
-                }
-                custom_tooltip = {
-                    text = philippines_no_serfdom_or_tenant
-                    NOR = {
-                        has_law_or_variant = law_type:law_serfdom
-                        has_law_or_variant = law_type:law_tenant_farmers
+                NOT = {
+                    any_political_movement = {
+                        is_insurrectionary = yes
                     }
                 }
             }
-            has_law_or_variant = law_type:law_compulsory_primary_school
-            NOT = {
-                has_law_or_variant = law_type:law_state_religion
-            }
-            has_law_or_variant = law_type:law_slavery_banned
-            custom_tooltip = {
-                text = turmoil_less_than_40
-                country_turmoil <= 0.40
-            }
-            NOT = {
-                any_political_movement = {
-                    is_insurrectionary = yes
-                }
-            }
         }
-    }
-
-    on_complete = {
-        c:USA = {
-            trigger_event = usfp_philippines.7
-        }
-    }
-
-    fail = {
-        NOT = {
-            c:PHI ?= {
-                is_subject_of = c:USA
-            }
-        }
-    }
-
-    on_fail = {
-        c:PHI ?= {
-            if = {
-                limit = {
-                    has_modifier = usfp_philippines_military_government_modifier
-                }
-                remove_modifier = usfp_philippines_military_government_modifier
-            }
-        }
-    }
-
-    invalid = {
-        NOT = {
-            exists = c:USA
-            exists = c:PHI
-        }
-        custom_tooltip = {
-            text = usa_rejected_philippine_tutelage
+        effect = {
             c:USA = {
-                has_variable = rejected_philippines_tutelage
+                trigger_event = usfp_philippines.7
             }
         }
-
     }
 
-    on_invalid = {
-        c:PHI ?= {
-            if = {
-                limit = {
-                    has_modifier = usfp_philippines_military_government_modifier
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                c:PHI ?= {
+                    is_subject_of = c:USA
                 }
-                remove_modifier = usfp_philippines_military_government_modifier
+            }
+        }
+        effect = {
+            c:PHI ?= {
+                if = {
+                    limit = {
+                        has_modifier = usfp_philippines_military_government_modifier
+                    }
+                    remove_modifier = usfp_philippines_military_government_modifier
+                }
             }
         }
     }
 
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                NOT = {
+                    exists = c:PHI
+                }
+                NOT = {
+                    exists = c:USA
+                }
+                custom_tooltip = {
+                    text = usa_rejected_philippine_tutelage
+                    c:USA = {
+                        has_variable = rejected_philippines_tutelage
+                    }
+                }
+            }
+        }
+        effect = {
+            c:PHI ?= {
+                if = {
+                    limit = {
+                        has_modifier = usfp_philippines_military_government_modifier
+                    }
+                    remove_modifier = usfp_philippines_military_government_modifier
+                }
+            }
+        }
+    }
 
     weight = 200
     should_be_pinned_by_default_uninvolved_or_context = no

@@ -55,7 +55,7 @@ usfp_usa_spain.1 = {
 			}
 		}
         ordered_scope_ship = {
-            order_by = naval_power_projection
+            order_by = ai_ship_value
             position = 5
             save_scope_as = uss_maine_ship_scope
         }

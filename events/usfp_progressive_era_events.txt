@@ -1445,18 +1445,7 @@ usfp_progressive_era.16 = {
 				years = 20
 			}
 		}
-		ig:ig_trade_unions = {
-			if = {
-				limit = { has_ideology = ideology:ideology_socialist }
-				remove_ideology = ideology_socialist
-			}
-		}
-		every_scope_state = {
-			limit = {
-				has_modifier = usfp_captive_state_government
-			}
-			remove_modifier = usfp_captive_state_government
-		}
+
 	}
 	#lets go socialist
 	option = {
@@ -1476,13 +1465,16 @@ usfp_progressive_era.16 = {
 			value = large_radicals
 			strata = upper
 		}
-		every_scope_state = {
-			limit = {
-				has_modifier = usfp_captive_state_government
-			}
-			remove_modifier = usfp_captive_state_government
-		}
 	}
+
+    after = {
+        every_scope_state = {
+            limit = {
+                has_modifier = usfp_captive_state_government
+            }
+            remove_modifier = usfp_captive_state_government
+        }
+    }
 }
 
 #IG potentially adopts Eugenics

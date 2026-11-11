@@ -1,5 +1,7 @@
 ﻿usfp_swami_vivekananda={
-	portrait_info = {genes={ 		hair_color={ 255 182 56 240 }
+	portrait_info = {genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 255 182 56 240 }
 	skin_color={ 173 130 125 129 }
 	eye_color={ 89 250 89 250 }
 	gene_cheek_fat={ "cheek_fat" 127 "cheek_fat" 127 }

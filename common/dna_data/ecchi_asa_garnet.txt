@@ -1,6 +1,8 @@
 ﻿ecchi_dna_henry_garnet = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 120 249 120 249 }
  		skin_color={ 156 221 156 221 }
  		eye_color={ 76 251 76 251 }

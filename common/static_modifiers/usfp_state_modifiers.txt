@@ -470,3 +470,65 @@ usfp_earthquake_anti_immigrant_modifier = {
 	state_loyalism_increases_cultural_erasure_mult = -0.50
 	state_loyalism_increases_violent_hostility_mult = -0.50
 }
+
+usfp_revolutionary_architecture_monuments_destroyed_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_positive.dds
+	state_construction_mult = 0.05
+}
+
+usfp_coal_wars_violence_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	state_turmoil_effects_mult = 0.10
+	building_coal_mine_throughput_add = -0.20
+}
+
+usfp_coal_wars_union_established_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_laborer_positive.dds
+	building_laborers_standard_of_living_add = 1
+	building_laborers_mortality_mult = -0.05
+	building_minimum_wage_mult = 0.10
+}
+
+usfp_coal_wars_unionization_strong_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_laborer_positive.dds
+	state_pop_support_movement_labor_mult = 0.20
+	state_pop_support_movement_socialist_mult = 0.20
+}
+
+usfp_coal_wars_unionization_defeated_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_laborer_negative.dds
+	state_pop_support_movement_labor_mult = -0.20
+	state_pop_support_movement_socialist_mult = -0.20
+}
+
+usfp_coal_wars_unionization_radicalized_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	state_pop_support_movement_labor_mult = -0.50
+	state_pop_support_movement_socialist_mult = 0.30
+	state_pop_support_movement_communist_mult = 0.30
+	state_pop_support_movement_anarchist_mult = 0.30
+}
+
+usfp_steel_mills_strikes_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_steel_mill_throughput_add = -0.30
+}
+
+usfp_ironworks_bombings_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	building_iron_mine_throughput_add = -0.15
+}
+
+usfp_labor_bombing_backlash_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	state_pop_support_movement_labor_mult = -0.50
+	state_pop_support_movement_anarchist_mult = -0.50
+	interest_group_ig_trade_unions_pop_attraction_mult = -0.50
+}
+
+usfp_urban_general_strike_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_machinist_negative.dds
+	building_shipyard_throughput_add = -0.90
+	building_group_bg_heavy_industry_throughput_add = -0.75
+	building_group_bg_light_industry_throughput_add = -0.50
+}

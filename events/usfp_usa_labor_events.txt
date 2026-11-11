@@ -180,7 +180,7 @@ usfp_usa_labor.2 = {
 					leader = {
 						NOR = {
 							has_ideology = ideology:ideology_vanguardist
-							has_ideology = ideology:ideology_social_democrat
+							has_ideology = ideology:ideology_state_socialist
 						}
 					}
 				}
@@ -343,9 +343,9 @@ usfp_usa_labor.3 = {
 				leader = {
 					OR = {
 						has_ideology = ideology:ideology_vanguardist
-						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_communist_leader
 						has_ideology = ideology:ideology_anarchist
-						has_ideology = ideology:ideology_social_democrat
+						has_ideology = ideology:ideology_state_socialist
 					}
 				}
 			}
@@ -385,13 +385,12 @@ usfp_usa_labor.4 = {
 	dlc = dlc_usfp
 	duration = 3
 
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
 	trigger = {
 		exists = c:USA
 		c:USA = root
-		NOT = {
-			has_variable = had_great_railroad_strike
-		}
-		game_date > 1877.6.1
+		has_modifier = usfp_panic_1873_modifier
 		NOR = {
 			has_law_or_variant = law_type:law_worker_protections
 			has_law_or_variant = law_type:law_old_age_pension
@@ -410,7 +409,6 @@ usfp_usa_labor.4 = {
 	}
 
 	immediate = {
-		set_variable = had_great_railroad_strike
 		random_scope_state = {
 			limit = {
 				OR = {
@@ -864,3 +862,676 @@ usfp_usa_labor.7 = {
     }
 }
 
+#Homestead Strike
+usfp_usa_labor.8 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	event_image = {
+		video = "unspecific_factory_closed"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	placement = scope:homestead_strike_state
+
+	title = usfp_usa_labor.8.t
+	desc = usfp_usa_labor.8.d
+	flavor = usfp_usa_labor.8.f
+	dlc = dlc_usfp
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	trigger = {
+		has_technology_researched = open_hearth_process
+		has_technology_researched = labor_movement
+		any_scope_state = {
+			is_incorporated = yes
+			has_building = building_steel_mill
+			any_scope_pop = {
+				pop_employment_building = building_steel_mill
+				OR = {
+					is_pop_type = laborers
+					is_pop_type = machinists
+				}
+				OR = {
+					pop_radical_fraction >= 0.15
+					standard_of_living < 14
+				}
+			}
+		}
+		ig:ig_industrialists ?= {
+			is_powerful = yes
+		}
+		NOR = {
+			has_law_or_variant = law_type:law_council_republic
+			has_law_or_variant = law_type:law_command_economy
+			has_law_or_variant = law_type:law_cooperative_ownership
+		}
+	}
+
+	immediate = {
+		ordered_scope_state = {
+			order_by = turmoil
+			position = 0
+			limit = {
+				is_incorporated = yes
+				has_building = building_steel_mill
+				any_scope_pop = {
+					pop_employment_building = building_steel_mill
+					OR = {
+						is_pop_type = laborers
+						is_pop_type = machinists
+					}
+					OR = {
+						pop_radical_fraction >= 0.15
+						standard_of_living < 14
+					}
+				}
+			}
+			save_scope_as = homestead_strike_state
+		}
+	}
+
+
+	#defeat strike
+	option = {
+		name = usfp_usa_labor.8.a
+		default_option = yes
+		scope:homestead_strike_state = {
+			add_radicals_in_state = {
+				pop_type = laborers
+				value = small_radicals
+			}
+		}
+		ig:ig_trade_unions ?= {
+			add_modifier = {
+				name = usfp_homestead_strike_defeated_ig_modifier
+				years = 4
+			}
+		}
+	}
+
+	#let them fight
+	option = {
+		name = usfp_usa_labor.8.b
+		random_list = {
+			75 = {
+				scope:homestead_strike_state = {
+					add_devastation = 5
+					add_modifier = {
+						name = usfp_steel_mills_strikes_modifier
+						years = 5
+					}
+					add_radicals_in_state = {
+						pop_type = laborers
+						value = small_radicals
+					}
+				}
+			}
+			25 = {
+				add_radicals = {
+					value = small_radicals
+					pop_type = capitalists
+				}
+				scope:homestead_strike_state = {
+					random_scope_building = {
+						limit = {
+							is_building_type = building_steel_mill
+						}
+						add_modifier = {
+							name = usfp_coal_wars_union_established_modifier
+							years = 5
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#support strike
+	option = {
+		name = usfp_usa_labor.8.c
+		trigger = {
+			OR = {
+				has_law_or_variant = law_type:law_right_to_associate
+				has_law_or_variant = law_type:law_corporatized_unions
+			}
+			NOT = {
+				has_law_or_variant = law_type:law_laissez_faire
+			}
+		}
+		highlighted_option = yes
+		show_as_unavailable = { always = no }
+		add_radicals = {
+			value = small_radicals
+			pop_type = capitalists
+		}
+		ig:ig_trade_unions ?= {
+			add_modifier = {
+				name = usfp_coal_wars_union_strength_ig_modifier
+				years = 5
+			}
+			add_modifier = {
+				name = usfp_backed_trade_unions_positive_ig_modifier
+				years = 4
+			}
+		}
+		ig:ig_industrialists ?= {
+			add_modifier = {
+				name = usfp_backed_trade_unions_negative_ig_modifier
+				years = 4
+			}
+		}
+		scope:homestead_strike_state = {
+			random_scope_building = {
+				limit = {
+					is_building_type = building_steel_mill
+				}
+				add_modifier = {
+					name = usfp_coal_wars_union_established_modifier
+					years = 5
+				}
+			}
+		}
+	}
+}
+
+#LA Times Bombing
+usfp_usa_labor.9 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	event_image = {
+		video = "ip4_bomb_throwing_anarchist"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	placement = scope:california_scope
+
+	title = usfp_usa_labor.9.t
+	desc = usfp_usa_labor.9.d
+	flavor = usfp_usa_labor.9.f
+	dlc = dlc_usfp
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	trigger = {
+		has_state_in_state_region = STATE_CALIFORNIA
+        any_scope_state = {
+            state_region = s:STATE_CALIFORNIA
+            radical_fraction = {
+                value >= 0.10
+                strata = lower
+            }
+            loyalist_fraction = {
+                value <= 0.50
+                strata = lower
+            }
+        }
+		any_political_movement = {
+			is_political_movement_type = movement_labor
+			political_movement_radicalism >= 0.25
+		}
+		any_political_movement = {
+			is_political_movement_type = movement_anarchist
+		}
+		has_technology_researched = dynamite
+		has_technology_researched = political_agitation
+		year >= 1910
+		NOR = {
+			has_law_or_variant = law_type:law_council_republic
+			has_law_or_variant = law_type:law_command_economy
+			has_law_or_variant = law_type:law_cooperative_ownership
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_CALIFORNIA
+			}
+			save_scope_as = california_scope
+		}
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = movement_labor
+            }
+            save_scope_as = labor_movement_scope
+        }
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = movement_anarchist
+            }
+            save_scope_as = anarchist_movement_scope
+        }
+	}
+
+	#lock them up
+	option = {
+		name = usfp_usa_labor.9.a
+		default_option = yes
+		scope:california_scope = {
+			add_modifier = {
+				name = usfp_ironworks_bombings_modifier
+				years = 2
+			}
+			add_modifier = {
+				name = usfp_labor_bombing_backlash_modifier
+				years = 20
+			}
+		}
+	}
+
+	#bombings will continue
+	option = {
+		name = usfp_usa_labor.9.b
+		scope:california_scope = {
+			add_radicals_in_state = {
+				pop_type = laborers
+				value = medium_radicals
+			}
+			add_radicals_in_state = {
+				strata = middle
+				value = large_radicals
+			}
+			add_radicals_in_state = {
+				strata = upper
+				value = large_radicals
+			}
+			add_modifier = {
+				name = usfp_ironworks_bombings_modifier
+				multiplier = 2
+				years = 4
+			}
+			add_modifier = {
+				name = usfp_labor_bombing_backlash_modifier
+				years = 30
+			}
+		}
+	}
+
+    after = {
+        scope:california_scope = {
+            kill_population_in_state = {
+                pop_type = clerks
+                value = 20
+            }
+        }
+
+        every_scope_character = {
+            limit = {
+                has_ideology = ideology:ideology_anarchist
+            }
+            add_modifier = {
+                name = usfp_agitator_bombing_campaign_modifier
+                years = 5
+            }
+        }
+    }
+}
+
+#Seattle General Strike
+usfp_usa_labor.10 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	event_image = {
+		video = "ip5_soviet_deliberation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	placement = scope:washington_scope
+
+	title = usfp_usa_labor.10.t
+	desc = usfp_usa_labor.10.d
+	flavor = usfp_usa_labor.10.f
+	dlc = dlc_usfp
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	trigger = {
+		has_state_in_state_region = STATE_WASHINGTON
+        any_scope_state = {
+            state_region = s:STATE_WASHINGTON
+            radical_fraction = {
+                value >= 0.10
+                strata = lower
+            }
+            loyalist_fraction = {
+                value <= 0.50
+                strata = lower
+            }
+        }
+		any_political_movement = {
+			movement_is_socialist = yes
+		}
+		any_diplomatically_relevant_country = {
+			is_revolutionary = no
+			has_law_or_variant = law_type:law_council_republic
+			country_rank >= rank_value:major_power
+			is_at_war = no
+		}
+		NOT = {
+			has_law_or_variant = law_type:law_council_republic
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_WASHINGTON
+			}
+			save_scope_as = washington_scope
+		}
+		ordered_diplomatically_relevant_country = {
+			limit = {
+				is_revolutionary = no
+				has_law_or_variant = law_type:law_council_republic
+				country_rank >= rank_value:major_power
+				is_at_war = no
+			}
+			order_by = prestige
+			position = 0
+			save_scope_as = foreign_council_republic
+		}
+	}
+
+	#restore order
+	option = {
+		name = usfp_usa_labor.10.a
+		default_option = yes
+		trigger = {
+			OR = {
+				institution_investment_level = {
+					institution = institution_police
+					value >= 2
+				}
+				institution_investment_level = {
+					institution = institution_home_affairs
+					value >= 2
+				}
+			}
+		}
+		highlighted_option = yes
+		show_as_unavailable = { always = yes }
+		scope:washington_scope = {
+			add_radicals_in_state = {
+				strata = lower
+				value = medium_radicals
+			}
+			add_modifier = {
+				name = usfp_urban_general_strike_modifier
+				months = 1
+				is_decaying = yes
+			}
+		}
+	}
+
+	#viva la revolution
+	option = {
+		name = usfp_usa_labor.10.b
+		ig:ig_industrialists ?= {
+			add_modifier = {
+				name = usfp_industrialists_fear_revolt_ig_modifier
+				years = 5
+			}
+		}
+		every_political_movement = {
+			limit = {
+				movement_is_socialist = yes
+			}
+			add_modifier = {
+				name = usfp_seattle_commune_modifier
+				years = 1
+			}
+		}
+		scope:washington_scope = {
+			add_radicals_in_state = {
+				value = large_radicals
+			}
+			add_modifier = {
+				name = usfp_urban_general_strike_modifier
+				months = 6
+				is_decaying = yes
+			}
+		}
+	}
+}
+
+#Business Plot
+usfp_usa_labor.11 = {
+	type = country_event
+
+	icon = "gfx/interface/icons/law_icons/autocracy.dds"
+	event_image = {
+		video = "ep1_clandestine_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	placement = root
+
+	title = usfp_usa_labor.11.t
+	desc = usfp_usa_labor.11.d
+	flavor = usfp_usa_labor.11.f
+	dlc = dlc_usfp
+	duration = 3
+	cooldown = { days = never_fire_again_modifier_time } #Once
+
+	trigger = {
+		has_technology_researched = mass_propaganda
+		has_technology_researched = corporate_management
+		any_political_movement = {
+			is_political_movement_type = movement_fascist
+		}
+		ig:ig_industrialists ?= {
+			ig_approval <= -5
+		}
+		any_scope_general = {
+			OR = {
+				has_template = usfp_smedley_butler
+                interest_group = root.ig:ig_industrialists
+				has_ideology = ideology:ideology_fascist
+			}
+			has_socialist_ideology = no
+			NOT = {
+				interest_group = {
+					is_interest_group_type = ig_trade_unions
+				}
+			}
+			is_ruler_of_any_country = no
+		}
+		NOT = {
+			has_law_or_variant = law_type:law_council_republic
+		}
+		ruler = {
+			OR = {
+				has_socialist_ideology = yes
+				has_ideology = ideology:ideology_usfp_progressive
+			}
+		}
+		NOR = {
+			has_variable = coup_cooldown_var
+		}
+		NOT = {
+			has_journal_entry = je_ip4_coup
+		}
+	}
+
+	immediate = {
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_fascist
+			}
+			save_scope_as = fascist_movement
+		}
+		if = {
+			limit = {
+				any_scope_general = {
+					has_template = usfp_smedley_butler
+				}
+			}
+			random_scope_general = {
+				limit = {
+					has_template = usfp_smedley_butler
+				}
+				save_scope_as = business_plot_general
+			}
+		} else_if = {
+			limit = {
+				any_scope_general = {
+					has_ideology = ideology:ideology_fascist
+					NOT = {
+						interest_group = {
+							is_interest_group_type = ig_trade_unions
+						}
+					}
+					is_ruler_of_any_country = no
+				}
+			}
+			random_scope_general = {
+				limit = {
+					has_ideology = ideology:ideology_fascist
+					NOT = {
+						interest_group = {
+							is_interest_group_type = ig_trade_unions
+						}
+					}
+				}
+				save_scope_as = business_plot_general
+			}
+		} else = {
+			ordered_scope_general = {
+				limit = {
+					has_socialist_ideology = no
+					NOT = {
+						interest_group = {
+							is_interest_group_type = ig_trade_unions
+						}
+					}
+					is_ruler_of_any_country = no
+				}
+                order_by = popularity
+                position = 0
+				save_scope_as = business_plot_general
+			}
+		}
+	}
+
+	#they have chosen poorly
+	option = {
+		name = usfp_usa_labor.11.a
+		default_option = yes
+		ig:ig_industrialists ?= {
+			add_modifier = {
+				name = usfp_business_plot_foiled_ig_modifier
+				years = 3
+			}
+		}
+		scope:business_plot_general = {
+			add_modifier = {
+				name = usfp_business_plot_spotlight
+				years = 4
+			}
+		}
+	}
+
+	#begin coup
+	option = {
+		name = usfp_usa_labor.11.b
+		trigger = {
+			scope:business_plot_general = {
+                custom_tooltip = {
+                    text = is_not_smedly_butler
+                    NOT = {
+                        has_template = usfp_smedley_butler
+                    }
+                }
+                loyalty <= 40
+			}
+		}
+		highlighted_option = yes
+		show_as_unavailable = { always = yes }
+		je:je_usfp_american_constitution ?= {
+			remove_modifier = usfp_apolitical_military_modifier
+		}
+		create_coup_from_character = {
+			CHARACTER = scope:business_plot_general
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_fascist
+			}
+			add_modifier = {
+				name = usfp_business_plot_movement_modifier
+				years = 2
+			}
+		}
+	}
+
+    #investigate!
+    option = {
+        name = usfp_usa_labor.11.c
+        highlighted_option = yes
+        show_as_unavailable = { always = yes }
+        trigger = {
+            ig:ig_industrialists ?= {
+                is_powerful = no
+                is_in_government = no
+            }
+            institution_investment_level = {
+                institution = institution_home_affairs
+                value >= 5
+            }
+        }
+        every_scope_character = {
+            limit = {
+                interest_group = {
+                    is_interest_group_type = ig_industrialists
+                }
+                has_ideology = ideology:ideology_fascist
+            }
+            add_modifier = {
+                name = usfp_business_plot_revealed_conspirator
+                years = 5
+            }
+        }
+        ordered_scope_character = {
+            limit = {
+                is_ruler_of_any_country = no
+                NOT = {
+                    has_ideology = ideology:ideology_fascist
+                }
+                has_socialist_ideology = no
+                interest_group = {
+                    is_interest_group_type = ig_industrialists
+                }
+            }
+            order_by = {
+                value = loyalty
+                multiply = -1
+            }
+            position = 0
+            add_modifier = {
+                name = usfp_business_plot_revealed_conspirator
+                years = 5
+            }
+        }
+        ig:ig_industrialists ?= {
+            add_modifier = {
+                name = usfp_business_plot_foiled_ig_modifier
+                years = 3
+                multiplier = 3
+            }
+        }
+        scope:business_plot_general = {
+            add_modifier = {
+                name = usfp_business_plot_spotlight
+                years = 4
+            }
+        }
+    }
+}

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_helen_keller = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 201 198 201 198 }
  		skin_color={ 46 15 46 15 }
  		eye_color={ 255 0 200 157 }

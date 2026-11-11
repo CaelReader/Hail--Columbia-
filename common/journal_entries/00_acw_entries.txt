@@ -3,8 +3,11 @@ je_acw_countdown = {
 	icon = "gfx/interface/icons/event_icons/abolition_slave.dds"
 
 	group = je_group_usa_american_civil_war
-
+    highlight = yes
 	should_be_pinned_by_default_uninvolved_or_context = yes
+    activation_description = {
+        always = yes
+    }
 
 	is_shown_in_lobby = {
 		c:USA = THIS
@@ -26,9 +29,20 @@ je_acw_countdown = {
 		}
 	}
 
+    modifiers_while_active = {
+        usfp_a_house_divided_modifier
+        usfp_slave_power_modifier
+    }
+
 	current_value = {
 		value = root.var:acw_progress_var
 	}
+
+    widget = {
+        gui = "gui/journal_entry_widgets/usfp_je_widgets.gui"
+        name = "usfp_widget_a_house_divided_active_je_list"
+        container = "custom_widget_container_3"
+    }
 
 	status_desc = {
 		first_valid = {
@@ -134,57 +148,63 @@ je_acw_countdown = {
 		}
 	}
 
-	complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-		has_law_or_variant = law_type:law_slavery_banned
-		any_revolution_ongoing = no
-		government_legitimacy > 20
-	}
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            scope:journal_entry = {
+                is_goal_complete = yes
+            }
+            has_law_or_variant = law_type:law_slavery_banned
+            any_revolution_ongoing = no
+            government_legitimacy > 20
+        }
+        effect = {
+            trigger_event = {
+                id = usfp_a_house_divided.12
+                days = 0
+                popup = yes
+            }
+            set_variable = je_acw_countdown_complete
+        }
+        event_outcome_effect_desc = {
+            effect = {
+                execute_event_option = {
+                    event = usfp_a_house_divided.12
+                    option = 0
+                }
+            }
+        }
+    }
 
-	on_complete = {
-		trigger_event = {
-			id = usfp_a_house_divided.12
-			days = 0
-			popup = yes
-		}
-		set_variable = je_acw_countdown_complete
-	}
+    outcome = {
+        flags = { historical }
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                has_civil_war_from_movement_type = movement_type:movement_pro_slavery
+                has_civil_war_from_movement_type = movement_type:movement_anti_slavery
+            }
+        }
+        effect = {
+            if = {
+                limit = {
+                    has_civil_war_from_movement_type = movement_type:movement_pro_slavery
+                }
+                set_variable = csa_will_spawn_var
+            }
+            custom_tooltip = {
+                text = acw_will_happen_tt
+                trigger_event = { id = acw_je_events.1 }
+            }
+        }
+    }
 
-	event_outcome_completed_effect_desc = {
-		effect = {
-			execute_event_option = {
-				event = usfp_a_house_divided.12
-				option = 0
-			}
-		}
-	}
-
-
-	modifiers_while_active = {
-		usfp_a_house_divided_modifier
-		usfp_slave_power_modifier
-	}
-	fail = {
-		OR = {
-			has_civil_war_from_movement_type = movement_type:movement_pro_slavery
-			has_civil_war_from_movement_type = movement_type:movement_anti_slavery
-		}		
-	}
-
-	on_fail = {
-		if = {
-			limit = {
-				has_civil_war_from_movement_type = movement_type:movement_pro_slavery
-			}
-			set_variable = csa_will_spawn_var
-		}
-		custom_tooltip = {
-			text = acw_will_happen_tt
-			trigger_event = { id = acw_je_events.1 }
-		}
-	}
 
 	on_monthly_pulse = {
 		effect = {
@@ -262,14 +282,17 @@ je_acw_countdown = {
 		government_legitimacy > 20
 	}
 	progressbar = yes
-	weight = 100
+	weight = 10000
 }
 
 je_acw_war = {
 	icon = "gfx/interface/icons/event_icons/waving_flag_usa_distress.dds"
-
+    highlight = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
 	group = je_group_usa_american_civil_war
-
+    activation_description = {
+        always = yes
+    }
 	scripted_button = usfp_emancipation_proclamation_button
 	scripted_button = usfp_acw_support_button
 
@@ -418,112 +441,123 @@ je_acw_war = {
 		}
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = acw_war_tt_complete
-			scope:target = { #failsafe for improperly annexed states
-				OR = {
-					is_country_alive = no
-					any_scope_state = {
-						count <= 2
-					} 
-				} 
-			}
-		}
-	}
-
-	on_complete = {
-		trigger_event = { id = acw_je_events.2 }
-		if = {
-			limit = { 
-				has_variable = csa_will_spawn_var
-			}
-			ruler = {
-				set_variable = abraham_lincoln
-			}
-		}
-		hidden_effect = {
-			usfp_cleanup_a_house_divided_variables = yes
-		}
-		usfp_cleanup_acw_agitators = yes
-		hidden_effect = {
-			trigger_event = {
-				id = usfp_acw.10
-				months = 1
-			}
-			if = { #failsafe for improperly annexed states
-				limit = { 
-					exists = scope:target
-				}
-				annex = scope:target
-			}
-		}
-		if = {
-			limit = { 
-				has_variable = csa_will_spawn_var
-			}
-			show_as_tooltip = {
-				add_journal_entry = {
-					type = je_acw_reconstruction
-				}
-				add_journal_entry = {
-					type = je_acw_wild_wild_west
-				}
-				add_modifier = {
-					name = usfp_post_acw_demobilization_modifier
-					years = 20
-					is_decaying = yes
-				}
-			}
-		}
-		add_modifier = {
-			name = usfp_war_caucus_modifier
-			years = 4
-			is_decaying = yes
-		}
-        set_global_variable = {
-            name = acw_recently_finished
-            years = 10
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
+        trigger = {
+            custom_tooltip = {
+                text = acw_war_tt_complete
+                scope:target = { #failsafe for improperly annexed states
+                    OR = {
+                        is_country_alive = no
+                        any_scope_state = {
+                            count <= 2
+                        }
+                    }
+                }
+            }
         }
-	}
-
-	fail = {
-		exists = scope:target
-		hidden_trigger = {
-			scope:target = { #failsafe for improperly annexed states
-				any_scope_state = {
-					count > 2
-				}
-			}
-		}
-		NOR = {
-			has_war_with = scope:target
-			is_diplomatic_play_enemy_of = scope:target
-		}
-	}
-
-	on_fail = {
-		trigger_event = usfp_acw.9
-		usfp_manifest_less_destiny_effect = yes
-		hidden_effect = {
-			remove_modifier = usfp_acw_union_modifier
-		}
-		hidden_effect = {
-			usfp_cleanup_a_house_divided_variables = yes
-		}
-		usfp_cleanup_acw_agitators = yes
-		show_as_tooltip = {
-			add_modifier = {
-				name = usfp_secession_legimitized
-				is_decaying = yes
-				years = 50
-			}
-		}
-        set_global_variable = {
-            name = acw_recently_finished
-            years = 10
+        effect = {
+            trigger_event = { id = acw_je_events.2 }
+            if = {
+                limit = {
+                    has_variable = csa_will_spawn_var
+                }
+                ruler = {
+                    set_variable = abraham_lincoln
+                }
+            }
+            hidden_effect = {
+                usfp_cleanup_a_house_divided_variables = yes
+            }
+            usfp_cleanup_acw_agitators = yes
+            hidden_effect = {
+                trigger_event = {
+                    id = usfp_acw.10
+                    months = 1
+                }
+                if = { #failsafe for improperly annexed states
+                    limit = {
+                        exists = scope:target
+                    }
+                    annex = scope:target
+                }
+            }
+            if = {
+                limit = {
+                    has_variable = csa_will_spawn_var
+                }
+                show_as_tooltip = {
+                    add_journal_entry = {
+                        type = je_acw_reconstruction
+                    }
+                    add_journal_entry = {
+                        type = je_acw_wild_wild_west
+                    }
+                    add_modifier = {
+                        name = usfp_post_acw_demobilization_modifier
+                        years = 20
+                        is_decaying = yes
+                    }
+                }
+            }
+            add_modifier = {
+                name = usfp_war_caucus_modifier
+                years = 4
+                is_decaying = yes
+            }
+            set_global_variable = {
+                name = acw_recently_finished
+                years = 10
+            }
         }
-	}
+    }
+
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            exists = scope:target
+            hidden_trigger = {
+                scope:target = { #failsafe for improperly annexed states
+                    any_scope_state = {
+                        count > 2
+                    }
+                }
+            }
+            NOR = {
+                has_war_with = scope:target
+                is_diplomatic_play_enemy_of = scope:target
+            }
+        }
+        effect = {
+            trigger_event = usfp_acw.9
+            usfp_manifest_less_destiny_effect = yes
+            hidden_effect = {
+                remove_modifier = usfp_acw_union_modifier
+            }
+            hidden_effect = {
+                usfp_cleanup_a_house_divided_variables = yes
+            }
+            usfp_cleanup_acw_agitators = yes
+            show_as_tooltip = {
+                add_modifier = {
+                    name = usfp_secession_legimitized
+                    is_decaying = yes
+                    years = 50
+                }
+            }
+            set_global_variable = {
+                name = acw_recently_finished
+                years = 10
+            }
+        }
+    }
 
 	on_monthly_pulse = {
 		random_events = {
@@ -560,17 +594,21 @@ je_acw_war = {
 		}
 	}
 
-	should_be_pinned_by_default_uninvolved_or_context = yes
-	
 	can_revolution_inherit = no
 
 	# acw_events.7 fires for the FSA or CSA, but requires the je_acw_war journal to be active
 	# acw_events.8 fires for the USA, FSA or CSA, but requires the je_acw_war journal to be active
 }
 
-#USFP: overhauled into just dealing with CSA aftermath
+#USFP: overhauled totally
 je_acw_reconstruction = {
-
+    icon = "gfx/interface/icons/invention_icons/egalitarianism.dds"
+    group = je_group_usa_american_civil_war
+    highlight = yes
+    dlc = dlc_usfp
+    activation_description = {
+        always = yes
+    }
 	status_desc = {
 		first_valid = {
 			triggered_desc = { 
@@ -594,19 +632,13 @@ je_acw_reconstruction = {
 			}
 		}
 	}
-	icon = "gfx/interface/icons/invention_icons/egalitarianism.dds"
 
-	group = je_group_usa_american_civil_war
 
 	modifiers_while_active = {
 		usfp_reconstruction_army_duties_modifier
 	}
+
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
 		#clean up election-spawned agitators
 		usfp_cleanup_acw_agitators = yes
 		set_variable = {
@@ -621,16 +653,6 @@ je_acw_reconstruction = {
 		}
 		cu:yankee = {
 			save_scope_as = yankee_culture
-		}
-		je:je_acw_reconstruction ?= {
-			add_modifier = {
-				name = usfp_reconstruction_white_fatigue_modifier
-				multiplier = var:reconstruction_var
-			}
-			add_modifier = {
-				name = usfp_reconstruction_occupation_authority_modifier
-				multiplier = 100
-			}
 		}
 		if = {
 			limit = { 
@@ -649,13 +671,15 @@ je_acw_reconstruction = {
 
 	scripted_button = usfp_reconstruction_enforce_rights_button
 	scripted_button = usfp_reconstruction_confederate_amnesty_button
+    scripted_button = usfp_reconstruction_radical_land_distribution_button
 	scripted_button = usfp_reconstruction_cointelpro_freedmen_button
-	scripted_button = usfp_reconstruction_cointelpro_slaver_button 
+	scripted_button = usfp_reconstruction_cointelpro_slaver_button
+
 
 	on_monthly_pulse = {
 		random_events = {
 			180 = 0
-			20 = acw_followup_events.4 # Forty Acres and a Mule
+			# 20 = acw_followup_events.4 # Forty Acres and a Mule
 			20 = acw_followup_events.5 # Supremacist Violence
 			20 = acw_followup_events.6 # Black Codes
 			20 = acw_followup_events.7 # Paramilitaries
@@ -671,26 +695,38 @@ je_acw_reconstruction = {
 			20 = usfp_reconstruction.15 #Rural Folk support Reconstruction
 		}
 		effect = {
-			je:je_acw_reconstruction = {
-				remove_modifier = usfp_reconstruction_white_fatigue_modifier
-				add_modifier = {
-					name = usfp_reconstruction_white_fatigue_modifier
-					multiplier = var:reconstruction_var
-				}
-				remove_modifier = usfp_reconstruction_occupation_authority_modifier
-				if = {
-					limit = { 
-						"scripted_bar_progress(usfp_reconstruction_northern_will_progress_bar)" > 0
-					}
-					add_modifier = {
-						name = usfp_reconstruction_occupation_authority_modifier
-						multiplier = "scope:journal_entry.scripted_bar_progress(usfp_reconstruction_northern_will_progress_bar)"
-					}
-				}
-
-			}
+			# je:je_acw_reconstruction = {
+			# 	remove_modifier = usfp_reconstruction_white_fatigue_modifier
+			# 	add_modifier = {
+			# 		name = usfp_reconstruction_white_fatigue_modifier
+			# 		multiplier = var:reconstruction_var
+			# 	}
+			# 	remove_modifier = usfp_reconstruction_occupation_authority_modifier
+			# 	if = {
+			# 		limit = {
+			# 			"scripted_bar_progress(usfp_reconstruction_northern_will_progress_bar)" > 0
+			# 		}
+			# 		add_modifier = {
+			# 			name = usfp_reconstruction_occupation_authority_modifier
+			# 			multiplier = "scope:journal_entry.scripted_bar_progress(usfp_reconstruction_northern_will_progress_bar)"
+			# 		}
+			# 	}
+			# }
 		}
 	}
+
+    scaling_modifiers_while_active = {
+        modifier = usfp_reconstruction_white_fatigue_modifier
+        value = {
+            value = root.var:reconstruction_var
+        }
+    }
+    scaling_modifiers_while_active = {
+        modifier = usfp_reconstruction_occupation_authority_modifier
+        value = {
+            value = "scope:journal_entry.scripted_bar_progress(usfp_reconstruction_northern_will_progress_bar)"
+        }
+    }
 
 	on_yearly_pulse = {
 		effect = {
@@ -717,7 +753,7 @@ je_acw_reconstruction = {
 				if = {
 					limit = {
 						has_variable = radical_land_distribution
-						var:radical_land_distribution < 4
+						var:radical_land_distribution < 3
 					 }
 					# if = {
 					# 	limit = {
@@ -753,7 +789,7 @@ je_acw_reconstruction = {
 				if = {
 					limit = {
 						has_variable = radical_land_distribution
-						var:radical_land_distribution = 4
+						var:radical_land_distribution = 3
 						NOT = {
 							has_modifier = usfp_freedmens_holdings
 						}
@@ -780,29 +816,38 @@ je_acw_reconstruction = {
 		}
 	}
 
-	on_timeout = {
-		# trigger_event = { id = acw_je_events.3 }
-		usfp_reconstruction_conclusion_effect = yes
-	}
+    outcome = {
+        header = JOURNAL_ENTRY_TIMEOUT
+        effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+        flags = { timeout historical }
+        conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+        effect = {
+            usfp_reconstruction_conclusion_effect = yes
+        }
+    }
 
-	invalid = {
-		OR = {
-			custom_tooltip = {
-				text = made_devils_bargain
-				has_variable = reconstruction_ended_early
-			}
-			NOT = {
-				has_law_or_variant = law_type:law_slavery_banned
-			}
-			NOT = {
-				any_scope_state = {
-					state_region = {
-						is_homeland = cu:afro_american
-					}
-				}
-			}
-		}
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                custom_tooltip = {
+                    text = made_devils_bargain
+                    has_variable = reconstruction_ended_early
+                }
+                NOT = {
+                    has_law_or_variant = law_type:law_slavery_banned
+                }
+                NOT = {
+                    any_scope_state = {
+                        state_region = {
+                            is_homeland = cu:afro_american
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 	scripted_progress_bar =  usfp_reconstruction_progress_bar
 	scripted_progress_bar =  usfp_reconstruction_northern_will_progress_bar
@@ -815,40 +860,53 @@ je_acw_reincorporate = {
 	icon = "gfx/interface/icons/generic_icons/secession_culture_ongoing.dds"
 
 	group = je_group_historical_content
+    activation_description = {
+        always = yes
+    }
 
-	complete = {
-		NOT = {
-			any_scope_state = {
-				has_modifier = unreconstructed_state
-				is_incorporated = no
-			}
-		}
-		NOT = {
-			any_scope_state = {
-				state_region = {
-					is_homeland = cu:dixie
-				}
-				loyalist_fraction = {
-					value < 0.2
-					culture = cu:dixie
-				}
-			}
-		}
-	}
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            NOT = {
+                any_scope_state = {
+                    has_modifier = unreconstructed_state
+                    is_incorporated = no
+                }
+            }
+            NOT = {
+                any_scope_state = {
+                    state_region = {
+                        is_homeland = cu:dixie
+                    }
+                    loyalist_fraction = {
+                        value < 0.2
+                        culture = cu:dixie
+                    }
+                }
+            }
+        }
+        effect = {
 
-	on_complete = {
-		# custom_tooltip = {
-		# 	text = dont_lose_dixie_culture
-		# 	set_variable = acw_keep_dixie
-		# }
-		# custom_tooltip = {
-		# 	text = reconstruction_progress
-		# 	change_variable = {
-		# 		name = reconstruction_var
-		# 		add = 1
-		# 	}
-		# }
-	}
+        }
+    }
+
+
+	# on_complete = {
+	# 	# custom_tooltip = {
+	# 	# 	text = dont_lose_dixie_culture
+	# 	# 	set_variable = acw_keep_dixie
+	# 	# }
+	# 	# custom_tooltip = {
+	# 	# 	text = reconstruction_progress
+	# 	# 	change_variable = {
+	# 	# 		name = reconstruction_var
+	# 	# 		add = 1
+	# 	# 	}
+	# 	# }
+	# }
 
 	# on_monthly_pulse = {
 	# 	random_events = {
@@ -859,11 +917,11 @@ je_acw_reincorporate = {
 	# 	}
 	# }
 
-	invalid = {
-		always = yes
-	}
+	# invalid = {
+	# 	always = yes
+	# }
 
-	timeout = 4380
+	# timeout = 4380
 }
 
 # je_acw_equality = {
@@ -920,33 +978,7 @@ je_acw_wild_wild_west = {
 	icon = "gfx/interface/icons/war_goals/take_colony.dds"
 
 	group = je_group_usa_manifest_destiny
-
-	complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-		NOT = {
-			any_scope_state = {
-				usfp_american_west_zone = yes
-				devastation > 0.1
-				turmoil > 0.1
-			}
-		}
-	}
-
-	on_complete = {
-		custom_tooltip = {
-			text = acw_no_outlaw_crisis
-		}
-		# custom_tooltip = {
-		# 	text = reconstruction_progress
-		# 	change_variable = {
-		# 		name = reconstruction_var
-		# 		add = 1
-		# 	}
-		# }
-	}
-
+    activation_description = { always = yes }
 	on_monthly_pulse = {
 		random_events = {
 			100 = 0
@@ -980,13 +1012,52 @@ je_acw_wild_wild_west = {
 		}
 	}
 
-	invalid = {
-		NOT = {
-			any_scope_state = {
-				usfp_american_west_zone = yes
-			}
-		}
-	}
+    outcome = {
+        flags = { historical }
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            scope:journal_entry = {
+                is_goal_complete = yes
+            }
+            NOT = {
+                any_scope_state = {
+                    usfp_american_west_zone = yes
+                    devastation > 0.1
+                    turmoil > 0.1
+                }
+            }
+        }
+        effect = {
+            custom_tooltip = {
+                text = acw_no_outlaw_crisis
+            }
+        }
+    }
+
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            NOT = {
+                any_scope_state = {
+                    usfp_american_west_zone = yes
+                }
+            }
+        }
+    }
+
+    outcome = {
+        header = JOURNAL_ENTRY_TIMEOUT
+        effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+        flags = { timeout }
+        conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+        effect = {
+            je_acw_wild_wild_west_cleanup = yes
+        }
+    }
 
 	current_value = {
 		value = var:je_acw_wild_west_var
@@ -1005,6 +1076,7 @@ je_acw_war_csa = {
 	icon = "gfx/interface/icons/event_icons/waving_flag_usa_distress.dds"
 	group = je_group_usa_american_civil_war
 	should_be_pinned_by_default_uninvolved_or_context = yes
+    activation_description = { always = yes }
 	on_monthly_pulse = {
 		random_events = {
 			chance_of_no_event = 33
@@ -1021,9 +1093,18 @@ je_acw_war_csa = {
 		usfp_csa_civil_war_no_colonies_modifier
 	}
 
-	complete = {
-		is_at_war = no
-		has_truce_with = c:USA
-		is_subject = no
-	}
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            is_at_war = no
+            has_truce_with = c:USA
+            is_subject = no
+        }
+        effect = {
+
+        }
+    }
 }

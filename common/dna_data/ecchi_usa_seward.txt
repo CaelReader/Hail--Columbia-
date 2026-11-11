@@ -1,6 +1,8 @@
 ﻿ecchi_dna_william_h_seward = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 190 136 190 147 }
  		skin_color={ 75 19 75 19 }
  		eye_color={ 208 198 208 198 }

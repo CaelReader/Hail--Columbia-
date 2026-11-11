@@ -1,14 +1,10 @@
 ﻿je_usfp_dust_bowl = {
     icon = "gfx/interface/icons/harvest_condition_icons/usfp_dust_storm.dds"
-
+    dlc = dlc_usfp
+    activation_description = { always = yes }
     group = je_group_crises
 
     immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
         trigger_event = usfp_dust_bowl.2
         set_global_variable = dust_bowl_ongoing
         set_global_variable = dust_bowl_happened
@@ -73,120 +69,130 @@
         }
     }
 
-    invalid = {
-        NOT = {
-            any_scope_state = {
-                is_in_geographic_region = geographic_region_southern_great_plains
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                any_scope_state = {
+                    is_in_geographic_region = geographic_region_southern_great_plains
+                }
+            }
+        }
+        effect = {
+            remove_global_variable = dust_bowl_ongoing
+            every_scope_state = {
+                limit = {
+                    has_modifier = usfp_shelterbelt_construction_modifier
+                }
+                remove_modifier = usfp_shelterbelt_construction_modifier
             }
         }
     }
 
-    on_invalid = {
-        remove_global_variable = dust_bowl_ongoing
-        every_scope_state = {
-            limit = {
-                has_modifier = usfp_shelterbelt_construction_modifier
-            }
-            remove_modifier = usfp_shelterbelt_construction_modifier
-        }
-    }
-
-    complete = {
-        custom_tooltip = {
-            text = usfp_dust_bowl_desertification_zero
-            scope:journal_entry = {
-                "scripted_bar_progress(usfp_dust_bowl_desertification_bar)" <= 0
-            }
-        }
-    }
-
-    on_complete = {
-        trigger_event = usfp_dust_bowl.3
-        remove_global_variable = dust_bowl_ongoing
-        every_scope_state = {
-            limit = {
-                has_modifier = usfp_shelterbelt_construction_modifier
-            }
-            remove_modifier = usfp_shelterbelt_construction_modifier
-        }
-        show_as_tooltip = { #actually applied in the event
-            custom_tooltip = dust_bowl_dust_storms_end
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
+        trigger = {
             custom_tooltip = {
-                text = dust_bowl_arable_land_restored
-                every_state_region_in_southern_plains = {
-                    add_arable_land = var:dust_bowl_arable_land_stripped
+                text = usfp_dust_bowl_desertification_zero
+                scope:journal_entry = {
+                    "scripted_bar_progress(usfp_dust_bowl_desertification_bar)" <= 0
+                }
+            }
+        }
+        effect = {
+            trigger_event = usfp_dust_bowl.3
+            remove_global_variable = dust_bowl_ongoing
+            every_scope_state = {
+                limit = {
+                    has_modifier = usfp_shelterbelt_construction_modifier
+                }
+                remove_modifier = usfp_shelterbelt_construction_modifier
+            }
+            show_as_tooltip = { #actually applied in the event
+                custom_tooltip = dust_bowl_dust_storms_end
+                custom_tooltip = {
+                    text = dust_bowl_arable_land_restored
+                    every_state_region_in_southern_plains = {
+                        add_arable_land = var:dust_bowl_arable_land_stripped
+                    }
+                }
+            }
+        }
+        event_outcome_effect_desc = {
+            header = usfp_dust_bowl.3.a
+            effect = {
+                execute_event_option = {
+                    event = usfp_dust_bowl.3
+                    option = 0
+                }
+            }
+        }
+        event_outcome_effect_desc = {
+            header = usfp_dust_bowl.3.b
+            effect = {
+                execute_event_option = {
+                    event = usfp_dust_bowl.3
+                    option = 1
                 }
             }
         }
     }
 
-    event_outcome_completed_effect_desc = {
-        header = usfp_dust_bowl.3.a
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            custom_tooltip = {
+                text = usfp_dust_bowl_desertification_full
+                scope:journal_entry = {
+                    "scripted_bar_progress(usfp_dust_bowl_desertification_bar)" >= 1000
+                }
+            }
+        }
         effect = {
-            execute_event_option = {
-                event = usfp_dust_bowl.3
-                option = 0
+            trigger_event = usfp_dust_bowl.4
+            remove_global_variable = dust_bowl_ongoing
+            every_scope_state = {
+                limit = {
+                    has_modifier = usfp_shelterbelt_construction_modifier
+                }
+                remove_modifier = usfp_shelterbelt_construction_modifier
+            }
+            show_as_tooltip = { #actually applied in the event
+                custom_tooltip = dust_bowl_dust_storms_continue
+                every_state_region_in_southern_plains = {
+                    add_state_trait = state_trait_usfp_dust_bowl_desert
+                    add_arable_land = -5
+                }
+            }
+        }
+        event_outcome_effect_desc = {
+            header = usfp_dust_bowl.4.a
+            effect = {
+                execute_event_option = {
+                    event = usfp_dust_bowl.4
+                    option = 0
+                }
+            }
+        }
+        event_outcome_effect_desc = {
+            header = usfp_dust_bowl.4.b
+            effect = {
+                execute_event_option = {
+                    event = usfp_dust_bowl.4
+                    option = 1
+                }
             }
         }
     }
 
-    event_outcome_completed_effect_desc = {
-        header = usfp_dust_bowl.3.b
-        effect = {
-            execute_event_option = {
-                event = usfp_dust_bowl.3
-                option = 1
-            }
-        }
-    }
-
-    fail = {
-        custom_tooltip = {
-            text = usfp_dust_bowl_desertification_full
-            scope:journal_entry = {
-                "scripted_bar_progress(usfp_dust_bowl_desertification_bar)" >= 1000
-            }
-        }
-    }
-
-    on_fail = {
-        trigger_event = usfp_dust_bowl.4
-        remove_global_variable = dust_bowl_ongoing
-        every_scope_state = {
-            limit = {
-                has_modifier = usfp_shelterbelt_construction_modifier
-            }
-            remove_modifier = usfp_shelterbelt_construction_modifier
-        }
-        show_as_tooltip = { #actually applied in the event
-            custom_tooltip = dust_bowl_dust_storms_continue
-            every_state_region_in_southern_plains = {
-                add_state_trait = state_trait_usfp_dust_bowl_desert
-                add_arable_land = -5
-            }
-        }
-    }
-
-    event_outcome_failed_effect_desc = {
-        header = usfp_dust_bowl.4.a
-        effect = {
-            execute_event_option = {
-                event = usfp_dust_bowl.4
-                option = 0
-            }
-        }
-    }
-
-    event_outcome_failed_effect_desc = {
-        header = usfp_dust_bowl.4.b
-        effect = {
-            execute_event_option = {
-                event = usfp_dust_bowl.4
-                option = 1
-            }
-        }
-    }
-
-    weight = 200
+    weight = 500
     should_be_pinned_by_default_uninvolved_or_context = yes
 }

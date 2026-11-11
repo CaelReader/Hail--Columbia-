@@ -1,6 +1,8 @@
 ﻿ecchi_dna_john_c_fremont = {
     portrait_info = {
     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 68 246 68 246 }
  		skin_color={ 93 5 93 5 }
  		eye_color={ 89 131 89 131 }

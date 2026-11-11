@@ -127,17 +127,17 @@
   
  rule_usfp_native_consolidation: "@america_icon! #yellow Hail, Columbia!#! | Decentralized Consolidation" #NT!
  setting_some_native_consolidation: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_some_native_consolidation_desc #high Some #!#!#!" #NT!
- setting_some_native_consolidation_desc: "Some [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] in North America will be consolidated on game start. #lore For use in case of potential performance issues.#!" #NT!
+ setting_some_native_consolidation_desc: "Some [Concept('concept_decentralized_nation', '$concept_decentralized_nations|q$')] in North America will be consolidated on game start. #lore For use in case of potential performance issues.#!" #NT!
  setting_more_native_consolidation: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_more_native_consolidation_desc #high More #!#!#!" #NT!
- setting_more_native_consolidation_desc: "Even more [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] in North America will be consolidated on game start. #lore For use in case of potential performance issues.#!" #NT!
+ setting_more_native_consolidation_desc: "Even more [Concept('concept_decentralized_nation', '$concept_decentralized_nations|q$')] in North America will be consolidated on game start. #lore For use in case of potential performance issues.#!" #NT!
  setting_no_native_consolidation: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_no_native_consolidation_desc #high None #!#!#!" #NT!
- setting_no_native_consolidation_desc: "None of the Mod-Added [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] in North America will be consolidated on game start." #NT!
+ setting_no_native_consolidation_desc: "None of the Mod-Added [Concept('concept_decentralized_nation', '$concept_decentralized_nations|q$')] in North America will be consolidated on game start." #NT!
   
  rule_usfp_african_consolidation: "@america_icon! #yellow Hail, Columbia!#! | African Consolidation" #NT!
  setting_african_consolidation: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_african_consolidation_desc #high Yes #!#!#!" #NT!
- setting_african_consolidation_desc: "Consolidates some [Concept('concept_country', '$concept_countries$')] in Central Africa at game start to reduce the starting number of tags below 420." #NT!
+ setting_african_consolidation_desc: "Consolidates some [Concept('concept_country', '$concept_countries|q$')] in Central Africa at game start to reduce the starting number of tags below 420." #NT!
  setting_no_african_consolidation: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_african_consolidation_desc #high No #!#!#!" #NT!
- setting_no_african_consolidation_desc: "African [Concept('concept_country', '$concept_countries$')] are unchanged." #NT!
+ setting_no_african_consolidation_desc: "African [Concept('concept_country', '$concept_countries|q$')] are unchanged." #NT!
   
   
  dyn_c_usfp_grand_columbia: "Grand Columbia" #NT!

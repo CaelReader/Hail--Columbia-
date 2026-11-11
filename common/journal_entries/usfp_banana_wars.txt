@@ -3,28 +3,25 @@
     icon = gfx/interface/icons/goods_icons/prestige_goods/gros_michel_banana_prestige.dds
 
     group = je_group_foreign_affairs
+    dlc = dlc_usfp
+    activation_description = { always = yes }
 
     immediate = {
-        scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
         set_variable = {
             name = banana_wars_var
             value = usfp_calculate_banana_wars_score
         }
-        if = {
-            limit = {
-                has_variable = banana_wars_var
-            }
-            scope:journal_entry = {
-                add_modifier = {
-                    name = usfp_banana_wars_score_modifier
-                    multiplier = root.var:banana_wars_var
-                }
-            }
-        }
+        # if = {
+        #     limit = {
+        #         has_variable = banana_wars_var
+        #     }
+        #     scope:journal_entry = {
+        #         add_modifier = {
+        #             name = usfp_banana_wars_score_modifier
+        #             multiplier = root.var:banana_wars_var
+        #         }
+        #     }
+        # }
         trigger_event = usfp_banana_wars.1
     }
 
@@ -46,19 +43,27 @@
         }
     }
 
+    scaling_modifiers_while_active = {
+        modifier = usfp_banana_wars_score_modifier
+        value = {
+            value = root.var:banana_wars_var
+        }
+    }
+
+
     on_monthly_pulse = {
         effect = {
             set_variable = {
                 name = banana_wars_var
                 value = usfp_calculate_banana_wars_score
             }
-            scope:journal_entry = {
-                remove_modifier = usfp_banana_wars_score_modifier
-                add_modifier = {
-                    name = usfp_banana_wars_score_modifier
-                    multiplier = root.var:banana_wars_var
-                }
-            }
+            # scope:journal_entry = {
+            #     remove_modifier = usfp_banana_wars_score_modifier
+            #     add_modifier = {
+            #         name = usfp_banana_wars_score_modifier
+            #         multiplier = root.var:banana_wars_var
+            #     }
+            # }
             if = {
                 limit = {
                     any_scope_war = {
@@ -170,93 +175,104 @@
 
     }
 
-    complete = {
-        scope:journal_entry = {
-            is_goal_complete = yes
-        }
-    }
-
-
-    on_complete = {
-        add_modifier = {
-            name = usfp_banana_wars_score_modifier
-            multiplier = 30
-            is_decaying = yes
-            years = 10
-        }
-        if = {
-            limit = {
-                is_power_bloc_leader = yes
-            }
-            every_country_in_caribbean_coast = {
-                save_scope_as = target_country
-                root.power_bloc = {
-                    add_leverage = {
-                        target = scope:target_country
-                        value = 200
-                    }
-                }
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            scope:journal_entry = {
+                is_goal_complete = yes
             }
         }
-        every_state_in_caribbean_coast = {
-            limit = {
-                owner ?= {
-                    OR = {
-                        save_temporary_scope_as = check_country
-                        root = {
-                            has_treaty_foreign_investment_rights_with = { TARGET = scope:check_country }
-                        }
-                        is_in_customs_union_with = root
-                        is_subject_of = root
-                    }
-                }
-            }
+        effect = {
             add_modifier = {
-                name = usfp_banana_wars_state_modifier
+                name = usfp_banana_wars_score_modifier
+                multiplier = 30
+                is_decaying = yes
                 years = 10
             }
-        }
-        every_state_in_caribbean_coast = {
-            limit = {
-                has_modifier = usfp_banana_wars_colony_modifier
+            if = {
+                limit = {
+                    is_power_bloc_leader = yes
+                }
+                every_country_in_caribbean_coast = {
+                    save_scope_as = target_country
+                    root.power_bloc = {
+                        add_leverage = {
+                            target = scope:target_country
+                            value = 200
+                        }
+                    }
+                }
             }
-            remove_modifier = usfp_banana_wars_colony_modifier
+            every_state_in_caribbean_coast = {
+                limit = {
+                    owner ?= {
+                        OR = {
+                            save_temporary_scope_as = check_country
+                            root = {
+                                has_treaty_foreign_investment_rights_with = { TARGET = scope:check_country }
+                            }
+                            is_in_customs_union_with = root
+                            is_subject_of = root
+                        }
+                    }
+                }
+                add_modifier = {
+                    name = usfp_banana_wars_state_modifier
+                    years = 10
+                }
+            }
+            every_state_in_caribbean_coast = {
+                limit = {
+                    has_modifier = usfp_banana_wars_colony_modifier
+                }
+                remove_modifier = usfp_banana_wars_colony_modifier
+            }
+            set_variable = banana_wars_finished
         }
-        set_variable = banana_wars_finished
     }
 
-    fail = {
-        ig:ig_industrialists ?= {
-            ig_counts_as_marginal = yes
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            ig:ig_industrialists ?= {
+                ig_counts_as_marginal = yes
+            }
+        }
+        effect = {
+            every_state_in_caribbean_coast = {
+                limit = {
+                    has_modifier = usfp_banana_wars_colony_modifier
+                }
+                remove_modifier = usfp_banana_wars_colony_modifier
+            }
         }
     }
 
-    on_fail = {
-        every_state_in_caribbean_coast = {
-            limit = {
-                has_modifier = usfp_banana_wars_colony_modifier
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                custom_tooltip = {
+                    text = refused_banana_wars
+                    has_variable = rejected_banana_wars
+                }
+                has_law_or_variant = law_type:law_council_republic
             }
-            remove_modifier = usfp_banana_wars_colony_modifier
         }
-    }
-
-
-    invalid = {
-        OR = {
-            custom_tooltip = {
-                text = refused_banana_wars
-                has_variable = rejected_banana_wars
+        effect = {
+            every_state_in_caribbean_coast = {
+                limit = {
+                    has_modifier = usfp_banana_wars_colony_modifier
+                }
+                remove_modifier = usfp_banana_wars_colony_modifier
             }
-            has_law_or_variant = law_type:law_council_republic
-        }
-    }
-
-    on_invalid = {
-        every_state_in_caribbean_coast = {
-            limit = {
-                has_modifier = usfp_banana_wars_colony_modifier
-            }
-            remove_modifier = usfp_banana_wars_colony_modifier
         }
     }
 

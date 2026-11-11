@@ -1,6 +1,8 @@
 ﻿ecchi_dna_cochise = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 22 245 22 245 }
  		skin_color={ 99 160 99 160 }
  		eye_color={ 42 203 42 203 }

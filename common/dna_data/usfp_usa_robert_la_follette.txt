@@ -1,6 +1,8 @@
 ﻿usfp_usa_robert_la_follette={
 	portrait_info = {
-		genes={ 		hair_color={ 198 193 189 193 }
+		genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 198 193 189 193 }
 		skin_color={ 95 19 95 19 }
 		eye_color={ 253 171 74 171 }
 		gene_cheek_fat={ "cheek_fat" 255 "cheek_fat" 178 }

@@ -1,6 +1,8 @@
 ﻿ecchi_dna_william_randolph_hearst = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 203 185 203 185 }
  		skin_color={ 6 28 6 28 }
  		eye_color={ 26 203 26 203 }

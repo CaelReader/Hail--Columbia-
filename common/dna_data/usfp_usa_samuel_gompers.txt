@@ -1,6 +1,8 @@
 ﻿usfp_usa_samuel_gompers={
 	portrait_info = {
-		genes={ 		hair_color={ 205 200 205 200 }
+		genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 205 200 205 200 }
  		skin_color={ 31 5 31 5 }
  		eye_color={ 100 107 100 107 }
  		gene_cheek_fat={ "cheek_fat" 137 "cheek_fat" 137 }

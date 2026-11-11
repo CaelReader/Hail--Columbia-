@@ -1,6 +1,8 @@
 ﻿usfp_benjamin_tillman={
 	portrait_info = {
-	genes={ 		hair_color={ 209 228 209 228 }
+	genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 209 228 209 228 }
  		skin_color={ 104 10 104 10 }
  		eye_color={ 47 154 47 154 }
  		gene_cheek_fat={ "cheek_fat" 114 "cheek_fat" 114 }

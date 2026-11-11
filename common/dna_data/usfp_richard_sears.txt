@@ -1,6 +1,8 @@
 ﻿usfp_richard_sears ={
 		portrait_info = {
-	genes={ 		hair_color={ 51 255 51 247 }
+	genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 51 255 51 247 }
  		skin_color={ 17 5 17 5 }
  		eye_color={ 1 211 131 46 }
  		gene_cheek_fat={ "cheek_fat" 149 "cheek_fat" 134 }

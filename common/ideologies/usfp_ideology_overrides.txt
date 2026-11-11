@@ -22,12 +22,15 @@ REPLACE:ideology_republican_paternalistic = { # Replacing basegame to stop stupi
         law_universal_suffrage = strongly_disapprove
         law_anarchy = strongly_disapprove
         law_technocracy = strongly_disapprove
+        law_labour_suffrage = strongly_disapprove
     }
 
     lawgroup_bureaucracy = {
         law_hereditary_bureaucrats = approve
+        law_military_bureaucrats = neutral
         law_appointed_bureaucrats = neutral
         law_elected_bureaucrats = neutral
+        law_communal_administration = strongly_disapprove
     }
 
     lawgroup_policing = {
@@ -75,12 +78,15 @@ REPLACE_OR_CREATE:ideology_jacksonian_democrat = { #replacing basegame
         law_autocracy = strongly_disapprove
         law_single_party_state = disapprove
         law_technocracy = strongly_disapprove
+        law_labour_suffrage = strongly_disapprove
     }
 
     lawgroup_bureaucracy = {
         law_elected_bureaucrats = approve
+        law_military_bureaucrats = disapprove
         law_appointed_bureaucrats = neutral
         law_hereditary_bureaucrats = disapprove
+        law_communal_administration = strongly_disapprove
     }
 
     #Citizenship and Slavery is a divided issue so neutral across
@@ -90,6 +96,7 @@ REPLACE_OR_CREATE:ideology_jacksonian_democrat = { #replacing basegame
         law_colonial_resettlement = strongly_disapprove
         law_colonial_exploitation = strongly_disapprove
         law_frontier_colonization = strongly_approve
+        law_internal_colonization = approve
     }
 
     lawgroup_land_reform = {

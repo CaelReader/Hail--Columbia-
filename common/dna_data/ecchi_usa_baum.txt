@@ -1,6 +1,8 @@
 ﻿ecchi_dna_l_frank_baum = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 13 232 13 232 }
  		skin_color={ 86 2 86 2 }
  		eye_color={ 222 162 222 162 }

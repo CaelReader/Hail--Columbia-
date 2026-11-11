@@ -3,7 +3,6 @@
 party_american_party: "American Party"
 party_free_soil_party: "Free Soil Party"
 party_radical_democracy_party: "Radical Democracy Party"
-party_socialist: "Socialist Labor Party"
 
 intelligentsia_missing: "$ig_intelligentsia$ missing from the Liberal Party"
 industrialists_missing: "$ig_industrialists$ missing from the Free Trade Party"
@@ -12,7 +11,7 @@ usfp_bourbon_democrats: "Bourbon Democrats"
 from_progressive_leader: "Progressive Leader"
 powerful_abolitionist: "[concept_powerful] [GetIdeology('ideology_abolitionist').GetName] [concept_leader]"
 harlem_renaissance_movement_attraction: "[GetCulture('afro_american').GetName] Renaissance"
-slave_free_state_balance: "Number of Slave vs Free [Concept('concept_incorporated_state', '$concept_incorporated_states$')]"
+slave_free_state_balance: "Number of Slave vs Free [Concept('concept_incorporated_state', '$concept_incorporated_states|q$')]"
 
 rural_interests: "Rural Interests"
 urban_interests: "Urban Interests"

@@ -1,14 +1,10 @@
 ﻿je_usfp_panic_1837 = {
 	icon = "gfx/interface/icons/invention_icons/central_banking.dds"
-
+    dlc = dlc_usfp
+    activation_description = { always = yes }
 	group = je_group_usfp_financial
 
 	immediate = {
-		scope:journal_entry = {
-            add_com_dlc_icon = {
-                dlc = dlc_usfp
-            }
-        }
 		if = {
 			limit = {
 				has_law_or_variant = law_type:law_interventionism
@@ -59,28 +55,35 @@
 		}
 	}
 
-	invalid = {
-		OR = {
-			has_law_or_variant = law_type:law_command_economy
-			has_law_or_variant = law_type:law_cooperative_ownership
-		}
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            has_radical_leftist_economy = yes
+        }
+    }
 
-	complete = {
-		custom_tooltip = {
-			text = panic_recovery_complete
-			scope:journal_entry = {
-				"scripted_bar_progress(usfp_panic_1837_recovery_progress_bar)" >= 300
-			}
-		}
-	}
-
-	on_complete = {
-		add_modifier = {
-			name = usfp_post_panic_recovery_modifier
-			years = 3
-		}
-	}
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        flags = { historical }
+        trigger = {
+            custom_tooltip = {
+                text = panic_recovery_complete
+                scope:journal_entry = {
+                    "scripted_bar_progress(usfp_panic_1837_recovery_progress_bar)" >= 300
+                }
+            }
+        }
+        effect = {
+            add_modifier = {
+                name = usfp_post_panic_recovery_modifier
+                years = 3
+            }
+        }
+    }
 
 	weight = 200
 	should_be_pinned_by_default_uninvolved_or_context = yes
@@ -89,7 +92,8 @@
 
 je_usfp_railroad_bubble = {
 	icon = "gfx/interface/icons/invention_icons/steel_railway_cars.dds"
-
+    dlc = dlc_usfp
+    activation_description = { always = yes }
 	group = je_group_usfp_financial
 
 
@@ -118,37 +122,51 @@ je_usfp_railroad_bubble = {
 	scripted_button = usfp_nationalize_railroads_button
 
 	timeout = 7200 #20 years
+    outcome = {
+        header = JOURNAL_ENTRY_TIMEOUT
+        effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+        flags = { timeout }
+        conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+        effect = {
+            add_loyalists = {
+                pop_type = capitalists
+                value = medium_radicals
+            }
+        }
+    }
 
-	on_timeout = {
-		add_loyalists = {
-			pop_type = capitalists
-			value = medium_radicals
-		}
-	}
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                has_radical_leftist_economy = yes
+                has_variable = usfp_nationalized_railroads
+            }
+        }
+    }
 
-	invalid = {
-		OR = {
-			has_law_or_variant = law_type:law_command_economy
-			has_law_or_variant = law_type:law_cooperative_ownership
-			has_variable = usfp_nationalized_railroads
-		}
-	}
-
-	fail = {
-		custom_tooltip = {
-			text = panic_recovery_complete
-			scope:journal_entry = {
-				"scripted_bar_progress(usfp_railroad_boom_bar)" >= 1000
-			}
-		}
-	}
-
-	on_fail = {
-		trigger_event = {
-			id = usfp_panics.2
-			popup = yes
-		}
-	}
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        flags = { historical }
+        trigger = {
+            custom_tooltip = {
+                text = panic_recovery_complete
+                scope:journal_entry = {
+                    "scripted_bar_progress(usfp_railroad_boom_bar)" >= 1000
+                }
+            }
+        }
+        effect = {
+            trigger_event = {
+                id = usfp_panics.2
+                popup = yes
+            }
+        }
+    }
 
 	weight = 200
 	should_be_pinned_by_default_uninvolved_or_context = yes

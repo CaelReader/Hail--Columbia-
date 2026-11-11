@@ -989,7 +989,7 @@ ecchi_usa_thomas_character_template = {
     culture = cu:yankee
     female = no
     religion = protestant
-    ideology = ideology_social_democrat #usfp
+    ideology = ideology_state_socialist #usfp
     interest_group = ig_trade_unions
 	dna = ecchi_dna_norman_thomas
     birth_date = 1884.11.20
@@ -1017,7 +1017,7 @@ ecchi_usa_foster_character_template = {
     culture = cu:yankee
     female = no
     religion = protestant
-    ideology = ideology_communist
+    ideology = ideology_communist_leader
     interest_group = ig_trade_unions
 	dna = ecchi_dna_william_z_foster
     birth_date = 1881.2.25
@@ -1261,7 +1261,7 @@ ecchi_usa_keller_character_template = {
     culture = cu:dixie
     female = yes
     religion = protestant
-    ideology = ideology_communist #USFP
+    ideology = ideology_communist_leader #USFP
     interest_group = ig_trade_unions
 	dna = ecchi_dna_helen_keller
     birth_date = 1880.6.27
@@ -1305,7 +1305,7 @@ ecchi_usa_keller_character_template = {
             set_ideology = ideology:ideology_feminist
         }
         else = {
-            set_ideology = ideology:ideology_communist
+            set_ideology = ideology:ideology_communist_leader
         }
     }
 }
@@ -1318,7 +1318,7 @@ ecchi_usa_hill_character_template = {
     culture = cu:swedish
     female = no
     religion = protestant
-    ideology = ideology_communist #USFP
+    ideology = ideology_communist_leader #USFP
     interest_group = ig_trade_unions
 	dna = ecchi_dna_joe_hill
     birth_date = 1879.10.7
@@ -1359,7 +1359,7 @@ ecchi_usa_twain_character_template = {
     culture = cu:yankee
     female = no
     religion = protestant
-    ideology = ideology_social_democrat
+    ideology = ideology_state_socialist
     interest_group = ig_intelligentsia
 	# dna = ecchi_dna_mark_twain
     birth_date = 1835.11.30
@@ -1897,7 +1897,7 @@ ecchi_asa_singleton_character_template = {
     birth_date = 1809.4.17
     home_region = STATE_TENNESSEE
     is_agitator = yes
-    traits = { charismatic tactful direct }
+    traits = { charismatic tactful direct persistent }
     agitator_usage = {
         country_trigger = {
             OR = {
@@ -1916,7 +1916,7 @@ ecchi_asa_singleton_character_template = {
 			}
         }
         earliest_usage_date = 1874.1.1
-        latest_usage_date = 1900.2.17
+        latest_usage_date = 1887.1.1
         #guaranteed to spawn if possible
     }
 }

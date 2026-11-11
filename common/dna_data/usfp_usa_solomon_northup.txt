@@ -1,6 +1,8 @@
 ﻿usfp_usa_solomon_northup={
 	portrait_info = {
-			genes={ 		hair_color={ 160 255 114 246 }
+			genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 160 255 114 246 }
 				skin_color={ 148 229 148 229 }
 				eye_color={ 85 245 85 245 }
 				gene_cheek_fat={ "cheek_fat" 145 "cheek_fat" 127 }

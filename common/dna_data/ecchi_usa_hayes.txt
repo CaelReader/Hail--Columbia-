@@ -1,6 +1,8 @@
 ﻿ecchi_dna_rutherford_b_hayes = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 20 251 20 251 }
  		skin_color={ 48 12 48 12 }
  		eye_color={ 85 144 85 144 }

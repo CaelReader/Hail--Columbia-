@@ -1,0 +1,234 @@
+﻿#Second Revolution, ending the Constitutionalist movement
+usfp_je_second_revolution = {
+
+    icon = gfx/interface/icons/ai_strategy_icons/revolutionary.dds
+    dlc = dlc_usfp
+    highlight = yes
+    activation_description = { always = yes }
+    group = je_group_socialism
+
+    scripted_button = usfp_second_revolution_destroy_monuments_button
+    scripted_button = usfp_second_revolution_suppress_dixie_button
+    scripted_button = usfp_second_revolution_complete_reconstruction_button
+    scripted_button = usfp_second_revolution_switch_outlook_button
+
+    scripted_progress_bar = usfp_second_revolution_bar
+
+    # widget = {
+    #     gui = "gui/com_journal_injects/injects.gui"
+    #     name = "com_journal_entry_progress_bars"
+    #     container = "com_custom_widget_container_scripted_progress_bars"
+    # }
+
+    status_desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = {
+                    var:usfp_second_revolution_current_var >= 70
+                }
+                desc = usfp_je_second_revolution_cementing_americanism
+            }
+            triggered_desc = {
+                trigger = {
+                    var:usfp_second_revolution_current_var <= 30
+                }
+                desc = usfp_je_second_revolution_cementing_internationalism
+            }
+            triggered_desc = {
+                trigger = {
+                    var:usfp_second_revolution_total_target >= 60
+                }
+                desc = usfp_je_second_revolution_leaning_americanism
+            }
+            triggered_desc = {
+                trigger = {
+                    var:usfp_second_revolution_total_target <= 40
+                }
+                desc = usfp_je_second_revolution_leaning_internationalism
+            }
+            triggered_desc = {
+                desc = usfp_je_second_revolution_undecided
+            }
+        }
+        first_valid = {
+            triggered_desc = {
+                desc = usfp_second_revolution_targets
+            }
+        }
+    }
+
+    immediate = {
+        trigger_event = usfp_usa_socialism.1
+        set_variable = {
+            name = usfp_second_revolution_americanism_target
+            value = usfp_second_revolution_get_americanism_target
+        }
+        set_variable = {
+            name = usfp_second_revolution_internationalism_target
+            value = usfp_second_revolution_get_antiamericanism_target
+        }
+        set_variable = { name = usfp_second_revolution_total_target value = 50 }
+        set_variable = { name = usfp_second_revolution_current_var value = 50 }
+        set_variable = { name = usfp_second_revolution_americanism_cementing_progress value = 0 }
+        set_variable = { name = usfp_second_revolution_antiamericanism_cementing_progress value = 0 }
+    }
+
+    is_shown_when_inactive = {
+        c:USA ?= root
+        has_technology_researched = socialism
+        OR = {
+            any_political_movement = {
+                movement_is_socialist = yes
+            }
+            has_law_or_variant = law_type:law_council_republic
+        }
+    }
+
+    possible = {
+        has_law_or_variant = law_type:law_council_republic
+        is_revolutionary = no
+        is_secessionist = no
+    }
+
+
+    on_monthly_pulse = {
+        effect = {
+            usfp_second_revolution_calculate_targets = yes
+            if = {
+                limit = {
+                    NOT = {
+                        has_variable = usfp_second_revolution_americanism_reached_75
+                    }
+                    var:usfp_second_revolution_current_var >= 75
+                }
+                set_variable = usfp_second_revolution_americanism_reached_75
+            }
+            if = {
+                limit = {
+                    has_variable = usfp_second_revolution_americanism_reached_75
+                    var:usfp_second_revolution_current_var >= 70
+                }
+                change_variable = {
+                    name = usfp_second_revolution_americanism_cementing_progress
+                    add = 1
+                }
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_variable = usfp_second_revolution_antiamericanism_reached_75
+                    }
+                    var:usfp_second_revolution_current_var <= 25
+                }
+                set_variable = usfp_second_revolution_antiamericanism_reached_75
+            }
+            if = {
+                limit = {
+                    has_variable = usfp_second_revolution_antiamericanism_reached_75
+                    var:usfp_second_revolution_current_var <= 30
+                }
+                change_variable = {
+                    name = usfp_second_revolution_antiamericanism_cementing_progress
+                    add = 1
+                }
+            }
+        }
+    }
+
+    #Americanism Outcome
+    outcome = {
+        header = usfp_je_second_revolution_americanist_header
+        effect_header = usfp_je_second_revolution_on_americanist_victory_header
+        color = "blue"
+        conclusion_desc = usfp_je_second_revolution_americanist_conclusion_desc
+        trigger = {
+            custom_tooltip = {
+                text = americanism_reached_75
+                has_variable = usfp_second_revolution_americanism_reached_75
+            }
+            custom_tooltip = {
+                text = americanism_reached_75_then_70_five_years
+                var:usfp_second_revolution_americanism_cementing_progress >= 60
+            }
+            any_revolution_ongoing = no
+        }
+        effect = {
+            trigger_event = usfp_usa_socialism.2
+            usfp_second_revolution_cleanup = yes
+        }
+        event_outcome_effect_desc = {
+            effect = {
+                execute_event_option = {
+                    event = usfp_usa_socialism.2
+                    option = 0
+                }
+            }
+        }
+    }
+
+
+    #Internationalist Outcome
+    outcome = {
+        header = usfp_je_second_revolution_internationalist_header
+        effect_header = usfp_je_second_revolution_on_internationalist_victory_header
+        color = "red"
+        conclusion_desc = usfp_je_second_revolution_internationalist_conclusion_desc
+        trigger = {
+            OR = {
+                AND = {
+                    custom_tooltip = {
+                        text = antiamericanism_reached_75
+                        has_variable = usfp_second_revolution_antiamericanism_reached_75
+                    }
+                    custom_tooltip = {
+                        text = antiamericanism_reached_75_then_70_five_years
+                        var:usfp_second_revolution_antiamericanism_cementing_progress >= 60
+                    }
+                }
+                custom_tooltip = {
+                    text = formed_socialist_world_republic
+                    has_variable = sozialistische_weltrepublik_var
+                }
+            }
+            any_revolution_ongoing = no
+            has_law_or_variant = law_type:law_multicultural
+            OR = {
+                has_law_or_variant = law_type:law_total_separation
+                has_law_or_variant = law_type:law_state_atheism
+            }
+        }
+        effect = {
+            trigger_event = usfp_usa_socialism.3
+            custom_tooltip = usfp_second_revolution_gain_all_american_primary_cultures
+            set_variable = usfp_second_revolution_internationalism_embraced
+            usfp_second_revolution_cleanup = yes
+        }
+        event_outcome_effect_desc = {
+            effect = {
+                execute_event_option = {
+                    event = usfp_usa_socialism.3
+                    option = 0
+                }
+            }
+        }
+    }
+
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                has_law_or_variant = law_type:law_council_republic
+            }
+        }
+        effect = {
+            usfp_second_revolution_cleanup = yes
+        }
+    }
+
+    should_be_pinned_by_default_uninvolved_or_context = yes
+
+    weight = 10000
+
+    can_revolution_inherit = yes
+}

@@ -96,7 +96,7 @@ usfp_victory_over_nullification_crisis_modifier = {
 
 usfp_acw_union_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
-	country_war_exhaustion_casualties_mult = -0.50
+	country_war_support_casualties_mult = -0.50
 	# unit_morale_loss_mult = -0.50
 	# military_formation_organization_gain_mult = 1.0
 	building_training_rate_mult = 0.5
@@ -109,7 +109,7 @@ usfp_acw_union_modifier = {
 
 usfp_acw_csa_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
-	country_war_exhaustion_casualties_mult = -0.50
+	country_war_support_casualties_mult = -0.50
 	# unit_morale_loss_mult = -0.50
 	# military_formation_organization_gain_mult = 1.0
 	# building_training_rate_mult = 0.5
@@ -122,7 +122,7 @@ usfp_acw_csa_modifier = {
 
 usfp_acw_fsa_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_america_positive.dds
-	country_war_exhaustion_casualties_mult = -0.50
+	country_war_support_casualties_mult = -0.50
 	# unit_morale_loss_mult = -0.50
 	# military_formation_organization_gain_mult = 1.0
 	building_training_rate_mult = 0.5
@@ -520,7 +520,7 @@ usfp_trust_dominance_modifier = {
 usfp_anti_imperialist_league_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_influence_negative.dds
 	country_infamy_generation_mult = 0.10
-	country_war_exhaustion_casualties_mult = 0.15
+	country_war_support_casualties_mult = 0.15
 	country_liberty_desire_of_subjects_add = 0.02
 	country_loyalism_increases_violent_hostility_mult = 0.05
 	country_loyalism_increases_cultural_erasure_mult = 0.05
@@ -743,6 +743,7 @@ usfp_naacp_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_newspaper_positive.dds
 	country_qualification_growth_second_rate_citizen_mult = 0.10
 	country_qualification_growth_open_prejudice_mult = 0.10
+    country_qualification_growth_cultural_erasure_mult = 0.10
 }
 
 usfp_csa_civil_war_no_colonies_modifier = {
@@ -845,7 +846,7 @@ usfp_philippines_military_government_modifier = {
 
 usfp_war_is_a_racket_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-    country_war_exhaustion_casualties_mult = 0.33
+    country_war_support_casualties_mult = 0.33
     state_pop_support_movement_socialist_mult = 0.20
     building_training_rate_mult = -0.15
 }
@@ -1010,6 +1011,7 @@ usfp_great_depression_modifier = {
     country_company_throughput_bonus_add = -0.25
     country_company_construction_efficiency_bonus_add = -0.25
 	political_movement_pop_attraction_mult = 0.33
+    building_cash_reserves_mult = -0.20
 }
 
 usfp_great_depression_immediate_modifier = {
@@ -1021,6 +1023,7 @@ usfp_great_depression_immediate_modifier = {
     country_company_throughput_bonus_add = -0.90
     country_company_construction_efficiency_bonus_add = -0.90
     state_construction_mult = -0.25
+    building_cash_reserves_mult = -0.70
 }
 
 usfp_railroad_boom_je_modifier = {
@@ -1083,4 +1086,24 @@ usfp_monroe_doctrine_complete_hegemony_modifier = {
 	country_diplomatic_reputation_add = -10
 	country_prestige_from_navy_power_projection_mult = 0.10
 	country_ship_crew_starting_veterancy_experience_mult = 0.30
+}
+
+usfp_coal_wars_ongoing_strikes = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_laborer_negative.dds
+	building_coal_mine_throughput_add = -0.10
+	state_pop_support_movement_labor_mult = 0.10
+}
+
+usfp_coal_wars_great_coal_strike = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	building_coal_mine_throughput_add = -0.66
+	building_group_bg_mining_throughput_add = -0.20
+	building_railway_throughput_add = -0.20
+	state_radicals_from_political_movements_mult = 0.10
+}
+
+usfp_second_revolution_switching_stance_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+    interest_group_in_government_attraction_mult = -0.15
+    country_legitimacy_base_add = -10
 }

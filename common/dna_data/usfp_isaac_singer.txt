@@ -1,6 +1,8 @@
 ﻿usfp_isaac_singer ={
 		portrait_info = {
-	genes={ 		hair_color={ 26 253 179 111 }
+	genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 26 253 179 111 }
  		skin_color={ 123 2 123 2 }
  		eye_color={ 255 219 199 81 }
  		gene_cheek_fat={ "cheek_fat" 144 "cheek_fat" 128 }

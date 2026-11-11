@@ -1,0 +1,339 @@
+﻿usfp_second_revolution_destroy_monuments_button = {
+    name = "usfp_second_revolution_destroy_monuments_button"
+    desc = "usfp_second_revolution_destroy_monuments_button_desc"
+
+    visible = {
+        any_scope_building = {
+            OR = {
+                is_building_type = building_white_house
+                is_building_type = building_statue_of_liberty
+            }
+        }
+        NOT = {
+            has_variable = usfp_destroyed_american_monuments
+        }
+    }
+
+    possible = {
+        active_law:lawgroup_education_system = {
+            has_amendment = amendment_type:amendment_usfp_second_revolution_internationalist_education
+        }
+        ruler = {
+            OR = {
+                has_ideology = ideology:ideology_communist_leader
+                has_ideology = ideology:ideology_vanguardist
+                has_ideology = ideology:ideology_anarchist
+                has_ideology = ideology:ideology_nihilist
+            }
+        }
+    }
+
+    effect = {
+        custom_tooltip = {
+            text = "second_revolution_gains_antiamericanism"
+            set_variable = usfp_destroyed_american_monuments
+        }
+        every_scope_state = {
+            limit = {
+                has_building = building_white_house
+            }
+            remove_building = building_white_house
+            add_modifier = {
+                name = usfp_revolutionary_architecture_monuments_destroyed_modifier
+                years = 2
+            }
+        }
+        every_scope_state = {
+            limit = {
+                has_building = building_statue_of_liberty
+            }
+            remove_building = building_statue_of_liberty
+            add_modifier = {
+                name = usfp_revolutionary_architecture_monuments_destroyed_modifier
+                years = 2
+            }
+        }
+        every_scope_state = {
+            limit = {
+                has_modifier = usfp_national_mall_modifier
+            }
+            remove_modifier = usfp_national_mall_modifier
+        }
+        every_primary_culture = {
+            root = {
+                add_radicals = {
+                    value = large_radicals
+                    culture = prev
+                }
+            }
+            add_fervor = -15
+        }
+        every_interest_group = {
+            limit = {
+                leader = {
+                    has_socialist_ideology = no
+                }
+            }
+            add_modifier = {
+                name = usfp_destroyed_monuments_ig_negative
+                years = 2
+            }
+        }
+        every_political_movement = {
+            limit = {
+                OR = {
+                    is_political_movement_type = movement_cultural_majority
+                    is_political_movement_type = movement_usfp_neoconfederate
+                    is_political_movement_type = movement_usfp_american_constitution
+                }
+            }
+            add_modifier = {
+                name = usfp_destroyed_monuments_movement_modifier
+                years = 2
+            }
+        }
+    }
+
+    ai_chance = {
+        value = 0
+    }
+}
+
+usfp_second_revolution_suppress_dixie_button = {
+    name = "usfp_second_revolution_suppress_dixie_button"
+    desc = "usfp_second_revolution_suppress_dixie_button_desc"
+
+    visible = {
+        NOT = {
+            has_variable = usfp_suppressed_dixie_culture
+        }
+        has_global_variable = american_civil_war
+        any_scope_state = {
+            state_region = {
+                is_homeland = cu:dixie
+            }
+        }
+        any_scope_pop = {
+            culture = cu:dixie
+        }
+        NOT = {
+            country_has_primary_culture = cu:usfp_american
+        }
+    }
+
+    possible = {
+        NOR = {
+            ruler = {
+                culture = cu:dixie
+            }
+            any_interest_group_in_government = {
+                leader = {
+                    culture = cu:dixie
+                }
+            }
+        }
+        has_law_or_variant = law_type:law_extraordinary_commission
+        OR = {
+            has_law_or_variant = law_type:law_censorship
+            has_law_or_variant = law_type:law_outlawed_dissent
+        }
+    }
+
+    effect = {
+        set_variable = usfp_suppressed_dixie_culture
+        add_radicals = {
+            culture = cu:dixie
+            value = huge_radicals
+        }
+        cu:dixie = {
+            add_fervor = -5
+        }
+        add_fervor_target_modifier = {
+            culture = cu:dixie
+            multiplier = -15
+            years = 10
+        }
+        remove_primary_culture = cu:dixie
+        kill_population_percent = {
+            culture = cu:dixie
+            percent = 0.01
+        }
+        every_scope_character = {
+            custom = dixie_characters
+            limit = {
+                culture = cu:dixie
+            }
+            random_list = {
+                80 = {
+                    retire_character = yes
+                }
+                10 = {
+                    exile_character_with_role_cleanup = yes
+                }
+                10 = {
+                    kill_character = yes
+                }
+            }
+        }
+    }
+
+    ai_chance = {
+        value = 0
+    }
+}
+
+usfp_second_revolution_complete_reconstruction_button = {
+    name = "usfp_second_revolution_complete_reconstruction_button"
+    desc = "usfp_second_revolution_complete_reconstruction_button_desc"
+
+    visible = {
+        has_global_variable = american_civil_war
+        any_scope_state = {
+            OR = {
+                has_modifier = usfp_deep_south_modifier
+                has_modifier = usfp_upper_south_modifier
+            }
+        }
+    }
+
+    possible = {
+        ruler = {
+            NOT = {
+                culture = cu:dixie
+            }
+        }
+        OR = {
+            has_law_or_variant = law_type:law_collectivized_agriculture
+            has_law_or_variant = law_type:law_command_economy
+        }
+    }
+
+    effect = {
+        add_loyalists = {
+            culture = cu:afro_american
+            value = large_radicals
+        }
+        add_radicals = {
+            culture = cu:dixie
+            value = large_radicals
+        }
+        every_scope_state = {
+            custom = deep_south_upper_south_states
+            limit = {
+                OR = {
+                    has_modifier = usfp_deep_south_modifier
+                    has_modifier = usfp_upper_south_modifier
+                }
+            }
+            if = {
+                limit = {
+                    has_modifier = usfp_deep_south_modifier
+                }
+                remove_modifier = usfp_deep_south_modifier
+            }
+            if = {
+                limit = {
+                    has_modifier = usfp_upper_south_modifier
+                }
+                remove_modifier = usfp_upper_south_modifier
+            }
+            add_modifier = usfp_freedmens_holdings
+            add_loyalists_in_state = {
+                culture = cu:afro_american
+                strata = lower
+                value = very_large_radicals
+            }
+        }
+        usfp_long_reconstruction_add_progress = {
+            VALUE = 100
+        }
+    }
+
+    ai_chance = {
+        value = 100
+    }
+}
+
+usfp_second_revolution_switch_outlook_button = {
+    name = "usfp_second_revolution_switch_outlook_button"
+    desc = "usfp_second_revolution_switch_outlook_button_desc"
+
+    visible = {
+        any_active_law = {
+            OR = {
+                has_amendment = amendment_type:amendment_usfp_second_revolution_internationalist_education
+                has_amendment = amendment_type:amendment_usfp_second_revolution_americanist_education
+            }
+        }
+    }
+
+    possible = {
+        NOT = {
+            has_modifier = usfp_second_revolution_switching_stance_modifier
+        }
+    }
+
+    cooldown = {
+        years = 5
+    }
+
+    effect = {
+        #switch from americanism to internationalism
+        if = {
+            limit = {
+                has_variable = usfp_second_revolution_supported_americanism
+            }
+            active_law:lawgroup_education_system = {
+                random_scope_amendment = {
+                    limit = {
+                        type = amendment_type:amendment_usfp_second_revolution_americanist_education
+                    }
+                    remove_amendment = yes
+                }
+            }
+            active_law:lawgroup_education_system = {
+                add_amendment = {
+                    type = amendment_usfp_second_revolution_internationalist_education
+                    sponsor = PREV.ig:ig_intelligentsia
+                }
+            }
+            custom_tooltip = {
+                text = second_revolution_institutions_will_support_internationalism
+                remove_variable = usfp_second_revolution_supported_americanism
+                set_variable = usfp_second_revolution_supported_antiamericanism
+            }
+        }
+        else_if = {
+            limit = {
+                has_variable = usfp_second_revolution_supported_antiamericanism
+            }
+            active_law:lawgroup_education_system = {
+                random_scope_amendment = {
+                    limit = {
+                        type = amendment_type:amendment_usfp_second_revolution_internationalist_education
+                    }
+                    remove_amendment = yes
+                }
+            }
+            active_law:lawgroup_education_system = {
+                add_amendment = {
+                    type = amendment_usfp_second_revolution_americanist_education
+                    sponsor = PREV.ig:ig_intelligentsia
+                }
+            }
+            custom_tooltip = {
+                text = second_revolution_institutions_will_support_americanism
+                remove_variable = usfp_second_revolution_supported_antiamericanism
+                set_variable = usfp_second_revolution_supported_americanism
+            }
+        }
+        add_modifier = {
+            name = usfp_second_revolution_switching_stance_modifier
+            years = 5
+        }
+    }
+
+    ai_chance = {
+        value = 100
+    }
+}

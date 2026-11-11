@@ -204,6 +204,25 @@
             }
         }
     }
+
+    s:STATE_VERMONT = {
+        region_state:USA = {
+            create_building={
+                building="building_copper_mine"
+                add_ownership={
+                    building={
+                        type="building_financial_district"
+                        country="c:USA"
+                        levels=1
+                        region="STATE_VERMONT"
+                    }
+                }
+                reserves=1
+                activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" }
+            }
+        }
+    }
+
     s:STATE_PENNSYLVANIA = {
         region_state:USA = {
             create_building={

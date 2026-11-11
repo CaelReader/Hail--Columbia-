@@ -1,6 +1,8 @@
 ﻿usfp_jay_gould ={
 	portrait_info = {
-	genes={ 		hair_color={ 25 255 189 82 }
+	genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 25 255 189 82 }
  		skin_color={ 58 30 58 30 }
  		eye_color={ 31 48 140 48 }
  		gene_cheek_fat={ "cheek_fat" 140 "cheek_fat" 140 }

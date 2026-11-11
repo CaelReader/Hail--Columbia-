@@ -1023,3 +1023,32 @@ Updated Transcontinental route triggers to allow you to plan a route that you ha
 Fixed Mexican Homelands not being added after completing the Securing the North JE
 Fixed Oregon Treaty not removing claims properly
 
+#10.0 "Debs"
+## New Content
+	Coal Wars JE detailing the UMWA's struggle to organize the coalfields in the face of company violence, with 10 events
+	Second Revolution JE for a USA that adopts Council Republic, determining the fate of the american national identity
+	New Events: Homestead Strike, Seattle General Strike, LA Times Bombing, Business Plot
+	New Characters: John Reed, Louise Bryant, Mother Jones, John L Lewis, Daniel De Leon, Victoria Woodhull, Benjamin Tucker, Lucy Parsons, Ed Boyce
+## 1.15 Compatibility
+    American Armed Forces are Patriotic, not Militarist
+    Anaconda is now a Copper Mines company
+    Updated all JEs to new outcome setup
+    Updated events that interact with socialist ideologies
+    Updated historical information Concepts to Glossaries
+    Added a starting Copper Mine to Vermont
+    The Constitutional Movement now folds into the Anti-Communist Movement
+    Added law stances for new laws to ideologies
+    Extraordinary Commission is unconstitutional, Military/Communal Bureaucrats are super unconstitutional
+    Updated new contextless canadian JE to work with the native tags
+    The American White Movement gets a special core ideology
+    Now soft-requires No Assimilation Across Heritage Groups, preventing Afro-American pops in the north from vanishing
+## Updates
+	Confiscate Slaver Lands now only takes 3 years to break up the plantations instead of 4
+    Confiscate Slaver Lands is now unlocked by JE button rather than random event
+    Updated Reconstruction tooltips and scripted bar stylings
+    The Great Depression now wrecks building cash reserve limits
+    Added vanilla Suffragists events to the Progressive Era JE
+## Fixes
+    Claim Canada button now works even against non-confederated canadian tags
+    Fixed some script errors in events
+

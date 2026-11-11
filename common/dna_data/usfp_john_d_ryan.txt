@@ -1,6 +1,8 @@
 ﻿usfp_john_d_ryan={
 	portrait_info = {
-	genes={ 		hair_color={ 255 255 250 104 }
+	genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 255 255 250 104 }
  		skin_color={ 23 24 23 24 }
  		eye_color={ 71 135 136 135 }
  		gene_cheek_fat={ "cheek_fat" 184 "cheek_fat" 175 }

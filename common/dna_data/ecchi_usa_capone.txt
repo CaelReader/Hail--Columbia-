@@ -1,6 +1,8 @@
 ﻿ecchi_dna_al_capone = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 167 223 167 223 }
  		skin_color={ 67 4 67 4 }
  		eye_color={ 77 164 77 164 }

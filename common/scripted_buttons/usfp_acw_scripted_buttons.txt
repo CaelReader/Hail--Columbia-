@@ -233,76 +233,76 @@ usfp_emancipation_proclamation_button = {
 }
 
 #remove the Gag Rule in case you end up with Slaver dominance who want to pass Slave Trade
-usfp_end_gag_rule_button = {
-	name = "usfp_end_gag_rule_button"
-	desc = "usfp_end_gag_rule_button_desc"
-
-	visible = {
-		ig:ig_landowners = {
-			is_in_government = yes
-		}
-	}
-
-	possible = {
-		ig:ig_intelligentsia = {
-			ig_counts_as_marginal = yes
-		}
-		OR = {
-			any_interest_group = {
-				is_powerful = yes
-				OR = {
-					has_ideology = ideology:ideology_pro_slavery
-					leader = {
-						has_ideology = ideology:ideology_slaver
-					}
-				}
-			}
-			ruler = {
-				has_ideology = ideology:ideology_slaver
-			}
-		}
-	}
-
-	effect = {
-		custom_tooltip = {
-			text = usfp_end_gag_rule
-			set_variable = removed_gag_rule
-		}
-		add_loyalists = {
-			value = small_radicals
-			interest_group = ig:ig_landowners
-		}
-	}
-}
-
-#remove the gag rule in case republicans win the election but are already revolutionary
-usfp_break_gag_rule_button = {
-	name = "usfp_break_gag_rule_button"
-	desc = "usfp_break_gag_rule_button_desc"
-
-	visible = {
-		ruler = {
-			interest_group = {
-				is_in_government = no
-			}
-		}
-	}
-
-	possible = {
-		any_revolution_ongoing = yes
-	}
-
-	effect = {
-		custom_tooltip = {
-			text = usfp_end_gag_rule
-			set_variable = removed_gag_rule
-		}
-	}
-
-	ai_chance = {
-		value = 1000
-	}
-}
+# usfp_end_gag_rule_button = {
+# 	name = "usfp_end_gag_rule_button"
+# 	desc = "usfp_end_gag_rule_button_desc"
+#
+# 	visible = {
+# 		ig:ig_landowners = {
+# 			is_in_government = yes
+# 		}
+# 	}
+#
+# 	possible = {
+# 		ig:ig_intelligentsia = {
+# 			ig_counts_as_marginal = yes
+# 		}
+# 		OR = {
+# 			any_interest_group = {
+# 				is_powerful = yes
+# 				OR = {
+# 					has_ideology = ideology:ideology_pro_slavery
+# 					leader = {
+# 						has_ideology = ideology:ideology_slaver
+# 					}
+# 				}
+# 			}
+# 			ruler = {
+# 				has_ideology = ideology:ideology_slaver
+# 			}
+# 		}
+# 	}
+#
+# 	effect = {
+# 		custom_tooltip = {
+# 			text = usfp_end_gag_rule
+# 			set_variable = removed_gag_rule
+# 		}
+# 		add_loyalists = {
+# 			value = small_radicals
+# 			interest_group = ig:ig_landowners
+# 		}
+# 	}
+# }
+#
+# #remove the gag rule in case republicans win the election but are already revolutionary
+# usfp_break_gag_rule_button = {
+# 	name = "usfp_break_gag_rule_button"
+# 	desc = "usfp_break_gag_rule_button_desc"
+#
+# 	visible = {
+# 		ruler = {
+# 			interest_group = {
+# 				is_in_government = no
+# 			}
+# 		}
+# 	}
+#
+# 	possible = {
+# 		any_revolution_ongoing = yes
+# 	}
+#
+# 	effect = {
+# 		custom_tooltip = {
+# 			text = usfp_end_gag_rule
+# 			set_variable = removed_gag_rule
+# 		}
+# 	}
+#
+# 	ai_chance = {
+# 		value = 1000
+# 	}
+# }
 
 #radical abolitionists can press this for more war support
 usfp_acw_support_button = {

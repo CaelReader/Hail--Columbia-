@@ -1,6 +1,8 @@
 ﻿usfp_jack_warner={
 	portrait_info = {
-	genes={ 		hair_color={ 144 255 185 73 }
+	genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 144 255 185 73 }
  		skin_color={ 81 14 81 14 }
  		eye_color={ 19 76 152 76 }
  		gene_cheek_fat={ "cheek_fat" 187 "cheek_fat" 139 }

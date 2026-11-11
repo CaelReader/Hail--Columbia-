@@ -435,16 +435,7 @@ acw_je_events.2 = {
 		add_journal_entry = {
 			type = je_acw_wild_wild_west
 		}
-		je:je_acw_reconstruction ?= {
-			add_modifier = {
-				name = usfp_reconstruction_white_fatigue_modifier
-				multiplier = var:reconstruction_var
-			}
-			add_modifier = {
-				name = usfp_reconstruction_occupation_authority_modifier
-				multiplier = 100
-			}
-		}
+
 		ai_chance = {
 			base = 1000
 		}

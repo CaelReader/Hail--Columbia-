@@ -491,7 +491,7 @@ uom_mkc = {
 	                }
                 }
             }
-            set_ideology = ideology:ideology_social_democrat
+            set_ideology = ideology:ideology_state_socialist
         }
         else = {
             set_ideology = ideology:ideology_moderate

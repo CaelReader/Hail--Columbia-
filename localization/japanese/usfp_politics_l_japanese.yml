@@ -44,19 +44,19 @@
  movement_usfp_american_constitution: "Constitutional Movement" #NT!
  movement_usfp_american_constitution_name: "$movement_usfp_american_constitution$" #NT!
  POP_SUPPORT_DIXIE_CULTURE: "[GetCulture('dixie').GetName] [concept_culture]" #NT!
- POP_SUPPORT_BLACK_SOL_DIFFERENCE: "[concept_sol] difference with $heritage_group_african$ [Concept('concept_pop', '$concept_pops$')]" #NT!
+ POP_SUPPORT_BLACK_SOL_DIFFERENCE: "[concept_sol] difference with $heritage_group_african$ [Concept('concept_pop', '$concept_pops|q$')]" #NT!
  POP_SUPPORT_MIXED_RECONSTRUCTION: "Divided Dixie" #NT!
  POP_SUPPORT_RADICAL_RECONSTRUCTION: "Radical Reconstruction" #NT!
- POP_SUPPORT_JIM_CROW_STATE: "[concept_usfp_jim_crow] [concept_state]" #NT!
+ POP_SUPPORT_JIM_CROW_STATE: "[glossary_usfp_jim_crow] [concept_state]" #NT!
  POP_SUPPORT_DIXIE_ARISTOCRATS: "[GetCulture('dixie').GetName] [GetPopType('aristocrats').GetName]" #NT!
  POP_SUPPORT_DIXIE_FARMERS: "[GetCulture('dixie').GetName] [GetPopType('farmers').GetName]" #NT!
  POP_SUPPORT_DIXIE_SOLDIERS: "[GetCulture('dixie').GetName] [GetPopType('soldiers').GetName]" #NT!
  POP_SUPPORT_DIXIE_OFFICERS: "[GetCulture('dixie').GetName] [GetPopType('officers').GetName]" #NT!
- ABOLISHING_SUFFRAGE: "[Concept('concept_election', '$concept_election_voting_franchise$')] Under Threat" #NT!
+ ABOLISHING_SUFFRAGE: "[Concept('concept_election', '$concept_election_voting_franchise|q$')] Under Threat" #NT!
   
  alert_usfp_ineligible_candidate_name: "Ineligible Presidential Candidate" #NT!
- alert_usfp_ineligible_candidate_desc: "The [concept_leader] of a [concept_powerful] [concept_interest_group] is not a #tooltippable;tooltip:[SCOPE.GetRootScope.GetCountry.GetTooltipTag],usfp_natural_born_citizens natural-born citizen#! and cannot run for [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')]." #NT!
- alert_usfp_ineligible_candidate_hint: "If they are the [concept_party_leader], a new [concept_character] will replace them at the start of the [Concept('concept_election', '$concept_election$')]." #NT!
+ alert_usfp_ineligible_candidate_desc: "The [concept_leader] of a [concept_powerful] [concept_interest_group] is not a #tooltippable;tooltip:[SCOPE.GetRootScope.GetCountry.GetTooltipTag],usfp_natural_born_citizens natural-born citizen#! and cannot run for [Concept('concept_ruler','$RULER_TITLE_PRESIDENT|q$')]." #NT!
+ alert_usfp_ineligible_candidate_hint: "If they are the [concept_party_leader], a new [concept_character] will replace them at the start of the [Concept('concept_election', '$concept_election|q$')]." #NT!
  alert_usfp_ineligible_candidate_action: "Politics Panel" #NT!
  usfp_ineligible_candidate_setting_name: "Ineligible Presidential Candidate" #NT!
   
@@ -86,14 +86,14 @@
   
  rule_usfp_election_chaos: "@america_icon! #yellow Hail, Columbia!#! | Chaotic Elections" #NT!
  setting_yes_election_chaos: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_yes_election_chaos_desc #high Yes #!#!#!" #NT!
- setting_yes_election_chaos_desc: "Under $law_census_voting$ or $law_universal_suffrage$, [Concept('concept_party', '$concept_parties$')] have a chance to randomly gain or lose [concept_momentum] each week during [Concept('concept_election', '$concept_elections$')]." #NT!
+ setting_yes_election_chaos_desc: "Under $law_census_voting$ or $law_universal_suffrage$, [Concept('concept_party', '$concept_parties|q$')] have a chance to randomly gain or lose [concept_momentum] each week during [Concept('concept_election', '$concept_elections|q$')]." #NT!
  setting_no_election_chaos: "#tooltippable #tooltip:[GetPlayer.GetTooltipTag],setting_no_election_chaos_desc #high No #!#!#!" #NT!
  setting_no_election_chaos_desc: "No weekly [concept_momentum] changes are applied." #NT!
   
  amendment_usfp_spoils_system: "Spoils System" #NT!
  amendment_usfp_spoils_system_desc: "Government offices are doled out as rewards for political supporters, causing a reshuffle of the civil service whenever a new party takes power." #NT!
  spoils_system_can_be_abolished_tt: "[ROOT.GetCountry.GetName] has suffered the effects of the Spoils System enough times (currently [ROOT.GetCountry.MakeScope.Var('usfp_spoils_system_abolish_var').GetValue|v0]/#v 5#!)" #NT!
- spoils_system_warning: "@warning! The Spoils System will temporarily reduce our [concept_bureaucracy] every time we [Concept('concept_government_reform','$concept_government_reform_short$')] our [concept_government]!" #NT!
+ spoils_system_warning: "@warning! The Spoils System will temporarily reduce our [concept_bureaucracy] every time we [Concept('concept_government_reform','$concept_government_reform_short|q$')] our [concept_government]!" #NT!
  amendment_usfp_bill_of_rights: "Bill of Rights" #NT!
  amendment_usfp_bill_of_rights_desc: "On paper, the Constitution protects the citizens' right to free speech, making censorship efforts more difficult though not impossible." #NT!
  amendment_usfp_seperate_but_equal: "Separate but Equal" #NT!
@@ -103,7 +103,7 @@
  amendment_usfp_anti_lynching: "Anti-Lynching Bill" #NT!
  amendment_usfp_anti_lynching_desc: "Lynching is elevated to a federal crime, preventing racist local authorities from shielding the perpetrators." #NT!
  amendment_usfp_gag_rule: "Gag Rule" #NT!
- amendment_usfp_gag_rule_desc: "To enforce the Missouri Compromise and adjourn further conflict over the issue, the [concept_usfp_house_of_representatives] has prohibited the consideration of petitions or laws relating to slavery." #NT!
+ amendment_usfp_gag_rule_desc: "To enforce the Missouri Compromise and adjourn further conflict over the issue, the [glossary_usfp_house_of_representatives] has prohibited the consideration of petitions or laws relating to slavery." #NT!
  doesnt_have_gag_rule: "Does #bold not#! have the Gag Rule [concept_amendment]" #NT!
  amendment_usfp_radical_land_redistribution: "40 Acres and a Mule" #NT!
  amendment_usfp_radical_land_redistribution_desc: "The lands of former slavers are seized by the state and made available to be redistributed to freedmen." #NT!

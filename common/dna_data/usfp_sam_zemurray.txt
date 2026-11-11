@@ -1,6 +1,8 @@
 ﻿usfp_sam_zemurray={
     portrait_info = {
-        genes={ 		hair_color={ 19 255 19 255 }
+        genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 19 255 19 255 }
         skin_color={ 3 23 3 23 }
         eye_color={ 30 87 204 26 }
         gene_cheek_fat={ "cheek_fat" 125 "cheek_fat" 125 }

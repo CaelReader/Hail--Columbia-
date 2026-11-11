@@ -1,0 +1,222 @@
+### TYPES
+types usfp_president_je_types
+{
+    type usfp_president_je_widget_type = widget {
+
+    datacontext = "[JournalEntry.GetCountry.GetRuler]"
+
+    # background
+    widget = {
+        size = { 100% 100% }
+        position = { 0 1 }
+        using = Animation_Character_Panel_Refresh
+
+        background = {
+            texture = "[GetCharacterRole('character_role_ruler').GetBackgroundTexture( Character.Self )]"
+            fittype = centercrop
+            mipmaplodbias = 1.8
+            shaderfile = "gfx/FX/gui_blur.shader"
+            effectname = "GuiBlur"
+        }
+    }
+
+    character_portrait_base_no_mask = {
+        block "datacontext" {
+            datacontext = "[JournalEntry.GetCountry.GetRuler]"
+        }
+        datacontext = "[JournalEntry.GetCountry.GetRuler]"
+        ignore_in_debug_draw = yes
+        size = { 217 261 } #+37 +21 (space for frame)
+
+        block "character_layout" {
+            position = { 50 10 }
+            size = { 400 400 }
+        }
+
+        blockoverride "portrait_size" {
+            block "character_portrait_size" {
+                size = { 575 575 }
+            }
+        }
+        blockoverride "portrait_texture" {
+            portrait_texture = "[JournalEntry.GetCountry.GetRuler.GetAnimatedPortrait('ruler_environment', 'camera_body', 'idle', GetPortraitRenderSize(PdxGuiWidget.Self))]"
+        }
+
+        blockoverride "portrait_icons" {}
+
+        blockoverride "tooltip" {
+            tooltipwidget = {
+                FancyTooltip_Character = {
+                    datacontext = "[Scope.AccessCharacter]"
+                }
+            }
+        }
+    }
+
+    icon = {
+        using = dark_area
+        parentanchor = bottom|hcenter
+        size = { 100% 40% }
+        alpha = 0.65
+        position = { 0 2 }
+
+        modify_texture = {
+            texture = "gfx/interface/masks/fade_vertical_top.dds"
+            spriteType = Corneredstretched
+            spriteborder = { 0 0 }
+            blend_mode = alphamultiply
+        }
+    }
+
+    widget = {
+        size = { 100% 100% }
+
+        background = {
+            texture = "gfx/interface/character_panel/char_bg_frame.dds"
+            margin_left = 18
+            margin_right = 10
+            margin_bottom = 10
+            spriteType = Corneredtiled
+
+            spriteborder_left = 200
+            spriteborder_right = 60
+            spriteborder_top = 170
+            spriteborder_bottom = 180
+
+            texture_density = 2
+        }
+    }
+
+    character_interactions_button = {
+        name = "tutorial_highlight_character_panel_interactions_button_1"
+    }
+}
+}
+
+
+### WIDGETS
+flowcontainer = {
+    name = "usfp_president_je_widget"
+
+    ### RULER
+    flowcontainer = {
+        direction = vertical
+
+        usfp_president_je_widget_type = {
+            state = {
+                name = update
+                trigger_on_create = yes
+            }
+
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            minimumsize = { 520 280 }
+
+            blockoverride "character_layout" {
+                position = { 0 0 }
+                size = { 80% 100% }
+            }
+            blockoverride "character_portrait_size" {
+                size = { 100% 100% }
+            }
+
+            # ruler stats
+            flowcontainer = {
+                parentanchor = right|top
+                position = { -8 5 }
+                direction = vertical
+                spacing = 5
+
+                background = {
+                    using = dark_area
+                    alpha = 0.75
+
+                    modify_texture = {
+                        texture = "gfx/interface/masks/fade_horizontal_left_full.dds"
+                        blend_mode = alphamultiply
+                    }
+                }
+
+                ### ROLE
+                ruler_stats_entry = {
+                    tooltip = "CHARACTER_PRIMARY_ROLE_TOOLTIP"
+
+                    blockoverride "ruler_icon" {
+                        widget = {
+                            size = { 35 35 }
+                            icon = {
+                                size = { 100% 100% }
+                                texture = "gfx/interface/icons/character_role_icons/politician.dds"
+                            }
+                        }
+                    }
+                    blockoverride "label" {
+                        text = "[Character.GetPrimaryRoleTitle]"
+                    }
+                    blockoverride "text" {
+                        text = "[Character.GetFullName]"
+                    }
+                }
+                ## INTEREST GROUP
+                ruler_stats_entry = {
+                    datacontext = "[Character.GetInterestGroup]"
+
+                    blockoverride "ruler_icon" {
+                        character_ig_button = {
+                            size = { 35 35 }
+                            blockoverride "in_government_icon" {}
+                        }
+                    }
+
+                    tooltipwidget = {
+                        FancyTooltip_IG = {}
+                    }
+
+                    blockoverride "label" {
+                        text = "INTEREST_GROUP"
+                    }
+                    blockoverride "text" {
+                        raw_text = "#v [Character.GetInterestGroup.GetNameNoFormatting]#!"
+                    }
+                }
+
+                ### IDEOLOGY
+                ruler_stats_entry = {
+                    datacontext = "[Character.GetIdeology]"
+
+                    tooltipwidget = {
+                        FancyTooltip_Ideology = {}
+                    }
+                    blockoverride "icon_texture" {
+                        texture = "[Ideology.GetTexture]"
+                    }
+                    blockoverride "label" {
+                        text = "IDEOLOGY_CONCEPT"
+                    }
+                    blockoverride "text" {
+                        text = "CHARACTER_IDEOLOGY"
+                    }
+                }
+                #POPULARITY
+                ruler_stats_entry = {
+                    tooltip = "POPULARITY_BREAKDOWN"
+
+                    blockoverride "icon_texture" {
+                        texture = "gfx/interface/icons/generic_icons/popularity.dds"
+                    }
+                    blockoverride "label" {
+                        text = "POPULARITY"
+                    }
+                    blockoverride "text" {
+                        text = "CHARACTER_POPULARITY"
+                    }
+                }
+
+                ### TRAITS
+                character_traits_no_label = {
+                    parentanchor = right
+                }
+            }
+        }
+    }
+}

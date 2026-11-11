@@ -1,6 +1,8 @@
 ﻿ecchi_dna_mark_twain = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 203 202 203 140 }
  		skin_color={ 27 10 27 10 }
  		eye_color={ 157 179 157 179 }

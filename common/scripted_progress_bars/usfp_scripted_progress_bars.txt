@@ -158,7 +158,13 @@
 	name = "usfp_bleeding_kansas_progress_bar"
 	desc = "usfp_bleeding_kansas_progress_bar_free_kansas"
 	second_desc = "usfp_bleeding_kansas_progress_bar_slave_kansas"
-	double_sided_bad = yes
+     progress_texture = "gfx/interface/progressbar/progressbar_default.dds"
+     background_texture = "gfx/interface/progressbar/progressbar_bad.dds"
+     glow_texture = "gfx/interface/progressbar/progressbar_default_glow.dds"
+     glow_line_texture = "gfx/interface/progressbar/progressbar_default_glow_line.dds"
+     marker = yes
+     left_icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_abolitionist.dds"
+     right_icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_slaver.dds"
 
 	monthly_progress = {
 		add = {
@@ -221,7 +227,14 @@
 	name = "usfp_reconstruction_progress_bar"
 	desc = "usfp_reconstruction_progress_bar_freedmen"
 	second_desc = "usfp_reconstruction_progress_bar_redeemers"
-	double_sided_bad = yes
+
+     progress_texture = "gfx/interface/progressbar/progressbar_green.dds"
+     background_texture = "gfx/interface/progressbar/progressbar_white.dds"
+     glow_texture = "gfx/interface/progressbar/progressbar_gold_glow.dds"
+     glow_line_texture = "gfx/interface/progressbar/progressbar_gold_glow_line.dds"
+     marker = yes
+     left_icon = "gfx/interface/icons/ideology_icons/ideology_usfp_abolitionist_radical_movement.dds"
+     right_icon = "gfx/interface/icons/ideology_icons/ideology_usfp_neoconfederate.dds"
 
 	start_value = 5
 	min_value = 0
@@ -654,6 +667,7 @@ usfp_roaring_twenties_optimism_bar = {
 	name = "usfp_roaring_twenties_optimism_bar"
 	desc = "usfp_roaring_twenties_optimism_bar_desc"
 	default_green = yes
+    marker = no
 
 	start_value = 300
 	min_value = 0
@@ -876,4 +890,141 @@ usfp_railroad_boom_bar = {
             desc = "total_incorporated_infrastructure_delta"
         }
     }
+}
+
+usfp_second_revolution_bar = {
+	name = "usfp_second_revolution_bar"
+	desc = "usfp_second_revolution_bar_desc"
+	second_desc = "usfp_second_revolution_bar_desc2"
+
+    progress_texture = "gfx/interface/progressbar/progressbar_default.dds"
+    background_texture = "gfx/interface/progressbar/progressbar_bad.dds"
+    glow_texture = "gfx/interface/progressbar/progressbar_default_glow.dds"
+    glow_line_texture = "gfx/interface/progressbar/progressbar_bad_glow_line.dds"
+    marker = yes
+
+	start_value = 50
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+        if = {
+            limit = {
+                has_variable = usfp_second_revolution_total_target
+                has_variable = usfp_second_revolution_current_var
+            }
+            add = {
+                desc = "usfp_second_revolution_progress_desc"
+                value = owner.var:usfp_second_revolution_total_target
+                subtract = owner.var:usfp_second_revolution_current_var
+                multiply = 0.5 # How aggressively this will chase the pivot value. Higher = more aggressive.
+            }
+        }
+	}
+}
+
+usfp_coal_wars_union_leverage_bar = {
+	name = "usfp_coal_wars_union_leverage_bar"
+	desc = "usfp_coal_wars_union_leverage_bar_desc"
+	default = yes
+
+	start_value = 100
+	min_value = 0
+	max_value = 1000
+
+	monthly_progress = {
+        #Unionized Coal States
+        progress_condition = {
+            limit = {
+                any_scope_state = {
+                    has_variable = usfp_coal_wars_state_unionized
+                }
+            }
+            add = {
+                every_scope_state = {
+                    limit = {
+                        has_variable = usfp_coal_wars_state_unionized
+                    }
+                    add = 1
+                }
+                desc = "coal_wars_unionized_states"
+            }
+        }
+		#TUs Clout
+		add = {
+			value = ig:ig_trade_unions.ig_clout
+            multiply = 10
+			desc = "trade_unions_clout"
+		}
+		#Labor Movement Support
+		add = {
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_labor
+				}
+				add = political_movement_support
+			}
+            multiply = 10
+			desc = "labor_movement_support"
+		}
+        if = {
+            limit = {
+                any_in_list = {
+                    variable = usfp_coal_wars_states
+                    count = all
+                    has_variable = usfp_coal_wars_state_unionized
+                }
+            }
+            multiply = {
+                value = 2
+                desc = "usfp_coal_wars_all_states_unionized"
+            }
+        }
+		#Price of Coal
+		add = {
+			value = root.market.mg:coal.market_goods_pricier
+            multiply = 10
+			desc = "price_of_coal"
+		}
+		subtract = {
+			value = 0
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_labor
+					is_being_suppressed = yes
+				}
+				add = {
+					value = "root.institution_investment_level(institution_home_affairs)"
+					divide = 5
+				}
+			}
+			desc = "suppressed_labor_movement"
+		}
+		add = {
+			value = 0
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_labor
+					is_being_suppressed = yes
+				}
+				add = {
+					value = "root.institution_investment_level(institution_home_affairs)"
+					divide = 5
+				}
+			}
+			desc = "bolstered_labor_movement"
+		}
+		#General Coal Strike rapidly drains leverage
+		if = {
+			limit = {
+				je:usfp_je_coal_wars ?= {
+					has_modifier = usfp_coal_wars_great_coal_strike
+				}
+			}
+			subtract = {
+				value = 100
+				desc = "usfp_coal_wars_great_coal_strike"
+			}
+		}
+	}
 }

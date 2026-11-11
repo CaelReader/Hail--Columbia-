@@ -1,6 +1,8 @@
 ﻿usfp_john_davis={
     portrait_info = {
-    genes={ 		hair_color={ 173 177 170 116 }
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 173 177 170 116 }
         skin_color={ 62 8 62 8 }
         eye_color={ 38 123 185 123 }
         gene_cheek_fat={ "cheek_fat" 182 "cheek_fat" 123 }

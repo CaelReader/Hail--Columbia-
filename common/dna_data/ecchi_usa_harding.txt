@@ -1,6 +1,8 @@
 ﻿ecchi_dna_warren_harding = {
     portrait_info = {
     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 213 173 213 173 }
  		skin_color={ 12 14 12 14 }
  		eye_color={ 96 146 96 146 }

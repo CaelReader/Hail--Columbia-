@@ -2653,7 +2653,7 @@ usfp_manifest_destiny.23 = {
 usfp_manifest_destiny.24 = {
 	type = country_event
 	placement = root
-
+    orphan = yes
 	event_image = {
 		video = "votp_agitator_speaking"
 	}
@@ -2725,7 +2725,7 @@ usfp_manifest_destiny.24 = {
 			modifier = {
 				trigger = {
 					any_scope_character = {
-						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_communist_leader
 					}
 				}
 				add = 50

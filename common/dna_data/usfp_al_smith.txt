@@ -1,6 +1,8 @@
 ﻿usfp_al_smith={
     portrait_info = {
-    genes={ 		hair_color={ 128 255 182 91 }
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 128 255 182 91 }
         skin_color={ 125 16 125 16 }
         eye_color={ 79 80 157 80 }
         gene_cheek_fat={ "cheek_fat" 136 "cheek_fat" 136 }

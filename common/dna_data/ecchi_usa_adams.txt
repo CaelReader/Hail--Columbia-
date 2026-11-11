@@ -1,6 +1,8 @@
 ﻿ecchi_dna_john_quincy_adams = {
     portrait_info = {
-    genes={         
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
         hair_color={ 186 196 191 196 }
  		skin_color={ 4 6 4 6 }
  		eye_color={ 169 130 169 130 }

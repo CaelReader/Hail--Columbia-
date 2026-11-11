@@ -1,6 +1,8 @@
 ﻿ecchi_dna_millard_fillmore = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 173 199 173 199 }
  		skin_color={ 93 0 120 1 }
  		eye_color={ 107 188 107 188 }

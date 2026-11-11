@@ -1,6 +1,8 @@
 ﻿ecchi_dna_woodrow_wilson = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 170 197 170 197 }
  		skin_color={ 55 17 55 17 }
  		eye_color={ 84 168 84 168 }

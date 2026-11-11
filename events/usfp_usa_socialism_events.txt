@@ -1,0 +1,252 @@
+﻿namespace = usfp_usa_socialism
+# Second Revolution Intro Event
+usfp_usa_socialism.1 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "gfx/event_pictures/votp_agitator_speaking.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/socialism.dds"
+
+    title = usfp_usa_socialism.1.t
+    desc = usfp_usa_socialism.1.d
+    flavor = usfp_usa_socialism.1.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    #Choose Americanism
+    option = {
+        name = usfp_usa_socialism.1.a
+        default_option = yes
+        if = {
+            limit = {
+                NOT = {
+                    has_law_or_variant = law_type:law_public_schools
+                }
+            }
+            activate_law = law_type:law_public_schools
+        }
+        active_law:lawgroup_education_system = {
+            add_amendment = {
+                type = amendment_usfp_second_revolution_americanist_education
+                sponsor = PREV.ig:ig_intelligentsia
+            }
+        }
+        custom_tooltip = {
+            text = second_revolution_institutions_will_support_americanism
+            set_variable = usfp_second_revolution_supported_americanism
+        }
+    }
+
+    #Choose Internationalism
+    option = {
+        name = usfp_usa_socialism.1.b
+        if = {
+            limit = {
+                NOT = {
+                    has_law_or_variant = law_type:law_public_schools
+                }
+            }
+            activate_law = law_type:law_public_schools
+        }
+        active_law:lawgroup_education_system = {
+            add_amendment = {
+                type = amendment_usfp_second_revolution_internationalist_education
+                sponsor = PREV.ig:ig_intelligentsia
+            }
+        }
+        custom_tooltip = {
+            text = second_revolution_institutions_will_support_internationalism
+            set_variable = usfp_second_revolution_supported_antiamericanism
+        }
+    }
+
+    #handle ideologies
+    after = {
+        every_interest_group = {
+            limit = {
+                has_ideology = ideology:ideology_american_school
+            }
+            remove_ideology = ideology_american_school
+        }
+        every_interest_group = {
+            limit = {
+                has_ideology = ideology:ideology_empire_of_liberty
+            }
+            remove_ideology = ideology_empire_of_liberty
+        }
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = movement_anti_communist
+            }
+            set_core_ideology = ideology_usfp_american_constitution_anti_communist_movement
+        }
+    }
+
+}
+
+# Second Revolution: American Socialism Conclusion
+usfp_usa_socialism.2 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "gfx/event_pictures/votp_agitator_speaking.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/socialism.dds"
+
+    title = usfp_usa_socialism.2.t
+    desc = usfp_usa_socialism.2.d
+    flavor = usfp_usa_socialism.2.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    option = {
+        name = usfp_usa_socialism.2.a
+        default_option = yes
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = movement_anti_communist
+            }
+            add_modifier = {
+                name = usfp_constitutional_movement_coopted_modifier
+                years = 20
+            }
+        }
+        every_primary_culture = {
+            root = {
+                add_loyalists = {
+                    culture = prev
+                    strata = middle
+                    value = large_radicals
+                }
+            }
+            root = {
+                add_loyalists = {
+                    culture = prev
+                    strata = lower
+                    value = medium_radicals
+                }
+            }
+        }
+    }
+
+}
+
+# Second Revolution: Internationalism Conclusion
+usfp_usa_socialism.3 = {
+    type = country_event
+    placement = root
+    event_image = {
+        video = "gfx/event_pictures/votp_agitator_speaking.bk2"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/invention_icons/socialism.dds"
+
+    title = usfp_usa_socialism.3.t
+    desc = usfp_usa_socialism.3.d
+    flavor = usfp_usa_socialism.3.f
+    dlc = dlc_usfp
+    duration = 3
+    cooldown = { days = never_fire_again_modifier_time } #Once
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+
+    #add all the cultures
+    option = {
+        name = usfp_usa_socialism.3.a
+        default_option = yes
+        usfp_radicalize_whites_in_country = {
+            RADICALS = large_radicals
+        }
+        every_scope_culture = {
+            limit = {
+                NOT = {
+                    this = cu:dixie
+                }
+                NOT = {
+                    this = cu:british #falklands
+                }
+                OR = {
+                    NOT = {
+                        has_discrimination_trait_group = heritage_group_indigenous_american
+                    }
+                    has_discrimination_trait = heritage_usfp_consolidated_native_north_american
+                }
+                NOT = {
+                    is_primary_culture_of = root
+                }
+                any_scope_homeland_state = {
+                    OR = {
+                        is_in_geographic_region = geographic_region_americas
+                        is_in_geographic_region = geographic_region_caribbean_old
+                        state_region = s:STATE_HAWAIIAN_ISLANDS
+                    }
+                    owner ?= root
+                    is_incorporated = yes
+                }
+            }
+            root = {
+                add_primary_culture = prev
+                # add_loyalists = {
+                #     value = large_radicals
+                #     culture = prev
+                # }
+            }
+        }
+        #who watches the watchmen?
+        if = {
+            limit = {
+                any_scope_state = {
+                    count >= 3
+                    state_region = {
+                        is_homeland = cu:vietnamese
+                    }
+                    is_incorporated = yes
+                }
+            }
+            add_primary_culture = cu:vietnamese
+        }
+    }
+
+    after = {
+        random_political_movement = {
+            limit = {
+                has_core_ideology = ideology:ideology_usfp_american_constitution_anti_communist_movement
+            }
+            set_core_ideology = ideology_anti_communist_movement
+        }
+    }
+
+}

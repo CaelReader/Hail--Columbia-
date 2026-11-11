@@ -1,6 +1,8 @@
 ﻿ecchi_dna_george_armstrong_custer = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 218 198 218 198 }
  		skin_color={ 65 18 65 18 }
  		eye_color={ 194 195 194 195 }

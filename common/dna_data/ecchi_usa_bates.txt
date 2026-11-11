@@ -1,6 +1,8 @@
 ﻿ecchi_dna_katharine_lee_bates = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 6 234 6 234 }
  		skin_color={ 55 1 55 1 }
  		eye_color={ 242 189 242 189 }

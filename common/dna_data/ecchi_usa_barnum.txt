@@ -1,6 +1,8 @@
 ﻿ecchi_dna_p_t_barnum = {
     portrait_info = {
-    genes={      
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 3 250 3 250 }
  		skin_color={ 122 4 122 4 }
  		eye_color={ 85 143 85 143 }

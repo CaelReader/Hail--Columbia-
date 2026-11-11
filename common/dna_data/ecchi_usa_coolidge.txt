@@ -1,6 +1,8 @@
 ﻿ecchi_dna_calvin_coolidge = {
     portrait_info = {
     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 165 186 165 186 }
  		skin_color={ 81 19 81 19 }
  		eye_color={ 225 171 225 171 }

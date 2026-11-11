@@ -1,6 +1,8 @@
 ﻿usfp_usa_george_crook ={
 	portrait_info = {
-		genes={ 		hair_color={ 114 177 230 47 }
+		genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 114 177 230 47 }
 		skin_color={ 86 15 86 15 }
 		eye_color={ 73 190 73 190 }
 		gene_cheek_fat={ "cheek_fat" 125 "cheek_fat" 125 }

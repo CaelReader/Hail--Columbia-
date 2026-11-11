@@ -1,6 +1,8 @@
 ﻿ecchi_dna_henry_ford = {
     portrait_info = {
     genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+
 		hair_color={ 41 232 41 232 }
  		skin_color={ 33 8 33 8 }
  		eye_color={ 255 177 255 177 }

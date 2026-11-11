@@ -1,6 +1,8 @@
 ﻿usfp_horatio_seymour={
     portrait_info = {
-    genes={ 		hair_color={ 0 255 12 234 }
+    genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 0 255 12 234 }
         skin_color={ 73 26 73 26 }
         eye_color={ 31 238 31 116 }
         gene_cheek_fat={ "cheek_fat" 129 "cheek_fat" 129 }

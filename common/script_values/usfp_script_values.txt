@@ -1024,3 +1024,559 @@ usfp_country_incorporated_unemployment_rate = {
 		}
 	}
 }
+
+usfp_second_revolution_get_americanism_target = {
+	# Primary Cultures Fervor
+	add = {
+		every_primary_culture = {
+			add = culture_current_fervor
+		}
+        divide = {
+            every_primary_culture = {
+                add = 1
+            }
+        }
+        divide = 100
+		desc = "average_primary_cultures_fervor"
+	}
+	#Manifest Destiny points
+	if = {
+		limit = {
+			has_journal_entry = usfp_manifest_destiny_main
+			has_variable = manifest_destiny_var
+		}
+		add = {
+			value = var:manifest_destiny_var
+            divide = 13
+            multiply = 10
+			desc = "manifest_destiny"
+		}
+	}
+	# Completed Superculture
+	if = {
+		limit = {
+			country_has_primary_culture = cu:usfp_american
+		}
+		add = {
+			value = 1
+			desc = "formed_american_superculture"
+		}
+	}
+	# Supremacist and Traditionalist Movement
+	add = {
+		every_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_cultural_majority
+					is_political_movement_type = movement_religious_majority
+				}
+			}
+			add = political_movement_support
+		}
+		desc = "supremacist_and_traditionalist_support"
+	}
+	# White Movement
+	add = {
+		every_political_movement = {
+			limit = {
+				OR = {
+                    is_political_movement_type = movement_anti_communist
+				}
+			}
+			add = political_movement_support
+		}
+		desc = "anti_communist_support"
+	}
+	# Fascist and Neo-Confederate Movement
+	add = {
+		every_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_fascist
+					is_political_movement_type = movement_usfp_neoconfederate
+				}
+			}
+			add = political_movement_support
+		}
+		desc = "fascist_neoconfederate_support"
+	}
+	# IGs supporting Presidential Republic
+	add = {
+		every_interest_group = {
+			limit = {
+				ig_counts_as_marginal = no
+				law_enactment_stance = {
+					value >= approve
+					law = law_type:law_presidential_republic
+				}
+			}
+			add = ig_clout
+		}
+        multiply = 1
+		desc = "igs_supporting_presidential_republic"
+	}
+	# American Laws
+	if = {
+		limit = {
+			has_law = law_type:law_usfp_nominal_separation
+		}
+		add = {
+			value = 1
+			desc = "law_usfp_nominal_separation"
+		}
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_interventionism
+		}
+		add = {
+			value = 0.5
+			desc = "law_interventionism"
+		}
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_laissez_faire
+		}
+		add = {
+			value = 1
+			desc = "law_laissez_faire"
+		}
+	}
+    #Racism
+    if = {
+        limit = {
+            has_law_or_variant = law_type:law_ethnostate
+        }
+        add = {
+            value = 2
+            desc = "law_ethnostate"
+        }
+    } else_if = {
+        if = {
+            limit = {
+                has_law_or_variant = law_type:law_national_supremacy
+            }
+            add = {
+                value = 1
+                desc = "law_national_supremacy"
+            }
+        }
+    } else_if = {
+        if = {
+            limit = {
+                has_law_or_variant = law_type:law_racial_segregation
+            }
+            add = {
+                value = 0.5
+                desc = "law_racial_segregation"
+            }
+        }
+    }
+	if = {
+		limit = {
+			has_variable = usfp_second_revolution_supported_americanism
+		}
+		add = {
+			add = institution_investment_level:institution_schools
+			add = institution_investment_level:institution_home_affairs
+			divide = 5
+			min = 0
+			desc = "second_revolution_institutions_support"
+		}
+	}
+    #Consolidation in State and Revolution
+}
+
+usfp_second_revolution_get_antiamericanism_target = {
+    # Anarchist Movement
+	add = {
+		every_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_anarchist
+				}
+			}
+			add = political_movement_support
+		}
+		desc = "anarchist_movement_activism_and_support"
+	}
+	# Communist or Revolutionary Socialist Movement
+	add = {
+		every_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_communist
+                    has_core_ideology = ideology:ideology_revolutionary_socialist_movement
+				}
+			}
+			add = political_movement_support
+		}
+		desc = "communist_movement_activism_and_support"
+	}
+	# Cultural Minority Movements
+	add = {
+		every_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_cultural_minority
+					is_political_movement_type = movement_minority_rights
+				}
+			}
+			add = political_movement_support
+		}
+		desc = "minority_movements_activism_and_support"
+	}
+	# Non-Primary Culture Pops
+	add = {
+		value = 1
+		subtract = {
+			every_primary_culture = {
+                save_temporary_scope_as = primary_culture_scope
+				add = "root.culture_percent_country(scope:primary_culture_scope)"
+			}
+		}
+		desc = "percent_non_primary_cultures"
+	}
+	# Non-Homeland Incorporated States
+	add = {
+		every_scope_state = {
+			limit = {
+				is_incorporated = yes
+				NOT = {
+					is_homeland_of_country_cultures = root
+				}
+			}
+			add = 0.2
+		}
+		desc = "non_homeland_incorporate_states"
+	}
+	# IGs supporting Council Republic
+	add = {
+        value = 0
+		every_interest_group = {
+			limit = {
+				ig_counts_as_marginal = no
+				law_stance = {
+					value >= approve
+					law = law_type:law_council_republic
+				}
+                law_stance = {
+                    value >= approve
+                    law = law_type:law_multicultural
+                }
+			}
+			add = ig_clout
+		}
+        multiply = 1
+		desc = "igs_supporting_council_republic_and_multiculturalism"
+	}
+	# Revolutionary Laws
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_state_atheism
+		}
+		add = {
+			value = 1
+			desc = "law_state_atheism"
+		}
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_multicultural
+		}
+		add = {
+			value = 0.5
+			desc = "law_multicultural"
+		}
+	} else = {
+        subtract = {
+            value = 0.5
+            desc = "no_multiculturalism"
+        }
+    }
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_anarchy
+		}
+		add = {
+			value = 1
+			desc = "law_anarchy"
+		}
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_no_colonial_affairs
+		}
+		add = {
+			value = 0.5
+			desc = "law_no_colonial_affairs"
+		}
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_single_party_state
+            has_variable = usfp_second_revolution_supported_antiamericanism
+		}
+		add = {
+			value = 1
+			desc = "law_single_party_state"
+		}
+	}
+	if = {
+		limit = {
+			has_variable = usfp_second_revolution_supported_antiamericanism
+		}
+		add = {
+			add = institution_investment_level:institution_schools
+			add = institution_investment_level:institution_home_affairs
+			divide = 5
+			min = 0
+			desc = "second_revolution_institutions_support"
+		}
+	}
+	#Monument Destruction
+	if = {
+		limit = {
+			has_variable = usfp_destroyed_american_monuments
+		}
+		add = {
+			value = 1
+			desc = "destroyed_american_monuments"
+		}
+	}
+    #At war with Ethnostate
+    if = {
+        limit = {
+            is_at_war = yes
+            any_enemy_in_war = {
+                country_rank >= rank_value:major_power
+                has_law_or_variant = law_type:law_ethnostate
+            }
+        }
+        add = {
+            value = 0.5
+            desc = "at_war_with_ethnostate"
+        }
+    }
+    #Colonial Affairs is negative
+    if = {
+        limit = {
+            has_institution = institution_colonial_affairs
+        }
+        subtract = {
+            add = institution_investment_level:institution_colonial_affairs
+            divide = 5
+            min = 0
+            desc = "second_revolution_colonial_affairs"
+        }
+    }
+    subtract = {
+        value = country_turmoil
+        desc = "[concept_turmoil]"
+    }
+	#Other Multicultural Council Republics
+	if = {
+		limit = {
+			any_country = {
+				NOT = {
+					this = root
+				}
+				is_revolutionary = no
+				is_secessionist = no
+				has_law_or_variant = law_type:law_multicultural
+				has_law_or_variant = law_type:law_council_republic
+			}
+		}
+		add = {
+			every_diplomatically_relevant_country = {
+				limit = {
+					NOT = {
+						this = root
+					}
+					is_revolutionary = no
+					is_secessionist = no
+					has_law_or_variant = law_type:law_multicultural
+					has_law_or_variant = law_type:law_council_republic
+				}
+				add = 0.1
+			}
+			max = 1
+			desc = "fellow_internationalist_council_republics"
+		}
+
+	}
+    #Confrontation in State and Revolution
+
+}
+
+#based on the State and Revolution script values
+usfp_second_revolution_americanism_display = {
+    if = {
+        limit = {
+            has_journal_entry = usfp_je_second_revolution
+        }
+        value = usfp_second_revolution_get_americanism_target # x/(x+y)
+        divide = {
+            value = usfp_second_revolution_get_americanism_target
+            add = usfp_second_revolution_get_antiamericanism_target
+            min = 0.01
+        }
+        multiply = 100
+        round = yes
+        divide = 100
+        min = 0
+        max = 1
+    }
+    else = {
+        value = 0
+    }
+}
+
+usfp_second_revolution_antiamericanism_display = {
+    if = {
+        limit = {
+            has_journal_entry = usfp_je_second_revolution
+        }
+        value = usfp_second_revolution_get_antiamericanism_target # x/(x+y)
+        divide = {
+            value = usfp_second_revolution_get_antiamericanism_target
+            add = usfp_second_revolution_get_americanism_target
+            min = 0.01
+        }
+        multiply = 100
+        round = yes
+        divide = 100
+        min = 0
+        max = 1
+    }
+    else = {
+        value = 0
+    }
+}
+
+usfp_second_revolution_americanism_progress = {
+    if = {
+        limit = {
+            has_journal_entry = usfp_je_second_revolution
+        }
+        value = "je:usfp_je_second_revolution.scripted_bar_progress(usfp_second_revolution_bar)"
+        divide = 100
+    }
+}
+
+usfp_second_revolution_antiamericanism_progress = {
+    value = 100
+    if = {
+        limit = {
+            has_journal_entry = usfp_je_second_revolution
+        }
+        subtract = "je:usfp_je_second_revolution.scripted_bar_progress(usfp_second_revolution_bar)"
+        divide = 100
+    }
+}
+
+usfp_second_revolution_drift_bar_target = {
+    value = var:usfp_second_revolution_total_target
+}
+
+usfp_second_revolution_drift_value = {
+    desc = "usfp_second_revolution_progress_desc"
+    value = owner.var:usfp_second_revolution_total_target
+    subtract = owner.var:usfp_second_revolution_current_var
+    multiply = 0.05 # How aggressively this will chase the pivot value. Higher = more aggressive.
+}
+
+usfp_coal_wars_unionization_progress = {
+	#TUs clout
+	add = {
+		value = "ig_state_pol_strength_share(owner.ig:ig_trade_unions)"
+        multiply = 10
+		desc = "trade_unions_clout"
+	}
+    #UMWA focus state
+    if = {
+        limit = {
+            owner.var:usfp_coal_wars_umwa_target = this
+        }
+        add = {
+            value = "ig_state_pol_strength_share(owner.ig:ig_trade_unions)"
+            multiply = 10
+            add = 1
+            desc = "united_mine_workers_focus_state"
+        }
+    }
+	#Labor radicals
+	if = {
+        limit = {
+            any_scope_pop = {
+                pop_employment_building = building_coal_mine
+                is_pop_type = laborers
+                pop_radical_fraction > 0
+            }
+        }
+        add = {
+            add = {
+                every_scope_pop = {
+                    limit = {
+                        pop_employment_building = building_coal_mine
+                        is_pop_type = laborers
+                    }
+                    add = pop_radical_fraction
+                }
+                divide = {
+                    every_scope_pop = {
+                        limit = {
+                            pop_employment_building = building_coal_mine
+                            is_pop_type = laborers
+                        }
+                        add = 1
+                    }
+                }
+            }
+            multiply = 10
+            desc = "radical_coal_miners"
+        }
+    }
+	#Favorable Laws
+	if = {
+		limit = {
+			owner = {
+				has_law_or_variant = law_type:law_right_to_associate
+			}
+		}
+		multiply = {
+			value = 1.5
+			desc = "law_right_to_associate"
+		}
+	}
+
+    #West Virginia difficulty
+    if = {
+        limit = {
+            state_region = s:STATE_WEST_VIRGINIA
+        }
+        divide = {
+            value = 2
+            desc = "west_virginia_rugged_terrain"
+        }
+    }
+
+	#Violent Suppression
+	if = {
+		limit = {
+			has_decree = decree_violent_suppression
+		}
+		divide = {
+			value = 2
+			desc = "decree_violent_suppression"
+		}
+	}
+
+	#Industrialists Clout
+	subtract = {
+		value = "ig_state_pol_strength_share(owner.ig:ig_industrialists)"
+        multiply = 5
+		desc = "industrialists_clout"
+	}
+}

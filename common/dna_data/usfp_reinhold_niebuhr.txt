@@ -1,6 +1,8 @@
 ﻿usfp_reinhold_niebuhr={
 portrait_info = {
-	genes={ 		hair_color={ 132 255 218 40 }
+	genes={
+gene_asian_east = { "asian_east" 0 "asian_east" 0 }
+ 		hair_color={ 132 255 218 40 }
  		skin_color={ 99 6 99 6 }
  		eye_color={ 56 228 131 72 }
  		gene_cheek_fat={ "cheek_fat" 131 "cheek_fat" 157 }

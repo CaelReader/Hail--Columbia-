@@ -38,7 +38,7 @@
 				leader = {
 					OR = {
 						has_ideology = ideology:ideology_usfp_progressive
-						has_ideology = ideology:ideology_social_democrat
+						has_ideology = ideology:ideology_state_socialist
 					}
 				}
 			}
@@ -667,4 +667,86 @@ amendment_usfp_philippine_assembly = {
     }
 
     amendment_activism_multiplier = 0.5
+}
+
+amendment_usfp_second_revolution_americanist_education = {
+    parent = law_presidential_republic
+
+    allowed_laws = { # list of laws that the amendment can be added to
+        law_public_schools
+    }
+
+    modifier = {
+        country_institution_cost_institution_schools_mult = 0.10
+    }
+
+    institution = institution_schools
+    institution_modifier = {
+        country_loyalism_increases_full_acceptance_mult = 0.04
+        country_radicals_from_conquest_mult = 0.02
+    }
+
+    possible = {
+        has_law_or_variant = law_type:law_council_republic
+        NOT = {
+            has_variable = usfp_second_revolution_internationalism_embraced
+        }
+    }
+
+    would_sponsor = {
+        always = no
+    }
+
+    can_repeal = {
+        government_legitimacy >= legitimacy_to_repeal_amendment
+        NOT = {
+            has_journal_entry = usfp_je_second_revolution
+        }
+    }
+
+    ai_will_revoke = {
+        always = no
+    }
+
+    amendment_activism_multiplier = 0.0
+}
+
+amendment_usfp_second_revolution_internationalist_education = {
+    parent = law_multicultural
+
+    allowed_laws = { # list of laws that the amendment can be added to
+        law_public_schools
+    }
+
+    modifier = {
+        country_institution_cost_institution_schools_mult = 0.25
+    }
+
+    institution = institution_schools
+    institution_modifier = {
+        state_assimilation_mult = -0.05
+        country_loyalism_increases_second_rate_citizen_mult = 0.04
+        country_loyalism_increases_open_prejudice_mult = 0.04
+    }
+
+    possible = {
+        has_law_or_variant = law_type:law_council_republic
+    }
+
+    would_sponsor = {
+        always = no
+    }
+
+    can_repeal = {
+        government_legitimacy >= legitimacy_to_repeal_amendment
+        NOT = {
+            has_journal_entry = usfp_je_second_revolution
+        }
+    }
+
+    ai_will_revoke = {
+        always = no
+    }
+
+    amendment_activism_multiplier = 0.0
 }
