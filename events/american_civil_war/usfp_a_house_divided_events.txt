@@ -1743,6 +1743,12 @@ usfp_a_house_divided.17 = {
 			ig_counts_as_marginal = no
 			has_party = yes
 		}
+        NOT = {
+            has_variable = lincoln_spawned
+        }
+        NOT = {
+            is_template_used = usa_lincoln_character_template
+        }
 	}
 
 	immediate = {
