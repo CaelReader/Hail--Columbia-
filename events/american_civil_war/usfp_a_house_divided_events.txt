@@ -1723,7 +1723,7 @@ usfp_a_house_divided.17 = {
 	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
-
+    fire_only_once = yes
 	duration = 3
 
 	trigger = {
@@ -1743,12 +1743,6 @@ usfp_a_house_divided.17 = {
 			ig_counts_as_marginal = no
 			has_party = yes
 		}
-        NOT = {
-            has_variable = lincoln_spawned
-        }
-        NOT = {
-            is_template_used = usa_lincoln_character_template
-        }
 	}
 
 	immediate = {
