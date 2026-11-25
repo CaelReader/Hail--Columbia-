@@ -51,3 +51,5 @@
  ideology_usfp_neoconfederate_movement_desc: "이 운동은 이민자 및 기타 인종 집단이 이룬 성과를 원망하며 그들을 '제자리로 돌려보내려'합니다. 그들은 남부 연합의 반란을 백인을 위해 싸운 영광스러운 대의로 우상화합니다."
  ideology_usfp_american_constitution_movement: "입헌주의"
  ideology_usfp_american_constitution_movement_desc: "이 운동은 미국 헌법의 기본 법칙을 보존하거나 복원하고자 합니다."
+ ideology_usfp_american_constitution_anti_communist_movement: "$ideology_usfp_american_constitution_movement$"
+ ideology_usfp_american_constitution_anti_communist_movement_desc: "이 운동은 미국 헌법에 명시된 대로 자유주의적·자본주의적 질서를 회복하고자 합니다."

@@ -177,3 +177,7 @@
  notification_philippine_tutelage_over_protectorate_name: "필리핀이 보호국으로 남겨지다"
  notification_philippine_tutelage_over_protectorate_desc: "[SCOPE.sCountry('philippines_scope').GetName]은(는) 우리의 [concept_protectorate]이 되기로 결정했습니다."
  notification_philippine_tutelage_over_protectorate_tooltip: "#header $notification_philippine_tutelage_over_protectorate_name$#!\n$notification_philippine_tutelage_over_protectorate_desc$"
+ notification_usfp_coal_wars_state_unionized_name: "탄전 노동조합"
+ notification_usfp_coal_wars_state_unionized_desc: "[SCOPE.sState('new_union_state').GetName]의 [GetBuildingType('building_coal_mine').GetName]에서 #tooltippable;tooltip:[GetPlayer.GetTooltipTag],usfp_coal_wars_union_contract_tt $usfp_coal_wars_union_contract_tt$#!을(를) 확보했습니다."
+ notification_usfp_coal_wars_state_unionized_tooltip: "#header $notification_usfp_coal_wars_state_unionized_name$#!\n$notification_usfp_coal_wars_state_unionized_desc$"
+ usfp_coal_wars_union_contract_tt: "[GetStaticModifier('usfp_coal_wars_union_established_modifier').GetName|v]\n[GetStaticModifier('usfp_coal_wars_union_established_modifier').GetDesc]"
