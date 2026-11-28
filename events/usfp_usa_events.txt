@@ -2491,9 +2491,16 @@ usfp_usa.28 = {
         usfp_radicalize_whites_in_country = {
             RADICALS = medium_radicals
         }
-        add_loyalists = {
-            value = medium_radicals
-            culture = cu:han
+        every_scope_culture = {
+            limit = {
+                has_discrimination_trait = tradition_sinosphere
+            }
+            root = {
+                add_loyalists = {
+                    value = medium_radicals
+                    culture = prev
+                }
+            }
         }
         ai_chance = {
             base = 0

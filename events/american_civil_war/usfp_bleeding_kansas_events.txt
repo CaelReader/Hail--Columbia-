@@ -15,7 +15,7 @@ usfp_bleeding_kansas.1 = {
 	flavor = usfp_bleeding_kansas.1.f
 	dlc = dlc_usfp
 	placement = scope:kansas_scope
-
+    fire_only_once_globally = yes
 	duration = 3
 
 	trigger = {
@@ -42,17 +42,31 @@ usfp_bleeding_kansas.1 = {
 	option = {
 		name = usfp_bleeding_kansas.1.a
 		default_option = yes
+        scope:massachusetts_scope ?= {
+            ordered_scope_pop = {
+                limit = {
+                    culture = cu:yankee
+                    is_pop_type = peasants
+                }
+                alternative_limit = {
+                    culture = cu:yankee
+                    is_pop_type = laborers
+                }
+                order_by = total_size
+                position = 0
+                move_partial_pop = {
+                    state = scope:kansas_scope
+                    population_ratio = {
+                        value = 4000
+                        divide = total_size
+                    }
+                }
+            }
+        }
 		scope:kansas_scope = {
 			add_modifier = {
 				name = usfp_emigrant_aid_company
 				years = 4
-			}
-			custom_tooltip = {
-				text = usfp_bleeding_kansas.1.a.tt
-				create_pop = {
-					culture = yankee
-					size = 4000
-				}
 			}
 			add_radicals_in_state = {
 				culture = cu:yankee
@@ -70,14 +84,28 @@ usfp_bleeding_kansas.1 = {
 	#bad
 	option = {
 		name = usfp_bleeding_kansas.1.b
-		scope:kansas_scope = {
-			custom_tooltip = {
-				text = usfp_bleeding_kansas.1.b.tt
-				create_pop = {
-					culture = yankee
-					size = 2000
-				}
-			}
+        scope:massachusetts_scope ?= {
+            ordered_scope_pop = {
+                limit = {
+                    culture = cu:yankee
+                    is_pop_type = peasants
+                }
+                alternative_limit = {
+                    culture = cu:yankee
+                    is_pop_type = laborers
+                }
+                order_by = total_size
+                position = 0
+                move_partial_pop = {
+                    state = scope:kansas_scope
+                    population_ratio = {
+                        value = 2000
+                        divide = total_size
+                    }
+                }
+            }
+        }
+        scope:kansas_scope = {
 			add_radicals_in_state = {
 				culture = cu:dixie
 				value = 0.02
@@ -135,16 +163,30 @@ usfp_bleeding_kansas.2 = {
 	#interfere
 	option = {
 		name = usfp_bleeding_kansas.2.a
-		scope:kansas_scope = {
+        scope:missouri_scope ?= {
+            ordered_scope_pop = {
+                limit = {
+                    culture = cu:dixie
+                    is_pop_type = peasants
+                }
+                alternative_limit = {
+                    culture = cu:dixie
+                    is_pop_type = laborers
+                }
+                order_by = total_size
+                position = 0
+                move_partial_pop = {
+                    state = scope:kansas_scope
+                    population_ratio = {
+                        value = 2000
+                        divide = total_size
+                    }
+                }
+            }
+        }
+        scope:kansas_scope = {
 			state_region = {
 				add_devastation = 10
-			}
-			custom_tooltip = {
-				text = usfp_bleeding_kansas.2.a.tt
-				create_pop = {
-					culture = dixie
-					size = 2000
-				}
 			}
 			add_radicals_in_state = {
 				culture = cu:dixie
@@ -165,16 +207,30 @@ usfp_bleeding_kansas.2 = {
 	option = {
 		name = usfp_bleeding_kansas.2.b
 		default_option = yes
+        scope:missouri_scope ?= {
+            ordered_scope_pop = {
+                limit = {
+                    culture = cu:dixie
+                    is_pop_type = peasants
+                }
+                alternative_limit = {
+                    culture = cu:dixie
+                    is_pop_type = laborers
+                }
+                order_by = total_size
+                position = 0
+                move_partial_pop = {
+                    state = scope:kansas_scope
+                    population_ratio = {
+                        value = 4000
+                        divide = total_size
+                    }
+                }
+            }
+        }
 		scope:kansas_scope = {
 			state_region = {
 				add_devastation = 15
-			}
-			custom_tooltip = {
-				text = usfp_bleeding_kansas.2.b.tt
-				create_pop = {
-					culture = dixie
-					size = 4000
-				}
 			}
 			add_radicals_in_state = {
 				culture = cu:dixie
@@ -897,17 +953,25 @@ usfp_bleeding_kansas.10 = {
 	option = {
 		name = usfp_bleeding_kansas.10.a
 		default_option = yes
+        ordered_scope_pop = {
+            limit = {
+                culture = cu:afro_american
+                is_pop_type = slaves
+            }
+            position = 0
+            order_by = total_size
+            move_partial_pop = {
+                state = scope:kansas_scope
+                population_ratio = {
+                    add = 2000
+                    divide = total_size
+                }
+            }
+        }
 		scope:kansas_scope = {
 			add_loyalists_in_state = {
 				value = large_radicals
 				culture = cu:dixie
-			}
-			hidden_effect = {
-				create_pop = {
-					culture = afro_american
-					size = 500
-					pop_type = slaves
-				}
 			}
 			enslave_discriminated_farm_workers = yes
 			if = {

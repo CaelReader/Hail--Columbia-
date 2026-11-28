@@ -14,6 +14,8 @@ usfp_manifest_destiny_main = {
 	is_shown_when_inactive = {
 		exists = c:USA
 		c:USA = ROOT
+        is_revolutionary = no
+        is_secessionist = no
 	}
 
 	possible = {
@@ -28,13 +30,20 @@ usfp_manifest_destiny_main = {
     }
 
 	immediate = {
-		set_variable = {
-			name = manifest_destiny_var
-			value = 0
-		}
-		trigger_event = {
-			id = usfp_manifest_destiny.1
-		}
+		if = {
+            limit = {
+                NOT = {
+                    has_variable = manifest_destiny_var
+                }
+            }
+            set_variable = {
+                name = manifest_destiny_var
+                value = 0
+            }
+            trigger_event = {
+                id = usfp_manifest_destiny.1
+            }
+        }
 		root = {
 			save_scope_as = usa_scope
 		}
@@ -674,6 +683,111 @@ usfp_je_westward_expansion = {
         }
     }
 
+    map_color = {
+        if = {
+            limit = {
+                state_region = {
+                    is_homeland = cu:yankee
+                }
+            }
+            value = "map_yankee_blue"
+        } else_if = {
+            limit = {
+                state_region = {
+                    is_homeland = cu:dixie
+                }
+            }
+            value = "map_dixie_butternut"
+        } else_if = {
+            limit = {
+                state_region = {
+                    is_homeland = cu:usfp_american
+                }
+            }
+            value = "old_glory_blue"
+        }
+    }
+
+    map_color_second = {
+        if = {
+            limit = {
+                state_region = {
+                    NOR = {
+                        is_homeland = cu:yankee
+                        is_homeland = cu:dixie
+                        is_homeland = cu:usfp_american
+                    }
+                }
+                usfp_westward_expansion_zone = yes
+                usfp_westward_expansion_dixie_zone = yes
+            }
+            value = "map_dixie_butternut"
+        } else_if = {
+            limit = {
+                state_region = {
+                    NOR = {
+                        is_homeland = cu:yankee
+                        is_homeland = cu:dixie
+                        is_homeland = cu:usfp_american
+                    }
+                }
+                usfp_westward_expansion_zone = yes
+                usfp_westward_expansion_dixie_zone = no
+            }
+            value = "map_yankee_blue"
+        }
+    }
+
+    map_tooltip = {
+        if = {
+            limit = {
+                state_region = {
+                    is_homeland = cu:usfp_american
+                }
+            }
+            custom_tooltip_no_bullet = "american_superculture_homeland"
+        }
+        else_if = {
+            limit = {
+                state_region = {
+                    is_homeland = cu:yankee
+                }
+            }
+            custom_tooltip_no_bullet = "yankee_homeland"
+        } else_if = {
+            limit = {
+                state_region = {
+                    is_homeland = cu:dixie
+                }
+            }
+            custom_tooltip_no_bullet = "dixie_homeland"
+        } else_if = {
+            limit = {
+                state_region = {
+                    NOR = {
+                        is_homeland = cu:yankee
+                        is_homeland = cu:dixie
+                    }
+                }
+                usfp_westward_expansion_zone = yes
+                usfp_westward_expansion_dixie_zone = yes
+            }
+            custom_tooltip_no_bullet = "dixie_eligible_homeland"
+        } else_if = {
+            limit = {
+                state_region = {
+                    NOR = {
+                        is_homeland = cu:yankee
+                        is_homeland = cu:dixie
+                    }
+                }
+                usfp_westward_expansion_zone = yes
+                usfp_westward_expansion_dixie_zone = no
+            }
+            custom_tooltip_no_bullet = "yankee_eligible_homeland"
+        }
+    }
+
 	should_be_pinned_by_default_uninvolved_or_context = no
 
 	weight = 10
@@ -1092,6 +1206,9 @@ usfp_je_mexican_occupation = {
 
     is_shown_when_inactive = {
         c:USA ?= root
+        NOT = {
+            country_has_primary_culture = cu:mexican
+        }
         any_scope_state = {
             is_in_geographic_region = geographic_region_mexico_old
         }
@@ -1139,6 +1256,7 @@ usfp_je_mexican_occupation = {
         conclusion_desc = je_standard_failure_conclusion_desc
         trigger = {
             OR = {
+                country_has_primary_culture = cu:mexican
                 NOT = {
                     any_scope_state = {
                         is_in_geographic_region = geographic_region_mexico_old
@@ -1165,6 +1283,10 @@ REPLACE_OR_CREATE:je_trans_continental_railway = {
 
 	is_shown_when_inactive = {
 		NOT = { has_global_variable = trans_continental_done }
+        owns_entire_state_region = STATE_NEW_YORK
+        any_scope_state = {
+            state_region = s:STATE_NEBRASKA
+        }
 	}
 
 	possible = {

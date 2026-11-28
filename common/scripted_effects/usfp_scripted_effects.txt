@@ -2526,6 +2526,34 @@ usfp_anger_anti_country_lobby_create_if_missing = {
 usfp_begin_chinese_california_migration = {
     custom_tooltip = {
         text = usfp_manifest_destiny.10.a.t
+        s:STATE_GUANGDONG = {
+            ordered_scope_state = {
+                limit = {
+                    any_scope_pop = {
+                        is_pop_type = laborers
+                        culture = cu:yue
+                    }
+                }
+                order_by = state_population
+                position = 0
+                ordered_scope_pop = {
+                    limit = {
+                        is_pop_type = laborers
+                        culture = cu:yue
+                    }
+                    position = 0
+                    order_by = total_size
+                    move_partial_pop = {
+                        state = scope:california_scope
+                        population_ratio = {
+                            value = 1000
+                            divide = total_size
+                            max = 1
+                        }
+                    }
+                }
+            }
+        }
         trigger_event = {
             id = usfp_manifest_destiny.11
             days = 1

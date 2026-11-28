@@ -163,6 +163,17 @@ usfp_westward_expansion_zone = {
 	}
 }
 
+usfp_westward_expansion_dixie_zone = {
+    OR = {
+        state_region = s:STATE_ARIZONA
+        state_region = s:STATE_CHIHUAHUA
+        state_region = s:STATE_RIO_GRANDE
+        state_region = s:STATE_SONORA
+        state_region = s:STATE_OKLAHOMA
+        state_region = s:STATE_NEW_MEXICO
+    }
+}
+
 usfp_westward_expansion_criteria = {
 	NOR = {
 		cu:yankee = {
@@ -1048,4 +1059,26 @@ usfp_coal_wars_valid_state = {
         }
         has_decree = decree_violent_suppression
     }
+}
+
+usfp_state_region_valid_for_slavery_expansion = {
+    OR = {
+        state_region = {
+            NOT = {
+                is_homeland = cu:yankee
+            }
+            is_homeland = cu:dixie
+        }
+        state_region = s:STATE_OKLAHOMA
+        state_region = s:STATE_NEW_MEXICO
+        state_region = s:STATE_ARIZONA
+        state_region = s:STATE_UTAH
+        #extended manifesting
+        state_region = s:STATE_RIO_GRANDE
+        state_region = s:STATE_CHIHUAHUA
+        state_region = s:STATE_SONORA
+        #golden circle
+        is_in_geographic_region = geographic_region_caribbean_coast
+    }
+
 }

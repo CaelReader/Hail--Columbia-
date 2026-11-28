@@ -1271,16 +1271,19 @@ usfp_second_revolution_get_antiamericanism_target = {
         multiply = 1
 		desc = "igs_supporting_council_republic_and_multiculturalism"
 	}
+    if = {
+        limit = {
+            religion_percent_country = {
+                target = rel:atheist
+                value >= 0.05
+            }
+        }
+        add = {
+            value = "religion_percent_country(rel:atheist)"
+            desc = "atheist_pops"
+        }
+    }
 	# Revolutionary Laws
-	if = {
-		limit = {
-			has_law_or_variant = law_type:law_state_atheism
-		}
-		add = {
-			value = 1
-			desc = "law_state_atheism"
-		}
-	}
 	if = {
 		limit = {
 			has_law_or_variant = law_type:law_multicultural
@@ -1319,7 +1322,7 @@ usfp_second_revolution_get_antiamericanism_target = {
             has_variable = usfp_second_revolution_supported_antiamericanism
 		}
 		add = {
-			value = 1
+			value = 0.5
 			desc = "law_single_party_state"
 		}
 	}

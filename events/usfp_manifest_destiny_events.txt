@@ -1075,9 +1075,15 @@ usfp_manifest_destiny.10 = {
 		set_global_variable = usfp_gold_mountain
 		c:CHI = {
 			save_scope_as = china_scope
-		}
-		cu:han = {
-			save_scope_as = han_scope
+            random_scope_state = {
+                limit = {
+                    state_region = s:STATE_GUANGDONG
+                }
+                save_scope_as = guangdong_scope
+            }
+            active_law:lawgroup_migration = {
+                save_scope_as = chinese_migration_controls
+            }
 		}
 	}
 
@@ -1085,24 +1091,33 @@ usfp_manifest_destiny.10 = {
 	option = {
 		name = usfp_manifest_destiny.10.a
 		default_option = yes
+        ordered_scope_pop = {
+            limit = {
+                culture = cu:yankee
+                is_pop_type = laborers
+            }
+            order_by = total_size
+            position = 0
+            move_partial_pop = {
+                state = scope:california_scope
+                population_ratio = {
+                    value = 1000
+                    divide = total_size
+                }
+            }
+        }
+        usfp_begin_chinese_california_migration = yes
 		scope:california_scope = {
 			add_modifier = {
 				name = usfp_gold_rush_lawlessness
 				years = 3
 			}
-			hidden_effect = {
-				create_pop = {
-					culture = yankee
-					size = 1000
-					pop_type = laborers
-				}
-			}
 			add_acceptance = {
-				target = cu:han
+				target = cu:yue
 				value = 5
 			}
 		}
-        usfp_begin_chinese_california_migration = yes
+
 		set_variable = {
 			name = gold_mountain_arrivals
 			years = 2
@@ -1112,33 +1127,47 @@ usfp_manifest_destiny.10 = {
 	#no bad
 	option = {
 		name = usfp_manifest_destiny.10.b
-		scope:california_scope = {
+        ordered_scope_pop = {
+            limit = {
+                culture = cu:yankee
+                is_pop_type = laborers
+            }
+            order_by = total_size
+            position = 0
+            move_partial_pop = {
+                state = scope:california_scope
+                population_ratio = {
+                    value = 1000
+                    divide = total_size
+                }
+            }
+        }
+        usfp_begin_chinese_california_migration = yes
+        scope:california_scope = {
 			add_modifier = {
 				name = usfp_gold_rush_lawlessness
 				years = 3
-			}
-			hidden_effect = {
-				create_pop = {
-					culture = yankee
-					size = 1000
-					pop_type = laborers
-				}
 			}
 			add_radicals_in_state = {
 				value = small_radicals
 				strata = lower
 			}
 			add_acceptance = {
-				target = cu:han
+				target = cu:yue
 				value = -5
 			}
 		}
-        usfp_begin_chinese_california_migration = yes
 		set_variable = {
 			name = gold_mountain_arrivals
 			years = 2
 		}
 	}
+
+    after = {
+        scope:china_scope = {
+            post_notification = usfp_china_laborers_leave_for_california
+        }
+    }
 }
 
 #Hidden event to handle Chinese arrivals to California, since vanilla game mechanics make this impossible otherwise
@@ -1147,11 +1176,34 @@ usfp_manifest_destiny.11 = {
 	hidden = yes
 
 	immediate = {
+        s:STATE_GUANGDONG = {
+            ordered_scope_state = {
+                limit = {
+                    any_scope_pop = {
+                        is_pop_type = laborers
+                        culture = cu:yue
+                    }
+                }
+                order_by = state_population
+                position = 0
+                ordered_scope_pop = {
+                    limit = {
+                        is_pop_type = laborers
+                        culture = cu:yue
+                    }
+                    position = 0
+                    order_by = total_size
+                    move_partial_pop = {
+                        state = scope:california_scope
+                        population_ratio = {
+                            value = 1000
+                            divide = total_size
+                        }
+                    }
+                }
+            }
+        }
 		scope:california_scope = {
-			create_pop = {
-				culture = han
-				size = 4000
-			}
 			if = {
 				limit = {
 					owner = {
@@ -1338,15 +1390,8 @@ usfp_manifest_destiny.13 = {
 				}
 			}
 			else_if = {
-				limit = { 
-					OR = {
-						state_region = s:STATE_ARIZONA
-						state_region = s:STATE_CHIHUAHUA
-						state_region = s:STATE_RIO_GRANDE
-						state_region = s:STATE_SONORA
-						state_region = s:STATE_OKLAHOMA
-						state_region = s:STATE_NEW_MEXICO
-					}
+				limit = {
+                    usfp_westward_expansion_dixie_zone = yes
 				}
 				state_region = {
 					add_homeland = cu:dixie

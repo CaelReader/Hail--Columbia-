@@ -772,6 +772,11 @@ usfp_indian_wars.8 = {
 		}
 		owns_entire_state_region = STATE_IDAHO
 		has_state_in_state_region = STATE_MONTANA
+        s:STATE_IDAHO.region_state:USA = {
+            any_scope_pop = {
+                culture = cu:nez_perce
+            }
+        }
 	}
 
 	immediate = {
@@ -804,16 +809,22 @@ usfp_indian_wars.8 = {
 	option = {
 		name = usfp_indian_wars.8.a
 		default_option = yes
-		custom_tooltip = {
-			text = usfp_indian_wars.8.a.tt
-			scope:indian_territory_scope = {
-				create_pop = {
-					culture = nez_perce
-					size = 418
-				}
-			}
-		}
 		scope:idaho_scope = {
+            ordered_scope_pop = {
+                limit = {
+                    culture = cu:nez_perce
+                }
+                position = 0
+                order_by = total_size
+                move_partial_pop = {
+                    state = scope:indian_territory_scope.capital
+                    population_ratio = {
+                        value = 418
+                        divide = total_size
+                        max = 1
+                    }
+                }
+            }
 			usfp_loyalize_settlers_in_state = {
 				LOYALISTS = small_radicals
 			}

@@ -978,15 +978,24 @@ usfp_a_house_divided.9 = {
 	}
 
 	immediate = {
+        ordered_scope_pop = {
+            limit = {
+                culture = cu:afro_american
+                is_pop_type = slaves
+            }
+            position = 0
+            order_by = total_size
+            move_partial_pop = {
+                state = s:STATE_TEXAS.region_state:USA
+                population_ratio = {
+                    add = 5000
+                    divide = total_size
+                }
+            }
+        }
 		s:STATE_TEXAS.region_state:USA = {
-			create_pop = {
-				pop_type = slaves
-				culture = afro_american
-				size = 1000			
-			}
 			enslave_discriminated_farm_workers = yes
 		}
-		
 	}
 }
 
@@ -1305,15 +1314,7 @@ usfp_a_house_divided.13 = {
 				culture = cu:dixie
 				is_pop_type = aristocrats
 			}
-			OR = {
-				state_region = s:STATE_OKLAHOMA
-				state_region = s:STATE_NEW_MEXICO
-				state_region = s:STATE_ARIZONA
-				#extended manifesting
-				state_region = s:STATE_RIO_GRANDE
-				state_region = s:STATE_CHIHUAHUA
-				state_region = s:STATE_SONORA
-			}
+            usfp_state_region_valid_for_slavery_expansion = yes
 			any_scope_building = {
 				OR = {
 					is_building_group = bg_agriculture
@@ -1325,6 +1326,7 @@ usfp_a_house_divided.13 = {
 	}
 
 	immediate = {
+
 		random_scope_state = {
 			limit = {
 				is_slave_state = no
@@ -1332,16 +1334,7 @@ usfp_a_house_divided.13 = {
 					culture = cu:dixie
 					is_pop_type = aristocrats
 				}
-				OR = {
-					state_region = s:STATE_OKLAHOMA
-					state_region = s:STATE_NEW_MEXICO
-					state_region = s:STATE_ARIZONA
-					state_region = s:STATE_UTAH
-					#extended manifesting
-					state_region = s:STATE_RIO_GRANDE
-					state_region = s:STATE_CHIHUAHUA
-					state_region = s:STATE_SONORA
-				}
+                usfp_state_region_valid_for_slavery_expansion = yes
 				any_scope_building = {
 					OR = {
 						is_building_group = bg_agriculture
@@ -1350,13 +1343,26 @@ usfp_a_house_divided.13 = {
 					occupancy < 1.0
 				}
 			}
-			create_pop = {
-				pop_type = slaves
-				culture = afro_american
-				size = 2000			
-			}
 			save_scope_as = slavery_expanded_state
 		}
+        ordered_scope_pop = {
+            limit = {
+                culture = cu:afro_american
+                is_pop_type = slaves
+            }
+            position = 0
+            order_by = total_size
+            move_partial_pop = {
+                state = scope:slavery_expanded_state
+                population_ratio = {
+                    add = 2000
+                    divide = total_size
+                }
+            }
+        }
+        scope:slavery_expanded_state ?= {
+            enslave_discriminated_farm_workers = yes
+        }
 		post_notification = usfp_slavery_expands
 	}
 }

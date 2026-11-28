@@ -507,11 +507,11 @@ usfp_manifest_destiny.9.b: "These speculative railroad companies are a financial
  transcontinental_southern_route_states: "Every [GetPlayer.GetAdjective] [concept_state] along the [GetGeographicRegion('geographic_region_transcontinental_southern_route').GetName]"
 
 usfp_manifest_destiny.10.t: "Tales of Gold Mountain"
-usfp_manifest_destiny.10.d: "News of the discovery of [GetGoods('gold').GetName] in [SCOPE.sState('california_scope').GetName] has reached across the Pacific to [SCOPE.sCountry('china_scope').GetName]. As a result, thousands of [SCOPE.sCulture('han_scope').GetName] migrants have begun to arrive by ship, drawn by tales of the vast wealth flowing from 'Gold Mountain'."
+usfp_manifest_destiny.10.d: "News of the discovery of [GetGoods('gold').GetName] in [SCOPE.sState('california_scope').GetName] has reached across the Pacific to [SCOPE.sCountry('china_scope').GetName]. As a result, thousands of [GetCulture('yue').GetName] migrants have begun to arrive by ship, drawn by tales of the vast wealth flowing from 'Gold Mountain'."
 usfp_manifest_destiny.10.f: ""O, just marry all the daughters to men from Gold Mountain—\n\nAll those trunks from Gold Mountain — you can demand as many as you want!\n\nO, don't ever marry your daughter to a man from Gold Mountain—\n\nLonely and sad — a cooking pot is her only companion!"" #Cantonese Rhyme
 usfp_manifest_destiny.10.a: "Gold fever is irresistable!"
 usfp_manifest_destiny.10.b: "Foreign laborers are trouble waiting to happen."
-usfp_manifest_destiny.10.a.t: "In defiance of [SCOPE.sCountry('china_scope').GetAdjective] policies, upwards of 30,000 [SCOPE.sCulture('han_scope').GetName] $laborers$ will arrive in [SCOPE.sState('california_scope').GetName] over the next few years."
+usfp_manifest_destiny.10.a.t: "In defiance of [SCOPE.sCountry('china_scope').GetAdjective] policies, upwards of 30,000 [GetCulture('yue').GetName] $laborers$ will arrive in [SCOPE.sState('california_scope').GetName] over the next few years."
 
 usfp_manifest_destiny.12.t: "The California Genocide"
 usfp_manifest_destiny.12.d: "As [ROOT.GetCountry.GetAdjective] settlers continue to press into the interior of [SCOPE.sState('california_scope').GetName], the state government has seen fit to embark on an official campaign of extermination against the native populace. The state has essentially pardoned all crimes commited against Indians, and is even awarding bounties for Indian scalps, begetting a wave of atrocities against the [SCOPE.sCulture('hokan_scope').GetName]."

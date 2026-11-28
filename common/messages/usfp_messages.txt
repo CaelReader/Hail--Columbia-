@@ -487,3 +487,11 @@ usfp_coal_wars_state_unionized = {
     notification_type = toast
     color = good
 }
+
+usfp_china_laborers_leave_for_california = {
+    type = country
+
+    texture = "gfx/interface/icons/notification_icons/pops.dds"
+    notification_type = feed
+    color = neutral
+}

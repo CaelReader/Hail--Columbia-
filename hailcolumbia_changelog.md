@@ -1052,3 +1052,13 @@ Fixed Oregon Treaty not removing claims properly
     Claim Canada button now works even against non-confederated canadian tags
     Fixed some script errors in events
 
+# 10.1 "Debs"
+Fixed Transcontinental Railroad JE appearing in the list for other countries
+Fixed a few events firing for non-usa countries
+Mexican Occupation JE now invalids if you gain Mexican primary culture through other means
+Pacific States is now properly releasable as a war goal
+Replaced all create_pop effects with move_partial_pop effects (this should fix weird SOL bugs with Grey's Reworks)
+The chinese migrants to California are now Yue actually moving from Guangdong instead of Han being spawned from thin air
+The Dust Bowl now takes slightly longer to reach full desertification
+Second Revolution: State Atheism no longer grants +1 to Internationalism, instead the percent of Atheist population is added
+Minnesota is no longer a Yankee homeland at game start

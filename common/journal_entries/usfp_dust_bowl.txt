@@ -152,7 +152,7 @@
             custom_tooltip = {
                 text = usfp_dust_bowl_desertification_full
                 scope:journal_entry = {
-                    "scripted_bar_progress(usfp_dust_bowl_desertification_bar)" >= 1000
+                    "scripted_bar_progress(usfp_dust_bowl_desertification_bar)" >= 1200
                 }
             }
         }

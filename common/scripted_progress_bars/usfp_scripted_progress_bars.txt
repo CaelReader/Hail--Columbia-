@@ -607,7 +607,7 @@ usfp_dust_bowl_desertification_bar = {
 
     start_value = 200
     min_value = 0
-    max_value = 1000
+    max_value = 1200
 
     monthly_progress = {
         #progress from ongoing dust storms or droughts

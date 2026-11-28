@@ -81,6 +81,39 @@ usfp_filibuster.1 = {
 				}
 			}
 			c:usfp_SON = {
+                s:STATE_CALIFORNIA.region_state_USA = {
+                    ordered_scope_pop = {
+                        limit = {
+                            culture = cu:dixie
+                            is_pop_type = peasants
+                        }
+                        alternative_limit = {
+                            culture = cu:yankee
+                            is_pop_type = peasants
+                        }
+                        position = 0
+                        order_by = total_size
+                        move_partial_pop = {
+                            state = c:USFP_SON.capital
+                            population_ratio = {
+                                value = 300 #LMAO
+                                divide = total_size
+                            }
+                        }
+                    }
+                }
+                capital = {
+                    random_scope_pop = {
+                        limit = {
+                            is_pop_type = peasants
+                            OR = {
+                                culture = cu:yankee
+                                culture = cu:dixie
+                            }
+                        }
+                        change_poptype = soldiers
+                    }
+                }
 				create_diplomatic_play = {
 					type = dp_return_state
 					target_state = scope:sonora_state_scope
@@ -94,13 +127,6 @@ usfp_filibuster.1 = {
 						type = unit_type:combat_unit_type_irregular_infantry
 						state_region = s:STATE_BAJA_CALIFORNIA
 						count = 1
-					}
-				}
-				capital = {
-					create_pop = {
-						culture = dixie
-						size = 300 #LMAO
-						pop_type = soldiers
 					}
 				}
 				save_scope_as = sonora_scope
@@ -675,18 +701,23 @@ usfp_filibuster.7 = {
 						ruler = yes
 						is_general = yes
 					}
-					capital = {
-						create_pop = {
-							culture = caribeno
-							size = 500
-							pop_type = soldiers
-						}
-						create_pop = {
-							culture = caribeno
-							size = 100
-							pop_type = officers
-						}
-					}
+                    c:USA = {
+                        ordered_scope_pop = {
+                            limit = {
+                                culture = cu:caribeno
+                            }
+                            position = 0
+                            order_by = total_size
+                            move_partial_pop = {
+                                state = c:usfp_F_CUB.capital
+                                population_ratio = {
+                                    value = 600
+                                    divide = total_size
+                                    max = 1
+                                }
+                            }
+                        }
+                    }
 					add_modifier = {
 						name = usfp_filibusters_modifier
 						years = 2

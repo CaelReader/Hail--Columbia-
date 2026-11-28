@@ -245,6 +245,11 @@ usfp_mormon.3 = {
 		rel:mormon = {
 			save_scope_as = mormonism_scope
 		}
+        s:STATE_UTAH = {
+            random_scope_state = {
+                save_scope_as = utah_scope
+            }
+        }
 	}
 
 	#farewell
@@ -252,13 +257,20 @@ usfp_mormon.3 = {
 		name = usfp_mormon.3.a
 		custom_tooltip = {
 			text = usfp_mormon.3.a.t
-			#actually just kill them and then respawn the correct amount in Deseret later
-			scope:illinois_scope = {
-				kill_population_percent_in_state = {
-					percent = 1
-					religion = rel:mormon
-				}
-			}
+            every_scope_pop = {
+                limit = {
+                    religion = rel:mormon
+                }
+                move_pop = scope:utah_scope
+            }
+            scope:utah_scope = {
+                every_scope_pop = {
+                    limit = {
+                        religion = rel:mormon
+                    }
+                    change_poptype = peasants
+                }
+            }
 			trigger_event = {
 				id = usfp_mormon.4
 				months = 6
@@ -302,19 +314,19 @@ usfp_mormon.4 = {
 							country = c:DES
 							provinces = { x9FC5C3 xA7E6DC x3FB458 xA9B917 x8F9823 }
 						}
-						region_state:DES = {
-							create_pop = {
-								culture = yankee
-								size = 80000
-								religion = mormon
-							}
-							create_pop = {
-								culture = yankee
-								size = 2000
-								religion = mormon
-								pop_type = clergymen
-							}
-						}
+                        every_scope_state = {
+                            limit = {
+                                any_scope_pop = {
+                                    religion = rel:mormon
+                                }
+                            }
+                            every_scope_pop = {
+                                limit = {
+                                    religion = rel:mormon
+                                }
+                                move_pop = c:DES.capital
+                            }
+                        }
 						add_claim = c:DES
 					}
 					capital = {

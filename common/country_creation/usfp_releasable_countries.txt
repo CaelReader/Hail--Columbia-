@@ -55,10 +55,10 @@ usfp_PSA = {
 		STATE_NEVADA
 	}
 	possible = {
-		NOT = {
-			c:USA ?= root
-		}
+        scope:war_goal_holder ?= {
+            has_technology_researched = pan-nationalism
+        }
 	}
 	required_num_states = 3
-	ai_will_do = { always = no }
+    ai_will_do = { always = no }
 }

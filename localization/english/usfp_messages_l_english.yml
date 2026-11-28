@@ -247,3 +247,7 @@ notification_usfp_cuba_filibusters_failed_tooltip: "#header $notification_usfp_c
  notification_usfp_coal_wars_state_unionized_desc: "The [GetBuildingType('building_coal_mine').GetName] in [SCOPE.sState('new_union_state').GetName] have gained #tooltippable;tooltip:[GetPlayer.GetTooltipTag],usfp_coal_wars_union_contract_tt $usfp_coal_wars_union_contract_tt$#!"
  notification_usfp_coal_wars_state_unionized_tooltip: "#header $notification_usfp_coal_wars_state_unionized_name$#!\n$notification_usfp_coal_wars_state_unionized_desc$"
 usfp_coal_wars_union_contract_tt: "[GetStaticModifier('usfp_coal_wars_union_established_modifier').GetName|v]\n[GetStaticModifier('usfp_coal_wars_union_established_modifier').GetDesc]"
+
+ notification_usfp_china_laborers_leave_for_california_name: "Gold-Seekers Leave For California"
+ notification_usfp_china_laborers_leave_for_california_desc: "[GetPopType('laborers').GetName] from [SCOPE.sState('guangdong_scope').GetName] have begun to skirt our [SCOPE.sLaw('chinese_migration_controls').GetName] to leave for [SCOPE.sState('california_scope').GetName]."
+ notification_usfp_china_laborers_leave_for_california_tooltip: "#header $notification_usfp_china_laborers_leave_for_california_name$#!\n$notification_usfp_china_laborers_leave_for_california_desc$"

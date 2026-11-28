@@ -184,6 +184,7 @@
 		}
 	}
 	s:STATE_MINNESOTA = {
+        remove_homeland = cu:yankee
 		create_state = {
 			country = c:CTF
 			owned_provinces = { x289431 xA8B1F6 x1B5B1A x0FAD27 x84B824 xBE054B x28022C x282692 x108E46 x1B5ADB x2F06FA xF09A2C xE7EF56 x6AD1DD x4FFFFC x658093 xCDECF0 

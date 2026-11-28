@@ -880,9 +880,10 @@ usfp_usa_labor.8 = {
 	flavor = usfp_usa_labor.8.f
 	dlc = dlc_usfp
 	duration = 3
-	cooldown = { days = never_fire_again_modifier_time } #Once
+	fire_only_once_globally = yes
 
 	trigger = {
+        c:USA ?= root
 		has_technology_researched = open_hearth_process
 		has_technology_researched = labor_movement
 		any_scope_state = {
@@ -1319,9 +1320,10 @@ usfp_usa_labor.11 = {
 	flavor = usfp_usa_labor.11.f
 	dlc = dlc_usfp
 	duration = 3
-	cooldown = { days = never_fire_again_modifier_time } #Once
+	fire_only_once_globally = yes
 
 	trigger = {
+        c:USA ?= root
 		has_technology_researched = mass_propaganda
 		has_technology_researched = corporate_management
 		any_political_movement = {

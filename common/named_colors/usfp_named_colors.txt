@@ -4,4 +4,7 @@
     csa_grey = rgb { 190  186  202 }
     cyan_pale = rgb { 173 222 233 }
     gold_dark = rgb { 167 99 40 }
+    map_yankee_blue = rgb{ 135 206 235 }
+    map_dixie_butternut = rgb{ 204 154 91 }
+    old_glory_blue = rgb{ 0 33 71 }
 }
